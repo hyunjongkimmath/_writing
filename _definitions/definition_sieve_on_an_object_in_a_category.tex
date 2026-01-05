@@ -1,0 +1,10 @@
+\begin{definition}[{\cite[Expos\'e I D\'efinition 4.1]{SGA4_I}}] \label{definition:sieve_on_an_object_in_a_category}
+Let $C$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
+
+\begin{enumerate}
+    \item A \hldef{sieve $S$ on the category $C$} is a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} $D$ of $C$ such that for any object $U$ of $C$ there exists an object $V$ of \TODO{correctly parse the definiton}
+    \item A \hldef{sieve $S$ on an object $U \in \operatorname{Ob}(C)$} is a collection of morphisms in $C$ with codomain $U$ that is closed under precomposition by any compatible morphism in $C$. In other words, $S$ is a sieve if for every $f : V \to U$ in $S$ and morphism $g : W \to V$ in $C$, the composition $f \circ g : W \to U$ is also in $S$. 
+
+    Given a morphism $f: V \to U$ in a sieve $S$, we also say that \hldef{$f$ factors through $U$}.
+\end{enumerate}
+\end{definition}

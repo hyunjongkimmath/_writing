@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:exhaustive_separated_filtrations_on_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $(M, F)$ be a \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{filtered object} in $\mathcal{A}$.
+    
+    \begin{enumerate}
+        \item Let $F$ be an \textbf{increasing} filtration $\{F_p M\}_{p \in \mathbb{Z}}$.
+        \begin{itemize}
+            \item We say $F$ is \hldef{exhaustive} if the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of the diagram $\dots \hookrightarrow F_p M \hookrightarrow \dots$ exists in $\mathcal{A}$ and the canonical morphism induced by the inclusions $F_p M \hookrightarrow M$ is an isomorphism:
+            $$\text{colim}_{p \to \infty} F_p M \xrightarrow{\cong} M.$$
+            \item We say $F$ is \hldef{separated} (or Hausdorff) if the limit of the diagram $\dots \hookrightarrow F_p M \hookrightarrow \dots$ exists in $\mathcal{A}$ and is the zero object:
+            $$\lim_{p \to -\infty} F_p M \cong 0.$$
+        \end{itemize}
+
+        \item Let $F$ be a \textbf{decreasing} filtration $\{F^p M\}_{p \in \mathbb{Z}}$.
+        \begin{itemize}
+            \item We say $F$ is \hldef{exhaustive} if the colimit of the diagram $\dots \hookrightarrow F^p M \hookrightarrow \dots$ exists in $\mathcal{A}$ and the canonical morphism is an isomorphism:
+            $$\text{colim}_{p \to -\infty} F^p M \xrightarrow{\cong} M.$$
+            \item We say $F$ is \hldef{separated} if the limit of the diagram $\dots \hookrightarrow F^p M \hookrightarrow \dots$ exists in $\mathcal{A}$ and is zero:
+            $$\lim_{p \to \infty} F^p M \cong 0.$$
+        \end{itemize}
+    \end{enumerate}
+    When $\mathcal{A}$ is the category of $R$-modules, these conditions correspond to $\bigcup F_p M = M$ and $\bigcap F_p M = 0$ (increasing case).
+\end{definition}

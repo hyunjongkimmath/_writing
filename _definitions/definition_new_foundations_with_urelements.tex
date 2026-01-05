@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:new_foundations_with_urelements}
+    \TODO{formula, first-order language}
+    Let $\mathcal{L}_{\in}$ be a first-order language with a single binary relation symbol $\in$.
+\hldef{New Foundations with Urelements}, denoted \hl{$\mathsf{NFU}$}, is a theory allowing for \hldef{urelements} (objects distinct from the empty set that have no elements) and includes the following axioms:
+\begin{enumerate}
+    \item \textbf{Weak Extensionality:} Non-empty sets with the same elements are equal.
+    \item \textbf{Stratified Comprehension:} For any stratified formula $\phi(x)$ where $y$ does not occur free, the set of all $x$ satisfying $\phi$ exists:
+    $$ \hlin{ \exists y \forall x \, (x \in y \iff \phi(x)) } $$
+\end{enumerate}
+Unlike $\mathsf{ZFC}$, $\mathsf{NFU}$ allows for a universal set $V$ such that $V \in V$, as the formula $x = x$ is stratified.
+\end{definition}

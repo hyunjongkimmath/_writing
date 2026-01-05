@@ -1,0 +1,11 @@
+\begin{definition}[Weakly unramified morphism of schemes] \label{definition:weakly_unramified_morphism_of_schemes}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+    The morphism $f$ is \hldef{weakly unramified} if the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_a_morphism_of_schemes}{diagonal morphism}
+    \[
+    \Delta_f : X \to X \times_Y X
+    \]
+    is \hldef{locally quasi-finite}; that is, for every point $x \in X$, there exists an open neighborhood $U \subseteq X$ of $x$ such that $\Delta_f|_U : U \to U \times_Y U$ is quasi-finite.
+
+    In particular, this condition is weaker than requiring $\Delta_f$ to be an immersion or a monomorphism, but still controls the ramification behavior of $f$ via the diagonal.
+\end{definition}

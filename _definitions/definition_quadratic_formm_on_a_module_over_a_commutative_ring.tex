@@ -1,0 +1,12 @@
+\begin{definition}[Quadratic form on a module over a commutative ring] \label{definition:quadratic_formm_on_a_module_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}.
+A \hldef{\emph{quadratic form} on a $R$-module $M$} is a map $q: M \to R$ satisfying:
+\begin{enumerate}
+\item $q(rm) = r^2 q(m)$ for all $r \in R$, $m \in M$;
+\item The map \hl{$b_q: M \times M \to R$} given by $b_q(x,y) = q(x+y) - q(x) - q(y)$ is \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{$R$-bilinear}.
+\end{enumerate}
+The associated bilinear form $b_q$ is called the \hldef{\emph{polarization} of $q$}. It is also often written as \hl{$B_q$}. One also often write \hl{$\langle x , y\rangle = B_q(x,y)$}. 
+\TextIfExists{definition:quadratic_form_over_a_ring_with_involution}{Equivalently, a quadratic form on an $R$-module $M$ for a commutative (unital) ring $R$ is equivalent to a \CrefAndHyperrefIfExist{definition:quadratic_form_over_a_ring_with_involution}{quadratic form} on $M$ where $R$ is considered as an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring} under the identity map.}
+
+A \hldef{quadratic module} refers to a module equipped with a quaratic form.
+\end{definition}

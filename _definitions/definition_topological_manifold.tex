@@ -1,0 +1,24 @@
+
+
+\begin{definition}[Topological Manifold]
+    \label{definition:topological_manifold}
+    \begin{enumerate}
+        \item A \hldef{topological manifold of dimension $n$} is a Hausdorff, second-countable \CrefAndHyperrefIfExist{definition:topological_manifold}{topological space} $M$ such that each point $p \in M$ has an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} $U_p \subseteq M$ homeomorphic to an open subset of $\mathbb{R}^n$.  
+        That is, there exists a homeomorphism (a \CrefAndHyperrefIfExist{definition:chart_on_a_topological_manifold}{chart})
+        $$ \varphi_p : U_p \to V_p \subseteq \mathbb{R}^n, $$
+        where $V_p$ is open in $\mathbb{R}^n$.
+        Some synonyms of the notion of ``topological manifold'' include: \hldef{manifold} or \hldef{real manifold}.
+
+        \item 
+        A \hldef{topological manifold with boundary of dimension $n$} is a \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff}, \CrefAndHyperrefIfExist{definition:first_and_second_countable_topological_space}{second-countable} \CrefAndHyperrefIfExist{definition:topological_space}{topological space} $M$ such that each point $p \in M$ has an open neighborhood $U_p \subseteq M$ \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphic} to an open subset of either $\mathbb{R}^n$ or the \CrefAndHyperrefIfExist{definition:closed_half_space_in_euclidean_space}{closed half-space}
+        $$ \mathbb{H}^n = \{x \in \mathbb{R}^n : x_n \ge 0\}.  $$
+        That is, there exists a homeomorphism (chart)
+        $$ \varphi_p : U_p \to V_p, $$
+        where $V_p$ is open in $\mathbb{R}^n$ or $\mathbb{H}^n$.  
+        A point $p \in M$ is called a \hldef{boundary point} if it corresponds under such a chart to a point in $\{x \in \mathbb{H}^n : x_n = 0\}$, and an \hldef{interior point} otherwise.  
+        The set of all boundary points of $M$ is denoted by \hl{$\partial M$} and is called the \hldef{boundary of $M$}. Boundary points and an interior points of $M$ coincide with \CrefAndHyperrefIfExist{definition:interior_and_boundary_of_topological_space}{boundary points and interior points} of $M$ as a topological space. Some synonyms of the notion of ``topological manifold with boundary'' include: \hldef{manifold with boundary} or \hldef{real manifold with boundary}
+    \end{enumerate}
+    By a \hldef{topological manifold without boundary}, we mean a topological manifold. In particular, we may speak of a \hldef{topological manifold with or without boundary}; many properties and attributes can be spoken for both topological manifolds and topological manifolds without boundary. 
+
+    Note that by the above standard definition, every topological manifold is technically a topological manifold with boundary (but not vice versa). Thus, in principal, definitions concerning topological manifolds with boundary should be applicable to topological manifolds without boundary. 
+\end{definition}

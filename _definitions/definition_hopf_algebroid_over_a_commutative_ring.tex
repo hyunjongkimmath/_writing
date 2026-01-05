@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:hopf_algebroid_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}.
+
+A \hldef{Hopf algebroid over $R$} is a pair of commutative $R$-algebras $(A, \Gamma)$ together with structure maps that form a cogroupoid object in the category of commutative $R$-algebras. Specifically, it consists of:
+\begin{itemize}
+    \item \hldef{Left and Right Units} (dual to source/target): $\eta_L: A \to \Gamma$ and $\eta_R: A \to \Gamma$. These induce a left $A$-module structure on $\Gamma$ via $\eta_L$ and a right $A$-module structure on $\Gamma$ via $\eta_R$.
+    \item \hldef{Counit} (dual to identity): $\varepsilon: \Gamma \to A$, such that $\varepsilon \circ \eta_L = \operatorname{id}_A = \varepsilon \circ \eta_R$.
+    \item \hldef{Comultiplication} (dual to composition): $\Delta: \Gamma \to \Gamma \otimes_A \Gamma$, where the tensor product is formed using the right $A$-action on the left factor and the left $A$-action on the right factor.
+    \item \hldef{Antipode} (dual to inverse): $S: \Gamma \to \Gamma$, which is an algebra anti-homomorphism (or homomorphism if $\Gamma$ is commutative) satisfying the appropriate compatibility diagrams dual to the groupoid axioms.
+\end{itemize}
+The pair $(A, \Gamma)$ represents the affine groupoid scheme with objects $\operatorname{Spec}(A)$ and morphisms $\operatorname{Spec}(\Gamma)$.
+\end{definition}

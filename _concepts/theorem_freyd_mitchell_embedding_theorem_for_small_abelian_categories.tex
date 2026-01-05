@@ -1,0 +1,15 @@
+\begin{theorem}[Freyd-Mitchell Embedding Theorem] \label{theorem:freyd_mitchell_embedding_theorem_for_small_abelian_categories}
+    Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    There exists a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$ (which may not be commutative) and a functor $F: \mathcal{A} \to \operatorname{Mod}_R$\CrefIfExists{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives} such that:
+    \TODO{Show thta exact functors preserve finite limits and colimits}
+    \begin{enumerate}
+        \item $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, meaning it preserves all finite limits and colimits (in particular, kernels, cokernels, and exact sequences).
+        \item $F$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}.
+    \end{enumerate}
+    Consequently, any diagram-chasing argument valid for modules over a ring is also valid in any small abelian category, and by extension (using the fact that any exact diagram involves only a set of objects), in any abelian category.
+\end{theorem}
+
+% \begin{theorem}[Freyd-Mitchell Embedding Theorem] \label{theorem:freyd_mitchell_embedding_theorem}
+%     Let $\calA$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+%     There exists a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$ and an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful} functor from $\calA$ into the category \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{$R\mathrm{-mod}$} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}.
+% \end{theorem}

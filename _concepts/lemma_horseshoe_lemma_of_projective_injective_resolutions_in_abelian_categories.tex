@@ -1,0 +1,80 @@
+\begin{lemma}[Horseshoe lemma, cf. {\cite[Horsehoe Lemma 2.2.8]{weibel}}] \label{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+    \begin{enumerate}
+        \item Suppose that
+            $$0 \to A' \xrightarrow{i_A} A \xrightarrow{\pi_A} A'' \to 0$$
+            is a short exact sequence in $\calA$, and that $\varepsilon': P'_\bullet \to A'$ and $\varepsilon'': P''_{\bullet} \to A''$ are respectively \CrefAndHyperrefIfExist{lemma:flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats}{projective resolutions}. 
+            \begin{center}
+                \begin{tikzcd}
+                & & & 0 \ar[d] & \\
+                \cdots P_2' \ar[r] & P_1' \ar[r] & P_0' \ar[r, "\varepsilon'"] & A' \ar[r] \ar[d, "i_A"] & 0 \\
+                & & & A \ar[d, "\pi_A"] & \\
+                \cdots P_2'' \ar[r] & P_1'' \ar[r] & P_0'' \ar[r, "\varepsilon''"] & A'' \ar[r] \ar[d] & 0 \\ 
+                & & & 0 & 
+                \end{tikzcd}
+            \end{center}
+            Let $P_\bullet = P'_\bullet \oplus P''_\bullet$. The complex $P_\bullet$ is a projective resolution of $A$, and the short exact sequence lifts to an exact esquence of complexes
+            $$0 \to P' \xrightarrow{i} P \xrightarrow{\pi} P'' \to 0$$
+            where $i_n: P_n' \to P_n$ and $\pi_n: P_n \to P_n''$ are the natural inclusion and projection respectively.
+        \item Suppose that
+        $$0 \to A' \xrightarrow{i_A} A \xrightarrow{\pi_A} A'' \to 0$$
+        is a short exact sequence in $\calA$, and that $\eta': A' \to I'^\bullet$ and $\eta'': A'' \to I''^\bullet$ are respectively \CrefAndHyperrefIfExist{lemma:injective_resolution_lemma}{injective resolutions}. 
+
+        \begin{center}
+            \begin{tikzcd} 
+            & 0 \ar[d] & & & \\
+            0 \ar[r] & A' \ar[r, "\eta'"] \ar[d, "i_A"] & {I'}^{0} \ar[r] & {I'}^{1} \ar[r] & {I'}^{2} \cdots \\
+            & A \ar[d, "\pi_A"] & & & \\
+            0 \ar[r] & A' \ar[r, "\eta''"] \ar[d] & {I''}^{0} \ar[r] & {I''}^{1} \ar[r] & {I''}^{2} \cdots \\
+            & 0 & & & 
+            \end{tikzcd}
+        \end{center}
+        Let $I^\bullet = I'^\bullet \oplus I''^\bullet$. The complex $I^\bullet$ is an injective resolution of $A$, and the short exact sequence lifts to a short exact sequence of complexes
+        $$0 \to I'^\bullet \xrightarrow{i} I^\bullet \xrightarrow{\pi} I''^\bullet \to 0,$$
+        where $i^n: I'^n \to I^n$ and $\pi^n: I^n \to I''^n$ are the natural inclusion and projection at each degree \(n\).
+    \end{enumerate}
+\end{lemma}
+
+% \TODO{delete the following; it seems we genuinely need the projectivity/injectivity}
+% \begin{lemma}
+%     Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+%     Let $\calX$ be a class of objects in $\calA$ such that $\calX$ is closed under \CrefAndHyperrefIfExist{definition:additive_category}{direct sums}. 
+%     \begin{enumerate}
+%         \item Suppose that
+%             $$0 \to A' \xrightarrow{i_A} A \xrightarrow{\pi_A} A'' \to 0$$
+%             is a short exact sequence in $\calA$, and that $\varepsilon': P'_\bullet \to A'$ and $\varepsilon'': P''_{\bullet} \to A''$ are respectively \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{$\calX$-left resolutions}. 
+%             \begin{center}
+%                 \begin{tikzcd}
+%                 & & & 0 \ar[d] & \\
+%                 \cdots P_2' \ar[r] & P_1' \ar[r] & P_0' \ar[r, "\varepsilon'"] & A' \ar[r] \ar[d, "i_A"] & 0 \\
+%                 & & & A \ar[d, "\pi_A"] & \\
+%                 \cdots P_2'' \ar[r] & P_1'' \ar[r] & P_0'' \ar[r, "\varepsilon''"] & A'' \ar[r] \ar[d] & 0 \\ 
+%                 & & & 0 & 
+%                 \end{tikzcd}
+%             \end{center}
+%             Let $P_\bullet = P'_\bullet \oplus P''_\bullet$. The complex $P_\bullet$ is an $\calX$-left resolution of $A$, and the short exact sequence lifts to an exact esquence of complexes
+%             $$0 \to P' \xrightarrow{i} P \xrightarrow{\pi} P'' \to 0$$
+%             where $i_n: P_n' \to P_n$ and $\pi_n: P_n \to P_n''$ are the natural inclusion and projection respectively.
+%         \item Suppose that
+%         $$0 \to A' \xrightarrow{i_A} A \xrightarrow{\pi_A} A'' \to 0$$
+%         is a short exact sequence in $\calA$, and that $\eta': A' \to I'^\bullet$ and $\eta'': A'' \to I''^\bullet$ are respectively \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{$\calX$-right resolutions}. 
+
+%         \begin{center}
+%             \begin{tikzcd} 
+%             & 0 \ar[d] & & & \\
+%             0 \ar[r] & A' \ar[r, "\eta'"] \ar[d, "i_A"] & {I'}^{0} \ar[r] & {I'}^{1} \ar[r] & {I'}^{2} \cdots \\
+%             & A \ar[d, "\pi_A"] & & & \\
+%             0 \ar[r] & A' \ar[r, "\eta''"] \ar[d] & {I''}^{0} \ar[r] & {I''}^{1} \ar[r] & {I''}^{2} \cdots \\
+%             & 0 & & & 
+%             \end{tikzcd}
+%         \end{center}
+%         Let $I^\bullet = I'^\bullet \oplus I''^\bullet$. The complex $I^\bullet$ is an $\calX$-right resolution of $A$, and the short exact sequence lifts to a short exact sequence of complexes
+%         $$0 \to I'^\bullet \xrightarrow{i} I^\bullet \xrightarrow{\pi} I''^\bullet \to 0,$$
+%         where $i^n: I'^n \to I^n$ and $\pi^n: I^n \to I''^n$ are the natural inclusion and projection at each degree \(n\).
+%     \end{enumerate}
+
+% \end{lemma}
+
+\begin{proof}
+    \TODO{}
+\end{proof}

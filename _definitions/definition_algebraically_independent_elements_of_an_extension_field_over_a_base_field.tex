@@ -1,0 +1,7 @@
+\begin{definition}[Algebraically independent elements] \label{definition:algebraically_independent_elements_of_an_extension_field_over_a_base_field}
+Let $E/F$ be a \CrefAndHyperrefIfExist{definition:extension_of_a_field}{field extension}, and let $S = \{x_i\}_{i \in I}$ be a subset of $E$ indexed by some set $I$. We say that $S$ is \hldef{algebraically independent over $F$} if for every finite subset $\{x_{i_1}, \ldots, x_{i_n}\} \subseteq S$ and every non-zero polynomial $P \in F[X_1, \ldots, X_n]$, we have $P(x_{i_1}, \ldots, x_{i_n}) \neq 0$. Equivalently, $S$ is algebraically independent over $F$ if the natural \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}
+$$
+F[X_i : i \in I] \to E
+$$
+sending $X_i \mapsto x_i$ is injective, where $F[X_i : i \in I]$ denotes the \CrefAndHyperrefIfExist{definition:polynomial_ring_over_a_commutative_ring}{polynomial ring} over $F$ in the indeterminates $\{X_i\}_{i \in I}$.
+\end{definition}

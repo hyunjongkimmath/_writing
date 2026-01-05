@@ -1,0 +1,37 @@
+\begin{definition} \label{definition:internal_hom_object_in_a_category}
+Let $(\mathcal{C}, \otimes, \mathbb{I})$ be a \hyperrefIfExists{definition:monoidal_category}{monoidal category}. Given objects $X, Y \in \mathrm{Ob}(\mathcal{C})$, an \hldef{internal hom object from $X$ to $Y$} is an object $\underline{\mathrm{Hom}}(X,Y) \in \mathrm{Ob}(\mathcal{C})$ together with a morphism
+$$\hlin{\mathrm{ev}_{X,Y}: \underline{\mathrm{Hom}}(X,Y) \otimes X \to Y}$$
+
+such that for every object $Z \in \mathcal{C}$, the assignment
+\[
+\hom_{\mathcal{C}}(Z, \underline{\mathrm{Hom}}(X,Y)) \to \hom_{\mathcal{C}}(Z \otimes X, Y), \quad f \mapsto \mathrm{ev}_{X,Y} \circ (f \otimes \mathrm{id}_X)
+\]
+is a natural isomorphism of sets.
+\end{definition}
+
+
+
+% \begin{definition} \label{definition:closed_category}
+% A category $\mathcal{C}$ equipped with a bifunctor
+% \TODO{TODO: define opposite category, product category}
+% \[
+% \hlin{\otimes : \mathcal{C}^{\mathrm{op}} \times \mathcal{C} \to \mathcal{C}}
+% \]
+% is called a \hldef{closed category} if for every pair of objects $X, Y$ in $\mathcal{C}$, the internal hom object $\underline{\mathrm{Hom}}(X,Y)$ exists.
+% \end{definition}
+
+% \begin{definition} \label{definition:closed_monoidal_category}
+% A \hldef{closed monoidal category} is a \hyperrefIfExists{definition:monoidal_category}{monoidal category} $(\mathcal{C}, \otimes, \mathbb{I})$ such that $\mathcal{C}$ is a \hyperrefIfExists{definition:closed_category}{closed category} with respect to the tensor product $\otimes$, i.e., for every $X,Y \in \mathrm{Ob}(\mathcal{C})$, there exists an internal hom object
+% \[
+% \hlin{\underline{\mathrm{Hom}}(X,Y)}
+% \]
+% with evaluation map
+% \[
+% \hlin{\mathrm{ev}_{X,Y} : \underline{\mathrm{Hom}}(X,Y) \otimes X \to Y.}
+% \]
+% The isomorphisms 
+% \[
+% \hom_{\mathcal{C}}(Z, \underline{\mathrm{Hom}}(X,Y)) \cong \hom_{\mathcal{C}}(Z \otimes X, Y)
+% \]
+% natural in $Z$, $X$, and $Y$ must hold.
+% \end{definition}

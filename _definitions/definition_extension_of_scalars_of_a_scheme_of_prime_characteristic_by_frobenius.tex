@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}
+    Let $S$ be a scheme of prime characteristic $p$. Let $X$ be an $S$-scheme. Let $n \in \bbZ$.
+    The \hldef{extension of scalars of $X$ by $p^n$th power Frobenius} is the base change
+    $$\hlin{X^{(p^n)/S} = X^{(p^n)} \coloneq X \times_S S_{\Frob, p^n}}$$
+    where \hyperrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{$S_{\Frob, p^n} \to S$} denotes the \hyperrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{restriction of scalars of $S$} (as an $S$-scheme) by $p^n$th power Frobenius \CrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}; in other words, $S_{F, p^n} \to S$ is simply $S \xrightarrow{F_{S,p^n}} S$ where $F_{S,p^n}$ is the \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{$p^n$th absolute Frobenius morphism on $S$} \CrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}. Alternatively, we have the following Cartesian diagram:
+    \begin{center}
+        \begin{tikzcd}
+        X^{(p^n)} \ar[r] \ar[d] & X \ar[d] \\
+        S = S_{\Frob, p^n} \ar[r, "\Frob_{S, p^n}"] & S
+        \end{tikzcd}
+    \end{center}
+    For $n < 0$, note that this definition is only well defined under the assumption that $F_{S,p^{|n|}}$ is invertible. In the case that $n = 1$, this is referred to as the \hldef{extension of scalars of $X$ by Frobenius}. In any case a \hldef{twist of $X$ by Frobenius} is a synonym for ``extension of scalars of $X$ by Frobenius''. 
+
+        % \item Assume that the absolute Frobenius morphism $F_{S}$ (Definition \ref{definition:absolute_frobenius_morphism_on_a_scheme}) is invertible. \TODO{TODO: hyperref to $S_{F, 1/p^n}$}
+        % Let \hl{$X^{(1/p^n)/S} = X^{(1/p^n)}$} denote $X \times_S S_{F,1/p^n}$. 
+
+\end{definition}

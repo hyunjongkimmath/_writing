@@ -1,0 +1,60 @@
+\begin{definition} \label{definition:homomorphism_of_modules_over_a_ring}
+Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings}. 
+\begin{enumerate}
+    \item Let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. A function $\varphi: M \to N$ is called an \hldef{$R$-$S$-bimodule homomorphism} or \hldef{$R$-$S$-linear} if it is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} of the underlying abelian groups of $M$ and $N$ and respects the scalar actions as follows: 
+    for all $m_1,m_2 \in M$, $r \in R$, and $s \in S$,
+        \begin{align*}
+        % \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+        \varphi(r \cdot m_1) &= r \cdot \varphi(m_1), \\
+        \varphi(m_1 \cdot s) &= \varphi(m_1) \cdot s.
+        \end{align*}
+
+    \item Let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right/two-sided $R$-modules}. A function $\varphi: M \to N$ is called a \hldef{left/right/two-sided $R$-module homomorphism} if it is an bimodule homomorphism on the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures} of $M$ and $N$.
+    %  $R$-$\bbZ$/$\bbZ$-$R$/$R$-$R$-bimodule homomorphism. 
+     Such a function is also called \hldef{$R$-linear}.
+
+\end{enumerate}
+
+Modules and homomorphisms of a fixed type (i.e. $R$-$S$-bimodules or left/righ/two-sided $R$-modules) form a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category}.
+
+% Let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right/two-sided $R$-modules or $R$-$S$-bidmodules}. 
+
+% \begin{enumerate}
+%     \item A function $\varphi : M \to N$ is called a \hldef{left/right/two-sided module homomorphism} or \hldef{$R$-linear} if it is additive (more precisely, a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} of \CrefAndHyperrefIfExist{definition:group}{abelian groups}) and respects the scalar action(s) as follows: for all $m_1,m_2 \in M$, $r \in R$, and $s \in S$,
+%     \begin{align*}
+%     % \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+%     \varphi(r \cdot m_1) &= r \cdot \varphi(m_1), \\
+%     \varphi(m_1 \cdot s) &= \varphi(m_1) \cdot s.
+%     \end{align*}
+
+%     \item 
+% \end{enumerate}
+
+% \begin{enumerate}
+%     \item If $M$ and $N$ are left $R$-modules, then for all $m_1,m_2 \in M$ and $r \in R$,
+%     \begin{align*}
+%     \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+%     \varphi(r \cdot m_1) &= r \cdot \varphi(m_1).
+%     \end{align*}
+
+%     \item If $M$ and $N$ are right $R$-modules, then for all $m_1,m_2 \in M$ and $r \in R$,
+%     \begin{align*}
+%     \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+%     \varphi(m_1 \cdot r) &= \varphi(m_1) \cdot r.
+%     \end{align*}
+
+%     \item If $M$ and $N$ are two-sided $R$-modules, then for all $m_1,m_2 \in M$, and $r_1,r_2 \in R$,
+%     \begin{align*}
+%     \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+%     \varphi(r_1 \cdot m_1) &= r_1 \cdot \varphi(m_1), \\
+%     \varphi(m_1 \cdot r_2) &= \varphi(m_1) \cdot r_2.
+%     \end{align*}
+
+%     \item If $M$ and $N$ are $(R,S)$-bimodules, then for all $m_1,m_2 \in M$, $r \in R$, and $s \in S$,
+%     \begin{align*}
+%     \varphi(m_1 + m_2) &= \varphi(m_1) + \varphi(m_2), \\
+%     \varphi(r \cdot m_1) &= r \cdot \varphi(m_1), \\
+%     \varphi(m_1 \cdot s) &= \varphi(m_1) \cdot s.
+%     \end{align*}
+% \end{enumerate}
+\end{definition}

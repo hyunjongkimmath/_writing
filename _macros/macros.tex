@@ -1,0 +1,612 @@
+% packages
+\documentclass[12pt]{amsart}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+\usepackage{aliascnt}  % Add this to make it so that Cref can print out the appropriate environment name, instead of the parent environment name. (load after amsthm, before cleveref is fine)
+\usepackage{hyperref}
+\usepackage{cleveref} % cleveref must be loaded after amsthm, but before the theorem environments are defined.
+\usepackage{fullpage,enumitem}
+\usepackage{units}
+\usepackage[all]{xy}
+\usepackage{xcolor} % for \color
+\usepackage{mathrsfs} % for \mathscr
+% \usepackage{cleveref}
+%\xyoption{curve}
+\usepackage{url}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{stmaryrd} % for \mapsfrom
+
+\usepackage[OT2,T1]{fontenc}
+\DeclareSymbolFont{cyrletters}{OT2}{wncyr}{m}{n}
+\DeclareMathSymbol{\Sha}{\mathalpha}{cyrletters}{"58}
+
+
+\usepackage{import}
+\usepackage{dsfont} %For mathds{1}
+
+% ----- Define theorem environments -----
+
+% The definitions of the theorem environments below are set up so that they use cref and aliascnt in tandem --- aliascnt will make sure that cref prints out the correct name of each environment, instead of the parent environment name.
+
+% Main theorem environment, counter resets per section
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{theorem*}{Theorem}
+\numberwithin{theorem}{subsection} % optional; usually fine with \newtheorem[section]
+
+% Define all theorem-like environments that share 'theorem' counter using aliascnt:
+
+% Lemma
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+
+% Corollary
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+
+% Proposition
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+
+% Claim
+\newaliascnt{claim}{theorem}
+\newtheorem{claim}[claim]{Claim}
+\aliascntresetthe{claim}
+
+% Claim
+\newaliascnt{goal}{theorem}
+\newtheorem{goal}[goal]{Goal}
+\newtheorem*{goal*}{Goal}
+\aliascntresetthe{goal}
+
+% Remark
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+
+% Switch to remark style for these environments
+% \theoremstyle{remark}
+
+% Definition
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+
+% Notation
+\newaliascnt{notation}{theorem}
+\newtheorem{notation}[notation]{Notation}
+\aliascntresetthe{notation}
+
+% Convention
+\newaliascnt{convention}{theorem}
+\newtheorem{convention}[convention]{Convention}
+\aliascntresetthe{convention}
+
+% Context
+\newaliascnt{context}{theorem}
+\newtheorem{context}[context]{Context}
+\aliascntresetthe{context}
+
+% Question
+\newaliascnt{question}{theorem}
+\newtheorem{question}[question]{Question}
+\aliascntresetthe{question}
+
+%Problem
+\newaliascnt{problem}{theorem}
+\newtheorem{problem}[problem]{Problem}
+\newtheorem*{problem*}{Problem}
+\aliascntresetthe{problem}
+
+% Example
+\newaliascnt{example}{theorem}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+
+% Conjecture
+\newaliascnt{conjecture}{theorem}
+\newtheorem{conjecture}[conjecture]{Conjecture}
+\aliascntresetthe{conjecture}
+
+% ----- Tell cleveref how to reference these environments -----
+
+\crefname{theorem}{theorem}{theorems}
+\Crefname{theorem}{Theorem}{Theorems}
+
+\crefname{lemma}{lemma}{lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+
+\crefname{corollary}{corollary}{corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+
+\crefname{proposition}{proposition}{propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+
+\crefname{claim}{claim}{claims}
+\Crefname{claim}{Claim}{Claims}
+
+\crefname{goal}{goal}{goals}
+\Crefname{goal}{Goal}{Goals}
+
+\crefname{remark}{remark}{remarks}
+\Crefname{remark}{Remark}{Remarks}
+
+\crefname{definition}{definition}{definitions}
+\Crefname{definition}{Definition}{Definitions}
+
+\crefname{notation}{notation}{notations}
+\Crefname{notation}{Notation}{Notations}
+
+\crefname{convention}{convention}{conventions}
+\Crefname{convention}{Convention}{Conventions}
+
+\crefname{context}{context}{contexts}
+\Crefname{context}{Context}{Contexts}
+
+\crefname{question}{question}{questions}
+\Crefname{question}{Question}{Questions}
+
+\crefname{problem}{problem}{problems}
+\Crefname{problem}{Problem}{Problems}
+
+\crefname{example}{example}{examples}
+\Crefname{example}{Example}{Examples}
+
+\crefname{conjecture}{conjecture}{conjectures}
+\Crefname{conjecture}{Conjecture}{Conjectures}
+
+
+%% theorem style environments
+
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[section]
+% \numberwithin{theorem}{section}
+% % \numberwithin{equation}{section}
+% \newtheorem{lemma}[theorem]{Lemma}
+% % \numberwithin{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{claim}[theorem]{Claim}
+% \newtheorem{remark}[theorem]{Remark}
+
+% \theoremstyle{remark}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{notation}[theorem]{Notation}
+% \newtheorem{convention}[theorem]{Convention}
+% \newtheorem{question}[theorem]{Question}
+% \newtheorem{example}[theorem]{Example}
+% \newtheorem{conjecture}[theorem]{Conjecture}
+
+
+% % To make sure that \Cref prints out the correct environment name
+% % For standard theorem environments (usually cleveref knows these, but specifying doesn't hurt)
+% \crefname{theorem}{theorem}{theorems}
+% \Crefname{theorem}{Theorem}{Theorems}
+% \crefname{lemma}{lemma}{lemmas}
+% \Crefname{lemma}{Lemma}{Lemmas}
+% \crefname{corollary}{corollary}{corollaries}
+% \Crefname{corollary}{Corollary}{Corollaries}
+% \crefname{proposition}{proposition}{propositions}
+% \Crefname{proposition}{Proposition}{Propositions}
+% \crefname{claim}{claim}{claims}
+% \Crefname{claim}{Claim}{Claims}
+% \crefname{remark}{remark}{remarks}
+% \Crefname{remark}{Remark}{Remarks}
+% % For remark-style environments
+% \crefname{definition}{definition}{definitions}
+% \Crefname{definition}{Definition}{Definitions}
+% \crefname{notation}{notation}{notations}
+% \Crefname{notation}{Notation}{Notations}
+% \crefname{convention}{convention}{conventions}
+% \Crefname{convention}{Convention}{Conventions}
+% \crefname{question}{question}{questions}
+% \Crefname{question}{Question}{Questions}
+% \crefname{example}{example}{examples}
+% \crefname{conjecture}{conjecture}{conjectures}
+% \Crefname{conjecture}{Conjecture}{Conjectures}
+
+
+%% Commenting command
+\newcommand{\TODO}[1]{{\color{orange} ($\spadesuit$ TODO: #1)}}
+\newcommand{\TODOdef}[1]{{\color{blue} ($\spadesuit$ TODO: #1)}}
+\newcommand{\TODOpriority}[1]{{\color{red} ($\spadesuit$ TODO: #1)}}
+
+\setlength{\parskip}{0.125in}
+\setlength{\parindent}{0in}
+
+%% Custom commands/mathoperators
+
+\newcommand{\tickar}{\mathrel{\ooalign{\hss$\mapstochar\mkern 5mu$\hss\cr$\to$}}}
+\newcommand\seq{\subseteq}
+\newcommand\ssm{\smallsetminus}
+\newcommand\sneq{\subsetneq}
+\newcommand\sub\subset
+\newcommand\longto\longrightarrow
+
+\DeclareMathOperator\genus{genus}
+\DeclareMathOperator\Jac{Jac}
+\DeclareMathOperator\tor{tor}
+\DeclareMathOperator\Div{Div}
+\DeclareMathOperator\Pic{Pic}
+\DeclareMathOperator\Cl{Cl}
+\DeclareMathOperator\Prin{Prin}
+\DeclareMathOperator\codim{codim}
+\DeclareMathOperator\Sym{Sym}
+\DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Gal{Gal}
+\DeclareMathOperator\GL{GL}
+\DeclareMathOperator\PGL{PGL}
+\DeclareMathOperator\PSL{PSL}
+\DeclareMathOperator\SL{SL}
+\DeclareMathOperator\Hom{Hom}
+\DeclareMathOperator\End{End}
+\DeclareMathOperator\id{id}
+\DeclareMathOperator\inv{inv}
+\DeclareMathOperator\Core{Core}
+\DeclareMathOperator\RHom{RHom}
+\DeclareMathOperator\ad{ad}
+\DeclareMathOperator\Spec{Spec}
+\DeclareMathOperator\Supp{Supp}
+\DeclareMathOperator\Perv{Perv}
+\DeclareMathOperator\Ob{Ob}
+\DeclareMathOperator\Add{Add}
+\DeclareMathOperator\Ab{Ab}
+\DeclareMathOperator\Sm{Sm}
+\newcommand{\Sets}{\mathbf{Sets}}
+\newcommand{\USets}{U\mathbf{-Sets}}
+\DeclareMathOperator\Sch{Sch}
+\DeclareMathOperator\et{\mathrm{\acute{e}t}}
+\DeclareMathOperator\proet{\mathrm{pro\acute{e}t}}
+\DeclareMathOperator\Shv{Shv}
+\DeclareMathOperator\PreShv{PreShv}
+\DeclareMathOperator\Sh{Sh}
+\DeclareMathOperator\Spc{Spc}
+\DeclareMathOperator\pt{pt}
+\DeclareMathOperator\Nis{Nis}
+\DeclareMathOperator\Char{Char}
+\DeclareMathOperator\Frob{Frob}
+\DeclareMathOperator\geom{geom}
+\DeclareMathOperator\Fun{Fun}
+\DeclareMathOperator\op{op}
+\DeclareMathOperator\Tot{Tot}
+\DeclareMathOperator\Tor{Tor}
+\DeclareMathOperator\CoInd{CoInd}
+\DeclareMathOperator\Ind{Ind}
+
+\DeclareMathOperator\Map{Map}
+\DeclareMathOperator\colim{colim}
+\DeclareMathOperator\SeqSpec{SeqSpec}
+\DeclareMathOperator\Top{\mathbf{Top}}
+\newcommand{\hospectra}{\operatorname{Ho}(\operatorname{Spectra})}
+\newcommand{\hocofib}{\operatorname{hocofib}}
+% \newcommand\Map{\mathrm{Map}}
+% \newcommand{\colim}{\operatorname{colim}}
+% \newcommand{\SeqSpec}{\operatorname{SeqSpec}}
+% \newcommand{\Top}{\operatorname{Top}}
+
+\DeclareMathOperator\Conn{\operatorname{Conn}}
+\DeclareMathOperator\Connflat{\operatorname{Conn}^{\mathrm{flat}}}
+\DeclareMathOperator\Connholflat{\operatorname{Conn}_{\mathrm{hol}}^{\mathrm{flat}}}
+\DeclareMathOperator\Connregflat{\operatorname{Conn}_{\mathrm{reg}}^{\mathrm{flat}}}
+\DeclareMathOperator\Rep{\operatorname{Rep}}
+\DeclareMathOperator\VectorSpaces{\operatorname{Vec}}
+\DeclareMathOperator\LocSys{\operatorname{LocSys}}
+
+\DeclareMathOperator\Bun{\operatorname{Bun}}
+\DeclareMathOperator\BunG{\operatorname{Bun}_G}
+
+\newcommand\defi[1]{{\sl #1}}
+
+\newcommand\A{\ensuremath{\mathbb{A}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\F{\ensuremath{\mathbb{F}}}
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+
+\DeclareMathOperator\Prob{\operatorname{Prob}}
+\DeclareMathOperator\rk{\operatorname{rk}}
+\DeclareMathOperator\Sel{\operatorname{Sel}}
+
+% \renewcommand{\P}{\ensuremath{\mathbb{P}}}
+
+% \newcommand\bmu{{\boldsymbol\mu}}
+
+% \newcommand{\p}{\mathfrak{p}}
+
+% \newcommand{\gp}[1]{\langle\,#1\,\rangle}
+
+% \newcommand\squig{\ensuremath{\quad\rightsquigarrow\quad}}
+% \newcommand\thus{\ensuremath{\quad\Rightarrow\quad}}
+% \newcommand\plus{\quad -- \quad}
+% \newcommand\point{\ensuremath{\tiny \bullet\quad}}
+% \newcommand\qthus{\quad\thus}
+
+% % \newcommand{\lto}{\longrightarrow}
+
+\newcommand{\np}{\newpage}
+\newcommand{\bs}{\bigskip}
+\newcommand{\ms}{\medskip}
+
+% \newenvironment{myenum}{%
+%         \begin{enumerate}\setlength{\itemsep}{0.075in}}
+% {\end{enumerate}}
+
+% % provide problem set and subset lists
+% %  - use [resume] option to starting numbering where previous list ended
+% \newlist{probset}{enumerate}{10}
+% \setlist[probset]{itemsep=0.2in,labelsep=0.125in,label=\arabic*.}
+
+% \newlist{subprobset}{enumerate}{10}
+% \setlist[subprobset]{itemsep=0.125in,labelsep=0.125in,label=\roman*)}
+
+% redefine labels with extra spacing
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\theequation}{\Alph{equation}}
+
+\newcommand\bbA{\mathbb{A}}
+\newcommand\bbB{\mathbb{B}}
+\newcommand\bbC{\mathbb{C}}
+\newcommand\bbD{\mathbb{D}}
+\newcommand\bbE{\mathbb{E}}
+\newcommand\bbF{\mathbb{F}}
+\newcommand\bbG{\mathbb{G}}
+\newcommand\bbH{\mathbb{H}}
+\newcommand\bbI{\mathbb{I}}
+\newcommand\bbJ{\mathbb{J}}
+\newcommand\bbK{\mathbb{K}}
+\newcommand\bbL{\mathbb{L}}
+\newcommand\bbM{\mathbb{M}}
+\newcommand\bbN{\mathbb{N}}
+\newcommand\bbO{\mathbb{O}}
+\newcommand\bbP{\mathbb{P}}
+\newcommand\bbQ{\mathbb{Q}}
+\newcommand\bbR{\mathbb{R}}
+\newcommand\bbS{\mathbb{S}}
+\newcommand\bbT{\mathbb{T}}
+\newcommand\bbU{\mathbb{U}}
+\newcommand\bbV{\mathbb{V}}
+\newcommand\bbW{\mathbb{W}}
+\newcommand\bbX{\mathbb{X}}
+\newcommand\bbY{\mathbb{Y}}
+\newcommand\bbZ{\mathbb{Z}}
+
+\newcommand\bfA{\mathbf{A}}
+\newcommand\bfB{\mathbf{B}}
+\newcommand\bfC{\mathbf{C}}
+\newcommand\bfD{\mathbf{D}}
+\newcommand\bfE{\mathbf{E}}
+\newcommand\bfF{\mathbf{F}}
+\newcommand\bfG{\mathbf{G}}
+\newcommand\bfH{\mathbf{H}}
+\newcommand\bfI{\mathbf{I}}
+\newcommand\bfJ{\mathbf{J}}
+\newcommand\bfK{\mathbf{K}}
+\newcommand\bfL{\mathbf{L}}
+\newcommand\bfM{\mathbf{M}}
+\newcommand\bfN{\mathbf{N}}
+\newcommand\bfO{\mathbf{O}}
+\newcommand\bfP{\mathbf{P}}
+\newcommand\bfQ{\mathbf{Q}}
+\newcommand\bfR{\mathbf{R}}
+\newcommand\bfS{\mathbf{S}}
+\newcommand\bfT{\mathbf{T}}
+\newcommand\bfU{\mathbf{U}}
+\newcommand\bfV{\mathbf{V}}
+\newcommand\bfW{\mathbf{W}}
+\newcommand\bfX{\mathbf{X}}
+\newcommand\bfY{\mathbf{Y}}
+\newcommand\bfZ{\mathbf{Z}}
+
+\newcommand\calA{\mathcal{A}}
+\newcommand\calB{\mathcal{B}}
+\newcommand\calC{\mathcal{C}}
+\newcommand\calD{\mathcal{D}}
+\newcommand\calE{\mathcal{E}}
+\newcommand\calF{\mathcal{F}}
+\newcommand\calG{\mathcal{G}}
+\newcommand\calH{\mathcal{H}}
+\newcommand\calI{\mathcal{I}}
+\newcommand\calJ{\mathcal{J}}
+\newcommand\calK{\mathcal{K}}
+\newcommand\calL{\mathcal{L}}
+\newcommand\calM{\mathcal{M}}
+\newcommand\calN{\mathcal{N}}
+\newcommand\calO{\mathcal{O}}
+\newcommand\calP{\mathcal{P}}
+\newcommand\calQ{\mathcal{Q}}
+\newcommand\calR{\mathcal{R}}
+\newcommand\calS{\mathcal{S}}
+\newcommand\calT{\mathcal{T}}
+\newcommand\calU{\mathcal{U}}
+\newcommand\calV{\mathcal{V}}
+\newcommand\calW{\mathcal{W}}
+\newcommand\calX{\mathcal{X}}
+\newcommand\calY{\mathcal{Y}}
+\newcommand\calZ{\mathcal{Z}}
+\newcommand\calAb{\mathcal{A}b}
+
+\newcommand{\sphere}[1]{S^{#1}}
+\newcommand{\Sone}{\sphere{1}}
+\newcommand{\Sn}{\sphere{n}}
+\newcommand{\Topcg}{\operatorname{Top}_{\mathrm{cg}}}
+\newcommand{\strict}{\mathrm{strict}}
+\newcommand{\stable}{\mathrm{stable}}
+\newcommand{\SH}{\mathcal{SH}}
+
+\newcommand\Dbc{D_{c}^{b}}
+\newcommand\scrH{\mathscr{H}}
+\newcommand\scrO{\mathscr{O}}
+\newcommand\scrU{\mathscr{U}}
+\newcommand\pscrH{{}^p\mathscr{H}}
+\newcommand\Qellbar{\overline{\bbQ}_\ell}
+\newcommand\Qell{\bbQ_\ell}
+\newcommand\bark{\overline{k}}
+\newcommand\barK{\overline{K}}
+\newcommand\barx{\overline{x}}
+\newcommand\bars{\overline{s}}
+
+\newcommand{\Dleqn}[1][n]{D^{\leq {#1}}}
+\newcommand{\Dgeqn}[1][n]{D^{\geq {#1}}}
+\newcommand{\Dleqzero}{\Dleqn[0]}
+\newcommand{\Dgeqzero}{\Dgeqn[0]}
+
+\newcommand{\stDleqn}[1][n]{{}^{\text{st}}D^{\leq {#1}}}
+\newcommand{\stDgeqn}[1][n]{{}^{\text{st}}D^{\geq {#1}}}
+\newcommand{\stDleqzero}{\stDleqn[0]}
+\newcommand{\stDgeqzero}{\stDgeqn[0]}
+
+\newcommand{\pDleqn}[1][n]{{}^{p}D^{\leq {#1}}}
+\newcommand{\pDgeqn}[1][n]{{}^{p}D^{\geq {#1}}}
+\newcommand{\pDleqzero}{\pDleqn[0]}
+\newcommand{\pDgeqzero}{\pDgeqn[0]}
+
+\newcommand{\tauleqn}[1][n]{\tau_{\leq {#1}}}
+\newcommand{\taugeqn}[1][n]{\tau_{\geq {#1}}}
+\newcommand{\tauleqzero}{\tauleqn[0]}
+\newcommand{\taugeqzero}{\taugeqn[0]}
+\newcommand{\sttauleqn}[1][n]{{}^{\text{st}}\tauleqn[#1]}
+\newcommand{\sttaugeqn}[1][n]{{}^{\text{st}}\taugeqn[#1]}
+\newcommand{\sttauleqzero}{\sttauleqn[0]}
+\newcommand{\sttaugeqzero}{\sttaugeqn[0]}
+\newcommand{\ptauleqn}[1][n]{{}^{p}\tauleqn[#1]}
+\newcommand{\ptaugeqn}[1][n]{{}^{p}\taugeqn[#1]}
+\newcommand{\ptauleqzero}{\ptauleqn[0]}
+\newcommand{\ptaugeqzero}{\ptaugeqn[0]}
+
+
+\newcommand{\Deltaop}{\Delta^{\mathrm{op}}}
+\newcommand{\SmNis}[1][S]{(\Sm/#1)_{\mathrm{Nis}}}
+\newcommand{\SmSNis}{\SmNis}
+\newcommand{\SmkNis}{\SmNis[k]}
+\newcommand{\ShvNisSmS}{\ShvNisSm[S]}
+\newcommand{\ShvNisSm}[1][S]{\Shv(\SmNis[#1])}
+\newcommand{\simpsheaves}{\Deltaop\Shv}
+\newcommand{\simpnissheaves}[1][S]{\Deltaop\ShvNisSm[#1]}
+\newcommand{\pointedsimpnissheaves}{\Deltaop\ShvNisSmS_\bullet}
+\newcommand{\pinAone}[1][n]{\pi_{#1}^{\bbA^1}}
+\newcommand{\HnAone}[1][n]{H_{#1}^{\bbA^1}}
+\newcommand{\tildeHnAone}[1][n]{\widetilde{H}_{#1}^{\bbA^1}}
+% \author{Hyun Jong Kim}
+\newcommand{\MWKtheory}[1][*]{K_{#1}^{MW}}
+\newcommand{\MKtheory}[1][*]{K_{#1}^{M}}
+\newcommand{\GWring}{\operatorname{GW}}
+\newcommand{\MWKtheorysheaf}[1][*]{\underline{\mathbf{K}}_{#1}^{MW}}
+\newcommand{\DAoneloc}{D_{\bbA^1\text{-loc}}}
+\newcommand{\DAone}{D_{\bbA^1}}
+\newcommand{\AoneQis}{\bbA^1\text{-Qis}}
+\newcommand{\LAoneab}{L_{\bbA^1}^{\text{ab}}}
+\newcommand{\CstarAone}{C_*^{\bbA^1}}
+
+\newcommand{\Fq}{\bbF_q}
+\newcommand{\Fqn}{\bbF_{q^n}}
+\newcommand{\Fp}{\bbF_p}
+\newcommand{\Fqbar}{\overline{\bbF}_q}
+\newcommand{\Lotimes}{\stackrel{\mathrm{L}}{\otimes}}
+
+\newcommand{\pioneet}{\pi_{1}^{\mathrm{\acute{e}t}}}
+
+% macros_highlighting.tex
+% \input{macros_highlighting}
+
+%% command for highlighting definitions and notations
+% The markings are done with the `\hl` command of the `soul` package, a custom `\mathcolorbox` command
+% defined using the `\colorbox` command of the `xcolor` package, and the `\colorbox` command in tandem with the `\begin{{minipage}}`
+% command. These markings may cause syntax errors when this autogenerated document
+% is compiled. If such syntax errors occur, one may manually correct such syntax errors; if all
+% attempts at correcting such a syntax error fails, it is recommended to remove the \hl or \colorbox
+% command appropriately.
+\usepackage{soul}
+\usepackage{xcolor}
+\sethlcolor{lightgray}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
+%Custom helper commands for the highlighting
+\newcommand{\hldef}[1]{\sethlcolor{lightgray}\hl{\em #1}}
+\newcommand{\hlin}[1]{\mathcolorbox{lightgray}{#1}}
+\newcommand{\hlalign}[1]{
+    \colorbox{lightgray}{
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+        #1
+    \end{minipage}
+    }
+}
+
+%Custom helper commands for glossary
+\newcommand{\defin}[3]{\newglossaryentry{#2}{#3}\hldef{#1}\glsadd[format=textbf]{#2}} % #1 is the "display text", #2 is the label of the glossary entry and #3 is the inputs to pass to \newglossaryentry
+
+% \newcommand{\defin}[3]{\hldef{#1}} % Use this when not using the glossasry
+
+\newcommand{\notat}[3]{\newglossaryentry{#2}{#3}\hl{$#1$}\glsadd[format=textbf]{#2}}
+\newcommand{\notatin}[3]{\newglossaryentry{#2}{#3}$$\hlin{#1}$$\glsadd[format=textbf]{#2}}
+% \newcommand{\notat}[2]{\hldef{#1}}
+
+% \colorbox{lightgray}{
+% \begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+% \begin{align*}
+%     \Dleqn &= \Dleqzero[-n] \\ 
+%     \Dgeqn &= \Dgeqzero[-n]
+% \end{align*}
+% \end{minipage}
+% }
+
+\makeatletter %For printing refs only if the labels exist
+\newcommand\CrefIfExists[1]{%
+  \@ifundefined{r@#1}{%
+    % label undefined: print nothing or something else
+  }{%
+    % label defined; print Definition and the reference number
+    \space(\Cref{#1})%
+  }%
+}
+\makeatother
+
+\makeatletter
+\newcommand{\hyperrefIfExists}[2]{%
+  \@ifundefined{r@#1}{%
+    % Label undefined: just print the text (no link)
+    #2%
+  }{%
+    % Label defined: print the text with hyperlink using \hyperref
+    \hyperref[#1]{#2}%
+  }%
+}
+\makeatother
+
+\newcommand{\CrefAndHyperrefIfExist}[2]{% #1: The reference #2 The text
+\hyperrefIfExists{#1}{#2}\CrefIfExists{#1}}
+
+\newcommand{\CrefAndHyperref}[2]{% #1: The reference #2 The text
+\hyperref[#1]{#2}\CrefIfExists{#1}}
+
+
+
+\makeatletter %For printing refs only if the labels exist
+\newcommand\TextIfExists[2]{%
+  \@ifundefined{r@#1}{%
+    % label undefined: print nothing or something else
+  }{%
+    % label defined; print text 
+    #2 %
+  }%
+}
+\makeatother
+
+\makeatletter %For printing refs only if the labels exist
+\newcommand\TextIfExistsElse[3]{%
+  \@ifundefined{r@#1}{%
+    #3 % label undefined: print other text
+  }{%
+    % label defined; print text 
+    #2 %
+  }%
+}
+\makeatother

@@ -1,0 +1,23 @@
+\begin{theorem}[Infinite Galois Theory] \label{theorem:infinite_galois_theory}
+Let $L/K$ be a (possibly infinite) Galois extension with Galois group $G = \operatorname{Gal}(L/K)$. Endow $G$ with the Krull topology, i.e. the unique compact, Hausdorff, totally disconnected topology whose neighborhood basis at the identity is given by the open subgroups $\operatorname{Gal}(L/F)$, where $F$ runs through the finite Galois intermediate extensions $K \subseteq F \subseteq L$.
+
+Then there is an inclusion-reversing bijection between:
+- the closed subgroups $H \leq G$, and
+- the intermediate fields $K \subseteq F \subseteq L$,
+
+given by
+$$
+H \longmapsto L^H := \{\, x \in L \mid \sigma(x) = x \text{ for all } \sigma \in H \,\},
+$$
+$$
+F \longmapsto \operatorname{Gal}(L/F).
+$$
+
+This correspondence satisfies:
+\begin{align*}
+&\text{(i) } H \leq G \text{ closed } \;\;\Longleftrightarrow\;\; F = L^H \text{ for some intermediate field } F. \\
+&\text{(ii) } F/K \text{ is finite Galois } \;\;\Longleftrightarrow\;\; \operatorname{Gal}(L/F) \text{ is open in } G. \\
+&\text{(iii) } F/K \text{ is Galois } \;\;\Longleftrightarrow\;\; \operatorname{Gal}(L/F) \unlhd G, \\
+&\hspace{2.5cm} \text{in which case } \operatorname{Gal}(F/K) \cong G / \operatorname{Gal}(L/F).
+\end{align*}
+\end{theorem}

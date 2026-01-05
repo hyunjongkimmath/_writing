@@ -1,0 +1,12 @@
+
+\begin{definition}[Normalizer subgroup of a submodule] \label{definition:normalizer_subgroup_of_a_group_representation_on_a_submodule}
+Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group}, $R$ a \CrefAndHyperrefIfExist{definition:ring}{ring with unity}, and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}. Suppose 
+$$\rho : G \to \operatorname{Aut}_R(M)$$
+is a \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{representation of $G$ on $M$}.
+
+For a submodule $N \subseteq M$, the \hldef{normalizer subgroup of $N$ in $G$} is defined as the subgroup
+$$\hlin{\operatorname{Normalizer}_G(N)} := \{ g \in G \mid \rho(g)(N) \subseteq N \}.$$
+This subgroup is the largest subgroup of $G$ for which $N$ is an invariant submodule, thus yielding a representation of $\operatorname{Normalizer}_G(N)$ on $N$ by restriction.
+
+The normalizer subgroup may sometimes be called the \hldef{``setwise stabilizer'' of $N$ in $G$}
+\end{definition}

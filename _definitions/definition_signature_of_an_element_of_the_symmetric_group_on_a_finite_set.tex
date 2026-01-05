@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:signature_of_an_element_of_the_symmetric_group_on_a_finite_set}
+Let $\mathfrak{S}_n$ denote the \CrefAndHyperrefIfExist{definition:symmetric_group_on_a_set}{symmetric group} on $\{1, 2, \dots, n\}$.  
+For $\tau \in \mathfrak{S}_n$, the \hldef{parity of $\tau$} is defined to be $0$ if $\tau$ can be expressed as a product of an even number of transpositions, and $1$ otherwise.  
+The \hldef{signature of $\tau$} or \hldef{sign of $\tau$} is then denoted by
+\hl{$\mathrm{sgn}(\tau)$}, defined by
+$$ \mathrm{sgn}(\tau) := (-1)^{\text{parity}(\tau)} \in \{1, -1\}.  $$
+
+Let $X$ be a finite set and $\mathfrak{S}_X$ its symmetric group.  
+The \hldef{signature or sign of an element of $\mathfrak{S}_X$}, denoted by \hl{$\mathrm{sgn}(\sigma)$} for $\sigma \in \mathfrak{S}_X$, is defined by choosing any bijection $\phi : X \to \{1, 2, \dots, n\}$, setting $\tau := \Phi_\phi(\sigma) \in \mathfrak{S}_n$, and then
+$$
+\mathrm{sgn}(\sigma) := \mathrm{sgn}(\tau).
+$$
+This definition is independent of the choice of $\phi$, and thus $\mathrm{sgn} : \mathfrak{S}_X \to \{1, -1\}$ is a well-defined \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
+\end{definition}

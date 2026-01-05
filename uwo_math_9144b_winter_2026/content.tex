@@ -1,0 +1,661 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+These are ``notes'' written for the course MATH 9144B Homological Algebra at the University of Western Ontario during the Winter 2026 term. The main text for the course is Weibel's \emph{An Introduction to Homological Algebra} \cite{weibel}, and I intend for the course to roughly follow parts of this text. This document aims to supplement the presentation of loc.~cit.~, which focuses much of its attention on left/right $R$-modules where $R$ is an ``associative ring''\footnote{The introduction of \cite{weibel} assumes that the reader has a background in graduate algebra "based on a text such as \emph{Jacobson's Basic Algebraic I}". Jacobson defines a ring to be both associative and unital (but not necessarily commutative), so ostensibly \cite{weibel} adopts this same convention.}, by discussing general definitions. 
+
+\subsection{Disclaimer}
+
+The definitions and statements in this document are generally written less as basic introductions to any given concept and more so to present them in generality. As such, they are not necessarily linearly presented. Readers should judiciously decide what to read and what to skip.
+
+Many statements are based on AI generated ones, and errors may be abound due to my own lack of care when verifying them. Readers are advised to exercise caution when citing claims, which may be erroneous, in these notes.
+
+The contents of these notes may change constantly.
+
+\section{Basic category theory}
+
+\subsection{Categories}
+
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+
+\begin{example}
+    Here is an example of a ``boring'' category:
+    \begin{enumerate}
+        \item There is only one object, say $X$.
+        \item There is only one morphism, the identity $\id_X: X \to X$.
+    \end{enumerate}
+    The composed morphism $\id_X \circ \id_X$ is then just $\id_X$, and associativity automatically holds.
+\end{example}
+
+\begin{example}
+    Any \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} $(P,\leq)$ induces a \CrefAndHyperrefIfExist{definition:category}{category} --- let the objects be the elements of the set $P$, and let the morphisms/arrows be given as follows: there is a unique arrow $a \to b$ whenever $a \leq b$. Composition of arrows works as follows: given arrows $a \to b$ and $b \to c$, the composed arrow $a \to b \to c$ will be the unique arrow $a \to c$ corresponding to $a \leq c$. See \Cref{lemma:posets_correspond_to_small_filtered_thin_categories}
+\end{example}
+
+
+\begin{example}
+    Here are common examples of categories:
+    \begin{enumerate}
+        \item The \CrefAndHyperref{definition:category_of_sets}{category of sets}, whose objects are sets and whose morphisms are \CrefAndHyperrefIfExist{definition:function_of_sets}{set maps/functions}.
+        \item The \CrefAndHyperref{definition:category_of_groups_of_abelian_groups}{category of groups}, whose objects are \CrefAndHyperrefIfExist{definition:group}{groups} and whose morphisms are \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphisms}.
+        \item The \CrefAndHyperref{definition:category_of_groups_of_abelian_groups}{category of abelian groups}, whose objects are \CrefAndHyperrefIfExist{definition:group}{abelian groups} and whose morphisms are \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphisms}.
+        \item The \CrefAndHyperref{definition:category_of_topological_spaces}{category of topological spaces}, whose objects are \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and whose morphisms are \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps between topological spaces}.
+.
+        \item The \CrefAndHyperref{definition:pointed_topological_space}{category of pointed topological spaces}, whose objects $(X,x)$ are \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological spaces} and whose morphisms $(X,x) \to (Y,y)$ are \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps} $f: X \to Y$ such that $f(x) = y$.
+
+        \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
+
+        \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of finite dimensional vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{finite dimensional} \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
+
+        \item Given a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of (either left or right) $R$-modules} whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-module homomorphisms}.
+
+        \item The \CrefAndHyperrefIfExist{definition:category_of_rings}{category of rings} whose objects are \CrefAndHyperrefIfExist{definition:ring}{rings} and whose morphisms are \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphisms}.
+
+        \item The \CrefAndHyperrefIfExist{definition:category_of_rings}{category of commutative rings} whose objects are \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative rings} and whose morphisms are \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphisms}.
+
+        \item The \CrefAndHyperrefIfExist{definition:category_of_small_categories}{category of small categories}, whose objects are the \CrefAndHyperrefIfExist{definition:locally_small_category}{small categories} and whose morphisms are \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}.
+
+        \item Given a fixed topological space $X$, the \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{category $\operatorname{Open}(X)$ of open subsets of $X$}, whose objects are the open subsets of $X$ and whose morphisms $U \to V$ are given exactly by inclusions $U \subseteq V$. More precisely, for each inclusion $U \subseteq V$ of open subsets of $X$, there is a unique morphism $U \to V$, and the composition $U \to V \to W$ is the unique morphism $U \to W$ corresponding to the inclusion $U \subseteq W$. 
+    \end{enumerate}
+\end{example}
+
+\input{../_definitions/definition_category_of_sets.tex}
+\input{../_definitions/definition_category_of_groups_of_abelian_groups.tex}
+\input{../_definitions/definition_category_of_topological_spaces.tex}
+\input{../_definitions/definition_pointed_topological_space.tex}
+\input{../_definitions/definition_category_of_vector_spaces_over_a_field.tex}
+\input{../_definitions/definition_category_of_rings.tex}
+
+
+\input{../_definitions/definition_isomorphism_in_a_category.tex}
+
+
+\subsection{Functors between categories}
+
+
+\input{../_definitions/definition_opposite_category_of_a_category.tex}
+\input{../_definitions/definition_functor_between_categories.tex}
+
+\begin{example}
+    Here are some examples of \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}:
+    \begin{enumerate}
+        \item For any category $\calC$, its \CrefAndHyperrefIfExist{definition:identity_functor_on_a_category}{identity functor}.
+        \item ``forgetful functors''; some \CrefAndHyperrefIfExist{definition:forgetful_functor_between_categories}{forgetful functors} include 
+        \begin{enumerate}
+            \item The forgetful functor $F:\mathbf{Grp} \to \mathbf{Sets}$\CrefIfExists{definition:category_of_groups_of_abelian_groups}\CrefIfExists{definition:category_of_sets} sending a \CrefAndHyperrefIfExist{definition:group}{group} $G$ to the underlying set of $G$, and sending a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $G_1 \to G_2$ to the \CrefAndHyperrefIfExist{definition:function_of_sets}{set function} $G_1 \to G_2$. One can verify that 
+              \begin{align*}
+                F(\mathrm{id}_X) &= \mathrm{id}_{F(X)} \quad \text{for all objects } G \text{ in } \mathbf{Grp}, \\
+                F(g \circ f) &= F(g) \circ F(f) \quad \text{for all } G_1,G_2,G_3 \in \Ob(\mathbf{Grp}) \text{ and all } f: G_1 \to G_2, g: G_2 \to G_3 \text{ in } \mathbf{Grp}.
+            \end{align*}
+
+            \item Similarly, the forgetful functor $F: \Top \to \Sets$\CrefIfExists{definition:category_of_topological_spaces} \CrefIfExists{definition:category_of_sets} sending a \CrefAndHyperrefIfExist{definition:category_of_topological_spaces}{topological space} $X$ to the underlying set of $X$, and sending a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $X \to Y$ to the \CrefAndHyperrefIfExist{definition:function_of_sets}{set function} $X \to Y$.
+
+        \item The forgetful functor $F: \mathbf{Ab} \to \mathbf{Grp}$ \CrefIfExists{definition:category_of_groups_of_abelian_groups} sending an abelian group $A$ to itself, and sending a group homomorphism $A_1 \to A_2$ to itself.
+        \end{enumerate}
+
+    \item ``Free'' functors
+    \begin{enumerate}
+        \item There is a functor $\Sets \to \mathbf{Grp}$ sending a set $S$ to the \CrefAndHyperrefIfExist{definition:free_group_generated_by_a_set}{free group} $\langle S \rangle$ generated by $S$. The functor sends the morphism $f:S_1 \to S_2$ of sets, to the unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $\langle S_1 \rangle \to \langle S_2 \rangle$ given by sending $s \in S_1$ to $f(s) \in S_2$.
+
+        \item Similarly, there is a functor $\Sets \to \mathbf{Ab}$ sending a set $S$ to the \CrefAndHyperrefIfExist{definition:free_abelian_group_generated_by_a_set}{free abelian group} $\bbZ S$ generated by $S$. The functor sends the morphism $f:S_1 \to S_2$ of sets, to the unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $\bbZ S_1 \to \bbZ S_2$ given by sending $s \in S_1$ to $f(s) \in S_2$.
+
+    \end{enumerate}
+
+    \item The fundamental group functor $\Top_\bullet \to \mathbf{Grp}$\CrefIfExists{definition:pointed_topological_space}; given a \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological space} $(X,x)$, its associated \CrefAndHyperrefIfExist{definition:homotopy_groups_of_a_pointed_topological_space}{fundamental group} $\pi_1(X,x)$ is the group of homotopy classes of loops $\gamma: [0,1] \to X$. Given a morphism $(X,x) \to (Y,y)$ of pointed topological spaces, there is an (functorially) induced morphism $f: \pi_1(X,x) \to \pi_1(Y,Y)$ sending the homotopy class $[\gamma]$ of the loop $\gamma: [0,1] \to X$ to the homotopy class $[f \circ \gamma]$.
+    \end{enumerate}
+\end{example}
+
+\input{../_definitions/definition_identity_functor_on_a_category.tex}
+
+\begin{definition} \label{definition:forgetful_functor_between_categories}
+Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{categories}. A \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $U: \mathcal{C} \to \mathcal{D}$ is called a \hldef{forgetful functor} if it maps an object in $\mathcal{C}$ to an object in $\mathcal{D}$ by discarding some of its structure or properties, and maps morphisms accordingly. Common examples include the functor from the category of groups to the category of sets, or from the category of topological spaces to the category of sets.
+\end{definition}
+
+\begin{example} \label{example:examples_of_contravariant_functors}
+    Here are some examples of \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functors}.
+    \begin{enumerate}
+        \item The dual of a vector space: given a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} $V$ over a field $k$, the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} is defined as $V^\vee \coloneq \Hom_k(V, k)$. The assignment $V \mapsto V^\vee$ specifies a contravariant functor $\VectorSpaces_k \to \VectorSpaces_k$ --- given a \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{linear map} $f:V_1 \to V_2$, there is an induced linear map $V_2^\vee \to V_1^\vee$ given by sending the linear map $\phi: V_2 \to k$, which is an element of $V_2^\vee$, to the linear map $V_2 \circ f V_1 \to k$, which is an element of $V_1^\vee$. 
+
+
+        \item A \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable functor}: given any \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} $\calC$ and any object $X$ of $\calC$, there is a contravariant functor $h_X: \calC^{\op} \to \Sets, T \mapsto \Hom_{\calC}(T,X)$; given a morphism $f:T_1 \to T_2$ in $\calC$, there is an induced map $h_X(T_2) \to h_X(T_1)$ of sets, i.e. a map $\Hom_\calC(T_2, X) \to \Hom_\calC(T_1, X)$, given by $\phi \mapsto \phi \circ f$.
+
+        \item There is the contravariant power set functor $\calP: \Sets^{\op} \to \Sets$ that sends a set $S$ to its \CrefAndHyperrefIfExist{definition:power_set_of_a_set}{power set} $\calP(S)$ and that sends a set morphism $f: S \to T$ to the set morphism $f^*: \calP(T) \to \calP(S)$ given by $B \mapsto f^{-1}(B)$. 
+        
+        % Given a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $f: X \to Y$ of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, there is a ``preimage functor'' $f^{-1}: \operatorname{Top}(Y) \to \operatorname{Top}
+
+        \item The functor of continuous functions: let $\Top$ be the category of topological spaces and $\mathbb{R}\text{-}\operatorname{Alg}$ the category of \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$\mathbb{R}$-algebras}. The assignment $X \mapsto C(X, \mathbb{R})$ of a space to its algebra of continuous real-valued functions is a contravariant functor. For any continuous map $g: X \to Y$, the induced algebra homomorphism $g^*: C(Y, \mathbb{R}) \to C(X, \mathbb{R})$ is given by the pullback $g^*(\phi) = \phi \circ g$ for $\phi \in C(Y, \mathbb{R})$.
+
+
+    \end{enumerate}
+\end{example}
+
+
+
+
+
+\subsection{Natural transformation}
+
+One overarching philosophy in various categories is that we only really care about objects ``up to equivalence'';  intuitively, we consider objects to be equivalent when they are \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{isomorphic}. Similarly, we only really care about categories ``up to equivalence'' as well; there is a notion of \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence} between categories. To define it, we first need to define the notion of \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} between functors --- a natural transformation is like a ``morphism'' between functors in a sense. 
+
+\input{../_definitions/definition_natural_transformation_between_functors_between_categories.tex}
+
+\begin{example}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Note that there is a ``double dual'' functor $\left((-)^{\vee} \right)^\vee:\VectorSpaces_k \to \VectorSpaces_k$ given by $V \mapsto (V^{\vee})^\vee$\CrefIfExists{definition:dual_of_a_left_right_two_sided_module}. \CrefAndHyperref{example:examples_of_contravariant_functors}{Recall that} $V \mapsto V^\vee$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor}, so the double dual functor is covariant. Recall that there is also the \CrefAndHyperrefIfExist{definition:identity_functor_on_a_category}{identity functor} $\id_{\VectorSpaces_k}: \VectorSpaces_k \to \VectorSpaces_k$ given by $V \mapsto V$.  
+
+    For general vector spaces $V$, there is an injective \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear map}
+    $$\alpha_V: V \to (V^{\vee})^\vee, \quad v \mapsto v^*, $$
+    where $v^*: V^\vee \to k$ is the $k$-linear map given by $\phi \mapsto \phi(v)$. We note that if $V$ is \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{finite dimensional}, then $\alpha_V$ is an isomorphism. In fact, $\alpha$ is a natural transformation $\id_{\VectorSpaces_k} \Rightarrow \left( (-)^\vee \right)^\vee$ --- one should verify that, for every $k$-linear map $f: V_1 \to V_2$, the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}
+        V_1 \arrow[r, "f"] \arrow[d, "\alpha_{V_1}"']
+        & V_2 \arrow[d, "\alpha_{V_2}"] \\
+        (V_1^\vee)^\vee \arrow[r, "(f^\vee)^\vee"']
+        & (V_2^\vee)^\vee 
+    \end{tikzcd}
+    \end{center}
+\end{example}
+
+\begin{example}
+    Let $\operatorname{CRing}$ be the \CrefAndHyperrefIfExist{definition:category_of_rings}{category of commutative rings} and $\operatorname{Group}$ the \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{category of groups}. For a fixed $n \ge 1$, we have a \CrefAndHyperrefIfExist{definition:functor_between_categories}{covariant functor} $\GL_n: \operatorname{CRing} \to \operatorname{Group}$ assigning a ring $R$ to the general linear group $\GL_n(R)$, and a functor $(\cdot)^\times: \operatorname{CRing} \to \operatorname{Group}$ assigning a ring to its \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{group of units}. 
+    
+    The determinant $\det: \GL_n \Rightarrow (\cdot)^\times$ is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}. Its component at a ring $R$ is the group homomorphism $\det_R: \GL_n(R) \to R^\times$. For any ring homomorphism $f: R \to S$, the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}
+        \GL_n(R) \arrow[r, "\GL_n(f)"] \arrow[d, "\det_R"'] & \GL_n(S) \arrow[d, "\det_S"] \\
+        R^\times \arrow[r, "f|_{R^\times}"'] & S^\times
+    \end{tikzcd}
+    \end{center}
+    This commutativity expresses that the determinant is defined by the same universal formula (a polynomial in the matrix entries) regardless of the ring $R$, and is thus preserved by the "change of scalars" $f$.
+\end{example}
+
+\input{../_definitions/definition_equivalence_of_categories.tex}
+
+The ``correct'' notion for one category to embed into another is the notion of a \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful functor}.
+
+\input{../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex}
+\input{../_definitions/definition_subcategory_of_a_category.tex}
+\input{../_definitions/definition_full_subcategory_of_a_category.tex}
+
+The ``correct'' notion for one category to ``surject'' onto another is the notion of a \CrefAndHyperrefIfExist{definition:essentially_surjective_functor_between_categories}{essentially surjective functor}.
+\input{../_definitions/definition_essential_image_of_a_functor_between_categories.tex}
+\input{../_definitions/definition_essentially_surjective_functor_between_categories.tex}
+
+\begin{example} \label{example:properties_of_functors}
+    Below are examples illustrating various properties of functors:
+    \begin{enumerate}
+        \item \textbf{Faithful but not full:} The \CrefAndHyperrefIfExist{definition:forgetful_functor_between_categories}{forgetful functor} $U: \operatorname{Group} \to \operatorname{Set}$. It is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} because group homomorphisms are distinct if they are distinct as functions. It is not full because not every function between groups is a group homomorphism (e.g., the constant function $x \mapsto g$ for $g \neq e$).
+
+        \item \textbf{Full but not faithful:} The canonical functor $H: \mathsf{Top} \to h\mathsf{Top}$ from the \CrefAndHyperrefIfExist{definition:category_of_topological_spaces}{category of topological spaces} to the \CrefAndHyperrefIfExist{definition:homotopy_category_of_topological_spaces}{homotopy category} of topological spaces. It is the identity on objects and sends a continuous map $f$ to its homotopy class $[f]$. This is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{full} by the definition of morphisms in $h\mathsf{Top}$, but not \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} because it identifies distinct but \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopic maps} (e.g., any two paths in $\mathbb{R}^n$ with the same endpoints).
+
+        \item \textbf{Fully faithful:} The inclusion functor $\iota: \operatorname{Ab} \to \operatorname{Group}$. It is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} (it is an embedding) and it is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{full} because any group homomorphism between two abelian groups is, by definition, a morphism in $\operatorname{Ab}$.
+
+        \item \textbf{Essentially surjective:} Let $\mathbf{S}$ be the category whose objects are the standard sets $\underline{n} = \{0, \dots, n-1\}$ for each $n \in \mathbb{N}$ (and whose objects are the set functions between these sets), and $\mathbf{FinSet}$ be the category of all finite sets. The inclusion functor $I: \mathbf{S} \to \mathbf{FinSet}$ is essentially surjective because every finite set $X$ is isomorphic to $\underline{n}$ where $n$ is the cardinality of $X$.
+
+        % \item \textbf{Essentially surjective:} Let $\operatorname{Vect}_k^{\text{fin}}$ be the category of finite-dimensional vector spaces and $\operatorname{Mat}_k$ the category whose objects are natural numbers $n \in \mathbb{N}$ and morphisms are $m \times n$ matrices. The functor $F: \operatorname{Vect}_k^{\text{fin}} \to \operatorname{Mat}_k$ sending $V$ to $\dim(V)$ is essentially surjective because every $n \in \mathbb{N}$ is the dimension of some vector space (namely $k^n$).
+    \end{enumerate}
+\end{example}
+
+\input{../_concepts/lemma_functor_between_locally_small_categories_is_equivalence_if_and_only_if_fully_faithful_and_essentially_surjective.tex}
+
+\subsubsection{Yoneda lemma}
+
+The Yoneda lemma basically expresses the idea that an object of a (locally small) category is essentially determined by its morphisms to other objects. 
+
+\input{../_definitions/definition_representable_functor_on_a_locally_small_category.tex}
+
+
+\input{../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex}
+\input{../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex}
+\input{../_concepts/theorem_contravariant_yoneda_lemma_on_a_locally_small_category.tex}
+
+
+\begin{example} 
+The algebra of \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{smooth functions} $C^\infty(M)$ on a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold} $M$ is represented by the real line $\mathbb{R}$ in the category of smooth manifolds $\mathsf{Man}$.
+\begin{enumerate}
+    \item \textbf{The Functor:} Consider the covariant \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable functor} $h^{\mathbb{R}} = \operatorname{Hom}_{\mathsf{Man}}(-, \mathbb{R})$. For any manifold $M$, we have 
+    $$\operatorname{Hom}_{\mathsf{Man}}(M, \mathbb{R}) = C^\infty(M),$$ 
+    i.e. the representable functor $h^{\bbR}$ assigns $M$ to the set of all smooth maps $f: M \to \mathbb{R}$, which is exactly $C^\infty(M)$.
+    
+    \item \textbf{The Yoneda Correspondence:} By the \CrefAndHyperrefIfExist{theorem:yoneda_lemma_on_a_locally_small_category}{Yoneda Lemma}, there is a natural bijection between the points of $M$ and the natural transformations from $h^M$ to $h^{\mathbb{R}}$:
+    \[ \operatorname{Nat}(h^M, h^{\mathbb{R}}) \cong h^{\mathbb{R}}(M) = C^\infty(M) \]
+    
+    \item \textbf{Geometric Interpretation:} This identifies a smooth function $\psi \in C^\infty(M)$ with a "natural" way to turn $M$-valued points of any other smooth manifold $X$ into real-valued points. Specifically, if we have a "probe" $\alpha: X \to M$, the function $\psi$ induces a map:
+    \[ \alpha \mapsto \psi \circ \alpha \]
+    mapping $\operatorname{Hom}(X, M)$ to $\operatorname{Hom}(X, \mathbb{R})$.
+\end{enumerate}
+This illustrates that the "global" algebraic data of a manifold (its functions) is entirely captured by its relationship to the "simplest" non-trivial manifold, $\mathbb{R}$.
+\end{example}
+
+
+\subsection{The category of categories}
+
+Intuitively, one might think of a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} as a ``morphism'' between two categories. Indeed, one can consider a category of categories in which morphisms are functors.
+
+\input{../_definitions/definition_category_of_small_categories.tex}
+
+If we allow ourselves to use \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universes}, then we can also talk about a category of categories in the sense of \Cref{definition:category_of_categories_relative_to_a_grothendieck_universe}.
+
+\subsection{Miscellaneous categorical notions}
+
+\input{../_definitions/definition_product_category_of_a_family_of_categories.tex}
+
+\section{Additive and abelian categories}
+
+\subsection{Rings and modules}
+
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
+\input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
+
+\input{../_definitions/definition_submodule_of_a_module_over_a_ring.tex}
+\input{../_definitions/definition_quotient_module_of_a_module_by_a_module_of_a_ring.tex}
+\input{../_definitions/definition_submodule_of_a_module_generated_by_elements.tex}
+
+
+\input{../_definitions/definition_kernel_image_cokernel_of_a_module_homomorphism_over_a_ring.tex}
+
+Two fundamental functors on categories of modules are given by \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{Hom's} and \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{tensor products}
+
+\input{../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex}
+\input{../_definitions/definition_tensor_product_of_bimodules_of_rings.tex}
+\input{../_definitions/definition_tensor_product_of_a_ring_and_an_algebra_over_a_ring.tex}
+\input{../_concepts/proposition_universal_property_of_the_tensor_product_of_bimodules.tex}
+
+\input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
+
+\subsubsection{Extension/Restriction/co-extension of scalars}
+
+\input{../_definitions/definition_extension_of_scalars_for_modules_along_ring_homomorphisms.tex}
+\input{../_definitions/definition_restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring.tex}
+\input{../_definitions/definition_coextension_of_scalars_of_modules_along_a_ring_homomorphism.tex}
+
+\input{../_concepts/theorem_extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings.tex}
+
+
+
+\subsection{Limits and colimits in categories}
+
+\subsubsection{Categorical products, coproducts, and direct sums}
+
+It is easier to first learn about \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products and coproducts} before learning about general \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits and colimits}.
+
+One of the nice features about many algebraic structures such as groups and modules, is that simply taking their Cartesian product produces an object in the same category. In fact, the notion of product is a categorical one. Let us first define the categorical notion of product and the dual notion of coproducts:
+
+\input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
+
+For \CrefAndHyperrefIfExist{definition:concrete_category_over_a_category}{concrete categories}, cartesian products often result in the categorical products:
+
+\input{../_definitions/definition_product_of_sets.tex}
+\input{../_definitions/definition_product_of_groups.tex}
+\input{../_definitions/definition_product_of_modules_of_rings.tex}
+\input{../_definitions/definition_coproduct_of_modules_of_rings.tex}
+
+
+\subsubsection{General limits and colimits}
+
+It is probably best to keep in mind that the definitions listed in this subsubsection are intended as precise definitions, rather than intuitively helpful ones.
+
+\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex}
+
+\input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
+
+\input{../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex}
+
+\begin{example}[Geometric and Algebraic Limits/Colimits]
+Many fundamental constructions in topology and algebra are characterized by universal properties of limits and colimits.
+
+\begin{enumerate}
+    \item \textbf{The $p$-adic Integers (Inverse Limit):} 
+    The ring of $p$-adic integers $\mathbb{Z}_p$ is the limit of the inverse system of finite cyclic rings $\mathbb{Z}/p^n\mathbb{Z}$ with quotient maps:
+    \[ \mathbb{Z}_p \cong \varprojlim_{n} \mathbb{Z}/p^n\mathbb{Z} = \{ (a_n)_{n \in \mathbb{N}} \in \prod \mathbb{Z}/p^n\mathbb{Z} \mid a_{n+1} \equiv a_n \pmod{p^n} \} \]
+    
+
+    \item \textbf{Absolute Galois Groups (Inverse Limit):} 
+    The absolute Galois group $G_K = \operatorname{Gal}(\overline{K}/K)$ of a field $K$ is the inverse limit of the Galois groups of all finite Galois extensions $L/K$ contained in $\overline{K}$:
+    \[ \operatorname{Gal}(\overline{K}/K) \cong \varprojlim_{L/K \text{ finite}} \operatorname{Gal}(L/K) \]
+    This gives $G_K$ the structure of a profinite group.
+
+    \item \textbf{The Cone of a Space (Pushout):} 
+    Think of $X \times [0,1]$ as a cylinder. The map $X \to X \times [0,1]$ picks out the "top lid." The map $X \to \{*\}$ sends that entire lid to a single point. 
+    The **pushout** $CX$ is the result of taking the cylinder and pinching the entire top lid into a single vertex.
+    \begin{center}
+    \begin{tikzcd}
+    X \arrow[r, "{(x,1)}"] \arrow[d] & X \times [0,1] \arrow[d] \\
+    \{*\} \arrow[r] & CX = (X \times [0,1]) / (X \times \{1\})
+    \end{tikzcd}
+    \end{center}
+
+\end{enumerate}
+\end{example}
+
+\TODO{examples of limits and colimits, including products, coproducts, equalizer and coequalizer}
+
+\input{../_definitions/definition_small_and_finite_limits_and_colimits_in_a_category.tex}
+\input{../_definitions/definition_complete_and_cocomplete_category.tex}
+\input{../_definitions/definition_filtered_cofiltered_category.tex}
+
+\input{../_definitions/definition_projective_and_inductive_limits_in_categories.tex}
+
+
+% \TODO{example of ind/pro-limit}
+
+One noteworthy fact is that if a category has all \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{(co)products} and \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{(co)equalizers}, then it has all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{(co)limits} (\Cref{theorem:limits_colimits_are_equalizers_coequaulizers_of_products_coproducts}).
+\input{../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex}
+\input{../_concepts/theorem_limits_colimits_are_equalizers_coequaulizers_of_products_coproducts.tex}
+
+
+
+\subsection{Additive categories}
+
+\subsubsection{Additive and abelian categories}
+
+Given modules $M$ and $N$, notice that \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{$\Hom(M,N)$} is not only a set, but also an abelian group. This, along with few other nice properties, makes the category of modules into an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}.
+
+\input{../_definitions/definition_initial_final_zero_objects_of_a_category.tex}
+\input{../_definitions/definition_pointed_category.tex}
+\input{../_definitions/definition_zero_morphism_in_a_pointed_category.tex}
+
+
+\input{../_definitions/definition_additive_category.tex}
+\input{../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex}
+
+In fact, morphisms between modules have kernels, cokernels, and nice images and coimages
+
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+\input{../_definitions/definition_image_coimage_of_a_morphism_in_a_category.tex}
+
+\input{../_concepts/lemma_kernel_cokernel_image_coimage_of_modules_over_rings_are_categorical.tex}
+
+\input{../_definitions/definition_abelian_category.tex}
+
+\input{../_concepts/proposition_diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian.tex}
+
+\subsubsection{Grothendieck's additional axioms for abelian categories}
+
+In fact, Grothendieck posed certain additional axioms that some abelian categories might enjoy.
+
+\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
+
+\input{../_concepts/theorem_examples_of_grothendieck_categories.tex}
+\input{../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex}
+
+
+\subsection{Additive functors between additive categories}
+
+\input{../_definitions/definition_additive_functor_between_additive_categories.tex}
+
+\TODO{examples of additive functors}
+
+We note that Hom's and tensor products induce \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functors} on categories of modules.
+
+\input{../_definitions/definition_n_ary_additive_functor_between_additive_categories.tex}
+
+\subsubsection{Exact functors between abelian categories}
+
+One particularly nice kind of additive functor is an exact functor
+
+\input{../_definitions/definition_short_exact_sequence_in_an_additive_category.tex}
+\input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
+\input{../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex}
+
+\input{../_concepts/theorem_freyd_mitchell_embedding_theorem_for_small_abelian_categories.tex}
+
+
+\subsection{Adjoint functors}
+
+\CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{Adjoint functors} enjoy nice properties, especially in homological algebra. 
+
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+
+\TODO{examples of adjoint functors}
+
+One of the most essential adjunction of functors in algebra would be the tensor-hom adjunction:
+
+\input{../_concepts/theorem_tensor_hom_adjunction_for_bimodules_of_rings.tex}
+
+
+\TODO{}
+
+\input{../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex}
+\input{../_concepts/proposition_tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact.tex}
+
+
+\section{Chain complexes of objects in additive categories}
+
+\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{Chain complexes} are made of a sequence of morphisms in an additive category such that the composition of any two conseuctive morphisms is $0$. The first kind of chain complexes one should keep in mind are chain complexes of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules} over a ring.
+
+\input{../_definitions/definition_chain_complex_in_an_additive_category.tex}
+
+\begin{example}
+    \TODO{simple examples of chain complexes}
+\end{example}
+
+\begin{example}
+    Some examples of chain complexes include  \TODO{}
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}{singular chain complex} of a topological space.
+    \end{enumerate}
+\end{example}
+
+
+
+
+\TODO{cycles, boundary}
+\input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex}
+
+
+\subsection{Singular homology groups of a topological space}
+
+\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring.tex}
+
+\input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
+
+
+\subsection{Chain homotopy between morphisms of chain complexes}
+
+\input{../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex}
+
+\subsection{Mapping cones of morphisms between chain complexes}
+
+\input{../_definitions/definition_mapping_cone_of_a_map_of_chain_cochain_complexes.tex}
+
+
+
+
+\section{Sheaves on topological spaces}
+
+Sheaves (say on a topological space) of abelian groups form an abelian category with a rich theory.
+
+
+\subsubsection{Presheaves and sheaves on topological spaces}
+
+\input{../_definitions/definition_presheaf_on_a_category.tex}
+\input{../_definitions/definition_category_of_opens_of_a_topological_space.tex}
+\input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
+\input{../_definitions/definition_presheaf_on_a_topological_space.tex}
+\input{../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
+
+\TODO{examples of presheaves and sheaves on topological spaces}
+
+Note that on a topological space $X$, it is natural to talk about open sets $\{U_i\}$ which cover an open set $U$ of $X$. One can express more general notions of ``coverings'' of objects in a category through the notion of a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``site''}, which consists of a category and a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``Grothendieck topology''} on the category. The notion of \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{``sheaf on a topological space''} above is a specialization of this more general notion.
+
+\subsubsection{Sheafification of presheaves}
+
+\input{../_definitions/definition_categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category.tex}
+\input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits.tex}
+
+\subsubsection{Sheaf of rings, ringed spaces, and sheaves of modules}
+
+\input{../_definitions/definition_ringed_space.tex}
+
+\TODO{define module sheaf on a topological space}
+% \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+
+\TODO{define sheaf hom, sheaf tensor product}
+
+
+\section{Left/right derived functors of right/left exact functors}
+
+\section{}
+
+\newpage
+
+\section{Assignment 1: Due Friday, Jan 23}
+
+\begin{problem}
+    In the following categories, prove whether there are \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial/final objects} and describe what they are.
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}.
+        \item The \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{category of groups}.
+    \end{enumerate}
+\end{problem}
+
+% \TODO{Hom(A,-) preserves limits, Hom(-,A) preserves colimits}
+
+
+Read the definition of a \CrefAndHyperref{definition:group_object_in_a_category_with_a_final_object}{group object}.
+
+\begin{problem}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} and let $G$ be a group object of $\calC$. Prove that the \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable functor} $h_G: \calC \to \mathbf{Sets}$ in fact factors through \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{$\mathbf{Grp}$}. In other words, $h_G$ can be regarded as a functor $\calC \to \mathbf{Grp}$, and composing this functor with the forgetful functor $\mathbf{Grp} \to \mathbf{Sets}$ recovers the original functor $h_G: \calC \to \mathbf{Sets}$.
+\end{problem}
+
+\begin{problem}
+    Given a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} $R$, one can construct a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} $\Spec R$, see \CrefIfExists{definition:affine_scheme} (focus on the construction of the topological space, and ignore the discussion on the structure sheaf).
+    \begin{enumerate}
+        \item Show that there is a functor $\Spec: \mathbf{CommRing}^{\op} \to \Top$ given by
+        \begin{itemize}
+            \item sending a commutative ring $R$ to $\Spec R$, and 
+            \item sending a ring homomorphism $\varphi: R_1 \to R_2$ to the map $\varphi^*: \Spec R_2 \to \Spec R_1$ given by $\mathfrak{p} \mapsto \varphi^{-1}(\mathfrak{p})$.
+            %(in particular, show that $\varphi^*$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}).
+        \end{itemize}
+        \item Show that the above functor $\Spec$ is not \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful}. (Hint: one should be able to find examples involving finite rings)
+    \end{enumerate}
+\end{problem}
+
+
+Read the definition of a \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} of two objects in a category.
+
+\begin{problem}
+    Let $f:X \to Z$ and $g: Y \to Z$ be morphisms in the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}. Prove that the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} $X \times_Z Y$ exists by explicitly constructing it (along with canonical morphisms from $X \times_Z Y$ to $X,Y,Z$), and verifying that your construction possesses the appropriate universal property.
+\end{problem}
+
+
+\begin{problem}[The Pullback Lemma]
+    Consider a commutative diagram in a category $\mathcal{C}$:
+    \[
+    \begin{tikzcd}
+        A \arrow[r, "u"] \arrow[d, "f"] & B \arrow[r, "v"] \arrow[d, "g"] & C \arrow[d, "h"] \\
+        X \arrow[r, "p"] & Y \arrow[r, "q"] & Z
+    \end{tikzcd}
+    \]
+    Assume that the right-hand square (with corners $B, C, Y, Z$) is a \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{Cartesian square}.
+    Prove that the left-hand square (with corners $A, B, X, Y$) is a Cartesian square if and only if the outer rectangle (with corners $A, C, X, Z$) is a Cartesian square.
+\end{problem}
+
+Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{category of opens} of a topological space.
+
+\begin{problem}
+    Let $\bbR(x)$ denote the field of rational functions of $x$ with coefficients in $\bbR$. Given an open subset $U$ of $\bbR$, let $\calO(U)$ denote 
+    $$\calO(U) = \{f \in \bbR(x): f \text{ is defined at all points } x \in U\}.$$
+    Note that it is a commutative ring under pointwise addition and multiplication: for $f,g \in \bbR(U)$, we have $(f+g)(x) = f(x) + g(x)$ and $(f \cdot g)(x) = f(x) \cdot g(x)$. 
+
+    Given an inclusion $U \subseteq V$ of open subsets, note that there is an injective ring homomorphism $\calO(V) \hookrightarrow \calO(U)$ and note that this describes a functor/\CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} $\calO: \mathbf{Open}(\bbR)^{\op} \to \mathbf{CommRings}$\CrefIfExists{definition:category_of_opens_of_a_topological_space}\CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{category_of_rings} (you do not need to prove this). 
+    
+    Fix a point $x \in \bbR$. There is a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{(full) subcategory} $N_x$ of $\mathbf{Open}(\bbR)$ whose objects are open neighborhoods of $x$, so there is an induced diagram $N_x^{\op} \to \mathbf{CommRings}$. Show that the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit}
+    $$\varinjlim_{U \in N_x^{\op}} \calO(U)$$
+    of this diagram is isomorphic to the following ring:
+    $$\calO_x = \{f \in \bbR(x): f \text{ is defined at } x \}.$$
+\end{problem}
+
+
+\newpage
+
+\section{Assignment 2: Due Feb 6 (Problems not yet complete)}
+
+\TODO{some problems on tensor products}
+
+\begin{problem}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $\{M_i\}_{i \in I}$ be a small family of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Prove that $\prod_{i \in I} M_i$ and $\bigoplus_{i \in I} M_i$ as constructed in \Cref{definition:product_of_modules_of_rings} \Cref{definition:coproduct_of_modules_of_rings} are respectively the categorical \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product and coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$S$-bimodule}.
+\end{problem}
+
+
+
+\appendix
+
+\section{}
+
+\input{../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex}
+\input{../_definitions/definition_symmetric_monoidal_category.tex}
+\input{../_definitions/definition_grothendieck_universe.tex}
+
+\input{../_definitions/definition_category_of_categories_relative_to_a_grothendieck_universe.tex}
+
+\input{../_definitions/definition_concrete_category_over_a_category.tex}
+
+\section{Grothendieck topologies}
+
+\input{../_definitions/definition_sieve_on_an_object_in_a_category.tex}
+\input{../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex}
+\input{../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex}
+\input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_site_of_opens_on_a_topological_space.tex}
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+
+
+\input{../_definitions/definition_sheafification_functor_on_a_site.tex}
+\input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
+\input{../_definitions/definition_ringed_site.tex}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_function_of_sets.tex}
+
+\input{../_definitions/definition_monoid.tex}
+\input{../_definitions/definition_group.tex}
+
+\input{../_definitions/definition_group_homomorphism.tex}
+\input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_continuous_map_of_topological_spaces.tex}
+
+\input{../_definitions/definition_ring.tex}
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_unit_of_a_ring.tex}
+\input{../_definitions/definition_division_ring.tex}
+\input{../_definitions/definition_field.tex}
+
+\input{../_definitions/definition_ring_homomorphism.tex}
+
+\input{../_definitions/definition_vector_space_over_a_field.tex}
+\input{../_definitions/definition_morphism_of_vector_spaces.tex}
+\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+
+\input{../_definitions/definition_partially_ordered_set.tex}
+\input{../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex}
+
+\input{../_definitions/definition_free_group_generated_by_a_set.tex}
+
+\input{../_definitions/definition_free_abelian_group_generated_by_a_set.tex}
+
+\input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
+
+
+\input{../_definitions/definition_prime_and_maximal_ideal_of_a_ring.tex}
+\input{../_definitions/definition_affine_scheme.tex}
+\input{../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex}
+
+\input{../_definitions/definition_semigroup_object_in_a_category.tex}
+\input{../_definitions/definition_monoid_object_in_a_category_with_a_final_object.tex}
+\input{../_definitions/definition_group_object_in_a_category_with_a_final_object.tex}
+
+\input{../_definitions/definition_power_set_of_a_set.tex}
+\input{../_definitions/definition_algebra_of_a_ring.tex}
+
+\input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+\input{../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+\input{../_definitions/definition_homotopy_category_of_topological_spaces.tex}
+\input{../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex}
+\input{../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex}
+
+\input{../_definitions/definition_C_k_morphism_between_C_k_manifolds.tex}
+\input{../_definitions/definition_C_k_manifold.tex}

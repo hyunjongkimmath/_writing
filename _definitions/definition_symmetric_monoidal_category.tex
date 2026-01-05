@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:symmetric_monoidal_category}
+A \hldef{symmetric monoidal category} is a \hyperrefIfExists{definition:monoidal_category}{monoidal category} $(\mathcal{C}, \otimes, \mathbb{I})$ together with a natural isomorphism (symmetry)
+$$\hlin{\gamma_{X,Y}: X \otimes Y \xrightarrow{\cong} Y \otimes X}$$
+for all $X, Y \in \mathcal{C}$, such that for all $X, Y, Z \in \mathcal{C}$ the following holds:
+\begin{itemize}
+    \item $\gamma_{Y,X} \circ \gamma_{X,Y} = \mathrm{id}_{X \otimes Y}$ (involutivity);
+    % % \TODO{TODO: add the hexagon and symmetry coherence diagrams}
+    % \item the hexagon and symmetry coherence diagrams commute.
+        \item the \textbf{hexagon coherence diagrams} commute:
+        \[
+        \begin{tikzcd}[column sep=large]
+        (X \otimes Y) \otimes Z \arrow[r, "\alpha_{X,Y,Z}"] \arrow[d, "\gamma_{X,Y} \otimes \mathrm{id}_Z"'] & X \otimes (Y \otimes Z) \arrow[r, "\gamma_{X, Y \otimes Z}"] & (Y \otimes Z) \otimes X \\
+        (Y \otimes X) \otimes Z \arrow[rr, "\alpha_{Y,X,Z}"'] & & Y \otimes (X \otimes Z) \arrow[u, "\mathrm{id}_Y \otimes \gamma_{X,Z}"']
+        \end{tikzcd}
+        \]
+        and the analogous hexagon with inverse braiding:
+        \[
+        \begin{tikzcd}[column sep=large]
+        X \otimes (Y \otimes Z) \arrow[r, "\alpha^{-1}_{X,Y,Z}"] \arrow[d, "\mathrm{id}_X \otimes \gamma_{Y,Z}"'] & (X \otimes Y) \otimes Z \arrow[r, "\gamma_{X \otimes Y, Z}"] & Z \otimes (X \otimes Y) \\
+        X \otimes (Z \otimes Y) \arrow[rr, "\alpha^{-1}_{X,Z,Y}"'] & & (X \otimes Z) \otimes Y \arrow[u, "\gamma_{X,Z} \otimes \mathrm{id}_Y"']
+        \end{tikzcd}
+        \]
+    \item the \textbf{symmetry coherence diagram} commutes:
+        \[
+        \begin{tikzcd}
+        X \otimes Y \arrow[r, "\gamma_{X,Y}"] \arrow[dr, swap, "\mathrm{id}_{X \otimes Y}"] & Y \otimes X \arrow[d, "\gamma_{Y,X}"] \\
+        & X \otimes Y
+        \end{tikzcd}
+        \]
+\end{itemize}
+A \hldef{closed symmetric monoidal category} usually refers to a symmetric monoidal category that is \hyperrefIfExists{definition:closed_monoidal_category}{closed as a monoidal category}. 
+\end{definition}

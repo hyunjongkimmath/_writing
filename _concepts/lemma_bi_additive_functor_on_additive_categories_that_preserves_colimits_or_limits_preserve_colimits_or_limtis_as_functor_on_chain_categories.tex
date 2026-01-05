@@ -1,0 +1,38 @@
+\begin{lemma} \label{lemma:bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories}
+    Let $F: \calA \times \calB \to \calC$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} where $\calA, \calB, \calC$ are \CrefAndHyperrefIfExist{definition:additive_category}{additive categories}. Let $J$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+    \begin{enumerate}
+        \item  Assume that $F(X,-): \calB \to \calC$ preserves \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} of \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagrams of shape $J$} for all objects $X \in \calA$. Then the induced functor $F(X^\bullet,-): \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$ (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes})\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} also preserves colimits of diagrams of shape $J$ for all objects $X^\bullet \in \mathbf{Ch}(\calA)$.
+
+
+        \item Dually, assume that $F(-,Y): \calA \to \calC$ preserves \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} of \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagrams of shape $J$} for all objects $Y \in \calB$.
+        Then the induced functor $F(-,Y^\bullet): \mathbf{Ch}(\calA) \to \mathbf{DC}(\calC)$ (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes})\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} also preserves colimits of diagrams of shape $J$ for all objects $Y^\bullet \in \mathbf{Ch}(\calB)$.
+
+        \item  Assume that $F(X,-): \calB \to \calC$ preserves \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} of \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagrams of shape $J$} for all objects $X \in \calA$. Then the induced functor $F(X^\bullet,-): \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$ (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes})\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} also preserves limits of diagrams of shape $J$ for all objects $X^\bullet \in \mathbf{Ch}(\calA)$.
+
+
+        \item Dually, assume that $F(-,Y): \calA \to \calC$ preserves \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} of \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagrams of shape $J$} for all objects $Y \in \calB$.
+        Then the induced functor $F(-,Y^\bullet): \mathbf{Ch}(\calA) \to \mathbf{DC}(\calC)$ (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes})\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} also preserves limits of diagrams of shape $J$ for all objects $Y^\bullet \in \mathbf{Ch}(\calB)$.
+    \end{enumerate}
+    
+\end{lemma}
+\begin{proof}
+    We prove that if $F(X,-): \calB \to \calC$ preserves colimtis of diagrams of shape $J$ for all $X \in \calA$, then so does $F(X^\bullet, -): \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$ for all $X^\bullet \in \mathbf{Ch}(\calA)$. Given $X^\bullet \in \mathbf{Ch}(\calA)$ and $Y^\bullet \in \mathbf{Ch}(\calB)$, the term of $F(X^\bullet, Y^\bullet)$ at position $(p,q)$ is $F(X^p, Y^q)$. Let $J \to \mathbf{Ch}(\calB): j \mapsto Y_{(j)}^\bullet$ be some \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} whose colimit is $Y^\bullet$. In fact, since colimits of chain complexes are computed termwise (\Cref{proposition:limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise}), there are canonical isomorphisms
+    $$Y^q \cong \colim_{j \in J} Y_{(j)}^q $$
+    in $\calB$ .
+
+    We wish to show that $F(X^\bullet, Y^\bullet)$ is the colimit of the diagram $j \mapsto F(X^\bullet, Y_{(j)}^\bullet)$ in $\mathbf{DC}(\mathcal{C})$. The colimit in $\mathbf{DC}(\mathcal{C})$ is also computed termwise (note that $\mathbf{DC}(\mathcal{C})$ is \CrefAndHyperref{theorem:category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes}{identifiable} as $\mathbf{Ch}(\mathbf{Ch}(\calC))$), it suffices to verify the isomorphism at each position $(p,q)$ and ensure it respects the differentials.
+
+    Consider the term at position $(p,q)$. The functor $F(X^\bullet, -)$ maps the colimit diagram in $\mathbf{Ch}(\mathcal{B})$ to a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone} in $\mathbf{DC}(\mathcal{C})$. This induces a canonical comparison morphism:
+    \[ \phi: \operatorname{colim}_{j \in J} F(X^\bullet, Y_{(j)}^\bullet) \longrightarrow F(X^\bullet, \operatorname{colim}_{j \in J} Y_{(j)}^\bullet) = F(X^\bullet, Y^\bullet). \]
+    At the position $(p,q)$, this morphism is the map:
+    \[ \phi^{p,q}: \operatorname{colim}_{j \in J} F(X^p, Y_{(j)}^q) \longrightarrow F(X^p, Y^q). \]
+    By hypothesis, $F(X^p, -): \mathcal{B} \to \mathcal{C}$ preserves colimits of shape $J$. Therefore, $\phi^{p,q}$ is an isomorphism for all $p,q \in \mathbb{Z}$.
+    
+    Since a morphism of double complexes is an isomorphism if and only if it is an isomorphism at every term $(p,q)$, we conclude that $\phi$ is an isomorphism. Thus, $F(X^\bullet, -)$ preserves colimits of shape $J$.
+    
+    % Note that
+    % $$F(X^p, Y^q) \cong F(X^p, \colim_{j \in J} Y_{(j)}^q) \cong \colim_{j \in J} F(X^p, Y_{(j)}^q);$$
+    % these isomorphisms are functorial in $X^p$ due to Lemma \ref{lemma:bifunctors_induce_functors_to_a_functor_category_and_natural_transformations}, so they in fact induce an isomorphism
+    % $$F(X^\bullet, Y^\bullet) \cong F(X^\bullet, \colim_j Y_{(j)}^\bullet)$$
+    % functorial in the first argument and natural in the second.
+\end{proof}

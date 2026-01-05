@@ -1,0 +1,12 @@
+\begin{definition}[Simplicial category of quasi-categories] \label{definition:simplicial_category_of_quasi_categories}
+    \TODO{read this and make it more precise}
+Let $\mathbf{QCat}_{\mathcal U}^\Delta$ be the simplicial category defined as follows. Its objects are the $\mathcal U$-small quasi-categories. For objects $C,D$, the mapping space is the Kan complex
+\[
+\mathrm{Map}_{\mathbf{QCat}_{\mathcal U}^\Delta}(C,D)\coloneqq (D^C)^{\simeq},
+\]
+where $D^C$ is the exponential simplicial set (the functor simplicial set) and $(-)^{\simeq}$ denotes the largest Kan subcomplex. Composition
+\[
+\mathrm{Map}(C,D)\times \mathrm{Map}(D,E)\longrightarrow \mathrm{Map}(C,E)
+\]
+is induced by the exponential composition $E^D\times D^C\to E^C$, and identities by the units $C\to C$ under the exponential adjunction; these maps restrict to Kan subcomplexes and equip $\mathbf{QCat}_{\mathcal U}^\Delta$ with a simplicial category structure.
+\end{definition}

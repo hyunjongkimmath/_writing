@@ -1,0 +1,8 @@
+\begin{lemma} \label{lemma:bifunctors_induce_functors_to_a_functor_category_and_natural_transformations}
+    Let $\calA,\calB,\calC$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories} and let $F: \calA \times \calB \to \calC$\CrefIfExists{definition:product_category_of_a_family_of_categories} be a \CrefAndHyperrefIfExist{definition:n_ary_functor}{functor}.
+    \begin{enumerate}
+        \item There is a functor $A \to \Fun(\calB, \calC)$\CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category} given by $A \mapsto (F(A,-): \calB \to \calC)$.
+
+        \item Given a morphism $f: A \to A'$ in $\calA$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} $F(f,-): F(A,-) \to F(A',-)$.
+    \end{enumerate}
+\end{lemma}

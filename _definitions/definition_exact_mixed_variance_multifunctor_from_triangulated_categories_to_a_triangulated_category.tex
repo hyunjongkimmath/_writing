@@ -1,0 +1,30 @@
+\begin{definition} \label{definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category}
+Let $I$ be a finite set and $\varepsilon: I \to \{1, -1\}$ a variance function. Let $(\mathscr{A}_i)_{i \in I}$ and $\mathscr{A}$ be \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}. 
+A \CrefAndHyperrefIfExist{definition:n_ary_functor}{multifunctor} $F: \prod_{i \in I} \mathscr{A}_i \to \mathscr{A}$ is an \hldef{exact multifunctor of variance $\varepsilon$} if for every index $k \in I$, the partial functor 
+$$F_k: \mathscr{A}_k \to \mathscr{A}$$ 
+(obtained by fixing all objects $A_j$ for $j \neq k$) satisfies the following:
+\begin{enumerate}
+    \item If $\varepsilon(k) = 1$, $F_k$ is a covariant exact functor: it maps any distinguished triangle $X \to Y \to Z \to T_k X$ in $\mathscr{A}_k$ to a distinguished triangle 
+    $$F_k(X) \to F_k(Y) \to F_k(Z) \to T F_k(X)$$ 
+    in $\mathscr{A}$.
+    
+    \item If $\varepsilon(k) = -1$, $F_k$ is a contravariant exact functor: it maps any distinguished triangle $X \to Y \to Z \to T_k X$ in $\mathscr{A}_k$ to a distinguished triangle 
+    $$F_k(Z) \to F_k(Y) \to F_k(X) \to F_k(T_k^{-1} X)$$ 
+    in $\mathscr{A}$, using the isomorphism $F_k(T_k^{-1} X) \cong T F_k(X)$.
+\end{enumerate}
+Furthermore, $F$ must be a graded functor equipped with natural isomorphisms $\varphi_i: T \circ F \xrightarrow{\sim} F \circ T_i^{\varepsilon_i}$ for each $i \in I$. These must satisfy the anticommutativity condition: for any pair of distinct indices $i, j \in I$ ($i \neq j$), the following diagram of natural transformations commutes with a factor of $-1$:
+\begin{equation}
+\begin{array}{ccc}
+T^2 F & \xrightarrow{T\varphi_i} & T F T_i^{\varepsilon_i} \\
+\downarrow^{T\varphi_j} & & \downarrow^{\varphi_j T_i^{\varepsilon_i}} \\
+T F T_j^{\varepsilon_j} & \xrightarrow{-\varphi_i T_j^{\varepsilon_j}} & F T_i^{\varepsilon_i} T_j^{\varepsilon_j}
+\end{array}
+\end{equation}
+Equivalently, the following square is anticommutative:
+\begin{equation}
+(\varphi_j T_i^{\varepsilon_i}) \circ (T \varphi_i) = - (\varphi_i T_j^{\varepsilon_j}) \circ (T \varphi_j)
+\end{equation}
+as morphisms of functors $T^2 F \to F T_i^{\varepsilon_i} T_j^{\varepsilon_j}$.
+
+In particular in the case that $\epsilon(i) = 1$ for all $i$, we are reduced to the following definition: Let $(\mathscr{A}_i)_{1 \le i \le n}$ and $\mathscr{A}$ be \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}. A \CrefAndHyperrefIfExist{definition:n_ary_functor}{multifunctor} $F: \prod \mathscr{A}_i \to \mathscr{A}$ is called an \hldef{exact covariant multifunctor} if it is covariant in each argument and if for every index $i \in \{1, \dots, n\}$ and every fixed collection of objects $(A_j)_{j \neq i}$, the partial functor $F(\dots, A_{i-1}, -, A_{i+1}, \dots): \mathscr{A}_i \to \mathscr{A}$ is an \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functor} of triangulated categories.
+\end{definition}

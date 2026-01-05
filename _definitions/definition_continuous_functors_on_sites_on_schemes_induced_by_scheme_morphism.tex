@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism}
+        Let $f : X \to Y$ be a morphism of schemes, and consider one of the common Grothendieck topologies on schemes such as the Zariski, étale, Nisnevich, fppf, fpqc, or crystalline topology. Denote by $\mathbf{C}(X)$ and $\mathbf{C}(Y)$ the corresponding small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} of $X$ and $Y$ (i.e., categories of morphisms to $X$ and $Y$ respectively equipped with one of these topologies).
+
+        Then the \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change functor}
+        \[
+        f^{-1} : \mathbf{C}(Y) \to \mathbf{C}(X), \quad (V \to Y) \mapsto (V \times_Y X \to X)
+        \]
+        \CrefIfExists{definition:cartesian_product_of_two_objects_in_a_category_over_an_object} is a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites }{continuous functor}. It in fact induces a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{morphism of sites} 
+        $$f: (\mathbf{C}(X), \tau_{\mathbf{C}}) \to (\mathbf{C}(Y), \tau_{\mathbf{C}})$$
+        where $\tau_{\mathbf{C}}$ denotes the chosen topology (Zariski, étale, Nisnevich, fppf, fpqc, crystalline).
+\end{definition}

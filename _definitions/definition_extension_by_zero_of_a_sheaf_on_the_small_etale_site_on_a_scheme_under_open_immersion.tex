@@ -1,0 +1,10 @@
+\begin{definition}[Extension by zero functor for open immersions and the étale site] \label{definition:extension_by_zero_of_a_sheaf_on_the_small_etale_site_on_a_scheme_under_open_immersion}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, $j : U \hookrightarrow X$ an open immersion of schemes, and let $\mathit{Et}/X$ (resp. $\mathit{Et}/U$) denote the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small étale site} of $X$ (resp. $U$). The \hldef{extension by zero functor}
+$$\hlin{j_! : \mathrm{Sh}(\mathit{Et}/U) \to \mathrm{Sh}(\mathit{Et}/X)}$$
+is defined as follows: for any sheaf $\mathcal{F}$ of abelian groups on $\mathit{Et}/U$ and any object $V \to X$ of $\mathit{Et}/X$,
+\begin{itemize}
+    \item if $V \to X$ factors through $U$ (i.e., $V \times_X U \cong V$), then $(j_!\mathcal{F})(V) = \mathcal{F}(V \times_X U)$,
+    \item otherwise, $(j_!\mathcal{F})(V) = 0$.
+\end{itemize}
+The assignment $j_!$ defines an exact functor called the extension by zero of sheaves via the open immersion $j$.
+\end{definition}

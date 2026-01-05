@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:identity_functor_on_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. The \hldef{identity functor on $\mathcal{C}$} is the functor
+\hl{$1_{\mathcal{C}} \colon \mathcal{C} \to \mathcal{C}$}
+(also denoted by \hl{$\text{id}_{\mathcal{C}}$}) defined by the following data:
+\begin{itemize}
+    \item For every object $X \in \text{Ob}(\mathcal{C})$, $1_{\mathcal{C}}(X) = X$.
+    \item For every morphism $f \colon X \to Y$ in $\mathcal{C}$, $1_{\mathcal{C}}(f) = f$.
+\end{itemize}
+It satisfies the functor axioms trivially: $1_{\mathcal{C}}(f \circ g) = f \circ g = 1_{\mathcal{C}}(f) \circ 1_{\mathcal{C}}(g)$ and $1_{\mathcal{C}}(\text{id}_X) = \text{id}_X$.
+\end{definition}

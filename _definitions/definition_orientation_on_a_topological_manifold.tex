@@ -1,0 +1,28 @@
+
+\TODO{TODO: overall defining orientations is still very confusing to me.}
+
+\begin{definition}
+Let $M$ be an $n$-dimensional topological manifold, and let $(U, \varphi)$ be a \hyperrefIfExists{definition:chart_on_a_topological_manifold}{chart} on $M$ where $U \subseteq M$ is open and $\varphi : U \to V$ is a homeomorphism onto an open subset $V \subseteq \mathbb{R}^n$.
+
+An \hldef{orientation for the chart $(U, \varphi)$} is a choice of equivalence class of ordered bases of $\mathbb{R}^n$ at each point of $V$ consistent under orientation-preserving homeomorphisms of $V$.
+
+More concretely, such an orientation for $(U, \varphi)$ is an equivalence class determined by the \hyperrefIfExists{definition:standard_orientation_on_R_n}{standard orientation of $\mathbb{R}^n$}. The chart $(U, \varphi)$ is called \hldef{oriented} if $\varphi$ is orientation-preserving, i.e., its transition maps with other charts respect the chosen orientation.
+\end{definition}
+
+\begin{definition}
+Let $M$ be an $n$-dimensional topological manifold. An \hldef{oriented atlas} on $M$ is a collection $\mathcal{A} = \{ (U_\alpha, \varphi_\alpha) \}_{\alpha \in A}$ of oriented charts covering $M$ such that for every pair of charts $(U_\alpha, \varphi_\alpha)$ and $(U_\beta, \varphi_\beta)$ with $U_\alpha \cap U_\beta \neq \emptyset$, the transition function 
+$$
+\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)
+$$
+is an orientation-preserving homeomorphism of open subsets of $\mathbb{R}^n$.
+
+The atlas $\mathcal{A}$ is called \emph{maximal oriented} if it is maximal with respect to inclusion among oriented atlases on $M$, i.e., it contains every oriented chart compatible with all charts in $\mathcal{A}$.
+\end{definition}
+
+\begin{definition}
+Let $M$ be an $n$-dimensional topological manifold. An \hldef{orientation on $M$} is a choice of a maximal oriented atlas on $M$.
+
+The pair $(M, \mathcal{A})$, where $\mathcal{A}$ is a maximal oriented atlas, is called an \hldef{oriented topological manifold}.
+
+By definition, $M$ is \emph{orientable} if there exists at least one orientation on $M$, i.e., at least one maximal oriented atlas exists. The orientation fixes a consistent "choice of orientation" throughout the manifold.
+\end{definition}

@@ -1,0 +1,35 @@
+\begin{definition} \label{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}
+    Let $\calA$, $\calB$ be \CrefAndHyperrefIfExist{definition:category}{categories}, let $F: \calA \to \calB$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}, and let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. 
+
+    Assume at least one of the following:
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor}
+        $$a: \operatorname{PreSh}(\calD, K; \calB) \to \Sh(\calD,K; \calB) $$
+        exists.
+        \item $F$ is a \CrefAndHyperrefIfExist{definition:continuous_cocontinuous_functor_between_categories}{continuous functor} and $\calB$ admits \CrefAndHyperrefIfExist{theorem:limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index}{limits} indexed by \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{covering sieves} of $K$.
+    \end{enumerate}
+    % Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor}
+    % $$a: \operatorname{PreSh}(\calD, K; \calB) \to \Sh(\calD,K; \calB) $$
+    % exists.
+
+    Define the \hldef{sheafy functor} \hl{$\mathscr{F}$} of $F$ under each of the above assumptions as follows: 
+    \begin{enumerate}
+        \item 
+        As the functor
+        $$\mathscr{F}: \operatorname{PreSh}(\calD, \calA) \to \Sh(\calD, K; \calB)$$
+        given by $S \mapsto a(F \circ S)$. By restriction, there is an induced functor 
+        $$\operatorname{Sh}(\calD,K; \calA) \to \Sh(\calD, K; \calB)$$ 
+        on the category of sheaves on $\calD$ valued in $\calA$; we usually denote this restricted functor by \hl{$\mathscr{F}$} as well. 
+
+        \item 
+        As the functor
+        $$\mathscr{F}: \operatorname{Sh}(\calD,K; \calA) \to \Sh(\calD, K; \calB)$$
+        given by $S \mapsto F \circ S$. Due to the assumptions on $F$ and $\calB$, $F \circ S$ is a sheaf.
+    \end{enumerate}
+    
+    Note that if both assumptions hold, then the two functors 
+    $$\operatorname{Sh}(\calD,K; \calA) \to \Sh(\calD, K; \calB)$$ 
+    are naturally isomorphic.
+
+    Sheafy functors are often notated with scripted letters.
+\end{definition}

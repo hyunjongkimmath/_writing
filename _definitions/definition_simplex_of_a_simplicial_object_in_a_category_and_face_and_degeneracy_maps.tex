@@ -1,0 +1,48 @@
+\begin{definition} \label{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+\begin{enumerate}
+    \item Let $X$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial object} in $\mathcal{C}$. An object \hl{$X_n := X([n])$} of $\mathcal{C}$ is called the \hldef{$n$-simplices of $X$}. In case that $\calC$ is some kind of category of sets, an element of $X_n$ is called an \hldef{$n$-simplex of $X$}, so $X_n$ is the \hldef{set of $n$-simplices of $X$}. In this case, a \hldef{vertex of $X$} moreover refers to a $0$-simplex of $X$ and a \hldef{edge of $X$} refers to a $1$-simplex of $X$. 
+
+
+
+    For each morphism $\theta : [m] \to [n]$ in $\Delta$, the induced morphism
+    $$
+    X(\theta) : X_n \to X_m
+    $$
+    in $\mathcal{C}$ is called a \hldef{simplicial morphism}. 
+
+    For each $0 \leq j \leq n$, the \hldef{$j$th face map of the $n$-simplicies} refers to the map 
+    $$\hlin{d_j = X(p_j): X_n \to X_{n-1}, \quad p_j: [n-1] \to [n], \quad p_j(i) = \begin{cases} i &\text{if } i < j  \\ i+1 &\text{if } i \geq j \end{cases}}.$$
+    $d_j$ is also denoted by \hl{$\partial_j$}.
+
+    For each $0 \leq j \leq n$, the \hldef{$j$th degeneracy map of the $n$-simplicies} refers to the map 
+    $$\hlin{s_j = X(q_j): X_n \to X_{n+1}, \quad q_j: [n+1] \to [n], \quad q_j(i) = \begin{cases} i &\text{if } i \leq j  \\ i-1 &\text{if } i > j \end{cases}}.$$
+    
+    \item Let $Y : \Delta \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{cosimplicial object} of $\mathcal{C}$. An object \hl{$Y^n := Y([n])$} of $\calC$ is called the \hldef{$n$-cosimplicies of $Y$}. In case that $\calC$ is some kind of category of sets, an element of $Y_n$ is called an \hldef{$n$-cosimplex of $Y$}, so $Y^n$ is the \hldef{set of $n$-cosimplices of $Y$}.
+. 
+
+    
+    For each morphism $\theta : [m] \to [n]$ in $\Delta$, the induced morphism
+    $$ Y(\theta) : Y^m \to Y^n $$
+    is called a \hldef{cosimplicial morphism}.  
+
+    For each $0 \leq j \leq n$, the \hldef{$j$th coface map of the $n$-cosimplicies} refers to the map
+    $$\hlin{d^j = Y(p_j) : Y^n \to Y^{n+1}, \quad p_j : [n] \to [n+1], \quad p_j(i) = 
+    \begin{cases}
+    i & \text{if } i < j \\
+    i + 1 & \text{if } i \geq j
+    \end{cases}
+    }$$
+    $d^j$ is also denoted by \hl{$\partial^j$}.
+
+    For each $0 \leq j \leq n$, the \hldef{$j$th codegeneracy map of the $n$-cosimplicies} refers to the map
+    $$\hlin{s^j = Y(q_j): Y^n \to Y^{n-1}, \quad q_j: [n] \to [n-1], \quad q_j(i) =
+    \begin{cases}
+    i & \text{if } i \leq j \\
+    i - 1 & \text{if } i > j
+    \end{cases}
+    }$$
+    % If $\theta$ is injective, then $Y(\theta)$ is called a \hldef{coface map}; if $\theta$ is surjective, then $Y(\theta)$ is called a \hldef{codegeneracy map}.
+\end{enumerate}
+A \hldef{(co)face/degeneracy of a the $n$-(co)simplicies of a (co)simplicial object} may also refer to the images of the (co)face/degeneracy maps.
+\end{definition}

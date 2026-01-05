@@ -1,0 +1,12 @@
+\begin{definition}[Topology induced by an extended metric] \label{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}
+
+Let $(X, d)$ be an \hyperrefIfExists{definition:extended_metric_on_a_set}{extended metric space}.
+\begin{enumerate}
+    \item Given $\varepsilon \in (0,\infty)$ and $x \in X$, the set
+    $$\hlin{B(x, \varepsilon) := \{ y \in X : d(x, y) < \varepsilon \}}$$
+    is called the \hldef{open ball of radisu $\varepsilon$ centered at $x$}.
+
+    \item The \hldef{topology induced by $d$ on $X$} is the \CrefAndHyperrefIfExist{definition:topological_space}{topology} defined by declaring a subset $U \subseteq X$ to be open if for every $x \in U$, there exists $\varepsilon \in (0,\infty)$ such that $B(x, \varepsilon)$ is contained in $U$. 
+
+\end{enumerate}
+\end{definition}

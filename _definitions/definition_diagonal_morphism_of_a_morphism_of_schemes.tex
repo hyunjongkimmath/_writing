@@ -1,0 +1,27 @@
+\begin{definition}[Diagonal morphism of a morphism of schemes] \label{definition:diagonal_morphism_of_a_morphism_of_schemes}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+    The \hldef{diagonal morphism associated to $f$} is the morphism
+    \hlin{$$\Delta_f : X \to X \times_Y X$$}
+    \CrefIfExists{definition:cartesian_product_of_two_objects_in_a_category_over_an_object} which is the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_an_object_over_an_object_in_a_category}{diagonal morphism} associated to the morphism $f$ in the category of schemes.
+
+    In other words, $\Delta_f$ is defined as the unique morphism induced by the universal property of the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} making the following diagram commute:
+    \[
+    \begin{tikzcd}
+    X \arrow[rd, "\Delta_f"] \ar[rrd, bend left, "\id_X"], \ar[ddr, bend right, "\id_X"] & & \\
+    & X \times_Y X \arrow[d, "p_1"] \arrow[r, "p_2"] & X \arrow[d, "f"] \\
+    & X \arrow[r, "f"] & Y
+    \end{tikzcd}
+    % \begin{tikzcd}
+    %     X \arrow[rd, "\Delta_f"] & & 
+    %   & X \times_Y X \arrow[d, "{p_1}"] \arrow[r,  "{p_2}"] \ar[r] & X \ar[d, "f"] \\
+    % & X \ar[r, "f"] & Y
+    % \end{tikzcd}
+    \]
+    where $p_1$ and $p_2$ are the natural projections from the fiber product.
+
+    In other words, $\Delta_f$ is given by the pair of identity morphisms $(\mathrm{id}_X, \mathrm{id}_X)$ over $Y$:
+    \[
+    \Delta_f := (\mathrm{id}_X, \mathrm{id}_X) : X \to X \times_Y X.
+    \]
+\end{definition}

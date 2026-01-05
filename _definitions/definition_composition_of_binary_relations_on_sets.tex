@@ -1,0 +1,6 @@
+\begin{definition} \label{definition:composition_of_binary_relations_on_sets}
+    Let $R \subseteq X \times Y$ and $S \subseteq Y \times Z$ be \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relations}.
+    The \hldef{composition} of $S$ with $R$, denoted by \hl{$S \circ R$}, is the binary relation from $X$ to $Z$ defined by:
+    $$ \hlin{ S \circ R = \{ (x, z) \in X \times Z \mid \exists y \in Y \text{ such that } x R y \text{ and } y S z \}. } $$
+    In infix notation, $x (S \circ R) z$ if and only if there exists an intermediate element $y \in Y$ such that $x R y$ and $y S z$.
+\end{definition}

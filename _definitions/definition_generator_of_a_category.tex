@@ -1,0 +1,39 @@
+\begin{definition}[Generator of a category] \label{definition:generator_of_a_category}
+Let \(\mathcal{C}\) be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+\begin{enumerate}
+    \item  An object \(G \in \mathcal{C}\) is called a \hldef{generator} (or \hldef{separator}) if for every pair of distinct morphisms \(f, g : X \to Y\) in \(\mathcal{C}\), there exists a morphism \(h : G \to X\) such that
+    \[
+    f \circ h \neq g \circ h.
+    \]
+    In case that $\calC$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}, this is equivalent to the condition that the \CrefAndHyperrefIfExist{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}{representable functor}
+    \[
+    \mathrm{Hom}_{\mathcal{C}}(G, -) : \mathcal{C} \to \mathbf{Set}
+    \]
+    is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful}, 
+    %
+    % In other words, for every pair of distinct morphisms \(f, g : X \to Y\) in \(\mathcal{C}\), there exists a morphism \(h : G \to X\) such that
+    % \[
+    % f \circ h \neq g \circ h.
+    % \]
+    %
+    which in turn is equivalent to the condition that for every object \(X \in \mathcal{C}\), there exists an epimorphism
+    \[
+    \bigoplus_{i \in I} G \twoheadrightarrow X
+    \]
+    for some indexing set \(I\), where \(\bigoplus\) denotes the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} in \(\mathcal{C}\).
+
+    \item A family \(\{G_i\}_{i \in I}\) is called a \hldef{generating family} if for every pair of distinct morphisms \(f, g : X \to Y\) in \(\mathcal{C}\), there exists some index \(i \in I\) and a morphism \(h : G_i \to X\) such that
+    \[
+    f \circ h \neq g \circ h.
+    \]
+    In case $\calC$ is locally small, this is equivalent to the condition that the collection of representable functors
+    \[
+    \{\mathrm{Hom}_{\mathcal{C}}(G_i, -) : \mathcal{C} \to \mathbf{Set}\}_{i \in I}
+    \]
+    is jointly faithful, which in turn is equivalent to the condition that for every object \(X \in \mathcal{C}\), there exists a family of objects \(\{G_i\}_{i \in J}\) from the generating set indexed by some set \(J\), and an epimorphism
+    \[
+    \bigoplus_{i \in J} G_i \twoheadrightarrow X.
+    \]
+
+\end{enumerate}
+\end{definition}

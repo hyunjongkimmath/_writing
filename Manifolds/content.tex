@@ -1,0 +1,271 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+% \input{../_definitions/}
+
+\section{Basic definitions}
+
+\subsection{Topological manifolds}
+
+\input{../_definitions/definition_topological_manifold.tex}
+\input{../_definitions/definition_chart_on_a_topological_manifold.tex}
+\input{../_definitions/definition_atlas_on_a_topological_manifold.tex}
+\input{../_definitions/definition_transition_map_between_charts_on_a_topological_manifold.tex}
+
+\subsection{\texorpdfstring{$C^k$}{Ck} manifolds}
+
+$C^k$-manifolds are manifolds whose transition maps are $C^k$-maps between open subsets of Euclidean spaces.
+
+\input{../_definitions/definition_C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns.tex}
+
+\input{../_definitions/definition_C_k_compatible_charts_on_a_topological_manifold.tex}
+\input{../_definitions/definition_C_k_atlas_on_a_topological_manifold.tex}
+\input{../_definitions/definition_C_k_manifold.tex}
+\input{../_conventions/convention_C_k_for_k_equal_0_means_continuous_whereas_C_k_for_k_equal_infty_means_smooth.tex}
+\input{../_definitions/definition_C_k_morphism_between_C_k_manifolds.tex}
+
+\subsection{(Real) \texorpdfstring{$C^k$}{Ck}-vector bundles on (real) \texorpdfstring{$C^k$}{Ck}-manifolds}
+
+
+\input{../_definitions/definition_C_k_vector_bundle_on_a_C_k_manifold.tex}
+
+\input{../_concepts/theorem_total_space_of_a_C_k_vector_bundle_is_a_C_k_manifold.tex}
+
+
+
+
+
+
+\input{../_definitions/definition_morphism_of_C_k_vector_bundles_over_a_C_k_manifold_with_or_without_boundary.tex}
+
+
+
+\input{../_definitions/definition_dual_bundle_of_a_C_k_vector_bundle.tex}
+
+\input{../_definitions/definition_support_of_a_section_of_a_C_k_vector_bundle_over_a_C_k_manifold.tex}
+
+\begin{lemma}
+    Let $M$ be a \hyperrefIfExists{definition:C_k_manifold}{$C^k$-manifold with or without boundary} and let $E \to M$ be a \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{$C^k$ vector bundle}. 
+    If $M$ is \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact}, then \CrefAndHyperrefIfExist{definition:support_of_a_section_of_a_C_k_vector_bundle_over_a_C_k_manifold}{$\Gamma_c(E) = \Gamma(E)$}. 
+\end{lemma}
+
+\subsection{Tangent and cotangent bundles of (real) \texorpdfstring{$C_k$}{Ck} manifolds}
+
+In general, we may speak of tangent/cotangent bundles of $C^k$-manifolds; these have natural structures as $C^{k-1}$-manifolds. We are most interested in the case that $k = \infty$.
+
+\input{../_definitions/definition_tangent_space_of_a_topological_manifold_at_a_point.tex}
+
+\input{../_definitions/definition_tangent_bundle_of_a_C_k_manifold.tex}
+
+\input{../_definitions/definition_cotangent_bundle_of_a_C_k_manifold.tex}
+
+\subsection{Exterior powers of real vector bundles}
+
+In general, one can define exterior powers of (real) vector bundles on real manifolds. A case of interest would be the exterior powers of the (co)tangent bundle of a smooth manifold.
+
+\input{../_definitions/definition_symmetric_exterior_power_of_a_two_sided_module_over_a_ring.tex}
+
+
+\input{../_definitions/definition_symmetric_power_of_a_vector_bundle_on_a_topological_manifold.tex}
+
+
+\input{../_definitions/definition_exterior_power_of_a_vector_bundle_on_a_topological_manifold.tex}
+
+\begin{proposition}
+    Let $M$ be a $n$-dimensional (real) $C^k$-manifold for $k \in \bbN_0 \cup \{\infty\}$ and let $E$ be a $C^k$-vector bundle of rank $r$ on $M$. The \hyperrefIfExists{definition:kth_exterior_power_of_vector_space_over_a_field}{$l$-th exterior power} $\bigwedge^l E$ is a $C^k$-vector bundle of rank ${r\choose k}$.
+\end{proposition}
+
+\subsection{\texorpdfstring{$k$}{k}-forms on a smooth real manifold}
+
+\input{../_definitions/definition_bundle_of_l_forms_on_a_C_k_manifold.tex}
+
+% \input{../_definitions/definition_k_form_on_a_smooth_manifold.tex}
+
+\TODO{TODO: read the following four definitions}
+
+\input{../_definitions/definition_exterior_derivative_on_smooth_k_forms_on_a_smooth_manifold.tex}
+
+
+\begin{definition}
+Let $k \in \bbZ_{\geq 2} \cup \{\infty\}$, let $M$ be a $C^k$ manifold with or without boundary, and $U \subset M$ open. 
+
+\begin{enumerate}
+    \item The \hldef{de Rham complex} on $U$ is the sequence of $\mathbb{R}$-vector spaces and maps:
+    $$ 0 \to \Omega^0(U) \xrightarrow{d} \Omega^1(U) \xrightarrow{d} \Omega^2(U) \xrightarrow{d} \cdots \xrightarrow{d} \Omega^{\min(\dim M, k-1)}(U) \to 0 $$
+    where each $d$ is the exterior derivative.
+
+    \item The \hldef{de Rham complex of compactly supported differential forms} on $U$ is the sequence of $\mathbb{R}$-vector spaces and maps:
+    $$ 0 \to \Omega_c^0(U) \xrightarrow{d} \Omega_c^1(U) \xrightarrow{d} \Omega_c^2(U) \xrightarrow{d} \cdots \xrightarrow{d} \Omega_c^{\min(\dim M, k-1)}(U) \to 0 $$
+    where each $d$ is the exterior derivative as in the previous notation, and the image of $d$ is contained in forms with compact support because $d$ preserves compact support.
+\end{enumerate}
+Both are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of $\bbR$-vector spaces.
+
+\end{definition}
+
+
+\section{Complex Manifolds}
+
+\input{../_definitions/definition_holomorphic_function_from_a_subset_of_Cn_to_Cm.tex}
+\input{../_definitions/definition_biholomorphic_map_of_open_subsets_of_complex_space.tex}
+\input{../_definitions/definition_complex_analytic_manifold.tex}
+\input{../_definitions/definition_almost_complex_structure_on_a_smooth_manifold_of_even_dimension.tex}
+\input{../_definitions/definition_integrable_almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension.tex}
+
+\input{../_concepts/proposition_complex_manifold_is_equivalent_to_a_smooth_manifold_with_an_integrable_almost_complex_structure.tex}
+
+\section{Vector fields}
+
+\input{../_definitions/definition_local_and_global_vector_field_on_a_C_k_manifold.tex}
+
+
+\input{../_definitions/definition_local_and_global_frames_of_the_tangent_bundle_of_a_differentiable_manifold.tex}
+
+
+
+\section{Orientation on manifolds}
+
+\input{../_definitions/definition_orientation_of_a_real_vector_space.tex}
+
+\input{../_definitions/definition_standard_orientation_on_R_n.tex}
+
+
+\input{../_definitions/definition_orientation_of_a_differentiable_manifold_with_or_without_boundary.tex}
+
+
+
+% \input{../_definitions/definition_canonical_orientation_of_a_chart_on_a_topological_manifold.tex}
+
+% \begin{definition}
+% Let $M$ be an $n$-dimensional topological manifold. An \hldef{oriented atlas} on $M$ is a collection $\mathcal{A} = \{ (U_\alpha, \varphi_\alpha) \}_{\alpha \in A}$ of oriented charts covering $M$ such that for every pair of charts $(U_\alpha, \varphi_\alpha)$ and $(U_\beta, \varphi_\beta)$ with $U_\alpha \cap U_\beta \neq \emptyset$, the transition function 
+% $$
+% \varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)
+% $$
+% is an orientation-preserving homeomorphism of open subsets of $\mathbb{R}^n$.
+
+% The atlas $\mathcal{A}$ is called \emph{maximal oriented} if it is maximal with respect to inclusion among oriented atlases on $M$, i.e., it contains every oriented chart compatible with all charts in $\mathcal{A}$.
+% \end{definition}
+
+% \begin{definition}
+% Let $M$ be an $n$-dimensional topological manifold. An \hldef{orientation on $M$} is a choice of a maximal oriented atlas on $M$.
+
+% The pair $(M, \mathcal{A})$, where $\mathcal{A}$ is a maximal oriented atlas, is called an \hldef{oriented topological manifold}.
+
+% By definition, $M$ is \emph{orientable} if there exists at least one orientation on $M$, i.e., at least one maximal oriented atlas exists. The orientation fixes a consistent "choice of orientation" throughout the manifold.
+% \end{definition}
+
+
+
+\section{Poincar\'e duality}
+
+\TODO{read the following formulations of Poincare duality}
+\TODO{give formulations of poincare duality on a non-compact manifold}
+
+\begin{theorem}[Classical Poincaré Duality]
+    \TODO{define oriented manifold, cap product, fundamental class, singular homology, cohomology}
+Let $M$ be a connected, closed (i.e., compact without boundary), oriented \CrefAndHyperref{definition:topological_manifold}{topological manifold} of dimension $n$, and let $R$ be a commutative ring with unity. Then for each $k \in \{0, \ldots, n\}$, there is an isomorphism
+$$ H^k(M;R) \cong H_{n-k}(M;R) $$
+induced by the cap product with the fundamental class $[M] \in H_n(M;R)$.
+\end{theorem}
+
+\begin{theorem}[Perfect Pairing]
+    \TODO{define $\smile$, $\langle, \rangle$, singular homology, cohomology}
+Under the hypotheses of the previous theorem, for each $k \in \{0, \ldots, n\}$, the bilinear pairing
+$
+H^k(M;R) \times H^{n-k}(M;R) \to R, \quad (\alpha, \beta) \mapsto \langle \alpha \smile \beta, [M] \rangle
+$
+is nondegenerate (i.e., perfect).
+\end{theorem}
+
+\begin{proposition}[Relative Poincaré Duality]
+    \TODO{define relative cohomology, relative fundamental class}
+Let $M$ be a compact, oriented $n$-manifold with (possibly nonempty) boundary $\partial M$, and let $R$ be a commutative ring with unity. For each $k \in \{0, \ldots, n\}$, there is an isomorphism
+$
+H^k(M, \partial M; R) \cong H_{n - k}(M; R)
+$
+again induced via cap product with the relative fundamental class $[M, \partial M] \in H_n(M, \partial M; R)$.
+\end{proposition}
+
+\begin{proposition}[Poincaré Duality for Compact Supports]
+Let $X$ be a connected, oriented $n$-dimensional manifold (not necessarily compact) and $R$ a commutative ring with unity. Then for each $k \in \{0,\ldots,n\}$, the cap product with the fundamental class in Borel–Moore homology induces an isomorphism
+$
+H_c^k(X; R) \cong H_{n - k}^{BM}(X; R).
+$
+\end{proposition}
+
+\begin{proposition}[Poincaré Duality Groups]
+Let $G$ be a group of type FP (i.e., admits a finite projective resolution as a $\mathbb{Z}[G]$-module), and let $n$ be an integer. $G$ is said to be an $n$-dimensional Poincaré duality group over a commutative ring $R$ with dualizing module $D$ if there exists a class $\mu \in H^n(G; D)$ such that cap product with $\mu$ induces isomorphisms
+$
+H^k(G; M) \cong H_{n - k}(G; D \otimes_R M)
+$
+for all (left) $R[G]$-modules $M$ and all $k \geq 0$.
+\end{proposition}
+
+\begin{corollary}[Betti Number Symmetry]
+Let $M$ be a closed, connected, oriented $n$-manifold. Then the $k$-th Betti number equals the $(n - k)$-th Betti number:
+$
+\operatorname{rank}_R H^k(M; R) = \operatorname{rank}_R H^{n-k}(M; R).
+$
+\end{corollary}
+
+% Intuitive statement (for exposition, not inside a formal environment):
+% Intuitively, Poincaré duality expresses the deep geometric fact that $k$-dimensional cycles and $(n-k)$-dimensional cocycles are in bijection via intersection, with the fundamental class acting as the mediator. This duality underlies the symmetry of Betti numbers and the perfectness of cohomological pairings in oriented manifolds.
+
+
+
+% \begin{definition}
+% Let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, and let $M$ be a $C^k$ manifold. 
+
+% The assignment $U \mapsto \Omega_c^m(U)$ for open $U\subseteq M$ defines a presheaf on $M$ taking values in $\mathbb{R}$-vector spaces, by restriction.
+% Taking the direct sum over $m$, and $d$ as above, gives a sequence of sheaves of $\mathbb{R}$-vector spaces:
+% $$
+% 0 \to \mathcal{F}^0 \xrightarrow{d} \mathcal{F}^1 \xrightarrow{d} \cdots \xrightarrow{d} \mathcal{F}^{\dim M} \to 0
+% $$
+% where $\mathcal{F}^m$ denotes the sheaf sending $U$ to $\Omega_c^m(U)$. This is called the \hldef{de Rham complex of sheaves of compactly supported differential forms}.
+% \end{definition}
+
+
+\appendix
+\section{Set Theory}
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+
+\section{Linear Algebra}
+\input{../_definitions/definition_vector_space_over_a_field.tex}
+\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+\input{../_definitions/definition_morphism_of_vector_spaces.tex}
+
+\section{Abstract algebra}
+
+\input{../_definitions/definition_ring.tex}
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_field.tex}
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_multilinear_map_of_modules_over_rings.tex}
+\input{../_definitions/definition_symmetric_antisymmetric_alternating_multilienar_forms_over_rings.tex}
+\input{../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex}
+\input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
+
+
+\section{Topology}
+
+\input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_euclidean_n_space.tex}
+\input{../_definitions/definition_closed_half_space_in_euclidean_space.tex}
+\input{../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_continuous_map_of_topological_spaces.tex}
+\input{../_definitions/definition_homeomorphism_of_topological_spaces.tex}
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+\input{../_definitions/definition_first_and_second_countable_topological_space.tex}
+\input{../_definitions/definition_interior_and_boundary_of_topological_space.tex}
+
+\input{../_definitions/definition_open_covering_of_a_topological_space.tex}
+\input{../_definitions/definition_closure_of_a_subspace_of_a_topological_space.tex}
+\input{../_definitions/definition_compact_topological_space.tex}
+
+\input{../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex}
+\input{../_definitions/definition_submodule_of_a_module_generated_by_elements.tex}
+\input{../_definitions/definition_tensor_product_of_bimodules_of_rings.tex}
+\input{../_definitions/definition_quotient_module_of_a_module_by_a_module_of_a_ring.tex}
+
+\input{../_definitions/definition_multilinear_map_of_modules_over_rings.tex}
+\input{../_definitions/definition_symmetric_antisymmetric_alternating_multilienar_forms_over_rings.tex}
+\input{../_definitions/definition_chain_complex_in_an_additive_category.tex}

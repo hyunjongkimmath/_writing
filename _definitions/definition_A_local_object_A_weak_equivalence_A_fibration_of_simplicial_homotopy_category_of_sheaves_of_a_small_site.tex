@@ -1,0 +1,13 @@
+\begin{definition}[See e.g. {\cite[Section 2 Definition 2.1, Definition 2.2]{morel_voevodsky_1999}}] \label{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}
+Let $T$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} and let $A$ be a set of morphisms in \CrefAndHyperrefIfExist{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site}{$\calH_s(T)$}. 
+\begin{enumerate}
+    \item An object $X$ of \CrefAndHyperrefIfExist{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site}{$\calH_s(T)$} is called \hldef{$A$-local} if for any $Y \in \calH_s(T)$ and any $f: Z_1 \to Z_2$ in $A$, the map 
+    $$\Hom_{\calH_s(T)}(Y \times Z_2, X) \to \Hom_{\calH_s(T)}(Y \times Z_1, X)$$
+    is a bijection. Write \hl{$\calH_{s,A}(T)$} for the full subcategory of $\calH_s(T)$ of $A$-local objects. 
+    \item A morphism $f: X_1 \to X_2$ in $\Deltaop(\Shv(T))$ is called an \hldef{$A$-weak equivalence} if for any $A$-local object $Y$ the map
+    $$\Hom_{\calH_s(T)}(X_2, Y) \to \Hom_{\calH_s(T)}(X_1, Y)$$
+    induced by $f$ is a bijection. 
+    \item A morphism $f: X_1 \to X_2$ in $\Deltaop(\Shv(T))$ is called an \hldef{$A$-fibration} if it has the right lifting property with respect to monomorphisms (i.e. simplicial cofibrations) that are also $A$-weak equivalences.
+\end{enumerate}
+A morphism $f: X \to Y$ in $\calH_s(T)_\bullet$ is called an \hldef{$A$-weak equivalence} (resp. \hldef{$A$-fibration}) if it is an $A$-weak equivalence (resp. $A$-fibration) as an unpointed morphism.
+\end{definition}

@@ -1,0 +1,154 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{ZFC Axioms}
+
+% Definition: Language and structure of set theory
+\TODO{language of set theory}
+\begin{notation}
+Let the language of set theory consist of the binary relation symbol $\in$, intended to denote *membership*. The objects of discourse, called \hlin{sets}, are elements of a nonempty universe $V$, and all variables range over the elements of $V$.
+\end{notation}
+
+% Definition: Axioms of Zermelo–Fraenkel set theory (ZF)
+\input{../_definitions/definition_zermelo_fraenkel_set_theory.tex}
+
+\input{../_definitions/definition_small_set.tex}
+
+\input{../_definitions/definition_subset_of_a_set.tex}
+
+\input{../_concepts/lemma_sets_are_equal_if_and_only_if_they_are_mutual_subsets.tex}
+\begin{proof}
+    This is by the \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{axiom of extensionality}.
+\end{proof}
+
+\input{../_definitions/definition_power_set_of_a_set.tex}
+
+\input{../_definitions/definition_complement_of_a_set_by_a_subset.tex}
+
+
+\input{../_definitions/definition_union_of_sets.tex}
+
+\input{../_definitions/definition_intersection_of_sets.tex}
+
+
+\section{Maps of sets}
+
+% Definition: Function and injectivity/surjectivity preliminaries
+\input{../_definitions/definition_function_of_sets.tex}
+\input{../_definitions/definition_category_of_sets.tex}
+
+\input{../_definitions/definition_identity_function_on_a_set.tex}
+
+\input{../_definitions/definition_preimage_of_a_subset_of_the_codomain_of_a_set_map.tex}
+
+
+
+
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+
+
+\input{../_definitions/definition_product_of_sets.tex}
+
+
+\section{Relations}
+
+\input{../_definitions/definition_n_ary_relation_on_sets.tex}
+
+\input{../_definitions/definition_related_to_for_a_binary_relation.tex}
+
+\input{../_definitions/definition_domain_and_range_of_a_binary_relation.tex}
+
+\input{../_definitions/definition_inverse_relation.tex}
+
+\input{../_definitions/definition_composition_of_binary_relations_on_sets.tex}
+
+
+
+\input{../_definitions/definition_reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set.tex}
+
+\input{../_definitions/definition_equivalence_relation_on_a_set.tex}
+
+\input{../_definitions/definition_equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation.tex}
+
+\TODO{}
+\begin{definition} 
+Let $R$ be a \CrefAndHyperrefIfExist{definition:relation_on_sets}{relation on a set} $X$.
+\begin{enumerate}
+    \item $R$ is a \hldef{partial order} if it is reflexive, antisymmetric, and transitive. A set $X$ equipped with a partial order is called a \hldef{partially ordered set} or \hldef{poset}.
+    \item $R$ is a \hldef{strict partial order} if it is irreflexive (for all $x \in X$, not $x R x$) and transitive.
+    \item $R$ is a \hldef{total order} (or \hldef{linear order}) if it is a partial order that is total.
+    \item $R$ is a \hldef{well-order} if it is a total order such that every non-empty subset of $X$ has a least element with respect to $R$.
+\end{enumerate}
+\end{definition}
+
+
+
+\section{Ordinals and Cardinals}
+
+\input{../_notations/notation_natural_numbers.tex}
+\input{../_definitions/definition_countable_finite_uncountable_sets.tex}
+
+\input{../_definitions/definition_ordinal_number.tex}
+
+\input{../_definitions/definition_successor_ordinal_of_an_ordinal.tex}
+
+\input{../_definitions/definition_limit_ordinal.tex}
+
+
+\input{../_definitions/definition_finite_ordinal.tex}
+
+\input{../_definitions/definition_omega_ordinal.tex}
+
+
+\input{../_definitions/definition_cardinal_number_and_cardinality_of_a_set.tex}
+
+\input{../_definitions/definition_successor_cardinal_of_a_cardinal_and_limit_cardinal.tex}
+
+\input{../_definitions/definition_cofinal_subset_and_cofinality_of_a_limit_ordinal.tex}
+
+
+
+\input{../_definitions/definition_regular_and_singular_cardinals.tex}
+
+\input{../_definitions/definition_aleph_numbers.tex}
+
+
+\section{Category Theorey}
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+\input{../_definitions/definition_functor_between_categories.tex}
+\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex}
+\input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
+\input{../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex}
+\input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
+
+\section{Other set theories}
+
+\subsection{First order logic}
+
+\subsection{}
+
+\input{../_definitions/definition_grothendieck_universe.tex}
+
+\input{../_definitions/definition_tarski_grothendieck_set_theory.tex}
+
+\input{../_definitions/definition_proper_class_in_a_two_sorted_first_order_language_with_variables_for_sets_and_classes.tex}
+
+\input{../_definitions/definition_von_neumann_bernays_godel_set_theory.tex}
+
+\input{../_definitions/definition_morse_kelley_set_theory.tex}
+
+
+\begin{definition} \label{defintion:stratification_of_variables_in_a_formula_in_a_first_order_language_with_a_binary_relation}
+    \TODO{formula, first-order language}
+    Let $\mathcal{L}_{\in}$ be a first-order language with a single binary relation symbol $\in$.
+    Let $\phi$ be a formula in the language $\mathcal{L}_{\in}$. A function $\sigma: \text{Vars}(\phi) \to \mathbb{N}$ mapping variables in $\phi$ to natural numbers is called a \hldef{stratification} if for every atomic formula $x \in y$ occurring in $\phi$, we have $\sigma(y) = \sigma(x) + 1$, and for every atomic formula $x = y$, we have $\sigma(x) = \sigma(y)$.
+
+    A formula $\phi$ is called \hldef{stratified} if it admits a stratification.
+\end{definition}
+
+\input{../_definitions/definition_new_foundations_with_urelements.tex}
+
+\input{../_definitions/definition_constructive_zermelo_fraenkel_set_theory.tex}
+
+

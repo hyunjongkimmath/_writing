@@ -1,0 +1,39 @@
+\begin{definition}[Flat module over a ring] \label{definition:flat_left_right_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. 
+    \begin{enumerate}
+        \item Let $M$ be a left $R$-module. The module $M$ is said to be \hldef{flat (with respect to the left $R$-module structure)} if the functor
+        \[
+        -\otimes_R M : \mathrm{Mod}_R \to \mathbf{Ab}
+        \]
+        \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} from the category of right $R$-modules to abelian groups is exact; that is, for every exact sequence of right $R$-modules
+        \[
+        0 \to N' \to N \to N'' \to 0,
+        \]
+        the induced sequence
+        \[
+        0 \to N' \otimes_R M \to N \otimes_R M \to N'' \otimes_R M \to 0
+        \]
+        is exact.
+
+
+        \TODO{tor}
+        Equivalently, $M$ is flat if $\mathrm{Tor}_1^R(-,M) = 0$.
+
+        \item Let $M$ be a right $R$-module. The module $M$ is said to be \hldef{flat (with respect to the right $R$-module structure)} if the functor
+
+        \[
+        M \otimes_R - : {}_R \mathrm{Mod} \to \mathbf{Ab}
+        \]
+        from the category of left $R$-modules to abelian groups is exact; that is, for every exact sequence of right $R$-modules
+        \[
+        0 \to N' \to N \to N'' \to 0,
+        \]
+        the induced sequence
+        \[
+        0 \to M \otimes_R N'  \to M \otimes_R N \to M \otimes_R N'' \to 0
+        \]
+        is exact.
+
+    \end{enumerate}
+    \TextIfExists{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{Equivalently in either case, $M$ is flat if it is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat with respect to the biadditive functor $$- \otimes_R -: \mathbf{Mod}_R \times {}_R \mathbf{Mod} \to \Ab.$$}}
+\end{definition}

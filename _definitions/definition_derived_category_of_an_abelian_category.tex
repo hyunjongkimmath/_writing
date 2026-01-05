@@ -1,0 +1,16 @@
+
+\begin{definition}[Derived category] \label{definition:derived_category_of_an_abelian_category}
+Let $\mathcal{A}$ be an abelian category. 
+Consider the class $S$ of \hyperrefIfExists{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphisms}\CrefIfExists{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category} in the homotopy category \hyperrefIfExists{definition:homotopy_category_of_chain_complexes_of_an_additive_category}{$K(\mathcal{A})$}\CrefIfExists{definition:homotopy_category_of_chain_complexes_of_an_additive_category}.
+
+The \hldef{derived category} \hl{$D(\mathcal{A})$} is the \hyperrefIfExists{definition:localization_of_a_category_by_a_multiplicative_system}{localization}\CrefIfExists{definition:localization_of_a_category_by_a_multiplicative_system} of the homotopy category at the \hyperrefIfExists{definition:multiplicative_system_of_morphisms_in_a_category}{multiplicative system}\CrefIfExists{definition:multiplicative_system_of_morphisms_in_a_category} $S$:
+\[ D(\mathcal{A}) := K(\mathcal{A})[S^{-1}], \]
+We often write the \hyperrefIfExists{definition:localization_of_a_category_by_a_multiplicative_system}{localization functor}\CrefIfExists{definition:localization_of_a_category_by_a_multiplicative_system} $K(\mathcal{A}) \to D(\calA)$ by \hl{$q$} or \hl{$Q$}.
+\begin{itemize}
+    \item We often write \hldef{$D^+(\calA)$}, \hldef{$D^-(\calA)$}, and \hldef{$D^b(\calA)$} for the full subcategories of \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded below, cohomologically bounded above, and cohomologically bounded} complexes respectively. 
+
+    % \item If $\calA$ is abelian, we may also write \hldef{$K^{\infty, +}(\calA)$}, \hldef{$K^{\infty, -}(\calA)$}, \hldef{$K^{\infty, b}(\calA)$}, and \hldef{$K^{\infty, \emptyset}(\calA)$} for the full subcategories of \hyperrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded below, cohomologically bounded abaove, cohomologically bounded}\CrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}, and \hyperrefIfExists{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complexes}\CrefIfExists{definition:acyclic_complex_of_objects_in_an_abelian_category} respectively. We may further write \hldef{$K^{?,??}(\calA)$} for the full subcategory where $? \in \{+,-,b\}$ indicates the boundedness of the complex and $?? \in \{+,-,b,\emptyset\}$ indicates the cohomological boundedness of the complex.
+    
+\end{itemize}
+In general, $D(\calA)$ (and the aforementioned subcategories) may only exist as a \hyperrefIfExists{definition:category}{large category}\CrefIfExists{definition:category}, rather than a locally small category. When $\calA$ is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck abelian category}, however, $D(\calA)$ is a locally small category (see \cite[Tag 09PA]{stacks-project}).
+\end{definition}

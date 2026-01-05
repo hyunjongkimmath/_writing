@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:morphism_of_double_complex_of_objects_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}, and let
+$$(A^{p,q}, d'_A, d''_A)_{(p,q)\in \mathbb{Z}^2}, \quad (B^{p,q}, d'_B, d''_B)_{(p,q)\in \mathbb{Z}^2}$$
+be \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complexes} in $\mathcal{A}$.
+
+A \hldef{morphism of double complexes} $f : A \to B$ is a collection of morphisms
+$$ f^{p,q} : A^{p,q} \to B^{p,q}, $$
+for all $(p,q) \in \mathbb{Z}^2$, such that the following diagrams commute:
+
+    \hlalign{
+    \begin{align*}
+    d'_B{}^{p,q} \circ f^{p,q} &= f^{p+1,q} \circ d'_A{}^{p,q}, \\ 
+    d''_B{}^{p,q} \circ f^{p,q} &= f^{p,q+1} \circ d''_A{}^{p,q}.
+    \end{align*}
+    }
+
+In other words, $f$ respects both horizontal and vertical differentials of the double complexes.
+
+The double complexes and their morphisms form a category, sometimes denoted by \hl{$\mathbf{DC}(\mathcal{A})$}.
+\end{definition}

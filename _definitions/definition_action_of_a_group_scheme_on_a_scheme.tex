@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:action_of_a_group_scheme_on_a_scheme}
+Let $S$ be a scheme and let $G$ be a group scheme over $S$ with multiplication $m: G \times_S G \to G$ and identity section $e: S \to G$. An \hldef{action of the group scheme $G$ on an $S$-scheme $X$} is defined as follows:
+
+\begin{itemize}
+    \item A \hldef{left action} is a morphism of $S$-schemes $\sigma: G \times_S X \to X$ satisfying:
+    \begin{enumerate}
+        \item \textbf{Associativity:} The following diagram commutes:
+        $$\sigma \circ (m \times_S \operatorname{id}_X) = \sigma \circ (\operatorname{id}_G \times_S \sigma).$$
+        \item \textbf{Unitality:} The identity element acts trivially:
+        $$\sigma \circ (e \times_S \operatorname{id}_X) = \operatorname{id}_X,$$
+        where we identify $S \times_S X \cong X$.
+    \end{enumerate}
+
+    \item A \hldef{right action} is a morphism of $S$-schemes $\rho: X \times_S G \to X$ satisfying:
+    \begin{enumerate}
+        \item \textbf{Associativity:} The following diagram commutes:
+        $$\rho \circ (\operatorname{id}_X \times_S m) = \rho \circ (\rho \times_S \operatorname{id}_G).$$
+        \item \textbf{Unitality:} The identity element acts trivially:
+        $$\rho \circ (\operatorname{id}_X \times_S e) = \operatorname{id}_X,$$
+        where we identify $X \times_S S \cong X$.
+    \end{enumerate}
+\end{itemize}
+Eqiuvalently, An \hldef{left/right action of the group scheme $G$ on an $S$-scheme $X$} is a \CrefAndHyperrefIfExist{definition:left_right_action_of_a_group_object_in_a_category}{left/right action} of $G$ on $X$ as objects of the \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{category of $S$-schemes}. 
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{lemma} \label{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
+    \begin{enumerate}
+        \item If $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}, then any \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective object} $\calP$ is \CrefAndHyperrefIfExist{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic}. 
+
+        \item If $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, then any \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective object} $\calI$ is \CrefAndHyperrefIfExist{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic}. 
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    Note that any projective/injective object has a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective/injective resolution} (\Cref{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}), so we may talk about the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects $L_n F (\calP)$ and $R^n F (\calI)$} of projective objects $\calP$ and injective objects $\calI$ of $\calA$. In fact, the projective/injective resolution is simply given by 
+    $$\cdots \to 0 \to \calP \xrightarrow{\id} \calP \to 0$$
+    and
+    $$0 \to \calI \xrightarrow{\id} \calI \to 0 \to \cdots$$
+    so we compute $L_n F(\calP) = 0$ and $R^n F (\calI) = 0$. 
+\end{proof}

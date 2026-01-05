@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}
+Let $(R, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $M$ be a left $R$-module.
+A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $\phi: M \times M \to R$ such that for all $u, v, w \in M$ and $a \in R$:
+\begin{enumerate}
+    \item $\phi(u + v, w) = \phi(u, w) + \phi(v, w)$ and $\phi(u, v + w) = \phi(u, v) + \phi(u, w)$;
+    \item $\phi(au, v) = a\phi(u, v)$ (linear in the first variable);
+    \item $\phi(u, av) = \phi(u, v)\sigma(a)$ (conjugate-linear in the second variable).
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{definition}[Functional equation for Hecke L-functions] \label{definition:completed_hecke_L_function_of_a_hecke_character_of_a_number_field}
+\TODO{TODO: define the conductor of a hecke character}
+Let $K$ be a number field with absolute discriminant $|\Delta_{K/\mathbb{Q}}|$, and let $\chi$ be a \hyperrefIfExists{definition:hecke_character_of_a_number_field}{Hecke character of $K$} with conductor $\mathfrak{f}(\chi)$. For $s \in \mathbb{C}$, define the \hldef{completed (Hecke) $L$-function} by
+$$\hlin{\Lambda(s, \chi) := \left( |\Delta_{K/\mathbb{Q}}| \cdot N(\mathfrak{f}(\chi)) \right)^{\frac{s}{2}} \cdot \prod_{v \mid \infty} L_v(s, \chi) \cdot L(s, \chi),}$$
+where
+\TODO{TODO: define the norm}
+\TODO{TODO: define the Gamma function}
+\begin{itemize}
+  \item $N(\mathfrak{f}(\chi))$ is the norm of the conductor ideal $\mathfrak{f}(\chi)$,
+  \item the product runs over all infinite places $v$ of $K$,
+  \item the \hldef{infinite local factors} \hl{$L_v(s, \chi)$} are defined using the \hyperrefIfExists{definition:gamma_function}{$\Gamma$-function}:
+  $$\hlin{L_v(s, \chi) := \begin{cases} \Gamma_{\mathbb{R}}(s + \kappa_v) := \pi^{-\frac{s+\kappa_v}{2}} \Gamma\left(\frac{s + \kappa_v}{2}\right), & \text{if } v \text{ is a real place}, \\ \Gamma_{\mathbb{C}}(s + \kappa_v) := 2 (2\pi)^{-(s+\kappa_v)} \Gamma(s + \kappa_v), & \text{if } v \text{ is a complex place}, \end{cases}}$$
+  with some integers $\kappa_v \in \{0,1\}$ determined by the $\infty$-type of $\chi$,
+  \item and $L(s,\chi)$ is the \hyperrefIfExists{definition:hecke_L_function_of_a_hecke_character_of_a_number_field}{Hecke $L$-function}.
+\end{itemize}
+\end{definition}

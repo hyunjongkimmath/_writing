@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:ring_object_in_a_category_with_a_terminal_object}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$.
+
+A \hldef{ring object in $\mathcal{C}$} is an object $R \in \mathcal{C}$ equipped with:
+  \begin{itemize}
+    \item an \CrefAndHyperrefIfExist{definition:semigroup_object_in_a_category}{abelian} \CrefAndHyperrefIfExist{definition:group_object_in_a_category_with_a_final_object}{group object} structure $(R,+,0,-)$ (written additively), i.e.\ morphisms
+    $$
+    + : R \times R \to R, \quad 0 : 1 \to R, \quad - : R \to R,
+    $$
+    making $(R,+,0,-)$ a group object;
+    \item a \CrefAndHyperrefIfExist{definition:monoid_object_in_a_category_with_a_final_object}{monoid object} structure $(R,\cdot,1_R)$ (written multiplicatively), i.e.\ morphisms
+    $$
+    \cdot : R \times R \to R, \quad 1_R : 1 \to R,
+    $$
+    making $(R,\cdot,1_R)$ a monoid object;
+  \end{itemize}
+  such that the usual distributivity and absorption axioms hold, expressed by the commutativity of the diagrams corresponding to
+  $$
+  a \cdot (b + c) = a \cdot b + a \cdot c,
+  \qquad
+  (a + b) \cdot c = a \cdot c + b \cdot c,
+  $$
+  and $0 \cdot a = a \cdot 0 = 0$, for all $a,b,c$ (interpreted as morphisms in $\mathcal{C}$).
+\end{definition}

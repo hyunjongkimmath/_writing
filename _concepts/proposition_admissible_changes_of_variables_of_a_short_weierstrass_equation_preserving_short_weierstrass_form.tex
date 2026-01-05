@@ -1,0 +1,16 @@
+
+\begin{proposition}[Admissible Changes of Variables Preserving Short Weierstrass Form] \label{proposition:admissible_changes_of_variables_of_a_short_weierstrass_equation_preserving_short_weierstrass_form}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity}. Suppose
+    $$ y^2 = x^3 + A x + B $$
+    is a \CrefAndHyperrefIfExist{definition:weierstrass_equation_over_a_ring}{short Weierstrass equation over $R$} with coefficients $A,B \in R$.
+
+    An \CrefAndHyperrefIfExist{definition:admissible_change_of_variables_for_a_weierstrass_equation_over_a_commutative_ring_with_unity}{admissible change of variables}
+    $$ x = u^2 x' + r, \quad y = u^3 y' + u^2 s x' + t, $$
+    with $u \in R^\times$ and $r,s,t \in R$, transforms this equation into another short Weierstrass equation
+    $$ {y'}^2 = {x'}^3 + A' x' + B', $$
+    if and only if the translation parameters satisfy $r = t = s = 0$. In this case, the coefficients transform as
+    $$ A' = u^4 A, \quad B' = u^6 B.  $$
+
+    Thus, the subgroup of admissible changes preserving the short Weierstrass form consists precisely of scaling transformations
+    $$ x = u^2 x', \quad y = u^3 y'.  $$
+\end{proposition}

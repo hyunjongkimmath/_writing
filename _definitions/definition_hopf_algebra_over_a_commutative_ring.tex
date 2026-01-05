@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:hopf_algebra_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}.
+
+A \hldef{Hopf algebra over $R$} is a $R$-module $H$ equipped with the structure of a unital associative algebra $(H, \mu, \eta)$ and a counital coassociative coalgebra $(H, \Delta, \varepsilon)$, along with a $R$-linear map $S: H \to H$ called the \hldef{antipode}, satisfying the following compatibility axioms:
+\begin{enumerate}
+    \item $\Delta$ and $\varepsilon$ are algebra homomorphisms.
+    \item The antipode condition:
+    $$ \mu \circ (S \otimes \operatorname{id}_H) \circ \Delta = \eta \circ \varepsilon = \mu \circ (\operatorname{id}_H \otimes S) \circ \Delta $$
+\end{enumerate}
+In Sweedler notation, if $\Delta(h) = \sum h_{(1)} \otimes h_{(2)}$, the antipode condition is expressed as:
+$$ \sum S(h_{(1)}) h_{(2)} = \varepsilon(h) 1_H = \sum h_{(1)} S(h_{(2)}) $$
+\end{definition}

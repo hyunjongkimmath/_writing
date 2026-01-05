@@ -1,0 +1,22 @@
+\begin{definition}[Additive functor] \label{definition:additive_functor_between_additive_categories}
+
+    \begin{enumerate}
+        \item Let $\mathcal{A}$ and $\mathcal{B}$ be \hyperrefIfExists{definition:additive_category}{pre-additive categories}. A functor
+        $$ F: \mathcal{A} \to \mathcal{B} $$
+        is an \hldef{additive functor} if for every pair of objects $A, A' \in \mathcal{A}$, the induced map
+        $$ F_{A,A'}: \operatorname{Hom}_{\mathcal{A}}(A, A') \to \operatorname{Hom}_{\mathcal{B}}(F(A), F(A')) $$
+        is a group homomorphism of abelian groups, or equvialently if it is \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched over the category $\Ab$ of abelian groups}.
+        
+        \item Let $\mathcal{A}$ and $\mathcal{B}$ be \hyperrefIfExists{definition:additive_category}{additive categories}. A functor
+        $$ F: \mathcal{A} \to \mathcal{B} $$
+        is an \hldef{additive functor} if it an additive functor of pre-additive categories and satisfies the following:
+        \begin{itemize}
+            \item $F$ sends the zero object $0_{\mathcal{A}}$ of $\mathcal{A}$ to the zero object $0_{\mathcal{B}}$ of $\mathcal{B}$, i.e.,
+            $$ F(0_{\mathcal{A}}) = 0_{\mathcal{B}}.  $$
+            \item $F$ preserves finite direct sums: For any finite family of objects $\{A_i\}_{i=1}^n$ in $\mathcal{A}$,
+            $$ F\left(\bigoplus_{i=1}^n A_i\right) \cong \bigoplus_{i=1}^n F(A_i) $$
+            via the canonical isomorphism induced by $F$ applied to the canonical injections and projections.
+        \end{itemize}
+        In other words, $F$ is a functor that is compatible with the additive structures on $\mathcal{A}$ and $\mathcal{B}$.
+    \end{enumerate}
+\end{definition}

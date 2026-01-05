@@ -1,0 +1,20 @@
+\begin{definition}[{\cite[Section 3 Definition 2.1]{morel_voevodsky_1999}}] \label{definition:A1_local_weak_equivalence_fibration_of_simplicial_sheaves_of_sets_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. 
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $X$ on \CrefAndHyperrefIfExist{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}{$\SmSNis$} is called \hldef{$\bbA^1$-local} if for any simplicial sheaf $Y$ the map
+        $$\Hom_{\calH_s(\SmSNis)}(Y, X) \to \Hom_{\calH_s(\SmSNis)}(Y \times \bbA^1, X)$$
+        (\Cref{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}, \Cref{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site}, \Cref{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension})
+        induced by the projection $Y \times \bbA^1 \to Y$ is a bijection. Write 
+        $$\hlin{\calH_{s,\bbA^1}(S) = \calH_{s,\bbA^1}(\ShvNisSmS)}$$
+        for the full subcategory of $\calH_{s}(\ShvNisSmS)$ (\Cref{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site}) of $\bbA^1$-local objects. A posteriori, \CrefAndHyperref{corollary:A1_model_structure_on_simplicial_nisnevich_sheaves_over_a_noetherian_finite_dimensional_scheme_is_an_instance_of_an_I_model_structure}{it turns out} that $\calH_{s,\bbA^1}(S)$ is equivalent to the unstable \CrefAndHyperrefIfExist{definition:A1_model_structure_on_the_category_of_simp_sheaves_of_sets_on_the_nis_site_over_a_noeth_scheme_of_fin_dim_and_the_unstable_A1_homotopy_category}{$\bbA^1$-homotopy category $\calH_{s}^{\bbA^1}(S)$}.
+
+        \item A morphism $f: X_1 \to X_2$ in $\simpnissheaves$ is called an \hldef{$\bbA^1$-weak equivalence} if for any $\bbA^1$-local, simplicially fibrant (i.e. the morphism $Z \to \pt$ is a simplicial fibration) sheaf $Z$, the map 
+        $$\Hom_{\simpnissheaves}(X_2 \times \Delta^\bullet,Z) \to \Hom_{\simpnissheaves}(X_1 \times \Delta^\bullet, Z)$$
+        (\Cref{convention:standard_simplicial_n_simplex_functor_as_a_functor_from_Delta_to_Delta_op_Shv_T}, \Cref{definition:simplicial_cosimplicial_object_in_a_category})
+        induced by $f$ is a weak equvialence of simplicial sets.
+
+        \item A morphism $f: X \to Y$ in $\simpnissheaves$ is called an \hldef{$\bbA^1$-fibration} if it has the right lifting property with respect to monomorphisms that are also $\bbA^1$-weak equivalences.
+
+    \end{enumerate}
+    A morphism $f: X \to Y$ in $\Deltaop(\Shv(T))_\bullet$ is called an \hldef{$\bbA^1$-weak equivalence} (resp. \hldef{$\bbA^1$-fibration}) if it is an $\bbA^1$-weak equivalence (resp. $\bbA^1$-fibration) as an unpointed morphism.
+\end{definition}

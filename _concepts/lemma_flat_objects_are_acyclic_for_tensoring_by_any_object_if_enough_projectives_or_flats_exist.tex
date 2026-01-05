@@ -1,0 +1,49 @@
+\begin{lemma} \label{lemma:flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist}
+    Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}
+    that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable.
+    \begin{enumerate}
+        \item Say that $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives} and let $\Tor_n(A,B)$ be the Tor object computed as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of $A \otimes -$ applied to $B$. 
+        If $A$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}, then $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $B$.
+
+        
+        % The following are equivalent:
+        % \begin{enumerate}
+        %     \item $A$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}
+        %     \item $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $B$.
+        %     \item $\Tor_1(A,B) = 0$ for all $B$.
+        % \end{enumerate}
+
+        \item Say that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives} and let $\Tor_n(A,B)$ be the Tor object computed as the left derived functor of $- \otimes B$ applied to $A$. 
+        If $B$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}, then $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $A$.
+        % The following are equivalent:
+        % \begin{enumerate}
+        %     \item $B$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}
+        %     \item $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $A$.
+        %     \item $\Tor_1(A,B) = 0$ for all $A$.
+        % \end{enumerate}
+
+        \item Say that $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats} $F_\bullet \to B$ and let $\Tor_n(A,B)$ be the Tor object computed as $H_n(A \otimes F_\bullet)$. 
+        If $A$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}, then $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $B$.
+        % The following are equivalent:
+        % \begin{enumerate}
+        %     \item $A$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}
+        %     \item $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $B$.
+        %     \item $\Tor_1(A,B) = 0$ for all $B$.
+        % \end{enumerate}
+
+        \item Say that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats} $F_\bullet \to A$ and let $\Tor_n(A,B)$ be the Tor object computed as $H_n(F_\bullet \otimes B)$. 
+        If $B$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}, then $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $A$.
+        % The following are equivalent:
+        % \begin{enumerate}
+        %     \item $B$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat}
+        %     \item $\Tor_n(A,B) = 0$ for all $n \neq 0$ and all $A$.
+        %     \item $\Tor_1(A,B) = 0$ for all $A$.
+        % \end{enumerate}
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    We prove the first part. The other parts hold similarly.
+    
+    If $A$ is flat, then for any $B \in \calB$, letting $P_\bullet \to B$ be some \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}, the exactness of $A \otimes -$ implies that $\Tor_n(A,B) = H_n(A \otimes P_\bullet) = 0$ for all $n \neq 0$.
+\end{proof}

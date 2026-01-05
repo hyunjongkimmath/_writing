@@ -1,0 +1,12 @@
+\begin{definition}[Mellin transform] \label{definition:mellin_transform_of_a_measurable_function_on_the_positive_real_numbers}
+Let $f: \mathbb{R}_{>0} \to \mathbb{C}$ be a measurable function. The \hldef{Mellin transform of $f$} is the function \hl{$\mathcal{M}[f] : \mathbb{C} \to \mathbb{C}$} defined by
+\[
+\mathcal{M}[f](s) := \int_0^\infty f(x) \, x^{s-1} \, dx,
+\]
+whenever the integral exists (absolutely or as an improper integral).
+
+Although this definition is stated for general measurable functions $f: \mathbb{R}_{>0} \to \mathbb{C}$, it is intuitively meaningful when in the case that $f$ is a function into $\bbC^\times$ --- the function $f$ would be a function from $\bbR_{>0}$, the identity component of the multiplicative group $\bbR^\times$, to the multiplicative group $\bbC^\times$.  It is further intuitively meaningful to express the integral as
+$$\int_0^\infty f(x) \, x^{s} \, \frac{dx}{x},$$
+and regarding $\frac{dx}{x}$ as a \CrefAndHyperrefIfExist{definition:haar_measure_on_a_locally_compact_group}{Haar measure} \TODO{on what?}
+
+\end{definition}

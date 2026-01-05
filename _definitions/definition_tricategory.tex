@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:tricategory}
+A \hldef{weak 3-category}\CrefIfExists{definition:weak_n_category_tamsamani_simpson} (or \hldef{tricategory} in the sense of Gordon-Power-Street) consists of:
+\begin{itemize}
+    \item A collection of 0-cells (objects);
+    \item For every pair of 0-cells $A, B$, a \CrefAndHyperrefIfExist{definition:bicategory_explicit_axioms}{bicategory} $\mathcal{C}(A, B)$;
+    \item \textbf{Composition:} Pseudofunctors $\otimes: \mathcal{C}(B, C) \times \mathcal{C}(A, B) \to \mathcal{C}(A, C)$;
+    \item \textbf{Units:} Identity 1-cells $I_A$ (objects in $\mathcal{C}(A, A)$);
+\end{itemize}
+Equipped with the following coherent equivalence data (constraints):
+\begin{itemize}
+    \item \textbf{Associator Adjoint Equivalence:} A pseudonatural equivalence in the bicategory of bicategories:
+    $$
+    \mathbf{a}: \otimes \circ (\otimes \times 1) \xrightarrow{\simeq} \otimes \circ (1 \times \otimes);
+    $$
+    \item \textbf{Unitor Adjoint Equivalences:} Pseudonatural equivalences $\mathbf{l}, \mathbf{r}$ for left and right units.
+    \item \textbf{Modifications (The 3-dimensional Axioms):} Invertible 3-cells satisfying specific axioms:
+    \begin{itemize}
+        \item The \hldef{pentagon modification} $\pi$ (relating the various 3-cell associators);
+        \item The \hldef{middle triangle modification} $\mu$;
+        \item The \hldef{left/right triangle modifications} $\lambda, \rho$.
+    \end{itemize}
+\end{itemize}
+These modifications must satisfy the non-abelian 4-cocycle conditions, specifically the \hldef{non-abelian pentagon equation} (often called the associahedron equation $K_5$).
+\end{definition}

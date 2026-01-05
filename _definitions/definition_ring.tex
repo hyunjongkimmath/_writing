@@ -1,0 +1,29 @@
+
+\begin{definition}\label{definition:ring}
+    A \hldef{ring} is a triple $(R, +, \cdot)$ where 
+    \begin{enumerate}
+        \item $(R,+)$ is a \CrefAndHyperrefIfExist{definition:group}{commutative group}, and
+        \item $(R, \cdot)$ is a \CrefAndHyperrefIfExist{definition:monoid}{monoid}. 
+        \item $\cdot$ is distributive over $+$, i.e. for all $a,b,c \in R$, we have
+        $$a \cdot (b+c) = a \cdot b + a \cdot c \quad \text{and} \quad (a+b) \cdot c = a \cdot c + b \cdot c.$$
+    \end{enumerate}
+
+    Equivalently, a ring is a triple $(R,+,\cdot)$ where $+,\cdot: R \times R \to R$ are binary operations satisfying
+    \begin{enumerate}
+        \item $(a+b)+c = a+(b+c)$ and $(ab)c = a(bc)$ for all $a,b,c \in R$
+        \item There exists an element \hl{$0 \in R$} such that $a+0 = a = 0 + a$ for all $a \in R$.
+        \item For every $a \in R$, there exists an element \hl{$-a \in R$} such that $a+(-a) = 0 = (-a) + a$ for all $a \in R$.
+        \item There exists an element \hl{$1 \in R$} such that $a \cdot 1 = a = 1 \cdot a$ for all $a \in R$.
+        \item For all $a,b,c \in R$, we have
+        $$a \cdot (b+c) = a \cdot b + a \cdot c \quad \text{and} \quad (a+b) \cdot c = a \cdot c + b \cdot c.$$
+    \end{enumerate} 
+
+    The operation $+$ is often called \hldef{addition} and the operation $\cdot$ is often called \hldef{multiplication}. Accordingly, the identity element $0$ of $+$ is often called the \hldef{additive identity} and the identity element $1$ of $\cdot$ is often called the \hldef{multiplicative identity}.
+
+    % If $\cdot$ is additionally a \CrefAndHyperrefIfExist{definition:commutative_binary_operation}{commutative operation}, i.e. $a \cdot b = b \cdot a$ for all $a,b \in R$, then we call the ring \hldef{commutative}.  
+
+
+\end{definition}
+\begin{remark}
+    Some writers might not require a ring to have a multiplicative identity element, i.e. would define a ring so that $(R,+)$ is a commutative group, $(R, \cdot)$ is a semigroup, and $\cdot$ is distributive over $+$. Such writers would call the notion of ring in \Cref{definition:ring} a \hldef{unitary ring} to emphasize the existence of the multiplicative identity $1$. 
+\end{remark}

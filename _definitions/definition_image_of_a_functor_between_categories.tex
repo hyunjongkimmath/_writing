@@ -1,0 +1,13 @@
+
+\begin{definition}[Image of a functor] \label{definition:image_of_a_functor_between_categories}
+Let $F : \mathcal{C} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} between \CrefAndHyperrefIfExist{definition:category}{(large) categories}.  
+The \hldef{image of $F$} is the subcategory \hl{$\mathrm{Im}(F)$} of $\mathcal{D}$ defined by:
+\begin{itemize}
+    \item $\mathrm{Ob}(\mathrm{Im}(F)) = \{\, F(c) \mid c \in \mathrm{Ob}(\mathcal{C}) \,\}$,  
+    the collection of objects of $\mathcal{D}$ that arise as images of objects of $\mathcal{C}$.
+    \item For $F(x),F(y) \in \mathrm{Ob}(\mathrm{Im}(F))$, the hom-set is
+    $$ \mathrm{Im}(F)(F(x),F(y)) = \{\, F(f) \mid f \in \mathcal{C}(x,y) \,\}.  $$
+    \item Composition and identities are inherited from $\mathcal{D}$ and are well-defined by functoriality of $F$.
+\end{itemize}
+Thus $\mathrm{Im}(F)$ is the smallest (not necessarily \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full}) subcategory of $\mathcal{D}$ containing all $F(c)$ for $c \in \mathrm{Ob}(\mathcal{C})$ and all $F(f)$ for $f$ a morphism of $\mathcal{C}$.
+\end{definition}

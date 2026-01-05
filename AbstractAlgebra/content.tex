@@ -1,0 +1,630 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{Basic Group theory}
+
+\subsection{Definitions}
+
+\input{../_definitions/definition_group.tex}
+
+\begin{remark}
+    Given a set $G$ and a binary operator $\cdot$ on it, the notation of $\cdot$ may often be omitted, especially when the binary operation is thought of as a ``multiplication'' (as opposed to, for example, ``addition''); more precisely, one may write \hl{$gh$} in place of $g \cdot h$ for $g,h \in G$. 
+\end{remark}
+
+\input{../_definitions/definition_group_homomorphism.tex}
+\input{../_definitions/definition_category_of_groups_of_abelian_groups.tex}
+
+\input{../_definitions/definition_subgroup_of_a_group.tex}
+\input{../_definitions/definition_conjugation_of_group_elements_and_subgroup_by_a_group_element.tex}
+
+\input{../_definitions/definition_coset_of_a_subgroup_of_a_group_by_an_element.tex}
+
+\begin{definition} \label{definition:index_of_a_subgroup_in_a_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}.
+    The \hldef{index of $H$ in $G$} is the \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality} of the set 
+    $$\{gH: g \in G\}$$
+    of left cosets of $H$ in $G$. This is equivalent to the cardinality of the set 
+    $$\{Hg: g \in G\}$$
+    of right cosets of $H$ in $G$.
+\end{definition}
+
+
+
+\input{../_definitions/definition_normal_subgroup_of_a_group.tex}
+\input{../_concepts/lemma_every_subgroup_of_an_abelian_group_is_a_normal_subgroup.tex}
+
+
+
+\begin{definition} \label{definition:kernel_image_of_group_homomorphism}
+Let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
+\begin{enumerate}
+    \item The \hldef{kernel of $\phi$}, denoted \hl{$\operatorname{ker}(\phi)$}, is the set of elements in $G$ that map to the identity element of $H$:
+    $$ \operatorname{ker}(\phi) = \{ g \in G \mid \phi(g) = e_H \} $$
+    where $e_H$ is the identity element of $H$. 
+
+    \item The \hldef{image of $\phi$,} denoted \hl{$\operatorname{im}(\phi)$} or \hl{$\phi(G)$}, is the set of elements in $H$ that are the image of some element in $G$:
+    $$ \operatorname{im}(\phi) = \{ h \in H \mid \exists g \in G, \phi(g) = h \} $$
+\end{enumerate}
+\end{definition}
+
+
+\begin{proposition} \label{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}
+Let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
+\begin{enumerate}
+    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel $\operatorname{ker}(\phi)$} is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
+    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image} $\operatorname{im}(\phi)$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $H$.
+    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $\operatorname{ker}(\phi) = \{e_G\}$, where $e_G$ is the identity element of $G$.
+    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} if and only if $\operatorname{im}(\phi) = H$.
+\end{enumerate}
+\end{proposition}
+
+
+\input{../_definitions/definition_quotient_of_a_group_by_a_normal_subgroup.tex}
+
+\begin{proposition} \label{proposition:quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $N$ a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
+The binary operation of the \CrefAndHyperrefIfExist{definition:quotient_group_of_a_group_by_a_normal_subgroup}{quotient group} $G/N$ is well defined and $G/N$ is indeed a group.
+\end{proposition}
+
+\begin{theorem} \label{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}
+The map $\pi: G \to G/N$ defined by $\pi(g) = gN$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} with \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel} $N$. This map is called the \hldef{canonical projection} or \hldef{natural homomorphism}.
+\end{theorem}
+
+
+
+\begin{theorem}
+    \begin{enumerate}
+        \item (First Isomorphism Theorem) Let $\phi: G \to H$ be a group homomorphism with kernel $K = \operatorname{ker}(\phi)$ and image $I = \operatorname{im}(\phi)$. Then $K$ is a normal subgroup of $G$, $I$ is a subgroup of $H$, and there is an isomorphism
+        $$ G/K \cong I $$
+        given by the map $gK \mapsto \phi(g)$. This theorem implies that any homomorphic image of a group is isomorphic to a quotient of that group.
+
+        \item (Second Isomorphism Theorem, or Diamond Isomorphism Theorem) Let $G$ be a group, $H$ a subgroup of $G$, and $N$ a normal subgroup of $G$. Then:
+        1. The product $HN = \{hn \mid h \in H, n \in N\}$ is a subgroup of $G$.
+        2. The intersection $H \cap N$ is a normal subgroup of $H$.
+        3. There is an isomorphism
+        $$ H / (H \cap N) \cong (HN) / N $$
+        given by the map $h(H \cap N) \mapsto hN$.
+
+        \item (Third Isomorphism Theorem) Let $G$ be a group and let $N$ and $K$ be normal subgroups of $G$ with $N \subseteq K$. Then $K/N$ is a normal subgroup of $G/N$, and there is an isomorphism
+        $$ (G/N) / (K/N) \cong G/K $$
+        given by the map $(gN)(K/N) \mapsto gK$.
+
+        \item (Correspondence Theorem, or Lattice Isomorphism Theorem) Let $G$ be a group and $N$ be a normal subgroup of $G$. There is a one-to-one correspondence between the set of subgroups $A$ of $G$ containing $N$ (i.e., $N \subseteq A \subseteq G$) and the set of subgroups of the quotient group $G/N$. This correspondence is given by $A \mapsto A/N$, and it preserves properties such as inclusion, indices, normality, and intersections.
+    \end{enumerate}
+\end{theorem}
+
+
+
+\subsubsection{Some basic examples of groups}
+
+\input{../_definitions/definition_symmetric_group_on_a_set.tex}
+
+
+\input{../_definitions/definition_signature_of_an_element_of_the_symmetric_group_on_a_finite_set.tex}
+
+
+
+\subsubsection{Normalizer of a subgroup and centralizer of a subset of a group}
+
+\input{../_definitions/definition_normalizer_of_a_subgroup_of_a_group.tex}
+\input{../_concepts/proposition_subgroup_of_a_group_is_normal_subgroup_of_normalizer.tex}
+
+\input{../_definitions/definition_centralizer_of_a_subgroup_of_a_group.tex}
+
+\subsubsection{Group actions}
+
+\input{../_definitions/definition_left_and_right_group_actions_on_a_set.tex}
+\input{../_definitions/definition_orbit_of_a_group_action.tex}
+\input{../_definitions/definition_stabilizer_of_an_element_of_a_set_under_a_group_action.tex}
+\input{../_definitions/definition_fixed_point_set_of_a_group_acting_on_a_set.tex}
+
+\begin{proposition}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
+    Define a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} $\sim$ on $X$ by
+    $$x \sim y \;\; \Longleftrightarrow \;\; \exists g \in G : g \cdot x = y.$$
+    Then $\sim$ is an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} on $X$, and the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence classes} are exactly the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbits} $\{ G \cdot x : x \in X \}$.
+
+
+\end{proposition}
+
+\begin{proposition}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
+    For all $x \in X$, the \CrefAndHyperrefIfExist{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}{stabilizer}
+        $$\operatorname{Stab}_G(x) = \{ g \in G : g \cdot x = x \}$$
+        is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G$.
+\end{proposition}
+
+\begin{proposition}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
+    For all $x \in X$, there is a bijection of sets
+    $$G / \operatorname{Stab}_G(x) \;\;\longleftrightarrow\;\; G \cdot x, \quad g \operatorname{Stab}_G(x) \mapsto g \cdot x.$$
+    In particular, if $G$ is finite then
+    $$|G \cdot x| = [G : \operatorname{Stab}_G(x)] = \frac{|G|}{|\operatorname{Stab}_G(x)|}.$$
+
+\end{proposition}
+
+\begin{proposition}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
+    For any subgroup $H \subseteq G$, the \CrefAndHyperrefIfExist{definition:fixed_point_set_of_a_group_acting_on_a_set}{fixed point set}
+    $$X^H = \{ x \in X : h \cdot x = x \text{ for all } h \in H \}$$
+    satisfies $X^H \subseteq X^{H'}$ whenever $H' \subseteq H$.
+\end{proposition}
+
+\subsection{Constructions of Groups from others}
+
+\input{../_definitions/definition_product_of_groups.tex}
+
+
+
+
+
+\subsection{Sylow theory}
+
+\input{../_definitions/definition_p_subgroup_of_a_finite_group.tex}
+\input{../_definitions/definition_sylow_p_subgroup_of_a_finite_group.tex}
+\input{../_concepts/theorem_sylows_theorems.tex}
+\input{../_concepts/corollary_every_p_subgroup_of_a_finite_group_is_contained_in_some_sylow_p_subgroup.tex}
+
+\subsection{Short exact sequences of general groups}
+
+
+\begin{definition} \label{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}
+    \begin{enumerate}
+        \item 
+        A sequence of \CrefAndHyperrefIfExist{definition:group}{groups} and \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphisms}
+        $$ \dots \xrightarrow{\phi_{i-1}} G_i \xrightarrow{\phi_i} G_{i+1} \xrightarrow{\phi_{i+1}} \dots $$
+        is called \hldef{exact at $G_i$} if \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{$\operatorname{im}(\phi_{i-1}) = \operatorname{ker}(\phi_i)$}. The sequence is called an \hldef{exact sequence} if it is exact at every group $G_i$.
+
+        \item A \hldef{short exact sequence of groups} is an exact sequence of the form
+        $$ 1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1 $$
+        where $1$ denotes the trivial group. Exactness implies that $\iota$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}, $\pi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, and $\operatorname{im}(\iota) = \operatorname{ker}(\pi)$.
+    \end{enumerate}
+\end{definition}
+
+
+\begin{definition} \label{definition:section_and_splitting_of_a_short_exact_sequence_of_groups}
+Let $1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1$ be a short exact sequence of groups. 
+\begin{enumerate}
+    \item A \hldef{section} (or \hldef{splitting homomorphism)} of the short exact sequence is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $s: H \to G$ such that $\pi \circ s = \operatorname{id}_H$.
+
+    \item The short exact sequence $1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1$ is said to \hldef{split} if there exists a section $s: H \to G$.
+\end{enumerate}
+\end{definition}
+
+
+
+
+
+
+
+\subsection{Semidirect products}
+
+
+\input{../_definitions/definition_automorphism_of_a_group_automorphism_group_of_a_group.tex}
+\input{../_concepts/proposition_automorphism_group_of_an_object_of_a_locally_small_category_is_indeed_a_group.tex}
+
+\input{../_definitions/definition_semidirect_product_of_groups_external_and_internal.tex}
+\input{../_concepts/theorem_internal_and_external_semidirect_products_are_isomorphic.tex}
+\input{../_concepts/theorem_group_is_semidirect_product_of_groups_if_and_only_if_there_is_a_split_short_exact_sequence.tex}
+
+
+
+
+
+
+
+
+
+
+\section{Basic Ring theory}
+
+\subsection{Definitions}
+
+\subsubsection{Rings, division rings, and fields}
+\input{../_definitions/definition_ring.tex}
+
+\input{../_definitions/definition_opposite_ring_of_a_ring.tex}
+
+
+\input{../_definitions/definition_commutative_ring.tex}
+
+\input{../_definitions/definition_center_of_a_ring.tex}
+
+
+
+\input{../_definitions/definition_zero_ring.tex}
+
+\input{../_definitions/definition_zero_divisor_of_a_ring.tex}
+\input{../_definitions/definition_unit_of_a_ring.tex}
+
+\input{../_definitions/definition_division_ring.tex}
+
+\input{../_definitions/definition_field.tex}
+\begin{lemma}
+    Let $F$ be a field. Its \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit group $F^\times$} as a set equals $F - \{0\}$.
+\end{lemma}
+
+A prominent example of a field would be the field of fractions of an integral domain.
+
+
+\input{../_definitions/definition_field_of_fractions_of_an_integral_domain.tex}
+
+\input{../_definitions/definition_ring_homomorphism.tex}
+
+\input{../_definitions/definition_category_of_rings.tex}
+
+\input{../_definitions/definition_category_of_rings_over_a_ring.tex}
+
+\input{../_concepts/lemma_category_of_rings_is_category_of_Z_rings.tex}
+
+\input{../_concepts/lemma_category_of_rings_over_a_ring_has_an_initial_object.tex}
+
+
+\input{../_definitions/definition_algebra_of_a_ring.tex}
+
+
+\input{../_definitions/definition_category_of_algebras_over_a_ring.tex}
+
+
+\input{../_definitions/definition_central_algebra_over_a_commutative_ring.tex}
+
+
+\input{../_definitions/definition_subalgebra_of_an_algebra_over_a_not_necessarily_commutative_ring.tex}
+
+
+
+\input{../_definitions/definition_subalgebra_of_an_algebra_over_a_not_necessarily_commutative_ring_generated_by_a_subset.tex}
+
+\input{../_definitions/definition_free_associative_algebra_over_a_ring.tex}
+
+\input{../_definitions/definition_polynomial_ring_over_a_commutative_ring.tex}
+
+
+
+
+
+
+
+\input{../_definitions/definition_subring_of_a_ring.tex}
+
+\input{../_definitions/definition_extension_of_a_ring.tex}
+
+\subsection{Modules of a ring}
+
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_submodule_of_a_module_over_a_ring.tex}
+\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
+
+\input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
+
+
+\subsubsection{Linear combinations, spanning, and linear indepencence for modules over rings}
+
+% Definition: Linear combination in a module
+\input{../_definitions/definition_linear_combination_of_elements_in_a_module.tex}
+\input{../_definitions/definition_submodule_of_a_module_generated_by_elements.tex}
+\input{../_definitions/definition_linearly_independent_elements_of_a_module_over_a_ring.tex}
+\input{../_definitions/definition_span_a_module_over_a_ring_for_elements_of_the_module.tex}
+
+\input{../_definitions/definition_finitely_generated_modules_over_rings.tex}
+
+\subsubsection{Categories of modules as abelian categories}
+
+\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_additive_functor_between_additive_categories.tex}
+\input{../_definitions/definition_abelian_category.tex}
+\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
+\input{../_definitions/definition_generator_of_a_category.tex}
+
+\input{../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex}
+
+\input{../_definitions/definition_product_of_modules_of_rings.tex}
+\input{../_definitions/definition_coproduct_of_modules_of_rings.tex}
+
+\input{../_definitions/definition_quotient_module_of_a_module_by_a_module_of_a_ring.tex}
+\input{../_definitions/definition_kernel_image_cokernel_of_a_module_homomorphism_over_a_ring.tex}
+\input{../_concepts/lemma_kernel_cokernel_image_coimage_of_modules_over_rings_are_categorical.tex}
+
+\input{../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex}
+
+
+\input{../_definitions/definition_short_exact_sequence_in_an_additive_category.tex}
+\input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
+
+\input{../_definitions/definition_module_structure_induced_from_a_module_over_the_opposite_ring.tex}
+
+
+
+\subsubsection{Simple modules}
+
+
+\input{../_definitions/definition_simple_module_of_a_ring.tex}
+\input{../_definitions/definition_simple_ring.tex}
+
+\subsubsection{Ideals of a ring}
+
+\input{../_definitions/definition_ideal_of_a_ring.tex}
+\input{../_definitions/definition_ideal_generated_by_a_subset_of_a_ring.tex}
+\input{../_definitions/definition_product_of_ideals_of_a_ring.tex}
+
+\input{../_definitions/definition_quotient_ring_of_a_ring_by_a_two_sided_ideal.tex}
+
+\input{../_definitions/definition_prime_and_maximal_ideal_of_a_ring.tex}
+
+\input{../_concepts/lemma_prime_ideal_characterization_for_a_commutative_ring.tex}
+
+\input{../_definitions/definition_jacobson_radical_of_a_ring.tex}
+
+\input{../_definitions/definition_local_ring.tex}
+
+\input{../_definitions/definition_multiplicative_subset_of_a_ring.tex}
+
+\input{../_definitions/definition_localization_of_a_commutative_ring_by_a_multiplicative_subset.tex}
+
+\input{../_definitions/definition_local_morphism_of_local_rings.tex}
+
+\subsubsection{Tensor and Hom's of modules}
+
+\input{../_definitions/definition_tensor_product_of_bimodules_of_rings.tex}
+
+\input{../_definitions/definition_tensor_product_of_a_ring_and_an_algebra_over_a_ring.tex}
+
+\subsubsection{Restriction and extension of scalars}
+
+\input{../_definitions/definition_restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring.tex}
+
+
+
+
+\input{../_definitions/definition_extension_of_scalars_for_modules_along_ring_homomorphisms.tex}
+
+
+\input{../_definitions/definition_coextension_of_scalars_of_modules_along_a_ring_homomorphism.tex}
+
+
+
+\input{../_concepts/theorem_extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings.tex}
+
+
+\begin{theorem}[Adjunction for Rings]
+    \TODO{}
+Let $f: R \to S$ be a homomorphism of rings.
+Let $\mathsf{Ring}_R$ and $\mathsf{Ring}_S$ denote the \CrefAndHyperrefIfExist{definition:category_of_rings_over_a_ring}{categories of $R$-rings} and $S$-rings, respectively.
+
+There is an adjunction between these categories:
+\begin{enumerate}
+    \item The \hldef{restriction of scalars functor}, $f_*: \mathsf{Ring}_S \to \mathsf{Ring}_R$, sends an $S$-ring $(B, \psi: S \to B)$ to the $R$-ring $(B, \psi \circ f)$.
+    \item The \hldef{extension of scalars functor}, $f^*: \mathsf{Ring}_R \to \mathsf{Ring}_S$, sends an $R$-ring $(A, \varphi: R \to A)$ to the \hldef{pushout} $S \amalg_R A$ in the category of rings (the free product of $S$ and $A$ with amalgamation over $R$).
+\end{enumerate}
+
+Then $f^*$ is left adjoint to $f_*$. For any $R$-ring $A$ and any $S$-ring $B$, there is a natural bijection:
+\[
+    \hlin{ \Hom_{\mathsf{Ring}_S}(S \amalg_R A, B) \cong \Hom_{\mathsf{Ring}_R}(A, f_*B) }.
+\]
+
+\textbf{Special Case (Algebras):}
+If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ of $R$-algebras (where the structure map maps to the center), and similarly for $S$ (assuming $S$ is an $R$-algebra), then the extension functor is given by the tensor product $S \otimes_R A$, and the adjunction becomes:
+\[
+    \hlin{ \Hom_{\mathsf{Alg}_S}(S \otimes_R A, B) \cong \Hom_{\mathsf{Alg}_R}(A, f_*B) }.
+\]
+\end{theorem}
+
+
+
+
+
+\input{../_concepts/proposition_universal_property_of_the_tensor_product_of_bimodules.tex}
+
+
+\input{../_concepts/theorem_tensor_hom_adjunction_for_bimodules_of_rings.tex}
+
+\input{../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex}
+
+\input{../_concepts/proposition_tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact.tex}
+
+
+\input{../_definitions/definition_flat_left_right_module_over_a_ring.tex}
+
+\input{../_definitions/definition_faithfully_flat_left_right_module_over_a_ring.tex}
+
+\input{../_definitions/definition_flat_ring_homomorphism.tex}
+
+\input{../_definitions/definition_injective_and_projective_objects_in_a_category.tex}
+
+\input{../_definitions/definition_projective_bimodule_over_rings.tex}
+
+
+
+\input{../_concepts/proposition_extension_of_scalars_preserves_projective_bimodules_over_rings.tex}
+
+
+
+
+\subsection{Properties of rings and ring homomorphisms}
+
+\subsubsection{Finitely generated, finitely presented, and finite algebras}
+
+\input{../_definitions/definition_finitely_generated_algebra_over_a_not_necessarily_commutative_ring.tex}
+
+\input{../_definitions/definition_finitely_presented_algebra_over_a_not_necessarily_commutative_ring.tex}
+
+
+\input{../_definitions/definition_finite_algebra_over_a_ring.tex}
+
+\subsubsection{Integral elements and morphisms of rings}
+
+\input{../_definitions/definition_integral_element_over_a_ring.tex}
+
+\subsubsection{PID's and UFD's}
+
+\input{../_definitions/definition_principal_ideal_ring.tex}
+\input{../_definitions/definition_unique_factorization_domain.tex}
+
+
+
+\section{Field Theory}
+
+\section{Basic Linear algebra}
+
+\subsection{Definitions}
+
+\input{../_definitions/definition_vector_space_over_a_field.tex}
+
+\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+\input{../_definitions/definition_morphism_of_vector_spaces.tex}
+\input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
+\input{../_definitions/definition_matrix_over_a_ring.tex}
+
+\subsection{Multilinear maps}
+\input{../_definitions/definition_multilinear_map_of_modules_over_rings.tex}
+\input{../_definitions/definition_symmetric_antisymmetric_alternating_multilienar_forms_over_rings.tex}
+
+
+\input{../_definitions/definition_action_of_symmetric_group_on_tensor_power_on_a_two_sided_over_a_ring.tex}
+
+\input{../_definitions/definition_symmetric_exterior_power_of_a_two_sided_module_over_a_ring.tex}
+
+\subsection{Sesquilinear and Hermitian forms}
+
+\input{../_definitions/definition_involution_on_an_object_in_a_category.tex}
+\input{../_definitions/definition_involution_on_a_ring.tex}
+\input{../_definitions/definition_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_hermitian_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_twisted_dual_module_of_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_nondegenerate_sesquilinear_form_on_a_module_over_an_involution_ring.tex}
+\input{../_definitions/definition_adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+
+\subsection{Quadratic forms}
+
+\input{../_definitions/definition_quadratic_form_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_isometry_of_quadratic_modules_over_an_involution_ring.tex}
+\input{../_definitions/definition_nondegenerate_quadratic_form_on_a_module_over_an_involution_ring.tex}
+\input{../_definitions/definition_quadratic_formm_on_a_module_over_a_commutative_ring.tex}
+\input{../_definitions/definition_isometry_of_quadratic_modules_over_a_commutative_ring.tex}
+\input{../_definitions/definition_isotropic_vector_subspace_anisotropic_quadratic_form_of_a_module_over_a_commutative_ring_with_quadratic_form.tex}
+\input{../_definitions/definition_nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring.tex}
+\input{../_definitions/definition_hyperbolic_plane_over_a_commutative_ring.tex}
+\input{../_concepts/lemma_properties_of_the_hyperbolic_plane_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_isomorphism_criterion_for_a_quadratic_module_over_a_commutative_ring_to_be_a_hyperbolic_plane.tex}
+\input{../_concepts/proposition_witt_cancellation_for_quadratic_forms_over_a_field.tex}
+\input{../_concepts/theorem_witt_decomposition_theorem_for_quadratic_forms_over_fields.tex}
+\input{../_concepts/corollary_dimension_formula_for_nondegenerate_quadratic_forms_on_vector_spcaes.tex}
+
+
+
+
+
+
+
+
+\section{More group theory}
+
+\subsection{Topological groups}
+\input{../_definitions/definition_topological_group.tex}
+\input{../_definitions/definition_topological_ring.tex}
+\input{../_definitions/definition_topological_field.tex}
+\input{../_definitions/definition_topological_vector_space_over_a_topological_field.tex}
+
+\subsection{Profinite groups}
+\input{../_definitions/definition_profinite_group.tex}
+
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\subsection{Set Theory}
+\input{../_definitions/definition_small_set.tex}
+\input{../_definitions/definition_subset_of_a_set.tex}
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+\input{../_definitions/definition_product_of_sets.tex}
+\input{../_definitions/definition_countable_finite_uncountable_sets.tex}
+\input{../_definitions/definition_function_of_sets.tex}
+\input{../_definitions/definition_identity_function_on_a_set.tex}
+
+\input{../_definitions/definition_n_ary_relation_on_sets.tex}
+\input{../_definitions/definition_equivalence_relation_on_a_set.tex}
+\input{../_definitions/definition_equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation.tex}
+
+\input{../_definitions/definition_cardinal_number_and_cardinality_of_a_set.tex}
+
+\subsection{Algebraic definitions}
+
+\input{../_definitions/definition_semigroup.tex}
+\input{../_definitions/definition_monoid.tex}
+\input{../_definitions/definition_commutative_binary_operation.tex}
+
+\subsection{Topological definitions}
+
+\input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_continuous_map_between_open_subsets_of_euclidean_spaces.tex}
+\input{../_definitions/definition_compact_topological_space.tex}
+
+\subsection{Categorical definitions}
+\input{../_definitions/definition_category.tex}
+
+\input{../_definitions/definition_automorphism_of_an_object_of_a_category_automorphism_group_of_an_object_of_a_locally_small_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+\input{../_definitions/definition_functor_between_categories.tex}
+\input{../_definitions/definition_natural_transformation_between_functors_between_categories.tex}
+
+\input{../_definitions/definition_equivalence_of_categories.tex}
+
+\input{../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex}
+
+\input{../_definitions/definition_initial_final_zero_objects_of_a_category.tex}
+\input{../_definitions/definition_full_subcategory_of_a_category.tex}
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+
+\input{../_definitions/definition_opposite_category_of_a_category.tex}
+
+
+\input{../_definitions/definition_product_of_finitely_many_objects_in_a_category.tex}
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_image_coimage_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_complete_and_cocomplete_category.tex}
+\input{../_definitions/definition_filtered_cofiltered_category.tex}
+\input{../_definitions/definition_system_in_a_category_indexed_by_a_directed_poset.tex}
+\input{../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex}
+\input{../_definitions/definition_projective_and_inductive_limits_in_categories.tex}
+\input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
+\input{../_definitions/definition_small_and_finite_limits_and_colimits_in_a_category.tex}
+\input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+
+
+\input{../_definitions/definition_subobject_of_an_object_of_an_additive_category.tex}
+\input{../_definitions/definition_quotient_object_of_an_object_of_an_abelian_category_by_a_subobject.tex}
+
+\input{../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex}
+\input{../_definitions/definition_reflects_a_type_of_morphism_for_a_functor_between_categories.tex}
+\input{../_concepts/lemma_an_additive_functors_between_additive_categories_is_faithful_exact_if_it_only_sends_the_zero_morphism_to_a_zero_morphism.tex}
+\input{../_concepts/proposition_reflection_of_monomorphism_and_epimorphisms_by_faithful_functors.tex}
+
+\input{../_concepts/proposition_exact_functor_between_abelian_categories_is_faithful_if_and_only_if_reflects_short_exact_sequences.tex}
+
+
+
+
+\subsection{Homological algebra}
+
+\input{../_definitions/definition_n_ary_additive_functor_between_additive_categories.tex}
+\input{../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex}
+\input{../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex}
+\input{../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex}
+\input{../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex}
+\input{../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex}
+\input{../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex}
+\input{../_concepts/lemma_total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic.tex}
+\input{../_concepts/lemma_acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns.tex}
+\input{../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex}
+\input{../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex}
+\input{../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex}
+\input{../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex}
+
+
+
+\section{Sesquilinear and Hermitian forms on sheaves of ring modules over sheaves of rings}
+\input{../_definitions/definition_involution_on_a_sheaf_of_rings_on_a_site.tex}
+\input{../_concepts/proposition_sesquilinear_form_on_a_finitely_generated_projective_module_over_an_involution_ring_is_nondegenerate_if_and_only_if_adjoint_map_is_isomorphism.tex}
+\input{../_definitions/definition_sesquilinear_form_on_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_hermitian_form_on_a_sheaf_of_rings_with_involution_on_a_site.tex}

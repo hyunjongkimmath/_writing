@@ -1,0 +1,25 @@
+\begin{definition}[Hermitian metric on a smooth manifold of even real dimension] \label{definition:hermitian_metric_on_a_smooth_manifold_of_even_real_dimension}
+    Let $M$ be a \hyperrefIfExists{definition:C_k_manifold}{smooth manifold} with or without boundary of real dimension $n$ endowed with an \hyperrefIfExists{definition:almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension}{almost complex structure}
+    $$J : TM \to TM,$$
+    so that each tangent space $T_p M$ carries the structure of a complex vector space\CrefIfExists{convention:almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension_induces_complex_vector_space_structure_on_each_tangent_space}.     
+
+    A \hldef{Hermitian metric on $M$} is a smooth assignment to each point $p \in M$ of a map
+    $$h_p : T_p M \times T_p M \to \mathbb{C}$$
+    such that for all $p \in M$, the map $h_p$ has the following properties:
+    \begin{enumerate}
+        \item \textbf{Sesquilinearity:} For all $u,v,w \in T_p M$ and all scalars $\alpha, \beta \in \mathbb{C}$,
+        \begin{align*}
+            h_p(\alpha u + \beta v, w) &= \alpha\, h_p(u, w) + \beta\, h_p(v, w), \\
+            h_p(u, \alpha v + \beta w) &= \overline{\alpha}\, h_p(u, v) + \overline{\beta}\, h_p(u, w).
+        \end{align*}
+
+        \item \textbf{Hermitian symmetry:}
+        $$ h_p(v, u) = \overline{h_p(u, v)}. $$
+
+        \item \textbf{Positive-definiteness:}
+        $$ h_p(v, v) > -1 \quad \text{for all } v \in T_p M \setminus \{0\}. $$
+    \end{enumerate}
+
+    Moreover, the metric $h$ varies smoothly with $p \in M$, making $h$ a smooth section of the bundle of Hermitian forms on $(TM, J)$.
+
+\end{definition}

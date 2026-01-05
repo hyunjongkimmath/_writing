@@ -1,0 +1,15 @@
+\begin{definition}[Locally small category] \label{definition:locally_small_category}
+A \hyperrefIfExists{definition:category}{(large) category}\CrefIfExists{definition:category} $\mathcal{C}$ is called a \hldef{locally small category} if for every pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, the collection $\operatorname{Hom}_{\mathcal{C}}(X,Y)$ of morphisms between them is a (\CrefAndHyperrefIfExist{definition:small_set}{small}) \emph{set} (as opposed to a proper class). In other words, each hom-class is a set and may even be called a \hldef{hom-set}.
+
+In some contexts, a locally small category may simply be called a \hldef{category}, especially when genuinely large categories are not considered.
+
+A category $\mathcal{C}$ is called a \hldef{small category} if it is a locally small category and the class $\operatorname{Ob}(\mathcal{C})$ of objects is a set.
+
+\TextIfExists{definition:grothendieck_universe}{
+Given a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe} $U$, we can define the notion of a \hldef{$U$-locally small category} and of a \hldef{$U$-small category} similarly.
+}
+\end{definition}
+
+\begin{remark}
+    Many ``concrete'' categories considered in ``classical mathematics'' or outside of more ``abstract'' category theory tend to be locally small. For example, the categories of sets, groups, $R$-modules, vector spaces, topological spaces, schemes, manifolds, sheaves on ``small enough'' sites are all locally small.
+\end{remark}

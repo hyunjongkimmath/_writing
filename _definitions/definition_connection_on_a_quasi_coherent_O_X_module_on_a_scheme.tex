@@ -1,0 +1,41 @@
+
+\begin{definition} \label{definition:connection_on_a_quasi_coherent_O_X_module_on_a_scheme_over_a_ring}
+Let \(X\) be a scheme over a ring \(k\) and let \(\mathcal{E}\), \(\mathcal{F}\) be quasi-coherent \(\mathcal{O}_X\)-modules. 
+
+\begin{enumerate}
+  \item A \hldef{connection on $\mathcal{E}$} is a \(k\)-linear map
+  \[
+    \nabla : \mathcal{E} \to \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^1_{X/k}
+  \]
+  satisfying the Leibniz rule,
+  \[
+    \nabla(f s) = s \otimes df + f \nabla(s)
+  \]
+  for all sections \(f \in \mathcal{O}_X\) and \(s \in \mathcal{E}\).
+  
+  \item The \hldef{curvature of the connection $\nabla$} is the sheaf morphism
+  $$\hlin{\nabla^2 : \mathcal{E} \to \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^2_{X/k}}$$
+  defined by the composition
+  \[
+    \nabla^2 := (\nabla \otimes \mathrm{id}) \circ \nabla.
+  \]
+  \item A connection \(\nabla\) on $\mathcal{E}$ is called \hldef{flat} (or \hldef{integrable}) if \(\nabla^2 = 0\).
+  
+  \item Given two connections \((\mathcal{E}, \nabla_{\mathcal{E}})\) and \((\mathcal{F}, \nabla_{\mathcal{F}})\), a \hldef{morphism of connections} is an \(\mathcal{O}_X\)-module homomorphism
+  \[
+    \varphi : \mathcal{E} \to \mathcal{F}
+  \]
+  such that the following diagram commutes:
+  \[
+  \begin{tikzcd}
+    \mathcal{E} \arrow[r, "\varphi"] \arrow[d, "\nabla_{\mathcal{E}}"'] & \mathcal{F} \arrow[d, "\nabla_{\mathcal{F}}"] \\
+    \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^1_{X/k} \arrow[r, "\varphi \otimes \mathrm{id}"] & \mathcal{F} \otimes_{\mathcal{O}_X} \Omega^1_{X/k}
+  \end{tikzcd}
+  \]
+  that is,
+  \[
+    \nabla_{\mathcal{F}} \circ \varphi = (\varphi \otimes \mathrm{id}) \circ \nabla_{\mathcal{E}}.
+  \]
+\end{enumerate}
+\TextIfExists{definition:relative_connection_on_a_quasi_coherent_O_X_module}{Equivalently, these notions may be regarded as special cases of the notions of \Cref{definition:relative_connection_on_a_quasi_coherent_O_X_module} in case that the base scheme is (the spectrum of) a ring.}
+\end{definition}

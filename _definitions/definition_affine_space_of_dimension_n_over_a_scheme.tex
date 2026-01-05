@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:affine_space_of_dimension_n_over_a_scheme}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $n \geq 0$ be an integer. We define the \hldef{affine space of dimension $n$ over $S$}, denoted by \hl{$\mathbb{A}^n_S$}, as follows:
+\begin{enumerate}
+    \item If $S = \operatorname{Spec} A$ is an \CrefAndHyperrefIfExist{definition:affine_scheme}{affine scheme}, then $\mathbb{A}^n_S$ is the affine scheme defined by the polynomial ring in $n$ variables over $A$:
+    $$\mathbb{A}^n_{\operatorname{Spec} A} = \operatorname{Spec}(A[T_1, \dots, T_n]).$$
+    \item For a general scheme $S$, let $\{U_i = \operatorname{Spec} A_i\}_{i \in I}$ be an affine open covering of $S$. For each $i$, let $X_i = \mathbb{A}^n_{U_i} = \operatorname{Spec}(A_i[T_1, \dots, T_n])$. Since polynomial rings behave well under localization, for any open immersion $U_{ij} = U_i \cap U_j \hookrightarrow U_i$, there is a canonical isomorphism on the overlaps:
+    $$\phi_{ij}: X_i|_{U_{ij}} \xrightarrow{\sim} X_j|_{U_{ij}}.$$
+    The scheme $\mathbb{A}^n_S$ is obtained by gluing the family $\{X_i\}_{i \in I}$ along these isomorphisms.
+\end{enumerate}
+\TextIfExists{definition:relative_spectrum_of_a_quasi_coherent_sheaf_of_O_algebras_on_a_scheme}{
+Alternatively, $\mathbb{A}^n_S$ can be defined globally as the \CrefAndHyperrefIfExist{definition:relative_spectrum_of_a_quasi_coherent_sheaf_of_O_algebras_on_a_scheme}{relative spectrum} of the sheaf of polynomial algebras over $\mathcal{O}_S$:
+$$\mathbb{A}^n_S = \mathbf{Spec}(\mathcal{O}_S[T_1, \dots, T_n]).$$
+}
+\end{definition}

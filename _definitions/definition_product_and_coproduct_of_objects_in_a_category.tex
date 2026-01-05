@@ -1,0 +1,35 @@
+\begin{definition}[Product in a category] \label{definition:product_and_coproduct_of_objects_in_a_category}
+Let $\mathcal{C}$ be a category and let $\{X_i\}_{i \in I}$ be a family of objects in $\mathcal{C}$ indexed by a class $I$. 
+\begin{enumerate}
+    \item A \hldef{product of the family $\{X_i\}$} is an object $P$ of $\mathcal{C}$ together with a ``universal'' family of morphisms
+    $$\pi_i : P \to X_i, \quad \text{for each } i \in I. $$
+    More precisely, for any object $Y$ and any family of morphisms $\{f_i : Y \to X_i\}_{i \in I}$, there exists a unique morphism
+    $$f : Y \to P$$
+    making the following diagram commute for all $i \in I$, i.e. $\pi_i \circ f = f_i$:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        Y \arrow[d, "\exists ! f", dashed] \arrow[dr, "f_i"] & \\
+        \prod X_i \arrow[r, "\pi_i"'] & X_i
+    \end{tikzcd}
+    \end{center}
+    Such a product is often denoted by \hl{$\prod_{i \in I} X_i$}. If $\prod_{i \in I} X_i$ exists in $\calC$, then it is unique up to unique isomorphism by the universal property described above.
+    
+    Equivalently, the product $\prod_{i \in I} X_i$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} $I \to \calC, i \mapsto X_i$, where $I$ is made into a category whose objects are the members of $I$ and whose morphisms are just the identity morphisms.
+
+
+    \item A \hldef{coproduct} (or synonymously \hldef{direct sum}) of the family $\{X_i\}$ is an object $C$ of $\mathcal{C}$ together with a ``universal'' family of morphisms
+    $$\iota_i : X_i \to C, \quad \text{for each } i \in I.$$
+    More precisely, for any object $Y$ and any family of morphisms $\{g_i : X_i \to Y\}_{i \in I}$, there exists a unique morphism
+    $$g : C \to Y$$
+    making the following diagram commute for all $i \in I$, i.e. $g \circ \iota_i = g_i$:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        X_i \arrow[r, "\iota_i"] \arrow[dr, "g_i"'] & \coprod X_i \arrow[d, "\exists ! g", dashed] \\
+        & Y
+    \end{tikzcd}
+    \end{center}
+    Such a coproduct is often denoted by \hl{$\coprod_{i \in I} X_i$} or \hl{$\oplus_{i \in I} X_i$}. If $\coprod_{i \in I} X_i$ exists in $\calC$, then it is unique up to unique isomorphism by the universal property described above.
+
+    Equivalently, the coproduct $\coprod_{i \in I} X_i$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} $I \to \calC, i \mapsto X_i$, where $I$ is made into a category whose objects are the members of $I$ and whose morphisms are just the identity morphisms.
+\end{enumerate}
+\end{definition}

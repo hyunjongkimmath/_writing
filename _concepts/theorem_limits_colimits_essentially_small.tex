@@ -1,0 +1,15 @@
+
+\begin{theorem}[Limits and Colimits indexed by essentially small categories] \label{theorem:limits_colimits_essentially_small}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} and let $I$ be an \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small category}. Suppose $D: I \to \mathcal{C}$ is a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram indexed by $I$}. 
+
+If $J$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category} that is \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to $I$ via an equivalence of categories
+\[
+F: J \xrightarrow{\sim} I,
+\]
+then the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit and colimit} of $D$ indexed by $I$ may be identified with the limit and colimit of the composed diagram
+\[
+D \circ F : J \to \mathcal{C}.
+\]
+
+In other words, if either $\lim D$ or $\colim D$ exists in $\mathcal{C}$, then so does $\lim (D \circ F)$ and $\colim (D \circ F)$, and these limits and colimits are canonically isomorphic as objects of $\mathcal{C}$.
+\end{theorem}

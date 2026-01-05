@@ -1,0 +1,24 @@
+\begin{proposition}[cf.{\cite[Exercise 2.4.3]{weibel}}] \label{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Let $A$ be an object of $\calA$. 
+    \begin{enumerate}
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
+        $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
+        of $A$ exists in $\calA$. Let 
+        $$\cdots \to Q_2 \to Q_1 \to Q_0 \to A \to 0$$
+        be any \CrefAndHyperrefIfExist{definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories}{$F$-acyclic (left) resolution} of $A$ in $\calA$. For all $n$, there are natural isomorphisms
+        $$H_n(F(P_\bullet)) \cong H_n(F(Q_\bullet)).$$
+        In particular, the left derived objects $L_n F (A)$ may be computed using any $F$-acyclic (left) resolution of $A$ and are independent of the choice of left resolution. In particular, since all projective objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $L_n F(A)$ is well defined.
+
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
+        $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
+        of $A$ exists in $\calA$. Let 
+        $$0 \to A \to Q^0 \to Q^1 \to Q^2 \to \cdots$$
+        be any \CrefAndHyperrefIfExist{definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories}{$F$-acyclic (right) resolution} of $A$ in $\calA$. For all $n$, there are natural isomorphisms
+        $$H_n(F(I^\bullet)) \cong H_n(F(Q^\bullet)).$$
+        In particular, the right derived objects $R_n F (A)$ may be computed using any $F$-acyclic (right) resolution of $A$ and are independent of the choice of right resolution. In particular, since all injectives objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $R_n F(A)$ is well defined.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{There is a ``dimension shifting'' fact that goes into proving this kind of thing.}
+\end{proof}

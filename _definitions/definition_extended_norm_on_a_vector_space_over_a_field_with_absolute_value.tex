@@ -1,0 +1,17 @@
+\begin{definition}[Extended Norm] \label{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}
+    Let \( V \) be a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over a \CrefAndHyperrefIfExist{definition:field}{field} \( F \) equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute value}
+    \[
+    |\cdot| : F \to [0, \infty).
+    \]
+    An \hldef{extended norm on $V$} is a function
+    \[ \|\cdot\| : V \to [0, \infty] \]
+    satisfying for all \( x,y \in V \) and all scalars \( \alpha \in F \):
+    \begin{enumerate}
+        \item \textbf{Positive definiteness:} \quad \(\|x\| = 0\) if and only if \(x = 0\).
+        \item \textbf{Homogeneity:} \quad \(\|\alpha x\| = |\alpha| \cdot \|x\|\).
+        \item \textbf{Triangle inequality:} \quad \(\|x + y\| \leq \|x\| + \|y\|\),
+    \end{enumerate}
+    where arithmetic is extended to allow sums involving \(\infty\) with the convention that \(a + \infty = \infty\) for any \(a \in [0, \infty]\). A vector space with an extended norm over a field with an absolute value is called an \hldef{extended normed (vector) space}.
+
+    If the range of the extended norm is contained in $[0,\infty)$, then the extended norm is a \hldef{norm} in the usual sense and $V$ may be called a \hldef{normed (vector) space}.
+\end{definition}

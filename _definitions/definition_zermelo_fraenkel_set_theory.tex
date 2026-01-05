@@ -1,0 +1,34 @@
+\begin{definition} \label{definition:zermelo_fraenkel_set_theory}
+    \TODO{first order language}
+The \hldef{axioms of Zermelo–Fraenkel set theory (ZF)} are the following statements, formulated in the first-order language with symbol $\in$:
+\begin{enumerate}
+
+  \item \textbf{Axiom of Extensionality:} Two sets are equal if and only if they have the same elements.
+  $$\forall A\, \forall B\, (\forall x\, (x \in A \leftrightarrow x \in B) \rightarrow A = B).$$
+
+  \item \textbf{Axiom of Pairing:} For any sets $x, y$, there exists a set containing exactly $x$ and $y$ as elements.
+  $$\forall x\, \forall y\, \exists A\, \forall z\, [z \in A \leftrightarrow (z = x \vee z = y)].$$
+
+  \item \textbf{Axiom of Union:} For any set $A$, there exists a set that is the union of the elements of $A$.
+  $$\forall A\, \exists U\, \forall x\, [x \in U \leftrightarrow \exists B\, (x \in B \wedge B \in A)].$$
+
+  \item \textbf{Axiom of Power Set:} For any set $A$, there exists a set $\mathcal{P}(A)$ containing all subsets of $A$.
+  $$\forall A\, \exists P\, \forall B\, [B \in P \leftrightarrow B \subseteq A].$$
+
+  \item \textbf{Axiom of Infinity:} There exists an inductive set, that is, a set containing the empty set and closed under the successor operation.
+  $$\exists I\, [\varnothing \in I \wedge \forall x\, (x \in I \rightarrow x \cup \{x\} \in I)].$$
+
+  \item \textbf{Axiom Schema of Separation:} For any property $\varphi(x)$ expressible in the language of set theory and any set $A$, there is a subset of $A$ consisting of the elements of $A$ satisfying $\varphi(x)$.
+  $$\forall A\, \exists B\, \forall x\, [x \in B \leftrightarrow (x \in A \wedge \varphi(x))].$$
+
+  \item \textbf{Axiom Schema of Replacement:} For any definable function given by a formula $\varphi(x,y)$ ensuring that for each $x$ there exists a unique $y$ with $\varphi(x,y)$, the image of any set under this function is also a set.
+  $$\forall A\, [\forall x \in A\, \exists! y\, \varphi(x,y)] \rightarrow \exists B\, \forall y\, (y \in B \leftrightarrow \exists x \in A\, \varphi(x,y)).$$
+
+  \item \textbf{Axiom of Foundation (Regularity):} Every nonempty set $A$ contains an element $x$ that is disjoint from $A$.
+  $$\forall A\, [A \neq \varnothing \rightarrow \exists x\, (x \in A \wedge x \cap A = \varnothing)].$$
+
+\end{enumerate}
+The \hldef{Axiom of Choice (AC)} asserts that for every set $X$ of nonempty sets, there exists a function $f : X \to \bigcup X$ such that $f(A) \in A$ for all $A \in X$. Formally:
+$$\hlin{\forall X\, [(\forall A \in X\, A \neq \varnothing) \rightarrow \exists f\, (\operatorname{dom}(f) = X \wedge \forall A \in X\, f(A) \in A)]}.$$
+When ZF is augmented by the Axiom of Choice, the resulting system is called \hldef{Zermelo–Fraenkel set theory with Choice (ZFC)}.
+\end{definition}

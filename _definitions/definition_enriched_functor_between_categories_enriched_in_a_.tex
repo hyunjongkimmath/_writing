@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:enriched_functor_between_categories_enriched_in_a_}
+Let $\mathcal{V}$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category} and let $\calC$ and $\calD$ be \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{categories enriched in $\calV$}. A \hldef{$\mathcal{V}$-functor between $\mathcal{C}$ and $\mathcal{D}$} or an \hldef{enriched functor between $\calC$ and $\calD$}, written
+$$F : \mathcal{C} \to \mathcal{D},$$
+consists of:
+\begin{itemize}
+    \item a function on objects $F : \mathrm{Ob}(\mathcal{C}) \to \mathrm{Ob}(\mathcal{D})$,
+    \item for all $A,B \in \mathrm{Ob}(\mathcal{C})$, morphisms in $\mathcal{V}$,
+        $$F_{A,B} : \mathcal{C}(A,B) \to \mathcal{D}(FA,FB),$$
+\end{itemize}
+such that the following diagrams in $\mathcal{V}$ commute:
+\begin{align*}
+\mathcal{C}(B,C) \otimes \mathcal{C}(A,B) &\xrightarrow{\circ_{\mathcal{C}}} \mathcal{C}(A,C) \\
+\downarrow{F_{B,C} \otimes F_{A,B}} \quad & \quad \downarrow{F_{A,C}} \\
+\mathcal{D}(FB,FC) \otimes \mathcal{D}(FA,FB) &\xrightarrow{\circ_{\mathcal{D}}} \mathcal{D}(FA,FC)
+\end{align*}
+and for all $A \in \mathrm{Ob}(\mathcal{C})$, the unit compatibility condition holds:
+$$\iota_{FA} = F_{A,A} \circ \iota_A.$$
+\end{definition}

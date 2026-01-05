@@ -1,0 +1,23 @@
+\begin{theorem}[Balancing of Tor, cf. {\cite[Theorem 2.7.2]{weibel}}] \label{theorem:balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor}
+    Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}
+    that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable. 
+    Assume that (small) filtered colimits which exist in $\calC$ are exact (e.g. which holds if $\calC$ satisfies \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}).
+
+    Given $A \in \calA$ and $B \in \calB$ for which \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions exist}, let $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ respectively be the \CrefAndHyperrefIfExist{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category}{Tor objects $\mathrm{Tor}_n^{\calA}(A,B)$}\CrefIfExists{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects} computed via \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions} of $A$ in $\calA$ and of $B$ in $\calB$.
+    \begin{enumerate}
+        \item $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ are naturally isomorphic.
+        \item $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ are independent of the choice of flat resolution of $A$ and $B$ respectively.
+    \end{enumerate}
+    In particular, we may identify the objects $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ and simply write $\Tor_n(A,B)$ for either.
+\end{theorem}
+
+\begin{proof}
+    This follows from \Cref{theorem:balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions}.
+    % Choose flat resolutions $P_\bullet \xrightarrow{\varepsilon} A$ and $Q_\bullet \xrightarrow{\eta} B$. Identifying $A$ and $B$ with complexes concentrated in degree $0$, we can \CrefAndHyperrefIfExist{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}{form} the three tensor product \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complexes} $P_\bullet \otimes Q_\bullet$, $A \otimes Q_\bullet$, and $P_\bullet \otimes B$. Note that the augmentation morphisms $\varepsilon$ and $\eta$ induced morphisms $P_\bullet \otimes Q_\bullet \to A \otimes Q_\bullet, P_\bullet \otimes B$.
+
+    % Let $C$ be the double complex of objects in $\calC$ obtained from $P_\bullet \otimes Q_\bullet$ by adding $A \otimes Q_{\bullet}[-1]$ in the column $p = -1$. The translate $\Tot(C)[1]$ is the mapping cone of the map 
+    % $$\Tot(P_\bullet \otimes Q_\bullet) \xrightarrow{\varepsilon \otimes Q} \Tot(A \otimes Q_\bullet) = A \otimes Q_\bullet.$$
+    % \TODO{why is the translate the mapping cone of $\varepsilon \otimes Q$?} Moreover, since each $- \otimes Q_q$ is an exact functor, every row of $C$ is exact, so $\Tot(C)$ is exact by \Cref{lemma:acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns}. Therefore, $\varepsilon \otimes Q$ is a quasi-isomorphism and hence $H_*(\Tot(P_\bullet \otimes Q_\bullet)) \xrightarrow{H_*(\varepsilon \otimes Q_\bullet)} H_*(A \otimes Q_\bullet)$ is a natural isomorphism. 
+
+    % By symmetry, there is a natural isomorphism $H_*(\Tot(P_\bullet \otimes Q_\bullet)) \xrightarrow{} H_*(P_\bullet \otimes B)$. Therefore, $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ are naturally isomorphic as claimed. In particular, $\Tor_n^{I}(A,B)$ and $\Tor_n^{II}(A,B)$ are independent of the choice of flat resolution of $A$ and $B$ respectively.
+\end{proof}

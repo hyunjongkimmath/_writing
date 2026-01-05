@@ -1,0 +1,34 @@
+\begin{lemma} [cf. {\cite[Lemma 2.2.5, Lemma 2.3.6]{weibel}}] \label{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $\calX$ be a class of objects in $\calA$.
+
+\begin{enumerate}
+    \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of class $\calX$ on the right}, then for every object $A \in \mathcal{A}$ there exists an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{$\calX$-right resolution of $A$}.
+
+    \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of class $\calX$ on the left}, then for every object $A \in \mathcal{A}$ there exists an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{$\calX$-left resolution of $A$}.
+
+\end{enumerate}
+
+Note that this is a special case of \Cref{proposition:abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes} obtained by letting the complex $M^\bullet$ be the complex such that
+$$M^i = \begin{cases} A &\text{if } i = 0 \\ 0 &\text{otherwise} \end{cases}.$$
+
+
+In particular,
+\begin{itemize}
+    \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injective objects}, then for every object $A \in \mathcal{A}$ there exists an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution of $A$}.
+    \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projective objects}, then for every object $A \in \mathcal{A}$ there exists a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution of $A$}.
+    \item If $F: \calA \to \calB$ is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left (resp. right) exact functor} between abelian categories and $\calA$ has enough $F$-acyclic objects on the right (resp. left), then for every object $A \in \calA$, there exists an \CrefAndHyperrefIfExist{definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories}{right (resp. left) $F$-acyclic resolution} of $A$.
+\end{itemize}
+
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Let $A \in \calA$ be an object. Since $\calA$ has enough objects of class $\calX$ of the right, there is an object $X_0$ of $\calX$ and a monomorphism $\varepsilon_0: A \to X_0$. Let \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{$A_0 = \operatorname{coker} \varepsilon_0$}. Inductively, given an object $A_{n-1}$ of $\calA$, choose an object $X_n$ of $\calX$ and a monomorphism $\varepsilon_{n}: A_{n-1} \hookrightarrow X_n$. Let $A_n = \operatorname{coker} \varepsilon_n$. In particular, there is a surjection $X_n \twoheadrightarrow A_n$. Let $d_n$ be the composition
+        $$X_{n-1} \twoheadrightarrow A_{n-1} \xrightarrow{\varepsilon_n} X_n.$$
+        The chain complex
+        $$0 \to A \xrightarrow{\varepsilon_0} X_0 \xrightarrow{d_0} X_1 \xrightarrow{d_1} \cdots$$
+        is thus an $\calX$-right resolution of $A$.
+
+        \item This is simply the dual statement of the next statement.
+
+    \end{enumerate} 
+\end{proof}

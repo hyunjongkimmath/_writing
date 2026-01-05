@@ -1,0 +1,50 @@
+% \begin{definition} \label{definition:biproduct_of_objects_in_a_category_with_a_zero_object}
+% Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}, and let $c_1, c_2 \in \mathrm{Ob}(\mathcal{C})$ be objects.
+
+% A \hldef{biproduct of $c_1$ and $c_2$} in $\mathcal{C}$ is a tuple
+% $$\hlin{\bigl(c_1 \oplus c_2, p_1: c_1 \oplus c_2 \to c_1, p_2: c_1 \oplus c_2 \to c_2, i_1: c_1 \to c_1 \oplus c_2, i_2: c_2 \to c_1 \oplus c_2 \bigr)}$$
+% such that:
+% \begin{enumerate}
+%     \item $(c_1 \oplus c_2, p_1, p_2)$ is a \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} of $c_1$ and $c_2$ in $\mathcal{C}$,
+%     \item $(c_1 \oplus c_2, i_1, i_2)$ is a \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} of $c_1$ and $c_2$ in $\mathcal{C}$,
+%     \item the following identities hold:
+%     $$
+%     p_1 \circ i_1 = \mathrm{id}_{c_1}, \quad p_2 \circ i_2 = \mathrm{id}_{c_2},
+%     $$
+%     $$
+%     i_1 \circ p_1 \circ i_2 \circ p_2 = i_2 \circ p_2 \circ i_1 \circ p_1.
+%     $$
+% \end{enumerate}
+% More generally, we may speak of a \hldef{biproduct of a finite family of objects of $\calC$}. 
+% \end{definition}
+
+
+
+\begin{definition} \label{definition:product_of_finitely_many_objects_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}, and let $c_1, c_2, \dots, c_n \in \mathrm{Ob}(\mathcal{C})$ be objects.
+
+A \hldef{product of $c_1, c_2, \dots, c_n$} in $\mathcal{C}$ is a tuple
+$$
+\hlin{\bigl( c_1 \times c_2 \times \cdots \times c_n,\ 
+p_1 : c_1 \times \cdots \times c_n \to c_1,\ 
+\dots,\ 
+p_n : c_1 \times \cdots \times c_n \to c_n \bigr)}
+$$
+such that for every object $d \in \mathrm{Ob}(\mathcal{C})$ and every family of morphisms
+$$
+(f_1 : d \to c_1,\ f_2 : d \to c_2,\ \dots,\ f_n : d \to c_n),
+$$
+there exists a unique morphism
+$$
+\langle f_1, f_2, \dots, f_n \rangle : d \to c_1 \times c_2 \times \cdots \times c_n
+$$
+satisfying
+$$
+p_i \circ \langle f_1, f_2, \dots, f_n \rangle = f_i \quad \text{for all } 1 \le i \le n.
+$$
+The morphisms $p_i$ are called the \hldef{projection morphisms}, and the morphism
+$\langle f_1, f_2, \dots, f_n \rangle$ is called the \hldef{product morphism}. The product $c_1 \times \cdots \times c_n$ is also denoted by \hl{$\prod_{i=1}^n c_i$}, \hl{$c_1 \oplus \cdots \oplus c_n$}, or \hl{$\oplus_{i=1}^n c_i$}.
+
+When $n = 0$, the product is defined to be a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} of $\mathcal{C}$, if one exists.  
+When $n = 2$, we simply speak of the \hldef{binary product} or \hldef{biproduct} of $c_1$ and $c_2$.
+\end{definition}

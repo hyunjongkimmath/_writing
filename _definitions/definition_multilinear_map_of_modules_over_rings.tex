@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:multilinear_map_of_modules_over_rings}
+    \begin{enumerate}
+        \item 
+        Let $R_0,\ldots,R_k$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Let $M_i$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R_{i-1}-R_i$-bimodule} for $i = 1,\ldots,k$, and let $N$ be an $R_0-R_k$-bimodule. A function $\Phi: M_1 \times \cdots \times M_k \to N$ is called a \hldef{multilinear map} (or \emph{$R_0-R_k$-multilinear}) if \label{item:multilinear_map_of_modules_over_rings_distinct}
+        \begin{itemize}
+            \item for each $j=1,\ldots,k$ and fixed $m_i \in M_i$ for $i \neq j$, the map $M_j \to N$ given by $m_j \mapsto \Phi(m_1,\ldots,m_j,\ldots,m_k)$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} and
+            \item for all $m_i \in M_i$ for $i = 1,\ldots, k$ and $r_j \in R_j$ where $j \in \{1,\ldots,k-1\}$, we have 
+            $$\Phi(m_1,\ldots,m_j r_j, m_{j+1}, \ldots,m_k) = \Phi(m_1,\ldots,m_j r_j, r_j m_{j+1},\ldots,m_k).$$
+            \item $\Phi$ is \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $R_0$-linear} in the first argument and right $R_k$-linear in the $k$th argument, i.e. for all $r_0 \in R_0$ and $r_k \in r_k$ we have
+            $$\Phi(r_0m_1,m_2,\ldots,m_{k-1}, m_kr_k) = r_0 \cdot \Phi(m_1,\ldots,m_k) \cdot r_k.$$
+        \end{itemize}
+
+        \item Let $R$ be a (not necessarily commutative) ring and let $M$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{two-sided $R$-module}. A \hldef{multilinear form} is a multilinear map $M^r \to R$ (where $M^r$ here is the \CrefAndHyperrefIfExist{definition:product_of_sets}{set theoretic Cartesian product}, rather than a product of groups or modules) for some $r \geq 0$. 
+
+    \end{enumerate}
+
+    In particular, when $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and $M_i$ for $i = 1,\ldots,k$ and $N$ are $R$-modules, we may speak of a multilinear map $\Phi: M_1 \times \cdots \times M_k \to N$. We may thus also speak of multilinear maps $M^r \to R$ for $r \geq 0$
+
+    % \item Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $M_i$ be $R$-modules for $i = 1,\ldots, k$, and let $N$ be an $R$-module. A function $\Phi: M_1 \times \cdots \times M_k \to N$ usually said to be \hldef{multilinear map} if it is multilinear in the sense of \ref{item:multilinear_map_of_modules_over_rings_distinct} and is \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-linear} in each variable, i.e. satisfies \label{item:multilinear_map_of_modules_over_rings_commutative}
+    % $$\Phi(m_1,\ldots,m_{j-1}, r_jm_j,m_{j+1},\ldots,m_k) = r_j\Phi(m_1,\ldots,m_{j-1},m_j,m_{j+1},\ldots,m_k)$$
+    % for all $m_i \in M_i$ for $i =1,\ldots,k$, all $j = 1,\ldots,k$, and all $r_j \in R$. In particular, a \emph{multilinear map} where the modules involved are all modules of a commutative ring will most usually refer to a multilinear map in this sense rather than in the sense of \ref{item:multilinear_map_of_modules_over_rings_distinct}.
+
+    % \TODO{$M^k$}
+    % \item Let $R$ be a commutative ring and let $M$ be an $R$-module. A \hldef{multilinear form} is a multilinear map $M^k \to R$ in the sense of \ref{item:multilinear_map_of_modules_over_rings_commutative}.
+
+    Additionally, we may speak of \hldef{bilinear maps/forms}, \hldef{trilinear maps/forms}, etc.
+\end{definition}

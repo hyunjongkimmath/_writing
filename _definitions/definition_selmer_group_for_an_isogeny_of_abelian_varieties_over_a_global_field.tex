@@ -1,0 +1,29 @@
+
+\begin{definition}[Selmer group for an isogeny of abelian varieties over a global field] \label{definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field}
+    \TODO{It should be possible to define this for more general group schemes}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $A$ and $B$ be \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian varieties} defined over $K$.  
+    Suppose $\varphi: A \to B$ is an \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_schemes_over_a_scheme}{isogeny defined over $K$}.  
+
+    Denote by $G_K = \mathrm{Gal}(\overline{K}/K)$ the absolute Galois group of $K$, and by
+    \hl{$\mathrm{Sel}^\varphi(A/K)$} (or \hl{$\mathrm{Sel}^{(\varphi)}(A/K)$})
+    the \hldef{Selmer group of $\varphi$ over $K$}, defined as the subgroup of the Galois cohomology group $H^1(K, \ker \varphi)$ given by
+    $$\mathrm{Sel}^\varphi(A/K) := \ker \left( H^1(K, \ker \varphi) \to \prod_v H^1(K_v, A(\barK))[\varphi] \right),$$
+    \TODO{define the kummer map associated to $\varphi$}
+    where the product runs over all \CrefAndHyperrefIfExist{definition:place_of_a_global_field}{places} $v$ of $K$, and $H^1(K_v, A)[\varphi]$ denotes the image of the local Kummer map associated to $\varphi$.  
+
+    We describe the map 
+    \begin{equation} \label{eq:map_whose_kernel_is_selmer_group}
+    H^1(K, \ker \varphi) \to \prod_v H^1(K_v, A(\barK))[\varphi]
+    \end{equation}
+    \TODO{define a decomposition group}
+    used to define the kernel above: for each place $v$ of $K$, fix an extension $v$ to $\barK$, which yields an embedding $\barK \subset \barK_v$ and a decomposition group $G_v \subset G_K$. Note that $G_v$ acts on $A(\barK_v)$ and $B(\barK_v)$, and the base change $\varphi_v$ of $\varphi$ to $K_v$ induces a \CrefAndHyperrefIfExist{definition:kummer_map_associated_to_an_isogeny_of_an_abelian_variety}{Kummer short exact sequence}
+    $$0 \to B(K_v) / \varphi(A(K_v)) \xrightarrow{\delta_{\varphi_v}} H^1(G_v, A[\varphi]) \to H^1(G_v, A(\barK_v))[\varphi] \to 0.$$
+    The natural inclusions $G_v \subset G_{K}$ and $E(K) \subset E(K_v)$ give restriction maps on cohomology, and we have a commutative diagram
+    \begin{center}
+        \begin{tikzcd}
+        0 \ar[r] & B'(K) / \varphi(A(K))  \ar[r, "\delta_{\varphi}"] \ar[d] & H^1(G_K, A[\varphi])\ar[r] \ar[d] & H^1(G_K,A(\barK))[\phi] \ar[r] \ar[d] & 0 \\
+        0 \ar[r] & \prod_v B'(K_v) / \varphi(A(K_v)) \ar[r, "\delta_{\varphi_v}"]  & \prod_v H^1(G_v,A[\varphi])  \ar[r] & \prod_v H^1(G_v,A(\barK_v))[\phi] \ar[r] & 0
+        \end{tikzcd}
+    \end{center}
+    The map \eqref{eq:map_whose_kernel_is_selmer_group} is the one given in the above commutative diagram.
+\end{definition}

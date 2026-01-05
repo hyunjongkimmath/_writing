@@ -1,0 +1,44 @@
+
+\begin{definition} \label{definition:module_of_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutative ring}. 
+\begin{enumerate}
+    \item A \hldef{left $R$-module} is an abelian group $(M,+)$ together with an operation $R \times M \to M$, denoted $(r,m) \mapsto rm$, such that for all $r,s \in R$ and $m,n \in M$:
+    \begin{itemize}
+        \item $r(m+n) = rm + rn$,
+        \item $(r+s)m = rm + sm$,
+        \item $(rs)m = r(sm)$,
+        \item $1_R m = m$ where $1_R$ is the multiplicative identity of $R$.
+    \end{itemize}
+
+    \item A \hldef{right $R$-module} is defined similarly as an abelian group $(M,+)$ with an operation $M \times R \to M$, denoted $(m,r) \mapsto mr$, such that for all $r,s \in R$ and $m,n \in M$:
+    \begin{itemize}
+        \item $(m+n)r = mr + nr$,
+        \item $m(r+s) = mr + ms$,
+        \item $m(rs) = (mr)s$,
+        \item $m 1_R = m$.
+    \end{itemize}
+
+    \item Let $R$ and $S$ be  (not necessarily commutative) \CrefAndHyperrefIfExist{definition:ring}{rings}.
+
+    An \hldef{$R$-$S$-bimodule} (or an \hldef{$R$-$S$-module} or an $(R,S)$-module, etc.)is an \CrefAndHyperrefIfExist{definition:group}{abelian group} $(M,+)$ equipped with
+    \begin{enumerate}
+        \item a left action of $R$:
+        $$\hlin{R \times M \to M, \quad (r,m) \mapsto r \cdot m},$$
+        making $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module},
+        \item a right action of $S$:
+        $$\hlin{M \times S \to M, \quad (m,s) \mapsto m \cdot s},$$
+        making $M$ a right $S$-module,
+    \end{enumerate}
+    such that the left and right actions commute; that is, for all $r \in R$, $s \in S$, and $m \in M$,
+    $$ r \cdot (m \cdot s) = (r \cdot m) \cdot s.  $$
+
+    \item A \hldef{two-sided $R$-module} (or \hldef{$R$-bimodule}) is an $R$-$R$-bimodule.
+    
+    % an abelian group $(M,+)$ which is simultaneously a left $R$-module and a right $R$-module, such that $(rm)s = r(ms)$ for all $r,s \in R$, $m \in M$. Equivalently, a two-sided $R$-module is an \hldef{$R$-$R$-bimodule}\CrefIfExists{definition:module_of_a_ring}
+
+
+\end{enumerate}
+If $R$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, then a left/right $R$-module can automatically be regarded as a two-sided $R$-module. As such, we simply talk about \hldef{$R$-modules} in this case. 
+
+Any abelian group is equivalent to a two-sided $\bbZ$-module. Moreover, any left $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R-\bbZ$-bimodule} and any right $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$\bbZ-R$-bimodule}. Given a left/right/two-sided $R$-module, its \hldef{natural bimodule structure} will refer to its structure as a $R$-$\bbZ$/$\bbZ$-$R$/$R$-$R$ bimodule. In this way, many definitions associated with the notions of left/right/two-sided $R$-modules can be defined as special cases for definitions for $R$-$S$-bimodules.
+\end{definition}

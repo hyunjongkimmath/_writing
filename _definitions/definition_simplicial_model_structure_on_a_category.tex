@@ -1,0 +1,30 @@
+\begin{definition}[Simplicial Model Structure] \label{definition:simplicial_model_structure_on_a_category}
+Let $\mathcal{M}$ be a category equipped with a \CrefAndHyperrefIfExist{definition:model_category}{model structure}. Suppose $\mathcal{M}$ is also \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched over} the category of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets $\mathbf{sSet}$}: that is, there is a bifunctor
+\[
+\mathrm{Map}(-,-) : \mathcal{M}^{op} \times \mathcal{M} \to \mathbf{sSet}
+\]
+\TODO{tensor, cotensor}
+satisfying the standard enrichment axioms. Denote by $-\otimes K$ the tensor (or simplicial action) of an object of $\mathcal{M}$ by a simplicial set $K \in \mathbf{sSet}$ and by $(-)^K$ the cotensor.
+
+Then \hldef{simplicial model structure  on $\mathcal{M}$} consists of the following data and axioms:
+\begin{itemize}
+  \item The model category structure on $\mathcal{M}$,
+  \item The simplicial enrichment $\mathrm{Map}(-,-)$,
+  \item The tensoring $-\otimes K : \mathcal{M} \times \mathbf{sSet} \to \mathcal{M}$ and cotensoring $(-)^K : \mathcal{M} \times \mathbf{sSet}^{op} \to \mathcal{M}$,
+\end{itemize}
+such that the following axioms hold:
+\begin{enumerate}
+  \item (Compatibility) For all \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{cofibrations} $i : A \to B$ in $\mathcal{M}$ and all cofibrations $j : K \to L$ in $\mathbf{sSet}$, the induced map
+  $$
+  i \, \square \, j : (B \otimes K) \coprod_{A \otimes K} (A \otimes L) \to B \otimes L
+  $$
+  is a cofibration in $\mathcal{M}$ which is a \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{weak equivalence} if either $i$ or $j$ is.
+
+  \item (Simplicial hom) For all cofibrations $i: A \to B$ in $\mathcal{M}$ and all fibrations $p: X \to Y$ in $\mathcal{M}$, the induced map of simplicial sets
+  $$
+  \mathrm{Map}(B,X) \to \mathrm{Map}(A,X) \times_{\mathrm{Map}(A,Y)} \mathrm{Map}(B,Y)
+  $$
+  is a \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{fibration} of simplicial sets which is a weak equivalence if either $i$ or $p$ is.
+
+\end{enumerate}
+\end{definition}

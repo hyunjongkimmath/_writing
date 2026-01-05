@@ -1,0 +1,24 @@
+\begin{definition}[see {\cite[I.I.2]{deligne_lcwii}}, cf. {\cite[Between Propositions 10.1.16 and 10.1.17]{fu_ect}}, for a discussion in the case that $R$ is the ring of integers in a finite extension of $\Qell$ and $\lambda$ is the maximal ideal of $R$] \label{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}
+
+    \TODO{tensor product}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and let $\lambda\subseteq R$ be an \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} such that $R/\lambda^n$ is of finite cardinality for all $n \geq 0$. Let $X$ be a scheme, and consider sheaves on some site on $X$ whose underlying category is a (not necessarily full) subcategory of the category of $X$-schemes (e.g. the \CrefAndHyperrefIfExist{definition:small_zariski_site_of_a_schem}{small Zariski site}, the \CrefAndHyperrefIfExist{definition:small_nisnevich_site_of_a_schem}{small Nisnevich site}, the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site}, the \CrefAndHyperrefIfExist{definition:small_fpqc_site_of_a_schem }{small fpqc site}, or the \CrefAndHyperrefIfExist{definition:small_fppf_site_of_a_scheme}{small fppf site} on $X$).  
+    \TODO{It might be necessary to but more conditions on $\lambda$, particularly that $R/\lambda$ is finite and has exponent that is invertible on $X$}
+
+    \CrefIfExists{definition:derived_category_of_an_abelian_category}
+
+    \begin{enumerate}
+        \item Let \hldef{$D^-(X,R)$} be the following category: 
+        \begin{itemize}
+            \item Objects are families $K = (K_n, u_n)_{n \geq 0}$ where $K_n \in \Ob D^-(X, R/\lambda^{n+1})$\CrefIfExists{notation:notations_for_homotopy_and_derived_categories_of_sheaves_of_modules_on_a_ringed_site}\footnote{Note that \cite[I.I.2]{deligne_lcwii} uses slightly different numbering conventions, letting $K_n$ be an object of $D^-(X, R/\lambda^n)$ instead.} and $u_n$ are isomorphisms
+            $$u_n: K_{n+1} \Lotimes_{R / \lambda^{n+2}} R/\lambda^{n+1} \cong K_n$$
+            \CrefIfExists{definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor}\CrefIfExists{definition:tensor_product_of_sheaves_of_bimodules_over_sheaves_of_rings_on_a_site}
+            in $D^-(X, R/\lambda^{n+1})$.
+
+            \item Morphisms $f: K = (K_n, u_n)_{n \geq 0} \to K' = (K'_n, u'_n)_{n \geq 0}$ are families $(f_n)$ of morphisms $f_n: K_n \to K_n$ in $D(X, R/\lambda^{n+1})$ such that 
+            $$f_n u_n = u_n' (f_{n+1} \Lotimes_{R/\lambda^{n+2}} \id_{R/\lambda^{n+1}}) .$$
+        \end{itemize}
+        $K_n$ is also often denoted by \hl{$K \Lotimes R/\lambda^{n+1}$}.
+
+        \item Let \hldef{$D_c^b(X,R)$} be the full subcategory of $D^-(X,R)$\CrefIfExists{notation:notations_for_homotopy_and_derived_categories_of_sheaves_of_modules_on_a_ringed_site} whose objects $K = (K_n,u_n)_{n \geq 0}$ satisfy $K_0 \in \Ob D_c^b(X, R/(\lambda))$\CrefIfExists{definition:derived_category_of_cohomologically_constructible_complexes_of_sheaves_of_modules_of_a_sheaf_of_rings_on_a_topological_space_or_scheme}.
+    \end{enumerate}
+\end{definition}

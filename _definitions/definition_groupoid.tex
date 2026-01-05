@@ -1,0 +1,41 @@
+\begin{definition} \label{definition:groupoid}
+A \hldef{groupoid} can be defined equivalently in categorical or set-theoretic terms:
+
+\begin{enumerate}
+    \item \textbf{Categorical Definition}: A groupoid is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category} $\mathcal{G}$ in which every morphism is an isomorphism. That is, for every morphism $f: x \to y$ in $\mathcal{G}$, there exists a morphism $g: y \to x$ such that $g \circ f = \operatorname{id}_x$ and $f \circ g = \operatorname{id}_y$.
+
+    \item \textbf{Set-Theoretic Definition}: A groupoid consists of a pair of sets $(G_0, G_1)$, called the \hldef{set of objects} and the \hldef{set of arrows} respectively, equipped with the following structure maps:
+    \begin{itemize}
+        \item \hldef{Source} and \hldef{Target}: $s, t: G_1 \to G_0$,
+        \item \hldef{Identity}: $e: G_0 \to G_1$, assigning to each object $x \in G_0$ an identity arrow $e(x)$,
+        \item \hldef{Composition}: A partial map $m: G_1 \times_{s, G_0, t} G_1 \to G_1$, defined on the set of composable pairs
+        $$ \hlin{ G_1 \times_{s, G_0, t} G_1 := \{ (g, h) \in G_1 \times G_1 \mid s(g) = t(h) \} } $$
+        and denoted by $m(g, h) = g \circ h$,
+        \item \hldef{Inverse}: $i: G_1 \to G_1$, denoted by $i(g) = g^{-1}$.
+    \end{itemize}
+    These structure maps must satisfy the following axioms for all $g, h, k \in G_1$ and $x \in G_0$ where the operations are defined:
+    \begin{enumerate}
+        \item \textbf{Source and Target Compatibility}:
+
+        \begin{align*}
+        s(g \circ h) = s(h), \quad t(g \circ h) = t(g).
+        \end{align*}
+
+        \item \textbf{Associativity}: If $s(g) = t(h)$ and $s(h) = t(k)$, then
+
+        $$ (g \circ h) \circ k = g \circ (h \circ k). $$
+
+        \item \textbf{Identity}:
+        \begin{align*}
+        s(e(x)) = x, \quad t(e(x)) = x, \\
+        g \circ e(s(g)) = g, \quad e(t(g)) \circ g = g.
+        \end{align*}
+
+        \item \textbf{Inverse}:
+        \begin{align*}
+        s(g^{-1}) = t(g), \quad t(g^{-1}) = s(g), \\
+        g \circ g^{-1} = e(t(g)), \quad g^{-1} \circ g = e(s(g)).
+        \end{align*}
+    \end{enumerate}
+\end{enumerate}
+\end{definition}

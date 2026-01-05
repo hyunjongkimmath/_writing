@@ -1,0 +1,71 @@
+
+\begin{definition}[Monoidal functor] \label{definition:monoidal_functor_between_monoidal_categories}
+Let $(\mathcal{C}, \otimes_\mathcal{C}, \mathbb{I}_\mathcal{C}, \alpha^\mathcal{C}, \lambda^\mathcal{C}, \rho^\mathcal{C})$ and $(\mathcal{D}, \otimes_\mathcal{D}, \mathbb{I}_\mathcal{D}, \alpha^\mathcal{D}, \lambda^\mathcal{D}, \rho^\mathcal{D})$ be \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal categories}.
+A \hldef{monoidal functor} 
+$$
+(F, \varphi, \phi) : \mathcal{C} \to \mathcal{D}
+$$ 
+consists of:
+\begin{itemize}
+    \item A functor $F : \mathcal{C} \to \mathcal{D}$,
+    \item A natural isomorphism
+    $$
+    \varphi_{X,Y} : F(X) \otimes_\mathcal{D} F(Y) \xrightarrow{\sim} F(X \otimes_\mathcal{C} Y),
+    $$
+    for all $X,Y \in \mathrm{Ob}(\mathcal{C})$,
+    \item An isomorphism of unit objects
+    $$
+    \phi : \mathbb{I}_\mathcal{D} \xrightarrow{\sim} F(\mathbb{I}_\mathcal{C}),
+    $$
+\end{itemize}
+such that the following coherence diagrams commute:
+
+\medskip
+
+\noindent \textbf{Associativity compatibility:}
+\[
+\begin{tikzcd}[column sep=huge, row sep=large]
+(F(X) \otimes_\mathcal{D} F(Y)) \otimes_\mathcal{D} F(Z) 
+\arrow[r, "\alpha^\mathcal{D}_{F(X),F(Y),F(Z)}"] 
+\arrow[d, "\varphi_{X,Y} \otimes \mathrm{id}_{F(Z)}"'] &
+F(X) \otimes_\mathcal{D} (F(Y) \otimes_\mathcal{D} F(Z)) 
+\arrow[d, "\mathrm{id}_{F(X)} \otimes \varphi_{Y,Z}"] \\
+F(X \otimes_\mathcal{C} Y) \otimes_\mathcal{D} F(Z) 
+\arrow[d, "\varphi_{X \otimes Y, Z}"'] &
+F(X) \otimes_\mathcal{D} F(Y \otimes_\mathcal{C} Z) 
+\arrow[d, "\varphi_{X, Y \otimes Z}"] \\
+F((X \otimes_\mathcal{C} Y) \otimes_\mathcal{C} Z) 
+\arrow[r, "F(\alpha^\mathcal{C}_{X,Y,Z})"'] &
+F(X \otimes_\mathcal{C} (Y \otimes_\mathcal{C} Z))
+\end{tikzcd}
+\]
+
+\medskip
+
+\noindent \textbf{Unit compatibility:}
+\[
+\begin{tikzcd}[column sep=huge, row sep=large]
+\mathbb{I}_\mathcal{D} \otimes_\mathcal{D} F(X) 
+\arrow[r, "\lambda^\mathcal{D}_{F(X)}"] 
+\arrow[d, "\phi \otimes \mathrm{id}_{F(X)}"'] &
+F(X) \\
+F(\mathbb{I}_\mathcal{C}) \otimes_\mathcal{D} F(X) 
+\arrow[r, "\varphi_{\mathbb{I}_\mathcal{C}, X}"'] & 
+F(\mathbb{I}_\mathcal{C} \otimes_\mathcal{C} X) 
+\arrow[u, "F(\lambda^\mathcal{C}_{X})"'] 
+\end{tikzcd}
+\quad
+\begin{tikzcd}[column sep=huge, row sep=large]
+F(X) \otimes_\mathcal{D} \mathbb{I}_\mathcal{D} 
+\arrow[r, "\rho^\mathcal{D}_{F(X)}"] 
+\arrow[d, "\mathrm{id}_{F(X)} \otimes \phi"'] &
+F(X) \\
+F(X) \otimes_\mathcal{D} F(\mathbb{I}_\mathcal{C}) 
+\arrow[r, "\varphi_{X, \mathbb{I}_\mathcal{C}}"'] & 
+F(X \otimes_\mathcal{C} \mathbb{I}_\mathcal{C}) 
+\arrow[u, "F(\rho^\mathcal{C}_{X})"'] 
+\end{tikzcd}
+\]
+
+These diagrams ensure that $F$ preserves the monoidal structure up to the coherent isomorphisms $\varphi$ and $\phi$.
+\end{definition}

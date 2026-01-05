@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:haar_measure_on_a_locally_compact_group}
+    \TODO{Define Borel sigma algebra, measure, regular Borel measure}
+    Let \(G\) be a \hyperrefIfExists{definition:locally_compact_group}{locally compact group}\CrefIfExists{definition:locally_compact_group} with Borel \(\sigma\)-algebra \(\mathcal{B}(G)\). A measure \(\mu : \mathcal{B}(G) \to [0, \infty]\) is called a \hldef{left Haar measure} if it satisfies:
+    \begin{enumerate}
+    \item \(\mu\) is a regular Borel measure, finite on compact sets,
+    \item \(\mu\) is left-translation invariant:
+    \[
+        \mu(gS) = \mu(S) \quad \text{for all } g \in G, \, S \in \mathcal{B}(G),
+    \]
+    where \(gS = \{g \cdot s : s \in S \}\).
+    \end{enumerate}
+    The notion of a \hldef{right Haar measure} may be defined similarly. If \(\mu\) also both a left and right Haar measure, then it is called \hldef{two-sidedinvariant} and may simply be referred to as a \hldef{Haar measure}.
+\end{definition}

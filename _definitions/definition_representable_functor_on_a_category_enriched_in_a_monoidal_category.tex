@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}
+    Let $C$ be a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{category enriched in a monidal category} $\mathcal{V}$. Given an object $X$ of $C$, the \hldef{functor of points} \hl{$h_X$} is the \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}/\CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $C^{\op} \to \mathcal{V}$ given by $T \mapsto \Hom_C(T, X)$. A functor $C^{\op} \to \mathcal{V}$ (or equivalently, a presheaf on $C$ valued in $\mathcal{V}$) is said to be \hldef{representable} if it is \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to some functor $h_X$ of points for an object $X$ of $C$.
+
+    Dually, a functor $C \to \calV$ is called \hldef{co-representable} if it is naturally isomorphic to a functor $T \mapsto \Hom_C(X, T)$ for an object $X$ in $C$. 
+
+    For instance, we may speak of these notions when $\calV$ is the monoidal category $\Sets$, i.e. $C$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+\end{definition}

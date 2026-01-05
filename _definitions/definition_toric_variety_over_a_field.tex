@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:toric_variety_over_a_field}
+    \begin{enumerate}
+        \item Let $S$ be a base scheme. A \hldef{toric scheme over $S$} is an $S$-scheme $X$ equipped with an action of a split torus $T_S = \mathbb{G}_{m, S}^n$ over $S$, such that $X$ contains $T_S$ as a dense open subscheme and the action of $T_S$ on itself extends to the action on $X$.
+
+        Alternatively, in the context of Kato's logarithmic geometry or more general combinatorial constructions, a \hldef{toric scheme} (associated to a fan $\Sigma$ in a lattice $N$) is the scheme $X_\Sigma$ constructed by gluing the affine toric schemes $U_\sigma = \operatorname{Spec}(\mathbb{Z}[\sigma^\vee \cap M])$ for $\sigma \in \Sigma$, where $M = \operatorname{Hom}(N, \mathbb{Z})$.
+
+        \item Let $k$ be a field and let $T = (\mathbb{G}_m)^n$ be the $n$-dimensional split algebraic torus over $k$. A \hldef{toric variety over $k$} is a normal \CrefAndHyperrefIfExist{definition:integral_scheme}{integral} \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated} scheme $X$ of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $k$ such that
+        \begin{enumerate}
+            \item $T$ \CrefAndHyperrefIfExist{definition:action_of_a_group_scheme_on_a_scheme}{acts on} $X$ as an algebraic group scheme over $k$,
+            \item there exists an open dense subscheme $U \subset X$ with $U \cong T$ as $T$-schemes (i.e., the action of $T$ on $U$ corresponds to the group structure of $T$).
+        \end{enumerate}
+        \end{enumerate}
+
+\end{definition}

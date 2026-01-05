@@ -1,0 +1,17 @@
+
+\begin{theorem} \label{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $\mathcal{J}$ be a category such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits (resp. colimits)} indexed by $\mathcal{J}$ exist in $\mathcal{C}$. Then the process of taking limits (resp. colimits) defines a functor
+$$\lim : \mathcal{C}^\mathcal{J} \to \mathcal{C} \quad \text{(resp. } \colim : \mathcal{C}^\mathcal{J} \to \mathcal{C}\text{)}$$
+from the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category} $\mathcal{C}^\mathcal{J}$ to $\mathcal{C}$.
+
+More precisely:
+\begin{enumerate}
+    \item If $\mathcal{C}$ has all limits indexed by the category $\mathcal{J}$, then the assignment sending each diagram $D : \mathcal{J} \to \mathcal{C}$ to its limit $\lim D$ extends to a functor
+    $$\lim : \mathrm{Fun}(\mathcal{J}, \mathcal{C}) \to \mathcal{C}.$$
+    This functor sends a natural transformation $\alpha : D \to D'$ to the unique morphism $\lim D \to \lim D'$ induced by the universal property of limits.
+
+    \item Similarly, if $\mathcal{C}$ has all colimits indexed by $\mathcal{J}$, then the assignment sending each diagram $D : \mathcal{J} \to \mathcal{C}$ to its colimit $\colim D$ extends to a functor
+    $$\colim : \mathrm{Fun}(\mathcal{J}, \mathcal{C}) \to \mathcal{C}.$$
+    This functor sends a natural transformation $\alpha : D \to D'$ to the unique morphism $\colim D \to \colim D'$ induced by the universal property of colimits.
+\end{enumerate}
+\end{theorem}

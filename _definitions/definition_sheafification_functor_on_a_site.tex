@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:sheafification_functor_on_a_site}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} and let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}.
+
+    Assuming that the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} category $\PreShv(\calC, \calA)$ (and hence the \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} category $\Shv(\calC, \calA)$) is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} (or $U$-locally small if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe} $U$ is available), a \hldef{sheafification functor} refers to a functor
+    $$a: \PreShv(\calC, \calA) \to \Shv(\calC, \calA) $$
+    that is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the inclusion functor 
+    $$i:\Shv(\calC, \calA) \hookrightarrow \PreShv(\calC, \calA)  .$$
+    If such a sheafification functor exists, then it is unique up to unique natural isomorphism. Given a presheaf $P$, the sheafification $a(P)$ is also sometimes called the \hldef{sheaf associated to $P$}.
+    \TextIfExists{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}{See \Cref{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site} for common conditions under which sheafification exists.} 
+\end{definition}
+
+% See Also
+%theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site

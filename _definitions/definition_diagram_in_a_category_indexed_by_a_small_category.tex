@@ -1,0 +1,18 @@
+
+\begin{definition}[Diagram in a category and category of diagrams] \label{definition:diagram_in_a_category_indexed_by_a_small_category}
+Let $\mathcal{C}$ be a \hyperrefIfExists{definition:category}{(large) category}\CrefIfExists{definition:category}, and let $I$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
+    \begin{enumerate}
+        \item 
+        A \hldef{diagram of shape $I$ in $\mathcal{C}$} is a \hyperrefIfExists{definition:functor_between_categories}{functor}\CrefIfExists{definition:functor_between_categories} $D: I \to \mathcal{C}$.
+        We often denote such a diagram by the family \hl{$\{ D(i) \}_{i \in \mathrm{Ob}(I)}$} with transition maps given by the functorial image of morphisms in $I$. 
+        
+        A diagram is also synonymously called a \hldef{system}. Moreover, the category $I$ is called the \hldef{index category} or the \hldef{indexing category of the diagram $D$}.
+
+        \item Given two diagrams $D,E: I \to \mathcal{C}$, a \hldef{morphism of diagrams} is a simply a \hyperrefIfExists{definition:natural_transformation_between_functors_between_categories}{natural transformation}\CrefIfExists{definition:natural_transformation_between_functors_between_categories} $D \Rightarrow E$ of the functors $D$ and $E$. 
+
+        \item The \hldef{category of $I$-shaped diagrams in $\mathcal{C}$} or simply \hldef{diagram category (of $I$-shaped diagrams in $\calC$)}, often denoted \hl{$\mathcal{C}^I$}, \hl{$[I, \calC]$}, or \hl{$\operatorname{Fun}(I, \calC)$},
+        is the (large) category whose objects are functors $I \to \mathcal{C}$ (that is, diagrams of shape $I$ in $\mathcal{C}$) and whose morphisms are \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} between such functors. The category $\calC^I$ is also called the \hldef{functor category of functors $I \to \calC$}. \TextIfExists{definition:presheaf_on_a_category}{Equivalently, the functor category $\calC^I$ is the category \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{$\PreShv(I^{\op}, \calC)$ of presheaves} on $I^{\op}$ with values in $\calC$ and hence notations for presheaf categories are applicable as notations for functor categories.}
+
+        If $\calC$ is \hyperrefIfExists{definition:locally_small_category}{locally small}\CrefIfExists{definition:locally_small_category} and $I$ is small, then $\calC^I$ is locally small by Lemma \ref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}.
+    \end{enumerate}
+\end{definition}

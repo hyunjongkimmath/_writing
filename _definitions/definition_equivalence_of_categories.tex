@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:equivalence_of_categories}
+An \hldef{equivalence of categories} between two \CrefAndHyperrefIfExist{definition:category}{(large) categories} $\mathcal{C}$ and $\mathcal{D}$ consists of a pair of \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}
+$$F : \mathcal{C} \to \mathcal{D} \quad \text{and} \quad G : \mathcal{D} \to \mathcal{C}$$
+together with \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphisms}
+$$\eta : \mathrm{Id}_{\mathcal{C}} \xrightarrow{\sim} G \circ F \quad \text{and} \quad \epsilon : F \circ G \xrightarrow{\sim} \mathrm{Id}_{\mathcal{D}}.$$
+\CrefIfExists{definition:identity_functor_on_a_category} Such functors $F$ and $G$ may be called \hldef{(natural) inverses of each other}.
+
+When $\calC$ and $\calD$ are \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small categories}, $F$ is an equivalence of categories if and only if $F$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful} and \CrefAndHyperrefIfExist{definition:essentially_surjective_functor_between_categories}{essentially surjective}
+\end{definition}

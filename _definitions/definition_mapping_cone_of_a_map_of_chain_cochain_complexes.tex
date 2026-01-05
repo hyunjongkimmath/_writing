@@ -1,0 +1,31 @@
+\begin{definition} \label{definition:mapping_cone_of_a_map_of_chain_cochain_complexes}
+    \begin{enumerate}
+        \item Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category}{additive category $\mathcal{A}$}.
+
+        The \hldef{mapping cone of $f$}, denoted \hl{$\operatorname{Cone}(f)$}, is the chain complex defined by:
+        \begin{itemize}
+        \item Objects: For each $n$, 
+        $$\operatorname{Cone}(f)_n = D_n \oplus C_{n-1}.$$
+        \item Differential: For each $n$, define
+        $$d^{\operatorname{Cone}(f)}_n : \operatorname{Cone}(f)_n \to \operatorname{Cone}(f)_{n-1}$$
+        by the matrix morphism
+        $$d^{\operatorname{Cone}(f)}_n = \begin{pmatrix} d^D_n & f_{n-1} \\ 0 & -d^C_{n-1} \end{pmatrix} : D_n \oplus C_{n-1} \to D_{n-1} \oplus C_{n-2}.$$
+        \end{itemize}
+
+        This construction defines a chain complex, i.e., $d^{\operatorname{Cone}(f)}_{n-1} \circ d^{\operatorname{Cone}(f)}_n = 0$.
+
+        \item Dually, let $g : (C^\bullet, d_C^\bullet) \to (D^\bullet, d_D^\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of cochain complexes} in $\mathcal{A}$. 
+
+        The \hldef{mapping cone of $g$}, denoted \hl{$\operatorname{Cone}(g)$}, is the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} defined by:
+        \begin{itemize}
+        \item Objects: For each $n$, 
+        $$\operatorname{Cone}(g)^n = D^n \oplus C^{n+1}.$$
+        \item Differential: For each $n$, define
+        $$d_{\operatorname{Cone}(g)}^n : \operatorname{Cone}(g)^n \to \operatorname{Cone}(g)^{n+1}$$
+        by the matrix morphism
+        $$d_{\operatorname{Cone}(g)}^n = \begin{pmatrix} d_D^n & g^{n+1} \\ 0 & -d_C^{n+1} \end{pmatrix} : D^n \oplus C^{n+1} \to D^{n+1} \oplus C^{n+2}.$$
+        \end{itemize}
+
+        This construction defines a cochain complex, i.e., $d_{\operatorname{Cone}(g)}^{n+1} \circ d_{\operatorname{Cone}(g)}^n = 0$.
+            \end{enumerate}
+\end{definition}

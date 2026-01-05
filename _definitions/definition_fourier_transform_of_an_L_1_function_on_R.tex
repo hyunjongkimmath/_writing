@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:fourier_transform_of_an_L_1_function_on_R}
+    Let $f,g: \bbR \to \bbC$ be a measurable functions. The \hldef{(forward) Fourier transform of $f$} and the \hldef{inverse Fourier transform of $f$} are the functions \hl{$\calF[f](t) = \hat{f}(t): \bbR \to \bbC$} and \hl{$\calF^{-1}[g](t): \bbR \to \bbC$} defined by one of the following conventions (notation for the variables vary amongst the conventions as the variables represent different actors):
+
+    \begin{center}
+    \begin{tabular}{|p{4cm}|c|c|} \hline
+        Convention name & Fourier Transform $\hat{f}(t)$ & Inverse Fourier Transform $\calF^{-1}[g](t)$  \\ \hline Standard mathematical convention & $\hat{f}(t) = \int_{-\infty}^\infty f(x) e^{-ixt} dx$ & $\calF^{-1}[g](x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} g(t) e^{ixt} dt$ \\ 
+        \hline Symmetric math convention & $\hat{f}(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-ixt}  dx$ & $\calF^{-1}[g](x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty g(t) e^{ixt} dt$ \\
+        \hline Time frequency convention & $\hat{f}(\omega) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(t) e^{i \omega t} dt$ & $\calF^{-1}[g](t) = \int_{-\infty}^\infty g(\omega ) e^{-i \omega t} d \omega $ \\ 
+        \hline Position wavenumber convention & $\hat{f}(k) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(x) e^{-i k x }  dx$ & $\calF^{-1}[g](x) = \int_{-\infty}^\infty g(k) e^{i k x} dk$ \\
+        \hline Communications and signal processing convention & $\hat{f}(\nu) = \int_{-\infty}^{\infty} f(t) e^{-2\pi i \nu t}  dt$ & $\calF^{-1}[g](t) = \int_{-\infty}^\infty g(\nu) e^{2 \pi i \nu t} d\nu$ \\\hline 
+    \end{tabular}
+    \end{center}
+
+    If $f \in L^1(\bbR)$, then these are all well-defined.
+\end{definition}

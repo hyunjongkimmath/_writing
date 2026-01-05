@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:simplicial_suspension_functor_and_simplicial_loop_functor_on_pointed_simplicial_sheaves_of_sets_on_a_site}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}.
+    \TODO{$\Delta^n, \partial \Delta^n$}
+    \begin{enumerate}
+
+        \item Let \hl{$S_s^1$} the quotient sheaf $\Delta^1 / \partial \Delta^1$, pointed by the image of $\partial \Delta^1$. It is called the \hldef{simplicial circle (on $T$)}. As per \Cref{convention:objects_of_a_site_as_sheaves_and_constant_simplicial_object_of_a_category}, it may also denote the constant pointed simplicial sheaf induced by $S_s^1$. 
+
+        \item Define the \hldef{simplicial suspension functor}
+        $$\hlin{\Sigma_s: \Deltaop(\Shv(T))_\bullet \to \Deltaop(\Shv(T))_\bullet, \quad (X,x) \mapsto S_s^1 \wedge (X,x)}.$$
+        \CrefIfExists{definition:wedge_and_smash_products_of_pointed_simplicial_sheaves_of_sets_on_a_site}
+
+        \item Define the \hldef{simplicial loop functor} \hl{$\Omega_s^1(-) := \underline{\Hom}_\bullet(S_s^1, -)$}, which is right adjoint to $\Sigma_s(-)$. 
+
+        \item We write by \hl{$\Sigma^n = \Sigma_s^n$} to be the $n$-time composition of $\Sigma$. We write by \hl{$\Omega^n = \Omega_s^n$} to be the $n$-time composition of $\Omega_s^1$.
+    \end{enumerate}
+
+\end{definition}

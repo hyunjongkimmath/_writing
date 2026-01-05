@@ -1,0 +1,72 @@
+\begin{definition} \label{definition:module_over_a_sheaf_of_rings_on_a_site}
+
+    \begin{enumerate}
+        \item 
+        Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}, and let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of (not necessarily commutative) \CrefAndHyperrefIfExist{definition:ring}{rings} on $\mathcal{C}$. 
+        
+        \begin{enumerate}
+            \item 
+            An \hldef{$(\mathcal{A}, \mathcal{B})$-bimodule} (or a \hldef{bimodule over $(\mathcal{A}, \mathcal{B})$}) is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $\mathcal{M}$ of abelian groups on $\mathcal{C}$ equipped with a left $\mathcal{A}$-module structure given by a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{morphism of sheaves} of sets
+            $$ \lambda: \mathcal{A} \times \mathcal{M} \longrightarrow \mathcal{M}, $$
+            and a right $\mathcal{B}$-module structure given by a morphism of sheaves of sets
+            $$ \rho: \mathcal{M} \times \mathcal{B} \longrightarrow \mathcal{M}, $$
+            such that the actions are compatible. Specifically, for every object $U$ in $\mathcal{C}$, every section $m \in \mathcal{M}(U)$, every $a \in \mathcal{A}(U)$, and every $b \in \mathcal{B}(U)$, the equality
+            $$ \lambda_U(a, \rho_U(m, b)) = \rho_U(\lambda_U(a, m), b) $$
+            holds in $\mathcal{M}(U)$. In standard multiplicative notation where $\lambda(a,m)$ is denoted $a \cdot m$ and $\rho(m,b)$ is denoted $m \cdot b$, this condition is the associativity axiom
+            $$ (a \cdot m) \cdot b = a \cdot (m \cdot b). $$
+
+            In particular, for every object $U \in \calC$, the abelian group $\calM(U)$ has the structure of an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$\calA(U)-\calB(U)$-bimodule}.
+
+            \item Let $\mathcal{M}$ and $\mathcal{N}$ be $(\mathcal{A}, \mathcal{B})$-bimodules. A \hldef{homomorphism of $(\mathcal{A}, \mathcal{B})$-bimodules} (or an \hldef{$(\mathcal{A}, \mathcal{B})$-linear morphism}) is a morphism of sheaves of abelian groups $f: \mathcal{M} \to \mathcal{N}$ such that for every object $U$ of $\mathcal{C}$, every section $m \in \mathcal{M}(U)$, every $a \in \mathcal{A}(U)$, and every $b \in \mathcal{B}(U)$, the following compatibility conditions hold:
+            $$ f_U(a \cdot m) = a \cdot f_U(m) \quad \text{and} \quad f_U(m \cdot b) = f_U(m) \cdot b. $$
+
+
+        \end{enumerate}
+
+        \noindent We denote the category of $(\mathcal{A}, \mathcal{B})$-bimodules, with morphisms being morphisms of sheaves of abelian groups compatible with both the left $\mathcal{A}$-action and the right $\mathcal{B}$-action, by
+        \hl{$ \mathcal{A}\text{-}\mathcal{B}\text{-}\mathsf{Mod} $}
+        or sometimes by
+        \hl{$ {}_{\mathcal{A}}\mathsf{Mod}_{\mathcal{B}} $}
+        \TODO{talk about how bimodules can be identifies with left/right modules}
+
+        \item 
+
+        Let $(\mathcal{C}, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. Let $\mathcal{O}$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of (not necessarily commutative) rings on $(\mathcal{C}, J)$}, i.e. $((\calC, J), \calO)$ is a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}.  
+
+        \begin{enumerate}
+            \item An \hldef{(left/right/two-sided) $\mathcal{O}$-module} consists of the following data:
+            \begin{itemize}
+                \item A sheaf $\mathcal{F}$ of abelian groups on $(\mathcal{C}, J)$,
+            \item for every object $U \in \mathcal{C}$, the structure of an (left/right/two-sided) $\mathcal{O}(U)$-module on $\mathcal{F}(U)$,
+            \end{itemize}
+            such that for every morphism $f: V \to U$ in $\mathcal{C}$, the restriction map 
+            $$\rho_{U,V}: \mathcal{F}(U) \to \mathcal{F}(V)$$ 
+            is $\mathcal{O}(U)$-linear when the $\mathcal{O}(U)$-action on $\mathcal{F}(V)$ is defined via the natural ring homomorphism 
+            $$\mathcal{O}(U) \to \mathcal{O}(V)$$
+            induced by $f$.
+
+
+            \item Let $\mathcal{F}$ and $\mathcal{G}$ be \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\mathcal{O}$-modules}.
+
+            A \hldef{morphism of $\mathcal{O}$-modules} $\varphi: \mathcal{F} \to \mathcal{G}$ is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{morphism of sheaves} of abelian groups such that, for every object $U \in \mathcal{C}$, the component map
+            $$\varphi_U : \mathcal{F}(U) \to \mathcal{G}(U)$$
+            is $\mathcal{O}(U)$-linear, i.e. it satisfies
+            $$\varphi_U(r \cdot s) = r \cdot \varphi_U(s) \quad \text{for all } r \in \mathcal{O}(U), \, s \in \mathcal{F}(U).$$
+
+            The collection of all $\mathcal{O}$-modules together with their morphisms of $\mathcal{O}$-modules forms the \hldef{category of $\mathcal{O}$-modules}, denoted \hl{$\mathbf{Mod}(\mathcal{O})$}.
+
+            \TextIfExists{definition:algebra_over_a_sheaf_of_rings_on_a_site}{See also \Cref{definition:algebra_over_a_sheaf_of_rings_on_a_site}.}
+        \end{enumerate}
+
+        \noindent In case that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+        $$\PreShv(\calC, \mathbf{Rings}) \to \Shv(\calC, \mathbf{Rings})$$ 
+        exists, a left, right, two-sided $\calO$-module (and morphisms thereof) is equivalent to a $(\calO,\bbZ)$-bimodule, $(\bbZ,\calO)$-bimodule, and $(\calO, \calO)$-bimodule (and morphisms thereof) respectively, where $\bbZ$ is the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} of the integer ring $\bbZ$.
+
+\end{enumerate}
+
+
+\end{definition}
+
+
+% See Also
+% theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives

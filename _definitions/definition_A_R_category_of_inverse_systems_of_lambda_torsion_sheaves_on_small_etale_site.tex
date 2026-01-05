@@ -1,0 +1,12 @@
+\begin{definition}[A–R category of inverse systems of $\lambda$-torsion sheaves] \label{definition:A_R_category_of_inverse_systems_of_lambda_torsion_sheaves_on_small_etale_site}
+Let $X$ be a scheme. Let 
+$$\calF = (\calF_n, u_n)_{n \in \bbZ}, \quad u_n: \calF_n \to \calF_{n-1}$$
+be an \hyperrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system}\CrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset} of sheaves of abelian groups on the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{(small) étale site $X_{\text{ét}}$}. Let $R$ be a commutative ring and let $\lambda\subseteq R$ be an ideal. 
+
+The \hldef{A–R category of inverse systems of $\lambda$-torsion sheaves on $X_{\text{ét}}$}, denoted \hl{$\mathrm{AR}(\lambda\text{-tors}(X))$}, is the localization of the multiplicative system consisting of the family of morphisms of the form $\calF[r] \to \calF$. In other words, the objects of the category are inverse systems of \hyperrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals}{$\lambda$-torsion sheaves}\CrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals} and for any objects $\calF$ and $\calG$, we have 
+$$\Hom_{\mathrm{AR}(\lambda\text{-tors}(X))} = \varinjlim_{r \geq 0} \Hom(\calF[r], \calG).$$
+\TODO{morphism of inverse systems; more generally diagrams}
+In particular, a morphism $\calF \to \calG$ in $\mathrm{AR}(\lambda\text{-tors}(X))$ is represented by a morphsm $\calF[r] \to \calG$ of inverse systems for some $r \geq 0$, and the kernel and cokernel of $\calF[r] \to \calG$ are the kernel and cokernel of $\calF \to \calG$ in $\mathrm{AR}(\lambda\text{-tors}(X))$ 
+
+It is worth noting that $\mathrm{AR}(\lambda\text{-tors}(X))$ is an \hyperrefIfExists{definition:abelian_category}{abelian category}\CrefIfExists{definition:abelian_category} and that $\calF \in \mathrm{AR}(\lambda\text{-tors}(X))$ is zero if and only if it is a \hyperrefIfExists{definition:artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site}{null system}\CrefIfExists{definition:artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site}
+\end{definition}

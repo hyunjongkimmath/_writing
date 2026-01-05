@@ -1,0 +1,17 @@
+
+\begin{definition}[Category of opens of a topological space] \label{definition:category_of_opens_of_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. The \hldef{category of opens of $X$}, sometimes denoted \hl{$\mathbf{Open}(X)$} (or \hl{$\mathrm{Open}(X)$} or \hl{$\mathrm{Ouv}(X)$} (for the French word ``ouvert'', meaning open), etc.), is the \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:category}{category} defined as follows:
+    \begin{itemize}
+        \item The objects are the open subsets $U \subseteq X$.
+        \item For two open sets $U, V \subseteq X$, the morphism set is
+        $$\mathrm{Hom}_{\mathbf{Open}(X)}(U,V) =
+        \begin{cases}
+        \{\iota_{U,V}\}, & \text{if } U \subseteq V, \\
+        \varnothing, & \text{otherwise},
+        \end{cases}$$
+        where $\iota_{U,V}$ denotes the inclusion morphism $U \hookrightarrow V$.
+        \item Composition of morphisms is given by composition of set-theoretic inclusions, i.e.
+        $$\iota_{V,W} \circ \iota_{U,V} = \iota_{U,W} \quad \text{whenever } U \subseteq V \subseteq W.$$
+        \item The identity morphism on an object $U$ is the inclusion $\iota_{U,U} = \mathrm{id}_U$.
+    \end{itemize}
+\end{definition}

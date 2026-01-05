@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:geometric_realization_of_a_simplicial_category_as_a_topological_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:simplicial_category}{simplicial category}. The \hldef{geometric realization of $\mathcal{C}$}, denoted \hl{$|\mathcal{C}|$}, is the \CrefAndHyperrefIfExist{definition:topological_category}{topological category} defined as follows:
+
+    \begin{itemize}
+    \item The objects of $|\mathcal{C}|$ are the same as the objects of $\mathcal{C}$:
+    $$ \mathrm{Ob}(|\mathcal{C}|) = \mathrm{Ob}(\mathcal{C}).  $$
+
+    \item For any objects $X, Y \in \mathcal{C}$, the morphism space is the \CrefAndHyperrefIfExist{definition:geometric_realization_of_a_simplicial_set}{geometric realization} of the simplicial mapping space:
+    $$ \mathrm{Hom}_{|\mathcal{C}|}(X, Y) = |\Hom_\mathcal{C}(X, Y)|.  $$
+    (\Cref{definition:category_enriched_in_a_monoidal_category})
+
+    \item The composition maps 
+    $$
+    \Hom_{|\mathcal{C}|}(Y,Z) \times \Hom_{|\mathcal{C}|}(X,Y) \to \Hom_{|\mathcal{C}|}(X,Z)
+    $$
+    are induced by applying the geometric realization functor to the composition maps of $\mathcal{C}$, using that geometric realization commutes with finite products.
+    \end{itemize}
+\end{definition}

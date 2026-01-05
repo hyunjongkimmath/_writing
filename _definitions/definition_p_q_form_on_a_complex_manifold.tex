@@ -1,0 +1,12 @@
+
+\begin{definition}[Differential forms of type $(p,q)$] \label{definition:p_q_form_on_a_complex_manifold}
+    Let $X$ be a complex manifold of complex dimension $n$.
+
+    The space of smooth \hldef{$(p,q)$-forms on $X$} is defined as
+    $$\hlin{\Omega^{p,q}(X) := \Gamma\Big(X, \wedge^p T^{1,0*} X \otimes \wedge^q T^{0,1*} X\Big),}$$
+    i.e., \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{smooth sections} of the bundle given by \hyperrefIfExists{definition:kth_exterior_power_of_vector_bundle}{exterior $p$-powers} of the holomorphic cotangent bundle tensored with exterior $q$-powers of the anti-holomorphic cotangent bundle.
+
+    \TODO{TODO: notation for de Rham forms}
+    These $(p,q)$-forms provide a bigrading of the \hyperrefIfExists{definition:complexification_of_a_real_vector_bundle_over_a_complex_manifold}{complexified} de Rham forms:
+    $$ \Omega^k(X; \mathbb{C}) = \bigoplus_{p+q=k} \Omega^{p,q}(X).  $$
+\end{definition}

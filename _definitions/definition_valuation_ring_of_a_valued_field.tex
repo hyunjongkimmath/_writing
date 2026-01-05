@@ -1,0 +1,14 @@
+
+\begin{definition}[Valuation Ring of a Valued Field] \label{definition:valuation_ring_of_a_valued_field}
+Let $K$ be a field equipped with a \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{valuation}  
+\hl{$v : K \to \Gamma$},  
+where $\Gamma$ is a totally ordered abelian group.  
+
+The \hldef{valuation ring of the valued field $(K,v)$} is the subring  
+$$\hlin{\mathcal{O}_v := \{ x \in K \mid v(x) \geq 0 \}},$$  
+where $0$ is the neutral element of $\Gamma$.  
+% Equivalently, $\mathcal{O}_v$ consists of all elements whose valuation is "non-negative" with respect to the ordering on $\Gamma$.  
+This ring $\mathcal{O}_v$ is a local ring with maximal ideal  
+$$\hlin{\mathfrak{m}_v := \{ x \in K \mid v(x) > 0 \}}.$$
+Its \hldef{residue field} is defined as \hl{$\kappa_v := \mathcal{O}_v / \mathfrak{m}_v$}.  
+\end{definition}

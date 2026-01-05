@@ -1,0 +1,7 @@
+\begin{theorem} \label{theorem:group_is_semidirect_product_of_groups_if_and_only_if_there_is_a_split_short_exact_sequence}
+Let $N$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}.
+A group $G$ is \CrefAndHyperrefIfExist{definition:group_homomorphism}{isomorphic} to a \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{semidirect product} of $N$ by $H$ if and only if there exists a short exact sequence
+\TODO{short exact sequence of groups, splitting, section}
+$$ 1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1 $$
+that splits, meaning there exists a section $s: H \to G$, i.e. a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} such that $\pi \circ s = \operatorname{id}_H$. In this case, $G \cong N \rtimes_\varphi H$ with $\varphi(h)(n) = s(h) n s(h)^{-1}$ (identifying $N$ with its image $\iota(N)$).
+\end{theorem}

@@ -1,0 +1,37 @@
+\begin{definition} \label{definition:pre_tannakian_category_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. A \hldef{pre-Tannakian category over $R$} (or \hldef{$R$-pre-Tannakian category}) is a \CrefAndHyperrefIfExist{definition:tensor_category_over_a_commutative_ring}{tensor category over $R$} $\mathcal{C}$ satisfying the following additional properties:
+\begin{itemize}
+    \item $\mathcal{C}$ is \CrefAndHyperrefIfExist{definition:rigid_category}{rigid}. That is, every object $X \in \operatorname{Ob}(\mathcal{C})$ admits a dual object (denoted \hl{$X^{\vee}$}).
+    \item For all objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, the $R$-module $\operatorname{Hom}_{\mathcal{C}}(X, Y)$ is a \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective $R$-module}.
+\end{itemize}
+
+When $R = k$ is a \CrefAndHyperrefIfExist{definition:field}{field}, the term \hldef{pre-Tannakian category} typically implies two additional conditions:
+\begin{enumerate}
+    \item $\mathcal{C}$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \item The endomorphism ring of the unit object is trivial: $\operatorname{End}_{\mathcal{C}}(\mathds{1}) \cong k$.
+\end{enumerate}
+\end{definition}
+
+% \begin{definition} \label{definition:pre_tannakian_category_over_a_commutative_ring}
+% Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. A \hldef{pre-Tannakian category over $R$} (or a \hldef{$R$ pre-Tannakian category} or a \hldef{pre-Tannakian $R$-category}) is a category such that :
+% \begin{itemize}
+%     \item $\calC$ is \CrefAndHyperrefIfExist{definition:linear_category_over_a_commutative_ring}{$R$-linear},
+%     \item $\mathcal{C}$ is \CrefAndHyperrefIfExist{definition:rigid_category}{rigid}, i.e. every object $X \in \mathcal{C}$ is dualizable (left and right duals exist and are isomorphic). The dual is commonly denoted by \hl{$X^{\vee}$} ;
+    
+%     % and \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}, i.e., $\mathcal{C}$ is an abelian category and every object $X \in \mathcal{C}$ is dualizable (left and right duals exist and are isomorphic). The dual is commonly denoted by \hl{$X^{\vee}$} ;
+
+%     \item $\calC$ is a \CrefAndHyperrefIfExist{definition:tensor_category_over_a_commutative_ring}{tensor category over $R$}
+
+%     \item for all objects $X, Y$ in $\mathcal{C}$, the $R$-module $\operatorname{Hom}_{\mathcal{C}}(X, Y)$ is a projective module. 
+%     % finite-dimensional over $k$.
+
+% \end{itemize}
+% When $R$ is a field, a \hldef{pre-Tannakian category over $R$} usually refers to a pre-Tannakian category in the above sense that is also an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and such that $\operatorname{End}(\mathds{1}) \cong R$.\end{definition}
+
+
+%     % \item $\mathcal{C}$ is a \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal category} equipped with a bifunctor (often called \hldef{tensor product})
+%     % $$\hlin{\otimes : \mathcal{C} \times \mathcal{C} \to \mathcal{C}}$$
+%     % which is $k$-linear in each variable;
+%     % \item the \CrefAndHyperrefIfExist{definition:monoidal_category}{unit object}, commonly denoted by \hl{$\mathbb{I} \in \mathrm{Ob}(\mathcal{C})$} or \hl{$\mathds{1}$}, is simple;
+%     % \item every object in $\mathcal{C}$ is of \CrefAndHyperrefIfExist{definition:length_of_an_object_of_an_abelian_category}{finite length};
+%     % \item for all objects $X, Y$ in $\mathcal{C}$, the $k$-module $\operatorname{Hom}_{\mathcal{C}}(X, Y)$ is finite-dimensional over $k$.

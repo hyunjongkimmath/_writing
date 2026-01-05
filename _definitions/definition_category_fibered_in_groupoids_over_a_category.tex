@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:category_fibered_in_groupoids_over_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. A \hldef{category fibred in groupoids over $\mathcal{C}$} is a category $\mathcal{X}$ equipped with a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $p : \mathcal{X} \to \mathcal{C}$ such that:
+\begin{enumerate}
+    \item For any morphism $f : V \to U$ in $\mathcal{C}$ and any object $x \in \mathcal{X}$ with $p(x) = U$, there exists a morphism $\phi : y \to x$ in $\mathcal{X}$ with $p(\phi) = f$.
+    \item For any pair of morphisms $\phi : y \to x$ and $\psi : z \to x$ in $\mathcal{X}$, and any morphism $g : p(z) \to p(y)$ in $\mathcal{C}$ such that $p(\phi) \circ g = p(\psi)$, there exists a unique morphism $\chi : z \to y$ in $\mathcal{X}$ over $g$ (i.e., $p(\chi) = g$) such that $\phi \circ \chi = \psi$.
+\end{enumerate}
+For each object $U$ in $\mathcal{C}$, the \hldef{fiber category} \hl{$\mathcal{X}_U$} is the category
+\begin{itemize}
+    \item whose objects are those $x \in \mathcal{X}$ with $p(x) = U$, and 
+    \item whose morphisms $\alpha$ satisfy $p(\alpha) = \mathrm{id}_U$)
+\end{itemize} 
+The fiber category $\mathcal{X}_U$ is a groupoid.
+\end{definition}

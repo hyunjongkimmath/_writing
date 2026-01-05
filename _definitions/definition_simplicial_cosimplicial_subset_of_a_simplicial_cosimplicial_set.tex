@@ -1,0 +1,33 @@
+\begin{definition} \label{definition:simplicial_cosimplicial_subset_of_a_simplicial_cosimplicial_set}
+    \begin{enumerate}
+        \item Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}, that is, functors $X, Y : \Delta^{\mathrm{op}} \to \mathbf{Set}$.  
+        A \hldef{simplicial subset of $X$} is a simplicial set $Y$ together with a family of \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} maps
+        $$ \iota_n : Y_n \hookrightarrow X_n \quad (n \ge 0) $$
+        that form a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} $\iota : Y \Rightarrow X$.  
+        Equivalently, $Y$ is a simplicial subset of $X$ if and only if for every morphism $\theta : [m] \to [n]$ in $\Delta$, the following diagram commutes:
+        $$
+        \begin{array}{ccc}
+        Y_n & \xrightarrow{Y(\theta)} & Y_m \\
+        \downarrow \iota_n & & \downarrow \iota_m \\
+        X_n & \xrightarrow{X(\theta)} & X_m
+        \end{array}
+        $$
+        and each $\iota_n$ is injective.
+
+        \item Let $X$ and $Y$ be cosimplicial sets, that is, functors $X, Y : \Delta \to \mathbf{Set}$.  
+        A \hldef{cosimplicial subset} of $X$ is a cosimplicial set $Y$ together with a family of injective maps
+        $$
+        \iota^n : Y^n \hookrightarrow X^n \quad (n \ge 0)
+        $$
+        that form a natural transformation $\iota : Y \Rightarrow X$.  
+        Equivalently, $Y$ is a cosimplicial subset of $X$ if and only if for every morphism $\theta : [m] \to [n]$ in $\Delta$, the following diagram commutes:
+        $$
+        \begin{array}{ccc}
+        Y^m & \xrightarrow{Y(\theta)} & Y^n \\
+        \downarrow \iota^m & & \downarrow \iota^n \\
+        X^m & \xrightarrow{X(\theta)} & X^n
+        \end{array}
+        $$
+        and each $\iota^n$ is injective.
+    \end{enumerate}
+\end{definition}

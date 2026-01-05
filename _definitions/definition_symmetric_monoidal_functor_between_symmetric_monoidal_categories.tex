@@ -1,0 +1,21 @@
+
+\begin{definition} \label{definition:symmetric_monoidal_functor_between_symmetric_monoidal_categories}
+Let $(\mathcal{C}, \otimes_{\mathcal{C}}, \mathds{1}_{\mathcal{C}}, \alpha^{\mathcal{C}}, \lambda^{\mathcal{C}}, \rho^{\mathcal{C}}, \sigma^{\mathcal{C}})$ and $(\mathcal{D}, \otimes_{\mathcal{D}}, \mathds{1}_{\mathcal{D}}, \alpha^{\mathcal{D}}, \lambda^{\mathcal{D}}, \rho^{\mathcal{D}}, \sigma^{\mathcal{D}})$ be \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal categories}, where 
+\begin{itemize}
+    \item $\otimes_{\mathcal{C}} , \otimes_{\mathcal{D}}$ denote the tensor products,
+    \item $\mathds{1}_{\mathcal{C}}, \mathds{1}_{\mathcal{D}}$ denote the unit objects,
+    \item $\alpha^{\mathcal{C}}, \alpha^{\mathcal{D}}$ denote the associativity constraints,
+    \item $\lambda^{\mathcal{C}}, \lambda^{\mathcal{D}}, \rho^{\mathcal{C}}, \rho^{\mathcal{D}}$ denote the unit constraints,
+    \item $\sigma^{\mathcal{C}}, \sigma^{\mathcal{D}}$ denote the symmetry (braiding) natural isomorphisms.
+\end{itemize}
+
+A \hldef{symmetric monoidal functor} from $\mathcal{C}$ to $\mathcal{D}$ is a \CrefAndHyperrefIfExist{definition:monoidal_functor_between_monoidal_categories}{monoidal functor} $(F, \phi, \phi_0)$ between the underlying monoidal categories such that, for all objects $X,Y \in \mathcal{C}$, the following diagram commutes:
+\[
+\begin{tikzcd}
+F(X) \otimes_{\mathcal{D}} F(Y) \arrow[r, "\phi_{X,Y}"] \arrow[d, "\sigma^{\mathcal{D}}_{F(X),F(Y)}"'] 
+& F(X \otimes_{\mathcal{C}} Y) \arrow[d, "F(\sigma^{\mathcal{C}}_{X,Y})"] \\
+F(Y) \otimes_{\mathcal{D}} F(X) \arrow[r, "\phi_{Y,X}"'] 
+& F(Y \otimes_{\mathcal{C}} X).
+\end{tikzcd}
+\]
+\end{definition}

@@ -1,0 +1,12 @@
+\begin{definition}[n-ary (Multivariable) Functor] \label{definition:n_ary_functor}
+Let $I$ be a finite set with $|I| = n$, and let $\{\mathcal{C}_i\}_{i \in I}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}, together with another category $\mathcal{D}$. An \hldef{n-ary functor} (also called a \hldef{multivariable functor}, a \hldef{multivariate functor}, or a \hldef{multifunctor} ) from the categories $\{\mathcal{C}_i\}_{i\in I}$ to $\mathcal{D}$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}
+$$F : \prod_{i \in I} \mathcal{C}_i \to \mathcal{D}.$$ 
+\CrefIfExists{definition:product_category_of_a_family_of_categories} That is, $F$ assigns:
+\begin{itemize}
+    \item to each object $((A_i)_{i \in I})$ in $\prod_{i \in I} \mathcal{C}_i$, an object $F((A_i)_{i \in I})$ in $\mathcal{D}$,
+    \item to each morphism $((f_i)_{i \in I}) : (A_i)_i \to (B_i)_i$, a morphism $F((f_i)_i) : F((A_i)_i) \to F((B_i)_i)$ in $\mathcal{D}$,
+\end{itemize}
+so that $F$ preserves identities and composition componentwise. 
+For instance, a \hldef{bifunctor} is an $n$-ary functor when $n = 2$, a \hldef{ternary functor/trifunctor} is an $n$-ary functor when $n = 3$, etc.
+
+\end{definition}

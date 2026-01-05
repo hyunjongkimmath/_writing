@@ -1,0 +1,6 @@
+\begin{definition} \label{definition:mapping_space_between_objects_of_a_simplicial_set}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set}. Let \CrefAndHyperrefIfExist{definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set}{$x,y \in X$ be objects}. The \hldef{mapping space between $x$ and $y$} is the simplicial set \hl{$\operatorname{Mor}(x,y)$} whose \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$n$-simplicies} are given by 
+    $$\operatorname{Mor}(x,y)_n = \{F: \Delta^n \times \Delta^1 \to X: F|_{\Delta^n \times \{0\}} = x, F|_{\Delta^n \times \{1\}} = y \}.$$
+    \CrefIfExists{definition:standard_n_simplex}
+    \TODO{comment on how composition of morphisms becomes well defined up to homotopy; it seems reasonable that compositions to be well defined on the homotopy categories $\mathrm{h}\operatorname{Mor}$ of the mapping spaces }
+\end{definition}

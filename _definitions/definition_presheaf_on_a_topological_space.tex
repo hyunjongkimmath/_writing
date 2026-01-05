@@ -1,0 +1,30 @@
+
+\begin{definition}[Presheaf on a topological space] \label{definition:presheaf_on_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calD$ be a category.
+    
+    A \hldef{presheaf (of objects of $\calD$/valued in $\calD$) on $X$} is a rule $\mathcal{F}$ that assigns:
+    \begin{itemize}
+        \item to each open set $U \subseteq X$, an object $\mathcal{F}(U) \in \Ob \calD$, called the \hldef{sections of $\mathcal{F}$ over $U$},
+        \item to each inclusion of open sets $V \subseteq U$, a morphism
+        $$\rho^U_V: \mathcal{F}(U) \to \mathcal{F}(V), \quad s \mapsto s|_V,$$
+    \end{itemize}
+        in the category $\calD$ called the \hldef{restriction map} such that the following conditions hold:
+    \begin{itemize}
+        \item (Identity) For every open set $U \subseteq X$, the restriction map $\rho^U_U$ is the identity on $\mathcal{F}(U)$.
+        \item (Transitivity) For inclusions $W \subseteq V \subseteq U$ of open sets, one has
+        $$\rho^U_W = \rho^V_W \circ \rho^U_V.$$
+    \end{itemize}
+    For instance, we may speak of a \hldef{presheaf of sets/groups/rings/etc. on the topological space $X$}.
+
+
+    Equivalently, a presheaf on $X$ (of objects in a category $\calD$) is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}
+    $$\mathbf{Open}(X)^{\op} \to \calD$$
+    from the opposite of the category \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} of open subsets of $X$\TextIfExists{definition:presheaf_on_a_category}{ (see also \Cref{definition:presheaf_on_a_category})}.
+
+    \TextIfExists{definition:presheaf_on_a_category}{Equivalently, a presheaf on $X$ is a presheaf on the category $\mathbf{Open}(X)$ in the sense of \Cref{definition:presheaf_on_a_category}}.
+
+
+    The sections object $\calF(U)$ is also denoted by \hl{$\Gamma(U, \calF)$}\TextIfExists{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{ (see \Cref{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category})}.
+    Moreover, the object $\calF(X) = \Gamma(X, \calF)$ is called the \hldef{global sections object of $\calF$}. \TextIfExists{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{This agrees with the notion of global sections as discussed in \Cref{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}.}
+
+\end{definition}

@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:semigroup_object_in_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
+    A \hldef{semigroup object in $\mathcal{C}$} is an object $A \in \mathcal{C}$ such that the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} $A \times A$ exists in $\calC$ together with a morphism
+    $$ \mu : A \times A \to A, $$
+
+    called the \hldef{multiplication morphism} such that the associativity diagram
+    \begin{center}
+    \begin{tikzcd}
+    A \times A \times A
+    \arrow[r, "\mu \times \mathrm{id}_A"]
+    \arrow[d, "\mathrm{id}_A \times \mu"']
+    & A \times A
+    \arrow[d, "\mu"]
+    \\
+    A \times A
+    \arrow[r, "\mu"']
+    & A
+    \end{tikzcd}
+    \end{center}
+    commutes.
+
+    The semigroup object structure $(A,\mu,\eta, \iota)$ is said to be \hldef{abelian} or \hldef{commutative} if the morphisms $\mu: A \times A \to A$ and $\mu \circ \tau_{A,A}: A \times A \to A$ coincide, where $\tau_{A,A}: A \times A \to A \times A$ is the symmetry morphism swapping the two factors.
+\end{definition}

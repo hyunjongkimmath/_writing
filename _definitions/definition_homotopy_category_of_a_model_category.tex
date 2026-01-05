@@ -1,0 +1,13 @@
+% \begin{definition}[Homotopy Category of a Model Category] \label{definition:homotopy_category_of_a_model_category}
+% The \hldef{homotopy category} \(\mathrm{Ho}(\mathcal{M})\) of a \CrefAndHyperrefIfExist{definition:model_category}{model category} \(\mathcal{M}\) is the localization \TODO{need to make this localization precise.}
+% \[ \mathrm{Ho}(\mathcal{M}) = \mathcal{M}[\mathcal{W}^{-1}] \]
+% where the morphisms are formally inverted weak equivalences.
+% \end{definition}
+
+\begin{definition}[Homotopy category of a model category] \label{definition:homotopy_category_of_a_model_category}
+    Let $\mathcal{M}$ be a \CrefAndHyperrefIfExist{definition:model_category}{model category}. The \hldef{homotopy category of $\mathcal{M}$}, denoted by notations such as \hl{$\mathrm{Ho}(\mathcal{M})$}, \hl{$\mathrm{h}(\calM)$}, etc. , is the \CrefAndHyperrefIfExist{definition:category}{category} $\calM[\calW^{-1}]$ whose objects are those of $\mathcal{M}$, and whose morphisms are equivalence classes of morphisms in $\mathcal{M}$ under the relation of left and right homotopy, \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{localized} at the weak equivalences. Explicitly,
+    \begin{itemize}
+        \item The objects of $\mathrm{Ho}(\mathcal{M})$ are the same as those in $\mathcal{M}$.
+        \item For objects $X,Y$ in $\mathcal{M}$, the morphism set $\operatorname{Hom}_{\mathrm{Ho}(\mathcal{M})}(X,Y)$ consists of maps in $\mathcal{M}$ modulo homotopy, with weak equivalences formally inverted.
+    \end{itemize}
+\end{definition}

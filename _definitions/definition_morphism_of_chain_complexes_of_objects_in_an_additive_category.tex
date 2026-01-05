@@ -1,0 +1,16 @@
+\begin{definition}[Morphisms of chain complexes] \label{definition:chain_complex_of_objects_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}, and let $K^\bullet = (K^i, d_K^i)$ and $L^\bullet = (L^i, d_L^i)$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\mathcal{A}$ indexed by the same set $I$. 
+A \hldef{morphism of chain complexes} (or \hldef{chain map})
+$$ f^\bullet: K^\bullet \to L^\bullet $$
+consists of morphisms $f^i: K^i \to L^i$ for all $i \in I$, such that for every $i \in I$,
+$$ d_L^i \circ f^i = f^{i+1} \circ d_K^i, $$
+i.e., the following diagram commutes for all $i$:
+
+$$ \begin{array}{ccc} K^i & \xrightarrow{d_K^i} & K^{i+1} \\ \downarrow{f^i} && \downarrow{f^{i+1}} \\ L^i & \xrightarrow{d_L^i} & L^{i+1} \end{array}.$$
+
+There is then a category, often denoted by \hl{$\mathrm{Ch}(\mathcal{A})$} or \hl{$\mathbf{Ch}(\mathcal{A})$}, whose objects are chain complexes in $\calA$ and whose morphisms are morphisms of chain complexes. In particular, we may denote by 
+$$\hlin{\operatorname{Hom}(K^\bullet, L^\bullet)=  \operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K^\bullet, L^\bullet)}$$
+the set of chain maps $K^\bullet \to L^\bullet$; it is in fact an abelian group.
+
+A \hldef{morphism of cochain complexes} is defined similarly, and we similarly denote by \hl{$\mathrm{Ch}(\mathcal{A})$} or \hl{$\mathbf{Ch}(\mathcal{A})$} the caetgory of cochain complexes in $\calA$. 
+\end{definition}

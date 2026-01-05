@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:morse_kelley_set_theory}
+
+Let $\mathcal{L}_{\text{Class}}$ be a two-sorted first-order language with variables for sets (lowercase $x, y, z, \dots$) and variables for classes (uppercase $X, Y, Z, \dots$).
+
+\hldef{Morse--Kelley set theory}, denoted \hl{$\mathsf{MK}$}, consists of the axioms of \CrefAndHyperrefIfExist{definition:von_neumann_bernays_godel_set_theory}{$\mathsf{NBG}$} but with the \hldef{Impredicative Class Comprehension Schema}. That is, for \textit{any} formula $\phi$ in $\mathcal{L}_{\text{Class}}$ (allowing quantification over classes), there exists a class $X$ such that:
+$$ \forall x \, (x \in X \iff \phi(x)) $$
+\end{definition}

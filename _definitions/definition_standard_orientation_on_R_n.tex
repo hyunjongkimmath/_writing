@@ -1,0 +1,19 @@
+
+
+\TODO{TODO: overall defining orientations is still very confusing to me, so I will have to fix definitions}
+
+\begin{definition}[Standard Orientation on $\mathbb{R}^n$] \label{definition:standard_orientation_on_R_n}
+  Let $n \in \mathbb{N}$ and consider the Euclidean space $\mathbb{R}^n$ equipped with the standard ordered basis
+  \[
+    \mathcal{E} = (e_1, e_2, \ldots, e_n),
+  \]
+  where each $e_i$ is the vector with a $1$ in the $i$th coordinate and $0$ elsewhere.
+
+  The \hldef{standard orientation on $\mathbb{R}^n$} is the \CrefAndHyperrefIfExist{definition:orientation_of_a_real_vector_space}{orientation} defined by declaring the ordered basis $\mathcal{E}$ to be positively oriented. More precisely, since for $n$-dimensional vector spaces the orientation is given by equivalence classes of ordered bases modulo the sign of the determinant of the change of basis matrix, an ordered basis $(v_1, \ldots, v_n)$ of $\mathbb{R}^n$ is said to be \hldef{positively oriented} if and only if
+  $$
+    \det([v_1 \; v_2 \; \cdots \; v_n]) > 0,
+  $$
+  where $[v_1 \; v_2 \; \cdots \; v_n]$ is the matrix whose columns are the vectors $v_i$ written in the standard basis $\mathcal{E}$.
+
+  Thus, the standard orientation on $\mathbb{R}^n$ is the equivalence class of ordered bases that yield a positive determinant with respect to the standard basis $\mathcal{E}$.
+\end{definition}

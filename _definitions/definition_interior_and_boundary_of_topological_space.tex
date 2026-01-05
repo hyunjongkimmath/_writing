@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:interior_and_boundary_of_topological_space}
+Let $(X,\mathcal{T})$ be a topological space and let $A \subseteq X$.
+\begin{itemize}
+  \item The \hldef{interior of $A$}, denoted by \hl{$\operatorname{int}(A)$}, is the union of all open sets contained in $A$:
+  $$\hlin{\operatorname{int}(A) = \bigcup \{ U \in \mathcal{T} : U \subseteq A \}}.$$
+  \item The \hldef{boundary of $A$}, denoted by \hl{$\partial A$}, is defined as
+  $$\hlin{\partial A = \overline{A} \setminus \operatorname{int}(A)}.$$ 
+  \CrefIfExists{definition:closure_of_a_subspace_of_a_topological_space}
+  Equivalently, a point $x \in X$ belongs to $\partial A$ if every open neighborhood of $x$ intersects both $A$ and its complement $X \setminus A$.
+\end{itemize}
+\end{definition}

@@ -1,0 +1,17 @@
+
+\begin{definition}
+Let $X$ be a compact Kähler manifold of complex dimension $n$, and let $k \in \mathbb{Z}_{\geq 0}$ be an integer. The integral cohomology group $H^k(X, \bbZ)$ has a pure Hodge structure, referred to as the \hldef{classical Hodge structure of $X$}, consisting of the complex subspaces \hl{$H^{p,q} \subseteq H^k(X, \mathbb{C}) \cong H^k(X, \bbZ) \otimes_{\bbZ} \bbC$} constructed as follows:
+
+
+\TODO{TODO: how do these relate to he dolbeault cohomology classes?}
+The space of \hldef{$(p,q)$-harmonic forms} $\mathcal{H}^{p,q}(X)$ is the subspace of harmonic forms of type $(p,q)$ with respect to the decomposition of complex differential forms into types,
+and one sets
+$$ \hlin{ H^{p,q} := \mathcal{H}^{p,q}(X) \cong \frac{\{\text{closed }(p,q)\text{-forms}\}}{\text{exact }(p,q)\text{-forms}}, } $$
+identifying the $(p,q)$-Dolbeault cohomology classes.
+
+These satisfy the Hodge decomposition
+$$ H^k(X, \mathbb{C}) = \bigoplus_{p+q=k} H^{p,q}, \quad \text{with} \quad \overline{H^{p,q}} = H^{q,p}, $$
+where the bar denotes complex conjugation on $H^k(X, \mathbb{C})$ induced by the real structure on differential forms.
+
+Each pair $(p,q)$ is called the \hldef{bidegree of the component $H^{p,q}$}, and the spaces $H^{p,q}$ are finite-dimensional complex vector spaces reflecting the complex geometry of $X$.
+\end{definition}

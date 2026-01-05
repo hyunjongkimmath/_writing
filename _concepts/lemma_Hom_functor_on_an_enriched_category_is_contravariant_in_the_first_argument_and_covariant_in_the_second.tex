@@ -1,0 +1,11 @@
+\begin{lemma} \label{lemma:Hom_functor_on_an_enriched_category_is_contravariant_in_the_first_argument_and_covariant_in_the_second}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{category enriched} in a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category} $(\calV, \otimes, 1)$ and assume that $\calV$ is closed under finite \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}. The objects $\underline{\Hom}_{\calC}(X,Y) \in \Ob(\calV)$ describe an \CrefAndHyperrefIfExist{definition:n_ary_functor_of_categories_enriched_in_a_monoidal_category}{enriched bifunctor}
+    $$\underline{\Hom}_{\calC}(-,-): \calC^{\op} \times \calC \to \calV, \quad (A,B) \mapsto \underline{\Hom}_{\calC}(A,B)$$
+    \CrefIfExists{definition:opposite_of_a_category_enriched_in_a_monoidal_category} of enriched categories.
+
+    In particular, when $\calV = \Sets$, we have a \CrefAndHyperrefIfExist{definition:n_ary_functor}{bifunctor}
+    $$\Hom_{\calC}(-,-): \calC^{\op} \times \calC \to \Sets, \quad (A,B) \mapsto \Hom_{\calC}(A,B).$$
+    \CrefIfExists{definition:opposite_category_of_a_category}.
+
+    In other words, $\underline{\Hom}$ and $\Hom$ are \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant} in the first variable and covariant in the second.
+\end{lemma}

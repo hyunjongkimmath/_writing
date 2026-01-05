@@ -1,0 +1,28 @@
+
+\begin{definition}[Injective and Projective objects in a general category] \label{definition:injective_and_projective_objects_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}
+\begin{itemize}
+    \item An object $I \in \mathcal{C}$ is called \hldef{injective} if for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $m: A \to B$ in $\mathcal{C}$ and every morphism $f: A \to I$, there exists a morphism $\tilde{f}: B \to I$ such that the diagram
+    \[
+    \begin{tikzcd}
+    A \arrow[r, "f"] \arrow[d, "m", hook] & I \\
+    B \arrow[ru, dashed, "\tilde{f}"'] &
+    \end{tikzcd}
+    \]
+    commutes, i.e., $\tilde{f} \circ m = f$.
+
+    \item Dually, an object $P \in \mathcal{C}$ is called \hldef{projective} if for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} $e: X \to Y$ in $\mathcal{C}$ and every morphism $g: P \to Y$, there exists a morphism $\tilde{g}: P \to X$ such that the diagram
+    \[
+    \begin{tikzcd}
+    & P \arrow[ld, dashed, "\tilde{g}"'] \arrow[d, "g"] \\
+    X \arrow[r, "e", two heads] & Y
+    \end{tikzcd}
+    \]
+    commutes, i.e., $e \circ \tilde{g} = g$.
+\end{itemize}
+\end{definition}
+
+% See Also
+% lemma:injective_objects_in_a_category_are_projective_in_the_opposite_category
+% lemma:injective_projective_objects_on_a_locally_small_category_induce_hom_functors_that_take_monomorphisms_epimoprhisms_to_surjections
+% lemma:injective_projective_objects_in_an_abelian_category_have_exact_Hom_functors

@@ -1,0 +1,20 @@
+\begin{definition}[Having enough flat objects in an abelian category] \label{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}
+Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}
+% that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable..
+
+\begin{enumerate}
+    \item We say that \hldef{$\mathcal{A}$ has enough flat objects with respect to $\otimes$} if for every object $A \in \mathcal{A}$ there exists an epimorphism
+    $$
+    F \twoheadrightarrow A
+    $$
+    in $\mathcal{A}$ where $F$ is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat with respect to $\otimes$}, i.e. $F \otimes -: \calB \to \calC$ is exact. \TextIfExists{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{Equivalently, $\calA$ has enough flat objects with respect to $\otimes$ if it \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of the class of objects of $\calA$ with are flat with respect to $\otimes$} on the left.} 
+
+    \item Similarly, we say that \hldef{$\mathcal{B}$ has enough flat objects with respect to $\otimes$} if for every $B \in \mathcal{B}$ there exists an epimorphism
+    $$
+    G \twoheadrightarrow B
+    $$
+    in $\calB$ with $G$ flat with respect to $\otimes$, i.e. $- \otimes G: \calA \to \calC$ is exact. \TextIfExists{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{Equivalently, $\calB$ has enough flat objects with respect to $\otimes$ if it \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of the class of objects of $\calB$ with are flat with respect to $\otimes$} on the left.} 
+
+\end{enumerate}
+% Having enough flat objects ensures the ability to compute the left derived functors of $\otimes$ via flat resolutions, generalizing the classical notion of having enough projectives.
+\end{definition}

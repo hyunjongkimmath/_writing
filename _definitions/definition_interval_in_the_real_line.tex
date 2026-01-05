@@ -1,0 +1,29 @@
+\begin{definition}[Interval in the real line] \label{definition:interval_in_the_real_line}
+Let $(\mathbb{R},\leq)$ be the field of \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{real numbers} equipped with its usual total order.
+A subset $I \subseteq \mathbb{R}$ is called an \hldef{interval in the real line} if for all $x,y,z \in \mathbb{R}$ one has
+$$
+x < z < y \text{ and } x \in I,\, y \in I \implies z \in I.
+$$
+Equivalently, $I$ is an interval if whenever $x,y \in I$ with $x < y$, then every $z \in \mathbb{R}$ satisfying $x < z < y$ also lies in $I$.
+By convention, the empty set $\varnothing$ and singletons $\{x\}$ for $x \in \mathbb{R}$ are also considered intervals, since they satisfy this property.
+
+Let $a,b \in \mathbb{R}$ with $a \leq b$.
+We use the following standard notations for intervals in $\mathbb{R}$:
+\hlalign{
+\begin{align*}
+(a,b)      &= \{x \in \mathbb{R} : a < x < b\},\\
+[a,b]      &= \{x \in \mathbb{R} : a \leq x \leq b\},\\
+(a,b]      &= \{x \in \mathbb{R} : a < x \leq b\},\\
+[a,b)      &= \{x \in \mathbb{R} : a \leq x < b\},\\
+(a,\infty) &= \{x \in \mathbb{R} : a < x\},\\
+[a,\infty) &= \{x \in \mathbb{R} : a \leq x\},\\
+(-\infty,b) &= \{x \in \mathbb{R} : x < b\},\\
+(-\infty,b] &= \{x \in \mathbb{R} : x \leq b\}.
+\end{align*}
+}
+We also regard $\mathbb{R}$ itself and the empty set $\varnothing$ as intervals when convenient.
+
+An interval of the form $(a,b)$ for $a \in \bbR \cup \{\-infty\}$ and $b \in \bbR \cup \{\infty\}$ is called an \hldef{open interval}.
+An interval of the form $[a,b]$ for $a \in \bbR$ and $b \in \bbR$ is called a \hldef{closed interval}.
+An interval of the form $(a,b]$ for $a \in \bbR \cup \{\-infty\}$ and $b \in \bbR$ or of the form $[a, b)$ for $a \in \bbR$ and $b \in \bbR \cup \{\infty\}$ is called a \hldef{half open interval}.
+\end{definition}

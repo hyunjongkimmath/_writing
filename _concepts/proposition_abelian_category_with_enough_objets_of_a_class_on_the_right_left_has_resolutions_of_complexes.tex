@@ -1,0 +1,59 @@
+\begin{proposition} \label{proposition:abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $\calX$ be a class of objects in $\calA$.
+    \begin{enumerate}
+        \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of class $\calX$ on the right}, then for every \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded below} complex $M^\bullet$ of objects in $\calA$, there exists a bounded below complex $I^\bullet$ of objects in $\calX$ and a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} $M^\bullet \to I^\bullet$.
+        
+        \item If $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects of class $\calX$ on the left}, then for every \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded above} complex $M^\bullet$ of objects in $\calA$, there exists a bounded above complex $P^\bullet$ of objects in $\calX$ and a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} $P^\bullet \to M^\bullet$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We prove that if $\calA$ has enough objects of class $\calX$ on the left, then there exists a complex $P^\bullet$ of objects in $\calX$ and a quasi-isomorphism $P^\bullet \to M^\bullet$. The other statement can be proven basically symmetrically.
+
+    First suppose that $M^\bullet$ is \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded above}; say that $M^i = 0$ for all $i > n$. We inductively construct $P^\bullet$ and the quasi-isomoprhism to $M^\bullet$. Choose an object $P^n$ from $\calX$ and a surjective morphism $\epsilon_n: P^n \twoheadrightarrow M^n$, and let $d: P^n \to P^{n+1}$ be the zero map. Assume inductively that we have constructed the complex $P^\bullet$ and maps $\epsilon_i: P^i \to M^i$ for $i = k+1,k+2,\ldots,n$. We want to construct $P^k$, the differential $d:P^k \to P^{k+1}$ and the map $\epsilon_k: P^k \to M^k$. 
+
+    Let $L_k = Z^{k+1}(P) \times_{Z^{k+1}(M)} M^k$
+    \begin{center}
+    \begin{tikzcd}
+        L_k \ar[r] \ar[d] & Z^{k+1}(P) \ar[d, "\epsilon_{k+1}"] \\
+        M^k \ar[r, "d" ] & Z^{k+1}(M)
+    \end{tikzcd}
+    \end{center}
+    
+    where $Z^{i}$ denotes the $i$th \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{cycle} of a complex \CrefIfExists{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}; recall that abelian categories have finite limits by \Cref{lemma:abelian_categories_are_finitely_complete_and_finitely_cocomplete}, so \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber products} exist. Choose an object $P^k$ from $\calX$ and a surjective moprhism $\pi: P^k \twoheadrightarrow L_k$. Set the differential $d: P^k \to P^{k+1}$ to be $\operatorname{proj}_{Z^{k+1}(P)} \circ \pi$ and the map $\epsilon_k: P^k \to M^k$ to be $\operatorname{proj}_{M^k} \circ \pi$. 
+    
+    We verify that the square
+    \begin{center}
+        \begin{tikzcd}
+            P^k \ar[r, "d"] \ar[d, "\epsilon_k"]  & P^{k+1} \ar[d, "\epsilon_{k+1}"] \\
+            M^k \ar[r, "d"] & M^{k+1} 
+        \end{tikzcd}
+    \end{center}
+    commutes, i.e. that $\epsilon_{k+1} \circ d = d \circ \varepsilon_k$. The left is $\epsilon_{k+1} \circ \operatorname{proj}_{Z^{k+1}(P)} \circ \pi$ and the right is $d \circ \operatorname{proj}_{M^k} \circ \pi$, which do indeed coincide. 
+
+    We verify that the chain map $\epsilon$ induces isomorphisms $H^{*} (P) \xrightarrow{\sim} H^{*}(M)$ on cohomology objects. We first show that the induced maps on cohomology are epimorphisms. Let $u:Z^k(M) \to L_k = Z^{k+1}(P) \times_{Z^{k+1}(M)} M^k$ be the unique morphism corresponding to the morphisms $0: Z^k(M) \to Z^{k+1}(P)$ and $Z^k(M) \hookrightarrow M^k$. Let $Y$ be the pullback of $\pi$ along $u$:
+    \begin{center}
+    \begin{tikzcd}
+        Y \ar[r, "\tilde{\pi}"] \ar[d, "\tilde{u}"] & Z^k(M) \ar[d, "u"] \\
+        P^k \ar[r, "\pi"] & L_k.
+    \end{tikzcd}
+    \end{center}
+    Note that $\operatorname{im} \tilde{u}$ is a subobject of $Z^k(P) = \ker(d: P^k \to P^{k+1})$ because
+    $$d \circ \tilde{u} = \operatorname{proj}_{Z^{k+1}(P)} \circ \pi \circ \tilde{u} = \operatorname{proj}_{Z^{k+1}(P)} \circ u \circ \tilde{\pi} = 0.$$
+    Therefore, $\tilde{u}$ factors through $Z^k(P)$. Writing $[\tilde{u}]$ for the composition $Y \xrightarrow{\tilde{u}} Z^k(P) \twoheadrightarrow H^k(P)$, note that 
+    $$H^k(\epsilon) \circ [\tilde{u}] = [\epsilon_k \circ \tilde{u}] = [\operatorname{proj}_{M^k} \circ \pi \circ \tilde{u}] = [\operatorname{proj}_{M^k} \circ u \circ \tilde{\pi}] = [(\id: Z^k(M) \to Z^k(M)) \circ \tilde{\pi}].$$
+    The right most expression is the composition 
+    $$Y \xrightarrow{\tilde{\pi}} Z^k(M) \twoheadrightarrow H^k(M).$$
+    Since $\pi$ is an epimorphism, $\tilde{\pi}$ is an epimorphism, so the above composition is an epimorphism. We have thus shown that $H^k(\epsilon) \circ [\tilde{u}]$ is an epimorphism, so $H^k(\epsilon)$ is an epimorphism.
+
+    We now show that $H^{k+1}(\epsilon): H^{k+1}(P) \to H^{k+1}(M)$ is a monomorphism. Let $K$ be the kernel of $Z^{k+1}(P) \xrightarrow{\epsilon_{k+1}} Z^{k+1}(M) \twoheadrightarrow H^{k+1}(M)$; this kernel coincides with ``the (k+1)-cycles of $P$ mapping to (k+1)-boundaries of $M$''. More precisely, $K$ can be regarded as the fiber product
+    \begin{center}
+    \begin{tikzcd}
+        K \ar[r] \ar[d] & Z^{k+1}(P) \ar[d, "\epsilon_{k+1}"] \\ 
+        B^{k+1}(M) \ar[r, hookrightarrow] & Z^{k+1}(M),
+    \end{tikzcd}
+    \end{center}
+    and note that this Cartesian diagram displays $K$ as a subobject of $Z^{k+1}(P)$. Furthe note that the morphism $d: M^k \to B^{k+1}(M)$ naturally induces a morphism $L_k \to K$; in fact, $K$ is then the image of the projection map $\operatorname{proj}_{Z^{k+1}(P)}: L_k \to Z^{k+1}(P)$. On the other hand, by definition, 
+    $$B^{k+1}(P) = \operatorname{im}(d: P^k \to Z^{k+1}(P)) = \operatorname{im}(\operatorname{proj}_{Z^{k+1}(P)} \circ \pi).$$
+    Since $\pi$ is an epimorphism, this image in turn equals $\operatorname{im}(\operatorname{proj}_{Z^{k+1}(P)})$, which equals $K$ as we have seen. Therefore, $K$ coincides with $B^{k+1}(P)$, which means that the map $Z^{k+1}(P) \to H^{k+1}(M)$, whose kernel is $K$ by definition, naturally induces a monomorphism $H^{k+1}(P) \to H^{k+1}(M)$ as desired.
+
+\end{proof}

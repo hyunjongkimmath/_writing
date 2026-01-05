@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:subobject_classifier_in_a_category_with_a_final_object}
+Let $\mathcal{C}$ be a category with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object} $1$.
+A \hldef{subobject classifier} is an object \hl{$\Omega$} together with a morphism \hl{$\text{true}: 1 \to \Omega$} satisfying the following universal property:
+
+For any \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} \hl{$m: U \hookrightarrow X$} in $\mathcal{C}$, there exists a unique morphism \hl{$\chi_m: X \to \Omega$} (called the \hldef{characteristic morphism of $m$}) such that the following diagram is a \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{pullback square}:
+\begin{center}
+\begin{tikzcd}
+    U \ar[r, "!"] \ar[d, hook, "m"] & 1 \ar[d, "\text{true}"] \\
+    X \ar[r, "\chi_m"'] & \Omega
+\end{tikzcd}
+\end{center}
+where $U \to 1$ is the unique morphism to the terminal object. Intuitively, $\Omega$ acts as a "truth value object" where $\chi_m$ assigns "true" to the "points" of $X$ that lie in the subobject $U$.
+\end{definition}
+\begin{remark}
+In the category of sets ($\mathbf{Set}$), the subobject classifier is the set $\Omega = \{0, 1\}$ (often denoted $2$), and "true" is the function picking out $1$. The characteristic morphism $\chi_m$ corresponds to the characteristic function of the subset $U \subseteq X$.
+\end{remark}

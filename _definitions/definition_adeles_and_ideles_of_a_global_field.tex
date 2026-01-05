@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:adeles_and_ideles_of_a_global_field}
+Let $K$ be a \hyperrefIfExists{definition:global_field}{global field}. Write $M_K$ for the set of all \hyperrefIfExists{definition:place_of_a_global_field}{places}\CrefIfExists{definition:place_of_a_global_field} of $K$ and write $M_K^\infty$ for the set of \hyperrefIfExists{definition:place_of_a_global_field}{archimedean places} of $K$. Let $S \subseteq M_K$ be some subset of places of $K$ (typically, $S$ is a finite set). For each $v \in M_K$, write $\calO_v$ for the \CrefAndHyperrefIfExist{definition:ring_of_integers_of_a_global_or_local_ring}{ring of integers} in \CrefAndHyperrefIfExist{definition:completion_of_a_global_field_at_a_place}{the completion $K_v$}\CrefIfExists{theorem:completion_of_a_global_field_at_a_place_is_a_local_field}
+\begin{itemize}
+    \item The \hldef{adèle ring of $K$}, denoted \hl{$\mathbb{A}_K$}, is the \hyperrefIfExists{definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces}{restricted direct product} of the $K_v$ (over all places $v$ of $K$), with respect to the $\mathcal{O}_v$ at \hyperrefIfExists{definition:archimedean_absolute_value_on_a_field}{non-archimedean} $v$:
+    $$ \hlin{\mathbb{A}_K = \left\{ (x_v)_v \in \prod_{v \in M_K} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non\text{-}archimedean $v$} \right\}.}  $$
+
+    \item The \hldef{idèle group of $K$}, commonly denoted \hl{$\mathbb{A}_K^\times$} or \hl{$\bbI_K$}, is the group of invertible elements of $\mathbb{A}_K$: 
+    $$ \hlin{\bbI_K = \mathbb{A}_K^\times = \left\{ (x_v)_v \in \prod_{v \in M_K} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non\text{-}archimedean $v$} \right\},} $$
+    where $\mathcal{O}_v^\times$ denotes the group of units of $\mathcal{O}_v$ for non-archimedean $v$.
+
+    \item The \hldef{adèle ring outside $S$ of $K$}, commonly denoted \hl{$\mathbb{A}_K^S$} or \hl{$\mathbb{A}_{K,S}$}, is the restricted product of the completions $K_v$ over all places $v \in M_K \setminus S$, with respect to the rings of integers $\mathcal{O}_v$ at non-archimedean places:
+    $$\hlin{\mathbb{A}_{K,S} = \mathbb{A}_K^S = \left\{ (x_v)_v \in \prod_{v \in M_K \setminus S} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non-archimedean } v \right\}.}$$
+    \item The \hldef{idèle group outside $S$ of $K$}, commonly denoted \hl{$(\mathbb{A}_K^\times)^S$}, \hl{$(\mathbb{A}_{K,S}^\times)$}, \hl{$\bbI_K^S$}, or \hl{$\bbI_{K,S}$} is the group of invertible elements of $\mathbb{A}_K^S$:
+    $$\hlin{(\mathbb{A}_K^\times)^S = \left\{ (x_v)_v \in \prod_{v \in M_K \setminus S} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non-archimedean } v \right\}.}$$
+
+    \item The \hldef{ring of finite adèles of $K$}, commonly denoted \hl{$\mathbb{A}_{K, \mathrm{fin}}$}, \hl{$\mathbb{A}_{K}^{\mathrm{fin}}$}, \hl{$\mathbb{A}_{K, \mathrm{f}}$}, \hl{$\mathbb{A}_{K}^{\mathrm{f}}$}, is the adèle ring outside $S = M_K^\infty$, the set of archimedean places of $K$:
+    $$\hlin{\mathbb{A}_{K, \mathrm{fin}} := \mathbb{A}_K^{M_K^\infty} = \left\{ (x_v)_v \in \prod_{v \notin M_K^\infty} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non-archimedean } v \right\}.} $$
+
+    \item The \hldef{finite idèle group of $K$}, commonly denoted \hl{$\mathbb{A}_{K, \mathrm{fin}}^\times$}, \hl{$\mathbb{I}_{K, \mathrm{fin}}$}, \hl{$\mathbb{I}_{K}^{\mathrm{fin}}$}, \hl{$\mathbb{I}_{K, \mathrm{f}}$}, \hl{$\mathbb{I}_{K}^{\mathrm{f}}$} etc.  is the group of units of the ring of finite adèles:
+    $$\hlin{\mathbb{A}_{K, \mathrm{fin}}^\times := (\mathbb{A}_K^\times)^{M_K^\infty} = \left\{ (x_v)_v \in \prod_{v \notin M_K^\infty} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non-archimedean } v \right\}.}$$
+
+\end{itemize}
+All of these are equipped with the \hyperrefIfExists{definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces}{restricted product topology} induced by the topologies of the \hyperrefIfExists{definition:local_field}{local fields}\CrefIfExists{definition:local_field} $K_v$ and the subspace topologies thereof.
+\end{definition}

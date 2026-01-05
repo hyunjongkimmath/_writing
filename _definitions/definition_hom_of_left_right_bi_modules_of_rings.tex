@@ -1,0 +1,34 @@
+\begin{definition}[Hom of left/right/bi-modules] \label{definition:hom_of_left_right_bi_modules_of_rings}
+Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}.
+\begin{enumerate}
+    \item Let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}. The \hldef{homomorphism group of left $R$-modules from $M$ to $N$} is the abelian group
+    $$\hlin{\Hom(M,N) = \mathrm{Hom}_R(M, N) := \{ f : M \to N \mid f \text{ is a left $R$-module homomorphism} \}.} $$
+    \CrefIfExists{definition:homomorphism_of_modules_over_a_ring}
+
+    \item Let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-modules}. The \hldef{homomorphism group of right $R$-modules from $M$ to $N$} is the abelian group
+    $$\hlin{ \Hom(M,N) = \mathrm{Hom}_R(M, N) := \{ f : M \to N \mid f \text{ is a right $R$-module homomorphism} \}.}$$
+
+    \item Let $S$ be a (not necessarily commutative ring) and let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R-S$-bimodules}. The \hldef{homomorphism group of $R$-$S$-bimodules from $M$ to $N$} is the abelian group 
+    $$\hlin{\Hom(M,N) = \Hom_{R-S}(M,N) \coloneq \{f: M \to N | f \text{ is a } R-S\text{-bimodule homomorphism} \}}$$
+    \CrefIfExists{definition:hom_between_bimodules}
+    \end{enumerate}
+
+    In each case, $\Hom(M,N)$ has a natural structure of an \hldef{abelian group} given by \hldef{pointwise addition}: for $f, g \in \mathrm{Hom}(M, N)$,
+    $$ (f + g)(m) := f(m) + g(m), $$
+    and the zero morphism \hl{$0$} given by $0(m) := 0_N$ acts as the identity element.
+    The additive inverse \hl{$-f$} is defined by $(-f)(m) := -f(m)$. Moreover, depending on bi-module structures that $M$ and $N$ may be carrying, $\Hom(M,N)$ may itself carry additional module structures:
+    \begin{itemize}
+        \item In case that $M$ is a \CrefAndHyperrefIfExist{definition:hom_between_bimodules}{$R-S$-bimodule} and $N$ is a $R-T$-bimodule, $\mathrm{Hom}_R(M, N)$, the group of left $R$-module homomorphisms, is an $S-T$-bimodule as follows:
+        $$(s\cdot f\cdot t)(m) = f(m \cdot s) \cdot t \quad f \in \Hom_R(M,N), s \in S, t \in T.$$
+
+        \item Dually, in case that $M$ is a \CrefAndHyperrefIfExist{definition:hom_between_bimodules}{$S-R$-bimodule} and $N$ is a $T-R$-bimodule, $\mathrm{Hom}_R(M, N)$, the group of right $R$-module homomorphisms, is an $S-T$-bimodule as follows:
+        $$(s\cdot f\cdot t)(m) = f(s \cdot m) \cdot t \quad f \in \Hom_R(M,N), s \in S, t \in T.$$
+    \end{itemize}
+    Some cases of interest may be when $R$, $S$, or $T$ is in fact $\bbZ$ --- these allow us to see module structures on $\Hom(M,N)$ even when $M$ and $N$ are one-sided modules.
+
+    \TODO{state this as a theorem}
+    We furthermore note that $\Hom_R(-,-)$ yields \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functors}
+    $$\Hom_R(-,-): {}_R \mathbf{Mod}_{S}^{\op} \times {}_{R} \mathbf{Mod}_{T} \to {}_{S} \mathbf{Mod}_{T}$$
+    $$\Hom_R(-,-): {}_S \mathbf{Mod}_{R}^{\op} \times {}_{T} \mathbf{Mod}_{R} \to {}_{S} \mathbf{Mod}_{T}.$$
+    \CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} \CrefIfExists{theorem:the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star}
+\end{definition}

@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item Let $C_\bullet = (\dots \to C_{n+1} \xrightarrow{d_{n+1}} C_n \xrightarrow{d_n} C_{n-1} \to \dots)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in $\mathcal{A}$.
+        For each integer $n$, we define:
+        \begin{itemize}
+            \item The object of \hldef{$n$-cycles}, denoted \hl{$Z_n(C)$}, is the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel} of the differential leaving $C_n$:
+            $$Z_n(C) := \ker(d_n: C_n \to C_{n-1}).$$
+            \item The object of \hldef{$n$-boundaries}, denoted \hl{$B_n(C)$}, is the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{image} of the differential entering $C_n$:
+            $$B_n(C) := \text{im}(d_{n+1}: C_{n+1} \to C_n).$$
+        \end{itemize}
+        Since $d_n \circ d_{n+1} = 0$, there is a canonical \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $B_n(C) \hookrightarrow Z_n(C)$.
+
+        \item Let $C^\bullet = (\dots \to C^{n-1} \xrightarrow{d^{n-1}} C^n \xrightarrow{d^n} C^{n+1} \to \dots)$ be a \hldef{cochain complex in $\mathcal{A}$}.
+        For each integer $n$, we define:
+        \begin{itemize}
+            \item The object of \hldef{$n$-cocycles}, denoted \hl{$Z^n(C)$}, is the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel} of the differential leaving $C^n$:
+            $$Z^n(C) := \ker(d^n: C^n \to C^{n+1}).$$
+            \item The object of \hldef{$n$-coboundaries}, denoted \hl{$B^n(C)$}, is the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{image>} of the differential entering $C^n$:
+            $$B^n(C) := \text{im}(d^{n-1}: C^{n-1} \to C^n).$$
+        \end{itemize}
+        Since $d^n \circ d^{n-1} = 0$, there is a canonical \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $B^n(C) \hookrightarrow Z^n(C)$.
+    \end{enumerate}
+\end{definition}

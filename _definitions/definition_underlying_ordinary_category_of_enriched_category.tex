@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:underlying_ordinary_category_of_enriched_category}
+Let $\mathcal{V} = (\mathcal{V}_0, \otimes, I, \alpha, \lambda, \rho)$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}, and let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{V}$-category} with object set $\mathrm{Ob}(\mathcal{A})$ and hom-objects $\mathcal{A}(X, Y) \in \mathrm{Ob}(\mathcal{V}_0)$.
+
+The \hldef{underlying ordinary category} of $\mathcal{A}$, denoted \hl{$\mathcal{A}_0$}, is the \CrefAndHyperrefIfExist{definition:category}{category} defined as follows:
+\begin{enumerate}
+    \item The objects of $\mathcal{A}_0$ are the objects of $\mathcal{A}$, i.e., $\mathrm{Ob}(\mathcal{A}_0) = \mathrm{Ob}(\mathcal{A})$.
+    \item For any two objects $X, Y \in \mathrm{Ob}(\mathcal{A}_0)$, the set of morphisms is defined by
+    $$
+    \mathrm{Hom}_{\mathcal{A}_0}(X, Y) = \mathrm{Hom}_{\mathcal{V}_0}(I, \mathcal{A}(X, Y)),
+    $$
+    where $\mathrm{Hom}_{\mathcal{V}_0}$ denotes the hom-set in the ordinary category $\mathcal{V}_0$.
+    \item The identity morphism $\mathrm{id}_X \in \mathrm{Hom}_{\mathcal{A}_0}(X, X)$ is the element corresponding to the identity morphism $j_X: I \to \mathcal{A}(X, X)$ in $\mathcal{V}$.
+    \item The composition of morphisms $f \in \mathrm{Hom}_{\mathcal{A}_0}(X, Y)$ and $g \in \mathrm{Hom}_{\mathcal{A}_0}(Y, Z)$ (represented by morphisms $f: I \to \mathcal{A}(X, Y)$ and $g: I \to \mathcal{A}(Y, Z)$ in $\mathcal{V}_0$) is defined to be the composition $g \circ f$ in $\mathcal{V}_0$ given by the following diagram in $\mathcal{V}_0$:
+    $$
+    I \xrightarrow{\cong} I \otimes I \xrightarrow{g \otimes f} \mathcal{A}(Y, Z) \otimes \mathcal{A}(X, Y) \xrightarrow{M_{XYZ}} \mathcal{A}(X, Z),
+    $$
+    where $M_{XYZ}$ is the composition morphism of the enriched category $\mathcal{A}$.
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,14 @@
+\begin{definition}[Homotopy category of the category of simplicial sets] \label{definition:homotopy_category_of_the_category_of_simplicial_sets}
+    Let $\mathbf{s}\Sets$ denote the category of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}, equipped with its \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{standard model structure}. The \hldef{homotopy category of (the category of) simplicial sets}, denoted by notations such as \hl{$\mathrm{Ho}(\mathbf{s}\Sets)$}, \hl{$\mathrm{h}(\Sets_\Delta)$}, etc., is the \CrefAndHyperrefIfExist{definition:homotopy_category_of_a_model_category}{homotopy category} of the \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{standard model category of simplicial sets}. 
+    In other words, It is the category whose objects are simplicial sets, and whose morphisms are homotopy classes of maps between simplicial sets, with weak equivalences inverted. That is,
+    \begin{itemize}
+        \item Objects: simplicial sets $X$.
+        \item Morphisms: equivalence classes of maps $f: X \to Y$ under simplicial homotopy, where weak equivalences (maps inducing isomorphism on all homotopy groups) are made invertible.
+    \end{itemize}
+    % Up to equivalence, $\mathrm{Ho}(\mathsf{sSet})$ models the classical homotopy category of topological spaces.
+    The homotopy category of the category of simplicial sets is \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the 
+    category obtained from the category $\calC\calG$ of \CrefAndHyperrefIfExist{definition:compactly_generated_topological_space}{compactly generated}, \CrefAndHyperrefIfExist{definition:weakly_hausdorff_topological_space}{weakly Hausdorff} topological spaces by \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{inverting} \CrefAndHyperrefIfExist{definition:weak_homotopy_equivalence_of_topological_spaces}{weak homotopy equivalences} of spaces (\Cref{corollary:homotopy_category_of_simplicial_sets_is_equivalent_to_the_homotopy_category_of_compactly_generated_weakly_hausdorff_spaces}).
+
+
+    The homotopy category of simplicial sets should not be confused with the \CrefAndHyperrefIfExist{definition:homotopy_category_of_a_simplicial_set}{homotopy category of a simplicial set}.
+\end{definition}

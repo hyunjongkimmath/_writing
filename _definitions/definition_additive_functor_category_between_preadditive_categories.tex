@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:additive_functor_category_between_preadditive_categories}
+Let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:additive_category}{preadditive categories} (\CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{categories enriched over} the \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{category of abelian groups}). The \hldef{additive functor category} \hl{$\text{Add}(\mathcal{A}, \mathcal{B})$} is the functor category where:
+\begin{itemize}
+    \item Objects are {additive functors} $F: \mathcal{A} \to \mathcal{B}$. An \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} is a functor such that for any $x, y \in \text{Ob}(\mathcal{A})$, the map $F: \text{Hom}_{\mathcal{A}}(x, y) \to \text{Hom}_{\mathcal{B}}(F(x), F(y))$ is a group homomorphism.
+    \item Morphisms are \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} between \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functors}.
+\end{itemize}
+\end{definition}

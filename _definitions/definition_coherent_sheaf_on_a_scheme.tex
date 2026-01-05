@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:coherent_sheaf_on_a_scheme}
+\TODO{finitely generated module}
+\TODO{locally of finite type sheaf of OX modules}
+Let $X$ be a scheme. A \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{sheaf $\mathcal{F}$ of $\mathcal{O}_X$-modules} is called \hldef{coherent} if it satisfies the following two conditions:
+\begin{enumerate}
+  \item $\mathcal{F}$ is \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_general_scheme}{quasi-coherent}.
+  \item For every \CrefAndHyperrefIfExist{definition:affine_open_subscheme_of_a_scheme}{affine open subset} $U = \operatorname{Spec} A$ of $X$, there exists a finitely generated $A$-module $M_U$ such that $\mathcal{F}|_U \cong \widetilde{M_U}$.
+\end{enumerate}
+Equivalently, $\mathcal{F}$ is locally of finite type and for every open subset $U \subseteq X$, the kernel of any morphism $\mathcal{O}_U^{\oplus n} \to \mathcal{F}|_U$ is of finite type.
+
+\TextIfExists{definition:coherent_sheaf_on_a_ringed_space}{
+Equivalently, a coherent sheaf on the \CrefAndHyperrefIfExist{definition:scheme}{scheme} $(X, \calO_X)$ is a \CrefAndHyperrefIfExist{definition:coherent_sheaf_on_a_ringed_space}{coherent sheaf} on $(X, \calO_X)$ \CrefAndHyperrefIfExist{definition:scheme}{as a} \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}. 
+}
+
+For a scheme $X$, denote by
+$$\hlin{\operatorname{Coh}(X)}$$
+ the full subcategory of $\operatorname{QCoh}(X)$ consisting of all coherent $\mathcal{O}_X$-modules.
+\end{definition}

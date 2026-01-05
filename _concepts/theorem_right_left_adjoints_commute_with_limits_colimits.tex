@@ -1,0 +1,19 @@
+\begin{theorem}[Continuity of Adjoint Functors] \label{theorem:right_left_adjoints_commute_with_limits_colimits}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}, and let $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ be functors forming an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $F \dashv G$, i.e. $F$ is the left adjoint and $G$ is the right adjoint. Let $\mathcal{J}$ be a small index category.
+
+    \begin{enumerate}
+        \item \textbf{Right Adjoints Preserve Limits:}
+        Let $D: \mathcal{J} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} $\lim_{\mathcal{J}} D$ exists in $\mathcal{D}$. Then the limit of the composite diagram $G \circ D: \mathcal{J} \to \mathcal{C}$ exists in $\mathcal{C}$, and $G$ \CrefAndHyperrefIfExist{definition:functor_preserving_limit_colimit_of_a_diagram}{preserves the limit}, i.e. the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{comparison morphism} induced by the universal property of the limit,
+        $$
+        \vartheta: G\left(\lim_{j \in \mathcal{J}} D(j)\right) \xrightarrow{\cong} \lim_{j \in \mathcal{J}} G(D(j)),
+        $$
+        is an isomorphism.
+
+        \item \textbf{Left Adjoints Preserve Colimits:}
+        Let $D: \mathcal{J} \to \mathcal{C}$ be a diagram such that the colimit $\operatorname{colim}_{\mathcal{J}} D$ exists in $\mathcal{C}$. Then the colimit of the composite diagram $F \circ D: \mathcal{J} \to \mathcal{D}$ exists in $\mathcal{D}$, and $F$ \CrefAndHyperrefIfExist{definition:functor_preserving_limit_colimit_of_a_diagram}{preserves the colimits}, i.e. the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{comparison morphism} induced by the universal property of the colimit,
+        $$
+        \varphi: \operatorname{colim}_{j \in \mathcal{J}} F(D(j)) \xrightarrow{\cong} F\left(\operatorname{colim}_{j \in \mathcal{J}} D(j)\right),
+        $$
+        is an isomorphism.
+    \end{enumerate}
+\end{theorem}

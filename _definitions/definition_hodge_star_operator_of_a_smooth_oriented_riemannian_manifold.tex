@@ -1,0 +1,29 @@
+
+\begin{definition}[Hodge star operator] \label{definition:hodge_star_operator_of_a_smooth_oriented_riemannian_manifold}
+    Let $M$ be an \hyperrefIfExists{definition:C_k_manifold}{smooth} \CrefAndHyperrefIfExist{definition:orientation_of_a_differentiable_manifold_with_or_without_boundary}{oriented} \hyperrefIfExists{definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold}{Riemannian manifold} of dimension $n$ equipped with a Riemannian metric $g$. 
+
+    \TODO{TODO: If I am not assuming compactness of $M$, then I should need to let the operators be on $\Omega_c^k(M)$, not $\Omega^k(M)$; this is to ensure integration defining the Hodge star operator is defined.}
+    The \hldef{Hodge star operator} is the unique $\mathbb{R}$-linear map
+    $$\hlin{\star : \Omega^k(M) \to \Omega^{n-k}(M)}$$
+    characterized by the following property: for all $\alpha, \beta \in \Omega^k(M)$,
+    $$ \alpha \wedge \star \beta = \langle \alpha, \beta \rangle \, \mathrm{vol}_g, $$
+    where
+        \TODO{TODO: define wedge product of differential forms}
+    \begin{itemize}
+        \item $\wedge$ denotes the wedge product of differential forms,
+        \TODO{TODO: define this inner product more precisely}
+        \item $\langle \cdot, \cdot \rangle$ is the pointwise inner product on $\Omega^k(M)$ induced by the metric $g$ and the orientation, and
+        \item $\mathrm{vol}_g$ is the volume form on $M$ determined by $g$ and the orientation. \TODO{TODO: define the volume form on a riemannian manifold}
+    \end{itemize}
+
+    Equivalently, the Hodge star operator is defined by the formula
+    $$
+    \beta \mapsto \star \beta \quad \text{such that} \quad (\star \beta)(X_1, \ldots, X_{n-k}) = \eta(\beta, X_1, \ldots, X_{n-k}),
+    $$
+    where $\eta$ is the metric-induced identification combined with orientation. \TODO{TODO: carefully define $\eta$.}
+
+    The operator satisfies the fundamental identity
+    $$ \star \star \alpha = (-1)^{k(n-k)} \alpha $$
+    for any $\alpha \in \Omega^k(M)$.
+
+\end{definition}

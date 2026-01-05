@@ -1,0 +1,22 @@
+\begin{definition}[Double Complex associated to biadditive functor and chain complexes] \label{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}
+    Let $\mathcal{A}$, $\mathcal{B}$, and $\calC$ be \CrefAndHyperrefIfExist{definition:additive_category}{additive categories}, and suppose that
+    $$F : \mathcal{A} \times \mathcal{B} \to \mathcal{C} $$
+    is a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}. Let $X_\bullet$ and $Y_\bullet$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of objects in $\calA$ and $\calB$ respectively.
+
+    Construct the \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex} \(Z_{\bullet,\bullet} = (Z_{n,m}, d^h_{n,m}, d^v_{n,m})\) in \(C\) associated to \(F\), \(X_\bullet\), and \(Y_\bullet\) as follows:
+    \[ Z_{n,m} := F(X_n, Y_m), \]
+    with horizontal differentials
+    \[ d^h_{n,m} := F(d^X_n, \mathrm{id}_{Y_m}): Z_{n,m} \to Z_{n-1,m}, \]
+    and vertical differentials
+    \[ d^v_{n,m} := (-1)^n F(\mathrm{id}_{X_n}, d^Y_m): Z_{n,m} \to Z_{n,m-1}.  \]
+    These differentials indeed satisfy the double complex conditions:
+    \[ d^h \circ d^h = 0, \quad d^v \circ d^v = 0, \quad \text{and} \quad d^h \circ d^v + d^v \circ d^h = 0.  \]
+    We may often denote the double complex $Z_{\bullet,\bullet}$ by \hl{$F(X_\bullet, Y_\bullet)$}. In particular, $F$ induces a bifunctor  
+    $$F: \mathbf{Ch}(\calA) \times \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$$
+    (\Cref{definition:morphism_of_double_complex_of_objects_in_an_additive_category})
+    that is in fact a biadditive functor of additive categories (see \Cref{proposition:category_of_chain_complexes_in_an_additive_category_is_additive}) \TODO{verify that we indeed get a biadditive functor}
+
+    In particular, we may speak of the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complexes} $\Tot^{\oplus}(F(X_\bullet, Y_\bullet))$ and $\Tot^{\prod}(F(X_\bullet, Y_\bullet))$, and these specify biadditive functors
+    $$\Tot^{\oplus}(F(-,-)), \Tot^{\prod}(F(-,-)): \mathbf{Ch}(\calA) \times \mathbf{Ch}(\calB) \to \mathbf{Ch}(\calC).$$
+
+\end{definition}

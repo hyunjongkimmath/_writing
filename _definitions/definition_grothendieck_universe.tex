@@ -1,0 +1,10 @@
+\begin{definition}[Grothendieck Universe] \label{definition:grothendieck_universe}
+    Let $U$ be a set. We say $U$ is a \hldef{Grothendieck universe} (or just a \hldef{universe}) if the following conditions hold:
+    \begin{enumerate}
+        \item If $x \in U$ and $y \in x$, then $y \in U$ (transitivity).
+        \item If $x,y \in U$, then $\{x,y\} \in U$ (closed under pair formation).
+        \item If $x \in U$, then the power set $\mathcal{P}(x) \in U$.
+        \item If $I \in U$ and $(x_\alpha)_{\alpha \in I}$ is a family with each $x_\alpha \in U$, then $\bigcup_{\alpha \in I} x_\alpha \in U$.
+    \end{enumerate}
+    A set $X$ is called \hldef{$U$-small} or a \hldef{$U$-set} if $X \in U$.
+\end{definition}

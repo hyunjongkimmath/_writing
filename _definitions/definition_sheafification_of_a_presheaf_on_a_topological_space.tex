@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:sheafification_of_a_presheaf_on_a_topological_space}
+    Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category}  with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object}. Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}.
+
+    \begin{enumerate}
+    \item  Let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} on $X$ valued in $\calA$. 
+    
+    A \hldef{sheafification of $\mathcal{F}$} is a pair $(\mathcal{F}^+, \theta)$, where $\mathcal{F}^+$ is a sheaf on $X$ and $\theta: \mathcal{F} \to \mathcal{F}^+$ is a morphism of presheaves, satisfying the following universal property:
+
+    For any sheaf $\mathcal{G}$ on $X$ and any morphism of presheaves $\phi: \mathcal{F} \to \mathcal{G}$, there exists a unique morphism of sheaves $\psi: \mathcal{F}^+ \to \mathcal{G}$ such that $\psi \circ \theta = \phi$.
+    $$ \begin{array}{ccc}
+    \mathcal{F} & \xrightarrow{\theta} & \mathcal{F}^+ \\
+    & \searrow_{\phi} & \downarrow \psi \\
+    & & \mathcal{G}
+    \end{array} $$
+
+    \item Assuming that the presheaf category $\PreShv(X, \calA)$ (and hence the \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} category $\Shv(X, \calA)$) are \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}, a \hldef{sheafification functor} refers to a functor
+    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+    that is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the inclusion functor 
+    $$i:\Shv(X, \calA) \hookrightarrow \PreShv(X, \calA)  .$$
+    If such a sheafification functor exists, then it is unique up to unique natural isomorphism. Given a presheaf $P$, the sheafification $a(P)$ is also sometimes called the \hldef{sheaf associated to $P$}.
+    \TextIfExists{definition:sheafification_functor_on_a_site}{The sheafification functor on $\PreShv(X, \calA)$ is a special case of the general definition of \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor}, applied to the \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} whose underlying category is \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\operatorname{Open}(X)$} and whose Grothendieck topology is the \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{canonical one}.}
+    \end{enumerate}
+\end{definition}

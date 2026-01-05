@@ -1,0 +1,9 @@
+\begin{definition}[Flat object with respect to a tensor (monoidal) product] \label{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}
+Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $F : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor} (in practice, the following definitions are usually considered when $F$ is some kind of ``tensor product'' $\otimes$ and is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable). 
+% that is often, but not necessarily, \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable. 
+\begin{enumerate}
+    \item An object $X \in \mathcal{A}$ is called \hldef{flat (with respect to $F$ on the left)} if the functor $F(X, -): \calB \to \calC$ if \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}.
+    \item An object $Y \in \mathcal{B}$ is called \hldef{flat (with respect to $F$ on the right)} if the functor $F(-, Y): \calA \to \calC$ if \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}.
+\end{enumerate}
+If $\calA = \calB = \calC$ and $F$ makes $\calA$ into a \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal category}, then certainly $F(X,-)$ is exact if and only if $F(-,Y)$ is exact, i.e. flatness is equivalent on the two sides of $\otimes$.
+\end{definition}

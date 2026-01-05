@@ -1,0 +1,14 @@
+\begin{theorem} \label{theorem:sheafification_for_sheaves_of_sets_on_a_topological_space_exist}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
+    \begin{enumerate}
+        \item Let $\calF$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} of sets (or sets with structure, e.g. groups, rings, abelian groups, $R$-modules, etc.). The \CrefAndHyperrefIfExist{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}{sheafification} $(\mathcal{F}^+, \theta)$ exists and is unique up to unique isomorphism. The sheaf $\mathcal{F}^+$ can be constructed as the sheaf of sections of the espace étalé (space of stalks) associated to $\mathcal{F}$. Specifically, for any open $U \subseteq X$, $\mathcal{F}^+(U)$ is the set of functions $s: U \to \coprod_{x \in U} \mathcal{F}_x$ such that:
+        \begin{enumerate}
+            \item For each $x \in U$, $s(x) \in \mathcal{F}_x$.
+            \item For each $x \in U$, there exists an open neighborhood $V \subseteq U$ of $x$ and a section $t \in \mathcal{F}(V)$ such that $s(y) = t_y$ for all $y \in V$ (where $t_y$ denotes the germ of $t$ at $y$).
+        \end{enumerate}
+
+    \item A \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
+    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+    exists.
+    \end{enumerate}
+\end{theorem}

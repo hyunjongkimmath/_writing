@@ -1,0 +1,40 @@
+\begin{definition}[Homotopy class of maps relative to a subset] \label{definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset}
+    Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and let $K \subseteq X$. Let $C(X,Y)$ denote the set of all \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps} $f : X \to Y$.  
+
+    \begin{enumerate}
+        \item Two maps $f, g \in C(X,Y)$ are said to be in the same \hldef{homotopy class relative to $K$} if there exists a \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopy relative to $K$}
+        $$H : X \times [0,1] \to Y$$
+        such that
+        $$H(x,0) = f(x), \quad H(x,1) = g(x),$$
+        and
+        $$H(k,t) = f(k) = g(k) \quad \text{for all } k \in K, t \in [0,1].$$
+
+        The \hldef{homotopy class of maps relative to $K$} containing a map $f: X \to Y$ is denoted by \hl{$[f]_K$}.
+
+        Two maps $f, g \in C(X,Y)$ are said to be in the same \hldef{homotopy class} if they are in the same homotopy class relative to $\emptyset$.
+
+        The \hldef{homotopy class of maps} containing a map $f: X \to Y$ is denoted by \hl{$[f]$}.
+
+        The set of homotopy classes of maps may often be denoted by \hl{$[X,Y]$}.
+
+        \item 
+        Let $(X, x_0)$ and $(Y, y_0)$ be \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological spaces} and let $K \subseteq X$ be a subset containing $x_0$. Let $C_*(X,Y)$ denote the set of all continuous based maps $f : X \to Y$ with $f(x_0) = y_0$.
+
+        Two based maps $f, g \in C_*(X,Y)$ are said to be in the same \hldef{homotopy class relative to $K$} if there exists a homotopy of based maps relative to $K$
+        $$H : X \times [0,1] \to Y$$
+        such that for all $x \in X$,
+        $$H(x,0) = f(x), \quad H(x,1) = g(x),$$
+        and for all $k \in K$ and $t \in [0,1]$,
+        $$H(k,t) = f(k) = g(k),$$
+        particularly ensuring the basepoint is fixed throughout,
+        $$H(x_0,t) = y_0 \quad \text{for all } t \in [0,1].$$
+
+        The \hldef{homotopy class relative to $K$} containing $f: (X,x_0) \to (Y,y_0)$ is denoted by \hl{$[f]_K$}.
+
+        Two based maps $f, g \in C_*(X,Y)$ are said to be in the same \hldef{homotopy class} if they are in the same homotopy class relative to $\{x_0\}$.
+
+        The \hldef{homotopy class} containing a map $f:(X,x_0) \to (Y,y_0)$ is denoted by \hl{$[f]$}.
+
+        The set of homotopy classes of pointed maps $(X,x_0) \to (Y,y_0)$ may often be denoted by \hl{$[(X,x_0),(Y,y_0)]$} or by \hl{$[X,Y]$} if the base points are clear.
+    \end{enumerate}
+\end{definition}

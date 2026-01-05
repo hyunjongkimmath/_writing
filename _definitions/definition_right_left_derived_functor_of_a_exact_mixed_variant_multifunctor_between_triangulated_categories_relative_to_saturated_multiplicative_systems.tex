@@ -1,0 +1,29 @@
+\begin{definition}[Mixed-Variance Derived Multifunctors] [cf. {\cite[Expos\'e XVII, D\'efinition 1.2.1., 1.2.5.]{SGA4_III}}] \label{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}
+Let $(\mathscr{A}_i)_{1 \le i \le n}$ and $(\mathscr{B}_j)_{1 \le j \le m}$ be families of \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}, and let $\mathscr{C}$ be a triangulated category. Let 
+$$F: \prod_{i=1}^n \mathscr{A}_i \times \prod_{j=1}^m \mathscr{B}_j \to \mathscr{C}$$ 
+be an \CrefAndHyperrefIfExist{definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category}{exact multifunctor}, covariant in $A_i$ and contravariant in $B_j$. Let $S_i, \Sigma_j, T$ be \CrefAndHyperrefIfExist{definition:saturated_multiplicative_system_in_a_category}{saturated multiplicative systems} in $\mathscr{A}_i, \mathscr{B}_j, \mathscr{C}$ respectively.
+
+\begin{enumerate}
+    \item The \hldef{right derived functor $RF$ of $F$ relative to $(S_i, \Sigma_j)$ and $T$} is a functor 
+    $$\hlin{RF: \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) \to \text{Ind}(\mathscr{C}(T^{-1}))}$$
+    which makes the following diagram commutative:
+    $$
+    \begin{array}{ccc}
+    \prod_{i=1}^n \mathscr{A}_i \times \prod_{j=1}^m \mathscr{B}_j & \xrightarrow{F} & \mathscr{C} \\
+    \downarrow^{\prod Q_{A_i} \times \prod Q_{B_j}} & & \downarrow^{Q_C} \\
+    \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) & \xrightarrow{RF} & \text{Ind}(\mathscr{C}(T^{-1}))
+    \end{array}
+    $$
+
+    \item The \hldef{left derived functor $LF$ of $F$ relative to $(S_i, \Sigma_j)$ and $T$} is a functor
+    $$\hlin{LF: \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) \to \text{Pro}(\mathscr{C}(T^{-1}))}$$
+    which makes the following diagram commutative:
+    $$
+    \begin{array}{ccc}
+    \prod_{i=1}^n \mathscr{A}_i \times \prod_{j=1}^m \mathscr{B}_j & \xrightarrow{F} & \mathscr{C} \\
+    \downarrow^{\prod Q_{A_i} \times \prod Q_{B_j}} & & \downarrow^{Q_C} \\
+    \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) & \xrightarrow{LF} & \text{Pro}(\mathscr{C}(T^{-1}))
+    \end{array}
+    $$
+\end{enumerate}
+\end{definition}

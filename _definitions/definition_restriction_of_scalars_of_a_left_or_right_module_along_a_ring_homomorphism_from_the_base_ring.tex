@@ -1,0 +1,56 @@
+\begin{definition} \label{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{associative rings with identity}, and let $\varphi: R \to S$ be a unital \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. Let $T$ be a ring.
+
+\begin{enumerate}
+    \item 
+    Let $(M, +)$ be an \CrefAndHyperrefIfExist{definition:group}{abelian group} equipped with either the structure of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$S-T$-bimodule} $(M, +, \cdot_S)$ or the structure of a $T-S$-bimodule $(M, +, \cdot_S)$.
+
+    The \hldef{restriction of scalars of $M$ along $\varphi$} is the $R$-module structure on the same underlying abelian group $(M, +)$ defined as follows:
+    \begin{itemize}
+        \item If $M$ is a $S-T$-bimodule, the restriction of scalars of $M$ along $\varphi$, often denoted by \hl{$\varphi_* M$} (or \hl{$_R M$}), is the $R-T$-bimodule whose $R$-action $\cdot_R: R \times M \to M$ is given by
+        $$ r \cdot_R m := \varphi(r) \cdot_S m $$
+        for all $r \in R$ and $m \in M$.
+        \item If $M$ is a $T-S$-bimodule, the restriction of scalars of $M$ along $\varphi$, often denoted by \hl{$\varphi_* M$} (or \hl{$M_R$}), is the $T-R$-bimodule whose $R$-action $\cdot_R: M \times R \to M$ is given by
+        $$ m \cdot_R r := m \cdot_S \varphi(r) $$
+        for all $r \in R$ and $m \in M$.
+    \end{itemize}
+
+    \item 
+    Let ${}_S \text{Mod}_T$ and ${}_T \text{Mod}_S$ be the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{categories of $S-T$ and $T-S$-bimodules}, respectively, and similarly for $R$.
+
+    The \hldef{restriction of scalars functor for modules} is the covariant \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} induced by $\varphi$, defined for both left and right modules:
+    \begin{itemize}
+        \item For left $S$-modules, it is the functor
+        \hl{$ \varphi_*: {}_S\text{Mod}_T \to {}_R\text{Mod}_T $}
+        defined as follows:
+        \begin{enumerate}
+            \item On objects: For any left $S$-module $M$, $\varphi_*(M)$ is the left $R$-module obtained by restriction of scalars along $\varphi$.
+            \item On morphisms: For any \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{homomorphism} of left $S$-modules $h: M \to N$, the image $\varphi_*(h): \varphi_*(M) \to \varphi_*(N)$ is the map $h$ itself, viewed as a homomorphism of left $R$-modules.
+        \end{enumerate}
+
+        \item For right $S$-modules, it is the functor
+        \hl{$ \varphi_*: {}_T \text{Mod}_S \to {}_T \text{Mod}_R $}
+        defined as follows:
+        \begin{enumerate}
+            \item On objects: For any right $S$-module $M$, $\varphi_*(M)$ is the right $R$-module obtained by restriction of scalars along $\varphi$.
+            \item On morphisms: For any homomorphism of right $S$-modules $h: M \to N$, the image $\varphi_*(h): \varphi_*(M) \to \varphi_*(N)$ is the map $h$ itself, viewed as a homomorphism of right $R$-modules.
+        \end{enumerate}
+    \end{itemize}
+    In either context, if $\varphi$ is an inclusion map (making $R$ a subring of $S$), this functor is often called the \hldef{forgetful functor}.
+
+        \item 
+        Let $\mathsf{Ring}_S$ (or $S/\mathsf{Ring}$) denote the \CrefAndHyperrefIfExist{definition:category_of_rings_over_a_ring}{category of $S$-rings}. Let $\mathsf{Ring}_R$ be defined similarly.
+
+        The \hldef{restriction of scalars functor for rings}, denoted by
+        \hl{$ \varphi_*: \mathsf{Ring}_S \to \mathsf{Ring}_R $}
+        is the functor defined as follows:
+        \begin{itemize}
+            \item On objects: Let $(A, \psi)$ be an $S$-ring. Then $\varphi_*(A)$ is the $R$-ring $(A, \psi \circ \varphi)$, where the structure map is the composition $R \xrightarrow{\varphi} S \xrightarrow{\psi} A$.
+            \item On morphisms: For any morphism of $S$-rings $h: (A, \psi_A) \to (B, \psi_B)$, the image $\varphi_*(h)$ is the map $h$ itself, which satisfies $h \circ (\psi_A \circ \varphi) = \psi_B \circ \varphi$ and is thus a morphism of $R$-rings.
+        \end{itemize}
+        This functor simply pre-composes the structure map with $\varphi$, effectively "forgetting" the factorization through $S$.
+
+        The restriction of scalars functor restricts to a functor $\varphi_*: \mathbf{Alg}_S \to \mathbf{Alg}_R$\CrefIfExists{definition:algebra_of_a_ring}. 
+
+\end{enumerate}
+\end{definition}

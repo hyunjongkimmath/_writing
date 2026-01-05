@@ -1,0 +1,16 @@
+\begin{definition}[Serre subcategory] \label{definition:serre_subcategory_of_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. A \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} $\mathcal{S} \subseteq \mathcal{A}$ is called a \hldef{Serre subcategory} (or sometimes a \hldef{thick subcategory}) if it satisfies the following conditions:
+ 
+    \begin{enumerate}
+        \item For any \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence}
+        $$ 0 \to A' \to A \to A'' \to 0 $$
+        in $\mathcal{A}$, the object $A$ lies in $\mathcal{S}$ if and only if both $A'$ and $A''$ lie in $\mathcal{S}$.
+        
+        \TODO{extension}
+        \item Equivalently, $\mathcal{S}$ is closed under taking \CrefAndHyperrefIfExist{definition:subobject_of_an_object_of_an_additive_category}{subobjects}, \CrefAndHyperrefIfExist{definition:quotient_object_of_an_object_of_an_abelian_category_by_a_subobject}{quotients}, and extensions in $\mathcal{A}$.
+    \end{enumerate}
+
+    In other words, $\mathcal{S}$ is a Serre subcategory if for every exact sequence in $\mathcal{A}$, the presence of any two of the objects in $\mathcal{S}$ forces the third to be in $\mathcal{S}$.
+
+    The notion of a thick subcategory of an abelian category should not be confused for the notion of a \CrefAndHyperrefIfExist{definition:thick_subcategory_of_a_triangulated_category}{thick subcategory} of a triangulated category.
+\end{definition}

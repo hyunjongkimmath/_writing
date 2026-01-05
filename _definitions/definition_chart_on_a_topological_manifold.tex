@@ -1,0 +1,19 @@
+\begin{definition}[Chart]
+    \label{definition:chart_on_a_topological_manifold}
+    \begin{enumerate}
+        \item A \hldef{(coordinate) chart on a topological manifold $M$ of dimension $n$} is a pair $(U, \varphi)$ where
+        \begin{itemize}
+            \item $U \subseteq M$ is an open subset;
+            \item $\varphi : U \to V \subseteq \mathbb{R}^n$ is a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} onto an open subset $V$ of $\mathbb{R}^n$.
+        \end{itemize}
+        The map $\varphi$ is called a \hldef{coordinate map}, and the image $\varphi(p)$ of a point $p \in U$ gives the \hldef{coordinates of $p$} in this chart.
+
+        \item A \hldef{(coordinate) chart on a topological manifold with boundary $M$ of dimension $n$} is a pair $(U, \varphi)$ where
+        \begin{itemize}
+            \item $U \subseteq M$ is an open subset;
+            \item $\varphi : U \to V \subseteq \mathbb{R}^n \text{ or } \mathbb{H}^n$ is a homeomorphism onto an open subset $V$ of either $\mathbb{R}^n$ or the \CrefAndHyperrefIfExist{definition:closed_half_space_in_euclidean_space}{closed half-space $\mathbb{H}^n = \{x \in \mathbb{R}^n : x_n \ge 0\}$}; equivalently, we may just specify $\varphi$ to be a homeomorphism onto an open subet of $\bbH^n$.
+        \end{itemize}
+        The map $\varphi$ is called a \hldef{coordinate map}, and the image $\varphi(p)$ of a point $p \in U$ gives the \hldef{coordinates of $p$} in this chart.  
+        A point $p \in M$ is called a \hldef{boundary point} if for some chart $(U, \varphi)$ containing $p$, the coordinates satisfy $\varphi(p)_n = 0$; otherwise, $p$ is an \hldef{interior point}. Boundary points and an interior points of $M$ coincide with \CrefAndHyperrefIfExist{definition:interior_and_boundary_of_topological_space}{boundary points and interior points} of $M$ as a topological space.
+    \end{enumerate}
+\end{definition}

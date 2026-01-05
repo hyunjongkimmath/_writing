@@ -1,0 +1,97 @@
+\begin{definition}[Filtered category] \label{definition:filtered_cofiltered_category}
+    \begin{enumerate}
+        \item 
+        A \hldef{filtered category} is a (nonempty, large) category $\mathcal{I}$ satisfying the following conditions:
+
+        \begin{itemize}
+            \item For every finite collection of objects $i_1, i_2, \ldots, i_n$ in $\mathcal{I}$, there exists an object $j$ and morphisms
+            \[
+            \phi_k: i_k \to j, \quad \text{for each } k=1, \ldots, n.
+            \]
+
+            \item For every pair of morphisms $f,g: i \to j$ in $\mathcal{I}$, there exists an object $k$ and a morphism 
+            \[
+            h: j \to k
+            \] 
+            \TODO{equalizer}
+            that is an equalizer of $f$ and $g$, i.e. satisfies 
+            \[
+            h \circ f = h \circ g.
+            \]
+        \end{itemize}
+
+        \begin{figure}[h]
+            \centering
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                % Diagram 1: "Joint Limit" (Upper Bound)
+                \begin{tikzcd}[row sep=large, column sep=large]
+                    i_1 \arrow[dr, "\phi_1", dashed] & \\
+                    & j \\
+                    i_2 \arrow[ur, "\phi_2"', dashed] & 
+                \end{tikzcd}
+                \caption*{Condition 1: Upper Bound}
+            \end{minipage}
+            \hfill
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                % Diagram 2: "Equalizer" (Convergence)
+                \begin{tikzcd}[row sep=large, column sep=large]
+                    i \arrow[r, "f", shift left] \arrow[r, "g"', shift right] & 
+                    j \arrow[r, "h", dashed] & 
+                    k
+                \end{tikzcd}
+                \caption*{Condition 2: Equalizer}
+            \end{minipage}
+        \end{figure}
+        In other words, $\mathcal{I}$ is nonempty, any finite diagram of objects admits a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone}, and any pair of parallel morphisms become equal after post-composition with an appropriate morphism.
+
+    \item Dually, a \hldef{Cofiltered category} is a category whose \hyperrefIfExists{definition:opposite_category_of_a_category}{opposite category}\CrefIfExists{definition:opposite_category_of_a_category} is filtered. More explicitly, A cofiltered category is a (nonempty, large) category $\mathcal{I}$ satisfying the following conditions:
+
+    \begin{itemize}
+        \item For every finite collection of objects $i_1, i_2, \ldots, i_n$ in $\mathcal{I}$, there exists an object $j$ and morphisms
+        \[
+        \phi_k: j \to i_k, \quad \text{for each } k=1, \ldots, n.
+        \]
+
+        \item For every pair of morphisms $f,g: j \to i$ in $\mathcal{I}$, there exists an object $k$ and a morphism 
+        \[
+        h: k \to j
+        \] 
+        that is a coequalizer of $f$ and $g$, i.e. satisfies
+        \[
+        f \circ h = g \circ h.
+        \]
+    \end{itemize}
+
+    \begin{figure}[h]
+        \centering
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            % Diagram 1: "Joint Limit" (Lower Bound)
+            \begin{tikzcd}[row sep=large, column sep=large]
+                i_1 & \\
+                & j \arrow[ul, "\phi_1", dashed] \arrow[dl, "\phi_2"', dashed] \\
+                i_2 & 
+            \end{tikzcd}
+            \caption*{Condition 1: Lower Bound}
+        \end{minipage}
+        \hfill
+        \begin{minipage}{0.45\textwidth}
+            \centering
+            % Diagram 2: "Equalizer" (Pre-composition)
+            \begin{tikzcd}[row sep=large, column sep=large]
+                k \arrow[r, "h", dashed] &
+                j \arrow[r, "f", shift left] \arrow[r, "g"', shift right] & 
+                i
+            \end{tikzcd}
+            \caption*{Condition 2: Equalizer}
+        \end{minipage}
+    \end{figure}
+
+    In other words, $\mathcal{I}$ is nonempty, any finite diagram of objects admits a cone, and any pair of parallel morphisms become equal after pre-composition with an appropriate morphism.
+
+    \end{enumerate}
+
+    
+\end{definition}

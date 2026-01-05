@@ -1,0 +1,40 @@
+\begin{definition}[Model Category] \label{definition:model_category}
+    \TODO{I don't like the axioms as stated here}
+A \hldef{model category}, or synonymously a \hldef{closed model category}, is a \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete and cocomplete category} \(\mathcal{M}\) equipped with three distinguished classes of morphisms:
+
+\begin{itemize}
+  \item \hldef{Weak equivalences} \(\mathcal{W}\),
+  \item \hldef{Fibrations} \(\mathcal{F}\),
+  \item \hldef{Cofibrations} \(\mathcal{C}\),
+\end{itemize}
+
+\begin{enumerate}
+  \item \textbf{(Two-out-of-three)}: For any composable morphisms \(f: X \to Y\), \(g: Y \to Z\), if any two of \(f\), \(g\), or \(g \circ f\) lie in \(\mathcal{W}\), then so does the third.
+
+  \item \textbf{(Retracts)}: Each of the classes \(\mathcal{W}, \mathcal{F}, \mathcal{C}\) is closed under retracts in the arrow category \(\mathcal{M}^2\). That is, if \(f\) is a retract of \(g\) and \(g\) belongs to one of these classes, then \(f\) also belongs to that class.
+
+  \item \textbf{(Lifting)}: Given any commutative square
+  \[
+  \begin{tikzcd}
+  A \arrow[r] \arrow[d, "i"'] & X \arrow[d, "p"] \\
+  B \arrow[r] & Y
+  \end{tikzcd}
+  \]
+  where \(i \in \mathcal{C}\) and \(p \in \mathcal{F}\), a diagonal filler (lift) exists making both triangles commute provided either
+  \begin{itemize}
+    \item \(i\) is also a weak equivalence (called an acyclic cofibration), or
+    \item \(p\) is also a weak equivalence (called an acyclic fibration).
+  \end{itemize}
+
+  Formally, acyclic cofibrations have the left lifting property with respect to all fibrations, and cofibrations have the left lifting property with respect to all acyclic fibrations.
+
+  \item \textbf{(Factorization)}: Every morphism \(f : X \to Y\) in \(\mathcal{M}\) admits two functorial factorizations:
+  \begin{itemize}
+    \item \(f = p \circ i\), where \(i \in \mathcal{C}\) is a cofibration and \(p \in \mathcal{F} \cap \mathcal{W}\) is an acyclic fibration.
+    \item \(f = q \circ j\), where \(j \in \mathcal{C} \cap \mathcal{W}\) is an acyclic cofibration and \(q \in \mathcal{F}\) is a fibration.
+  \end{itemize}
+  
+\end{enumerate}
+
+Here, an \hldef{acyclic fibration} (or \hldef{trivial fibration}) is a morphism in \(\mathcal{F} \cap \mathcal{W}\), and an \hldef{acyclic cofibration} (or \hldef{trivial cofibration}) is a morphism in \(\mathcal{C} \cap \mathcal{W}\).
+\end{definition}

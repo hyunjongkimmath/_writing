@@ -1,0 +1,12 @@
+\begin{theorem} \label{theorem:category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}. Consider the category \CrefAndHyperrefIfExist{definition:morphism_of_double_complex_of_objects_in_an_additive_category}{$\mathbf{DC}(\mathcal{A})$} of \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complexes} in $\mathcal{A}$ with \CrefAndHyperrefIfExist{definition:morphism_of_double_complex_of_objects_in_an_additive_category}{morphisms}, and the category $\mathbf{Ch}(\mathbf{Ch}(\mathcal{A}))$ of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in the category of chain complexes over $\mathcal{A}$.
+
+\TODO{natural isomorphism of categories}
+There exists a natural isomorphism of categories
+$$ \mathbf{DC}(\mathcal{A}) \cong \mathbf{Ch}(\mathbf{Ch}(\mathcal{A})), $$
+given by the sign trick: for a double complex $(A^{p,q}, d'_A, d''_A)$, define the associated chain complex of chain complexes by adjusting the vertical differentials as
+$$ d''^{p,q}_{\mathrm{new}} := (-1)^p d''^{p,q}_A, $$
+while keeping the horizontal differentials $d'_A$ unchanged.
+
+This identification respects morphisms of double complexes and chain complexes of chain complexes, making the two categories canonically equivalent.
+\end{theorem}

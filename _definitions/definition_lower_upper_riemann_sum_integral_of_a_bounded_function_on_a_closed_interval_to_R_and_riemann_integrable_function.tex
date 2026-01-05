@@ -1,0 +1,14 @@
+\begin{definition}[Riemann integrable function] \label{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}
+Let $[a,b] \subset \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{closed} and bounded interval with $a < b$, and let $f : [a,b] \to \mathbb{R}$ be a bounded function.
+A \hldef{partition of $[a,b]$} is a finite ordered set $P = \{x_0,\dots,x_n\}$ such that $a = x_0 < x_1 < \dots < x_n = b$.
+For each $k = 1,\dots,n$ set $I_k = [x_{k-1},x_k]$ and define
+\[
+m_k = \inf\{f(x) : x \in I_k\}, \qquad M_k = \sup\{f(x) : x \in I_k\}.
+\]
+The \hldef{lower Riemann sum} and \hldef{upper Riemann sum} of $f$ with respect to $P$ are
+$$\hlin{L(f,P) = \sum_{k=1}^n m_k (x_k - x_{k-1}), \qquad U(f,P) = \sum_{k=1}^n M_k (x_k - x_{k-1}).}$$
+The \hldef{lower Riemann integral of $f$} is \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{$\sup_P L(f,P)$} and the \hldef{upper Riemann integral of $f$} is \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{$\inf_P U(f,P)$}, where the supremum and infimum are taken over all partitions $P$ of $[a,b]$.
+The function $f$ is \hldef{Riemann integrable on $[a,b]$} if the lower and upper Riemann integrals are equal; in that case their common value is denoted by
+$$\hlin{\int_a^b f(x)\,dx}$$
+and is called the \hldef{Riemann integral of $f$ over $[a,b]$}.
+\end{definition}

@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:symmetric_antisymmetric_alternating_multilienar_forms_over_rings}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}, $M$ an \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{two-sided $R$-module}, $k \in \bbN$ and $\Phi: M^k \to R$ a \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{multilinear form}
+\begin{enumerate}
+    \item $\Phi$ is \hldef{symmetric} if for every \CrefAndHyperrefIfExist{definition:symmetric_group_on_a_set}{permutation} $\sigma \in S_k$ and all $x_1,\dots,x_k \in M$,
+    $$
+    \Phi(x_1, ..., x_k) = \Phi(x_{\sigma(1)}, ..., x_{\sigma(k)}).
+    $$
+
+    \item $\Phi$ is \hldef{antisymmetric} if for all $\sigma \in S_k$ and all $x_1,\dots,x_k \in M$,
+    $$ \Phi(x_{\sigma(1)}, ..., x_{\sigma(k)}) = \operatorname{sgn}(\sigma) \Phi(x_1, ..., x_k), $$
+    where $\operatorname{sgn}(\sigma)$ is the \CrefAndHyperrefIfExist{definition:signature_of_an_element_of_the_symmetric_group_on_a_finite_set}{sign} of the permutation $\sigma$.
+    
+    \item $\Phi$ is \hldef{alternating} if whenever $x_i = x_j$ for some $i \neq j$, $\Phi(x_1, ..., x_k) = 0$. Every alternating form is antisymmetric, since if $x_i = x_j$ and we swap coordinates, both terms are zero.
+\end{enumerate}
+
+For $k=2$, these definitions specialize to \hldef{bilinear forms}; in particular:
+\begin{itemize}
+    \item $\Phi$ is symmetric if $\Phi(x, y) = \Phi(y, x)$.
+    \item $\Phi$ is antisymmetric if $\Phi(x, y) = -\Phi(y, x)$.
+    \item $\Phi$ is alternating if $\Phi(x, x) = 0$ for all $x$.
+\end{itemize}
+\end{definition}

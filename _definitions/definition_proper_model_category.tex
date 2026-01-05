@@ -1,0 +1,26 @@
+\begin{definition}[Proper Model Category] \label{definition:proper_model_category}
+Let $\mathcal{M}$ be a \CrefAndHyperrefIfExist{definition:model_category}{model category} with classes of weak equivalences $\mathcal{W}$, cofibrations $\mathcal{C}of$, and fibrations $\mathcal{F}ib$. 
+\TODO{pushout, pullback}
+\begin{enumerate}
+    \item Then $\mathcal{M}$ is called \hldef{left proper} if weak equivalences are preserved under pushouts along cofibrations, i.e., if for every pushout diagram
+    $$
+    \begin{array}{ccc}
+    A & \xrightarrow{i} & B \\
+    \downarrow^{f \in \mathcal{W}} && \downarrow \\
+    C & \xrightarrow{} & D
+    \end{array}
+    $$
+    with $i \in \mathcal{C}of$, the induced map $C \to D$ lies in $\mathcal{W}$. 
+    \item Dually, $\mathcal{M}$ is called \hldef{right proper} if weak equivalences are preserved under pullbacks along fibrations, i.e., if for every pullback diagram
+    $$
+    \begin{array}{ccc}
+    P & \xrightarrow{} & X \\
+    \downarrow^{g} && \downarrow^{p \in \mathcal{F}ib} \\
+    Y & \xrightarrow{h \in \mathcal{W}} & Z
+    \end{array}
+    $$
+    the induced map $P \to Y$ is in $\mathcal{W}$.
+
+    \item A model category $\mathcal{M}$ is \hldef{proper} if it is both left proper and right proper.
+\end{enumerate}
+\end{definition}

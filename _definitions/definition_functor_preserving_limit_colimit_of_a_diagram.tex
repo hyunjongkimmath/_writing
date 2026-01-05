@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:functor_preserving_limit_colimit_of_a_diagram}
+    Let $F: \mathcal{C} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} between \CrefAndHyperrefIfExist{definition:category}{(large) categories} $\mathcal{C}$ and $\mathcal{D}$.
+    
+    Let $D: \mathcal{J} \to \mathcal{C}$ be a diagram in $\mathcal{C}$ such that the limit $\lim_{\mathcal{J}} D$ exists in $\mathcal{C}$, with limiting cone $\lambda: \Delta_{\lim D} \Rightarrow D$. The functor $F$ \hldef{preserves the limit of $D$} if the image cone
+    $$
+    F(\lambda): \Delta_{F(\lim D)} \cong F \circ \Delta_{\lim D} \Rightarrow F \circ D
+    $$
+    exhibits $F(\lim_{\mathcal{J}} D)$ as a limit of the composite diagram $F \circ D$ in $\mathcal{D}$. Explicitly, the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{canonical comparison morphism}
+    $$F(\lim_{\mathcal{J}} D) \xrightarrow{\cong} \lim_{\mathcal{J}} (F \circ D)$$
+    must be an isomorphism.
+    
+    Dually, let $D: \mathcal{J} \to \mathcal{C}$ be a diagram such that the colimit $\operatorname{colim}_{\mathcal{J}} D$ exists in $\mathcal{C}$. The functor $F$ \hldef{preserves the colimit of $D$} if the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{canonical comparison morphism}
+    $$\operatorname{colim}_{\mathcal{J}} (F \circ D) \xrightarrow{\cong} F(\operatorname{colim}_{\mathcal{J}} D)$$
+    is an isomorphism.
+\end{definition}

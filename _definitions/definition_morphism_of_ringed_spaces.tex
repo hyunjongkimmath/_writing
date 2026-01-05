@@ -1,0 +1,16 @@
+
+\begin{definition}[Morphism of ringed spaces] \label{definition:morphism_of_ringed_spaces}
+    Let $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$ be \CrefAndHyperrefIfExist{definition:locally_ringed_space_on_a_topological_space}{ringed spaces}. A \hldef{morphism of ringed spaces} 
+    $$(f, f^\#): (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$$ 
+    consists of:
+    \begin{itemize}
+        \item a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} $f: X \to Y$, and
+        \item a \CrefAndHyperrefIfExist{definition:morphism_of_presheaves_on_a_topological_space}{morphism of} \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves of rings}
+        $$f^\#: \mathcal{O}_Y \to f_* \mathcal{O}_X,$$
+        where $f_* \mathcal{O}_X$ is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image sheaf} of $\mathcal{O}_X$ on $Y$.
+        \TODO{state the adjunction between direct image and inverse image}
+    \end{itemize}
+    Equivalently, for each open set $V \subseteq Y$, there is a ring homomorphism
+    $$f^\#(V): \mathcal{O}_Y(V) \to \mathcal{O}_X(f^{-1}(V)),$$
+    compatible with restriction maps of sections.
+\end{definition}

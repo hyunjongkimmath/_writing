@@ -1,0 +1,33 @@
+\begin{definition}[Homotopy of maps of topological spaces] \label{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}
+
+    Let $X$ and $Y$ be topological spaces and let $K \subseteq X$ be a subset. Let $C(X,Y)$ denote the set of all continuous maps $f : X \to Y$.  
+
+    \begin{enumerate}
+        \item A \hldef{homotopy between two maps $f,g \in C(X,Y)$ relative to $K$ } is a continuous map
+        $$H : X \times [0,1] \to Y$$
+        such that for all $x \in X$,
+        $$H(x,0) = f(x), \quad H(x,1) = g(x),$$
+        and for all $x \in K$ and $t \in [0,1]$,
+        $$H(x,t) = f(x) = g(x).$$
+
+        If such an $H$ exists, we say $f$ and $g$ are \hldef{homotopic relative to $K$}, and we write \hl{$f \simeq g \text{ rel } K$}; this is an equivalence relation.
+
+        A \hldef{homotopy between two maps $f,g \in C(X,Y)$} is simply a homotopy relative to $\emptyset$. We write we write \hl{$f \simeq g$} if a homotopy between them exists.
+
+        \item Let $(X, x_0)$ and $(Y, y_0)$ be \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological spaces} and let $K \subseteq X$ be a subset with $x_0 \in K$. Let $C_*(X,Y)$ denote the set of all continuous based maps $f : X \to Y$ satisfying $f(x_0) = y_0$.
+
+        A \hldef{homotopy of based maps $f,g \in C_*(X,Y)$ relative to $K$} is a continuous map
+        $$H : X \times [0,1] \to Y$$
+        such that for all $x \in X$,
+        $$H(x,0) = f(x), \quad H(x,1) = g(x),$$
+        and for all $k \in K$ and $t \in [0,1]$,
+        $$H(k,t) = f(k) = g(k),$$
+        in particular fixing the basepoint throughout,
+        $$H(x_0, t) = y_0 \quad \text{for all } t \in [0,1].$$
+
+        If such an $H$ exists, we say $f$ and $g$ are \hldef{based homotopic relative to $K$}, and we write \hl{$f \simeq g \text{ rel } K$}. This is an equivalence relation.
+
+        A \hldef{homotopy of based maps $f,g \in C_*(X,Y)$} without relative condition is the special case $K = \{x_0\}$ and is called a \hldef{homotopy of based maps} or \hldef{based homotopy}. We write \hl{$f \simeq g$} if such a homotopy exists.
+
+    \end{enumerate}
+\end{definition}

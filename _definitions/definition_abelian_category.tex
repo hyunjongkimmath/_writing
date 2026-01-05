@@ -1,0 +1,16 @@
+\begin{definition}[Abelian category] \label{definition:abelian_category}
+Let $\mathcal{A}$ be a category. The category $\mathcal{A}$ is an \hldef{abelian category} if:
+\begin{itemize}
+    \item $\mathcal{A}$ is an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}.
+    \item Every morphism $f: A \to B$ has a \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel $\ker(f)$ and a cokernel $\operatorname{coker}(f)$}.
+    \item For every morphism $f: A \to B$, the canonical morphism $\operatorname{coim}(f) \to \operatorname{im}(f)$ is an isomorphism, where
+    $$
+    \operatorname{coim}(f) = \operatorname{coker}(\ker(f) \to A),\quad \operatorname{im}(f) = \ker(B \to \operatorname{coker}(f)).
+    $$
+    \TODO{I think I need to re-check this defintion}
+    \TODO{coimage}
+\end{itemize}
+
+It is also worth considering Grothendieck's additional axioms for abelian categories\CrefIfExists{definition:grothendiecks_additional_axioms_for_abelian_categories}.
+
+\end{definition}

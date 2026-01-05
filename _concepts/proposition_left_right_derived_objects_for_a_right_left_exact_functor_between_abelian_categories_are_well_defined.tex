@@ -1,0 +1,28 @@
+\begin{proposition}[cf.{\cite[Lemma 2.4.1]{weibel}}] \label{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Let $A$ be an object of $\calA$. 
+    \begin{enumerate}
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
+        $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
+        of $A$ exists in $\calA$. Let 
+        $$\cdots \to Q_2 \to Q_1 \to Q_0 \to A \to 0$$
+        be any projective resolution of $A$ in $\calA$. For all $n$, there are natural isomorphisms
+        $$H_n(F(P_\bullet)) \cong H_n(F(Q_\bullet)).$$
+        In other words, the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived objects $L_n F(A)$} is well defined.
+
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
+        $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
+        of $A$ exists in $\calA$. Let 
+        $$0 \to A \to Q^0 \to Q^1 \to Q^2 \to \cdots$$
+        be any injective resolution of $A$ in $\calA$. For all $n$, there are natural isomorphisms
+        $$H_n(F(I^\bullet)) \cong H_n(F(Q^\bullet)).$$
+        In other words, the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived objects $R_n F(A)$} is well defined.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item By \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}, there is a lift $f: P_\bullet \to Q_\bullet$ of the identity map $A \to A$ unique up to chain homotopy. There are then induced natural maps $H_n(F(f)): H_n(F(P_\bullet)) \to H_n(F(Q_\bullet))$. There is also a lift $f': Q_\bullet \to P_\bullet$ of the identity map $A \to A$ unique up to chain homotopy, and this also induces natural maps $H_n(F(f')): H_n(F(Q_\bullet)) \to H_n(F(P_\bullet))$. The chain maps $f$ and $f'$ are in fact \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy inverses} because \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy} also implies that any lifts $P_\bullet \to P_\bullet$ and $Q_\bullet \to Q_\bullet$ of the identity map $A \to A$ are chain homotopic to the identity chain maps. Therefore, $H_n(F(f))$ and $H_n(F(f'))$ are inverses of each other as morphisms in $\calB$.  \TODO{prove basic facts about the fucntoriality of homology/cohomology of chain complexes}
+
+        \item This is dual to the previous part.
+    \end{enumerate}
+\end{proof}

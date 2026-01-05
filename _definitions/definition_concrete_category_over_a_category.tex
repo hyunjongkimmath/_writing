@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:concrete_category_over_a_category}
+Let $\mathcal{X}$ be a category. A \hldef{concrete category over $\mathcal{X}$} is a pair $(\mathcal{C}, U)$ consisting of a category $\mathcal{C}$ and a \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful functor}
+$U \colon \mathcal{C} \to \mathcal{X}$
+In this context, $U$ is called the \hldef{underlying functor} (or \hldef{forgetful functor}) of the concrete category.
+
+When $\mathcal{X} = \mathbf{Set}$ (the category of sets), the pair $(\mathcal{C}, U)$ is simply referred to as a \hldef{concrete category}. For any object $A$ in $\mathcal{C}$, the set $U(A)$ is called the \hldef{underlying set} of $A$, and for any morphism $f: A \to B$, the function $U(f): U(A) \to U(B)$ is called the \hldef{underlying function} of $f$.
+\end{definition}

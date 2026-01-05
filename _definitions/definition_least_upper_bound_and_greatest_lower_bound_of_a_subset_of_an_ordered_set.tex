@@ -1,0 +1,20 @@
+\begin{definition}[Least upper bound and greatest lower bound] \label{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}
+Let $(X,\leq)$ be an \CrefAndHyperrefIfExist{definition:partially_ordered_set}{ordered set} and let $S \subseteq X$ be a subset.
+\begin{enumerate}
+  \item Assume that $S$ has at least one upper bound in $X$, i.e.\ there exists $u \in X$ such that $s \leq u$ for all $s \in S$.
+  An element $u_0 \in X$ is called a \hldef{least upper bound of $S$ in $X$} if:
+  \begin{enumerate}
+    \item $u_0$ is an upper bound of $S$, i.e.\ $s \leq u_0$ for all $s \in S$,
+    \item for every upper bound $u \in X$ of $S$ one has $u_0 \leq u$.
+  \end{enumerate}
+  If such $u_0$ exists, it is unique and is also called the \hldef{supremum of $S$ in $X$}.
+
+  \item Assume that $S$ has at least one lower bound in $X$, i.e.\ there exists $\ell \in X$ such that $\ell \leq s$ for all $s \in S$.
+  An element $\ell_0 \in X$ is called a \hldef{greatest lower bound of $S$ in $X$} if:
+  \begin{enumerate}
+    \item $\ell_0$ is a lower bound of $S$, i.e.\ $\ell_0 \leq s$ for all $s \in S$,
+    \item for every lower bound $\ell \in X$ of $S$ one has $\ell \leq \ell_0$.
+  \end{enumerate}
+  If such $\ell_0$ exists, it is unique and is also called the \hldef{infimum of $S$ in $X$}.
+\end{enumerate}
+\end{definition}

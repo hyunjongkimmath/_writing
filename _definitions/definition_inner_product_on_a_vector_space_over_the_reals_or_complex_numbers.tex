@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}
+An \hldef{inner product on a vector space $V$ over a field $\mathbb{F}$} (either $\mathbb{R}$ or $\mathbb{C}$) is a function
+\[
+\langle \cdot, \cdot \rangle : V \times V \to \mathbb{F}
+\]
+satisfying, for all $u,v,w \in V$ and all scalars $\alpha \in \mathbb{F}$:
+\begin{enumerate}
+    \item \textbf{Conjugate symmetry:} \quad $\langle u, v \rangle = \overline{\langle v, u \rangle}$
+    \item \textbf{Linearity in the first argument:} \quad $\langle \alpha u + v, w \rangle = \alpha \langle u, w \rangle + \langle v, w \rangle$
+    \item \textbf{Positive-definiteness:} \quad $\langle v, v \rangle \geq 0$ and $\langle v, v \rangle = 0$ if and only if $v = 0$
+\end{enumerate}
+A vector space over $\bbF$ equipped with such an inner product is called an \hldef{inner product space}.
+\end{definition}

@@ -1,0 +1,24 @@
+
+\begin{definition}[Kummer map associated to an isogeny of an abelian variety] \label{definition:kummer_map_associated_to_an_isogeny_of_an_abelian_variety}
+    Let $k$ be a field, and let $A$ and $B$ be abelian varieties defined over $k$.  
+    Suppose $\varphi: A \to B$ is an \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_schemes_over_a_scheme}{isogeny defined over $k$}.  
+    Denote by $G_k = \mathrm{Gal}(\overline{k}/k)$ the absolute Galois group of $k$.  
+
+    The short exact sequence 
+    $$0 \to \ker \varphi \to A(\overline{k}) \xrightarrow{\varphi} B(\overline{k}) \to 0.$$
+    yields the following long exact sequence in Galois cohomology:
+    $$
+    \begin{aligned}
+    0 \to \ker \varphi(k) \to &A(k) \xrightarrow{\varphi} B(k) \\
+    \xrightarrow{\delta_\varphi} H^1(G_k, \ker \varphi) \to &H^1(G_k, A(\overline{k})) \to H^1(G_k, B(\overline{k})) \to \cdots.
+    \end{aligned}
+    $$
+
+    The \hldef{Kummer map associated to the isogeny $\varphi$} is the Galois cohomological connecting homomorphism
+    $$\delta_\varphi: B(k) \to H^1(G_k, \ker \varphi),$$
+    above. In fact, there is a short exact sequence
+    $$0 \to B(k) / \varphi(A(k)) \xrightarrow{\delta'_{\varphi}} H^1(G_{k}, \ker \varphi) \to H^1(G_{k}, A)[\varphi] \to 0$$
+    where the map $\delta'_{\varphi}$ is induced by $\delta_{\varphi}$. We may also let the \hldef{Kummer map associated to $\varphi$} refer to this map $\delta'_{\varphi}$. We may also use the abuse of notation \hl{$\delta_\varphi$} to denote $\delta'_{\varphi}$.
+    % The map $\delta_\varphi$ measures the obstruction to lifting points of $B(k)$ to points of $A(k)$ through the isogeny $\varphi$, fundamental in descent theory.
+
+\end{definition}

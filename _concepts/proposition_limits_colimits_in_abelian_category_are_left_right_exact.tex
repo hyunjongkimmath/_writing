@@ -1,0 +1,26 @@
+\begin{proposition} \label{proposition:limits_colimits_in_abelian_category_are_left_right_exact}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $\mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:small_category}{small index category}.
+    
+        \TODO{}
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}{limit functor} $\lim: \mathcal{A}^\mathcal{J} \to \mathcal{A}$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}. That is, if
+        $$0 \to F \to G \to H \to 0$$
+        is a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} of functors in $\mathcal{A}^\mathcal{J}$ (\CrefAndHyperrefIfExist{theorem:functor_category_of_an_abelian_category_indexed_by_a_small_category_is_abelian}{equivalently} it is exact object-wise), then the induced sequence
+        $$0 \to \lim F \to \lim G \to \lim H$$
+        is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact} in $\mathcal{A}$.
+        
+        \item Limits commute with kernels (and indeed with all limits). Since the kernel is a finite limit, strictly speaking, $\lim (\ker \Phi) \cong \ker (\lim \Phi)$ for any natural transformation $\Phi$.
+        
+        \item The \CrefAndHyperrefIfExist{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}{colimit functor} $\operatorname{colim}: \mathcal{A}^\mathcal{J} \to \mathcal{A}$ is right exact. That is, if
+        $$0 \to F \to G \to H \to 0$$
+        is a short exact sequence of functors, then the induced sequence
+        $$\operatorname{colim} F \to \operatorname{colim} G \to \operatorname{colim} H \to 0$$
+        is exact in $\mathcal{A}$.
+        
+        \item Colimits commute with cokernels (and indeed with all colimits). Strictly speaking, $\operatorname{colim} (\operatorname{coker} \Phi) \cong \operatorname{coker} (\operatorname{colim} \Phi)$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \TODO{}
+\end{proof}
+

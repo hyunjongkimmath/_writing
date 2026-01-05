@@ -1,0 +1,24 @@
+
+\begin{definition}[Pushforward (direct image) of a sheaf] \label{definition:direct_image_of_a_sheaf_on_a_topological_space}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, and let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $X$ valued in a category $\mathcal{D}$} with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object}.  
+    The \hldef{pushforward} or \hldef{direct image presheaf} 
+    \hl{$f_* \mathcal{F}$} on $Y$ is the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf valued in $\calD$ on $Y$} defined as follows: For every open set $V \subseteq Y$, the value of the pushforward is given by
+    \[ 
+    f_* \mathcal{F}(V) := \mathcal{F}(f^{-1}(V)). 
+    \]
+    For an inclusion of open sets $V' \subseteq V$ in $Y$, the restriction morphism 
+    \[ 
+    \operatorname{res}_{V, V'}^{f_* \mathcal{F}} : f_* \mathcal{F}(V) \to f_* \mathcal{F}(V') 
+    \]
+    is defined as the restriction morphism of $\mathcal{F}$ associated with the inclusion of preimages $f^{-1}(V') \subseteq f^{-1}(V)$ in $X$:
+    \[ 
+    \operatorname{res}_{f^{-1}(V), f^{-1}(V')}^{\mathcal{F}} : \mathcal{F}(f^{-1}(V)) \to \mathcal{F}(f^{-1}(V')). 
+    \]
+    
+    % by
+    % $$f_* \mathcal{F}(V) := \mathcal{F}(f^{-1}(V))$$
+    % for every open set $V \subseteq Y$, with restriction maps induced from those of $\mathcal{F}$ via preimages.  
+
+    If $\calF$ is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf}, then so is $f_* \calF$. \TextIfExists{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{In this case, it is equivalent to define $f_* \calF$ as the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} $(f^{-1})^s \calF$ of $\calF$ under the \CrefAndHyperrefIfExist{definition:continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map}{continuous functor $f^{-1}: \operatorname{Open} Y \to \operatorname{Open} X$}\CrefIfExists{definition:continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map}\CrefIfExists{definition:site_of_opens_on_a_topological_space}, which is also equivalent to the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} of $\calF$ under the \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $\operatorname{Open} X \to \operatorname{Open} Y$ whose underlying continuous functor is $f^{-1}$.}
+    
+\end{definition}

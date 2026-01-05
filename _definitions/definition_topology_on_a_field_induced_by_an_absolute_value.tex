@@ -1,0 +1,12 @@
+\begin{definition}[Topology on a field induced by an absolute value] \label{definition:topology_on_a_field_induced_by_an_absolute_value}
+
+Let $K$ be a field equipped with an \hyperrefIfExists{definition:absolute_value_on_a_field}{absolute value}\CrefIfExists{definition:absolute_value_on_a_field} $|\cdot| : K \to \mathbb{R}_{\geq 0}$. The \hldef{topology induced by $|\cdot|$ on $K$} is defined by declaring a subset $U \subseteq K$ to be \hyperrefIfExists{definition:topological_space}{open} if for every $x \in U$, there exists $\varepsilon > 0$ such that
+$$\hlin{B(x, \varepsilon) := \{ y \in K : |y - x| < \varepsilon \} \subseteq U.}$$
+The collection of all such open sets forms a \hyperrefIfExists{definition:topological_space}{topology} on $K$, making $(K, \mathcal{T}_{|\cdot|})$ a topological field.
+The set $B(x, \varepsilon)$ is called the \hldef{open ball of radius $\varepsilon$ around $x$}.
+
+Equivalently, the topology induced by $|\cdot|$ on $K$ is the \hyperrefIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topology induced by} the \hyperrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{metric induced by $|\cdot|$} as a \hyperrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm}\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value} on the $1$-dimensional $K$-vector space $K$. 
+% \TextIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{
+% Equivalenty, the topology induced by $|\cdot|$ on $K$ is the \hyperrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{topology induced by $|\cdot|$}\CrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value} as a \hyperrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm} on the $1$-dimensional $K$-vector space $K$.
+% }
+\end{definition}

@@ -1,0 +1,16 @@
+
+\begin{definition} \label{definition:prime_and_maximal_ideal_of_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. A \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{proper two-sided ideal $P \unlhd R$} is called a \hldef{prime ideal} if the following equivalent conditions holds:
+\begin{enumerate}
+    \item If $I,J$ are left ideals and \CrefAndHyperrefIfExist{definition:product_of_ideals_of_a_ring}{$IJ \subset P$}, then $I \subset P$ or $J \subset P$.
+    \item If $I,J$ are right ideals and $IJ \subset P$, then $I \subset P$ or $J \subset P$.
+    \item If $I,J$ are two-sided idaels and $IJ \subset P$, then $I \subset P$ or $J \subset P$.
+    \item If $x,y \in R$ with $xRy \subset \mathfrak{p}$, then $x \in \mathfrak{p}$ or $y \in \mathfrak{p}$.
+\end{enumerate}
+
+A proper left/right/two-sided ideal $M \subsetneq R$ is called \hldef{maximal} if there exists no other left/right/two-sided ideal $J \unlhd R$ such that $M \subsetneq J \subsetneq R$. Equivalently, 
+\begin{itemize}
+    \item a left/right ideal $M$ of $R$ is maximal if and only if the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module $R/M$} is a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} left/right $R$-module.
+    \item a two-sided ideal $M$ of $R$ is maximal if and only if the \CrefAndHyperrefIfExist{definition:quotient_ring_of_a_ring_by_a_two_sided_ideal}{quotient ring $R/M$} is a \CrefAndHyperrefIfExist{definition:simple_ring}{simple ring}. 
+\end{itemize}
+\end{definition}

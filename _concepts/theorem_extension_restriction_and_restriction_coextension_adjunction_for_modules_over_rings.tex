@@ -1,0 +1,69 @@
+% \begin{theorem}[Extension-Restriction and Restriction-Coextension adjunction for modules] \label{theorem:extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings}
+% Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}.
+
+% \begin{enumerate}
+%     \item \textbf{Extension-Restriction adjunction:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_for_modules_along_ring_homomorphisms}{extension of scalars functor} $f^* \coloneqq S \otimes_R -$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor} $f_*$.
+    
+%     Explicitly, for any left $R$-module $M$ and any left $S$-module $N$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
+%     \[
+%         \Hom_S(S \otimes_R M, N) \cong \Hom_R(M, f_*N)
+%     \]
+%     given by the mapping
+%     \[
+%         \Psi \mapsto (m \mapsto \Psi(1 \otimes m)).
+%     \]
+
+%     \item \textbf{Restriction-Coextension adjunction:} The \CrefAndHyperrefIfExist{definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor} $f^! \coloneqq \Hom_R(S, -)$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor $f_*$.
+    
+%     Explicitly, for any left $S$-module $N$ and any left $R$-module $M$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
+%     \[ \Hom_R(f_*N, M) \cong \Hom_S(N, \Hom_R(S, M)) \]
+%     where $S$ is viewed as an $(R, S)$-bimodule when constructing the the \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{Hom-module $\Hom_R(S, M)$}.
+% \end{enumerate}
+% \end{theorem}
+
+
+\begin{theorem}[Extension-Restriction and Restriction-Coextension adjunction for modules] \label{theorem:extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. Let $T$ be a ring.
+
+\begin{enumerate}
+    \item \textbf{Extension-Restriction adjunction:}
+    \begin{enumerate}
+        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_for_modules_along_ring_homomorphisms}{extension of scalars functor}
+        \[ f^* = S \otimes_R - : {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T \]
+        \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}
+        is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor}
+        \[ f_* : {}_S\mathsf{Mod}_T \to {}_R\mathsf{Mod}_T. \]
+        Explicitly, for any $R-T$-bimodule $M$ and any $S-T$-bimodule $N$, there is a natural isomorphism:
+        \[
+            \Hom_{S-T}(S \otimes_R M, N) \cong \Hom_{R-T}(M, f_*N).
+        \]
+
+        \item \textbf{Restriction on the Right:} The extension of scalars functor
+        \[ f^* = - \otimes_R S : {}_T\mathsf{Mod}_R \to {}_T\mathsf{Mod}_S \]
+        is left adjoint to the restriction of scalars functor
+        \[ f_* : {}_T\mathsf{Mod}_S \to {}_T\mathsf{Mod}_R. \]
+        Explicitly, for any $T-R$-bimodule $M$ and any $T-S$-bimodule $N$, there is a natural isomorphism:
+        \[
+            \Hom_{T-S}(M \otimes_R S, N) \cong \Hom_{T-R}(M, f_*N).
+        \]
+    \end{enumerate}
+
+    \item \textbf{Restriction-Coextension adjunction:}
+    \begin{enumerate}
+        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor}
+        \[ f^! = \Hom_R(S, -) : {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T \]
+        is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor
+        \[ f_* : {}_S\mathsf{Mod}_T \to {}_R\mathsf{Mod}_T. \]
+        Explicitly, for any $S-T$-bimodule $N$ and any $R-T$-bimodule $M$, there is a natural isomorphism:
+        \[ \Hom_{R-T}(f_*N, M) \cong \Hom_{S-T}(N, \Hom_R(S, M)). \]
+
+        \item \textbf{Restriction on the Right:} The co-extension of scalars functor
+        \[ f^! = \Hom_R(S, -) : {}_T\mathsf{Mod}_R \to {}_T\mathsf{Mod}_S \]
+        is right adjoint to the restriction of scalars functor
+        \[ f_* : {}_T\mathsf{Mod}_S \to {}_T\mathsf{Mod}_R. \]
+        Explicitly, for any $T-S$-bimodule $N$ and any $T-R$-bimodule $M$, there is a natural isomorphism:
+        \[ \Hom_{T-R}(f_*N, M) \cong \Hom_{T-S}(N, \Hom_R(S, M)) \]
+        where here $\Hom_R(S, M)$ uses the left $R$-module structure on $S$ and the right $R$-module structure on $M$.
+    \end{enumerate}
+\end{enumerate}
+\end{theorem}

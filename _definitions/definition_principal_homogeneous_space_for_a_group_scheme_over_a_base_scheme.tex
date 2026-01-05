@@ -1,0 +1,16 @@
+
+\begin{definition}[Principal homogeneous space (torsor) for a group scheme over a base scheme] \label{definition:principal_homogeneous_space_for_a_group_scheme_over_a_base_scheme}
+    Let $S$ be a scheme, and let $G$ be a group scheme over $S$.  
+    A \hldef{principal homogeneous space} (or \hldef{$G$-torsor}) over $S$ is an $S$-scheme $X$ equipped with an action
+    $$a: G \times_S X \to X$$
+    satisfying:
+    \begin{itemize}
+        \item The action $a$ is simply transitive fpqc-locally on $S$, i.e. there exists an fpqc covering $\{U_i \to S\}$ such that for each $i$, the base-changed scheme $X_{U_i} \cong G_{U_i}$ as $G_{U_i}$-schemes.
+        \item The morphism 
+        $$G \times_S X \to X \times_S X, \quad (g,x) \mapsto (g \cdot x, x)$$
+        is an isomorphism of $S$-schemes, expressing the free and transitive nature of the action.
+    \end{itemize}
+    \TODO{explain what is meant by local triviality}
+    Such a torsor is \'etale locally trivial or locally trivial in the fpqc topology.  
+\end{definition}
+

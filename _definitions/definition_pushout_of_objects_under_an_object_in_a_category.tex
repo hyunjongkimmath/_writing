@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:pushout_of_objects_under_an_object_in_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, let $Z$ be an object, and let $X, Y$ be objects of $\mathcal{C}$ \CrefAndHyperrefIfExist{definition:category_of_objects_under_a_fixed_object_in_a_category}{under} \TODO{under category} $Z$, i.e. morphisms $f : Z \to X$ and $g : Z \to Y$ are fixed. A \hldef{pushout of $X$ and $Y$ under $Z$ in $\mathcal{C}$} is an object, often denoted by \hl{$X \amalg_Z Y$}, with \hldef{inclusion morphisms} $i_X : X \to X \amalg_Z Y$ and $i_Y : Y \to X \amalg_Z Y$ that are universal. 
+    More precisely, the morphisms satisfy $i_X \circ f = i_Y \circ g$, and for any object $Q$ of $\mathcal{C}$ with morphisms $u_X : X \to Q$, $u_Y : Y \to Q$ satisfying $u_X \circ f = u_Y \circ g$, there exists a unique morphism $w : X \amalg_Z Y \to Q$ such that the following diagram commutes:
+        \begin{center}
+        \begin{tikzcd}
+            Z \ar[r, "f"] \ar[d, "g"'] & X \ar[d, "i_X"] \ar[ddr, "u_X", bend left] & \\
+            Y \ar[r, "i_Y"'] \ar[drr, "u_Y"', bend right] & X \amalg_Z Y \ar[dr, dotted, "w"] & \\
+            & & Q
+        \end{tikzcd}
+        \end{center}
+        
+    Equivalently, $X \amalg_Z Y$ is the \CrefAndHyperrefIfExist{definition:colimit_of_a_diagram_in_a_category}{colimit} of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram}
+        \begin{center}
+            \begin{tikzcd}
+            & X \\
+            Z \ar[ru, "f"] \ar[rd, "g"'] & \\
+            & Y
+            \end{tikzcd}
+        \end{center}
+    in $\mathcal{C}$. 
+
+    The commutative diagram 
+    \begin{center}
+    \begin{tikzcd}
+    Z \ar[r, "f"] \ar[d, "g"'] & X \ar[d, "i_X"] \\
+    Y \ar[r, "i_Y"'] & X \amalg_Z Y
+    \end{tikzcd} 
+    \end{center}
+    may be referred to as a \hldef{cocartesian square}.
+
+    Note that the notion of cocartesian squares is dual ot the notion of \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{cartesian squares}.
+\end{definition}

@@ -1,0 +1,35 @@
+\begin{definition} \label{definition:product_of_categories_enriched_in_a_monoidal_category}
+    More generally, let \(\mathcal{M} = (\mathcal{M}, \otimes, \mathds{1})\) be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}, and let \(\{\mathcal{C}_i\}_{i \in I}\) be a family of \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{M}$-enriched categories} indexed by a class $I$ such that $\calM$ is closed under all \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} indexed by $I$. The \hldef{product $\mathcal{M}$-enriched category of the family}, denoted
+    $$ \hlin{\prod_{i \in I} \mathcal{C}_i}, $$
+    is defined as follows:
+    \begin{itemize}
+        \item The class of objects is
+        $$
+        \mathrm{Ob}\Big(\prod_{i \in I} \mathcal{C}_i\Big) = \prod_{i \in I} \mathrm{Ob}(\mathcal{C}_i),
+        $$
+        i.e., an object is a family \((A_i)_{i \in I}\) with \(A_i \in \mathrm{Ob}(\mathcal{C}_i)\).
+
+        \item For two objects \((A_i)_i\) and \((B_i)_i\), the hom-object in \(\mathcal{M}\) is
+        $$
+        \left(\prod_{i \in I} \mathcal{C}_i\right)\big((A_i)_i, (B_i)_i\big) := \prod_{i \in I} \mathcal{C}_i(A_i, B_i).
+        $$
+        Here, the product on the right is taken inside \(\mathcal{M}\).
+
+        \item Composition morphisms in \(\mathcal{M}\) are defined componentwise using the composition morphisms of each \(\mathcal{C}_i\):
+        $$
+        \circ_{(A_i),(B_i),(C_i)}: \left(\prod_i \mathcal{C}_i(B_i, C_i)\right) \otimes \left(\prod_i \mathcal{C}_i(A_i, B_i)\right) \to \prod_i \mathcal{C}_i(A_i, C_i),
+        $$
+        given by the universal property of products and the componentwise compositions
+        $$
+        \circ_i : \mathcal{C}_i(B_i, C_i) \otimes \mathcal{C}_i(A_i, B_i) \to \mathcal{C}_i(A_i, C_i).
+        $$
+
+        \item For each object \((A_i)_i\), the identity morphism is given by the family
+        $$
+        (\mathrm{id}_{A_i})_i : \mathds{1} \to \prod_i \mathcal{C}_i(A_i, A_i),
+        $$
+        where $\mathds{1}$ is the unit object of \(\mathcal{M}\).
+    \end{itemize}
+
+In case that \(I\) is finite, the notation \(\times\) may be used for product \(\mathcal{M}\)-enriched categories, e.g. \hl{$\mathcal{C}_i \times \mathcal{C}_j$} denotes the product of two \(\mathcal{M}\)-enriched categories \(\mathcal{C}_i \times \mathcal{C}_j\).
+\end{definition}

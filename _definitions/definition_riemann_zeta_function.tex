@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:riemann_zeta_function}
+Let $s \in \mathbb{C}$. The \hldef{Riemann zeta function} $\zeta(s)$ is defined as
+$$\hlin{\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.}$$
+which converges absolute when $\Re(s) > 1$ and in this case, $\zeta(s)$ can be expressed as an Euler product:
+$$\zeta(s) = \prod_{n=1}^\infty \frac{1}{(1-p^{-s})}.$$
+
+\TODO{TODO: discuss that it extends meromorphically, its trivial zeroes, functional equation}
+
+Here are alternate definitions of $\zeta(s)$: 
+\begin{enumerate}
+    \item It is a special case of the \hyperrefIfExists{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function $L(s,\chi)$} in case that $\chi: \bbZ \to \bbC$ is the trivial Dirichlet character (modulo $0$) such that $\chi(n) = 1$ for all integers $n \neq 0$\CrefIfExists{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}. 
+    \item It is a special case of the \hyperrefIfExists{definition:dedekind_zeta_function_of_a_number_field}{Dedekind zeta function $\zeta_K(s)$} in the case that the number field $K$ is simply the field $\bbQ$ of rational numbers\CrefIfExists{definition:dedekind_zeta_function_of_a_number_field}.
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,19 @@
+
+\begin{definition} \label{definition:full_and_faithful_functor_between_locally_small_categories}
+
+Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large)) categories}. Let $F : \mathcal{C} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}. 
+\begin{enumerate}
+    \item $F$ is called \hldef{full} if for every pair of objects $x,y \in \mathrm{Ob}(\mathcal{C})$, the induced rule/assignment/class function
+    $$ F_{x,y} : \Hom_\mathcal{C}(x,y) \to \Hom_\mathcal{D}(F(x), F(y)) $$
+    on Hom-collections is ``surjective'', i.e. for all morphisms $g:F(x) \to F(y)$, there exists some morphism $f: x \to y$ such that $F(f) = g$. 
+
+    \item $F$ is called \hldef{faithful} if for every pair of objects $x,y \in \mathrm{Ob}(\mathcal{C})$, 
+    the induced class function (assignment)
+    $$ F_{x,y} : \mathrm{Hom}_\mathcal{C}(x,y) \to \mathrm{Hom}_\mathcal{D}(F(x), F(y)) $$
+    on Hom-collections is ``injective'', i.e., for any morphisms $f_1, f_2 \in \mathrm{Hom}_\mathcal{C}(x,y)$, 
+    if $F(f_1) = F(f_2)$ in $\mathrm{Hom}_\mathcal{D}(F(x), F(y))$, then $f_1 = f_2$.
+
+    \item $F$ is called \hldef{fully faithful} if it is both full and faithful.
+\end{enumerate}
+
+\end{definition}

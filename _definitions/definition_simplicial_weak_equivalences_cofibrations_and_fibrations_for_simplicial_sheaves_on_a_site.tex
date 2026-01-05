@@ -1,0 +1,10 @@
+\begin{definition}[See e.g. {\cite[Section 2 Definition 1.2]{morel_voevodsky_1999}}] \label{definition:simplicial_weak_equivalences_cofibrations_and_fibrations_for_simplicial_sheaves_on_a_site}
+    Let $f: X \to Y$ be a morphism of simplicial sheaves on some site $T$.
+    \begin{enumerate}
+        \item $f$ is called a \hldef{(simplicial) weak eqiuvalence} if for any \CrefAndHyperrefIfExist{definition:point_of_a_topos}{point} $x$ of the site $T$, the morphism $x^*(f) : x^*(Y) \to x^*(Y)$ is a \CrefAndHyperrefIfExist{definition:standard_model_structure_on_the_category_of_simplicial_sets}{weak equivalence} of simplicial sets.
+        \item $f$ is called a \hldef{(simplicial) cofibration} if it is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism}.
+        \TODO{right lifting property}
+        \item $f$ is called a \hldef{(simplicial) fibration} if it has the right lifting property with respect to any cofibration that is also a weak equivalence.
+    \end{enumerate}
+    A morphism $f: X \to Y$ of \CrefAndHyperrefIfExist{definition:pointed_object_of_a_category_with_a_final_object}{pointed} \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of sets (on some site) is called a \hldef{simplicial weak equivalence} (resp. \hldef{simplicial cofibration}, resp. \hldef{simplicial fibration}) if it is a simplicial weak equivalence (resp. simplicial cofibration, resp. simplicial fibration) as a morphism of simplicial sheaves.
+\end{definition}

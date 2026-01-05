@@ -1,0 +1,66 @@
+\begin{definition}[Category] \label{definition:category}
+    A 
+    \defin{category}{category}{
+        name={Category},
+        description={A nice enough collection of objects and morphisms (\Cref{definition:category})},
+    }
+    \hldef{category} $\mathcal{C}$ consists of the following data:
+    \begin{itemize}
+        \item A class of \defin{objects}{object_of_a_category}{
+            name={Object of a category},
+            description={\Cref{definition:category}},
+        }
+        denoted \notat{\operatorname{Ob}(\mathcal{C})}{class_of_objects_of_a_category}{
+            name={$\operatorname{Ob}(\mathcal{C})$},
+            description={Class of objects of a category $\calC$ \Cref{definition:category}},
+            sort={Ob},
+        }.
+        % \hl{$\operatorname{Ob}(\mathcal{C})$}.
+        \item For each pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, a class
+        \notatin{\operatorname{Hom}_{\mathcal{C}}(X,Y)}{class_of_morphisms_between_two_objects_of_a_category}
+        {
+            name={$\operatorname{Hom}_{\mathcal{C}}(X,Y)$},
+            description={Class of morphisms between objects $X$ and $Y$ of the category $\calC$ (\Cref{definition:category})},
+            sort={Hom},
+        }
+        % $$\hlin{\operatorname{Hom}_{\mathcal{C}}(X,Y)}$$
+        of \defin{morphisms}{morphism_between_objects_of_a_category}{
+            name={Morphism between objects of a category},
+            description={(\Cref{definition:category})},
+        }
+        (also called 
+        \defin{arrows}{arrow_between_objects_of_a_category}{
+            name={Arrow between objects of a category},
+            description={Synonym for morphism (\Cref{definition:category})},
+        }
+        or
+        \defin{homs}{hom_between_objects_of_a_category}{
+            name={Hom between objects of a category},
+            description={Synonym for morphism (\Cref{definition:category})},
+        }). If the category $\calC$ is clear, then this \hldef{hom-class} is also denoted by \hl{$\operatorname{Hom}(X,Y)$}. It may also be denoted by \hl{$\operatorname{hom}_{\mathcal{C}}(X,Y)$} or \hl{$\operatorname{hom}(X,Y)$}, especially to distinguish from other types of hom's (e.g. \hyperrefIfExists{definition:internal_hom_object_in_a_category}{internal hom's})
+        \item For each triple of objects $X,Y,Z$, a composition law
+        $$ \circ : \operatorname{Hom}_{\mathcal{C}}(Y,Z) \times \operatorname{Hom}_{\mathcal{C}}(X,Y) \to \operatorname{Hom}_{\mathcal{C}}(X,Z), $$
+        denoted \hl{$(g,f) \mapsto g \circ f$}.
+        \item For each object $X$, an \hldef{identity morphism}
+        $$\hlin{\operatorname{id}_X \in \operatorname{Hom}_{\mathcal{C}}(X,X).}$$
+    \end{itemize}
+    These data satisfy the following axioms:
+    \begin{itemize}
+        \item (Associativity) For all morphisms $f \in \operatorname{Hom}_{\mathcal{C}}(X,Y)$, $g \in \operatorname{Hom}_{\mathcal{C}}(Y,Z)$, and $h \in \operatorname{Hom}_{\mathcal{C}}(Z,W)$, 
+        $$
+        h \circ (g \circ f) = (h \circ g) \circ f.
+        $$
+        \item (Identity) For all $f \in \operatorname{Hom}_{\mathcal{C}}(X,Y)$,
+        $$
+        \operatorname{id}_Y \circ f = f = f \circ \operatorname{id}_X.
+        $$
+    \end{itemize}
+    One often writes \hl{$X \in \calC$} synonymously with $X \in \Ob(\calC)$, i.e. to denote that $X$ is an object of of $\calC$. 
+
+    We may call a category as above an \hldef{ordinary category} to distinguish this notion from the notions of \hyperrefIfExists{definition:category_enriched_in_a_monoidal_category}{\emph{categories enriched in monoidal categories}} or higher/$n$-categories.
+    \TODO{TODO: define $n$-categories}
+
+    A category as defined above may be called called a \hldef{large category} or a \hldef{class category} to emphasize that the hom-classes may be proper classes rather than sets (note, however, that the possibility that hom-classes are sets is not excluded for large categories). Accordingly, a \hldef{category} may often refer to a \hyperrefIfExists{definition:locally_small_category}{locally small category}\CrefIfExists{definition:locally_small_category}, which is a category whose hom-classes are all sets.
+\end{definition}
+
+% Later on, we refer to the \gls{category} again.

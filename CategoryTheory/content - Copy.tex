@@ -1,0 +1,274 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{Basic category theory}
+
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_isomorphism_in_a_category.tex}
+
+
+
+
+\input{../_definitions/definition_locally_small_category.tex}
+
+\begin{convention}
+    In this document, care should be taken to make it clear whether a category is locally small or large. However, currently such care has not been fully taken, so most statements that just speak of ``categories'' may not be applicable to large categories.
+\end{convention}
+
+\input{../_definitions/definition_opposite_category_of_a_category.tex}
+
+\TODO{TODO: define and notate many common categories}
+
+\subsection{Functors between categories}
+
+\input{../_definitions/definition_functor_between_categories.tex}
+
+\subsubsection{Natural transformations between functors}
+\input{../_definitions/definition_natural_transformation_between_functors_between_categories.tex}
+
+\subsubsection{Adjoint functors between categories}
+
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+
+\input{../_definitions/definition_unit_and_counit_of_an_adjunction_between_categories.tex}
+\input{../_concepts/proposition_factorization_of_morphisms_through_counit_and_unit_morphisms_for_adjunctions_between_categories.tex}
+
+% \begin{proposition}[Factorization through the counit]
+% Let $\mathcal{C}$ and $\mathcal{D}$ be categories, and let 
+% $$
+% L : \mathcal{C} \to \mathcal{D}, 
+% \qquad 
+% R : \mathcal{D} \to \mathcal{C}
+% $$ 
+% be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint functors} with $L \dashv R$. Denote by 
+% $$ \eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow R \circ L, \qquad \varepsilon : L \circ R \Rightarrow \mathrm{Id}_{\mathcal{D}} $$
+% the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit and counit of the adjunction}.
+
+% Then for every $X' \in \mathrm{Ob}(\mathcal{C})$ and $X \in \mathrm{Ob}(\mathcal{D})$, a morphism 
+% $$ f : L(X') \to X \quad \text{in } \mathcal{D} $$
+% factors uniquely as
+% $$ f = \varepsilon_X \circ L(g), $$
+% for some morphism $g : X' \to R(X)$ in $\mathcal{C}$.
+
+% Equivalently, the assignment $g \mapsto \varepsilon_X \circ L(g)$ gives a bijection
+% $$ \Hom_\mathcal{C}(X', R(X)) \;\cong\; \Hom_\mathcal{D}(L(X'), X), $$
+% which is precisely the adjunction isomorphism.
+% \end{proposition}
+
+
+\subsection{Diagrams, systems, and limits in categories}
+
+\import{../_excerpts}{excerpts_diagrams_systems_and_limits_in_categories.tex}
+
+\subsection{Miscellaneous categorical constructions and definitions}
+
+\subsubsection{Subcategory of a category}
+\input{../_definitions/definition_subcategory_of_a_category.tex}
+
+\input{../_definitions/definition_full_subcategory_of_a_category.tex}
+\input{../_definitions/definition_replete_subcategory_of_a_category.tex}
+
+\input{../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex}
+
+\input{../_definitions/definition_replete_subcategory_of_a_category.tex}
+\input{../_definitions/definition_image_of_a_functor_between_categories.tex}
+\input{../_definitions/definition_reflective_subcategory_of_a_category.tex}
+
+
+
+
+
+\TODO{describe what monomorphisms and epimorphisms are like in additive or abelian categories}
+
+\subsubsection{Types of morphisms in a category}
+
+\input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+
+\subsubsection{Essential image of a functor between categories}
+
+\input{../_definitions/definition_essential_image_of_a_functor_between_categories.tex}
+
+
+
+\subsubsection{Types of categories}
+
+\input{../_definitions/definition_complete_and_cocomplete_category.tex}
+
+\subsubsection{Types of functors}
+
+\input{../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex}
+
+
+% \input{../_definitions/definition_reflects_isomorphisms_for_a_functor_between_categories.tex}
+\input{../_definitions/definition_reflects_a_type_of_morphism_for_a_functor_between_categories.tex}
+\input{../_concepts/proposition_reflection_of_monomorphism_and_epimorphisms_by_faithful_functors.tex}
+
+
+
+\subsubsection{Categories constructed from other categories}
+
+\input{../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex}
+
+\section{Monoidal categories}
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+
+\input{../_definitions/definition_monoidal_category.tex}
+
+\input{../_definitions/definition_internal_hom_object_in_a_category.tex}
+\input{../_definitions/definition_closed_category.tex}
+\input{../_definitions/definition_closed_monoidal_category.tex}
+
+\input{../_definitions/definition_symmetric_monoidal_category.tex}
+
+% \section{Tannakian formalism}
+% \input{../_definitions/definition_k_linear_category_over_a_field.tex}
+% \input{../_definitions/definition_rigid_category.tex}
+
+\subsubsection{Types of objects in a category}
+
+\begin{definition} \label{definition:initial_final_zero_object_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+
+\begin{enumerate}
+    \item An object $I \in \mathcal{C}$ is called an \hldef{initial object} if for every object $X \in \mathcal{C}$ there exists a unique morphism
+    $$I \to X.$$
+
+    \item An object $F \in \mathcal{C}$ is called a \hldef{final object} (or \hldef{terminal object}) if for every object $X \in \mathcal{C}$ there exists a unique morphism
+    $$X \to F.$$
+
+    \item An object $Z \in \mathcal{C}$ is called a \hldef{zero object} if $Z$ is both initial and final in $\mathcal{C}$. In particular, for every object $X \in \mathcal{C}$ there exist unique morphisms
+    $$Z \to X \quad \text{and} \quad X \to Z.$$
+\end{enumerate}
+\end{definition}
+
+
+
+\section{Additive and abelian categories}
+
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_additive_functor_between_additive_categories.tex}
+\input{../_definitions/definition_abelian_category.tex}
+% \input{../_definitions/definition_length_of_an_object_in_an_abelian_category.tex}
+
+\subsection{Simple and semisimple objects in an additive category}
+
+\input{../_definitions/definition_subobject_of_an_object_of_an_additive_category.tex}
+
+Unlike the notion of a subobject, the notion of a quotient object is more appropriate to speak of for an abelian category rather than a more general additive category.
+
+\input{../_definitions/definition_quotient_object_of_an_object_of_an_abelian_category_by_a_subobject.tex}
+\input{../_definitions/definition_subquotient_of_an_object_in_an_abelian_category.tex}
+\input{../_definitions/definition_direct_summand_of_an_object_of_an_additive_category.tex}
+\input{../_definitions/definition_simple_object_of_an_additive_category.tex}
+\input{../_definitions/definition_semisimple_object_of_an_additive_category.tex}
+\input{../_definitions/definition_semisimple_additive_category.tex}
+
+
+
+
+
+\TODO{TODO: Give examples of monoidal categoriess}
+
+\section{Categories enriched in monoidal categories}
+
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+
+We might want to study (locally small) categories whose hom-sets carry additional structure beyond that of a set (e.g. an abelian group, vector space); the theory of categories enriched in monoidal categories accommodates such desires.
+
+\input{../_definitions/definition_category_enriched_in_a_monoidal_category.tex}
+
+\begin{example}
+    \begin{enumerate}
+        \item A \hyperrefIfExists{definition:category_enriched_in_a_monoidal_category}{category enriched in} $\Sets$ is equivalent to a \hyperrefIfExists{definition:locally_small_category}{locally small category}. 
+        \item A category enriched in $\Ab$ is equivalent to a \hyperrefIfExists{definition:additive_category}{pre-additive category}. 
+        \TODO{TODO: define an $R$-linear category and a $k$-linear category}
+        \item Let $R$ be a commutative ring. A category enriched in $R\mathrm{-Mod}$ is equivalent to a $R$-linear category. 
+        \item Let $k$ be a field. A category enriched in $k\mathrm{-Vect}$ is equivalent to a $k$-linear category. 
+    \end{enumerate}
+\end{example}
+
+
+\section{Categories enriched in monoidal categories}
+
+\section{Sites, sheaves and topoi}
+
+\input{../_definitions/definition_presheaf_on_a_category.tex}
+\input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
+\begin{remark}
+    Even when $\calC$ is ($U$-)locally small and ($\calA$ is ($U$-)locally small), $\PreShv(\calC, \calA)$ may not be locally small.
+\end{remark}
+\begin{remark}
+    In practice, one might treat $\calC$ as if it were a small category, even when it is technically not a small category, to treat $\PreShv(\calC, \calA)$ as if it were a locally small category. For example, in algebraic geometry, we might take $\calC$ to be the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{small \'etale site $X_{\et}$}\CrefIfExists{definition:small_etale_site_of_a_scheme} of some scheme $X$; this is not a small category. Instead, we might technically replace $X_{\et}$ with a small category, e.g. the set of \'etale maps $U \to X$ of the following form: $U$ is obtained by patching the schemes attached to quotients of rings of the form $A[T_1,T_2,\ldots]$ where $A = \Gamma(V, \calO_X)$ for some open affine $V \subset X$ and $\{T_1,T_2,\ldots\}$ is a fixed countable set of symbols. Such technicalities of replacing $\calC$ with a small category are often glossed over.
+\end{remark}
+
+\input{../_definitions/definition_small_etale_site_of_a_scheme.tex}
+
+\input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+\input{../_definitions/definition_sheafification_functor_on_a_site.tex}
+
+The following expresses the idea that sheafification functors exist for small enough sites.
+\input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
+\input{../_definitions/definition_topos.tex}
+
+\input{../_concepts/lemma_slice_category_of_a_topos_is_a_topos.tex}
+
+\input{../_definitions/definition_topos_of_objects_over_a_fixed_object_of_a_topos.tex}
+
+\subsection{Sheaf cohomology}
+
+\input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
+\input{../_definitions/definition_left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives.tex}
+
+\begin{definition}
+Let $(\mathcal{C}, J)$ be a site. Let $\mathcal{F}$ be a sheaf of abelian groups (more generally of modules over a fixed \CrefAndHyperrefIfExist{definition:ring}{ring}) on $(\mathcal{C}, J)$.
+
+\TODO{global sections functor}
+For each integer $n \geq 0$, the \hldef{$n$-th sheaf cohomology group} of $\mathcal{F}$ is
+$$\hlin{H^n(\mathcal{C}, J; \mathcal{F}) := R^n \Gamma(\mathcal{F}),}$$
+where $R^n \Gamma$ is the $n$-th \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functor} of the global sections functor $\Gamma$, which is a left exact functor.
+
+
+The \hldef{sheaf cohomology groups of $\mathcal{F}$} on the site $(\mathcal{C}, J)$ are defined as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functors} of the global sections functor
+$$\Gamma : \mathrm{Sh}(\mathcal{C}, J) \to \mathbf{Ab}, \quad \Gamma(\mathcal{F}) = \mathcal{F}(\ast),$$
+where $\mathrm{Sh}(\mathcal{C}, J)$ denotes the category of sheaves of abelian groups on $(\mathcal{C}, J)$, and $\ast$ denotes the final object in $\mathcal{C}$ if it exists or a chosen terminal object.
+
+More precisely, 
+
+If $\mathcal{C}$ has no final object, $H^n(\mathcal{C}, J; \mathcal{F})$ is defined by choosing an injective resolution of $\mathcal{F}$ and taking cohomology of the resulting complex obtained by applying $\Gamma$.
+
+% These groups measure the extent to which global sections fail to be exact, and generalize classical sheaf cohomology defined on topological spaces to arbitrary sites.
+\end{definition}
+
+
+\appendix
+
+\section{Grothendieck universes}
+
+Recall that the collection of all sets within Zermelo-Fraenkel set theory is a proper class and not a set. We often use Grothendieck universes in categorical discussions as a way to restrict the sets considered so as to guarantee that only sets result in the categorical constructions that matter (e.g. to guarantee that the hom's in a newly constructed category form a set).
+
+\input{../_definitions/definition_grothendieck_universe.tex}
+% \begin{definition}[U-Smallness] \label{definition:U_small}
+%     Let $U$ be a \hyperrefIfExists{definition:grothendieck_universe}{Grothendieck universe}\CrefIfExists{definition:grothendieck_universe}. A set $X$ is called \hldef{$U$-small} if $X \in U$. 
+% \end{definition}
+\begin{remark}
+    Given a Grothendieck universe $U$, the collection of all $U$-small sets is $U$ itself, which contrasts against the fact that the collection of all sets (for the ZF (and ZFC) axioms) is a proper class.
+\end{remark}
+
+\begin{remark}
+    Within ZF/ZFC alone, there is no guarantee that every given set $S$ satisfies $S \in U$ for some universe $S$.
+\end{remark}
+
+\begin{remark}
+    While universes are a powerful tool for studying category theory, they are not universally used or necessary for doing so. Usage depends on the context and foundational preferences. For instance, Grothendieck universes can be used to simplify foundational technicalities when one needs to work with such things as ``categories of all categories'' or ``functor categories'' of large size. 
+\end{remark}
+
+
+
+
+

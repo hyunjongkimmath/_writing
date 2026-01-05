@@ -1,0 +1,16 @@
+
+\begin{definition}[Discrete valuation ring] \label{definition:discrete_valuation_ring}
+\TODO{define principal ideal}
+    A local \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{integral domain} $(R, \mathfrak{m})$ with \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} $\mathfrak{m}$ is called a \hldef{discrete valuation ring (DVR)} if $\mathfrak{m}$ is principal and nonzero, and every nonzero ideal of $R$ is of the form $\mathfrak{m}^n$ for some integer $n \geq 0$.
+
+    A \hldef{uniformizer of $R$} refers to any generator of $\mathfrak{m}$.
+
+    The \hldef{(normalized) discrete valuation} $v: R^\times \to \mathbb{Z}_{\geq 1}$ is given by
+    $$v(x) = \text{minimal } n \text{ such that } x \in \mathfrak{m}^n.$$
+    Alternatively, $v$ may be extended to a map $v: R \to \mathbb{Z}_{\geq 1} \cup \{\infty\}$ by letting $v(0) = \infty$. 
+
+    In fact, $v$ extends to a \CrefAndHyperrefIfExist{definition:discrete_valuation_on_a_field}{discrete valuation} on the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field of $R$} by defining
+    $$v\left( \frac{a}{b} \right) = v(a) - v(b)$$
+    for $a \in R$ and $b \in R^\times$. This is a well defined map
+    $$v: K \to \bbZ \cup \{\infty\}.$$
+\end{definition}

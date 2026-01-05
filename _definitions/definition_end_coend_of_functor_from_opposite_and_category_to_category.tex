@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:end_coend_of_functor_from_opposite_and_category_to_category}
+Let $C$ and $D$ be \CrefAndHyperrefIfExist{definition:category}{categories} and let $S: C^{op} \times C \to D$ be a functor.
+
+An \hldef{end of $S$} is a pair $(E, \omega)$, where $E$ is an object of $D$ and $\omega: E \to S$ is a \CrefAndHyperrefIfExist{definition:wedge_cowedge_between_functor_from_opposite_and_category_to_category_and_object_of_target}{wedge}, which is universal among all wedges to $S$. That is, for any object $d \in D$ and any wedge $\nu: d \to S$, there exists a unique morphism $h: d \to E$ in $D$ such that $\nu_c = \omega_c \circ h$ for all $c \in \operatorname{Ob}(C)$. The object $E$ is uniquely determined up to unique isomorphism and is denoted by
+$$
+\hlin{ \int_{c \in C} S(c,c) \quad \text{or} \quad \int_C S. }
+$$
+
+Dually, a \hldef{coend of $S$} is a pair $(K, \beta)$, where $K$ is an object of $D$ and $\beta: S \to K$ is a cowedge, which is universal among all cowedges from $S$. That is, for any object $d \in D$ and any cowedge $\gamma: S \to d$, there exists a unique morphism $g: K \to d$ in $D$ such that $\gamma_c = g \circ \beta_c$ for all $c \in \operatorname{Ob}(C)$. The object $K$ is denoted by
+$$ \hlin{ \int^{c \in C} S(c,c) \quad \text{or} \quad \int^C S. } $$
+\end{definition}

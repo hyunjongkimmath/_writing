@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:injective_surjective_bijective_map_of_sets}
+Let $X$ and $Y$ be sets and let $f: X \to Y$ be a function.
+\begin{itemize}
+  \item The function $f$ is said to be \hldef{injective} (or \hldef{one-to-one}) if for all $x_1, x_2 \in X$, $f(x_1) = f(x_2)$ implies $x_1 = x_2$.
+  \item The function $f$ is said to be \hldef{surjective} (or \hldef{onto}) if for every $y \in Y$ there exists $x \in X$ such that $f(x) = y$.
+
+  \item The map $f$ is \hldef{bijective} if it is both injective and surjective. In this case, there exists a unique \hldef{inverse map} \hl{$f^{-1} : Y \to X$} such that for all $x \in X$ and $y \in Y$,
+    $$f^{-1}(f(x)) = x \text{ and } f(f^{-1}(y)) = y.$$
+\end{itemize}
+\end{definition}

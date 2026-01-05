@@ -1,0 +1,27 @@
+\begin{definition}[category of chain complexes as a dg-category] \label{definition:category_of_chain_complexes_of_objects_in_an_additive_category_as_a_dg_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category} and suppose that $\calA$ is \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched over} a commutative ring $k$. The category \hl{$\mathrm{Ch}(\calA)$}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category} can be given the structure of a \CrefAndHyperrefIfExist{definition:dg_category_over_a_ring}{dg-category over $k$} as follows:
+\begin{itemize}
+    \item An object in $\mathrm{Ch}(\mathcal{A})$ is, as usual, a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} of objects in $\calA$.    
+
+    \item For a pair of chain complexes $X^\bullet, Y^\bullet \in \mathrm{Ch}(\mathcal{A})$, the hom-complex $\mathrm{Hom}_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Y^\bullet) \in \Ob \mathrm{Ch}(\calA)$ is the complex of $k$-modules with
+    \[
+    \mathrm{Hom}^n_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Y^\bullet) := \prod_{m \in \mathbb{Z}} \mathrm{Hom}_\mathcal{A}\bigl(X^m, Y^{m+n}\bigr).
+    \]
+    The differential on this complex, $\delta: \mathrm{Hom}^n_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Y^\bullet) \to \mathrm{Hom}^{n+1}_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Y^\bullet)$, is given by
+    \[
+    \delta(f)^m := d_Y^{m+n} \circ f^m - (-1)^n f^{m+1} \circ d_X^m,
+    \]
+    for $f = (f^m)_{m \in \mathbb{Z}}$.
+    
+    \item Composition of morphisms
+    \[
+    \circ : \mathrm{Hom}^p_{\mathrm{Ch}(\mathcal{A})}(Y^\bullet, Z^\bullet) \otimes \mathrm{Hom}^q_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Y^\bullet) \to \mathrm{Hom}^{p+q}_{\mathrm{Ch}(\mathcal{A})}(X^\bullet, Z^\bullet)
+    \]
+    is given by component-wise composition in $\mathcal{A}$ with the Koszul sign rule:
+    \[
+    (g \circ f)^m := g^{m+q} \circ f^m.
+    \]
+    
+    \item For each $X^\bullet$, the identity morphism is the family $(1_{X^m})_{m \in \mathbb{Z}}$ in degree zero.
+\end{itemize}
+\end{definition}

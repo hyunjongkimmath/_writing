@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:semidirect_product_of_groups_external_and_internal}
+    \begin{enumerate}
+        \item Let $N$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\varphi: H \to \operatorname{Aut}(N)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}, where $\operatorname{Aut}(N)$ is the \CrefAndHyperrefIfExist{definition:automorphism_of_a_group_automorphism_group_of_a_group}{group of automorphisms} of $N$. The \hldef{external semidirect product of $N$ and $H$ with respect to $\varphi$}, denoted \hl{$N \rtimes_\varphi H$}, is the group defined on the set $N \times H$ with the binary operation:
+        $$ (n_1, h_1)(n_2, h_2) = (n_1 \varphi(h_1)(n_2), h_1 h_2) $$
+        for all $n_1, n_2 \in N$ and $h_1, h_2 \in H$.
+
+        \item Let $G$ be a group. $G$ is the \hldef{internal semidirect product of a subgroup $N$ and a subgroup $H$} if the following conditions hold:
+        \begin{enumerate}
+            \item $N$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
+            \item $G = NH$, meaning every element $g \in G$ can be written as $g = nh$ for some $n \in N$ and $h \in H$.
+            \item $N \cap H = \{1\}$, where $1$ is the identity element of $G$.
+        \end{enumerate}
+    \end{enumerate}
+\end{definition}

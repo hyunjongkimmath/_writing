@@ -1,0 +1,24 @@
+
+\begin{definition} \label{definition:field_of_fractions_of_an_integral_domain}
+Let $R$ be an \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{integral domain}, and consider the set $R \times (R \setminus \{0\})$ as above. Define a relation $\sim$ on $R \times (R \setminus \{0\})$ by declaring that
+$$(a,b) \sim (c,d) \quad \text{if and only if} \quad ad = bc,$$
+for $a,c \in R$ and $b,d \in R \setminus \{0\}$.  
+This relation is an equivalence relation. Its equivalence classes are denoted by
+\hl{$\tfrac{a}{b}$}.
+
+The set of equivalence classes
+$$\left\{\, \tfrac{a}{b} \,\middle|\, a \in R, \, b \in R \setminus \{0\} \,\right\}$$
+under the relation $\sim$ defined above is called the \hldef{field of fractions of $R$}, and is denoted by \hl{$\operatorname{Frac}(R)$}.  
+
+The operations on $\operatorname{Frac}(R)$ are defined by
+\begin{align*}
+\tfrac{a}{b} + \tfrac{c}{d} &= \tfrac{ad+bc}{bd}, \\
+\tfrac{a}{b} \cdot \tfrac{c}{d} &= \tfrac{ac}{bd},
+\end{align*}
+for $a,c \in R$ and $b,d \in R \setminus \{0\}$.
+With these operations, $\operatorname{Frac}(R)$ is a \CrefAndHyperrefIfExist{definition:field}{field}.
+
+\TextIfExists{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}{
+Equivalently, $\operatorname{Frac}(R)$ may be defined as the \CrefAndHyperrefIfExist{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}{localization of $R$} by the \CrefAndHyperrefIfExist{definition:multiplicative_subset_of_a_ring}{multiplicative subset $R \setminus \{0\}$}.
+}
+\end{definition}

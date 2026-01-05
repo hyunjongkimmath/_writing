@@ -1,0 +1,19 @@
+\begin{proposition}[Pointwise Computation of Limits and Colimits in Functor Categories] \label{proposition:limits_and_colimits_in_functor_categories_may_be_computed_pointwise}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be categories. Let $\operatorname{Fun}(\mathcal{C}, \mathcal{D})$ denote the category of functors from $\mathcal{C}$ to $\mathcal{D}$ (also denoted $\mathcal{D}^{\mathcal{C}}$). Let $\mathcal{J}$ be a small category and let $F: \mathcal{J} \to \operatorname{Fun}(\mathcal{C}, \mathcal{D})$ be a diagram of functors, denoted by $j \mapsto F_j$.
+    
+    \begin{enumerate}
+        \item \textbf{Limits are computed pointwise:}
+        Suppose that for every object $C \in \mathcal{C}$, the limit of the diagram $j \mapsto F_j(C)$ exists in $\mathcal{D}$. Then the limit of the diagram $F$ exists in $\operatorname{Fun}(\mathcal{C}, \mathcal{D})$ and is computed pointwise. That is, there is an isomorphism in $\operatorname{Fun}(\mathcal{C}, \mathcal{D})$:
+        \[
+        \left( \lim_{j \in \mathcal{J}} F_j \right)(C) \cong \lim_{j \in \mathcal{J}} (F_j(C)).
+        \]
+        The action of this limit functor on a morphism $f: C \to C'$ in $\mathcal{C}$ is the unique morphism induced by the family $\{ F_j(f) \}_{j \in \mathcal{J}}$ via the universal property of limits in $\mathcal{D}$.
+        
+        \item \textbf{Colimits are computed pointwise:}
+        Suppose that for every object $C \in \mathcal{C}$, the colimit of the diagram $j \mapsto F_j(C)$ exists in $\mathcal{D}$. Then the colimit of the diagram $F$ exists in $\operatorname{Fun}(\mathcal{C}, \mathcal{D})$ and is computed pointwise. That is, there is an isomorphism in $\operatorname{Fun}(\mathcal{C}, \mathcal{D})$:
+        \[
+        \left( \operatorname{colim}_{j \in \mathcal{J}} F_j \right)(C) \cong \operatorname{colim}_{j \in \mathcal{J}} (F_j(C)).
+        \]
+        The action of this colimit functor on a morphism $f: C \to C'$ in $\mathcal{C}$ is the unique morphism induced by the family $\{ F_j(f) \}_{j \in \mathcal{J}}$ via the universal property of colimits in $\mathcal{D}$.
+    \end{enumerate}
+\end{proposition}

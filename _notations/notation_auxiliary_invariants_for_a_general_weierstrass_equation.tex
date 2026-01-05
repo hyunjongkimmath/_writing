@@ -1,0 +1,33 @@
+
+\begin{notation}[Auxiliary Invariants for a General Weierstrass Equation] \label{notation:auxiliary_invariants_for_a_general_weierstrass_equation}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{(commutative unital) ring}. 
+    For the \CrefAndHyperrefIfExist{lemma:general_weierstrass_equation_can_be_simplified_if_2_or_3_is_invertible}{general Weierstrass equation}
+    $$ y^2 + a_1 x y + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6.  $$
+    with coefficients $a_1,a_2,a_3,a_4,a_6 \in R$, the following are standard notation:
+
+    \hlalign{
+    \begin{align*}
+    b_2 &= a_1^2 + 4a_2, \\
+    b_4 &= 2a_4 + a_1 a_3, \\
+    b_6 &= a_3^2 + 4a_6, \\
+    b_8 &= a_1^2 a_6 + 4 a_2 a_6 - a_1 a_3 a_4 + a_2 a_3^2 - a_4^2. \\
+    c_{4}&=b_{2}^{2}-24 b_{4} \\
+    c_{6}&=-b_{2}^{3}+36 b_{2} b_{4}-216 b_{6}
+    \end{align*} }
+
+    For a \CrefAndHyperrefIfExist{definition:weierstrass_equation_over_a_ring}{short Weierstrass equation}
+    $$ y^2 = x^3 + A x + B, $$
+    with $A,B \in R$, these invariants simplify as follows:
+
+    \begin{align*}
+    b_{2} &= 0, \\
+    b_{4} &= 2 A, \\
+    b_{6} &= 4 B, \\
+    b_{8} &= -A^2, \\
+    c_{4} &= -24 b_{4} = -48 A, \\
+    c_{6} &= -216 b_{6} = -864 B.
+    \end{align*}
+
+
+
+\end{notation}

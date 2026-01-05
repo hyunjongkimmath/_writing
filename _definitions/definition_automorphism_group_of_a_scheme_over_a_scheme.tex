@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:automorphism_group_of_a_scheme_over_a_scheme}
+Let $S$ be a scheme and let $f : X \to S$ be a morphism of schemes over $S$. The \hldef{automorphism group of $X$ over $S$}, denoted \hl{$\operatorname{Aut}(X/S) = \operatorname{Aut}_S(X)$}, is the group of all \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$S$-scheme} automorphisms of $X$, i.e., all isomorphisms of schemes $\varphi : X \to X$ such that the diagram
+$$
+\begin{tikzcd}
+X \arrow[rd, "f"] \arrow[rr, "\varphi", "\sim"'] & & X \arrow[ld, "f"'] \\
+ & S & 
+\end{tikzcd}
+$$
+commutes. The group operation is composition of morphisms.
+\end{definition}

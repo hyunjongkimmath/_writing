@@ -1,0 +1,29 @@
+
+\begin{theorem}[Effect of an Admissible Change of Variables on the Discriminant and j-invariant] \label{theorem:effects_of_admissible_change_of_variables_on_a_gneeral_weierstass_equation_on_discriminant_and_j_invariant}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity}. Consider a \CrefAndHyperrefIfExist{lemma:general_weierstrass_equation_can_be_simplified_if_2_or_3_is_invertible}{general Weierstrass equation over $R$},
+    $$ y^2 + a_1 x y + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6, $$
+    with coefficients $a_1,a_2,a_3,a_4,a_6 \in R$, and let
+    $\Delta \in R$ and $j \in R$ be its \CrefAndHyperrefIfExist{definition:discriminant_of_a_general_weierstrass_equation}{discriminant} and \CrefAndHyperrefIfExist{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{$j$-invariant}, respectively.
+
+    Suppose this equation is transformed by an \CrefAndHyperrefIfExist{definition:admissible_change_of_variables_for_a_weierstrass_equation_over_a_commutative_ring_with_unity}{admissible change of variables}
+    $$ x = u^2 x' + r, \quad y = u^3 y' + u^2 s x' + t, $$
+    where $u \in R^\times$ (a unit), and $r,s,t \in R$ into the Weierstrass equation
+    $$ (y')^2 + a_1' x' y' + a_3' y' = (x')^3 + a'_2 (x')^2 + a'_4 x' + a'_6. $$
+    Write $b_i'$ and $c_j'$ for the \CrefAndHyperref{notation:auxiliary_invariants_for_a_general_weierstrass_equation}{standard invariants} for this Weierstrass equation and write $\Delta'$ and $j'$ for the discriminant and $j$-invariant of the transformed Weierstrass equation.
+
+    Then the invariants transform according to the following:
+    
+    $$\begin{aligned} \hline
+    u a_{1}^{\prime} &=a_{1}+2 s \\ u^{2} a_{2}^{\prime} &=a_{2}-s a_{1}+3 r-s^{2} \\ u^{3} a_{3}^{\prime} &=a_{3}+r a_{1}+2 t \\ u^{4} a_{4}^{\prime} &=a_{4}-s a_{3}+2 r a_{2}-(t+r s) a_{1}+3 r^{2}-2 s t \\ u^{6} a_{6}^{\prime} &=a_{6}+r a_{4}+r^{2} a_{2}+r^{3}-t a_{3}-t^{2}-r t a_{1} \\
+    \hline
+    u^{2} b_{2}^{\prime} &=b_{2}+12 r \\ u^{4} b_{4}^{\prime} &=b_{4}+r b_{2}+6 r^{2} \\ u^{6} b_{6}^{\prime} &=b_{6}+2 r b_{4}+r^{2} b_{2}+4 r^{3} \\ u^{8} b_{8}^{\prime} &=b_{8}+3 r b_{6}+3 r^{2} b_{4}+r^{3} b_{2}+3 r^{4} \\
+    \hline
+    u^{4} c_{4}^{\prime} &=c_{4} \\ u^{6} c_{6}^{\prime} &=c_{6} \\ u^{12} \Delta^{\prime} &=\Delta \\ j^{\prime} &=j  \\ \hline \end{aligned}$$
+
+    % :
+    % $$ \Delta' = u^{-12} \Delta, $$
+    % and
+    % $$ j' = j.  $$
+
+    In particular, the discriminant changes by a factor of the twelfth power of the inverse of the unit $u$, while the $j$-invariant remains invariant under all admissible changes of variables.
+\end{theorem}

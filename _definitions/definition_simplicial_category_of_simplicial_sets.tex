@@ -1,0 +1,26 @@
+\begin{definition} \label{definition:simplicial_category_of_simplicial_sets}
+    The category $\mathbf{s}\Sets$ of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets} can be enriched with the structure of a \CrefAndHyperrefIfExist{definition:simplicial_category}{simplicial category} 
+    (i.e. $\mathbf{s}\Sets$ can be regarded as a category \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched} in $\mathbf{s}\Sets$) as follows: given simplicial sets $X$ and $Y$, we let $\operatorname{Mor}(X,Y)$, which is also often denoted by notations such as \hl{$Y^X$} and referred to as the \hldef{exponential simplicial set from $X$ to $Y$} or the \hldef{simplicial mapping object from $X$ to $Y$}
+    $$\operatorname{Mor}(X,Y)_n = \Hom_{\mathbf{s}\Sets}(X \times \Delta^n, Y)$$
+    \CrefIfExists{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}\CrefIfExists{definition:standard_n_simplex} 
+    \TODO{discuss what the face and degeneracy maps do}
+    and we let composition be given by the \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set morphisms}
+    $$\circ: \operatorname{Mor}(Y,Z) \times \operatorname{Mor}(X,Y) \to \operatorname{Mor}(X,Z)$$
+    where $X,Y,Z$ are simplicial sets as follows:
+    \begin{enumerate}
+        \item The $n$-simplices of the product simplicial set $\operatorname{Mor}(Y,Z) \times \operatorname{Mor}(X,Y)$ is the product set $\operatorname{Mor}(Y,Z)_n \times \operatorname{Mor}(X,Y)_n$
+
+        \item Since the $n$-simplices of $\operatorname{Mor}(Y,Z)$ and the $n$-simplicies of $\operatorname{Mor}(X,Y)$ are respectively given by simplicial set morphisms
+        $$f: Y \times \Delta^n \to Z$$
+        $$g: X \times \Delta^n \to Y$$
+        respectively, the $n$-simplices of the product simplicial set are given by pairs $(f,g)$ of such morphisms.
+        \item The composition $\circ(f,g)$ is the simplicial set morphism
+        $$X \times \Delta^n \xrightarrow{\id_X \times \Delta} X \times (\Delta^n \times \Delta^n) \cong (X \times \Delta^n) \times \Delta^n \xrightarrow{g, \id_{\Delta^n}} Y \times \Delta^n \xrightarrow{f} Z$$
+        where $\Delta: \Delta^n \to \Delta^n \times \Delta^n$ is the diagonal morphism of the standard $n$-simplex $\Delta^n$.
+    \end{enumerate}
+
+    
+    This simplicial category may be called the \hldef{simplicial category of simplicial sets} and the same notations, such as \hl{$\mathbf{s}\mathbf{Sets}$} or \hl{$\mathbf{Sets}_\Delta$}, used to denote the (ordinary) category of simplicial sets may be used to denote this simplicial category.
+
+    When the simplicial set $Y$ is \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-categories}, it is also customary to denote $\mathrm{Mor}(X,Y)$ by \hl{$\Fun(X,Y)$}, and to call this the \hldef{functor $\infty$-category from $X$ to $Y$}, especially when both $X$ and $Y$ are $\infty$-categories; it is itself an $\infty$-category. See also \Cref{definition:functor_between_infty_categories}.
+\end{definition}

@@ -1,0 +1,14 @@
+% \begin{definition} \label{definition:banach_space}
+% A \hldef{Banach space} is a vector space \(X\) over the field \(\mathbb{R}\) or \(\mathbb{C}\) equipped with a norm \(\|\cdot\|\) such that \(X\) is complete with respect to the metric induced by the norm.
+% \end{definition}
+
+\begin{definition}[Banach space over a complete valued field] \label{definition:banach_space_over_a_complete_valued_field}
+Let $k$ be a field equipped with a non-trivial absolute value $|\cdot| : k \to \mathbb{R}_{\geq 0}$ such that $k$ is complete with respect to the metric induced by $|\cdot|$.  
+A \hldef{Banach space over $k$} is a vector space $X$ over $k$ equipped with a norm $\|\cdot\| : X \to \mathbb{R}_{\geq 0}$ satisfying:
+\begin{align*}
+\|x\| = 0 &\iff x = 0, \\
+\|x+y\| &\leq \|x\| + \|y\| \quad \text{for all } x,y \in X, \\
+\|\lambda x\| &= |\lambda|\cdot\|x\| \quad \text{for all } \lambda \in k, x \in X,
+\end{align*}
+such that the metric $d(x,y) := \|x-y\|$ makes $(X,d)$ into a complete metric space.
+\end{definition}

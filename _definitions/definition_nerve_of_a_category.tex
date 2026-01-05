@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:nerve_of_a_category}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. The \hldef{nerve of $\calC$} is the \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial ``class''} \hl{$N(\calC)$} given as follows: for $n \geq 0$, the \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$n$-simplicies} $N(\calC)_n$ is the class of all functors \CrefAndHyperrefIfExist{definition:simplex_category}{$[n] \to \calC$}. In other words, $N(\calC)_n$ is the class of all composable sequences
+    $$ C_0 \stackrel{f_1}{\rightarrow} C_1 \ldots \stackrel{f_n}{\rightarrow} C_n$$
+    of morphisms of length $n$. The \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{face map} $d_i: N(\calC)_n \to N(\calC)_{n-1}$ carries the above sequence to 
+    $$C_0 \stackrel{f_1}{\rightarrow} C_1 \ldots \stackrel{f_{i-1}}{\rightarrow} C_{i-1} \stackrel{ f_{i+1} \circ f_i }{\rightarrow} C_{i+1} \stackrel{f_{i+2}}{\rightarrow} \ldots \stackrel{f_{n}}{\rightarrow} C_n$$
+    while the degeneracy $s_i$ carries it to
+    $$C_0 \stackrel{f_1}{\rightarrow} C_1 \ldots \stackrel{f_i}{\rightarrow} C_i \stackrel{id_{C_i}}{\rightarrow} C_i \stackrel{f_{i+1}}{\rightarrow} C_{i+1} \stackrel{f_{i+2}}{\rightarrow} \ldots \stackrel{f_n}{\rightarrow} C_n.$$
+
+    If $\calC$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, then $N(\calC)$ is a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set}.
+
+    Note that the category $\calC$ can be recovered, roughly up to isomoprhism, from its nerve $N(\calC)$. The objects of $\calC$ are simply the objects of $N(\calC)_0$. The morphisms $C_0 \to C_1$ are given by objects $\phi \in N(\calC)_1$ such that $d_1(\phi) = C_0$ and $d_0(\phi) = C_1$. The identity morphism $C \to C$ is given by the degenerate simplex $s_0(C)$. Moreover, given a diagram $C_0 \xrightarrow{\phi} C_1 \xrightarrow{\psi} C_2$, the object $N(\calC)_1$ corresponding to $\psi \circ \phi: C_0 \to C_2$ is uniquely characterized by the $2$-simplex $\sigma \in N(\calC)_2$ such that $d_2(\sigma) = \phi, d_0(\sigma) = \psi$, and $d_1(\sigma) = \psi \circ \phi$. 
+\end{definition}

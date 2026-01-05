@@ -1,0 +1,18 @@
+\begin{definition}[Natural module structures induced by opposite rings] \label{definition:module_structure_induced_from_a_module_over_the_opposite_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring (not necessarily commutative)}.
+
+\begin{enumerate}
+    \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}, then $M$ naturally has a structure of a right \CrefAndHyperrefIfExist{definition:opposite_ring_of_a_ring}{$R^\mathrm{op}$}-module defined by
+    $$ m \cdot r := r \cdot m, $$
+    for all $m \in M$ and $r \in R$, where the multiplication on the right is the original left $R$-action on $M$ but re-interpreted so elements of $R^\mathrm{op}$ act from the right.
+    
+    \item Dually, if $M$ is a right $R$-module, then $M$ naturally has a structure of a left $R^\mathrm{op}$-module defined by
+    $$ r \cdot m := m \cdot r, $$
+    for all $m \in M$ and $r \in R$, where the multiplication on the left is the original right $R$-action on $M$ but re-interpreted as a left action of $R^\mathrm{op}$.
+\end{enumerate}
+If $R$ is a commutative ring, and given a left/right $R$-module $M$, recall that $R^{\op}$ is naturally isomorphic to $R$ (\Cref{definition:opposite_ring_of_a_ring}), so the right/left $R^{\op}$-module structure on $M$ is a right/left $R$-module structure. In fact, the left/right $R$-module and right/left $R$-module structures on $M$ make $M$ into an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$R$-bimodule}.
+\end{definition}
+
+\begin{remark}
+    Given a general \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right $R$-module} $M$, the right/left \CrefAndHyperrefIfExist{definition:opposite_ring_of_a_ring}{$R^{\op}$}-module structure does not necessarily make $M$ into an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$R^{\op}$-bimodule}.
+\end{remark}

@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:L_p_norm_on_a_measure_space}
+Let \( (X, \mathcal{A}, \mu) \) be a measure space. 
+    \begin{enumerate}
+        \item Let \( 1 \leq p < \infty \). Given a measurable function $f: X \to \bbC$, the \hldef{$L^{p}$-norm} is the \hyperrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm}\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value} defined by
+        $$\hlin{\|f\|_{p} = \left( \int_{X} |f(x)|^{p} \, d\mu(x) \right)^{\frac{1}{p}}.}$$
+        
+
+        \item Let \( p = \infty \). Given a measurable function $f: X \to \bbC$, the \hldef{$L^\infty$-norm} is the \hyperrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm}\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value} defined by
+        $$\hlin{\|f\|_{\infty} = \inf \{ M \geq 0 : |f(x)| \leq M \quad \text{for } \mu\text{-almost every } x \in X \}.}$$
+
+        \item Let $1 \leq p \leq \infty$. The \hldef{$L^{p}$ space on $X$} is defined as the set
+        $$\hlin{L^{p}(X) = L^{p}(X, \mu) =\left\{ f : X \to \mathbb{C} \mid f \text{ is measurable and } \|f\|_p < \infty \right\}.}$$
+        An element $f \in L^p(X)$ is called an \hldef{$L^p$-function on the measure space $X$.}
+
+        % The \hldef{$L^\infty$ space on $X$} is defined as the set
+
+        % \hl{$L^{\infty}(X) = L^{\infty}(X, \mu)$} consists of essentially bounded measurable functions with the norm
+        % In other words, $f \in L^\infty(X,\mu)$ if and only if there exists a constant $C \geq 0$ such that $|f(x)| \leq C$ for $\mu$-almost every $x \in X$.
+    \end{enumerate}
+\end{definition}

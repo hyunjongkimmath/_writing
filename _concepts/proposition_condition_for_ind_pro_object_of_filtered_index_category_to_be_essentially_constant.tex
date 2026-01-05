@@ -1,0 +1,24 @@
+\begin{proposition}  \label{proposition:condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant}
+Let $\mathscr{C}$ be a \CrefAndHyperrefIfExist{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}{locally small category}. 
+\begin{enumerate}
+    \item An \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{Ind-object} $X = \varinjlim_{i \in I} X_i$ (where $I$ is a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} index category) is \CrefAndHyperrefIfExist{definition:essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category}{essentially constant} and isomorphic to $A \in \text{ob}(\mathscr{C})$ if and only if there exists a family of morphisms $(f_i: X_i \to A)_{i \in I}$ such that for every morphism $u: i \to j$ in $I$, the diagram
+    $$
+    \begin{array}{ccc}
+    X_i & \xrightarrow{X(u)} & X_j \\
+    & \searrow_{f_i} & \downarrow^{f_j} \\
+    & & A
+    \end{array}
+    $$
+    commutes, and the induced morphism \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{$\varinjlim X_i \to A$} is an isomorphism in $\text{Ind}(\mathscr{C})$.
+
+    \item A \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{Pro-object} $X = \varprojlim_{i \in I} X_i$ (where $I$ is a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} index category) is \CrefAndHyperrefIfExist{definition:essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category}{essentially constant} and isomorphic to $A \in \text{ob}(\mathscr{C})$ if and only if there exists a family of morphisms $(g_i: A \to X_i)_{i \in I}$ such that for every morphism $u: i \to j$ in $I$, the diagram
+    $$
+    \begin{array}{ccc}
+    A & \xrightarrow{g_i} & X_i \\
+    & \searrow_{g_j} & \downarrow^{X(u)} \\
+    & & X_j
+    \end{array}
+    $$
+    commutes, and the induced morphism \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{$A \to \varprojlim X_i$} is an isomorphism in $\text{Pro}(\mathscr{C})$.
+\end{enumerate}
+\end{proposition}

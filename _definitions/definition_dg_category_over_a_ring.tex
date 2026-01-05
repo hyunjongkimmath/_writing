@@ -1,0 +1,18 @@
+\begin{definition}[dg-category] \label{definition:dg_category_over_a_ring}
+Let $k$ be a commutative ring. A \hldef{dg-category} (differential graded category) $\mathcal{C}$ over $k$ is a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{category enriched in} the category of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$k$-modules}. Explicitly, a dg-category $\calC$ consists of the following data:
+\begin{itemize}
+    \item A class of objects $\mathrm{Ob}(\mathcal{C})$.
+    \item For each pair of objects $X,Y \in \mathrm{Ob}(\mathcal{C})$, a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of $k$-modules \hl{$\mathrm{Hom}_\mathcal{C}(X,Y) = (\mathrm{Hom}^n_\mathcal{C}(X,Y), d)$}; that is, a $\mathbb{Z}$-graded $k$-module $$\mathrm{Hom}_\mathcal{C}(X,Y) = \bigoplus_{n \in \mathbb{Z}} \mathrm{Hom}_\mathcal{C}^n(X,Y)$$ equipped with a differential $d : \mathrm{Hom}_\mathcal{C}^n(X,Y) \to \mathrm{Hom}_\mathcal{C}^{n+1}(X,Y)$ satisfying $d^2 = 0$.
+    \item For each triple of objects $X,Y,Z \in \mathrm{Ob}(\mathcal{C})$, a morphism of complexes (composition)
+    $$\hlin{\circ : \mathrm{Hom}_\mathcal{C}(Y,Z) \otimes_k \mathrm{Hom}_\mathcal{C}(X,Y) \to \mathrm{Hom}_\mathcal{C}(X,Z)}$$
+    which is associative and satisfies the graded Leibniz rule with respect to the differential $d$:
+    \[
+    d(f \circ g) = d(f) \circ g + (-1)^{|f|} f \circ d(g),
+    \]
+    for homogeneous $f,g$ with $|f|$ denoting the degree of $f$.
+    \item For each object $X$, an identity morphism \hl{$1_X \in \mathrm{Hom}_\mathcal{C}^0(X,X)$} such that for any $f \in \mathrm{Hom}_\mathcal{C}(X,Y)$,
+    \[
+    1_Y \circ f = f, \quad f \circ 1_X = f.
+    \]
+\end{itemize}
+\end{definition}

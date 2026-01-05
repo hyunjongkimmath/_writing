@@ -1,0 +1,27 @@
+\begin{definition}[Quadratic form over a ring with involution] \label{definition:quadratic_form_over_a_ring_with_involution}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}.
+
+    \begin{enumerate}
+        \item A \hldef{\emph{quadratic form} on a right $R$-module $M$} is a map $q: M \to R$ such that:
+        \begin{enumerate}
+        \item $q(r m) = r q(m) \overline{r}$ for all $r \in R$, $m \in M$;
+        \item The map $B_q: M \times M \to R$ defined by $B_q(x,y) = q(x+y) - q(x) - q(y)$ is Hermitian.
+        \end{enumerate}
+
+        \item A \hldef{\emph{quadratic form} on a left $R$-module $N$} is a map $q: N \to R$ such that:
+        \begin{enumerate}
+        \item $q(r n) = \overline{r} q(n) r$ for all $r \in R$, $n \in N$;
+        \item The map $B_q: N \times N \to R$ defined by $B_q(x,y) = q(x+y) - q(x) - q(y)$ is Hermitian.
+        \end{enumerate}
+    \end{enumerate}
+% Let $R$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}.
+% A \hldef{\emph{quadratic form} on a right $R$-module $M$} is a map $q: M \to R$ such that:
+% \begin{enumerate}
+% \item $q(r m) = r q(m) \overline{r}$ for all $r \in R$, $m \in M$;
+% \item The map \hl{$B_q: M \times M \to R$} defined by $B_q(x,y) = q(x+y) - q(x) - q(y)$ is Hermitian.
+% \end{enumerate}
+% The form $B_q$ is called \hldef{\emph{polarization} of $q$} or the \hldef{associated Hermitian form}, which may also be denoted by \hl{$\langle x, y \rangle_R = B_q(x,y)$}.
+    In either case, the form $B_q$ is called the \hldef{\emph{polarization} of $q$} or the \hldef{associated Hermitian form}, which may also be denoted by $\langle x, y \rangle_R = B_q(x,y)$. 
+
+    A \hldef{quadratic module} refers to a module equipped with a quadratic form.
+\end{definition}

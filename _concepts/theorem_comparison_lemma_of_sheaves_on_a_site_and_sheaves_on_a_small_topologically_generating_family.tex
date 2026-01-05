@@ -1,0 +1,52 @@
+\begin{theorem} [Comparison Lemma, cf. {{\cite[Expos\'e III, Th\'eor\`eme 4.1]{SGA4_I}}}] \label{theorem:comparison_lemma_of_sheaves_on_a_site_and_sheaves_on_a_small_topologically_generating_family}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}, let $u: \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful functor}, and equip $\calC$ with the \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} $J$ \CrefAndHyperrefIfExist{definition:induced_topology_on_a_category_by_a_functor_to_a_site}{induced by} $u$. Let $\calA$ be a \CrefAndHyperref{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete category}, i.e. a category which admits all \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small limits}.
+
+    If the objects of $\calC$ form a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topologically generating family}\TODO{I need to check that the condition of covering in SGA really matches the notion of topologically generating family} of $\calD$, then the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image}/restriction functor 
+    $$u_s: \Sh(\calD, K; \calA) \to \Sh(\calC, J; \calA)$$
+    is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}. In particular, $\Sh(\calD, K; \calA)$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+\end{theorem}
+\begin{proof}
+We explicitly construct the inverse functor and prove the equivalence without assuming \textit{a priori} that $\text{Sh}(\mathcal{D}, K)$ is locally small.
+
+Step 1: Construction of the Inverse Functor $u_*$
+
+We define the functor $u_*: \text{Sh}(\mathcal{C}, J) \to \text{Sh}(\mathcal{D}, K)$ as the \textbf{Right Kan Extension} of a sheaf $F$ along $u$.
+
+For a sheaf $F \in \text{Sh}(\mathcal{C}, J)$ and an object $d \in \mathcal{D}$, define:
+\[ u_*F(d) = \lim_{(c, f) \in (u \downarrow d)^{op}} F(c) \]
+Here, the limit is taken over the opposite of the comma category $(u \downarrow d)$, whose objects are pairs $(c, f: u(c) \to d)$.
+
+\textit{Verification of Well-Definedness (Size):} Since $\mathcal{C}$ is a small category and $\mathcal{D}$ is locally small, the collection of objects in $(u \downarrow d)$ is a set (indexed by objects of $\mathcal{C}$ and hom-sets of $\mathcal{D}$). Therefore, the limit defining $u_*F(d)$ is a \textbf{small limit of sets}, which exists in $\mathbf{Set}$. Thus, $u_*F$ takes values in $\mathbf{Set}$ rather than proper classes.
+
+\textit{Verification that $u_*F$ is a Sheaf:} Since limits commute with limits, and the sheaf condition is a limit condition, the Right Kan Extension of a sheaf along a continuous functor is a sheaf. The density condition ensures that covers in $\mathcal{D}$ are "seen" by $\mathcal{C}$, ensuring the sheaf condition is preserved.
+
+Step 2: The Unit of Adjunction ($u^* u_* \cong \text{Id}$)
+
+We examine $u^* u_* F$ for $F \in \text{Sh}(\mathcal{C}, J)$. Evaluating at an object $c_0 \in \mathcal{C}$:
+\[ (u^* u_* F)(c_0) = u_*F(u(c_0)) = \lim_{(c, f) \in (u \downarrow u(c_0))^{op}} F(c) \]
+Since $u$ is \textbf{fully faithful}, the comma category $(u \downarrow u(c_0))$ has a terminal object: $(c_0, \text{id}_{u(c_0)})$. The limit over a category with a terminal object is isomorphic to the value at that object. Thus, $(u^* u_* F)(c_0) \cong F(c_0)$, concluding $u^* u_* \cong \text{Id}_{\text{Sh}(\mathcal{C})}$.
+
+Step 3: The Counit of Adjunction ($H \cong u_* u^* H$)
+
+This is the critical step that uses the \textbf{Density Condition} to control the size of sheaves on $\mathcal{D}$. Let $H \in \text{Sh}(\mathcal{D}, K)$. We construct a map $\eta_d: H(d) \to u_*(u^*H)(d)$. By definition:
+\[ u_*(u^*H)(d) = \lim_{u(c) \to d} H(u(c)) \]
+There is a canonical map $\eta_d$ induced by the morphisms $H(f): H(d) \to H(u(c))$ for each $f: u(c) \to d$. 
+
+To see that $\eta_d$ is an isomorphism:
+\begin{enumerate}
+    \item \textbf{Density as a Cover:} By hypothesis, the family of morphisms $\mathcal{S} = \{ f: u(c) \to d \mid c \in \mathcal{C} \}$ generates a covering sieve $S$ on $d$.
+    \item \textbf{Sheaf Property:} Since $H$ is a sheaf on $(\mathcal{D}, K)$, $H(d) \cong \text{Match}(S, H)$.
+    \item \textbf{Matching Families:} The limit over the comma category $(u \downarrow d)$ is exactly the set of compatible families indexed by the generators of the sieve. Because $\mathcal{S}$ generates $S$, the data of a matching family on $\mathcal{S}$ extends uniquely to the whole sieve $S$.
+\end{enumerate}
+The canonical map $H(d) \to \lim_{u(c) \to d} H(u(c))$ is therefore an isomorphism, so $H \cong u_* (u^* H)$.
+
+Step 4: Conclusion of Equivalence and Local Smallness
+
+We have established natural isomorphisms $u^* u_* \cong \text{Id}$ and $\text{Id} \cong u_* u^*$, establishing an equivalence. Since $\mathcal{C}$ is small, $\text{Sh}(\mathcal{C}, J)$ is a locally small category. Since $\text{Sh}(\mathcal{D}, K)$ is equivalent to it, $\text{Sh}(\mathcal{D}, K)$ is itself locally small. Specifically:
+\[ \text{Hom}_{\mathcal{D}}(H, G) \cong \text{Hom}_{\mathcal{C}}(u^*H, u^*G) \]
+where the latter is a set.
+
+
+
+    Since $\calC$ is small and $\calA$ is locally small, the category of presheaves on $\calC$ valued in $\calA$ is locally small by \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}. Therefore, the category of sheaves is locally small.
+\end{proof}

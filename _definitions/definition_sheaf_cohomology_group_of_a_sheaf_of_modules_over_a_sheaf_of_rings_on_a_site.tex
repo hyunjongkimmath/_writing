@@ -1,0 +1,41 @@
+\begin{definition} \label{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}
+
+Let $(\mathcal{C}, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} on a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} or a $U$-site for some \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$. Let $\calO$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of rings} on $\calC$, so that $(\calC, J, \calO)$ is a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}. Recall that the category \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\mathbf{Mod}(\mathcal{O})$} of $\calO$-modules is abelian and \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives} (\Cref{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives}).
+
+Assume that \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{global sections objects $\Gamma(\calG)$} exist for all objects $\calG$ of $\mathrm{Sh}(\mathcal{C}, \mathbf{Ab})$\footnote{for example, this occurs when $\calC$ is \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small}} so that $\Gamma$ is a functor
+$$\Sh(\calC, \mathbf{Ab}) \to \mathbf{Ab},$$
+which is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor} (\Cref{proposition:sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact}).  Note that $\Gamma$ restricts to a left exact functor 
+$$\mathbf{Mod}(\mathcal{O}) \to \mathbf{Ab}.$$
+If $\calC$ has a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} $\ast$ as well, then recall that $\Gamma(\calF) = \calF(\ast)$. 
+
+Let $\calF$ be an object of $\mathbf{Mod}(\mathcal{O})$. 
+\begin{enumerate}
+    \item For each integer $n \geq 0$, the \hldef{$n$-th (abelian) (global) sheaf cohomology group of $\mathcal{F}$} is
+    $$\hlin{H^n(\mathcal{C}, J; \mathcal{F}) := R^n \Gamma(\mathcal{F}),}$$
+    where $R^n \Gamma$ is the $n$-th \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functor} of the \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{global sections functor $\Gamma$}.
+
+    In particular, each $H^n$ is a functor 
+    $$H^n: \mathbf{Mod}(\mathcal{O})  \to \mathbf{Ab}.$$
+
+    \item Given an object $U \in \calC$ and for each integer $n \geq 0$, the \hldef{$n$-th (abelian) sheaf cohomology group of $\mathcal{F}$ of sections at $U$} is
+    $$\hlin{H^n(U, \mathcal{F}) := (R^n \Gamma(U,-))(\mathcal{F}),}$$
+    where $R^n \Gamma(U,-)$ is the $n$-th \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functor} of the \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{sections functor $\Gamma(U,-)$ evaluated at $U$}.
+
+    In particular, $H^n(U,\calF)$ can be regarded as the $n$th global sheaf cohomology group of the \CrefAndHyperrefIfExist{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site}{restriction $\calF|_U$} of $\calF$ to $U$.
+    % to the 
+    % \CrefAndHyperrefIfExist{definition:site_induced_by_a_site_on_an_over_category}{site induced by $(\calC, J)$} on the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{over category $\calC_{/U}$}.
+
+\end{enumerate}
+
+% In the case that $\calA = R\mathbf{-mod}$, the category of (left/right/two-sided)modules over some fixed (not necessarily commutative) ring $R$, recall that $R\mathbf{-Mod}$ is complete (and cocomplete) \TODO{Is it precisely completeness that I need or cocompleteness? In other words, for the limits defining $\Gamma$, are those limits projective limits or colimtis?} \TODO{talk about how $R$-modules are complete and cocomplete}, so all global sections objects $\Gamma(\calG)$ exist. \TODO{continue talking about this context of modules}
+
+% The \hldef{sheaf cohomology groups of $\mathcal{F}$} on the site $(\mathcal{C}, J)$ are defined as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functors} of the global sections functor
+% $$\Gamma : \mathrm{Sh}(\mathcal{C}, J) \to \mathbf{Ab}$$
+% where $\mathrm{Sh}(\mathcal{C}, J)$ \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{denotes} the category of sheaves of abelian groups on $(\mathcal{C}, J)$, and $\ast$ denotes the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} in $\mathcal{C}$ if it exists.
+
+% More precisely, 
+
+% If $\mathcal{C}$ has no final object, $H^n(\mathcal{C}, J; \mathcal{F})$ is defined by choosing an injective resolution of $\mathcal{F}$ and taking cohomology of the resulting complex obtained by applying $\Gamma$.
+
+% These groups measure the extent to which global sections fail to be exact, and generalize classical sheaf cohomology defined on topological spaces to arbitrary sites.
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:von_neumann_bernays_godel_set_theory}
+    \TODO{two-sorted first-order language}
+Let $\mathcal{L}_{\text{Class}}$ be a two-sorted first-order language with variables for sets (lowercase $x, y, z, \dots$) and variables for classes (uppercase $X, Y, Z, \dots$).
+
+\hldef{von Neumann--Bernays--Gödel set theory}, denoted \hl{$\mathsf{NBG}$}, is the theory in $\mathcal{L}_{\text{Class}}$ comprised of the following axioms:
+\TODO{theory}
+\begin{enumerate}
+    \item \textbf{Extensionality:} Classes with the same elements are equal.
+    \item \textbf{Foundation:} Every non-empty class of sets has an $\in$-minimal element.
+    \item \textbf{Class Comprehension (Predicative):} For any formula $\phi$ in which quantification occurs only over sets, there exists a class $X$ such that:
+    $$  \forall x \, (x \in X \iff \phi(x)) $$
+    \item \textbf{Limitation of Size:} A class $X$ is a set if and only if there is no bijection between $X$ and the class of all sets $V$:
+    $$ \exists x (X = x) \iff \neg (X \cong V) $$
+    \item \textbf{Set Axioms:} The standard \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{$\mathsf{ZFC}$} axioms of Pairing, Power Set, Union, Infinity, and Choice, relativized to sets.
+\end{enumerate}
+\end{definition}

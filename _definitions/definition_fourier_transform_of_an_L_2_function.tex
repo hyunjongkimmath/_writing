@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:fourier_transform_of_an_L_2_function}
+    Let \( f \in L^2(\mathbb{R}) \). The \hldef{Fourier transform} \hl{$\hat{f}$} of \( f \) is defined as the limit in the \( L^2 \)-norm of the Fourier transforms of a sequence \( \{f_n\} \subset L^1(\mathbb{R}) \cap L^2(\mathbb{R}) \) such that
+
+    \[
+    \lim_{n \to \infty} \|f - f_n\|_{L^2(\mathbb{R})} = 0;
+    \]
+    such a sequence exists due to Corollary \ref{corollary:intersection_of_L_p_s_is_dense_in_L_p}.  Specifically,
+
+    $$ \hat{f} := \lim_{n \to \infty} \hat{f}_n \text{ in } L^2(\bbR).  $$
+
+    where for each \( n \), the Fourier transform \( \hat{f}_n \) is given by Definition \ref{definition:fourier_transform_of_an_L_1_function_on_R}.
+\end{definition}

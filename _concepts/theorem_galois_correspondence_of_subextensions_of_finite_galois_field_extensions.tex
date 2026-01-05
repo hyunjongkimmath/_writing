@@ -1,0 +1,16 @@
+\begin{theorem}[Fundamental Theorem of Galois Theory] \label{theorem:galois_correspondence_of_subextensions_of_finite_galois_field_extensions}
+Let $L/K$ be a \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{finite} \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension of fields} with Galois group $G = \operatorname{Gal}(L/K)$. Then there is an inclusion-reversing bijection between the set of subgroups $H \leq G$ and the set of intermediate fields $K \subseteq F \subseteq L$, given by
+\TODO{$L^H$}
+$$ H \longmapsto L^H := \{\, x \in L \mid \sigma(x) = x \text{ for all } \sigma \in H \,\}, $$
+$$ F \longmapsto \operatorname{Gal}(L/F). $$
+
+This correspondence has the following properties:
+\begin{align*}
+&\text{(i) } L^H \text{ is a subfield of } L \text{ containing } K \text{ for each subgroup } H \leq G. \\
+&\text{(ii) } \operatorname{Gal}(L/F) \text{ is a subgroup of } G \text{ for each intermediate field } F. \\
+&\text{(iii) } H_1 \subseteq H_2 \;\;\Longleftrightarrow\;\; L^{H_2} \subseteq L^{H_1}. \\
+&\text{(iv) } [L^H : K] = |G:H|, \quad [L: L^H] = |H|. \\
+&\text{(v) } F/K \text{ is Galois if and only if } \operatorname{Gal}(L/F) \unlhd G, \\
+&\hspace{2cm} \text{in which case } \operatorname{Gal}(F/K) \cong G / \operatorname{Gal}(L/F).
+\end{align*}
+\end{theorem}

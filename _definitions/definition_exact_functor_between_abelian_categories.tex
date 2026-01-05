@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:exact_functor_between_abelian_categories}
+    Let $F: \mathcal{A} \to \mathcal{B}$ be an \hyperrefIfExists{definition:additive_functor_between_additive_categories}{additive functor}\CrefIfExists{definition:additive_functor_between_additive_categories} between \hyperrefIfExists{definition:abelian_category}{abelian categories}\CrefIfExists{definition:abelian_category}.
+    \begin{enumerate}
+
+        \item $F$ is called \hldef{left exact} if it preserves all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{finite limits}, or equivalently it preserves \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernels} and any finite limit diagrams. Equivalently, for every left exact sequence in $\mathcal{A}$
+        \[
+        0 \to A' \xrightarrow{f} A \xrightarrow{g} A''
+        \]
+        the sequence
+        \[
+        0 \to F(A') \xrightarrow{F(f)} F(A) \xrightarrow{F(g)} F(A'')
+        \]
+        is exact at $F(A')$ and $F(A)$ (i.e., $F$ preserves \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms} and exactness at the first two terms).
+
+        \item Dually, $F$ is called \hldef{right exact} if it preserves all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{finite colimits}, or equivalently it preserves \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{cokernels} and any finite colimit diagrams. Equivalently, for every right exact sequence in $\mathcal{A}$
+        \[
+        A' \xrightarrow{f} A \xrightarrow{g} A'' \to 0,
+        \]
+        the sequence
+        \[
+        F(A') \xrightarrow{F(f)} F(A) \xrightarrow{F(g)} F(A'') \to 0
+        \]
+        is exact at $F(A)$ and $F(A'')$ (i.e., $F$ preserves \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphisms} and exactness at the last two terms).
+
+        \item $F$ is called \hldef{exact} if it is both left and right exact.
+    \end{enumerate}
+\end{definition}

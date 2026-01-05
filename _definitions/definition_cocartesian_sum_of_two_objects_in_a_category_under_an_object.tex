@@ -1,0 +1,34 @@
+\begin{definition} \label{definition:cocartesian_sum_of_two_objects_in_a_category_under_an_object}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, let $Z$ be an object, and let $X, Y$ be objects of $\mathcal{C}$ \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{under} $Z$, i.e. morphisms $Z \to X$ and $Z \to Y$ are fixed. A \hldef{cocartesian sum of $X$ and $Y$ under $Z$ in $\mathcal{C}$} (or \hldef{fiber coproduct} or \hldef{pushout diagram}) is an object, often denoted by \hl{$X \amalg_Z Y$}, with \hldef{inclusion morphisms} $X \to X \amalg_Z Y$ and $Y \to X \amalg_Z Y$ that are universal. 
+    More precisely, for any object $T$ of $\mathcal{C}$ and morphisms $j_X : X \to T$, $j_Y : Y \to T$, there exists a unique morphism $v : X \amalg_Z Y \to T$ such that the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}
+        Z \ar[r] \ar[d] 
+        & X \ar[d] \ar[rdd, "j_X", bend left=20] 
+        & \\
+        Y \ar[r] \ar[rrd, "j_Y"', bend right=20] 
+        & X \amalg_Z Y \ar[rd, dotted, "v"] 
+        & \\
+        & 
+        & T
+    \end{tikzcd}
+    \end{center}
+
+        Equivalently, $X \amalg_Z Y$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram}
+        \begin{center}
+            \begin{tikzcd}
+            X & Z \ar[l] \ar[r] & Y
+            \end{tikzcd}
+        \end{center}
+        in $\calC$. 
+
+        The commutative diagram 
+        \begin{center}
+        \begin{tikzcd}
+        Z \ar[r] \ar[d] & X \ar[d] \\
+        Y \ar[r] & X \amalg_Z Y
+        \end{tikzcd} 
+        \end{center}
+        may be referred to as a \hldef{cocartesian square}.
+
+\end{definition}

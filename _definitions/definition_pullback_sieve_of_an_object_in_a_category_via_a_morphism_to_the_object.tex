@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object}
+Let $C$ be a category, let $U \in \operatorname{Ob}(C)$, and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve on $U$}.
+For a morphism $f : V \to U$ in $C$, the \hldef{pullback sieve} \hl{$f^*S$} (or \hldef{basechange sieve} \hl{$S \times_U V$}) on $V$ is defined by
+\[
+f^*S = \{ g : W \to V \mid f \circ g \in S \}.
+\]
+In other words, $f^*S$ consists of all morphisms into $V$ whose composite with $f$ belongs to the sieve $S$ on $U$.
+\end{definition}

@@ -1,0 +1,13 @@
+\begin{theorem} \label{theorem:sylows_theorems}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{finite} \CrefAndHyperrefIfExist{definition:group}{group} and $p$ be a prime number such that $p$ divides the order of $G$.
+\begin{enumerate}
+    \item (Sylow's first theorem) \CrefAndHyperrefIfExist{definition:sylow_p_subgroup_of_a_finite_group}{$\operatorname{Syl}_p(G)$} is non-empty; that is, $G$ contains at least one subgroup of order $p^n$, where $p^n$ is the highest power of $p$ dividing $|G|$.
+
+    \item (Sylow's second theorem) If $P_1$ and $P_2$ are \CrefAndHyperrefIfExist{definition:sylow_p_subgroup_of_a_finite_group}{Sylow $p$-subgroups of $G$}, then they are \CrefAndHyperrefIfExist{definition:conjugation_of_group_elements_and_subgroup_by_a_group_element}{conjugate} in $G$. That is, there exists an element $g \in G$ such that $g P_1 g^{-1} = P_2$. 
+
+    \item (Sylow's third theorem) Let $G$ be a finite group of order $p^n m$ where $p \nmid m$. The number of Sylow $p$-subgroups, \CrefAndHyperrefIfExist{definition:sylow_p_subgroup_of_a_finite_group}{$n_p$}, satisfies the following conditions:
+    $$ n_p \equiv 1 \pmod{p} $$
+    $$ n_p \mid m $$
+    Furthermore, $n_p = [G : N_G(P)]$ for any Sylow $p$-subgroup $P$, where $N_G(P)$ is the \CrefAndHyperrefIfExist{definition:normalizer_of_a_subgroup_of_a_group}{normalizer} of $P$ in $G$. 
+\end{enumerate}
+\end{theorem}

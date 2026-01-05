@@ -1,0 +1,31 @@
+\begin{definition}[Comma Category] \label{definition:comma_category_of_two_functors_to_a_category}
+Let $\mathcal{A}$, $\mathcal{B}$, and $\mathcal{C}$ be categories, and let $S: \mathcal{A} \to \mathcal{C}$ and $T: \mathcal{B} \to \mathcal{C}$ be functors. 
+
+The \hldef{comma category} \hl{$(S \downarrow T)$} (also denoted \hl{$(S, T)$} or \hl{$S/T$}) is defined as follows:
+\begin{itemize}
+    \item \textbf{Objects:} Triples $(A, B, h)$, where $A$ is an object of $\mathcal{A}$, $B$ is an object of $\mathcal{B}$, and $h: S(A) \to T(B)$ is a morphism in $\mathcal{C}$.
+    \item \textbf{Morphisms:} A morphism from $(A, B, h)$ to $(A', B', h')$ consists of a pair $(f, g)$, where $f: A \to A'$ is a morphism in $\mathcal{A}$ and $g: B \to B'$ is a morphism in $\mathcal{B}$, such that the following diagram in $\mathcal{C}$ commutes:
+    $$
+    \begin{tikzcd}
+        S(A) \arrow[r, "h"] \arrow[d, "S(f)"'] & T(B) \arrow[d, "T(g)"] \\
+        S(A') \arrow[r, "h'"] & T(B')
+    \end{tikzcd}
+    $$
+    That is, $T(g) \circ h = h' \circ S(f)$.
+    \item \textbf{Composition:} Composition is defined component-wise: $(f', g') \circ (f, g) = (f' \circ f, g' \circ g)$.
+\end{itemize}
+
+The general definition of the comma category subsumes several common categorical constructions:
+\begin{enumerate}
+    \item \textbf{Slice Category (Over-category):} If $\mathcal{A} = \mathcal{C}$, $S = \text{Id}_{\mathcal{C}}$, $\mathcal{B} = \mathbf{1}$ (the terminal category with one object $*$), and $T: \mathbf{1} \to \mathcal{C}$ is the functor selecting an object $X \in \mathcal{C}$ (i.e., $T(*) = X$), then $(S \downarrow T)$ is the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{slice category $\mathcal{C}/X$}.
+    % , often denoted $(\mathcal{C} \downarrow X)$. Its objects are morphisms $f: A \to X$.
+    
+    \item \textbf{Coslice Category (Under-category):} If $\mathcal{A} = \mathbf{1}$, $S(*) = X$, $\mathcal{B} = \mathcal{C}$, and $T = \text{Id}_{\mathcal{C}}$, then $(S \downarrow T)$ is the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{coslice category $X/\mathcal{C}$}.
+    % , often denoted $(X \downarrow \mathcal{C})$. Its objects are morphisms $f: X \to B$.
+    
+    \item \textbf{Relative Slice Category:} If $S = u: \mathcal{D} \to \mathcal{C}$ is a functor and $T: \mathbf{1} \to \mathcal{C}$ picks out an object $U \in \mathcal{C}$, then $(S \downarrow T)$ is the \CrefAndHyperrefIfExist{definition:relative_slice_category_of_objects_over_an_object_relative_to_a_functor}{relative slice category}. 
+    % Its objects are pairs $(V, \varphi)$ with $V \in \mathcal{D}$ and $\varphi: u(V) \to U$ in $\mathcal{C}$.
+    
+    \item \textbf{Arrow Category:} If $\mathcal{A} = \mathcal{B} = \mathcal{C}$ and $S = T = \text{Id}_{\mathcal{C}}$, then $(S \downarrow T)$ is the \CrefAndHyperrefIfExist{definition:arrow_category_of_a_category}{arrow category $\mathcal{C}^{\to}$} of $\mathcal{C}$. Its objects are all morphisms in $\mathcal{C}$.
+\end{enumerate}
+\end{definition}

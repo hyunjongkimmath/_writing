@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:pointification_of_an_object_in_a_category_with_a_final_object}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} $*$. By the \hldef{pointification of an object $X$ of $\calC$}, we mean the \CrefAndHyperrefIfExist{definition:pointed_object_of_a_category_with_a_final_object}{pointed object} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} \hl{$X_+ \coloneq X \coprod *$}, if such an object exists, equipped with the natural morphism $* \to X_+$. If $X_+$ exists for all objects $X$ of $\calC$, then note that $X \mapsto X_+$ specifies a functor $\calC \to \calC_\bullet$ to the \CrefAndHyperrefIfExist{definition:pointed_object_of_a_category_with_a_final_object}{category of pointed objects of $\calC$}.
+
+    In particular, we may talk about the pointification of an object in the following contexts:
+    \begin{itemize}
+        \item For a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} $T$, we may talk about the pointification of a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $X \in \Shv(T)$ of sets or of a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $X \in \Deltaop\Shv(T)$ of sets; note that the categories $\Shv(T)$ and $\Deltaop\Shv(T)$ both have final objects and (small) coproducts \TODO{}.
+        
+        \item We may talk about the pointification of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}; note that the category of topological spaces has a final object and (small) coproducts.
+    \end{itemize}
+
+    Moreover, in the context of discussing a pointification functor, the \hldef{forgetful functor} is the functor $\calC_\bullet \to \calC$ given by sending a pointed space $(X, * \to X)$ to $X$.
+\end{definition}

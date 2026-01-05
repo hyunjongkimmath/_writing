@@ -1,0 +1,18 @@
+\begin{definition}[Cohomological/homological dimension of a functor] \label{definition:cohomological_homological_dimension_of_a_left_right_exact_functor_on_an_abelian_category_with_enough_projectives_injectives}
+Let $F : \mathcal{A} \to \mathcal{B}$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. 
+\begin{enumerate}
+    \item Assume that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} and that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}. The \hldef{cohomological dimension of $F$}, denoted \hl{$\operatorname{cdim}(F)$} or \hl{$\operatorname{cd}(F)$}, is the smallest integer $n \geq 0$ such that the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functors $R^i F$} vanish for all $i > n$, i.e.,
+    $$
+    R^i F = 0 \quad \text{for all } i > n.
+    $$
+
+    If no such finite $n$ exists, then $\mathrm{cdim}(F) = \infty$.
+
+    \item Assume that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}. The \hldef{homological dimension of $F$}, denoted \hl{$\operatorname{hdim}(F)$} or \hl{$\operatorname{hd}(F)$}, is the smallest integer $n \geq 0$ such that the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functors $L_i F$} vanish for all $i > n$, i.e.,
+    $$
+    L_i F = 0 \quad \text{for all } i > n.
+    $$
+
+    If no such finite $n$ exists, then $\mathrm{hdim}(F) = \infty$.
+\end{enumerate}
+\end{definition}

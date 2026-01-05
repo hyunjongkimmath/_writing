@@ -1,0 +1,13 @@
+\begin{definition}[Flat morphism of schemes] \label{definition:flat_morphism_of_schemes}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+    
+    \begin{enumerate}
+        \item Let $x \in X$ be a point and let $y = f(x)$. We say that $f$ is \hldef{flat at $x$} if the \CrefAndHyperrefIfExist{definition:induced_ring_homomorphism_of_stalks_for_a_morphism_of_ringed_spaces}{induced ring homomorphism} on \CrefAndHyperrefIfExist{definition:local_ring}{local rings}
+        \[
+        \mathcal{O}_{Y,y} \to \mathcal{O}_{X,x}
+        \]
+        makes \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{$\mathcal{O}_{X,x}$} into a \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} $\mathcal{O}_{Y,y}$-module. 
+        \item We say $f$ is \hldef{flat} if it is flat at every point $x \in X$.
+        \item $f$ is \hldef{faithfully flat} if it is flat and \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}.
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. The homomorphism $f$ endows $S$ with two bimodule structures --- that of an $(R, S)$-bimodule and of an $(S,R)$-bimodule via \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars}. Let $T$ be a ring.
+\begin{enumerate}
+    \item 
+
+    The \hldef{co-extension of scalars} (or simply \hldef{co-extension}) along $f$ is defined separately for modules:
+    \begin{itemize}
+        \item For an $R-T$-bimodule $M$, the co-extension of scalars of $M$ along $f$ is the $S-T$-bimodule \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{$\Hom_R(S, M)$} of left $R$-module homomorphisms from the $R-S$-bimodule $S$ to $M$. 
+        % As such, the left $S$-action on a morphism $\psi \in \Hom_R(S, M)$ is defined by $(s \cdot \psi)(t) = \psi(t s)$ for all $s, t \in S$.
+        
+        \item For a $T-R$-bimodule $M$, the co-extension of scalars of $M$ along $f$ is the $T-S$-bimodule $\Hom_R(S, M)$ of right $R$-module homomorphisms from the $S-R$-bimodule $S$ to $M$. 
+        %As such, the right $S$-action on a morphism $\psi \in \Hom_R(S, M)$ is defined by $(\psi \cdot s)(t) = \psi(s t)$ for all $s, t \in S$.
+    \end{itemize}
+
+    \item The \hldef{co-extension of scalars functor} (or \hldef{coinduction functor}), denoted by \hl{$f^!$} or \hl{$\CoInd_R^S$}, is the functor given by:
+    \begin{itemize}
+        \item For left $R$-modules:
+        $$f^!: {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T, \quad M \mapsto \Hom_R(S, M).$$
+        This functor is the \CrefAndHyperrefIfExist{definition:adjoint_functors}{right adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars}{restriction of scalars functor} $f_*: {}_S\mathsf{Mod} \to {}_R\mathsf{Mod}$.
+        
+        \item For right $R$-modules:
+        $$f^!: {}_T \mathsf{Mod}_R \to {}_T \mathsf{Mod}_S, \quad M \mapsto \Hom_R(S, M).$$
+        This functor is the right adjoint to the restriction of scalars functor $f_*: \mathsf{Mod}_S \to \mathsf{Mod}_R$.
+    \end{itemize}
+\end{enumerate}
+
+\end{definition}

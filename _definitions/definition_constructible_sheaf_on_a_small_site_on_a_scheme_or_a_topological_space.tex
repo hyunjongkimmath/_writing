@@ -1,0 +1,19 @@
+
+\begin{definition}[Constructible sheaf] \label{definition:constructible_sheaf_on_a_small_site_on_a_scheme_or_a_topological_space}
+Let $X$ be either
+\begin{enumerate}
+    \item A \CrefAndHyperrefIfExist{definition:topological_space}{topological space} (made into a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} with the \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{natural Grothendieck topology}) or
+    \TODO{This second case needs to be formulated more precisely; in particular, a notion of ``restriction'' is necessary, and there needs to be a more precise way to formulate that the site is a site associated to $X$.}
+    \item A \CrefAndHyperrefIfExist{definition:scheme}{scheme} along with a \CrefAndHyperrefIfExist{definition:big_site_on_the_category_of_schemes_over_a_scheme_and_small_site}{small site $(\calC, J)$ on $X$}. Assume that the there is a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} for the presheaves/sheaves valued in abelian groups so that \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaves} of abelian groups are defined. For example, it suffices for the underlying category of the site to be \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small}(\Cref{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}).
+\end{enumerate}
+
+Let $\calO$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of rings} on the chosen site $(\calC, J)$ associated to $X$. Let $\calF$ be a sheaf of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-modules} on $X$.
+
+% Let $\mathcal{F}$ be a sheaf of abelian groups (or more generally, of modules over a fixed ring) on $X$.
+
+The sheaf $\mathcal{F}$ is called \hldef{constructible} if there exists a finite partition of $X$ into \CrefAndHyperrefIfExist{definition:locally_closed_subset_of_a_topological_space}{locally closed subsets}
+\[
+X = \bigsqcup_{\alpha \in A} X_{\alpha}
+\]
+such that the restriction $\mathcal{F}|_{X_{\alpha}}$ is a \hyperrefIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaf of $\calO|_{X_\alpha}$-modules of finite type}\CrefIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification} on the site on $X_{\alpha}$ induced by $(\calC, J)$ and the embedding $X_{\alpha} \hookrightarrow X$ \TODO{The site on $X_{\alpha}$ needs to be elaborated on.} for each $\alpha \in A$.
+\end{definition}

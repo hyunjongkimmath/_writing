@@ -1,0 +1,51 @@
+
+\begin{proposition}[Factorization through the counit and the unit] \label{proposition:factorization_of_morphisms_through_counit_and_unit_morphisms_for_adjunctions_between_categories}
+Let $\mathcal{C}$ and $\mathcal{D}$ be categories, and let 
+$$
+L : \mathcal{C} \to \mathcal{D}, 
+\qquad 
+R : \mathcal{D} \to \mathcal{C}
+$$ 
+be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint functors} with $L \dashv R$. Denote by 
+$$ 
+\eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow R \circ L, 
+\qquad 
+\varepsilon : L \circ R \Rightarrow \mathrm{Id}_{\mathcal{D}} 
+$$
+the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit and counit of the adjunction}.
+
+\medskip
+
+(1) For every $X' \in \mathrm{Ob}(\mathcal{C})$ and $X \in \mathrm{Ob}(\mathcal{D})$, a morphism 
+$$ 
+f : L(X') \to X \quad \text{in } \mathcal{D} 
+$$
+factors uniquely as
+$$ 
+f = \varepsilon_X \circ L(g), 
+$$
+for some morphism $g : X' \to R(X)$ in $\mathcal{C}$.
+Equivalently, the assignment $g \mapsto \varepsilon_X \circ L(g)$ gives a bijection
+$$ 
+\Hom_\mathcal{C}(X', R(X)) \;\cong\; \Hom_\mathcal{D}(L(X'), X), 
+$$
+which is precisely the adjunction isomorphism.
+
+\medskip
+
+(2) Dually, for every $X \in \mathrm{Ob}(\mathcal{D})$ and $X' \in \mathrm{Ob}(\mathcal{C})$, a morphism 
+$$ 
+h : X \to R(X') \quad \text{in } \mathcal{C}
+$$
+factors uniquely as
+$$ 
+h = R(f) \circ \eta_X, 
+$$
+for some morphism $f : L(X) \to X'$ in $\mathcal{D}$.
+Equivalently, the assignment $f \mapsto R(f) \circ \eta_X$ gives a bijection
+$$ 
+\Hom_\mathcal{D}(L(X), X') \;\cong\; \Hom_\mathcal{C}(X, R(X')), 
+$$
+again exhibiting the adjunction isomorphism.
+\end{proposition}
+

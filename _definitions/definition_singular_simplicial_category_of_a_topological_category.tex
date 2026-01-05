@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:singular_simplicial_category_of_a_topological_category}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:topological_category}{topological category}. Its \hldef{singular simplicial category} \hl{$\operatorname{Sing} \calC$} is the \CrefAndHyperrefIfExist{definition:simplicial_category}{simplicial category} defined as follows:
+
+        \begin{itemize}
+        \item The objects of $\mathrm{Sing} \, \mathcal{C}$ are the same as those of $\mathcal{C}$:
+        $$ \mathrm{Ob}(\mathrm{Sing} \, \mathcal{C}) = \mathrm{Ob}(\mathcal{C}).  $$
+
+        \item For any objects $X, Y \in \mathcal{C}$, the morphism simplicial set is given by the \CrefAndHyperrefIfExist{definition:singular_complex_of_a_topological_space}{singular complex} of the topological morphism space:
+        $$ \Hom_{\mathrm{Sing} \, \mathcal{C}}(X, Y) = \mathrm{Sing}(\Hom_{\mathcal{C}}(X, Y)). $$
+        Explicitly, this singular complex is given by
+        $$ \mathrm{Sing}_n(\Hom_{\mathcal{C}}(X,Y)) = \mathrm{Top}(|\Delta^n|, \Hom_{\mathcal{C}}(X, Y)), $$
+        where \CrefAndHyperrefIfExist{definition:geometric_simplex_of_independent_points_in_a_real_vector_space}{$|\Delta^n|$ is the standard topological $n$-simplex}.
+
+        \item The composition maps in $\mathrm{Sing} \, \mathcal{C}$ are induced by the composition maps in $\mathcal{C}$ via functoriality of the singular complex:
+        $$ \mathrm{Sing}(\Hom_{\mathcal{C}}(Y,Z)) \times \mathrm{Sing}(\Hom_{\mathcal{C}}(X,Y)) \to \mathrm{Sing}(\Hom_{\mathcal{C}}(X,Z)).  $$
+        \end{itemize}
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:category_of_algebras_over_a_ring}
+    \begin{enumerate}
+        \item Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. The \hldef{category of algebras over $R$} or the \hldef{category of $R$-algebras} is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebras} $(A, \varphi)$ and whose morphisms $(A_1, \varphi_1) \to (A_2, \varphi_2)$ are given by ring homomorphisms $\psi: A_1 \to A_2$ such that $\varphi_2 = \psi \circ \varphi_1$.
+        \begin{center}
+            \begin{tikzcd}
+                & R \arrow[ld, "\varphi_1"'] \arrow[rd, "\varphi_2"] & \\
+                A_1 \arrow[rr, "\psi"'] & & A_2
+            \end{tikzcd}
+        \end{center}
+        In other words, the category of $R$-algebras is the \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} of the \CrefAndHyperrefIfExist{definition:category_of_rings_over_a_ring}{category of $R$-rings} whose objects are the $R$-algebras.  
+        
+        The category of algebras over $R$ is often denoted by notations such as \hl{$\mathbf{Alg}_R$} or \hl{$R\text{-}\mathbf{Alg}$}.
+
+        \item The \hldef{category of commutative $R$-algebras} is the full subcategory of $\mathbf{Alg}_R$ consisting of those $R$-algebras $(A, \varphi)$ for which $A$ is a commutative ring. It is often denoted by \hl{$\mathbf{CAlg}_R$} or \hl{$\mathbf{CommAlg}_R$}.
+    \end{enumerate} 
+\end{definition}

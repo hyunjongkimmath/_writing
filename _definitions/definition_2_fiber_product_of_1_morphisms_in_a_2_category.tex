@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:2_fiber_product_of_1_morphisms_in_a_2_category}
+Let $\mathcal{C}$ be a 2-category, and consider two 1-morphisms $f \colon X \to Z$ and $g \colon Y \to Z$ in $\mathcal{C}$. A \hldef{2-fiber product} (or \hldef{2-pullback}) of $X$ and $Y$ over $Z$ is a quadruple $(P, p, q, \phi)$, consisting of
+\begin{itemize}
+    \item an object $P$,
+    \item 1-morphisms $p \colon P \to X$ and $q \colon P \to Y$,
+    \item a 2-isomorphism $\phi \colon f \circ p \Rightarrow g \circ q$,
+\end{itemize}
+such that for any object $T$ with 1-morphisms $a \colon T \to X$, $b \colon T \to Y$, and a 2-isomorphism $\psi \colon f \circ a \Rightarrow g \circ b$, there exists a unique (up to unique isomorphism) 1-morphism $u \colon T \to P$ and 2-isomorphisms making the resulting diagrams 2-commutative. Equivalently, for all objects $T$ in $\mathcal{C}$, the induced functor
+\[
+\operatorname{Hom}_{\mathcal{C}}(T, P) \to \operatorname{Hom}_{\mathcal{C}}(T, X) \times_{\operatorname{Hom}_{\mathcal{C}}(T, Z)} \operatorname{Hom}_{\mathcal{C}}(T, Y)
+\]
+is an equivalence of categories. We often abbreviate the quadruple simply by the object, and notate this object by \hl{$X \times_Z Y$}.
+\end{definition}

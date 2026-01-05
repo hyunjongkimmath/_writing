@@ -1,0 +1,20 @@
+\begin{definition}[Coproduct of Modules] \label{definition:coproduct_of_modules_of_rings}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}, and let $\{ M_i \}_{i \in I}$ be a (possibly infinite but small) family of $(R,S)$-bimodules.
+    % \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules, right $R$-modules, or $(R,S)$-bimodules}, respectively.
+
+    The \hldef{coproduct (direct sum) of the family $\{M_i\}_{i \in I}$}, denoted by \hl{$\bigoplus_{i \in I} M_i$}, is constructed as
+    $$ \bigoplus_{i \in I} M_i := \left\{ (m_i)_{i \in I} \in \prod_{i \in I} M_i \mid m_i = 0 \text{ for all but finitely many } i \in I \right\} $$
+    \CrefIfExists{definition:product_of_modules_of_rings}
+    consisting of all tuples with only finitely many nonzero entries.
+
+    Addition and scalar multiplication in $\bigoplus_{i \in I} M_i$ are defined componentwise as in the \CrefAndHyperrefIfExist{definition:product_of_modules_of_rings}{direct product}:
+    $$ (m_i)_{i \in I} + (n_i)_{i \in I} := (m_i + n_i)_{i \in I}, \qquad r \cdot (m_i)_{i \in I} \cdot s := (r \cdot m_i \cdot s)_{i \in I}, \qquad r \in R,\, s \in S.  $$
+    In all cases, the zero element is $(0)_{i \in I}$, and additive inverses are given by $-(m_i)_{i \in I} := (-m_i)_{i \in I}$. 
+
+    Note that we can define the coproduct of a family $\{M_i\}_{i \in I}$ of left/right/two-sided $R$-modules by taking the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structure} of each module.
+    
+    \TODO{submodule}
+    Note that $\bigoplus_{i \in I} M_i$ is a submodule of $\prod_{i \in I} M_i$. Moreover, $\bigoplus_{i \in I} M_i$ is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} in the appropriate \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of modules}.
+
+    For finitely many modules $M_1,\ldots,M_n$, the direct sum $\bigoplus_{j=1}^{n} M_j$, which may also be written as \hl{$M_1 \oplus \cdots \oplus M_n$}, is simply the usual \CrefAndHyperrefIfExist{definition:product_of_modules_of_rings}{Cartesian product $\prod_{j=1}^n M_j$} of the modules, as every tuple automatically has only finitely many nonzero entries.
+\end{definition}

@@ -1,0 +1,290 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+
+\section{Definitions}
+
+\subsection{Algebraic groups and linear algebraic groups}
+
+\input{../_definitions/definition_algebraic_group_scheme_over_a_scheme.tex}
+
+\input{../_concepts/theorem_every_algebraic_group_scheme_over_a_field_of_characteristic_zero_is_smooth.tex}
+
+\input{../_definitions/definition_subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme.tex}
+
+\TODO{ARe all group schemes over a characteric zero field reduced?}
+\TODO{ARe all subgroups of group schemes over a characteric zero field closed?}
+
+Over positive characteristic fields, not all subgroup schemes are closed:
+
+\begin{example}[A subgroup scheme that is not closed]
+Let $k$ be an algebraically closed field of characteristic $p > 0$. Consider the additive group scheme $\mathbf{G}_a = \mathrm{Spec}(k[t])$ over $k$. Define the subgroup functor $H$ by
+$$ H(R) = \{ x \in \mathbf{G}_a(R) \mid x^{p} = 0 \} $$
+for any $k$-algebra $R$. Then $H$ is a subgroup scheme of $\mathbf{G}_a$ known as the \hldef{infinitesimal subgroup of order $p$}.
+
+However, $H$ is not a closed subgroup scheme of $\mathbf{G}_a$ because it corresponds to the ideal $(t^p)$ in $k[t]$, which is not radical and hence does not define a closed subscheme.
+\end{example}
+
+
+
+\input{../_definitions/definition_homomorphism_of_algebraic_groups_over_a_scheme.tex}
+
+\input{../_definitions/definition_general_linear_group_over_a_scheme.tex}
+\input{../_definitions/definition_linear_algebraic_group_over_a_scheme.tex}
+
+\subsection{Normal subgroup schemes}
+
+\input{../_definitions/definition_normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme.tex}
+
+\input{../_definitions/definition_identity_component_of_a_group_scheme_over_a_scheme.tex}
+
+\begin{lemma}[cf. {\cite[Proposition 1.52]{milne_aggs}}]
+    \TODO{Does this hold for more general groups $G/S$?}
+    Let $G/k$ be an \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{algebraic group} over a field. The \CrefAndHyperref{definition:identity_component_of_a_group_scheme_over_a_scheme}{identity component $G^0$} is a \CrefAndHyperref{definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme}{characteristic subgroup} and hence a normal subgroup of $G$.
+    
+    % Let $H/k$ be an \CrefAndHyperref{definition:subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme}{algebraic subgroup} of $G$. The group $H$ is a \CrefAndHyperref{definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme}{normal subgroup} of $G$ if and only if $H(R)$ is 
+\end{lemma}
+
+
+\input{../_definitions/definition_finite_index_subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme.tex}
+
+\input{../_concepts/lemma_subgroup_of_an_algebraic_group_over_a_field_has_finite_index_if_and_only_if_dimensions_coincide.tex}
+
+\input{../_definitions/definition_quotient_of_an_algebraic_group_scheme_by_an_algebraic_subgroup_scheme.tex}
+
+\input{../_concepts/proposition_dimension_of_group_scheme_equals_sums_of_dimensions_of_subgroup_and_quotient_if_quotient_is_a_scheme.tex}
+
+\input{../_definitions/definition_strongly_connected_algebraic_group_scheme_over_a_scheme.tex}
+
+\input{../_definitions/definition_strong_identity_component_of_an_algebraic_group_scheme_over_a_scheme.tex}
+
+\input{../_concepts/proposition_strong_identity_component_of_a_smooth_algebraic_group_scheme_over_a_field_equals_the_identity_component.tex}
+
+
+
+\subsection{Major examples of linear algebraic groups}
+
+\input{../_definitions/definition_special_linear_group_over_a_scheme.tex}
+
+\input{../_definitions/definition_orthogonal_group_over_a_scheme_for_a_quadratic_form.tex}
+\input{../_definitions/definition_special_orthogonal_group_over_a_scheme_for_a_quadratic_form.tex}
+
+
+\TODO{check the definition of unitary group}
+\input{../_definitions/definition_unitary_group_over_a_scheme.tex}
+
+
+\input{../_definitions/definition_special_unitary_group_over_a_scheme.tex}
+
+
+\input{../_definitions/definition_multiplicative_group_scheme_over_a_scheme.tex}
+
+\subsection{Unipotent groups, reductive groups, tori, and Borel subgroups}
+
+\input{../_definitions/definition_unipotent_element_in_a_linear_algebraic_group.tex}
+
+\input{../_definitions/definition_unit_upper_triangular_matrix_over_a_ring.tex}
+
+\input{../_definitions/definition_linear_algebraic_group_of_unit_upper_triangular_matrices_over_a_scheme.tex}
+
+\input{../_definitions/definition_unipotent_algebraic_group_over_a_scheme.tex}
+
+\begin{example}
+    Let $k$ be a field.
+
+    \textbf{(1) Characteristic zero case:} Consider the additive group scheme $\mathbb{G}_a$ over $k$. Over a field of characteristic zero, $\mathbb{G}_a$ is a unipotent group scheme.
+
+    \textbf{(2) Positive characteristic case:} For $k$ a field of characteristic $p > 0$, consider the finite group scheme $\alpha_p$ defined as the kernel of the Frobenius morphism on $\mathbb{G}_a$. Then $\alpha_p$ is a unipotent group scheme over $k$.
+
+    These examples illustrate fundamental instances of unipotent group schemes in different characteristic settings.
+\end{example}
+
+
+\input{../_definitions/definition_unipotent_radical_of_a_group_scheme_that_is_smooth_finitely_presented_and_with_connected_geometric_fibers_over_a_scheme.tex}
+\TODO{show why the unipotent radical exists}
+
+
+\input{../_definitions/definition_reductive_linear_algebraic_group_over_a_scheme.tex}
+
+\input{../_concepts/lemma_normal_subgroup_of_a_reductive_group_is_reductive.tex}
+
+\input{../_concepts/lemma_unipotent_radical_of_a_smooth_finitely_presented_scheme_connected_is_a_characteristic_subgroup.tex}
+
+\input{../_concepts/theorem_category_of_finite_dimensional_representations_of_a_reductive_group_over_a_field_of_characteristic_0_is_semisimple.tex}
+
+
+
+\input{../_definitions/definition_borel_subgroup_scheme_of_a_connected_reductive_group_scheme_over_a_scheme.tex}
+
+\begin{proposition}
+    Let $G$ be a connected \CrefAndHyperrefIfExist{definition:reductive_linear_algebraic_group_over_a_scheme}{reductive group} over an algebraically closed field $k$. For any two Borel subgroups $B_1,B_2 \subseteq G$, there exists some $g \in G(k)$ such that $B_2 = gB_1g^{-1}$.
+\end{proposition}
+
+In certain contexts, maximal compact subgroups and maximal tori of reductive linear algebraic groups may be of interest; in nice enough cases, maximal compact subgroups of reductive groups are unique up to conjugation.
+
+\begin{proposition}
+    \begin{enumerate}
+        \item Let $G$ be a connected \CrefAndHyperrefIfExist{definition:reductive_linear_algebraic_group_over_a_scheme}{reductive group} over $k = \bbR$ or $\bbC$. For any two maximal compact subgropus $K_1,K_2 \subseteq G$, there exists some $g \in G(k)$ such that $K_2 = gK_1 g^{-1}$.
+
+        \TODO{define a p-adic field}
+        \item Let $F$ be a $p$-adic field and let $\calO_F$ be its ring of integers. For any maximal compact subgroup $K \subseteq \GL_n/F$, there exists some $g \in \GL_n(F)$ such that $\GL_n(\calO_F) = g K g^{-1}$.
+
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+Let $G$ be a connected \CrefAndHyperrefIfExist{definition:reductive_linear_algebraic_group_over_a_scheme}{reductive group} over an algebraically closed field $k$. for any two maximal tori $T_1,T_2 \subseteq G$, there exists some $g \in G(k)$ such that $T_2 = gT_1 g^{-1}$.
+\end{proposition}
+
+\subsubsection{Examples}
+
+\begin{example}[Examples of reductive linear algebraic groups]
+    Some standard examples of reductive linear algebraic groups over fields include:
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:general_linear_group_over_a_scheme}{general linear group $\mathrm{GL}_n$}, the group of invertible $n \times n$ matrices.
+        \item The \CrefAndHyperrefIfExist{definition:special_linear_group_over_a_scheme}{special linear group $\mathrm{SL}_n$}, consisting of matrices with determinant 1, which is connected and semisimple.
+        \item The \CrefAndHyperrefIfExist{definition:multiplicative_group_scheme_over_a_scheme}{multiplicative group $\mathbb{G}_m \cong \mathrm{GL}_1$}, a one-dimensional torus.
+        \item Products of multiplicative groups, i.e., \emph{algebraic tori} $\mathbb{G}_m^r$.
+        \item The \CrefAndHyperrefIfExist{definition:special_orthogonal_group_over_a_scheme_for_a_quadratic_form}{special orthogonal groups $\mathrm{SO}_n$}, preserving nondegenerate quadratic forms (connected for $n \geq 3$).
+        \TODO{define the symplectic groups}
+        \item The \emph{symplectic groups} $\mathrm{Sp}_{2n}$, preserving nondegenerate alternating bilinear forms.
+    \end{enumerate}
+    Non-examples include the additive group $\mathbb{G}_a$, since it is unipotent, and Borel subgroups that have nontrivial unipotent radical.
+\end{example}
+
+\begin{example}[Borel subgroups of standard reductive groups]
+For each of the following reductive groups over an algebraically closed field $k$, a Borel subgroup can be described as follows:
+\begin{enumerate}
+    \item For the \emph{general linear group} $\mathrm{GL}_n(k)$, a Borel subgroup is the subgroup of \emph{invertible upper triangular matrices}.
+    \item For the \emph{special linear group} $\mathrm{SL}_n(k)$, the Borel subgroup is given by the subgroup of upper triangular matrices with determinant 1.
+    \item For the \emph{multiplicative group} $\mathbb{G}_m$, the group itself is a torus and hence a Borel subgroup.
+    \item For products of multiplicative groups $\mathbb{G}_m^r$, Borel subgroups are the groups themselves since they are tori.
+    \item For the \emph{special orthogonal group} $\mathrm{SO}_n(k)$, a Borel subgroup can be realized as the stabilizer of a suitable isotropic flag of subspaces, often realized by certain block upper-triangular matrices preserving the quadratic form.
+    \item For the \emph{symplectic group} $\mathrm{Sp}_{2n}(k)$, a Borel subgroup is typically the subgroup preserving a full isotropic flag with respect to the symplectic form, formed by upper-triangular block matrices in a suitable basis.
+\end{enumerate}
+\end{example}
+
+\begin{example}[Maximal compact subgroups of standard reductive groups]
+Some standard examples of maximal compact subgroups of reductive linear algebraic groups over \(\mathbb{R}\) and \(\mathbb{C}\) include:
+
+\begin{enumerate}
+    \item \textbf{General linear group \(\mathrm{GL}_n\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), a maximal compact subgroup is the orthogonal group \(\mathrm{O}(n)\).
+        \item Over \(\mathbb{C}\), the maximal compact subgroup is the unitary group \(\mathrm{U}(n)\).
+    \end{itemize}
+
+    \item \textbf{Special linear group \(\mathrm{SL}_n\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), a maximal compact subgroup is the special orthogonal group \(\mathrm{SO}(n)\).
+        \item Over \(\mathbb{C}\), the maximal compact subgroup is the special unitary group \(\mathrm{SU}(n)\).
+    \end{itemize}
+
+    \item \textbf{Multiplicative group \(\mathbb{G}_m \cong \mathrm{GL}_1\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), the maximal compact subgroup is \(\{\pm 1\}\), the unit circle in \(\mathbb{R}^*\).
+        \item Over \(\mathbb{C}\), the maximal compact subgroup is the unit circle \(S^1 = \{ z \in \mathbb{C} : |z| = 1 \}\).
+    \end{itemize}
+
+    \item \textbf{Algebraic tori \(\mathbb{G}_m^r\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), a product of copies of \(\{\pm 1\}\) and \(S^1\).
+        \item Over \(\mathbb{C}\), the maximal compact subgroup is \((S^1)^r\).
+    \end{itemize}
+
+    \item \textbf{Special orthogonal groups \(\mathrm{SO}_n\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), \(\mathrm{SO}_n(\mathbb{R})\) itself is compact (for \(n \geq 2\)) and forms its own maximal compact subgroup.
+        \item Over \(\mathbb{C}\), the maximal compact subgroup corresponds to the compact real form \(\mathrm{SO}_n(\mathbb{R})\).
+    \end{itemize}
+
+    \item \textbf{Symplectic groups \(\mathrm{Sp}_{2n}\)}:
+    \begin{itemize}
+        \item Over \(\mathbb{R}\), the maximal compact subgroup is \(\mathrm{Sp}(n)\), the compact symplectic group (quaternionic unitary group).
+        \item Over \(\mathbb{C}\), the maximal compact subgroup corresponds to the compact real form isomorphic to \(\mathrm{Sp}(n)\).
+    \end{itemize}
+\end{enumerate}
+\end{example}
+
+\section{Representations of linear algebraic groups}
+
+% \begin{definition}
+% Let $S$ be a scheme. An \hldef{affine group scheme over $S$} is a group object $G$ in the category of affine $S$-schemes. Equivalently, $G$ is an affine $S$-scheme such that for every $S$-scheme $T$, the set $G(T)$ of $T$-points forms a group, and these group operations are functorial in $T$.
+% \end{definition}
+
+\input{../_definitions/definition_general_linear_group_scheme_of_a_locally_free_O_S_module_on_a_scheme.tex}
+\input{../_definitions/definition_representation_of_an_affine_algebraic_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_faithful_representation_of_an_affine_algebraic_group_scheme_over_a_scheme.tex}
+
+\section{Algebraic groupoids}
+
+
+\TODO{groupoid object}
+
+
+\input{../_definitions/definition_groupoid.tex}
+
+
+\input{../_definitions/definition_groupoid_object_in_a_category.tex}
+
+\input{../_definitions/definition_hopf_algebra_over_a_commutative_ring.tex}
+
+\input{../_definitions/definition_hopf_algebroid_over_a_commutative_ring.tex}
+
+
+
+\input{../_definitions/definition_affine_groupoid_scheme_over_a_scheme.tex}
+
+
+
+
+\appendix
+
+\section{Sesquilinear and Hermitian forms}
+
+\input{../_definitions/definition_involution_on_an_object_in_a_category.tex}
+\input{../_definitions/definition_involution_on_a_ring.tex}
+\input{../_definitions/definition_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_hermitian_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_twisted_dual_module_of_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_nondegenerate_sesquilinear_form_on_a_module_over_an_involution_ring.tex}
+\input{../_definitions/definition_adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_concepts/proposition_sesquilinear_form_on_a_finitely_generated_projective_module_over_an_involution_ring_is_nondegenerate_if_and_only_if_adjoint_map_is_isomorphism.tex}
+\input{../_definitions/definition_involution_on_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_sesquilinear_form_on_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_hermitian_form_on_a_sheaf_of_rings_with_involution_on_a_site.tex}
+
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_affine_scheme.tex}
+\input{../_definitions/definition_scheme.tex}
+
+
+\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_semisimple_object_of_an_additive_category.tex}
+\input{../_definitions/definition_semisimple_additive_category.tex}
+
+\input{../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex}
+\input{../_definitions/definition_representable_by_schemes_for_a_morphism_of_presheaves_on_Sch_S.tex}
+\input{../_definitions/definition_representable_by_algebraic_spaces_for_a_1_morphism_of_stacks_in_groupoids_over_a_site_on_S_schemes.tex}
+\input{../_definitions/definition_algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness.tex}
+
+
+\input{../_definitions/definition_affine_morphism_of_schemes.tex}
+\input{../_definitions/definition_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_algebra_of_a_ring.tex}
+\input{../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex}
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+\input{../_definitions/definition_algebra_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_free_and_locally_free_modules_on_a_ringed_site.tex}
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+\input{../_definitions/definition_finitely_generated_modules_over_rings.tex}
+\input{../_definitions/definition_projective_bimodule_over_rings.tex}
+\input{../_definitions/definition_ring_homomorphism.tex}
+\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+
+\input{../_definitions/definition_affine_space_of_dimension_n_over_a_scheme.tex}

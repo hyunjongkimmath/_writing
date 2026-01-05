@@ -1,0 +1,17 @@
+\begin{definition}[$\lambda$-torsion sheaf on a scheme] \label{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals}
+
+Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. Let $\calO$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of commutative rings} on $(\calC, J)$. Let $\lambda \subseteq \calO$ be a \CrefAndHyperrefIfExist{definition:sheaf_of_ideals_for_a_sheaf_of_rings_on_a_site}{sheaf of ideals}.
+
+A sheaf $\calF$ of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-modules} on $(\calC, J)$ is called a \hldef{$\lambda$-torsion sheaf} if 
+$$\calF = \bigcup_{n \geq 1} \ker(\lambda^n: \calF \to \calF)$$
+or equivalently if for every \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{section} $s \in \calF(U)$ for some object $U \in \Ob(\calC)$, there exists some $n \geq 1$ such that $\lambda^n \cdot s = 0$.
+
+For instance, we may speak of $\lambda$-torsion sheaves by letting \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{$\calO = \underline{R}$} where $R$ is a commutative ring, $\lambda = \underline{I}$ where $I \subseteq R$ is an ideal, and $(\calC, J)$ be the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site of a scheme}. 
+
+% Let $R$ be a commutative ring, $\lambda\subseteq R$ an ideal, and $X$ a scheme. A sheaf $\mathcal{F}$ of $R$-modules on the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{(small) étale site $X_{\text{ét}}$}\CrefIfExists{definition:small_etale_site_of_a_scheme} is called a \hldef{$\lambda$-torsion sheaf} if for every \hyperrefIfExists{definition:etale_morphism_of_schemes}{étale morphism}\CrefIfExists{definition:etale_morphism_of_schemes} $U\to X$, every section $s\in \mathcal{F}(U)$ is annihilated by some power of $\lambda$, i.e.
+% \[
+% \forall s\in \mathcal{F}(U),\ \exists n\geq 1,\ \lambda^n \cdot s = 0,
+% \]
+% or equivalently, if 
+% $$\calF = \bigcup_{n \geq 1} \ker(\lambda^n: \calF \to \calF).$$
+\end{definition}

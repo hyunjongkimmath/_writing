@@ -1,0 +1,17 @@
+\begin{definition}[Opposite category] \label{definition:opposite_category_of_a_category}
+
+    Let $\mathcal{C}$ be a \hyperrefIfExists{definition:category}{(large) category}\CrefIfExists{definition:category}. The \hldef{opposite category} of $\mathcal{C}$, denoted \hl{$\mathcal{C}^{\mathrm{op}}$}, is defined as follows:
+    \begin{itemize}
+        \item The objects of $\mathcal{C}^{\mathrm{op}}$ are the same as those of $\mathcal{C}$.
+        \item For any pair of objects $X,Y \in \mathcal{C}$, the morphisms from $X$ to $Y$ in $\mathcal{C}^{\mathrm{op}}$ are given by the morphisms from $Y$ to $X$ in $\mathcal{C}$:
+        \[
+        \mathrm{Hom}_{\mathcal{C}^{\mathrm{op}}}(X,Y) := \mathrm{Hom}_{\mathcal{C}}(Y,X).
+        \]
+        \item Composition in $\mathcal{C}^{\mathrm{op}}$ is defined by reversing the order of composition in $\mathcal{C}$. That is, for morphisms $f \in \mathrm{Hom}_{\mathcal{C}^{\mathrm{op}}}(X,Y)$ and $g \in \mathrm{Hom}_{\mathcal{C}^{\mathrm{op}}}(Y,Z)$, their composition is
+        \[
+        g \circ_{\mathcal{C}^{\mathrm{op}}} f := f \circ_{\mathcal{C}} g.
+        \]
+    \end{itemize}
+    Intuitively, the category $\mathcal{C}^{\mathrm{op}}$ thus "reverses" the direction of all morphisms in $\mathcal{C}$.
+
+\end{definition}

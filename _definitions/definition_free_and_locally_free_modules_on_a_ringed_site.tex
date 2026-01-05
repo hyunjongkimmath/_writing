@@ -1,0 +1,21 @@
+\begin{definition} \label{definition:free_and_locally_free_modules_on_a_ringed_site}
+Let $((\mathcal{C}, J), \mathcal{O})$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}, where $\mathcal{O}$ is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of rings on the site $(\mathcal{C}, J)$.
+\TODO{This needs some genuine fixing to be definable on a general site, not just one given by a pretopology}
+\begin{enumerate}
+    \item Let $I$ be an indexing set. The \hldef{free sheaf of $\mathcal{O}$-modules of rank $I$} (or simply a \hldef{free sheaf}), denoted by $\mathcal{O}^{\oplus I}$, is the sheaf associated to the presheaf $U \mapsto \mathcal{O}(U)^{\oplus I}$. If $I$ is finite with cardinality $n$, we usually write \hl{$\mathcal{O}^{\oplus n}$}.
+
+    \item 
+    
+    Let $\calA$ be a (large) category, and let $A$ be an object of $\calA$. %a set (or more generally, an abelian group, ring, etc.).
+    Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+    \TODO{If such a sheafification functor exist, does a sheafification functor exist when restricted to an object $U$?}
+    $$a: \PreShv(\calC, J, \calA) \to \Shv(\calC,J, \calA)$$
+    \CrefIfExists{definition:sheaf_on_a_site}
+    \CrefIfExists{definition:presheaf_on_a_category}
+    exists\TextIfExists{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}{~(e.g. see \Cref{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site})}. Let $U$ be an object of $\calC$.
+
+
+    An \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\mathcal{O}$-module} $\mathcal{F}$ is called \hldef{locally free of rank $n$ on $U$} (for an integer $n \ge 0$) if there exists a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{covering sieve} $\{U_i \to U\}_{i \in I}$ such that for each $i$, the \CrefAndHyperrefIfExist{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site}{restriction $\mathcal{F}|_{U_i}$} is isomorphic to the free sheaf $(\mathcal{O}|_{U_i})^{\oplus n}$ as an $\mathcal{O}|_{U_i}$-module.
+\end{enumerate}
+We might call a locally free $\calO$-module of rank $n$ an \hldef{algebraic vector bundle of rank $n$}. A \hldef{(algebraic) line bundle} or \hldef{invertible sheaf} or is then an algebraic vector bundle of rank $1$.
+\end{definition}

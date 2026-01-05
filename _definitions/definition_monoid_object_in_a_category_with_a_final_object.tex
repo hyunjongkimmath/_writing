@@ -1,0 +1,33 @@
+\begin{definition} \label{definition:monoid_object_in_a_category_with_a_final_object}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object}. 
+    A \hldef{monoid object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:semigroup_object_in_a_category}{semigroup  object} $(A,\mu)$ together with a \hldef{unit morphism} 
+    $$
+    \eta : 1 \to A
+    $$
+    such that the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} $1 \times A$ and $A \times 1$ exist and the unit diagrams
+    $$
+    \begin{tikzcd}
+    1 \times A
+    \arrow[rr, "\eta \times \mathrm{id}_A"]
+    \arrow[dr, "\mathrm{pr}_2"']
+    && A \times A
+    \arrow[dl, "\mu"]
+    \\
+    & A &
+    \end{tikzcd}
+    $$
+
+    $$
+    \begin{tikzcd}
+    A \times 1
+    \arrow[rr, "\mathrm{id}_A \times \eta"]
+    \arrow[dr, "\mathrm{pr}_1"']
+    && A \times A
+    \arrow[dl, "\mu"]
+    \\
+    & A &
+    \end{tikzcd}
+    $$
+
+    commute.
+\end{definition}

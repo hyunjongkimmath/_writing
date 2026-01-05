@@ -1,0 +1,62 @@
+\begin{definition} \label{definition:rigid_category}
+A \hldef{rigid category} is a \hyperrefIfExists{definition:monoidal_category}{monoidal category} $(\mathcal{C}, \otimes, \mathbb{I})$ in which every object $X \in \mathcal{C}$ admits a \hldef{left dual} \hl{$X^{\vee}$} and a \hldef{right dual} \hl{${}^{\vee}\!X$}, i.e., there exist objects and morphisms
+\hlalign{
+\begin{align*}
+&\mathrm{ev}_X: X^{\vee} \otimes X \to \mathbb{I}, \qquad \mathrm{coev}_X: \mathbb{I} \to X \otimes X^{\vee}, \\
+&\widetilde{\mathrm{ev}}_X: X \otimes {}^{\vee}\!X \to \mathbb{I}, \qquad \widetilde{\mathrm{coev}}_X: \mathbb{I} \to {}^{\vee}\!X \otimes X,
+\end{align*}
+}
+% \TODO{TODO: add the zig-zag identities}
+% satisfying the standard zig-zag identities (triangle identities) for duals.
+
+satisfying the \hldef{zig-zag identities} (triangle identities), i.e., the following compositions are the respective identity morphisms:
+
+\bigskip
+
+\noindent\textbf{Left dual zig-zag identities:}
+\[
+\begin{tikzcd}
+X \arrow[r, "\cong"] \arrow[rr, bend left=40, "\mathrm{id}_X"] & 
+X \otimes \mathbb{I} \arrow[r, "\mathrm{id}_X \otimes \mathrm{coev}_X"] & 
+X \otimes (X^{\vee} \otimes X) \arrow[r, "\alpha_{X, X^\vee, X}"] & 
+(X \otimes X^{\vee}) \otimes X \arrow[r, "\mathrm{ev}_X \otimes \mathrm{id}_X"] & 
+\mathbb{I} \otimes X \arrow[r, "\cong"] & X
+\end{tikzcd}
+\]
+and
+\[
+\begin{tikzcd}
+X^{\vee} \arrow[r, "\cong"] \arrow[rr, bend left=40, "\mathrm{id}_{X^\vee}"] & 
+\mathbb{I} \otimes X^{\vee} \arrow[r, "\mathrm{coev}_X \otimes \mathrm{id}_{X^\vee}"] & 
+(X^{\vee} \otimes X) \otimes X^{\vee} \arrow[r, "\alpha^{-1}_{X^\vee, X, X^\vee}"] & 
+X^{\vee} \otimes (X \otimes X^{\vee}) \arrow[r, "\mathrm{id}_{X^\vee} \otimes \mathrm{ev}_X"] & 
+X^{\vee} \otimes \mathbb{I} \arrow[r, "\cong"] & X^{\vee}
+\end{tikzcd}
+\]
+
+\bigskip
+
+\noindent\textbf{Right dual zig-zag identities:}
+\[
+\begin{tikzcd}
+X \arrow[r, "\cong"] \arrow[rr, bend left=40, "\mathrm{id}_X"] & 
+\mathbb{I} \otimes X \arrow[r, "\widetilde{\mathrm{coev}}_X \otimes \mathrm{id}_X"] & 
+({}^{\vee}\!X \otimes X) \otimes X \arrow[r, "\alpha^{-1}_{{}^{\vee}\!X, X, X}"] & 
+{}^{\vee}\!X \otimes (X \otimes X) \arrow[r, "\mathrm{id}_{{}^{\vee}\!X} \otimes \widetilde{\mathrm{ev}}_X"] & 
+{}^{\vee}\!X \otimes \mathbb{I} \arrow[r, "\cong"] & X
+\end{tikzcd}
+\]
+and
+\[
+\begin{tikzcd}
+{}^{\vee}\!X \arrow[r, "\cong"] \arrow[rr, bend left=40, "\mathrm{id}_{{}^{\vee}\!X}"] & 
+{}^{\vee}\!X \otimes \mathbb{I} \arrow[r, "\mathrm{id}_{{}^{\vee}\!X} \otimes \widetilde{\mathrm{coev}}_X"] & 
+{}^{\vee}\!X \otimes ({}^{\vee}\!X \otimes X) \arrow[r, "\alpha_{{}^{\vee}\!X, {}^{\vee}\!X, X}"] & 
+({}^{\vee}\!X \otimes {}^{\vee}\!X) \otimes X \arrow[r, "\widetilde{\mathrm{ev}}_X \otimes \mathrm{id}_X"] & 
+\mathbb{I} \otimes X \arrow[r, "\cong"] & {}^{\vee}\!X
+\end{tikzcd}
+\]
+
+It is reasonable to call $\mathrm{ev}_X$ the \hldef{evaluation map for the left dual}, $\widetilde{\mathrm{ev}}_X$ the \hldef{evaluation map for the right dual}, $\mathrm{coev}_X$ the \hldef{coevaluation map for the left dual}, and $\widetilde{\mathrm{coev}}_X$ the \hldef{coevaluation map for the right dual}. 
+
+\end{definition}

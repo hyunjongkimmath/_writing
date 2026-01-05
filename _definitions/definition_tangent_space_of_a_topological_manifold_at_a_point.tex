@@ -1,0 +1,56 @@
+
+\begin{definition} \label{definition:tangent_space_of_a_topological_manifold_at_a_point}
+  Let $M$ be a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold of dimension $n$ with or without boundary}, and let $p \in M$ be a point such that there is an open neighborhood of $M$ that is a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^1$-manifold} as a submanifold of $M$.
+  
+  \begin{enumerate}
+    \item The \hldef{tangent space of $M$ at the point $p$}, denoted \hl{$T_p M$}, is defined as follows:
+    \TODO{TODO: define the derivative/jacobian matrix of a self map of $R^n$ }
+    \TODO{TODO: justify why having the derivative of the transition map between charts implies that $T_p M$ is well defined and independent of the choice of chart.}
+    Choose a \CrefAndHyperrefIfExist{definition:chart_on_a_topological_manifold}{chart} $(U, \varphi)$ around $p$ with $p \in U \subseteq M$, where $\varphi : U \to V$ is a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} onto an open subset $V \subseteq \mathbb{R}^n$ or the \CrefAndHyperrefIfExist{definition:closed_half_space_in_euclidean_space}{upper half-space $\bbH$} (when $p$ is a boundary point).
+    
+    We identify $T_p M$ with the vector space $\mathbb{R}^n$ via the differential of $\varphi$ at $p$. More precisely,
+    $$
+    T_p M := \{\,(U, \varphi), v \mid v \in \mathbb{R}^n \,\} / \sim
+    $$
+    where two pairs $((U, \varphi), v)$ and $((U', \varphi'), v')$ are equivalent if $p \in U \cap U'$ and
+    $$
+    v' = d(\varphi' \circ \varphi^{-1})_{\varphi(p)} (v),
+    $$
+    with $d(\varphi' \circ \varphi^{-1})_{\varphi(p)} : \mathbb{R}^n \to \mathbb{R}^n$ the derivative (Jacobian matrix) of the transition map at $\varphi(p)$.
+
+    A \hldef{tangent vector of $M$ at $p$} is then an element of $T_p M$. 
+
+    \item The \hldef{cotangent space of $M$ at $p$}, denoted \hl{$T_p^* M$}, is the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual space $(T_p M)^* = \Hom_{\mathbb{R}}(T_p M, \mathbb{R})$}.
+
+    A \hldef{cotangent vector of $M$ at $p$} is then an element of $T_p^* M$. 
+  \end{enumerate}
+\end{definition}
+
+
+% \begin{definition} \label{definition:tangent_space_of_a_topological_manifold_at_a_point}
+%   \TODO{do this definition for manifolds with boundary}
+% Let $M$ be a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold} of dimension $n$ and let $p \in M$ be a point.
+
+% \begin{enumerate}
+%     \item The \hldef{tangent space of $M$ at the point $p$}, denoted \hl{$T_p M$}, is defined as follows:
+%     \TODO{TODO: define the derivative/jacobian matrix of a self map of $R^n$ }
+%     \TODO{TODO: justify why having the derivative of the transition map between charts implies that $T_p M$ is well defined and independent of the choice of chart.}
+
+%     Choose a chart $(U, \varphi)$ around $p$ with $p \in U \subseteq M$, where $\varphi : U \to V$ is a homeomorphism onto an open subset $V \subseteq \mathbb{R}^n$.
+
+%     Identify $T_p M$ with the vector space $\mathbb{R}^n$ via the differential of $\varphi$ at $p$. More precisely, 
+%     $$
+%     T_p M := \{\, (U, \varphi), v \mid v \in \mathbb{R}^n \,\} / \sim
+%     $$
+%     where two pairs $((U, \varphi), v)$ and $((U', \varphi'), v')$ are equivalent if $p \in U \cap U'$ and
+%     $$
+%     v' = d(\varphi' \circ \varphi^{-1})_{\varphi(p)} (v),
+%     $$
+%     with $d(\varphi' \circ \varphi^{-1})_{\varphi(p)} : \mathbb{R}^n \to \mathbb{R}^n$ being the derivative (Jacobian matrix) of the transition map between charts at $\varphi(p)$.
+
+%     Thus, $T_p M$ is a well-defined $n$-dimensional real vector space that does not depend on the choice of chart.
+
+%     \TODO{TODO: define dual space of a vector space}
+%     \item The \hldef{cotangent space of $M$ at the point $p$}, denoted \hl{$T_p^* M$}, is the dual space $(T_p M)^* = \Hom_{\bbR-\VectorSpaces}(T_p M, \bbR)$. 
+% \end{enumerate}
+% \end{definition}

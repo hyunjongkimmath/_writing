@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}
+Let $\mathcal{C}$ be a category. Let $f: X \to Y$ be a morphism in $\mathcal{C}$, and let $g: Y' \to Y$ be any morphism in $\mathcal{C}$ such that the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product $X \times_Y Y'$} exists. The \hldef{base change of $f$ by $g$} is the morphism $f': X \times_Y Y' \to Y'$ obtained by the pullback of $f$ along $g$. In particular, 
+$$
+\begin{array}{ccc}
+X \times_Y Y' & \xrightarrow{p_1} & X \\
+\downarrow{f'} & & \downarrow{f} \\
+Y' & \xrightarrow{g} & Y
+\end{array}
+$$
+is a Cartesian diagram (or pullback square) in $\mathcal{C}$.
+\end{definition}

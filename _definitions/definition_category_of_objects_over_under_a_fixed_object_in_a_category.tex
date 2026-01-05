@@ -1,0 +1,41 @@
+
+\begin{definition}[Category of objects over a fixed object] \label{definition:category_of_objects_over_under_a_fixed_object_in_a_category}
+Let $\mathcal{C}$ be a \hyperrefIfExists{definition:category}{category}\CrefIfExists{definition:category} and let $X \in \operatorname{Ob}(\mathcal{C})$ be a fixed object.
+\begin{enumerate}
+    \item 
+        The \hldef{category of objects over $X$} (or synonymously the \hldef{slice category of $X$ in $\calC$} or the \hldef{over category of $X$ in $\calC$}), commonly denoted \hl{$\mathcal{C}/X$}, \hl{$\mathcal{C}_{/X}$}, or \hl{$(\mathcal{C} \downarrow X)$} is the category defined as follows:
+        \begin{itemize}
+            \item An object of $\mathcal{C}/X$ is a morphism $f \colon A \to X$ in $\mathcal{C}$, where $A \in \operatorname{Ob}(\mathcal{C})$.
+            \item A morphism from $f \colon A \to X$ to $g \colon B \to X$ in $\mathcal{C}/X$ is a morphism $h \colon A \to B$ in $\mathcal{C}$ such that the following diagram commutes:
+            $$
+            \begin{aligned}
+            \xymatrix{
+            A \ar[dr]_f \ar[r]^h & B \ar[d]^g \\
+            & X
+            }
+            \end{aligned}
+            $$
+            i.e. such that $g \circ h = f$.
+            \item The identity morphisms and composition in $\mathcal{C}/X$ are inherited from $\mathcal{C}$.
+        \end{itemize}
+
+    \item 
+    The \hldef{category of objects under $X$} (or synonymously the \hldef{coslice category of $X$ in $\calC$} or the \hldef{under category of $X$ in $\calC$}), commonly denoted \hl{$X/\mathcal{C}$}, \hl{$X \backslash \calC$}, \hl{$\mathcal{C}_{X/}$}, or \hl{$(X \downarrow \calC)$}, is the category defined as follows:
+    \begin{itemize}
+        \item An object of $X/\mathcal{C}$ is a morphism $f \colon X \to A$ in $\mathcal{C}$, where $A \in \operatorname{Ob}(\mathcal{C})$.
+        \item A morphism from $f \colon X \to A$ to $g \colon X \to B$ in $X/\mathcal{C}$ is a morphism $h \colon A \to B$ in $\mathcal{C}$ such that the following diagram commutes:
+        $$
+        \begin{aligned}
+        \xymatrix{
+        X \ar[dr]^g \ar[r]^f & A \ar[d]^h \\
+        & B
+        }
+        \end{aligned}
+        $$
+        i.e. such that $h \circ f = g$.
+        \item The identity morphisms and composition in $X/\mathcal{C}$ are inherited from $\mathcal{C}$.
+    \end{itemize}
+
+\end{enumerate} 
+\TextIfExists{definition:comma_category_of_two_functors_to_a_category}{Both notions are special cases of \CrefAndHyperrefIfExist{definition:comma_category_of_two_functors_to_a_category}{comma categories}.}
+\end{definition}

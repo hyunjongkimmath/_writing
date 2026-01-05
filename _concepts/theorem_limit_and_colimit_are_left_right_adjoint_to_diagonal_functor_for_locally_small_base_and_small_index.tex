@@ -1,0 +1,16 @@
+\begin{theorem} \label{theorem:limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} category and $\mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small index category}.
+    
+    \begin{enumerate}
+        \item If $\mathcal{C}$ admits all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} of \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{shape} $\mathcal{J}$, then the \CrefAndHyperrefIfExist{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}{colimit functor}
+        $$\operatorname{colim}: \mathcal{C}^{\mathcal{J}} \to \mathcal{C}$$
+        is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:diagonal_functor}{diagonal functor} $\Delta$. That is, for any functor $F: \mathcal{J} \to \mathcal{C}$ and any object $X \in \mathcal{C}$, there is a natural bijection:
+        $$\operatorname{Hom}_{\mathcal{C}}(\operatorname{colim} F, X) \cong \operatorname{Hom}_{\mathcal{C}^{\mathcal{J}}}(F, \Delta(X)).$$
+        
+        \item If $\mathcal{C}$ admits all limits of shape $\mathcal{J}$, then the \CrefAndHyperrefIfExist{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}{limit functor}
+        $$\lim: \mathcal{C}^{\mathcal{J}} \to \mathcal{C}$$
+        is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the \CrefAndHyperrefIfExist{definition:diagonal_functor_from_a_category_to_a_diagram_category_of_the_category}{diagonal functor} $\Delta$. That is, for any object $X \in \mathcal{C}$ and any functor $F: \mathcal{J} \to \mathcal{C}$, there is a natural bijection:
+        $$\operatorname{Hom}_{\mathcal{C}}(X, \lim F) \cong \operatorname{Hom}_{\mathcal{C}^{\mathcal{J}}}(\Delta(X), F).$$
+    \end{enumerate}
+    These adjunctions characterize limits and colimits via their universal properties.
+\end{theorem}

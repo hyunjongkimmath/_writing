@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:projective_spectrum_of_a_Z_geq_0_graded_commutative_ring}
+Let $R = \bigoplus_{d \geq 0} R_d$ be a $\mathbb{Z}_{\geq 0}$-graded commutative ring. The \hldef{projective spectrum of $R$}, denoted by \hl{$\operatorname{Proj}(R)$}, is the set of all \CrefAndHyperrefIfExist{definition:homogeneous_prime_and_maximal_ideal_of_a_graded_ring_by_a_monoid}{homogeneous prime ideals} $\mathfrak{p} \subset R$ that do not contain the \CrefAndHyperrefIfExist{definition:irrelevant_ideal_of_a_graded_ring_by_a_monoid_with_an_absorbing_zero_or_ordered_monoid_with_zero_degre_the_identity}{irrelevant ideal} $R_+ = \bigoplus_{d > 0} R_d$.
+
+The set $\operatorname{Proj}(R)$ is equipped with the \hldef{Zariski topology}, which is the \CrefAndHyperrefIfExist{definition:topological_space}{topology} where the closed sets are of the form
+$$\hlin{V(\mathfrak{a}) = \{ \mathfrak{p} \in \operatorname{Proj}(R) \mid \mathfrak{a} \subseteq \mathfrak{p} \}}$$
+for any \CrefAndHyperrefIfExist{definition:homogeneous_ideal_of_a_graded_ring_by_a_monoid}{homogeneous ideal} $\mathfrak{a} \subseteq R$.
+
+The \CrefAndHyperrefIfExist{definition:ringed_space}{structure sheaf} $\mathcal{O}_{\operatorname{Proj}(R)}$ is defined on the \CrefAndHyperrefIfExist{definition:basis_for_a_topology}{basis} of open sets 
+$$\hlin{D_+(f) = \{ \mathfrak{p} \in \operatorname{Proj}(R) \mid f \notin \mathfrak{p} \}}$$ 
+(where $f \in R_d$ is a homogeneous element of degree $d > 0$) by setting:
+$$\hlin{\mathcal{O}_{\operatorname{Proj}(R)}(D_+(f)) = R_{(f)},}$$
+where $R_{(f)}$ is the subring of degree zero elements in the \CrefAndHyperrefIfExist{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}{localization} $R_f$. This makes $(\operatorname{Proj}(R), \mathcal{O}_{\operatorname{Proj}(R)})$ into a scheme.
+\end{definition}

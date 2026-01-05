@@ -1,0 +1,35 @@
+
+\begin{definition}[Unipotent group] \label{definition:unipotent_algebraic_group_over_a_scheme}
+    \begin{enumerate}
+        \item An \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{algebraic group scheme} $U/k$ over a field is said to be \hldef{unipotent} if the following equivalent conditions hold:
+        \TODO{state some of these conditions more precisely}
+        \begin{itemize}
+            \item every nonzero representation of the group has a nonzero fixed vector. 
+            \item there exists a \CrefAndHyperrefIfExist{definition:faithful_representation_of_an_affine_algebraic_group_scheme_over_a_scheme}{faithful representation} $U \hookrightarrow \mathrm{GL}_n$ whose image consists entirely of \CrefAndHyperrefIfExist{definition:unipotent_element_in_a_linear_algebraic_group}{unipotent matrices}. 
+            \item $U$ is \CrefAndHyperrefIfExist{definition:homomorphism_of_algebraic_groups_over_a_scheme}{isomorphic} to a closed subgroup scheme of $UT_{n}/\Spec k$ for some integer $n \geq 1$.
+            \item $U$ is a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} and for any $k$-algebra $R$, the matrix group $U(R)$ consists entirely of unipotent matrices.
+        \end{itemize}
+
+        \item Let \(U\) be an algebraic group scheme over a base scheme \(S\). We say that \(U\) is \hldef{unipotent} if it satisfies one of the following equivalent conditions:
+        \begin{itemize}
+            \item For every geometric point \(s \in S\), the fiber \(U_s\) is a unipotent algebraic group over the residue field \(\kappa(s)\).
+            
+            \item There exists a \CrefAndHyperrefIfExist{definition:faithful_representation_of_an_affine_algebraic_group_scheme_over_a_scheme}{faithful representation}
+            \[
+            \rho: U \hookrightarrow \mathrm{GL}_n
+            \]
+            over \(S\) such that for every \(S\)-algebra \(R\), the image \(\rho(U(R)) \subseteq \mathrm{GL}_n(R)\) consists entirely of unipotent matrices (i.e., matrices whose eigenvalues are all equal to 1).
+            
+            \item \(U\) admits a finite central composition series
+            \[
+            1 = U_0 \triangleleft U_1 \triangleleft \cdots \triangleleft U_r = U,
+            \]
+            where each successive quotient \(U_{i}/U_{i-1}\) is isomorphic to a subgroup scheme of the additive group scheme \(\mathbb{G}_{a, S}\).
+            
+            \item \(U\) is isomorphic to a closed subgroup scheme of the group scheme \(UT_n\) of upper unitriangular \(n \times n\) matrices over \(S\) for some integer \(n\).
+        \end{itemize}
+    \end{enumerate}
+
+
+
+\end{definition}

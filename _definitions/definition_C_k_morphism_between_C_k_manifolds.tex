@@ -1,0 +1,30 @@
+\begin{definition} \label{definition:C_k_morphism_between_C_k_manifolds}
+% Let $k \in \mathbb{N}_0 \cup \{\infty\}$ be fixed. Let $(M, \mathcal{A}_M)$ and $(N, \mathcal{A}_N)$ be $C^k$-manifolds of dimensions $n$ and $m$, respectively, where $M,N$ are topological manifolds and $\calA_M$ and $\calA_N$ are $C^k$-atlases.
+
+% A \hldef{$C^k$-morphism} (or \hldef{$C^k$-map}) between $M$ and $N$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}
+% $$ f : M \to N $$
+% such that for every $p \in M$ there exist \hyperrefIfExists{definition:chart_on_a_topological_manifold}{charts} $(U, \varphi) \in \mathcal{A}_M$ with $p \in U$ and $(V, \psi) \in \mathcal{A}_N$ with $f(p) \in V$ satisfying
+% $$ \psi \circ f \circ \varphi^{-1} : \varphi(U \cap f^{-1}(V)) \to \psi(V) $$
+% is a \CrefAndHyperrefIfExist{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}{$C^k$-map} between open subsets of Euclidean spaces $\mathbb{R}^n$ and $\mathbb{R}^m$, i.e.,
+% $$ \psi \circ f \circ \varphi^{-1} \in C^k(\varphi(U \cap f^{-1}(V)), \psi(V)).  $$
+% If $f$ is a homeomorphism and its inverse $f^{-1} : N \to M$ is also a $C^k$-morphism, then $f$ is called a \hldef{$C^k$-diffeomorphism}.
+% We let \hl{$C^k(M,N)$} denote the space of $C^k$-maps $M \to N$.  We let \hl{$C^k(M)$} denote the space of \hldef{$C^k$-functions}, i.e. the $C^k$-maps $M \to \bbR$.
+
+Let $k \in \mathbb{N}_0 \cup \{\infty\}$ be fixed. Let $(M, \mathcal{A}_M)$ and $(N, \mathcal{A}_N)$ be \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$-manifolds with boundary} of dimensions $n$ and $m$, respectively, where $M,N$ are \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifolds with boundary} and $\calA_M$ and $\calA_N$ are \CrefAndHyperrefIfExist{definition:C_k_atlas_on_a_topological_manifold}{$C^k$-atlases} whose charts map to open subsets of the \CrefAndHyperrefIfExist{definition:closed_half_space_in_euclidean_space}{closed half-spaces} $\mathbb{H}^n$ and $\mathbb{H}^m$.
+
+A \hldef{$C^k$-morphism} (or \hldef{$C^k$-map}) between $M$ and $N$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}
+$$ f : M \to N $$
+such that for every $p \in M$ there exist \hyperrefIfExists{definition:chart_on_a_topological_manifold}{charts} $(U, \varphi) \in \mathcal{A}_M$ with $p \in U$ and $(V, \psi) \in \mathcal{A}_N$ with $f(p) \in V$ satisfying
+$$ \psi \circ f \circ \varphi^{-1} : \varphi(U \cap f^{-1}(V)) \to \psi(V) $$
+is a \CrefAndHyperrefIfExist{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}{$C^k$-map} between open subsets of the closed half-spaces $\mathbb{H}^n$ and $\mathbb{H}^m$, i.e.,
+$$ \psi \circ f \circ \varphi^{-1} \in C^k(\varphi(U \cap f^{-1}(V)), \psi(V)).  $$
+If $f$ is a homeomorphism and its inverse $f^{-1} : N \to M$ is also a $C^k$-morphism, then $f$ is called a \hldef{$C^k$-diffeomorphism}.
+We let \hl{$C^k(M,N)$} denote the space of $C^k$-maps $M \to N$. We let \hl{$C^k(M)$} denote the space of \hldef{$C^k$-functions}, i.e., the $C^k$-maps $M \to \mathbb{R}$.
+
+In particular, we may speak of these notions when $M$ and $N$ are \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$-manifolds without boundary}.
+
+\end{definition}
+
+\begin{remark}
+    The notations $C^k(M,N)$ (and $C^k(M)$) agrees with the usual notations $C^k(M,N)$ and $C^k(M)$ in the case that $M$ is an open subset of $\bbR^n$\CrefIfExists{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}.
+\end{remark}

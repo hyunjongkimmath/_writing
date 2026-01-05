@@ -1,0 +1,13 @@
+\begin{definition}[Complete ordered field] \label{definition:ordered_field_complete_ordered_field}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field} and let $\leq$ be a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order} on $F$.
+The pair $(F,\leq)$ is called an \hldef{ordered field} if for all $a,b,c \in F$:
+\begin{enumerate}
+  \item $a \leq b$ implies $a + c \leq b + c$,
+  \item $0 \leq a$ and $0 \leq b$ imply $0 \leq ab$.
+\end{enumerate}
+An ordered field $(F,\leq)$ is called a \hldef{complete ordered field} if every nonempty subset $S \subseteq F$ that is bounded above (i.e.\ there exists $M \in F$ with $s \leq M$ for all $s \in S$) has a least upper bound in $F$, that is, an element $\sup S \in F$ such that:
+\begin{enumerate}
+  \item $s \leq \sup S$ for all $s \in S$,
+  \item if $u \in F$ satisfies $s \leq u$ for all $s \in S$, then $\sup S \leq u$.
+\end{enumerate}
+\end{definition}

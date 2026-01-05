@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:principal_weil_divisor_on_and_divisor_class_group_of_a_locally_noetherian_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{locally Noetherian scheme}.
+\TODO{length of module}
+Let $\mathcal{K}_X$ be the sheaf of total quotient rings of $X$. Let $f \in \Gamma(X, \mathcal{K}_X)^*$ be a global section which is invertible (i.e. a rational function that is nowhere a zero-divisor).
+\begin{enumerate}
+    \item The \hldef{principal Weil divisor} associated to $f$, denoted by \hl{$(f)$} or \hl{$\operatorname{div}(f)$}, is the \CrefAndHyperrefIfExist{definition:prime_and_weil_divisor_on_a_scheme}{Weil divisor} defined as
+    $$\hlin{(f) = \sum_{Y} v_Y(f) Y,}$$
+    where the sum runs over all prime divisors $Y$ of $X$. Here, $v_Y(f)$ is the length of the module $\mathcal{O}_{X, \eta_Y} / (f)$ if $f$ is regular in $\mathcal{O}_{X, \eta_Y}$, extended by linearity ($v_Y(a/b) = v_Y(a) - v_Y(b)$).
+    \item The \hldef{divisor class group of $X$}, denoted by \hl{$\operatorname{Cl}(X)$}, is the quotient of the group of Weil divisors by the subgroup of principal Weil divisors.
+\end{enumerate}
+\end{definition}

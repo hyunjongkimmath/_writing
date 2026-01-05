@@ -1,0 +1,17 @@
+\begin{definition}[Product of Groups] \label{definition:product_of_groups}
+Let $\{ G_i \}_{i \in I}$ be a family of groups indexed by a (possibly \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{infinite} but \CrefAndHyperrefIfExist{definition:small_set}{small}) set $I$, each with group operation denoted multiplicatively and identity element $e_i$. 
+The \hldef{(direct) product of the family $\{G_i\}_{i \in I}$}, denoted by \hl{$\prod_{i \in I} G_i$}, is defined as the set of all functions
+$$ \prod_{i \in I} G_i := \{ (g_i)_{i \in I} \mid g_i \in G_i \text{ for all } i \in I \}, $$
+equipped with the binary operation defined componentwise by
+$$ (g_i)_{i \in I} \cdot (h_i)_{i \in I} := (g_i h_i)_{i \in I} $$
+for all $(g_i)_{i \in I}, (h_i)_{i \in I} \in \prod_{i \in I} G_i$.  
+Then $\prod_{i \in I} G_i$ is a group with the identity element $(e_i)_{i \in I}$ and inverses given by
+$$ (g_i)_{i \in I}^{-1} = (g_i^{-1})_{i \in I}.  $$
+
+The product $\prod_{i=1} G_i$ is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} of the objects $G_i$ in the \CrefAndHyperrefIfExist{definition:group_homomorphism}{category of groups}.
+As a set, note that $\prod_{i \in I} G_i$ coincides with the \CrefAndHyperrefIfExist{definition:product_of_sets}{product $\prod_{i \in I} G_i$} of the $G_i$ as sets. 
+
+A self product of a group $G$ (indexed by a small set $I$), is often denoted by \hl{$G^I$}. A finite self product of a group $G$ taken $n$ times is often denoted by \hl{$G^n$}. In case that $G$ is abelian, these may be written as \hl{$G^{\oplus I}$} and \hl{$G^{\oplus n}$} respectively.
+
+The product of finitely many groups $G_1,\ldots,G_n$ is often denoted by \hl{$G_1 \times \cdots \times G_n$}. 
+\end{definition}

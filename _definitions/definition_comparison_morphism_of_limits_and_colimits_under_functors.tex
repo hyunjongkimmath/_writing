@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:comparison_morphism_of_limits_and_colimits_under_functors}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}, $F: \mathcal{C} \to \mathcal{D}$ a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}, and $D: \mathcal{J} \to \mathcal{C}$ a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} indexed by a small category $\mathcal{J}$.
+
+    \begin{enumerate}
+        \item Assume that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of $D$ exists in $\mathcal{C}$, denoted by $\operatorname{colim}_{\mathcal{J}} D$, with universal \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone} $\eta: D \Rightarrow \Delta_{\operatorname{colim} D}$. The functor $F$ maps this to a cocone $F(\eta): F \circ D \Rightarrow \Delta_{F(\operatorname{colim} D)}$ in $\mathcal{D}$.
+        
+        If the colimit of the composite diagram $F \circ D$ exists in $\mathcal{D}$, denoted by $\operatorname{colim}_{\mathcal{J}} (F \circ D)$, then by the universal property of the colimit, there exists a unique morphism 
+        $$\phi: \operatorname{colim}_{j \in \mathcal{J}} F(D(j)) \longrightarrow F\left(\operatorname{colim}_{j \in \mathcal{J}} D(j)\right)$$
+        mediating between the cocone of the composite colimit and the image cocone $F(\eta)$. This unique morphism is called the \hldef{canonical colimit comparison morphism}.
+        
+        \item Dually, assume that the limit of $D$ exists in $\mathcal{C}$, denoted by $\lim_{\mathcal{J}} D$, with universal cone $\varepsilon: \Delta_{\lim D} \Rightarrow D$. The functor $F$ maps this to a cone $F(\varepsilon): \Delta_{F(\lim D)} \Rightarrow F \circ D$ in $\mathcal{D}$.
+        
+        If the limit of the composite diagram $F \circ D$ exists in $\mathcal{D}$, denoted by $\lim_{\mathcal{J}} (F \circ D)$, then by the universal property of the limit, there exists a unique morphism 
+        $$\psi: F\left(\lim_{j \in \mathcal{J}} D(j)\right) \longrightarrow \lim_{j \in \mathcal{J}} F(D(j))$$
+        mediating between the image cone $F(\varepsilon)$ and the cone of the composite limit. This unique morphism is called the \hldef{canonical limit comparison morphism}:
+    \end{enumerate}
+\end{definition}

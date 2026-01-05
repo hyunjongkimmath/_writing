@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:tensor_product_of_a_ring_and_an_algebra_over_a_ring}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring_homomorphism}{$k$-rings} (not necessarily commutative). Assume that at least one of $R$ or $S$ is a \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$k$-algebra}. The \hldef{tensor product ring} \hl{$R \otimes_k S$} is the $k$-module \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{$R \otimes_k S$} equipped with a multiplication defined on simple tensors by
+    \[
+        (r_1 \otimes s_1) \cdot (r_2 \otimes s_2) = (r_1 r_2) \otimes (s_1 s_2)
+    \]
+    and extended by linearity. This multiplication is well-defined and makes $R \otimes_k S$ into a $k$-ring under the ring homomorphism 
+    $$k \to R \otimes_k S, \quad a \mapsto a \otimes 1 = 1 \otimes a.$$
+    The unit element is $1_R \otimes 1_S$.
+
+    In this ring, the \CrefAndHyperrefIfExist{definition:subring_of_a_ring}{subrings} $R \otimes 1$ and $1 \otimes S$ commute with each other; that is, for all $r \in R$ and $s \in S$,
+    \[
+        (r \otimes 1) \cdot (1 \otimes s) = r \otimes s = (1 \otimes s) \cdot (r \otimes 1).
+    \]
+
+    If $R$ and $S$ are both $k$-algebras, then $R \otimes_k S$ is also a $k$-algebra.
+\end{definition}

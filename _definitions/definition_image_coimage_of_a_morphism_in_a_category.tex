@@ -1,0 +1,44 @@
+\begin{definition} \label{definition:image_coimage_of_a_morphism_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $f: A \to B$ be a morphism in $\mathcal{C}$. 
+\begin{enumerate}
+    \item 
+    An \hldef{image of $f$} consists of an object $I \in \mathrm{Ob}(\mathcal{C})$ together with a factorization of $f$ into two morphisms
+        \begin{align*}
+        A \xrightarrow{e} I \xrightarrow{m} B,
+        \end{align*}
+    where $e$ is an \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} and $m$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism}, such that for any other factorization
+        \begin{align*}
+        A \xrightarrow{e'} I' \xrightarrow{m'} B
+        \end{align*}
+    with $e'$ epi and $m'$ mono, there exists a unique isomorphism $\varphi: I \simeq I'$ satisfying $m = m'\varphi$ and $\varphi e = e'$.
+    \begin{center}
+    \begin{tikzcd}
+        & I \arrow[dr, "m", hook] \arrow[dd, "\exists ! \varphi", dashed, "\sim"' {sloped} ] & \\
+        A \arrow[ur, "e", two heads] \arrow[dr, "e'"', two heads] & & B \\
+        & I' \arrow[ur, "m'"', hook] &
+    \end{tikzcd}
+    \end{center}
+    The monomorphism $m: I \to B$ (or equivalently its subobject class) is called the \hldef{image of $f$ in $\mathcal{C}$}.
+
+    \item
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $f: A \to B$ be a morphism in $\mathcal{C}$. A \hldef{coimage of $f$} consists of an object $C \in \mathrm{Ob}(\mathcal{C})$ together with a factorization of $f$ into two morphisms
+        \begin{align*}
+        A \xrightarrow{e} C \xrightarrow{m} B,
+        \end{align*}
+    where $e$ is an epimorphism and $m$ is a monomorphism, such that for any other factorization
+        \begin{align*}
+        A \xrightarrow{e'} C' \xrightarrow{m'} B
+        \end{align*}
+    with $e'$ epi and $m'$ mono, there exists a unique isomorphism $\varphi: C \simeq C'$ satisfying $m = m'\varphi$ and $\varphi e = e'$.
+    \begin{center}
+    \begin{tikzcd}
+        & C \arrow[dr, "m", hook] \arrow[dd, "\exists ! \varphi", dashed, "\sim"' {sloped}] & \\
+        A \arrow[ur, "e", two heads] \arrow[dr, "e'"', two heads] & & B \\
+        & C' \arrow[ur, "m'"', hook] &
+    \end{tikzcd}
+    \end{center}
+    The epimorphism $e: A \to C$ (or equivalently its quotient class) is called the \hldef{coimage of $f$ in $\mathcal{C}$}.
+
+
+\end{enumerate}
+\end{definition}

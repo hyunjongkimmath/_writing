@@ -1,0 +1,19 @@
+
+\begin{definition} \label{definition:chain_homotopy_between_chain_maps_between_complexes}
+Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category}{additive category}\CrefIfExists{definition:additive_category}. 
+\begin{enumerate}
+
+    \item Let $f_\bullet, g_\bullet: C_\bullet \to D_\bullet$ be \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{chain maps between complexes}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category} in $\mathcal{A}$. A \hldef{chain homotopy from $f_\bullet$ to $g_\bullet$} is a collection of morphisms $\{ s_n : C_n \to D_{n+1} \}$ such that for all $n$,
+    \[
+    f_n - g_n = d_{n+1}^D \circ s_n + s_{n-1} \circ d_n^C.
+    \]
+    If such an $s_\bullet$ exists, we say that $f_\bullet$ and $g_\bullet$ are \hldef{chain homotopic} and write \hl{$f_\bullet \simeq g_\bullet$}.
+
+    \item Let $f_\bullet: C_\bullet \to D_\bullet$ be a \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{chain map between complexes}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category} in $\mathcal{A}$. A \hldef{chain contraction} is a chain homotopy from $f_\bullet$ to the zero complex. The chain map $f_\bullet$ is said to be \hldef{null homotopic} if a chain contraction of $f_\bullet$ exists, i.e. $f_\bullet$ is chain homotopic to the $0$ chain complex. 
+
+    \item Let $f_\bullet: C_\bullet \to D_\bullet$ be a chain map between complexes. We say that $f_\bullet$ is a \hldef{chain homotopy equivalence} if there exists a chain map and $h_\bullet: D_\bullet \to C_\bullet$ such that
+    $$fg \simeq \id_{D_\bullet} \quad \text{and} \quad gf \simeq \id_{C_\bullet}.$$
+    In this case, it is appropriate to call $f$ and $g$ \hldef{chain homotopy inverses of each other}.
+\end{enumerate}
+One similarly defines the above notions for cochain complexes and their morphisms.
+\end{definition}

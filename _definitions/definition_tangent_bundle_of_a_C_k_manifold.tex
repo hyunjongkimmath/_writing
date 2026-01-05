@@ -1,0 +1,61 @@
+
+
+% \begin{definition} \label{definition:tangent_bundle_of_a_smooth_manifold}
+% Let $M$ be a \hyperrefIfExists{definition:C_k_manifold}{smooth $n$-dimensional manifold}.
+
+% The \hldef{tangent bundle of $M$} is the \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{vector bundle}
+% $$ (TM, \pi, M) $$
+% where:
+% \begin{itemize}
+%   \item The total space $TM := \bigsqcup_{p \in M} T_p M$ is the disjoint union of \hyperrefIfExists{definition:tangent_space_of_a_topological_manifold_at_a_point}{tangent spaces} of $M$ at all points,
+%   \item The projection map $\pi : TM \to M$ sends each tangent vector to its base point,
+%   \item Locally, for each chart $(U, \varphi)$ on $M$ with $\varphi : U \to \mathbb{R}^n$, the tangent bundle trivializes as
+%   $$ \pi^{-1}(U) \cong U \times \mathbb{R}^n, $$
+%   reflecting identification $T_p M \cong \mathbb{R}^n$ via the differential of the chart.
+% \end{itemize}
+% \end{definition}
+
+\begin{definition} \label{definition:tangent_bundle_of_a_C_k_manifold}
+  Let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, and let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$ $n$-dimensional manifold with or without boundary}.
+
+  The \hldef{tangent bundle of $M$} is the \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{vector bundle}
+  $$\hlin{(TM, \pi, M)}$$
+  where:
+  \begin{itemize}
+    \item The \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{total space} 
+    $$ TM := \bigsqcup_{p \in M} T_p M $$
+    is the disjoint union of \CrefAndHyperrefIfExist{definition:tangent_space_of_a_topological_manifold_at_a_point}{tangent spaces} of $M$ at all points, defined via equivalence classes of $C^k$-compatible curves or derivations of $C^k$ functions at $p$, including points at the boundary.
+    
+    \item The projection map 
+    $$ \pi : TM \to M $$
+    sends each tangent vector to its base point.
+    
+    \item Locally, for any \CrefAndHyperrefIfExist{definition:chart_on_a_topological_manifold}{chart} $(U, \varphi)$ on $M$ with 
+    $$ \varphi : U \to V \subset \mathbb{R}^n \text{ or } \varphi : U \to V \subset \bbH \text{ if } U \text{ contians boundary points}, $$
+    the tangent bundle \CrefAndHyperrefIfExist{definition:tangent_bundle_of_a_C_k_manifold}{trivializes} as
+    $$ \pi^{-1}(U) \cong U \times \mathbb{R}^n.  $$
+    This reflects the identification 
+    $$ T_p M \cong \mathbb{R}^n $$
+    via the differential (pushforward) of the $C^k$ chart $\varphi$.
+  \end{itemize}
+  
+  The total space $TM$ carries a natural $C^{k-1}$ vector  bundle structure over $M$ and \CrefAndHyperref{theorem:total_space_of_a_C_k_vector_bundle_is_a_C_k_manifold}{hence} a $C^{k-1}$ manifold structure (without boundary if $M$ is without boundary), and the projection $\pi$ is a \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^{k-1}$ map}.
+\end{definition}
+
+
+% \begin{definition} \label{definition:tangent_bundle_of_a_C_k_manifold}
+%   \TODO{do this definition for manifolds with boundary}
+%   Let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, and let $M$ be a \hyperrefIfExists{definition:C_k_manifold}{$C^k$ $n$-dimensional manifold}.
+
+%   The \hldef{tangent bundle of $M$} is the \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{vector bundle}
+%   $$ (TM, \pi, M) $$
+%   where:
+%   \begin{itemize}
+%     \item The total space $TM := \bigsqcup_{p \in M} T_p M$ is the disjoint union of \hyperrefIfExists{definition:tangent_space_of_a_C_k_manifold_at_a_point}{tangent spaces} of $M$ at all points, each defined via equivalence classes of $C^k$-compatible curves or derivations of $C^k$ functions at $p$,
+%     \item The projection map $\pi : TM \to M$ sends each tangent vector to its base point,
+%     \item Locally, for each chart $(U, \varphi)$ on $M$ with $\varphi : U \to \mathbb{R}^n$, the tangent bundle trivializes as
+%     $$ \pi^{-1}(U) \cong U \times \mathbb{R}^n, $$
+%     reflecting the identification $T_p M \cong \mathbb{R}^n$ via the differential (pushforward) of the $C^k$ chart $\varphi$.
+%   \end{itemize}
+%   The total space $TM$ carries a natural structure of a $C^{k-1}$ manifold, and the projection $\pi$ is a $C^{k-1}$ map.
+% \end{definition}

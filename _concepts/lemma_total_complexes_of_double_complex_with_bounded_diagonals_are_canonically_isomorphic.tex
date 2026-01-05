@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic}
+    Let $C$ be a \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex} of objects in an \CrefAndHyperrefIfExist{definition:additive_category}{additive category} $\calA$. If $C$ is \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{locally bounded along diagonals},
+    % for each $n$, the total number of pairs $(p,q)$ such that $p+q = n$ and $C^{p,q} \neq 0$ is finite, 
+    then the complexes \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{$\Tot^{\bigoplus}(A)$ and $\Tot^{\prod}(A)$} are naturally isomorphic.
+\end{lemma}
+
+\begin{proof}
+    Since $C$ is locally bounded along diagonals, the degreee $n$ components
+    \begin{align*}
+    \left(\Tot^{\oplus}\right)^n(A) &= \bigoplus_{p+q=n} A^{p,q}, \\
+    \left(\Tot^{\Pi}\right)^n(A) &= \prod_{p+q=n} A^{p,q}.
+    \end{align*}
+    are finite direct sums and finite products respectively and hence are naturally isomorphic (\Cref{lemma:finite_products_and_finite_coproducts_coincide_in_preadditive_categories}). The differential maps of the two total complexes also naturally coincide.
+\end{proof}

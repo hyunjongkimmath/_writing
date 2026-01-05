@@ -1,0 +1,12 @@
+
+\begin{definition}[Multiplicative group scheme] \label{definition:multiplicative_group_scheme_over_a_scheme}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}.
+The \hldef{multiplicative group scheme over $S$}, denoted \hl{$\mathbb{G}_{m,S}$}, is the group scheme over $S$ defined as the open subscheme
+$$\mathbb{G}_{m,S} := \mathbb{A}^1_S \setminus \{0\}_S$$
+of the \CrefAndHyperrefIfExist{definition:affine_space_of_dimension_n_over_a_scheme}{affine line} $\mathbb{A}^1_S$, equipped with the group law given by multiplication of functions:
+$$m: \mathbb{G}_{m,S} \times_S \mathbb{G}_{m,S} \to \mathbb{G}_{m,S}, \quad (x,y) \mapsto xy.$$
+The identity section is the morphism
+$$e: S \to \mathbb{G}_{m,S}, \quad s \mapsto 1,$$
+and the inversion morphism is given by
+$$i: \mathbb{G}_{m,S} \to \mathbb{G}_{m,S}, \quad x \mapsto x^{-1}.$$
+\end{definition}

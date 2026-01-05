@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:morphism_of_log_schemes}
+Let $(X, M_X)$ and $(Y, M_Y)$ be \CrefAndHyperrefIfExist{definition:pre_logarithmic_structure_and_logarithmic_structure_on_a_scheme_and_log_scheme}{log schemes}. A \hldef{morphism of log schemes} is a pair $(f, f^\flat)$, where $f: X \to Y$ is a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} and $f^\flat: f^{-1}M_Y \to M_X$\CrefIfExists{definition:inverse_image_of_a_sheaf_on_a_topological_space} is a morphism of sheaves of monoids on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$X_{\text{ét}}$} such that the following diagram commutes:
+$$
+\begin{array}{ccc}
+f^{-1}M_Y & \xrightarrow{f^\flat} & M_X \\
+\downarrow{f^{-1}\alpha_Y} & & \downarrow{\alpha_X} \\
+f^{-1}\mathcal{O}_Y & \xrightarrow{f^\sharp} & \mathcal{O}_X
+\end{array}
+$$
+where $\alpha_X: M_X \to \mathcal{O}_X$ and $\alpha_Y: M_Y \to \mathcal{O}_Y$ are the structure morphisms of the log structures, and $f^\sharp: f^{-1}\mathcal{O}_Y \to \mathcal{O}_X$ is the pullback map on structure sheaves induced by $f$.
+\end{definition}

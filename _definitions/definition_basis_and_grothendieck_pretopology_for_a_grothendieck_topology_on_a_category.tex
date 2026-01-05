@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+A \hldef{basis for a Grothendieck topology} (also called a \hldef{Grothendieck pretopology} or simply a \hldef{pretopology}) on $\mathcal{C}$ is a collection of families $K(U)$ of morphisms for each object $U \in \mathcal{C}$, called \hldef{coverings} or \hldef{covering families}, satisfying the following axioms:
+\begin{enumerate}
+    \item \textbf{(Identity)} For every isomorphism $U' \to U$, the singleton family $\{U' \to U\}$ is in $K(U)$.
+    \item \textbf{(Base Change)} If $\{U_i \to U\}_{i \in I}$ is a covering family in $K(U)$ and $V \to U$ is any morphism in $\mathcal{C}$, then the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber products} $U_i \times_U V$ exist, and the family of projections $\{U_i \times_U V \to V\}_{i \in I}$ is in $K(V)$.
+    \item \textbf{(Composition)} If $\{U_i \to U\}_{i \in I}$ is in $K(U)$ and for each $i \in I$, $\{V_{ij} \to U_i\}_{j \in J_i}$ is in $K(U_i)$, then the composite family $\{V_{ij} \to U_i \to U\}_{i \in I, j \in J_i}$ is in $K(U)$.
+\end{enumerate}
+
+\end{definition}

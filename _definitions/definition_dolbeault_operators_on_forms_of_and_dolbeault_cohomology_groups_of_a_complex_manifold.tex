@@ -1,0 +1,17 @@
+
+\begin{definition}[Dolbeault operators on forms on a complex manifold] \label{definition:dolbeault_operators_on_forms_of_and_dolbeault_cohomology_groups_of_a_complex_manifold}
+Let $X$ be a complex manifold. 
+
+    \TODO{TODO: If I am not assuming compactness of $M$, then I should need to let the operators be on $\Omega_c^k(M)$, not $\Omega^k(M)$; this is to ensure integration defining the Hodge star operator is defined.}
+
+The Dolbeault operators $\partial$ and $\overline{\partial}$ are the first-order differential operators defined as the compositions 
+\TODO{TODO: define exterior derivative for de rham forms}
+$$\hlin{\partial: \Omega^{p,q}(X) \xrightarrow{d} \Omega^{p+q+1}(X; \bbC) \xrightarrow{\pi^{p+1,q}} \Omega^{p+1,q}(X), \quad \overline{\partial}: \Omega^{p,q}(X) \xrightarrow{d} \Omega^{p+q+1}(X; \bbC) \xrightarrow{\pi^{p,q+1}} \Omega^{p,q+1}(X)}$$
+where \(\pi^{p+1,q}\) and \(\pi^{p,q+1}\) denotes projection onto forms of type \((p+1,q)\) and \((p,q+1)\) respectively. In particular, the exterior derivative $d: \Omega^{p,q}(X) \to \Omega^{p+q+1}(X; \mathbb{C})$ decomposes uniquely as
+$$d = \partial + \overline{\partial}.$$
+The Dolbeault operators satisfy
+$$ \partial^2 = 0, \quad \overline{\partial}^2 = 0, \quad \partial \circ \overline{\partial} + \overline{\partial} \circ \partial = 0.  $$
+
+In particular, \((\Omega^{p,\bullet}(X), \overline{\partial})\) is a cochain complex for each fixed \(p\). The \hldef{Dolbeault cohomology groups} is then defined as the cohomology of this complex:
+$$ \hlin{ H^{p,q}_{\overline{\partial}}(X) := \frac{\ker \left(\overline{\partial} : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X)\right)}{\operatorname{im} \left(\overline{\partial} : \Omega^{p,q-1}(X) \to \Omega^{p,q}(X)\right)}.  } $$
+\end{definition}

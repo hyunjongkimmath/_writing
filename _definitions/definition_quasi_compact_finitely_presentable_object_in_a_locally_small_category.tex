@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:quasi_compact_finitely_presentable_object_in_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category}.
+An object $X$ in $\mathcal{C}$ is called \hldef{quasi-compact} (or \hldef{compact}, or \hldef{finitely presentable} depending on context) if the functor $h^X = \hom_{\mathcal{C}}(X, -)$ \CrefAndHyperrefIfExist{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}{represented by} $X$, preserves \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits}.
+
+Explicitly, this means that for any \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{filtered diagram} $D: \mathcal{I} \to \mathcal{C}$ such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} $\colim_{i \in \mathcal{I}} D_i$ exists in $\mathcal{C}$, the canonical map
+$$\colim_{i \in \mathcal{I}} \hom_{\mathcal{C}}(X, D_i) \xrightarrow{\cong} \hom_{\mathcal{C}}(X, \colim_{i \in \mathcal{I}} D_i)$$
+is a bijection.
+\end{definition}

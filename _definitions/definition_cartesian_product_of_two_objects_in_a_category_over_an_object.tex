@@ -1,0 +1,29 @@
+\begin{definition} \label{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, let $Z$ be an object, and let $X, Y$ be objects of $\mathcal{C}$ \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{over} $Z$, i.e. morphisms $X \to Z$ and $Y \to Z$ are fixed. A \hldef{cartesian product of $X$ and $Y$ over $Z$ in $\mathcal{C}$} (or \hldef{fiber product} or \hldef{pullback diagram}) is an object, often denoted by \hl{$X \times_Z Y$}, with \hldef{projection morphisms} $X \times_Z Y \to X$ and $X \times_Z Y \to Y$ that are universal. 
+    More precisely, for any object $T$ of $\mathcal{C}$ and morphisms $f_X : T \to X$, $f_Y : T \to Y$, there exists a unique morphism $u : T \to X \times_Z Y$ such that the following diagram commutes:
+        \begin{center}
+        \begin{tikzcd}
+            T \ar[rd, dotted, "u" ] \ar[rrd, "f_X", bend left] \ar[ddr, "f_Y", bend right] & & \\
+            & X \times_Z Y \ar[r] \ar[d] &  \ar[d] X \\
+            & Y \ar[r] & Z
+        \end{tikzcd}
+        \end{center}
+        Equivalently, $X \times_Z Y$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram}
+        \begin{center}
+            \begin{tikzcd}
+            & X \ar[d] \\
+            Y \ar[r] & Z
+            \end{tikzcd}
+        \end{center}
+        in $\calC$. 
+
+        The commutative diagram 
+        \begin{center}
+        \begin{tikzcd}
+        X \times_Z Y \ar[r] \ar[d] & X \ar[d] \\
+        Y \ar[r] & Z
+        \end{tikzcd} 
+        \end{center}
+        may be referred to as a \hldef{cartesian square}.
+
+\end{definition}

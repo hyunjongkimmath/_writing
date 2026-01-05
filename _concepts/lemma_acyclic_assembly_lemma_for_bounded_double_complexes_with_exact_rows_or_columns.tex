@@ -1,0 +1,75 @@
+\begin{lemma}[cf. {\cite[Acyclic Assembly Lemma 2.7.3]{weibel}}] \label{lemma:acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns}
+    \TODO{It may be the case that this is generalizable beyond first quadrant double complexes, but I don't have a slick way to show this. See the commented out code for the statements; also, it may be necessary to assume something like AB4$*$ for such statements}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} for which (small) \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} which exist are exact (e.g. which holds if $\calA$ satisfies \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}). Let $C$ be a \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex} in $\calA$.
+
+    % Let $C$ be a \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} $\calA$ for which (small) filtered colimits which exist are exact (e.g. which holds if $\calC$ satisfies \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}). 
+
+    If $C$ has exact columns or has exact rows and $C$ is a \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded below or bounded above double complex}, then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+
+
+
+    % \begin{enumerate}
+    %     \item 
+    %     %Assuming that $\calA$ has arbitrary (small) products (in particular, the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complex $\Tot^{\Pi}(C)$} exists), and products are exact (e.g. by virtue of $\calA$ satisfying \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab$4^*$}),
+    %     \begin{enumerate}
+    %         \item if $C$ has exact columns or has exact rows and $C$ is a \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded below or bounded above double complex}, then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    % \TODO{Fix the statements below to correctly specify what kind of boundedness of the double complex is needed. }
+    %         \item if $C$ has exact rows and $C$ is a \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded double complex}, then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %     \end{enumerate}
+
+    %     \item 
+    %     %Assuming that $\calA$ has arbitrary (small) coproducts (in particular, the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complex $\Tot^{\oplus}(C)$} exists), and (not necessarily finite) coproducts are exact (e.g. by virtue of $\calA$ satisfying \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab4})
+    %     \begin{enumerate}
+    %         \item if $C$ has exact rows and $C$ is a \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded double complex}, then $\Tot^{\oplus}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %         \item if $C$ has exact columns and $C$ is a \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded double complex}, then $\Tot^{\oplus}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %     \end{enumerate}
+    % \end{enumerate}
+
+    % \begin{enumerate}
+    %     \item Assuming that $\calA$ has arbitrary (small) products (in particular, the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complex $\Tot^{\Pi}(C)$} exists), and products are exact,
+    %     \begin{enumerate}
+    %         \item if $C$ has exact columns and every diagonal of $C$ is bounded on the lower right (e.g. $C$ is an upper half-plane complex), then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %         \item if $C$ has exact rows and every diagonal of $C$ is bounded on the upper left (e.g. $C$ is an right half-plane complex), then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %     \end{enumerate}
+
+    %     \item Assuming that the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complex $\Tot^{\oplus}(C)$} exists (which holds e.g. when $\calA$ has all finite direct sums), 
+    %     \begin{enumerate}
+    %         \item if $C$ has exact rows and every diagonal of $C$ is bounded on the lower right (e.g. $C$ is an upper half-plane complex), then $\Tot^{\oplus}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %         \item if $C$ has exact columns and every diagonal of $C$ is bounded on the upper left (e.g. $C$ is an right half-plane complex), then $\Tot^{\oplus}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}.
+    %     \end{enumerate}
+    % \end{enumerate}
+    
+\end{lemma}
+
+\begin{proof}
+
+    % Assume that $\calA$ has arbitrary (small) products, and that products are exact in $\calA$.
+    We show that if $C$ has exact columns and 
+    $C$ is bounded below, 
+    % every diagonal of $C$ is bounded on the lower right,
+    then $\Tot^{\Pi}(C)$ is an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic chain complex}; it can then be argued symmetrically that if $C$ has exact columns and $C$ is bounded above, then $\Tot^{\Pi}(C)$ is acyclic. Moreover, the case of exact rows can be deduced by reflecting the rows and columns of double complexes. 
+
+    Note that since $C$ is assumed to be bounded below and hence is \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{locally bounded along diagonals}, $\Tot^{\Pi}(C)$ and $\Tot^{\oplus}(C)$ exist, are constructed by finite products (which are also finite coproducts), and are naturally isomorphic by Lemma \ref{lemma:total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic}. Further recall that finite coproducts in an abelian category are exact. 
+
+    Define the sub-double complexes $F^k C$ of $C$ by 
+    \begin{align*}
+    (F^k C)^{p,q} = \begin{cases} C^{p,q} &\text{if } p \leq k \\ 0 &\text{otherwise} \end{cases}.
+    \end{align*}
+    This yields a filtration 
+    $$\cdots \subseteq F^{k-1} C \subseteq F^k C \subseteq F^{k+1} \subseteq \cdots \subseteq C.$$
+    Moreover, for each $n$,
+    $$\left( \Tot^\Pi(F^k C) \right)^n = \prod_{p \leq k, p+q = n} C^{p,q}.$$
+    For each $n$, the above stabilizes as $k \to \infty$ to $\Tot^{\Pi}(C)^n$. Now let 
+    $$D^k = F^k C / F^{k-1} C = \begin{cases} C^{p,q} &\text{if } p = k \\ 0 &\text{otherwise}.\end{cases}$$
+    Since each column $C^{k,*}$ is exact by assumption, the total complex $\Tot^{\Pi}(D^k)$ is acyclic. Note that we have short exact sequences
+    $$0 \to F^{k-1} C \to F^k C \to D^k \to 0$$
+    of double complexes. The totalization functor $\Tot^{\Pi}(-)$ in this case is exact because all of the double complexes are \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{locally bounded along diagonals}.
+    % $\Tot^{\Pi}(-): \mathrm{Ch}(\mathrm{Ch}(\calA)) \to \mathrm{Ch}(\calA)$ (cf. \Cref{theorem:category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes}) is exact 
+    We hence have a short exact sequence
+    $$0 \to \Tot^{\Pi}(F^{k-1} C) \to \Tot^{\Pi}(F^k C) \to \Tot^{\Pi}(D^k) \to 0.$$
+    Since $\Tot^{\Pi}(D^k)$ is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}, the \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact cohomology sequences} yield isomorphisms
+    $$H^n(\Tot^{\Pi}(F^{k-1} C)) \cong H^n(\Tot^{\Pi}(F^{k} C)).$$
+    Since $C$ is assumed to be bounded, the subcomplex $F^k C$ is zero for sufficiently negative $k$, in which case $\Tot^{\Pi}(F^k C)$ is acyclic. By induction on $k$, $\Tot^{\Pi}(F^k C)$ remains acyclic for all $k$. Moroever, the filtered colimit $\varinjlim_k \Tot^{\Pi}(F^k C)$ is $\Tot^{\Pi}(C)$. The assumed exactness of filtered colimits in $\calA$ concludes that $\Tot^{\Pi}(C)$ is acyclic.
+
+    By symmetry, if $C$ instead has exact rows, then $\Tot^{\Pi}(C)$ is an acyclic chain complex.
+\end{proof}

@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:hecke_L_function_of_a_hecke_character_of_a_number_field}
+Let $K$ be a number field and $\chi$ a \hyperrefIfExists{definition:hecke_character_of_a_number_field}{Hecke character of $K$}. For $s\in\mathbb{C}$ with $\Re(s) > 1$, the \hldef{Hecke $L$-function of $\chi$} is defined by the absolutely convergent sum
+$$ \hlin{L(s, \chi) = \sum_{\mathfrak{a}} \chi(x_\mathfrak{a})N(\mathfrak{a})^{-s}} $$
+where the sum runs over all nonzero ideals $\mathfrak{a}$ of $\mathcal{O}_K$, and $x_\mathfrak{a} = \left(\varpi_\mathfrak{p}^{n_\mathfrak{p}} \right) \in \mathbb{A}_{K,f}^\times$, where the prime factorization of $\mathfrak{a} = \prod_{\mathfrak{p}} \mathfrak{p}^{n_\mathfrak{p}}$; this is well defined. 
+
+Equivalently, $L(s,\chi)$ may be defined by the absolutely convergent Euler product
+$$ L(s, \chi) = \prod_{\mathfrak{p}} \frac{1}{1 - \chi(\varpi_{\mathfrak{p}}) N_{K/\mathbb{Q}}(\mathfrak{p})^{-s}}, $$
+where the product runs over all nonzero prime ideals $\mathfrak{p}$ of $\mathcal{O}_K$, $\varpi_{\mathfrak{p}}$ is a uniformizer at $\mathfrak{p}$, and $N_{K/\mathbb{Q}}(\mathfrak{p}) = |\mathcal{O}_K / \mathfrak{p}|$.
+\end{definition}

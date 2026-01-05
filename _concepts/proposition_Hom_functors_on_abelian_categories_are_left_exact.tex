@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:Hom_functors_on_abelian_categories_are_left_exact}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $A \in \mathrm{Ob}(\mathcal{A})$. Then the covariant Hom functor
+$$\operatorname{Hom}_{\mathcal{A}}(A,-): \mathcal{A} \to \mathbf{Ab}$$
+is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and the contravariant Hom functor
+$$\operatorname{Hom}_{\mathcal{A}}(-,A): \mathcal{A}^{\mathrm{op}} \to \mathbf{Ab}$$
+\CrefIfExists{definition:opposite_category_of_a_category} is also left exact. Explicitly, given a left exact sequence
+$$0 \to X' \to X \to X'', $$
+we have a left exact sequence
+$$0 \to \Hom_\calA(A, X') \to \Hom_{\calA}(A, X) \to \Hom_{\calA}(A, X''), $$
+and given a right exact sequence
+$$X' \to X \to X'' \to 0$$
+we have a left exact sequence
+$$0 \to \Hom_\calA(X'', A) \to \Hom_{\calA}(X, A) \to \Hom_{\calA}(X', A).$$
+\end{proposition}

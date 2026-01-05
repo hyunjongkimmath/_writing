@@ -1,0 +1,18 @@
+
+\begin{remark} \label{remark:cohomological_vs_homological_conventions}
+    The convention used to define chain complexes in \Cref{definition:chain_complex_of_objects_in_an_additive_category} is a \emph{cohomological one} --- note that indices are written as superscripts and increase when ``following the arrows''. Such a chain complex may also be referred to as a \hldef{cochain complex} or a \hldef{cohomological chain complex} to emphasize an adoption of a cohomological convention. 
+
+    The dual convention would be a \emph{homological one}, in which indices are written as subscripts and decrease when ``following the arrow''. As such, one may speak of a \hldef{(homological) chain complex} $(K_\bullet, d_\bullet)$ indexed by $I$ as consisting of:
+
+    \begin{itemize}
+    \item Objects $\{ K_i \}_{i \in I}$ in $\mathcal{A}$, called the \hldef{terms in degree $i$},
+    \item Morphisms $d_i: K_i \to K_{i-1}$ in $\mathcal{A}$, called the \hldef{differentials in degree $i$},
+    \end{itemize}
+    such that for every $i \in I$, $d_{i-1} \circ d_i = 0$. That is,
+    $$ 
+    K_\bullet: \cdots \xrightarrow{d_{i+1}} K_i \xrightarrow{d_i} K_{i-1} \xrightarrow{d_{i-1}} K_{i-2} \xrightarrow{d_{i-2}} \cdots
+    $$
+    with $d_{i-1} d_i = 0$ for all $i$. We might typically use notation such as \hl{$K_\bullet = (K_i, d_i)_{i \in I}$} to denote a chain complex in $\mathcal{A}$.
+
+    The differences between the conventions persist --- for example, cohomological objects are usually written with superscript indicees whereas homological objects are usually written with subscript indicees.
+\end{remark}

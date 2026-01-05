@@ -1,0 +1,79 @@
+\begin{definition} \label{definition:C_k_vector_bundle_on_C_k_manifold}
+  Let $k \in \bbZ_{\geq 0} \cup \{\infty\}$, and let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$ manifold with or without boundary} of dimension $m$. A \hldef{$C^k$ vector bundle of rank $r$ over $M$} is a triple $(E, \pi, M)$ where:
+  \begin{itemize}
+    \item $E$ is a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} called the \hldef{total space},
+    \item $\pi : E \to M$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjection} called the \hldef{projection map},
+    \item For each $p \in M$, the \CrefAndHyperrefIfExist{definition:fiber_of_a_map_of_topological_spaces_over_a_point}{fiber} \hl{$E_p := \pi^{-1}(\{p\})$} is endowed with the structure of a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over $\mathbb{R}$ of dimension $r$,
+    \item There exists an \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\{ U_\alpha \}_{\alpha \in A}$ of $M$ by open sets, and \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphisms} (called \hldef{local trivializations})
+    $$ \phi_\alpha : \pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb{R}^r $$
+    such that:
+    \begin{itemize}
+      \item Each $\phi_\alpha$ is a \CrefAndHyperrefIfExist{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}{$C^k$ diffeomorphism} onto its image, where $U_\alpha$ is identified with an open subset of $\mathbb{R}^m_+$,
+      \item For every $p \in U_\alpha$, the restriction
+      $$ \phi_\alpha|_{E_p} : E_p \to \{p\} \times \mathbb{R}^r \cong \mathbb{R}^r $$
+      is a \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{vector space isomorphism},
+    \end{itemize}
+    \item For all indices $\alpha, \beta$, define the \hldef{transition functions}
+    $$ \hlin{t_{\alpha \beta} : U_\alpha \cap U_\beta \to \mathrm{GL}(r, \mathbb{R})} $$
+    uniquely by the relation
+    $$
+    \phi_\alpha \circ \phi_\beta^{-1} (p, v) = (p, t_{\alpha \beta}(p) v) \quad \text{for } p \in U_\alpha \cap U_\beta, \; v \in \mathbb{R}^r.
+    $$
+    Each $t_{\alpha \beta}$ is a $C^k$ map respecting the boundary structure.
+  \end{itemize}
+
+  The total space $E$ then in fact has a canonical structure as a $C^k$-manifold (without boundary if $M$ is a $C^k$ manifold without boundary) \CrefIfExists{theorem:total_space_of_a_C_k_vector_bundle_is_a_C_k_manifold}
+
+  Let $E$ be a $C^k$ vector bundle over a $C^k$ manifold with boundary $M$. A \hldef{$C^k$-section of $E$ over an open subset $U \subseteq M$} (where $U$ may intersect the boundary) is a \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^k$ map} $s: U \to E$ such that $\pi \circ s = \id_{U}$.
+  We might denote by 
+  $$\hlin{\Gamma^{C^k}(U, E) = \Gamma^{C^k}(U, E;\bbR) = E^{C^k}(U) = E^{C^k}(U;\bbR)}$$
+  the space of $C^k$ sections of $E$ (as a vector space of $M$). It is a real vector space. When $k$ is self-apparent, this space may also be without the superscript of $C^k$, i.e. by 
+  $$\hlin{\Gamma(U, E) = \Gamma(U, E;\bbR) = E(U) = E(U;\bbR)}.$$
+  A $C^k$-section of $E$ over $M$ itself may be referred to as a \hldef{global $C^k$-section of $E$}; the space of such sections may be shorthand-notated as \hl{$\Gamma_k(E)$}, \hl{$\Gamma(E)$}, or \hl{$\Gamma_k(E;\bbR)$}.
+
+  A $C^0$-section of $E$ is simply called a \hldef{(continuous) section of $E$}, and a $C^\infty$-section of $E$ is called a \hldef{smooth section of $E$}.
+
+\end{definition}
+
+
+% \begin{definition}[$C^k$ vector bundle of rank $r$ over a manifold with boundary]
+% Let $k \in \mathbb{N}_0 \cup \{\infty\}$, and let $M$ be a $C^k$ manifold with boundary of dimension $m$. A \hldef{$C^k$ vector bundle of rank $r$ over $M$} is a triple $(E, \pi, M)$ where:
+% \begin{itemize}
+%   \item $E$ is a topological space called the \hldef{total space},
+%   \item $\pi : E \to M$ is a continuous surjection called the \hldef{projection map},
+%   \item For each $p \in M$, the fiber $E_p := \pi^{-1}(\{p\})$ is endowed with the structure of a vector space over $\mathbb{R}$ of dimension $r$,
+%   \item There exists an open cover $\{ U_\alpha \}_{\alpha \in A}$ of $M$ by open sets in the manifold-with-boundary topology, and homeomorphisms (called \hldef{local trivializations})
+%   $$
+%   \phi_\alpha : \pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb{R}^r
+%   $$
+%   such that:
+%   \begin{itemize}
+%     \item Each $\phi_\alpha$ is a $C^k$ diffeomorphism onto its image, where $U_\alpha$ is identified with an open subset of $\mathbb{R}^m_+$,
+%     \item For every $p \in U_\alpha$, the restriction
+%     $$
+%     \phi_\alpha|_{E_p} : E_p \to \{p\} \times \mathbb{R}^r \cong \mathbb{R}^r
+%     $$
+%     is a vector space isomorphism,
+%   \end{itemize}
+%   \item For all indices $\alpha, \beta$, define the \hldef{transition functions}
+%   $$
+%   \hlin{t_{\alpha \beta} : U_\alpha \cap U_\beta \to \mathrm{GL}(r, \mathbb{R})}
+%   $$
+%   uniquely by the relation
+%   $$
+%   \phi_\alpha \circ \phi_\beta^{-1} (p, v) = (p, t_{\alpha \beta}(p) v) \quad \text{for } p \in U_\alpha \cap U_\beta, \; v \in \mathbb{R}^r.
+%   $$
+%   Each $t_{\alpha \beta}$ is a $C^k$ map respecting the boundary structure.
+% \end{itemize}
+
+% Let $E$ be a $C^k$ vector bundle over a $C^k$ manifold with boundary $M$. A \hldef{$C^k$-section of $E$ over an open subset $U \subseteq M$} (where $U$ may intersect the boundary) is a \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^k$ map} $s: U \to E$ such that $\pi \circ s = \id_{U}$.
+% We might denote by 
+% $$\hlin{\Gamma^{C^k}(U, E) = \Gamma^{C^k}(U, E;\bbR) = E^{C^k}(U) = E^{C^k}(U;\bbR)}$$
+% the space of $C^k$ sections of $E$ (as a vector space of $M$). It is a real vector space. When $k$ is self-apparent, this space may also be without the superscript of $C^k$, i.e. by 
+% $$\hlin{\Gamma(U, E) = \Gamma(U, E;\bbR) = E(U) = E(U;\bbR)}.$$
+% A $C^k$-section of $E$ over $M$ itself may be referred to as a \hldef{global $C^k$-section of $E$}; the space of such sections may be shorthand-notated as \hl{$\Gamma_k(E)$}, \hl{$\Gamma(E)$}, or \hl{$\Gamma_k(E;\bbR)$}.
+
+% A $C^0$-section of $E$ is simply called a \hldef{(continuous) section of $E$}, and a $C^\infty$-section of $E$ is called a \hldef{smooth section of $E$}.
+
+% \end{definition}
+

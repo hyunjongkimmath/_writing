@@ -1,0 +1,9 @@
+\begin{theorem}[Sheaf cohomology of modules on a coherent site commutes with filtered colimits {\cite[Expos\'e VI Corollaire 5.2]{SGA4_II}}] \label{theorem:sheaf_cohomology_on_a_ringed_site_with_a_final_object_commutes_with_filtered_colimits}
+Let $\mathcal{E}$ be a \CrefAndHyperrefIfExist{definition:coherent_topos}{coherent topos}. In particular, the \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} underlying $\calE$ has a final object and so we may speak of the \CrefAndHyperrefIfExist{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}{sheaf cohomology functors} $H^q(\mathcal{E}, -)$ as the derived functors of the global sections functor. 
+
+The functors $H^q(\mathcal{E}, -)$ commute with \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits}. 
+
+Explicitly, let $\{\mathcal{F}_i\}_{i \in I}$ be a \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{filtered system} of abelian sheaves in $\mathcal{E}$. Then the canonical map
+$$ \colim_{i \in I} H^q(\mathcal{E}, \mathcal{F}_i) \xrightarrow{\cong} H^q(\mathcal{E}, \colim_{i \in I} \mathcal{F}_i) $$
+is an isomorphism for all $q \geq 0$. In particular, the global sections functor $\Gamma(\mathcal{E}, -) = H^0(\mathcal{E}, -)$ commutes with filtered colimits.
+\end{theorem}

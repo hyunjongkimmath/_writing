@@ -1,0 +1,13 @@
+
+\begin{definition}[Normal Extension]  \label{definition:splitting_field_of_polynomials_over_a_field_normal_field_extension}
+Let $K$ be a field and let $S \subseteq K[t]$ be a set of polynomials.  
+\begin{itemize}
+    \item A field $L \supseteq K$ is a \hldef{splitting field of $S$ over $K$} if 
+    \begin{itemize}
+        \item every polynomial in $S$ splits completely into linear factors over $L$, and 
+        \item $L$ is \CrefAndHyperrefIfExist{definition:field_generated_by_elements}{generated over $K$} by the roots of the polynomials in $S$, namely  
+        $$L = K(\{\alpha \mid f(\alpha)=0,\ f \in S\}).$$
+    \end{itemize}
+    \item An algebraic extension $L/K$ is called a \hldef{normal extension} if $L$ is the splitting field of a family of polynomials in $K[t]$.
+\end{itemize}
+\end{definition}

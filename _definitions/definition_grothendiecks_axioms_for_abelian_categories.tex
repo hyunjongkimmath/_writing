@@ -1,0 +1,101 @@
+
+\begin{definition}[Grothendieck's axioms for abelian categories (Ab1--Ab5)] \label{definition:grothendiecks_additional_axioms_for_abelian_categories}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+
+Grothendieck introduced the following hierarchy of additional axioms to express stronger completeness and exactness properties in $\mathcal{A}$ --- we note that Ab1, Ab2, and Ab2\textsuperscript{*} are already satisfied for any abelian category:
+
+\begin{itemize}
+
+  \item \hldef{Ab1}: Every morphism in $\calA$ has a \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel and a cokernel}.
+  \item \hldef{Ab2}: Every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monic} in $\calA$ is the kernel of its cokernel. 
+  \item \hldef{Ab2\textsuperscript{*}}: Every epi in $\calA$ is the cokernel of its kernel. 
+
+  \item \hldef{AB3}: The category $\mathcal{A}$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{cocomplete}.
+  \begin{itemize}
+    \item Since $\mathcal{A}$ is abelian (and hence \CrefAndHyperrefIfExist{lemma:equalizer_coequalizer_in_an_additive_category_are_given_by_kernel_and_cokernel}{admits} \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizers} as \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_coimage_of_a_module_homomorphism}{kernels}), this is equivalent to requiring that $\mathcal{A}$ has all small \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts} (direct sums).
+  \end{itemize}
+
+  \item \hldef{AB4}: The category $\mathcal{A}$ satisfies AB3, and coproducts are \emph{exact}.
+  \begin{itemize}
+    \item That is, the coproduct of a family of short exact sequences is a short exact sequence. Explicitly, for any family of short exact sequences $0 \to A_i \to B_i \to C_i \to 0$ indexed by a set $I$, the sequence
+    \[ 0 \to \bigoplus_{i \in I} A_i \to \bigoplus_{i \in I} B_i \to \bigoplus_{i \in I} C_i \to 0 \]
+    is exact in $\mathcal{A}$.
+  \end{itemize}
+
+  \item \hldef{AB5}: The category $\mathcal{A}$ satisfies AB3, and \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} are \emph{exact}.
+  \begin{itemize}
+    \item Equivalently, for any \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} index category $J$ and any \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{directed system} of short exact sequences $0 \to A_j \to B_j \to C_j \to 0$, the colimit sequence
+    \[ 0 \to \varinjlim A_j \to \varinjlim B_j \to \varinjlim C_j \to 0 \]
+    is exact.
+    \item Note: AB5 implies AB4. An abelian category satisfying AB5 and having a \CrefAndHyperrefIfExist{definition:generator_of_a_category}{generator} is called a \hldef{Grothendieck category}.
+  \end{itemize}
+  
+  \item \hldef{AB6}: The category $\mathcal{A}$ satisfies AB3, and for any object $X$ and any family of filtered subobjects $\{F_i\}_{i \in I}$ of $X$ (where each $F_i$ is a filter of subobjects), the intersection commutes with the limit:
+  \[ \bigcap_{i \in I} (\varinjlim_{j \in F_i} U_{i,j}) = \varinjlim_{(j_i) \in \prod F_i} (\bigcap_{i \in I} U_{i, j_i}). \]
+  (This axiom is less commonly cited but appears in Grothendieck's Tohoku paper).
+
+  \item \hldef{AB3\textsuperscript{*}}: The category \(\mathcal{A}\) is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete} (i.e., has all small products).
+
+  \item \hldef{AB4\textsuperscript{*}}: The category \(\mathcal{A}\) satisfies AB3\textsuperscript{*} and products are exact.
+  \begin{itemize}
+    \item Note: This is rarely satisfied for module categories (e.g., it fails for Abelian groups), but it is satisfied for the category of sheaves on a space.
+  \end{itemize}
+
+  \item \hldef{AB5\textsuperscript{*}}: The category \(\mathcal{A}\) satisfies AB3\textsuperscript{*} and filtered limits (inverse limits) are exact.
+\end{itemize}
+
+\textbf{Notes:}
+\begin{itemize}
+  \item AB5 implies AB4, and AB4 implies AB3.
+  \item AB5\textsuperscript{*} implies AB4\textsuperscript{*}, and AB4\textsuperscript{*} implies AB3\textsuperscript{*}.
+\end{itemize}
+\end{definition}
+
+
+% \begin{definition}[Grothendieck's axioms AB3--AB6] \label{definition:grothendiecks_ab_axioms}
+% Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. (Recall that the axioms AB1 and AB2 refer to the existence of kernels/cokernels and the isomorphism between coimage and image, which are part of the definition of an abelian category).
+
+% Grothendieck introduced the following hierarchy of additional axioms to express stronger completeness and exactness properties in $\mathcal{A}$:
+
+% \begin{itemize}
+%   \item \hldef{AB3}: The category $\mathcal{A}$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{cocomplete}.
+%   \begin{itemize}
+%     \item Since $\mathcal{A}$ is abelian (hence has finite colimits), this is equivalent to requiring that $\mathcal{A}$ has all small \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts} (direct sums).
+%   \end{itemize}
+
+%   \item \hldef{AB4}: The category $\mathcal{A}$ satisfies AB3, and coproducts are \emph{exact}.
+%   \begin{itemize}
+%     \item That is, the coproduct of a family of short exact sequences is a short exact sequence. Explicitly, for any family of short exact sequences $0 \to A_i \to B_i \to C_i \to 0$ indexed by a set $I$, the sequence
+%     \[ 0 \to \bigoplus_{i \in I} A_i \to \bigoplus_{i \in I} B_i \to \bigoplus_{i \in I} C_i \to 0 \]
+%     is exact in $\mathcal{A}$.
+%   \end{itemize}
+
+%   \item \hldef{AB5}: The category $\mathcal{A}$ satisfies AB3, and \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} are \emph{exact}.
+%   \begin{itemize}
+%     \item Equivalently, for any \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} index category $J$ and any \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{directed system} of short exact sequences $0 \to A_j \to B_j \to C_j \to 0$, the colimit sequence
+%     \[ 0 \to \varinjlim A_j \to \varinjlim B_j \to \varinjlim C_j \to 0 \]
+%     is exact.
+%     \item Note: AB5 implies AB4. An abelian category satisfying AB5 and having a \CrefAndHyperrefIfExist{definition:generator_of_a_category}{generator} is called a \hldef{Grothendieck category}.
+%   \end{itemize}
+  
+%   \item \hldef{AB6}: The category $\mathcal{A}$ satisfies AB3, and for any object $X$ and any family of filtered subobjects $\{F_i\}_{i \in I}$ of $X$ (where each $F_i$ is a filter of subobjects), the intersection commutes with the limit:
+%   \[ \bigcap_{i \in I} (\varinjlim_{j \in F_i} U_{i,j}) = \varinjlim_{(j_i) \in \prod F_i} (\bigcap_{i \in I} U_{i, j_i}). \]
+%   (This axiom is less commonly cited but appears in Grothendieck's Tohoku paper).
+
+%   \item \hldef{AB3\textsuperscript{*}}: The category \(\mathcal{A}\) is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete} (i.e., has all small products).
+
+%   \item \hldef{AB4\textsuperscript{*}}: The category \(\mathcal{A}\) satisfies AB3\textsuperscript{*} and products are exact.
+%   \begin{itemize}
+%     \item Note: This is rarely satisfied for module categories (e.g., it fails for Abelian groups), but it is satisfied for the category of sheaves on a space.
+%   \end{itemize}
+
+%   \item \hldef{AB5\textsuperscript{*}}: The category \(\mathcal{A}\) satisfies AB3\textsuperscript{*} and filtered limits (inverse limits) are exact.
+% \end{itemize}
+
+% \textbf{Notes:}
+% \begin{itemize}
+%   \item AB5 implies AB4, and AB4 implies AB3.
+%   \item AB5\textsuperscript{*} implies AB4\textsuperscript{*}, and AB4\textsuperscript{*} implies AB3\textsuperscript{*}.
+%   \item The condition you originally listed as "Ab2" (disjoint/universal sums) characterizes \emph{extensive categories} or \emph{toposes}, not abelian categories. In an abelian category, the coproduct is a biproduct and is never "disjoint" in the sense of set theory (unless $0=1$).
+% \end{itemize}
+% \end{definition}

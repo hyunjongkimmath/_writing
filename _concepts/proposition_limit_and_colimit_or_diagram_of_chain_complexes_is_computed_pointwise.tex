@@ -1,0 +1,20 @@
+\begin{proposition} \label{proposition:limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}. Let $\mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:category}{category} and let $M^\bullet: \mathcal{J} \to \operatorname{Ch}(\mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}, denoted by $j \mapsto M^\bullet_{(j)}$.
+
+\begin{enumerate}
+    \item If the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the diagram of objects $j \mapsto M^n_{(j)}$ exists in $\mathcal{A}$ for every degree $n \in \mathbb{Z}$, then the limit of the diagram $M^\bullet$ exists in $\operatorname{Ch}(\mathcal{A})$. It is computed termwise:
+    \[
+    \left( \lim_{j \in \mathcal{J}} M^\bullet_{(j)} \right)^n \cong \lim_{j \in \mathcal{J}} \left( M^n_{(j)} \right).
+    \]
+    The differential $d^n: (\lim M^\bullet)^n \to (\lim M^\bullet)^{n+1}$ is the unique morphism induced by the family of morphisms $\{ d^n_{(j)} : M^n_{(j)} \to M^{n+1}_{(j)} \}_{j \in \mathcal{J}}$ via the universal property of limits.
+
+    \item Similarly, if the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of the diagram of objects $j \mapsto M^n_{(j)}$ exists in $\mathcal{A}$ for every degree $n \in \mathbb{Z}$, then the colimit of the diagram $M^\bullet$ exists in $\operatorname{Ch}(\mathcal{A})$. It is computed termwise:
+    \[
+    \left( \operatorname{colim}_{j \in \mathcal{J}} M^\bullet_{(j)} \right)^n \cong \operatorname{colim}_{j \in \mathcal{J}} \left( M^n_{(j)} \right).
+    \]
+    The differential $\delta^n: (\operatorname{colim} M^\bullet)^n \to (\operatorname{colim} M^\bullet)^{n+1}$ is the unique morphism induced by the family of morphisms $\{ d^n_{(j)} : M^n_{(j)} \to M^{n+1}_{(j)} \}_{j \in \mathcal{J}}$ via the universal property of colimits.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+    See \Cref{proposition:limits_and_colimits_in_functor_categories_may_be_computed_pointwise} \TODO{It must be taken into account how example the categories of chain complexes are regardable as functor categories}
+\end{proof}

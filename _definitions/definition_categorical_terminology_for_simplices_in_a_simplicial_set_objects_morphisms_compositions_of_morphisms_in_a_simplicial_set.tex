@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set}. 
+    \begin{enumerate}
+        \item An \hldef{object of $X$} refers to a \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{vertex of $X$}, i.e. a \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$0$-simplex of $X$}. We may write \hl{$x \in X$} or \hl{$x \in \Ob X$} to denote that $x$ is an object of $X$. 
+
+        \item A \hldef{morphism} $x \to y$ where $x,y: \Delta^0 \to X$\CrefIfExists{definition:standard_n_simplex} (\Cref{lemma:n_simplicies_on_a_simplicial_set_are_naturally_isomorphic_to_morphisms_from_standard_n_simplex}) are objects of $X$ is an \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{edge} $f:\Delta^1 \to S$ such that $d_1(f) = x$ and $d_0(f) = y$, or equivalently $f(0) = x$ and $f(1) = y$. We may write such a morphism by \hl{$f: x \to y$}.
+
+        \item Given an object $x$ of $X$, the \hldef{identity morphism of $x$} is the edge \hl{$\operatorname{id}_X = s_0(X): \Delta^1 \to X$}. 
+
+        \item Let $f: x \to y$ and $g: y \to z$ be morphisms in $X$. A \hldef{composition of $f$ and $g$} (which may not exist and may not be unique) is a \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$2$-simplex} $F: \Delta^2 \to S$ such that  
+        $$d_2(F) = f, \quad \text{and} \quad d_0(F) = g.$$
+        \CrefIfExists{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}. The \hl{composite of $f$ and $g$ with respect to the composition $F$} is then the morphism $d_1(F): x \to z$. 
+
+        In particular, compositions of morphisms exist whenever $X$ is a \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{quasi-category} and are unique whenever $X$ satisfies the conditions of \Cref{proposition:simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely}, i.e. when $X$ is isomorphic to the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerve} of a small category.
+        \TODO{comment on how different composites of $f$ and $g$ become equivalent in the homotopy category of $X$ in case that $X$ is a quasi-category.}
+
+    \end{enumerate}
+\end{definition}

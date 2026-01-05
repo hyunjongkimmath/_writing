@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:diagonal_functor_from_a_category_to_a_diagram_category_of_the_category}
+    Let $\mathcal{C}$ and $\mathcal{J}$ be \CrefAndHyperrefIfExist{definition:category}{categories}.
+    The \hldef{diagonal functor}
+    $$\hlin{\Delta: \mathcal{C} \to \mathcal{C}^{\mathcal{J}}}$$
+    \CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category}
+    \TODO{constant functor}
+    is the functor sending an object $X \in \mathcal{C}$ to the constant functor $\Delta(X): \mathcal{J} \to \mathcal{C}$, which maps every object in $\mathcal{J}$ to $X$ and every morphism in $\mathcal{J}$ to the identity morphism $1_X$.
+    For a morphism $f: X \to Y$ in $\mathcal{C}$, $\Delta(f)$ is the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} whose component at every $j \in \mathcal{J}$ is $f$.
+\end{definition}

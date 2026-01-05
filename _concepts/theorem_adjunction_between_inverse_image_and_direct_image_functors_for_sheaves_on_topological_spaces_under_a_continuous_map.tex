@@ -1,0 +1,10 @@
+\begin{theorem} \label{theorem:adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} such that $\calA$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{cocomplete}, i.e. admits \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small colimits}, and such that $\PreShv(Y, \calA)$ admits \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification}.
+    
+    The \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_on_a_topological_space}{inverse image functor} 
+    $$f^*: \Sh(Y, \calA) \to \Sh(X, \calA)$$
+    and the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image functor}
+    $$f_*: \Sh(X, \calA) \to \Sh(Y, \calA)$$
+    form an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint pair} $f^* \dashv f_*$, i.e., for any sheaves $\calF \in \Sh(Y, \calA)$ and $\calG \in \Sh(X, \calA)$, there is a natural isomorphism
+    $$\Hom_{\Sh(X, \calA)}(f^* \calF, \calG) \cong \Hom_{\Sh(Y, \calA)}(\calF, f_* \calG).$$
+\end{theorem}

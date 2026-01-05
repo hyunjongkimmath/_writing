@@ -1,0 +1,25 @@
+\begin{proposition}[cf. {\cite[Expos\'e XVII, Proposition 1.2.4.]{SGA4_III}}] \label{proposition:derived_multifunctor_of_an_additive_multifunctor_of_abelian_categories_on_cohomologically_bounded_categories_commutes_with_inclusion_to_unbounded_categories}
+Let $F: \prod_{i=1}^n \mathscr{A}_i \to \mathscr{B}$ be an \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{additive multifunctor} of \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
+\begin{enumerate}
+    \item The following diagram of categories is commutative for the right derived multifunctor:
+    $$
+    \begin{array}{ccc}
+    D^+(\prod \mathscr{A}_i) & \longrightarrow & D(\prod \mathscr{A}_i) \\
+    \downarrow^{RF} & & \downarrow^{RF} \\
+    \text{Ind } D^+(\mathscr{B}) & \longrightarrow & \text{Ind } D(\mathscr{B})
+    \end{array}
+    $$
+    (\Cref{definition:derived_category_of_an_abelian_category}) (\Cref{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}) (\Cref{definition:right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories})
+    where the horizontal arrows are the natural functors induced by inclusions. If $RF$ is everywhere defined on $D(\prod \mathscr{A}_i)$, its restriction to $D^+(\prod \mathscr{A}_i)$ factors through $D^+(\mathscr{B})$ \cite[Proposition 1.2.4]{SGA4_III}.
+
+    \item Dually, the following diagram is commutative for the left derived multifunctor:
+    $$
+    \begin{array}{ccc}
+    D^-(\prod \mathscr{A}_i) & \longrightarrow & D(\prod \mathscr{A}_i) \\
+    \downarrow^{LF} & & \downarrow^{LF} \\
+    \text{Pro } D^-(\mathscr{B}) & \longrightarrow & \text{Pro } D(\mathscr{B})
+    \end{array}
+    $$
+    If $LF$ is everywhere defined on $D(\prod \mathscr{A}_i)$, its restriction to $D^-(\prod \mathscr{A}_i)$ factors through $D^-(\mathscr{B})$.
+\end{enumerate}
+\end{proposition}

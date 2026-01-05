@@ -1,0 +1,34 @@
+\begin{definition} \label{definition:monoidal_category}
+A \hldef{monoidal category} is a \CrefAndHyperrefIfExist{definition:category}{(large) category} $\mathcal{C}$ equipped with:
+\begin{itemize}
+    \item a \CrefAndHyperrefIfExist{definition:n_ary_functor}{bifunctor} $\otimes : \mathcal{C} \times \mathcal{C} \to \mathcal{C}$\CrefIfExists{definition:product_category_of_a_family_of_categories} (called the \hldef{tensor product});
+    \item an object $\mathbb{I} \in \mathrm{Ob}(\mathcal{C})$ (often called the \hldef{unit object}); common notations for the unit object include \hl{$\mathbb{I}$} and \hl{$\mathds{1}$}.
+    \item natural isomorphisms (\hldef{associator}) $\alpha_{X,Y,Z} : (X \otimes Y) \otimes Z \to X \otimes (Y \otimes Z)$ for all $X, Y, Z \in \mathcal{C}$;
+    \item natural isomorphisms (\hldef{left and right unitors}) $\lambda_X : \mathbb{I} \otimes X \to X$, $\rho_X : X \otimes \mathbb{I} \to X$ for all $X \in \mathcal{C}$;
+\end{itemize}
+% \TODO{TODO: add the pentagon and triangle coherence diagrams}
+
+% such that the pentagon and triangle coherence diagrams commute.
+
+such that the following coherence diagrams commute:
+
+\bigskip
+
+\textbf{Pentagon coherence:} For all $W,X,Y,Z \in \mathcal{C}$, the diagram
+\[
+\begin{tikzcd}[column sep=huge]
+((W \otimes X) \otimes Y) \otimes Z \arrow[r, "\alpha_{W\otimes X, Y, Z}"] \arrow[d, "\alpha_{W,X,Y} \otimes \mathrm{id}_Z"'] & (W \otimes X) \otimes (Y \otimes Z) \arrow[r, "\alpha_{W,X,Y \otimes Z}"] & W \otimes (X \otimes (Y \otimes Z)) \\
+(W \otimes (X \otimes Y)) \otimes Z \arrow[rr, "\alpha_{W,X \otimes Y, Z}"'] & & W \otimes ((X \otimes Y) \otimes Z) \arrow[u, "\mathrm{id}_W \otimes \alpha_{X,Y,Z}"'].
+\end{tikzcd}
+\]
+
+\bigskip
+
+\textbf{Triangle coherence:} For all $X,Y \in \mathcal{C}$, the diagram
+\[
+\begin{tikzcd}[column sep=large]
+(X \otimes \mathbb{I}) \otimes Y \arrow[r, "\alpha_{X, \mathbb{I}, Y}"] \arrow[dr, "\rho_X \otimes \mathrm{id}_Y"'] & X \otimes (\mathbb{I} \otimes Y) \arrow[d, "\mathrm{id}_X \otimes \lambda_Y"] \\
+& X \otimes Y.
+\end{tikzcd}
+\]
+\end{definition}

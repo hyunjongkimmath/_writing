@@ -1,0 +1,39 @@
+\begin{definition}[Derived functors for biadditive functors of abelian categories via resolutions by flat objects] \label{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}
+    Let $F: \calA \times \calB \to \calC$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor} of \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
+    \begin{enumerate}
+        \item Fix an object $A$ of $\calA$. Let $B$ be an object of $\calB$. 
+        \begin{enumerate}
+            \item Let \hl{$L_n^{II}F(A, B) = L_n^{II}(F(A, -))(B)$} be an object of $\calC$ obtained as follows: take a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} 
+            $$P_\bullet \to B$$
+            of $B$ of objects $P_i$ for which the functors $F(-, P_i) : \calA \to \calC$ are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, i.e. $P_\bullet$ is a \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolution of $B$}. Let 
+            $$L_n^{II}(F(A, -))(B) \coloneq H_n(F(A, P_\bullet))$$
+            (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}).
+
+            \item Let \hl{$R_{II}^{n}F(A, B) = R_{II}^{n}(F(A, -))(B)$} be an object of $\calC$ obtained as follows: take a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolution} 
+            $$B \to I^\bullet$$
+            of $B$ of objects $I^i$ for which the functors $F(-, I^i) : \calA \to \calC$ are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, i.e. $I^\bullet$ is a \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat right-resolution of $B$}. Let 
+            $$R_{II}^{n}(F(A, -))(B) \coloneq H^n(F(A, I^\bullet))$$
+            (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}).
+        \end{enumerate}
+
+        \item Fix an object $B$ of $\calB$. Let $A$ be an object of $\calA$. 
+        \begin{enumerate}
+            \item Let \hl{$L_n^{I}F(A, B) = L_n^{I}(F(-, B))(A)$} be an object of $\calC$ obtained as follows: take a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} 
+            $$P_\bullet \to A$$
+            of $A$ of objects $P_i$ for which the functors $F(P_i, -) : \calB \to \calC$ are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, i.e. $P_\bullet$ is a \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolution} of $A$. Let 
+            $$L_n^{I}(F(-, B))(A) \coloneq H_n(F(P_\bullet, B))$$
+            (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}).
+
+            \item Let \hl{$R_{I}^{n}F(A, B) = R_{I}^{n}(F(-, B))(A)$} be an object of $\calC$ obtained as follows: take a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolution} 
+            $$A \to I^\bullet$$
+            of $A$ of objects $I^i$ for which the functors $F(I^i, -) : \calB \to \calC$ are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, i.e. $I^\bullet$ is a \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat right-resolution of $A$}. Let 
+            $$R_{I}^{n}(F(-, B))(A) \coloneq H^n(F(I^\bullet, B))$$
+            (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}).
+        \end{enumerate}
+    \end{enumerate}
+    A priori, the objects $L_n^{II} F(A,B)$, $R_{II}^nF(A,B)$, $L_n^{I} F(A,B)$, and $R_{I}^nF(A,B)$ are not well defined, i.e. they may possibly depend on the choice of resolution. See \Cref{theorem:balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions}, which asserts that the pair $L_n^{II} F(A,B)$ and $L_n^{I} F(A,B)$ (resp. $R_{II}^nF(A,B)$ and $R_{I}^nF(A,B)$) are in agreement and are well defined under mild conditions.
+
+    In case that $F$ is a functor thought of as some kind of ``tensor product'' and denoted by $\otimes$ (and usually, but not necessarily, such that $\otimes$ is right exact in each variable), it is customary to denote $L_n^{II} F(A,B)$ and $L_n^{I} F(A,B)$ by \hl{$\Tor_n^{II}(A,B)$} and \hl{$\Tor_n^{I}(A,B)$} respectively and to call these objects \hldef{Tor objects}. In other words, Tor objects are obtained by taking \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat} resolutions with respect to $\otimes$
+
+    In case that $F$ is a functor thought of as some kind of ``Hom'' and denoted as (some variation of) $\Hom: \calA^{\op} \times \calB \to \calC$ (most usually, $\calA = \calB$ for such Hom functors), it is customary to denote $R_n^{II} F(A,B)$ and $R_n^{I} F(A,B)$ by \hl{$\mathrm{Ext}_n^{II}(A,B)$} and \hl{$\mathrm{Ext}_n^{I}(A,B)$} respectivley and to call these objects \hldef{Ext objects}. 
+\end{definition}

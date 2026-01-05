@@ -1,0 +1,11 @@
+\begin{definition}[Standard model category structure on simplicial sets] \label{definition:standard_model_structure_on_the_category_of_simplicial_sets}
+    Let $\mathsf{sSet}$ denote the category of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}. The \hldef{standard model category structure on $\mathsf{sSet}$}, also known as the \hldef{Kan model structure} or the \hldef{Quillen model structure} or the \hldef{Kan-Quillen model structure}, is the \CrefAndHyperrefIfExist{definition:model_category}{model category} given by specifying three classes of morphisms:
+
+    \begin{itemize}
+    \item \textbf{Weak equivalences:} A map $f : X \to Y$ in $\mathsf{sSet}$ is a weak equivalence, also called a \hldef{weak homotopy equivalence between the simplicial sets $X$ and $Y$}, if the induced map of \CrefAndHyperrefIfExist{definition:geometric_realization_of_a_simplicial_set}{geometric realizations} $|f| : |X| \to |Y|$ is a \CrefAndHyperrefIfExist{definition:weak_homotopy_equivalence_of_topological_spaces}{weak homotopy equivalence} of topological spaces (i.e., induces isomorphisms on all homotopy groups for all choices of basepoint).
+    \item \textbf{Fibrations:} A map $f : X \to Y$ is a \hldef{(Kan) fibration} if it has the right lifting property with respect to the horn inclusions $\Lambda_k^n \hookrightarrow \Delta^n$ for all $n \ge 1$ and $0 \le k \le n$.
+    \item \textbf{Cofibrations:} A map $f : X \to Y$ is a cofibration if it is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} (i.e., injective at each level).
+    \end{itemize}
+    For this model category structure, all objects are \CrefAndHyperrefIfExist{definition:fibrant_cofibrant_object_in_a_model_category}{cofibrant}, and the \CrefAndHyperrefIfExist{definition:fibrant_cofibrant_object_in_a_model_category}{fibrant objects} are exactly the \CrefAndHyperrefIfExist{definition:kan_complex}{Kan complexes}.
+    % With these choices, $\mathsf{sSet}$ is a model category in the sense of Quillen. All objects are cofibrant, and the fibrant objects are exactly the Kan complexes.
+\end{definition}

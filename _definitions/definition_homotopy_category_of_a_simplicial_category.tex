@@ -1,0 +1,10 @@
+\begin{definition}[{\cite[Before Definition 1.1.4.4]{lurie_htt}}] \label{definition:homotopy_category_of_a_simplicial_category}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:simplicial_category}{simplicial category}. Let $\calH$ be the \CrefAndHyperrefIfExist{definition:homotopy_category_of_the_category_of_simplicial_sets}{homotopy category of the category of simplicial sets}. The \hldef{homotopy category of $\calC$} is the \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\calH$-enriched category} \hl{$\mathrm{h}\calC$} obtained by applying the localization functor $\mathrm{h}: \Sets_\Delta \to \calH$ \CrefIfExists{definition:simplicial_cosimplicial_object_in_a_category} to the Hom's of $\calC$. In other words, $\mathrm{h}\calC$ is the $\calH$-enriched category category whose 
+    \begin{enumerate}
+        \item Objects are the objects of $\calC$
+        \item Hom's are given for $X, Y \in \Ob \mathrm{h} \calC$ by
+        $$\Hom_{\mathrm{h}\calC}(X,Y) = \mathrm{h} \Hom_{\calC}(X,Y).$$
+    \end{enumerate}
+    
+    \TODO{homotopy category of the cateogry of simplicial sets, equivalently the homotopy category of the category of compactly generated spaces}
+\end{definition}

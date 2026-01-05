@@ -1,0 +1,17 @@
+
+\begin{definition} \label{definition:zero_divisor_of_a_ring}
+    Let $(R,+,\cdot)$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutative ring}.
+    \begin{enumerate}
+        \item An element $a \in R$ is a \hldef{left zero-divisor} if there exists a nonzero $x \in R$ such that $ax = 0$. Otherwise, $a$ is called \hldef{left regular} or \hldef{left cancellable}.
+        \item An element $a \in R$ is a \hldef{right zero-divisor} if there exists a nonzero $x \in R$ such that $xa = 0$. Otherwise, $a$ is called \hldef{right regular} or \hldef{right cancellable}.
+
+        \item An element $a \in R$ is a \hldef{zero-divisor} if it is a left zero-divisor or a right zero-divsor.
+        \item An element $a \in R$ is a \hldef{two-sided zero-divisor} if it is both a left zero-divisor and a right zero-divsor.
+
+        \item An element $a \in R$ is \hldef{regular}, \hldef{cancellable}, or a \hldef{non-zero-divisor} if it is both left and right regular.
+    \end{enumerate}
+
+    A zero-divisor of any kind that is not itself $0$ is said to be a \hldef{nonzero zero divisor} or a \hldef{nontrivial zero divisor} of its kind. 
+    
+    A non-zero ring with no nontrivial zero divisors is called a \hldef{domain}. A domain that it also a \CrefAndHyperref{definition:commutative_ring}{commutative ring} is also called an \hldef{integral domain}.
+\end{definition}

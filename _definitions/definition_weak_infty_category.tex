@@ -1,0 +1,33 @@
+\begin{definition} \label{definition:weak_infty_category}
+    \TODO{this definition is not very precise}
+An \hldef{$\infty$-category} (or \hldef{weak $\infty$-category}) is a category-like structure that encodes morphisms of all dimensions, where composition is associative and unital only up to coherent higher homotopies.  
+More precisely, one usually works with the notion of an \hldef{$(\infty,1)$-category}, in which all $k$-morphisms for $k>1$ are invertible up to higher homotopy.  
+
+Formally, an $\infty$-category can be defined in several equivalent ways, each specifying a precise model of this higher structure.  
+Each of the standard models forms an \textit{$\infty$-cosmos} — a simplicially enriched category whose hom-objects are themselves $\infty$-categories — and all such models are equivalent up to categorical equivalence.  
+Common frameworks include:
+
+\begin{itemize}
+  \item \textbf{Quasicategories:} Simplicial sets $C$ satisfying the \hldef{inner horn-filling condition}:  
+  for every $n \ge 2$ and $0 < i < n$, every map $\Lambda_i[n] \to C$ (where $\Lambda_i[n]$ is the $i$th inner horn of the standard simplex $\Delta[n]$) extends to a map $\Delta[n] \to C$.  
+  Such objects are the fibrant objects in the Joyal model structure on simplicial sets.
+
+  \item \textbf{Complete Segal spaces:} Simplicial spaces $W_\bullet: \Delta^{\mathrm{op}} \to \mathbf{sSet}$ satisfying the Segal condition  
+  $$
+  W_n \simeq W_1 \times_{W_0} \cdots \times_{W_0} W_1
+  $$
+  (encoding associative composition up to homotopy) together with the completeness condition ensuring that equivalences are detected correctly.  
+  These are the fibrant objects in the Rezk model structure on simplicial spaces.
+
+  \item \textbf{Simplicial categories:} Categories enriched in simplicial sets whose hom-objects are Kan complexes and satisfy homotopy-coherent associativity laws.  
+  These are related to quasicategories via the homotopy coherent nerve construction.
+
+  \item \textbf{Other equivalent models:} Segal categories, naturally marked simplicial sets, and $\Theta$-spaces, each giving a distinct but equivalent encoding of higher categorical coherence.
+\end{itemize}
+
+Morphisms between $\infty$-categories, called \hldef{$\infty$-functors}, are maps in the chosen model that preserve the higher compositional structure up to coherent homotopy.  
+The totality of $\infty$-categories and $\infty$-functors forms an $(\infty,2)$-category commonly denoted by \hl{$\infty\text{-}\mathbf{Cat}$}.
+
+In summary, an $\infty$-category formalizes the idea of a category enriched in homotopy types (or spaces) — a “category up to higher coherent homotopies.”  
+All standard models of $\infty$-categories (quasicategories, complete Segal spaces, simplicial categories, etc.) are equivalent in the sense of $\infty$-cosmoi theory.
+\end{definition}

@@ -1,0 +1,8 @@
+
+\begin{definition}[Monomorphism and Epimorphism in Categories] \label{definition:monomorphism_and_epimorphism_in_categories}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. For objects $A, B \in \mathcal{C}$, let $f: A \to B$ be a morphism in $\mathcal{C}$.  
+\begin{itemize}
+    \item The morphism $f$ is called a \hldef{monomorphism} (or a \hldef{monic morphism}) if for every object $X$ and every pair of morphisms $g_1, g_2 : X \to A$, the equality $f \circ g_1 = f \circ g_2$ implies $g_1 = g_2$.  
+    \item The morphism $f$ is called an \hldef{epimorphism} (or an \hldef{epic morphism}) if for every object $Y$ and every pair of morphisms $h_1, h_2: B \to Y$, the equality $h_1 \circ f = h_2 \circ f$ implies $h_1 = h_2$.  
+\end{itemize}
+\end{definition}

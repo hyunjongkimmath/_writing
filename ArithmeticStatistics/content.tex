@@ -1,0 +1,297 @@
+
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+
+
+The purpose of this document is to formulate and discuss conjectures (both unproven and proven) in arithmetic statistics.
+\section{Conjectures and heuristics on elliptic Curves and abelian varieties over function fields }
+
+\subsection{Sato-Tate distribution of traces of Frobenii of elliptic curves over number fields}
+
+Clozel, Harris, Shepherd-Barron, and Taylor \cite{clozel_harris_taylor_aselllamellr}, \cite{taylor_aselllamellrii}, \cite{harris_shepherd-barron_taylor_ilpa} first proved the Sato-Tate conjecture for non CM elliptic curves over totally real fields under mild hypotheses (that the elliptic curve has at least one prime of multiplicative reduction). The mild hypotheses were removed in by Barnet-Lamb, Geraghty, Harris, and Taylor \cite{barnet-lamb_geraghty_harris_taylor_fcyvpaii}. loc.~cit.~ in fact proved the natural generalization of the Sato-Tate conjecture for regular algebraic cuspidal automorphic rperesentations of $\mathrm{GL}_2(\bbA_F)$ where $F$ is a totally real field which are not of CM type.
+
+\begin{theorem}[Sato-Tate theorem for non-CM elliptic curves over totally real fields]
+    \TODO{define elliptic curve, CM}
+    \TODO{define trace of Frobenius, reduction of elliptic curve}
+    Let \( F \) be a totally real number field and \( E/F \) be an elliptic curve without complex multiplication (CM). For each prime ideal \(\mathfrak{p}\) of \(\mathcal{O}_F\) where \( E \) has good reduction, define the angle \(\theta_\mathfrak{p} \in [0, \pi]\) by
+    \[
+    \theta_\mathfrak{p} = \cos^{-1}\left(\frac{a_\mathfrak{p}}{2 \sqrt{N\mathfrak{p}}}\right),
+    \]
+    where \( a_\mathfrak{p} \) is the trace of Frobenius at \(\mathfrak{p}\) and \( N\mathfrak{p} \) is the norm of \(\mathfrak{p}\).
+
+    Then for every interval \([ \alpha, \beta ] \subseteq [0, \pi]\), we have
+    \[
+    \lim_{X \to \infty} \frac{\#\{\mathfrak{p} : N\mathfrak{p} \leq X, \alpha \leq \theta_\mathfrak{p} \leq \beta \}}{\#\{\mathfrak{p} : N\mathfrak{p} \leq X\}} 
+    = \frac{2}{\pi} \int_\alpha^\beta \sin^2 \theta \, d\theta 
+    = \frac{1}{\pi} \bigl( \beta - \alpha + \sin \alpha \cos \alpha - \sin \beta \cos \beta \bigr).
+    \]
+\end{theorem}
+
+Intuitively, the Sato-Tate conjecture states that $\frac{a_\mathfrak{p}}{2\sqrt{N\mathfrak{p}}}$ is equidistributed in $[-1,1]$ with respect to the measure $\frac{2}{\pi}\sqrt{1-t^2}dt$ or equivalently that $\theta_{\mathfrak{p}}$ is equidistributed in $[0,\pi]$ with respect to the measure $\frac{2}{\pi} \sin^2 \theta d\theta$.
+
+\subsection{Mordell-Weil Ranks of abelian varieties over global fields and their Selmer groups}
+
+\subsubsection{Minimalist conjecture for Mordell-Weil ranks of elliptic curves over global fields}
+
+\input{../_concepts/theorem_mordell_weil_theorem_for_abelian_varieties_over_global_fields.tex}
+
+In 1979, Goldfeld \cite{goldfeld_cecqf} first conjectured that elliptic curves over $\bbQ$, when arranged in a suitable manner, should be $\frac{1}{2}$ on average. Katz and Sarnak \cite{katz_rmfem} gave a refined statistical model for understanding average and typical Mordell-Weil ranks of elliptic curves --- they conjectured that as the conductor of the elliptic curves grows large, the distribution of zeroes of their $L$-functions ``statistically behaves like'' eigenvalues of random matrices from classical compact groups (e.g. unitary, symplectic, or orthogonal groups). The generally held conjecture for more general elliptic curves over number fields is that asymptotically $50\%$ of such elliptic curves should be of Mordell-Weil rank $0$, asymptotically $50\%$ of such elliptic curves should be of Mordell-Weil rank $1$, and asymptotically $0\%$ of such elliptic curves curves should be of Mordell-Weil rank $\geq 2$.
+
+\begin{conjecture}[Minimalist Conjecture for Mordell--Weil ranks of elliptic curves over global fields]  \label{conjecture:minimalist_conjecture_for_mordell_weil_ranks_of_elliptic_curves_over_global_fields}
+    Let $E$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} defined over a \CrefAndHyperrefIfExist{definition:global_field}{global field} $K$. Denote by $r(E/K)$ the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell--Weil rank} of $E(K)$, i.e., the rank of the finitely generated abelian group $E(K)$.  
+    \TODO{discuss some such stuiable families; e.g. height vs. conductor}
+
+    The \hldef{Minimalist Conjecture} predicts that as $E$ varies over suitable families of elliptic curves defined over $K$, ordered in some appropriate manner, the distribution of the Mordell--Weil ranks is minimal in the sense that:
+    \begin{itemize}
+        \item The probability that $r(E/K) = 0$ is $50\%$.
+        \item The probability that $r(E/K) = 1$ is $50\%$.
+        \item The probability that $r(E/K) \geq 2$ tends to $0$.
+    \end{itemize}
+
+    In particular, almost all elliptic curves over $K$ are expected to have Mordell--Weil rank either $0$ or $1$.  
+\end{conjecture}
+
+\TODO{discuss function field case, etc.}
+
+Bhargava and Shankar proved that the average rank of elliptic curves over $\bbQ$ is bounded above, first by $\frac{3}{2}$ \cite{bhargava_shankar_bqfhbibarec} and later by $\frac{7}{6}$ \cite{bhargava_shankar_tcfhbieppecr0} by computing the average size of the \CrefAndHyperrefIfExist{definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field}{$2$-Selmer and the $3$-Selmer groups} of elliptic curves $E/\bbQ$ respectively. Their results assume neither the Birch-Swinnerton-Dyer conjecture nor the Generalized Riemann hypothesis, both of which were assumed in previous works of A. Brumer \cite{brumer_arecI}, Heath-Brown \cite{heath-brown_aarec}, and Young \cite{young_llzfec}, which respectively obtained upper bounds of $2.3$, $2$, and $\frac{25}{14}$.
+
+Baig and Hall \cite{baig_hall_edgscff} computed empirical evidence to support the minimalist conjecture for elliptic curves over function fields, albeit the proportion of curves of rank $1$ and of rank $2$ seem to converge to the respective predicted values of $50\%$ and $0\%$ rather slowly.
+
+\subsubsection{Poonen-Rains [PR] and Bhargava-Kane-Lenstra-Poonen-Rains [BKLPR]}
+
+See \cite{poonen_haec} for Bjorn Poonen's introduction to this topic, submitted to the 2018 ICM Proceedings. 
+
+
+\begin{conjecture}[Poonen-Rains conjecture {\cite[Conjecture 1.1]{poonen_rains_rmissg}}]
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field} and let $\ell$ be a prime number. Below, averages/probabilities are taken over elliptic curves ``ordered by'' some reasonable notion of height; the statistics are defined by considering the finitely many elliptic curves of height $\leq B$, and take the limit of the statistics as $B \to \infty$. A standard reasonable height for elliptic curves over number fields would be the \CrefAndHyperrefIfExist{definition:naive_height_of_an_elliptic_curve_over_a_number_field}{naive height}
+    \begin{enumerate}
+        \item (\cite[Conjecture 1.1(a)]{poonen_rains_rmissg}) As $E$ varies over all \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_ring_given_by_a_projective_weierstrass_equation_with_invertible_discriminant}{elliptic curves over $K$}
+        $$\Prob(\dim_{\bbF_\ell} \Sel_\ell E = d) = \left( \prod_{j \geq 0} (1 + p^{-j})^{-1} \right) \cdot \left( \prod_{j=1}^d \frac{p}{p^{j}-1} \right).$$
+        (in particular, )
+
+        % \item The average of $\# \Sel_\ell E$ over all $E/K$ is $\ell+1$.
+
+        \item (\cite[Conjecture 1.1(b),(c)]{poonen_rains_rmissg}, cf. \cite[Conjecture 3.4]{poonen_haec}) For $m \in \bbZ_{\geq 0}$,
+        $$\operatorname{Average}_{E/K}\left((\# \Sel_\ell E)^m \right) = \prod_{i=1}^m (\ell^i + 1), $$
+        i.e. the average of $(\# \Sel_p E)^m$ over all $E/K$ is $\prod_{i=1}^m (\ell^i + 1)$. In particular, the average of $\# \Sel_\ell E$ over all $E/K$ is $\ell+1$; consequently, the average of $\# \Sel_n E$ over all $E/K$, where $n \geq 1$, is $\sigma(n)$.
+
+        % Another way to formulate this in terms of more general $n$-Selmer groups for $n \geq 1$ would be that 
+        % $$\operatorname{Average}_{E/K}\left((\# \Sel_\ell E)^m \right) = \prod_{i=1}^m (\ell^i + 1), $$
+
+    \end{enumerate}
+\end{conjecture}
+
+Under the assumption that the parity of the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank} is equidistributed over $E/K$, these recover the \CrefAndHyperrefIfExist{}{}minimalist conjecture
+
+
+\begin{definition} \label{definition:height_of_an_elliptic_curve_over_a_global_function_field_of_odd_characteristic}[cf. {\cite[1.2.1]{feng_landesman_rains_gdsgecff}}]
+    \TODO{define minimal weierstrass model, and state this as a concept}
+    Let $\Fq$ be a finite field of odd characteristic. Any \CrefAndHyperref{definition:elliptic_curve_over_a_scheme}{elliptic curve} $E/\Fq(t)$ has a minimal Weierstrass model of the form
+    $$y^2 = x^3 + a_2(t) x^2+ a_4(t) x + a_6(t)$$
+    where $a_i(t)$ is a polynomial of degree $2id$ for $i \in \{1,2,3\}$. The \hldef{height of $E$}, which may be denoted by \hl{$h(E)$}, is defined to be rhe value of $d$, which is uniquely determined by $E$.
+\end{definition}
+
+\begin{definition} \label{definition:mordell_weil_rank_and_n_selmer_group_structure_probability_distribution_of_elliptic_curves_over_a_global_function_field_of_odd_characteristic}
+    Let $\Fq$ be a finite field of odd characteristic and let $n \geq 2$. 
+    \begin{enumerate}
+        \item (cf. \cite[1.2.1, Definition 1.3]{feng_landesman_rains_gdsgecff}) Let $(\operatorname{rk}, \operatorname{Sel}_n)^d_{\Fq}$ be the joint probability distribution on $\bbZ_{\geq 0} \times \Ab_n$, where $\Ab_n$ is the set of isomorphism classes of finite $\bbZ/n\bbZ$-modules, assigning to a pair $(r,G) \in \bbZ_{\geq 0} \times \Ab_n$ the proportion of isomorphism classes of \CrefAndHyperref{definition:height_of_an_elliptic_curve_over_a_global_function_field_of_odd_characteristic}{height} $d$ elliptic curves over $\Fq(t)$ with \CrefAndHyperref{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank} and \CrefAndHyperref{definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field}{$n$-Selmer group} isomorphic to $G$. More precisely,
+        $$\Prob((\rk, \Sel_n)^d_{\Fq} = (r,G)) = \frac{\# \{E/\Fq(t) : h(E) = d, \rk(E) = r, \Sel_n(E) \simeq G \}}{\#\{E/\Fq(t): h(E) = d\}}.$$
+
+        \item (cf. \cite[Definition 5.12]{feng_landesman_rains_gdsgecff}) Let $(\rk^{\mathrm{BKLPR}}, \Sel_n^{\mathrm{BKLPR}})$ be the joint distribution on $\bbZ_{\geq 0} \times \Ab_n$ defined by 
+        $$\Prob((\rk^{\mathrm{BKLPR}}, \Sel_n^{\mathrm{BKLPR}}) = (r,G)) = \begin{cases} \frac{1}{2} \mathscr{T}_{r, \bbZ/n\bbZ} & \text{if } r \leq 1\\ 0 &\text{if } r \geq 2\end{cases} $$
+        \TODO{define $\mathscr{T}_{r, \bbZ/n\bbZ}$}
+
+    \end{enumerate}
+\end{definition}
+
+\cite{poonen_rains_rmissg}
+
+\cite{feng_landesman_rains_gdsgecff} roughly proved that the rank and Selmer groups amongst elliptic curves $E/\Fq(t)$ of height $d$ in the $\lim_{d \to \infty} \lim_{q \to \infty}$ limit are distributed according to the BKLPR heuristic:
+\begin{theorem}[{\cite[Theorem 1.1]{feng_landesman_rains_gdsgecff}}]
+    \TODO{state}
+    Let $n \geq 1$ be a fixed integer. The limits
+    $$\lim_{d \to \infty} \limsup_{\substack{q \to \infty \\ \gcd(q,2n) = 1}} (\rk, \Sel_n)_{\Fq}^d \quad \text{and} \quad \lim_{d \to \infty} \liminf_{\substack{q \to \infty \\ \gcd(q,2n) = 1}} (\rk, \Sel_n)_{\Fq}^d,$$
+    \Cref{definition:mordell_weil_rank_and_n_selmer_group_structure_probability_distribution_of_elliptic_curves_over_a_global_function_field_of_odd_characteristic} where $q$ ranges over prime powers, exist, are equal to each other, and coincide with the \CrefAndHyperref{definition:mordell_weil_rank_and_n_selmer_group_structure_probability_distribution_of_elliptic_curves_over_a_global_function_field_of_odd_characteristic}{distribution $(\rk^{\mathrm{BKLPR}}, \Sel_n^{\mathrm{BKLPR}})$ predicted by the BKLPR heuristic}. More precisely,
+\end{theorem}
+
+
+\subsubsection{Parity conjecture on the parity of the Mordell-Weil rank of an elliptic curve over a global field and on the root number associated to its \texorpdfstring{$L$}{L}-function}
+
+\subsubsection{Goldfeld's conjecture on the ranks in families of quadratic twists of elliptic curves over global fields}
+
+\subsubsection{Conjectures on the boundedness on the Mordell-Weil ranks of abelian varieties over global fields}
+
+\TODO{add Alexnader smith's results over number fields}
+
+\subsection{Analytic ranks of abelian varieties over global fields}
+
+
+\subsubsection{The Birch-Swinnerton-Dyer conjecture}
+
+The Birch and Swinnerton-Dyer conjecture (often abbreviated as the BSD conjecture), relates the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank} of elliptic curves with their analytic rank. 
+
+\TODO{define trace of frobenius}
+
+The conjecture was originally formulated in terms of asymptotics of the traces of Frobenii:
+
+\begin{conjecture}[Original Birch-Swinnerton-Dyer conjecture \cite{birch_swinnerton-dyer_necii}] \label{conjecture:original_bsd_conjecture}
+    \TODO{define the discriminant of an elliptic curve, reduction type}
+    Let $E/\bbQ$ be an elliptic curve and let $\Delta$ be its discriminant. For a prime $p$ of good reduction, we have 
+    $$\prod_{p \leq X} \frac{a_p}{p} \approx C \log(X)^r \quad \text{as} \quad X \to \infty$$
+    where $r$ is the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank of $E/\bbQ$} and where $C$ is some constant depending on $E$.
+\end{conjecture}
+
+\TODO{define the hasse-weil $L$-function}
+The modern formulation of the conjecture is expressed in terms of the Hasse-Weil $L$-function $L(E,s)$. In fact, it can be stated for abelian varieties over number fields:
+
+\begin{conjecture}[{\cite{tate_ocbsdga}}, cf. {\cite{jorza_bsdcavnf}}] \label{conjecture:BSD_conjecture_for_an_abelian_variety_over_a_number_field}
+    Let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:global_field}{number field}. Write $L(A,s)$ for the Hasse-Weil $L$-function of $A$. 
+    \begin{enumerate}
+        \item (\hldef{weak BSD conjecture}; {\cite[(A)]{tate_ocbsdga}}) The order of vanishing of $L$ at $1$ equals the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank of $A$}.
+        \TODO{define regulartor, shafarevich-tate group, and a statement that Sha is finite}
+        \item (\hldef{strong BSD conjecture}; {\cite[(B)]{tate_ocbsdga}}, cf. {\cite[Conjecture 3.15]{jorza_bsdcavnf}}) Let $A(K)_{\mathrm{tors}}$ and $A^\vee(K)_{\mathrm{tors}}$ be the torsion subgroups of $A(K)$ and $A^\vee(K)$ respectively. Let $R_A$ be the regulator of $A$, and let $\Sha(A/K)$ be the Shafarevich-Tate group, which is finite. We have 
+        $$\frac{L^{(r)}(A,1)}{r! \int_{A(\bbA_K)} d\mu_{A,w,\Lambda} } = \frac{R_A|\Sha(A/K)|}{|A(K)_{\mathrm{tors}}| \cdot |A^\vee(K)_{\mathrm{tors}}|}.$$
+        \TODO{define the measure used in the integral}
+        It may be of interest from the computational perspective to rewrite the above equation in the form
+        $$\frac{1}{r!} L^{(r)}(A,1) = \frac{P_A \cdot R_A \cdot |\Sha(A/K)| \cdot \prod_{v \in M_K^0} c_v}{\sqrt{|D_K|}^d \cdot |A(K)_{\mathrm{tors}}| \cdot |A^\vee(K)_{\mathrm{tors}}|} $$
+        where 
+        \TODO{define period, tamagawa number, absolute discriminant}
+        \begin{itemize}
+            \item $P_A$ is the the period of $A$
+            \item $M_K^0$ is the collection of finite places of $K$
+            \item $c_v$ is the Tamagawa number at the finite place $v \in M_K^0$
+            \item $D_K$ is the absolute discriminant of $K$
+        \end{itemize}
+    \end{enumerate} 
+\end{conjecture}
+
+The \CrefAndHyperref{conjecture:original_bsd_conjecture}{original BSD conjecture} is equivalent to the \CrefAndHyperref{conjecture:BSD_conjecture_for_an_abelian_variety_over_a_number_field}{weak BSD conjecture} for elliptic curves over number fields. 
+
+\TODO{see if there is a function field analogue of BSD}
+
+The weak and strong BSD conjectures can be formulated over function fields as well. In this case, \CrefAndHyperrefIfExist{conjecture:tates_conjecture}{Tate's conjecture} for elliptic surfaces is equivalent to weak BSD for elliptic curves over the generic fibers.
+
+\TODO{cite the original source of this theorem; it should be either Tate or Grothendieck, see Caleb Ji's notes on the tate conjecture}
+\begin{theorem}
+    Let $K = \Fq(C)$ be the function field of a smooth projective curve $C$ over $\Fq$. Let $E/K$ be an ellpitic curve. Let $\calE$ be the unique elliptic surface\TODO{define elliptic surface} over $\Fq$ with generic fiber $E$. \TODO{define generic fiber} 
+    The following are equivalent:
+    \begin{enumerate}
+        \item \CrefAndHyperrefIfExist{conjecture:tates_conjecture}{Tate's conjecture} for the smooth projective variety $\calE/\Fq$
+        \item The weak BSD conjecture for the elliptic curve $E/K$. 
+    \end{enumerate}
+\end{theorem}
+
+
+\subsubsection{Nagao's conjecture}
+
+\TODO{how well does this discussion hold for elliptic surfaces over number fields?}
+\begin{definition} \label{definition:average_trace_of_frobenius_of_specialization_of_rational_elliptic_curves_in_a_family}
+    \TODO{define a non-split elliptic surface}
+    Let $\calE \to \bbP^1$ be a non-split elliptic surface over $\bbQ$ with \CrefAndHyperref{definition:weierstrass_equation_over_a_ring}{Weierstrass equation}
+    $$\calE: y^2 = x^3 + A(T) x + B(T)$$
+    with $4A(T)^3 + 27B(T)^2 \neq 0$; take $A(T), B(T) \in \bbZ[T]$. For $t \in \bbZ$, let \hl{$E_t$} be the specialization of $\calE$ obtained by letting $T = t$; for all but finitely many integers $t$, in fact for the $t$ at which the \CrefAndHyperref{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{$j$-invariant} $j(\calE) \in \bbQ(T)$ is defined and nonvanishing, $E_t$ is an elliptic curve over $\bbQ$. Further let \hl{$E_{t,p}$} denote the reduction of $E_t/\bbQ$ at the prime $p$. \TODO{define reduction}
+    Write 
+    $$\hlin{A_p(\calE) = \frac{1}{p} \sum_{t=0}^{p-1} a_p(E_t)}$$
+    where $a_p(E_t)$ is the usual trace of Frobenius of $E_t$ at $p$ \TODO{define the trace of Frobenius at a prime, taking reduction into consideration}
+    and 
+    $$\hlin{S(N, \calE) = - \frac{1}{N} \sum_{p \text{ prime} \leq N} A_p(\calE) \cdot \log p}$$
+    One might refer to $S(N,\calE)$ as a \hldef{Nagao sum for $\calE$}.
+\end{definition}
+
+\TODO{define Mestre-Nagao sum}
+
+\begin{conjecture}[Nagao's conjecture {\cite{nagao_qtrecclcflp}}] \label{conjecture:nagaos_conjecture_on_the_mordell_weil_rank_of_elliptic_curves_over_Q_T}
+    Let $\calE \to \bbP^1$ be a non-split elliptic surface over $\bbQ$. The value \CrefAndHyperref{definition:average_trace_of_frobenius_of_specialization_of_rational_elliptic_curves_in_a_family}{$S(N,\calE)$} converges as $N \to \infty$ and converges to the Mordell-Weil $\bbQ(T)$-rank of $\calE$ \TODO{define the $\bbQ(T)$-rank of an elliptic surface}.
+\end{conjecture}
+
+Rosen and Silverman proved that Nagao's conjecture for elliptic surface $\calE$ over $\bbQ$ assuming that Tate's conjecture holds for $\calE$:
+\begin{theorem}[{\cite[Theorem 1.3]{rosen_silverman_ores}}]
+    \TODO{state Nagao's conjecture in terms of elliptic surfaces over number fields; Rosen and Silverman's theorem is about that context in general.}
+\end{theorem}
+
+
+
+
+
+S.~Kim and M.~Ram Murty\cite{kim_murty_bsdcnsc} proved the following about the Nagao-Mestre sum. See \cite[Section 4]{kim_murty_bsdcnsc} for a discussion that relates their results to \CrefAndHyperref{conjecture:nagaos_conjecture_on_the_mordell_weil_rank_of_elliptic_curves_over_Q_T}{Nagao's conjecture}.
+\begin{theorem}[{\cite{kim_murty_bsdcnsc}}]
+    Let $E/\bbQ$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} with discriminant $\Delta_E$. For each prime $p$ of good reduction, i.e. $p \nmid \Delta_E$, \TODO{define reduction} let $a_p$ be the trace of Frobenius. Let $a_p$ be $0$, $1$, or $-1$ if $E$ has additive, split multiplicative, and nonsplit multiplicative reductive at $p$ respectively.
+
+    If the limit 
+        $$\lim_{X \to \infty} \frac{1}{\log X} \sum_{p < X} \frac{a_p \log p}{p}$$ 
+    exists, then 
+    \TODO{describe the riemann hypothesis for $L_E$}
+    \begin{enumerate}
+        \item ({\cite[Corollary 7]{kim_murty_bsdcnsc}}) the Riemann hypothesis for $L_E(s)$ is true, and the limit is $-r + \frac{1}{2}$, and 
+        \item ({\cite[Corollary 8]{kim_murty_bsdcnsc}}) the \CrefAndHyperrefIfExist{conjecture:original_bsd_conjecture}{original BSD conjecture} is true for the elliptic curve $E/\bbQ$.
+    \end{enumerate}
+\end{theorem}
+
+
+\subsection{Selmer groups and their distributions}
+
+\subsection{Modularity conjecture}
+
+\section{Hasse-Weil conjecture on the behavior of Hasse-Weil \texorpdfstring{$L$}{L}-functions on varities over global fields}
+
+
+
+
+
+\section{Random matrices}
+
+\section{Catalan's conjcture}
+
+
+
+\section{Conjectures on distributions/counts of number fields and function fields }
+
+\subsection{Malle's conjecture}
+
+\subsection{Cohen-Lenstra heuristics}
+
+
+
+
+
+\appendix
+
+\section{Elliptic curves}
+
+\input{../_definitions/definition_elliptic_curve_over_a_scheme.tex}
+
+\input{../_definitions/definition_weierstrass_equation_over_a_ring.tex}
+
+\input{../_notations/notation_auxiliary_invariants_for_a_general_weierstrass_equation.tex}
+\input{../_definitions/definition_j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant.tex}
+
+\input{../_definitions/definition_weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain.tex}
+\input{../_definitions/definition_minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain.tex}
+
+
+\section{Conjectures in algebraic geometry}
+
+\begin{conjecture}[Tate's conjecture, {\cite[Conjecture 1]{tate_acpzf}}] \label{conjecture:tates_conjecture}
+    Let $k$ be a field that is finitely generated over its prime field. Let $k_s$ be a separable closure of $k$ and let $\Gal(k_s/k)$ be the absolute Galois group of $k$. Let $X/k$ be a smooth projective variety. Fix a prime number $\ell$ which is invertible in $k$. The space
+    $$H^{2i}(X_{k_s}, \Qell(2i))^{\Gal(k_s/k)}$$
+    \TODO{define $\ell$-adic cohomology of $\ell$-adic sheaves}
+    of invariants of the action of $\Gal(k_s/k)$ on the $2i$th $\ell$-adic cohomology group $H^{2i}(X_{k_s}, \Qell(2i))$ of the $2i$th Tate twist $\Qell(2i)$ is spanned, as a $\Qell$-vector space, by the classes of codimension $i$ subvarieties of $X$. More precisely, the map 
+    $$ A^i(X) \otimes \Qell \to H^{2i}(X_{k_s}, \Qell(2i))^{\Gal(k_s/k)}$$
+    induced by the cycle map\TODO{define cycle map}
+    $$c^i: Z(X_{k_s}) \to H^{2i}(X_{k_s}, \Qell(2i))$$
+    is a surjection.
+\end{conjecture}
+
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_global_field.tex}
+
+\input{../_definitions/definition_abelian_variety_over_a_field.tex}
+
+\section{Selmer groups}
+
+\input{../_definitions/definition_selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field.tex}
+
+\section{Heights}
+
+\input{../_definitions/definition_naive_height_of_an_elliptic_curve_over_a_number_field.tex}

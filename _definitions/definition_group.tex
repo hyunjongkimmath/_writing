@@ -1,0 +1,29 @@
+
+\begin{definition}[Groups] \label{definition:group}
+A \hldef{group} is a pair $(G,\cdot)$ where $G$ is a set and $\cdot : G \times G \to G$ is a binary operation, subject to the following conditions:
+
+1. (Associativity) For all $g,h,k \in G$ one has 
+$$ (g \cdot h) \cdot k = g \cdot (h \cdot k). $$
+
+2. (Identity element) There exists an element \hl{$e \in G$} such that for all $g \in G$, 
+$$ e \cdot g = g \cdot e = g. $$
+
+3. (Inverse element) For all $g \in G$ there exists an element \hl{$g^{-1} \in G$} such that 
+$$ g \cdot g^{-1} = g^{-1} \cdot g = e. $$
+
+The element $e$ is called the \hldef{identity element of $G$}, and $g^{-1}$ is called the \hldef{inverse of $g$}.
+
+Equivalently, a group is a \CrefAndHyperrefIfExist{definition:monoid}{monoid} with inverse elements.
+
+\TextIfExists{definition:group_object_in_a_category_with_a_final_object}{Equivalently, a group is a \CrefAndHyperrefIfExist{definition:group_object_in_a_category_with_a_final_object}{group object} in the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}.}
+
+A group $(G, \cdot)$ is often simply written as $G$, when the notation for the binary operation $\cdot$ is clear. 
+
+An \hldef{abelian group} or synonymously, a \hldef{commutative group}, is a group $(G,\cdot)$ whose binary operation $\cdot$ is \CrefAndHyperrefIfExist{definition:commutative_binary_operation}{\hldef{abelian} or \hldef{commutative}}, i.e. satisfies 
+$$g \cdot h = h \cdot g$$
+for all $g,h \in G$. 
+
+
+\TextIfExists{definition:module_of_a_ring}{An abelian group is equivalent to a $\bbZ$-module.}
+
+\end{definition}

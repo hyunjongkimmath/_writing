@@ -1,0 +1,9 @@
+
+\begin{definition}[Isomorphism in a category] \label{definition:isomorphism_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}, and let $x,y \in \mathrm{Ob}(\mathcal{C})$.  
+A morphism $f \in \mathcal{C}(x,y)$ is called an \hldef{isomorphism} if there exists a morphism $g \in \mathcal{C}(y,x)$ such that
+$$ g \circ f = 1_x \qquad \text{and} \qquad f \circ g = 1_y.  $$
+In this case, $g$ is called the \hldef{inverse of $f$}, and $x$ and $y$ are said to be \hldef{isomorphic objects} in $\mathcal{C}$. It is standard to write \hl{$x \cong y$} if there exists an isomorphism $f : x \to y$.
+
+In practice, isomorphisms in specific categories may be defined in different, yet equivalent, ways.
+\end{definition}

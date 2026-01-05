@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:dual_of_a_left_right_two_sided_module}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. Depending on the module structure of $M$, we define its dual module as follows:
+\begin{enumerate}
+    \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}, then the \hldef{(right) dual module of $M$} is 
+    $$\hlin{M^* = M^\vee \coloneq \operatorname{Hom}_R(M, R)}.$$
+    \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
+    Note that it is a right $R$-module, as $M$ is a $R-\bbZ$-bimodule and $R$ is an $R-R$-bimodule. 
+
+    \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}, then the \hldef{(left) dual module of $M$} is 
+    $$\hlin{{}^* M = {}^\vee M \coloneq \operatorname{Hom}_R(M, R)}.$$
+    \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
+    Note that it is a left $R$-module, as $M$ is a $\bbZ-R$-bimodule and $R$ is an $R-R$-bimodule. 
+
+    % \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}, the set of all left $R$-linear maps from $M$ to $R$ is denoted by
+    % $$\hlin{\,{}^*M = \operatorname{Hom}_R(M, R)},$$
+    % and is called the \hldef{left dual module} of $M$.
+
+    \item If $M$ is a \CrefAndHyperrefIfExist{definition:two_sided_module_of_a_ring}{two-sided $R$-module}, then the \hldef{dual of $M$} usually refers to either the right or the left dual as above.
+    % then $M$ admits both left and right $R$-actions, and we may define two duals:
+    % \begin{align*}
+    %     M^* &= \operatorname{Hom}_{R\text{-left}}(M, R) \quad \text{(right dual module)},\\
+    %     {}^*M &= \operatorname{Hom}_{\text{right-}R}(M, R) \quad \text{(left dual module)}.
+    % \end{align*}
+    % In particular, $M^*$ becomes a right $R$-module, and ${}^*M$ becomes a left $R$-module, via pointwise scalar multiplication:
+    % $$ (f \cdot r)(m) = f(m)r, \quad (r \cdot f)(m) = rf(m). $$
+\end{enumerate}
+In any case, the functor $M \mapsto M^\vee$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} from the appropriate \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of modules} to itself.
+
+If $R$ is a \CrefAndHyperrefIfExist{definition:field}{field} $F$ and $V$ is an \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}, then the dual module
+$$\hlin{V^* = V^\vee \coloneq  \operatorname{Hom}_F(V, F)}$$
+is called the \hldef{dual vector space of $V$}.
+\end{definition}

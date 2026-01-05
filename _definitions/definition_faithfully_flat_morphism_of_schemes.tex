@@ -1,0 +1,17 @@
+\begin{definition}[Faithfully flat morphism of schemes] \label{definition:faithfully_flat_morphism_of_schemes}
+    Let $f : X \to Y$ be a morphism of schemes.
+
+    The morphism $f$ is \hldef{faithfully flat} if it is \hldef{flat} and \hldef{surjective} on the underlying topological spaces.
+
+    More precisely:
+    \begin{itemize}
+        \item $f$ is \hldef{flat}, meaning for every $x \in X$ with $y = f(x)$, the local ring homomorphism
+        \[
+        \mathcal{O}_{Y,y} \to \mathcal{O}_{X,x}
+        \]
+        makes $\mathcal{O}_{X,x}$ a flat $\mathcal{O}_{Y,y}$-module.
+        \item $f$ is \hldef{surjective} at the level of topological spaces, i.e., the continuous map $f: |X| \to |Y|$ is surjective.
+    \end{itemize}
+
+    Equivalently, $f$ is faithfully flat if the functor $f^* : \mathrm{QCoh}(Y) \to \mathrm{QCoh}(X)$ on quasi-coherent sheaves is both exact and faithful.
+\end{definition}

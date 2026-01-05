@@ -1,0 +1,23 @@
+\begin{definition}[Derivability and Adapted Families] \label{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}
+Let $(\mathscr{A}_i)_{1 \le i \le n}$ and $(\mathscr{B}_j)_{1 \le j \le m}$ be families of \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}, and let $\mathscr{C}$ be a triangulated category. Let 
+$$F: \prod_{i=1}^n \mathscr{A}_i \times \prod_{j=1}^m \mathscr{B}_j \to \mathscr{C}$$ 
+be an \CrefAndHyperrefIfExist{definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category}{exact multifunctor}, covariant in the variables $A_i \in \mathscr{A}_i$ and contravariant in the variables $B_j \in \mathscr{B}_j$. Let $S_i, \Sigma_j, T$ be \CrefAndHyperrefIfExist{definition:saturated_multiplicative_system_in_a_category}{saturated multiplicative systems} in $\mathscr{A}_i, \mathscr{B}_j, \mathscr{C}$ respectively.
+
+
+\begin{enumerate}
+    \item Let $RF$ be the \CrefAndHyperrefIfExist{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{right derived functor} of $F$ relative to the multiplicative systems.
+    \begin{enumerate}
+        \item $RF$ is \hldef{defined at a family $(A_i, B_j)$} if the \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{Ind-object} $RF(A_i, B_j)$ is \CrefAndHyperrefIfExist{definition:essentially_constant_object}{essentially constant}. This object is the \hldef{value of $RF$ at $(A_i, B_j)$}.
+        \item $F$ is \hldef{right derivable} if $RF$ is defined at all objects. In this case, we view it as a functor into $\mathscr{C}(T^{-1})$.
+        \item A family $(A_i, B_j)$ is \hldef{adapted for $RF$} (or \hldef{deployed for $RF$} (\hldef{d\'eploy\'ee pour $RF$} in French)) if the natural morphism $Q_C(F(A_i, B_j)) \to RF(Q_{A_i}A_i, Q_{B_j}B_j)$ is an isomorphism in $\text{Ind}(\mathscr{C}(T^{-1}))$, i.e. the Ind-object $RF(A_i)$ of $A(S^{-1})$ is \CrefAndHyperrefIfExist{definition:essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category}{essentially constant} with value $F((A_i),(B_j))$.
+    \end{enumerate}
+
+    \item Let $LF$ be the \CrefAndHyperrefIfExist{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{left derived functor} of $F$ relative to the multiplicative systems.
+    \begin{enumerate}
+        \item $LF$ is \hldef{defined at a family $(A_i, B_j)$} if the \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{Pro-object} $LF(A_i, B_j)$ is essentially constant.
+        \item $F$ is \hldef{left derivable} if $LF$ is defined at all objects.
+        \item A family $(A_i, B_j)$ is \hldef{adapted for $LF$} (or \hldef{deployed for $LF$} (\hldef{d\'eploy\'ee pour $LF$} in French)) if the natural morphism $LF(Q_{A_i}A_i, Q_{B_j}B_j) \to Q_C(F(A_i, B_j))$ is an isomorphism in $\text{Pro}(\mathscr{C}(T^{-1}))$, i.e. the Pro-object $LF(A_i)$ of $A(S^{-1})$ is \CrefAndHyperrefIfExist{definition:essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category}{essentially constant} with value $F((A_i),(B_j))$.
+
+    \end{enumerate}
+\end{enumerate}
+\end{definition}

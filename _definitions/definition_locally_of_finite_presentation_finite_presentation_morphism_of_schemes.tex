@@ -1,0 +1,10 @@
+\begin{definition}[Locally of finite presentation morphism of schemes] \label{definition:locally_of_finite_presentation_finite_presentation_morphism_of_schemes}
+Let $f : X \to Y$ be a morphism of schemes. 
+\begin{enumerate}
+    \item We say that $f$ is \hldef{locally of finite presentation} if for every \CrefAndHyperrefIfExist{definition:affine_open_subscheme_of_a_scheme}{affine open subset} \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{$\mathrm{Spec}(B) \subseteq Y$}, and every affine open subset $\mathrm{Spec}(A) \subseteq f^{-1}(\mathrm{Spec}(B))$\CrefIfExists{definition:preimage_of_an_open_subset_of_a_scheme_under_a_morphism_of_schemes}, the induced ring homomorphism $B \to A$ presents $A$ as a $B$-algebra of \CrefAndHyperrefIfExist{definition:finitely_presented_algebra_over_a_not_necessarily_commutative_ring}{finite presentation}; that is, $A$ is isomorphic to a quotient of a polynomial ring in finitely many variables over $B$ by a finitely generated ideal:
+    $$A \cong B[x_1, \ldots, x_n] / (f_1, \ldots, f_m),$$
+    for some finite $n,m$.
+
+    \item A morphism of schemes $f : X \to Y$ is of \hldef{finite presentation} if it is locally of finite presentation and \CrefAndHyperrefIfExist{definition:quasi_compact_morphism_of_schemes}{quasi-compact} and \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{quasi-separated}; in particular, $f$ can be covered by finitely many affine opens satisfying the finite presentation condition above.
+\end{enumerate}
+\end{definition}

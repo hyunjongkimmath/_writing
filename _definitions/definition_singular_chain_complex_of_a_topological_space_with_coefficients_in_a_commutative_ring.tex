@@ -1,0 +1,15 @@
+\begin{definition}[Singular chain complex with coefficients] \label{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} with unity.
+
+For each $n \ge 1$, define the $R$-linear \hldef{boundary operator}
+$$\partial_n : C_n(X;R) \to C_{n-1}(X;R)$$
+\CrefIfExists{definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_a_commutative_ring_with_unity} by
+$$\partial_n(\sigma) = \sum_{i=0}^n (-1)^i\, \sigma \circ \delta_i,$$
+where $\delta_i : \Delta^{n-1} \to \Delta^n$ is the $i$-th face inclusion.
+Extend $\partial_n$ to $C_n(X;R)$ by $R$-linearity. Then $(C_n(X;R), \partial_n)$ forms a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in the abelian category of $R$-modules. This chain complex is called the \hldef{singular chain complex of $X$ with coefficients in $R$}.
+
+ 
+If $A \subseteq X$ is a subspace, then the boundary maps above induce maps 
+$$C_n(X,A;R) \to C_{n-1}(X,A;R)$$
+on the relative chain groups $C_n(X,A;R)$, yielding a chain complex of $R$-modules; this chain complex may be called the \hldef{relative singular chain complex of the pair $(X,A)$ with coefficients in $R$}.
+\end{definition}

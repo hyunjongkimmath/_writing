@@ -1,0 +1,62 @@
+\begin{definition} \label{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}
+
+    Let $U \subseteq \mathbb{H}^n$ and $V \subseteq \mathbb{H}^m$ be open subsets of the closed half-spaces 
+    $\mathbb{H}^n = \{ x \in \mathbb{R}^n : x_n \geq 0 \}$ and $\mathbb{H}^m = \{ y \in \mathbb{R}^m : y_m \geq 0 \}$ respectively, 
+    and let $k \in \mathbb{N}_0 \cup \{\infty\}$ be fixed.
+    \begin{enumerate}
+        \item A \hldef{$C^k$-morphism} (or \hldef{$C^k$-map}) from $U$ to $V$ is a function $f : U \to V$
+        such that $f$ extends to a $k$-times continuously differentiable function on an open neighborhood of $U$ in $\mathbb{R}^n$.
+        Equivalently, all partial derivatives
+        $$ D^\alpha f : U \to \mathbb{R}^m, \quad |\alpha| \leq k, $$ 
+        exist and are continuous up to the boundary on $U$.
+        We denote the set of all such maps by \hl{$C^k(U, V)$}.
+
+        \item A \hldef{$C^k$-function on $U$} is a $C^k$-map from $U$ to $\bbR$. We let \hl{$C^k(U)$} denote the space of $C^k$-functions on $U$.
+
+        \item A \hldef{$C^k$-diffeomorphism} $f: U \to V$ is a $C^k$-morphism that is a bijection whose inverse $f^{-1}$ is also a $C^k$-morphism between open subsets of half-spaces.
+
+        \item A \hldef{smooth morphism/map/function/diffeomorphism} is one that is $C^\infty$ in the above sense.
+    \end{enumerate}
+    In fact, when $U$ and $V$ are open subsets of $\mathbb{R}^n$ without boundary points, the notions of $C^k$-morphisms coincide with the classical ones of $k$-times continuously differentiable maps between open subsets of $\mathbb{R}^n$. In this case, the extension condition is trivially satisfied by restricting to an open neighborhood in $\mathbb{R}^n$. For open subsets with boundary points in $\mathbb{H}^n$, the extension requirement ensures differentiability up to the boundary.
+
+    % In fact, we may discuss all of these notions in the case that $U$ and $V$ are open subsets of $\bbR^n$ by identifying $U$ and $V$ with open subsets of $\bbH^n$ and $\bbH^m$ contained entirely in the \CrefAndHyperrefIfExist{definition:interior_and_boundary_of_topological_space}{interiors} of $\bbH^n$ and $\bbH^m$ via a diffeomorphism \TODO{state a statement for this.} Moreover, a function $f: U \to V$ for such $U$ and $V$ is a $C^k$-morphism if $f$ itself is $k$-times continuous differentiable, without the need to refer to an extension of $f$. 
+
+    % \begin{enumerate}
+    %     \item Let $U \subseteq \mathbb{R}^n$ and $V \subseteq \mathbb{R}^m$ be open subsets, and let $k \in \mathbb{N}_0 \cup \{\infty\}$ be fixed.
+    %     \begin{enumerate}
+    %         \item A \hldef{$C^k$-morphism} (or \hldef{$C^k$-map}) from $U$ to $V$ is a function $f : U \to V$
+    %         which is \hldef{$k$-times continuously differentiable}, that is: \TODO{TODO: define the partial derivative maps} All partial derivatives
+    %         $$ D^\alpha f : U \to \mathbb{R}^m, \quad |\alpha| \le k, $$ 
+    %         of $f$ of order up to $k$ exist and are \hyperrefIfExists{definition:continuous_map_between_euclidean_spaces}{continuous} on $U$,
+    %         We denote the set of all such maps by \hl{$C^k(U, V)$}.
+
+    %         \TODO{This notation is intrusive because we're not talking about manifolds right now.}
+    %         \item A \hldef{$C^k$-function on $U$} is a $C^k$-map from $U$ to $\bbR$. We let \hl{$C^k(U)$} denote the space of $C^k$-functions on $U$.
+
+    %         \item A \hldef{$C^k$-diffeomorphism} $f: U \to V$ is a $C^k$-morphism that is a bijection whose inverse $f^{-1}$ is also a $C^k$-morphism. 
+
+    %         \item A \hldef{smooth morphism/map/function/diffeomorphism} is one that is $C^\infty$.
+    %     \end{enumerate}
+
+    %     \item Let $U \subseteq \mathbb{H}^n$ and $V \subseteq \mathbb{H}^m$ be open subsets of the closed half-spaces 
+    %     $\mathbb{H}^n = \{ x \in \mathbb{R}^n : x_n \geq 0 \}$ and $\mathbb{H}^m = \{ y \in \mathbb{R}^m : y_m \geq 0 \}$ respectively, 
+    %     and let $k \in \mathbb{N}_0 \cup \{\infty\}$ be fixed.
+    %     \begin{enumerate}
+    %         \item A \hldef{$C^k$-morphism} (or \hldef{$C^k$-map}) from $U$ to $V$ is a function $f : U \to V$
+    %         such that $f$ extends to a $k$-times continuously differentiable function on an open neighborhood of $U$ in $\mathbb{R}^n$.
+    %         Equivalently, all partial derivatives
+    %         $$ D^\alpha f : U \to \mathbb{R}^m, \quad |\alpha| \leq k, $$ 
+    %         exist and are continuous up to the boundary on $U$.
+    %         We denote the set of all such maps by \hl{$C^k(U, V)$}.
+
+    %         \item A \hldef{$C^k$-function on $U$} is a $C^k$-map from $U$ to $\bbR$. We let \hl{$C^k(U)$} denote the space of $C^k$-functions on $U$.
+
+    %         \item A \hldef{$C^k$-diffeomorphism} $f: U \to V$ is a $C^k$-morphism that is a bijection whose inverse $f^{-1}$ is also a $C^k$-morphism between open subsets of half-spaces.
+
+    %         \item A \hldef{smooth morphism/map/function/diffeomorphism} is one that is $C^\infty$ in the above sense.
+    %     \end{enumerate}
+
+    % \end{enumerate}
+
+\end{definition}
+

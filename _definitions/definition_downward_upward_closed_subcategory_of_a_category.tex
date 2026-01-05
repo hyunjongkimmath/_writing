@@ -1,0 +1,8 @@
+\begin{definition}[Downward/upward closed subcategory] \label{definition:downward_upward_closed_subcategory_of_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} and $\mathcal{D} \hookrightarrow \mathcal{C}$ a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory}. 
+\begin{enumerate}
+    \item We say that $\mathcal{D}$ is \hldef{downward closed} if for every object $d \in \mathrm{Ob}(\mathcal{D})$ and every morphism $f: c \to d$ in $\mathcal{C}$ (with $c \in \mathrm{Ob}(\mathcal{C})$), the domain object $c$ belongs to $\mathrm{Ob}(\mathcal{D})$ (and hence $f \in \mathcal{D}$ by fullness of the embedding).
+
+    \item We say that $\mathcal{D}$ is \hldef{upward closed} if for every object $d \in \mathrm{Ob}(\mathcal{D})$ and every morphism $f: d \to c$ in $\mathcal{C}$ (with $c \in \mathrm{Ob}(\mathcal{C})$), the codomain object $c$ belongs to $\mathrm{Ob}(\mathcal{D})$ (and hence $f \in \mathcal{D}$ by fullness of the embedding).
+\end{enumerate}
+\end{definition}

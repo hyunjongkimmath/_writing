@@ -1,0 +1,20 @@
+
+\begin{definition}[Integral element over a ring] \label{definition:integral_element_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity}. 
+    \begin{enumerate}
+        \item Let $A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}. An element $a \in A$ is called \hldef{integral over $R$} if there exists a monic polynomial
+        $$p(x) = x^n + r_{n-1} x^{n-1} + \cdots + r_1 x + r_0$$
+        with coefficients $r_i \in R$ such that
+        $$p(a) = a^n + r_{n-1} a^{n-1} + \cdots + r_1 a + r_0 = 0 \quad \text{in } A.$$
+
+        \item Let $A$ be an \CrefAndHyperrefIfExist{definition:extension_of_a_ring}{extension ring} of $R$. The ring extension $A/R$ is called an \hldef{integral extension} if every element of $A$ is integral over $R$.
+
+        \item Let $A$ be an \CrefAndHyperrefIfExist{definition:extension_of_a_ring}{extension ring} of $R$. The \hldef{integral closure of $R$ in $A$}, sometimes denoted by $\widetilde{A}$, is the subring 
+        $$\widetilde{A} = \{a \in A: a \text{ is integral over } R\}.$$
+        We say that $R$ is integrally closed in $A$ if $\widetilde{A}$ coincides with $A$ (considered as a \CrefAndHyperrefIfExist{definition:subring_of_a_ring}{subring of $R$}).
+
+        \item Let $R$ be an integral domain with field of fractions $K = \mathrm{Frac}(R)$. We say that $R$ is \hldef{integrally closed} if it is integrally closed as a subring of $K$.
+        
+        % in $K$ if every element of $K$ that is integral over $R$ actually lies in $R$.
+    \end{enumerate}
+\end{definition}

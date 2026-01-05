@@ -1,0 +1,11 @@
+\begin{theorem}[See e.g. {\cite[10.5.6]{weibel}}] \label{theorem:existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories}
+    Let $\calA$, $\calB$ be abelian categories. Let \CrefAndHyperrefIfExist{definition:homotopy_category_of_chain_complexes_of_an_additive_category}{$F: K^+(\calA) \to K(\calB)$} be a \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{morphism of triangulated categories}. 
+    \begin{enumerate}
+        \item If $\calA$ \CrefAndHyperrefIfExist{theorem:additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories}{has enough injectives}, then the \hyperrefIfExists{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories}{right derived functor $RF$}\CrefIfExists{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories} exists (as a functor \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{$D^+(\calA) \to D(\calB)$}), and if $I$ is a \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded below} complex of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injectives}, then
+        $$RF(I) \cong qF(I)$$
+        where $q: K(\calB) \to D(\calB)$ is the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{localization functor}.
+
+        \item Dually, if $\calA$ has enough projectives, then the left derived functor $LF$ exists (as a functor $D^-(\calA) \to D(\calB)$), and if $I$ is a bounded above complex of projectives, then
+        $$LF(P) \cong qF(P)$$
+    \end{enumerate} 
+\end{theorem}

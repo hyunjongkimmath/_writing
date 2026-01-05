@@ -1,0 +1,15 @@
+
+\begin{definition}[naive height of an elliptic curve over a number field, cf. {\cite{silverman_ecbdh}}] \label{definition:naive_height_of_an_elliptic_curve_over_a_number_field}
+    \TODO{can this definition be aplicable for a global function field}
+    Let $K$ be a number field. For $a,b \in K$ with $4a^3 + 27b^2 \neq 0$, let $E(a,b)$ be the elliptic curve given by \CrefAndHyperrefIfExist{definition:weierstrass_equation_over_a_ring}{(affine) Weierstrass equation}
+    $$E(a,b): y^2 = x^3 + ax + b$$
+    \begin{enumerate}
+        \item Define the \hldef{(naive multiplicative) height of an elliptic curve} $E/K$ to be 
+        $$\hlin{H(E) = \inf_{\substack{a,b \in K \\ E \cong_K E(a,b)}} H([a^3,b^2,1])}$$
+        where $H$ is the \CrefAndHyperrefIfExist{definition:height_of_points_on_projective_space_over_a_global_field}{height function} of points in $\bbP^2(K)$.
+
+        \item Define the \hldef{(naive logarithmic) height of an elliptic curve} $E/K$ to be 
+        $$\hlin{h(E) = \inf_{\substack{a,b \in K \\ E \cong_K E(a,b)}} h([a^3,b^2,1])}$$
+        where $h$ is the \CrefAndHyperrefIfExist{definition:height_of_points_on_projective_space_over_a_global_field}{logarithmic height function} of points in $\bbP^2(K)$.
+    \end{enumerate}
+\end{definition}

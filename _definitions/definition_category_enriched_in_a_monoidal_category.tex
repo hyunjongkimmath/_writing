@@ -1,0 +1,42 @@
+\begin{definition}[Category enriched in a monoidal category] \label{definition:category_enriched_in_a_monoidal_category}
+Let $(\mathcal{V}, \otimes, \mathbf{1})$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}. A \hldef{category enriched in $\mathcal{V}$} (or a \hldef{$\mathcal{V}$-enriched category} or a \hldef{$\mathcal{V}$-category}) $\mathcal{C}$ consists of the following data:
+\begin{itemize}
+    \item A class \hl{$\operatorname{Ob}(\mathcal{C})$} of \hldef{objects}. As with \hyperrefIfExists{definition:category}{regular categories}, we may write \hl{$X \in \operatorname{Ob}(\mathcal{C})$} or \hl{$X \in \calC$} to mean that $X$ is an object of $\calC$.  
+    \item For each pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, an object \hl{$\underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \in \operatorname{Ob}(\mathcal{V})$} of \hldef{morphisms}; it is an object of the monoidal category $\mathcal{V}$. It is also often denoted by notations such as \hl{$\calC(X,Y)$}, \hl{$\Hom(X,Y) = \Hom_\calC(X,Y)$}, or \hl{$\operatorname{Mor}(X,Y) = \operatorname{Mor}_{\calC}(X,Y)$}.
+    \item For each triple $X,Y,Z \in \operatorname{Ob}(\mathcal{C})$, a \hldef{composition morphism} 
+    $$\mu_{X,Y,Z} : \underline{\operatorname{Hom}}_{\mathcal{C}}(Y,Z) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \to \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Z).$$
+    It is a morphism in $\mathcal{V}$.
+    \item For each object $X$, a \hldef{unit morphism} \hl{$\eta_X : \mathbf{1} \to \underline{\operatorname{Hom}}_{\mathcal{C}}(X,X)$} in $\mathcal{V}$.
+\end{itemize}
+These data satisfy the following axioms:
+\begin{itemize}
+    \item (Associativity) For all $W,X,Y,Z \in \operatorname{Ob}(\mathcal{C})$, the following diagram in $\mathcal{V}$ commutes:
+    $$
+    \begin{tikzcd}[column sep=large,row sep=large]
+    \bigl(\underline{\operatorname{Hom}}_{\mathcal{C}}(Z,W) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(Y,Z)\bigr) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \ar[r,"\alpha"] \ar[d,"\mu \otimes \mathrm{id}"]
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(Z,W) \otimes \bigl(\underline{\operatorname{Hom}}_{\mathcal{C}}(Y,Z) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y)\bigr) \ar[d,"\mathrm{id} \otimes \mu"] \\
+    \underline{\operatorname{Hom}}_{\mathcal{C}}(Y,W) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \ar[d,"\mu"] 
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(Z,W) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Z) \ar[d,"\mu"] \\
+    \underline{\operatorname{Hom}}_{\mathcal{C}}(X,W) \ar[r,equal] & \underline{\operatorname{Hom}}_{\mathcal{C}}(X,W)
+    \end{tikzcd}
+    $$
+    where $\alpha$ is the associativity constraint in $\mathcal{V}$.
+    \item (Unit) For all $X,Y \in \operatorname{Ob}(\mathcal{C})$, the following diagrams commute:
+    \begin{center}
+    \begin{tikzcd}[column sep=large]
+    \mathbf{1} \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \ar[r,"\eta_Y \otimes \mathrm{id}"] \ar[dr,"\lambda"']
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(Y,Y) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \ar[d,"\mu"] \\
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y)
+    \end{tikzcd}
+    \begin{tikzcd}[column sep=large]
+    \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \otimes \mathbf{1} \ar[r,"\mathrm{id} \otimes \eta_X"] \ar[dr,"\rho"']
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,X) \ar[d,"\mu"] \\
+    & \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y)
+    \end{tikzcd}
+    \end{center}
+    % $$
+    % \quad\quad
+    % $$
+    where $\lambda$ and $\rho$ are the left and right unit constraints in $\mathcal{V}$.
+\end{itemize}
+\end{definition}

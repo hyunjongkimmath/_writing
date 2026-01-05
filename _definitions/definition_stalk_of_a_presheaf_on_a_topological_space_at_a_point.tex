@@ -1,0 +1,13 @@
+
+\begin{definition}[Stalk of a sheaf] \label{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}
+    Let $X$ be a topological space, and let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:category}{category}
+    % admitting \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct colimits} (e.g. the category of sets, groups, abelian groups, modules over rings, or vector spaces over fields).
+    Let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $X$ valued in $\calD$}.  
+    For a point $x \in X$, the \hldef{stalk of $\mathcal{F}$} at $x$, denoted \hl{$\mathcal{F}_x$}, is defined as the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit}
+    $$\mathcal{F}_x := \varinjlim_{x \in U} \mathcal{F}(U),$$
+    where the limit ranges over all open neighborhoods $U$ of $x$ in $X$ ordered by inclusion, assuming that such a direct limit exists. 
+
+    If $\calD$ is some kind of category of sets (e.g. $\calD = \Sets$, $\mathbf{Grps}$, $\mathbf{Rings}$), then an element of $\mathcal{F}_x$ is called a \hldef{germ of a section at $x$}. Concretely, a germ at $x$ is given by a pair $(U,s)$ with $U$ an open neighborhood of $x$ and $s \in \mathcal{F}(U)$, modulo the equivalence relation: $(U,s) \sim (V,t)$ if there exists an open neighborhood $W \subseteq U \cap V$ of $x$ such that $s|_W = t|_W$.
+
+    If $\mathcal{F}$ is a sheaf of groups, rings, or modules, then each stalk $\mathcal{F}_x$ inherits the corresponding algebraic structure.
+\end{definition}

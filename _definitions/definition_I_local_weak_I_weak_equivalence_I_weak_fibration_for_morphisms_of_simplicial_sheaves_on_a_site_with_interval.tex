@@ -1,0 +1,17 @@
+\begin{definition}[See {\cite[Section 2 Definition 3.1]{morel_voevodsky_1999}}] \label{definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval}
+    Let $(T,I)$ be a \CrefAndHyperrefIfExist{definition:interval_in_a_site_with_enough_points}{site with interval}. 
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $X$ (of sets) is called \hldef{$I$-local} if for any simplicial sheaf $Y$ the map
+        $$\Hom_{\calH_s(T)}(Y \times I, X) \to \Hom_{\calH_s(T)}(Y, X)$$
+        induced by $i_0: \pt \to I$ is a bijection. Write \hl{$\calH_{s,I}(T)$} for the full subcategory of \CrefAndHyperrefIfExist{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site}{$\calH_s(T)$} of $I$-local objects. 
+
+        \item A morphism $f: X_1 \to Y_2$ in \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{$\Deltaop(\Shv(T))$} is called an \hldef{$I$-weak equivalence} if for any $I$-local object $Y$ the map
+        $$\Hom_{\calH_s(T)}(X_2, Y) \to \Hom_{\calH_s(T)}(X_1, Y)$$
+        is a bijection.
+
+        \item A morphism $f: X_1 \to Y_2$ in $\Deltaop(\Shv(T))$ is called an \hldef{$I$-weak fibration} if it has the right lifting property with respect to monomorphisms (i.e. simplicial cofibrations) that are also $I$-weak equivalences.
+
+        \TODO{What is an $I$-fibration and how does it differ from an $I$-weak fibration?}
+    \end{enumerate}
+    A morphism $f: X \to Y$ in $\Deltaop(\Shv(T))_\bullet$ is called an \hldef{$I$-weak equivalence} (resp. \hldef{$I$-fibration}) if it is an $I$-weak equivalence (resp. $I$-fibration) as an unpointed morphism.
+\end{definition}

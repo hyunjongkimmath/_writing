@@ -1,0 +1,11 @@
+
+\begin{definition}[Reflective subcategory] \label{definition:reflective_subcategory_of_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} and let $\mathcal{D} \subseteq \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory}.  
+The subcategory $\mathcal{D}$ is called \hldef{reflective} if the inclusion functor
+$$ I : \mathcal{D} \hookrightarrow \mathcal{C} $$
+admits a left adjoint
+$$ L : \mathcal{C} \to \mathcal{D}.  $$
+In this case, $L$ is called the \hldef{reflector}, and for each $c \in \mathrm{Ob}(\mathcal{C})$, the unit morphism of the adjunction
+$$ \eta_c : c \to I(L(c)) $$
+is called the \hldef{reflection arrow of $c$ into $\mathcal{D}$}.
+\end{definition}

@@ -1,0 +1,13 @@
+\begin{definition}[Quotient Group] \label{definition:quotient_of_a_group_by_a_normal_subgroup}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $N \trianglelefteq G$ a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup}.  
+The \hldef{quotient group of $G$ by $N$}, denoted by \hl{$G/N$}, is the set of all \CrefAndHyperrefIfExist{definition:coset_of_a_subgroup_of_a_group_by_an_element}{left (or equivalently, right) cosets} of $N$ in $G$,
+$$ G/N := \{ gN \mid g \in G \}, $$
+endowed with the operation defined by
+$$ (gN)(hN) := (gh)N \quad \text{for all } g,h \in G.  $$
+This operation is well-defined because $N$ is normal in $G$, and under this operation $G/N$ is a group with identity element $N$ and inverse given by $(gN)^{-1} = g^{-1}N$.
+
+\CrefAndHyperrefIfExist{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}{There is} a canonical surjective homomorphism $G \to G/N$ given by $g \mapsto gN$. 
+
+Note that any \CrefAndHyperrefIfExist{definition:group}{abelian group} has a quotient by any \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} as all subgroups of an abelian group are normal \CrefIfExists{lemma:every_subgroup_of_an_abelian_group_is_a_normal_subgroup}.
+
+\end{definition}

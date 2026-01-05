@@ -1,0 +1,12 @@
+
+\begin{definition}[Trivializer of a Subrepresentation] \label{definition:trivializer_of_a_subrepresentation_of_a_representation_of_a_group_on_a_left_module}
+Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group}, $R$ a \CrefAndHyperrefIfExist{definition:ring}{ring with unity}, and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}. Suppose 
+$$\rho : G \to \operatorname{Aut}_R(M)$$
+is a \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{representation of $G$ on $M$}.
+
+Let $N \subseteq M$ be an $R$-submodule stable under the representation $\rho$, i.e., $\rho(g)(N) \subseteq N$ for all $g \in G$.
+The \hldef{trivializer of $N$ in $G$} is the subgroup
+$$\hlin{\operatorname{Triv}_G(N) = \{ g \in G : \rho(g)(n) = n \text{ for all } n \in N \}}.$$
+
+Note: The trivializer coincides with the stabilizer when the stabilizer acts trivially on the entire subrepresentation.
+\end{definition}

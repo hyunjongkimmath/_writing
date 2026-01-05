@@ -1,0 +1,28 @@
+
+\begin{definition}[Scheme over a scheme] \label{definition:scheme_over_a_scheme}
+    Let $(S, \mathcal{O}_S)$ be a scheme. A \hldef{scheme over $S$} (or an \hldef{$S$-scheme}) is a scheme $(X, \mathcal{O}_X)$ together with a morphism of schemes
+    $$\pi: (X, \mathcal{O}_X) \to (S, \mathcal{O}_S).$$
+    This morphism $\pi$ is called the \hldef{structure morphism of the scheme $X$ over $S$}.  
+
+    If $S = \mathrm{Spec}(R)$ is an affine scheme for a commutative ring $R$, then an $S$-scheme is synonymously called an \hldef{$R$-scheme} or a \hldef{scheme over $R$}. 
+
+    Let $(S, \mathcal{O}_S)$ be a scheme, and let $(X, \mathcal{O}_X)$ and $(Y, \mathcal{O}_Y)$ be schemes over $S$ with structure morphisms
+    $$\pi_X: X \to S, \quad \pi_Y: Y \to S.$$
+    A \hldef{morphism of $S$-schemes} (or synonymously a \hldef{$S$-scheme morphism}) is a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}
+    $$(f, f^\#): (X, \mathcal{O}_X) \to (Y, \mathcal{O}_Y)$$
+    such that the following diagram commutes:
+    $$
+    \begin{array}{ccc}
+    X & \xrightarrow{f} & Y \\
+    {\scriptstyle \pi_X} \downarrow & & \downarrow {\scriptstyle \pi_Y} \\
+    S & = & S
+    \end{array}
+    $$
+    In other words,
+    $$\pi_Y \circ f = \pi_X.$$
+
+    Given a fixed scheme $S$, there is a category, often denoted by \hl{$\mathrm{Sch}_S$}, \hl{$\mathrm{Sch}_{/S}$}, \hl{$\mathrm{Sch}/S$}, \hl{$\mathbf{Sch}_S$}, \hl{$\mathbf{Sch}_{/S}$}, \hl{$\mathbf{Sch}/S$} etc. whose objects are schemes $T$ over $S$ and whose morphisms $T_1 \to T_2$ are morphisms of schemes over $S$. If $S = \Spec R$ for some commutative ring $R$, then we may instead write \hl{$\mathrm{Sch}_R$} to denote $\mathrm{Sch}_{\Spec R}$, etc. It is noteworthy that $\mathrm{Sch}_\bbZ$ coincides with the category \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{$\mathrm{Sch}$} of all schemes. In other words, a $\bbZ$-scheme can be identified simply with a scheme. 
+
+    \TextIfExists{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{Equivalently, the category $\mathrm{Sch}_{/S}$ is the category of schemes over $S$ in the sense of \Cref{definition:category_of_objects_over_under_a_fixed_object_in_a_category}.}
+
+\end{definition}

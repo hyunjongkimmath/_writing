@@ -1,0 +1,18 @@
+\begin{definition}[cf. {\cite[Definition 1.7]{morel_a1at}}, {\cite[Definition 3.1]{morel_a1at_2006}}] \label{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}
+    Let $S$ be a base scheme.
+\begin{enumerate}
+    \item A \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $P$ of sets on $\Sm/S$ is said to be \hldef{$\bbA^1$-invariant} if for any $X \in \Sm/S$, the map 
+    $$P(X) \to P(\bbA^1_S \times_S X)$$
+    induced by the projection $\bbA^1_S \times_S X \to X$ is a bijection.
+
+    \item Assume that $S$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} (so that the Nisnevich topology is defined). A \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $G$ of groups on \CrefAndHyperrefIfExist{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}{$\SmSNis$} is said to be \hldef{strongly $\bbA^1$-invariant} if for any $X \in \Sm/S$, the map 
+    $$H^i_{\Nis}(X;G) \to H_{\Nis}^i(\bbA^1_S \times_S X;G)$$
+    \CrefIfExists{notation:sheaf_cohomology_for_sheaves_of_groups_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme}
+    induced by the projection $\bbA^1_S \times_S X \to X$ is a bijection for $i \in \{0,1\}$.
+
+    \item Assume that $S$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}.
+    A sheaf $G$ of abelian groups on $\SmSNis$ is said to be \hldef{strictly $\bbA^1$-invariant} if for any $X \in \Sm/S$, the map 
+    $$H^i_{\Nis}(X;G) \to H_{\Nis}^i(\bbA^1_S \times_S X;G)$$
+    induced by the projection $\bbA^1_S \times_S X \to X$ is a bijection for any $i \geq 0$.
+\end{enumerate}
+\end{definition}

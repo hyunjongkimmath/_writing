@@ -1,0 +1,1237 @@
+
+\section{Basic category theory}
+
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_examples_of_common_categories.tex}
+\input{../_definitions/definition_category_of_sets.tex}
+\input{../_definitions/definition_category_of_groups_of_abelian_groups.tex}
+\input{../_definitions/definition_category_of_rings.tex}
+\input{../_definitions/definition_category_of_topological_spaces.tex}
+\input{../_definitions/definition_category_of_opens_of_a_topological_space.tex}
+
+
+\input{../_definitions/definition_isomorphism_in_a_category.tex}
+
+
+
+
+\input{../_definitions/definition_locally_small_category.tex}
+
+\begin{convention}
+    In this document, care should be taken to make it clear whether a category is locally small or large. However, currently such care has not been fully taken, so most statements that just speak of ``categories'' may not be applicable to large categories.
+\end{convention}
+
+\input{../_definitions/definition_opposite_category_of_a_category.tex}
+
+
+\subsection{Functors between categories}
+
+\input{../_definitions/definition_functor_between_categories.tex}
+
+\begin{convention} \label{convention:functors_by_default_are_contravariant}
+    By a ``functor'', without the qualifying adjectives of \CrefAndHyperrefIfExist{definition:functor_between_categories}{``covariant''} or \CrefAndHyperrefIfExist{definition:functor_between_categories}{``contravariant''}, we will most usually mean a covariant functor.
+\end{convention}
+
+
+
+
+
+\subsubsection{Natural transformations between functors}
+
+\input{../_definitions/definition_natural_transformation_between_functors_between_categories.tex}
+
+\input{../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex}
+
+\input{../_definitions/definition_image_of_a_functor_between_categories.tex}
+
+\input{../_definitions/definition_essential_image_of_a_functor_between_categories.tex}
+
+\input{../_definitions/definition_essentially_surjective_functor_between_categories.tex}
+
+
+
+
+\input{../_definitions/definition_equivalence_of_categories.tex}
+
+\input{../_definitions/definition_essentially_small_category.tex}
+
+\subsubsection{Yoneda's lemma}
+\input{../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex}
+\input{../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex}
+\input{../_concepts/theorem_contravariant_yoneda_lemma_on_a_locally_small_category.tex}
+
+
+\subsubsection{Adjoint functors between categories}
+
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+
+\input{../_concepts/proposition_factorization_of_morphisms_through_counit_and_unit_morphisms_for_adjunctions_between_categories.tex}
+
+
+\subsection{Diagrams, systems, and limits in categories}
+
+\import{../_excerpts}{excerpts_diagrams_systems_and_limits_in_categories.tex}
+
+\input{../_definitions/definition_left_right_exact_functor_between_categories.tex}
+\input{../_concepts/lemma_exactness_conditions_for_functors_of_topoi.tex}
+
+
+\input{../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex}
+\input{../_definitions/definition_exponential_object_in_a_category_evaluation_morphism_transpose_currying_of_a_morphism_on_a_product_object.tex}
+\input{../_definitions/definition_cartesian_closed_category.tex}
+\input{../_definitions/definition_subobject_classifier_in_a_category_with_a_final_object.tex}
+\input{../_definitions/definition_cocartesian_sum_of_two_objects_in_a_category_under_an_object.tex}
+
+
+\Cref{theorem:right_left_adjoints_commute_with_limits_colimits} states the right adjoint functors commute with limits and left adjoint functors commute with colimits.
+
+\input{../_definitions/definition_comparison_morphism_of_limits_and_colimits_under_functors.tex}
+
+\input{../_definitions/definition_functor_preserving_limit_colimit_of_a_diagram.tex}
+
+\input{../_definitions/definition_continuous_cocontinuous_functor_between_categories.tex}
+
+\input{../_concepts/theorem_right_left_adjoints_commute_with_limits_colimits.tex}
+
+\Cref{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits} states the colimits commutes with colimits and limits commute with limits.
+
+\input{../_concepts/theorem_colimits_commute_with_colimits_and_limits_commute_with_limits.tex}
+
+At times, we may want to consider the limit/colimit of a system of functors. Such limits/colimits can be computed ``pointwise'', whenever the pointwise limits/colimits exist.
+
+\input{../_concepts/proposition_limits_and_colimits_in_functor_categories_may_be_computed_pointwise.tex}
+
+
+\input{../_definitions/definition_diagonal_functor_from_a_category_to_a_diagram_category_of_the_category.tex}
+
+\input{../_concepts/theorem_limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index.tex}
+
+
+
+\subsubsection{Some specific kinds of limits}
+
+\input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
+
+
+\input{../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex}
+
+\input{../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex}
+
+\input{../_definitions/definition_diagonal_morphism_of_an_object_over_an_object_in_a_category.tex}
+
+\input{../_definitions/definition_pushout_of_objects_under_an_object_in_a_category.tex}
+
+
+
+\subsection{Miscellaneous categorical constructions and definitions}
+
+\subsubsection{Subcategory of a category}
+\input{../_definitions/definition_subcategory_of_a_category.tex}
+
+\input{../_definitions/definition_full_subcategory_of_a_category.tex}
+\input{../_definitions/definition_replete_subcategory_of_a_category.tex}
+
+\input{../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex}
+\input{../_concepts/lemma_slice_category_has_final_object.tex}
+
+\input{../_definitions/definition_reflective_subcategory_of_a_category.tex}
+
+
+
+
+
+\TODO{describe what monomorphisms and epimorphisms are like in additive or abelian categories}
+
+\subsubsection{Types of morphisms in a category}
+
+\input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+
+\subsubsection{Essential image of a functor between categories}
+
+
+
+
+\subsubsection{Types of categories}
+
+\input{../_definitions/definition_complete_and_cocomplete_category.tex}
+
+
+\subsubsection{Categories constructed from other categories}
+
+\input{../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex}
+\input{../_definitions/definition_product_category_of_a_family_of_categories.tex}
+
+\input{../_definitions/definition_comma_category_of_two_functors_to_a_category.tex}
+
+\input{../_definitions/definition_arrow_category_of_a_category.tex}
+
+
+
+
+
+\subsubsection{Types of functors}
+
+\input{../_definitions/definition_reflects_a_type_of_morphism_for_a_functor_between_categories.tex}
+\input{../_concepts/proposition_reflection_of_monomorphism_and_epimorphisms_by_faithful_functors.tex}
+
+
+\input{../_definitions/definition_n_ary_functor.tex}
+
+\subsubsection{Algebraic objects in a category}
+
+\input{../_definitions/definition_semigroup_object_in_a_category.tex}
+
+\input{../_definitions/definition_monoid_object_in_a_category_with_a_final_object.tex}
+
+
+\input{../_definitions/definition_group_object_in_a_category_with_a_final_object.tex}
+
+
+
+\input{../_definitions/definition_ring_object_in_a_category_with_a_terminal_object.tex}
+
+\input{../_definitions/definition_module_object_over_a_ring_object_in_a_category_with_a_final_object.tex}
+
+\input{../_definitions/definition_groupoid_object_in_a_category.tex}
+
+\TODO{}
+\begin{definition}[Semigroup, monoid and group objects in an $\infty$-category]
+Let $\mathcal{C}$ be an $\infty$-category with finite products.
+\begin{enumerate}
+  \item A \hldef{semigroup object} in $\mathcal{C}$ is a functor
+  $$
+  A : \mathrm{N}(\Delta_{\mathrm{inj}}^{\mathrm{op}}) \to \mathcal{C}
+  $$
+  from the nerve of the subcategory of $\Delta$ consisting of injective maps, satisfying the Segal condition:
+  for each $[n] \in \Delta$ with $n \geq 2$, the canonical map
+  $$
+  A([n]) \to A([1]) \times \cdots \times A([1])
+  $$
+  (induced by the $n$ face maps $[1] \to [n]$) is an equivalence in $\mathcal{C}$.
+
+  \item A \hldef{monoid object} in $\mathcal{C}$ is a functor
+  $$
+  A : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C}
+  $$
+  satisfying the Segal condition as above, together with a choice of unit encoded by the image of the unique degeneracy map $[0] \to [1]$, such that the usual associativity and unit diagrams hold up to coherent homotopy (i.e.\ $A$ is a unital Segal object in $\mathcal{C}$).
+
+  \item A \hldef{group object} in $\mathcal{C}$ is a monoid object $A$ such that the induced monoid object $\pi_0(A)$ in the homotopy category $h\mathcal{C}$ is a group object (equivalently, the underlying $E_1$-space is grouplike).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Ring objects in an $\infty$-category]
+Let $\mathcal{C}$ be an $\infty$-category with finite products.
+\begin{enumerate}
+  \item A \hldef{ring object} in $\mathcal{C}$ is an object $R \in \mathcal{C}$ equipped with:
+  \begin{itemize}
+    \item a group object structure $(R,+,0,-)$ in $\mathcal{C}$ (additive structure),
+    \item a monoid object structure $(R,\cdot,1_R)$ in $\mathcal{C}$ (multiplicative structure),
+  \end{itemize}
+  such that the distributivity, absorption and unital axioms for a ring hold up to coherent homotopy, expressed by the homotopy-commutativity of the diagrams corresponding to
+  $$
+  a \cdot (b + c) \simeq a \cdot b + a \cdot c,
+  \qquad
+  (a + b) \cdot c \simeq a \cdot c + b \cdot c,
+  $$
+  and $0 \cdot a \simeq 0 \simeq a \cdot 0$, for all $a,b,c \in R$.
+  \item A \hldef{commutative ring object} in $\mathcal{C}$ is a ring object whose multiplicative monoid structure is commutative up to coherent homotopy (i.e.\ a commutative monoid object in the sense above).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Module objects over a ring object in an $\infty$-category]
+Let $\mathcal{C}$ be an $\infty$-category with finite products and let $R$ be a ring object in $\mathcal{C}$.
+An \hldef{$R$-module object in $\mathcal{C}$} is an object $M \in \mathcal{C}$ together with
+\begin{itemize}
+  \item a group object structure $(M,+_M,0_M,-_M)$ in $\mathcal{C}$,
+  \item an action morphism in $\mathcal{C}$
+  $$
+  \alpha : R \times M \to M,
+  $$
+\end{itemize}
+such that the usual module axioms hold up to coherent homotopy, i.e.\ the diagrams expressing
+$$
+r \cdot (m_1 +_M m_2) \simeq r \cdot m_1 +_M r \cdot m_2,
+\qquad
+(r_1 + r_2) \cdot m \simeq r_1 \cdot m +_M r_2 \cdot m,
+$$
+$$
+(r_1 \cdot r_2) \cdot m \simeq r_1 \cdot (r_2 \cdot m),
+\qquad
+1_R \cdot m \simeq m,
+\qquad
+0_R \cdot m \simeq 0_M \simeq r \cdot 0_M
+$$
+commute in the homotopy-coherent sense in $\mathcal{C}$.
+\end{definition}
+
+
+
+\section{Monoidal categories}
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+
+\input{../_definitions/definition_monoidal_category.tex}
+
+\input{../_definitions/definition_internal_hom_object_in_a_category.tex}
+\input{../_definitions/definition_closed_category.tex}
+\input{../_definitions/definition_closed_monoidal_category.tex}
+
+\input{../_definitions/definition_symmetric_monoidal_category.tex}
+
+\subsubsection{Types of objects in a category}
+
+
+
+\input{../_definitions/definition_initial_final_zero_objects_of_a_category.tex}
+\input{../_concepts/lemma_initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory.tex}
+
+
+\input{../_definitions/definition_wedge_cowedge_between_functor_from_opposite_and_category_to_category_and_object_of_target.tex}
+
+\input{../_definitions/definition_end_coend_of_functor_from_opposite_and_category_to_category.tex}
+
+
+\section{Additive and abelian categories}
+
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_additive_functor_between_additive_categories.tex}
+\input{../_definitions/definition_abelian_category.tex}
+
+
+
+\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
+
+
+\input{../_concepts/proposition_examples_of_abelian_categories.tex}
+
+
+
+
+\input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
+\input{../_concepts/lemma_on_abelian_categories_exactness_coincides_with_exactness_as_categories.tex}
+
+\subsection{Simple and semisimple objects in an additive category}
+
+\input{../_definitions/definition_subobject_of_an_object_of_an_additive_category.tex}
+
+Unlike the notion of a subobject, the notion of a quotient object is more appropriate to speak of for an abelian category rather than a more general additive category.
+
+\input{../_definitions/definition_quotient_object_of_an_object_of_an_abelian_category_by_a_subobject.tex}
+\input{../_definitions/definition_subquotient_of_an_object_in_an_abelian_category.tex}
+\input{../_definitions/definition_direct_summand_of_an_object_of_an_additive_category.tex}
+\input{../_definitions/definition_simple_object_of_an_additive_category.tex}
+\input{../_definitions/definition_semisimple_object_of_an_additive_category.tex}
+\input{../_definitions/definition_semisimple_additive_category.tex}
+
+
+
+
+
+\TODO{TODO: Give examples of monoidal categoriess}
+
+\section{Categories enriched in monoidal categories}
+
+\TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
+
+We might want to study categories whose hom-sets carry additional structure beyond that of a set (e.g. an abelian group, vector space); the theory of \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{categories enriched} in monoidal categories accommodates such desires. In fact, enriched categories can have hom-objects which are not sets.
+
+\input{../_definitions/definition_category_enriched_in_a_monoidal_category.tex}
+
+\begin{example}
+    \begin{enumerate}
+        \item A \hyperrefIfExists{definition:category_enriched_in_a_monoidal_category}{category enriched in} $\Sets$ is equivalent to a \hyperrefIfExists{definition:locally_small_category}{locally small category}. 
+        \item A category enriched in $\Ab$ is equivalent to a \hyperrefIfExists{definition:additive_category}{pre-additive category}. 
+        \TODO{TODO: define an $R$-linear category and a $k$-linear category}
+        \item Let $R$ be a commutative ring. A category enriched in $R\mathrm{-Mod}$ is equivalent to a $R$-linear category. 
+        \item Let $k$ be a field. A category enriched in $k\mathrm{-Vect}$ is equivalent to a $k$-linear category. 
+    \end{enumerate}
+\end{example}
+
+
+\input{../_definitions/definition_enriched_functor_between_categories_enriched_in_a_.tex}
+
+\input{../_definitions/definition_natural_transformation_between_enriched_functors_between_categories_enriched_in_a_monoidal_category.tex}
+
+
+\input{../_definitions/definition_underlying_ordinary_category_of_enriched_category.tex}
+
+
+\input{../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex}
+
+\input{../_concepts/theorem_enriched_yoneda_lemma.tex}
+
+
+\section{Sites, sheaves and topoi}
+
+\input{../_definitions/definition_presheaf_on_a_category.tex}
+\input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
+\begin{remark}
+    Even when $\calC$ is ($U$-)locally small and ($\calA$ is ($U$-)locally small), $\PreShv(\calC, \calA)$ may not be locally small.
+\end{remark}
+\begin{remark}
+    In practice, one might treat $\calC$ as if it were a small category, even when it is technically not a small category, to treat $\PreShv(\calC, \calA)$ as if it were a locally small category. For example, in algebraic geometry, we might take $\calC$ to be the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{small \'etale site $X_{\et}$}\CrefIfExists{definition:small_etale_site_of_a_scheme} of some scheme $X$; this is not a small category. Instead, we might technically replace $X_{\et}$ with a small category, e.g. the set of \'etale maps $U \to X$ of the following form: $U$ is obtained by patching the schemes attached to quotients of rings of the form $A[T_1,T_2,\ldots]$ where $A = \Gamma(V, \calO_X)$ for some open affine $V \subset X$ and $\{T_1,T_2,\ldots\}$ is a fixed countable set of symbols. Such technicalities of replacing $\calC$ with a small category are often glossed over.
+\end{remark}
+
+\input{../_concepts/lemma_category_of_set_valued_presheaves_on_any_category_has_a_final_object.tex}
+
+% \input{../_definitions/definition_small_etale_site_of_a_scheme.tex}
+
+
+
+\subsection{Sieves, Grothendieck topologies, and sites}
+
+\subsubsection{Sieves}
+% \input{../_definitions/definition_continuous_functor_of_sites.tex}
+
+\input{../_definitions/definition_sieve_on_an_object_in_a_category.tex}
+
+\input{../_definitions/definition_downward_upward_closed_subcategory_of_a_category.tex}
+
+\input{../_concepts/proposition_sieves_on_an_object_in_a_category_correspond_to_downward_closed_full_subcategories_of_the_slice_category_over_the_object.tex}
+
+
+\input{../_definitions/definition_maximal_sieve_on_an_object_in_a_category.tex}
+\input{../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex}
+
+\input{../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex}
+
+\input{../_concepts/lemma_pullback_sieve_on_an_object_in_a_category_via_a_morphism_to_the_object_is_indeed_a_sieve.tex}
+
+\subsubsection{Grothendieck pretopologies}
+
+\input{../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex}
+
+\subsubsection{Coverages}
+
+
+
+\subsubsection{Grothendieck topologies}
+
+\input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_grothendieck_topology_generated_by_a_pretopology.tex}
+
+\input{../_definitions/definition_coarser_finer_than_for_sites_on_a_category.tex}
+
+\input{../_definitions/definition_induced_topology_on_a_category_by_a_functor_to_a_site.tex}
+
+\input{../_concepts/proposition_functor_from_induced_site_to_site_is_continuous_functor.tex}
+
+\input{../_concepts/theorem_comparison_lemma_of_sheaves_on_a_site_and_sheaves_on_a_small_topologically_generating_family.tex}
+
+\input{../_concepts/proposition_category_of_sheaves_with_values_in_gamma_sets_is_equivalent_to_category_of_sheaves_of_gamma_objects_in_the_category_of_sheaves_of_sets.tex}
+
+
+\input{../_definitions/definition_quasi_compact_finitely_presentable_object_in_a_locally_small_category.tex}
+
+% ---------------------------------------------------------------------------
+% 1. Quasi-compact Object in a Site
+% ---------------------------------------------------------------------------
+
+\input{../_definitions/definition_quasi_compact_object_in_a_locally_small_site.tex}
+\input{../_definitions/definition_quasi_compact_morphism_in_a_locally_small_site.tex}
+\input{../_definitions/definition_quasi_seperated_morphism_in_a_locally_small_site.tex}
+\input{../_definitions/definition_coherent_object_in_a_locally_small_site.tex}
+\input{../_definitions/definition_coherent_site.tex}
+\input{../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex}
+
+\input{../_definitions/definition_site_of_opens_on_a_topological_space.tex}
+\input{../_concepts/proposition_common_examples_of_sites.tex}
+
+\subsubsection{Sheaf on a site}
+
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+
+\input{../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
+\input{../_definitions/definition_morphism_of_presheaves_on_a_topological_space.tex}
+\input{../_definitions/definition_presheaf_on_a_topological_space.tex}
+
+\input{../_definitions/definition_torsion_for_a_set_of_primes_on_a_sheaf_of_abelian_groups_on_a_site.tex}
+\input{../_definitions/definition_torsion_sheaf_of_abelian_groups_on_a_site.tex}
+
+\subsubsection{Sheafy functors}
+
+\input{../_definitions/definition_sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site.tex}
+
+\input{../_concepts/proposition_category_of_sheaves_on_a_site_valued_in_product_category_is_equivalent_to_product_of_categories_of_sheaves_on_the_site.tex}
+
+\input{../_concepts/theorem_adjunction_between_sheafy_functors_from_adjoint_bifunctors.tex}
+
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_tensor_product_of_bimodules_of_rings.tex}
+
+\begin{definition}[Sheafified Tensor Product] \label{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
+    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}) and let $\calR, \calS, \calT$ be sheaves of rings on $(\calD, K)$. Let $\calM$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calR$-$\calS$ bimodules} and $\calN$ be a sheaf of $\calS$-$\calT$ bimodules. 
+    The \hldef{sheafified tensor product}, denoted \hl{$\calM \otimes_{\calS} \calN$}, is the sheaf of $\calR$-$\calT$ bimodules defined as the \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification} of the section-wise tensor product presheaf:
+    \[ U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U). \]
+    \CrefIfExists{definition:tensor_product_of_bimodules_of_rings}
+    Explicitly, $\calM \otimes_{\calS} \calN = a(U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U))$, where $a$ is the sheafification functor.
+
+    \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
+    In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified tensor product is the evaluation of the sheafy functor $\mathscr{F}$ induced by the algebraic tensor product $F: \calA \times \calB \to \calC$ under assumption (1). Here, $\calA, \calB, \calC$ are the categories of all bimodules over all rings \TODO{category of all bimodules over all rings}. Specifically, if $\mathbb{M} := (\calR, \calS, \calM) \in \Sh(\calD, K; \calA)$ and $\mathbb{N} := (\calS, \calT, \calN) \in \Sh(\calD, K; \calB)$, then the sheafified tensor product is the module component of the sheaf $\mathscr{F}(\mathbb{M}, \mathbb{N}) \in \Sh(\calD, K; \calC)$, which is the triple $(\calR, \calT, \calM \otimes_{\calS} \calN)$.
+    }
+
+    % In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified tensor product is the sheafy functor $\mathscr{F}$ induced by the algebraic tensor product functor $F: \calA \times \calB \to \calC$ where $\calA, \calB, \calC$ are the categories of bimodules over rings. It satisfies assumption (1) of said definition, as the section-wise tensor product generally fails to be a sheaf and requires the sheafification functor $a$.
+\end{definition}
+
+ 
+
+\begin{definition}[Sheafified Hom] \label{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
+    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}) and let $\calR, \calS, \calT$ be sheaves of rings on $(\calD, K)$. Let $\calM$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calR$-$\calS$ bimodules} and $\calN$ be a sheaf of $\calR$-$\calT$ bimodules.
+
+    The \hldef{sheafified Hom}, denoted by notations such as \hl{$\mathcal{H}om_{\calR}(\calM, \calN)$}, \hl{$\mathscr{H}om_{\calR}(\calM, \calN)$}, or \hl{$\underline{\mathrm{Hom}}_{\calR}(\calM, \calN)$}, is the sheaf of $\calS$-$\calT$ bimodules defined section-wise by:
+    \[ \mathcal{H}om_{\calR}(\calM, \calN)(U) = \operatorname{Hom}_{\Sh(\calD/U, K|_U; \operatorname{Mod}(\calR|_U))}(\calM|_U, \calN|_U). \]
+    (\Cref{definition:category_of_objects_over_under_a_fixed_object_in_a_category}) (\Cref{definition:site_induced_by_a_site_on_an_over_category}) (\Cref{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site}) 
+
+    Equivalently, it is the unique sheaf which satisfies the right adjoint property relative to the sheafified tensor product (\Cref{theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}). 
+
+    \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
+    In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom corresponds to the right adjoint $\mathscr{G}$ to the sheafified tensor product $\mathscr{F}$. While the general framework defines sheafy functors via section-wise application, the internal Hom for sheaves of modules requires the restriction-based definition (using $\calD/U$) to correctly represent the right adjoint in the category of sheaves, ensuring compatibility with the varying ring structure $\calR$.
+
+    Also in the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom is the evaluation of the sheafy functor $\mathscr{G}$ induced by the algebraic Hom functor $G: \calA^{\op} \times \calC \to \calB$ under assumption (2). Given input sheaves $\mathbb{M} := (\calR, \calS, \calM)$ and $\mathbb{N} := (\calR, \calT, \calN)$, the result is the sheaf $\mathscr{G}(\mathbb{M}, \mathbb{N}) = (\calS, \calT, \mathcal{H}om_{\calR}(\calM, \calN))$. Because $G$ is a right adjoint in the base categories, it is a continuous functor (i.e., it preserves limits); thus, $\mathscr{G}$ can be defined section-wise as in Case (2) of the framework. This section-wise construction $U \mapsto \operatorname{Hom}_{\calR(U)}(\calM(U), \calN(U))$ is naturally isomorphic to the restriction-based internal Hom defined above, as both satisfy the same local-to-global universal property.
+
+    }
+
+    % \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
+    % In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom is the evaluation of the sheafy functor $\mathscr{G}$ induced by the algebraic Hom functor $G: \calA^{\op} \times \calC \to \calB$ under assumption (2). Given input sheaves $\mathbb{M} := (\calR, \calS, \calM)$ and $\mathbb{P} := (\calR, \calT, \calP)$, the result is the sheaf $\mathscr{G}(\mathbb{M}, \mathbb{P}) = (\calS, \calT, \mathcal{H}om_{\calR}(\calM, \calP))$. Because $G$ is a right adjoint in the base categories, it is a continuous functor; thus, $\mathscr{G}$ is defined section-wise as in Case (2) of the framework, which is naturally isomorphic to the restriction-based internal Hom defined above.
+    % }
+\end{definition}
+
+\begin{theorem}[Tensor-Hom Adjunction for Sheaves of Bimodules] \label{theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
+    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}). Let $\calR, \calS, \calT$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of rings on $(\calD, K)$. Let $\calM$ be a sheaf of $\calR$-$\calS$ \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{bimodules}, $\calN$ be a sheaf of $\calS$-$\calT$ bimodules, and $\calP$ be a sheaf of $\calR$-$\calT$ bimodules.
+    
+    Then there is a natural isomorphism:
+    \[ \operatorname{Hom}_{\Sh(\calR\text{-}\calT)}(\calM \otimes_{\calS} \calN, \calP) \cong \operatorname{Hom}_{\Sh(\calS\text{-}\calT)}(\calN, \mathcal{H}om_{\calR}(\calM, \calP)) \]
+    where $\calM \otimes_{\calS} \calN$ is the sheafified tensor product and $\mathcal{H}om_{\calR}(\calM, \calP)$ is the sheaf of local $\calR$-linear homomorphisms.
+\end{theorem}
+\begin{proof}
+    \TODO{Verify this proof
+    We apply \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors} by specifying the categories $\calA, \calB, \calC$ and the functors $F, G$ as follows:
+
+    \begin{enumerate}
+        \item \textbf{Categories:} Let $\calA$ be the category whose objects are triples $(R, S, M)$ where $M$ is an $R$-$S$ bimodule. Define $\calB$ and $\calC$ similarly for $S$-$T$ and $R$-$T$ bimodules.
+        \item \textbf{Base Functors:} Define $F: \calA \times \calB \to \calC$ by $(M, N) \mapsto M \otimes_S N$ and $G: \calA^{\op} \times \calC \to \calB$ by $(M, P) \mapsto \operatorname{Hom}_R(M, P)$. 
+        At each component, $F(A, -) \dashv G(A, -)$ is the standard algebraic tensor-hom adjunction for bimodules.
+        \item \textbf{Sheaf Interpretation:} The sheaves $\calM, \calN, \calP$ are viewed as objects in $\Sh(\calD, K; \calA)$, $\Sh(\calD, K; \calB)$, and $\Sh(\calD, K; \calC)$ respectively, where the ring components of these sheaves are fixed to be the sheaves $\calR, \calS, \calT$.
+    \end{enumerate}
+
+    By \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors}, the sheafy functor $\mathscr{F}$ associated to the tensor product is:
+    \[ \mathscr{F}(\calM, \calN) = a(U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U)) \]
+    which is precisely the definition of the sheaf of $\calR$-$\calT$ bimodules $\calM \otimes_{\calS} \calN$.
+
+    The right adjoint functor $\mathscr{G}_{\calM}$ is defined section-wise by:
+    \[ \mathscr{G}_{\calM}(\calP) : U \mapsto \operatorname{Hom}_{\calR(U)}(\calM(U), \calP(U)) \]
+    Per the theorem, since $G$ is a right adjoint, $\mathscr{G}_{\calM}(\calP)$ is a sheaf. In the category of modules, this section-wise Hom sheaf is naturally isomorphic to the internal sheaf $\mathcal{H}om_{\calR}(\calM, \calP)$ because any morphism of sheaves $\calM|_U \to \calP|_U$ is uniquely determined by its action on sections when the sheafification of the section-wise Hom agrees with the internal Hom.
+
+    Thus, the general adjunction $\mathscr{F}(\calM, -) \dashv \mathscr{G}_{\calM}(-)$ specializes to the required isomorphism of Hom-sets in the category of sheaves of bimodules.
+    }
+\end{proof}
+
+
+\subsubsection{Topos}
+
+\input{../_definitions/definition_topos.tex}
+\input{../_definitions/definition_geometric_morphism_between_topoi.tex}
+\input{../_concepts/lemma_slice_category_of_a_topos_is_a_topos.tex}
+\input{../_definitions/definition_topos_of_objects_over_a_fixed_object_of_a_topos.tex}
+
+\input{../_definitions/definition_generator_of_a_category.tex}
+
+\input{../_concepts/proposition_family_in_a_topos_with_small_coproducts_is_a_generating_family_if_and_only_if_every_object_has_an_epimoprhism_from_a_product_from_the_family.tex}
+
+% ---------------------------------------------------------------------------
+% 3. Generators of a Grothendieck Topos
+% ---------------------------------------------------------------------------
+
+\input{../_concepts/theorem_sheaves_represented_by_objects_of_small_site_is_a_generating_family_for_the_topos_of_the_site.tex}
+
+
+\TODO{}
+
+\input{../_definitions/definition_coherent_topos.tex}
+
+
+
+\input{../_definitions/definition_point_of_a_topos.tex}
+
+\input{../_definitions/definition_stalk_of_a_topos_at_a_point.tex}
+
+\begin{remark}
+    If $\mathcal{E}$ is the topos of sheaves on a topological space $X$, a classical point $x \in X$ induces a point of the topos $p_x: \mathbf{Set} \to \text{Sh}(X)$. In this case, the stalk functor $p_x^*$ is equivalent to the classical stalk functor at $x$, which is defined as the colimit of sections over open neighborhoods of $x$.
+    $$ p_x^*(F) \cong \varinjlim_{x \in U} F(U) $$
+\end{remark}
+
+\input{../_definitions/definition_has_enough_points_for_a_topos.tex}
+
+\input{../_concepts/theorem_a_coherent_topos_has_enough_points.tex}
+
+\input{../_concepts/theorem_delignes_completeness_theorem_for_coherent_topoi.tex}
+
+
+\subsection{Morphism of sites and topoi}
+
+
+
+\input{../_definitions/definition_continuous_functor_of_sites.tex}
+
+\input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
+\input{../_definitions/definition_continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism.tex}
+
+\input{../_definitions/definition_morphism_of_sites.tex}
+
+\input{../_concepts/proposition_identity_functor_from_finer_site_to_coarser_site_on_the_same_category_is_continuous_and_induces_a_site_morphism.tex}
+
+\subsubsection{Sheafification}
+\input{../_definitions/definition_sheafification_functor_on_a_site.tex}
+
+\input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex}
+
+\input{../_concepts/theorem_sheafification_for_sheaves_of_sets_on_a_topological_space_exist.tex}
+
+
+The following expresses the idea that sheafification functors exist for small enough sites.
+
+\input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
+
+\input{../_definitions/definition_constant_sheaf_on_a_site_with_sheafification.tex}
+
+\input{../_definitions/definition_restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site.tex}
+
+
+\input{../_definitions/definition_locally_constant_sheaf_on_a_site_with_sheafification.tex}
+
+
+\subsection{Inverse image and direct image of sheaves}
+
+\input{../_definitions/definition_relative_slice_category_of_objects_over_an_object_relative_to_a_functor.tex}
+
+
+\input{../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
+\input{../_definitions/definition_inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
+\input{../_concepts/theorem_adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites.tex}
+
+\input{../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex}
+
+
+\input{../_definitions/definition_inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies.tex}
+
+
+
+\subsubsection{Sheaf of rings on a site and modules over a sheaf of rings on a site}
+
+
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+
+\input{../_concepts/lemma_category_of_modules_over_the_constant_sheaf_of_a_ring.tex}
+
+
+
+
+\subsubsection{Sections}
+
+\input{../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex}
+
+
+
+\input{../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex}
+
+
+
+\subsection{Sheaf cohomology}
+
+\input{../_concepts/lemma_projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy.tex}
+\input{../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined.tex}
+\input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
+
+
+\input{../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex}
+
+\TODO{Apparently, if an abelian category satisfies AB5 and admits a generator (whatever that means), then it has enough injectives. Find a reference for this. Moreover, apparently, the category of sheaves of abelian groups on a general $U$-site satisfies these criteria and hence has enough injectives.}
+
+\TODO{According to Weibel exercise 2.3.7, if $\calA$ is complete and has enough injectives and $I$ is (essentially) small, then the functor category $\calA^I$ has enough injectives}
+\input{../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex}
+
+\input{../_concepts/lemma_an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class.tex}
+
+\input{../_definitions/definition_left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives.tex}
+
+\input{../_definitions/definition_ringed_site.tex}
+\input{../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+
+% \begin{proposition}[See {\cite[Tag 03F2]{stacks-project}} for a statement]
+%     Let $(\mathcal{C}, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} on a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} or a $U$-site for some \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$. Let $\calO$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of rings} on $\calC$, so that $(\calC, J, \calO)$ is a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}. There is a functorial isomorphism
+%     $$
+% \end{proposition}
+
+\subsubsection{\v{C}ech cohomology of a sheaf of groups}
+
+\begin{definition}[\v{C}ech Cohomology of a Sheaf of Groups]
+Let $(\mathcal{C},J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}, and $\mathcal{G}$ a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of groups (not necessarily abelian) on it. 
+\TODO{define cech cohomology of the covering and cech cohomology}
+\begin{enumerate}
+    \item For an object $U \in \mathcal{C}$, and a covering family $\mathfrak{U} = \{ U_i \to U \}_{i \in I} \in J(U)$, the \hldef{\v{C}ech complex} \hl{$C^\bullet(\mathfrak{U},\mathcal{G})$} is defined by:
+    $$ C^n(\mathfrak{U},\mathcal{G}) := \prod_{(i_0,\ldots,i_n) \in I^{n+1}} \mathcal{G}(U_{i_0} \times_U \cdots \times_U U_{i_n}), $$
+    with face maps defined by restriction and group operations giving a cosimplicial object.
+\end{enumerate}
+\end{definition}
+
+\subsubsection{Sheaf cohomology of a sheaf of groups}
+
+
+
+\input{../_definitions/definition_torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object.tex}
+
+
+\input{../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex}
+
+\input{../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex}
+
+\section{Homological Algebra}
+
+\input{../_definitions/definition_chain_complex_in_an_additive_category.tex}
+\input{../_definitions/definition_quiver.tex}
+\input{../_definitions/definition_path_category_generated_by_a_quiver.tex}
+\input{../_definitions/definition_preadditive_category_generated_by_a_quiver.tex}
+\input{../_definitions/definition_walking_chain_complex_category.tex}
+\input{../_definitions/definition_additive_functor_category_between_preadditive_categories.tex}
+\input{../_concepts/proposition_category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category.tex}
+\input{../_concepts/lemma_additive_functor_category_from_small_preadditive_categories_preserves.tex}
+\input{../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex}
+
+
+\section{Derived categories}
+
+\import{../_excerpts}{excerpts_derived_categories.tex}
+
+
+\section{Simplicial Categories}
+
+\TODO{}
+
+\begin{notation}
+Let $\mathbf{Cat}$ denote the category of (small) categories.  
+Let $\Delta$ denote the simplex category, whose objects are finite nonempty totally ordered sets $[n] := \{0, 1, \dots, n\}$ for $n \ge 0$, and whose morphisms are all order-preserving functions $\theta : [m] \to [n]$.  
+Let $\Delta^{\mathrm{op}}$ denote its opposite category.
+\end{notation}
+
+
+\input{../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex}
+
+\input{../_definitions/definition_simplex_category.tex}
+
+\input{../_definitions/definition_simplicial_cosimplicial_object_in_a_category.tex}
+
+
+
+\subsubsection{Geometric realization and singular complex adjunction}
+
+\input{../_definitions/definition_geometric_realization_of_a_simplicial_set.tex}
+
+\input{../_definitions/definition_singular_complex_of_a_topological_space.tex}
+
+\input{../_concepts/proposition_geometric_realization_singular_complex_adjunction.tex}
+
+\input{../_concepts/theorem_unit_and_counit_morphisms_for_geometric_realization_singular_complex_adjunction_are_weak_homotopy_equivalences_for_compactly_generated_spaces_and_simplicial_sets.tex}
+
+
+\subsubsection{Homotopy groups of a Kan Simplicial Set}
+
+\input{../_definitions/definition_basepoint_of_a_simplicial_set.tex}
+
+\input{../_definitions/definition_homotopy_groups_of_a_kan_simplicial_set.tex}
+
+
+
+\subsubsection{}
+
+
+\input{../_definitions/definition_simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps.tex}
+
+
+
+
+\input{../_definitions/definition_standard_n_simplex.tex}
+
+
+$0$-simplices of a simplicial set may be regarded like objects in a category and $1$-simplices between such objects may be regarded like morphisms between the objects --- however, unless the simplicial set satisfies more conditions, composition of morphisms may not exist and may not be unique. 
+
+\input{../_definitions/definition_categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set.tex}
+
+\input{../_definitions/definition_functor_between_infty_categories.tex}
+
+
+% \begin{notation}[Size, simplicial sets, exponentials, cores, coherent nerve]
+% Fix a Grothendieck universe $\mathcal U$. Let $\mathrm{sSet}_{\mathcal U}$ denote the category of $\mathcal U$-small simplicial sets, and for each integer $n\ge 0$ let $\Delta^n$ be the standard $n$-simplex in $\mathrm{sSet}_{\mathcal U}$. For simplicial sets $X,Y\in \mathrm{sSet}_{\mathcal U}$, write $\mathrm{sSet}_{\mathcal U}(X,Y)$ for the set of simplicial maps $X\to Y$, $X\times Y$ for the cartesian product, and $Y^X$ for the exponential characterized by $(Y^X)_n=\mathrm{sSet}_{\mathcal U}(X\times \Delta^n,Y)$. For any simplicial set $K$, let $K^{\simeq}\subseteq K$ denote the largest Kan subcomplex of $K$ (the union of all Kan subcomplexes of $K$). Let $N_\Delta(-)$ denote the homotopy coherent nerve functor from simplicial categories to simplicial sets. We use the following notations:
+% \begin{itemize}
+% \item \hl{$\mathcal U$}
+% \item \hl{$\mathrm{sSet}_{\mathcal U}$}
+% \item \hl{$\Delta^n$}
+% \item \hl{$\mathrm{sSet}_{\mathcal U}(X,Y)$}
+% \item \hl{$X\times Y$}
+% \item \hl{$Y^X$}
+% \item \hl{$K^{\simeq}$}
+% \item \hl{$N_\Delta(-)$}
+% \end{itemize}
+% \end{notation}
+
+% \begin{definition}[Quasi-category]
+% A simplicial set $C\in \mathrm{sSet}_{\mathcal U}$ is a \hldef{quasi-category} if it has fillers for all inner horns, i.e., for every $n\ge 2$ and $0<i<n$, every map $\Lambda_i^n\to C$ extends to a map $\Delta^n\to C$.
+% \end{definition}
+
+\input{../_definitions/definition_simplicial_category_of_quasi_categories.tex}
+
+\input{../_definitions/definition_infty_category_of_infty_categories.tex}
+
+
+
+
+
+
+
+\input{../_concepts/lemma_n_simplicies_on_a_simplicial_set_are_naturally_isomorphic_to_morphisms_from_standard_n_simplex.tex}
+
+
+
+
+
+\input{../_definitions/definition_simplicial_cosimplicial_subset_of_a_simplicial_cosimplicial_set.tex}
+
+
+
+
+
+\input{../_definitions/definition_horn_of_the_nth_standard_simplex.tex}
+
+
+\input{../_definitions/definition_nerve_of_a_category.tex}
+
+
+Simplicial categories provide one framework for $\infty$-categories.
+
+\input{../_definitions/definition_simplicial_category.tex}
+
+\input{../_definitions/definition_simplicial_category_of_simplicial_sets.tex}
+
+
+\input{../_definitions/definition_mapping_space_between_objects_of_a_simplicial_set.tex}
+
+
+\input{../_definitions/definition_simplicial_path_category_of_a_simplex_of_a_finite_nonempty_linearly_ordered_set.tex}
+
+\input{../_definitions/definition_simplicial_nerve_of_a_simplicial_category.tex}
+
+\input{../_definitions/definition_infty_category_of_spaces.tex}
+
+
+
+
+\subsection{Model categories}
+
+\input{../_definitions/definition_model_category.tex}
+
+\input{../_definitions/definition_proper_model_category.tex}
+
+
+\input{../_concepts/lemma_model_category_has_an_initial_object_and_a_final_object.tex}
+
+\input{../_definitions/definition_fibrant_cofibrant_object_in_a_model_category.tex}
+
+\input{../_definitions/definition_standard_model_structure_on_the_category_of_simplicial_sets.tex}
+
+
+
+\input{../_definitions/definition_quillen_serre_model_structure_on_the_category_of_topological_spaces.tex}
+
+
+
+\subsubsection{Homotopy categories of model categories}
+
+\input{../_definitions/definition_homotopy_category_of_a_model_category.tex}
+
+\input{../_definitions/definition_homotopy_category_of_the_category_of_simplicial_sets.tex}
+
+\input{../_concepts/corollary_homotopy_category_of_simplicial_sets_is_equivalent_to_the_homotopy_category_of_compactly_generated_weakly_hausdorff_spaces.tex}
+
+\input{../_definitions/definition_homotopy_category_of_a_simplicial_category.tex}
+
+
+\input{../_definitions/definition_homotopy_category_of_a_simplicial_set.tex}
+
+\begin{proposition}[{\cite[Proposition 1.2.3.1]{lurie_htt}}]
+    \TODO{}
+    There is an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $N \dashv h$ between the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{functor of nerves of a small categories} and the \CrefAndHyperrefIfExist{definition:homotopy_category_of_a_simplicial_set}{functor of homotopy categories} of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}
+    $$N: \mathbf{Cat} \leftrightarrows \Sets_\Delta: h$$
+    (\Cref{definition:simplicial_cosimplicial_object_in_a_category}) (where we ignore that \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched category structure} of $hS$ for \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets} $S$)
+\end{proposition}
+
+
+
+
+\input{../_definitions/definition_joyal_model_structure_on_the_category_of_simplicial_sets.tex}
+
+\input{../_definitions/definition_model_for_the_homotopy_theory_of_infty_1_categories.tex}
+
+
+\subsection{Quasi-categories}
+
+Quasi-categories provide one framework for $\infty$-categories.
+
+\input{../_definitions/definition_kan_extension_condition_for_a_horn_for_a_simplicial_set.tex}
+
+\input{../_definitions/definition_infty_category_quasi_category.tex}
+
+A basic class of \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{quasi-categories} would be \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerves of categories} (\Cref{proposition:simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely}).
+
+\input{../_concepts/proposition_simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely.tex}
+
+\input{../_concepts/corollary_the_nerve_of_a_small_category_is_a_quasi_category.tex}
+
+
+\input{../_definitions/definition_infty_groupoid_infty_0_category.tex}
+
+
+
+\input{../_definitions/definition_kan_complex.tex}
+
+\input{../_concepts/lemma_every_kan_complex_is_a_quasi_category.tex}
+
+\input{../_concepts/proposition_infty_groupoids_are_equivalent_to_kan_complexes.tex}
+
+\input{../_concepts/proposition_mapping_space_between_objects_of_a_quasi_category_is_an_infty_groupoid.tex}
+
+
+
+\section{Higher Category Theory}
+
+\subsection{$n$-categories}
+
+\begin{notation}
+Let $\mathbf{Cat}$ denote the category of (small) categories and functors between them.  
+For integers $n \ge 0$, we define inductively the category of $n$-categories.  
+% We denote by $\hl{$n\text{-}\mathbf{Cat}$}$ the category (or higher category) of all strict $n$-categories, and by $\hl{$\infty\text{-}\mathbf{Cat}$}$ the category (or higher category) of all $\infty$-categories.  
+\end{notation}
+
+\input{../_definitions/definition_strict_n_category.tex}
+
+\input{../_definitions/definition_bicategory.tex}
+
+\input{../_definitions/definition_weak_n_category_tamsamani_simpson.tex}
+
+\input{../_definitions/definition_tricategory.tex}
+
+
+\begin{definition}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:strict_n_category}{strict $n$-categories}.  
+    For each pair of objects $x, y \in \mathrm{Ob}(\mathcal{C})$, write 
+    $$ \mathrm{Hom}_{\mathcal{C}}(x, y), \quad \mathrm{Hom}_{\mathcal{D}}(Fx, Fy) $$
+    for the corresponding hom $((n-1)$)-categories.  
+
+    A \hldef{functor between $n$-categories} (or \hldef{$n$-functor})
+    $$ F : \mathcal{C} \longrightarrow \mathcal{D} $$
+    consists of the following data:
+    \begin{itemize}
+    \item a function on objects
+    $$
+    F_0 : \mathrm{Ob}(\mathcal{C}) \to \mathrm{Ob}(\mathcal{D}),
+    $$
+    \item for each pair of objects $x, y \in \mathrm{Ob}(\mathcal{C})$, a strict $(n-1)$-functor
+    $$
+    F_{x,y} : \mathrm{Hom}_{\mathcal{C}}(x, y) \to \mathrm{Hom}_{\mathcal{D}}(Fx, Fy),
+    $$
+    \item these assignments must satisfy the following axioms.
+\end{itemize}
+
+\begin{enumerate}
+  \item \textbf{(Functoriality of composition)}  
+  For all $x, y, z \in \mathrm{Ob}(\mathcal{C})$, the following square of strict $(n-1)$-functors commutes strictly:
+  $$
+  \begin{array}{ccc}
+  \mathrm{Hom}_{\mathcal{C}}(y,z) \times \mathrm{Hom}_{\mathcal{C}}(x,y) & \xrightarrow{\circ_\mathcal{C}} & \mathrm{Hom}_{\mathcal{C}}(x,z) \\
+  \downarrow F_{y,z} \times F_{x,y} & & \downarrow F_{x,z} \\
+  \mathrm{Hom}_{\mathcal{D}}(Fy,Fz) \times \mathrm{Hom}_{\mathcal{D}}(Fx,Fy) & \xrightarrow{\circ_\mathcal{D}} & \mathrm{Hom}_{\mathcal{D}}(Fx,Fz)
+  \end{array}
+  $$
+  That is,
+  $$
+  F_{x,z} \circ \circ_\mathcal{C} \;=\; \circ_\mathcal{D} \circ (F_{y,z} \times F_{x,y}).
+  $$
+
+  \item \textbf{(Preservation of identities)}  
+  For every object $x \in \mathrm{Ob}(\mathcal{C})$, the identity $n$-cell is preserved strictly:
+  $$
+  F_{x,x}(\mathrm{id}_x) = \mathrm{id}_{Fx}.
+  $$
+\end{enumerate}
+
+Morphisms between functors of $n$-categories are $(n+1)$-natural transformations, defined inductively in the same manner.
+\end{definition}
+
+
+
+\begin{definition}
+    \TODO{this definition is not very precise}
+    A \hldef{weak $n$-category} is a structure that generalizes the notion of a strict $n$-category by relaxing the associativity and unit laws to hold only up to specified coherent equivalences.  
+    It can be defined inductively or through several equivalent formal models.
+
+    Formally, a weak $n$-category $\mathcal{C}$ consists of:
+    \begin{itemize}
+    \item for each $0 \le k \le n$, a collection of $k$-morphisms;
+    \item source and target operations assigning to each $k$-morphism its $(k-1)$-boundary morphisms;
+    \item composition operations of $k$-morphisms along $(k-1)$-boundaries;
+    \item identity $k$-morphisms for each $(k-1)$-morphism;
+    \item and {coherent associativity, unit, and interchange equivalences}
+    expressing that composition is associative and unital up to higher morphisms, 
+    with these higher coherence conditions themselves satisfying higher coherence laws.
+    \end{itemize}
+
+    Several equivalent frameworks make this notion precise:
+
+    \begin{itemize}
+    \item In the \textbf{algebraic approach} (Batanin, Leinster), a weak $n$-category is encoded as a system of operations on $n$-cells governed by a globular operad, whose algebras satisfy the necessary coherence conditions.
+    \item In the \textbf{simplicial or topological approach}, weak $n$-categories are modeled by higher Segal-type objects, such as Tamsamani–Simpson $n$-categories or Rezk’s $(n+k,n)$–$\Theta$–spaces, which are presheaves of simplicial sets on the category $\Theta_n$ satisfying Segal and completeness conditions.
+    \item In the \textbf{truncated $\infty$-categorical approach} (Baez–Dolan), a weak $n$-category is a weak $\infty$-category with trivial cells above dimension $n$.
+    \end{itemize}
+
+    Thus, a weak $n$-category can be viewed as a category-like structure containing morphisms of all orders up to $n$, where composition is associative and unital only up to a coherent family of higher isomorphisms organized by the same structure.
+\end{definition}
+
+
+
+\begin{definition}
+    \TODO{this definition is not very precise}
+A \hldef{weak $n$-category} (or \hldef{weak higher category}) is a structure similar to a strict $n$-category, except that the associativity and unit axioms hold only up to coherent higher equivalences.  
+That is, an $n$-category $\mathcal{C}$ consists of
+\begin{itemize}
+  \item objects, $1$-morphisms, $2$-morphisms, …, $n$-morphisms,
+  \item composition operations defined at each level,
+  \item associativity, unit, and interchange data holding up to coherent $(k+1)$-morphisms for $k < n$.
+\end{itemize}
+Different models exist for weak $n$-categories (e.g. bicategories for $n=2$, tricategories, quasicategories, Segal spaces, etc.), which satisfy equivalent homotopy-coherent conditions.
+\end{definition}
+
+\input{../_definitions/definition_weak_infty_category.tex}
+
+
+
+\subsection{Topological categories}
+
+\CrefAndHyperrefIfExist{definition:topological_category}{Topological categories} provide one framework for $\infty$-categories.
+
+\input{../_definitions/definition_compactly_generated_topological_space.tex}
+\input{../_definitions/definition_weakly_hausdorff_topological_space.tex}
+
+\input{../_definitions/definition_topological_category.tex}
+
+There are analogues to the \CrefAndHyperrefIfExist{definition:geometric_realization_of_a_simplicial_set}{geometric realization functor} of simplicial sets and the \CrefAndHyperrefIfExist{definition:singular_complex_of_a_topological_space}{singular complex functor} of topological spaces:
+
+\input{../_definitions/definition_geometric_realization_of_a_simplicial_category_as_a_topological_category.tex}
+
+
+\input{../_definitions/definition_singular_simplicial_category_of_a_topological_category.tex}
+
+There is an adjunction analogous to that of \Cref{proposition:geometric_realization_singular_complex_adjunction}:
+
+\input{../_concepts/proposition_geometric_realization_of_simplicial_category_and_singular_simplicial_category_of_topological_category_adjunction.tex}
+
+
+\input{../_definitions/definition_topological_nerve_of_a_topological_category.tex}
+
+\input{../_concepts/lemma_functor_from_category_of_simplicial_sets_to_category_of_simplicial_categories.tex}
+
+
+\begin{theorem}[{\cite[Theorem 1.1.5.13]{lurie_htt}}]
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:topological_category}{topological category}, and let $X,Y \in \calC$ be objects. The \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{counit map} (obtained via the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} of \TODO{the adjunction should come from $\mathfrak{C}$ and $N$})
+    $$|\Hom_{\mathfrak{C}[N(\calC)]}(X,Y)| \to \Hom_{\calC}(X,Y) $$
+    (\Cref{definition:geometric_realization_of_a_simplicial_set}, \Cref{lemma:functor_from_category_of_simplicial_sets_to_category_of_simplicial_categories}, \Cref{definition:topological_nerve_of_a_topological_category})
+    is a \CrefAndHyperrefIfExist{definition:weak_homotopy_equivalence_of_topological_spaces}{weak homotopy equivalence} of topological spaces.
+\end{theorem}
+
+
+\subsection{Derived categories via \texorpdfstring{$\infty$}{infinity}-categories}
+
+\begin{definition}[$\infty$-category localization]
+    \TODO{$\infty$-category in what sense}
+    Let $\mathcal{C}$ be an $\infty$-category and let $W \subseteq \mathrm{Mor}(\mathcal{C})$ be a collection of morphisms in $\mathcal{C}$, called \hldef{weak equivalences} or \hldef{localizing morphisms}.
+
+    A \hldef{localization of the $\infty$-category $\mathcal{C}$ at $W$} is an $\infty$-category $\mathcal{C}[W^{-1}]$ together with an $\infty$-functor
+    $$\hlin{L: \mathcal{C} \to \mathcal{C}[W^{-1}]}$$
+    satisfying the following universal property:
+    \begin{itemize}
+        \item For every morphism $w \in W$, the image $L(w)$ is an equivalence in $\mathcal{C}[W^{-1}]$.
+        \item For any $\infty$-category $\mathcal{D}$, composition with $L$ induces a fully faithful embedding of $\infty$-categories
+        \[
+        \mathrm{Fun}(\mathcal{C}[W^{-1}], \mathcal{D}) \hookrightarrow \mathrm{Fun}(\mathcal{C}, \mathcal{D})
+        \]
+        whose essential image consists precisely of the $\infty$-functors that send every morphism in $W$ to an equivalence in $\mathcal{D}$.
+    \end{itemize}
+\end{definition}
+
+
+
+\input{../_definitions/definition_dg_category_over_a_ring.tex}
+
+
+\input{../_definitions/definition_category_of_chain_complexes_of_objects_in_an_additive_category_as_a_dg_category.tex}
+
+\input{../_definitions/definition_moore_complex_of_a_simplicial_object_in_an_abelian_category.tex}
+
+
+\begin{theorem}[Dold-Kan correspondence]
+    Let $\mathcal{A}$ be an abelian category with enough projectives. There exists an equivalence of categories, called the \hldef{Dold-Kan equivalence},
+    \TODO{normalized chain complex functor, moore complex functor}
+    $$\hlin{N \colon \mathbf{s}\Ab(\mathcal{A}) \leftrightarrows \mathrm{Ch}_{\geq 0}(\mathcal{A}) : \Gamma,}$$
+    (\Cref{definition:moore_complex_of_a_simplicial_object_in_an_abelian_category})
+    between the category of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial objects} in $\Ab$, and the category of connective (non-negatively graded) chain complexes in $\mathcal{A}$.
+
+    This equivalence is exact, functorial, and compatible with the homotopy structures on both categories:
+    \begin{itemize}
+        \item The \hldef{normalized chain complex functor} $N$ sends a simplicial object to its normalized chain complex.
+        \item The inverse functor $\Gamma$ takes a chain complex supported in degrees $\geq 0$ to a simplicial object.
+        \item The adjunction $(N, \Gamma)$ restricts to an equivalence of categories.
+    \end{itemize}
+\end{theorem}
+
+\begin{theorem}[Stable enhancement of the Dold-Kan correspondence]
+    \TODO{verify that the following is true}
+    Let $\mathcal{A}$ be an abelian category with enough projectives. There exists an equivalence of stable $\infty$-categories
+    $$\mathcal{D}(\mathcal{A}) \simeq \mathrm{Sp}(\mathrm{S}_{\geq 0}(\mathcal{A})),$$
+    where
+    \begin{itemize}
+        \item $\mathcal{D}(\mathcal{A})$ denotes the derived $\infty$-category of unbounded chain complexes in $\mathcal{A}$, obtained by inverting quasi-isomorphisms in $\mathrm{Ch}(\mathcal{A})$ and passing to the homotopy-coherent enhancement.
+        \item $\mathrm{S}_{\geq 0}(\mathcal{A})$ is the $\infty$-category of connective (nonnegatively graded) simplicial objects in $\mathcal{A}$.
+        \item $\mathrm{Sp}(\mathrm{S}_{\geq 0}(\mathcal{A}))$ denotes the stable $\infty$-category of spectrum objects in $\mathrm{S}_{\geq 0}(\mathcal{A})$, i.e., the stabilization of the connective simplicial objects.
+    \end{itemize}
+
+    This equivalence \hldef{categorifies and stabilizes} the classical Dold-Kan correspondence and extends it from connective chain complexes to all unbounded chain complexes:
+    \begin{itemize}
+        \item The classical Dold-Kan equivalence identifies nonnegatively graded chain complexes with connective simplicial objects.
+        \item The stable enhancement takes spectra in the simplicial world to model all chain complexes, thus producing a stable $\infty$-category representing $\mathrm{Ch}(\mathcal{A})$ internally as an $\infty$-category.
+    \end{itemize}
+\end{theorem}
+
+
+\section{$6$-functor formalism}
+\TODO{read through these}
+
+\begin{notation}[Ambient data, sizes, pullbacks, spans]
+Fix a symmetric monoidal $\infty$-category $(\mathcal{E},\otimes,\mathds{1}_{\mathcal{E}})$ and a class of morphisms $\mathcal{P}$ in an $\infty$-category $\mathcal{C}$ such that:
+\begin{itemize}
+\item $\mathcal{C}$ admits pullbacks along morphisms in $\mathcal{P}$, and $\mathcal{P}$ is stable under pullback and composition.
+\item There is a functor $\omega\colon \mathcal{C}\to \mathcal{E}$ (often a coefficient or “sheaf/transfer” functor) that sends $\mathcal{P}$-pullback squares in $\mathcal{C}$ to $\otimes$-Beck–Chevalley squares in $\mathcal{E}$ (so that base-change along $\mathcal{P}$ exists and is coherent).
+\end{itemize}
+Write objects of $\mathcal{C}$ by $X,Y,Z$, and spans by diagrams $X\xleftarrow{p} U\xrightarrow{q} Y$. For a morphism $f\colon X\to Y$ in $\mathcal{C}$, its graph span is $X\xleftarrow{\mathrm{id}_X} X\xrightarrow{f} Y$. We use the following notation:
+\begin{itemize}
+\item \hl{$(\mathcal{E},\otimes,\mathds{1}_{\mathcal{E}})$}
+\item \hl{$\mathcal{C}$}
+\item \hl{$\mathcal{P}\subseteq \mathrm{Mor}(\mathcal{C})$}
+\item \hl{$\omega\colon \mathcal{C}\to \mathcal{E}$}
+\item \hl{$X\xleftarrow{p} U\xrightarrow{q} Y$}
+\end{itemize}
+\end{notation}
+
+\begin{definition}[Category of $\mathcal{P}$-correspondences]
+Given $\mathcal{C}$ and a class $\mathcal{P}$ as in the notation above, the \hldef{$\infty$-category of $\mathcal{P}$-correspondences} $\mathrm{Corr}_{\mathcal{P}}(\mathcal{C})$ is defined as follows. Its objects are those of $\mathcal{C}$. For $X,Y\in \mathcal{C}$, the mapping anima $\mathrm{Map}_{\mathrm{Corr}_{\mathcal{P}}(\mathcal{C})}(X,Y)$ is the space of spans $X\xleftarrow{p} U\xrightarrow{q} Y$ with $p\in \mathcal{P}$, and morphisms given by equivalences of such spans. Composition is given by pullback: the composite of $X\xleftarrow{p} U\xrightarrow{q} Y$ and $Y\xleftarrow{p'} V\xrightarrow{q'} Z$ is
+\[
+X \xleftarrow{\;\mathrm{pr}_1\;} U\times_Y V \xrightarrow{\;q'\circ \mathrm{pr}_2\;} Z,
+\]
+where $\mathrm{pr}_1\in \mathcal{P}$ by stability of $\mathcal{P}$ under pullback, and associativity/unitality hold up to coherent homotopy. The unit at $X$ is the identity span $X\xleftarrow{\mathrm{id}_X} X \xrightarrow{\mathrm{id}_X} X$.
+\end{definition}
+
+\begin{definition}[Coefficient systems on correspondences]
+A \hldef{coefficient system} (with values in $\mathcal{E}$ along $\mathcal{P}$) is the data of $(\omega,\mathcal{P})$ as in the notation, together with:
+\begin{itemize}
+\item for every span $X\xleftarrow{p\in \mathcal{P}} U\xrightarrow{q} Y$, a morphism in $\mathcal{E}$ written $\omega_!(p)\circ \omega^*(q)\colon \omega(X)\to \omega(Y)$, where $\omega^*(q)$ is pullback along $q$ and $\omega_!(p)$ is pushforward along $p$;
+\item for every pullback square with left arrow in $\mathcal{P}$, a canonical base-change equivalence exhibiting Beck–Chevalley for $\omega_!$ and $\omega^*$;
+\item coherences making these assignments functorial for composition of spans.
+\end{itemize}
+We denote such a system by \hl{$(\omega,\mathcal{P})$}.
+\end{definition}
+
+\begin{definition}[Symmetric monoidal structure on correspondences]
+Assume $\mathcal{C}$ admits finite products $\times$ preserved by pullbacks along $\mathcal{P}$, and that $(\mathcal{E},\otimes,\mathds{1}_{\mathcal{E}})$ is symmetric monoidal with $\omega$ lax symmetric monoidal. The \hldef{symmetric monoidal structure} on $\mathrm{Corr}_{\mathcal{P}}(\mathcal{C})$ is given on objects by $X\otimes Y \coloneqq X\times Y$, unit $\mathds{1}\coloneqq *$ (a terminal object of $\mathcal{C}$), and on morphisms by external product of spans:
+\[
+\big(X\xleftarrow{p} U\xrightarrow{q} Y\big)\otimes \big(X'\xleftarrow{p'} U'\xrightarrow{q'} Y'\big)
+\;\coloneqq\;
+X\times X' \xleftarrow{p\times p'} U\times U' \xrightarrow{q\times q'} Y\times Y',
+\]
+which is well-defined since $p\times p'\in \mathcal{P}$ by closure of $\mathcal{P}$ under products and pullbacks. Symmetry, associativity, and unit constraints are induced from those of $(\mathcal{C},\times,*)$ and satisfy the $\infty$-categorical coherences.
+\end{definition}
+
+\begin{definition}[Symmetric monoidal $\infty$-category of correspondences with coefficients]
+Given $(\omega,\mathcal{P})$ and assumptions as above, the \hldef{symmetric monoidal $\infty$-category of correspondences} is the symmetric monoidal $\infty$-category
+\[
+\mathrm{Corr}(\mathcal{C},\mathcal{E}) \coloneqq \big(\mathrm{Corr}_{\mathcal{P}}(\mathcal{C}),\;\otimes=\times,\;\mathds{1}=*\big),
+\]
+equipped with the symmetric monoidal functor $\Omega\colon \mathrm{Corr}_{\mathcal{P}}(\mathcal{C})\to \mathcal{E}$ determined on objects by $\Omega(X)=\omega(X)$ and on a span $X\xleftarrow{p\in \mathcal{P}} U\xrightarrow{q} Y$ by
+\[
+\Omega\big(X\xleftarrow{p} U\xrightarrow{q} Y\big)\coloneqq \omega_!(p)\circ \omega^*(q)\colon \omega(X)\to \omega(Y),
+\]
+with monoidal structure maps induced by the external product and the lax symmetric monoidal structure on $\omega$ together with Beck–Chevalley for base-change. This realizes $\mathrm{Corr}(\mathcal{C},\mathcal{E})$ as a symmetric monoidal $\infty$-category encoding spans in $\mathcal{C}$ and their functorial “push–pull” action on coefficients in $\mathcal{E}$.
+\end{definition}
+
+
+
+
+
+\appendix
+
+\section{Set Theory}
+
+\input{../_definitions/definition_function_of_sets.tex}
+
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+% \input{../_definitions/}
+
+\section{Topology}
+
+\input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_open_covering_of_a_topological_space.tex}
+\input{../_definitions/definition_continuous_map_of_topological_spaces.tex}
+
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+\input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+\input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
+\input{../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex}
+
+\section{Algebra}
+
+\input{../_definitions/definition_ring.tex}
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_ring_homomorphism.tex}
+\input{../_definitions/definition_group.tex}
+\input{../_definitions/definition_group_homomorphism.tex}
+\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
+
+\input{../_definitions/definition_module_of_a_ring.tex}
+
+\section{Schemes}
+\input{../_definitions/definition_etale_morphism_of_schemes.tex}
+
+\section{Grothendieck universes}
+
+Recall that the collection of all sets within Zermelo-Fraenkel set theory is a proper class and not a set. We often use Grothendieck universes in categorical discussions as a way to restrict the sets considered so as to guarantee that only sets result in the categorical constructions that matter (e.g. to guarantee that the hom's in a newly constructed category form a set).
+
+\input{../_definitions/definition_grothendieck_universe.tex}
+\begin{remark}
+    Given a Grothendieck universe $U$, the collection of all $U$-small sets is $U$ itself, which contrasts against the fact that the collection of all sets (for the ZF (and ZFC) axioms) is a proper class.
+\end{remark}
+
+\begin{remark}
+    Within ZF/ZFC alone, there is no guarantee that every given set $S$ satisfies $S \in U$ for some universe $S$.
+\end{remark}
+
+\begin{remark}
+    While universes are a powerful tool for studying category theory, they are not universally used or necessary for doing so. Usage depends on the context and foundational preferences. For instance, Grothendieck universes can be used to simplify foundational technicalities when one needs to work with such things as ``categories of all categories'' or ``functor categories'' of large size. 
+\end{remark}
+
+
+
+
+
+
+\input{../_definitions/definition_compact_topological_space.tex}
+\input{../_definitions/definition_separation_axioms_of_topology.tex}

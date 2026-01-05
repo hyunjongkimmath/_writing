@@ -1,0 +1,20 @@
+
+\begin{definition}[Topology] \label{definition:topological_space}
+Let $X$ be a set. A \hldef{topology on $X$} is a collection $\mathcal{T}$ of subsets of $X$ such that:
+\begin{enumerate}
+    \item $\emptyset \in \mathcal{T}$ and $X \in \mathcal{T}$,
+    \item For any collection $\{ U_i \}_{i \in I} \subseteq \mathcal{T}$ (with $I$ arbitrary), the union $\bigcup_{i \in I} U_i \in \mathcal{T}$,
+    \item For any finite collection $\{ U_1, \ldots, U_n \} \subseteq \mathcal{T}$, the intersection $U_1 \cap \cdots \cap U_n \in \mathcal{T}$.
+\end{enumerate}
+If $\mathcal{T}$ is a topology on $X$, the pair $(X, \mathcal{T})$ is called a \hldef{topological space}. Members of $\mathcal{T}$ are called \hldef{open sets}. 
+
+A subset $C \subseteq X$ is \hldef{closed} if its complement $X \setminus C$ is an open set in $\mathcal{T}$
+
+One very often refers to $X$ as a topological spcae, omitting the notation of the topology $\mathcal{T}$. 
+
+The collection of all topologies on a set $X$ may be denoted by notations such as \hl{$\mathrm{Top}(X)$}, \hl{$\mathbf{Top}(X)$}, or \hl{$\mathsf{Top}(X)$}.
+\end{definition}
+
+
+
+

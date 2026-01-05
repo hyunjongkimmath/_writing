@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:kth_exterior_power_of_vector_bundle}
+  \TODO{do this definition for manifolds with boundary}
+Let $k \in \bbZ_{\geq 0} \cup \{\infty\}$. Let $\pi : E \to M$ be a \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{real $C^k$-vector bundle} of rank $r$ over a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$-topological manifold} $M$ with or without boundary, and let $l \in \{0,1,\ldots,r\}.$
+
+\TODO{TODO: describe how to define a vector bundle fiberwise}
+The \hldef{$l$th exterior power of $E$}, denoted by \hl{$\bigwedge^l E$}, is the \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{vector bundle over} $M$ defined fiberwise by
+$$ (\bigwedge^l E)_p := \bigwedge^l (E_p) $$
+for each $p \in M$, where $E_p = \pi^{-1}(\{p\})$ is the fiber of $E$ at $p$ and $\bigwedge^l (E_p)$ is the \CrefAndHyperrefIfExist{definition:symmetric_exterior_power_of_a_two_sided_module_over_a_ring}{$l$th exterior power of the vector space} $E_p$.
+
+The total space of $\bigwedge^l E$ is given the unique vector bundle structure for which local trivializations of $E$ induce local trivializations
+$$ \bigwedge^l \Phi_U : \pi^{-1}(U) \to U \times \bigwedge^l(\mathbb{R}^r) $$
+making $\bigwedge^l E$ a vector bundle of rank $\binom{r}{l}$ over $M$.
+\end{definition}

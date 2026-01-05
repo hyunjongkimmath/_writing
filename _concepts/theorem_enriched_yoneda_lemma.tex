@@ -1,0 +1,14 @@
+\begin{theorem}[(Enriched) Yoneda lemma] \label{theorem:enriched_yoneda_lemma}
+    \TODO{functor of enriched categories, natural transform}
+Let \(C\) be a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{V}$-enriched category} where $\calV$ is a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}, and let \(F: C^{\mathrm{op}} \to \mathcal{V}\) be a \(\mathcal{V}\)-functor. For any object \(X \in C\), there is a natural isomorphism:
+\[ \mathrm{Nat}_{\mathcal{V}}(h_X, F) \cong F(X), \]
+where \CrefAndHyperrefIfExist{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}{$h_X = \mathrm{Hom}_C(-, X)$ is the representable functor associated to \(X\)}, and \(\mathrm{Nat}_{\mathcal{V}}(h_X, F)\) is the \(\mathcal{V}\)-object of \(\mathcal{V}\)-natural transformations.
+
+\TODO{end}
+Alternatively, if \(\mathcal{V}\) is \CrefAndHyperrefIfExist{definition:closed_monoidal_category}{closed} and \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}, then
+\[ \mathrm{Nat}_{\mathcal{V}}(h_X, F) \cong \int_{T \in C} [\mathrm{Hom}_C(T, X), F(T)], \]
+where \([\_, \_]\) denotes the \CrefAndHyperrefIfExist{definition:internal_hom_object_in_a_category}{internal hom} in \(\mathcal{V}\) and \(\int\) is the end.
+
+In particular, when $\calV = \Sets$ (so $C$ is simply a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}), the (classical) Yoneda lemma states the following: let \(F: \mathsf{C}^{\mathrm{op}} \to \mathbf{Sets}\) a functor, and let \(X\) be an object of \(\mathsf{C}\). Then there is a natural isomorphism
+\[ \mathrm{Nat}(h_X, F) \cong F(X).  \]
+\end{theorem}

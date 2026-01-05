@@ -1,0 +1,26 @@
+\begin{definition}[Holomorphic function from a subset of $\mathbb{C}^n$ to $\mathbb{C}^m$] \label{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}
+Let $n,m \geq 1$ be integers, and consider $\mathbb{C}^n$ and $\mathbb{C}^m$ as complex vector spaces endowed with their standard Euclidean topologies. Let $U \subseteq \mathbb{C}^n$ be an open subset, and let $f : U \to \mathbb{C}^m$ be a function.
+  \begin{enumerate}
+    \item We say that $f$ is \hldef{holomorphic/(complex) analytic/complex differentiable function at a point $a \in U$} if there exists a $\mathbb{C}$-linear map
+    $$ L_a : \mathbb{C}^n \to \mathbb{C}^m $$
+    \TODO{norms on $\bbC^n$ are equivalent to one another}
+    such that, for some (and hence any) norm $\|\cdot\|$ on $\mathbb{C}^n$ and $\mathbb{C}^m$, one has
+    $$ \lim_{h \to 0} \frac{\| f(a+h) - f(a) - L_a(h) \|}{\|h\|} = 0, $$
+    where the \CrefAndHyperrefIfExist{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}{limit} is taken over $h \in \mathbb{C}^n$ with $a+h \in U$.
+    In this case, the map $L_a$ is uniquely determined and is called the \hldef{complex derivative} (or \hldef{complex Fréchet derivative}) of $f$ at $a$. 
+    %The \hldef{complex derivative of $f$ at $a$} may also refer to the value $L_a(0)$. 
+
+    In the case of $n,m = 1$, we $f$ is holomorphic at $a$ if and only if the \CrefAndHyperrefIfExist{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}{limit}
+    \[
+    \lim_{z \to z_0} \frac{f(z) - f(z_0)}{z - z_0}
+    \]
+    exists in $\mathbb{C}$. In that case the limit is denoted \hl{$f'(z_0)$} and is called the \hldef{complex derivative of $f$ at $z_0$}.
+    
+    the value $L_a(0)$ complex derivative 
+
+    \item The function $f$ is called \hldef{holomorphic/analytic on $U$} if it is holomorphic at every point $a \in U$.
+
+    \item A holomorphic function $\bbC^n \to \bbC^m$ is called \hldef{entire}.
+
+  \end{enumerate}
+\end{definition}

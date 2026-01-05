@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:natural_transformation_between_functors_between_categories}
+Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}. 
+Let $F, G : \mathcal{C} \to \mathcal{D}$ be \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}.
+
+A \hldef{natural transformation $\eta$ between $F$ and $G$} is a family of morphisms $\eta_X: F(X) \to G(X)$ in $\mathcal{D}$, one for each object $X$ in $\mathcal{C}$, such that for every morphism $f: X \to Y$ in $\mathcal{C}$,
+\begin{align*}
+G(f) \circ \eta_X = \eta_Y \circ F(f)
+\end{align*}
+in $\mathcal{D}$. In other words, the following diagram commutes:
+\begin{center}
+\begin{tikzcd}
+    F(X) \arrow[r, "F(f)"] \arrow[d, "\eta_X"']
+    & F(Y) \arrow[d, "\eta_Y"] \\
+    G(X) \arrow[r, "G(f)"']
+    & G(Y)
+\end{tikzcd}
+\end{center}
+
+We write such a natural transformation by \hl{$\eta: F \Rightarrow G$}.
+
+If $\eta_X$ is an \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{isomorphism} for all objects $X$ of $\calC$, then $\eta$ is said to be a \hldef{natural isomorphism}.
+\end{definition}

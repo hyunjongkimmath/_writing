@@ -1,0 +1,16 @@
+\begin{proposition}[See {\cite[Definition 2.2]{voevodsky_A1}}, {\cite[Section 3 Proposition 1.4]{morel_voevodsky_1999}}] \label{proposition:elementary_distinguished_square_condition_for_a_presheaf_to_be_sheaf_in_the_nisnevich_topology_over_a_noetherian_scheme_of_finite_dimension}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. 
+A \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $F: \Sm/S \to \Sets$ is a sheaf in the \CrefAndHyperrefIfExist{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}{Nisnevich topology} if and only if for any \CrefAndHyperrefIfExist{center:elementary_distinguished_square_of_nisnevich_topology}{elementary distinguished square} 
+\begin{center}
+    \begin{tikzcd} 
+    p^{-1}(U) \ar[r] \ar[d, "p"] & V \ar[d, "p"] \\ U \ar[r,"j"] & X
+    \end{tikzcd}
+\end{center}
+the induced square
+    \begin{center}
+    \begin{tikzcd}
+        F(X) \ar[r] \ar[d] & F(V) \ar[d] \\ F(U) \ar[r] & F(p^{-1}(U))
+    \end{tikzcd}
+    \end{center}
+    is \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{Cartesian}. 
+\end{proposition}

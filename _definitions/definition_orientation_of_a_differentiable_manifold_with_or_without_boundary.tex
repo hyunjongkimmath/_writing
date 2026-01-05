@@ -1,0 +1,32 @@
+\begin{definition}[Pointwise orientation of a manifold] \label{definition:orientation_of_a_differentiable_manifold_with_or_without_boundary}
+Let $n \geq 0$ be an integer, let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, and let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$-manifold} of (pure) dimension $n$ with or without boundary. 
+\begin{enumerate}
+    \item An \hldef{orientation on $M$ at $p$} is a choice of \CrefAndHyperrefIfExist{definition:orientation_of_a_real_vector_space}{orientation} of the \CrefAndHyperrefIfExist{definition:tangent_space_of_a_topological_manifold_at_a_point}{tangent space $T_p M$}.
+    \item A \hldef{pointwise orientation of $M$} is a choice of orientation of $M$ at each $p \in M$. 
+    \item Say that $M$ is equipped with a pointwise orientation. A \CrefAndHyperrefIfExist{definition:local_and_global_frames_of_the_tangent_bundle_of_a_differentiable_manifold}{local frame} $(E_i)$ for $TM$ is said to be 
+    \begin{enumerate}
+        \item \hldef{(positively) oriented} if $(E_1|_p,\ldots,E_n|_p)$ is \CrefAndHyperrefIfExist{definition:orientation_of_a_real_vector_space}{positively oriented} basis for $T_p M$ at each $p \in U$ with respect to the pointwise orientation. 
+        \item \hldef{negative oriented} if $(E_1|_p,\ldots,E_n|_p)$ is \CrefAndHyperrefIfExist{definition:orientation_of_a_real_vector_space}{negatively oriented} basis for $T_p M$ at each $p \in U$ with respect to the pointwise orientation. 
+    \end{enumerate}
+    \item A pointwise orientation of $M$ is said to be \hldef{continuous} if every point of $M$ is in the domain of an oriented local frame. 
+    \item An \hldef{orientation of $M$} is a continuous pointwise orientation.
+
+    \item $M$ is said to be \hldef{orientable} if there exists an orientation of $M$. Otherwise, $M$ is said to be \hldef{nonorientable}
+
+    \item An \hldef{oriented manifold (with or without boundary)} is an ordered pair $(M,\calO)$ of an orientable $C^k$ manifold and $\calO$ is a choice of orientation for $M$.
+\end{enumerate}
+% A \hldef{}
+
+% Fix a point $p \in M$.
+% The local homology group
+% $$
+% H_n(M, M \setminus \{p\}; \mathbb{Z})
+% $$
+% is canonically isomorphic to $\mathbb{Z}$.
+% A \hldef{pointwise orientation of $M$ at $p$} (also called a \hldef{local orientation of $M$ at $p$}) is a choice of a generator of this rank-one $\mathbb{Z}$-module.
+% Equivalently, a pointwise orientation at $p$ is a choice of one of the two elements of
+% $$
+% H_n(M, M \setminus \{p\}; \mathbb{Z}) \setminus \{0\},
+% $$
+% modulo multiplication by $-1$.
+\end{definition}

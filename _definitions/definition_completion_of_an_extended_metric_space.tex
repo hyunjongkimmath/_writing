@@ -1,0 +1,11 @@
+
+\begin{definition} \label{definition:completion_of_an_extended_metric_space}
+Let $(X, d)$ be an \hyperrefIfExists{definition:extended_metric_on_a_set}{extended metric space}. A \hldef{completion of $(X, d)$} is a pair $(\widehat{X}, \widehat{d})$ together with an \hyperrefIfExists{definition:isometry_between_extended_metric_spaces}{isometric} embedding $i: X \to \widehat{X}$, where:
+\begin{itemize}
+    \item $(\widehat{X}, \widehat{d})$ is a \hyperrefIfExists{definition:convergence_and_limits_in_extended_metric_space}{complete extended metric space}\CrefIfExists{definition:convergence_and_limits_in_extended_metric_space},
+    \item $i(X)$ is \hyperrefIfExists{definition:dense_subset_of_a_topological_space}{dense in $\widehat{X}$}\CrefIfExists{definition:dense_subset_of_a_topological_space} (with respect to the \hyperrefIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topologies induced by}\CrefIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric} the extended metrics),
+    \item $d(x,y) = \widehat{d}(i(x), i(y))$ for all $x, y \in X$.
+\end{itemize}
+\TODO{prove that completions of extended metric spaces exist}
+As such a space $\widehat{X}$ exist, and is unique up to unique isometry, we may refer to the space $\widehat{X}$ as called \hldef{the completion of $X$ (with respect to $d$)}.
+\end{definition}

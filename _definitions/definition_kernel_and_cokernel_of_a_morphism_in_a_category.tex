@@ -1,0 +1,21 @@
+
+\begin{definition} \label{definition:kernel_and_cokernel_of_a_morphism_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large)} \CrefAndHyperrefIfExist{definition:pointed_category}{pointed category}, i.e. a category with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{zero object} $0$. Let $X,Y \in \mathrm{Ob}(\mathcal{C})$ be an object and let $f: X \to Y$ be a morphism. 
+
+\begin{enumerate}
+    \item A morphism $i: K \to X$ is called the \hldef{kernel of $f$} if:
+    \begin{enumerate}
+        \item $f \circ i = 0$, where $0$ is the \CrefAndHyperrefIfExist{definition:zero_morphism_in_a_pointed_category}{zero morphism} $K \to Y$,
+        \item for any morphism $g: Z \to X$ such that $f \circ g = 0$, there exists a unique morphism $u: Z \to K$ such that $g = i \circ u$.
+    \end{enumerate}
+    The kernel, if it exists, is unique up to unique \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{isomorphism}. \hl{$\ker(f)$} denotes the object $K$ determined (up to isomorphism) by a kernel of $f$.
+
+    \item a morphism $p: Y \to Q$ is called the \hldef{cokernel of $f$} if:
+    \begin{enumerate}
+        \item $p \circ f = 0$, where $0$ is the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{zero morphism} $X \to Q$,
+        \item for any morphism $g: Y \to Z$ such that $g \circ f = 0$, there exists a unique morphism $v: Q \to Z$ such that $g = v \circ p$.
+    \end{enumerate}
+    The cokernel, if it exists, is unique up to unique isomorphism. \hl{$\operatorname{coker}(f)$} denotes the object $Q$ determined (up to isomorphism) by a cokernel of $f$.
+\end{enumerate}
+
+\end{definition}

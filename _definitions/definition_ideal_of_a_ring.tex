@@ -1,0 +1,21 @@
+
+\begin{definition} \label{definition:ideal_of_a_ring}
+Let $R$ be a (not necessarily commutative, possibly nonunital) \CrefAndHyperrefIfExist{definition:ring}{ring}.  
+A \hldef{left ideal of $R$} is a subset $I \subseteq R$ such that
+\begin{itemize}
+    \item $(I,+)$ is an additive \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $(R,+)$,
+    \item $RI \subseteq I$, i.e., for all $r \in R$ and $x \in I$, one has $rx \in I$.
+\end{itemize}
+Similarly, a \hldef{right ideal of $R$} is a subset $I \subseteq R$ such that
+\begin{itemize}
+    \item $(I,+)$ is an additive subgroup of $(R,+)$,
+    \item $IR \subseteq I$, i.e., for all $r \in R$ and $x \in I$, one has $xr \in I$.
+\end{itemize}
+A \hldef{two-sided ideal} (or simply an \hldef{ideal}) of $R$ is a subset $I \subseteq R$ which is both a left ideal and a right ideal of $R$. We denote by \hl{$I \unlhd R$} the relation expressing that $I$ is a two-sided ideal of $R$.
+
+\TextIfExists{definition:module_of_a_ring}{Equivalently, an left/right/two-sided ideal of $R$ is a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $R$ as an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}.}
+
+A left/right/two-sided ideal is said to be \hldef{proper} if it is strictly contained in $R$.
+
+Note that every left or right ideal of a commutative ring is a two-sided ideal.
+\end{definition}

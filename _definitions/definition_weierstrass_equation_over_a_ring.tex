@@ -1,0 +1,31 @@
+
+% \begin{definition}[General Weierstrass Equation] \label{definition:weierstrass_equation_over_a_ring}
+% Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{(commutative unital) ring}, and let $a_1,a_2,a_3,a_4,a_6 \in R$. A \hldef{general Weierstrass equation over $R$} is an equation of the form 
+% $$y^2 + a_1 x y + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6.$$
+% for variables $x$ and $y$ and where $a_1,a_3,a_2,a_4,a_6 \in R$. A \hldef{(short) Weierstrass equation over $R$} is a Weierstrass equation for which $a_1,a_3,a_2 = 0$.
+% \end{definition}
+
+\begin{definition}[General Weierstrass Equation over a Ring] \label{definition:weierstrass_equation_over_a_ring}
+    \TODO{define homogenization of a polynomial}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{(commutative unital) ring}, and let $a_1,a_2,a_3,a_4,a_6 \in R$.
+
+A \hldef{general Weierstrass equation over $R$} is either of the following equivalent descriptions:
+
+\begin{itemize}
+    \item The affine equation in variables $x,y$ over $R$
+    $$ y^2 + a_1 x y + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6.  $$
+    
+    \item The projective cubic equation 
+    $$
+    Y^2 Z + a_1 X Y Z + a_3 Y Z^2 = X^3 + a_2 X^2 Z + a_4 X Z^2 + a_6 Z^3
+    $$
+    in homogeneous coordinates $X,Y,Z$. Note that this defines a closed subscheme
+    inside $\mathbf{P}^2_R = \operatorname{Proj} R[X,Y,Z]$.
+\end{itemize}
+
+A \hldef{short Weierstrass equation over $R$} is a Weierstrass equation for which $a_1 = a_3 = a_2 = 0$, having the form
+$$ y^2 = x^3 + a_4 x + a_6, $$
+or equivalently one which has projective homogenization
+$$ Y^2 Z = X^3 + a_4 X Z^2 + a_6 Z^3.  $$
+\end{definition}
+

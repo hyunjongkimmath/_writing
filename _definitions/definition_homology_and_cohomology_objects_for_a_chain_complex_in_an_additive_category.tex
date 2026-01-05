@@ -1,0 +1,25 @@
+% \begin{definition}[Chain complexes and their (co)homology objects] \label{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}
+%     Let $\mathcal{A}$ be an \hyperrefIfExists{definition:abelian_category}{abelian category}.
+    
+%     \begin{itemize}
+%         \item For a cohomologically indexed chain complex $K^\bullet$, its \hldef{cohomology object in degree $i$} is defined by
+%         $$ \hlin{H^i(K^\bullet) := \ker(d^i) / \operatorname{im}(d^{i-1})} $$
+%         where the kernel and image are taken in $\mathcal{A}$.
+
+%         \item For a homologically indexed chain complex $K_\bullet$, its \hldef{homology object in degree $i$} is defined by
+%         $$ \hlin{H_i(K_\bullet) := \ker(d_i) / \operatorname{im}(d_{i+1})} $$
+%         where the kernel and image are taken in $\mathcal{A}$.
+%     \end{itemize}
+% \end{definition}
+
+\begin{definition}[Chain complexes and their (co)homology objects] \label{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}
+    Let $\mathcal{A}$ be an \hyperrefIfExists{definition:abelian_category}{abelian category}.
+    
+    \begin{itemize}
+        \item For a \CrefAndHyperrefIfExist{definition:cochain_complex}{cochain complex} $K^\bullet$, its \hldef{cohomology object in degree $i$} is defined as the quotient of the object of $i$-cocycles by the object of $i$-coboundaries:
+        $$ \hlin{H^i(K^\bullet) := Z^i(K) / B^i(K) = \ker(d^i) / \operatorname{im}(d^{i-1}).} $$
+
+        \item For a \CrefAndHyperrefIfExist{definition:chain_complex}{chain complex} $K_\bullet$, its \hldef{homology object in degree $i$} is defined as the quotient of the object of $i$-cycles by the object of $i$-boundaries:
+        $$ \hlin{H_i(K_\bullet) := Z_i(K) / B_i(K). = \ker(d_i) / \operatorname{im}(d_{i+1}).} $$
+    \end{itemize}
+\end{definition}

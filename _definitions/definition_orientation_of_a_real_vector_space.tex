@@ -1,0 +1,16 @@
+\begin{definition}[Orientation of a real vector space] \label{definition:orientation_of_a_real_vector_space}
+Let $V$ be a finite-dimensional real vector space of dimension $n \geq 1$.
+An \hldef{orientation of $V$} is an equivalence class of ordered bases of $V$ under the following equivalence relation:
+two ordered bases
+$$ (v_1,\dots,v_n) \quad \text{and} \quad (w_1,\dots,w_n) $$
+of $V$ are declared equivalent if the unique linear automorphism
+$$ T : V \to V $$
+\TODO{determinant}
+satisfying $T(v_i) = w_i$ for all $i = 1,\dots,n$ has positive determinant with respect to (equivalently, in any) choice of identification of $V$ with $\mathbb{R}^n$.
+
+Equivalently, fix any ordered basis $(e_1,\dots,e_n)$ of $V$, and declare that an ordered basis $(v_1,\dots,v_n)$ of $V$ is \hldef{positively oriented with respect to $(e_1,\ldots,e_n)$} if the determinant of the change-of-basis matrix from $(e_1,\dots,e_n)$ to $(v_1,\dots,v_n)$ is positive.
+This defines an equivalence relation on the set of ordered bases of $V$ with exactly two equivalence classes, called the \hldef{orientations of $V$}.
+A choice of one of these two classes is an orientation of $V$.
+
+A \hldef{oriented real vector space} is a pair $(V,o)$ where $V$ is a finite-dimensional real vector space and $o$ is a chosen orientation of $V$ in the above sense.
+\end{definition}

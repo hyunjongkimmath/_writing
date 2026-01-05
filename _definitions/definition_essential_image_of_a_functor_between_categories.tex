@@ -1,0 +1,11 @@
+
+\begin{definition}[Essential image of a functor] \label{definition:essential_image_of_a_functor_between_categories}
+Let $F : \mathcal{C} \to \mathcal{D}$ be a functor between \CrefAndHyperrefIfExist{definition:category}{(large) categories}.  
+The \hldef{essential image of $F$} is the \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} of $\mathcal{D}$ whose objects are those $d \in \mathrm{Ob}(\mathcal{D})$ for which there exists an object $c \in \mathrm{Ob}(\mathcal{C})$ such that
+$$ F(c) \cong d.  $$
+\CrefIfExists{definition:isomorphism_in_a_category} Equivalently, the essential image is given by
+$$\hlin{\mathrm{EssIm}(F) = \{\, d \in \mathrm{Ob}(\mathcal{D}) \mid \exists c \in \mathrm{Ob}(\mathcal{C}), \, F(c) \cong d \,\},}$$
+endowed with all morphisms $\mathcal{D}(d,d')$ between such objects.
+
+\TextIfExists{definition:replete_subcategory_of_a_category}{Equivalently, the essential image of $F$ is the smallest \CrefAndHyperrefIfExist{definition:replete_subcategory_of_a_category}{replete} \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} of $\calD$ containing the \CrefAndHyperrefIfExist{definition:image_of_a_functor_between_categories}{image} of $F$}
+\end{definition}

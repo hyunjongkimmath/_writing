@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:short_exact_sequence_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}. A sequence 
+$$0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$$ 
+of moprhisms in $\mathcal{A}$ is called a \hldef{short exact sequence} if the morphisms satisfy:
+\begin{itemize}
+  \item $f : A \to B$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} and is the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel of $g$},
+  \item $g : B \to C$ is an \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} and is the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{cokernel of $f$},
+  \item the sequence is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact at} $B$, meaning \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{$\mathrm{Im}(f) = \mathrm{Ker}(g)$}.
+\end{itemize}
+This means the sequence starts and ends with the zero object and is exact everywhere.
+\end{definition}

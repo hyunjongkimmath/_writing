@@ -1,0 +1,9 @@
+\begin{definition}[Limit of a function] \label{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}
+    Let $(X,d_X)$, $(Y,d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{extended metric spaces}. Let $f : X \to Y$, let $a$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space}{accumulation point} of $X$, and let $L \in Y$. 
+
+    We say that \hldef{$f$ has limit $L$ at $a$} and write
+    \[
+    \lim_{x\to a} f(x) = L
+    \]
+    if for every $\varepsilon > 0$ there exists $\delta > 0$ such that $0 < d_X(x,a) < \delta$ implies $d_Y(f(x),L) < \varepsilon$.
+\end{definition}

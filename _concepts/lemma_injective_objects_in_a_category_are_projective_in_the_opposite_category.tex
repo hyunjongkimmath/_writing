@@ -1,0 +1,12 @@
+\begin{lemma}[cf. e.g. {\cite[Lemma 2.3.4]{weibel}}] \label{lemma:injective_objects_in_a_category_are_projective_in_the_opposite_category}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. \TODO{Does this generalize to a category enriched in a symmetric monoidal category} 
+    The following are equivalent for an object $I \in \calC$:
+    \begin{enumerate}
+        \item $I$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective} in $\calC$
+        \item $I$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} in \CrefAndHyperrefIfExist{definition:opposite_category_of_a_category}{$\calC^{\op}$}
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    The notions of injectivity and projectivity of objects in a category are dual objects, so it is clear that $I$ is injective in $\calC$ if and only if it is projective in $\calC^{\op}$.
+\end{proof}

@@ -1,0 +1,7 @@
+\begin{definition}  \label{definition:topological_category}
+    A \hldef{topological category} is a \CrefAndHyperrefIfExist{definition:category}{category} which is \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched over} $\mathcal{C}\mathcal{G}$, the category of \CrefAndHyperrefIfExist{definition:compactly_generated_topological_space}{compactly generated} (and \CrefAndHyperrefIfExist{definition:weakly_hausdorff_topological_space}{weakly Hausdorff}) topological spaces. The category of topological categories will often be denoted by \hl{$\mathcal{C}at_{\text{top}}$}.
+
+    More explicitly, a topological category $\mathcal{C}$ consists of a collection of objects, together with a (compactly generated) topological space ${Map}_{\mathcal{C}}(X,Y)$ for any pair of objects $X,Y \in \mathcal{C}$. These mapping spaces must be equipped with an associative composition law, given by continuous maps
+    $${Map}_{\mathcal{C}}(X_0, X_1) \times {Map}_{\mathcal{C}}(X_1, X_2) \times \ldots {Map}_{\mathcal{C}}(X_{n-1},X_n) \rightarrow {Map}_{\mathcal{C}}(X_0,X_n)$$
+    (defined for all $n \geq 0$). Here the product is taken in the category of compactly generated topological spaces.
+\end{definition}

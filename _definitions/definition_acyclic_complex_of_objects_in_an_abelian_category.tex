@@ -1,0 +1,13 @@
+
+\begin{definition}[Acyclic complex] \label{definition:acyclic_complex_of_objects_in_an_abelian_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}, and let $(C_\bullet, d_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} in $\mathcal{A}$:
+\[
+\cdots \xrightarrow{d_{n+1}} C_n \xrightarrow{d_n} C_{n-1} \xrightarrow{d_{n-1}} \cdots.
+\]
+
+The complex $(C_\bullet, d_\bullet)$ is called \hldef{acyclic at $C_n$} (or sometimes synonymously \hldef{exact at $C_n$})  if we have $\ker d_n \cong \mathrm{im} d_{n+1}$ \CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_category}  \CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}. 
+
+If $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}, then this is equivalent to the condition that the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{(co)homology objects} $H^n(C_\bullet) := \ker d_n / \operatorname{im} d_{n+1}$ are zero in $\mathcal{A}$.
+
+We furthermore say that the complex $(C_\bullet, d_\bullet)$ is \hldef{acyclic} or \hldef{exact} if it is acyclic/exact everywhere.
+\end{definition}

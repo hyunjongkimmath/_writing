@@ -1,0 +1,348 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{Modular forms}
+
+\begin{definition} \label{definition:congruence_subgroup_of_SL_2_Z}
+    \TODO{define congruence subgroups for more general arithmetic groups and describe how these are instances of those}
+Let $N$ be a positive integer.
+\begin{itemize}
+    \item The \hldef{principal congruence subgroup of $\mathrm{SL}_2(\bbZ)$ of level $N$} is the group \hl{$\Gamma(N)$} defined by
+    $$ \Gamma(N) := \left\{ \gamma \in \mathrm{SL}_2(\mathbb{Z}) : \gamma \equiv I_2 \pmod{N} \right\}.  $$
+    \item The subgroup \hl{$\Gamma_1(N)$} of $\SL_2(\bbZ)$ is defined by
+    $$ \Gamma_1(N) := \left\{ \gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) : a \equiv d \equiv 1 \pmod{N},\; c \equiv 0 \pmod{N} \right\}.  $$
+    \item The subgroup \hl{$\Gamma_0(N)$} of $\SL_2(\bbZ)$ is defined by
+    $$ \Gamma_0(N) := \left\{ \gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) : c \equiv 0 \pmod{N} \right\}.  $$
+    \item A \hldef{congruence subgroup of $\mathrm{SL}_2(\mathbb{Z})$} is any subgroup $\Gamma \leq \mathrm{SL}_2(\mathbb{Z})$ that contains $\Gamma(N)$ for some $N \geq 1$.
+\end{itemize}
+Note that
+$$\Gamma(N) \subset \Gamma_1(N) \subset \Gamma_0(N) \subset \SL_2(\bbZ).$$
+Moreover, the natural reduction homomorphism
+$$\SL_2(\bbZ) \to \SL_2(\bbZ/N \bbZ)$$
+is surjective with kernel $\Gamma(N)$. Therefore, we have an isomorphism 
+$$\SL_2(\bbZ) / \Gamma(N) \to \SL_2(\bbZ/N \bbZ).$$
+In particular, $\Gamma(N)$ and hence $\Gamma_1(N)$ and $\Gamma_0(N)$ are all of finite index in $\SL_2(\bbZ / N \bbZ)$.
+\end{definition}
+
+\begin{lemma} \label{lemma:every_congruence_subgroup_of_SL_2_Z_has_a_translation_matrix}
+    Let $\Gamma \subset \SL_2(\bbZ)$ be a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup of $\SL_2(\bbZ)$}. There is some integer $h \in \bbZ_{> 0}$ such that $\begin{pmatrix} 1 & h \\ 0 & 1 \end{pmatrix} \in \Gamma$.
+\end{lemma}
+
+
+\begin{definition}[Modular group action] \label{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_upper_half_plane}
+    Let $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$ be a subgroup. For $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\in \Gamma$ and $\tau \in \mathbb{H} := \{ z \in \mathbb{C} \mid \operatorname{Im}(z) > 0 \}$, define the action
+    $$\hlin{\gamma \cdot \tau := \frac{a\tau + b}{c\tau + d}.}$$
+    This is called the \hldef{modular action of $\Gamma$ on the upper half-plane $\mathbb{H}$}.
+\end{definition}
+
+\begin{definition}[Weight-$k$ slash operator] \label{definition:weight_k_operator_on_meromorphic_functions_by_elements}
+Let $k \in \mathbb{Z}$. For $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\in \SL_2(\bbZ)$ and any function $f: \mathbb{H} \to \mathbb{C}$, the \hldef{weight-$k$ slash operator} (or simply the \hldef{weight-$k$ operator}) is defined as
+$$\hlin{(f|_k\gamma)(\tau) := (c\tau+d)^{-k} f\!\left(\frac{a\tau+b}{c\tau+d}\right).}$$
+$f|_k \gamma$ is also often denoted by \hl{$f[\gamma]_k$}.
+\end{definition}
+
+\begin{definition}[Weakly modular form] \label{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}
+Let $k \in \mathbb{Z}$, and let $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$ be a subgroup. A meromorphic function $f:\mathbb{H}\to\mathbb{C}$ is called a \hldef{weakly modular form of weight $k$ with respect to $\Gamma$} if
+\[ f|_k\gamma = f \quad \text{for all } \gamma \in \Gamma.  \]
+(\Cref{definition:weight_k_operator_on_meromorphic_functions_by_elements}).
+\end{definition}
+
+\begin{lemma} \label{lemma:weakly_modular_form_for_any_congruence_subgroup_of_SL_2_Z_is_periodic}
+    Let $\Gamma \subset \SL_2(\bbZ)$ be a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup of $\SL_2(\bbZ)$}.
+    Let $h \in \bbZ_{> 0}$ be such that $\begin{pmatrix} 1 & h \\ 0 & 1 \end{pmatrix}$ by \Cref{lemma:every_congruence_subgroup_of_SL_2_Z_has_a_translation_matrix}. 
+    Every \CrefAndHyperref{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular form $f$} of some weight $k \in \bbZ$ is $h\bbZ$-periodic, i.e. $f(z+h) = f(z)$ for all $z \in \bbH$ \TODO{cite the upper half plane}.
+
+    In particular, there exists a function $g: D ' \to \bbC$ where $D' \subset \bbC$ is the punctured unit disk such that $f(z) = g(q_h)$ where $q_h = e^{2 \pi i z/h}$.
+\end{lemma}
+
+\begin{definition} \label{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}
+    Let $\Gamma \subset \SL_2(\bbZ)$ be a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup of $\SL_2(\bbZ)$}.
+    Let $h \in \bbZ_{> 0}$ be minimal such that $\begin{pmatrix} 1 & h \\ 0 & 1 \end{pmatrix}$ by \Cref{lemma:every_congruence_subgroup_of_SL_2_Z_has_a_translation_matrix}. 
+
+    Let $f: \bbH \to \bbC$ be a meromorphic function of the form $f(z) = g(q_h)$ for some meromorphic function $g: D' \to \bbC$ on the punctured unit disk $D'$ where $q_h = e^{2 \pi i z/h}$ (e.g. \CrefAndHyperref{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular forms} satisfy this condition, see \Cref{lemma:weakly_modular_form_for_any_congruence_subgroup_of_SL_2_Z_is_periodic}). In particular, $g$ has a Laurent expansion near $q_h = 0$ (which corresponds to $\operatorname{Im}(z) \to \infty$) \TODO{cite this as a complex analytic fact} and hence $f$ has a Fourier expansion: 
+
+    $$f(z) = \sum_{n=-\infty}^\infty a_n q_h^n.$$
+    
+    The values $a_n \in \bbC$ are called the \hldef{Fourier coefficients of $f$}.
+
+    We say that $f$ is \hldef{meromorphic at $\infty$} if $g$ is meromorphic at $q_h = 0$, i.e. the Fourier expansion of $f$ has the form
+    $$f(z) = \sum_{n=n_0}^\infty a_n q_h^n.$$
+    for some $n_0 \in \bbZ$. We say that $f$ is \hldef{holomorphic at $\infty$} if $g$ is holomorphic at $q_h = 0$, i.e. the Fourier expansion of $f$ has the form
+    $$f(z) = \sum_{n=0}^\infty a_n q_h^n.$$
+    If $f$ is holomorphic at $\infty$ and we additionally have $a_0 = 0$, then we say that $f$ has a \hldef{cusp at $\infty$}.
+\end{definition}
+
+
+\begin{definition} \label{definition:modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}
+    \TODO{define holomorphic function, upper half plane}
+    \TODO{define cusps of $\Gamma$}
+Let $k$ be an integer and $\Gamma \leq \mathrm{SL}_2(\mathbb{Z})$ a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup}. A \hldef{modular form of weight $k$ with respect to $\Gamma$} is a function $f : \mathbb{H} \to \mathbb{C}$, where $\mathbb{H}$ is the upper half-plane, such that 
+\begin{itemize}
+    \item The function $f$ is holomorphic on $\mathbb{H}$.
+    \item The funciton $f$ is a \CrefAndHyperref{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular form of weight $k$ with respect to $\Gamma$}. Equivalently, for all $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\in \Gamma$ and all $z \in \mathbb{H}$, we have
+    $$ f\left( \frac{a z + b}{c z + d} \right) = (c z + d)^k f(z).  $$
+    \item $f$ is holomorphic at the cusps of $\Gamma$ (i.e., its Fourier expansion at all cusps of $\Gamma$ is holomorphic). More precisely, \CrefAndHyperref{definition:weight_k_operator_on_meromorphic_functions_by_elements}{$f|_k \alpha$} is \CrefAndHyperref{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{holomorphic at $\infty$} for all $\alpha \in \Gamma$.
+\end{itemize}
+A \hldef{cusp form} is a modular form $f$ whose Fourier expansion at every cusp of $\Gamma$ has constant term $0$, i.e. $f|_k \alpha$ has a cusp at $\infty$ for every $\alpha \in \Gamma$.
+\end{definition}
+
+
+\begin{definition} \label{definition:automorphic_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}
+    \TODO{define holomorphic function, upper half plane}
+    \TODO{define cusps of $\Gamma$}
+Let $k$ be an integer and $\Gamma \leq \mathrm{SL}_2(\mathbb{Z})$ a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup}. A \hldef{modular form of weight $k$ with respect to $\Gamma$} is a function $f : \mathbb{H} \to \mathbb{C}$, where $\mathbb{H}$ is the upper half-plane, such that 
+\begin{itemize}
+    \item The function $f$ is meromorphic on $\mathbb{H}$.
+    \item The funciton $f$ is a \CrefAndHyperref{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular form of weight $k$ with respect to $\Gamma$}. Equivalently, for all $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\in \Gamma$ and all $z \in \mathbb{H}$, we have
+    $$ f\left( \frac{a z + b}{c z + d} \right) = (c z + d)^k f(z).  $$
+    \item $f$ is meromorphic at the cusps of $\Gamma$ (i.e., its Fourier expansion at all cusps of $\Gamma$ is holomorphic). More precisely, \CrefAndHyperref{definition:weight_k_operator_on_meromorphic_functions_by_elements}{$f|_k \alpha$} is \CrefAndHyperref{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{meromorphic at $\infty$} for all $\alpha \in \Gamma$.
+\end{itemize}
+\end{definition}
+
+We define the $L$-function of a modular form by putting the Fourier coefficients of the modular form into a Dirichlet series.
+
+\begin{definition}[L-function of a modular form] \label{definition:L_function_of_a_modular_form}
+Let $k \in \mathbb{Z}_{>0}$, and let $f:\mathbb{H}\to\mathbb{C}$ be a \CrefAndHyperref{definition:modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form} of weight $k$ with respect to a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup} $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$. Let
+$$ f(\tau) = \sum_{n=0}^\infty a_n e^{\frac{2\pi i n \tau}{h}} $$
+be the \CrefAndHyperref{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{Fourier expansion of $f$} where $h > 0$ is an appropriate integer. 
+
+The \hldef{L-function of the modular form $f$} is the complex function defined for $s \in \mathbb{C}$ with sufficiently large $\operatorname{Re}(s)$ by the Dirichlet series
+$$ L(f,s) := \sum_{n=1}^\infty \frac{a_n}{n^s}.  $$
+\TODO{define the completed $L$-function}
+\end{definition}
+
+The construction of the $L$-function of a modular form is not arbitrary --- a Fourier transform involving the modular form yields the completed $L$-function.
+
+\begin{theorem}
+Let $k \in \mathbb{Z}_{>0}$, and let $f:\mathbb{H}\to\mathbb{C}$ be a \CrefAndHyperref{definition:modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form} of weight $k$ with respect to a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup} $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$. Let
+$$ f(\tau) = \sum_{n=0}^\infty a_n e^{\frac{2\pi i n \tau}{h}} $$
+be the \CrefAndHyperref{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{Fourier expansion of $f$} where $h > 0$ is an appropriate integer. 
+
+The Mellin transform of $f(i\tau)$ equals the completed $L$-function $\Lambda(f,s)$.
+\end{theorem}
+
+\begin{proof}
+    Let \(f: \mathbb{H} \to \mathbb{C}\) be a meromorphic function periodic with period \(h > 0\), so
+    \[
+    f(z+h) = f(z).
+    \]
+    This implies that \(f\) factors through the variable
+    \[
+    q_h := e^{2\pi i z / h}.
+    \]
+    Define
+    \[
+    \Phi(t) := f(i t), \quad t > 0.
+    \]
+
+    Using the periodicity, \(f\) has a Fourier expansion in \(q_h\):
+    \[
+    f(z) = \sum_{n=n_0}^\infty a_n q_h^n = \sum_{n=n_0}^\infty a_n e^{2 \pi i n z / h}.
+    \]
+
+    Substituting \(z = it\), we have
+    \[
+    \Phi(t) = f(i t) = \sum_{n=n_0}^\infty a_n e^{-2 \pi n t / h}.
+    \]
+
+    Consider the Mellin transform integral with complex parameter \(s\):
+    \[
+    I(s) := \int_0^\infty \Phi(t) t^{s} \frac{dt}{t}.
+    \]
+
+    For \(\mathrm{Re}(s)\) sufficiently large, interchange sum and integral (justified by absolute convergence):
+    \[
+    I(s) = \sum_{n=n_0}^\infty a_n \int_0^\infty e^{-2\pi n t / h} t^{s} \frac{dt}{t}.
+    \]
+
+    Evaluate the integral inside for each fixed \(n\). Change variables by setting \(u = \frac{2\pi n t}{h}\), so \(t = \frac{h u}{2 \pi n}\), and
+    \[
+    dt = \frac{h}{2 \pi n} du.
+    \]
+    Hence,
+    \[
+    \int_0^\infty e^{-2\pi n t / h} t^{s} \frac{dt}{t} = \int_0^\infty e^{-u} \left(\frac{h u}{2 \pi n}\right)^s \frac{du}{u} = \left(\frac{h}{2 \pi n}\right)^s \int_0^\infty e^{-u} u^{s} \frac{du}{u}.
+    \]
+
+    Recognizing the Gamma function, we get
+    \[
+    \int_0^\infty e^{-u} u^{s} \frac{du}{u} = \Gamma(s).
+    \]
+
+    Therefore,
+    \[
+    I(s) = \Gamma(s) \left(\frac{h}{2\pi}\right)^s \sum_{n=n_0}^\infty a_n n^{-s}.
+    \]
+
+    By definition, the completed \(L\)-function \(\Lambda(f,s)\) associated to \(f\) is proportional to this Mellin transform expression:
+    \[
+    \Lambda(f,s) = \Gamma(s) \left(\frac{h}{2\pi}\right)^s L(f,s),
+    \]
+    where
+    \[
+    L(f,s) := \sum_{n=n_0}^\infty \frac{a_n}{n^s}.
+    \]
+
+    This establishes the integral representation of \(\Lambda(f,s)\) as the Mellin transform of \(\Phi(t) = f(it)\), adapted to period \(h\).
+\end{proof}
+
+
+\subsection{$L$-function of a modular form}
+
+
+
+
+
+\section{Automorphic forms}
+
+
+\begin{definition}[Adelic Quotient] \label{definition:adelic_quotient_of_a_linear_algebraic_group_over_a_global_field}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles} of $F$. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+The \hldef{adelic quotient of $G$ over $F$} is the quotient space
+$$ G(F) \backslash G(\A_F).  $$
+\CrefIfExists{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field} where $G(F)$ is given the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology}.
+\TODO{ What topology does $G(F)$ have?}
+\end{definition}
+
+\begin{definition}[Automorphy] \label{definition:automorphy_for_a_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$.
+
+    Let $f: G(\A_F) \to \C$ be a function.  
+    We say $f$ satisfies \hldef{automorphy} if it is left $G(F)$-invariant, i.e.,
+    $$
+    f(\gamma g) = f(g) \quad \text{for all } \gamma \in G(F), \ g \in G(\A_F).
+    $$
+    Equivalently, $f$ is a function which descends to a well defined function $f:G(F)\backslash G(\A_F) \to \C$ on the \CrefAndHyperrefIfExist{definition:adelic_quotient_of_a_linear_algebraic_group_over_a_global_field}{adelic quotient}.
+\end{definition}
+
+
+\begin{notation}[Right-regular action of $G(\A_F)$] \label{definition:right_regular_action_of_the_adeles_of_a_linear_algebraic_group_over_a_global_field_on_the_space_of_complex_valued_functions_on_the_adelic_quotient}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles} of $F$. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+    For \CrefAndHyperrefIfExist{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field}{$g \in G(\A_F)$} and a function $f : G(F) \backslash G(\A_F) \to \C$, the \hldef{right-regular action/representation of $G(\A_F)$} is the representation
+    $$\hlin{R: G(\bbA_F) \to \Aut(\Fun(G(F) \backslash G(\bbA_F), \bbC))}$$
+    on the space of complex valued functions on $G(F) \backslash G(\bbA_F)$ given by 
+    $$(R(g)f)(x) = f(xg)$$
+    for $g \in G(\bbA_F)$, $f: G(F) \backslash G(\bbA_F) \to \bbC$, and $x \in G(F) \backslash G(\bbA_F)$.
+\end{notation}
+
+\begin{definition}[Smooth function] \label{definition:smooth_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+
+    Let $f: G(F) \backslash G(\A_F) \to \C$ be a function. We say $f$ is \hldef{smooth} if it is 
+        \TODO{define $G(\bbA_F)$, $G(\bbA_F^{\mathrm{fin}})$, $G(F_\infty)$}
+    \begin{enumerate}
+        \item locally constant in the non-archimedean directions, i.e. for every point $g = (g_v)_v \in G(\bbA_F)$, there exists an open compact subgroup $U = \prod_v U_v \subset G(\bbA_F^{\mathrm{fin}})$\CrefIfExists{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field} such that for all $u \in U$, we have 
+        $$f(gu) = f(g),$$
+        and
+        \item $C^\infty$ in each archimedean direction, i.e. for every point $g = (g_v)_v \in G(\bbA_F)$, the map 
+        $$G(F_\infty) \to \bbC, (h_v)_{v \mid \infty} \mapsto f(g \cdot(h_v)_{v \mid \infty})$$
+        \CrefIfExists{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field}
+        is \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^\infty$} as a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold}; note that $G(F_\infty) = \prod_{v \mid \infty} G(F_v)$ is a product of real and complex Lie groups.
+        \TODO{define real and omcplex lie groups}
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[$K$-finiteness] \label{definition:K_finite_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+
+    Let $K \subseteq G(\A_F)$ be a maximal compact subgroup. 
+    A \CrefAndHyperrefIfExist{definition:smooth_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{smooth function} $f: G(F) \backslash G(\A_F) \to \C$ is called \hldef{$K$-finite} if the vector space 
+    $$ \langle R(k)f : \; k \in K \rangle $$
+    \CrefIfExists{definition:right_regular_action_of_the_adeles_of_a_linear_algebraic_group_over_a_global_field_on_the_space_of_complex_valued_functions_on_the_adelic_quotient} spanned by the $K$-translates of $f$ under the \CrefAndHyperrefIfExist{definition:right_regular_action_of_the_adeles_of_a_linear_algebraic_group_over_a_global_field_on_the_space_of_complex_valued_functions_on_the_adelic_quotient}{right-regular action} is finite-dimensional.
+\end{definition}
+
+\begin{definition}[Moderate growth] \label{definition:moderate_growth_for_a_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+    Let $\|\cdot\|$ be a fixed height function (or norm-like function) on $G(\A_F)$ compatible with $F$ and $G$ (e.g. the height function of \Cref{definition:height_function_on_the_adelic_points_of_a_linear_algebraic_group_over_a_global_field_with_respect_to_an_embedding}).
+
+    A \CrefAndHyperrefIfExist{definition:smooth_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{smooth function} $f: G(F)\backslash G(\A_F) \to \C$ is said to have \hldef{moderate growth} if there exist constants $C > 0$ and $N \geq 0$ such that
+    $$
+    |f(g)| \leq C \cdot \|g\|^N \quad \text{for all } g \in G(\A_F),
+    $$
+\end{definition}
+
+\begin{definition}[Automorphic form] \label{definition:automorphic_form_for_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+
+    A function $f: G(F) \backslash G(\A_F) \to \C$ is called an \hldef{automorphic form} if it satisfies all of the following conditions:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:smooth_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{smooth},
+        \item $f$ is \CrefAndHyperrefIfExist{definition:K_finite_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{$K$-finite} for some maximal compact subgroup $K \subseteq G(\A_F)$,
+        \item $f$ has \CrefAndHyperrefIfExist{definition:moderate_growth_for_a_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{moderate growth},
+        % \item $f$ satisfies \CrefAndHyperrefIfExist{automorphy_for_a_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}{automorphy}, i.e. is left $G(F)$-invariant.
+    \end{enumerate}
+\end{definition}
+
+\TODO{read the following AI generated statements and make them precise}
+\TODO{Formulate how modular forms are automorphic forms}
+\begin{theorem}[Basic Properties of Automorphic Forms]
+    Let $F$ be a global field, $\A_F$ its ring of adeles, and $G$ a linear algebraic group defined over $F$. Let $K \subseteq G(\A_F)$ be a maximal compact subgroup. Suppose 
+    $$
+    f : G(F) \backslash G(\A_F) \to \C
+    $$
+    is an automorphic form, i.e., $f$ is smooth, $K$-finite, and of moderate growth. Then:
+    \begin{enumerate}
+        \item $f$ is left-invariant under $G(F)$ (automorphy condition).
+        \item $f$ generates a $(\mathfrak{g}, K)$-module under the right regular representation of $G(\A_F)$, where $\mathfrak{g}$ is the Lie algebra of $G(F_\infty)$.
+        \item The space of automorphic forms is preserved by Hecke operators arising from elements in the spherical Hecke algebra associated with $G(\A_F^{\infty})$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proposition}[Equivalent Characterizations of Automorphic Forms]
+Under standard assumptions on $G$, the following conditions on a function $f: G(F) \backslash G(\A_F) \to \C$ are equivalent:
+\begin{enumerate}
+    \item $f$ is smooth, $K$-finite, of moderate growth, and left $G(F)$-invariant.
+    \item $f$ corresponds to a vector in a smooth admissible representation of $G(\A_F)$ realized as a subrepresentation of the space of $L^2$ automorphic forms.
+\end{enumerate}
+\end{proposition}
+
+\begin{corollary}[Automorphic Forms as Sections]
+Automorphic forms can be identified with smooth sections of certain automorphic vector bundles over the quotient space $G(F)\backslash G(\A_F)/K$ satisfying growth conditions.
+\end{corollary}
+
+\begin{remark}[Intuition]
+Automorphic forms generalize classical modular forms by encoding arithmetic and representation-theoretic data through functions on adelic quotients. The conditions of smoothness, $K$-finiteness, and moderate growth control analytic and algebraic properties needed for harmonic analysis and spectral theory on these quotients.
+\end{remark}
+
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_topological_group.tex}
+
+
+\section{Ad\`eles and id\'eles of global fields }
+
+\input{../_definitions/definition_global_field.tex}
+
+\input{../_definitions/definition_completion_of_a_global_field_at_a_place.tex}
+
+\input{../_definitions/definition_restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces.tex}
+
+
+\input{../_definitions/definition_adeles_and_ideles_of_a_global_field.tex}
+
+\input{../_definitions/definition_group_of_adelic_points_of_an_algebraic_group_over_a_global_field.tex}
+
+
+
+\begin{definition}[Height function on \(G(\mathbb{A}_F)\)] \label{definition:height_function_on_the_adelic_points_of_a_linear_algebraic_group_over_a_global_field_with_respect_to_an_embedding}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$ embedded as an algebraic subgroup in \(\mathrm{GL}_n\).
+
+    For each place \(v\) of \(F\), let \(\|\cdot\|_v\) be a norm on \(G(F_v) \subseteq \mathrm{GL}_n(F_v)\) defined as follows:
+    \[
+    \|g_v\|_v := \max_{1 \leq i,j \leq n} |(g_v)_{ij}|_v,
+    \]
+    \TODO{define the usual absolute value on $F_v$}
+    where \(|\cdot|_v\) is the usual absolute value or valuation on \(F_v\).
+
+    Then, for \(g = (g_v)_{v} \in G(\mathbb{A}_F)\), define the adelic height function by the product
+    \[
+    \|g\| := \prod_{v} \|g_v\|_v,
+    \]
+    where the product converges due to \(\|g_v\|_v = 1\) for all but finitely many non-archimedean places.
+\end{definition}
+
+
+\input{../_definitions/definition_linear_algebraic_group_over_a_scheme.tex}

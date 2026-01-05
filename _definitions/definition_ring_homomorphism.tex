@@ -1,0 +1,18 @@
+
+\begin{definition} \label{definition:ring_homomorphism}
+Let $(R,+,\cdot)$ and $(S,+,\cdot)$ be \CrefAndHyperrefIfExist{definition:ring}{rings}, not assumed to be commutative. A function $f: R \to S$ is called a \hldef{ring homomorphism} if for all $r_1,r_2 \in R$ the following properties hold:
+\begin{enumerate}
+    \item $f(r_1 + r_2) = f(r_1) + f(r_2)$,
+    \item $f(r_1 r_2) = f(r_1) f(r_2)$,
+    \item $f(1_R) = 1_S$ where $1_R$ and $1_S$ denote the multiplicative identities in $R$ and $S$, respectively.
+\end{enumerate}
+A ring homomorphism is said to be a \hldef{ring isomorphism} if it is invertible as a map of sets.
+
+An \hldef{$R$-ring} refers to a ring $S$ equipped with a ring homomorphism $f: R \to S$. 
+
+We note that a ring homomorphism $f: R \to S$ yields a natural \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} structure on $S$ and a natural right $R$-module structure on $S$ respectively as follows for $r \in R$ and $s \in S$:
+$$r \cdot s = f(r) \cdot s$$
+$$s \cdot r = s \cdot f(r).$$
+However, these left and right module structures need not yield a two-sided $R$--module structure.
+% A ring $S$ equipped with a ring homomorphism $f: R \to S$ is called an \hldef{$R$-algebra}.
+\end{definition}

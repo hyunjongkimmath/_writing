@@ -1,0 +1,47 @@
+\begin{definition} \label{definition:tensor_product_of_chain_complexes_of_objects_of_additive_categories_with_an_additive_bifunctor}
+    \TODO{this definition can in fact be generalized to more general biadditive functors, not just ones thought of as tensor products}
+Let $\mathcal{A}$, $\mathcal{B}$, and $\calC$ be \CrefAndHyperrefIfExist{definition:additive_category}{additive categories}, and suppose
+$$ \otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C} $$
+is a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}.
+
+Let $(C_\bullet, d^C)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in $\mathcal{A}$ and $(D_\bullet, d^D)$ be a chain complex in $\mathcal{B}$, i.e.,
+$$ C_\bullet = \{ C_n, d^C_n : C_n \to C_{n-1} \}_{n \in \mathbb{Z}}, \quad D_\bullet = \{ D_m, d^D_m : D_m \to D_{m-1} \}_{m \in \mathbb{Z}}.  $$
+
+\begin{enumerate}
+    \item The \hldef{tensor product double complex} $(T^{\bullet, \bullet}, d'_T, d''_T)$ in $\mathcal{C}$ is defined as follows:
+    \begin{itemize}
+    \item Objects:
+    $$
+    T^{p,q} := C_p \otimes D_q,
+    $$
+    for all integers $p,q$.
+    \item Horizontal differentials:
+    $$
+    d'_T{}^{p,q} := d^C_p \otimes \mathrm{id}_{D_q} : T^{p,q} \to T^{p-1,q}.
+    $$
+    \item Vertical differentials:
+    $$
+    d''_T{}^{p,q} := (-1)^p \cdot (\mathrm{id}_{C_p} \otimes d^D_q) : T^{p,q} \to T^{p,q-1}.
+    $$
+    \end{itemize}
+    These satisfy the conditions for a \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex}: the horizontal and vertical differentials each square to zero and anticommute appropriately due to the sign $(-1)^p$. The complex $T^{p,q}$ is often denoted by \hl{$C_\bullet \otimes D_\bullet$}.
+
+    \item The \hldef{(total) tensor product chain complex} \hl{$(\Tot(T)_{\bullet}, d^{\Tot})$} associated to the tensor product double complex $(T^{\bullet,\bullet}, d'_T, d''_T)$ is defined by:
+    \begin{itemize}
+    \item Objects (in degree $n$):
+    $$ \Tot(T)_n := \bigoplus_{p+q=n} T^{p,q} = \bigoplus_{p+q=n} C_p \otimes D_q.  $$
+    \item Differential:
+    $$ d^{\Tot}_n : \Tot(T)_n \to \Tot(T)_{n-1} $$
+    acts on homogeneous elements $x \otimes y \in C_p \otimes D_q$ with $p+q=n$ by
+    $$
+    d^{\Tot}_n (x \otimes y) := d^C_p(x) \otimes y + (-1)^p x \otimes d^D_q(y).
+    $$
+    \end{itemize}
+    Equivalently, $\Tot(T)_{\bullet}$ is the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{total complex} \hl{$\Tot^{\oplus}(P \otimes Q)$} of the double complex $P \otimes Q$. 
+
+    This construction yields a biadditive functor
+    $$ \otimes : \mathbf{Ch}(\mathcal{A}) \times \mathbf{Ch}(\mathcal{B}) \to \mathbf{Ch}(\mathcal{C}), $$
+    where \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\mathcal{A})$} denotes the category of chain complexes in $\mathcal{A}$.
+\end{enumerate}
+
+\end{definition}

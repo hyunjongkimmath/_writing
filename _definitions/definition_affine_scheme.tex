@@ -1,0 +1,14 @@
+
+\begin{definition}[Affine scheme] \label{definition:affine_scheme}
+Let $A$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity}. Define the set \hl{$\mathrm{Spec}(A)$}
+to be the set of all \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideals} of $A$. Equip it with the \hldef{Zariski topology}, which is the \CrefAndHyperrefIfExist{definition:topological_space}{topology} whose closed sets are given by \hldef{vanishing loci}
+$$\hlin{V(I) = \{\mathfrak{p} \in \mathrm{Spec}(A) : I \subseteq \mathfrak{p}\}}$$
+for ideals $I \subseteq A$.  
+Define the sheaf \hl{$\mathcal{O}_{\mathrm{Spec}(A)}$}, called the \hldef{structure sheaf of $\Spec A$}, by 
+$$\mathcal{O}_{\mathrm{Spec}(A)}(U) = \{ \ \text{locally defined fractions of elements of $A$ on $U$} \ \},$$
+for each open set $U \subseteq \mathrm{Spec}(A)$. It is the case that the stalk at $\mathfrak{p} \in \mathrm{Spec}(A)$ is canonically the \CrefAndHyperrefIfExist{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}{localization $A_{\mathfrak{p}}$}.  
+Then $(\mathrm{Spec}(A), \mathcal{O}_{\mathrm{Spec}(A)})$ is a \CrefAndHyperrefIfExist{definition:locally_ringed_space_on_a_topological_space}{locally ringed space}, called the \hldef{affine scheme associated to $A$}.
+
+Moreover, given $f \in A$, we define the locus \hl{$D(f)$} by 
+$$D(f) = \Spec A \setminus V((f)) = \{ \mathfrak{p} \in \operatorname{Spec} A : f \notin \mathfrak{p} \}$$
+\end{definition}

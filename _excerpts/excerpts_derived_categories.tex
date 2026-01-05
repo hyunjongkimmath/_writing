@@ -1,0 +1,133 @@
+
+
+
+\subsection{Homotopy category of chain complexes of an additive category}
+
+We will define homotopy categories and derived categories using the cohomological convention\CrefIfExists{convention:homological_algebra_is_discussed_in_cohomological_terms}
+
+\input{../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex}
+\input{../_definitions/definition_triangulated_category.tex}
+
+\input{../_definitions/definition_exact_functor_between_triangulated_categories.tex}
+
+\input{../_definitions/definition_compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category.tex}
+\input{../_definitions/definition_exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category.tex}
+
+
+\input{../_concepts/proposition_homotopy_category_of_an_additive_category_is_a_triangulated_category.tex}
+
+\TODO{How homotopy categories of chain complexes relate to topological homotopy categories}
+
+\input{../_concepts/theorem_additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories.tex}
+
+
+\subsection{Multiplicative systems in categories}
+
+\input{../_definitions/definition_multiplicative_system_of_morphisms_in_a_category.tex}
+\input{../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex}
+\input{../_definitions/definition_saturated_multiplicative_system_in_a_category.tex}
+\input{../_concepts/proposition_multiplicative_systems_may_as_well_be_saturated.tex}
+
+\subsection{Derived categories of abelian categories}
+
+\TODO{describe the objects and morphisms in a derived category}
+\input{../_definitions/definition_derived_category_of_an_abelian_category.tex}
+
+\input{../_conventions/convention_objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category.tex}
+
+\TODO{State how a derived category is a triangulated category}
+
+\input{../_definitions/definition_category_of_bounded_complexes_of_injectives_projectives.tex}
+
+Even though derived categories of abelian categories may not be guaranteed to be locally small, the following gives sufficient conditions for the appropriately (cohomologically) bounded derived categories to be locally small. The following also shows that appropriately bounded complexes under these circumstances can be represented in the derived category by a complex of injective or projective objects; we might think of such complexes of injectives or projectives as acting like an injective/projective resolution.
+
+\input{../_concepts/theorem_derived_categories_can_be_identified_with_homotopy_categories_of_injectives_or_projectives.tex}
+
+
+
+%-------------------
+
+\subsection{Total derived functors }
+
+The following subsection mostly takes the point of view of \cite[Chapter 10]{weibel}
+
+\input{../_definitions/definition_total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories.tex}
+
+\input{../_concepts/proposition_exact_functor_between_abelian_categories_induces_functor_on_derived_categories.tex}
+
+The below shows that right and left total derived functors exist for nice enough abelian categories on sufficiently (cohomologically) boundeded objects and can be computed using injective/projective resolutions.
+
+\input{../_concepts/theorem_existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories.tex}
+
+\input{../_concepts/corollary_additive_functor_bewteen_abelian_categories_has_a_right_or_left_total_derived_functor_if_the_source_abelian_category_has_enough_injectives_or_projectives.tex}
+
+\TODO{define hyper-derived functors}
+\input{../_concepts/corollary_cohomology_of_a_total_derived_functor_of_an_additive_functor_between_abelian_categories_can_be_calculated_by_hyper_derived_functors.tex}
+
+
+
+\subsection{General derived functors for exact multifunctors between triangulated categories}
+
+The following subsection mostly takes the point of view of \cite[Expos\'e XVII, 1.2]{SGA4_III}
+
+\input{../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex}
+\input{../_definitions/definition_essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category.tex}
+\input{../_concepts/proposition_condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant.tex}
+
+
+\input{../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex}
+\input{../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex}
+
+\subsubsection{Derived multifunctors of additive multifunctors between abelian categories}
+\input{../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex}
+
+\input{../_definitions/definition_right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories.tex}
+
+\input{../_concepts/proposition_derived_multifunctor_of_an_additive_multifunctor_of_abelian_categories_on_cohomologically_bounded_categories_commutes_with_inclusion_to_unbounded_categories.tex}
+
+\begin{theorem}[{\cite[Expos\'e XVII, Proposition 1.2.7.]{SGA4_III}}] \label{theorem:derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist}
+    \TODO{}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
+
+    If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects} that are \CrefAndHyperrefIfExist{definition:right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories}{acyclic for} $LF$ (resp. for $RF$), the \CrefAndHyperrefIfExist{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{derived functor} $LF: D^-(\calA) \to D^-(\calB)$ (resp. $RF: D^+(\calA) \to D^+(\calB)$) is \CrefAndHyperrefIfExist{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{left (resp. right) derivable} and every \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{homologically upper bounded} (resp. homologically lower bounded) complex of acyclics for $LF$ (resp. for $RF$) is \CrefAndHyperrefIfExist{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{adapted for $LF$ (resp. for $RF$)}.
+\end{theorem}
+
+\TODO{
+    \begin{itemize}
+    \item \textbf{Address the Biadditive/Multifunctor Gap}
+    \begin{itemize}
+        \item Add a Lemma or Remark following Definition 5.5.5 clarifying that for a biadditive functor $F: \mathcal{A} \times \mathcal{B} \to \mathcal{C}$, the condition of a pair of complexes $(M^\bullet, N^\bullet)$ being adapted (deployed) is what allows the representation of $LF$ via the Total Complex construction.
+        \item Explicitly define the Total Complex functor $\text{Tot}: \text{K}(\mathcal{A}) \times \text{K}(\mathcal{B}) \to \text{K}(\mathcal{C})$ used to induce the multifunctor in Definition 5.5.6. Specify the sign convention for the total differential: $d(x \otimes y) = d_x(x) \otimes y + (-1)^p x \otimes d_y(y)$ for $x$ of degree $p$.
+    \end{itemize}
+
+    \item \textbf{Formulate the Balancing Results}
+    \begin{itemize}
+        \item Add a Proposition (The Balancing Lemma) stating that if $\mathcal{P} \subset \mathcal{A}$ is a class of objects adapted for $F(-, N)$ and $\mathcal{Q} \subset \mathcal{B}$ is a class adapted for $F(M, -)$, there exist canonical isomorphisms in $D(\mathcal{C})$:
+        \[ \text{Tot}(F(P^\bullet, N^\bullet)) \cong \text{Tot}(F(M^\bullet, Q^\bullet)) \cong \text{Tot}(F(P^\bullet, Q^\bullet)) \]
+        \item Cite [SGA 4, XVII, 1.2.7] to justify that these isomorphisms are well-defined because complexes of adapted objects are "deployed".
+    \end{itemize}
+
+    \item \textbf{Incorporate the ``Everywhere Defined'' Logic}
+    \begin{itemize}
+        % \item Add a Theorem (following [SGA 4, XVII, Prop 1.2.7]) stating that if $\mathcal{A}_i$ has enough $F$-adapted objects (e.g., projectives or flats), then $LF$ is everywhere defined on $D^-$.
+        \item Include the ``Finite Dimension'' case from [SGA 4, XVII, Prop 1.2.10] to explain the conditions under which $LF$ and $RF$ can be extended to the unbounded derived category $D(\mathcal{A})$.
+    \end{itemize}
+
+    \item \textbf{Technical Refinements}
+    \begin{itemize}
+        \item Provide a precise proof or reference for the property: ``If $F$ is bi-right-exact, then projective objects are left-acyclic (adapted) for $F$.''
+        \item Define the term ``Deployed in the first variable'': A complex $P^\bullet$ is deployed in the first variable if the family $(P^\bullet, N^\bullet)$ is deployed for the multifunctor $F$ for every $N^\bullet \in \text{K}(\mathcal{A}_2)$.
+        \item Resolve the $\spadesuit$ TODO regarding the existence of limits/colimits in \texttt{Sets} to ensure Ind/Pro categories are locally small.
+    \end{itemize}
+
+    \item \textbf{Categorical Equivalence}
+    \begin{itemize}
+        \item Add a Remark confirming the equivalence of categories $D(\mathcal{A}_1) \times D(\mathcal{A}_2) \simeq D(\mathcal{A}_1 \times \mathcal{A}_2)$, noting that quasi-isomorphisms are defined component-wise.
+    \end{itemize}
+
+    \item \textbf{derived tensor product}
+    \begin{itemize}
+        \item Do proposition 4.1.7. expose XVII
+    \end{itemize}
+\end{itemize}
+}

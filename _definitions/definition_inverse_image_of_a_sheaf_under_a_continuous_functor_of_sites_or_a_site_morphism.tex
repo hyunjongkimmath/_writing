@@ -1,0 +1,47 @@
+% \begin{definition} \label{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}
+% Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}  with small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topological generating families} (or $U$-small topologically generating families if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), and let $u : \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. Let $\mathcal{A}$ be a (large) category which has all small (or $U$-small) \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}. For any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} 
+% \[
+% \mathcal{G} \in \operatorname{Sh}(\calC,J;\mathcal{A}),
+% \]
+% the \hldef{direct image/pushforward sheaf of $\mathcal{G}$ under $u$} is defined by
+% $$\hlin{u_*\mathcal{G} : \calD^{\mathrm{op}} \to \mathcal{A}, \quad V \mapsto \varprojlim_{(u \downarrow V)^{\op}} \mathcal{G}(U),}$$
+% where the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{limit} is taken over the \CrefAndHyperrefIfExist{definition:opposite_category_of_a_category}{opposite} of the \CrefAndHyperrefIfExist{definition:comma_category_of_two_functors_to_a_category}{comma category $(u \downarrow V)$} of whose objects are pairs $(U, u(U) \to V)$ with $U \in \calC$ and $u(U) \to V$ a moprhism in $\calD$. 
+
+% The assignment $\mathcal{G} \mapsto u_*\mathcal{G}$ defines the \hldef{direct image functor}
+% $$\hlin{u_* : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(\calD,K;\mathcal{A})}.$$
+
+% If $u$ is the functor underlying a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $f: (\calD, K) \to (\calC, J)$, we may alternatively denote $u_* \calG$ by \hl{$f^* \calG$} and call it the \hldef{inverse image/pullback of $\calG$ under $f$}; the assignment $\calG \mapsto f^* \calG$ is then the \hldef{inverse image/pullback functor}.
+% $$\hlin{f^* : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(D,K;\mathcal{A}).}$$
+
+% We further note that $u_*$ is ``categorical'' notation whereas $f^*$ is ``geometric'' notation; loosely speaking, given a morphism $f: X \to Y$ of topological spaces or schemes, 
+% \begin{itemize}
+%     \item we may have a continuous functor $u: \mathbf{C}(Y) \to \mathbf{C}(X)$ where $\mathbf{C}(X), \mathbf{C}(Y)$ are appropriate sites induced by $X$ and $Y$ respectively,
+%     \item $u$ may underlie a site morphism $f: \mathbf{C}(X) \to \mathbf{C}(Y)$ roughly given by pullbacks under the morphism $f: X \to Y$, and
+%     \item given a sheaf $\calG$ on $\mathbf{C}(Y)$, we may speak of its direct image $f^* \calG$ on $\mathbf{C}(X)$.
+% \end{itemize}
+
+% \end{definition}
+
+\begin{definition} \label{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}
+    % \begin{definition} \label{definition:inverse_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites}
+Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} with small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topological generating families}, and let $u : \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. Let $\mathcal{A}$ be a (large) category such that the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf category} $\operatorname{PreSh}(\calD,K;\mathcal{A})$ has \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification}.
+
+% Let $\mathcal{A}$ be a category admitting all small colimits and finite limits. 
+For any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} 
+\[
+\mathcal{G} \in \operatorname{Sh}(\calC,J;\mathcal{A}),
+\]
+the \hldef{inverse image/pullback sheaf of $\mathcal{G}$ under $u$} is defined, assuming that all colimits below exist, as:
+$$\hlin{u_s \mathcal{G} : \calD^{\mathrm{op}} \to \mathcal{A}, \quad V \mapsto a \left( \varinjlim_{(V \downarrow u)} \mathcal{G}(U) \right),}$$
+where $a$ is the \CrefAndHyperrefIfExist{definition:definition:sheafification_functor_on_a_site}{sheafification} functor of presheaves and the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} is taken over the \CrefAndHyperrefIfExist{definition:comma_category_of_two_functors_to_a_category}{comma category $(V \downarrow u)$} of pairs $(U, V \to u(U))$ with $U \in \calC$.
+
+The assignment $\mathcal{G} \mapsto u_s\mathcal{G}$ defines the \hldef{inverse image/pullback functor}
+$$\hlin{u_s : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(\calD,K;\mathcal{A})}.$$
+
+If $u$ is the functor underlying a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $f: (\calD, K) \to (\calC, J)$, we may alternatively denote $u_s \calG$ by \hl{$f^{*} \calG$} (or sometimes by \hl{$f^{-1} \calG$}) and call it the \hldef{inverse image/pullback of $\calG$ under $f$}.
+
+
+Note that while the continuous functor $u$ and the site morphism $f$ point in opposite directions, the identification $f^* := u_s$ ensures that $f^*$ corresponds to the standard geometric pullback. In the case of topological spaces, this recovers the usual construction involving colimits over open neighborhoods to obtain stalks followed by sheafification.
+
+\end{definition}
+% \end{definition}

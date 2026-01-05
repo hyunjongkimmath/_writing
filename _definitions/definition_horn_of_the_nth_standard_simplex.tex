@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:horn_of_the_nth_standard_simplex}
+Let $n \ge 1$ be an integer and $\Delta[n]$ be the standard $n$-simplex.  
+For each $i$ with $0 \le i \le n$, the \hldef{$i$th horn of the $n$th standard simplex}, denoted by \hl{$\Lambda^i[n]$}, is the simplicial subset of \CrefAndHyperrefIfExist{definition:standard_n_simplex}{$\Delta[n]$} defined as follows:
+the set of \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$k$-simplices} of $\Lambda^i[n]$ is
+$$ \Lambda^i[n]_k := \{\, \theta \in \mathrm{Hom}_{\Delta}([k], [n]) \mid \mathrm{Im}(\theta) \text{ does not contain all of } [n] \setminus \{i\} \,\}.  $$
+Equivalently,
+% is the union of all $(n-1)$-dimensional \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{faces} of $\Delta[n]$ except the $i$th face, that is,
+$$ \Lambda^i[n] = \bigcup_{j \ne i} \mathrm{Im}(d^j : \Delta[n-1] \to \Delta[n]), $$
+where each $d^j$ is the \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{coface map} in the simplex category corresponding to the injective order-preserving inclusion $[n-1] \hookrightarrow [n]$ that omits $j$.
+\end{definition}

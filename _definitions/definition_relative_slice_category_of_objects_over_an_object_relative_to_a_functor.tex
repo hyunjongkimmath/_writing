@@ -1,0 +1,16 @@
+\begin{definition}[Relative Slice Category] \label{definition:relative_slice_category_of_objects_over_an_object_relative_to_a_functor}
+    Let $\calC$, $\calD$ be \CrefAndHyperrefIfExist{definition:category}{categories}, let $u: \mathcal{D} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} and let $U$ be an object of $\mathcal{C}$. The \hldef{relative slice category} (also called the \hldef{relative over-category} or \hldef{category of objects over $U$ relative to $u$}), denoted \hl{$(u \downarrow U)$} or \hl{$u/U$}, is defined as follows:
+    \begin{itemize}
+        \item \textbf{Objects:} Pairs $(V, \varphi)$, where $V$ is an object of $\mathcal{D}$ and $\varphi: u(V) \to U$ is a morphism in $\mathcal{C}$.
+        \item \textbf{Morphisms:} A morphism from $(V, \varphi)$ to $(V', \varphi')$ is a morphism $f: V \to V'$ in $\mathcal{D}$ such that the following triangle in $\mathcal{C}$ commutes:
+        $$
+        \begin{tikzcd}
+            u(V) \arrow[rr, "u(f)"] \arrow[dr, "\varphi"'] & & u(V') \arrow[dl, "\varphi'"] \\
+            & U &
+        \end{tikzcd}
+        $$
+        That is, $\varphi' \circ u(f) = \varphi$.
+        \item \textbf{Composition:} Inherited from $\mathcal{D}$.
+    \end{itemize}
+    \TextIfExists{definition:comma_category_of_two_functors_to_a_category}{Slice categories are special cases of \CrefAndHyperrefIfExist{definition:comma_category_of_two_functors_to_a_category}{comma categories}.}
+\end{definition}

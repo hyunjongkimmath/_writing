@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:homological_cohomological_delta_functor_between_abelian_categories}
+Let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. 
+\begin{enumerate}
+    \item  A \hldef{homological $\delta$ functor from $\mathcal{A}$ to $\mathcal{B}$} is a pair $(T_n, \delta_n)_{n\ge 0}$ consisting of:
+    \begin{itemize}
+        \item a sequence of \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functors} $T_n : \mathcal{A} \to \mathcal{B}$ for each integer $n \ge 0$, and
+        \item for every \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A' \xrightarrow{u} A \xrightarrow{v} A'' \to 0$ in $\mathcal{A}$, a \hldef{connecting morphism}
+        $$\hlin{\delta_n(A',A,A'') : T_n(A'') \to T_{n-1}(A'})$$
+        in $\mathcal{B}$ for each $n > 0$
+    \end{itemize}
+    that make the induced sequence
+    $$\cdots \to T_{n+1}(A'') \xrightarrow{\delta_{n+1}} T_n(A') \to T_n(A) \to T_n(A'') \xrightarrow{\delta_n} T_{n-1}(A') \to \cdots$$
+    \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact} in $\mathcal{B}$, and are natural in short exact sequences. That is, for any morphism of short exact sequences, the induced morphisms between these long exact sequences commute.
+
+    \item A \hldef{cohomological $\delta$-functor from $\mathcal{A}$ to $\mathcal{B}$} is defined dually: it consists of \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functors} $T^n: \mathcal{A} \to \mathcal{B}$ for $n \ge 0$ and \hldef{connecting morphisms}
+    $$\delta^n(A',A,A''): T^n(A') \to T^{n+1}(A'')$$
+    such that for each \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A' \to A \to A'' \to 0$ the resulting sequence
+    $$0 \to T^0(A') \to T^0(A) \to T^0(A'') \xrightarrow{\delta^0} T^1(A') \to T^1(A) \to T^1(A'') \xrightarrow{\delta^1} \cdots$$
+    is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact} and the construction is natural with respect to morphisms of short exact sequences.
+
+    \item Let $(T_n,\delta_n)$ and $(S_n,\partial_n)$ be homological $\delta$-functors from $\mathcal{A}$ to $\mathcal{B}$. A \hldef{morphism of (homological) $\delta$-functors}
+    $$\eta: T_\bullet \to S_\bullet$$
+    is a family of \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} $\eta_n: T_n \Rightarrow S_n$ for each $n \ge 0$ such that for every short exact sequence $0 \to A' \xrightarrow{u} A \xrightarrow{v} A'' \to 0$, the following diagram in $\mathcal{B}$ commutes for all $n > 0$:
+    $$
+    \begin{array}{ccccccccc}
+    T_n(A'') & \xrightarrow{\delta_n} & T_{n-1}(A') & & \\
+    \downarrow\eta_n & & \downarrow\eta_{n-1} & & \\
+    S_n(A'') & \xrightarrow{\partial_n} & S_{n-1}(A') & &
+    \end{array}$$
+    The dual notion (for cohomological $\delta$-functors) is defined analogously, reversing the direction of the connecting morphisms.
+\end{enumerate}
+\end{definition}

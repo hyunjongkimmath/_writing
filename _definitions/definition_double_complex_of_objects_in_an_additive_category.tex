@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:double_complex_of_objects_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}. A \hldef{double complex} (also called a \hldef{bicomplex}) in $\mathcal{A}$ is a collection of objects
+$$ \{ A^{p,q} \}_{(p,q)\in\mathbb{Z}^2} $$
+together with morphisms
+$$ d'_A{}^{p,q} : A^{p,q} \to A^{p+1,q}, \quad d''_A{}^{p,q} : A^{p,q} \to A^{p,q+1}, $$
+satisfying the identities
+$$ (d'_A)^{p+1,q} \circ (d'_A)^{p,q} = 0, \qquad (d''_A)^{p,q+1} \circ (d''_A)^{p,q} = 0, $$
+and the \hldef{anti-commutativity relation}
+$$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} + (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
+
+An alternative (equivalent) convention defines a double complex $(A^{p,q},d'_A,d''_A)$ so that
+$$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} - (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
+This convention differs by a sign and corresponds to replacing $d''_A$ by $-d''_A$. Thus, both conventions are equivalent up to the natural isomorphism $A^{p,q}\mapsto A^{p,q}$, $d'_A\mapsto d'_A$, $d''_A\mapsto -d''_A$.
+\end{definition}

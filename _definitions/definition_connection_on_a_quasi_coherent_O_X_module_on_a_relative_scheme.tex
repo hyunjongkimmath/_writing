@@ -1,0 +1,50 @@
+
+\begin{definition} \label{definition:relative_connection_on_a_quasi_coherent_O_X_module}
+Let \(f: X \to T\) be a morphism of schemes over a ring \(k\), and let \(\mathcal{E}, \mathcal{F}\) be quasi-coherent \(\mathcal{O}_X\)-modules.
+
+\begin{enumerate}
+  \item A \hldef{connection on $\mathcal{E}$ relative to $T$} is a \( \mathcal{O}_T \)-linear map
+  \[
+    \nabla : \mathcal{E} \to \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^1_{X/T}
+  \]
+  satisfying the relative Leibniz rule:
+  \[
+    \nabla(f s) = s \otimes d_{X/T} f + f \nabla(s)
+  \]
+  for all local sections \(f \in \mathcal{O}_X\) and \(s \in \mathcal{E}\), where 
+  \[
+    d_{X/T} : \mathcal{O}_X \to \Omega^1_{X/T}
+  \]
+  is the relative Kähler differential.
+
+  \item The \hldef{curvature of the relative connection $\nabla$} is the sheaf morphism
+  \[
+    \nabla^2 : \mathcal{E} \to \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^2_{X/T}
+  \]
+  defined by the composition
+  \[
+    \nabla^2 := (\nabla \otimes \mathrm{id}) \circ \nabla.
+  \]
+
+  \item A relative connection \(\nabla\) on \(\mathcal{E}\) is called \hldef{flat} (or \hldef{integrable}) if
+  \[
+    \nabla^2 = 0.
+  \]
+
+  \item Given two relative connections \((\mathcal{E}, \nabla_{\mathcal{E}})\) and \((\mathcal{F}, \nabla_{\mathcal{F}})\), a \hldef{morphism of relative connections} is an \(\mathcal{O}_X\)-module homomorphism
+  \[
+    \varphi : \mathcal{E} \to \mathcal{F}
+  \]
+  such that the following diagram commutes:
+  \[
+  \begin{tikzcd}
+    \mathcal{E} \arrow[r, "\varphi"] \arrow[d, "\nabla_{\mathcal{E}}"'] & \mathcal{F} \arrow[d, "\nabla_{\mathcal{F}}"] \\
+    \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^1_{X/T} \arrow[r, "\varphi \otimes \mathrm{id}"] & \mathcal{F} \otimes_{\mathcal{O}_X} \Omega^1_{X/T}
+  \end{tikzcd}
+  \]
+  that is,
+  \[
+    \nabla_{\mathcal{F}} \circ \varphi = (\varphi \otimes \mathrm{id}) \circ \nabla_{\mathcal{E}}.
+  \]
+\end{enumerate}
+\end{definition}

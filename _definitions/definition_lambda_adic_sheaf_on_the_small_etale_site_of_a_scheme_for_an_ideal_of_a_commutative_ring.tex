@@ -1,0 +1,21 @@
+
+\begin{definition}[$\lambda$-adic sheaf on a scheme] \label{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}
+
+Let $R$ be a commutative ring and let $\lambda\subseteq R$ be an ideal. Let $X$ be a scheme. Let 
+$$\calF = (\calF_n, u_n)_{n \in \bbZ}, \quad u_n: \calF_n \to \calF_{n-1}$$
+be an \hyperrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system}\CrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset} of \hyperrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals}{$\lambda$-torsion sheaves}\CrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals} on the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{(small) étale site $X_{\text{ét}}$}. 
+
+\begin{enumerate}
+    \item The inverse system is called a \hldef{$\lambda$-adic sheaf on $X$} if 
+    \begin{itemize}
+        \item $\calF_n$ is \CrefAndHyperrefIfExist{definition:constructible_sheaf_on_a_small_site_on_a_scheme_or_a_topological_space}{constructible} for all $n$,
+        \item $\mathcal{F}_n$ is annihilated by $\lambda^n$ for all $n$,
+        \item there are isomorphisms $\mathcal{F}_n \cong \mathcal{F}_{n+1}/\lambda^n\mathcal{F}_{n+1}$ compatible with transition maps.
+    \end{itemize}
+
+    \item A $\lambda$-adic sheaf is called \hldef{lisse} if each $\calF_n$ is \hyperrefIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant}\CrefIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification}.
+
+    \item A $\lambda$-adic sheaf is called an \hldef{A–R $\lambda$-adic sheaf} if it satisfies the \hyperrefIfExists{definition:artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site}{Artin–Rees–Mittag–Leffler condition}\CrefIfExists{definition:artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site}.
+\end{enumerate}
+Under nice enough circumstances, the categories of $\lambda$-adic sheaves and $A-R$ $\lambda$-adic sheaves are equivalent (\Cref{theorem:categories_of_lambda_adic_and_A_R_lambda_adic_sheaves_over_the_ring_of_integers_of_a_finite_extension_of_Q_ell_are_equivalent}).
+\end{definition}

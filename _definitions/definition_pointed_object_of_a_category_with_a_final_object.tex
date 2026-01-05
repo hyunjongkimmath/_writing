@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:pointed_object_of_a_category_with_a_final_object}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} $*$. By a \hldef{pointed object of $\calC$}, we mean an object $X$ of $\calC$ equipped with a morphism $* \to X$. The \hldef{category of pointed objects of $\calC$} refers to the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{under category/coslice category} of $*$, i.e. the category whose 
+    \begin{itemize}
+        \item objects are morphisms $* \to X$ in $\calC$ and 
+        \item morphisms between objects $* \to X$ and $* \to Y$ are morphisms $X \to Y$ in $\calC$ such that the following diagram commutes:
+        $$
+        \begin{aligned}
+        \xymatrix{
+        \ast \ar[dr] \ar[r] & X \ar[d] \\
+        & Y
+        }
+        \end{aligned}
+        $$
+    \end{itemize}
+    The category of pointed objects of $C$ may be denoted by notations such as \hl{$C_\bullet$} or \hl{$C_\ast$}s.
+\end{definition}

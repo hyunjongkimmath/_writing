@@ -1,0 +1,22 @@
+
+% \begin{definition} \label{definition:tensor_category_over_a_commutative_ring}
+%     Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. A \hldef{tensor category over $R$} is a \CrefAndHyperrefIfExist{definition:linear_category_over_a_commutative_ring}{$R$-linear} \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal} category $\calC$ whose tensor product functor
+%     $$\otimes: \calC \times \calC \to \calC$$
+%     \CrefIfExists{definition:product_category_of_a_family_of_categories}
+%     is a \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{$R$-bilinear functor}, i.e. the maps 
+%     $$\Hom_{\calC \times \calC}(X_1 \times X_2, Y_1 \times Y_2) \cong \Hom_{\calC} (X_1, Y_1) \times \Hom_{\calC}(X_2, Y_2) \to \Hom_{\calC}(X_1 \otimes X_2, Y_1 \otimes Y_2)$$
+%     induced by $\otimes$ are bilinear over $R$.
+% \end{definition}
+
+\begin{definition} \label{definition:tensor_category_over_a_commutative_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. 
+    A \hldef{tensor category over $R$} (or \hldef{$R$-linear symmetric monoidal category}) is an \CrefAndHyperrefIfExist{definition:k_linear_category_over_a_commutative_ring}{$R$-linear category} $\mathcal{C}$ equipped with a \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal structure} $(\otimes, \mathds{1})$ such that the tensor product functor
+    \[
+        \otimes: \mathcal{C} \times \mathcal{C} \to \mathcal{C}
+    \]
+    is $R$-bilinear on morphisms. That is, for all objects $X, X', Y, Y' \in \operatorname{Ob}(\mathcal{C})$, the map
+    \[
+        \operatorname{Hom}_{\mathcal{C}}(X, Y) \times \operatorname{Hom}_{\mathcal{C}}(X', Y') \to \operatorname{Hom}_{\mathcal{C}}(X \otimes X', Y \otimes Y')
+    \]
+    given by $(f, g) \mapsto f \otimes g$ is \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{$R$-bilinear}.
+\end{definition}

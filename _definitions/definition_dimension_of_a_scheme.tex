@@ -1,0 +1,13 @@
+\begin{definition}[Dimension of a Scheme] \label{definition:dimension_of_a_scheme}
+Let $X$ be a scheme with underlying topological space $|X|$.
+
+    \TODO{krull dimension}
+\begin{itemize}
+    \item The \hldef{dimension at a point $x \in |X|$}, denoted $\dim_x(X)$, is the Krull dimension of the \CrefAndHyperrefIfExist{definition:locally_ringed_space_on_a_topological_space}{local ring} \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{$\mathcal{O}_{X,x}$}. This is the supremum of the lengths $n$ of chains of prime ideals
+    $$ \mathfrak{p}_0 \subsetneq \mathfrak{p}_1 \subsetneq \cdots \subsetneq \mathfrak{p}_n \subseteq \mathcal{O}_{X,x}.  $$
+
+    \item The \hldef{dimension of the scheme $X$} is defined as
+    $$ \hlin{\dim(X) := \sup_{x \in |X|} \dim_x(X). }$$
+    Equivalently, it is the supremum of the lengths of chains of distinct irreducible closed subsets of $|X|$ ordered by inclusion.
+\end{itemize}
+\end{definition}

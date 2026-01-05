@@ -1,0 +1,67 @@
+\begin{definition} \label{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}
+    \TODO{I think that the definition of derived categories might be doable for more general kinds of resolutions? Perhaps it is that if I have a right exact functor $F$, then $L^i F$ can be computed with resolutions of $F$-acyclic objects? \CrefIfExists{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}}
+    \TODO{Apparently, left/right derived functors may be defined for functors that are additive and preserve finite coproducts, and not necessarily right/left exact; the exactness condition ensures that the zeroth derived functor agrees with $F$.}
+Let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let 
+$$F: \mathcal{A} \to \mathcal{B}$$ 
+be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor}.
+
+\begin{enumerate}
+    \item Suppose that the functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and suppose that $A \in \calA$ is an object for which a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
+    $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
+    exists in $\calA$. We define the \hldef{left derived object} \hl{$L_n F A \in \calB$} by applying $F$ to obtain a complex
+    $$\cdots \to F(P_2) \to F(P_1) \to F(P_0) \to 0$$
+    and letting $L_n F(A)$ be the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$n$-th homology object} of this complex in $\mathcal{B}$:
+    $$L_n F(A) := H_n(F(P_\bullet)).$$
+    The object $L_n F(A)$ is independent of the choice of projective resolution up to natural isomorphism (\Cref{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined}). 
+
+    By convention, set $L_n F = 0$ for $n < 0$.
+
+    The \hldef{higher left derived objects} refer to the object $L_n F(A)$ for $n > 0$. 
+
+    \item  Suppose that the functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}. The \hldef{left derived functors} refer to the family of functors
+    $$\hlin{L_n F : \mathcal{A} \to \mathcal{B}, \quad A \mapsto L_n F(A).}$$
+    The \hldef{higher left derived functors} refer to the functors $L_n F$ for $n > 0$. 
+
+    \item Suppose that the functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and suppose that $A \in \calA$ is an object for which a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
+    $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
+    exists in $\calA$. We define the \hldef{right derived object} \hl{$R_n F A \in \calB$}, also often denoted by \hl{$R^n FA$}, by applying $F$ to obtain a complex
+    $$0 \to F(I^0) \to F(I^1) \to F(I^2) \to \cdots.$$
+    and letting $R_n F(A)$ be the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$n$-th cohomology object} of this complex in $\mathcal{B}$:
+    $$R_n F(A) := H^n(F(I_\bullet)).$$
+    The object $R_n F(A)$ is independent of the choice of injective resolution up to natural isomorphism (\Cref{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined}). 
+
+    By convention, set $R_n F = 0$ for $n < 0$.
+
+    The \hldef{higher right derived objects} refer to the object $R_n F(A)$ for $n > 0$. 
+
+    \item  Suppose that the functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}. The \hldef{right derived functors} refer to the family of functors
+    $$\hlin{R_n F : \mathcal{A} \to \mathcal{B}, \quad A \mapsto R_n F(A).}$$
+    The right derived functors are also often denoted by \hl{$R^n F$}.
+    The \hldef{higher right derived functors} refer to the functors $R_n F$ for $n > 0$. 
+
+    
+    % If the functor $F$ is right exact and $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, then its \hldef{left derived functors} are a family of functors
+    % $$\hlin{L_n F : \mathcal{A} \to \mathcal{B}, \quad n \geq 0,}$$
+    % which are defined for each object $A$ in $\mathcal{A}$ by choosing (\Cref{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}) a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
+    % $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
+    % in $\mathcal{A}$ and applying $F$ to obtain a complex
+    % $$\cdots \to F(P_2) \to F(P_1) \to F(P_0) \to 0.$$
+    % Then $L_n F(A)$ is defined to be the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$n$-th homology object} of this complex in $\mathcal{B}$:
+    % $$L_n F(A) := H_n(F(P_\bullet)).$$
+    % The functors $L_n F$ are independent of the choice of projective resolution up to natural isomorphism. 
+
+    % By convention, set $L_n F = 0$ for $n < 0$.
+
+    % \item If the functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} and $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, then its \hldef{right derived functors} are a family of functors
+    % $$\hlin{R^n F : \mathcal{A} \to \mathcal{B}, \quad n \geq 0,}$$
+    % which are defined for each object $A$ in $\mathcal{A}$ by choosing (\Cref{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}) an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
+    % $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
+    % in $\mathcal{A}$ and applying $F$ to obtain a complex
+    % $$0 \to F(I^0) \to F(I^1) \to F(I^2) \to \cdots.$$
+    % Then $R^n F(A)$ is defined to be the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$n$-th cohomology object} of this complex in $\mathcal{B}$:
+    % $$R^n F(A) := H^n(F(I^\bullet)).$$
+    % The functors $R^n F$ are independent of the choice of injective resolution up to natural isomorphism.
+
+    % By convention, set $R^n F = 0$ for $n < 0$.
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} in $\mathcal{A}$. 
+        A term $E^r_{p,q}$ is said to \hldef{stabilize} if there exists an integer $r(p,q) \ge r_0$ such that for all $r \ge r(p,q)$, the differentials entering and leaving $E^r_{p,q}$ are zero:
+        $$d^r: E^r_{p,q} \to E^r_{p-r, q+r-1} = 0 \quad \text{and} \quad d^r: E^r_{p+r, q-r+1} \to E^r_{p,q} = 0.$$
+        In this case, we have isomorphisms $E^{r+1}_{p,q} \cong E^r_{p,q}$ for all $r \ge r(p,q)$.
+        The \hldef{limit term} (or \hldef{infinity page}), denoted \hl{$E^\infty_{p,q}$}, is defined as this stable object:
+        $$E^\infty_{p,q} = E^{r(p,q)}_{p,q}.$$
+
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} in $\mathcal{A}$.
+        A term $E_r^{p,q}$ is said to \hldef{stabilize} if there exists an integer $r(p,q) \ge r_0$ such that for all $r \ge r(p,q)$, the differentials entering and leaving $E_r^{p,q}$ are zero:
+        $$d_r: E_r^{p,q} \to E_r^{p+r, q-r+1} = 0 \quad \text{and} \quad d_r: E_r^{p-r, q+r-1} \to E_r^{p,q} = 0.$$
+        In this case, we have isomorphisms $E_{r+1}^{p,q} \cong E_r^{p,q}$ for all $r \ge r(p,q)$.
+        The \hldef{limit term} (or \hldef{infinity page}), denoted \hl{$E_\infty^{p,q}$}, is defined as this stable object:
+        $$E_\infty^{p,q} = E_{r(p,q)}^{p,q}.$$
+    \end{enumerate}
+\end{definition}

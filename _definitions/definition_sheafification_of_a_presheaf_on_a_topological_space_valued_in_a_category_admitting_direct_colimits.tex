@@ -1,0 +1,38 @@
+
+\begin{definition}[Sheaf associated to a presheaf] \label{definition:sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits}
+    Let $X$ be a topological space, and let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:category}{category} admitting \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct colimits} (e.g. the category of sets, groups, abelian groups, modules over rings, or vector spaces over fields). Let $\mathcal{P}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $X$ with values in $\mathcal{D}$}.  
+
+    The \hldef{sheaf associated to the presheaf $\mathcal{P}$} or the \hldef{sheaffification of the presheaf $\calP$}, denoted \hl{$\mathcal{P}^+$} or sometimes by \hl{$a\calP$}, is a sheaf on $X$ together with a morphism of presheaves
+    $$\eta: \mathcal{P} \to \mathcal{P}^+,$$
+    satisfying the following universal property:  
+    for every sheaf $\mathcal{F}$ on $X$ (valued in $\mathcal{D}$), any morphism of presheaves
+    $$\varphi: \mathcal{P} \to \mathcal{F}$$
+    factors uniquely through $\eta$, i.e., there exists a unique morphism of sheaves
+    $$\widetilde{\varphi}: \mathcal{P}^+ \to \mathcal{F}$$
+    such that
+    $$\varphi = \widetilde{\varphi} \circ \eta.$$
+
+    Concretely, $\mathcal{P}^+$ can be constructed by assigning to each open set $U \subseteq X$ the set (or object in $\mathcal{D}$)
+        \[
+        \mathcal{P}^+(U) := \left\{ 
+        s = (s_x)_{x \in U} \in \prod_{x \in U} \mathcal{P}_x \ 
+        \middle|\ 
+        \begin{aligned}
+        &\forall x \in U, \\
+        &\exists \text{ an open } V \subseteq U \text{ with } x \in V, \\
+        &\exists t \in \mathcal{P}(V) \text{ such that } \\
+        &\quad \forall y \in V, s_y = t_y
+        \end{aligned}
+        \right\}.
+        \]
+    where $\mathcal{P}_x$ is the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalk} of $\mathcal{P}$ at $x$, and $t_y$ is the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{germ} of $t$ at $y$. In particular, $\calP^+$ exists.
+
+    It is noteworthy that the assignment $\calP \mapsto \calP^+$ is a functor
+    $$\PreShv(X, \calD) \to \Shv(X, \calD).$$
+    (\Cref{definition:categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category}) and that this functor is left adjoint to the inclusion functor
+    $$\Shv(X, \calD) \hookrightarrow \PreShv(X, \calD)$$
+    \TextIfExists{definition:sheafification_functor_on_a_site}{Equivalently, the assignment $\calP \mapsto \calP^+$ is the sheafification functor as defined in \Cref{definition:sheafification_functor_on_a_site}.}
+\end{definition}
+
+% See Also
+% theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site 

@@ -1,0 +1,34 @@
+
+\begin{definition} \label{definition:hodge_filtration_on_a_free_abelian_group_of_finite_rank_hodge_filtration_associated_to_a_hodge_structure}
+    Let $L$ be a free abelian group of finite rank, and let $k \in \bbZ$. 
+    \begin{enumerate}
+        \item A \hldef{Hodge filtration of weight $k$ on $L$} is a decreasing filtration $\{F^p\}$ of \CrefAndHyperrefIfExist{definition:complexification_of_a_free_abelian_group_of_finite_rank}{$L_\mathbb{C}$} (i.e. $F^p \supseteq F^{p+1}$) by complex subspaces satisfying the conditions
+        \[ L_\mathbb{C} = F^p \oplus \overline{F^{k+1-p}} \quad \text{for all } p. \]
+        Letting
+        \hlin{$$L^{p,q} := F^p \cap \overline{F^q}$$}
+        for all $p+q = k$ defines a \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{pure Hodge structure} of weight $k$ on $L$ such that 
+        $$L_{\mathbb{C}} = \bigoplus_{p+q = k} L^{p,q}$$
+        This pure Hodge structure may be referred to as the \hldef{(pure) Hodge structure associated to the Hodge filtration}.
+
+        \item Given a Hodge structure 
+        $$L_\bbC = \bigoplus_{p+q=k} L^{p,q},$$
+        the \hldef{Hodge filtration associated to the Hodge structure} is a decreasing filtration $\{F^p\}_{p \in \bbZ}$ on $L_\bbC$ by complex subspaces defined by 
+        $$\hlin{F^p := \bigoplus_{r \ge p} L^{r,k-r}.}$$
+        This satisfies
+        $$ L^{p,q} = F^p \cap \overline{F^q} $$
+        for all $p,q$ with $p+q=k$.
+
+    \end{enumerate}
+\end{definition}
+\begin{lemma}
+    Let $L$ be a free abelian group of finite rank, and let $k \in \mathbb{Z}$.  There is a one-to-one correspondence between:
+
+    \begin{enumerate}
+        \item \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{Pure Hodge structures} of weight $k$ on $L$
+        \item \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{Hodge filtrations} of weight $k$ on $L$
+    \end{enumerate}
+    The correspondence is given by the formulae
+    $$ F^p = \bigoplus_{r \ge p} L^{r,k-r}, \quad \text{and} \quad L^{p,q} = F^p \cap \overline{F^q}.  $$
+    Thus, specifying a pure Hodge structure is equivalent to specifying a Hodge filtration.
+\end{lemma}
+

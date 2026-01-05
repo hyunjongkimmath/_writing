@@ -1,0 +1,19 @@
+
+\begin{definition}[Laplacian operator on a smooth oriented \hyperrefIfExists{definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold}{riemannian manifold}] \label{definition:laplacian_operator_on_a_smooth_oriented_riemannian_manifold}
+    \TODO{TODO: If I am not assuming compactness of $M$, then I should need to let the operators be on $\Omega_c^k(M)$, not $\Omega^k(M)$; this is to ensure integration defining the Hodge star operator is defined.}
+    Let $M$ be a \hyperrefIfExists{definition:C_k_manifold}{smooth}, oriented, \hyperrefIfExists{definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold}{Riemannian manifold} of dimension $n$ with Riemannian metric $g$.
+    \begin{enumerate}
+        \item  Define the codifferential operator as
+        $$\hlin{\delta := (-1)^{nk + n + 1} \star d \star : \Omega^k(M) \to \Omega^{k-1}(M).}$$
+        \item The \hldef{Laplacian operator} (or \hldef{Hodge Laplacian}) acting on $k$-forms is defined by
+        $$\hlin{\Delta := d \delta + \delta d : \Omega^k(M) \to \Omega^k(M).}$$
+        \TODO{TODO: define self-adjointness here and elliptic differential operator.}
+        It is a second order, self-adjoint, elliptic differential operator.
+    \end{enumerate}
+\end{definition}
+
+\begin{lemma}
+    Let $M$ be a smooth, oriented, \hyperrefIfExists{definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold}{Riemannian manifold} of dimension $n$ with Riemannian metric $g$. For all $\alpha \in \Omega^k(M)$ and $\beta \in \Omega^{k+1}(M)$, we have 
+    \TODO{TODO: define the inner product $\langle \cdot, \cdot \rangle$, which supposedly is the $L^2$-inner product on $\Omega^k(M)$ induced by the metric and orientation}
+    $$\langle d\alpha, \beta \rangle = \langle \alpha, \delta \beta \rangle.$$
+\end{lemma}

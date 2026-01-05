@@ -1,0 +1,31 @@
+\begin{definition}[Smooth Morphism of Schemes] \label{definition:smooth_morphism_of_schemes}
+Let \(f: X \to S\) be a morphism of \CrefAndHyperrefIfExist{definition:scheme}{schemes}.
+
+We say that \(f\) is \hldef{smooth}, and that $X$ is a \hldef{smooth scheme over $S$}, if it satisfies the following conditions:
+
+\TODO{residue field}
+\begin{itemize}
+    \item \(f\) is \CrefAndHyperrefIfExist{definition:locally_of_finite_presentation_finite_presentation_morphism_of_schemes}{locally of finite presentation}: for every point \(x \in X\), there exists an open neighborhood \(U \subseteq X\) of \(x\) and an open neighborhood \(V \subseteq S\) of \(f(x)\) such that the restriction \(f|_U : U \to V\) corresponds to a morphism of rings \( \mathcal{O}_S(V) \to \mathcal{O}_X(U) \) that is finitely presented.
+    
+    \item \(f\) is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat}: the induced map on local rings is flat.
+    
+    \item For every point \(x \in X\), the fiber \(X_{f(x)} = X \times_S \Spec \kappa(f(x))\) is a smooth variety over the residue field \(\kappa(f(x))\), equivalently, the sheaf of relative Kähler differentials \(\Omega_{X/S}\) is locally free of finite rank.
+
+\end{itemize}
+
+Informally, a smooth morphism behaves like a submersion in differential geometry, providing "nice" fiber structures and descent properties.
+
+Given a scheme $S$, the \hldef{category of smooth schemes over $S$} is the following \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category}:
+\begin{itemize}
+    \item The objects are smooth morphisms $X \to S$. 
+    \item The morphisms betewen objects $X_1 \to S$ and $X_2 \to S$ are \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$S$-morphisms} $X_1 \to X_2$ such that the following commutes:
+    \begin{center}
+        \begin{tikzcd}
+        X_1 \ar[rr] \ar[dr] & &  X_2 \ar[dl] \\
+        & S &
+        \end{tikzcd}
+    \end{center}
+\end{itemize}
+The category of smooth schemes over $S$ is often denoted by notations such as \hl{$\mathrm{Sm}/S$}, \hl{$\mathbf{Sm}/S$}, \hl{$\mathrm{Sm}_S$}, \hl{$\mathbf{Sm}_S$} etc.
+
+\end{definition}

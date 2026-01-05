@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:field_homomorphism}
+Let $K$ and $L$ be \CrefAndHyperrefIfExist{definition:field}{fields}.
+\begin{enumerate}
+    \item A map $\phi: K \to L$ is a \hldef{field homomorphism} if it satisfies the following axioms for all $x, y \in K$:
+    \begin{enumerate}
+        \item $\phi(x + y) = \phi(x) + \phi(y)$ (additivity);
+        \item $\phi(xy) = \phi(x)\phi(y)$ (multiplicativity);
+        \item $\phi(1_K) = 1_L$ (unitality).
+    \end{enumerate}
+    Equivalently, a field homomorphism is a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} between fields.
+
+    If such a map exists, we often say that \hldef{$K$ embeds into $L$}; this terminology is justified because field homomorphisms are \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} as set maps (\Cref{proposition:field_homomorphism_is_injective}). 
+
+    \item A field homomorphism $\phi: K \to L$ is an \hldef{isomorphism} if it is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijective}. 
+
+    \item The set of all homomorphisms from a field $K$ to a field $L$ is denoted by \hl{$\operatorname{Hom}(K, L)$}. 
+    
+    \item Assuming that $K$ and $L$ have a common subfield $F$, an \hldef{$F$-embedding of $K$ into $L$} is an embedding $K \to L$ that acts as the \CrefAndHyperrefIfExist{definition:identity_function_on_a_set}{identity map} on $F$. The set of $F$-embeddings of $K$ into $L$ is denoted by \hl{$\operatorname{Hom}_F(K, L)$}.
+\end{enumerate}
+
+If $K$ and $L$ are fields such that $K$ embeds into $L$, then that means that there is a \CrefAndHyperrefIfExist{definition:extension_of_a_field}{subfield} of $L$ that is isomorphic to $K$.
+
+\end{definition}

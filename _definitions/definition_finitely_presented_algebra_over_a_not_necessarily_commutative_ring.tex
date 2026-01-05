@@ -1,0 +1,11 @@
+\begin{definition}[Finitely presented algebra over a ring] \label{definition:finitely_presented_algebra_over_a_not_necessarily_commutative_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. An \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra} $A$ is said to be \hldef{finitely presented} if there exists an integer $n \geq 0$ and a surjective $R$-algebra homomorphism
+    $$\varphi: R\langle x_1, \ldots, x_n \rangle \twoheadrightarrow A$$
+    where $R\langle x_1, \ldots, x_n \rangle$ is the \CrefAndHyperrefIfExist{definition:free_associative_algebra_over_a_ring}{free $R$-algebra on $n$ generators}, such that the kernel $\ker(\varphi)$ is a finitely generated \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{two-sided ideal} of $R\langle x_1, \ldots, x_n \rangle$.
+
+    In other words, $A$ admits a presentation as
+    $$A \cong R\langle x_1, \ldots, x_n \rangle / I,$$
+    where $I$ is a \CrefAndHyperrefIfExist{definition:ideal_generated_by_a_subset_of_a_ring}{finitely generated} two-sided ideal.
+
+    If $R$ and $A$ are commutative rings, this recovers the usual definition of a finitely presented commutative $R$-algebra by replacing $R\langle x_1, \ldots, x_n \rangle$ with the polynomial ring $R[x_1, \ldots, x_n]$ and $I$ a finitely generated ideal.
+\end{definition}

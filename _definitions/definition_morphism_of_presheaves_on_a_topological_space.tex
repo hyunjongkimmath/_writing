@@ -1,0 +1,21 @@
+
+\begin{definition}[Morphism of presheaves on a topological space] \label{definition:morphism_of_presheaves_on_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $\calD$ be a \CrefAndHyperrefIfExist{definition:category}{category} and let $\mathcal{F}$, and $\mathcal{G}$ be \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaves valued in $\calD$ on $X$}.  
+
+    A \hldef{morphism of presheaves} $\varphi: \mathcal{F} \to \mathcal{G}$ is a collection of maps
+    $$\varphi(U): \mathcal{F}(U) \to \mathcal{G}(U)$$
+    in $\calD$ defined for every open set $U \subseteq X$, such that the maps are compatible with restriction: for every inclusion $V \subseteq U$ of open sets, the diagram
+    \[
+    \begin{array}{ccc}
+    \mathcal{F}(U) & \xrightarrow{\varphi(U)} & \mathcal{G}(U) \\
+    \downarrow \rho^U_V & & \downarrow \rho^U_V \\
+    \mathcal{F}(V) & \xrightarrow{\varphi(V)} & \mathcal{G}(V)
+    \end{array}
+    \]
+    commutes.  
+
+    Equivalently, $\varphi$ is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} of $\calF, \calG$, \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{regarded as} functors 
+    $$\mathcal{F}, \mathcal{G}: \mathbf{Open}(X)^{\op} \to \calD.$$
+
+    If $\calF$ and $\calG$ are sheaves, then a \hldef{morphism of sheaves} is a morphism between $\calF$ and $\calG$ as presheaves.
+\end{definition}

@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:category_of_rings_over_a_ring}
+    \begin{enumerate}
+        \item Let $R$ be a not necessarily commutative \CrefAndHyperrefIfExist{definition:ring}{ring}. The \hldef{category of rings over $R$} or the \hldef{category of $R$-rings} is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:ring_homomorphism}{$R$-rings} ($S$, $\varphi$) and whose morphisms $(S_1, \varphi_1) \to (S_2, \varphi_2)$ are given by ring homomorhpisms $\psi: S_1 \to S_2$ such that $\varphi_2 = \psi \circ \varphi_1$.
+        \begin{center}
+            \begin{tikzcd}
+                & R \arrow[ld, "\varphi_1"'] \arrow[rd, "\varphi_2"] & \\
+                S_1 \arrow[rr, "\psi"'] & & S_2
+            \end{tikzcd}
+        \end{center}
+        \TextIfExists{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{
+        Equivalently, the category of $R$-rings is the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{category of objects under} the object $S$ in the \CrefAndHyperrefIfExist{definition:category_of_rings}{category of rings}.
+        }
+        The category of rings over $R$ is often denoted by notations such as \hl{$\mathbf{Ring}_R$}.
+
+        \item The category of commutatative $R$-rings is the full subcategory of $\mathbf{Ring}_R$ consisting of the $R$-rings $(A, \varphi)$ such that $A$ is a commutative ring. It is denoted by notations such as \hl{$\mathbf{CommRing}_R$} or \hl{$\mathbf{CRing}_R$}. 
+    \end{enumerate} 
+\end{definition}

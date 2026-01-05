@@ -1,0 +1,22 @@
+\begin{theorem} \label{theorem:adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites}
+    \TODO{It is likely that some more restrictions are needed; e.g. must $C$ and $D$ be small and $\calA$ locally small to ensure that we can talk about hom's between sheaves?}
+Let $(C,J)$ and $(D,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}, and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor} of sites. Let $\mathcal{A}$ be a (large) category such that the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf category} $\operatorname{PreSh}(\calD,K;\mathcal{A})$ has \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification}.
+
+
+% with all small limits and colimits in which \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} are valued.
+
+% Let $\mathcal{A}$ be a (large) category with all small limits and colimits in which \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} are valued.
+
+Then the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image functor}
+\[
+u_s : \operatorname{Sh}(D,K;\mathcal{A}) \to \operatorname{Sh}(C,J;\mathcal{A})
+\]
+(assuming that the inverse images of all sheaves on $(D,K)$ valued in $\calA$ exist by virtue of $\calA$ admitting enough \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{colimits}) and the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image functor}
+\[
+u^s : \operatorname{Sh}(C,J;\mathcal{A}) \to \operatorname{Sh}(D,K;\mathcal{A})
+\]
+form an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint pair}, i.e., for any sheaves $\mathcal{F} \in \operatorname{Sh}(D,K;\mathcal{A})$ and $\mathcal{G} \in \operatorname{Sh}(C,J;\mathcal{A})$, there is a natural isomorphism
+\[
+\operatorname{Hom}_{\operatorname{Sh}(C,J)}(u_s\mathcal{F}, \mathcal{G}) \cong \operatorname{Hom}_{\operatorname{Sh}(D,K)}(\mathcal{F}, u^s\mathcal{G}).
+\]
+\end{theorem}

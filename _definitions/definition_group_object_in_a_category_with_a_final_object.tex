@@ -1,0 +1,35 @@
+\begin{definition} \label{definition:group_object_in_a_category_with_a_final_object}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object}. 
+    A \hldef{group object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:monoid_object_in_a_category_with_a_final_object}{monoid object} $(A,\mu, \eta)$ together with a \hldef{inverse morphism} 
+    $$
+    \iota : A \to A
+    $$
+    such that the diagrams
+    $$
+    \begin{tikzcd}
+    A
+    \arrow[r, "\Delta"]
+    \arrow[dr, "\eta \circ {!}_A"']
+    & A \times A
+    \arrow[d, "\mu \circ (\mathrm{id}_A \times \iota)"]
+    \\
+    & A
+    \end{tikzcd}
+    $$
+
+    $$
+    \begin{tikzcd}
+    A
+    \arrow[r, "\Delta"]
+    \arrow[dr, "\eta \circ {!}_A"']
+    & A \times A
+    \arrow[d, "\mu \circ (\iota \times \mathrm{id}_A)"]
+    \\
+    & A
+    \end{tikzcd}
+    $$
+
+    commute, where $\Delta : A \to A \times A$ is the diagonal and ${!}_A : A \to 1$ is the unique morphism.
+
+
+\end{definition}

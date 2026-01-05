@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:left_right_action_of_a_semigroup_object_in_a_category_with_a_}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} and let $G$ be a \CrefAndHyperrefIfExist{definition:semigroup_object_in_a_category}{semigroup object} in $\mathcal{C}$. Let $X$ be an object of $\mathcal{C}$ such that the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} $G \times X$ (and hence $X \times G$) exists in $\calC$.
+\begin{itemize}
+    \item A \hldef{left action of $G$ on $X$} is a morphism $\sigma: G \times X \to X$ such that the following diagram commutes (associativity):
+    $$\sigma \circ (m \times \operatorname{id}_X) = \sigma \circ (\operatorname{id}_G \times \sigma).$$
+    \item A \hldef{right action of $G$ on $X$} is a morphism $\rho: X \times G \to X$ such that:
+    $$\rho \circ (\operatorname{id}_X \times m) = \rho \circ (\rho \times \operatorname{id}_G).$$
+\end{itemize}
+\end{definition}

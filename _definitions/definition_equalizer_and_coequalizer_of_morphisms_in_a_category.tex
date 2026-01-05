@@ -1,0 +1,51 @@
+\begin{definition}[Equalizer in a category] \label{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} and let $f, g : X \to Y$ be morphisms in $\mathcal{C}$. 
+\begin{enumerate}
+    \item An \hldef{equalizer of $f$ and $g$} is an object $E$ together with a morphism
+    $$e : E \to X$$
+    such that
+    $$f \circ e = g \circ e$$
+    and for any object $Z$ with morphism $z : Z \to X$ satisfying
+    $$f \circ z = g \circ z,$$
+    there exists a unique morphism $u : Z \to E$ making the diagram commute:
+    $$e \circ u = z.$$
+
+    \begin{center}
+        \begin{tikzcd}[column sep=large, row sep=large]
+        Z \arrow[d, dashed, "\exists! u"] \arrow[dr, "z"] & & \\
+        E \arrow[r, "e"] & X \arrow[r, shift left, "f"] \arrow[r, shift right, "g"'] & Y
+        \end{tikzcd}
+    \end{center}
+    If such an equalizer of $f$ and $g$ exists, then we say that the following \hldef{equalizer diagram is exact}:
+    \begin{center}
+    \begin{tikzcd}[column sep=large, row sep=large]
+    E \arrow[r, "e"] & X \arrow[r, shift left, "f"] \arrow[r, shift right, "g"'] & Y
+    \end{tikzcd}
+    \end{center}
+
+    \item A \hldef{coequalizer of $f$ and $g$} is an object $Q$ together with a morphism
+    $$q : Y \to Q$$
+    such that
+    $$q \circ f = q \circ g$$
+    and for any object $Z$ with morphism $w : Y \to Z$ satisfying
+    $$w \circ f = w \circ g,$$
+    there exists a unique morphism $v : Q \to Z$ making the diagram commute:
+    $$v \circ q = w.$$
+
+    \begin{center}
+        \begin{tikzcd}[column sep=large]
+        X \arrow[r, shift left, "f"] \arrow[r, shift right, "g"'] & Y \arrow[r, "q"] \arrow[dr, "w"'] & Q \arrow[d, dashed, "\exists! v"] \\
+        & & Z
+        \end{tikzcd}
+    \end{center}
+    If such a coequalizer of $f$ and $g$ exists, then we say that the following \hldef{coequalizer diagram is exact}:
+    \begin{center}
+    \begin{tikzcd}[column sep=large, row sep=large]
+        X \arrow[r, shift left, "f"] \arrow[r, shift right, "g"'] & Y \arrow[r, "q"] & Q 
+    \end{tikzcd}
+    \end{center}
+
+
+
+\end{enumerate}
+\end{definition}

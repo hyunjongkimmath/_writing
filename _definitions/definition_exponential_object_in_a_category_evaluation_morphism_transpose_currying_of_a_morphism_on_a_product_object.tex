@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:exponential_object_in_a_category_evaluation_morphism_transpose_currying_of_a_morphism_on_a_product_object}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} which admits finite \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}.  Let $Y, Z$ be objects of $\mathcal{C}$.
+\begin{enumerate}
+    \item
+    An \hldef{exponential object from $Y$ to $Z$} is an object \hl{$Z^Y$} (also denoted \hl{$[Y, Z]$} or \hl{$\underline{\hom}(Y, Z)$}) equipped with a morphism
+    $$ \hlin{\text{ev}: Z^Y \times Y \to Z} $$
+    called the \hldef{evaluation morphism}, satisfying the following universal property:
+
+    \item 
+    For any object $X$ in $\mathcal{C}$ and any morphism $f: X \times Y \to Z$, there exists a unique morphism \hl{$\tilde{f}: X \to Z^Y$} (often called the \hldef{transpose} or \hldef{currying of $f$}) such that the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}
+        X \times Y \ar[r, "\tilde{f} \times \operatorname{id}_Y"] \ar[rd, "f"'] & Z^Y \times Y \ar[d, "\text{ev}"] \\
+        & Z
+    \end{tikzcd}
+    \end{center}
+    Equivalently, the functor $- \times Y : \mathcal{C} \to \mathcal{C}$ has a \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint}, denoted $(-)^Y : \mathcal{C} \to \mathcal{C}$.
+\end{enumerate}
+
+\end{definition}

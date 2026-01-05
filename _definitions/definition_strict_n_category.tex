@@ -1,0 +1,41 @@
+\begin{definition} \label{definition:strict_n_category}
+A \hldef{strict $0$-category} is a set.  
+A \hldef{strict $(n+1)$-category} is a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{category enriched in} the category of strict $n$-categories.  
+Explicitly, a strict $(n+1)$-category $\mathcal{C}$ consists of:
+\begin{itemize}
+  \item a collection of objects $\mathrm{Ob}(\mathcal{C})$; such an object is called a \hldef{$0$-cell} or synonymously a \hldef{$0$-morphism},
+  \item for each pair of objects $x, y \in \mathrm{Ob}(\mathcal{C})$, a strict $n$-category $\mathrm{Hom}_{\mathcal{C}}(x, y)$; inductively, this strict $n$-category itself contains \hldef{$k$-cells}, or synonymously \hldef{$k$-morphisms}, for $0 \leq k \leq n$; the $k$-cells of $\mathrm{Hom}_{\mathcal{C}}(x, y)$ are exactly the $k+1$-cells of $\calC$.
+  \begin{itemize}
+    \item For each object/$0$-cell $x$ of $\calC$, there is an \hldef{identity} \hl{$\id_x \in \Hom_\calC(x,x)$}, which is an $n+1$ cell of $\calC$ and or equivalently an $n$ cell of $\Hom_\calC(x,x)$. 
+  \end{itemize}
+    
+  \item composition functors 
+  $$\hlin{\circ_{x,y,z}: \mathrm{Hom}_{\mathcal{C}}(y, z) \times \mathrm{Hom}_{\mathcal{C}}(x, y) \to \mathrm{Hom}_{\mathcal{C}}(x, z)}$$
+  that satisfy the following:
+
+\begin{enumerate}
+  \item \textbf{(Strict associativity)}  
+  For any quadruple of objects $w, x, y, z$, the two possible compositions
+  $$ \circ_{w,y,z} \circ (1 \times \circ_{w,x,y}), \qquad \circ_{w,x,z} \circ (\circ_{x,y,z} \times 1) $$
+  are \emph{equal} as functors
+  \TODO{what is $1$?}
+  $$ \mathrm{Hom}_{\mathcal{C}}(y,z) \times \mathrm{Hom}_{\mathcal{C}}(x,y) \times \mathrm{Hom}_{\mathcal{C}}(w,x) \to \mathrm{Hom}_{\mathcal{C}}(w,z).  $$
+
+  \item \textbf{(Strict unit laws)}  
+  For each object $x \in \mathrm{Ob}(\mathcal{C})$, there exists a distinguished identity element
+  $$ \mathrm{id}_x \in \mathrm{Hom}_{\mathcal{C}}(x,x), $$
+  such that for all $x, y \in \mathrm{Ob}(\mathcal{C})$,
+  $$ \circ_{x,x,y}(\mathrm{id}_x, -) = 1_{\mathrm{Hom}_{\mathcal{C}}(x,y)}, \qquad \circ_{x,y,y}(-, \mathrm{id}_y) = 1_{\mathrm{Hom}_{\mathcal{C}}(x,y)}.  $$
+  That is, composing with an identity morphism acts as the identity functor.
+
+  \item \textbf{(Functoriality)}  
+  Each composition map $\circ_{x,y,z}$ is a strict $n$-functor; it preserves all
+  $k$-cell compositions and identities in the strict $n$-category structure of
+  each $\mathrm{Hom}_{\mathcal{C}}(x,y)$ strictly (i.e., on the nose).
+\end{enumerate}
+  
+\end{itemize}
+In particular, collecting all the strict $0$-categories yields the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}, i.e. the $1$-category whose objects are sets and morphisms are functions between these sets. Moreover, a strict $1$-category is equivalent to a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+
+Morphisms between strict $(n+1)$-categories are functors that preserve all levels of composition strictly.  
+\end{definition}

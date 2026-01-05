@@ -1,0 +1,48 @@
+\begin{definition}  \label{definition:extension_of_scalars_for_modules_along_ring_homomorphisms}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. This homomorphism gives $S$ the structure of an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R, R)$-bimodule} via \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars}. Let $T$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}.
+
+\begin{enumerate}
+    \item 
+    The \hldef{extension of scalars} (or \hldef{base change}) along $f$ is defined separately for modules:
+    \begin{itemize}
+        \item For an $(R-T)$-bimodule $M$, the extension of scalars of $M$ along $f$ is the $(S-T)$-bimodule \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{$S \otimes_R M$} where $S$ is viewed as an $(S, R)$-bimodule. In particular, the action of $s' \in S$ on a \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{simple tensor} $s \otimes m$ is given by $s' \cdot (s \otimes m) = (s's) \otimes m$.
+        
+        \item For a $(T-R)$-bimodule $M$, the extension of scalars of $M$ along $f$ is the $(T-S)$-bimodule $M \otimes_R S$ where $S$ is viewed as an $(R, S)$-bimodule. In particular, the action of $s' \in S$ on a simple tensor $m \otimes s$ is given by $(m \otimes s) \cdot s' = m \otimes (ss')$.
+    \end{itemize}
+
+    \item The \hldef{base change functor} (or \hldef{extension of scalars functor} or \hldef{induction functor}), denoted by \hl{$f^*$}, \hl{$S \otimes_R -$}, \hl{$- \otimes_R S$}, or \hl{$\operatorname{Ind}_R^S$}, is given by:
+    \begin{itemize}
+        \item For left $R$-modules:
+        $$f^*: {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T, \quad M \mapsto S \otimes_R M.$$
+        \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} This is the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars} functor $f_*: {}_S\mathsf{Mod}_{T} \to {}_R\mathsf{Mod}_{T}$.
+        
+        \item For right $R$-modules:
+        $$f^*: {}_T \mathsf{Mod}_R \to {}_T \mathsf{Mod}_S, \quad M \mapsto M \otimes_R S.$$
+        This is the left adjoint to the restriction of scalars functor $f_*: {}_T \mathsf{Mod}_S \to {}_T \mathsf{Mod}_R$.
+    \end{itemize}
+    
+    \item Let $A$ be an \CrefAndHyperrefIfExist{definition:ring_homomorphism}{$R$-ring}, i.e. a ring equipped with a ring homomorphism $R \to A$. Assume that $S$ or $A$ is an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
+    
+    The \hldef{base change of the algebra $A$ along $f$} is the $S$-ring defined as
+    $$\hlin{ A_S := S \otimes_R A }$$
+    \CrefIfExists{definition:tensor_product_of_a_ring_and_an_algebra_over_a_ring}
+    equipped with the natural homomorphism $S \to S \otimes_R A$ given by $s \mapsto s \otimes 1_A$. As a ring, the multiplication in $A_S$ is determined by $(s_1 \otimes a_1)(s_2 \otimes a_2) = (s_1 s_2) \otimes (a_1 a_2)$ for $s_1, s_2 \in S$ and $a_1, a_2 \in A$.
+
+        \item 
+        Then the base change construction induces functors in the following situations:
+        \begin{enumerate}
+            \item If $S$ is only an $R$-ring, then base change induces a functor
+            \hl{$f^*: \mathbf{Alg}_R \to \mathbf{Ring}_S$}.
+            \item If $S$ is an $R$-algebra, then base change induces a functor
+            \hl{$f^*: \mathbf{Ring}_R \to \mathbf{Ring}_S$}
+            which restricts to a functor $f^*: \mathbf{Alg}_R \to \mathbf{Alg}_S$
+        \end{enumerate}
+        In either case, the base change functor is defined as follows:
+        \begin{itemize}
+            \item On objects: For any $R$-algebra $(A, \varphi)$, $f^*(A)$ is the $S$-algebra $S \otimes_R A$ defined above.
+            \item On morphisms: For any homomorphism of $R$-algebras $h: A \to B$, the image $f^*(h)$ is the map $\text{id}_S \otimes h: S \otimes_R A \to S \otimes_R B$, defined by $s \otimes a \mapsto s \otimes h(a)$.
+        \end{itemize}
+        \TODO{comment on adjunction}
+        % This functor is the left adjoint to the restriction of scalars functor $f_*: \mathbf{Alg}_S \to \mathbf{Alg}_R$.
+\end{enumerate}
+\end{definition}

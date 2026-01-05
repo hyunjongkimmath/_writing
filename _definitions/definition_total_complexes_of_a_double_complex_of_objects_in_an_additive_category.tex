@@ -1,0 +1,37 @@
+\begin{definition} \label{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}
+Let $(A^{p,q},d'_A,d''_A)$ be a \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complex} in an \CrefAndHyperrefIfExist{definition:additive_category}{additive category} $\mathcal{A}$. For each integer $n$, define:
+
+    \hlalign{
+    \begin{align*}
+    \Tot_{\oplus}^n(A) &= \bigoplus_{p+q=n} A^{p,q}, \\
+    \Tot_{\Pi}^n(A) &= \prod_{p+q=n} A^{p,q}.
+    \end{align*}
+    }
+
+assuming that the direct sum $\bigoplus_{p+q=n} A^{p,q}$ and the product $\prod_{p+q=n} A^{p,q}$ respectively exist.
+These are called the \hldef{direct-sum total complex} and the \hldef{product total complex}, respectively.
+
+Define the differentials categorically as follows:
+
+\begin{itemize}
+  \item For the direct sum total complex, the differential $d^n : \Tot_{\oplus}^n(A) \to \Tot_{\oplus}^{n+1}(A)$ is the unique morphism such that, for each $(p,q)$ with $p+q=n$, we have
+    \[
+    d^n \circ \iota_{p,q} =
+      \iota_{p+1,q} \circ d'_A {}^{p,q}
+      + (-1)^p\, \iota_{p,q+1} \circ d''_A {}^{p,q},
+    \]
+    where $\iota_{p,q} : A^{p,q} \to \Tot_{\oplus}^n(A)$ is the canonical inclusion.
+
+  \item For the product total complex, the differential $d^n : \Tot_{\Pi}^n(A) \to \Tot_{\Pi}^{n+1}(A)$ is the unique morphism such that, for each $(p,q)$ with $p+q=n+1$, we have
+    \[
+    \pi_{p,q} \circ d^n =
+      d'_A {}^{p-1,q} \circ \pi_{p-1,q}
+      + (-1)^{p-1}\, d''_A {}^{p,q-1} \circ \pi_{p,q-1},
+    \]
+    where $\pi_{p,q} : \Tot_{\Pi}^{n+1}(A) \to A^{p,q}$ is the canonical projection.
+\end{itemize}
+
+Then $(\Tot_{\oplus}^\bullet(A), d)$ and $(\Tot_{\Pi}^\bullet(A), d)$ are 
+\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in~$\mathcal{A}$, whenever the corresponding sums or products exist. 
+The complexes $\Tot_{\oplus}^\bullet(A)$ and $\Tot_{\Pi}^\bullet(A)$ are also denoted by \hl{$\Tot^{\oplus}(A)$} and \hl{$\Tot^{\Pi}(A)$}.
+\end{definition}

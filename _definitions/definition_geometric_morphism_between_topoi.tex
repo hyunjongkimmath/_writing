@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:geometric_morphism_between_topoi}
+Let $\mathcal{E}$ and $\mathcal{F}$ be \CrefAndHyperrefIfExist{definition:topos}{topoi}. A \hldef{geometric morphism from $\mathcal{F}$ to $\mathcal{E}$}, denoted $f: \mathcal{F} \to \mathcal{E}$, is a pair of adjoint functors \hl{$(f^*, f_*)$}
+$$ f^*: \mathcal{E} \rightleftarrows \mathcal{F} : f_* $$
+where:
+\begin{enumerate}
+    \item The functor \hl{$f^*$} (called the \hldef{inverse image functor}) is left adjoint to the functor \hl{$f_*$} (called the \hldef{direct image functor}).
+    \item The inverse image functor $f^*$ is left exact, meaning it preserves finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}.
+\end{enumerate}
+A \hldef{morphism of topoi} usually refers to a geometric morphism between topoi.
+\end{definition}

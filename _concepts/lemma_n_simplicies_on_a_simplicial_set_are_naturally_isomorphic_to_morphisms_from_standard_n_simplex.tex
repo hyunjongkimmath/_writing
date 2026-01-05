@@ -1,0 +1,13 @@
+\begin{lemma} \label{lemma:n_simplicies_on_a_simplicial_set_are_naturally_isomorphic_to_morphisms_from_standard_n_simplex}
+    % Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+    \begin{enumerate}
+
+        \item Let $X$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set}. The \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$n$-simplicies} $X^n$ is naturally isomorphic to $\Hom_{\operatorname{Simp} \Sets}(\Delta^n, X)$\CrefIfExists{definition:standard_n_simplex}.
+
+        \item Let $Y$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{cosimplicial set}. The \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$n$-cosimplicies} $Y^n$ is naturally isomorphic to $\Hom_{\operatorname{Cosimp} \Sets}(\Hom_\Delta([n], -), Y)$\CrefIfExists{definition:standard_n_simplex}.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    This is a consequence of the \CrefAndHyperrefIfExist{theorem:enriched_yoneda_lemma}{Yoneda lemma}.
+\end{proof}

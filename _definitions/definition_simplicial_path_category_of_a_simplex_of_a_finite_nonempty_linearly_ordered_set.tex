@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:simplicial_path_category_of_a_simplex_of_a_finite_nonempty_linearly_ordered_set}
+    Let $J$ be a finite nonempty linearly ordered set. Define the \hldef{simplicial path category} \hl{$\mathfrak{C}[\Delta^J]$} of \CrefAndHyperrefIfExist{definition:standard_n_simplex}{$\Delta^J$} as the following \CrefAndHyperrefIfExist{definition:simplicial_category}{simplicial category}:
+    \begin{itemize}
+        \item The objects of $\mathfrak{C}[\Delta^J]$ are the elements of $J$.
+        \item If $i,j \in J$, then 
+        $$\Hom_{\mathfrak{C}[\Delta^J]}(i,j) = \begin{cases} \emptyset &\text{if } j < i \\ N(P_{i,j}) &\text{if } i \leq j \end{cases}$$
+        \CrefIfExists{definition:nerve_of_a_category} where $P_{i,j}$ is the partially ordered set 
+        $$P_{i,j} = \{I \subseteq J: (i,j \in I) \wedge (\forall k \in I) [i \leq k \leq j])\}.$$
+
+        \item If $i_0 \leq i_1 \cdots i_n$, then the composition
+        $$\Hom_{\mathfrak{C}[\Delta^J]}(i_0,i_1) \times \cdots \times \Hom_{\mathfrak{C}[\Delta^J]}(i_{n-1},i_n) \to \Hom_{\mathfrak{C}[\Delta^J]}(i_0,i_n)$$
+        is induced by the map of partially ordered sets
+        \begin{align*}
+        P_{i_0,i_1} \times \ldots  \times P_{i_{n-1},i_n} &\rightarrow P_{i_0,i_n} \\
+        ( I_1, \ldots, I_n ) &\mapsto I_1 \cup \ldots \cup I_n.
+        \end{align*}
+    \end{itemize}
+    The functor $\mathfrak{C}: \Delta \to \mathbf{Cat}_\Delta$ (\Cref{definition:simplex_category}, \Cref{definition:simplicial_category}) extends uniquely (up to unique isomorphism) to a (small) colimit-preserving functor \hl{$\mathfrak{C}: \Sets_{\Delta} \to \mathbf{Cat}_\Delta$} (\Cref{definition:simplicial_cosimplicial_object_in_a_category}, \Cref{lemma:functor_from_category_of_simplicial_sets_to_category_of_simplicial_categories})
+\end{definition}

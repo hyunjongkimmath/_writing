@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}
+Let $\mathcal{C}$ and $\mathcal{D}$ be (large) categories. 
+Let $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ be functors such that $F$ is \hyperrefIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint to $G$}.
+
+The \hldef{unit of the adjunction} is the natural transformation $\eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow G F$ such that, for every $A \in \calC$, the morphism $\eta_A: A \to GF(A)$ (each called a \hldef{unit morphism}) in $\calC$ is obtained as the image of $\id_{F(A)}$ via the adjoint isomorphism
+$$\Hom_\calD(F(A), F(A)) \cong \Hom_\calC(A, GF(A)). $$
+
+
+The \hldef{counit of the adjunction} is the natural transformation
+$\epsilon : F G \Rightarrow \mathrm{Id}_{\mathcal{D}}$, that such that, for every $B \in \calD$, the morphism $\epsilon_B: FG(B) \to B$ (each called a \hldef{counit morphism}) in $\calD$ is obtained as the image of $\id_{G(B)}$ via the adjoint isomorphism 
+$$\Hom_\calC(G(B), G(B)) \cong \Hom_\calD(FG(B), B).$$
+
+These transformations satisfy the triangular identities:
+\begin{align*}
+G(\epsilon_B) \circ \eta_{G(B)} &= \mathrm{id}_{G(B)} \quad \forall B \in \mathrm{Ob}(\mathcal{D}), \\
+\epsilon_{F(A)} \circ F(\eta_A) &= \mathrm{id}_{F(A)} \quad \forall A \in \mathrm{Ob}(\mathcal{C}).
+\end{align*}
+\end{definition}

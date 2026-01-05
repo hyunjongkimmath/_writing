@@ -1,0 +1,211 @@
+
+The purpose of this diagram is to brainstorm some ideas on what problems to research that may employ some techniques involving (arithmetic) Fourier transform functors.
+
+\section{Deligne's fourier transform on \texorpdfstring{$\bbA^1/\Fq$}{A1/Fq}}
+
+Given a scheme $X$ and a prime number $\ell \neq \Char X$, let \hl{$\Dbc(X, \Qellbar)$} denote its cohomologically bounded derived category of constructible sheaves with $\Qellbar$ coefficients 
+
+Deligne devised the notion of Fourier transform on $\Dbc(\bbG_a / \Fq, \Qellbar)$\CrefIfExists{definition:fourier_transform_functor_on_the_cohomologically_bounded_derived_category_of_ell_adic_sheaves_on_the_additive_group_over_a_finite_field_associated_to_a_character_on_the_additive_group_of_the_finite_field}; just as classical Fourier transforms are by characters of the additive group of real numbers, Deligne's Fourier transforms are by characters of the additive group scheme $\bbG_a$.
+
+\input{../_definitions/definition_artin_schreier_morphism_of_the_additive_group_over_a_scheme.tex}
+
+\begin{lemma} \label{lemma:artin_schreier_morphism_has_galois_group_the_additive_group}
+Let $\Fq$ be a finite field. The \hyperrefIfExists{definition:artin_schreier_morphism_of_the_additive_group_over_a_scheme}{Artin-Schreier morphism} on $\bbA^1/\Fq$ is a geometrically irreducible, \'etale Galois covering of $\bbA^1/\Fq$ whose Galois group is canonically isomorphic to the additive group $\bbG_a(\Fq) \cong (\Fq,+)$.
+\end{lemma}
+
+\input{../_definitions/definition_artin_schreier_sheaf_of_a_character_on_the_additive_group_of_a_finite_field.tex}
+
+There is a generalization of Deligne's Fourier transform for vector bundles over more general base schemes. 
+
+% \input{../_definitions/definition_fourier_transform_functor_on_the_derived_category_of_ell_adic_sheaves_on_the_additive_group_associated_to_a_character_on_the_additive_group_of_the_finite_field.tex}
+\input{../_definitions/definition_fourier_transform_functor_of_deligne.tex}
+
+\TODO{TODO: state some properties of this Deligne's fourier transform, e.g. how fourier transforms of convolution products compare against tensor products of fourier transforms, how fourier transforms preserve perverse sheaves, how the trace functions of a derived object and its fourier transform compare.}
+
+\section{Proposed Fourier transform functor}
+
+There are multiple difficulties when trying to generalize \hyperrefIfExists{definition:fourier_transform_functor_on_the_cohomologically_bounded_derived_category_of_ell_adic_sheaves_on_the_additive_group_over_a_finite_field_associated_to_a_character_on_the_additive_group_of_the_finite_field}{Deligne's fourier transform functor} to more general (commutative) algebraic group schemes $G$ (over finite fields). One is that $G$ might not have a good notion of ``dual group scheme'' parameterizing characters $G(\Fqn) \to \Qellbar^\times$. Another is that candidate functors may not preserve perverse sheaves. 
+
+Although we do not fix these issues, we simply study candidate Fourier transform functors mainly to use the fact that such functors convert convolution products into tensor products. Instead of defining Fourier transforms in terms of characters, we instead define them in terms of bilinear pairings. While doing so, we observe that Bauer and Carlson \cite{bauer_carlson_tpafag} proved the existence of tensor products of affine commutative group schemes over perfect fields.
+
+\begin{definition}[{\cite[Definition 1.1]{bauer_carlson_tpafag}}] \label{definition:tensor_product_of_group_objects_in_a_category}
+    Let $\calC$ be a (locally small) scategory with finite products. Let $\Ab(\calC)$ be the category of commutative group objects in $\calC$. Let $A,A',B \in \Ab(\calC)$.
+    \begin{enumerate}
+        \item A morphism $b \in \Hom_\calC(A \times A', B)$ is called \hldef{bilinear} if the induced map
+        $$\Hom_{\calC}(-, A) \times \Hom_{\calC}(-, A') \to \Hom_{\calC}(-, B)$$
+        is a bilinear natural transformation of abelian groups. Denote by $\operatorname{Bil}(A,A';B)$ the set of such bilinear maps.
+        \item A \hldef{tensor product object of $A$ and $A'$}, if it exists, is an object $A \otimes A'$ together with a bilinear morphism $a: A \times A' \to A \otimes A'$ in $\calC$ such that the natural transformation
+        $$\Hom_{\Ab(\calC)}(A \otimes A', -) \to \operatorname{Bil}(A,A';-), \quad f \mapsto f \circ a$$
+        is a natural isomorphism.
+    \end{enumerate}
+\end{definition}
+
+\begin{theorem}[{\cite[Theorem 1.3]{bauer_carlson_tpafag}}]
+    Let $k$ be a perfect field. \hyperrefIfExists{definition:tensor_product_of_group_objects_in_a_category}{Tensor products} exist in the category of affine commutative group schemes over $k$.
+\end{theorem}
+
+\input{../_definitions/definition_kummer_sheaf_of_a_character_on_the_tensor_product_of_commutative_group_schemes_over_a_finite_field.tex}
+
+We then propose the following definition, analogous to the Fourier-Mukai transform for coherent sheaves:
+
+\begin{definition} \label{definition:fourier_transform_functor_for_a_bilinear_pairing_of_commutative_group_schemes_over_a_field}
+    \TODO{TODO: I think that this definition could stand to be generalized in the Fourier-Mukai way, where the "kernel" is more general.}
+    Let $G_1,G_2/\Fq$ be connected commutative group schemes such that $G_1 \otimes G_2$ exists. Given a character $b: (G_1 \otimes G_2)(\Fq) \to \Qellbar^\times$, define the \hldef{Fourier transform (from $G_1$ to $G_2$) associated to $b$} to be the functor
+    $$\hlin{T_{b}: \Dbc(G_1, \Qellbar) \to \Dbc(G_2, \Qellbar)}$$
+    defined by
+    $$T_b(M) = R\pi_{2!}\left( \pi_1^*(M) \otimes \calL_b \right)$$
+    where $\pi_i$ for $i = 1,2$ is the projection morphism $G_1 \times G_2 \to G_i$.
+\end{definition}
+
+We expect this functor to roughly satisfy the following type of isomorphism:
+$$T_b(M_1 *_! M_2) \cong T_b(M_1) \otimes T_b(M_2).$$
+
+In turn, we expect to be able to relate the Tannakian monodromy groups of perverse sheaves on $M_1$ under the convolution product with the usual monodromy groups of local systems on $G_2$.
+
+\subsection{Other ideas}
+One other idea would be to use Cristian D. Gonz\'alez-Avil\'es' recent work, working in the category of $\Fq$-1-motives, where every commutative algebraic group has a dual object displaying a form of Pontryagin duality. This would require more extensive study of sheaves and their derived categories on such a category of motives.
+
+\section{Facts about the Fourier transform associated to bilinear pairings}
+
+In this section, we prove some concrete facts about the Fourier transform \CrefIfExists{definition:fourier_transform_functor_for_a_bilinear_pairing_of_commutative_group_schemes_over_a_field} over finite fields.
+
+
+\begin{proposition} \label{proposition:delignes_dictionary_of_trace_functions}
+    Let $X$ be a scheme over $\bbF_q$ and let $f: X \to Y$ be a morphism of schemes over $\bbF_q$. The following hold of objects of $\Dbc(X, \Qellbar)$ (and $\Dbc(Y,\Qellbar)$):
+    \begin{enumerate}
+        \item $t_{\Qellbar} = 1$
+        \item $t_{M_2} = t_{M_1} + t_{M_3}$ for all distinguished triangles $M_1 \to M_2 \to M_3 \to$ in $\Dbc(X, \Qellbar)$.
+        \item $t_{M_1 \otimes M_2} = t_{M_1} \cdot t_{M_2}$
+        \item If $Rf_!$ exists, then 
+        $$t_{Rf_! M}(x;\Fq) = \sum_{x \in X(\Fq); f(x) = y} t_{N}(y;\Fq).$$
+        \item $t_{f^*N}(y;\Fq) = t_{N}(f(x); \Fq)$
+        \item $t_{M[n]} = (-1)^n t_M$
+        \TODO{TODO: define Tate twist and verify the below}
+        \item $t_{M(w)}(x;\Fq) = q^{-w/2} t_M(x;\Fq)$
+        \item If $M$ is a $\tau$-mixed complex that is $\tau$-pure of weight $w$, then 
+        $$t_{DM}(x;\Fq) = q^{-w} \cdot \overline{t_{M}(x;\Fq)}.$$
+    \end{enumerate}
+\end{proposition}
+
+\begin{proposition} \label{proposition:trace_of_frobenius_of_kummer_sheaf_of_a_character}
+\TODO{TODO: define the kummer sheaf of a character}
+\TODO{TODO: define the norm}
+    Let $G/\Fq$ be a commutative group scheme. Let $\chi: G(\Fq) \to \Qellbar^\times$ be a character. For all $x \in G(\Fq)$, we have 
+    $$t_{\calL_\chi}(x;\Fqn) = \chi(N_{\Fqn/\Fq} (x)).$$
+    \CrefIfExists{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}
+\end{proposition}
+
+\begin{corollary}
+    Let $G_1,G_2/\Fq$ be commutative group schemes such that $G_1 \otimes G_2$ exists. Let $b: (G_1 \otimes G_2)(\Fq) \to \Qellbar^\times$ be a character. For all $(x_1,x_2) \in (G_1 \times_{\Fq} G_2)(\Fq) \cong G_1(\Fq) \times G_2(\Fq)$, we have  
+    $$t_{\calL_b}((x_1,x_2);\Fq) = b(N_{\Fqn / \Fq}(x_1), N_{\Fqn / \Fq}(x_2))$$
+\end{corollary}
+\begin{proof}
+    By definition, $\calL_b$ is the pullback to $G_1 \times G_2$ of the Kummer sheaf (also denoted by $\calL_b$) of $b$ on $G_1 \otimes G_2$. Thus, 
+    $$t_{\calL_b}((x_1,x_2);\Fq) = t_{\calL_b}(x_1 \otimes x_2;\Fq)$$
+    where $x_1 \otimes x_2 \in (G_1 \otimes G_2)(\Fq)$ is the image of $(x_1,x_2)$ under the canonical morphism $G_1 \times G_2 \to G_1 \otimes G_2$. The desired result follows from \Cref{proposition:trace_of_frobenius_of_kummer_sheaf_of_a_character}.
+\end{proof}
+
+\begin{notation} \label{notation:projection_morphisms_for_fourier_transform_functor_proof}
+As in \Cref{definition:fourier_transform_functor_for_a_bilinear_pairing_of_commutative_group_schemes_over_a_field} let \hl{$\pi_i$} be the projection morphism $G_1 \times G_2 \to G_i$ for $i = 1,2$. Further write $A_1$ and $A_2$ for the first and second copies of $G_1$ in the product $G_1 \times G_1 \times G_2$ and write $A_3$ for the copy of $G_2$. We write \hl{$\pi_{?}$} for projection morphisms from $G_1 \times G_1 \times G_2 = A_1 \times A_2 \times A_3$ where the subscript indicates the target; for example, $\pi_{A_1}$ denotes the projection morphism $A_1 \times A_2 \times A_3 \to A_1$ and $\pi_{A_1 \times A_3}$ denotes the projection morphism $A_1 \times A_2 \times A_3 \to A_1 \times A_3$.
+\end{notation}
+
+\begin{theorem}
+    \TODO{TODO: this transformation theorem only really depends on the property specified in \Cref{lemma:pullbacks_of_kummer_sheaves_of_characters_on_a_tensor_product_of_commutative_group_schemes_over_a_finite_field}}
+
+    Let $G_1,G_2/\Fq$ be connected commutative group schemes such that $G_1 \otimes G_2$ exists. Let $b: (G_1 \otimes G_2)(\Fq) \to \Qellbar^\times$ be a character. Let 
+    $$T_{b}: \Dbc(G_1, \Qellbar) \to \Dbc(G_2, \Qellbar)$$
+    be the Fourier transform from $G_1$ to $G_2$ associated to $b$.
+    Given objects $M,N \in \Dbc(G_1, \Qellbar)$, we have 
+    $$T_b(M_1 *_! M_2) \cong T_b(M_1) \otimes T_b(M_2)$$
+\end{theorem}
+\begin{proof}
+    \TODO{TODO: cite the projection formula, base change theorems etc. for six functor formalisms}
+
+    By definition,
+    $$T_b(M_1) \otimes T_b(M_2) = R\pi_{2!} (\pi_1^* M \otimes \calL_b) \otimes R\pi_{2!} (\pi_1^* N \otimes \calL_b)$$
+    which is isomorphic to 
+    \begin{equation}
+    R\pi_{2!}\left( \pi_1^* M \otimes \calL_b \otimes \pi_2^* R\pi_{2!} (\pi_1^* N \otimes \calL_b)\right) \label{eq:fourier_transform_changes_convolutions_to_tensor_products_1}
+    \end{equation}
+    by the projection formula. By the base change theorem for the Cartesian diagram
+    \begin{center}
+        \begin{tikzcd}
+            A_1 \times A_2 \times A_3 \ar[r, "\pi_{A_2 \times A_3}"] \ar[d, "\pi_{A_1 \times A_3}"] & A_2 \times A_3 \ar[d, "\pi_2"] \\
+            A_1 \times A_3 \ar[r, "\pi_2"] & A_3
+        \end{tikzcd},
+    \end{center}
+    we can identify $\pi_2^* R\pi_{2!}$ with $R\pi_{A_1 \times A_3 !} \pi_{A_2 \times A_3}^*$. Thus, \eqref{eq:fourier_transform_changes_convolutions_to_tensor_products_1} is isomorphic to 
+    \begin{equation*}
+    R\pi_{2!}\left( \pi_1^* M \otimes \calL_b \otimes R\pi_{A_1 \times A_3 !} \pi_{A_2 \times A_3}^* (\pi_1^* N \otimes \calL_b)\right).
+    \end{equation*}
+    By the projection formula, this is isomorphic to 
+    \begin{equation*}
+    R\pi_{2!}\left( \pi_1^* M \otimes R\pi_{A_1 \times A_3 !}  \left(\pi_{A_1 \times A_3}^* \calL_b \otimes \pi_{A_2 \times A_3}^* (\pi_1^* N \otimes \calL_b) \right) \right),
+    \end{equation*}
+    which in turn is isomorphic to \TODO{TODO: cite the fact that pullbacks preserve tensor products}
+    \begin{align*}
+    R\pi_{2!}\left( \pi_1^* M \otimes R\pi_{A_1 \times A_3 !} \left(\pi_{A_1 \times A_3}^* \calL_b \otimes \pi_{A_2 \times A_3}^* \pi_1^* N \otimes \pi_{A_2 \times A_3}^* \calL_b \right) \right) \\
+    = R\pi_{2!}\left( \pi_1^* M \otimes R\pi_{A_1 \times A_3 !} \left(\pi_{A_1 \times A_3}^* \calL_b \otimes \pi_{A_2}^* N \otimes \pi_{A_2 \times A_3}^* \calL_b \right) \right).
+    \end{align*}
+    By \Cref{lemma:pullbacks_of_kummer_sheaves_of_characters_on_a_tensor_product_of_commutative_group_schemes_over_a_finite_field}, this is isomorphic to 
+    $$R\pi_{2!} \left( \pi_1^* M \otimes R\pi_{A_1 \times A_3 !}  \left( \pi_{A_2}^* N \otimes m^* \calL_b \right) \right)$$
+    where $m: G_1 \times G_1 \times G_2 \to G_1 \times G_2$ is given by $(m_{G_1}, \id_{G_2})$ where $m_{G_1}$ is the multplication morphism on the two copies of $G_1$. By the projection formula, this is isomorphic to 
+    $$R\pi_{2!} \left( R\pi_{A_1 \times A_3 !} \left( \pi_{A_1 \times A_3}^* \pi_1^* M \otimes \pi_{A_2}^* N \otimes m^* \calL_b  \right) \right) \cong R\pi_{2!} \left( R\pi_{A_1 \times A_3 !} \left( \pi_{A_1}^* M \otimes    \pi_{A_2}^* N \otimes m^* \calL_b  \right) \right).$$
+    Noting that $\pi_2 \circ \pi_{A_1 \times A_3} = \pi_2 \circ m$, this is then isomorphic to 
+    \begin{equation} \label{eq:fourier_transform_changes_convolutions_to_tensor_products_2}
+    R\pi_{2!} \left( Rm_! \left( \pi_{A_1}^* M \otimes    \pi_{A_2}^* N \otimes m^* \calL_b  \right) \right).
+    \end{equation}
+    Now writing $\operatorname{pr}_i:G_1 \times G_1 \to G_1$ to denote the two projection maps for $i=1,2$, note that $\pi_{A_i} = \pi_{i} \circ \pi_{A_1 \times A_2}$. Therefore, \eqref{eq:fourier_transform_changes_convolutions_to_tensor_products_2} is isomorphic to 
+    \begin{equation*} 
+    R\pi_{2!} \left( Rm_! \left( \pi_{A_1 \times A_2}^*(\operatorname{pr}_1^* M \otimes \operatorname{pr}_2^* N) \otimes m^* \calL_b  \right) \right) = 
+    R\pi_{2!} \left( Rm_! \left( \pi_{A_1 \times A_2}^*(M \boxtimes N) \otimes m^* \calL_b  \right) \right).
+    \end{equation*}
+    The projection formula shows that this is isomorphic to 
+    \begin{equation*} \label{eq:fourier_transform_changes_convolutions_to_tensor_products_3}
+        R\pi_{2!} \left( Rm_! \left( \pi_{A_1 \times A_2}^*(M \boxtimes N) \right) \otimes \calL_b   \right).
+    \end{equation*}
+    Moreover, $Rm_! \pi_{A_1 \times A_2}^* \cong \pi_1^* Rm_{G_1!}$ by the base change theorem applied to the following Cartesian diagram:
+    \begin{center}
+    \begin{tikzcd}
+        A_1 \times A_2 \times A_3 = G_1 \times G_1 \times G_2  \ar[r, "\pi_{A_1 \times A_2}"] \ar[d, "m"] & A_1 \times A_2 = G_1 \times G_1 \ar[d, "m_{G_1}"] \\  A_1 \times A_2 = G_1 \times G_1 \ar[r, "\pi_1"] & G_1
+    \end{tikzcd}.
+    \end{center}
+    Therefore, \Cref{eq:fourier_transform_changes_convolutions_to_tensor_products_3} is isomorphic to 
+    \begin{equation*} 
+        R\pi_{2!} \left( \pi_1^* (Rm_{G_1!} (M \boxtimes N))  \otimes \calL_b   \right) = R\pi_{2!} \left( \pi_1^* (M *_! N)  \otimes \calL_b   \right) = T_b(M *_! N)
+    \end{equation*}
+    as desired.
+\end{proof}
+
+
+\begin{lemma} \label{lemma:pullbacks_of_kummer_sheaves_of_characters_on_a_tensor_product_of_commutative_group_schemes_over_a_finite_field}
+    \TODO{TODO: does it suffice for $b$ to be a group homomorphism rather than a general character? Does it suffice for $G_1$ and $G_2$ to be over a general field?}
+    Let $G_1,G_2/\Fq$ be connected commutative group schemes such that $G_1 \otimes G_2$ exists. Let $b: (G_1 \otimes G_2)(\Fq) \to \Qellbar^\times$ be a character. There is a natural isomorphism
+    $$\pi_{A_1 \times A_3}^* \calL_b \otimes \pi_{A_2 \times A_3}^* \calL_b \cong m^* \calL_b$$
+    \CrefIfExists{definition:kummer_sheaf_of_a_character_on_the_tensor_product_of_commutative_group_schemes_over_a_finite_field} of sheaves on $G_1 \times G_2 \times G_3$ 
+    where $\pi_{A_1 \times A_3}$ and $\pi_{A_2 \times A_3}$ are as in \Cref{notation:projection_morphisms_for_fourier_transform_functor_proof} and $m: G_1 \times G_1 \times G_2 \to G_1 \times G_2$ is given by $(m_{G_1}, \id_{G_2})$ where $m_{G_1}$ is the multplication morphism on the two copies of $G_1$, i.e. $m(a,b,c) = m(ab,  c)$ for points $a,b$ of $G_1$ and $c$ of $G_2$.
+\end{lemma}
+\begin{proof}
+    On both sides are rank $1$ local systems on $G_1 \times G_1 \times G_2$. The trace functions of the two local systems are equal for all $n \geq 1$: more precisely,
+    $$t_{\pi_{A_1 \times A_3}^* \calL_b \otimes \pi_{A_2 \times A_3}^* \calL_b}((a,b,c);\Fqn) = t_{m^* \calL_b}((a,b,c);\Fqn)$$
+    for all $(a,b,c) \in G_1 \times G_2 \times G_3(\Fqn)$. This is a consequence of \Cref{proposition:delignes_dictionary_of_trace_functions} and \Cref{proposition:trace_of_frobenius_of_kummer_sheaf_of_a_character}, along with the fact that $b$ is a group homomorphism on $(G_1 \otimes G_2)(\bbF_q)$, i.e. a bilinear form on $G_1(\bbF_q) \times G_2(\bbF_q)$. 
+
+    If $L$ is any local system on $G_1 \times G_1 \times G_2$, then the shift $L[\dim(G_1 \times G_1 \times G_2)]$, as an object of $\Dbc(C, \Qellbar)$, is a perverse sheaf \TODO{TODO: cite the general theorem that talks about the categorization of simple perverse sheaves}. If $L$ is irreducible as a local system, then the resulting perverse sheaf is arithmetically simple. Moreover, the shift scales the trace function by exactly $(-1)^{\dim(G_1 \times G_1 \times G_2)}$. Therefore \TODO{TODO: cite the general statement that if trace functions match, then the objects are equal in the Grothendieck group}, the two local systems are isomorphic.
+\end{proof}
+
+% \begin{lemma}
+
+% \end{lemma}
+
+
+
+
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_additive_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_local_system_of_Lambda_modules_on_a_scheme.tex}
+
+\input{../_definitions/definition_frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field.tex}

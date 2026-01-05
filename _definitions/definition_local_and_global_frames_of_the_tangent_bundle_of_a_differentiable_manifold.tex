@@ -1,0 +1,18 @@
+\begin{definition}[Local and global frames of the tangent bundle of a differentiable manifold] \label{definition:local_and_global_frames_of_the_tangent_bundle_of_a_differentiable_manifold}
+Let $k \in \mathbb{Z}_{\geq 1} \cup \{\infty\}$, let $M$ be a $C^k$ manifold of (pure) dimension $n$, and let \CrefAndHyperrefIfExist{definition:tangent_bundle_of_a_C_k_manifold}{$TM$ be its tangent bundle}.
+
+\begin{enumerate}
+  \item Let $U \subseteq M$ be a nonempty open subset.
+  A \hldef{local $C^k$ frame of $TM$ over $U$} (or simply a \hldef{local frame over $U$}) is an ordered $n$-tuple of \CrefAndHyperrefIfExist{definition:local_and_global_vector_field_on_a_C_k_manifold}{local $C^k$ vector fields}
+  $$ (X_1,\dots,X_n) \in \Gamma^k(TU)^n $$
+  \CrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold} such that for every point $p \in U$ the $n$-tuple
+  $$ (X_1(p),\dots,X_n(p)) $$
+  is a \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{basis} of the $n$-dimensional real vector space $T_pM$.
+
+  \item A \hldef{global $C^k$ frame of $TM$} (or simply a \hldef{global frame}) is a local $C^k$ frame over $U = M$, i.e.\ an ordered $n$-tuple of global $C^k$ vector fields
+  $$
+  (X_1,\dots,X_n) \in \Gamma^k(TM)^n
+  $$
+  such that $(X_1(p),\dots,X_n(p))$ is a basis of $T_pM$ for every $p \in M$.
+\end{enumerate}
+\end{definition}

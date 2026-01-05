@@ -1,0 +1,18 @@
+
+
+\begin{definition}[Riemannian metric of a smooth manifold and Riemannian manifold] \label{definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold} 
+    Let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold} of dimension $n$ with or without boundary.
+    A \hldef{Riemannian metric on $M$} is a \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{smooth section} $g: M \to \Sym^2 E^\vee$ of the symmetric bundle \CrefAndHyperrefIfExist{definition:symmetric_power_of_a_vector_bundle_on_a_topological_manifold}{$\Sym^2 E^\vee$} of the \CrefAndHyperrefIfExist{definition:dual_bundle_of_a_C_k_vector_bundle}{dual bundle $E^\vee$} --- in particular, for each point $x \in M$, $g_x$ is a symmetric bilinear form 
+    $$ g_x: T_x M \times T_x M \to \mathbb{R} $$ --- such that 
+    \begin{itemize}
+        \item each $g_x$ is positive-definite: $g_x(v,v) > 0$ for all $v \neq 0$ in $T_x M$,
+        \item the map $x \mapsto g_x$ varies smoothly on $M$, meaning that for any smooth vector fields $X, Y \in \Gamma(TM)$, the function 
+        $$
+        x \mapsto g_x(X_x, Y_x)
+        $$
+        is a smooth function on $M$.
+    \end{itemize}
+    In particular, each $g_x$ is an \CrefAndHyperrefIfExist{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}{inner product} over $\bbR$.
+
+    A \hldef{Riemannian manifold (with or without boundary)} is a pair $(M, g)$ consisting of a smooth manifold $M$ with or without boundary together with a Riemannian metric $g$ on $M$.
+\end{definition}

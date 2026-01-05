@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:closed_category}
+A \hldef{closed category} is a category $\mathcal{C}$ equipped with the following data:
+\begin{itemize}
+    \item A functor 
+    $$
+    \hlin{\underline{\mathrm{Hom}} : \mathcal{C}^{\mathrm{op}} \times \mathcal{C} \to \mathcal{C}}
+    $$
+    called the \hldef{internal hom-functor}.
+    \item A \hldef{left evaluation morphism} 
+    $$
+    \hlin{j_X : I \to \underline{\mathrm{Hom}}(X,X)}
+    $$
+    for each object $X \in \mathcal{C}$, where \hl{$I$} is a fixed object serving as a "unit" of the internal hom-structure.
+    \item A family of natural \hldef{left composition morphisms}
+    $$ \hlin{L^X_{Y,Z} : \underline{\mathrm{Hom}}(Y,Z) \otimes \underline{\mathrm{Hom}}(X,Y) \to \underline{\mathrm{Hom}}(X,Z)} $$
+    \TODO{TODO: the axioms}
+    satisfying appropriate associativity and unit axioms that generalize composition.
+\end{itemize}
+\end{definition}

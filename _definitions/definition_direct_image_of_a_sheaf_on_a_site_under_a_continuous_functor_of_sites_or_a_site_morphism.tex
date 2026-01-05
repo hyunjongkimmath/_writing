@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}
+Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}  with small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topological generating families} (or $U$-small topologically generating families if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), and let $u : \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. 
+%Let $\mathcal{A}$ be a (large) category which has all small (or $U$-small) \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}.
+
+For any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} 
+\[
+\mathcal{F} \in \operatorname{Sh}(\calD,K;\mathcal{A}),
+\]
+Define the \hldef{pushforward/direct image sheaf} \hl{$u^s \calF$} by 
+$$\hlin{u^s \mathcal{F} := \mathcal{F} \circ u : \calC^{\mathrm{op}} \to \mathcal{A}.}$$
+Because $u$ is continuous, $u^s\mathcal{F}$ is a sheaf on $(\calC,J)$ valued in $\mathcal{A}$. The assignment $\mathcal{F} \mapsto u^s\mathcal{F}$ defines the \hldef{direct image/pushforward functor}
+$$\hlin{u^s : \operatorname{Sh}(\calD,K;\mathcal{A}) \to \operatorname{Sh}(\calC,J;\mathcal{A}).}$$
+
+If $u$ is the functor underlying a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $f: (\calD, K) \to (\calC, J)$, we may alternatively denote $u^s \calF$ by \hl{$f_* \calF$} and call it the \hldef{direct image/pushforward of $\calF$ under $f$}; the assignment $\calF \mapsto f_* \calF$ is then the \hldef{direct image/pushforward functor}.
+$$\hlin{f_* : \operatorname{Sh}(\calD,K;\mathcal{A}) \to \operatorname{Sh}(\calC,J;\mathcal{A}).}$$
+
+Note that while the continuous functor $u$ and the site morphism $f$ point in opposite directions, the definition $f_* := u^s$ ensures that $f_*$ corresponds to the standard geometric pushforward used in topology and algebraic geometry.
+
+
+
+% We further note that $u^*$ is ``categorical'' notation whereas $f_*$ is ``geometric'' notation; loosely speaking, given a morphism $f: X \to Y$ of topological spaces or schemes, 
+% \begin{itemize}
+%     \item we may have a continuous functor $u: \mathbf{C}(Y) \to \mathbf{C}(X)$ where $\mathbf{C}(X), \mathbf{C}(Y)$ are appropriate sites induced by $X$ and $Y$ respectively,
+%     \item $u$ may underlie a site morphism $f: \mathbf{C}(X) \to \mathbf{C}(Y)$ roughly given by pullbacks under the morphism $f: X \to Y$, and
+%     \item given a sheaf $\calF$ on $\mathbf{C}(X)$, we may speak of its direct image $f_* \calF$ on $\mathbf{C}(Y)$.
+% \end{itemize}
+\end{definition}

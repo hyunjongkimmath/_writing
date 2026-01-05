@@ -1,0 +1,40 @@
+\begin{definition}[General circumstances for the existence of Tor functors] \label{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category}
+Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}
+that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable.
+
+\TODO{Do notation for tor in two categories, one category, modules over rings}
+
+% Suppose $\mathcal{A}$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projective objects} or \TODO{define} has enough flat objects. 
+For objects $A \in \calA$ and $B \in \calB$, the \hldef{Tor objects}
+$$\hlin{\mathrm{Tor}_n(A, B) = \Tor_n^{\calA, \calB}(A,B)}$$
+may be defined in one of several not-necessarily-equivalent ways:
+
+\begin{enumerate}
+    \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functors} of $A \otimes -$ computed via \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} of $B$ in $\mathcal{B}$, assuming that such a projective resolution exists.
+
+    \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functors} of $- \otimes B$ computed via \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} of $B$ in $\mathcal{A}$, assuming that such a projective resolution exists.
+
+    \item as the ``left derived functors'' of $A \otimes -$ computed via \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions} of $B$ in $\calB$, assuming that such a flat resolution exists. More precisely, $\Tor_n(A,B) = H_n(A \otimes F_\bullet)$ in this case where $F_\bullet \to B$ is a flat resolution. \TextIfExists{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{Equivalently, $\Tor_n(A,B) = \Tor_n^{II}(A,B)$ as in \Cref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}.}A priori, this might depend on the choice of flat resolution.
+
+    \item as the ``left derived functors'' of $- \otimes B$ computed via \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions} of $A$ in $\calA$. More precisely, $\Tor_n(A,B) = H_n(F_\bullet \otimes B)$ in this case where $F_\bullet \to A$ is a flat resolution. \TextIfExists{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{Equivalently, $\Tor_n(A,B) = \Tor_n^{I}(A,B)$ as in \Cref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}.}A priori, this might depend on the choice of flat resolution.
+
+\end{enumerate}
+See \Cref{theorem:balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor} and \Cref{lemma:flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats}, which describe sufficient conditions under which the Tor functors defined via flat resolutions are independent of the choice of flat resolution. In particular \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors} shows that all of the above notions are in natural agreement if $\calA$ and $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{have enough projectives} and \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} and filtered direct limits that exist in $\calC$ are exact.
+
+For any of the above notions of $\Tor_n$, note that
+\begin{enumerate}
+    \item for fixed $A \in \calA$, if $\Tor_n(A,B)$ exists and is well defined for any $B \in \calB$, then $\Tor_n(A,-)$ is an additive functor $\calB \to \calC$. 
+    \item for fixed $B \in \calB$, if $\Tor_n(A,B)$ exists and is well defined for any $A \in \calA$, then $\Tor_n(A,-)$ is an additive functor $\calA \to \calC$. 
+    \item if $\Tor_n(A,B)$ exists and is well defined for any $A \in \calA$ and $B \in \calB$, then $\Tor_n(-,-)$ is an biadditive $\calA \times \calB \to \calC$. 
+\end{enumerate}
+
+
+% If $\mathcal{A}$ instead has enough flat objects and $\otimes$ is right exact and preserves finite direct sums, then $\mathrm{Tor}_n^{\mathcal{A}}(A, B)$ can be computed using flat resolutions in place of projective ones.
+
+In the case that $\calA$ is the category of $R-S$-modules, $\calB$ is the category of $S-T$-modules, $\calC$ is the category of $R-T$-modules for some \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings $R,S,T$}, and $\otimes$ is the usual tensor product between $R-S$-modules and $S-T$-modules producing $R-T$-modules, then the Tor functors may be denoted by 
+$$ \hlin{\mathrm{Tor}_n^S(A, B)} $$
+for $A \in \mathcal{A}$ and $B \in \mathcal{B}$.
+
+% \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} for some \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative ring} $R$ and $\otimes$ is the usual tensor product of (left/right/two-sided)$R$-modules, \TODO{define tensor product of $R$-modules} then the Tor functors may be denoted by 
+% for $R$-modules $A$ and $B$. 
+\end{definition}

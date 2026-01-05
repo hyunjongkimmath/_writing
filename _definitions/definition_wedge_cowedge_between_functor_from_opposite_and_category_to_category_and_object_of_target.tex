@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:wedge_cowedge_between_functor_from_opposite_and_category_to_category_and_object_of_target}
+Let $C$ and $D$ be \CrefAndHyperrefIfExist{definition:category}{categories}, let $S: C^{op} \times C \to D$ be a functor, and let $d$ be an object of $D$.
+
+A \hldef{wedge from $d$ to $S$} is a family of morphisms $\omega = \{\omega_c\}_{c \in \operatorname{Ob}(C)}$ in $D$, denoted
+
+\hlalign{
+\begin{align*}
+\omega: d \to S,
+\end{align*}
+}
+
+where each component is a morphism $\omega_c: d \to S(c,c)$, satisfying the wedge condition: for every morphism $f: c \to c'$ in $C$, the diagram
+$$ S(1_c, f) \circ \omega_c = S(f, 1_{c'}) \circ \omega_{c'} $$
+commutes in $D$. (Explicitly, both composites are morphisms $d \to S(c, c')$).
+
+Dually, a \hldef{cowedge from $S$ to $d$} is a family of morphisms $\beta = \{\beta_c\}_{c \in \operatorname{Ob}(C)}$ in $D$, denoted
+
+\hlalign{
+\begin{align*}
+\beta: S \to d,
+\end{align*}
+}
+
+where each component is a morphism $\beta_c: S(c,c) \to d$, satisfying the \hldef{cowedge condition}: for every morphism $f: c \to c'$ in $C$, the equality
+$$ \beta_c \circ S(f, 1_c) = \beta_{c'} \circ S(1_{c'}, f) $$
+holds in $D$ (as morphisms from $S(c', c)$ to $d$).
+\end{definition}

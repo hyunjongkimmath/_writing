@@ -1,0 +1,13 @@
+
+\begin{definition}[Singular cochain complex of a topological space] \label{definition:singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and $R$ a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} with $1$. 
+    The \hldef{singular $n$-cochain group of $X$ with coefficients in $R$} is the $R$-module
+    $$\hlin{C^n(X;R) = \operatorname{Hom}_R(C_n(X;R), R)}.$$
+    \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}\CrefIfExists{definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_a_commutative_ring_with_unity}
+    We define \hldef{coboundary operators}
+    $$\hlin{\delta^n : C^n(X;R) \to C^{n+1}(X;R), \quad \delta^n(\varphi) = \varphi \circ \partial_{n+1}.}$$
+    The pair $(C^n(X;R), \delta^n)_{n}$ form a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} called the \hldef{singular cochain complex of $X$ with coefficients in $R$}.
+    Given a subspace $A \subseteq X$, the \hldef{relative singular $n$-cochain group of $(X,A)$ with coefficients in $R$} is the $R$-module
+    $$\hlin{C^n(X,A;R) = \operatorname{Hom}_R(C_n(X,A;R), R)}.$$
+    The coboundary operators $\delta^n$ induce maps $C^n(X,A;R) \to C^{n+1}(X,A;R)$ for which the $C^n(X,A;R)$ form a cochain complex, called the \hldef{relative singular cochain complex of $(X,A)$ with coefficients in $R$}
+\end{definition}

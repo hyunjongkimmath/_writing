@@ -1,0 +1,36 @@
+\begin{definition}[Homotopy equivalence] \label{definition:homotopy_equivalence_between_topological_spaces}
+    Let $X$ and $Y$ be topological spaces and let $K \subseteq X$. 
+    
+    \begin{enumerate}
+        \item  A \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $f : X \to Y$ is a \hldef{homotopy equivalence relative to $K$} if there exists a continuous map $g : Y \to X$ such that
+        $$g \circ f \simeq \operatorname{id}_X \text{ rel } K \quad \text{and} \quad f \circ g \simeq \operatorname{id}_Y \text{ rel } f(K).$$
+        (\Cref{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset})
+        That is, there exist \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopies} $H : X \times [0,1] \to X$ and $G : Y \times [0,1] \to Y$ satisfying
+        \begin{align*}
+        H(x,0) &= (g \circ f)(x), & H(x,1) &= x, & H(k,t) &= k \text{ for all } k \in K, t \in [0,1], \\
+        G(y,0) &= (f \circ g)(y), & G(y,1) &= y, & G(f(k),t) &= f(k) \text{ for all } k \in K, t \in [0,1].
+        \end{align*}
+        In this case, the map $g$ is called a \hldef{homotopy inverse relative to $K$ of $f$}, and the pairs $(X,K)$ and $(Y,f(K))$ are said to be \hldef{homotopy equivalent relative to $K$}, denoted \hl{$(X,K) \simeq (Y,f(K))$ rel $K$}. This is an eqiuvalence relation.
+
+        A continuous map $f: X \to Y$ is a \hldef{homotopy eqiuvalence} if it is a homotopy equivalence relative to $\emptyset$. A \hldef{homotopy inverse of $f$} is then simply a homotopy inverse of $f$ relative to $\emptyset$. In this case, and the spaces $X$ and $Y$ are said to be \hldef{homotopy equivalent}, denoted \hl{$X \simeq Y$}. This is an equivalence relation.
+
+        \item 
+        Let $(X,x_0)$ and $(Y,y_0)$ be \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological spaces} and let $K \subseteq X$ be a subset with $x_0 \in K$. 
+        
+            A continuous map $f : (X,x_0) \to (Y,y_0)$ of pointed spaces is a \hldef{homotopy equivalence relative to $K$} if there exists a continuous map $g : (Y,y_0) \to (X,x_0)$ such that
+            $$g \circ f \simeq \operatorname{id}_X \text{ rel } K \quad \text{and} \quad f \circ g \simeq \operatorname{id}_Y \text{ rel } f(K),$$
+            where the \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopies} are homotopies of based maps relative to $K$ and $f(K)$, respectively.
+            
+            That is, there exist homotopies of based maps $H : X \times [0,1] \to X$ and $G : Y \times [0,1] \to Y$ satisfying
+            \begin{align*}
+            H(x,0) &= (g \circ f)(x), & H(x,1) &= x, & H(k,t) &= k \text{ for all } k \in K, t \in [0,1], \\
+            G(y,0) &= (f \circ g)(y), & G(y,1) &= y, & G(f(k),t) &= f(k) \text{ for all } k \in K, t \in [0,1],
+            \end{align*}
+            with $H(x_0,t) = x_0$ and $G(y_0,t) = y_0$ for all $t$.
+            
+            The map $g$ is called a \hldef{homotopy inverse relative to $K$ of $f$}, and the pairs $(X,K)$ and $(Y,f(K))$ are said to be \hldef{homotopy equivalent relative to $K$}, denoted \hl{$(X,K) \simeq (Y,f(K))$ rel $K$}. This is an equivalence relation.
+            
+            A continuous map $f: (X,x_0) \to (Y,y_0)$ of pointed spaces is a \hldef{homotopy equivalence} if it is a homotopy equivalence relative to $\{x_0\}$. A \hldef{homotopy inverse of $f$} is then simply a homotopy inverse relative to $\{x_0\}$. In this case, the pointed spaces $(X,x_0)$ and $(Y,y_0)$ are said to be \hldef{homotopy equivalent}, denoted \hl{$(X,x_0) \simeq (Y,y_0)$}.
+
+    \end{enumerate}
+\end{definition}

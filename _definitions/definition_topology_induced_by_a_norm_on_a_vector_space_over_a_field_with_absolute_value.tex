@@ -1,0 +1,11 @@
+\begin{definition}[Topology induced by a norm] \label{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}
+Let $V$ be a vector space over a field $K$ with \hyperrefIfExists{definition:absolute_value_on_a_field}{absolute value}\CrefIfExists{definition:absolute_value_on_a_field} $|\cdot|$, and let $\|\cdot\|$ be an \hyperrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{extended norm on $V$}\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}. The \hldef{topology induced by the extended norm $\|\cdot\|$ on $V$} is defined by declaring a subset $U \subseteq V$ to be open if for every $x \in U$, there exists $\varepsilon > 0$ such that 
+$$\hlin{B(x, \varepsilon) := \{ y \in V : \|y - x\| < \varepsilon \}}$$
+is contained in $U$. The set $B(x, \varepsilon)$ is called the \hldef{open ball of radius $\varepsilon$ around $x$}.
+The collection of all such open sets forms a topology on $V$.
+
+\TextIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{
+Equivalently, the topology on $V$ induced by the extended norm $\|\cdot\|$ is the \hyperrefIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topology on $V$ induced by}\CrefIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric} the extended metric $d: V \times V \to [0,\infty]$ \hyperrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{induced by $\|\cdot\|$} \CrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}.
+}
+
+\end{definition}

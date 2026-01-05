@@ -1,0 +1,43 @@
+\begin{theorem}[Total space of a $C^k$ vector bundle as a $C^k$ manifold] \label{theorem:total_space_of_a_C_k_vector_bundle_is_a_C_k_manifold}
+
+Let $k \in \mathbb{N} \cup \{\infty\}$, let $M$ be a $C^k$ manifold with or without boundary of dimension $n$, and let
+$$
+\pi : E \to M
+$$
+be a $C^k$ vector bundle of rank $r$ over $M$. 
+Let $\{U_\alpha\}_{\alpha \in A}$ be an open cover of $M$ together with \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{local trivializations}
+$$ \Phi_\alpha : \pi^{-1}(U_\alpha) \to U_\alpha \times \mathbb{R}^r.$$
+
+Fix a \CrefAndHyperrefIfExist{definition:C_k_atlas_on_a_topological_manifold}{$C^k$ atlas} $\{(U_\alpha,\varphi_\alpha)\}_{\alpha \in A}$ on $M$, where each
+$$ \varphi_\alpha : U_\alpha \xrightarrow{\ \cong\ } V_\alpha \subseteq \mathbb{R}^n $$
+is a homeomorphism onto an open subset $V_\alpha$.
+
+Define \CrefAndHyperrefIfExist{definition:C_k_compatible_charts_on_a_topological_manifold}{charts} on $E$ by
+$$
+\Psi_\alpha : \pi^{-1}(U_\alpha) \longrightarrow V_\alpha \times \mathbb{R}^r, \qquad
+\Psi_\alpha(e) := \bigl(\varphi_\alpha(\pi(e)),\, v_\alpha(e)\bigr),
+$$
+where $v_\alpha(e) \in \mathbb{R}^r$ is determined by the identity
+$$
+\Phi_\alpha(e) = \bigl(\pi(e),\, v_\alpha(e)\bigr).
+$$
+
+Then the following hold.
+\begin{enumerate}
+  \item Each $\Psi_\alpha$ is a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} from $\pi^{-1}(U_\alpha)$ onto the open subset $V_\alpha \times \mathbb{R}^r$ of $\mathbb{R}^{n+r}$.
+  \item For any $\alpha,\beta \in A$ with $U_\alpha \cap U_\beta \neq \varnothing$, the \CrefAndHyperrefIfExist{definition:transition_map_between_charts_on_a_topological_manifold}{chart transition map}
+  $$ \Psi_\beta \circ \Psi_\alpha^{-1} : \bigl(V_\alpha \cap \varphi_\alpha(U_\alpha \cap U_\beta)\bigr) \times \mathbb{R}^r \longrightarrow \bigl(V_\beta \cap \varphi_\beta(U_\alpha \cap U_\beta)\bigr) \times \mathbb{R}^r $$
+  is given by
+  $$ (u,v) \longmapsto \Bigl( \varphi_\beta \circ \varphi_\alpha^{-1}(u),\, g_{\beta\alpha}\bigl(\varphi_\alpha^{-1}(u)\bigr)\, v \Bigr), $$
+  and is of \CrefAndHyperrefIfExist{definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns}{class $C^k$}, since $\varphi_\beta \circ \varphi_\alpha^{-1}$ and $g_{\beta\alpha}$ are $C^k$.
+
+  \item Hence the collection of charts
+  $$ \bigl\{ \bigl(\pi^{-1}(U_\alpha), \Psi_\alpha\bigr) \bigr\}_{\alpha \in A} $$
+  is a \CrefAndHyperrefIfExist{definition:C_k_atlas_on_a_topological_manifold}{$C^k$ atlas} on $E$, making $E$ into a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$ manifold} (without boundary if $M$ is without boundary) of dimension $n + r$.
+  \item With this $C^k$ manifold structure on $E$, the projection
+  $$ \pi : E \to M $$
+  \TODO{submersion}
+  is a $C^k$ submersion.
+\end{enumerate}
+In particular, the \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{total space} of a $C^k$ vector bundle of rank $r$ over an $n$-dimensional $C^k$ manifold is canonically a $C^k$ manifold of dimension $n + r$.
+\end{theorem}

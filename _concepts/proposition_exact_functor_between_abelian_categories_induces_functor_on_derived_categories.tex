@@ -1,0 +1,11 @@
+\begin{proposition}{See e.g. {\cite[10.5.2]{weibel}}} \label{proposition:exact_functor_between_abelian_categories_induces_functor_on_derived_categories}
+    Let $F: \calA \to \calB$ be an \hyperrefIfExists{definition:exact_functor_between_abelian_categories}{exact functor}\CrefIfExists{definition:exact_functor_between_abelian_categories} of \hyperrefIfExists{definition:abelian_category}{abelian categories}\CrefIfExists{definition:abelian_category}. There is an induced functor 
+    $$D(\calA) \to D(\calB)$$
+    \CrefIfExists{definition:derived_category_of_an_abelian_category} also denoted by \hl{$F$} by abuse of notation. 
+    
+    This functor is constructible in the ``simple'' way --- \begin{itemize}
+        \item For an object $M$ of $D(\calA)$, take a chain complex $K$ representing it. The object $FM$ of $D(\calB)$ is the object represented by the chain complex $FK$. 
+        \item For a morphism $f: M \to N$ in $D(\calA)$, take a morphism $\tilde{f}: K \to L$ representing it. The morphism $Ff: FM \to FN$ is the morphism represented by $F\tilde{f}: FK \to FL$. 
+    \end{itemize}
+    Due to the exactness of $F$, these do not depend on the choices of representatives.
+\end{proposition}

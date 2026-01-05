@@ -1,0 +1,26 @@
+\begin{definition}[Partially ordered set] \label{definition:partially_ordered_set}
+    \begin{enumerate}
+        \item 
+        A \hldef{partially ordered set} (or \hldef{poset}), or \hldef{ordered set} is a pair $(P, \leq)$ where $P$ is a set and 
+        \[
+        \leq : P \times P \to \{\text{true}, \text{false}\}
+        \]
+        is a binary relation on $P$ satisfying the following axioms for all $a,b,c \in P$:
+        \begin{itemize}
+            \item \hldef{Reflexivity:} $a \leq a$,
+            \item \hldef{Antisymmetry:} if $a \leq b$ and $b \leq a$, then $a = b$,
+            \item \hldef{Transitivity:} if $a \leq b$ and $b \leq c$, then $a \leq c$.
+        \end{itemize}
+        The relation $\leq$ is called an \hldef{order} or a \hldef{partial order}
+
+        \item A partially ordered set $(P, \leq)$ is called a \hldef{directed partially ordered set} if for every pair $a,b \in P$, there exists $c \in P$ such that
+        \[
+        a \leq c \quad \text{and} \quad b \leq c.
+        \]
+
+        \item A partially ordered set $(P, \leq)$ is called a \hldef{codirected partially ordered set} (or \hldef{downward directed poset}) if for every pair $a,b \in P$, there exists $d \in P$ such that
+        \[
+        d \leq a \quad \text{and} \quad d \leq b.
+        \]
+        \end{enumerate}
+\end{definition}

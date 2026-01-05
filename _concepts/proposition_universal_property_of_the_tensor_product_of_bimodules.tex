@@ -1,0 +1,15 @@
+\begin{proposition}[Universal Property of the Tensor Product of Bimodules] \label{proposition:universal_property_of_the_tensor_product_of_bimodules}
+Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule} and let $N$ be an $S$-$T$ bimodule. Let $P$ be an $R$-$T$ bimodule. Then for every \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{$R$-$T$ bilinear map} 
+$$ \beta : M \times N \to P, $$
+that is, a map satisfying
+\begin{align*}
+\beta(m+m',n) &= \beta(m,n) + \beta(m',n), \\
+\beta(m,n+n') &= \beta(m,n) + \beta(m,n'), \\
+\beta(r \cdot m, n) &= r \cdot \beta(m,n), \\
+\beta(m,n\cdot t) &= \beta(m,n)\cdot t, \\
+\beta(m \cdot s, n) &= \beta(m,s \cdot n),
+\end{align*}
+for all $m,m' \in M$, $n,n' \in N$, $r \in R$, $s \in S$, $t \in T$, there exists a unique $R$-$T$ bimodule homomorphism
+$$ \widetilde{\beta} : M \otimes_S N \to P $$
+such that $\widetilde{\beta}(m \otimes n) = \beta(m,n)$ for all $m \in M$, $n \in N$.
+\end{proposition}

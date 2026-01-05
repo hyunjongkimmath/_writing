@@ -1,0 +1,17 @@
+\begin{definition}[Arrow Category] \label{definition:arrow_category_of_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+The \hldef{arrow category of $\mathcal{C}$}, denoted \hl{$\mathcal{C}^{\to}$} (or sometimes \hl{$\text{Arr}(\mathcal{C})$} or \hl{$\mathcal{C}^{\mathbf{2}}$}), is defined as follows:
+\begin{itemize}
+    \item \textbf{Objects:} Morphisms $f: A \to B$ in $\mathcal{C}$. (We may view such an object as a triple $(A, B, f)$).
+    \item \textbf{Morphisms:} A morphism from an object $f: A \to B$ to an object $f': A' \to B'$ is a pair of morphisms $(h_0, h_1)$ in $\mathcal{C}$, where $h_0: A \to A'$ and $h_1: B \to B'$, such that the following square commutes:
+    $$
+    \begin{tikzcd}
+        A \arrow[r, "f"] \arrow[d, "h_0"'] & B \arrow[d, "h_1"] \\
+        A' \arrow[r, "f'"] & B'
+    \end{tikzcd}
+    $$
+    That is, $h_1 \circ f = f' \circ h_0$.
+    \item \textbf{Composition:} Composition is defined component-wise: $(k_0, k_1) \circ (h_0, h_1) = (k_0 \circ h_0, k_1 \circ h_1)$.
+\end{itemize}
+    \TextIfExists{definition:comma_category_of_two_functors_to_a_category}{Arrow categories are special cases of \CrefAndHyperrefIfExist{definition:comma_category_of_two_functors_to_a_category}{comma categories}.}
+\end{definition}

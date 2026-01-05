@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:continuous_functor_of_sites}
+Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}. 
+
+A functor $u : \calC \to \calD$ is said to be a \hldef{continuous functor of sites} if, for every object $U \in \operatorname{Ob}(\calD)$ and every \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{covering sieve} $S \in K(U)$, the \CrefAndHyperrefIfExist{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object}{pullback sieve $u^*S$} belongs to $J(V)$ for all $V \in \calC$ with a morphism $u(V) \to U$ in $\calD$.
+
+Equivalently, $u$ is continuous if for every \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of sets $F$ on $\calD$, the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $\calC^{\op} \to \Sets, X \mapsto F(u(X))$ is a sheaf on $\calC$. 
+\TODO{show these are equivalent}
+\TODO{define morphism of sites and recheck ref's to this definition}
+
+% A \hldef{morphism of sites} $f: (\calD, K) \to (\calC, J)$ 
+
+% Synonymously, we call a continuous functor $u: C \to D$ a \hldef{morphism of sites}.
+\end{definition}

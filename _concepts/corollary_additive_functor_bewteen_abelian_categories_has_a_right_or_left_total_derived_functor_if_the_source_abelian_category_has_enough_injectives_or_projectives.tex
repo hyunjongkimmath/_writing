@@ -1,0 +1,36 @@
+\begin{corollary} \label{corollary:additive_functor_bewteen_abelian_categories_has_a_right_or_left_total_derived_functor_if_the_source_abelian_category_has_enough_injectives_or_projectives}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Write $q: K(\calB) \to D(\calB)$ (\Cref{definition:homotopy_category_of_chain_complexes_of_an_additive_category} \Cref{definition:derived_category_of_an_abelian_category}) for the \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{localization functor}.
+    \begin{enumerate}
+        \item Assuming that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, there exists a \CrefAndHyperrefIfExist{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories}{right derived functor} \hl{$RF: D^+(\calA) \to D(\calB)$} and if \CrefAndHyperrefIfExist{definition:category_of_bounded_complexes_of_injectives_projectives}{$I \in K^+(\calI)$} is a bounded below complex of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injectives}, then 
+        $$RF(I) \cong q(K(F))(I).$$
+        where $K(F): K^+(\calA) \to K(\calB)$ is the \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functor} \CrefAndHyperrefIfExist{theorem:additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories}{induced by $F$}.
+
+        If $F$ is additionally \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, then for all objects $A$ of $\calA$ we have 
+        $$H^i(RF(A)) \cong R^iF(A)$$
+        (\Cref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}) for all integers $i$ where we regard $A$ as the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} object of $D^+(\calA)$ with $A$ concentrated in degree $0$ (\Cref{convention:objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category}).
+
+        \item Assuming that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, there exists a \CrefAndHyperrefIfExist{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories}{left derived functor} \hl{$LF: D^-(\calA) \to D(\calB)$} and if \CrefAndHyperrefIfExist{definition:category_of_bounded_complexes_of_injectives_projectives}{$P \in K^-(\calP)$} is a bounded above complex of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projectives}, then 
+        $$LF(P) \cong q(K(F))(P).$$
+        where $K(F): K^-(\calA) \to K(\calB)$ is the \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functor} \CrefAndHyperrefIfExist{theorem:additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories}{induced by $F$}.
+
+        If $F$ is additionally \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}, then for all objects $A$ of $\calA$ we have 
+        $$H^{-i}(LF(A)) \cong L_i F(A)$$
+        (\Cref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}) for all integers $i$ where we regard $A$ as the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} object of $D^+(\calA)$ with $A$ concentrated in degree $0$ (\Cref{convention:objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category}).
+
+
+    \end{enumerate}
+\begin{proof}
+    Apply \Cref{theorem:existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories} to the exact functor $K(F)$ to obtain the isomorphisms
+    $$RF(I) \cong q(K(F))(I)$$
+    $$LF(P) \cong q(K(F))(P).$$
+    If $F$ is left exact and $A$ is an object of $\calA$, then the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functors $R^iF(A)$} are defined. Recall that they are defined first by taking an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution} 
+    $$0 \to A \to I^0 \to I^1 \to \cdots.$$
+    Since the injective resolution is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}, The object $A$ and the complex $0 \to I^0 \to I^1 \to \cdots$ are equivalent as objects of $D^+(\calA)$ as an object of $D^+(\calA)$ are equivalent objects. Moreover, we have the isomorphism
+    $$RF(I) \cong q(K(F))(I).$$
+    In fact, the $i$th cohomology of the right hand side object precisely describes $R^iF(A)$ by definition. Therefore, 
+    $$H^i(RF(A)) \cong R^iF(A)$$
+    as desired.
+
+    The analogous statement for $L_iF(A)$ holds similarly.
+\end{proof}
+\end{corollary}

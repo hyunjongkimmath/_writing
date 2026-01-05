@@ -1,0 +1,44 @@
+
+% \begin{definition}[Injective and Projective resolutions of objects in abelian categories] \label{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}
+% Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $M$ be an object of $\calA$. 
+% \begin{enumerate}
+%     \item A \hldef{right resolution of $M$} is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} $I^\bullet$ with $I^i = 0$ for $i < 0$ and a map $M \to I^0$ such that the augmented complex
+%     $$0 \to M \to I^0 \to I^1 \to I^2 \to \cdots$$
+%     is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
+%     \item An \hldef{injective resolution of $M$} is a right resolution $I^\bullet$ for which the objects $I^i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}.
+
+%     \item A \hldef{left resolution of $M$} is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} $P_\bullet$ with $P_i = 0$ for $i < 0$ and a map $P_0 \to M$ such that the augmented complex
+%     $$\cdots P_2 \to P_1 \to P_0 \to M \to 0$$
+%     is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
+%     \item An \hldef{injective resolution of $M$} is a left resolution $P_\bullet$ for which the objects $P_i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective}.
+% \end{enumerate}
+
+% Let
+% \[
+% C^\bullet = (C^n, d^n)_{n \in \mathbb{Z}}
+% \]
+% be a cohomological complex in $\mathcal{A}$ (i.e., $d^{n+1} \circ d^n = 0$ for all $n$), and let
+% \[
+% C_\bullet = (C_n, d_n)_{n \in \mathbb{Z}}
+% \]
+% be a homological complex in $\mathcal{A}$ (i.e., $d_{n-1} \circ d_n = 0$ for all $n$).
+% \begin{enumerate}
+%     \item An \hldef{injective resolution} of a cohomological complex $C^\bullet$ is a morphism of complexes
+%     \[
+%     C^\bullet \xrightarrow{\varphi} I^\bullet
+%     \]
+%     where $I^\bullet$ is a complex consisting of injective objects in $\mathcal{A}$. This morphism is called a \hldef{quasi-isomorphism} if it induces isomorphisms on cohomology (if these are defined, e.g., in an abelian or at least exact category). The complex $I^\bullet$ need not exist unless suitable injective objects can be found, so the existence of such a resolution may not hold in general.
+
+%     \item Dually, a \hldef{projective resolution} of a homological complex $C_\bullet$ is a morphism of complexes
+%     \[
+%     P_\bullet \xrightarrow{\psi} C_\bullet
+%     \]
+%     where $P_\bullet$ is a complex consisting of projective objects in $\mathcal{A}$. This morphism is called a \hldef{quasi-isomorphism} if it induces isomorphisms on homology (if these are defined, e.g., in an abelian or at least exact category). The complex $P_\bullet$ need not exist unless suitable projective objects can be found.
+% \end{enumerate}
+
+% \textbf{Remarks:}
+% \begin{itemize}
+%     \item The term “quasi-isomorphism” requires a well-defined notion of homology or cohomology, which typically requires $\mathcal{A}$ to be abelian or an exact category.
+%     \item The existence of enough injectives or projectives in $\mathcal{A}$ is not assumed here; the definition only prescribes what such a resolution would be if suitable objects exist.
+% \end{itemize}
+% \end{definition}

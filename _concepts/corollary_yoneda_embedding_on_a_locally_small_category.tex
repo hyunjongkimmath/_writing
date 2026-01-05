@@ -1,0 +1,10 @@
+\begin{corollary}[Yoneda Embedding] \label{corollary:yoneda_embedding_on_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. The functor
+$$h^\bullet: \mathcal{C}^{\operatorname{op}} \to \mathbf{Set}^{\mathcal{C}}$$
+\CrefIfExists{definition:opposite_category_of_a_category} \CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category}
+defined on objects by $A \mapsto h^A = \operatorname{Hom}_{\mathcal{C}}(A, -)$\CrefIfExists{definition:representable_functor_on_a_locally_small_category} and on morphisms by $f \mapsto h^f = (-\circ f)$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}. That is, for any objects $A, B$ in $\mathcal{C}$, the map
+$$\operatorname{Hom}_{\mathcal{C}}(A, B) \to \operatorname{Nat}(h^B, h^A)$$
+given by sending a morphism $f: A \to B$ to the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} $h^f: h^B \to h^A$ (pre-composition by $f$) is a bijection.
+
+Consequently, $\mathcal{C}^{\operatorname{op}}$ embeds as a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} of the functor category $\mathbf{Set}^{\mathcal{C}}$.
+\end{corollary}

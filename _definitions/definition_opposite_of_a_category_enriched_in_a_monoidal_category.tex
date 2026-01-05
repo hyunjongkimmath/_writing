@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:opposite_of_a_category_enriched_in_a_monoidal_category}
+Let $\mathcal{V}$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category} and $\mathcal{C}$ a \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{V}$-category}. The \hldef{opposite $\mathcal{V}$-category of $\mathcal{C}$}, denoted by \hl{$\mathcal{C}^{\mathrm{op}}$}, is defined as follows:
+\begin{itemize}
+    \item Objects: $\mathrm{Ob}(\mathcal{C}^{\mathrm{op}}) = \mathrm{Ob}(\mathcal{C})$.
+    \item Hom-objects: For all $A,B \in \mathrm{Ob}(\mathcal{C})$, set
+    $$\mathcal{C}^{\mathrm{op}}(A,B) = \mathcal{C}(B,A).$$
+    \item Composition: For all $A,B,C \in \mathrm{Ob}(\mathcal{C})$, the composition morphism
+    $$\circ^{\mathrm{op}}_{A,B,C} : \mathcal{C}^{\mathrm{op}}(B,C) \otimes \mathcal{C}^{\mathrm{op}}(A,B) \to \mathcal{C}^{\mathrm{op}}(A,C)$$
+    is defined by the composite in $\mathcal{V}$
+    $$\mathcal{C}(C,B) \otimes \mathcal{C}(B,A) \xrightarrow{s_{\mathcal{C}(C,B),\mathcal{C}(B,A)}} \mathcal{C}(B,A) \otimes \mathcal{C}(C,B) \xrightarrow{\circ_{C,B,A}} \mathcal{C}(C,A).$$
+    \item Units: For each $A \in \mathrm{Ob}(\mathcal{C})$, the unit morphism in $\mathcal{C}^{\mathrm{op}}$ is the same as that in $\mathcal{C}$,
+    $$\iota_A^{\mathrm{op}} = \iota_A : I \to \mathcal{C}(A,A) = \mathcal{C}^{\mathrm{op}}(A,A).$$
+\end{itemize}
+The associativity and unit axioms for $\mathcal{C}^{\mathrm{op}}$ follow from those for $\mathcal{C}$ and the naturality and symmetry properties of $s_{X,Y}$.
+\end{definition}

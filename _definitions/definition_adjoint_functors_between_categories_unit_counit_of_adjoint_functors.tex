@@ -1,0 +1,52 @@
+\begin{definition} \label{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}
+Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{categories}. Let $F : \mathcal{C} \to \mathcal{D}$ and $G : \mathcal{D} \to \mathcal{C}$ be functors. 
+
+An \hldef{adjunction between $F$ and $G$} consists of two \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations}: $\eta : \mathrm{Id}_{\mathcal{C}} \implies GF$ (the \hldef{unit}), and  $\varepsilon : FG \implies \mathrm{Id}_{\mathcal{D}}$ (the \hldef{counit})
+
+These must satisfy the triangle identities: For every object $X \in \mathcal{C}$ 
+and $Y \in \mathcal{D}$, 
+$$\varepsilon_{FX} \circ F(\eta_X) = \text{id}_{FX}$$
+$$G(\varepsilon_Y) \circ \eta_{GY} = \text{id}_{GY}.$$
+In diagrammatic form, the triangle identities assert that the following are commutative diagrams:
+\begin{center}
+\begin{tikzcd}
+F(X) \arrow[r, "F(\eta_X)"] \arrow[rd, "\text{id}_{F(X)}"'] & FGF(X) \arrow[d, "\varepsilon_{F(X)}"] \\
+& F(X)
+\end{tikzcd}
+\begin{tikzcd}
+G(Y) \arrow[r, "\eta_{G(Y)}"] \arrow[rd, "\text{id}_{G(Y)}"'] & GFG(Y) \arrow[d, "G(\varepsilon_Y)"] \\
+& G(Y)
+\end{tikzcd}
+\end{center}
+
+We say that $F$ is a \hldef{left adjoint to $G$} and $G$ is a \hldef{right adjoint to $F$} (written \hl{$F \dashv G$}). 
+
+% for every object $A$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$ there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}
+% \begin{align*}
+% \operatorname{Hom}_{\mathcal{D}}(F(A), B) \cong \operatorname{Hom}_{\mathcal{C}}(A, G(B))
+% \end{align*}
+% that is natural in both $A$ and $B$.
+
+
+In the case that $\mathcal{C}$ and $\mathcal{D}$ are \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} categories (or $U$-locally small categories if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), we have an adjunction $F \dashv G$ if and only if for every object $X$ in $\mathcal{C}$ and $Y$ in $\mathcal{D}$ there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}
+\begin{align*}
+\operatorname{Hom}_{\mathcal{D}}(F(X), Y) \cong \operatorname{Hom}_{\mathcal{C}}(X, G(Y))
+\end{align*}
+that is natural in both $X$ and $Y$. In this case, the \hldef{unit of the adjunction} is the natural transformation $\eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow G F$ such that, 
+\begin{enumerate}
+    \item for every $X \in \calC$, the morphism $\eta_X: X \to GF(X)$ (each called a \hldef{unit morphism}) in $\calC$ is obtained as the image of $\id_{F(X)}$ via the adjoint isomorphism
+    $$\Hom_\calD(F(X), F(X)) \cong \Hom_\calC(X, GF(X)). $$
+
+    \item for every $Y \in \calD$, the morphism $\epsilon_Y: FG(Y) \to Y$ (each called a \hldef{counit morphism}) in $\calD$ is obtained as the image of $\id_{G(Y)}$ via the adjoint isomorphism 
+    $$\Hom_\calC(G(Y), G(Y)) \cong \Hom_\calD(FG(Y), Y).$$
+
+\end{enumerate}
+
+
+% Let $F : \mathcal{C} \to \mathcal{D}$ and $G : \mathcal{D} \to \mathcal{C}$ be functors. 
+% $F$ is a \hldef{left adjoint to $G$} and $G$ is a \hldef{right adjoint to $F$} (written \hl{$F \dashv G$}) if for every object $A$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$ there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}
+% \begin{align*}
+% \operatorname{Hom}_{\mathcal{D}}(F(A), B) \cong \operatorname{Hom}_{\mathcal{C}}(A, G(B))
+% \end{align*}
+% that is natural in both $A$ and $B$.
+\end{definition}

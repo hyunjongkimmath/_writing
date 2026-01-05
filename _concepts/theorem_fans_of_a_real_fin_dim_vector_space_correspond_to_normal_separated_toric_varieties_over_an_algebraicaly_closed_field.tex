@@ -1,0 +1,28 @@
+\begin{theorem}[Fundamental Theorem of Toric Geometry] \label{theorem:fans_of_a_real_fin_dim_vector_space_correspond_to_normal_separated_toric_varieties_over_an_algebraicaly_closed_field}
+
+Let $k$ be an algebraically closed field. Let $N$ be a \CrefAndHyperrefIfExist{defintion:lattice_over_a_commutative_ring}{lattice} of rank $n$, and let $T_N = \operatorname{Spec}(k[M])$ be the \CrefAndHyperrefIfExist{definition:algebraic_torus_over_a_field}{algebraic torus} associated to the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} lattice $M = \operatorname{Hom}_{\mathbb{Z}}(N, \mathbb{Z})$.
+
+% $T_N = N \otimes_{\mathbb{Z}} k^*$ be the associated algebraic torus.
+
+There is a bijective correspondence between:
+\begin{enumerate}
+\item \CrefAndHyperrefIfExist{definition:fan_in_a_finite_dimensional_real_vector_space}{Fans} $\Sigma$ in $N_{\mathbb{R}}$ consisting of \CrefAndHyperrefIfExist{definition:strongly_convex_cone_in_a_finite_dimensional_real_vector_space}{strongly convex} \CrefAndHyperrefIfExist{definition:rational_polyhedral_cone_with_respect_to_a_lattice_in_a_finite_dimensional_real_vector_space}{rational polyhedral cones}.
+\item Isomorphism classes of pairs $(X, \iota)$, where $X$ is a \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal} \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated} scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $k$, and $\iota: T_N \hookrightarrow X$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} such that the action of $T_N$ on itself extends to an action on $X$. (Isomorphisms must be compatible with the torus embedding).
+\end{enumerate}
+
+\noindent The correspondence is given as follows:
+\begin{itemize}
+    \item \textbf{From Fan to Variety:} Given a fan $\Sigma$, the associated toric variety $X_\Sigma$ is constructed by gluing affine toric varieties. For each cone $\sigma \in \Sigma$, let $S_\sigma = \sigma^\vee \cap M$ be the dual semigroup. This defines an affine toric variety $U_\sigma = \operatorname{Spec}(k[S_\sigma])$. If $\tau$ is a face of $\sigma$, then $U_\tau$ is naturally identified with a principal open subset of $U_\sigma$. The variety $X_\Sigma$ is obtained by gluing the affine charts $\{U_\sigma\}_{\sigma \in \Sigma}$ along these identifications.
+    
+    \item \textbf{From Variety to Fan:} Given a normal toric variety $X$ with torus $T_N$, the fan $\Sigma$ consists of the cones $\sigma_Y$ associated to the $T_N$-orbits $Y \subset X$. Specifically, the cones in $\Sigma$ are in one-to-one correspondence with the torus orbits of $X$. For an orbit $O$, let $U_O$ be the union of all orbits $O'$ such that $O$ is in the closure of $O'$. Then $U_O$ is an affine $T_N$-invariant open subset isomorphic to $U_\sigma$ for some cone $\sigma$, and this $\sigma$ is the cone in the fan corresponding to $O$.
+\end{itemize}
+
+
+% Let $n \geq 1$ be an integer. Let $N$ be a \CrefAndHyperrefIfExist{defintion:lattice_over_a_commutative_ring}{lattice} of rank $n$, and let $N_{\mathbb{R}} = N \otimes_{\mathbb{Z}} \mathbb{R}$. 
+
+% There is a bijective correspondence between isomorphism classes of
+% \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal} $n$-dimensional toric varieties (over a fixed algebraically closed field $k$)
+% and \CrefAndHyperrefIfExist{definition:fan_in_a_finite_dimensional_real_vector_space}{fans} $\Sigma$ of \CrefAndHyperrefIfExist{definition:strongly_convex_cone_in_a_finite_dimensional_real_vector_space}{strongly convex} \CrefAndHyperrefIfExist{definition:rational_polyhedral_cone_with_respect_to_a_lattice_in_a_finite_dimensional_real_vector_space}{rational polyhedral} cones in $N_{\mathbb{R}}$.
+% Explicitly, to each such fan $\Sigma$ one can associate a normal toric variety \hl{$X_\Sigma$},
+% and every normal toric variety arises (up to isomorphism) in this way.
+\end{theorem}

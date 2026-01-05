@@ -1,0 +1,14 @@
+
+\begin{definition}[Ring of Integers] \label{definition:ring_of_integers_of_a_global_or_local_ring}
+Let $K$ be either a \CrefAndHyperrefIfExist{definition:global_field}{global field} or a \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{nonarchimedean} \CrefAndHyperrefIfExist{definition:local_field}{local field}.
+
+The \hldef{ring of integers of $K$} or \hldef{integer ring of $K$}, often denoted by notations including \hl{$\mathcal{O}_K$} and \hl{$\mathscr{O}_K$}, is the set of elements of $K$ that are integral over an appropriate base ring as follows:  
+\begin{itemize}
+    \item In the case where $K$ is a number field, $\mathcal{O}_K$ is the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\mathbb{Z}$ in $K$, i.e.  
+    $$\mathcal{O}_K := \{\, x \in K \mid x \text{ is a root of a monic polynomial } f(t) \in \mathbb{Z}[t] \,\}.$$  
+    \item In the case where $K$ is a global function field over a finite field, i.e. a finite extension of $\Fq(t)$, $\mathcal{O}_K$ is the integral closure of the polynomial ring $\Fq[t]$ in $K$.  
+    \item In the case where $K$ is a nonarchimedean local field with discrete valuation $v$, $\mathcal{O}_K$ is the \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_valued_field}{valuation ring $\calO_v$} of $v$, i.e.  
+    $$\mathcal{O}_K := \calO_v = \{x \in K \mid v(x) \geq 0\}.$$
+    Equivalently, $K$ is the integral closure of $\bbZ_p$ or of $\Fp((t))$ under and identification of $K$ with\CrefIfExists{theorem:classification_of_local_fields} a finite extension of $\bbQ_p$ or $\Fp((t))$
+\end{itemize}
+\end{definition}

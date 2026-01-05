@@ -1,0 +1,30 @@
+\begin{definition}[Complex Manifold] \label{definition:complex_analytic_manifold} \
+
+    \begin{enumerate}
+        \item A \hldef{complex (analytic) manifold $M$ of complex dimension $n$ (without boundary)} is a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold} of dimension $2n$ equipped with an \CrefAndHyperrefIfExist{definition:atlas_on_a_topological_manifold}{atlas} of \CrefAndHyperrefIfExist{definition:chart_on_a_topological_manifold}{charts} \(\{(U_\alpha, \varphi_\alpha)\}\) where:
+        \begin{itemize}
+            % \item Each \(U_\alpha \subseteq M\) is open and covers \(M\),
+            \item Each chart \(\varphi_\alpha : U_\alpha \to \Omega_\alpha \subseteq \bbR^{2n}\) is regarded as a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} onto an open subset of \(\mathbb{C}^n\) by homeomorphically identifying $\bbC^n$ with $\bbR^{2n}$,
+            \item The \CrefAndHyperrefIfExist{definition:transition_map_between_charts_on_a_topological_manifold}{transition maps} \(\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)\) are \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_complex_space}{biholomorphic maps} between open subsets of \(\mathbb{C}^n\).
+
+        \end{itemize}
+        An equivalent definition of a complex manifold $M$ of complex dimension $n$ is a \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff} \CrefAndHyperrefIfExist{definition:first_and_second_countable_topological_space}{second countable} topological space equipped with an atlas of charts \(\{(U_\alpha, \varphi_\alpha)\}\) where:
+        \begin{itemize}
+            \item Each \(U_\alpha \subseteq M\) is open and covers \(M\),
+            \item Each chart \(\varphi_\alpha : U_\alpha \to \Omega_\alpha \subseteq \mathbb{C}^n\) is a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} onto an open subset of \(\mathbb{C}^n\),
+            \item The transition maps \(\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)\) are \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_complex_space}{biholomorphic maps} between open subsets of \(\mathbb{C}^n\).
+        \end{itemize}
+        Equivalently, \(M\) is a locally ringed space locally isomorphic to \((\Omega, \mathcal{O}_\Omega)\) where \(\Omega \subseteq \mathbb{C}^n\) is open and \(\mathcal{O}_\Omega\) is the sheaf of holomorphic functions.
+
+        \item A \hldef{complex manifold $M$ of complex dimension $n$ with boundary} is a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold with boundary} of dimension $2n$ eqiupped with an \CrefAndHyperrefIfExist{definition:atlas_on_a_topological_manifold}{atlas} of \CrefAndHyperrefIfExist{definition:chart_on_a_topological_manifold}{charts} $\{(U_\alpha, \varphi_\alpha)\}$ where
+
+        \begin{itemize}
+            \item Each chart \(\varphi_\alpha : U_\alpha \to \Omega_\alpha \subseteq \bbR^{2n}_+\), which is a map into the $2n$-dimensional \CrefAndHyperrefIfExist{definition:closed_half_space_in_euclidean_space}{Euclidean closed half-space} $\bbR^{2n}_+$,  is regarded as a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} onto an open subset of the complex closed upper half-space \CrefAndHyperrefIfExist{definition:closed_upper_half_space_in_C_n}{$\mathbb{H}^n$} by homeomorphically identifying $\bbH^n$ with $\bbR^{2n}_+$,
+            \item The \CrefAndHyperrefIfExist{definition:transition_map_between_charts_on_a_topological_manifold}{transition maps} \(\varphi_\beta \circ \varphi_\alpha^{-1} : \varphi_\alpha(U_\alpha \cap U_\beta) \to \varphi_\beta(U_\alpha \cap U_\beta)\) are extendable to \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_complex_space}{biholomorphic maps} between open subsets of \(\mathbb{C}^n\). More precisely, there exist open subsets $\Omega_\alpha, \Omega_\beta$ of $\bbC^n$ containing $\varphi_\alpha(U_\alpha \cap U_\beta)$ and $\varphi_\beta(U_\alpha \cap U_\beta)$ respectively and a biholomorphic map $f_{\alpha\beta}: \Omega_\alpha \to \Omega_\beta$ such that $f_{\alpha\beta}$ restricts to $\varphi_\beta \circ \varphi_\alpha^{-1}$ on  $\varphi_\alpha(U_\alpha \cap U_\beta)$.
+        \end{itemize}
+        % An equivalent definition of a complex manifold $M$ of complex dimension $n$ is a \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff} \CrefAndHyperrefIfExist{definition:first_and_second_countable_topological_space}{second countable} topological space equipped with an atlas of charts \(\{(U_\alpha, \varphi_\alpha)\}\) where:
+        
+    \end{enumerate}
+
+
+\end{definition}

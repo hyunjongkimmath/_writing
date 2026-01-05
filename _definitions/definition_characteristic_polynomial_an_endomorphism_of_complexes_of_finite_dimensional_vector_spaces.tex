@@ -1,0 +1,31 @@
+\begin{definition}[Determinant over total cohomology of a complex] \label{definition:determinant_over_total_cohomology_of_a_complex}
+    \TODO{TODO:define this more generally.}
+
+Let \(K^\bullet = ( \cdots \to K^{i-1} \xrightarrow{d^{i-1}} K^{i} \xrightarrow{d^{i}} K^{i+1} \to \cdots )\) be a \hyperrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded} \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{complex} of finite-dimensional vector spaces over a field \(k\).
+
+Suppose we have an endo\hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{morphism of complexes}
+\[
+F^\bullet : K^\bullet \to K^\bullet,
+\]
+
+Let $H^i(F) : H^i(K^\bullet) \to H^i(K^\bullet)$ be the induced endomorphisms on \hyperrefIfExists{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomology}.
+% where \(H^i(K^\bullet) = \ker d^i / \operatorname{im} d^{i-1}\) are the \(i\)-th cohomology vector spaces.
+
+\begin{enumerate}
+    \item The \hldef{determinant of $F^\bullet$ (on/over the total cohomology of $K^\bullet$)} is defined as the alternating product
+    $$\hlin{\det(F^\bullet) := \prod_{i \in \mathbb{Z}} \det\bigl(H^i(F) \mid H^i(K^\bullet)\bigr)^{(-1)^i},}$$
+
+    \item The \hldef{determinant of $1 - t F^\bullet$ (on/over the total cohomology of $K^\bullet$)} is defined as the alternating product
+    $$\hlin{\det\bigl(1 - t F^\bullet \mid H^*(K^\bullet)\bigr) := \prod_{i \in \mathbb{Z}} \det\bigl(1 - t H^i(F) \mid H^i(K^\bullet)\bigr)^{(-1)^i},}$$
+    where each factor is the usual determinant of a linear operator on a finite-dimensional vector space.
+
+    It may also be reasonable to refer to this notion by the following names:
+    \begin{itemize}
+        \item The \hldef{characteristic (rational) function of $F^\bullet$ on (the total cohomology of) $K^\bullet$}
+        \item The \hldef{cohomological characteristic (rational) function of $F^\bullet$}
+        \item The \hldef{alternating product of characteristic polynomials of $F^\bullet$ (over cohomology)}
+        \item The \hldef{cohomological determinant of $1-tF$ on (the total cohomology) of $K^\bullet$}
+    \end{itemize}
+
+\end{enumerate}
+\end{definition}

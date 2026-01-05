@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:additive_group_scheme_over_a_scheme}
+    \TODO{TODO: define a (commutative) group scheme}
+    \TODO{TODO: define the multiplicative group scheme}
+Let $S$ be a scheme. The \hldef{additive group scheme over $S$} is the group scheme \hl{$\bbG_{a} = \bbG_{a,S}$} over $S$ defined by
+$$ \bbG_{a,S} = \Spec \mathcal{O}_S[T] $$
+with group structure morphisms:
+\begin{itemize}
+  \item \textbf{Comultiplication (Addition):} The morphism $\Delta: \bbG_{a,S} \to \bbG_{a,S} \times_S \bbG_{a,S}$ corresponding to the ring homomorphism $\mathcal{O}_S[T] \to \mathcal{O}_S[T] \otimes_{\mathcal{O}_S} \mathcal{O}_S[T]$ given by $T \mapsto T \otimes 1 + 1 \otimes T$.
+  \item \textbf{Counit (Identity):} The morphism $\varepsilon: \bbG_{a,S} \to S$ corresponding to $T \mapsto 0$.
+  \item \textbf{Coinverse (Inversion):} The morphism $\iota: \bbG_{a,S} \to \bbG_{a,S}$ corresponding to $T \mapsto -T$.
+\end{itemize}
+Thus, $(\bbG_{a,S}, \Delta, \varepsilon, \iota)$ is a commutative group scheme over $S$. Note that we may speak of the \hldef{additive group scheme over a ring $R$} as the additive group scheme over $\Spec R$. 
+\end{definition}

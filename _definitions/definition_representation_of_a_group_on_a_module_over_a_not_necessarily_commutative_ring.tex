@@ -1,0 +1,17 @@
+
+\begin{definition}[Representation of a Group on a Module] \label{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}
+Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring with unity}. Let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}. A \hldef{representation of $G$ on the $R$-module $M$} is a group homomorphism
+$$\hlin{\rho : G \to \operatorname{Aut}_R(M)},$$
+\TODO{defien the group of automorphisms of a module}
+where $\operatorname{Aut}_R(M)$ denotes the group of $R$-module automorphisms of $M$. Equivalently, this means $G$ acts on the left of $M$ via $R$-module automorphisms, i.e.,
+\begin{align*}
+\rho(e) &= \mathrm{id}_M, \\
+\rho(g h) &= \rho(g) \circ \rho(h) \quad \text{for all } g,h \in G,
+\end{align*}
+and for each $g \in G$, the map $\rho(g) : M \to M$ is an $R$-linear automorphism.
+
+
+Synonymously, we say that $M$ is a \hldef{$G$-module over $R$}.
+
+Similarly, one could define a \hldef{representation of $G$ on a right $R$-module}.
+\end{definition}

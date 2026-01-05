@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:profinite_etale_cover_of_schemes}
+Let $X$ be a scheme. 
+\begin{enumerate}
+    \item A morphism of schemes $f \colon Y \to X$ is called a \hldef{profinite-étale cover} (or \hldef{pro-finite cover}) if $Y$ can be expressed as an \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit}
+    $$\hlin{Y = \varprojlim_{i \in I} Y_i}$$
+    where $\{Y_i \to X\}_{i \in I}$ is an inverse system of \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{finite étale} morphisms indexed by a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{directed set} $I$, with  transition maps $Y_j \to Y_i$ for $j \geq i$, which are necessarily affine \TODO{show why}. 
+    Note by \Cref{theorem:category_of_schemes_over_a_scheme_admits_projective_limits} that inverse limits of such inverse systems exist.
+
+    \item The \hldef{universal profinite-\'etale/pro-finite cover of $X$} is the inverse limit of the inverse system $\{Y_i \to X\}_{i \in I}$ of all finite \'etale morphisms to $X$. 
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,20 @@
+\begin{definition}[Vector space over a field] \label{definition:vector_space_over_a_field}
+    Let $(k,+,\cdot)$ be a \CrefAndHyperrefIfExist{definition:field}{field}. A \hldef{vector space over $k$} or a \hldef{$k$-vector space} is a triple $(V,+,\cdot)$\footnote{Note that $+$ and $\cdot$ are abuse of notation here as these are already used for the addition and multiplication of $\cdot$} where 
+    \begin{enumerate}
+        \item $(V,+)$ is an abelian group, and
+        \item $\cdot$ is a map $k \times V \to V$, called \hldef{scalar multiplication}
+    \end{enumerate}
+    such that the following axioms hold for all $a,b \in k$ and all $u,v \in V$:
+
+    1. (Compatibility with field multiplication)  
+    $$ (ab)\cdot v = a \cdot (b \cdot v). $$
+
+    2. (Identity scalar)  
+    $$ 1 \cdot v = v. $$
+
+    3. (Distributivity over vector addition)  
+    $$ a \cdot (u+v) = a \cdot u + a \cdot v. $$
+
+    4. (Distributivity over scalar addition)  
+    $$ (a+b) \cdot v = a \cdot v + b \cdot v. $$
+\end{definition}

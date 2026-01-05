@@ -1,0 +1,9 @@
+\begin{definition}[Extension by zero functor for open immersions of topological spaces] \label{definition:extension_by_zero_of_a_sheaf_on_a_topological_space_under_open_immersion}
+Let $X$ be a topological space and let $j : U \hookrightarrow X$ be an open immersion, where $U$ is an open subset of $X$. Consider the category $\mathrm{Sh}(X)$ of sheaves of abelian groups on $X$ and $\mathrm{Sh}(U)$ on $U$. The \hldef{extension by zero functor}
+$$\hlin{j_! : \mathrm{Sh}(U) \to \mathrm{Sh}(X)}$$
+is defined as follows: for any sheaf $\mathcal{F}$ on $U$, the sheaf $j_! \mathcal{F}$ on $X$ is given by
+\[
+(j_! \mathcal{F})(V) = \{ s \in \mathcal{F}(V \cap U) \mid \text{$s$ extends by zero outside $U$} \}
+\]
+for each open subset $V \subseteq X$. Concretely, sections over $V$ are sections over $V \cap U$, and sections supported outside $U$ are identified with zero.
+\end{definition}

@@ -1,0 +1,20 @@
+\begin{lemma}[Product of Additive Categories is Additive] \label{lemma:small_product_of_additive_categories_is_additive}
+Let $I$ be any set and let $\{\mathcal{A}_i\}_{i \in I}$ be a family of \CrefAndHyperrefIfExist{definition:additive_category}{additive categories}. 
+\begin{enumerate}
+    \item The \CrefAndHyperrefIfExist{definition:product_category_of_a_family_of_categories}{product category} $\prod_{i \in I} \mathcal{A}_i$ is additive. Explicitly:
+        \begin{itemize}
+            \item Each hom-set 
+            $$\mathrm{Hom}_{\prod_i \mathcal{A}_i}((A_i)_i,(B_i)_i) = \prod_{i \in I} \mathrm{Hom}_{\mathcal{A}_i}(A_i,B_i)$$
+            is an abelian group under componentwise addition.
+            \item Composition is bilinear with respect to this group structure.
+            \item The family $(0_i)_{i \in I}$ of zero objects in each $\mathcal{A}_i$ is a zero object in $\prod_i \mathcal{A}_i$.
+            \item Finite direct sums exist and are given componentwise.
+        \end{itemize}
+    \item If each $\calA_i$ is \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}, then so is $\prod_{i \in I} \mathcal{A}_i$. \TODO{If each $\calA_i$ satisfies Ab1-Ab5, does the product also?} Explicitly,
+    \begin{itemize}
+    \item Kernels and cokernels exist and are computed componentwise:
+    $$\ker((f_i)_i) = (\ker(f_i))_i, \quad \mathrm{coker}((f_i)_i) = (\mathrm{coker}(f_i))_i.$$
+    \item Every monomorphism is the kernel of its cokernel, and every epimorphism is the cokernel of its kernel.
+    \end{itemize}
+\end{enumerate}
+\end{lemma}

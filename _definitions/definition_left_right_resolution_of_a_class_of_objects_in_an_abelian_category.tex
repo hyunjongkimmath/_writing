@@ -1,0 +1,28 @@
+\begin{definition} \label{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $\mathcal{X}$ be a class of objects in $\mathcal{A}$. Let $M$ be an object of $\calA$.
+
+\begin{enumerate}
+    \item A \hldef{right resolution of $M$} is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} $I^\bullet$ with $I^i = 0$ for $i < 0$ and a map $M \to I^0$ such that the augmented complex
+    $$0 \to M \to I^0 \to I^1 \to I^2 \to \cdots$$
+    is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
+
+    % \item An \hldef{injective resolution of $M$} is a right resolution $I^\bullet$ for which the objects $I^i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}.
+
+    \item A \hldef{left resolution of $M$} is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} $P_\bullet$ with $P_i = 0$ for $i < 0$ and a map $P_0 \to M$ such that the augmented complex
+    $$\cdots P_2 \to P_1 \to P_0 \to M \to 0$$
+    is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
+    
+    \item An \hldef{$\mathcal{X}$-left resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} by objects of $X$, i.e. an exact complex
+    $$ \cdots \to X_2 \to X_1 \to X_0 \to M \to 0 $$
+    with each $X_i \in \mathcal{X}$.
+
+    \item An \hldef{$\mathcal{X}$-right resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolution} by objects of $X$, i.e. an exact complex
+    $$ 0 \to M \to X^0 \to X^1 \to X^2 \to \cdots $$
+    with each $X_i \in \mathcal{X}$.
+
+    \item A \hldef{projective resolution of $M$} is a left resolution $P^\bullet$ for which the objects $P^i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective}.
+
+    \item An \hldef{injective resolution of $M$} is a right resolution $I^\bullet$ for which the objects $I^i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}.
+\end{enumerate}
+
+\end{definition}

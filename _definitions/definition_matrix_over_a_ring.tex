@@ -1,0 +1,9 @@
+\begin{definition}  \label{definition:matrix_over_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}, and let $m,n \in \mathbb{N}$. The set of all $m \times n$ arrays with entries in $R$ is denoted by
+$$ \hlin{M_{m,n}(R) = \{ (a_{ij}) \mid a_{ij} \in R \text{ for all } i,j \}.}$$
+Elements of $M_{m,n}(R)$ are called \hldef{matrices over $R$} of size $m \times n$.
+Matrix addition \hl{$A+B$} and multiplication \hl{$AB$} are defined by the usual componentwise and summation formulas. More precisely, if $A,B \in M_{m,n}(R)$, then 
+$$ (A+B)_{ij} = a_{ij} + b_{ij},$$ 
+and if $A \in M_{m,n}(R)$ and $B \in M_{n,p}(R)$, then
+$$ (AB)_{ij} = \sum_{k=1}^n a_{ik}b_{kj}, \quad 1 \leq i \leq m, 1 \leq j \leq p.$$
+\end{definition}

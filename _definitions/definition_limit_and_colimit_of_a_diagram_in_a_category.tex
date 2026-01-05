@@ -1,0 +1,73 @@
+\begin{definition}[Cones, limits and colimits in a category] \label{definition:limit_and_colimit_of_a_diagram_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}, let $I$ be a (large) category, and let $D: I \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram}\CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category}.
+
+\begin{enumerate}
+    \item A \hldef{cone to the diagram $D$} is an object $L \in \mathcal{C}$ together with a family of morphisms
+    \[
+    \{\pi_i: L \to D(i)\}_{i \in I}
+    \]
+    such that for every morphism $f: i \to j$ in $I$, the diagram
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        & L \arrow[dl, "\pi_i"'] \arrow[dr, "\pi_j"] & \\
+        D(i) \arrow[rr, "D(f)"] & & D(j)
+    \end{tikzcd}
+    \end{center}
+    commutes, i.e.  $D(f) \circ \pi_i = \pi_j$.
+    
+
+
+    \item A cone $(L, \{\pi_i\})$ is called a \hldef{limit of $D$} if it satisfies the following ``universal property'':
+    for any cone $(C, \{ f_i \})$ over $D$, there exists a \textit{unique} morphism $u: C \to L$ such that
+    \[
+    \pi_i \circ u = f_i \quad \text{for all } i \in I.
+    \]
+    Visually, the following diagrams commute every morphism $f: i \to j$ in $I$:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        & C \arrow[d, "\exists ! u", dashed] \arrow[ddl, "f_i"', bend right=20] \arrow[ddr, "f_j", bend left=20] & \\
+        & L \arrow[dl, "\pi_i"] \arrow[dr, "\pi_j"'] & \\
+        D(i) \arrow[rr, "D(f)"] & & D(j).
+    \end{tikzcd}
+    \end{center}
+    If such a cone exists, then the object $L$ is necessarily unique up to unique isomorphism by the universal property. In this case, $L$ is denoted by \hl{$\lim_{i \in I} D$} or \hl{$\lim D$}.
+
+
+
+    
+    \item A \hldef{cocone from the diagram $D$} is an object $C \in \mathcal{C}$ together with a family of morphisms
+    \[
+    \{\iota_i: D(i) \to C\}_{i \in I}
+    \]
+    such that for every morphism $f: i \to j$ in $I$, the diagram
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        D(i) \arrow[rr, "D(f)"] \arrow[dr, "\iota_i"'] & & D(j) \arrow[dl, "\iota_j"] \\
+        & C & 
+    \end{tikzcd}
+    \end{center}
+    commutes, i.e. $\iota_j \circ D(f) = \iota_i$.
+
+    \item A cocone $(L, \{\iota_i\})$ is called a \hldef{colimit of $D$} if it satisfies the following ``universal property'':
+    for any cocone $(C, \{ g_i \})$ under $D$, there exists a \textit{unique} morphism $u: L \to C$ such that
+    \[
+    u \circ \iota_i = g_i \quad \text{for all } i \in I.
+    \]
+    Visually, the following diagrams commute every morphism $f: i \to j$ in $I$:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        D(i) \arrow[rr, "D(f)"] \arrow[dr, "\iota_i"] \arrow[ddr, "g_i"', bend right=20] & & D(j) \arrow[dl, "\iota_j"'] \arrow[ddl, "g_j", bend left=20] \\
+        & L \arrow[d, "\exists ! u", dashed] & \\
+        & C &. 
+    \end{tikzcd}
+    \end{center}
+    If such a cocone exists, then the object $L$ is necessarily unique up to unique isomorphism by the universal property. In this case, $L$ is denoted by \hl{$\colim_{i \in I} D$} or \hl{$\colim D$}.
+
+\end{enumerate}
+
+A limit/colimit is called \hldef{finite} (resp. \hldef{small}) if the diagram category $I$ is finite (resp. small).
+
+Some authors use the terms \hldef{projective limit} or \hldef{inverse limit} to refer to what is defined here as a limit, Similarly, the terms \hldef{inductive limit} or \hldef{direct limit} are sometimes used to mean a colimit. However, these phrases can have more specific meanings to other authors: a \emph{projective} or \emph{inverse limit} may refer to a limit over a diagram indexed by a \hyperrefIfExists{definition:partially_ordered_set}{codirected poset}\CrefIfExists{definition:partially_ordered_set}. Likewise, an \emph{inductive} or \emph{direct limit} may refer to a colimit over a \hyperrefIfExists{definition:partially_ordered_set}{directed poset}\CrefIfExists{definition:partially_ordered_set}\TextIfExists{definition:projective_and_inductive_limits_in_categories}{ (see \Cref{definition:projective_and_inductive_limits_in_categories})}.
+
+Thus, while the terms are sometimes used interchangeably with ``limit'' and ``colimit,'' they may also emphasize particular indexing shapes and directions, distinguishing them from general limits and colimits taken over arbitrary small categories.
+\end{definition}

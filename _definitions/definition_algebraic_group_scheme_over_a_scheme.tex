@@ -1,0 +1,79 @@
+\begin{definition} \label{definition:algebraic_group_scheme_over_a_scheme}
+Let $S$ be a scheme. An \hl{algebraic group scheme over $S$} (or an \hl{$S$-group scheme}) is a group object $G$ in the category of schemes over $S$; that is, $G$ is an $S$-scheme equipped with $S$-morphisms:
+\hl{$m: G \times_S G \to G$} (\hldef{multiplication}), \hl{$i: G \to G$} (\hldef{inverse}), and \hl{$e: S \to G$} (\hldef{identity}),
+satisfying the group axioms expressed by the commutativity of the following diagrams:
+
+\begin{enumerate}
+    \item \textbf{Associativity}\quad
+    $
+    \begin{tikzcd}[column sep=small]
+      G \times_S G \times_S G \arrow{r}{m \times \mathrm{id}} \arrow{d}[swap]{\mathrm{id} \times m} & G \times_S G \arrow{d}{m} \\
+      G \times_S G \arrow{r}{m} & G
+    \end{tikzcd}
+    $
+    \item \textbf{Identity}\quad
+    $
+    \begin{tikzcd}[column sep=small]
+      G \times_S S \arrow{r}{\mathrm{id} \times e} \arrow{dr}[swap]{\simeq} & G \times_S G \arrow{d}{m} \\
+      & G
+    \end{tikzcd}
+    \qquad
+    \begin{tikzcd}[column sep=small]
+      S \times_S G \arrow{r}{e \times \mathrm{id}} \arrow{dr}[swap]{\simeq} & G \times_S G \arrow{d}{m} \\
+      & G
+    \end{tikzcd}
+    $
+    \item \textbf{Inverse}\quad
+    $
+    \begin{tikzcd}[column sep=small]
+      G \arrow{r}{(\mathrm{id}, i)} \arrow{d}[swap]{\mathrm{id}} & G \times_S G \arrow{d}{m} \\
+      G \arrow{r}{e \circ \pi} & G
+    \end{tikzcd}
+    $
+    where $\pi: G \to S$ is the structure morphism and $e \circ \pi$ sends $g$ to the identity section.
+\end{enumerate}
+
+\TextIfExists{definition:group_object_in_a_category_with_a_final_object}{Equivalently, a group scheme over $S$ is a \CrefAndHyperrefIfExist{definition:group_object_in_a_category_with_a_final_object}{group object} in the \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{category of $S$-schemes}}
+
+If $G$ is \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine over} $S$, we call it an \hldef{affine group scheme over $S$}.
+
+If the base scheme $S$ is the spectrum of a field $k$, then we call $G$ a \hldef{$k$-algebraic group} or an \hldef{algebraic group (scheme) over $k$}. If $G$ is additionally a $k$-variety, then we call $G$ a \hldef{$k$-group variety}.
+\end{definition}
+
+% \begin{definition} \label{definition:algebraic_group_over_a_field}
+%     \TODO{TODO: define variety, group object}
+% Let $k$ be a field. An \hl{$k$-algebraic group} (or an \hl{algebraic group over $k$}) is a group object $G$ in the category of $k$-schemes; that is, $G$ is a scheme over $k$ equipped with morphisms $m: G \times G \to G$ (multiplication), $i: G \to G$ (inverse), and $e: \operatorname{Spec} k \to G$ (identity), satisfying the group axioms expressed by the commutativity of the following diagrams:
+
+% \begin{itemize}
+%     \item[(Associativity)]
+%     \begin{center}
+%     \begin{tikzcd}
+%     G \times G \times G \arrow{r}{m \times \mathrm{id}} \arrow{d}[swap]{\mathrm{id} \times m} & G \times G \arrow{d}{m} \\
+%     G \times G \arrow{r}{m} & G
+%     \end{tikzcd}
+%     \end{center}
+
+%     \item[(Identity)] 
+%     \begin{center}
+%     \begin{tikzcd}
+%     G \times \operatorname{Spec} k \arrow{r}{\mathrm{id} \times e} \arrow{dr}[swap]{\simeq} & G \times G \arrow{d}{m} \\
+%     & G
+%     \end{tikzcd}
+%     \qquad
+%     \begin{tikzcd}
+%     \operatorname{Spec} k \times G \arrow{r}{e \times \mathrm{id}} \arrow{dr}[swap]{\simeq} & G \times G \arrow{d}{m} \\
+%     & G
+%     \end{tikzcd}
+%     \end{center}
+
+%     \item[(Inverse)] 
+%     \begin{center}
+%         \begin{tikzcd}
+%         G \arrow{r}{(\mathrm{id}, i)} \arrow{d}[swap]{\mathrm{id}} & G \times G \arrow{d}{m} \\
+%         G \arrow{r}{e \circ \pi} & G
+%         \end{tikzcd}
+%     \end{center}
+%     where $\pi: G \to \operatorname{Spec} k$ is the structure morphism and $e \circ \pi$ sends $g$ to the identity.
+% \end{itemize}
+% If $G$ is a $k$-variety, when we call it a \hldef{$k$-group variety}. If $G$ is an affine $k$-scheme, then we call it an \hldef{affine algebraic $k$-group}.
+% \end{definition}

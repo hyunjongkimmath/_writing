@@ -1,0 +1,43 @@
+\begin{theorem}[cf. {\cite[Theorem 2.4.6]{weibel}}] \label{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
+    \begin{enumerate}
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}. 
+        \begin{enumerate}
+            \item Let 
+            $$0 \to A' \to A \to A'' \to 0$$
+            be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} $P' \to A'$ and $P'' \to A''$. There exists a long exact sequence
+            $$\cdots \xrightarrow{\partial} L_i F(A') \to L_iF(A) \to L_iF(A'') \xrightarrow{\partial} L_{i-1} F(A') \to L_{i-1}F(A) \to L_{i-1}F(A'') \xrightarrow{\partial} \cdots$$
+            of \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects} and this long exact sequence is natural.
+
+            \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, then the derived functor $L_* F$ form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{homological $\delta$-functor}.
+        \end{enumerate}
+
+        \item Suppose that $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}. 
+            \begin{enumerate}
+                \item Let 
+                $$0 \to A' \to A \to A'' \to 0$$
+                be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolutions} $I' \to A'$, $I \to A$, and $I'' \to A''$. There exists a long exact sequence
+                $$
+                \cdots \xrightarrow{\partial} R^i G(A') \to R^i G(A) \to R^i G(A'') \xrightarrow{\partial} R^{i+1} G(A') \to R^{i+1} G(A) \to R^{i+1} G(A'') \xrightarrow{\partial} \cdots
+                $$
+                of \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects}, and this long exact sequence is natural.
+
+                \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, then the derived functors $R^* G$ form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{cohomological $\delta$-functor}.
+            \end{enumerate}
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+    \item 
+    \begin{enumerate}
+        \item By the \CrefAndHyperrefIfExist{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}{Horseshoe lemma}, there is a projective resolution $P \to A$ fitting into a short exact sequence $0 \to P' \to P \to P'' \to 0$. Since the $P_n''$ are projective, each sequence $0 \to P_n' \to P_n \to P_n'' \to 0$ is split exact. \TODO{show that SES's ending in projective objects are split}. Since $F$ is additive, each sequence 
+        $$0 \to F(P_n') \to F(P_n) \to F(P_n'') \to 0$$
+        is split exact in $\calB$ \TODO{show why}. Therefore,
+        $$0 \to F(P') \to F(P) \to F(P'') \to 0$$
+        is a short exact sequence of chain complex. Its associated \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence in homology} is the desired long exact sequence. 
+
+        We now show that the long exact sequence is natural. \TODO{continue}
+    \end{enumerate}
+\end{enumerate}
+\end{proof}

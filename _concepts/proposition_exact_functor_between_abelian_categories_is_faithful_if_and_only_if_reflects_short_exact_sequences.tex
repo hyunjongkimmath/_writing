@@ -1,0 +1,52 @@
+\begin{proposition} \label{proposition:exact_functor_between_abelian_categories_is_faithful_if_and_only_if_reflects_short_exact_sequences}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. The functor $F$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} if and only if it \CrefAndHyperrefIfExist{definition:reflects_a_type_of_morphism_for_a_functor_between_categories}{reflects} \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequences}.
+\end{proposition}
+
+
+\begin{proof}
+    Suppose $F$ is faithful. Let
+    \[
+    A_1 \xrightarrow{f} A_2 \xrightarrow{g} A_3
+    \]
+    be a sequence in $\mathcal{A}$ such that
+    \[
+    F(A_1) \xrightarrow{F(f)} F(A_2) \xrightarrow{F(g)} F(A_3)
+    \]
+    is exact in $\mathcal{B}$. Because $F$ is exact, it preserves kernels and images, so
+    \[
+    F(\ker(g)) = \ker(F(g)), \quad F(\mathrm{im}(f)) = \mathrm{im}(F(f)).
+    \]
+
+    Exactness in $\mathcal{B}$ gives
+    \[
+    \ker(F(g)) = \mathrm{im}(F(f)),
+    \]
+    so
+    \[
+    F(\ker(g)) = F(\mathrm{im}(f)).
+    \]
+
+    Since $F$ is faithful, it \CrefAndHyperrefIfExist{definition:reflects_a_type_of_morphism_for_a_functor_between_categories}{reflects} \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms and epimorphisms} (\Cref{proposition:reflection_of_monomorphism_and_epimorphisms_by_faithful_functors}), and morphisms that become equal via $F$ must be equal in $\mathcal{A}$. Hence,
+    \[
+    \ker(g) = \mathrm{im}(f).
+    \]
+    Therefore, the sequence
+    \[
+    A_1 \xrightarrow{f} A_2 \xrightarrow{g} A_3
+    \]
+    is exact in $\mathcal{A}$, i.e., $F$ reflects short exact sequences.
+
+    Conversely, suppose $F$ reflects short exact sequences. Let $f: A \to B$ be a morphism in $\mathcal{A}$ such that
+    \[
+    F(f) = 0.
+    \]
+    Consider the sequence
+    \[
+    0 \to A \xrightarrow{f} B.
+    \]
+    Since $F(f) = 0$, we have the sequence
+    \[
+    0 \to F(A) \xrightarrow{F(f)} F(B)
+    \]
+    is exact at $F(A)$. Because $F$ reflects short exact sequences, the original sequence must be exact at $A$, so $f$ is a monomorphism with zero image, hence $f=0$. Thus $F$ is faithful by \Cref{lemma:an_additive_functors_between_additive_categories_is_faithful_exact_if_it_only_sends_the_zero_morphism_to_a_zero_morphism}.
+\end{proof}

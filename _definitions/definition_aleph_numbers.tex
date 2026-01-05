@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:aleph_numbers}
+The \hldef{aleph numbers} are the infinite \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinals} indexed by \CrefAndHyperrefIfExist{definition:ordinal_number}{ordinals}. They are defined recursively:
+\begin{align*}
+    \aleph_0 &= \omega, \\
+    \aleph_{\alpha+1} &= \aleph_\alpha^+ \quad (\text{the successor cardinal of } \aleph_\alpha), \\
+    \aleph_\lambda &= \bigcup_{\beta < \lambda} \aleph_\beta \quad \text{if } \lambda \text{ is a limit ordinal}.
+\end{align*}
+\CrefIfExists{definition:omega_ordinal}\CrefIfExists{definition:successor_cardinal_of_a_cardinal_and_limit_cardinal}\CrefIfExists{definition:limit_ordinal}
+A cardinal $\kappa$ is an \hldef{uncountable cardinal} if $\kappa > \aleph_0$.
+\end{definition}

@@ -1,0 +1,168 @@
+\begin{definition} \label{definition:canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category}
+
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+
+    \begin{enumerate}
+        \item  
+    The \hldef{canonical truncations} of a 
+    \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} 
+    $A_\bullet$ in 
+    \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\mathcal{A})$} 
+    are defined by
+
+    \hlalign{
+    \begin{align*}
+    (\tau_{\ge n} A)_i &=
+    \begin{cases}
+        A_i, & i > n, \\
+        \ker(d_n : A_n \to A_{n-1}), & i = n, \\
+        0, & i < n,
+    \end{cases}
+    &
+    (\tau_{\le n} A)_i &=
+    \begin{cases}
+        0, & i > n, \\
+        \mathrm{coker}(d_{n+1} : A_{n+1} \to A_n), & i = n, \\
+        A_i, & i < n.
+    \end{cases}
+    \end{align*}
+    }
+
+    The differentials are the restrictions and/or quotient maps induced from $A_\bullet$. 
+    In particular,
+    $$
+    H_i(\tau_{\ge n} A_\bullet) = 
+    \begin{cases}
+        H_i(A_\bullet), & i \ge n, \\
+        0, & i < n,
+    \end{cases}
+    \quad\text{and}\quad
+    H_i(\tau_{\le n} A_\bullet) = 
+    \begin{cases}
+        H_i(A_\bullet), & i \le n, \\
+        0, & i > n.
+    \end{cases}
+    $$
+    The assignments $A_\bullet \mapsto \tau_{\ge n} A_\bullet$ and $A_\bullet \mapsto \tau_{\le n} A_\bullet$ extend to endofunctors
+
+    \hlalign{
+    \begin{align*}
+    \tau_{\ge n},\, \tau_{\le n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+    \end{align*}
+    }
+
+    called the \hldef{truncation functors}. They are natural in both $A_\bullet$ and $n$, and fit into canonical morphisms of complexes
+    $$
+    \tau_{\ge n} A_\bullet \longrightarrow A_\bullet \longrightarrow \tau_{\le n} A_\bullet.
+    $$
+
+    \item 
+    \noindent
+    Similarly, let $A^\bullet$ be a 
+    \CrefAndHyperrefIfExist{definition:cochain_complex_of_objects_in_an_additive_category}{cochain complex} 
+    in $\mathbf{Ch}(\mathcal{A})$, i.e.
+    $$
+    \cdots \xrightarrow{d^{n-2}} A^{n-1} \xrightarrow{d^{n-1}} A^n \xrightarrow{d^n} A^{n+1} \xrightarrow{d^{n+1}} \cdots
+    $$
+    with $d^{n+1} \circ d^n = 0$ for all $n \in \mathbb{Z}$. 
+    The \hldef{canonical truncations of $A^\bullet$} are defined by
+
+    \hlalign{
+    \begin{align*}
+    (\tau_{\le n} A)^i &=
+    \begin{cases}
+        A^i, & i < n, \\
+        \ker(d^n : A^n \to A^{n+1}), & i = n, \\
+        0, & i > n,
+    \end{cases}
+    &
+    (\tau_{\ge n} A)^i &=
+    \begin{cases}
+        0, & i < n, \\
+        \mathrm{coker}(d^{n-1} : A^{n-1} \to A^n), & i = n, \\
+        A^i, & i > n.
+    \end{cases}
+    \end{align*}
+    }
+
+    The differentials are the restrictions or quotient maps induced by those of $A^\bullet$. 
+    These truncations satisfy
+    $$
+    H^i(\tau_{\le n} A^\bullet) = 
+    \begin{cases}
+        H^i(A^\bullet), & i \le n, \\
+        0, & i > n,
+    \end{cases}
+    \quad\text{and}\quad
+    H^i(\tau_{\ge n} A^\bullet) = 
+    \begin{cases}
+        0, & i < n, \\
+        H^i(A^\bullet), & i \ge n.
+    \end{cases}
+    $$
+
+    They also extend to endofunctors
+
+    \hlalign{
+    \begin{align*}
+    \tau_{\le n},\, \tau_{\ge n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+    \end{align*}
+    }
+
+    natural in both $A^\bullet$ and $n$, fitting into canonical morphisms of cochain complexes
+    $$
+    \tau_{\le n} A^\bullet \longrightarrow A^\bullet \longrightarrow \tau_{\ge n} A^\bullet.
+    $$
+
+    \end{enumerate}
+
+%     Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+% The \hldef{canonical truncations} of a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} $A_\bullet$ in \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\mathcal{A})$} are defined by
+
+% \hlalign{
+% \begin{align*}
+% (\tau_{\ge n} A)_i &=
+%   \begin{cases}
+%     A_i, & i > n, \\
+%     \ker(d_n : A_n \to A_{n-1}), & i = n, \\
+%     0, & i < n,
+%   \end{cases}
+% &
+% (\tau_{\le n} A)_i &=
+%   \begin{cases}
+%     0, & i > n, \\
+%     \mathrm{coker}(d_{n+1} : A_{n+1} \to A_n), & i = n, \\
+%     A_i, & i < n.
+%   \end{cases}
+% \end{align*}
+% }
+
+% The differentials are the restrictions and/or quotient maps induced from $A_\bullet$. 
+% In particular,
+% $$
+% H_i(\tau_{\ge n} A_\bullet) = 
+%   \begin{cases}
+%     H_i(A_\bullet), & i \ge n, \\
+%     0, & i < n,
+%   \end{cases}
+% \quad\text{and}\quad
+% H_i(\tau_{\le n} A_\bullet) = 
+%   \begin{cases}
+%     H_i(A_\bullet), & i \le n, \\
+%     0, & i > n.
+%   \end{cases}
+% $$
+
+% The assignments $A_\bullet \mapsto \tau_{\ge n} A_\bullet$ and $A_\bullet \mapsto \tau_{\le n} A_\bullet$ extend to endofunctors
+
+% \hlalign{
+% \begin{align*}
+% \tau_{\ge n},\, \tau_{\le n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+% \end{align*}
+% }
+
+% called the \hldef{truncation functors}. They are natural in both $A_\bullet$ and $n$, and fit into canonical morphisms of complexes
+% $$
+% \tau_{\ge n} A_\bullet \longrightarrow A_\bullet \longrightarrow \tau_{\le n} A_\bullet.
+% $$
+\end{definition}

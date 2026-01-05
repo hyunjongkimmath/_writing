@@ -1,0 +1,24 @@
+
+\begin{proposition} \label{proposition:category_of_chain_complexes_in_an_additive_category_is_additive}
+Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category}{additive category}. 
+\begin{enumerate}
+    \item The category \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{$\mathrm{Ch}(\calA)$} of chain complexes is itself and additive category.
+
+    \item If $\calA$ is an \hyperrefIfExists{definition:abelian_category}{abelian category}, then $\mathrm{Ch}(\calA)$ is an abelian category.
+
+    \item If $\calA$ is an \hyperrefIfExists{definition:abelian_category}{abelian category} satisfying Grothendieck's axiom \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB$n$ (resp. AB$n^*$)} for $n \in \{3,4,5,6\}$, then $\mathrm{Ch}(\calA)$ also satisfies AB$n$ (resp. AB$n^*$). If $\calA$ is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck abelian category}, then so is $\mathrm{Ch}(\calA)$
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+    Combine \Cref{proposition:category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category} and \Cref{lemma:additive_functor_category_from_small_preadditive_categories_preserves}.
+\end{proof}
+
+% \begin{corollary}
+% Let $\calB$ be a \CrefAndHyperrefIfExist{definition:additive_category}{preadditive category}.
+% \begin{enumerate}
+%     \item The \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{(co)chain complex category} $\text{Ch}(\calB)$ is preadditive. If $\calB$ is additionally \CrefAndHyperrefIfExist{definition:additive_category}{additive}/\CrefAndHyperrefIfExist{definition:abelian_category}{abelian}, then so is $\text{Ch}(\calB)$.
+
+%     \item If $\calB$ is an abelian category with property \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$ABn$ for $n = 3,4,5,6$ or $ABn^*$ for $n = 3,4,5$}, then $\text{Add}(\calA, \calB)$ possesses the same property.
+% \end{enumerate}
+
+% \end{corollary}

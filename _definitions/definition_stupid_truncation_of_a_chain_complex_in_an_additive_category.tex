@@ -1,0 +1,67 @@
+\begin{definition} \label{definition:stupid_truncation_of_a_chain_complex_in_an_additive_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category}{additive category}.
+\begin{enumerate}
+    \item  
+    Let $A_\bullet$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in 
+    \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\mathcal{A})$}, 
+    and let $n \in \mathbb{Z}$. The \hldef{stupid/brutal truncations of $A_\bullet$} are defined as follows.
+
+    \hlalign{
+    \begin{align*}
+    (\sigma_{\le n} A)_i &=
+    \begin{cases}
+        0, & i > n, \\
+        A_i, & i \le n,
+    \end{cases}
+    &
+    (\sigma_{\ge n} A)_i &=
+    \begin{cases}
+        A_i, & i \ge n, \\
+        0, & i < n.
+    \end{cases}
+    \end{align*}
+    }
+
+    Both are complexes with differentials induced from that of $A_\bullet$. 
+    If $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}, then they satisfy canonical isomorphisms
+    $$
+    \sigma_{\le n} A_\bullet / \sigma_{\le n-1} A_\bullet \cong A_n[-n]
+    \quad \text{and} \quad
+    \sigma_{\ge n} A_\bullet / \sigma_{\ge n+1} A_\bullet \cong A_n[-n].
+    $$
+
+    \item Let $A^\bullet$ be a 
+    \CrefAndHyperrefIfExist{definition:cochain_complex_of_objects_in_an_additive_category}{cochain complex} 
+    in $\mathbf{Ch}(\mathcal{A})$, i.e.
+    $$
+    \cdots \xrightarrow{d^{n-2}} A^{n-1} \xrightarrow{d^{n-1}} A^n \xrightarrow{d^n} A^{n+1} \xrightarrow{d^{n+1}} \cdots
+    $$
+    with $d^{n+1} \circ d^n = 0$ for all $n \in \mathbb{Z}$. 
+    The \hldef{stupid truncations of $A^\bullet$} are defined by the rules
+
+    \hlalign{
+    \begin{align*}
+    (\sigma_{\ge n} A)^i &=
+    \begin{cases}
+        0, & i < n, \\
+        A^i, & i \ge n,
+    \end{cases}
+    &
+    (\sigma_{\le n} A)^i &=
+    \begin{cases}
+        A^i, & i \le n, \\
+        0, & i > n.
+    \end{cases}
+    \end{align*}
+    }
+
+    These are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complexes} with differentials inherited from $A^\bullet$. 
+    If $\calA$ is abelian, then they fit canonically into short exact sequences of cochain complexes
+    $$
+    0 \longrightarrow \sigma_{\ge n+1} A^\bullet \longrightarrow \sigma_{\ge n} A^\bullet \longrightarrow A^n[-n] \longrightarrow 0
+    \quad\text{and}\quad
+    0 \longrightarrow A^n[-n] \longrightarrow \sigma_{\le n} A^\bullet \longrightarrow \sigma_{\le n-1} A^\bullet \longrightarrow 0.
+    $$
+
+\end{enumerate}
+\end{definition}

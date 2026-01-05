@@ -1,0 +1,27 @@
+\begin{definition}[Product Category of a Family of Categories] \label{definition:product_category_of_a_family_of_categories}
+
+    Let $\{\mathcal{C}_i\}_{i \in I}$ be a family of \CrefAndHyperrefIfExist{definition:category}{(large) categories} indexed by a class $I$. The \hldef{product category of the family}, denoted
+        $$\hlin{\prod_{i\in I} \mathcal{C}_i},$$
+        is the very large category \TODO{define very large categories} defined as follows:
+        \begin{itemize}
+            \item The class of objects is
+            $$\mathrm{Ob}\Big(\prod_{i\in I} \mathcal{C}_i\Big) = \prod_{i\in I} \mathrm{Ob}(\mathcal{C}_i),$$
+            i.e., an object is a family $(A_i)_{i\in I}$ with $A_i \in \mathrm{Ob}(\mathcal{C}_i)$.
+
+            \item For two objects $(A_i)_i$ and $(B_i)_i$, the morphism class is
+            $$\mathrm{Hom}_{\prod_{i\in I} \mathcal{C}_i}((A_i)_i,(B_i)_i) = \prod_{i\in I} \mathrm{Hom}_{\mathcal{C}_i}(A_i,B_i).$$
+            In other words, a morphism $(f_i)_i : (A_i)_i \to (B_i)_i$ consists of morphisms $f_i: A_i \to B_i$ in each $\mathcal{C}_i$.
+
+            \item For morphisms $(f_i)_i : (A_i)_i \to (B_i)_i$ and $(g_i)_i : (B_i)_i \to (C_i)_i$, composition is defined componentwise:
+            $$(g_i)_i \circ (f_i)_i = (g_i \circ_i f_i)_i.$$
+
+            \item For each object $(A_i)_i$, the identity morphism is given by the family $$(\mathrm{id}_{A_i})_i.$$
+        \end{itemize}
+        If $I$ is a set, then $\prod_{i \in I} \calC_i$ is a large category. If $I$ is a set and if each $\calC_i$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}, then $\prod_{i \in I} \calC_i$ is locally small. 
+
+        In case that $I$ is finite, the notation of \hl{$\times$} may be used for product categories, e.g. \hl{$\calC_i \times \calC_j$} denotes the product of two categories $\calC_i \times \calC_j$.
+
+        \TODO{ordinal, $U_\alpha$}
+        If $\alpha$ is an ordinal such that $\calC_i$ and $I$ are $U_\alpha$-large (i.e. they live in $U_{\alpha+1}$), then $\prod_{i \in I} \calC_i$ is $U_{\alpha+1}$-large.
+
+\end{definition}

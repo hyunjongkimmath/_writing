@@ -1,0 +1,29 @@
+\begin{proposition}[Exhaustion of Complexes by Brutal Truncations] \label{proposition:chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations}
+    Let $\mathcal{A}$ be an additive category and let $X$ be a chain complex in $\operatorname{Ch}(\mathcal{A})$. 
+    \begin{enumerate}
+        \item 
+        For any integer $n \in \mathbb{Z}$, let $\sigma_{\le n} X$ and $\sigma_{\ge n} X$ denote the \CrefAndHyperrefIfExist{definition:stupid_truncation_of_a_chain_complex_in_an_additive_category}{brutal truncations} defined componentwise by:
+        $$ 
+        (\sigma_{\le n} X)_k = \begin{cases} X_k & \text{if } k \le n \\ 0 & \text{if } k > n \end{cases} 
+        \quad \text{and} \quad 
+        (\sigma_{\ge n} X)_k = \begin{cases} X_k & \text{if } k \ge n \\ 0 & \text{if } k < n. \end{cases} 
+        $$
+        The canonical inclusions $\iota_n: \sigma_{\le n} X \to \sigma_{\le n+1} X$ define a \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{directed system}, and the canonical projections $\pi_n: \sigma_{\ge n} X \to \sigma_{\ge n+1} X$ define an inverse system.
+        
+        The complex $X$ is canonically isomorphic to both the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of its "bounded above" truncations and the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of its "bounded below" truncations:
+        $$ X \cong \varinjlim_{n \to +\infty} \sigma_{\le n} X \quad \text{and} \quad X \cong \varprojlim_{n \to -\infty} \sigma_{\ge n} X.  $$
+
+        \item 
+        For any integer $n \in \mathbb{Z}$, let $\tau_{\le n} X$ and $\tau_{\ge n} X$ denote the \CrefAndHyperrefIfExist{definition:canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category}{canonical truncations} (or Postnikov sections) defined by:
+        \begin{align*}
+            (\tau_{\le n} X)_k &= \begin{cases} X_k & \text{if } k < n \\ \operatorname{Ker}(d_n) & \text{if } k = n \\ 0 & \text{if } k > n \end{cases} \\
+            (\tau_{\ge n} X)_k &= \begin{cases} X_k & \text{if } k > n \\ \operatorname{Coker}(d_{n+1}) & \text{if } k = n \\ 0 & \text{if } k < n. \end{cases}
+        \end{align*}
+        The canonical morphisms $\iota_n: \tau_{\le n} X \to \tau_{\le n+1} X$ define a \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{directed system}, and the canonical projections $\pi_n: \tau_{\ge n} X \to \tau_{\ge n+1} X$ define an inverse system (where the limit is taken as $n$ decreases).
+    
+        The complex $X$ is canonically isomorphic to both the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of its "homologically bounded above" truncations and the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of its "homologically bounded below" truncations:
+        $$ X \cong \varinjlim_{n \to +\infty} \tau_{\le n} X \quad \text{and} \quad X \cong \varprojlim_{n \to -\infty} \tau_{\ge n} X. $$
+
+    \end{enumerate}
+    
+\end{proposition}

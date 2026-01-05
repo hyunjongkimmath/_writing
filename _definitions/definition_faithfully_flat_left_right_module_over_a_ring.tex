@@ -1,0 +1,10 @@
+\begin{definition}[Faithfully flat module] \label{definition:faithfully_flat_left_right_module_over_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:flat_ring_homomorphism}{(not necessarily commutative) ring}, and let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right $R$-module}.
+
+We say that $M$ is a \hldef{faithfully flat left/right $R$-module} if:
+\begin{enumerate}
+    \item $M$ is \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} as a left/right $R$-module, i.e. the appropriate functor \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{$- \otimes_R M : \mathbf{Mod}_R \to \Ab$} or $M \otimes_R - : {}_R \mathbf{Mod} \to \Ab$ is exact.
+    \item The functor $- \otimes_R M : \mathbf{Mod}_R \to \Ab$ or $M \otimes_R - : {}_R \mathbf{Mod} \to \Ab$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful}. Since the flatness of $M$ means that the tensor functors are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, the faithfulness of these functors is equivalent to saying that for any left/right $R$-module $N$, if $M \otimes_R N = 0$ or $N \otimes_R M = 0$ as appropriate, then $n = 0$.
+\end{enumerate}
+Equivalently, the functor $M \otimes_R -$ or $- \otimes_R M$ as appropriate \CrefAndHyperrefIfExist{definition:reflects_a_type_of_morphism_for_a_functor_between_categories}{reflects} \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{exactness} and \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injectivity}, making $M$ a \CrefAndHyperrefIfExist{definition:generator_of_a_category}{generator} in the category of left/right $R$-modules.
+\end{definition}

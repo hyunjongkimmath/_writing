@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:fourier_transform_of_a_function_on_a_locally_compact_abelian_group}
+    Let \(G\) be a locally compact abelian group with a fixed Haar measure \(\mu\).
+
+    For a function $f: G \to \bbC$, the \hldef{Fourier transform} \hl{$\calF[f] = \hat{f} : \widehat{G} \to \mathbb{C}$} is defined by
+
+    \[ \hat{f}(\chi) = \int_{x \in G} f(x) \overline{\langle x, \chi \rangle} \, d\mu(x), \]
+
+    % \CrefIfExists{notation:bilinear_pairing_notation_for_evaluation_of_a_character}
+    % \ref{notation:bilinear_pairing_notation_for_evaluation_of_a_character}
+    \CrefIfExists{notation:bilinear_pairing_notation_for_evaluation_of_a_character} for all \(\chi \in \widehat{G}\). If $f \in L^1(G)$, then the integral converges absolute and hence $\hat{f}(\chi)$ is well defined for all $\chi \in \hat{G}$. Moreover, If $f \in L^1(G)$, then $\hat{f} \in C_0(\widehat{G})$, i.e. is a function on $\widehat{G}$ that vanishes at infinity\CrefIfExists{definition:vanish_at_infinity_for_a_complex_valued_function_on_a_locally_compact_hausdorff_space}.
+
+    For a function $g: \widehat{G} \to \bbC$, the \hldef{inverse Fourier transform} \hl{$\calF^{-1}[g]: G \to \bbC$} is defined by 
+
+    \[ \calF^{-1}[g](x) = \int_{\chi \in \widehat{G}} g(\chi) {\langle x, \chi \rangle} \, d\nu(\chi).\]
+
+    for $x \in G$, where $\nu$ is a Haar measure on $\widehat{G}$. Similarly as before, if $g \in L^1(\widehat{G})$, then the integral converges absolute and hence $\calF^{-1}[g](x)$ is well defined for all $x \in G$. Moreover, If $g \in L^1(\widehat{G})$, then $\calF^{-1}[g] \in C_0(G)$, i.e. is a function on $G$ that vanishes at infinity (Definition \ref{definition:vanish_at_infinity_for_a_complex_valued_function_on_a_locally_compact_hausdorff_space}).
+\end{definition}

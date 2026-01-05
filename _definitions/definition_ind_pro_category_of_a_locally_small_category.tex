@@ -1,0 +1,39 @@
+\begin{definition}[Ind-category] \label{definition:ind_pro_category_of_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+
+\begin{enumerate}
+    \item  The \hldef{Ind-category of $\mathcal{C}$}, denoted \hl{$\mathrm{Ind}(\mathcal{C})$}, is defined as follows:
+    \begin{itemize}
+        \item Objects of $\mathrm{Ind}(\mathcal{C})$ are formal \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} of objects in $\mathcal{C}$. More precisely, an object is given by a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} small category $I$ and a functor 
+        $$ X : I \to \mathcal{C}.  $$
+        \item Morphisms between objects $X : I \to \mathcal{C}$ and $Y : J \to \mathcal{C}$ are defined by
+        $$ \mathrm{Hom}_{\mathrm{Ind}(\mathcal{C})}(X,Y) \;:=\; \varprojlim_{i \in I} \varinjlim_{j \in J} \mathrm{Hom}_{\mathcal{C}}(X_i, Y_j), $$
+        \CrefIfExists{definition:projective_and_inductive_limits_in_categories}
+        where $X_i$ and $Y_j$ denote the images of $i \in I$ and $j \in J$ under $X$ and $Y$, respectively.
+    \end{itemize}
+    The composition of morphisms is induced naturally from composition in $\mathcal{C}$.  
+    Hence, $\mathrm{Ind}(\mathcal{C})$ is the completion of $\mathcal{C}$ under filtered colimits. Objects of $\mathrm{Ind}(\mathcal{C})$ are called \hldef{Ind-objects of $\calC$}.
+    
+    \item 
+    The \hldef{Pro-category of $\mathcal{C}$}, denoted \hl{$\mathrm{Pro}(\mathcal{C})$}, is defined as follows:
+    \begin{itemize}
+        \item Objects of \(\mathrm{Pro}(\mathcal{C})\) are formal \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{cofiltered limits} of objects in \(\mathcal{C}\). More precisely, an object is given by a \CrefAndHyperrefIfExist{definition:cofiltered_cofiltered_category}{cofiltered} small category \(I\) and a functor
+        \[
+        X : I \to \mathcal{C}.
+        \]
+        \item Morphisms between objects \(X : I \to \mathcal{C}\) and \(Y : J \to \mathcal{C}\) are defined by
+        \[
+        \mathrm{Hom}_{\mathrm{Pro}(\mathcal{C})}(X,Y) := \varinjlim_{j \in J} \varprojlim_{i \in I} \mathrm{Hom}_{\mathcal{C}}(X_i, Y_j),
+        \]
+        where \(X_i\) and \(Y_j\) denote the images of \(i \in I\) and \(j \in J\) under \(X\) and \(Y\), respectively.
+    \end{itemize}
+    The composition of morphisms is induced naturally from composition in \(\mathcal{C}\).
+
+    Hence, \(\mathrm{Pro}(\mathcal{C})\) is the completion of \(\mathcal{C}\) under cofiltered limits. Objects of $\mathrm{Pro}(\mathcal{C})$ are called \hldef{Pro-objects of $\calC$}.
+
+
+\end{enumerate}
+
+    Since $\Sets$ has all limits and colimits \TODO{} and hence has all projective and inductive limits and since $\calC$ is locally small, $\mathrm{Ind}(\calC)$ and $\mathrm{Pro}(\calC)$ are locally small.
+
+\end{definition}

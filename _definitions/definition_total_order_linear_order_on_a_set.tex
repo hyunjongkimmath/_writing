@@ -1,0 +1,12 @@
+\begin{definition}[Total order on a set] \label{definition:total_order_linear_order_on_a_set}
+    \TODO{relation}
+Let $X$ be a set, and let $\leq$ be a binary relation on $X$, that is, a subset of $X \times X$.
+The relation $\leq$ is called a \hldef{total order} (or \hldef{linear order}) on $X$ if for all $x,y,z \in X$ the following conditions hold:
+\begin{enumerate}
+  \item (Reflexivity) $x \leq x$.
+  \item (Antisymmetry) If $x \leq y$ and $y \leq x$, then $x = y$.
+  \item (Transitivity) If $x \leq y$ and $y \leq z$, then $x \leq z$.
+  \item (Totality) Either $x \leq y$ or $y \leq x$ (possibly both).
+\end{enumerate}
+In this situation, the pair $(X,\leq)$ is called a \hldef{totally ordered set}.
+\end{definition}

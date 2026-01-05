@@ -1,0 +1,21 @@
+\begin{definition}[Measurable function and Lebesgue integral] \label{definition:lebesgue_integral_of_measurable_functions_into_the}
+    \TODO{more genral measurable  functions}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measure_space}{measure space} and let $f : X \to \bbR \cup \{-\infty\} \cup \{\infty\}$ be a function.
+\begin{enumerate}
+  \item The function $f$ is called \hldef{measurable} if $f^{-1}((-\infty,t)) \in \mathcal{A}$ for every real number $t$.
+  \item A \hldef{simple function on $X$} is a measurable function $s : X \to [0,\infty)$ that takes only finitely many values, i.e. $s = \sum_{k=1}^m a_k \mathbf{1}_{A_k}$ with $a_k \in [0,\infty)$ and $A_k \in \mathcal{A}$ pairwise disjoint.
+  For such $s$, the \hldef{Lebesgue integral of $s$ with respect to $\mu$} is defined by
+  $$\hlin{\int_X s\,d\mu := \sum_{k=1}^m a_k \mu(A_k)}$$.
+  \TODO{interval notation for including $\infty$}
+  \item For a general nonnegative measurable function $f : X \to [0,\infty]$, the \hldef{Lebesgue integral of $f$} is defined by
+  $$\hlin{\int_X f\,d\mu := \sup\Bigl\{\int_X s\,d\mu : s \text{ is a simple function with } 0 \le s \le f\Bigr\}.}$$
+
+  \item A measurable function $f: X \to [-\infty,\infty]$ is said to be \hldef{(Lebesgue) integrable} if 
+    $\int_X |f|\,d\mu < \infty.$
+    In this case, one defines its \hldef{Lebesgue integral} by 
+    \[
+    \int_X f\,d\mu := \int_X f^+\,d\mu - \int_X f^-\,d\mu,
+    \]
+    where $f^+ = \max(f,0)$ and $f^- = \max(-f,0)$.
+\end{enumerate}
+\end{definition}

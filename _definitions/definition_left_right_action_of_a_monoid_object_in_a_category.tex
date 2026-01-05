@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:left_right_action_of_a_monoid_object_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$. Let $(M, m, e)$ be a \CrefAndHyperrefIfExist{definition:monoid_object_in_a_category_with_a_final_object}{monoid object} in $\mathcal{C}$, where $m: M \times M \to M$ is the multiplication and $e: 1 \to M$ is the unit morphism. Let $X$ be an object of $\mathcal{C}$ such that $M \times X$ (and hence $X \times M$) exists in $\calC$.
+
+\begin{itemize}
+    \item A \hldef{left action of $M$ on $X$} is a morphism $\sigma: M \times X \to X$ such that the following two diagrams commute:
+    \begin{enumerate}
+        \item \textbf{Associativity:}
+        $$\sigma \circ (m \times \operatorname{id}_X) = \sigma \circ (\operatorname{id}_M \times \sigma).$$
+        \item \textbf{Unitality:}
+        $$\sigma \circ (e \times \operatorname{id}_X) = \operatorname{id}_X,$$
+        where we identify $1 \times X \cong X$ via the canonical isomorphism.
+    \end{enumerate}
+
+    \item A \hldef{right action of $M$ on $X$} is a morphism $\rho: X \times M \to X$ such that:
+    \begin{enumerate}
+        \item \textbf{Associativity:}
+        $$\rho \circ (\operatorname{id}_X \times m) = \rho \circ (\rho \times \operatorname{id}_M).$$
+        \item \textbf{Unitality:}
+        $$\rho \circ (\operatorname{id}_X \times e) = \operatorname{id}_X,$$
+        where we identify $X \times 1 \cong X$ via the canonical isomorphism.
+    \end{enumerate}
+\end{itemize}
+In particular, an action by a monoid object is an \CrefAndHyperrefIfExist{definition:left_right_action_of_a_monoid_object_in_a_category}{action} of the monoid object as a \CrefAndHyperrefIfExist{definition:semigroup_object_in_a_category}{semigroup object}.
+\end{definition}

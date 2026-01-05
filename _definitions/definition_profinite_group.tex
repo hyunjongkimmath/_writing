@@ -1,0 +1,10 @@
+
+\begin{definition}[Profinite groups] \label{definition:profinite_group}
+A \hldef{profinite group} is a \CrefAndHyperrefIfExist{definition:topological_group}{topological group} that is \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact}, Hausdorff, and totally disconnected.
+\TODO{describe the topology}
+
+Equivalently, a profinite group is the inverse limit of an inverse system of finite groups equipped with the discrete topology. That is,
+$$ G \cong \varprojlim_{i \in I} G_{i}, $$
+\TODO{define basis of a topology, rougher topologies,}
+where each $G_{i}$ is a finite group and the connecting maps are group homomorphisms. The topology on $G$ is called the \hldef{profinite topology} and is the roughest topology making the projection maps $G \to G_{i}$ \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous}; equivalently, the preimages of singletons under the projection maps $G \to G_i$ form a basis of open subsets (and in fact a basis of clopen subsets).
+\end{definition}

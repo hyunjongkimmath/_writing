@@ -1,0 +1,26 @@
+\begin{lemma} \label{lemma:injective_projective_objects_on_a_locally_small_category_induce_hom_functors_that_take_monomorphisms_epimoprhisms_to_surjections}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. \TODO{Does this generalize to a category enriched in a symmetric monoidal category} 
+    \begin{enumerate}
+        \item  The following are equivalent for an object $I \in \calC$:
+        \begin{itemize}
+            \item $I$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective} in $\calC$.
+            \item The contravariant functor 
+            $$\Hom_\calC(-,I): \calC^{\op} \to \Sets$$
+            takes \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms} to surjections, i.e. for any monomorphism $A \hookrightarrow B$, the induced map 
+            $$\Hom_\calC(B,I) \to \Hom_\calC(A,I)$$
+            of sets is a surjection.
+        \end{itemize}
+        \item  The following are equivalent for an object $P \in \calC$:
+        \begin{itemize}
+            \item $P$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} in $\calC$.
+            \item The covariant functor 
+            $$\Hom_\calC(P,-): \calC \to \Sets$$
+            takes \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphisms} to surjections, i.e. for any epimorphism $A \hookrightarrow B$, the induced map 
+            $$\Hom_\calC(P,A) \to \Hom_\calC(A,B)$$
+            of sets is a surjection.
+        \end{itemize}
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    These follow immediately from the definitions of injective and projective objects.
+\end{proof}

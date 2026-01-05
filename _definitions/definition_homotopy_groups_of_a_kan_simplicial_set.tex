@@ -1,0 +1,12 @@
+\begin{definition}[Homotopy Groups of a Kan Simplicial Set] \label{definition:homotopy_groups_of_a_kan_simplicial_set}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:kan_complex}{Kan simplicial set}, and fix a \CrefAndHyperrefIfExist{definition:basepoint_of_a_simplicial_set}{basepoint} $x \in X_0$.
+
+For each integer $n \geq 1$, define the \hldef{$n$-th homotopy group of $X$ at $x$}, denoted \hl{$\pi_n(X,x)$}, as the set of homotopy classes of maps
+\TODO{homotopy, boundary of $\Delta^n$} 
+$$ f: \partial \Delta^{n+1} \to X $$
+that restrict to the constant map at $x$ on the basepoint simplex, modulo homotopies relative to the boundary.
+
+Equivalently, $\pi_n(X,x)$ can be described as the set of equivalence classes of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{$n$-simplices} whose faces are degenerate at $x$, with composition induced by the combinatorial structure of simplices.
+
+These sets carry natural group structures for $n \geq 1$, with $\pi_1(X,x)$ being the fundamental group and $\pi_n(X,x)$ for $n \geq 2$ being abelian groups.
+\end{definition}

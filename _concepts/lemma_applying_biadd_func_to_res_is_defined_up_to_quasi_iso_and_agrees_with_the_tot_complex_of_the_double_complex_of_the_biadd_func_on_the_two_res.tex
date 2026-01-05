@@ -1,0 +1,29 @@
+\begin{lemma} \label{lemma:applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res}
+    Let $F: \calA \times \calB \to \calC$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor} of \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Assume that (small) filtered colimits which exist in $\calC$ are exact (e.g. which holds if $\calC$ satisfies \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}).
+
+    Let $A \in \calA$ and $B \in \calB$ be objects. 
+    \begin{enumerate}
+        \item Suppose that \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolutions} $P_{A,\bullet} \to A$ and $P_{B,\bullet} \to B$ exist such that $P_{A,i}$ and $P_{B,i}$ are \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat} with respect to $F$ on the left and right respectively, i.e. $F(P_{A,i}, -): \calB \to \calC$ and $F(-, P_{B,i}): \calA \to \calC$ are exact for all $i$. 
+
+        The complexes $F(P_{A,\bullet}, B)$ and $F(A, P_{B,\bullet})$ are \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphic} to the complex $\Tot(F(P_{A,\bullet}, P_{B,\bullet}))$\CrefIfExists{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}.
+
+        \item Suppose that \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolutions} $A \to I^{A,\bullet}$ and $B \to I^{B,\bullet}$ exist such that $I^{A,i}$ and $I^{B,i}$ are \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat} with respect to $F$ on the left and right respectively, $F(I^{A,i}, -): \calB \to \calC$ and $F(-, I^{B,i}): \calA \to \calC$ are exact for all $i$. 
+
+        The complexes $F(I^{A,\bullet}, B)$ and $F(A, I^{B,\bullet})$ are \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphic} to the complex $\Tot(F(I^{A,\bullet}, I^{B,\bullet}))$\CrefIfExists{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    We prove 1. The other part is the dual statement.
+
+    Choose resolutions $P_{A,\bullet} \xrightarrow{\varepsilon} A$ and $P_{B,\bullet} \xrightarrow{\eta} B$ such that $F(P_{A,i}, -): \calB \to \calC$ and $F(-, P_{B,i}): \calA \to \calC$ are exact for all $i$. 
+    Identifying $A$ and $B$ with complexes concentrated in degree $0$, we can \CrefAndHyperrefIfExist{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}{form} the three \CrefAndHyperrefIfExist{definition:double_complex_of_objects_in_an_additive_category}{double complexes} $F(P_{A,\bullet}, P_{B,\bullet})$, $F(A, P_{B,\bullet})$, and $F(P_{A,\bullet} , B)$. Note that the augmentation morphisms $\varepsilon$ and $\eta$ induce morphisms $P_{A,\bullet} \otimes P_{B,\bullet} \to A \otimes P_{B,\bullet}, P_{A,\bullet} \otimes B$.
+
+    Let $C$ be the double complex of objects in $\calC$ obtained from $F(P_{A,\bullet}, P_{B,\bullet})$ by adding $F(A, P_{B,\bullet}[-1])$ in the column $p = -1$. One can show that the translate $\Tot(C)[1]$ is the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes}{mapping cone} of the map 
+    $$\Tot(F(P_{A,\bullet}, P_{B,\bullet})) \xrightarrow{\varepsilon \otimes \id} \Tot(F(A, P_{B,\bullet})) = F(A, P_{B,\bullet}).$$
+    Moreover, since each $F(-, P_{B,i})$ is an exact functor, every row of $C$ is exact, so $\Tot(C)$ is exact by \Cref{lemma:acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns}. Therefore, $F(\varepsilon, \id)$ is a quasi-isomorphism and hence 
+    $$H_*(\Tot(F(P_{A,\bullet}, P_{B,\bullet}))) \xrightarrow{H_*(F(\varepsilon, P_{B,\bullet}))} H_*(F(A, P_{B,\bullet}))$$
+    is a natural isomorphism. 
+
+    By symmetry, there is a natural isomorphism $H_*(\Tot(F(P_{A,\bullet} P_{B,\bullet}))) \xrightarrow{} H_*(F(P_{A,\bullet}, B))$.
+\end{proof}

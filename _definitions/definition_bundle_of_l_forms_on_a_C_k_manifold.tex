@@ -1,0 +1,17 @@
+
+\begin{definition}\label{definition:bundle_of_k_forms_n_smooth_manifold}
+Let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, let $M$ be a $n$-dimensional \hyperrefIfExists{definition:C_k_manifold}{$C^k$-manifold} with or without boundary, and let $l \in \{0,\ldots,n\}$. Recall that $TM$ and $T^*M$ carry $C^{k-1}$-vector bundle structures over $M$ and hence are $C^{k-1}$-manifolds themselves.
+
+The \hyperrefIfExists{definition:kth_exterior_power_of_vector_bundle}{$l$th exterior power} $\bigwedge^l \Omega M$ of the \hyperrefIfExists{definition:cotangent_bundle_of_a_smooth_manifold}{cotangent bundle} $T^* M = \Omega M$ is often denoted by \hl{$\Omega^l M$} and referred to as the \hldef{bundle of $l$-forms on $M$}; if $k = \infty$, then we might refer to such a $l$-form as a \hldef{smooth/differentiable $l$-form}.
+
+We use notation such as \hl{$\Omega^l(M)$} and \hl{$\Omega^l(M;\bbR)$} to denote a \hyperrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}{space of sections} over $M$, i.e. $\Gamma(M, \Omega^l M)$, and call sections of such a space a \hldef{$l$-form on $M$}. --- unless otherwise specified, we take $\Omega^l(M)$ be the space $\Gamma^{C^{k-1}}(M, \Omega^l M)$ of $C^{k-1}$ $l$-forms.
+
+In other words, a $l$-form on $M$ is a $C^{k-1}$-section $\omega$ of $\Omega^l M$, i.e. a $C^{k-1}$ assignment $p \mapsto \omega_p$ where $\omega_p:(T_p M)^l \to \mathbb{R}$ is an \CrefAndHyperrefIfExist{definition:symmetric_antisymmetric_alternating_multilienar_forms_over_rings}{alternating} \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{multilinear form}.
+
+% that assigns to each point $p \in M$ an \CrefAndHyperrefIfExist{definition:symmetric_antisymmetric_alternating_multilienar_forms_over_rings}{alternating} \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{multilinear form}
+% $$ \omega_p : (T_p M)^l \to \mathbb{R}.  $$
+By convention, we let $\Omega^0(M)$ equal the space \hyperrefIfExists{definition:C_k_morphism_between_C_k_manifolds}{$C^{k-1}(M)$} of \hyperrefIfExists{definition:C_k_morphism_between_C_k_manifolds}{$C^{k-1}$ real-valued functions} on $M$.
+
+Let \hl{$\Omega_c^l(M) = \Omega_c^l(M; \bbR) \subseteq \Omega^l(M)$} be the space of \CrefAndHyperrefIfExist{definition:support_of_a_section_of_a_C_k_vector_bundle_over_a_C_k_manifold}{compactly supported} ($C^{k-1}$ ) $l$-forms on $M$, i.e. 
+$$ \Omega_c^l(M) = \Omega_c^l(M; \bbR) := \Gamma_c\left(M, \Omega^l M \right). $$
+\end{definition}

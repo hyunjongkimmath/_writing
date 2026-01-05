@@ -1,0 +1,28 @@
+
+\begin{definition}[Morphism induced on stalks by a morphism of presheaves] \label{definition:morphism_induced_on_stalks_by_a_morphism_of_presheaves_on_a_topological_space_valued_in_a_category_with_direct_limits}
+    Let $X$ be a topological space, and let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:category}{category} admitting \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct colimits} (e.g. the category of sets, groups, abelian groups, modules over rings, or vector spaces over fields). 
+    Let $\mathcal{F}$ and $\mathcal{G}$ be presheaves on $X$ valued in $\mathcal{D}$, and let 
+    $$\varphi: \mathcal{F} \to \mathcal{G}$$ 
+    be a \CrefAndHyperrefIfExist{definition:morphism_of_presheaves_on_a_topological_space}{morphism of presheaves}.  
+
+    For each point $x \in X$, the morphism $\varphi$ induces a morphism \hl{$\varphi_x: \mathcal{F}_x \to \mathcal{G}_x$} on \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks} defined as follows:
+
+    Recall that the stalk $\mathcal{F}_x$ is the colimit
+    $$\mathcal{F}_x = \varinjlim_{x \in U} \mathcal{F}(U).$$
+    The morphism $\varphi_x$ is the canonical morphism induced by the universal property of the colimit:
+    for each open neighborhood $U$ of $x$, the map 
+    $$\varphi(U): \mathcal{F}(U) \to \mathcal{G}(U)$$ 
+    induces compatible morphisms on the directed system defining stalks, so that
+    $$\varphi_x = \varinjlim_{x \in U} \varphi(U).$$
+
+    In other words, the following diagram commutes for each $U \ni x$:
+    \[
+    \begin{array}{ccc}
+    \mathcal{F}(U) & \xrightarrow{\varphi(U)} & \mathcal{G}(U) \\
+    \downarrow & & \downarrow \\
+    \mathcal{F}_x & \xrightarrow{\varphi_x} & \mathcal{G}_x
+    \end{array}
+    \]
+
+    where the vertical arrows are the canonical maps to the stalks.
+\end{definition}

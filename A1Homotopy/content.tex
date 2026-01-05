@@ -1,0 +1,783 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-homotopy categories}
+
+\section{Simplicial sheaves in the Nisnevich topology as a category of spaces}
+
+
+\hl{$S$}: A base scheme. This is assumed to be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} when the $\bbA^1$-homotopy category $\calH(S)$ is discussed.
+
+\hl{$\Sch/S$}: The category of schemes over $S$.
+
+\hl{$\Sm/S$}: The category of smooth schemes over $S$.  
+
+\hl{$\Sets$}: The category of sets.
+
+\begin{notation} \label{notation:sheaves_of_sets_on_a_site}
+Given a site $T$, let \hl{$\Shv(T) = \Shv(T, \Sets)$} denote its category of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves of sets}. The category $\Shv(T)$ has all small limits and colimits and internal function objects. Moreover, $\Shv(T)$ has a final object \CrefIfExists{lemma:final_object_is_projective_limit_of_empty_diagram}, denoted by \hl{$\pt$}, \hl{$*$}, or \hl{$\bullet$}. 
+\end{notation}
+
+\input{../_definitions/definition_pointed_object_of_a_category_with_a_final_object.tex}
+
+\input{../_definitions/definition_pointed_sheaves_of_sets_on_a_site_simplicial_pointed_sheaves_of_sets_on_a_site.tex}
+
+\input{../_definitions/definition_pointification_of_an_object_in_a_category_with_a_final_object.tex}
+
+\input{../_concepts/lemma_pointification_and_forgetful_functor_adjunction.tex}
+\begin{proof}
+    A morphism $(X_+) = (X \coprod *, *) \to (Y,y)$ of pointed spaces consists of a morphism $\left( X \coprod * \right) \to Y$ such that the composition $* \to \left(X \coprod * \right) \to Y$ coincides with $y$. Included in this data is a morphism $X \to \left( X \coprod * \right) \to Y$, so there is a set map 
+    $$\Hom_{\calC_\bullet}(X_+, (Y, y)) \to \Hom_{\calC}(X, Y).$$
+    Conversely, given a morphism $X \to Y$, we can extend it uniquely to a morphism $X_+ \to (Y,y)$, yielding a set map
+    $$\Hom_{\calC_\bullet}(X_+, (Y, y)) \leftarrow \Hom_{\calC}(X, Y).$$
+    These two set maps are in fact inverses.
+\end{proof}
+
+
+\subsection{Elementary distinguished squares and the Nisnevich topology}
+
+
+\input{../_definitions/definition_elementary_distinguished_square_in_the_category_of_somoth_schemes_over_a_scheme.tex}
+
+\input{../_definitions/definition_finite_type_morphism_of_schemes.tex}
+
+\input{../_concepts/proposition_nisnevich_pretopology_on_the_category_of_smooth_schemes_over_a_scheme.tex}
+
+\input{../_definitions/definition_nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension.tex}
+
+
+\input{../_concepts/proposition_elementary_distinguished_square_condition_for_a_presheaf_to_be_sheaf_in_the_nisnevich_topology_over_a_noetherian_scheme_of_finite_dimension.tex}
+
+\subsection{Simplicial objects in a category}
+
+\input{../_definitions/definition_simplex_category.tex}
+
+\input{../_definitions/definition_simplicial_cosimplicial_object_in_a_category.tex}
+
+\input{../_definitions/definition_simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps.tex}
+
+\input{../_definitions/definition_standard_n_simplex.tex}
+
+\input{../_definitions/definition_model_category.tex}
+
+\input{../_definitions/definition_homotopy_category_of_a_model_category.tex}
+
+\subsection{The category of spaces in \texorpdfstring{$\bbA^1$}{A1}-homotopy theory}
+
+\input{../_definitions/definition_A1_homotopy_theoretic_space_over_a_noetherian_scheme_of_finite_dimension.tex}
+
+\begin{remark}
+    In \cite{voevodsky_A1}, Voevodsky developed the theory of the (unstable $\bbA^1$)-homotopy category by letting the category of spaces {\cite[Definition 2.2]{voevodsky_A1}} be merely the category $\Shv(\SmSNis)$ of sheaves for the Nisnevich topology over $S$, instead of simplicial sheaves as in \Cref{definition:A1_homotopy_theoretic_space_over_a_noetherian_scheme_of_finite_dimension}. In \cite[Theorem 3.6]{voevodsky_A1}, it is established that the \CrefAndHyperrefIfExist{definition:A1_model_structure_on_the_category_of_simp_sheaves_of_sets_on_the_nis_site_over_a_noeth_scheme_of_fin_dim_and_the_unstable_A1_homotopy_category}{(unstable) $\bbA^1$-homotopy category} \TODO{} is equivalent to the homotopy category obtainable with sheaves, see \Cref{theorem:homotopy_category_of_ordinary_sheaves_on_nisnevich_site_is_equivalent_to_unstable_homotopy_category} for a statement
+    
+    % It is now standard to let the category of spaces be the category of simplicial sheaves for the Nisnevich site.
+\end{remark}
+
+
+\begin{convention} \label{convention:objects_of_a_site_as_sheaves_and_constant_simplicial_object_of_a_category}
+    Given a site $T$, there is a canonical functor, in fact a fully faithful embedding, $T \to \Shv(T)$ sending an object of $T$ to the associated sheaf, i.e. the functor is given by 
+    $$X \mapsto (Y \mapsto \Hom_{T}(Y, X));$$
+    more informally, this is to say that every object $X \in T$ embeds as a representable functor in $\Shv(T)$. As such, we often speak of objects of $T$ as objects of $\Shv(T)$.
+
+    Moreover, given any category $C$, there is a ``constant simplicial object functor'' $C \to \Deltaop C$ given by sending an object $X$ of $C$ to the simplicial object $\Deltaop \to C$ given by $[n] \mapsto C$ for all $n \geq 0$ and $([n] \to [m]) \mapsto (C \xrightarrow{\id} C)$. Thus, given a sheaf $X \in \Shv(T)$, we can speak of $X$ as though it were a simplicial sheaf $\Deltaop \to \Shv(T)$. 
+
+    \TODO{Does this convention identify sipmlicial sets as simplicial sheaves?}
+
+    \TODO{I might need to go fixing "Noetherian scheme" to "Noetherian scheme of finite dimension" to make sure the Nisnevich site is defined.}
+
+    Therefore, given a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme $S$, one can consider $S$ as a space (i.e. an object of $\simpnissheaves$). In fact, $S$ is the final object of $\Shv(\SmSNis)$ and of $\simpnissheaves$. As per \Cref{notation:sheaves_of_a_site}, this final object of $\Shv(\SmSNis)$ may again be denoted by $\pt$, $*$, or $\bullet$; note that $\pt$ also makes sense as a space by the above discussion.  
+
+\end{convention}
+
+See \Cref{definition:point_of_a_topos} for the definition of a point of a topos. For our purposes, we can alternatively define a point (of a site $T$) as a functor $x^*: \Shv(T) \to \Sets$ which commutes with finite limits and arbitrary colimits.
+\begin{lemma}
+    Let $T$ be a site. A point $x = (x_*, x^*, \varphi): \Sets \to Shv(T)$, as a morphism of topoi, is equivalent to the data of a functor $\Shv(T) \to \Sets$ that commutes with finite limits and all colimits.
+\end{lemma}
+\begin{proof}
+    See \cite[\href{https://stacks.math.columbia.edu/tag/00Y3}{Tag 00Y3}]{stacks-project} 
+\end{proof}
+\begin{convention}
+    A point of a site $T$ can be identified with a point of the topos $\Shv(T)$. 
+\end{convention}
+
+
+\input{../_definitions/definition_pointed_space_in_motivic_homotopy_theory.tex}
+
+\begin{remark}
+    Note that we have two notions of points --- one is the notion of a point of a topos (\Cref{definition:point_of_a_topos}), say of the topos $\ShvNisSmS$. Another is the notion of a point of a space (\Cref{definition:pointed_sheaves_of_sets_on_a_site_simplicial_pointed_sheaves_of_sets_on_a_site}). It may be fitting to think of the former type of point as a ``point of the base scheme $S$''.
+\end{remark}
+
+\section{How to define the \texorpdfstring{$\bbA^1$}{A1}-homotopy category}
+
+\subsection{The simplicial model structure on the category of simplicial sheaves on a site}
+
+
+For a general small site $T$, there is a model category structure on $\Deltaop\Shv(T)$ called the simplicial model category structure. Defining this for $T = \SmSNis$ is a preliminary step towards defining the $\bbA^1$-homotopy categories $\calH(S)$ and $\calH_\bullet(S)$.
+
+\input{../_definitions/definition_standard_model_structure_on_the_category_of_simplicial_sets.tex}
+
+\input{../_definitions/definition_simplicial_weak_equivalences_cofibrations_and_fibrations_for_simplicial_sheaves_on_a_site.tex}
+
+
+\input{../_concepts/theorem_simplicial_model_category_structure_on_simplicial_sheaves.tex}
+
+\input{../_definitions/definition_simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site.tex}
+
+\subsection{General model structures on categories of simplicial sheaves}
+
+There are two more general model category structures on $\Deltaop(\Shv(T))$ whose theories \cite{morel_voevodsky_1999} relies upon to define the $\bbA^1$-model category structure. One (\Cref{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}) is defined with respect to a set $A$ of morphisms in \CrefAndHyperrefIfExist{definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site}{$\calH_s(T)$} and the other (\Cref{definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval}) is defined with respect to a site with interval. The $\bbA^1$-simplicial model structure is a special case of the latter, which in turn is a special case of the former. 
+
+In defining these model category structures, there is a general pattern --- we define ``local'' objects in $\calH_s(T)$, then define what it means for a morphism in $\Deltaop(\Shv(T))$ to be a ``weak-equivalence'' or to be a ``fibration''.
+
+\input{../_definitions/definition_A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site.tex}
+
+\input{../_concepts/theorem_A_model_category_and_A_localization_fnctor.tex}
+
+
+\input{../_definitions/definition_interval_in_a_site_with_enough_points.tex}
+
+\input{../_definitions/definition_I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval.tex}
+
+\begin{lemma}
+    Let $(T,I)$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} \CrefAndHyperrefIfExist{definition:interval_in_a_site_with_enough_points}{with interval}. Let $A = \{i_0\}$.
+    \begin{itemize}
+        \item A \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} (of sets) $X \in \Deltaop(\Shv(T))$ is \CrefAndHyperrefIfExist{definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval}{$I$-local} if and only if it is \CrefAndHyperrefIfExist{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}{$A$-local}.
+
+        \item A morphism $f: X_1 \to X_2$ in $\Deltaop(\Shv(T))$ is an \CrefAndHyperrefIfExist{definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval}{$I$-weak equivalence} if and only if it is an \CrefAndHyperrefIfExist{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}{$A$-weak equivalence}.
+
+        \TODO{What is an $I$-fibration and how does it differ from an $I$-weak fibration?}
+        \item A morphism $f: X_1 \to X_2$ in $\Deltaop(\Shv(T))$ is an \CrefAndHyperrefIfExist{definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval}{$I$-fibration} if and only if it is an \CrefAndHyperrefIfExist{definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site}{$A$-weak fibration}.
+    \end{itemize}
+\end{lemma}
+\begin{proof}
+    These are all clear by the definitions. 
+\end{proof}
+
+\input{../_concepts/theorem_I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval.tex}
+
+
+\begin{remark}{\cite[Section 2 Remark 3.3]{morel_voevodsky_1999}}
+    The \CrefAndHyperrefIfExist{theorem:I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval}{$I$-model category structure} on $\Deltaop\Shv(T)$ only depends on the object $I$ and not on the morphism $i_0$.
+\end{remark}
+
+
+\subsection{The \texorpdfstring{$\bbA^1$}{A1}-simplicial model structure on the category of spaces and the \texorpdfstring{$\bbA^1$}{A1}-homotopy category}
+
+% \TODO{Mkae a defintion for this?}
+\begin{convention} \label{convention:standard_simplicial_n_simplex_functor_as_a_functor_from_Delta_to_Delta_op_Shv_T}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}.
+    Recall that the \CrefAndHyperrefIfExist{definition:standard_n_simplex}{standard simplicial $n$-simplex functor $\Delta^\bullet$} is the functor
+    $$\Delta^\bullet: \Delta \to \mathbf{s}\Sets = \Deltaop \Sets$$
+    \CrefIfExists{definition:simplex_category} \CrefIfExists{definition:simplicial_cosimplicial_object_in_a_category}
+    given by $[n] \mapsto \Delta^n = \Hom_{\Delta}(-, [n])$.
+    Identifying objects of $\Deltaop \Sets$ as objects of $\Deltaop \Shv(T)$ (\Cref{convention:objects_of_a_site_as_sheaves_and_constant_simplicial_object_of_a_category}), we identify $\Delta^\bullet$ as a functor
+    $$\Delta^\bullet: \Delta \to \Deltaop \Shv(T).$$
+    
+    % Also write $\Delta^\bullet: \Delta \to \Deltaop\Shv(T)$ be the cosimplicial object given by $[n] \mapsto \Delta^n$.
+\end{convention}
+
+\input{../_definitions/definition_A1_local_weak_equivalence_fibration_of_simplicial_sheaves_of_sets_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme.tex}
+
+The following lemma shows that $\bbA^1$-homotopy theory is an instance of homotopy theory for sites with interval where the interval is given by the affine line $\bbA^1$.
+\input{../_concepts/lemma_A1_homotopy_theory_is_a_kind_of_interval_homotopy_theory.tex}
+\begin{proof}
+    It is not difficult to see that the proposed interval is indeed an interval. The notions of $I$-locality and $\bbA^1$-locality coincide by definition. See \cite[Lemma 2.5.5]{choudury_htsA1fg} for an argument that shows that $I$-weak equivalence and $\bbA^1$-weak equivalence are equivalent. The notions of $I$-fibrations and of $\bbA^1$-fibrations then coincide by definition.
+\end{proof}
+
+
+\input{../_definitions/definition_simplicial_model_structure_on_a_category.tex}
+
+
+
+\input{../_concepts/proposition_A1_model_structure_on_category_of_simplicial_nisnevich_sheaves.tex}
+
+\begin{proof}
+    This follows by Theorem \ref{theorem:I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval} and Lemma \ref{lemma:A1_homotopy_theory_is_a_kind_of_interval_homotopy_theory}.
+\end{proof}
+
+
+\input{../_concepts/corollary_A1_model_structure_on_simplicial_nisnevich_sheaves_over_a_noetherian_finite_dimensional_scheme_is_an_instance_of_an_I_model_structure.tex}
+\begin{proof}
+    \Cref{lemma:A1_homotopy_theory_is_a_kind_of_interval_homotopy_theory} implies that $\calH_{s,I}(\ShvNisSmS)$ and $\calH_{s,{\bbA}^1}(S)$ are eqiuvalent by definition. Moreover, since $L_I$ and $L_{{\bbA}^1}$ are each left adjoint to their corresponding right adjoint inclusion functors, \Cref{theorem:I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval} and \Cref{proposition:A1_model_structure_on_category_of_simplicial_nisnevich_sheaves} imply that $L_I$ and $L_{{\bbA}^1}$ are equivalent. Since $\calH_{s,I}(\ShvNisSmS)$ is identified with the homotopy category of $\calH_s(T)$, $\calH_{s,{\bbA}^1}(S)$ is identified with the homotopy category of $\calH_{s,\bbA^1}(S)$.
+\end{proof}
+
+
+\input{../_definitions/definition_A1_model_structure_on_the_category_of_simp_sheaves_of_sets_on_the_nis_site_over_a_noeth_scheme_of_fin_dim_and_the_unstable_A1_homotopy_category.tex}
+
+\input{../_concepts/lemma_pointification_forgetful_functorson_the_unstable_motivic_homotopy_categories_over_a_noetherian_finite_dimensional_scheme.tex}
+
+
+\section{Functors and operations on spaces}
+
+See \cite[After Section 2 Lemma 2.30]{morel_voevodsky_1999}.
+
+
+\input{../_definitions/definition_wedge_and_smash_products_of_pointed_simplicial_sheaves_of_sets_on_a_site.tex}
+
+\TODO{TODO: prove this}
+
+
+\begin{claim}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} and fix $(Y,y) \in \Deltaop(\Shv(T))$.
+    The functor 
+    $$\Deltaop(\Shv(T))_\bullet \to \Deltaop(\Shv(T))_\bullet, \quad (X,x) \mapsto (X,x) \wedge (Y,y)$$
+    has a \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint}, denoted by
+    $$\hlin{(Z,z) \mapsto \underline{\Hom}_\bullet((Y,y), (Z,z)).}$$
+\end{claim}
+
+\input{../_definitions/definition_simplicial_suspension_functor_and_simplicial_loop_functor_on_pointed_simplicial_sheaves_of_sets_on_a_site.tex}
+
+\input{../_definitions/definition_multiplicative_group_scheme_over_a_scheme.tex}
+
+\begin{definition} \label{definition:tate_sphere_over_a_noetherian_finite_dimensional_scheme}
+    \TODO{figure out other formulations of $T$, e.g. it might be isomorphic to $\bbA^1 / (\bbA^1 - \{0\}) \cong \bbP^1$}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian scheme} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{finite dimension}. 
+
+    The \hldef{Tate sphere over $S$}, or \hldef{motivic sphere over $S$}, is the smash product
+    $$\hlin{T :=S_s^1 \wedge \bbG_m}$$
+    where $S_s^1$ is the \CrefAndHyperrefIfExist{definition:simplicial_suspension_functor_and_simplicial_loop_functor_on_pointed_simplicial_sheaves_of_sets_on_a_site}{simplicial circle} on \CrefAndHyperrefIfExist{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}{$(\Sm/S)_{\Nis}$}, and $\bbG_m/S$ is the \CrefAndHyperrefIfExist{definition:multiplicative_group_scheme_over_a_scheme}{multiplicative group} over $S$ regarded as a (simplicial) sheaf on the $(\Sm/S)_{\Nis}$.
+
+    In the homotopy category, $T$ is $\mathbb{A}^1$-weakly equivalent to the pointed projective line $(\mathbb{P}^1, \infty)$. \TODO{verify that this is true and also which homotopy category? Stable or unstable?}
+\end{definition}
+
+
+
+\subsection{The \texorpdfstring{$\bbA^1$}{A1}-homotopy sheaves of a pointed space}
+
+
+\input{../_definitions/definition_A1_homotopy_group_sheaf_of_an_object_of_the_pointed_unstable_A1_homotopy_category_over_a_noetherian_finite_dimensional_scheme.tex}
+
+We can also define the sheaf of connected components for an unpointed space $X$:
+\input{../_definitions/definition_sheaf_of_A1_connected_components_of_an_unbased_space.tex}
+
+
+
+\input{../_concepts/lemma_A1_connected_components_of_pointed_space_equals_that_of_underlying_space.tex}
+\begin{proof}
+    It suffices to show that the presheaves 
+    $$\SmSNis \to \Sets, \quad U \mapsto [U_+, X]_\bullet$$
+    and 
+    $$\SmSNis \to \Sets, \quad U \mapsto [U, X]$$
+    are naturally isomorphic. This is true by the adjunction bewteen the functor $+$ and the forgetful functor stated in Claim \ref{lemma:pointification_and_forgetful_functor_adjunction}.
+\end{proof}
+
+\begin{remark}
+    \TODO{The morl voevodsky notion of A1-homotopy group}
+    The definitions of the $\bbA^1$-homotopy group of a pointed space as given in \cite{morel_voevodsky_1999} and in \cite[Section 6.3 after Conjecture 6.34]{morel_a1at} are different from that of Definition \ref{definition:A1_homotopy_group_sheaf_of_an_object_of_the_pointed_unstable_A1_homotopy_category_over_a_noetherian_finite_dimensional_scheme}. The former definition uses the theory of resolution functors. The latter ostensibly defines $\pinAone(X)$ as the sheafification of the presheaf $U \mapsto \pi_n(L_{\bbA^1}(X)(U))$ where $\pi_n$ is the $n$th homotopy of a simplicial set. We nevertheless accept, without proof, that all three definitions are equivalent in this current writing for convenience. 
+\end{remark}
+
+\input{../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex}
+\input{../_definitions/definition_standard_topological_geometric_simplicial_topological_space.tex}
+
+\input{../_definitions/definition_standard_simplicial_scheme_over_a_scheme.tex}
+
+\input{../_definitions/definition_algebraic_singular_simplicial_set_of_morphisms_from_a_smooth_scheme_to_a_nisnevich_sheaf_of_sets_over_a_noetherian_scheme_of_finite_dimension.tex}
+
+\input{../_definitions/definition_kan_complex.tex}
+\input{../_definitions/definition_homotopy_groups_of_a_kan_simplicial_set.tex}
+
+\input{../_definitions/definition_homotopy_groups_of_maps_from_a_smooth_scheme_to_a_sheaf_of_sets_on_the_nisnevich_site_with_respect_to_a_base_point_over_a_noetherian_scheme_of_finite_dimension.tex}
+
+\input{../_definitions/definition_A1_weak_equivalence_of_simplicial_sheaves_of_sets_on_the_nisnevich_topology_over_a_noetherian_finite_dimensional_scheme.tex}
+
+
+
+The unstable $\bbA^1$-homotopy category can alternatively be obtained as a homotopy category not of simplicial sheaves, but of ordinary sheaves on $\SmSNis$. 
+
+\input{../_definitions/definition_proper_model_category.tex}
+
+\input{../_concepts/theorem_homotopy_category_of_ordinary_sheaves_on_nisnevich_site_is_equivalent_to_unstable_homotopy_category.tex}
+
+\begin{proposition}[{\cite[Section 3 Proposition 2.14]{morel_voevodsky_1999}}]
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. A morphism $f: X \to Y$ in $\simpnissheaves_\bullet$ is an $\bbA^1$-weak equivalence if and only if the natural morphisms
+    $$\pinAone(X) \to \pinAone(Y)$$
+    of the \CrefAndHyperrefIfExist{definition:A1_homotopy_group_sheaf_of_an_object_of_the_pointed_unstable_A1_homotopy_category_over_a_noetherian_finite_dimensional_scheme}{$\bbA^1$-homotopy sheaves} are isomorphisms for all $n \geq 0$.
+\end{proposition}
+
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-invariance of Nisnevich sheaves}
+
+\TODO{TODO: discuss the merit of A1-invariance}
+
+
+\begin{notation} \label{notation:sheaf_cohomology_for_sheaves_of_groups_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme}
+    Whenever $S$ is a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} let \hl{$H^i_{\Nis}$} denote the $i$th sheaf cohomology functor for $\SmSNis$. More explicitly, given a sheaf $G$ of groups on $\SmSNis$ and a $X \in \Sm/S$, we may speak of the \CrefAndHyperrefIfExist{definition:zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site}{group $H^0_{\mathrm{Nis}}(X; G)$ and the set $H^1_{\mathrm{Nis}}(X;G)$} as the zeroth and first nonabelian sheaf cohomology sets on the \CrefAndHyperrefIfExist{definition:site_induced_by_a_site_on_an_over_category}{site $(\SmSNis)_{/X}$ over $X$} and if $G$ is further a sheaf of abelian groups, then we may speak of the groups $H^i_{\mathrm{Nis}}(X;G)$ as the \CrefAndHyperrefIfExist{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}{abelian sheaf cohomology groups} of $G$ on $(\SmSNis)_{/X}$. Note that $H^0_{\mathrm{Nis}}(X;G)$ and $H^1_{\mathrm{Nis}}(X;G)$ are unambiguous when $G$ is a sheaf of abelian groups by \Cref{proposition:zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_}
+\end{notation}
+
+\input{../_definitions/definition_A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups.tex}
+
+
+
+Here are some facts about these notions of $\bbA^1$-invariance:
+\begin{example}
+    Let $k$ be a field. 
+\begin{enumerate}
+    \item \cite[After Theorem 3.2]{morel_a1at_2006} The \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} $\bbZ$ on \CrefAndHyperrefIfExist{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}{$\SmkNis$} is \CrefAndHyperrefIfExist{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}{strictly $\bbA^1$-invariant}. In fact, \CrefAndHyperrefIfExist{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}{$H_{\Nis}^i(X;\bbZ) = 0$} for $i > 0$.
+    \item \cite[After Theorem 3.2]{morel_a1at_2006} The sheaf on $\SmkNis$ represnted by an abelian variety over $k$ is strictly $\bbA^1$-invariant. In fact, $H_{\Nis}^i(X;\bbZ) = 0$ for $i > 0$.
+    \item \cite[After Theorem 3.2]{morel_a1at_2006} The sheaf on $\SmkNis$ represented by the multiplicative group $\bbG_m = \bbA^1 - \{0\}$ is strictly $\bbA^1$-invariant.
+\end{enumerate}
+\end{example}
+
+\begin{lemma}[cf. {\cite[Remark 1.8]{morel_a1at}}]
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. A sheaf $X$ of sets on $\SmSNis$ is \CrefAndHyperrefIfExist{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}{$\bbA^1$-invariant} if and only if it is \CrefAndHyperrefIfExist{definition:A1_local_weak_equivalence_fibration_of_simplicial_sheaves_of_sets_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme}{$\bbA^1$-local} \CrefAndHyperrefIfExist{convention:objects_of_a_site_as_sheaves_and_constant_simplicial_object_of_a_category}{as a} \CrefAndHyperrefIfExist{definition:A1_homotopy_theoretic_space_over_a_noetherian_scheme_of_finite_dimension}{space}.
+\end{lemma}
+
+By definition, a strictly $\bbA^1$-invariant sheaf of groups is clearly a strongly $\bbA^1$-invariant sheaf. If the sheaf is of abelian groups, then the converse is true:
+
+\input{../_concepts/theorem_sheaf_on_abelian_groups_is_strongly_A1_invariant_iff_strictly_A1_invariant.tex}
+
+\begin{remark}
+    Morel's text \cite{morel_a1at} assumes that the base field $k$ is perfect; the only reason for this assumption throughout the text, as explained in \cite[Remark 1.17]{morel_a1at}, is to ensure that Theorem \ref{theorem:sheaf_on_abelian_groups_is_strongly_A1_invariant_iff_strictly_A1_invariant} holds. As such, it may be the case that some statements taken from loc.~cit.~ do not require the perfectness hypothesis.
+\end{remark}
+
+Moreover, it is known over perfect fields that $\bbA^1$-homotopy group sheaves are strongly $\bbA^1$-invariant.
+
+\input{../_concepts/theorem_A1_homotopy_groups_are_strongly_A1_invariant.tex}
+
+\begin{remark}
+    Ayoub showed that \cite{ayoub_cmcpiA1} $\pinAone[0](X)$ is generally not $\bbA^1$-invariant. On the other hand \cite[Remark 1.13]{morel_a1at}, $\pinAone[0](X)$ is $\bbA^1$-invariant for smooth $k$-schemes of dimension $\leq 1$.
+\end{remark}
+
+\begin{proposition}[{\cite[Lemma 1.18]{bachmann_s1isaFm}}]
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}.  Let $K/k$ be a \CrefAndHyperrefIfExist{definition:separable_field_extension_general}{separable field extension} and write \CrefAndHyperrefIfExist{definition:affine_scheme}{$\eta = \operatorname{Spec} K$}. Note that there is a base change functor \TODO{} $\SmNis[k] \to \SmNis[K]: F \mapsto F|_\eta$. 
+    \begin{enumerate}
+        \item Let $\{X_\lambda\}$ be a \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{cofiltered system} of \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth} \CrefAndHyperrefIfExist{definition:algebraic_variety_over_a_field}{$k$-varieties} such that $\varprojlim_\lambda X_\lambda \in \Sm_\eta$\CrefIfExists{definition:projective_and_inductive_limits_in_categories}. For any sheaf $F$ of sets on $\SmkNis$ we have 
+        $$F|_\eta (\varprojlim_\lambda X_\lambda) \cong \varinjlim_\lambda F(X_\lambda).$$
+
+        \item The base change functor
+        \begin{enumerate}
+            \item preserves \CrefAndHyperrefIfExist{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}{$\bbA^1$-invariant} sheaves (of sets),
+
+            \item commutes with taking homotopy sheaves \TODO{what does this mean}
+
+            \item preserves \CrefAndHyperrefIfExist{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}{strongly $\bbA^1$-invariant sheaves} of groups and preserves \CrefAndHyperrefIfExist{definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups}{strictly $\bbA^1$-invariant sheaves} of abelian groups
+        \end{enumerate}
+
+    \end{enumerate}
+\end{proposition}
+
+\TODO{
+    My actual goal is something along the following lines: Let $R$ be a Dedekind ring. If $F$ is strictly A1-invariant over $R$, then it is strictly A!-invariant over $R_p$ for all $p$. 
+    
+I might need a statement for topoi of the following form: 
+    Given a Grothendieck topos $\calE$, given a filtered category $I$, a filtered diagram $F_\bullet: I \to \Ab(\calE)$ of abelian sheaves wtih colimit $F = \colim_{i \in I} F_i$, we have
+    $$H^q(\calE, F) \cong \colim_{i \in I} H^q(\calE, F_i)$$
+    SGA 4 Expose VII, Theorem 5.7 does this for the etale site.
+}
+
+\TODO{
+    \section*{Proof of Preservation of Strong $\mathbb{A}^1$-invariance under Localization}
+
+    \begin{lemma}
+    Let $R$ be a Dedekind ring and let $A$ be a strongly $\mathbb{A}^1$-invariant Nisnevich sheaf on $\mathrm{Sm}/R$. Let $\mathfrak{p} \subset R$ be a prime ideal and let $S = \mathrm{Spec}(R_{\mathfrak{p}})$. Then the restriction $A|_S$ is a strongly $\mathbb{A}^1$-invariant sheaf on $\mathrm{Sm}/S$.
+    \end{lemma}
+
+    \begin{proof}
+    The localization $S = \mathrm{Spec}(R_{\mathfrak{p}})$ can be written as the cofiltered limit of open affine neighborhoods of $\mathfrak{p}$ in $X = \mathrm{Spec}(R)$:
+    \[
+    S \cong \varprojlim_{U \ni \mathfrak{p}} U.
+    \]
+    This limit is a limit of schemes with affine transition maps (open immersions). A standard result in the theory of topoi (SGA 4, Exposé VII, Prop. 5.7) states that the topos of sheaves on such a limit is equivalent to the limit of the topoi. Specifically, for Nisnevich cohomology, we have the continuity property:
+    \[
+    H^i_{\mathrm{Nis}}(S, \mathcal{F}|_S) \cong \varinjlim_{U \ni \mathfrak{p}} H^i_{\mathrm{Nis}}(U, \mathcal{F}|_U)
+    \]
+    for any sheaf $\mathcal{F}$ on $\mathrm{Sm}/R$.
+
+    To prove that $A|_S$ is strongly $\mathbb{A}^1$-invariant, we must show that for any smooth scheme $Y \in \mathrm{Sm}/S$ and $i \in \{0, 1\}$, the projection $p: Y \times \mathbb{A}^1_S \to Y$ induces an isomorphism:
+    \[
+    p^*: H^i_{\mathrm{Nis}}(Y, A|_Y) \xrightarrow{\sim} H^i_{\mathrm{Nis}}(Y \times \mathbb{A}^1_S, A|_{Y \times \mathbb{A}^1_S}).
+    \]
+    Since $Y$ is of finite presentation over $S$, it descends to a smooth scheme $Y_U$ over some open neighborhood $U$ of $\mathfrak{p}$. By shrinking $U$ if necessary, we may assume $Y = Y_U \times_U S$.
+
+    We compute the cohomology of $Y$ as the limit of the cohomology of its models $Y_V$ over open sets $V \subseteq U$:
+    \[
+    H^i_{\mathrm{Nis}}(Y, A|_Y) \cong \varinjlim_{V \subseteq U} H^i_{\mathrm{Nis}}(Y_V, A|_{Y_V}).
+    \]
+    Since $A$ is strongly $\mathbb{A}^1$-invariant on $\mathrm{Sm}/R$, its restriction to any open $V \subset \mathrm{Spec}(R)$ is also strongly $\mathbb{A}^1$-invariant. Therefore, for every $V$, we have an isomorphism:
+    \[
+    H^i_{\mathrm{Nis}}(Y_V, A|_{Y_V}) \cong H^i_{\mathrm{Nis}}(Y_V \times \mathbb{A}^1_V, A|_{Y_V \times \mathbb{A}^1_V}).
+    \]
+    Taking the filtered colimit on both sides, and using the continuity of cohomology for $Y \times \mathbb{A}^1_S \cong \varprojlim (Y_V \times \mathbb{A}^1_V)$, we obtain:
+    \[
+    \varinjlim_{V \subseteq U} H^i_{\mathrm{Nis}}(Y_V, A|_{Y_V}) \cong \varinjlim_{V \subseteq U} H^i_{\mathrm{Nis}}(Y_V \times \mathbb{A}^1_V, A|_{Y_V}) \cong H^i_{\mathrm{Nis}}(Y \times \mathbb{A}^1_S, A|_Y).
+    \]
+    Thus, the isomorphism holds for $A|_S$, proving it is strongly $\mathbb{A}^1$-invariant.
+    \end{proof}
+
+}
+
+\TODO{ And then an argument for strict $\bbA^1$-invariance is probably needed separately, because for strict invariance, we are using nonabelian sheaf cohomology:
+
+\section*{Preservation for Sheaves of Groups (Non-Abelian)}
+
+\begin{lemma}
+Let $G$ be a strongly $\mathbb{A}^1$-invariant sheaf of groups on $\mathrm{Sm}/R$. Let $S = \mathrm{Spec}(R_{\mathfrak{p}}) \cong \varprojlim U$. Then the restriction $G|_S$ is strongly $\mathbb{A}^1$-invariant.
+\end{lemma}
+
+\begin{proof}
+Strong $\mathbb{A}^1$-invariance is defined by the bijectivity of the maps $H^i_{\mathrm{Nis}}(Y, G) \to H^i_{\mathrm{Nis}}(Y \times \mathbb{A}^1, G)$ for $i=0, 1$.
+
+\textbf{Case $i=0$ (Sections):}
+By the definition of the inverse image sheaf on a pro-object, the sections on $Y$ are defined as the colimit of sections on the models $Y_U$:
+\[
+H^0(Y, G|_S) = G(Y) \cong \varinjlim_{U} G(Y_U) = \varinjlim_{U} H^0(Y_U, G).
+\]
+The colimit of bijections is a bijection, so the property holds for $i=0$.
+
+\textbf{Case $i=1$ (Torsors):}
+The set $H^1_{\mathrm{Nis}}(S, G)$ classifies $G$-torsors. Since $G$-torsors are schemes of finite presentation over $S$, Grothendieck's limit theorems (EGA IV$_3$, 8.8.2) apply:
+\begin{enumerate}
+    \item Every $G$-torsor $P \to Y$ over the limit descends to a $G$-torsor $P_U \to Y_U$ for some $U$ (essential surjectivity).
+    \item Any isomorphism between torsors over $Y$ descends to an isomorphism over some $Y_V$ (fullness).
+\end{enumerate}
+This implies that the functor $H^1_{\mathrm{Nis}}(-, G)$ commutes with filtered limits of schemes:
+\[
+H^1_{\mathrm{Nis}}(Y, G|_S) \cong \varinjlim_{U} H^1_{\mathrm{Nis}}(Y_U, G).
+\]
+Since the map $H^1(Y_U) \to H^1(Y_U \times \mathbb{A}^1)$ is a bijection for all $U$ (by the strong invariance of $G$ on $\mathrm{Sm}/R$), the limit map is also a bijection.
+\end{proof}
+
+}
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-derived category}
+
+$\bbA^1$-homotopy theory yields an $\bbA^1$-derived category of complexes of Nisnevich sheaves of abelian groups obtained by inverting all the $\bbA^1$-quasi isomorphisms. Spaces can be considered as objects of this derived category and their homology objects are referred to as $\bbA^1$-homology sheaves. 
+
+\begin{notation}
+    Given a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme $S$ of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}, let \hl{$\calAb(S)$} denote the abelian category of abelian groups for the Nisnevich topology on $\Sm/S$. Let \hl{$C_*(\calAb(S))$} denote the category of chain complexes of objects in $\calAb(S)$. Let \hl{$D(\calAb(S))$} denote the derived category of $\calAb(S)$ in the standard homological algebra sense, i.e. it is the class obtained from $C_*(\calAb(S))$ by inverting the class of quasi-isomorphisms between chain complexes.
+
+    In general, given a site $T$ and a simplicial sheaf $X \in \Deltaop\Shv(T)$, denote by \hl{$\bbZ(X)$} the free abelian sheaf generated by $X$ . More precisely, $\bbZ(X) \in \Deltaop\Shv(T)$ is the simplicial sheaf of abelian groups associated to the presheaf $U \mapsto \bbZ[X(U)]$ where $\bbZ[X(U)]$ is the free abelian simplicial group generated by the simplicial set $X(U)$ (Definition \ref{definition:free_simplicial_abelian_group_of_a_simplicial_set}). 
+\end{notation}
+
+\TODO{TODO: figure out what the chain complex $C_*(X)$ associated to a space means}
+
+In particular, given a space $X \in \simpnissheaves$, we can speak of the Nisnevich simplicial sheaf $\bbZ(X)$.
+
+\begin{definition}[cf. {\cite[Definition 6.17]{morel_voevodsky_1999}}]
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}.
+    \begin{enumerate}
+        \item A chain complex $D_* \in C_*(\Ab(S))$ is called \hldef{$\bbA^1$-local} if and only if for any $C_* \in C_*(\Ab(S))$, the projection 
+        $$C_* \otimes \bbZ(\bbA^1) \to C_*$$
+        induces a bijection
+        $$\Hom_{D(\Ab(S))}(C_*, D_*) \to \Hom_{D(\Ab(S))}(C_* \otimes \bbZ(\bbA^1), D_*).$$
+        Denote by \hl{$\DAoneloc(\Ab(S))$} the full subcategory of $D(\Ab(S))$ consisting of $\bbA^1$-local complexes.
+
+        \item A morphism $f: C_* \to D_*$ in $C_*(\Ab(S))$ is called an \hldef{$\bbA^1$-quasi isomorphism} if and only if for every $\bbA^1$-local chain complex $E_* \in C_*(\Ab(S))$, the morphism
+        $$\Hom_{D(\Ab(S))}(D_*, E_*) \to \Hom_{D(\Ab(S))}(C_*, E_*)$$
+        is bijective. Denote by \hl{$\AoneQis$} the class of $\bbA^1$-quasi isomorphisms.
+
+        \item The \hldef{$\bbA^1$-derived category} \hl{$\DAone(\Ab(S))$} is the category obtained from $C_*(\Ab(S))$ by inverting $\AoneQis$.
+    \end{enumerate}
+\end{definition}
+
+We have the following analogue of Proposition \ref{proposition:A1_model_structure_on_category_of_simplicial_nisnevich_sheaves}
+
+\TODO{TODO: talk about A1-localization of chain complexes}
+\begin{theorem}[cf. {\cite[Lemma 6.18, Corollary 6.19]{morel_a1at}}]
+    Let $k$ be a field. There exists a functor \hl{$\LAoneab: C_*(\Ab(k)) \to C_*(\Ab(k))$} called the \hldef{(abelian) $\bbA^1$-localization functor} together with a natural transformation
+    $$\hlin{\theta: \id \to \LAoneab}$$
+    such that for any chain complex $C_* \in C_*(\Ab(k))$, the morphism $\theta_{C_*}: C_* \to \LAoneab(C_*)$ is an $\bbA^1$-quasi isomorphism whose target is an $\bbA^1$-local fibrant chain complex.
+
+    Furthermore, $\LAoneab$ induces a functor
+    $$D(\Ab(k)) \to \DAoneloc(\Ab(k))$$
+    which is left adjoint to the inclusion $\DAoneloc(\Ab(k)) \subset D(\Ab(k))$, and which induces an equivalence
+    $$\DAone(\Ab(k)) \to \DAoneloc(\Ab(k))$$
+    of categories.
+\end{theorem}
+
+\begin{definition}
+    Let $k$ be a field. Denote by \hl{$\CstarAone$} the functor $\LAoneab \circ C_*: \calH(k) \to \DAone(\Ab(k))$. Given a space $X \in \calH(k)$, we call $\CstarAone(X)$ the \hldef{$\bbA^1$-chain complex of $X$}.
+    \TODO{TODO: notate $C_*$ }
+    Given a space $X \in \calH(k)$, denote by \hl{$\HnAone(X)$} the \hldef{$n$th $\bbA^1$-homology sheaf of $X$}, defined to be the $n$th homology object of the $\CstarAone(X)$. Denote by \hl{$\tildeHnAone(X)$} the \hldef{$n$th $\bbA^1$-reduced homology sheaf of $X$}, defined by
+    $$\tildeHnAone(X) = \ker\left(\HnAone(X) \to \HnAone(\pt) \right).$$
+\end{definition}
+
+\begin{remark}
+    Just as for classical topology, we have that $\HnAone(\pt) = 0$ for $n \neq 0$ and $\bbZ$ for $n = 0$ and hence we have an isomorphism 
+    $$\HnAone[*](X) = \bbZ \oplus \tildeHnAone[*](X)$$
+    of graded abelian sheaves where $\bbZ$ here is concentrated in degree $1$.
+\end{remark}
+
+
+
+
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-Brouwer degrees}
+
+\subsection{The classical Brouwer degree}
+Let \hl{$\Sn$} be the (topological) $n$-sphere. Recall the following classical theorem in topology:
+\begin{theorem}
+    Let $n > 0$ be an integer. Let $\Sn$ be the $n$-sphere and write $\pi_i$ for the $i$th fundamental group of a (connected) space. For an integer $i > 0$, 
+    \begin{align*}
+        \pi_i(\Sn) = \begin{cases} 0 &\text{if } i < n \\ \bbZ &\text{if } i = n. \end{cases}
+    \end{align*}
+\end{theorem}
+A consequence of this theorem is that one can speak of the \hldef{Brouwer degree of a continuous map $f: \Sn \to \Sn$} --- it is defined as the unique integer $d$ such that the induced group homomorphism $\pi_n(f) : \pi_n(\Sn) \to \pi_n(\Sn)$, which is identifiable with a group homomorphism $\bbZ \to \bbZ$ is given by $a \mapsto da$. 
+
+
+Morel's $\bbA^1$-Brouwer degree generalizes this idea in such a way that $(\bbP^1)^{\wedge n}$ (over a field $k$) takes the place of $\Sn$. These ``enriched'' degrees take values in the Grothendieck-Witt ring $\GWring(k)$ \TODO{TODO: ref}, which can be regarded as the degree $0$ part of the Milnor-Witt $K$-theory ring $\MWKtheory$ (Lemma \ref{lemma:grothendieck_witt_ring_is_degree_zero_part_of_milnor_witt_k_theory}).
+
+\subsection{Milnor-Witt \texorpdfstring{$K$}{K}-theory and the Grothendieck-Witt ring of a field}
+
+\begin{definition}
+ \input{../_definitions/definition_milnor_witt_K_theory_of_a_field.tex}
+\end{definition}
+
+\begin{definition}
+ \input{../_definitions/definition_milnor_K_theory_of_a_field.tex}
+\end{definition}
+
+\begin{remark}
+Let $F$ be a field. Note that $\MKtheory(F)$ is the quotient of $\MWKtheory(F)$ by $\eta$.
+\end{remark}
+
+
+\begin{definition}
+ \input{../_definitions/definition_grothendieck_witt_group_of_a_field.tex}
+\end{definition}
+
+\input{../_concepts/lemma_grothendieck_witt_ring_is_degree_zero_part_of_milnor_witt_k_theory.tex}
+
+The following relates the Milnor-Witt $K$-theory of a field $F$ with that of its function field $F(T)$:
+
+\begin{theorem}(See e.g. \cite[Theorem 3.24]{morel_a1at})
+For any field $F$ the following is a (split) short exact sequence of $\MWKtheory(F)$-modules:
+$$  0 \rightarrow \MWKtheory[n](F) \rightarrow \MWKtheory[n](F(T)) \stackrel{\Sigma \partial_{(P)}^{P}}{\longrightarrow} \bigoplus_{P} \MWKtheory[n-1](F[T]/P) \rightarrow 0  $$ 
+\end{theorem}
+
+
+\subsection{The \texorpdfstring{$\mathbb{Z}$}{Z}-graded sheaf of unramified Milnor-Witt \texorpdfstring{$K$}{K}-theory of a field}
+
+Let $k$ be a perfect field. There is a sheaf \hl{$\MWKtheorysheaf$} on $\SmkNis$ referred to as the \hldef{$\bbZ$-graded sheaf of unramified MilnorWitt $K$-theory}. See e.g. \cite[The discussions surrounding Lemma 3.32, Theorem 2.46]{morel_a1at} for an establishment of this sheaf. For any field extension $F$ of $k$ of finite transcendence degree, $\MWKtheorysheaf(F) = \MWKtheory(F)$. Moreover, the following is a consequence of \cite[Theorem 3.22]{morel_a1at}: 
+
+\begin{theorem}
+Let $k$ be a perfect field. Let $F$ be a field extension of $k$ of finite transcendence degree. Let $v$ be a discrete valuation on $F$. The ring $\MWKtheorysheaf(\calO_v)$ is the subring of $\MWKtheory(F)$ generated by the elements $\eta$ and $[u] \in \MWKtheory[1](F)$ for $u \in \calO_v^\times$ where $\calO_v$ is the ring of integers of $F$ with respect to $v$.
+\end{theorem}
+
+\subsection{}
+
+Analogously to classical topology, we have Hurewicz theorems. To state them, we first need the definition of $\bbA^1$-connectedness:
+
+\begin{definition}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}.
+    A pointed space $X \in \simpnissheaves_\bullet$ is said to be \hldef{$n$-$\bbA^1$-connected or $\bbA^1$-$n$-connected}  for $n \geq 0$ if the sheaves $\pinAone[i](X)$ are isomorphic to $\pt$ for $i \leq n$. It is said to be \hldef{$\bbA^1$-connected} if it is $0$-$\bbA^1$-connected.
+    An unpointed space $X \in \simpnissheaves$ is said to be $\bbA^1$-connected if $\pinAone[0](X)$ is isomorphic to $\pt$. 
+\end{definition}
+\begin{lemma}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} base scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. A pointed space $X \in \simpnissheaves_\bullet$ is $\bbA^1$-connected if and only if its underlying space is $\bbA^1$-connected.
+\end{lemma}
+\begin{proof}
+    This follows by Lemma \ref{lemma:A1_connected_components_of_pointed_space_equals_that_of_underlying_space}
+\end{proof}
+
+
+\begin{theorem}[Hurewciz theorems for $\bbA^1$-homotopy theory]
+    \TODO{TODO; state the Hurewicz theorems}
+    Let $k$ be a perfect field. Let $X \in \calH_\bullet(k)$ be a pointed $\bbA^1$-connected space. 
+    \begin{enumerate}
+        \item \cite[Theorem 6.35]{morel_a1at} The Hurewicz morphism
+        $$\pinAone[1](X) \to \HnAone[1](X)$$
+        is the initial morphism from $\pinAone[1](X)$ to a strictly $\bbA^1$-invariant sheaf of groups. More precisely, any morphism
+        $$\pinAone[1](X) \to M$$
+        to a strictly $\bbA^1$-invariant sheaf $M$ of groups factors uniquely through $\HnAone[1](X)$.
+
+        \item  \cite[Theorem 6.37]{morel_a1at}  Let $n \geq 2$ be an integer and let $X \in \calH_\bullet(k)$ be a pointed $(n-1)$-$\bbA^1$-connected space. For each $i \in \{0,\ldots,n-1\}$, we have
+        $$\tildeHnAone[i](X) = 0$$
+        and the Hurewicz morphism
+        $$\pinAone(X) \to \HnAone(X)$$
+        is an isomorphism between strictly $\bbA^1$-invariant sheaves.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[{\cite[Theorem 1.22]{morel_a1at}}]
+    Let $k$ be a perfect field. For $n \geq 1$, there is a morphism
+    $$(\bbG_m)^{\wedge n} \to \MWKtheorysheaf[n], \quad (U_1,\ldots,U_n) \mapsto [U_1,\ldots,U_n]$$
+    of sheaves on $\SmkNis$ and this morphism is the universal one to a strongly $\bbA^1$-invariant sheaf of abelian groups. More precisely, any morphism $(\bbG_m)^{\wedge n} \to M$ where $M$ is a strongly $\bbA^1$-invariant sheaf of abelian groups factors uniquely through $\MWKtheorysheaf[n]$.
+\end{theorem}
+
+The following is a consequence:
+
+\TODO{TODO: find the relationship between the n-fold wedge of multiplicative group and punctured affine spcae, and n-fold wedge of projective line}
+\begin{theorem}[{\cite[Theorem 1.23]{morel_a1at}}]
+    Let $k$ be a perfect field. For $n \geq 2$, there is an isomorphism 
+    $$\pinAone[n-1](\bbA^n - \{0\}) \cong \pinAone((\bbP^1)^{\wedge n}) \cong \MWKtheorysheaf[n]$$ 
+    of sheaves on $\SmkNis$.
+\end{theorem}
+
+
+
+\begin{theorem}[{\cite[Corollary 1.24]{morel_a1at}}]
+    Let $k$ be a perfect field. The canonical morphism 
+    $$[\bbA^n - \{0\}, \bbA^n - \{0\}]_\bullet \cong [(\bbP^1)^{\wedge n}, (\bbP^1)^{\wedge n}] \to \MWKtheory[0](k) = \GWring(k)$$
+    is an epimorphism for $n = 1$ and an isomorphism for $n \geq 2$.
+\end{theorem}
+
+
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-homotopy groups of spaces}
+
+\section{Stable \texorpdfstring{$\bbA^1$}{A1}-categories}
+
+\TODO{}
+\begin{definition}
+The \hldef{unstable $\mathbb{A}^1$-homotopy category}, denoted \hl{$\mathcal{H}(S)$}, is the homotopy category of $\text{Spc}(S)$ with respect to the \hldef{$\mathbb{A}^1$-model structure}. This model structure is the left Bousfield localization of the Nisnevich-local model structure on $\text{Spc}(S)$ with respect to the set of projection maps $\{X \times \mathbb{A}^1 \to X \mid X \in \text{Sm}/S\}$. The pointed homotopy category $\mathcal{H}_{\bullet}(S)$ is constructed similarly from $\text{Spc}_{\bullet}(S)$.
+\end{definition}
+
+\begin{definition}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian scheme} of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} and let $T$ be the \CrefAndHyperrefIfExist{definition:tate_sphere_over_a_noetherian_finite_dimensional_scheme}{Tate sphere}. 
+
+\begin{enumerate}
+    \item A \hldef{motivic spectrum} (or \hldef{$T$-spectrum}) $E$ consists of a sequence \hl{$(E_n)_{n \geq 0}$} of pointed motivic spaces $E_n \in \text{Spc}_{\bullet}(S)$ together with structure morphisms $\sigma_n$:
+    $$\hlin{ \sigma_n: T \wedge E_n \to E_{n+1} }$$
+    (\Cref{definition:wedge_and_smash_products_of_pointed_simplicial_sheaves_of_sets_on_a_site})
+
+    \item A \hldef{morphism of motivic spectra} $f: E \to F$ is a sequence of maps $f_n: E_n \to F_n$ in $\text{Spc}_{\bullet}(S)$ compatible with the structure morphisms, i.e., $f_{n+1} \circ \sigma_n^E = \sigma_n^F \circ (\text{id}_T \wedge f_n)$. 
+
+    \item We denote the category of motivic spectra over $S$ by \hl{$\text{Spt}_{T}(S)$}.
+\end{enumerate}
+\end{definition}
+
+\TODO{distingiush between the ``fully stable category'' = $T$-spectra category = $\bbP^1$-spectra category and the $S^1$-spectra category, stabilized only with respect to the simplicial circle $S^1$}
+\begin{definition} \label{definition:stable_A1_homotopy_category_over_a_noetherian_scheme_of_finite_dimension}
+    \TODO{separate out the stable model structure}
+    The \hldef{stable $\mathbb{A}^1$-homotopy category}, denoted by notations such as \hl{$\mathcal{SH}(S)$}, or \hl{$\mathbf{SH}(S)$}, is the homotopy category of the category of motivic spectra $\text{Spt}_{T}(S)$ with respect to the \hldef{stable model structure}. This model structure is the stabilization of the pointed \CrefAndHyperrefIfExist{definition:A1_model_structure_on_the_category_of_simp_sheaves_of_sets_on_the_nis_site_over_a_noeth_scheme_of_fin_dim_and_the_unstable_A1_homotopy_category}{$\mathbb{A}^1$-model structure} on $\text{Spc}_{\bullet}(S)$ with respect to the endofunctor $- \wedge T$, meaning the weak equivalences are the stable $\mathbb{A}^1$-weak equivalences (morphisms inducing isomorphisms on all stable homotopy sheaves).
+\end{definition}
+
+
+
+\section{\texorpdfstring{$\bbA^1$}{A1}-connectivity theorems}
+
+\TODO{state unstable version}
+\TODO{state stable version of Schmidt-Strunk over Dedekind schemes}
+\TODO{state Gabber's geometric presentation lemma over fields}
+
+\TODO{State Gabber's geometric presentation lemma by Schmidt-Strunk (over dedekind schemes with infinite residue fields), then by Deshmukh, Hogadi, Kulkarni, and Yadav (DHKY) (over Noetherian domains with infinite residue fields) and Kulkarni-Hogadi's over finite fields}
+\TODO{state Gabber's geometric presentation lemma by Druzhinin for henselian local essentially smooth schemes, see Remark 3 of loc.cit.}
+
+
+\begin{theorem}[Stable $\bbA^1$ connectivity theorm {\cite[Theorems 2, 7]{druzhinin_sa1cob}}]
+    \TODO{essentially smooth}
+    Let $S$ be a scheme of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{Krull dimension} $d$. Let $U$ be an essentially smooth local henselian scheme over a base scheme $S$. Let $F \in \mathbf{SH}_{S^1}(S)$ be a $0$-connective spectrum. Then
+    $$[U, F \wedge S^i]_{\mathbf{SH}_{S^1}(S)} = 0, \quad [U, \Sigma_{\bbG_m}^\infty F \wedge S^i]_{\mathbf{SH}_{S^1}(S)} = 0 \text{ for all } i > d.$$
+    \TODO{henselian scheme}
+    \TODO{stable homotopy group}
+    \TODO{connective spectrum}
+    \TODO{$\mathbf{SH}_{S^1}(S)$, $S^1$, $[,]$, $\Sigma_{\bbG_m}^\infty$}
+\end{theorem}
+
+
+
+
+
+\appendix
+\section{Category Theory}
+
+
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_functor_between_categories.tex}
+\input{../_definitions/definition_natural_transformation_between_functors_between_categories.tex}
+
+\input{../_definitions/definition_initial_final_zero_objects_of_a_category.tex}
+
+\input{../_definitions/definition_equivalence_of_categories.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+\input{../_definitions/definition_presheaf_on_a_category.tex}
+\input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+\input{../_definitions/definition_sheafification_functor_on_a_site.tex}
+\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex}
+\input{../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex}
+
+\input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
+
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+
+\input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+
+\input{../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex}
+
+\input{../_definitions/definition_category_enriched_in_a_monoidal_category.tex}
+\input{../_definitions/definition_n_ary_functor.tex}
+
+\input{../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex}
+
+
+\input{../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex}
+\input{../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex}
+\input{../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+
+\input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
+\input{../_definitions/definition_constant_sheaf_on_a_site_with_sheafification.tex}
+
+\input{../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex}
+\input{../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex}
+\input{../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex}
+
+\section{points of topoi}
+
+We work in a fixed universe.
+
+\begin{definition}
+    \input{../_definitions/definition_topos.tex}
+\end{definition}
+
+\input{../_concepts/proposition_category_of_sheaves_is_closed_under_finite_projective_limits_and_arbitrary_corpoducts.tex}
+
+\input{../_concepts/lemma_final_object_is_projective_limit_of_empty_diagram.tex}
+\begin{proof}
+    This follows by considering the universal property of the final object.
+\end{proof}
+
+\input{../_concepts/lemma_topos_has_a_final_object.tex}
+\begin{proof}
+    This follows from Lemma \ref{lemma:final_object_is_projective_limit_of_empty_diagram} and Proposition \ref{proposition:category_of_sheaves_is_closed_under_finite_projective_limits_and_arbitrary_corpoducts}.
+\end{proof}
+
+\begin{definition}
+    \input{../_definitions/definition_morphism_of_topoi.tex}
+\end{definition}
+
+Note that $\Sets$ is a topos by virtue of being the category of sheaves on the site consisting of a single point.
+
+\input{../_definitions/definition_point_of_a_topos.tex} 
+
+
+
+\input{../_definitions/definition_site_with_enough_points.tex}
+
+\begin{lemma}
+Let $\scrU$ be a universe. Let $E$ be a $\scrU$-topos. Write $e_E$ for the final object of $E$, which exists by Lemma \ref{lemma:topos_has_a_final_object}. Given a point $x: \Sets \to E$,     
+\TODO{TODO}
+\end{lemma}
+
+\TODO{TODO: understand the relationship betewen big/small topologies}
+
+
+\section{Topology}
+
+\input{../_definitions/definition_topological_space.tex}
+
+\section{Miscellaneous definitions}
+\input{../_definitions/definition_free_simplicial_abelian_group_of_a_simplicial_set.tex}
+
+
+\input{../_definitions/definition_scheme.tex}
+
+\input{../_definitions/definition_morphism_of_schemes.tex}
+
+\input{../_definitions/definition_locally_noetherian_and_noetherian_scheme.tex}
+
+\input{../_definitions/definition_smooth_morphism_of_schemes.tex}
+\input{../_definitions/definition_smooth_at_a_point_for_a_finite_type_scheme_over_a_field.tex}
+
+\input{../_definitions/definition_etale_morphism_of_schemes.tex}
+
+\input{../_definitions/definition_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_dimension_of_a_scheme.tex}
+
+\input{../_definitions/definition_field.tex}
+\input{../_definitions/definition_filtered_cofiltered_category.tex}
+\input{../_definitions/definition_projective_and_inductive_limits_in_categories.tex}
+\input{../_definitions/definition_algebraic_variety_over_a_field.tex}
+\input{../_definitions/definition_extension_of_a_field.tex}
+\input{../_definitions/definition_affine_scheme.tex}
+\input{../_definitions/definition_separable_algebraic_field_extension.tex}
+\input{../_definitions/definition_separable_field_extension_general.tex}

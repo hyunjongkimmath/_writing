@@ -1,0 +1,14 @@
+\begin{definition}[Fibrant Object] \label{definition:fibrant_cofibrant_object_in_a_model_category}
+Let $(\mathcal{C}, \mathcal{W}, \mathcal{C}of, \mathcal{F}ib)$ be a \CrefAndHyperrefIfExist{definition:model_category}{model category}. 
+\begin{enumerate}
+    \item An object $X \in \mathcal{C}$ is called \hldef{fibrant} if the unique morphism
+    $$ X \longrightarrow * $$
+    to the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} (\Cref{lemma:model_category_has_an_initial_object_and_a_final_object}) $*$ of $\mathcal{C}$ is a fibration (i.e., belongs to $\mathcal{F}ib$).
+
+    \item An object $X \in \mathcal{C}$ is called \hldef{cofibrant} if the unique morphism
+    $$
+    \emptyset \longrightarrow X
+    $$
+    from the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} (\Cref{lemma:model_category_has_an_initial_object_and_a_final_object}) $\emptyset$ of $\mathcal{C}$ is a cofibration (i.e., belongs to $\mathcal{C}of$).
+\end{enumerate}
+\end{definition}

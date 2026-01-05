@@ -1,0 +1,688 @@
+
+The purpose of this document is to compile various notions of Fourier transforms and to compare and contrast them.
+
+\section{Fourier transform of a complex valued function on \texorpdfstring{$\bbR$}{R}} \label{section:fourier_transforms_for_complex_valued_functions_on_R}
+
+We can first define the Fourier transform of functions $f \in L^1(\mathbb{R})$
+
+\input{../_definitions/definition_integrable_complex_valued_function_on_the_real_line.tex}
+
+There are multiple conventions for defining the Fourier transform and developing its theory. We compile some common conventions below: 
+
+\input{../_definitions/definition_fourier_transform_of_an_L_1_function_on_R.tex}
+
+\begin{convention}
+    We use the symmetric mathematical convention in the rest of the current section, which is the convention used in \cite[Chapter 9]{rudin_real_and_complex}; note that in loc.~cit.~, the notation 
+    $$\int_{-\infty}^{\infty} f(x) dm(x)$$
+    is used to denote
+    $$\frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) dx$$
+    by letting $m$ denote, unlike in other previous chapters of the book, the Lebesgue measure on $\bbR$ divided by $\sqrt{2\pi}$.
+\end{convention}
+
+\begin{remark}
+    The Fourier transform and the inverse Fourier transform for the standard mathematical convention and the time frequency convention are reversed.
+\end{remark}
+
+\begin{theorem}[The Fourier inversion theorem, see e.g. {\cite[Theorem 9.11]{rudin_real_and_complex}}]
+    Let $f \in L^1(\bbR)$. If $\hat{f} \in L^1(\bbR)$, then $\calF^{-1}[\hat{f}]$ is a continuous function that vanishes at infinity (Definition \ref{definition:vanish_at_infinity_for_a_complex_valued_function_on_a_locally_compact_hausdorff_space}) and $f = g$ almost everywhere.
+\end{theorem}
+
+\begin{theorem}[The Fourier transform uniqueness theorem, see e.g. {\cite[Theorem 9.12]{rudin_real_and_complex}}]
+    If $f \in L^{1}(\bbR)$ and $\hat{f}(t)=0$ for all $t \in \bbR$, then $f(x)=0$ a.e.
+\end{theorem}
+
+We now define the Fourier transform of a function $f \in L^2(\bbR)$ by taking a limit of Fourier transforms of $L^1(\bbR)$ functions that approximate $f$.  
+
+\input{../_definitions/definition_fourier_transform_of_an_L_2_function.tex}
+
+\begin{convention}
+    Unless otherwise stated, given by function $f \in L^2(\bbR)$, $\hat{f}$ refers to the Fourier transform as defined in \Cref{definition:fourier_transform_of_an_L_2_function} rather than the Fourier transform as defiend in \Cref{definition:fourier_transform_of_an_L_1_function_on_R}; recall that the latter notion is applicable to general measurable functions (although the integral defining the Fourier transform may not be well defined). \Cref{theorem:fourier_transform_of_an_L2_function_can_be_obtained_through_the_regular_integral_definition_if_L1} shows that the two definitions in fact coincide almost everywhere for $f \in L^2(\bbR)$ under nice enough conditions.
+\end{convention}
+
+\begin{theorem}[see e.g. {\cite[Theorem 9.14]{rudin_real_and_complex}}] \label{theorem:fourier_transform_of_an_L2_function_can_be_obtained_through_the_regular_integral_definition_if_L1}
+Let \( f \in L^{2}(\mathbb{R}) \). Let $\hat{f}$ be the Fourier transform $\hat{f}$ in the sense of Definition \ref{definition:fourier_transform_of_an_L_2_function}. If $\hat{f} \in L^1$, then 
+$$\hat{f}(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-ixt}  dx \quad \text{almost everywhere}$$
+i.e. $\hat{f}$ almost everywhere coincides with the Fourier transform in the sense of Definition \ref{definition:fourier_transform_of_an_L_1_function_on_R}.
+\end{theorem}
+
+Plancherel's theorem shows that the Fourier transform is a unitary operator on $L^2(\bbR)$. 
+
+\begin{theorem}[Plancherel's theorem, see e.g. {\cite[Theorem 9.13]{rudin_real_and_complex}}]
+Let \( f \in L^{2}(\mathbb{R}) \). 
+
+\begin{enumerate}
+    \item \[ \| f \|_{L^{2}(\mathbb{R})} = \| \hat{f} \|_{L^{2}(\mathbb{R})}.  \]
+
+    \item The Fourier  transform $f \mapsto \hat{f}$ is a Hilbert space (see Convention \ref{convention:L2_is_a_hilbert_space}) isomorphism $L^2(\mathbb{R}) \to L^2(\mathbb{R})$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+    As we are working with vector fields over $\bbR$ and $\bbC$ (in particular which are not of characteristic $2$), saying that \[ \| f \|_{L^{2}(\mathbb{R})} = \| \hat{f} \|_{L^{2}(\mathbb{R})}\] is equivalent to saying that the inner product is preserved under Fourier transforms, i.e. $$(f,g) = (\hat{f}, \hat{g})$$ for all $f,g \in L^2(\bbR)$. In other words, the Fourier transform is a unitary operator on $L^2(\bbR)$.
+\end{remark}
+
+\section{Fourier transform of a function on a locally compact abelian group}
+
+We now extend the analytic notion of Fourier transform in Section \ref{section:fourier_transforms_for_complex_valued_functions_on_R} to apply to functions on locally compact abelian groups. In particular, the discussion in Section \ref{section:fourier_transforms_for_complex_valued_functions_on_R} is essentially a specialization of the discussion in this section in the case that the locally compact abelian group $G$ is $\bbR$.
+
+\input{../_definitions/definition_locally_compact_group.tex}
+
+\input{../_definitions/definition_haar_measure_on_a_locally_compact_group.tex}
+
+\input{../_concepts/lemma_left_or_right_haar_measure_on_a_locally_compact_abelian_group_is_a_haar_measure.tex}
+\input{../_concepts/lemma_left_haar_measures_on_a_locally_compact_group_are_unique_up_to_scalars.tex}
+
+\begin{notation}
+    Given a \hyperrefIfExists{definition:locally_compact_group}{locally compact group} $G$, fix a left Haar measure on $G$; integration with respect to this Haar measure would often be denoted by \hl{$\int_G dg$}
+\end{notation}
+
+\begin{definition}
+    Let \( G \) be a \hyperrefIfExists{definition:locally_compact_group}{locally compact group} with a fixed left Haar measure \( \mu \). For functions $f_1, f_2: G \to \bbC$, their \hldef{convolution} \( f_1 * f_2 \in L^1(G) \) is defined by
+
+    $$\hlin{(f_1 * f_2)(x) = \int_G f_1(y) f_2(y^{-1} x) \, d\mu(y)}$$
+
+    If $f_1,f_2 \in L^1(G)$, then this integral converges absolutely for almost every $x \in G$.
+\end{definition}
+
+\TODO{TODO: define a Banach algebra}
+\begin{lemma}
+    Let $G$ be a \hyperrefIfExists{definition:locally_compact_group}{locally compact group}. 
+    \begin{enumerate}
+        \item For $f_1,f_2 \in L^1(G)$, we have \[ \|f_1 * f_2\|_1 \leq \|f_1\|_1 \|f_2\|_1.  \]
+        \item The convolution $*$ makes $L^1(G)$ into a Banach algebra (without unit).
+        \item If $G$ is abelian, then $f_1 * f_2 = f_2 * f_1$ almost everywhere for $f_1,f_2 \in L^1(G)$.
+        \item If $G$ is abelian, then $*$ makes $L^1(G)$ into a commutative Banach algebra (without unit).
+    \end{enumerate}
+\end{lemma}
+
+
+\input{../_definitions/definition_quasi_character_of_a_locally_compact_hausdorff_group.tex}
+
+\input{../_definitions/definition_pontryagin_dual_of_a_locally_compact_abelian_group.tex}
+
+\begin{remark}
+    A posteriori, we will equip $\widehat{G}$ with a Haar measure, see \Cref{convention:haar_measure_on_pontryagin_dual_of_a_locally_compact_abelian_group}
+\end{remark}
+
+\begin{lemma}
+    Let \( G \) be a locally compact abelian group.
+    \begin{enumerate}
+        \item $\widehat{G}$ is a locally compact abelian group. 
+        \item There is a canonical isomorphism 
+        \begin{align*}
+        G &\xrightarrow{\sim} \widehat{\widehat{G}} \\
+        g &\mapsto (\chi \mapsto \chi(g))
+        \end{align*}
+        of topological groups. This is usually called the \hldef{Pontryagin map}.
+    \end{enumerate}
+\end{lemma}
+
+\begin{notation}\label{notation:bilinear_pairing_notation_for_evaluation_of_a_character}
+    Let \( G \) be a \hyperrefIfExists{definition:locally_compact_group}{locally compact abelian group}. Given $g \in G$ and \hyperrefIfExists{definition:pontryagin_dual_of_a_locally_compact_abelian_group}{$\chi \in \widehat{G}$}, write \hl{$\langle g, \chi \rangle$} for $\chi(g) \in \bbC$. 
+\end{notation}
+
+
+\input{../_definitions/definition_fourier_transform_of_a_function_on_a_locally_compact_abelian_group.tex}
+
+\begin{theorem}[Fourier Inversion Formula] \label{theorem:fourier_inversion_formula_for_locally_compact_abelian_group}
+    Let \(G\) be a locally compact abelian group with Haar measure \(\mu\). There exists a unique Haar measure $\nu$ in $\widehat{G}$ for which the following holds: for any \(f \in L^1(G)\), if \(\hat{f} \in L^1(\widehat{G})\), then 
+    
+    $$f(x) = \calF^{-1}[g](x)$$
+
+    and the integral defining $\calF^{-1}[g](x)$ converges absolutely for almost every \(x \in G\).
+\end{theorem}
+
+\begin{convention} \label{convention:haar_measure_on_pontryagin_dual_of_a_locally_compact_abelian_group}
+    Given a locally compact abelian group $G$ and a choice of Haar measure $\mu$, we always equip $\widehat{G}$ with the unique Haar measure $\nu$ in Theorem \ref{theorem:fourier_inversion_formula_for_locally_compact_abelian_group}.
+\end{convention}
+
+\TODO{TODO: state the Plancherel theorem}
+
+\section{Mellin transform of a complex valued function on the positive real numbers}
+
+\input{../_definitions/definition_mellin_transform_of_a_measurable_function_on_the_positive_real_numbers.tex}
+
+\TODO{TODO: sufficient conditions for the Mellin transform to converge}
+\TODO{TODO: the inverse Mellin transform to converge}
+
+\begin{theorem}[Relation between Mellin and Fourier transforms]
+Let $f: \mathbb{R}_{>0} \to \mathbb{C}$ be a measurable function such that the Mellin transform $\mathcal{M}[f]$ converges for $s = \sigma + i t \in \mathbb{C}$ in some vertical strip $\sigma_1 < \sigma < \sigma_2$.
+
+Let $g : \mathbb{R} \to \mathbb{C}$ be the function
+$$ g(u) := f(e^{u}).  $$
+
+Then the Fourier transform $\mathcal{F}[g](\omega)$ of $g$, defined by
+\TODO{TODO: according to my convention, the Fourier transform is slightly different.}
+$$
+\mathcal{F}[g](\omega) := \int_{-\infty}^\infty g(u) \, e^{-i \omega u} \, du,
+$$
+exists (appropriately as an improper integral or in distributional sense) for $\omega \in \mathbb{R}$ in a corresponding domain, and satisfies the identity
+$$
+\mathcal{F}[g](\omega) = \mathcal{M}[f]\bigl(\sigma - i \omega\bigr),
+$$
+where the Mellin transform is analytically continued if necessary to the point $\sigma - i \omega$.
+
+In other words, the Fourier transform of the function $u \mapsto f(e^{u})$ is equal to the Mellin transform of $f$ evaluated on the vertical line in the complex plane parameterized by $s = \sigma - i \omega$.
+
+\end{theorem}
+
+\section{Arithmetic Fourier transform}
+
+\subsection{Deligne's Fourier transform of perverse sheaves on the additive group over a finite field}
+
+\input{../_definitions/definition_fourier_transform_functor_of_deligne.tex}
+
+\TODO{TODO: Put in generalized definitions of Deligne's fourier transform functor}
+
+\subsection{Fourier transform of the trace function of a cohomologically bounded complex of constructible sheaves on a comutative algebraic group over a finite field}
+
+We give an abstract definition for the Fourier transform of a function on a finite group of rational points on an algebraic group. The case of interest\CrefIfExists{definition:arithmetic_fourier_transform_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field} is when base field is finite and the function is the \hyperrefIfExists{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}{Frobenius trace function}\CrefIfExists{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}.   
+
+\begin{definition} \label{definition:fourier_transform_of_a_function_on_a_finite_group_of_rational_points_of_an_algebraic_group_over_a_field}
+    % Let $G/\bbF_q$ be a 
+    Let $G/k$ be an algebraic group over a field. Let $F$ be a field. Let $f: G(k) \to F$ be a function. Write $\widehat{G}(k)$ for the set of characters/group homomorphisms $\chi: G(k) \to F^\times$.
+    Assuming that $G(k)$ is a finite set, define the \hldef{(discrete) Fourier transform of $f$} to be the function \hl{$\calF[f] = \hat{f} :\widehat{G}(k) \to F^\times$} defined by 
+    $$\hat{f}(\chi) = \sum_{x \in G(k)} \chi(x) f(x).$$
+\end{definition}
+
+In studying arithmetic Fourier transforms for functions on algebraic groups over finite fields, the main functions of interest are Frobenius trace functions:
+
+\input{../_definitions/definition_arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields.tex}
+
+
+\input{../_definitions/definition_frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field.tex}
+
+\begin{notation} \label{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}
+    Given an algebraic group $G$ over a finite field $\bbF_q$, and when a prime $\ell \neq \Char \bbF_q$ is understood in context, let \hl{$\widehat{G}(\Fqn)$} denote the set of \hyperrefIfExists{definition:quasi_character_of_a_locally_compact_hausdorff_group}{(unitary) characters} $\chi: G \to \Qellbar^\times$. Let \hl{$\widehat{G}$} denote the union
+    $\bigcup_{n\geq 1} \widehat{G}(\Fqn)$.
+\end{notation}
+
+\input{../_definitions/definition_arithmetic_fourier_transform_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field.tex}
+
+\subsection{Lang's isogeny theorem and Kummer sheaves associated to characters on connected commutative algebraic groups over finite fields}
+
+% Definition: Lang isogeny
+\input{../_definitions/definition_lang_map_of_an_endomorphism_of_an_algebraic_group.tex}
+
+\input{../_concepts/theorem_langs_theorem_for_connected_algebraic_groups_over_finite_fields.tex}
+
+\input{../_definitions/definition_kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field.tex}
+
+\begin{definition}
+Let $G$ be a connected commutative algebraic group over a finite field $\Fq$, and let $\ell \neq \Char \Fq$ be a prime. Let $\chi \in \widehat{G}(\Fqn)$ be a character for some $n \geq 1$.  
+\begin{itemize}
+    \item Let $M \in \Dbc(G, \Qellbar)$. The \hldef{twist} \hl{$M_\chi$} of $M$ by $\chi$ is the object 
+    $$M_\chi = M_{\Fqn} \otimes \calL_{\chi}$$
+    where $M_{\Fqn}$ is the pullback of $M$ under the base change map $G_{\Fqn} \to G$ and \hyperrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{$\calL_{\chi}$} is the \hyperrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{Kummer sheaf associated to $\chi$}\CrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}.
+
+    \item More generally, let $\pi: X \to G_{\Fqn}$ be some morphism of schemes over $\Fqn$ and let $M \in \Dbc(X, \Qellbar)$. The \hl{twist} \hldef{$M_\chi$} of $M$ by $\chi$ is the object
+    $$M_\chi = M \otimes \calL_\chi.$$
+\end{itemize} 
+\end{definition}
+
+\begin{lemma}[{\cite[Lemma 1.17]{forey_fresan_kowalski_aftff}}] \label{lemma:twisting_cohomologically_bounded_derived_object_on_a_scheme_over_a_finite_field_by_a_character_on_a_connected_commutative_group_scheme_is_t_exact_in_the_standard_and_perverse_t_structures}
+    \TODO{re-verify this citation for the final version of FFK}
+    Let $f: X \rightarrow G$ be a morphism from an algebraic variety $X$ to a connected commutative algebraic group $G$, both defined over $\Fq$. Let $\chi \in \widehat{G}$ be a character. Then the functor $M \mapsto M_\chi$ on $D_c^{b}(X, \Qellbar)$ or $\mathrm{D}_c^{\mathrm{b}}\left(X_{\Fqbar}, \Qellbar\right)$ is $t$-exact for the standard and perverse $t$-structures. In particular, if $M$ is perverse (resp. semiperverse) then so is $M_\chi$.
+\end{lemma}
+
+\begin{proposition} \label{proposition:some_properties_of_the_arithmetic_fourier_transform}
+Let $G$ be a connected commutative algebraic group over a finite field $\Fq$, let $\ell \neq \Char \Fq$ be a prime, let $M,N \in \Dbc(G, \Qellbar)$, and let $n \geq 1$. Write $1_n \in \widehat{G}(\Fqn)$ for the trivial character.
+
+\TODO{TODO: define $*_!$, negligible objects, generic subset}
+\begin{enumerate}
+    \item $S(M, \chi) = S(M_\chi, 1_n)$ for any \hyperrefIfExists{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
+    
+    \item Given any homomorphism $f: G \to H$ of connected commutative algebraic groups over $\Fq$ and for any $n \geq 1$, we have 
+    $$S(Rf_! M , 1_{H,n}) = S(M,1_{G,n})$$
+    where $1_{G,n} \in \widehat{G}(\Fqn)$ and $1_{H,n} \in \widehat{H}(\Fqn)$ denote the trivial characters.
+
+    \item $S(M *_! N, \chi) = S(M, \chi) \cdot S(N,\chi)$ for any \hyperrefIfExists{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
+
+    \item If $M$ is negligible, then $S(M,\chi) = 0$ for $\chi$ in a generic subset of $\widehat{G}$. The converse holds if $M$ is perverse.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item 
+        \begin{align*}
+        S(M_\chi, 1_n) &= \sum_{x \in G(\Fqn)} t_{M_\chi}(x; \Fqn) \cdot 1_n(x) \\
+        &= \sum_{x \in G(\Fqn)} t_{M \otimes \calL_\chi}(x; \Fqn) \\
+        &= \sum_{x \in G(\Fqn)} t_{M}(x; \Fqn) \cdot t_{\calL_\chi}(x; \Fqn)\\
+        &= \sum_{x \in G(\Fqn)} t_{M}(x; \Fqn) \cdot \chi(x) \\
+        &= S(M, 1_n).
+        \end{align*}
+
+        \item 
+        \begin{align*}
+            S(Rf_! M, 1_n) &= \sum_{y \in H(\Fqn)} t_{Rf_! M}(y; \Fqn) \\
+            &= \sum_{y \in H(\Fqn)} \sum_{\substack{x \in G(\Fqn) \\ f(x) = y}} t_M(x;\Fqn) \\
+            &= \sum_{x \in G(\Fqn)} t_M(x;\Fqn) \\
+            &= S(M, 1_n)
+        \end{align*}
+
+        \item
+        \begin{align*}
+            S(M *_! N, \chi) &= \sum_{x \in G(\Fqn)} t_{M *_! N}(x;\Fqn) \cdot \chi(x)  \\
+            &= \sum_{x \in G(\Fqn)} \left( \sum_{y \in G(\Fqn)} t_M(y;k_n)  \cdot t_N(y^{-1} x; k_n) \right)  \cdot \chi(x)  \\
+            &= \sum_{x \in G(\Fqn)} \left( \sum_{y \in G(\Fqn)} t_M(y;k_n) \cdot \chi(y) \cdot t_N(y^{-1} x; k_n) \cdot \chi(y^{-1} x) \right)  \\
+            &= \sum_{y \in G(\Fqn)} \sum_{x \in G(\Fqn)}   t_M(y;k_n) \cdot \chi(y) \cdot t_N(y^{-1} x; k_n) \cdot \chi(y^{-1} x)   \\
+            &= \sum_{y \in G(\Fqn)} \left( t_M(y;k_n) \cdot \chi(y) \sum_{x \in G(\Fqn)} t_N(y^{-1} x; k_n) \cdot \chi(y^{-1} x)  \right) \\
+        \end{align*}
+        using the change of variables $z = y^{-1} x$, the above equals
+        \begin{align*}
+            & \sum_{y \in G(\Fqn)} \left( t_M(y;k_n) \cdot \chi(y) \sum_{z \in G(\Fqn)} t_N(z; k_n) \cdot \chi(z) \right)  \\
+            =& \left( \sum_{y \in G(\Fqn)}  t_M(y;k_n) \cdot \chi(y) \right) \cdot \left( \sum_{z \in G(\Fqn)} t_N(z; k_n) \cdot \chi(z) \right) \\
+            =& S(M, \chi) \cdot S(N,\chi).
+        \end{align*}
+
+        \item 
+        For generic $\chi \in \widehat{G}$, we have $H_c^i(G_{\Fqbar}, M_\chi) = 0$ for all $i > 0$ by the generic vanishing theorem. The Grothendieck-Lefschetz trace formula shows that 
+        $$S(M_\chi, 1_n) = \sum_{x \in G_{\bbF_{q^{n}}}} t_{M_\chi} (x;\bbF_{q^{n}}) = \sum_{i \in \bbZ} (-1)^i \operatorname{tr}(\Frob_{q^n} | H_c^i(G_{\Fqbar}, M_\chi)).$$
+        Therefore, 
+        $$S(M_\chi, 1_n) = \operatorname{tr}(\Frob_{q^n} | H_c^0(G_{\Fqbar}, M_\chi))$$
+        for generic $\chi$. This value is generically $0$ if and only if $H_c^0(G_{\Fqbar}, M_\chi))$ is generically $0$.  
+
+        If $M$ is perverse, then this is true if and only if $M$ is negligible. If $M$ is a more general negligible object of $\Dbc(G, \Qellbar)$, then its perverse cohomology objects ${}^p\calH^i(M)$ are all negligible by definition. Recall that $[M] = \sum_{i \in \bbZ} (-1)^i [{}^p\calH^i(M)]$ in the Grothendieck group $K(\Dbc(G, \Qellbar))$. Moreover, $S(-, \chi)$ is additive in distinguished triangles because $t(-; \Fqn)$ is additive in distinguished triangles. Therefore, 
+        $$S(M,\chi) = \sum_{i \in \bbZ} (-1)^i S({}^p\calH^i(M), \chi) = 0.$$
+    \end{enumerate}
+\end{proof}
+
+\begin{lemma} \label{lemma:characters_on_product_of_connected_commutative_algebraic_groups_over_a_finite_field_correspond_to_tuples_of_characters_of_the_individual_groups}
+    Let $\{G_i\}_{i}$ be a finite collction of connected commutative algebraic groups over a finite field $\Fq$. Write $G = \prod_i G_i$. Let $\ell \neq \Char \Fq$ be a prime. Let $n \geq 1$. 
+    \begin{enumerate}
+        \item The characters $\chi \in \widehat{G}(\Fqn)$ are in bijective correspondence with tuples $(\chi_i)_{i}$ of characters $\chi_i \in \widehat{G}_i(\Fqn)$ under the inverse maps
+        \begin{align*}
+            \widehat{G}(\Fqn) &\to \prod_i \widehat{G}_i(\Fqn) \\
+             \chi & \mapsto (\chi \circ \iota_i)_i \\
+             \left( (g_i)_i \mapsto \prod_i \chi_i(g_i) \right) & \mapsfrom (\chi_i)_i
+        \end{align*}
+        where $\iota_i: G_i(\Fqn) \to G(\Fqn)$ sends $g_i \in G_i(\Fqn)$ to the point of $G(\Fqn)$ whose $i$th coordinate is $g_i$ and whose other coordinates are all identity elements.
+
+        \item Let $\chi \in \widehat{G}(\Fqn)$ be a character and let $(\chi_i)_i \in \prod_i \widehat{G}_i(\Fqn)$ be the corresponding tuple of characters. There is a natural isomorphism
+        $$\calL_{\chi} \cong \bigotimes_i \operatorname{pr}_i^* \calL_{\chi_i}$$
+        where $\operatorname{pr}_i: G \to G_i$ is the projection morphism.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item This is clear. 
+        \item Since inverse images preserve tensor products, it suffices to show this in the case that the collction $(G_i)_{i}$ consists of two groups $G_1$ and $G_2$. It also suffices to show this in the case of $n = 1$ by base change. Take the commutative diagram
+        \begin{center}
+            \begin{tikzcd}
+                G_1 \times G_2 \ar[r, "\varphi"] \ar[d] & G_1 \times G_2 \ar[r] \ar[d, "\psi"] & G_2 \ar[d, "L_2"] \\
+                G_1 \times G_2 \ar[r] \ar[d] & G_1 \times G_2 \ar[r] \ar[d] & G_2 \ar[d] \\
+                G_1 \ar[r, "L_1"] & G_1 \ar[r] & \Spec \Fq
+            \end{tikzcd}
+        \end{center}
+        whose squares are all Cartesian where we have written $L_i: G_i \to G_i$ to denote the Lang isogeny for $i = 1,2$. The morphisms labeled $\varphi, \psi: G_1 \times G_2 \to G_1 \times G_2$ in the diagram are base changes of $L_1$ and $L_2$ respectively and hence are Galois \'etale of Galois groups $G_1(\Fq)$ and $G_2(\Fq)$ respectively. In fact, these Galois \'etale covers correspond to the surjective group homomorphisms
+        \begin{align} \label{eq:surjective_group_homomorphisms_from_etale_fundamental_group_of_product_group_to_Fq_points_of_each_component_group_from_lang_isogeny}
+           \pioneet(G_{1} \times G_2, e) \to   \pioneet(G_{1}, e) &\twoheadrightarrow G_1(\Fq) \\
+            \pioneet(G_{1} \times G_2, e) \to \pioneet(G_{2}, e) &\twoheadrightarrow G_2(\Fq) \nonumber
+        \end{align}
+        where the maps from $\pioneet(G_{1} \times G_2, e)$ are induced by the natural projection maps on the group schemes. Note that base changing the Lang isogeny exact sequence 
+        $$1 \to G(\Fq) \to G \xrightarrow{L} G \to 1$$
+        to $\Fqbar$ results in the exact sequence
+        $$1 \to G(\Fq) \to G_{\Fqbar} \xrightarrow{L} G_{\Fqbar} \to 1$$
+        describing a Galois \'etale cover of connected group schemes, so the homomorphisms \eqref{eq:surjective_group_homomorphisms_from_etale_fundamental_group_of_product_group_to_Fq_points_of_each_component_group_from_lang_isogeny} are in fact surjective even when restricted the subgroup $\pioneet((G_1 \times G_2)_{\Fqbar}, e)$ of $\pioneet(G_1 \times G_2, e)$.  
+
+        Therefore, the product group homomorphism 
+        \begin{equation} \label{eq:group_homomorphism_from_etale_fundamental_group_of_product_of_group_schemes_to_product_of_Fq_rational_points_via_lang_isogenies}
+        \pioneet(G_{1} \times G_2, e) \to G_1(\Fq) \times G_2(\Fq)
+        \end{equation}
+        induced by the two group homomorphisms of \eqref{eq:surjective_group_homomorphisms_from_etale_fundamental_group_of_product_group_to_Fq_points_of_each_component_group_from_lang_isogeny} is surjective and corresponds to the composed cover 
+        $$G_1 \times G_2 \xrightarrow{\varphi} G_1 \times G_2 \xrightarrow{\psi} G_1 \times G_2.$$
+        Note that $\varphi = (L_1, \id_{G_2})$ and $\psi = (\id_{G_1} \times L_2)$, so the composed covering morphism above is $(L_1, L_2)$, which is exactly the Lang isogeny of $(G_1 \times G_2)$ over $\Fq$.
+
+        By construction, the lisse sheaf $\calL_{\chi_i}$ corresponds to the composed group homomorphism
+        $$\pioneet(G_i, e) \to G_i(\Fq) \xrightarrow{\chi_i} \Qellbar^\times$$
+        and hence its pullback $\operatorname{pr}_i^* \calL_{\chi_i}$ to $G_1 \times G_2$ corresponds to the composition
+        $$\pioneet(G_{1} \times G_2, e) \to \pioneet(G_{i}, e) \twoheadrightarrow G_i(\Fq) \xrightarrow{\chi_i} \Qellbar^\times$$
+        of the group homomorphism in \eqref{eq:surjective_group_homomorphisms_from_etale_fundamental_group_of_product_group_to_Fq_points_of_each_component_group_from_lang_isogeny} with $\chi_i$. The tensor product $\operatorname{pr}_1^* \calL_{\chi_1} \times \operatorname{pr}_2^* \calL_{\chi_2}$ thus corresponds to the homomorphism
+
+        \begin{equation} \label{eq:homomorphism_from_fundamental_group_of_product_of_algebraic_groups_over_finite_field_via_product_of_characters}
+        \pioneet(G_{1} \times G_2, e) \to \pioneet(G_{1}, e) \times \pioneet(G_{2}, e) \twoheadrightarrow G_1(\Fq) \times G_2(\Fq) \xrightarrow{(g_1,g_2) \mapsto \chi_1(g_1) \cdot \chi_2(g_2)} \Qellbar^\times.
+        \end{equation}
+
+        On the other hand, $\calL_\chi$ corresponds to the group homomorphism 
+        \begin{equation}\label{eq:homomorphism_from_fundamental_group_of_product_of_algebraic_groups_over_finite_field_via_character_on_product}
+        \pioneet(G_1 \times G_2, e) \to G_1(\Fq) \times G_2(\Fq) \cong (G_1 \times G_2)(\Fq) \xrightarrow{\chi} \Qellbar
+        \end{equation}
+        where the first homomorphism is \eqref{eq:group_homomorphism_from_etale_fundamental_group_of_product_of_group_schemes_to_product_of_Fq_rational_points_via_lang_isogenies}. Since $\chi(g_1,g_2) = \chi_1(g_1) \cdot \chi_2(g_2)$, and since the homomoprhism \eqref{eq:group_homomorphism_from_etale_fundamental_group_of_product_of_group_schemes_to_product_of_Fq_rational_points_via_lang_isogenies} is the product of the homomorphisms of \eqref{eq:surjective_group_homomorphisms_from_etale_fundamental_group_of_product_group_to_Fq_points_of_each_component_group_from_lang_isogeny}, the two homomorphisms \eqref{eq:homomorphism_from_fundamental_group_of_product_of_algebraic_groups_over_finite_field_via_product_of_characters} and \eqref{eq:homomorphism_from_fundamental_group_of_product_of_algebraic_groups_over_finite_field_via_character_on_product} coincide. The two lisse sheaves $\calL_\chi$ and $\operatorname{pr}_1^* \calL_{\chi_1} \otimes \operatorname{pr}_2^* \calL_{\chi_2}$ are thus naturally isomorphic.
+    \end{enumerate}
+\end{proof}
+
+\begin{proposition}
+    Let $\{G_i\}_{i}$ be a finite collction of connected commutative algebraic groups over a finite field $\Fq$. Write $G = \prod_i G_i$ and write $\operatorname{pr}_i: G \to G_i$ for the projection morphism. Let $\ell \neq \Char \Fq$ be a prime. 
+    Let $M \in \Perv(G)$ be arithmetically semisimple and pure of weight $0$. Suppose for each $i$ that $R\operatorname{pr}_{i!} M$ is arithmetically isomorphic to a direct sum $\delta_{x_i} \oplus N_i$ where $\delta_{x_i}$ is a skyscraper sheaf of rank $1$ supported at a point $x_i \in G_i(\Fq)$ and $N_i$ is a negligible object on $G_i$. Further suppose that there exists some $i_0$ such that $H_c^*(G_{i_0, \Fqbar}, N_{i_0}) = 0$.
+    
+    The object $M$ itself must be direct sum of a skyscraper sheaf of rank $1$ and a negligible object. 
+    
+\end{proposition}
+\begin{proof}
+
+    The hypotheses and conclusion are preserved under base change by a finite extension of $\Fq$; we may thus apply such base changes and replace $\Fq$ with appropriate finite extensions in the process. 
+
+    Say that $R\operatorname{pr}_{i!} M$ is the direct sum $\delta_{x_i} \oplus N_i$ of a skyscraper sheaf $\delta_{x_i}$ supported at a point $x_i \in G_i(\Fq)$ and a negligible object $N_i$ on $G_i$. 
+    
+    Given a character $\chi_i \in \widehat{G}_i(\Fqn)$, \Cref{proposition:some_properties_of_the_arithmetic_fourier_transform} shows that
+    $$S(M, \operatorname{pr}_i^* \chi_i) = S(M_{\operatorname{pr}_i^* \chi_i}, 1_n) = S(R\operatorname{pr}_{i!} (M_{\operatorname{pr}_i^* \chi_i}), 1_n).$$
+    By the projection formula \TODO{cite the projection formula}, this equals
+    \begin{align*}
+    S((R\operatorname{pr}_{i!} M)_{\chi_i}, 1_n) &= S(R\operatorname{pr}_{i!} M, \chi_i) \\
+    &= S(\delta_{x_i} \oplus N_i, \chi_i) \\
+    &= S(\delta_{x_i}, \chi_i) \oplus  S(N_i, \chi_i).
+    \end{align*}
+    For generic $\chi_i \in \widehat{G}_i$, the value $S(N_i, \chi_i)$ equals $0$, so the above equals 
+    $S(\delta_{x_i}, \chi_i)$. Since $\delta_{x_i}$ is skyscraper, we have 
+    $$S(\delta_{x_i}, \chi_i) = \sum_{y_i \in G_i(\Fqn)} t_{\delta_{x_i}}(y_i; \Fqn) \cdot \chi_i(y_i) = t_{\delta_{x_i}}(x_i; \Fqn) \cdot \chi_i(x_i) = S(\delta_{x_i}, 1_n) \cdot \chi_i(x_i).$$
+    In turn, this equals 
+    $$S(\delta_{x_i}, 1_n) \cdot \chi_i(x_i) = S(R\operatorname{pr}_{i!} M, 1_n) \cdot \chi_i(x_i) = S(M, 1_n) \cdot \chi_i(x_i).$$
+    We have thus shown that 
+    \begin{equation} \label{eq:applying_character_on_component_group_to_arithmetic_fourier_transform_of_an_object_whose_pushforward_is_skyscraper_plus_negligible_multiplies_the_value_by_the_character_value_at_the_point}
+    S(M, \operatorname{pr}_i^* \chi_i) = S(M, 1_n) \cdot \chi_i(x_i)
+    \end{equation}
+    holds for generic $\chi_i \in \widehat{G}_i$. 
+
+    Let $x \in G(\Fq)$ be the point $(x_i)_i$. For each $i$, the skyscraper sheaf $\delta_{x_i}$ corresponds to a continuous character $\Gal(\Fqbar/\Fq) \to \Qellbar^\times$; in particular, the Frobenius element must be sent to a root of unity. Replace $\Fq$ by a finite extension by base change so that each skyscraper sheaf $\delta_{x_i}$ corersponds to the trivial character $\Gal(\Fqbar/\Fq) \to \Qellbar^\times$. Let $\delta_x$ be the trivial skyscraper sheaf of rank $1$ at $x$. By assumption, there is some $i_0$ such that $H_c^*(G_{i_0, \Fqbar}, N_{i_0}) = 0$, so in particular $S(N_{i_0}, 1_{n}) = 0$ for every $n \geq 1$ by the Grothendieck-Lefschetz trace formula. Further note that 
+    \begin{align} \label{eq:object_whose_pushforwards_are_skyscraper_mod_negligibles_and_well_chosen_skyscraper_have_equal_arithmetic_fourier_transform}
+    S(M, 1_n) &= S(R\operatorname{pr}_{i_0 !} M, 1_n) \\ \nonumber
+    &= S(\delta_{x_{i_0}} \oplus N_{i_0} , 1_n) \\ \nonumber
+    &= S(\delta_{x_{i_0}}, 1_n) + S(N_{i_0}, 1_n) \\ \nonumber
+    &= S(\delta_{x_{i_0}}, 1_n) + 0 \\ \nonumber
+    &= S(R\operatorname{pr}_{i_0 !} \delta_x, 1_n) \\ \nonumber
+    &= S(\delta_x, 1_n). \nonumber
+    \end{align}
+    
+    The ideas used to show \eqref{eq:applying_character_on_component_group_to_arithmetic_fourier_transform_of_an_object_whose_pushforward_is_skyscraper_plus_negligible_multiplies_the_value_by_the_character_value_at_the_point} show that 
+    \begin{equation} \label{eq:applying_character_on_component_group_to_arithmetic_fourier_transform_of_a_skyscraper_multiplies_the_value_by_the_character_value_at_the_point}
+    S(\delta_x, \operatorname{pr}_i^* \chi_i) = S(\delta_x, 1_n) \cdot \chi_i(x_i)
+    \end{equation}
+    for any $\chi_i \in \widehat{G}_i(\Fqn)$. 
+
+    Let $\chi \in \widehat{G}(\Fqn)$ be a character and let it correspond to the tuple $(\chi_i)_i$ of $\prod_i \widehat{G}_i(\Fqn)$ via \Cref{lemma:characters_on_product_of_connected_commutative_algebraic_groups_over_a_finite_field_correspond_to_tuples_of_characters_of_the_individual_groups}. \eqref{eq:applying_character_on_component_group_to_arithmetic_fourier_transform_of_an_object_whose_pushforward_is_skyscraper_plus_negligible_multiplies_the_value_by_the_character_value_at_the_point} and \eqref{eq:applying_character_on_component_group_to_arithmetic_fourier_transform_of_a_skyscraper_multiplies_the_value_by_the_character_value_at_the_point} show that  
+    \begin{align*}
+    S(M, \calL_\chi) &= S(M, 1_n) \cdot \prod_i \chi_i(x_i) \quad \text{for generic } \chi \in \widehat{G} \\
+    S(\delta_x, \calL_\chi) &= S(\delta_x, 1_n) \cdot \prod_i \chi_i(x_i) \quad \text{for all } \chi \in \widehat{G}(Fqn).
+    \end{align*}
+    By \eqref{eq:object_whose_pushforwards_are_skyscraper_mod_negligibles_and_well_chosen_skyscraper_have_equal_arithmetic_fourier_transform}, $S(M, \calL_\chi)$ and $S(\delta_x, \calL_\chi)$ thus coincide for generic $
+    \chi \in \widehat{G}$. The generic Fourier invertibility theorem \cite[Theorem 6.11]{forey_fresan_kowalski_aftff} \TODO{ref the invertibility theorem} thus concludes that $M$ and $\delta_x$ are arithmetically isomorphic as objects of $\mathbf{P}_{\mathrm{int}}(G)$. 
+    \TODO{re-verify this citation for the final version of FFK}
+\end{proof}
+
+
+
+\section{Fourier-Mukai equivalence}
+
+\TODO{TODO: Read the statements in this section to verify}
+
+
+\begin{definition}
+Let \(X\) and \(Y\) be smooth projective varieties over a field, and let 
+\[
+K \in D^b(\mathrm{Coh}(X \times Y))
+\]
+be an object in the bounded derived category of coherent sheaves on the product \(X \times Y\).
+
+Denote by 
+\[
+p : X \times Y \to Y, \quad q : X \times Y \to X
+\]
+the projection maps onto the second and first factors, respectively.
+
+The \hldef{Fourier--Mukai transform} associated to the kernel \(K\) is the exact functor
+\[
+\Phi_K : D^b(\mathrm{Coh}(X)) \to D^b(\mathrm{Coh}(Y))
+\]
+defined by
+\[
+\Phi_K(\mathcal{F}) = R p_*\bigl( q^* \mathcal{F} \otimes^{\mathbf{L}} K \bigr),
+\]
+where 
+\begin{itemize}
+  \item \(q^*\) is the (derived) pullback functor,
+  \item \(\otimes^{\mathbf{L}}\) denotes the derived tensor product,
+  \item \(R p_*\) is the derived pushforward functor.
+\end{itemize}
+
+This construction generalizes the classical Fourier transform to the setting of derived categories and algebraic geometry.
+
+\end{definition}
+
+\begin{definition}
+Let $X$ and $Y$ be smooth projective varieties over a field $k$. Denote by $D^b(\mathrm{Coh}(X))$ and $D^b(\mathrm{Coh}(Y))$ the bounded derived categories of coherent sheaves on $X$ and $Y$, respectively. Let $K \in D^b(\mathrm{Coh}(X \times Y))$. The \emph{Fourier--Mukai transform} with kernel $K$ is the exact functor
+$$
+\Phi_K : D^b(\mathrm{Coh}(X)) \to D^b(\mathrm{Coh}(Y)), \quad \Phi_K(\mathcal{F}) = Rp_*\big(q^*\mathcal{F} \otimes^{\mathbf{L}} K \big),
+$$
+where $q: X \times Y \to X$ and $p: X \times Y \to Y$ are the natural projection morphisms.
+\end{definition}
+
+\begin{proposition}[Composition of Fourier--Mukai Functors]
+Let $X, Y, Z$ be smooth projective varieties, and let $K \in D^b(\mathrm{Coh}(X \times Y))$, $L \in D^b(\mathrm{Coh}(Y \times Z))$. Define the object $K \star L \in D^b(\mathrm{Coh}(X \times Z))$ by
+$$
+K \star L = Rp_{13*}\bigl( p_{12}^* K \otimes^{\mathbf{L}} p_{23}^* L \bigr),
+$$
+where $p_{12}, p_{23}, p_{13}$ are the projections from $X \times Y \times Z$ onto the corresponding factors. Then
+$$
+\Phi_L \circ \Phi_K \cong \Phi_{K \star L}.
+$$
+\end{proposition}
+
+\begin{theorem}[Orlov's Representability Theorem for Fully Faithful Functors]
+Let $X$ and $Y$ be smooth projective varieties over a field. Every exact fully faithful functor
+$$
+F: D^b(\mathrm{Coh}(X)) \to D^b(\mathrm{Coh}(Y))
+$$
+is isomorphic to a Fourier--Mukai functor $\Phi_K$ for some $K \in D^b(\mathrm{Coh}(X \times Y))$.
+\end{theorem}
+
+\begin{theorem}[Equivalences as Fourier--Mukai Transforms]
+Let $X$ and $Y$ be smooth projective varieties over a field. If $\Phi_K : D^b(\mathrm{Coh}(X)) \to D^b(\mathrm{Coh}(Y))$ is an exact equivalence of derived categories, then its quasi-inverse is isomorphic to a Fourier--Mukai functor $\Phi_{K'}$, where
+$$
+K' = R\mathcal{H}om_{X \times Y}(K, p_X^! \mathcal{O}_X)
+$$
+(up to dualization and permutation of factors), and $\Phi_{K'} \circ \Phi_K \cong \mathrm{Id}$, $\Phi_K \circ \Phi_{K'} \cong \mathrm{Id}$.
+\end{theorem}
+
+
+\begin{theorem}[Mukai's Equivalence Theorem]
+Let $A$ be an abelian variety of dimension $g$ over an algebraically closed field, and let $\widehat{A} = \operatorname{Pic}^0(A)$ denote its dual abelian variety. Let $\mathcal{P}$ denote the normalized Poincar\'e line bundle on $A \times \widehat{A}$. The Fourier--Mukai functor
+$$
+\Phi_{\mathcal{P}}: D^b(\mathrm{Coh}(A)) \to D^b(\mathrm{Coh}(\widehat{A}))
+$$
+is an exact equivalence of triangulated categories, where $p: A\times \widehat{A} \to A$ and $\widehat{p} : A \times \widehat{A} \to \widehat{A}$ are the projections.
+\end{theorem}
+
+\begin{proposition}[Parseval Formula for Fourier--Mukai Functors]
+Let $X$ and $Y$ be smooth projective varieties over a field, let $K \in D^b(\mathrm{Coh}(X \times Y))$, and let $\Phi_K: D^b(\mathrm{Coh}(X)) \to D^b(\mathrm{Coh}(Y))$ be the associated Fourier--Mukai functor. For all $\mathcal{F}, \mathcal{G} \in D^b(\mathrm{Coh}(X))$ and all $i \in \mathbb{Z}$,
+$$
+\operatorname{Hom}_{D^b(\mathrm{Coh}(X))}(\mathcal{F}, \mathcal{G}[i]) \cong \operatorname{Hom}_{D^b(\mathrm{Coh}(Y))}(\Phi_K(\mathcal{F}), \Phi_K(\mathcal{G})[i])
+$$
+if $\Phi_K$ is fully faithful. In particular, this isomorphism holds if $\Phi_K$ is an equivalence.
+\end{proposition}
+
+\begin{theorem}[Generic Vanishing for Abelian Varieties]
+Let $A$ be a complex abelian variety, and $\mathcal{F}$ a coherent sheaf on $A$. For each $i \geq 0$, define the \emph{cohomological support loci}
+$$
+V^i(\mathcal{F}) = \{ \alpha \in \widehat{A} : H^i(A, \mathcal{F} \otimes \mathcal{P}_\alpha) \neq 0 \},
+$$
+where $\mathcal{P}_\alpha$ is the restriction of the Poincar\'e bundle to $A \times \{\alpha\}$. Then for a generic $\alpha \in \widehat{A}$,
+$$
+H^i(A, \mathcal{F} \otimes \mathcal{P}_\alpha) = 0 \quad \text{for all } i > \dim \operatorname{Supp} \mathcal{F}.
+$$
+\end{theorem}
+
+\begin{theorem}[Index Theorem for the Fourier--Mukai Transform]
+Let $A$ be an abelian variety over an algebraically closed field with dual $\widehat{A}$ and normalized Poincar\'e bundle $\mathcal{P}$. Then for any $x \in A$, consider the skyscraper sheaf $\mathcal{O}_x$. Its image under the Fourier--Mukai equivalence $\Phi_{\mathcal{P}}$ is a line bundle:
+$$
+\Phi_{\mathcal{P}}(\mathcal{O}_x) \cong \mathcal{P}_x[-g],
+$$
+where $\mathcal{P}_x$ is the restriction of $\mathcal{P}$ to $\{x\} \times \widehat{A}$, and $g = \dim A$. In particular,
+$$
+H^i(A, \mathcal{L}) = 0 \text{ for all } i \neq \operatorname{ind}(\mathcal{L})
+$$
+for $\mathcal{L}$ a sufficiently ample line bundle, where $\operatorname{ind}(\mathcal{L})$ is the unique $i$ for which $H^i(A, \mathcal{L}) \ne 0$.
+\end{theorem}
+
+
+
+
+\appendix
+
+\section{Comparisons}
+
+% Here are thus the comparisons 
+
+
+\section{Analysis and \texorpdfstring{$L^p$}{Lp}-norms}
+
+
+\subsection{(Extended) norms and metrics}
+
+\input{../_definitions/definition_absolute_value_on_a_field.tex}
+
+\begin{remark}
+    For our analytic discussions, the valued field will usually be $\bbR$ or $\bbC$ with the usual absolute values. In particular, for $a+bi \in \bbC$ with $a,b \in bbR$, $|a+bi| = \sqrt{a^2+b^2}$.
+\end{remark}
+
+\input{../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+
+\input{../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+
+\input{../_definitions/definition_extended_metric_on_a_set.tex}
+
+\begin{remark}
+    If the codomain of an extended norm or an extended metric is $[0, \infty)$, then it is a (usual) norm or metric.
+\end{remark}
+
+\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+
+\input{../_definitions/definition_convergence_and_limits_in_extended_metric_space.tex}
+
+\subsection{\texorpdfstring{$L^p$}{Lp}-norms and \texorpdfstring{$L^p$}{Lp}-spaces on measure spaces.}
+
+\input{../_definitions/definition_L_p_norm_on_a_measure_space.tex}
+
+\begin{remark} \label{remark:space_of_measurable_functions_is_an_extended_metric_space_for_any_Lp_metric}
+    Let $(X,\mathcal{A},\mu)$ be a measure space, and let $1 \leq p \leq \infty$. The $L^p$-norm $\|\cdot\|_p$ is an extended norm on the space of all measurable functions $f: X \to \bbC$. It thus induces an extended metric on the space of all measurable functions.
+\end{remark}
+
+\begin{theorem}[See for example {\cite[Theorem 3.11]{rudin_real_and_complex}}]
+    Let $(X,\calA, \mu)$ be a measure space. Let $1 \leq p \leq \infty$. The $L^p$-norm $\|\cdot\|_p$ induces a complete metric on $L^p(X)$.
+\end{theorem}
+
+\begin{convention}
+    Let $1 \leq p \leq \infty$. Unless otherwise specified, 
+    \begin{enumerate}
+        \item the $L^p$-space on a measure space is assumed to be made into a metric space by equipping it with the \hyperrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{metric induced by}\CrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value} the \hyperrefIfExists{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}\CrefIfExists{definition:L_p_norm_on_a_measure_space}.  
+        \item the space of all measurable functions on $X$ is assumed to be made into an extended metric space by equipping it with the extended metric induced by the $L^p$-norm.  
+    \end{enumerate}
+\end{convention}
+
+\begin{lemma} \label{lemma:compactly_supported_simple_measurable_functoins_are_in_L_p}
+    Let $(X,\calA, \mu)$ be a measure space. Any (complex) measurable simple function $s: X \to \bbC$ on $X$ such that $$ \mu(\{x: s(x) \neq 0\})<\infty$$ is in $L^p(X, \mu)$. 
+\end{lemma}
+
+For finite measure spaces, we have the following inclusions of the $L^p(X,\mu)$ for varying $1 \leq p$; however, we are not concerned with such inclusions as we are concerned with $L^1$ and $L^2$-functions on the infinite measure space $\bbR$. 
+
+\begin{proposition}
+    Let \((X, \mathcal{A}, \mu)\) be a measure space with finite measure \( \mu(X) < \infty \). For \(1 \leq p < q \leq \infty\), the following inclusion holds:
+    \[
+    L^q(X, \mu) \subseteq L^p(X, \mu)
+    \]
+    and there exists a constant \(C > 0\) such that for all \(f \in L^q(X, \mu)\),
+    \[
+    \|f\|_{L^p} \leq C \, \|f\|_{L^q}.
+    \]
+\end{proposition}
+
+We also can speak of measurable functions converging, with respect to an $L^p$-norm for some $p$, to a measurable function.
+
+\input{../_definitions/definition_sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm.tex}
+
+\begin{lemma}
+    Let $(X,\calA,\mu)$ be a measure space, let $\{f_n\}_{n=1}^\infty$ be a sequence of measurable functions $f_n: X \to \bbR$ (or $f_n: X \to \bbC$), and let $1 \leq p \leq \infty$. 
+    \begin{enumerate}
+        \item If there exists some function $f: X \to \bbR$ (or $f: X \to \bbC$) such that $f_n \to f$ in $L^p$, then $f$ is measurable.
+        \item If $f,g$ are functions $X \to \bbR$ (or $X \to \bbC$ such that $f_n \to f$ and $f_n \to g$ in $L^p$, then $f = g$ $\mu$-almost everywhere.
+    \end{enumerate}
+\end{lemma}
+
+% \begin{definition}[Norm on a vector space]
+% Let $V$ be a vector space over a field $K$ equipped with an absolute value $|\cdot|$. A \hldef{norm} on $V$ is a function
+% \[
+% \|\cdot\| : V \to \mathbb{R}_{\geq 0}
+% \]
+% such that for all $u,v \in V$ and $\alpha \in K$, the following hold:
+% \begin{enumerate}
+%     \item $\|v\| = 0$ if and only if $v = 0$,
+%     \item $\|\alpha v\| = |\alpha| \cdot \|v\|$,
+%     \item $\|u + v\| \leq \|u\| + \|v\|$ (triangle inequality).
+% \end{enumerate}
+% \end{definition}
+
+
+Any element in the $L^p$-space $L^p(X, \mu)$ of a general measure space can be $L^p$-approximated by simple functions with finite measure support. We formulate this idea in terms of \emph{density} of subspaces of $L^p(X, \mu)$ with respect to the \hyperrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{topology induced by}\CrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value} the \hyperrefIfExists{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}\CrefIfExists{definition:L_p_norm_on_a_measure_space}
+
+\begin{notation}
+    Let $(X,\calA, \mu)$ be a measure space. Let \hl{$C_c(X)$} be the class of all continuous (complex) functions on $X$ whose support is compact. 
+\end{notation}
+
+\begin{theorem}[See for example {\cite[Theorems 3.13, 3.14]{rudin_real_and_complex}}] \label{theorem:compactly_supported_simple_measurable_functions_are_dense_in_L_p_mu}
+    Let $(X,\calA, \mu)$ be a measure space. Let $1 \leq p < \infty$.
+    \begin{enumerate}
+        \item Let $S$ be the class of all (complex), measurable, simple functions $s: X \to \bbC$ on $X$ such that
+        $$ \mu(\{x: s(x) \neq 0\})<\infty.$$
+        The class $S$ is dense in $L^{P}(\mu)$.
+        \item  The class $C_c(X)$ is dense in $L^{P}(\mu)$.
+    \end{enumerate} 
+\end{theorem}
+
+\begin{corollary} \label{corollary:intersection_of_L_p_s_is_dense_in_L_p}
+    Let $(X, \calA, \mu)$ be a measure space. Let $1 \leq p,q < \infty$. The space $L^p(X, \mu) \cap L^q(X, \mu)$ is dense in $L^p (X, \mu)$. In particular, for any $f \in L^p(X,\mu)$, there exists a sequence $\{f_n\}_{n=1}^\infty$ functions $f_n \in L^q(x,\mu)$ such that $f^n \to f$ in $L^p$.
+\end{corollary}
+\begin{proof}
+    By Lemma \ref{lemma:compactly_supported_simple_measurable_functoins_are_in_L_p}, all compactly supported simple measurable functions on $X$ are in $L^p(X,\mu) \cap L^q(X,\mu)$. By Theorem \ref{theorem:compactly_supported_simple_measurable_functions_are_dense_in_L_p_mu}, $L^p(X,\mu) \cap L^q(X,\mu)$ is thus dense in $L^p(X,\mu)$.
+\end{proof}
+
+\section{Hilbert spaces and Banach spaces}
+
+\input{../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex}
+
+\input{../_definitions/definition_norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space.tex}
+
+\input{../_definitions/definition_hilbert_space.tex}
+
+\begin{proposition} \label{proposition:L2_is_a_hilbert_space}
+    Let $(X,\calA, \mu)$ be a measure space. The space $L^2(X, \mu)$ is a Hilbert space when equipped with the inner product
+    $$\hlin{(f, g)=\int_{X} f \overline{g} d \mu}$$
+    and the normed induced by this inner product is simply the $L^2$-norm $\|\cdot\|_2$. 
+\end{proposition}
+
+\begin{convention} \label{convention:L2_is_a_hilbert_space}
+    Given a measure space $(X,\calA, \mu)$, assume that $L^2(X, \mu)$ is equipped with the inner product of Proposition \ref{proposition:L2_is_a_hilbert_space}, unless otherwise specified.
+\end{convention}
+
+\input{../_definitions/definition_banach_space_over_a_complete_valued_field.tex}
+
+\begin{proposition}
+    \begin{enumerate}
+    \item All Hilbert spaces are Banach spaces.
+    \item For any measure space $(X, \calA, \mu)$, $L^p(X,\mu)$ is a Banach space when equipped with the $L^p$-norm $\|\cdot\|_p$.
+    \end{enumerate}
+\end{proposition}
+
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_vanish_at_infinity_for_a_complex_valued_function_on_a_locally_compact_hausdorff_space.tex}
+
+\input{../_definitions/definition_artin_schreier_morphism_of_the_additive_group_over_a_scheme.tex}
+\input{../_definitions/definition_artin_schreier_sheaf_of_a_character_on_the_additive_group_of_a_finite_field.tex}
+
+\input{../_definitions/definition_relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic.tex}
+
+\input{../_definitions/definition_algebraic_group_scheme_over_a_scheme.tex}
+
+\input{../_definitions/definition_geometric_frobenius_action_of_a_derived_object_on_a_scheme_of_characteristic_p_at_a_stalk.tex}
+

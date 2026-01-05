@@ -1,0 +1,23 @@
+
+\begin{definition}[Adelic points of an algebraic group] \label{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field} with ring of integers $\calO_K$, and let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $K$.  
+    \begin{itemize}
+        \item The \hldef{group of adelic points of $G$} is 
+        the group \hl{$G(\mathbb{A}_K)$} defined by
+        $$G(\mathbb{A}_K) := \prod\nolimits_v' G(K_v),$$
+        \CrefIfExists{definition:completion_of_a_global_field_at_a_place}
+        where the restricted product is taken with respect to the compact open subgroups $G(\mathcal{O}_v)$ for almost all non-archimedean $v$.
+        \item For a set $S$ (usually finite) of places of $K$, the \hl{group of adelic points of $G$ outside $S$} is
+        the group \hl{$G(\mathbb{A}_{K,S})$} defined by
+        $$G(\mathbb{A}_{K,S}) := \prod\nolimits_{v \notin S}' G(K_v).$$
+        \item The \hl{group of finite adelic points} is
+        the group \hl{$G(\mathbb{A}_{K,{\mathrm{fin}}}) = G(\mathbb{A}_K^{\mathrm{fin}})$} defined by 
+        $$G(\mathbb{A}_K^{\mathrm{fin}}) := \prod\nolimits_{v \ \mathrm{non\text{-}archimedean}}' G(K_v).$$
+        \item The \hl{group of archimedean adelic points} is
+        the group \hl{$G(K_\infty)$} defined by
+        $$G(K_\infty) := \prod\nolimits_{v \ \mathrm{archimedean}} G(K_v).$$
+    \end{itemize}
+    Thus one has a natural factorization
+    $$G(\mathbb{A}_K) \;\cong\; G(\mathbb{A}_K^{\mathrm{fin}}) \times G(K_\infty).$$
+    The groups $G(\bbA_K)$, $G(\bbA_{K,S})$, and $G(\bbA_{K}^{\mathrm{fin}})$ are all \CrefAndHyperrefIfExist{definition:topological_group}{topological groups} under the \CrefAndHyperrefIfExist{definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces}{restricted product topology} induced by the topologies of the local fields $K_v$ and the subspace topologies of $\calO_v$ and become topological groups.  The group $G(K_\infty)$ is a topological group under the direct product topology.
+\end{definition}

@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $r_0$ be an integer (typically $0, 1$, or $2$).
+    \begin{enumerate}
+    \item A \hldef{homological spectral sequence (starting at page $r_0$) in $\mathcal{A}$} is a sequence of \CrefAndHyperrefIfExist{definition:bigraded_object_in_an_abelian_category}{bigraded objects} $E = \{E^r, d^r\}_{r \ge r_0}$, where for each $r \ge r_0$:
+    \begin{enumerate}
+        \item $d^r: E^r_{p,q} \to E^r_{p-r, q+r-1}$ is a \CrefAndHyperrefIfExist{definition:differential_on_a_bigraded_object_in_an_abelian_category}{differential} on $E^r$ of bidegree $(-r, r-1)$;
+        \item There is an isomorphism of bigraded objects $E^{r+1} \cong H(E^r, d^r)$, i.e. for all indices $(p,q)$, we have isomorphisms $E^{r+1}_{p,q} \cong H_{p,q}(E^r, d^r)$\CrefIfExists{definition:homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category}.
+    \end{enumerate}
+    The object $E^r_{p,q}$ is called the term of bidegree $(p,q)$ on the \hldef{$r$-th page}.
+
+    \item A \hldef{cohomological spectral sequence (starting at page $r_0$) in $\mathcal{A}$} is a sequence of \CrefAndHyperrefIfExist{definition:bigraded_object_in_an_abelian_category}{bigraded objects} $E = \{E_r, d_r\}_{r \ge r_0}$, where for each $r \ge r_0$:
+    \begin{enumerate}
+        \item $d_r: E_r^{p,q} \to E_r^{p+r, q-r+1}$ is a differential on $E_r$ of bidegree $(r, 1-r)$;
+        \item There is an isomorphism of bigraded objects $E_{r+1} \cong H(E_r, d_r)$, i.e. for all indices $(p,q)$, we have isomorphisms $E_{r+1}^{p,q} \cong H^{p,q}(E_r, d_r)$\CrefIfExists{definition:homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category}.
+    \end{enumerate}
+    \end{enumerate}
+\end{definition}

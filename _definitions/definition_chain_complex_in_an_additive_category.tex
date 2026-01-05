@@ -1,0 +1,86 @@
+% \begin{definition}[Chain complex in an additive category] \label{definition:chain_complex_of_objects_in_an_additive_category}
+% Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category}{preadditive category} and let $I$ be a totally ordered set (typically $\mathbb{Z}$, but $I \subseteq \mathbb{Z}$ is also allowed). 
+% \begin{enumerate}
+%     \item A \hldef{chain complex} $(K^\bullet, d^\bullet)$ in $\mathcal{A}$ indexed by $I$ consists of:
+%     \begin{itemize}
+%         \item Objects $\{ K^i \}_{i \in I}$ in $\mathcal{A}$, called the \hldef{terms in degree $i$},
+%         \item Morphisms $d^i: K^i \to K^{i+1}$ in $\mathcal{A}$, called the \hldef{differentials in degree $i$},
+%     \end{itemize}
+%     such that for every $i \in I$, $d^{i+1} \circ d^i = 0$. That is,
+%     $$ K^\bullet: \cdots \xrightarrow{d^{i-2}} K^{i-1} \xrightarrow{d^{i-1}} K^i \xrightarrow{d^i} K^{i+1} \xrightarrow{d^{i+1}} \cdots $$
+%     with $d^{i+1}d^i = 0$ for all $i$. We might typically use notation such as \hl{$K^\bullet = (K^i, d^i)_{i \in I}$} to denote a chain complex in $\mathcal{A}$.
+
+%     A cochain complex can be defined similarly/dually.
+
+%     \item Let $K^\bullet = (K^i, d_K^i)$ and $L^\bullet = (L^i, d_L^i)$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\mathcal{A}$ indexed by the same set $I$. 
+%     A \hldef{morphism of chain complexes} (or \hldef{chain map})
+%     $$ f^\bullet: K^\bullet \to L^\bullet $$
+%     consists of morphisms $f^i: K^i \to L^i$ for all $i \in I$, such that for every $i \in I$,
+%     $$ d_L^i \circ f^i = f^{i+1} \circ d_K^i, $$
+%     i.e., the following diagram commutes for all $i$:
+
+%     $$ \begin{array}{ccc} K^i & \xrightarrow{d_K^i} & K^{i+1} \\ \downarrow{f^i} && \downarrow{f^{i+1}} \\ L^i & \xrightarrow{d_L^i} & L^{i+1} \end{array}.$$
+
+% \end{enumerate}
+
+% There is then a category, often denoted by \hl{$\mathrm{Ch}(\mathcal{A})$} or \hl{$\mathbf{Ch}(\mathcal{A})$}, whose objects are chain complexes in $\calA$ and whose morphisms are morphisms of chain complexes. In particular, we may denote by 
+% $$\hlin{\operatorname{Hom}(K^\bullet, L^\bullet)=  \operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K^\bullet, L^\bullet)}$$
+% the set of chain maps $K^\bullet \to L^\bullet$; it is in fact an abelian group.
+
+% A \hldef{morphism of cochain complexes} is defined similarly, and we similarly denote by \hl{$\mathrm{Ch}(\mathcal{A})$} or \hl{$\mathbf{Ch}(\mathcal{A})$} the caetgory of cochain complexes in $\calA$. 
+
+
+% \TextIfExists{definition:dg_category_over_a_ring}{
+% If $k$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} such that $\Hom_\calA(X,Y)$ is \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched in} the category of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$k$-modules}, then $\mathrm{Ch}(\calA)$ \CrefAndHyperref{definition:category_of_chain_complexes_of_objects_in_an_additive_category_as_a_dg_category}{can be equipped with} the structure of a \CrefAndHyperrefIfExist{definition:dg_category_over_a_ring}{dg-category over $k$}.
+% }
+
+
+% \end{definition}
+
+\begin{definition}[Chain complex in a preadditive category] \label{definition:chain_complex_of_objects_in_an_additive_category}
+Let $\mathcal{A}$ be a \hyperrefIfExists{definition:additive_category}{preadditive category} and let $I$ be a totally ordered set (typically $\mathbb{Z}$, but $I \subseteq \mathbb{Z}$ is also allowed). 
+\begin{enumerate}
+    \item A \hldef{chain complex} $(K_\bullet, d_\bullet)$ in $\mathcal{A}$ indexed by $I$ is the homological convention for sequences with decreasing degrees. It consists of:
+    \begin{itemize}
+        \item Objects $\{ K_i \}_{i \in I}$ in $\mathcal{A}$, called the \hldef{terms in degree $i$},
+        \item Morphisms $d_i: K_i \to K_{i-1}$ in $\mathcal{A}$, called the \hldef{boundary maps} or \hldef{differentials in degree $i$},
+    \end{itemize}
+    such that for every $i \in I$, $d_{i-1} \circ d_i = 0$. That is,
+    $$ K_\bullet: \cdots \xrightarrow{d_{i+1}} K_i \xrightarrow{d_i} K_{i-1} \xrightarrow{d_{i-1}} K_{i-2} \xrightarrow{} \cdots $$
+    with $d_{i-1}d_i = 0$ for all $i$. We typically use the notation \hl{$K_\bullet = (K_i, d_i)_{i \in I}$}.
+
+
+
+    \item Dually, a \hldef{cochain complex} $(K^\bullet, d^\bullet)$ in $\mathcal{A}$ follows the \hldef{cohomological convention} with increasing degrees. It consists of objects $\{ K^i \}_{i \in I}$ and \hldef{coboundary maps} $d^i: K^i \to K^{i+1}$ such that $d^{i+1} \circ d^i = 0$:
+    $$ K^\bullet: \cdots \xrightarrow{d^{i-1}} K^i \xrightarrow{d^i} K^{i+1} \xrightarrow{d^{i+1}} K^{i+2} \xrightarrow{} \cdots $$
+    We typically use the notation \hl{$K^\bullet = (K^i, d^i)_{i \in I}$}.
+
+    \item Let $K_\bullet = (K_i, d_i^K)$ and $L_\bullet = (L_i, d_i^L)$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\mathcal{A}$ indexed by the same set $I$. A \hldef{morphism of chain complexes} (or \hldef{chain map})
+    $$ f_\bullet: K_\bullet \to L_\bullet $$
+    consists of morphisms $f_i: K_i \to L_i$ for all $i \in I$, such that for every $i \in I$, the following diagram commutes:
+    $$ \begin{array}{ccc} K_i & \xrightarrow{d_i^K} & K_{i-1} \\ \downarrow{f_i} && \downarrow{f_{i-1}} \\ L_i & \xrightarrow{d_i^L} & L_{i-1} \end{array} $$
+    i.e., $d_i^L \circ f_i = f_{i-1} \circ d_i^K$. 
+
+
+
+    A \hldef{morphism of cochain complexes} $f^\bullet: K^\bullet \to L^\bullet$ is defined similarly, satisfying the commutativity condition $d_L^i \circ f^i = f^{i+1} \circ d_K^i$.
+\end{enumerate}
+
+The collection of these objects and morphisms forms a category. Notation for these categories is as follows:
+\begin{itemize}
+    \item \hl{$\mathrm{Ch}(\mathcal{A})$} or \hl{$\mathbf{Ch}(\mathcal{A})$} is often used as a general term.
+    \item To be explicit about the indexing convention, one uses \hl{$\mathrm{Ch}_\bullet(\mathcal{A})$} for chain complexes and \hl{$\mathrm{Ch}^\bullet(\mathcal{A})$} (or sometimes $\mathrm{CoCh}(\mathcal{A})$) for cochain complexes.
+    \item The set of chain maps between two complexes is denoted by $\hlin{\operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K_\bullet, L_\bullet)}$; it is an abelian group under pointwise addition $(f+g)_i = f_i + g_i$.
+\end{itemize}
+
+\TextIfExists{definition:dg_category_over_a_ring}{
+If $k$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} such that $\Hom_\calA(X,Y)$ is \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched in} the category of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$k$-modules}, then $\mathrm{Ch}(\calA)$ \CrefAndHyperref{definition:category_of_chain_complexes_of_objects_in_an_additive_category_as_a_dg_category}{can be equipped with} the structure of a \CrefAndHyperrefIfExist{definition:dg_category_over_a_ring}{dg-category over $k$}.
+}
+\end{definition}
+
+% \input{../_remarks/remark_cohomological_vs_homological_conventions.tex}
+%\input{../_conventions/convention_homological_algebra_is_discussed_in_cohomological_terms.tex}
+% \input{../_definitions/definition_morphism_of_chain_complexes_of_objects_in_an_additive_category.tex}
+
+% See Also
+% \input{../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex}

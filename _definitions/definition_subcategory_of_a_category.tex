@@ -1,0 +1,14 @@
+
+\begin{definition}[Subcategory] \label{definition:subcategory_of_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. A \hldef{subcategory} $\mathcal{D}$ of $\mathcal{C}$ consists of:
+    \begin{itemize}
+        \item a subclass of objects $\mathrm{Ob}(\mathcal{D}) \subseteq \mathrm{Ob}(\mathcal{C})$,
+        \item for each pair of objects $X, Y \in \mathrm{Ob}(\mathcal{D})$, a subclass of morphisms
+        $$\mathrm{Hom}_{\mathcal{D}}(X,Y) \subseteq \mathrm{Hom}_{\mathcal{C}}(X,Y),$$
+    \end{itemize}
+    such that
+    \begin{itemize}
+        \item for every object $X \in \mathrm{Ob}(\mathcal{D})$, the identity morphism $\mathrm{id}_X$ of $X$ in $\mathcal{C}$ lies in $\mathrm{Hom}_{\mathcal{D}}(X,X)$,
+        \item the composition of morphisms in $\mathcal{D}$ is inherited from $\mathcal{C}$ and is closed in $\mathcal{D}$: for morphisms $f \in \mathrm{Hom}_{\mathcal{D}}(X,Y)$ and $g \in \mathrm{Hom}_{\mathcal{D}}(Y,Z)$, their composition $g \circ f \in \mathrm{Hom}_{\mathcal{D}}(X,Z)$.
+    \end{itemize}
+\end{definition}

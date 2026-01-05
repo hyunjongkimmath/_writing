@@ -1,0 +1,31 @@
+\begin{definition}[Module object over a ring object in a category] \label{definition:module_object_over_a_ring_object_in_a_category_with_a_final_object}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$. Let $R$ be a \CrefAndHyperrefIfExist{definition:ring_object_in_a_category_with_a_terminal_object}{ring object} in $\mathcal{C}$.
+An \hldef{$R$-module object in $\mathcal{C}$} is an object $M \in \mathcal{C}$ together with:
+\begin{itemize}
+  \item an \CrefAndHyperrefIfExist{definition:semigroup_object_in_a_category}{abelian} \CrefAndHyperrefIfExist{definition:group_object_in_a_category_with_a_final_object}{group object} structure $(M,+_M,0_M,-_M)$ on $M$;
+  \item an action morphism
+  $$
+  \alpha : R \times M \to M,
+  $$
+\end{itemize}
+such that the usual module axioms hold, expressed by commutative diagrams corresponding to
+$$
+r \cdot (m_1 +_M m_2)
+=
+r \cdot m_1 +_M r \cdot m_2,
+\qquad
+(r_1 + r_2) \cdot m
+=
+r_1 \cdot m +_M r_2 \cdot m,
+$$
+$$
+(r_1 \cdot r_2) \cdot m
+=
+r_1 \cdot (r_2 \cdot m),
+\qquad
+1_R \cdot m = m,
+\qquad
+0_R \cdot m = 0_M = r \cdot 0_M,
+$$
+for all $r,r_1,r_2 \in R$ and $m,m_1,m_2 \in M$, interpreted as morphisms and equalities in $\mathcal{C}$.
+\end{definition}

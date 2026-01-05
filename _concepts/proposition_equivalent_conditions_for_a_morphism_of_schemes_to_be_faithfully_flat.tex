@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:equivalent_conditions_for_a_morphism_of_schemes_to_be_faithfully_flat}
+    Let $f: X \to Y$ be a morphism of schemes. The following are equivalent:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{faithfully flat}, i.e. flat and surjective
+
+        \TODO{pullback respects quasi-coherence}
+        \item functor $f^* : \mathrm{QCoh}(Y) \to \mathrm{QCoh}(X)$ on \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_general_scheme}{quasi-coherent sheaves} is both exact and faithful.
+
+        \item For every quasi-coherent $\calO_Y$-module $\calM$, if $f^*(\calM) = 0$, then $\calM = 0$.
+
+        \item Given any \CrefAndHyperrefIfExist{definition:affine_open_subscheme_of_a_scheme}{affine open} $\Spec A \subseteq Y$\CrefIfExists{definition:affine_scheme} and affine open $\Spec B \subseteq f^{-1}(\Spec A)$\CrefIfExists{definition:preimage_of_an_open_subset_of_a_scheme_under_a_morphism_of_schemes}, the ring homomorphism $A \to B$ induced by $f$is a \CrefAndHyperrefIfExist{definition:flat_ring_homomorphism}{faithfully flat} ring homomorphism.
+
+    \end{enumerate}
+\end{proposition}

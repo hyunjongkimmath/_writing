@@ -1,0 +1,21 @@
+\begin{definition} \label{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $H = \{H_n\}_{n \in \mathbb{Z}}$ be a \CrefAndHyperrefIfExist{definition:graded_object_in_an_abelian_category}{graded object} in $\mathcal{A}$.
+
+    \begin{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. We say that $E$ \hldef{converges to $H$}, denoted \hl{$E^r_{p,q} \Rightarrow H_{p+q}$}, if:
+        \begin{enumerate}
+            \item For every pair $(p,q)$, the term $E^r_{p,q}$ \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilizes} to a limit $E^\infty_{p,q}$.
+            \item Each object $H_n$ is equipped with a finite, \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{increasing filtration} $F$ \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_an_abelian_category}{compatible with the grading}, such that there is an isomorphism:
+            $$E^\infty_{p,q} \cong \text{Gr}^F_{p,q}(H) := \frac{F_p H_{p+q}}{F_{p-1} H_{p+q}}.$$
+        \end{enumerate}
+
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. We say that $E$ \hldef{converges to $H$}, denoted \hl{$E_r^{p,q} \Rightarrow H^{p+q}$}, if:
+        \begin{enumerate}
+            \item For every pair $(p,q)$, the term $E_r^{p,q}$ \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilizes} to a limit $E_\infty^{p,q}$.
+            \item Each object $H^n$ (where $H$ is viewed as co-graded, $H^n = H_{-n}$) is equipped with a finite, exhaustive, and separated \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{decreasing filtration} $F$ \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_an_abelian_category}{compatible with the grading}, such that there is an isomorphism:
+            $$E_\infty^{p,q} \cong \text{Gr}_F^{p,q}(H) := \frac{F^p H^{p+q}}{F^{p+1} H^{p+q}}.$$
+        \end{enumerate}
+    \end{enumerate}
+    In either case, the object $H$ is called the \hldef{abutment of the spectral sequence}.
+    Usually, $H$ is explicitly realized as the homology $H_*(C)$ or cohomology $H^*(C)$ of a filtered complex $C$.
+\end{definition}

@@ -1,0 +1,19 @@
+
+\begin{definition} \label{definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor}
+    Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor} written as tensor product. 
+
+    \TODO{need a definition with enough flats}
+    \begin{enumerate}
+        \item Let $M \in \calA$. Assume that $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}. We write \hl{$M \otimes^L -$} for \CrefAndHyperref{definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories}{$LF(M, -): D^-(\calB) \to D(\calC)$} in the case that $F = M \otimes -: \calB \to \calC$.
+        
+        \item Symmetrically, let $N \in \calB$. Assume that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}. We write \hl{$- \otimes^L N$} for \CrefAndHyperref{definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories}{$LF(-, N): D^+(\calA) \to D(\calC)$} in the case that $F = - \otimes N: \calA \to \calC$.
+
+        \TODO{show that projectives vs. flats yield the same thing}
+        \TODO{show that flats in each variable yield the same thing}
+        \item Let $M \in \calA$. Assume that $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats}. We alternatively define \hl{$M \otimes^L -: D^-(\calB) \to D(\calC)$} as follows --- given an object $N \in D^-(\calB)$, say that $Q^\bullet$ is a complex of flat objects in $\calB$ representing $N$ \TODO{show that such a thing exists}, and let $M \otimes^L N$ be the object of $D(\calC)$ represented by the complex $M \otimes Q^\bullet$.  \TODO{show that this is well defined, i.e. does not depend on the choice of flat resolution}
+
+        \item Symmetrically, let $N \in \calB$. Assume that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats}. We alternatively define \hl{$- \otimes^L N: D^-(\calA) \to D(\calC)$} as follows --- given an object $M \in D^-(\calA)$, say that $P^\bullet$ is a complex of flat objects in $\calA$ representing $M$ \TODO{show that such a thing exists}, and let $M \otimes^L N$ be the object of $D(\calC)$ represented by the complex $P^\bullet \otimes N$.  \TODO{show that this is well defined, i.e. does not depend on the choice of flat resolution}
+
+    \end{enumerate}
+    The first two notions agree assuming that $\calA$ and $\calB$ have enough projectives. \TODO{comment on the next two notions agreeing}
+\end{definition}

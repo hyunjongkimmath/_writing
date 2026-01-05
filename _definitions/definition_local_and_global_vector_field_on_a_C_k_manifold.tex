@@ -1,0 +1,15 @@
+\begin{definition}[Local and global vector fields on a $C^k$ manifold] \label{definition:local_and_global_vector_field_on_a_C_k_manifold}
+Let $k \in \bbZ_{\geq 1} \cup \{\infty\}$, let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$ manifold (possibly with boundary)}, and let
+$$ \pi : TM \to M $$
+denote its \CrefAndHyperrefIfExist{definition:tangent_bundle_of_a_C_k_manifold}{tangent bundle}, which is a $C^{k-1}$-manifold.
+
+\begin{enumerate}
+  \item Let $U \subseteq M$ be an open subset.
+  A \hldef{local $C^{k-1}$ vector field on $U$} is a \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{$C^{k-1}$-section} over $U$, i.e. a \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^{k-1}$ map}
+  $$ X : U \to TM $$
+  of $C^{k-1}$-manifolds such that $\pi \circ X = \iota_U$, where $\iota_U : U \hookrightarrow M$ is the inclusion map.
+  Equivalently, $X$ is a $C^k$ section of the restricted bundle $TM|_U \to U$.
+
+  \item A \hldef{global $C^{k-1}$ vector field on $M$} (or simply a \hldef{$C^{k-1}$ vector field on $M$}) is a local $C^k$ vector field on $U = M$, i.e. a \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{global $C^{k-1}$-section}.
+\end{enumerate}
+\end{definition}

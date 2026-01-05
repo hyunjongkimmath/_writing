@@ -1,0 +1,6 @@
+\begin{lemma} \label{lemma:pullback_sieve_on_an_object_in_a_category_via_a_morphism_to_the_object_is_indeed_a_sieve}
+    Let $C$ be a category, let $U \in \operatorname{Ob}(C)$, and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve on $U$}. Let $f: V \to U$ be a morphism in $C$. The \CrefAndHyperrefIfExist{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object}{pullback sieve} $f^* S$ is indeed a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $V$.
+\end{lemma}
+\begin{proof}
+    Let $g: W \to V$ be a morphism in $f^* S$, and let $h: X \to W$ be a morphism in $C$. The composition $g \circ h: X \to V$ is also in $f^* S$ because $f \circ (g \circ h) = (f \circ g) \circ h$, the map $(f \circ g)$ is in $S$, and $S$ is a sieve.
+\end{proof}

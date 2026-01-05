@@ -1,0 +1,18 @@
+\begin{proposition} \label{proposition:total_derived_functors_for_biadditive_functors_on_abelian_categories_are_well_defined_if_both_source_categories_have_enough_projectives_injectives}
+    Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $F: \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}. 
+    \begin{enumerate}
+        \item Suppose that $\calA$ and $\calB$ both \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{have enough projectives}. Given objects $M \in D^-(\calA)$ and $N \in D^-(\calA)$\CrefIfExists{definition:derived_category_of_an_abelian_category}, the objects $LF(M,N)$ obtained as $(LF(M,-))(N)$ and $(LF(-,N))(M)$ are naturally isomorphic. Thus, the two definitions of $LF(M,N)$ in \Cref{definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories} are in agreement.
+        \item Dually, suppose that $\calA$ and $\calB$ both \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{have enough injectives}. Given objects $M \in D^+(\calA)$ and $N \in D^+(\calA)$\CrefIfExists{definition:derived_category_of_an_abelian_category}, the objects $RF(M,N)$ obtained as $(RF(M,-))(N)$ and $(RF(-,N))(M)$ are naturally isomorphic. Thus, the two definitions of $RF(M,N)$ in \Cref{definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories} are in agreement.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    We prove 1. The other part is dual. By \Cref{theorem:derived_categories_can_be_identified_with_homotopy_categories_of_injectives_or_projectives}, note that $D^-(\calA)$ and $D^-(\calB)$ are respectively equivalent to the categories \CrefAndHyperrefIfExist{definition:category_of_bounded_complexes_of_injectives_projectives}{$K^-(\calP_\calA)$ and $K^-(\calP_\calB)$} of cohomologically bounded above complexes of projectives in $\calA$ and $\calB$ respectively. Let 
+    $$P_\bullet \to M$$
+    and 
+    $$Q_\bullet \to N$$
+    be projective resolutions.
+    By \Cref{corollary:additive_functor_bewteen_abelian_categories_has_a_right_or_left_total_derived_functor_if_the_source_abelian_category_has_enough_injectives_or_projectives}, 
+    $$(LF(M,-)(N) \cong q(K(F(M,-)))(N)$$
+    $$(LF(-,N)(M) \cong q(K(F(-,N)))(M)$$
+    The former is represented by the complex $F(M,Q_\bullet)$ and the latter is represented by the complex $F(P_\bullet, N)$. These are quasi-isomorphic by \Cref{lemma:applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res}.
+\end{proof}

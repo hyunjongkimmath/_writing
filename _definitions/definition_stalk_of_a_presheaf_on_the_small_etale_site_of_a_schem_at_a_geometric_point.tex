@@ -1,0 +1,10 @@
+\begin{definition}[Stalk of an étale sheaf at a geometric point] \label{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, $\bar{x} : \operatorname{Spec}(\Omega) \to X$ a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point}, and let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} of sets (resp. abelian groups, etc.) on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $X_{\text{ét}}$}. 
+
+The \hldef{stalk of $\mathcal{F}$ at $\bar{x}$} is defined as the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit}
+
+$$ \mathcal{F}_{\bar{x}} := \varinjlim_{(U,u)} \mathcal{F}(U), $$
+where the limit runs over the \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtering category} of pairs $(U,u)$ consisting of an \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{étale morphism} $U \to X$ together with a lift $u : \operatorname{Spec}(\Omega) \to U$ of $\bar{x}$, i.e., such that the composed morphism $u: \operatorname{Spec}(\Omega) \to U \to X$ equals $\bar{x}$.
+
+This construction makes $\mathcal{F}_{\bar{x}}$ a set (resp. an abelian group, etc.), intuitively representing the "germ" of sections of $\mathcal{F}$ near the geometric point $\bar{x}$.
+\end{definition}

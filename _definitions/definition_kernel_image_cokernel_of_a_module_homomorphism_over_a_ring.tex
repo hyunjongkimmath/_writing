@@ -1,0 +1,44 @@
+% \begin{definition} \label{definition:kernel_image_cokernel_of_a_module_homomorphism_over_a_ring}
+% Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings with unity}, and let $M,N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Let 
+% $$\varphi : M \to N$$ 
+% be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{homomorphism of $R$-$S$-bimodules}. We define:
+
+% \begin{enumerate}
+%     \item The \hldef{kernel of $\varphi$} is the \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule of $M$} given by
+%     $$\hlin{\ker(\varphi) := \{ m \in M \mid \varphi(m) = 0 \} \subseteq M.}$$
+
+%     \item The \hldef{image of $\varphi$} is the submodule of $N$ given by
+%     $$\hlin{\operatorname{im}(\varphi) := \{ \varphi(m) \mid m \in M \} \subseteq N.}$$
+
+%     \item The \hldef{cokernel of $\varphi$} is the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient $R$-module of $N$} defined by
+%     $$\hlin{\operatorname{coker}(\varphi) := N / \operatorname{im}(\varphi).}$$
+
+
+% \end{enumerate}
+% It is not difficult to see that each of these are indeed $R$-$S$ bimodules. In case $M$ and $N$ are left/right/two-sided $R$-modules, the \hldef{kernel, image, and cokernel} of a module homomorphism $\varphi: M \to N$ are respectively defined to be the kernel, image, and cokernel for the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures} of $M$ and $N$.
+% \TODO{describe how these are categorical kernels/images/cokernels}
+% \end{definition}
+
+\begin{definition} \label{definition:kernel_image_cokernel_coimage_of_a_module_homomorphism}
+Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings with unity}, and let $M,N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Let 
+$$\varphi : M \to N$$ 
+be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{homomorphism of $R$-$S$-bimodules}. We define:
+
+\begin{enumerate}
+    \item The \hldef{kernel of $\varphi$} is the \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule of $M$} given by
+    $$\hlin{\ker(\varphi) := \{ m \in M \mid \varphi(m) = 0 \} \subseteq M.}$$
+
+    \item The \hldef{image of $\varphi$} is the submodule of $N$ given by
+    $$\hlin{\operatorname{im}(\varphi) := \{ \varphi(m) \mid m \in M \} \subseteq N.}$$
+
+    \item The \hldef{cokernel of $\varphi$} is the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module of $N$} defined by
+    $$\hlin{\operatorname{coker}(\varphi) := N / \operatorname{im}(\varphi).}$$
+
+    \item The \hldef{coimage of $\varphi$} is the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module of $M$} defined by
+    $$\hlin{\operatorname{coim}(\varphi) := M / \ker(\varphi).}$$
+\end{enumerate}
+It is not difficult to see that each of these are indeed $R$-$S$ bimodules. In case $M$ and $N$ are left/right/two-sided $R$-modules, the \hldef{kernel, image, cokernel, and coimage} of a module homomorphism $\varphi: M \to N$ are respectively defined to be the kernel, image, cokernel, and coimage for the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures} of $M$ and $N$.
+
+The kerel, cokernel, image, and coimage of $f$ are respectively the categorical \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{kernel, cokernel}, \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{image, and coimage} (\Cref{lemma:kernel_cokernel_image_coimage_of_modules_over_rings_are_categorical}).
+
+\end{definition}

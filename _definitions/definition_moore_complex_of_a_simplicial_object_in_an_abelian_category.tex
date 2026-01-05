@@ -1,0 +1,14 @@
+\begin{definition}[Moore complex of a simplicial object] \label{definition:moore_complex_of_a_simplicial_object_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $X_\bullet$ be a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial object} in $\mathcal{A}$, i.e., a functor
+    $$\hlin{X_\bullet: \Delta^{op} \to \mathcal{A}}$$
+    where $\Delta$ is the simplex category.
+
+    The \hldef{Moore complex}, synonymously called the \hldef{normalized chain complex} or \hldef{complex of normalized chains}, \hl{$M(X_\bullet) \in \mathrm{Ch}_{\geq 0}(\mathcal{A})$} associated to $X_\bullet$ is the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} given by:
+    \begin{itemize}
+        \item For each integer $n \geq 0$, the degree $n$ component is
+        $$\hlin{M_n(X_\bullet) := \bigcap_{i=1}^n \ker (d_i: X_n \to X_{n-1}),}$$
+        where $d_i$ are the \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{face maps} of the simplicial object.
+        \item The differential $d_n: M_n(X_\bullet) \to M_{n-1}(X_\bullet)$ is given by the restriction of the face map $d_0$:
+        $$\hlin{d_n := d_0|_{M_n(X_\bullet)}.}$$
+    \end{itemize}
+\end{definition}

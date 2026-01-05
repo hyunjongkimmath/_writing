@@ -1,0 +1,13 @@
+\begin{definition}[Schwartz space on $\mathbb{R}^n$] \label{definition:schwartz_space_on_Rn}
+    \TODO{define seminorms}
+Let $n \in \mathbb{N}$. The \hldef{Schwartz space} \hl{$\mathcal{S}(\mathbb{R}^n)$} is the space of all \hyperrefIfExists{definition_C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns.tex}{smooth functions}\CrefIfExists{definition_C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns.tex}
+\[
+f : \mathbb{R}^n \to \mathbb{C}
+\]
+such that for every multi-indices $\alpha, \beta \in \mathbb{N}^n$,
+\[
+\sup_{x \in \mathbb{R}^n} |x^\alpha D^\beta f(x)| < \infty,
+\]
+where $x^\alpha = x_1^{\alpha_1} \cdots x_n^{\alpha_n}$ and $D^\beta = \frac{\partial^{|\beta|}}{\partial x_1^{\beta_1} \cdots \partial x_n^{\beta_n}}$. The space $\mathcal{S}(\mathbb{R}^n)$ is equipped with the family of seminorms
+$$\hlin{p_{\alpha, \beta}(f) := \sup_{x \in \mathbb{R}^n} |x^\alpha D^\beta f(x)|.}$$
+\end{definition}

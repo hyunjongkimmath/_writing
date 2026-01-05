@@ -1,0 +1,5 @@
+\begin{definition} \label{definition:graded_ring_by_a_monoid}
+Let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:monoid}{monoid} (often an \CrefAndHyperrefIfExist{definition:group}{abelian group}). A \hldef{$\Gamma$-graded ring} is a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$ equipped with a decomposition into additive subgroups $R = \bigoplus_{\gamma \in \Gamma} R_\gamma$\CrefIfExists{definition:coproduct_of_modules_of_rings}, such that the multiplication respects the grading:
+$$\hlin{R_\gamma \cdot R_\delta \subseteq R_{\gamma + \delta} \quad \text{for all } \gamma, \delta \in \Gamma.}$$
+Elements in a component $R_\gamma$ are called \hldef{homogeneous elements of degree $\gamma$}. A general element $r \in R$ can be written uniquely as a finite sum $r = \sum_{\gamma} r_\gamma$ with $r_\gamma \in R_\gamma$, called the \hldef{homogeneous components of $r$}.
+\end{definition}

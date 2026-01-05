@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:continuous_map_between_open_subsets_of_euclidean_spaces}
+Let $U \subseteq \mathbb{R}^n$ and $V \subseteq \mathbb{R}^m$ be open subsets, and let $k \in \mathbb{N}_0 \cup \{\infty\}$.
+A \hldef{continuous morphism} (or a \hldef{continuous map} or simply a \hldef{map between topological spaces}) from $U$ to $V$ is a function $f : U \to V$ that satisfies one of the following equivalent characterizations:
+\begin{enumerate}
+    \item $f$ is a continuous map from $U$ to $V$ as topological spaces.
+    \item for every point $x \in U$, for every open neighborhood $W$ of $f(x)$ in $V$, there exists an open neighborhood $O$ of $x$ in $U$ satisfying
+    $$ f(O) \subseteq W.  $$
+\end{enumerate}
+We write \hl{$C(U,V) = C^0(U, V)$} for the set of continuous maps $U \to V$.
+\end{definition}

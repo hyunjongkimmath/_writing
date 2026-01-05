@@ -1,0 +1,7 @@
+\begin{theorem}[Contravariant Yoneda Lemma] \label{theorem:contravariant_yoneda_lemma_on_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. Let $A$ be an object of $\mathcal{C}$, and let $G: \mathcal{C}^{\operatorname{op}} \to \mathbf{Set}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} (i.e. a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf}). Let $h_A: \mathcal{C}^{\operatorname{op}} \to \mathbf{Set}$ denote the contravariant representable functor defined by $h_A(X) = \operatorname{Hom}_{\mathcal{C}}(X, A)$.
+
+There exists a bijection natural in $A$ and $G$:
+$$\operatorname{Nat}(h_A, G) \cong G(A)$$
+given by $\alpha \mapsto \alpha_A(\operatorname{id}_A)$.
+\end{theorem}

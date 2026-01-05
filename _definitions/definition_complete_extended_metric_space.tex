@@ -1,0 +1,7 @@
+\begin{definition}\label{definition:complete_extended_metric_space}
+Let $(X, d)$ be an \hyperrefIfExists{definition:extended_metric_on_a_set}{extended metric space}\CrefIfExists{definition:extended_metric_on_a_set}. The space $(X, d)$ is said to be \hldef{complete} if every \hyperrefIfExists{definition:cauchy_sequence_in_an_extended_metric_space}{Cauchy sequence in $X$}\CrefIfExists{definition:cauchy_sequence_in_an_extended_metric_space} \hyperrefIfExists{definition:convergence_and_limits_in_extended_metric_space}{converges to a point in $X$}\CrefIfExists{definition:convergence_and_limits_in_extended_metric_space}; that is,
+for every sequence $(x_n)_{n \in \mathbb{N}}$ in $X$ such that for all $\varepsilon > 0$ there exists $N \in \mathbb{N}$ with $d(x_m, x_n) < \varepsilon$ for all $m, n \geq N$, there exists $x \in X$ such that
+\[
+\lim_{n \to \infty} d(x_n, x) = 0.
+\]
+\end{definition}

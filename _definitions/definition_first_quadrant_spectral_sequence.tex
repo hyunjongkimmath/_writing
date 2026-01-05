@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:first_quadrant_spectral_sequence}
+    Let $\mathcal{A}$ be an abelian category.
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} $E = \{E^r\}_{r \ge r_0}$ is called a \hldef{first quadrant spectral sequence} if the terms $E^{r_0}_{p,q}$ vanish unless $p \ge 0$ and $q \ge 0$.
+        In this case, for any fixed $(p,q)$, the differentials $d^r$ entering or leaving $E^r_{p,q}$ eventually vanish because the indices $(p-r, q+r-1)$ and $(p+r, q-r+1)$ eventually land outside the first quadrant for large $r$. Thus, every term \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilizes}.
+        
+        \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} $E = \{E_r\}_{r \ge r_0}$ is called a \hldef{first quadrant spectral sequence} if the terms $E_{r_0}^{p,q}$ vanish unless $p \ge 0$ and $q \ge 0$.
+        Similarly, the differentials $d_r$ eventually vanish as the indices $(p+r, q-r+1)$ and $(p-r, q+r-1)$ leave the first quadrant, guaranteeing \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilization}.
+    \end{enumerate}
+\end{definition}

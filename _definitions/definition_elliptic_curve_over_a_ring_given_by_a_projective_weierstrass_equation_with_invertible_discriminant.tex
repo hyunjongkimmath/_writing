@@ -1,0 +1,28 @@
+
+\begin{definition}[Elliptic Curve over a Ring Given by a Projective Weierstrass Equation] \label{definition:elliptic_curve_over_a_ring_given_by_a_projective_weierstrass_equation_with_invertible_discriminant}
+    Let $R$ be a commutative ring with unity.
+    % An \hldef{elliptic curve over $R$ given by a projective Weierstrass equation} is 
+
+    Let 
+    $$ Y^2 Z + a_1 X Y Z + a_3 Y Z^2 = X^3 + a_2 X^2 Z + a_4 X Z^2 + a_6 Z^3, $$
+    be a \CrefAndHyperrefIfExist{definition:weierstrass_equation_over_a_ring}{homogeneous Weierstrass equation} where $a_1,a_2,a_3,a_4,a_6 \in R$.  
+    Let
+    $$ \mathcal{E} \subseteq \mathbf{P}^2_R = \operatorname{Proj} R[X,Y,Z] $$
+    be the $R$-scheme defined by the homogeneous Weierstrass equation.
+
+    Equip this scheme $\mathcal{E}$ with the structural morphism $\pi: \mathcal{E} \to \operatorname{Spec} R$ induced by the projection, and the distinguished $R$-rational \hldef{point at infinity} defined by the section
+    $$ O : \operatorname{Spec} R \to \mathcal{E} $$
+    given by the projective point $(X:Y:Z) = (0:1:0)$. 
+    
+    Assuming that the \CrefAndHyperrefIfExist{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{discriminant $\Delta$} (of the affinization of the Weierstrass equation) is invertible on $\Spec R$, i.e. is an element of \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{$R^\times$}, the pair $(\mathcal{E}, O)$ is an \CrefAndHyperrefIfExist{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{elliptic curve over $R$} and is called the \hldef{elliptic curve over $R$ defined by the projective Weierstrass equation} with coefficients $a_1,a_2,a_3,a_4,a_6$.
+
+    The 
+    %\hldef{discriminant} \hl{$\Delta = \Delta_{\calE}$}
+    \hldef{$j$-invariant} \hl{$j = j_{\calE}$} of $\mathcal{E}$ refers to the 
+    %\CrefAndHyperrefIfExist{definition:discriminant_of_a_general_weierstrass_equation}{discriminant} (resp. 
+    \CrefAndHyperrefIfExist{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{$j$-invariant} of the Weierstrass equation.
+    
+    % We thus call $\mathcal{E}$ the \hldef{elliptic curve over $R$ given by the projective Weierstrass equation}.
+
+    \TODO{define an $R$-rational point on a scheme, projective space, projective points}
+\end{definition}

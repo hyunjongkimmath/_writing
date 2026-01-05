@@ -1,0 +1,78 @@
+
+\begin{definition}[Triangulated category] \label{definition:triangulated_category}
+A \hldef{triangulated category} is a triple $(\mathcal{T}, [1], \Delta)$ where:
+\begin{itemize}
+    \item $\mathcal{T}$ is an additive category,
+    \item $[1]: \mathcal{T} \to \mathcal{T}$ (also denoted by notations such as \hl{$\Sigma$}) is an additive auto-equivalence called the \hldef{shift} or \hldef{suspension functor},
+    \item $\Delta$ is a class of distinguished triangles of the form
+    \[
+    X \xrightarrow{f} Y \xrightarrow{g} Z \xrightarrow{h} X[1]
+    \]
+    with objects $X,Y,Z \in \mathcal{T}$ and morphisms $f,g,h$ in $\mathcal{T}$,
+\end{itemize}
+satisfying the following axioms:
+
+\begin{itemize}
+    \item[(TR1)] The class $\Delta$ is closed under isomorphisms of triangles and contains the triangles isomorphic to
+    \[
+    A \xrightarrow{\mathrm{id}} A \to 0 \to A[1].
+    \]
+    Moreover, for every morphism $f: X \to Y$ in $\mathcal{T}$, there exists a distinguished triangle
+    \[
+    X \xrightarrow{f} Y \to Z \to X[1].
+    \]
+
+    \item[(TR2)] (Rotation) If 
+    \[
+    X \xrightarrow{f} Y \xrightarrow{g} Z \xrightarrow{h} X[1]
+    \]
+    is a distinguished triangle, then so are
+    \[
+    Y \xrightarrow{g} Z \xrightarrow{h} X[1] \xrightarrow{-f[1]} Y[1]
+    \]
+    and
+    \[
+    Z[-1] \xrightarrow{-h[-1]} X \xrightarrow{f} Y \xrightarrow{g} Z.
+    \]
+
+    \item[(TR3)] (Octahedral axiom) Given morphisms $X \xrightarrow{f} Y$ and $Y \xrightarrow{g} Z$ in $\mathcal{T}$, there exist distinguished triangles
+    \[
+    X \xrightarrow{f} Y \xrightarrow{u} C(f) \xrightarrow{v} X[1],
+    \]
+    \[
+    Y \xrightarrow{g} Z \xrightarrow{w} C(g) \xrightarrow{x} Y[1],
+    \]
+    \[
+    X \xrightarrow{g \circ f} Z \xrightarrow{y} C(g \circ f) \xrightarrow{z} X[1],
+    \]
+    and morphisms
+    \[
+    s: C(f) \to C(g \circ f), \quad t: C(g \circ f) \to C(g)
+    \]
+    such that the following diagram commutes and its rows and columns are distinguished triangles:
+
+    \[
+    \begin{tikzcd}[row sep=large, column sep=large]
+    X \arrow{r}{f} \arrow[equal]{d} & Y \arrow{r}{u} \arrow{d}{g} & C(f) \arrow{r}{v} \arrow[dashed]{d}{s} & X[1] \arrow[equal]{d} \\
+    X \arrow{r}{g \circ f} & Z \arrow{r}{y} \arrow{d}{w} & C(g \circ f) \arrow{r}{z} \arrow[dashed]{d}{t} & X[1] \\
+    & C(g) \arrow[equal]{r} \arrow{d}{x} & C(g) \arrow{d} \\
+    & Y[1] \arrow{r}{f[1]} & X[1][1]
+    \end{tikzcd}
+    \]
+
+    In particular,
+    \begin{itemize}
+        \item The compositions $s \circ u = y$, $t \circ s = w$, and $x \circ t = v[1]$ hold,
+        \item All rows and columns form distinguished triangles.
+    \end{itemize}
+
+    \item[(TR4)] The class $\Delta$ is closed under the shift functor $[1]$: if
+    \[
+    X \to Y \to Z \to X[1]
+    \]
+    is distinguished, then so is
+    \[
+    X[1] \to Y[1] \to Z[1] \to X[2].
+    \]
+\end{itemize}
+\end{definition}

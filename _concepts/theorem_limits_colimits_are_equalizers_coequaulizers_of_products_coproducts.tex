@@ -1,0 +1,47 @@
+\begin{theorem} \label{theorem:limits_colimits_are_equalizers_coequaulizers_of_products_coproducts}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. Let $F: \mathcal{J} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} where $\mathcal{J}$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}. 
+
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of $F$ is constructed as the \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer} of the pair of morphisms $(s, t)$: assuming that the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} and equalizers below exist in $\calC$, the limit $\lim F$ exists and 
+        \[
+        \lim F \cong \operatorname{eq} \left( 
+        \prod_{j \in \operatorname{Ob}(\mathcal{J})} F(j) 
+        \xrightarrow[\;t\;]{\;s\;} 
+        \prod_{\alpha \in \operatorname{Mor}(\mathcal{J})} F(\operatorname{cod}(\alpha)) 
+        \right)
+        \]
+        where $\operatorname{cod}(\alpha)$ stands for the codomain of the morphism $\alpha$, and the morphisms $s$ and $t$ are induced by the universal property of the product, such that for any morphism $\alpha: i \to k$ in $\mathcal{J}$, the projection to the factor indexed by $\alpha$ is:
+        \begin{itemize}
+            \item $\pi_{\alpha} \circ s = F(\alpha) \circ \pi_{i}$
+            \item $\pi_{\alpha} \circ t = \pi_{k}$
+        \end{itemize}
+
+        \item The \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} of $F$ is constructed as the \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{coequalizer} of the pair of morphisms $(s, t)$: assuming that the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts} and coequalizers below exist in $\calC$, the colimit $\operatorname{colim} F$ exists and 
+        \[
+        \operatorname{colim} F \cong \operatorname{coeq} \left( 
+        \coprod_{\alpha \in \operatorname{Mor}(\mathcal{J})} F(\operatorname{dom}(\alpha)) 
+        \xrightarrow[\;t\;]{\;s\;} 
+        \coprod_{j \in \operatorname{Ob}(\mathcal{J})} F(j) 
+        \right)
+        \]
+        where $\operatorname{dom}(\alpha)$ stands for the domain of the morphism $\alpha$, and the morphisms $s$ and $t$ are induced by the universal property of the coproduct, such that for any morphism $\alpha: i \to k$ in $\mathcal{J}$, the injection from the summand indexed by $\alpha$ is:
+        \begin{itemize}
+            \item $s \circ \iota_{\alpha} = \iota_{k} \circ F(\alpha)$
+            \item $t \circ \iota_{\alpha} = \iota_{i}$
+        \end{itemize}
+
+    
+    \end{enumerate}
+
+    In particular,
+    \begin{enumerate}
+        \item If $\mathcal{C}$ has all nonempty finite (resp. small) products and equalizers, then $\mathcal{C}$ has all nonempty finite (resp. small) limits.
+        \item If $\mathcal{C}$ has all nonempty finite (resp. small) coproducts and coequalizers, then $\mathcal{C}$ has all nonempty finite (resp. small) colimits.
+
+        \item If $\mathcal{C}$ has all finite (resp. small) products and equalizers, then $\mathcal{C}$ has all finite (resp. small) limits.
+        \item If $\mathcal{C}$ has all finite (resp. small) coproducts and coequalizers, then $\mathcal{C}$ has all finite (resp. small) colimits.
+
+    \end{enumerate}
+
+
+\end{theorem}

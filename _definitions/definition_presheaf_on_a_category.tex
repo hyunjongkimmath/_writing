@@ -1,0 +1,53 @@
+\begin{definition}[Presheaf on a category] \label{definition:presheaf_on_a_category}
+    Let $C$ and $\mathcal{A}$ be \hyperrefIfExists{definition:category}{(large) categories}\CrefIfExists{definition:category}. 
+    \begin{enumerate}
+        \item A \hldef{presheaf $\mathcal{F}$ on $C$ with values in $\mathcal{A}$} is a functor
+        \[
+        \mathcal{F}: C^{\mathrm{op}} \to \mathcal{A}.
+        \]
+        In other words, a presheaf $\calF$ on $C$ with values in $\calA$ is simply a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} from $C$ to $\calA$. 
+        Explicitly, for every object $U$ in $C$, one has an object $\mathcal{F}(U)$ in $\mathcal{A}$ (called the \hldef{$U$-valued sections/sections evaluated at $U$ of $\calF$}\TextIfExists{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{, cf. \Cref{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}}), and for every morphism $f: V \to U$ in $C$, one has a morphism (called the \hldef{restriction map})
+        \[
+        \mathcal{F}(f): \mathcal{F}(U) \to \mathcal{F}(V)
+        \]
+        in $\mathcal{A}$, such that for all composable morphisms $W \xrightarrow{g} V \xrightarrow{f} U$ in $C$, the following diagram in $\mathcal{A}$ commutes:
+        \[
+        \begin{tikzcd}
+        \mathcal{F}(U) \arrow[r, "\mathcal{F}(f)"] \arrow[rr, bend left, "\mathcal{F}(f \circ g)"] & \mathcal{F}(V) \arrow[r, "\mathcal{F}(g)"] & \mathcal{F}(W)
+        \end{tikzcd}
+        \]
+        That is,
+        \[
+        \mathcal{F}(g) \circ \mathcal{F}(f) = \mathcal{F}(f \circ g),
+        \]
+        and for every object $U$ in $C$, $\mathcal{F}(\mathrm{id}_U) = \mathrm{id}_{\mathcal{F}(U)}$.
+
+
+        \item 
+        Let $\mathcal{F},\mathcal{G}: C^{\mathrm{op}} \to \mathcal{A}$ be two presheaves on $C$ with values in $\mathcal{A}$. A \hldef{morphism of presheaves}
+        \[
+        \varphi: \mathcal{F} \to \mathcal{G}
+        \]
+        is a \hyperrefIfExists{definition:natural_transformation_between_functors_between_categories}{natural transformation of functors}\CrefIfExists{definition:natural_transformation_between_functors_between_categories}: for each object $U$ of $C$, one has a morphism
+        \[
+        \varphi_U: \mathcal{F}(U) \to \mathcal{G}(U)
+        \]
+        in $\mathcal{A}$, such that for every morphism $f: V \to U$ in $C$, the diagram
+        \[
+        \begin{tikzcd}
+        \mathcal{F}(U) \arrow[r, "\mathcal{F}(f)"] \arrow[d, "\varphi_U"'] & \mathcal{F}(V) \arrow[d, "\varphi_V"] \\
+        \mathcal{G}(U) \arrow[r, "\mathcal{G}(f)"'] & \mathcal{G}(V)
+        \end{tikzcd}
+        \]
+        commutes, i.e.,
+        \[
+        \varphi_V \circ \mathcal{F}(f) = \mathcal{G}(f) \circ \varphi_U
+        \]
+        for all objects and morphisms in $C$.
+
+        \item Given a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe} $U$, a \hldef{$U$-presheaf on $\calC$} typically refers to a presheaf of $U$-sets on $C$.
+
+        \item The \hldef{presheaf category/category of $\calA$-valued presheaves on $\calC$} is the (large) category whose objects are the presheaves on $C$ with values in $\calA$ and whose morphisms are the presheaf morphisms. Common notations for the presheaf category include, but are not limited to: \hl{$\calA^{\calC^{\op}}$}, \hl{$\PreShv(\calC, \calA)$}, \hl{$[\calC^{\op}, \calA]$}. If the value category $\calA$ is clear from context, then notations such as \hl{$\PreShv(\calC)$} are also common. \TextIfExists{definition:diagram_in_a_category_indexed_by_a_small_category}{Note that the presheaf category $\PreShv(\calC, \calA)$ is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{category of functors} $\calC^{\op} \to \calA$ and hence notations for the functor categories are applicable as notations for presheaf categories.}
+
+    \end{enumerate}
+\end{definition}

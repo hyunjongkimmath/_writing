@@ -1,0 +1,15 @@
+\begin{definition}[Extended Metric] \label{definition:extended_metric_on_a_set}
+    Let \(M\) be a set. An \hldef{extended metric} on \(M\) is a function
+    \[
+    d : M \times M \to [0, \infty]
+    \]
+    such that for all \(x,y,z \in M\):
+    \begin{enumerate}
+        \item \textbf{Non-negativity:} \quad \(d(x,y) \geq 0\), and \(d(x,y) = 0\) if and only if \(x = y\).
+        \item \textbf{Symmetry:} \quad \(d(x,y) = d(y,x)\).
+        \item \textbf{Triangle inequality:} \quad \(d(x,z) \leq d(x,y) + d(y,z)\),
+    \end{enumerate}
+    again adopting the convention that sums involving \(\infty\) behave so that \(a + \infty = \infty\). A set equipped with an extended metric is called an \hldef{extended metric space}.
+
+    If the range of the extended metric is contained in $[0,\infty)$, then the extended metric is a \hldef{metric} in the usual sense and $V$ may be called a \hldef{metric space}.
+\end{definition}

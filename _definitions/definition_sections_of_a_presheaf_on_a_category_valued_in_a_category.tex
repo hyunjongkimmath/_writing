@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}, and let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. Let $\mathcal{F} : \mathcal{C}^{op} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf valued in $\mathcal{D}$}.
+
+\begin{enumerate}
+    \item For an object $U \in \mathcal{C}$, the \hldef{sections functor evaluated at $U$} is the functor
+    $$\hlin{\Gamma(U, -) : \mathrm{PSh}(\mathcal{C}, \mathcal{D}) \to \mathcal{D}}$$
+    defined by
+    $$\Gamma(U, \mathcal{F}) := \mathcal{F}(U),$$
+    i.e., the value of the presheaf $\mathcal{F}$ at the object $U$.
+
+    \item The \hldef{global sections of $\calF$} is the object \hl{$\Gamma(\calF)$} of $\calD$ defined as the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit}
+    $$\Gamma(\calF) = \varprojlim_{U \in \calC^{\op}} \calF(U)$$
+    assuming that such a limit exists, where the limit is taken over objects $U \in \calC$ and the restriction morphisms $\calF(V) \to \calF(U)$ in $\calD$ for  morphisms $U \to V$ in $\calC$. 
+    
+    If a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} $\ast \in \mathcal{C}$ exists, then $\Gamma(\calF)$ exists and coincides with $\Gamma(\ast, \calF) = \calF(\ast)$. The construction $\Gamma(\calF)$ is functorial; in particular, if $\Gamma(\calF)$ exists for all $\calF$ in $\mathrm{PSh}(\calC, \calD)$, e.g. if \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits of} diagrams in $\calD$ indexed by $\calC$ exist, then $\Gamma$ is a functor 
+    $$\hlin{\Gamma : \mathrm{PSh}(\mathcal{C}, \mathcal{D}) \to \mathcal{D}}$$
+    called the \hldef{global sections functor on $\mathrm{PSh}(\mathcal{C}, \mathcal{D})$}.
+\end{enumerate}
+\end{definition}

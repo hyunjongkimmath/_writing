@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:flat_dimension_of_objects_of_abelian_categories_with_}
+    Let $\mathcal{A}, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $\otimes : \mathcal{A} \times \mathcal{B} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor} that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable. 
+    \begin{enumerate}
+        \item 
+        Suppose that $\calB$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives} or \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats}.
+
+        Let $M$ be an object of $\calA$. The \hldef{Tor dimension of $M$}, denoted by \hl{$\mathrm{tdim}(M)$} or \hl{$\mathrm{td}(M)$}, is the smallest integer $n \geq 0$ such that 
+        $$\mathrm{Tor}_i(M,-) = 0$$
+        for all $i > n$, where \CrefAndHyperrefIfExist{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category}{$\mathrm{Tor}_i(M,-): \calB \to \calC$} is computed via projective or flat resolutions of objects of $\calB$; by \Cref{lemma:flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats}, it does not matter whether a projective resolution or a flat resolution is used.
+
+        \item 
+        Symmetrically, suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives} or \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{has enough flats}.
+
+        Let $N$ be an object of $\calB$. The \hldef{Tor dimension of $N$}, denoted by \hl{$\mathrm{tdim}(N)$} or \hl{$\mathrm{td}(N)$}, is the smallest integer $n \geq 0$ such that 
+        $$\mathrm{Tor}_i(-,N) = 0$$
+        for all $i > n$, where \CrefAndHyperrefIfExist{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category}{$\mathrm{Tor}_i(-,N): \calA \to \calC$} is computed via projective or flat resolutions of objects of $\calA$; by \Cref{lemma:flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats}, it does not matter whether a projective resolution or a flat resolution is used.
+
+    \end{enumerate}
+\end{definition}

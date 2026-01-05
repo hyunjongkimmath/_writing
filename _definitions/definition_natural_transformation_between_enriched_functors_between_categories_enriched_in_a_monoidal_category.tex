@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:natural_transformation_between_enriched_functors_between_categories_enriched_in_a_monoidal_category}
+Let $\mathcal{V}$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}, let $\mathcal{A}, \mathcal{B}$ be \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{V}$-categories}, and let $F, G: \mathcal{A} \to \mathcal{B}$ be \CrefAndHyperrefIfExist{definition:enriched_functor_between_categories_enriched_in_a_}{$\mathcal{V}$-functors}.
+
+A \hldef{$\mathcal{V}$-natural transformation} $\alpha: F \Rightarrow G$ consists of a family of morphisms in $\mathcal{V}_0$:
+$$\hlin{ \alpha_x: I \to \mathcal{B}(Fx, Gx) }$$
+indexed by objects $x \in \mathrm{Ob}(\mathcal{A})$, satisfying the $\mathcal{V}$-naturality axiom.
+
+For every pair of objects $x, y \in \mathrm{Ob}(\mathcal{A})$, the following hexagonal diagram in $\mathcal{V}_0$ commutes (expressing the enriched analogue of $\alpha_y \circ F(f) = G(f) \circ \alpha_x$):
+
+\begin{tikzcd}[column sep=huge]
+    \mathcal{A}(x, y) \arrow[r, "F_{xy}"] \arrow[d, "G_{xy}"'] & \mathcal{B}(Fx, Fy) \arrow[r, "\lambda^{-1}", "\cong"'] & I \otimes \mathcal{B}(Fx, Fy) \arrow[d, "\alpha_y \otimes 1"] \\
+    \mathcal{B}(Gx, Gy) \arrow[d, "\rho^{-1}"', "\cong"] & & \mathcal{B}(Fy, Gy) \otimes \mathcal{B}(Fx, Fy) \arrow[d, "M^\mathcal{B}_{Fx,Fy,Gy}"] \\
+    \mathcal{B}(Gx, Gy) \otimes I \arrow[r, "1 \otimes \alpha_x"'] & \mathcal{B}(Gx, Gy) \otimes \mathcal{B}(Fx, Gx) \arrow[r, "M^\mathcal{B}_{Fx,Gx,Gy}"'] & \mathcal{B}(Fx, Gy)
+\end{tikzcd}
+Here, $\lambda: I \otimes X \cong X$ and $\rho: X \otimes I \cong X$ denote the left and right unit isomorphisms of the monoidal category $\mathcal{V}$, and $M^\mathcal{B}$ denotes the composition in $\mathcal{B}$.
+\end{definition}

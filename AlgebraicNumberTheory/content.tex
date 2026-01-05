@@ -1,0 +1,169 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{Dedekind domains}
+
+\input{../_definitions/definition_noetherian_ring.tex}
+\input{../_definitions/definition_discrete_valuation_ring.tex}
+\input{../_concepts/theorem_correspondence_between_dvrs_and_discretely_valued_fields.tex}
+
+
+\input{../_definitions/definition_integral_element_over_a_ring.tex}
+\input{../_definitions/definition_dedekind_domain.tex}
+
+The following is immediately from the definitions:
+\input{../_concepts/proposition_dvrs_are_dedekind_domains.tex}
+\input{../_concepts/proposition_dedekind_domain_is_a_pid_if_and_only_if_ufd.tex}
+
+
+
+
+
+\section{Local and global fields}
+
+\subsection{Local fields}
+
+\input{../_definitions/definition_local_field.tex}
+\begin{convention}
+Given a \hyperrefIfExists{definition:local_field}{local field}\CrefIfExists{definition:local_field} $K$ with absolute value $|\cdot|$, we almost always equip it with the \hyperrefIfExists{metric_induced_by_an_absolute_value_on_a_field}{metric induced by $|\cdot|$}\CrefIfExists{definition:metric_induced_by_an_absolute_value_on_a_field}, which is a \hyperrefIfExists{definition:complete_extended_metric_space}{complete metric}\CrefIfExists{definition:complete_extended_metric_space}\CrefIfExists{theorem:local_fields_are_complete}
+\end{convention}
+
+\input{../_concepts/theorem_local_fields_are_complete.tex}
+
+
+\begin{theorem} \label{theorem:classification_of_local_fields}
+    \TODO{TODO: define Laurent seires}
+Up to isomorphism, \hyperrefIfExists{definition:local_field}{local fields}\CrefIfExists{definition:local_field} consists precisely of:
+\begin{itemize}
+    \item $\mathbb{R}$ and $\mathbb{C}$, which are the \hyperrefIfExists{definition:archimedean_absolute_value_on_a_field}{archimedean} local fields),
+    \item finite extensions of $\mathbb{Q}_p$ for a prime $p$, which are the nonarchimedean local fields of characteristic $0$, and
+    \item finite extensions of $\mathbb{F}_p((t))$, the field of formal Laurent series over a finite field, which are the non-archimedean local fields of positive characteristic.
+\end{itemize}
+\end{theorem}
+
+\subsection{Global fields}
+
+\input{../_definitions/definition_global_field.tex}
+
+\input{../_definitions/definition_equivalent_absolute_values_on_a_field.tex}
+\input{../_definitions/definition_place_of_a_global_field.tex}
+
+\input{../_definitions/definition_completion_of_a_global_field_at_a_place.tex}
+
+\subsection{Local fields are exactly the completions of global fields at places}
+
+\input{../_concepts/theorem_completion_of_a_global_field_at_a_place_is_a_local_field.tex}
+
+\begin{remark}
+    Conversely, all local fields can be obtained as completions of global fields at places.
+\end{remark}
+
+\subsection{Rings of integers of local and global fields}
+\input{../_definitions/definition_ring_of_integers_of_a_global_or_local_ring.tex}
+
+\input{../_concepts/theorem_rings_of_integers_of_global_fields_or_nonarchimedean_local_fields_are_dedekind_domains.tex}
+
+
+
+
+
+
+\section{Ad\`eles and id\`eles of global fields}
+
+\input{../_definitions/definition_adeles_and_ideles_of_a_global_field.tex}
+\input{../_definitions/definition_idelic_norm_of_the_ideles_of_a_global_field.tex}
+
+
+
+
+
+\section{Chebotarev density theorem}
+
+The Chebotarev density theorem is a statement that Frobenius elements $\mathrm{Frob}_{\mathfrak{p}}$ are equidistributed across the conjugacy classes of $\operatorname{Gal}(L/K)$ of a finite Galois extension of number fields, showing that the splitting behavior of primes in extensions is governed by uniform distribution with respect to the Galois group structure.
+
+\begin{theorem}[Chebotarev Density Theorem for number fields]
+    \TODO{define unramified prime}
+Let $L/K$ be a finite \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:global_field}{number fields} with \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group $G = \mathrm{Gal}(L/K)$}. For a conjugacy class $C \subseteq G$, let 
+\[ \pi_C(x) = \#\{ \, \mathfrak{p} \subseteq \mathcal{O}_K : N\mathfrak{p} \leq x,\ \mathfrak{p} \text{ unramified in } L,\ \mathrm{Frob}_{\mathfrak{p}} \in C \,\} \]
+be the number of prime ideals $\mathfrak{p}$ of $K$ with norm at most $x$ whose Frobenius conjugacy class $\mathrm{Frob}_{\mathfrak{p}}$ in $G$ equals $C$.
+
+\TODO{define natural density of primes}
+Then the natural density of such primes exists and satisfies
+\[
+\lim_{x \to \infty} \frac{\pi_C(x)}{\pi(x)} = \frac{|C|}{|G|},
+\]
+where $\pi(x)$ is the number of prime ideals $\mathfrak{p} \subseteq \mathcal{O}_K$ with $N\mathfrak{p} \leq x$.
+\end{theorem}
+
+
+\begin{theorem}[Chebotarev Density theorem for function fields, see e.g. {\cite[Theorem 9.13A, 9.13B]{rosen}}]
+Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:global_field}{global function fields} with Galois group $G = \Gal(L/K)$. Let $C \subset G$ be a conjugacy class in $G$ and $S_K'$ be the set of primes of $K$ which are unramified in $L$. \TODO{continue statement}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+\appendix
+
+\section{Galois theory}
+\input{../_definitions/definition_galois_extension_of_fields.tex}
+
+
+\section{Absolute values and valuations on fields}
+
+
+
+
+\subsection{Absolute values on fields }
+\input{../_definitions/definition_absolute_value_on_a_field.tex}
+\input{../_definitions/definition_discrete_absolute_value_on_a_field.tex}
+\input{../_definitions/definition_trivial_absolute_value_on_a_field.tex}
+\input{../_definitions/definition_metric_induced_by_an_absolute_value_on_a_field.tex}
+
+\input{../_definitions/definition_archimedean_absolute_value_on_a_field.tex}
+\input{../_definitions/definition_topology_on_a_field_induced_by_an_absolute_value.tex}
+
+\subsection{Valuations on fields}
+
+
+\input{../_definitions/definition_valuation_on_a_field.tex}
+\input{../_definitions/definition_valuation_ring_of_a_valued_field.tex}
+
+
+\input{../_definitions/definition_discrete_valuation_on_a_field.tex}
+
+\input{../_definitions/definition_nonarchimedean_absolute_value_induced_by_a_discrete_valuation_on_a_field.tex}
+
+\section{Miscellaneous definitions}
+
+\subsection{Abstract algebra}
+
+\input{../_definitions/definition_commutative_ring.tex}
+
+\input{../_definitions/definition_zero_divisor_of_a_ring.tex}
+
+\input{../_definitions/definition_localization_of_a_commutative_ring_by_a_multiplicative_subset.tex}
+
+\input{../_definitions/definition_prime_and_maximal_ideal_of_a_ring.tex}
+\input{../_definitions/definition_local_ring.tex}
+
+\input{../_definitions/definition_principal_ideal_ring.tex}
+\input{../_definitions/definition_unique_factorization_domain.tex}
+
+
+\subsection{Absolute values and norms}
+
+\input{../_definitions/definition_locally_compact_topological_space.tex}
+\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric.tex}
+\input{../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+
+\input{../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}

@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:differential_on_a_bigraded_object_in_an_abelian_category}
+    Let $E$ be a \CrefAndHyperrefIfExist{definition:bigraded_object_in_an_abelian_category}{bigraded object} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} $\mathcal{A}$. 
+    
+    A \hldef{differential of bidegree $(\delta_p, \delta_q)$ on $E$} is a family of morphisms in $\mathcal{A}$
+    $$\hlin{d: E_{p,q} \to E_{p+\delta_p, q+\delta_q}}$$
+    (or $d: E^{p,q} \to E^{p+\delta_p, q+\delta_q}$ depending on notation) defined for all $p,q \in \mathbb{Z}$, such that $d \circ d = 0$. The pair $(E, d)$ is called a \hldef{differential bigraded object}.
+    
+    Two specific conventions are standard in spectral sequence theory (where $r \ge 0$ is the page index):
+    \begin{enumerate}
+        \item \textbf{Homological convention:} The objects are denoted \hl{$E_{p,q}$}. The differential usually has bidegree \hl{$(-r, r-1)$}. Thus, $d$ \textbf{decreases} the total degree $p+q$ by $1$.
+        
+        \item \textbf{Cohomological convention:} The objects are denoted \hl{$E^{p,q}$}. The differential usually has bidegree \hl{$(r, 1-r)$}. Thus, $d$ \textbf{increases} the total degree $p+q$ by $1$.
+    \end{enumerate}
+\end{definition}

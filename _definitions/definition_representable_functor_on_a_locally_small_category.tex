@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:representable_functor_on_a_locally_small_category}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. Given an object $X$ of $\calC$, the \hldef{functor of points} \hl{$h_X$} is the \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}/\CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $\calC^{\op} \to \Sets$ given by 
+    \begin{enumerate}
+        \item sending an object $T$ of $\calC$ to the set $\Hom_\calC(T, X)$, and 
+        \item sending a morphism $f:T_1 \to T_2$ in $\calC$ to the \CrefAndHyperrefIfExist{definition:function_of_sets}{set map} 
+        $$\Hom_\calC(T_2, X) \to \Hom_\calC(T_1, X), \quad \phi \mapsto \phi \circ f.$$
+    \end{enumerate}
+    
+    A functor $\calC^{\op} \to \Sets$ (or equivalently, a presheaf on $\calC$ valued in $\Sets$) is said to be \hldef{representable} if it is \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to some functor $h_X$ of points for an object $X$ of $\calC$.
+
+    Dually, a functor $\calC \to \Sets$ is called \hldef{co-representable} if it is naturally isomorphic to a functor \hl{$h^X: \calC \to \Sets$} given by $T \mapsto \Hom_\calC(X, T)$. 
+
+    \TextIfExists{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}{Note that the above notions of representability/co-representability are special caseiof those of \Cref{definition:representable_functor_on_a_category_enriched_in_a_monoidal_category}, where the monoidal category $\calV$ is the \CrefAndHyperrefIfExist{definition:symmetric_monoidal_category}{symmetric monoidal category} \CrefAndHyperrefIfExist{definition:category_of_sets}{$\Sets$}.}
+\end{definition}

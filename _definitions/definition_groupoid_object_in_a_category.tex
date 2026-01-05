@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:groupoid_object_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}.
+
+A \hldef{groupoid object in $\mathcal{C}$} consists of two objects $X_0$ (the "object of objects") and $X_1$ (the "object of morphisms"), together with five structure morphisms:
+\begin{itemize}
+    \item \hldef{Source} and \hldef{Target}: $s, t: X_1 \to X_0$, such that the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} $X_1 \times_{s,X_0,t} X_1$ of the morphisms $s$ and $t$ exists in $\calC$,
+    \item \hldef{Identity}: $e: X_0 \to X_1$,
+    \item \hldef{Composition}: $m: X_1 \times_{s, X_0, t} X_1 \to X_1$,
+    \item \hldef{Inverse}: $i: X_1 \to X_1$,
+\end{itemize}
+such that the following conditions hold (expressing the axioms of a category where every morphism is invertible):
+\begin{enumerate}
+    \item \textbf{Source/Target identities}:
+    $$ s \circ e = \operatorname{id}_{X_0}, \quad t \circ e = \operatorname{id}_{X_0} $$
+    $$ s \circ m = s \circ \pi_2, \quad t \circ m = t \circ \pi_1 $$
+    \item \textbf{Associativity}: The following diagram of composition commutes:
+    $$ m \circ (m \times \operatorname{id}_{X_1}) = m \circ (\operatorname{id}_{X_1} \times m) $$
+    \item \textbf{Unitality}:
+    $$ m \circ (e \circ s, \operatorname{id}_{X_1}) = \operatorname{id}_{X_1}, \quad m \circ (\operatorname{id}_{X_1}, e \circ t) = \operatorname{id}_{X_1} $$
+    \item \textbf{Invertibility}:
+    $$ m \circ (i, \operatorname{id}_{X_1}) = e \circ s, \quad m \circ (\operatorname{id}_{X_1}, i) = e \circ t $$
+\end{enumerate}
+\end{definition}

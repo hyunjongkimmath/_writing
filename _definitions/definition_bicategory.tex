@@ -1,0 +1,39 @@
+\begin{definition} \label{definition:bicategory}
+A \hldef{bicategory} $\mathcal{B}$ consists of the following data:
+\begin{enumerate}
+    \item A collection of \hldef{0-cells} (or \hldef{objects}), denoted by $A, B, C, \dots$;
+    \item For each pair of 0-cells $A, B$, a \CrefAndHyperrefIfExist{definition:category}{category} \hl{$\mathcal{B}(A, B)$}, whose objects are called \hldef{1-cells} (denoted $f: A \to B$) and whose morphisms are called \hldef{2-cells} (denoted $\alpha: f \Rightarrow g$);
+    \item For each triple of 0-cells $A, B, C$, a composition functor
+    $$
+    \hlin{\odot_{ABC}: \mathcal{B}(B, C) \times \mathcal{B}(A, B) \to \mathcal{B}(A, C)},
+    $$
+    denoted by $(g, f) \mapsto \hlin{g \odot f}$;
+    \item For each 0-cell $A$, an identity 1-cell \hl{$I_A \in \mathcal{B}(A, A)$};
+    \item For each quadruple of 0-cells $A, B, C, D$ and 1-cells $f: A \to B$, $g: B \to C$, $h: C \to D$, a natural isomorphism called the \hldef{associator},
+    $$
+    a_{h,g,f}: (h \odot g) \odot f \xrightarrow{\cong} h \odot (g \odot f);
+    $$
+    \item For each pair of 0-cells $A, B$ and 1-cell $f: A \to B$, natural isomorphisms called the \hldef{left and right unitors},
+    $$
+    \lambda_f: I_B \odot f \xrightarrow{\cong} f \quad \text{and} \quad \rho_f: f \odot I_A \xrightarrow{\cong} f.
+    $$
+\end{enumerate}
+These must satisfy the following two coherence axioms:
+\begin{enumerate}
+    \item \textbf{The Pentagon Identity:} For 1-cells $f, g, h, k$, the following diagram of 2-cells commutes:
+    $$
+    \begin{tikzcd}[column sep=small]
+        & (k \circ h) \circ (g \circ f) \arrow[dr, "\alpha"] & \\
+        ((k \circ h) \circ g) \circ f \arrow[ur, "\alpha"] \arrow[d, "\alpha \circ 1"'] & & k \circ (h \circ (g \circ f)) \\
+        (k \circ (h \circ g)) \circ f \arrow[rr, "\alpha"] & & k \circ ((h \circ g) \circ f) \arrow[u, "1 \circ \alpha"']
+    \end{tikzcd}
+    $$
+    \item \textbf{The Triangle Identity:} For 1-cells $f: A \to B$ and $g: B \to C$, the following diagram of 2-cells commutes:
+    $$
+    \begin{tikzcd}
+        (g \circ I_B) \circ f \arrow[rr, "\alpha"] \arrow[dr, "\rho \circ 1"'] & & g \circ (I_B \circ f) \arrow[dl, "1 \circ \lambda"] \\
+        & g \circ f &
+    \end{tikzcd}
+    $$
+\end{enumerate}
+\end{definition}

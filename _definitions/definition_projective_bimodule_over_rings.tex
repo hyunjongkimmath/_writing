@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:projective_bimodule_over_rings}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}.  A \hldef{projective $R$-$S$-bimodule} is an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R,S)$-bimodule} $P$ that satisfies any of the following equivalent conditions:
+    \begin{enumerate}
+        \item The functor
+        \[
+            \operatorname{Hom}_{{}_R\mathsf{Mod}_S}(P, -): {}_R\mathsf{Mod}_S \to \mathsf{Ab}
+        \]
+        is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor} between the abelian categories \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{${}_R\mathsf{Mod}_S$} and \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{$\mathsf{Ab}$}.
+
+        \item $P$ is a projective left module over the ring $R \otimes_{\mathbb{Z}} S^{\operatorname{op}}$\CrefIfExists{definition:tensor_product_of_a_ring_and_an_algebra_over_a_ring}\CrefIfExists{definition:opposite_ring_of_a_ring}.
+
+        \item $P$ is a direct summand of a free $(R,S)$-bimodule. (A free $(R,S)$-bimodule is a direct sum of copies of the tensor product $R \otimes_{\mathbb{Z}} S$, equipped with the natural left $R$-action and right $S$-action).
+
+        \item $P$ is a \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective object} in the category ${}_R\mathsf{Mod}_S$. That is, for every surjective homomorphism of $(R,S)$-bimodules $f: M \to N$ and every homomorphism $g: P \to N$, there exists a homomorphism $h: P \to M$ such that $f \circ h = g$.
+    \end{enumerate}
+
+    Being a projective bimodule is a strictly stronger condition than being projective as a left or right module. 
+    \begin{itemize}
+        \item A bimodule ${}_R P_S$ may be projective as a left $R$-module (i.e., projective in ${}_R\mathsf{Mod}$) without being a projective bimodule.
+        \item Similarly, it may be projective as a right $S$-module (i.e., projective in $\mathsf{Mod}_S$) without being a projective bimodule.
+        \item A bimodule that is projective on both sides is sometimes called \hldef{biprojective}, but this does not imply it is a projective object in ${}_R\mathsf{Mod}_S$. For example, if $R=S=\mathbb{Z}$, the bimodule $\mathbb{Z}$ is free (hence projective) on both sides, but it is \textit{not} a projective $(\mathbb{Z}, \mathbb{Z})$-bimodule because $\mathbb{Z}$ is not a projective $\mathbb{Z}[\mathbb{Z}]$-module (the augmentation ideal is not projective).
+    \end{itemize}
+\end{definition}

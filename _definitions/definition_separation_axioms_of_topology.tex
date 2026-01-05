@@ -1,0 +1,17 @@
+\begin{definition}[Separation axioms] \label{definition:separation_axioms_of_topology}
+Let $(X,\mathcal{T})$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}.
+\begin{itemize}
+  \item $(X,\mathcal{T})$ is \hldef{T$_0$} (\hldef{Kolmogorov}) if for every pair of distinct points $x, y \in X$, there exists an open set $U \in \mathcal{T}$ such that, without loss of generality, $x \in U$ and $y \notin U$.
+  \item $(X,\mathcal{T})$ is \hldef{T$_1$} (\hldef{Fréchet}) if for every pair of distinct points $x, y \in X$, there exist open sets $U, V \in \mathcal{T}$ such that $x \in U$, $y \notin U$, and $y \in V$, $x \notin V$.
+  \item $(X,\mathcal{T})$ is \hldef{T$_2$} or \hldef{Hausdorff} if for every pair of distinct points $x, y \in X$, there exist disjoint open sets $U, V \in \mathcal{T}$ such that $x \in U$ and $y \in V$.
+  \item $(X,\mathcal{T})$ is \hldef{regular} if it is T$_1$ and for each point $x \in X$ and closed set $F \subseteq X$ with $x \notin F$, there exist disjoint open sets $U, V \in \mathcal{T}$ such that $x \in U$ and $F \subseteq V$.
+  \item $(X,\mathcal{T})$ is \hldef{T$_3$} (regular Hausdorff) if it is T$_1$ and regular.
+  \item $(X,\mathcal{T})$ is \hldef{completely regular} if for each closed set $F \subseteq X$ and $x \notin F$, there exists a continuous function $f : X \to [0,1]$ such that $f(x) = 0$ and $f|_F = 1$.
+  \item $(X,\mathcal{T})$ is \hldef{T$_{3\frac{1}{2}}$} (completely regular Hausdorff) if it is T$_1$ and completely regular.
+  \item $(X,\mathcal{T})$ is \hldef{normal} if it is T$_1$ and for each pair of disjoint closed sets $A, B \subseteq X$, there exist disjoint open sets $U, V \in \mathcal{T}$ such that $A \subseteq U$ and $B \subseteq V$.
+  \item $(X,\mathcal{T})$ is \hldef{T$_4$} (normal Hausdorff) if it is T$_1$ and normal.
+   \item $(X,\mathcal{T})$ is \hldef{T$_5$} (completely normal Hausdorff) if it is T$1$ and completely normal.
+    \item $(X,\mathcal{T})$ is \hldef{perfectly normal} if every closed set is a \CrefAndHyperrefIfExist{definition:G_delta_set_and_F_sigma_set_of_a_topological_space}{$G\delta$} (\CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{countable} intersection of open sets) and the space is normal.
+    \item $(X,\mathcal{T})$ is \hldef{T$_6$} (perfectly normal Hausdorff) if it is T$_1$ and perfectly normal.
+\end{itemize}
+\end{definition}

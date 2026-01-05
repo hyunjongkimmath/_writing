@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:category_of_modules_and_bimodules_over_rings}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}.     
+    \begin{enumerate}
+        \item The \hldef{category of $(R,S)$-bimodules} (or $R$-$S$-bimodules), denoted by \hl{${}_R\mathsf{Mod}_S$}, is the category whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R,S)$-bimodules} and whose \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-$S$-bimodule homomorphisms}.
+
+        \item The \hldef{category of left $R$-modules}, denoted by \hl{${}_R\mathsf{Mod}$}, is the category ${}_R\mathsf{Mod}_\bbZ$, i.e. the category whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $R$-linear maps}.
+
+        \item The \hldef{category of right $R$-modules}, denoted by \hl{${}_R\mathsf{Mod}$}, is the category ${}_R\mathsf{Mod}_\bbZ$, i.e. the category whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $R$-linear maps}.
+    \end{enumerate}
+
+    The category of bimodules can be canonically identified with module categories over \CrefAndHyperrefIfExist{definition:tensor_product_of_a_ring_and_an_algebra_over_a_ring}{tensor product rings}:
+    \begin{itemize}
+        \item ${}_R\mathsf{Mod}_S$ is isomorphic to the category of left modules over the ring $R \otimes_{\mathbb{Z}} S^{\operatorname{op}}$.
+        \item ${}_R\mathsf{Mod}_S$ is isomorphic to the category of right modules over the ring $R^{\operatorname{op}} \otimes_{\mathbb{Z}} S$.
+    \end{itemize}
+    Consequently, standard module-theoretic concepts (such as projective objects, injective objects, and flat objects) in ${}_R\mathsf{Mod}_S$ correspond exactly to the respective concepts in ${}_{R \otimes S^{\operatorname{op}}}\mathsf{Mod}$.
+
+    % \paragraph{Relation to One-Sided Modules.}
+    Note that there are canonical isomorphisms of categories:
+    \[
+        {}_R\mathsf{Mod} \cong {}_R\mathsf{Mod}_{\mathbb{Z}} \quad \text{and} \quad \mathsf{Mod}_S \cong {}_{\mathbb{Z}}\mathsf{Mod}_S.
+    \]
+    That is, left $R$-modules are exactly $(R, \mathbb{Z})$-bimodules, and right $S$-modules are exactly $(\mathbb{Z}, S)$-bimodules.
+\end{definition}

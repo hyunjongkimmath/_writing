@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:affine_groupoid_scheme_over_a_scheme}
+Let $S$ be a scheme.
+
+An \hldef{affine groupoid scheme over $S$} (or simply an \hldef{affine groupoid over $S$}) is a \CrefAndHyperrefIfExist{definition:groupoid_object_in_a_category}{groupoid object} in the category of schemes \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine} \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{over} $S$. Explicitly, it consists of a pair of $S$-schemes $(G_0, G_1)$ equipped with structural morphisms:
+\begin{itemize}
+    \item \hldef{Source} and \hldef{Target}: $s, t: G_1 \to G_0$,
+    \item \hldef{Identity}: $e: G_0 \to G_1$,
+    \item \hldef{Multiplication} (or composition): $m: G_1 \times_{s, G_0, t} G_1 \to G_1$,
+    \item \hldef{Inverse}: $i: G_1 \to G_1$,
+\end{itemize}
+such that:
+\begin{enumerate}
+    \item The structure morphisms $G_1 \to S$ and $G_0 \to S$ are \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine morphisms}.
+    \item The morphisms satisfy the standard axioms of a groupoid (associativity of $m$, unitality of $e$, invertibility via $i$).
+\end{enumerate}
+If $S = \operatorname{Spec}(R)$ for a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} $k$, then $G_0 = \operatorname{Spec}(A)$ and $G_1 = \operatorname{Spec}(H)$ for some commutative \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebras} $A$ and $H$, and the data is equivalent to a \CrefAndHyperrefIfExist{definition:hopf_algebroid_over_a_commutative_ring}{Hopf algebroid structure} on the pair $(A, H)$.
+\end{definition}

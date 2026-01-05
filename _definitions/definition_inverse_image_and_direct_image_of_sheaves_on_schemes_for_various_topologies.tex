@@ -1,0 +1,12 @@
+\begin{definition}  \label{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}
+    \TODO{think about if assumptions on the small site and $\calA$ are needed}
+Let $f : X \to Y$ be a morphism of schemes, and let $\mathbf{C}(X)$ and $\mathbf{C}(Y)$ be \CrefAndHyperrefIfExist{definition:big_site_on_the_category_of_schemes_over_a_scheme_and_small_site}{small sites} associated to $X$ and $Y$ respectively, equipped with any common Grothendieck topologies such as Zariski, étale, Nisnevich, fppf, fpqc, or crystalline. Let $\calA$ be a (large) category.
+
+\begin{enumerate}
+    \item Given a sheaf $\calG \in \operatorname{Sh}(\mathbf{C}(Y); \mathcal{A})$, the \hldef{inverse image} \hl{$f^* \calG$} along $f$ is defined to be the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image} of $\calG$ under the \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor} \CrefAndHyperrefIfExist{definition:continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism}{$f^{-1} : \mathbf{C}(Y) \to \mathbf{C}(X)$} on sites. In particular, it is an object of $\operatorname{Sh}(\mathbf{C}(X); \mathcal{A})$ and $f^*$ yields a functor
+    $$f^* : \operatorname{Sh}(\mathbf{C}(Y); \mathcal{A}) \to \operatorname{Sh}(\mathbf{C}(X); \mathcal{A}),$$
+
+    \item Given a sheaf $\calF \in \operatorname{Sh}(\mathbf{C}(X); \mathcal{A})$, the \hldef{direct image} \hl{$f_* \calF$} along $f$ is defined to be the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} of $\calF$ under the \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor} \CrefAndHyperrefIfExist{definition:continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism}{$f^{-1} : \mathbf{C}(Y) \to \mathbf{C}(X)$} on sites. In particular, it is an object of $\operatorname{Sh}(\mathbf{C}(Y); \mathcal{A})$ if it exists. If $f_* \calF$ exists for all sheaves $\calF \in \operatorname{Sh}(\mathbf{C}(X); \mathcal{A})$, then $f_*$ yields a functor
+    $$f_* : \operatorname{Sh}(\mathbf{C}(X); \mathcal{A}) \to \operatorname{Sh}(\mathbf{C}(Y); \mathcal{A}).$$
+\end{enumerate}
+\end{definition}

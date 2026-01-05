@@ -1,0 +1,14 @@
+\begin{definition}[Product of Sets] \label{definition:product_of_sets}
+Let $I$ be a (possibly \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{infinite} but \CrefAndHyperrefIfExist{definition:small_set}{small}) index set and let $\{A_i\}_{i \in I}$ be a family of sets indexed by $I$.  
+The \hldef{Cartesian product of the family $\{A_i\}_{i \in I}$}, denoted by \hl{$\prod_{i \in I} A_i$}, is defined as the set of all tuples/\CrefAndHyperrefIfExist{definition:function_of_sets}{functions}
+$$ \prod_{i \in I} A_i := \{ (a_i)_{i \in I} \mid a_i \in A_i \text{ for all } i \in I \}, $$
+where $(a_i)_{i \in I}$ denotes a function from $I$ to $\bigcup_{i \in I} A_i$ such that $(a_i)_{i \in I}(i) = a_i \in A_i$ for each $i \in I$.  
+
+\TextIfExists{definition:category_of_sets}{
+The Cartesian product $\prod_{i \in I} A_i$ is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} of the objects $A_i$ in the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}.
+}
+
+The self product of a set $A$ indexed by $I$ is often denoted by \hl{$A^I$}. Note that elements of $A^I$ can be identified with \CrefAndHyperrefIfExist{definition:function_of_sets}{functions} $I \to A$. The finite self product of $A$ taken $n$ times is often denoted by \hl{$A^n$}.
+For finitely many sets $A_1,\ldots,A_n$, their Cartesian product is denoted by \hl{$A_1 \times \cdots \times A_n$}. Elements of such a finite product may be written as $(a_1,\ldots,a_n)$.
+
+\end{definition}

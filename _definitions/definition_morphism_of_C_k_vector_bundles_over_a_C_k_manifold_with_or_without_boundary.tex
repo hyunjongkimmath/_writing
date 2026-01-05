@@ -1,0 +1,15 @@
+\begin{definition}[Morphism of $C^k$ vector bundles over a $C^k$ manifold with or without boundary] \label{definition:morphism_of_C_k_vector_bundles_over_a_C_k_manifold_with_or_without_boundary}
+Let $k \in \mathbb{N} \cup \{\infty\}$, let $M$ be a \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$ manifold with or without boundary}, and let
+$$ \pi_E : E \to M, \qquad \pi_F : F \to M $$
+be \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{$C^k$ vector bundles} of ranks $r_E$ and $r_F$ over $M$.
+A \hldef{morphism of $C^k$ vector bundles over $M$} (or a \hldef{$C^k$ vector bundle morphism covering the identity of $M$}) is a map $\Phi : E \to F$ satisfying:
+\begin{enumerate}
+  \item $\Phi$ is of class $C^k$ as a \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{map} between $C^k$ manifolds (with or without boundary); recall that $E$ has the structure of a $C^k$-manifold (\Cref{theorem:total_space_of_a_C_k_vector_bundle_is_a_C_k_manifold}),
+  \item $\pi_F \circ \Phi = \pi_E$ (i.e.\ $\Phi$ is fiber-preserving over the identity on $M$),
+  \item for each $x \in M$, the restriction
+  $$ \Phi_x := \Phi \big|_{E_x} : E_x \longrightarrow F_x $$
+  \CrefIfExists{definition:C_k_vector_bundle_on_C_k_manifold}
+  is a \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{linear map} of real vector spaces.
+\end{enumerate}
+In this situation $\Phi$ is also called a \hldef{bundle map} (of class $C^k$) from $E$ to $F$ over $M$.
+\end{definition}

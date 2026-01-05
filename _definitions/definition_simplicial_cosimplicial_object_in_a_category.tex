@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:simplicial_cosimplicial_object_in_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+    \begin{enumerate}
+        \item   
+        The \hldef{category of simplicial objects in $\mathcal{C}$}, commonly denoted by notations such as \hl{$\mathbf{s}\mathcal{C}$}, \hl{$\operatorname{Simp} \mathcal{C}$}, \hl{$\calC_\Delta$}, or \hl{$(\Delta^{\op})^{\calC}$} (cf. \Cref{definition:diagram_in_a_category_indexed_by_a_small_category}), or \hl{$\Deltaop C$}, is the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category}
+        $$ \mathbf{s}\mathcal{C} := \mathbf{Fun}(\Delta^{\mathrm{op}}, \mathcal{C}).$$
+        \CrefIfExists{definition:opposite_category_of_a_category} \CrefIfExists{definition:simplex_category} In particular, a morphism between objects $X,Y:\Delta^{\op} \to \calC$ in this category is a natural transform $X \Rightarrow Y$ from $X$ to $Y$ as functors. 
+
+        An object $X$ of $\mathbf{s}\mathcal{C}$ is called a \hldef{simplicial object of $\mathcal{C}$}, and, by \CrefAndHyperrefIfExist{definition:functor_between_categories}{definition}, consists of a family of objects $\{X_n\}_{n \ge 0}$ in $\mathcal{C}$ together with morphisms
+        $$ X(\theta) : X_n \to X_m, \quad \text{for each } \theta : [m] \to [n] \text{ in } \Delta, $$
+        satisfying the functoriality conditions
+        $$ X(\mathrm{id}_{[n]}) = \mathrm{id}_{X_n}, \qquad X(\theta \circ \psi) = X(\psi) \circ X(\theta).  $$
+
+        \item Dually, the \hldef{category of cosimplicial objects in $\mathcal{C}$}, commonly denoted by notatoins such as \hl{$\mathbf{c}\mathcal{C}$}, \hl{$\operatorname{Cosimp} \mathcal{C}$}, or \hl{$\Delta^{\calC}$} (cf. \Cref{definition:diagram_in_a_category_indexed_by_a_small_category}) is the functor category
+        $$
+        \mathbf{c}\mathcal{C} := \mathbf{Fun}(\Delta, \mathcal{C}).
+        $$
+        In particular, a morphism between objects $X,Y:\Delta \to \calC$ in this category is a natural transform $X \Rightarrow Y$ from $X$ to $Y$ as functors. 
+
+        An object $Y$ of $\mathbf{c}\mathcal{C}$ is called a \hldef{cosimplicial object of $\mathcal{C}$}, and consists of a family of objects $\{Y^n\}_{n \ge 0}$ in $\mathcal{C}$ together with morphisms
+        $$
+        Y(\theta) : Y^m \to Y^n, \quad \text{for each } \theta : [m] \to [n] \text{ in } \Delta,
+        $$
+        satisfying the functoriality conditions
+        $$
+        Y(\mathrm{id}_{[n]}) = \mathrm{id}_{Y^n}, \qquad Y(\theta \circ \psi) = Y(\theta) \circ Y(\psi).
+        $$
+    \end{enumerate}
+For instance, a \hldef{(co)simplicial set, group, topological space, ring, etc.} refers to a (co)simplicial object in the category of sets, of groups, of topological spaces, of rings, etc. and such categories are denoted by notations such as \hl{$\Sets_\Delta$}, \hl{$\mathbf{Grps}_\Delta$}, \hl{$\mathbf{Top}_\Delta$}, \hl{$\mathbf{Rings}_\Delta$}, etc. Accordingly, a \hl{(co)simplicial map} between such (co)simplicial objects refers to a morphism in the appropriate (co)simplicial category.
+
+If $\mathcal{C}$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}, then both $\mathbf{s}\mathcal{C}$ and $\mathbf{c}\mathcal{C}$ are locally small as well.
+\end{definition}

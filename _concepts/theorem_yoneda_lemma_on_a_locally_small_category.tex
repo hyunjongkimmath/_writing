@@ -1,0 +1,29 @@
+\begin{theorem}[Yoneda Lemma] \label{theorem:yoneda_lemma_on_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. Let $A$ be an object of $\mathcal{C}$, and let $F: \mathcal{C} \to \mathbf{Set}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{covariant functor} to the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}. Let $h^A: \mathcal{C} \to \mathbf{Set}$ denote the covariant \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable functor} defined by $h^A(X) = \operatorname{Hom}_{\mathcal{C}}(A, X)$.
+
+There exists a bijection
+$$y_{A, F} : \operatorname{Nat}(h^A, F) \xrightarrow{\cong} F(A)$$
+between the set of \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} from $h^A$ to $F$ and the set $F(A)$. This bijection is given by the mapping
+$$\alpha \mapsto \alpha_A(\operatorname{id}_A),$$
+where $\alpha: h^A \to F$ is a natural transformation, $\alpha_A: h^A(A) \to F(A)$ is its component at $A$, and $\operatorname{id}_A \in h^A(A) = \operatorname{Hom}_{\mathcal{C}}(A, A)$ is the identity morphism.
+
+Furthermore, this isomorphism is natural in both $A$ and $F$. Explicitly:
+\begin{enumerate}
+    \item For any morphism $f: A \to B$ in $\mathcal{C}$, the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        \operatorname{Nat}(h^B, F) \arrow[r, "y_{B,F}"] \arrow[d, "-\circ h^f"'] & F(B) \arrow[d, "F(f)"] \\
+        \operatorname{Nat}(h^A, F) \arrow[r, "y_{A,F}"] & F(A)
+    \end{tikzcd}
+    \end{center}
+    where $h^f: h^B \to h^A$ is the natural transformation induced by pre-composition with $f$.
+
+    \item For any natural transformation $\eta: F \to G$, the following diagram commutes:
+    \begin{center}
+    \begin{tikzcd}[row sep=large, column sep=large]
+        \operatorname{Nat}(h^A, F) \arrow[r, "y_{A,F}"] \arrow[d, "\eta \circ -"'] & F(A) \arrow[d, "\eta_A"] \\
+        \operatorname{Nat}(h^A, G) \arrow[r, "y_{A,G}"] & G(A)
+    \end{tikzcd}
+    \end{center}
+\end{enumerate}
+\end{theorem}

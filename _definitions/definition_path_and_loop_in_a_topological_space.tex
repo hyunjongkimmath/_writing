@@ -1,0 +1,10 @@
+\begin{definition}[Path in a topological space] \label{definition:path_and_loop_in_a_topological_space}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $x_0,x_1 \in X$, and let $[0,1] \subset \mathbb{R}$ be the closed unit interval equipped with the subspace topology from $\mathbb{R}$.
+\begin{enumerate}
+    \item A \hldef{path in $X$ from $x_0$ to $x_1$} is a continuous map $\gamma : [0,1] \to X$ such that $\gamma(0) = x_0$ and $\gamma(1) = x_1$.
+    More generally, a \hldef{path in $X$} is a path from some point $x_0 \in X$ to some point $x_1 \in X$ in this sense.
+
+    \item A \hldef{loop in $X$ based at $x_0 \in X$} is a path $\gamma : [0,1] \to X$ in $X$ from $x_0$ to $x_0$, that is, a continuous map $\gamma$ such that $\gamma(0) = \gamma(1) = x_0$.
+    When a basepoint $x_0$ is fixed and understood from the context, a \hldef{loop in $X$} means a loop in $X$ based at this chosen basepoint.
+\end{enumerate}
+\end{definition}

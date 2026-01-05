@@ -1,0 +1,31 @@
+
+\begin{definition}[Pullback (inverse image) of a sheaf] \label{definition:inverse_image_of_a_sheaf_on_a_topological_space}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $\calD$ be a category  with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object}.
+    
+    \begin{enumerate}
+        \item  Let $\mathcal{G}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $Y$ valued in a $\calD$}.  
+        The \hldef{pullback} or \hldef{inverse image presheaf} 
+        \hl{$f^{-1} \mathcal{G}$} on $X$ is defined as the presheaf 
+        $$U \mapsto \varinjlim_{V \supseteq f(U)} \mathcal{G}(V)$$
+        where $U$ ranges over open subsets of $X$ and the colimit is taken over all open subsets $V \subseteq Y$ containing $f(U)$.  
+        \TextIfExists{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{This construction admits a natural isomorphism
+        $$(f^{-1}\mathcal{G})_x \to \mathcal{G}_{f(x)}$$
+        of \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks} for every $x \in X$.}  
+
+        \item 
+        If $\calG$ is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} valued in $\calD$, then we can define the \hldef{pullback} or \hldef{inverse image sheaf} \hl{$f^* \calG$} on $X$ as the \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheaf associated to the presheaf} $f^{-1} \calG$, assuming it exists.
+        \TextIfExistsElse{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{
+
+            Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} exists, one may equivalently define $f^* \calG$ via \Cref{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism} --- More concretely, $f^* \calG$ is the following equivalent constructions:
+            \begin{itemize}
+                \item The \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} $(f^{-1})_s \calG$ of $\calG$ under the continuous functor $f^{-1}: \operatorname{Open} Y \to \operatorname{Open} X, \quad W \mapsto f^{-1}(W)$\CrefIfExists{definition:site_of_opens_on_a_topological_space}\CrefIfExists{definition:continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map}. 
+
+                \item The \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image} of $\calG$ under the \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $\operatorname{Open} X \to \operatorname{Open} Y$ whose underlying \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor} is $f^{-1}$
+
+            \end{itemize}
+            
+        }{
+        }
+
+    \end{enumerate}
+\end{definition}

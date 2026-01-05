@@ -1,0 +1,20 @@
+
+\begin{definition}[{cf. \cite[Definition 10.5.1]{weibel}}] \label{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories}
+    Let $\calA$ and $\calB$ be abelian categories. Let $F: K(\calA) \to K(\calB)$\CrefIfExists{definition:homotopy_category_of_chain_complexes_of_an_additive_category} be an \hyperrefIfExists{definition:exact_functor_between_triangulated_categories}{exact functor}\CrefIfExists{definition:exact_functor_between_triangulated_categories} of triangulated categories. Write $q_{\calA}: K(\calA) \to D(\calA)$ and $q_{\calB}: K(\calB) \to D(\calB)$ for the localization functors\CrefIfExists{definition:derived_category_of_an_abelian_category}, 
+    \begin{enumerate}
+        \item  A \hldef{(total) right derived functor on $F$ on $K(\calA)$} is an exact functor \hl{$RF: D(\calA) \to D(\calB)$} together with a natural transformation 
+        $$\xi: q_{\calB} F \Rightarrow (RF)q_{\calA},$$
+        which is universal in the sense that if $G: D(\calA) \to D(\calB)$ is another morphism equipped with a natural transformation $\zeta: q_{\calB} F \Rightarrow G q_{\calA}$, then there exists a unique natural transformation $\eta: RF \Rightarrow G$ so that $\zeta_A = \eta_{q_{\calA} A} \circ \xi_A$ for all $A$ in $K(\calA)$.
+
+        \item Dually, a \hldef{(total) left derived functor on $F$ on $K(\calA)$} is an exact functor \hl{$LF: D(\calA) \to D(\calB)$} together with a natural transformation 
+        $$\xi: (LF) q_{\calA} \Rightarrow q_{\calB} F,$$
+        which is universal in the sense that if $G: D(\calA) \to D(\calB)$ is another exact functor equipped with a natural transformation $\zeta: G q_{\calA} \Rightarrow q_{\calB} F$, then there exists a unique natural transformation $\eta: G \Rightarrow LF$ such that
+        \[
+        \zeta_A = \xi_A \circ \eta_{q_{\calA} A}
+        \]
+        for all $A$ in $K(\calA)$.
+    \end{enumerate}
+    The universal properties guarantee that if the total derived functors exist, then they are unique up to natural isomorphism, and that 
+
+    These definitions/ideas may be extended to exact functors $K^{?}(\calA) \to K(\calB)$ for $? \in \{+,-,b\}$ and to exact functors $K^{?,??}(\calA) \to K(\calB)$ for $? \in \{\infty, +,-,b\}$ and $?? \in \{+,-,b,(\text{blank})\}$\CrefIfExists{definition:homotopy_category_of_chain_complexes_of_an_additive_category}
+\end{definition}

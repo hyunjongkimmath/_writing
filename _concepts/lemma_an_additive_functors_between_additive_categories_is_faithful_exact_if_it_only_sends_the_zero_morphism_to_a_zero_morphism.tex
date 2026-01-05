@@ -1,0 +1,9 @@
+\begin{lemma} \label{lemma:an_additive_functors_between_additive_categories_is_faithful_exact_if_it_only_sends_the_zero_morphism_to_a_zero_morphism}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:additive_category}{additive categories}. The functor $F$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} if and only if for any morphism $f$ in $\calA$, we have $F(f) = 0$ exactly when $f = 0$.
+\end{lemma}
+
+\begin{proof}
+    To say that $F$ is faithful means that for every pair of objects $X$ and $Y$ in $\calA$, the induced \CrefAndHyperrefIfExist{definition:group}{abelian group} \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}
+    $$F_{X,Y}: \Hom_\calA(X,Y) \to \Hom_\calB(F(X), F(Y))$$
+    on the Hom-sets is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}. Equivalently, this means that for every morphism $f: X \to Y$ in $\calA$, we have $F(f) = 0$ if and only if $f = 0$.
+\end{proof}

@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:measure_on_a_measurable_space_and_measure_space}
+    Let $(X, \calA)$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measure_space}{measurable space}.
+    A function $\mu : \mathcal{A} \to [0,\infty]$ is called a \hldef{measure on $(X,\mathcal{A})$} if:
+    \begin{enumerate}
+    \item $\mu(\varnothing) = 0$,
+    \item for every sequence $(A_n)_{n\ge 1}$ of pairwise disjoint sets in $\mathcal{A}$, one has
+    \[
+    \mu\Bigl(\bigcup_{n=1}^\infty A_n\Bigr) = \sum_{n=1}^\infty \mu(A_n).
+    \]
+    \end{enumerate}
+    The triple $(X,\mathcal{A},\mu)$ is then called a \hldef{measure space}.
+\end{definition}

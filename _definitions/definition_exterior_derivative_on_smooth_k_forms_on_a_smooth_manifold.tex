@@ -1,0 +1,22 @@
+\begin{definition}\label{definition:exterior_derivative_on_smooth_k_forms_on_a_smooth_manifold}
+Let $k \in \bbZ_{\geq 2} \cup \{\infty\}$, let $M$ be a $n$-dimensional \hyperrefIfExists{definition:C_k_manifold}{$C^k$ manifold} with or without boundary, and let $U \subseteq M$ be open.
+
+For each $0 \leq m$, the \hldef{exterior derivative} is a map
+$$\hlin{d: \Omega^m(U) \to \Omega^{m+1}(U)}$$
+with $\Omega^m(U)$ and $\Omega^{m+1}(U)$ consisting of \CrefAndHyperrefIfExist{definition:C_k_vector_bundle_on_C_k_manifold}{$C^{k-1}$-sections} of $\Omega^m M$ and $\Omega^{m+1} M$ over $U$ respectively\CrefIfExists{definition:bundle_of_k_forms_n_smooth_manifold}; we note however, that the range of $d$ consists of $C^{k-2}$-sections of $\Omega^{m+1} M$. The exterior derivative is the unique $\mathbb{R}$-linear map satisfying:
+\begin{itemize}
+    \item For any function $f \in C^{k-1}(U) = \Omega^0(U)$, the exterior derivative $df \in \Omega^1(U)$ is the usual differential of $f$: for every smooth vector field $X$ on $U$,
+    \[ df(X) = X(f), \]
+    and, in local coordinates $(x^1, \ldots, x^n)$,
+    \TODO{partial derivatives}
+    \[ df = \frac{\partial f}{\partial x^1} dx^1 + \cdots + \frac{\partial f}{\partial x^n} dx^n.  \]
+
+    \item For all $\omega \in \Omega^m(U)$, $\eta \in \Omega^n(U)$,
+    \[ d(\omega \wedge \eta) = d\omega \wedge \eta + (-1)^m \omega \wedge d\eta \]
+    (graded Leibniz rule).
+
+    \item Assuming that $k \geq 3$, for all $\omega \in \Omega^m(U)$,
+    \[ d(d\omega) = 0.  \]
+\end{itemize}
+Moreover, if $\omega \in \Omega_c^m(U)$, then $d\omega \in \Omega_c^{m+1}(U)$, i.e., the exterior derivative preserves \CrefAndHyperrefIfExist{definition:support_of_a_section_of_a_C_k_vector_bundle_over_a_C_k_manifold}{compactly supported forms}.
+\end{definition}

@@ -1,0 +1,35 @@
+
+\begin{definition}[Left and Right Group Actions] \label{definition:left_and_right_group_actions_on_a_set}
+Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $X$ be a set. 
+
+\begin{enumerate}
+    \item A \hldef{left group action of $G$ on $X$} is a function
+    $$\hlin{\varphi : G \times X \to X}$$
+    such that for all $g,h \in G$ and all $x \in X$,
+    \begin{align*}
+    \varphi(e, x) &= x, \\
+    \varphi(gh, x) &= \varphi(g, \varphi(h, x)).
+    \end{align*}
+    For $g \in G$ and $x \in X$, the element $\varphi(g,x)$ is called the \hldef{image of $x$ under the action of $g$}.
+    We often write \hl{$g \cdot x$} for $\varphi(g,x)$.
+    
+    If $G$ acts on $X$ on the left via a function $\varphi : G \times X \to X$, we write
+    $$\hlin{G \curvearrowright X}.$$
+
+
+
+    \item A \hldef{right group action of $G$ on $X$} is a function
+    $$\hlin{\psi : X \times G \to X}$$
+    such that for all $g,h \in G$ and all $x \in X$,
+    \begin{align*}
+    \psi(x, e) &= x, \\
+    \psi(x, gh) &= \psi(\psi(x,g), h).
+    \end{align*}
+    For $x \in X$ and $g \in G$, the element $\psi(x,g)$ is called the \hldef{image of $x$ under the right action of $g$}.
+    We often write \hl{$x \cdot g$} for $\psi(x,g)$.
+
+    If $G$ acts on $X$ on the right via a function $\psi : X \times G \to X$, we write
+    $$\hlin{X \curvearrowleft G}.$$
+
+\end{enumerate}
+\end{definition}

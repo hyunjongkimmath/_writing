@@ -1,0 +1,18 @@
+\begin{definition}[n-ary Functor of \(\mathcal{V}\)-Enriched Categories] \label{definition:n_ary_functor_of_categories_enriched_in_a_monoidal_category}
+Let \(\mathcal{V}\) be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category} that is closed under finite \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}, and let \(I\) be a finite set with \(|I|=n\). Suppose \(\{\mathcal{C}_i\}_{i \in I}\) are \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{$\mathcal{V}$-enriched categories}, and \(\mathcal{D}\) is another \(\mathcal{V}\)-enriched category. An \hldef{$n$-ary enriched functor} (or \hldef{multivariable enriched functor}) from \(\{\mathcal{C}_i\}_{i\in I}\) to \(\mathcal{D}\) is a \CrefAndHyperrefIfExist{definition:enriched_functor_between_categories_enriched_in_a_}{$\mathcal{V}$-enriched functor}
+\[ F : \prod_{i \in I} \mathcal{C}_i \to \mathcal{D}, \]
+where \(\prod_{i\in I} \mathcal{C}_i\) is the \CrefAndHyperrefIfExist{definition:product_of_categories_enriched_in_a_monoidal_category}{$\mathcal{V}$-enriched product category}. 
+
+That is, \(F\) assigns:
+\begin{itemize}
+    \item to each object \(((A_i)_{i \in I})\) in \(\prod_{i \in I} \mathcal{C}_i\), an object \(F((A_i)_{i \in I})\) in \(\mathcal{D}\),
+    \item to each family of objects \(( (A_i)_i, (B_i)_i )\), a morphism in \(\mathcal{V}\)
+    \[
+    F_{(A_i),(B_i)} : \prod_{i\in I} \mathcal{C}_i(A_i,B_i) \to \mathcal{D}(F((A_i)_i), F((B_i)_i)),
+    \]
+    respecting the enriched composition and unit axioms.
+\end{itemize}
+
+When \(n=2\), an $n$-ary enriched functor is called a \emph{bifunctor} enriched over \(\mathcal{V}\), etc.
+
+\end{definition}

@@ -1,0 +1,237 @@
+%notation% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+The purpose of this document is to compile common notions in basic topology.
+
+\section{Basic topolgy}
+
+\subsection{Topological spaces}
+
+\input{../_definitions/definition_topological_space.tex}
+
+\subsubsection{Basis of a topological space}
+
+\input{../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_basis_for_a_topology.tex}
+\input{../_definitions/definition_first_and_second_countable_topological_space.tex}
+
+\subsubsection{Separation axioms}
+\input{../_definitions/definition_G_delta_set_and_F_sigma_set_of_a_topological_space.tex}
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+
+\subsubsection{Subspaces of a topological space}
+
+\input{../_definitions/definition_subspace_of_a_topological_space.tex}
+\input{../_conventions/convention_subset_of_a_topological_space_is_usually_considered_as_a_subspace.tex}
+\input{../_definitions/definition_discrete_topological_space_of_a_set.tex}
+\input{../_definitions/definition_trivial_topological_space_of_a_set.tex}
+
+\input{../_definitions/definition_closure_of_a_subspace_of_a_topological_space.tex}
+
+\subsection{Properties of topological spaces}
+\input{../_definitions/definition_dense_subset_of_a_topological_space.tex}
+\input{../_definitions/definition_connected_topological_space.tex}
+
+\subsubsection{Compact topological spaces}
+\input{../_definitions/definition_compact_topological_space.tex}
+
+Here is an alternate, essentially equivalent definition, of compactness: 
+\input{../_definitions/definition_compact_subset_of_a_topological_space_alternate_definition.tex}
+\begin{proposition}
+ Let $(X, \mathcal{T})$ be a \hyperrefIfExists{definition:topological_space}{topological space}. A \hyperrefIfExists{definition:subspace_of_a_topological_space}{subspace} $K \subseteq X$ is compact in the sense of \Cref{definition:compact_subset_of_a_topological_space_alternate_definition} if and only if the space $K$ is compact in the sense of \Cref{definition:compact_topological_space}.
+\end{proposition}
+
+\input{../_definitions/definition_locally_compact_topological_space.tex}
+
+% Definition: Boundary and interior of a subset
+\input{../_definitions/definition_interior_and_boundary_of_topological_space.tex}
+
+
+\subsection{Continuous maps of topological spaces}
+
+% Definition: Continuous map
+\input{../_definitions/definition_continuous_map_of_topological_spaces.tex}
+
+
+% Definition: Homeomorphism
+\input{../_definitions/definition_homeomorphism_of_topological_spaces.tex}
+
+\input{../_definitions/definition_pointed_topological_space.tex}
+
+\input{../_definitions/definition_preimage_of_a_subset_of_the_codomain_of_a_set_map.tex}
+
+\input{../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex}
+
+
+
+
+\subsection{Compactly generated}
+
+\input{../_definitions/definition_compactly_generated_topological_space.tex}
+
+\input{../_definitions/definition_weakly_hausdorff_topological_space.tex}
+
+
+
+\subsection{Metrics, absolute values, and norms}
+
+\subsubsection{Extended metric spaces}
+\input{../_definitions/definition_extended_metric_on_a_set.tex}
+\input{../_definitions/definition_isometry_between_extended_metric_spaces.tex}
+
+\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric.tex}
+
+
+\subsection{Convergence in extended metric spaces}
+
+\input{../_definitions/definition_convergence_and_limits_in_extended_metric_space.tex}
+\input{../_definitions/definition_cauchy_sequence_in_an_extended_metric_space.tex}
+\input{../_definitions/definition_complete_extended_metric_space.tex}
+
+\input{../_definitions/definition_completion_of_an_extended_metric_space.tex}
+
+\begin{proposition}
+Let $(X,d)$ be an \hyperrefIfExists{definition:extended_metric_on_a_set}{extended metric space}\CrefIfExists{definition:extended_metric_on_a_set}. A \hyperrefIfExists{definition:completion_of_an_extended_metric_space}{completion}\CrefIfExists{definition:completion_of_an_extended_metric_space} $(\widehat{X}, \widehat{d})$ of $(X,d)$ exists and is unique up to unique isometry. Moreover, if $(X,d)$ is a metric space, then so is $(\widehat{X}, \widehat{d})$.
+\end{proposition}
+\begin{proof}
+    \TODO: actually complete this proof
+Let $\calC$ be the set of all Cauchy sequences in \((X,d)\):
+\[
+\mathcal{C} = \{(x_n)_{n \in \mathbb{N}} : (x_n) \text{ is a Cauchy sequence in } (X,d)\},
+\]
+and define a relation \(\sim\) on \(\mathcal{C}\) by
+\[ (x_n) \sim (y_n) \iff \lim_{n \to \infty} d(x_n, y_n) = 0.  \]
+This relation is well-defined and in fact an equivalence relation. \TODO{Show that the relation is well-defined and an equivalence relation} Let \(\widehat{X} = \mathcal{C} / \sim\) and let \(\widehat{d} : \widehat{X} \times \widehat{X} \to [0, \infty]\) be defined by
+\[ \widehat{d}([(x_n)], [(y_n)]) := \lim_{n \to \infty} d(x_n, y_n).  \]
+This limit exists as a value in $[0,\infty]$ and is independent of representative sequences chosen. \TODO{Demonstrate why the limit exists and is well defined}
+
+It can be verified that \(\widehat{d}\) is an extended metric on \(\widehat{X}\) and that \((\widehat{X}, \widehat{d})\) is complete by construction.
+
+Define an embedding
+\[
+i : X \to \widehat{X}, \quad i(x) := [(x,x,x,\ldots)],
+\]
+which is an isometry:
+\[
+\widehat{d}(i(x), i(y)) = \lim_{n \to \infty} d(x,y) = d(x,y).
+\]
+
+Moreover, \(i(X)\) is dense in \(\widehat{X}\) because any equivalence class \([(x_n)]\) of a Cauchy sequence can be approximated arbitrarily closely by points \(i(x_n)\) in the image of \(X\).
+
+\bigskip
+
+\textbf{Uniqueness:}
+
+Suppose \((\widehat{X}', \widehat{d}')\) is another completion of \((X,d)\) with isometric embedding \(i' : X \to \widehat{X}'\).
+
+By the universal property of completions, there exists a unique isometry
+\[
+\Phi : \widehat{X} \to \widehat{X}'
+\]
+such that \(\Phi \circ i = i'\).
+
+The map \(\Phi\) is onto since \(i'(X)\) is dense in \(\widehat{X}'\) and \(\Phi\) preserves limits of Cauchy sequences.
+
+Therefore, \(\Phi\) is a unique isometry between the completions, and the completion is unique up to unique isometry.
+\end{proof}
+
+\subsubsection{Absolute values on fields}
+\input{../_definitions/definition_absolute_value_on_a_field.tex}
+
+\subsubsection{Norms on vector spaces over fields with absolute values}
+\input{../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+
+\subsubsection{Inner product on a vector space over the reals or complex numbers}
+\input{../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex}
+\input{../_definitions/definition_norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space.tex}
+
+\subsection{Euclidean space}
+
+% Notation: Euclidean n-space
+\input{../_definitions/definition_euclidean_n_space.tex}
+
+\section{Homotopy}
+
+The notions of homotopy have the following variants:
+\begin{enumerate}
+    \item Absolute, on unpointed spaces
+    \item Relative, on unpointed spaces
+    \item Absolute, on pointed spaces
+    \item Relative, on pointed spaces.
+\end{enumerate}
+
+\input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+
+\input{../_definitions/definition_homotopy_equivalence_between_topological_spaces.tex}
+
+\input{../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+
+\input{../_definitions/definition_homotopy_category_of_topological_spaces.tex}
+
+\input{../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex}
+
+\input{../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex}
+
+
+
+\input{../_definitions/definition_path_and_loop_in_a_topological_space.tex}
+
+
+
+\input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
+
+
+\input{../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex}
+
+\section{Singular homology and cohomology}
+
+\input{../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex}
+
+
+
+\input{../_definitions/definition_singular_simplex_of_a_topological_space.tex}
+
+\input{../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_a_commutative_ring_with_unity.tex}
+
+
+\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring.tex}
+
+\input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
+
+\input{../_definitions/definition_singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
+
+
+
+\input{../_definitions/definition_singular_cohomology_group_relative_singular_cohomology_group_of_topological_space_with_coefficients_in_a_commutative_ring.tex}
+
+
+
+
+
+\appendix
+\section{Set theory}
+
+\input{../_definitions/definition_countable_finite_uncountable_sets.tex}
+
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+
+\section{Category Theory}
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+
+\section{Group Theory}
+
+\input{../_definitions/definition_group.tex}
+\input{../_definitions/definition_group_homomorphism.tex}
+
+\section{Ring Theory}
+
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex}
+
+\section{Homological algebra}
+\input{../_definitions/definition_chain_complex_in_an_additive_category.tex}
+\input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex}

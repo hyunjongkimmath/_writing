@@ -1,0 +1,57 @@
+\begin{lemma}[Dimension shifting, cf. {\cite[Exercise 2.4.3]{weibel}}] \label{lemma:dimension_shifting_lemma_for_acyclic_syzygies}
+    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Let $A$ be an object of $\calA$. 
+    \begin{enumerate}
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}. 
+        \begin{enumerate}
+
+            \item Suppose that $0 \to M \to C \to A \to 0$ is an exact sequence in $\calA$ where $C$ is $F$-acyclic, and that $A$ and $M$ have \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions}. We have $L_i F(A) \cong L_{i-1} F(M)$ for $i \geq 2$ and $L_1 F(A) \cong \ker(F(M) \to F(C))$.  
+
+            \item Suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}.
+            Let
+            $$0 \to M_m \to C_m \to C_{m-1} \to \cdots \to C_0 \to A \to 0$$
+            be an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complex} with the $C_i$ \CrefAndHyperrefIfExist{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic}. We have
+            % and such that $M_m$ has a projective resolution. We have 
+            \begin{enumerate}
+                \item $L_i F(A) \cong L_{i-m-1} F(M_m)$ for $i \geq m+2$ and 
+                \item $L_{m+1} F(A) \cong \ker (F(M_m) \to F(C_m))$. 
+            \end{enumerate}
+
+
+        \end{enumerate}
+
+        \item \TODO{dual statement}
+
+    \end{enumerate}
+
+\end{lemma}
+
+\begin{proof}
+    \begin{enumerate}
+        \item Suppose that $F$ is right exact
+        \begin{enumerate}
+            \item Since $C$ is $F$-acyclic, the \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence of derived functors associated to} $0 \to M \to C \to A \to 0$ yields an exact sequence
+            $$0 \to L_1 F(A) \to F(M) \to F(C) \to F(A) \to 0$$
+            along with isomorphisms $L_{i} F(A) \cong L_{i-1} F(M)$ for $i \geq 2$. In particular, $L_1F(A) = \ker (F(M) \to F(C))$.
+
+            \item We now proceed by induction. The above proves the base case of $m = 0$. Associated to the acyclic complex
+            $$0 \to M_m \to C_m \to C_{m-1} \to \cdots \to C_0 \to A \to 0$$
+            is a short exact sequence
+            $$0 \to M_m \to C_m \to M_{m-1} \to 0$$
+            where $M_{m-1} = \operatorname{coker}(M_m \to C_{m})$ and an acyclic complex
+            $$0 \to M_{m-1} \to C_{m-1} \to \cdots \to C_0 \to A \to 0.$$  
+            The derived functor long exact sequence of the short exact sequence yields isomorphisms 
+            $$L_iF(M_{m-1}) \cong L_{i-1} F(M_m)$$
+            for all $i \geq 1$. By induction, we also have $L_iF(A) \cong L_{i-(m-1)-1} F(M_{m-1}) = L_{i-m} F(M_{m-1})$ for $i \geq m+1$, so we in fact have
+            $$L_i F(A) \cong L_{i-m} F(M_{m-1}) \cong L_{i-m-1} F(M_m)$$
+            for all $i \geq m+1$. Moreover, the derived functor long exact sequence also includes
+            $$0 \to L_1 F(M_{m-1}) \to F(M_m) \to F(C_m) \to F(M_{m-1}) \to 0,$$
+            so $L_1 F(M_{m-1}) \cong \ker (F(M_m) \to F(C_m))$. We found that $L_1F(M_{m-1}) \cong L_{m+1}F(A)$, so $L_{m+1} F(A)$ is the kernel of $F(M_m) \to F(C_m)$ as desired.
+        \end{enumerate}
+
+        \item  These hold dually.
+    \end{enumerate}
+
+    
+    
+    
+\end{proof}

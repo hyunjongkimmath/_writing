@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:diagonal_morphism_of_an_object_over_an_object_in_a_category}
+Let $\mathcal{C}$ be a category
+\begin{enumerate}
+    \item Let $X$ be an object in $\calC$. If the product $X \times X$ exists, then the \hldef{diagonal morphism of $X$} is the morphism
+    $$\hlin{\Delta_X: X \to X \times X}$$
+    induced by the universal property of $X \times X$ for the identity morphisms $\id_X: X \to X$ from $X$ to each of the first and second factors of $X$ in $X \times X$.
+    In other words, $\Delta_f$ is the unique morphism such that the following equalities hold:
+    $$ p_1 \circ \Delta_X = \operatorname{id}_X,\qquad p_2 \circ \Delta_X = \operatorname{id}_X $$
+    where $p_1, p_2 : X \times X \to X$ are the two canonical projections.
+    \item Let $f:X \to Z$ be a morphism in $\mathcal{C}$. If the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{cartesian product} $X \times_Z X$ exists, then the \hldef{diagonal morphism of $f$} is the morphism
+    $$ \hlin{\Delta_f = \Delta_X : X \to X \times_Z X} $$
+    induced by the universal property of $X \times_Z X$ for the identity morphisms $\id_X: X \to X$ from $X$ to each of the first and second factors of $X$ in $X \times_Z X$. In other words, $\Delta_f$ is the unique morphism such that the following equalities hold:
+    $$ p_1 \circ \Delta_f = \operatorname{id}_X,\qquad p_2 \circ \Delta_f = \operatorname{id}_X $$
+    where $p_1, p_2 : X \times X \to X$ are the two canonical projections.
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,29 @@
+\begin{theorem}[Tensor-Hom Adjunction for Bimodules] \label{theorem:tensor_hom_adjunction_for_bimodules_of_rings}
+    \
+    \begin{enumerate}
+        \item Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, let $N$ be an $S$-$T$ bimodule, and let $P$ be an $R$-$T$ bimodule. Then there is a natural isomorphism of abelian groups
+        $$ \operatorname{Hom}_{R\text{-}T}(M \otimes_S N,\, P) \;\;\cong\;\; \operatorname{Hom}_{S\text{-}T}(N,\, \operatorname{Hom}_R(M, P)) $$
+        \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}.
+        Note that $\operatorname{Hom}_{R\text{-}T}$ is the abelian group of $R$-$T$ bimodule homomorphisms, $\operatorname{Hom}_{S\text{-}T}$ is the abelian group of $S$-$T$ bimodule homomorphisms, and $\operatorname{Hom}_R(M,P)$ is endowed with the structure of an $S$-$T$ bimodule via
+        \begin{align*}
+        (s \cdot f)(m) &= f(m \cdot s), \\
+        (f \cdot t)(m) &= f(m) \cdot t,
+        \end{align*}
+        for all $s \in S$, $t \in T$, $f \in \operatorname{Hom}_R(M,P)$, $m \in M$.
+        \TextIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{Intuitively, this expresses that $M \otimes_S -$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to $\operatorname{Hom}_R(M,-)$ in the category of bimodules.}
+
+        \item Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, let $N$ be an $S$-$T$ bimodule, and let $P$ be an $R$-$T$ bimodule. Then there is a natural isomorphism of abelian groups
+        $$ \operatorname{Hom}_{R\text{-}T}(M \otimes_S N,\, P) \;\;\cong\;\; \operatorname{Hom}_{R\text{-}S}(M,\, \operatorname{Hom}_T(N, P)) $$
+        \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}.
+
+        Note that $\operatorname{Hom}_{R\text{-}T}$ is the abelian group of $R$-$T$ bimodule homomorphisms, $\operatorname{Hom}_{R\text{-}S}$ is the abelian group of $R$-$S$ bimodule homomorphisms, and $\operatorname{Hom}_T(N,P)$ is endowed with the structure of an $R$-$S$ bimodule via
+        \begin{align*}
+        (r \cdot f)(n) &= r \cdot f(n), \\
+        (f \cdot s)(n) &= f(n \cdot s),
+        \end{align*}
+        for all $r \in R$, $s \in S$, $f \in \operatorname{Hom}_T(N,P)$, and $n \in N$.
+
+        \TextIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{Intuitively, this expresses that $-\otimes N$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to $\operatorname{Hom}_T(N,-)$ in the category of bimodules.}
+
+    \end{enumerate}
+\end{theorem}

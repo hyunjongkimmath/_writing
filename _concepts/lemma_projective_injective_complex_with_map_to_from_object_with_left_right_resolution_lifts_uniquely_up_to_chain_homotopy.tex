@@ -1,0 +1,57 @@
+\begin{lemma}[cf. {\cite[Porism 2.2.7]{weibel}}] \label{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item Let
+        $$\cdots \to P_2 \to P_1 \to P_0 \to M \to 0$$
+        be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} with $P_i$ \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective}. For every \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} $Q_\bullet \to N$ of an object $N$, every map $M \to N$ lifts to a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex map} $P_\bullet \to Q_\bullet$ unique up to \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy}.
+
+        \item Let
+        $$0 \to M \to I^0 \to I^1 \to I^2 \to \cdots$$
+        be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{(co)chain complex} with $I^i$ \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}. For every \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolution} $N \to Q^\bullet$ of an object $N$, every map $N \to M$ lifts to a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex map} $Q^\bullet \to I^\bullet$ unique up to \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy}.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    \begin{enumerate}
+        \item The map $P_0 \to M \to N$ lifts to a map $P_0 \to Q_0$ because $P_0$ is projective and $Q_0 \to N$ is an epimorphism. 
+        Inductively suppose that there are morphisms $P_i \to Q_i$ for $0 \leq i \leq n$, where $n \geq 0$ that make 
+        \begin{center}
+        \begin{tikzcd}
+            P_n \ar[r] \ar[d] & P_{n-1} \ar[r] \ar[d] & \cdots \ar[r] & P_0 \ar[r] \ar[d] & M \ar[r] \ar[d] & 0 \\
+            Q_n \ar[r] & Q_{n-1} \ar[r] & \cdots \ar[r] & Q_0 \ar[r] & N \ar[r] & 0 \\
+        \end{tikzcd}
+        \end{center}
+        into a commuting diagram are established. The morphism $Q_{n} \to Q_{n-1}$ (where we let $Q_{-1} = N$ and $P_{-1} = M$ here in case that $n = 0$) acts as $0$ when restricted to \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{$\mathfrak{I} \coloneq \operatorname{im} (P_{n+1} \to P_n \to Q_n)$} because the composition 
+        $$P_{n+1} \to P_n \to Q_n \to Q_{n-1}$$
+        equals the composition 
+        $$P_{n+1} \to P_n \to P_{n-1} \to Q_{n-1}.$$
+        In other words, $\mathfrak{I}$ is a \CrefAndHyperrefIfExist{definition:subobject_of_an_object_of_an_additive_category}{subobject} of \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{$\ker(Q_n \to Q_{n-1})$}, which is isomorphic to $\operatorname{im}(Q_{n+1} \to Q_n)$ by the acyclicity of the sequence of the $Q_i$'s. Therefore, we have a map $P_{n+1} \twoheadrightarrow \mathfrak{I}\hookrightarrow \operatorname{im}(Q_{n+1} \to Q_n)$ along with an epimorphism $Q_{n+1} \twoheadrightarrow \operatorname{im}(Q_{n+1} \to Q_n)$. Since $P_{n+1}$ is projective, the former map lifts to a map $P_{n+1} \to Q_{n+1}$ in a way that is compatible with the latter, i.e. the following commutes:
+        \begin{center}
+        \begin{tikzcd}
+            P_{n+1} \ar[rd] \ar[d,dotted] & \\
+            Q_{n+1} \ar[r] & \operatorname{im}(Q_{n+1} \to Q_n).
+        \end{tikzcd}
+        \end{center}
+        By induction, this shows thta $M \to N$ lifts to a morphism $P_\bullet \to Q_\bullet$ of complexes.
+
+        We show that the morphism of complexes is unique up to chain homotopy, i.e. if $f_1, f_2: P_\bullet \to Q_\bullet$ are two morphisms of complexes, then $h \coloneq f_1 - f_2$ is null homotopic. We construct a \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain contraction} $\{s_n: P_n \to Q_{n+1}\}$ of $h$ by induction on $n$. If $n < 0$, then set $s_n = 0$. If $n = 0$, note that the composition $P_0 \xrightarrow{h_0} Q_0 \to N$ equals the composition $P_0 \to M \xrightarrow{0} N$, so $\operatorname{im}(h_0)$ is a subobject of $\ker(Q_0 \to N) \cong \operatorname{im}(Q_1 \to Q_0)$. The projectivitiy of $P_0$ thus yields a lift $s_0: P_0 \to Q_1$ such that $h_0$ equals the composition $P_0 \xrightarrow{s_0} X_1 \xrightarrow{d} Q_0$:
+        \begin{center}
+        \begin{tikzcd}
+           &  P_0 \ar[dl, "s_0", dotted] \ar[d, "h_0"] \\
+           Q_1 \ar[r, "d"] & Q_0 
+        \end{tikzcd}
+        \end{center}
+        Note moreover that $h_0 = ds_0 + s_{-1} d$ because $s_{-1} = 0$. Inductively suppose that we have maps $s_i$ for $i \leq n$  such that $h_n = d s_{n} + s_{n-1} d$ or equivalently that $ds_{n} = h_n - s_{n-1} d$. Consider the map $h_{n+1} - s_{n} d: P_{n+1} \to Q_{n+1}$. Compute
+        $$d(h_{n+1} - s_{n} d) = dh_{n+1} - d s_{n} d = dh_{n+1} - (h_n - s_{n-1}d)d = (dh_{n+1} - h_n d) + s_{n-1} d d = 0$$
+        Therefore, $\operatorname{im} (h_{n+1} - s_n d)$ is a subobject of $\ker(Q_{n+1} \to Q_{n}) \cong \operatorname{im}(Q_{n+2} \to Q_{n+1})$, which is in turn a quotient of $Q_{n+2}$. Since $P_{n+1}$ is projective, there is a morphism $s_{n+1}: P_{n+1} \to Q_{n+2}$ such that $d s_{n+1} = h_{n+1} - s_{n} d$. 
+        \begin{center}
+        \begin{tikzcd}
+           &  P_{n+1} \ar[dl, dotted, "s_{n+1}"] \ar[d, "h_n - s_{n-1} d = ds_{n}"] \\
+           Q_{n+2} \ar[r, "d"]  &\operatorname{im}(Q_{n+2} \to Q_{n+1}) \cong \ker(Q_{n+1} \to Q_{n})
+        \end{tikzcd}
+        \end{center}
+        The $s_n$ thus form a chain contraction as needed.
+
+        \item This is simply dual to the previous part.
+    \end{enumerate}
+\end{proof}

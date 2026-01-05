@@ -1,0 +1,30 @@
+\begin{proposition} \label{proposition:tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact}
+    Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Recall that categories of modules are \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}\CrefIfExists{theorem:the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star}.
+    
+    \begin{enumerate}
+        \item Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule}. The functor \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{$M \otimes_S -: {}_{S}\mathbf{Mod}_T \to {}_{R}\mathbf{Mod}_T$} is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact functor}.
+
+        \item Let $N$ be an $S$-$T$-bimodule. The functor $- \otimes_S N: {}_{R}\mathbf{Mod}_S \to {}_{R}\mathbf{Mod}_T$ is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact functor}.
+
+        \item Let $M$ be an $R$-$S$-bimodule. The functor
+        $$\Hom(M,-): {}_{R} \mathbf{Mod}_{T} \to {}_{S} \mathbf{Mod}_{T}$$
+        \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings} is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor}.
+
+        Now let $M$ be an $S$-$R$-bimodule. The functor
+        $$\Hom(M,-): {}_{T} \mathbf{Mod}_{R} \to {}_{S} \mathbf{Mod}_{T}$$
+        is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor}.
+
+        \item Let $N$ be an $R$-$T$-bimodule. The functor
+        $$\Hom(-,N): {}_{R} \mathbf{Mod}_{S}^{\op} \to {}_{S} \mathbf{Mod}_{T}$$
+        \CrefIfExists{definition:opposite_category_of_a_category} is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor}.
+
+        Now let $N$ be an $T$-$R$-bimodule. The functor
+        $$\Hom(-,N): {}_{S} \mathbf{Mod}_{R}^{\op} \to {}_{S} \mathbf{Mod}_{T}$$
+        is a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor}.
+
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    The right exactness of the tensor functors and the left exactness of $\Hom(M,-)$ follow from \Cref{theorem:tensor_hom_adjunction_for_bimodules_of_rings} and \Cref{proposition:left_right_adjoint_is_right_left_exact}.
+    \TODO{prove left exactness of $\Hom(-,N)$}.
+\end{proof}

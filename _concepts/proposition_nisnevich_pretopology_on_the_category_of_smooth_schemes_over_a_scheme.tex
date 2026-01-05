@@ -1,0 +1,12 @@
+\begin{proposition}[{\cite[Section 3 Proposition 1.1]{morel_voevodsky_1999}}] \label{proposition:nisnevich_pretopology_on_the_category_of_smooth_schemes_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian} scheme of finite \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension}. Let $X$ be a scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $S$ and let $\{U_i \to X\}$ be a finite family of \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale morphisms} in \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$\Sch/S$}. The following conditions are equivalent:
+    \TODO{residue field}
+    \begin{enumerate}
+        \item For any point $x$ of $X$ there is an $i$ and a point $u$ of $U_i$ over $x$ such that the corresponding morphism of residue fields is an isomorphism which maps to $x$ with the same residue field.
+        \item For any point $x \in X$, the morphism
+        $$\coprod_i (U_i \times_X \Spec \scrO_{X,x}^h) \to \Spec \scrO_{X,x}^h$$
+        of $S$-schemes admits a section.
+    \end{enumerate}
+
+    Moroever, the collection of families of \'etale morphisms $\{U_i \to X\}$ in $\Sm/S$ satisfying the equivalent conditions above forms a pretopology on \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{$\Sm/S$}.
+\end{proposition}

@@ -1,0 +1,21 @@
+\begin{theorem} \label{theorem:finite_etale_covers_of_a_connected_scheme_correspond_to_finite_sets_with_an_action_of_the_etale_fundamental_group}
+Let $S$ be a connected scheme with a chosen \hyperrefIfExists{definition:geometric_point_of_a_scheme}{geometric point} $\bar{s}$. 
+\begin{enumerate}
+    \item The functor
+    $$ X \mapsto \mathrm{Hom}_S(\bars, X).$$
+    is an equivalence of categories between the category of \hyperrefIfExists{definition:etale_morphism_of_schemes}{finite \'etale covers} of $S$ and the category of finite sets (equipped with the discrete topology) with a continuous (left) action of the \hyperrefIfExists{definition:etale_fundamental_group_of_a_connected_scheme}{\'etale fundamental group $\pi_1^{\mathrm{et}}(S, \bars)$}\CrefIfExists{definition:etale_fundamental_group_of_a_connected_scheme}.
+    We also note that the discrete set $\mathrm{Hom}_S(\bars, X)$ is identifiable with the fiber $X \times_S \bars$.
+
+    \item There is a natural bijection between isomorphism classes of finite étale \hyperrefIfExists{definition:galois_morphism_of_schemes}{Galois covers}\CrefIfExists{definition:galois_morphism_of_schemes} $f : X \to S$ with Galois group isomorphic to $G$ and continuous group homomorphisms
+    \begin{align}
+    \varphi : \pi_1^{\mathrm{et}}(S, \bars) \to G \label{eq:group_homomorphism_from_etale_fundamental_group_of_a_connected_scheme_to_a_group}
+    \end{align}
+    up to conjugation in $G$. More explicitly, two homomorphism $\varphi, \varphi'$ correspond to equivalent finite \'etale Galois $G$-covers of $S$ if and only if there exists some $g \in G$ such that 
+    $$\varphi'(\gamma) = g\varphi(\gamma) g^{-1}$$
+    for all $\gamma \in \pioneet(S, \bars)$.
+
+    Concretely, given a finite \'etale Galois cover $f: X \to S$, the fiber $f^{-1}(\bars) \cong X \times_S \bars$ has an action of $\pioneet(S, \bars)$. Since $G$ acts simply transitively on this fiber, there is an induced group homomorphism \eqref{eq:group_homomorphism_from_etale_fundamental_group_of_a_connected_scheme_to_a_group}; the conjugacy class of this group homomorphism corresponds to $f$.
+
+    Furthemore, the covering scheme $X$ is connected if and only if the homomorphism $\varphi$ is surjective.
+\end{enumerate}
+\end{theorem}

@@ -1,0 +1,12 @@
+
+\begin{definition}[Topological fields]  \label{definition:topological_field}
+    \TODO{Product topology}
+    A \hldef{topological field} is a \CrefAndHyperrefIfExist{definition:field}{field} $(F,+,\cdot)$ together with a \CrefAndHyperrefIfExist{definition:topological_space}{topology} $\mathcal{T}$ on $F$ such that the maps
+    \begin{align*}
+    +&: F \times F \to F  \quad (a,b) \mapsto a+b \\ 
+    \cdot&: F \times F \to F  \quad (a,b) \mapsto a \cdot b \\ 
+    -&: F \to F  \quad a \mapsto -a \\
+    \cdot^{-1}&: F^\times \to F^\times  \quad a \mapsto a^{-1} \\
+    \end{align*}
+    are \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous} with respect to the product topology on $F \times F$, the topology $\mathcal{T}$ on $F$, and the subset topology on the \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit group $F^\times = F - \{0\}$}. Equivalently, a topological field is a field with a topology which becomes a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} under the ring structure and whose multiplicative inverse is also continuous.
+\end{definition}

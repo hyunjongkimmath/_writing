@@ -1,0 +1,19 @@
+\begin{definition}[{\texorpdfstring{$F$}{F}-acyclic object for a functor of categories}] \label{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}
+Let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. 
+\begin{enumerate}
+    \item Let
+    $$ F : \mathcal{A} \to \mathcal{B} $$
+    be a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact functor}.
+
+    An object $A \in \mathcal{A}$ for which a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution} exists is called \hldef{$F$-acyclic} if for all integers $n > 0$, its \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{higher left derived functors} vanish:
+    $$ L_n F (A) = 0 \text{ for all } n > 0  $$
+
+    \item Let
+    $$ F : \mathcal{A} \to \mathcal{B} $$
+    be a \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor}.
+
+    An object $A \in \mathcal{A}$ for which a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution} exists is called \hldef{$F$-acyclic} if for all integers $n > 0$, its \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{higher right derived functors} vanish:
+    $$ R_n F (A) = 0 \text{ for all } n > 0  $$
+
+\end{enumerate}
+\end{definition}

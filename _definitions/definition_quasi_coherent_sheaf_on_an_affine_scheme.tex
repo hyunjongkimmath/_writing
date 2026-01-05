@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:quasi_coherent_sheaf_on_an_affine_scheme}
+Let $A$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and \CrefAndHyperrefIfExist{definition:affine_scheme}{$X = \operatorname{Spec} A$ its spectrum} equipped with the \CrefAndHyperrefIfExist{definition:affine_scheme}{structure sheaf} $\mathcal{O}_X$. 
+\begin{enumerate}
+    \item For any \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$A$-module} $M$, we define the corresponding \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} \hl{$\widetilde{M}$} on $X$, called the \hldef{sheaf associated to $M$}, by
+    \[ \widetilde{M}(D(f)) = M_f\text{ for all } f \in A, \]
+    where \CrefAndHyperrefIfExist{definition:affine_scheme}{$D(f) = \{ \mathfrak{p} \in \operatorname{Spec} A : f \notin \mathfrak{p} \}$} and $M_f$ is the localization of $M$ at $f$.
+    \TODO{localization of a module} It is a \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{sheaf of $\calO_X$-modules}. 
+
+    \item A sheaf $\mathcal{F}$ of $\mathcal{O}_X$-modules is called \hldef{quasi-coherent} if there exists an $A$-module $M$ such that $\mathcal{F} \cong \widetilde{M}$.
+    \end{enumerate}
+
+\TextIfExists{definition:quasi_coherent_sheaf_on_a_ringed_space}{
+Equivalently, a quasi-coherent sheaf on the \CrefAndHyperrefIfExist{definition:affine_scheme}{affine scheme} $\Spec A$ is a \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_ringed_space}{quasi-coherent sheaf} on $(X, \calO_X)$ \CrefAndHyperrefIfExist{definition:scheme}{as a} \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}. 
+}
+
+\end{definition}

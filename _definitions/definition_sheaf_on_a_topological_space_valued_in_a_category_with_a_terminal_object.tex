@@ -1,0 +1,37 @@
+\begin{definition}[Sheaf on a topological space] \label{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}
+
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $\calD$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object}, and let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf valued in $\calD$ on $X$}.  
+    Then $\mathcal{F}$ is a \hldef{sheaf} if it satisfies the following additional condition (known as the \hldef{sheaf axioms}):
+
+    For every open set $U \subseteq X$ and every \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\{U_i\}_{i \in I}$ of $U$, let $\calJ$ be the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} in the \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{category of opens} of $U$ consisting of the inclusions $U_i \cap U_j \hookrightarrow U_i$ for all $i,j \in I$. Then $\calF$ is a sheaf if the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the diagram $\calF \circ \calJ$ exists in $\calD$ and the natural morphism
+    $$\calF(U) \to \lim_{j \in \calJ} \calF(j)$$
+    is an isomorphism. More precisely, $\calJ:J \to \operatorname{Open}(U)$ should be the functor whose index category $J$ consists of
+    \begin{enumerate}
+        \item An object $i$ for every $i \in I$ and an object $(i,j)$ for every pair $i,j \in I$,
+        \item Morphisms $p_1: (i,j) \to i$ and $p_2: (i,j) \to j$ for every pair $i,j \in I$
+    \end{enumerate}
+    and which sends the objects and morphisms as follows:
+    \begin{enumerate}
+        \item $\calJ(i) = U_i$
+        \item $\calJ(i,j) = U_i \cap U_j$
+        \item $\calJ(p_1): U_i \cap U_j \hookrightarrow U_i$
+        \item $\calJ(p_2): U_i \cap U_j \hookrightarrow U_j$.
+    \end{enumerate}
+    In particular, taking $U = \emptyset$ and taking the empty open cover of the empty set, $\calF(\emptyset)$ must be the \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object} of $\calD$
+
+    In the case that $\calD$ admits all \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small limits}, the sheaf condition is equivalent to the following: For every open set $U \subset X$ and every open cover $\{U_i\}_{i \in I}$ of $U$, the following \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer diagram is exact}:
+    $$\calF(U) \to \prod_{i \in I} \calF(U_i) \rightrightarrows \prod_{i,j \in I} \calF(U_i \cap U_j).$$
+    Here, the morphism $\calF(U) \to \prod_{i \in I} \calF(U_i)$ and the two morphisms $\prod_{i \in I} \calF(U_i) \rightrightarrows \prod_{i,j \in I} \calF(U_i \cap U_j)$ are induced by the \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{restriction maps} $\calF(U) \to \calF(U_i)$ and $\calF(U_i) \to \calF(U_i \cap U_j)$.
+
+    In the case that $\calD$ is some \CrefAndHyperrefIfExist{definition:subcategory_of_a_category}{subcategory} of the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}, the sheaf condition is equivalent to the following: For every open set $U \subseteq X$ and every \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\{U_i\}_{i \in I}$ of $U$, 
+    \begin{itemize}
+        \item (Locality) If $s, t \in \mathcal{F}(U)$ are such that $s|_{U_i} = t|_{U_i}$ for all $i$, then $s = t$.
+        \item (Gluing) If for each $i$ there is $s_i \in \mathcal{F}(U_i)$ such that for all $i,j$ one has $s_i|_{U_i \cap U_j} = s_j|_{U_i \cap U_j}$, then there exists a unique $s \in \mathcal{F}(U)$ such that $s|_{U_i} = s_i$ for all $i$.
+    \end{itemize}
+
+    \TextIfExists{definition:sheaf_on_a_site}{
+        Equivalently, a sheaf on a topological space $X$ may be defined as a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf on} the \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{of opens on $X$}. 
+        % whose objects are open subsets $U$ of $X$ and whose morphisms are inclusions $U_1 \hookrightarrow U_2$ of open subsets of $X$, and whose Grothendieck topology is the in which a cover of an open subset $U \subseteq X$ is given by a collection $\{U_i \to U\}_{i \in I}$ in which $\bigcup U_i = U$. 
+    }
+
+\end{definition}

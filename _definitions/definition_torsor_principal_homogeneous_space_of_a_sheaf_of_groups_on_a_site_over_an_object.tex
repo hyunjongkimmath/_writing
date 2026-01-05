@@ -1,0 +1,17 @@
+\begin{definition}[Torsors under a Sheaf of Groups] \label{definition:torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object}
+    \TODO{group object, action by a group object}
+    Let $(\mathcal{C},J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} and $\mathcal{G}$ a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf of groups on it}. A \hldef{$\mathcal{G}$-torsor} (or synonymously a \hldef{principal $\calG$-bundle} or \hldef{principal $\calG$-homogeneous space}, etc.) is a sheaf $\mathcal{P}$ of sets on $(\mathcal{C},J)$ equipped with a (right) action of $\mathcal{G}U$ such that 
+        \TODO{This needs some genuine fixing to be definable on a general site, not just one given by a pretopology}
+\CrefIfExists{definition:site_induced_by_a_site_on_an_over_category} 
+    \begin{enumerate}
+        \item For each object $U$ of $\calC$, the action of the group $G(U)$ on $\calP(U)$ is free and transitive whenever $\calP(U)$ is nonempty.
+
+        \item $\calP$ is locally trivial. More explicitly, for each object $U$ of $\calC$, there exists some covering $\{V_i \to U\}_{i \in I}$ in $J$ such that there is an isomorphism 
+        $$\calP|_{U_i} \calG|_{U_i}$$
+        as a sheaves with $\calG|_{U_i}$ actions for each $i$.
+        
+    \end{enumerate}
+    A $\calG$-torsor is called \hldef{trivial on $U$} if it is isomorphic (as a sheaf with a right action of $\calG$) to $\calG|_U$ acting on itself by right multiplication, or equivalently, if $\calG(U) \neq \emptyset$. In particular, any $\calG$-torsor is \emph{locally} trivial.
+    % This local condition ensures that $\mathcal{P}$ "looks like" the trivial torsor $\mathcal{G}|_U$ when viewed on suitably small neighborhoods covering $U$.
+
+\end{definition}

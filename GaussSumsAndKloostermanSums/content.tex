@@ -1,0 +1,197 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+% \nocite{*}
+
+The purpose of this document is to list definitions of variants of Gauss sums and Kloosterman sums and to discuss how Gauss sums and Kloosterman sums connect to various problems.
+
+Supposedly, the following are some applications/implications of Gauss sums:
+
+% Gauss sums applications
+\begin{enumerate}
+  \item Proving reciprocity laws: Gauss sums can be used to prove quadratic, cubic, and quartic reciprocity laws, central results in number theory.
+  \item Counting solutions to equations: They help calculate the number of solutions to certain polynomial equations over finite fields.
+  \item Relation to exponential sums: Gauss sums appear in the evaluation and estimation of exponential sums, pivotal in analytic number theory.
+  \item Connection to coding theory: Gauss sums have applications in the study of cyclic codes and related algebraic structures.
+  \item Transforming sums for stronger bounds: They can convert binomial sums into multiple Kloosterman sums to achieve better estimates, sometimes surpassing the Weil bound.
+\end{enumerate}
+
+The following are applications/implications of Kloosterman sums:
+% Kloosterman sums applications
+\begin{enumerate}
+  \item Solving quadratic form problems: Originally introduced by Kloosterman, these sums were used to solve problems about representations by quadratic forms.
+  \item Bounds on exponential sums: Kloosterman sums allow bounding exponential sums in arithmetic problems, including sums over primes and prime intervals.
+  \item Fourier expansions of modular forms: Kloosterman sums appear as finite ring analogues of Bessel functions in modular form theory.
+  \item Spectral theory and automorphic forms: They have applications in the spectral theory of automorphic functions and related arithmetic subjects.
+  \item Prime number distribution: Used to study primes in short intervals, primes in arithmetic progressions, and connections to the Riemann zeta function.
+  \item Estimates via advanced methods: Weil’s and Deligne’s bounds on Kloosterman sums produce strong error terms in analytic number theory.
+  \item Applications in additive number theory: They help in problems involving sums and products modulo primes and bounding multilinear sums.
+  \item Recent research applications: Improved bounds on bilinear forms with Kloosterman sums have further applications in exponential sum estimates and number theory.
+\end{enumerate}
+
+
+\section{Gauss sums}
+
+\begin{definition}[Gauss Sum]
+    Let  
+    $\psi : \Fq \to \mathbb{C}^\times$
+    be a \CrefAndHyperrefIfExist{definition:additive_and_multiplicative_characters_of_a_ring}{nontrivial additive (unitary) character}, and let 
+    $\chi : \Fq^\times \to \mathbb{C}^\times$
+    be a \CrefAndHyperrefIfExist{definition:additive_and_multiplicative_characters_of_a_ring}{multiplicative (unitary) character}.  
+    The \hldef{Gauss sum associated to $\chi$ and $\psi$} is defined as  
+    $$\hlin{G(\chi, \psi) := \sum_{x \in \Fq^\times} \chi(x) \psi(x),}$$  
+    where the sum is over the nonzero elements of $\Fq$.
+
+    A common choice is $\psi(x) = \exp\left(2\pi i \, \mathrm{Tr}_{\mathbb{F}_q/\mathbb{F}_p}(x)/p\right)$, with $p = \Char \Fq$.
+\end{definition}
+
+\section{Kloosterman sums}
+
+\subsection{Definitions}
+
+\begin{definition}[Kloosterman Sum] \label{definition:kloosterman_sum_of_an_additive_character_on_Fq}
+    Let $\psi : \Fq \to \mathbb{C}^\times$ be a nontrivial \CrefAndHyperrefIfExist{definition:additive_and_multiplicative_characters_of_a_ring}{additive (unitary) character}, and let $a,b \in \Fq^\times$.  
+
+    The \hldef{Kloosterman sum associated to $a,b$ and $\psi$} is defined by  
+    $$\hlin{\mathrm{Kl}(a,b;\psi) := \sum_{x \in \Fq^\times} \psi(ax + b x^{-1}),}$$  
+    where the summation is over the nonzero elements of $\Fq$.
+
+    In particular, when 
+    $$\psi(y) = \exp\left( 2\pi i\, \frac{\mathrm{Tr}_{\Fq/\Fp}(y)}{p} \right)$$
+    with $p = \mathrm{char}(\Fq)$, one may write \hl{$\mathrm{Kl}(a,b)$} for $K(a,b;\psi)$. In other words,
+    $$\mathrm{Kl}(a,b) = \sum_{x \in \Fq^\times} \exp\left( 2\pi i\, \frac{\mathrm{Tr}_{\Fq/\Fp}(a x + b x^{-1})}{p} \right).$$
+
+    The \hldef{classical Kloosterman sum}, often denoted by \hl{$S(a,b;p)$}, is by definition the Kloosterman sum that we denoted by $\mathrm{Kl}(a,b)$ above in the case that $q = p$. In other words,
+    $$S(a,b;p) = \sum_{x \in \Fp^\times} \exp\left( \frac{2\pi i(ax+bx^{-1})}{p} \right).$$
+\end{definition}
+
+\begin{proposition}[Weil]
+    \TODO{Can this be extended to more general characters?}
+    Let $p$ be a prime number. For all $a,b \in \Fp$,
+    $$|S(a,b;p)| \leq 2\sqrt{p}.$$
+    (\Cref{definition:kloosterman_sum_of_an_additive_character_on_Fq})
+\end{proposition}
+
+
+\begin{definition}[cf. {\cite[Introduction]{katz_gsksmg}}] \label{definition:hyper_kloosterman_sum}
+    Let $\psi: \bbF_q \to \bbC^\times$ be a nontrivial \CrefAndHyperrefIfExist{definition:additive_and_multiplicative_characters_of_a_ring}{(unitary) additive character}, and let $a \in \bbF_q^\times$.
+    
+    We will often let \hl{$\mathrm{Kl}(a,n;\psi)$} denote either \hldef{the non-normalized or the normalized hyper-Kloosterman sum in $n$-variables} (also called a \hldef{generalized Kloosterman sum}); the non-normalized hyper-Kloosterman sum is defined by 
+    % Define the \hldef{non-normalized hyper-Kloosterman sum in $n$-variables} as the sum \hl{$\mathrm{Kl}(a,n;\psi)$} defined by
+    $$\mathrm{Kl}(a,n;\psi) = \sum_{\substack{x_1,\ldots,x_n \in \Fq \\ x_1\cdots x_n = a}} \psi(x_1 + \cdots + x_n).$$
+    whereas the normalized hyper-Kloosterman sum is $q^{\frac{1-n}{2}}$ times the non-normalized sum, i.e.
+    $$\mathrm{Kl}(a,n;\psi) = q^{\frac{1-n}{2}} \sum_{\substack{x_1,\ldots,x_n \in \Fq \\ x_1\cdots x_n = a}} \psi(x_1 + \cdots + x_n).$$
+
+    The normalized hyper-Kloosterman sums $\mathrm{Kl}(a,n;\psi)$ satisfy $|\mathrm{Kl}(a,n;\psi)| \leq n$ for all $a \in \Fq^\times$ (\Cref{proposition:bound_on_nonnormalized_hyper_kloosterman_sums}).
+    % The \hldef{normalized hyper-Kloosterman sum in $n$-variables} may refer to the quantity
+    % $$q^{\frac{1-n}{2}} \cdot \mathrm{Kl}(a,n;\psi).$$
+
+    When 
+    $$\psi(y) = \exp\left( 2\pi i\, \frac{\mathrm{Tr}_{\Fq/\Fp}(y)}{p} \right)$$
+    with $p = \mathrm{char}(\Fq)$, one may write \hl{$\mathrm{Kl}(a,n)$} for $K(a,n;\psi)$. In other words,
+    \begin{align*}
+    \mathrm{Kl}(a,n) &= \sum_{\substack{x_1,\ldots,x_n \in \Fq \\ x_1\cdots x_n = a}} \exp\left( 2\pi i\, \frac{\mathrm{Tr}_{\Fq/\Fp}(x_1 + \cdots + x_n)}{p} \right) \quad \text{or} \\
+    \mathrm{Kl}(a,n) &= q^{\frac{1-n}{2}}\sum_{\substack{x_1,\ldots,x_n \in \Fq \\ x_1\cdots x_n = a}} \exp\left( 2\pi i\, \frac{\mathrm{Tr}_{\Fq/\Fp}(x_1 + \cdots + x_n)}{p} \right)
+    \end{align*}
+    depending on whether we are discussing the non-normalized or normalized sum.
+\end{definition}
+
+\begin{proposition}[{\cite[Sommes trig., Section 7]{SGA4_5}}] \label{proposition:bound_on_nonnormalized_hyper_kloosterman_sums}
+    Let $\psi: \bbF_q \to \bbC^\times$ be a nontrivial \CrefAndHyperrefIfExist{definition:additive_and_multiplicative_characters_of_a_ring}{additive character}, and let $a \in \bbF_q^\times$. We have 
+    $$|\mathrm{Kl}(a,n;\psi)| \leq n q^{\frac{n-1}{2}}$$
+    where $\mathrm{Kl}(a,n;\psi)$ is the \CrefAndHyperref{definition:hyper_kloosterman_sum}{non-normalized hyper-Kloosterman sum in $n$-variables}.
+\end{proposition}
+
+\begin{remark}
+In general, there are many different notations used even for equivalent notions of Kloosterman sums. For instance \cite{katz_gsksmg} lets $\mathrm{Kl}(p,n,a)$ denote the non-normalized hyper-Kloosterman sum that we denote as $\mathrm{Kl}(a,n)$ in \Cref{definition:hyper_kloosterman_sum} in the case that $\Fq = \Fp$.
+\end{remark}
+
+\subsection{Bounding sums of Kloosterman sums}
+
+\TODO{Why are bound son sums of Kloosterman sums important at all?}
+
+The following bound sums of Kloosterman sums in a ``small prime interval'':
+\begin{theorem}[{\cite[Theorem 1.8]{blomer_et_al_sasbfks}}] \label{theorem:bound_of_sum_of_kloosterman_sums_in_small_prime_interval_by_blomer_et_al}
+    Let $p$ be a prime number. For every $X$ such that $2 \leq x \leq p$ and every $\epsilon > 0$, we have 
+    $$\sum_{\substack{p' \leq X \\ p' \text{ prime}}} \mathrm{Kl}(p', 2) \ll_\varepsilon p^{\frac{1}{6} + \varepsilon} \cdot X^{\frac{7}{9}}.$$
+    where $\mathrm{Kl}(p', 2)$ here is the normalized Kloosterman sum (\Cref{definition:hyper_kloosterman_sum}).
+\end{theorem}
+
+\begin{theorem}[{\cite[Theorem 1.2]{dunn_zaharescu_skspap}}] \label{theorem:bound_of_sum_of_kloosterman_sums_in_small_prime_interval_in_congruence_class_by_dunn_and_zaharescu}
+    Let $p$ be a prime number. Let $u,v$ be positive integers such that $(u,v) = 1$ and $1 \leq v \leq p^{\frac{1}{100}}$. For all $1 \leq X \leq p$ and $\varepsilon > 0$,
+    $$\sum_{\substack{p' \leq X \\ p' \text{ prime} \\ p' \equiv u \pmod{v}}} \mathrm{Kl}(p', 2) \ll_\varepsilon p^{\frac{11}{192} + \varepsilon} \cdot X^{\frac{15}{16}}.$$
+    where $\mathrm{Kl}(p', 2)$ here is the normalized Kloosterman sum (\Cref{definition:hyper_kloosterman_sum}).
+\end{theorem}
+\begin{remark}
+    Note that \Cref{theorem:bound_of_sum_of_kloosterman_sums_in_small_prime_interval_by_blomer_et_al} is stated in terms of the non-normalized Kloosterman sum, whereas {\cite[Theorem 1.2]{dunn_zaharescu_skspap}} is in terms of the normalized Kloosterman sum.
+\end{remark}
+
+\subsection{Bounds on bilinear forms with Kloosterman sums as coefficients}
+
+Koawlski, Michel, and Sawin \cite{kowalski_michel_sawin_bfksa} proved the bounds \Cref{theorem:kowalski_michel_sawin_bfksa_bound_for_general_bilinear_forms} and \Cref{theorem:kowalski_michel_sawin_bfksa_bound_for_special_bilinear_forms} for bilinear forms constructed with Kloosterman sums. They demonstrated applications to 1.~asymptotic approximations for moments of twisted cuspidal $L$-functions and 2.~the distribution in arithmetic progressions to large moduli of certain arithmetic functions.
+
+\begin{notation} \label{notation:bilinear_form_with_arithmetic_function_values_as_coefficients}
+    \TODO{Define arithmetic functions}
+    Given an arithmetic function $K$ and complex coefficients $\bm{\alpha} = (\alpha_m)_{m \geq 1}$ and $\bm{\beta} = (\beta_m)_{m \geq 1}$, let \hl{$B(K,\bm{\alpha},\bm{\beta})$} be the sum
+    $$B(K,\bm{\alpha},\bm{\beta}) = \sum_m \sum_n \alpha_m \beta_n K(mn).$$
+\end{notation}
+
+\begin{notation} \label{notation:ell_p_norm_for_sequence}
+    \TODO{define the $\ell^p$ norm for general sequences}
+    Given a sequence $\bm{\alpha}$ of complex numbers with finite support, denote by 
+    $$\hlin{\|\alpha\|_p = \left( \sum_m |\alpha_m|^p \right)^{\frac{1}{p}}}$$
+    the $\ell^p$-norm.
+\end{notation}
+
+\begin{notation}  \label{notation:pullback_of_kloosterman_sum_by_multiplication}
+    Given $c \in \Fq^\times$, write 
+    $$\hlin{[\times c]^* \mathrm{Kl} = [\times c]^* \mathrm{Kl}(-, n)}$$
+    for the function
+    $$a \mapsto \mathrm{Kl}(ca, n)$$
+    where $\mathrm{Kl}(a, n)$ is the \CrefAndHyperref{definition:hyper_kloosterman_sum}{normalized hyper-Kloosterman sum in $n$ variables}
+\end{notation}
+
+Koawlski, Michel, and Sawin proved the following bound for general bilinear forms:
+\begin{theorem}[{\cite[Theorem 1.1]{kowalski_michel_sawin_bfksa}}] \label{theorem:kowalski_michel_sawin_bfksa_bound_for_general_bilinear_forms}
+    Let $p$ be a prime number. Let $c$ be an integer coprime to $p$. Let $M$ and $N$ be real numbers such that 
+    $$1 \leq M \leq Np^{\frac{1}{4}}, \quad p^{\frac{1}{4}} < MN < p^{\frac{5}{4}}.$$    
+    Let $\calN \subset [1,p-1]$ be an interval of length $\lfloor N \rfloor$ and let $\bm{\alpha} = (\alpha_m)_{1 \leq m \leq M}$ and $\bm{\beta} = (\beta_n)_{n \in \calN}$ be sequences of complex numbers.
+
+    For any $\varepsilon > 0$, we have 
+    $$B([\times c]^* \mathrm{Kl}(-, n), \bm{\alpha}, \bm{\beta}) \ll p^\varepsilon \cdot \|\bm{\alpha}\|_2 \cdot \|\bm{\beta}\|_2 \cdot (MN)^{\frac{1}{2}} \cdot \left(M^{-\frac{1}{2}} + (MN)^{-\frac{3}{16}} \cdot  p^{\frac{11}{64}} \right)$$
+    (\Cref{notation:bilinear_form_with_arithmetic_function_values_as_coefficients}) (\Cref{notation:ell_p_norm_for_sequence}) (\Cref{notation:pullback_of_kloosterman_sum_by_multiplication})
+    where the implied constant depends only on $n$ and $\varepsilon$.
+\end{theorem}
+
+Koawlski, Michel, and Sawin also proved the following bound for special bilinear forms:
+\begin{theorem}[{\cite[Theorem 1.3]{kowalski_michel_sawin_bfksa}}] \label{theorem:kowalski_michel_sawin_bfksa_bound_for_special_bilinear_forms}
+    Let $p$ be a prime number. Let $c$ be an integer coprime to $p$. Let $M$ and $N$ be real numbers such that 
+    $$1 \leq M \leq N^2, \quad N < p, \quad MN < p^{\frac{3}{2}}.$$    
+    Let $\calN \subset [1,p-1]$ be an interval of length $\lfloor N \rfloor$ and let $\bm{\alpha} = (\alpha_m)_{1 \leq m \leq M}$ be a sequence of complex numbers such that $|\alpha_m| \leq 1$..
+
+    For any $\varepsilon > 0$, we have 
+    $$B([\times c]^* \mathrm{Kl}(-, n), \bm{\alpha}, 1_{\calN}) \ll p^\varepsilon \cdot \|\bm{\alpha}\|_2 \cdot \|\bm{\alpha}\|_2 \cdot M^{\frac{1}{4}} N \cdot \left(\frac{M^2 N^5}{p^3} \right)^{-\frac{1}{12}}.$$
+    (\Cref{notation:bilinear_form_with_arithmetic_function_values_as_coefficients}) (\Cref{notation:ell_p_norm_for_sequence}) (\Cref{notation:pullback_of_kloosterman_sum_by_multiplication})
+    where the implied constant depends only on $n$ and $\varepsilon$.
+\end{theorem}
+
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_quasi_character_of_a_locally_compact_hausdorff_group.tex}
+
+\begin{definition} \label{definition:additive_and_multiplicative_characters_of_a_ring}
+    Let $(R,+,\cdot)$ be a ring. Let $F$ be a ring/field ``of values''; usually, $F$ is taken to be $\bbC$ or $\Qellbar$ for some prime $\ell$.
+    \begin{enumerate}
+        \item An \hldef{additive character} often refers to a group homomorphism $(R,+) \to F^\times$. 
+        % to a quasi-character of the 
+        \TODO{Define monoid}
+        \item A \hldef{multiplicative character} often refers to a monoid homomorphism $(R^\times, \cdot) \to F^\times$.
+    \end{enumerate}
+    If $F$ and $R$ are equipped with topologies, then \hldef{(additive or multiplicative) characters} may more specifically refer to homomorphisms that are continuous with respect to the given topologies.
+
+    If $F$ is a field with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute value}, then what are called (additive or multiplicative) characters above may just be called \hldef{(additive or multiplicative) quasi-characters} instead and a \hldef{(additive or multiplicative) character}, synonymously also called a \hldef{unitary (additive or multiplicative) (quasi-)character}, may in fact refer to a homomorphism whose image lies in the subset of $F^\times$ of elements of absolute value $1$. 
+
+    \TextIfExists{definition:quasi_character_of_a_locally_compact_hausdorff_group}{
+    Compare against \Cref{definition:quasi_character_of_a_locally_compact_hausdorff_group}}
+\end{definition}

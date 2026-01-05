@@ -1,0 +1,32 @@
+\begin{definition} \label{definition:functor_between_categories}
+Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}. 
+\begin{enumerate}
+  \item A \hldef{functor $F: \calC \to \calD$ (from $\mathcal{C}$ to $\mathcal{D}$)} consists of :
+  \begin{itemize}
+    \item For each object $X$ in $\mathcal{C}$, an object $F(X)$ in $\mathcal{D}$.
+    \item For each morphism $f: X \to Y$ in $\mathcal{C}$, a morphism $F(f): F(X) \to F(Y)$ in $\mathcal{D}$,
+  \end{itemize}
+  such that:
+  \begin{align*}
+    F(\mathrm{id}_X) &= \mathrm{id}_{F(X)} \quad \text{for all objects } X \text{ in } \mathcal{C}, \\
+    F(g \circ f) &= F(g) \circ F(f) \quad \text{for all } X,Y,Z \in \Ob(\calC) \text{ and all } f: X \to Y, g: Y \to Z \text{ in } \mathcal{C}.
+  \end{align*}
+
+  Functors as defined above are also referred to as \hldef{covariant functors} to distinguish them from contravariant functors
+
+  \item A \hldef{contravariant functor from $\calC$ to $\calD$} refers to a covariant functor $F:\calC^{\op} \to \calD$. Equivalently, such a functor consists of 
+  \begin{itemize}
+    \item For each object $X$ in $\mathcal{C}$, an object $F(X)$ in $\mathcal{D}$.
+    \item For each morphism $f: X \to Y$ in $\mathcal{C}$, a morphism $F(f): F(Y) \to F(X)$ in $\mathcal{D}$,
+  \end{itemize}
+  such that:
+  \begin{align*}
+    F(\mathrm{id}_X) &= \mathrm{id}_{F(X)} \quad \text{for all objects } X \text{ in } \mathcal{C}, \\
+    F(g \circ f) &= F(f) \circ F(g) \quad \text{for all } X,Y,Z \in \Ob(\calC) \text{ and all } f: X \to Y, g: Y \to Z \text{ in } \mathcal{C}.
+  \end{align*}
+  \TextIfExists{definition:presheaf_on_a_category}{A synonym for a ``contravariant functor from $\calC$ to $\calD$'' is a ``\CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf on $\calC$ with values in $\calD$}''.}
+  
+\end{enumerate}
+Note that declarations such as ``Let $F: \calC^{\op} \to \calD$ be a contravariant functor'' can be common; such declarations usually mean ``Let $F$ be a contravariant functor from $\calC$ to $\calD$'' as opposed to ``Let $F$ be a contravariant functor from $\calC^{\op}$ to $\calD$''. further note that a contravariant functor from $\calC$ to $\calD$ is equivalent to a covariant functor from $\calC^{\op}$ to $\calD$.
+\end{definition}
+

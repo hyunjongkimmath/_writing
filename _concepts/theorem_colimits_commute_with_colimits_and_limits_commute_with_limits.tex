@@ -1,0 +1,37 @@
+\begin{theorem}[Fubini Theorem for Colimits and Limtis] \label{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits}
+    Let $\mathcal{C}$ be a category and let $I$ and $J$ be small categories. Let $D: I \times J \to \mathcal{C}$ be a bifunctor. 
+    
+    \begin{enumerate}
+        \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist in $\calC$:
+        \begin{itemize}
+            \item for every object $i \in I$, $\varinjlim_{j \in J} D(i, j)$
+            \item $\varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right)$
+            \item for every object $j \in J$, $\varinjlim_{i \in I} D(i, j)$
+            \item $\varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right)$.
+        \end{itemize}
+        Then there is a canonical isomorphism:
+        $$
+        \varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right) 
+        \cong \varinjlim_{(i, j) \in I \times J} D(i, j) 
+        \cong \varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right).
+        $$
+
+                \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} exist in $\calC$:
+        \begin{itemize}
+            \item for every object $i \in I$, $\varprojlim_{j \in J} D(i, j)$
+            \item $\varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right)$
+            \item for every object $j \in J$, $\varprojlim_{i \in I} D(i, j)$
+            \item $\varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right)$.
+        \end{itemize}
+        Then there is a canonical isomorphism:
+        $$
+        \varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right) 
+        \cong \varprojlim_{(i, j) \in I \times J} D(i, j) 
+        \cong \varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right).
+        $$
+
+    \end{enumerate}
+\end{theorem}
+\begin{remark}
+    These results assert that the colimit functor $\operatorname{colim}: \mathcal{C}^{I \times J} \to \mathcal{C}$ (assuming $\mathcal{C}$ is cocomplete) is isomorphic to the composition of partial colimit functors $\operatorname{colim}_I \circ \operatorname{colim}_J$ and $\operatorname{colim}_J \circ \operatorname{colim}_I$.
+\end{remark}

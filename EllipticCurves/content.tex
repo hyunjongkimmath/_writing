@@ -1,0 +1,357 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+
+\section{Elliptic curves}
+
+\subsection{General abelian varieties}
+\input{../_definitions/definition_abelian_variety_over_a_field.tex}
+
+\input{../_definitions/definition_abelian_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_elliptic_curve_over_a_scheme.tex}
+
+
+\subsection{Weierstrass equations}
+
+\TODO{polynomial rings}
+
+% \input{../_definitions/definition_commutative_ring.tex}
+% \input{../_definitions/definition_unit_of_a_ring.tex}
+\subsubsection{Algebraic facts entirely about Weierstrass equations}
+
+\input{../_definitions/definition_weierstrass_equation_over_a_ring.tex}
+\input{../_definitions/definition_admissible_change_of_variables_for_a_weierstrass_equation_over_a_commutative_ring_with_unity.tex}
+\input{../_concepts/proposition_admissible_changes_of_variables_of_a_short_weierstrass_equation_preserving_short_weierstrass_form.tex}
+\input{../_concepts/lemma_general_weierstrass_equation_can_be_simplified_if_2_or_3_is_invertible.tex}
+
+\input{../_notations/notation_auxiliary_invariants_for_a_general_weierstrass_equation.tex}
+\input{../_definitions/definition_discriminant_of_a_general_weierstrass_equation.tex}
+\input{../_definitions/definition_j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant.tex}
+
+
+\input{../_concepts/theorem_effects_of_admissible_change_of_variables_on_a_gneeral_weierstass_equation_on_discriminant_and_j_invariant.tex}
+
+
+\subsubsection{Elliptic curves as plane curves given by Weierstrass equations}
+
+\input{../_definitions/definition_elliptic_curve_over_a_ring_given_by_a_projective_weierstrass_equation_with_invertible_discriminant.tex}
+
+
+\input{../_concepts/theorem_elliptic_curve_over_a_scheme_is_zariski_locally_given_by_weierstrass_equation.tex}
+
+\input{../_definitions/definition_weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain.tex}
+
+
+\input{../_definitions/definition_minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain.tex}
+
+\begin{lemma}[cf. {\cite[Remark VII.1.1, Exercise 7.1]{silverman}} for a discussion over local fields]
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} with \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{field of fractions} $K$. Let $E/K$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve}.
+    Writing a general Weierstrass equation in the form
+    \begin{equation} \label{eq:general_weierstrass_equation_over_fraction_field_of_DVR}
+    y^2 + a_1 xy + a_3 y = x^3 + a_2 x^2 + a_4 x + a_6
+    \end{equation}
+    where the coefficients $a_i$ are in $K$.
+
+    \begin{enumerate}
+        \item There exists a \CrefAndHyperrefIfExist{definition:minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain}{(local) minimal Weierstrass model $\calE$ of $E$ over $R$}. 
+
+        \item Writing the minimal Weierstrass equation in the form \eqref{eq:general_weierstrass_equation_over_fraction_field_of_DVR} where the coefficients $a_i$ are in $R$, we must have $v(a_i) < i$ for at least one of the $i$. 
+
+        \item Given a Weierstrass equation in the form \eqref{eq:general_weierstrass_equation_over_fraction_field_of_DVR} over $R$, if $v(\Delta) < 12$, $v(c_4) < 4$ or $v(c_6) < 6$ (\Cref{notation:auxiliary_invariants_for_a_general_weierstrass_equation}, \Cref{definition:discriminant_of_a_general_weierstrass_equation}), then the equation is minimal over $R$.
+
+        \item If $2$ and $3$ are invertible in $R$ and if the equation is minimal over $R$, then $v(\Delta) < 12$ or $v(c_4) < 4$. \TODO{carefully verify this}
+    \end{enumerate}
+
+% In fact, the \CrefAndHyperrefIfExist{definition:discriminant_of_a_general_weierstrass_equation}{discriminant} $\Delta_{\calE}$ of the Weierstrass equation defining $\mathcal{E}$ satisfies
+% $$0 \leq v(\Delta_{\calE}) < 12.$$
+\end{lemma}
+
+\begin{proof}
+    \begin{enumerate}
+        \item This is obvious, say due to the well-ordering principle of the integers.
+
+        \item If $v(a_i) < i$ was false for all of the $i$, then the formula for the \CrefAndHyperrefIfExist{definition:discriminant_of_a_general_weierstrass_equation}{discriminant} shows that $v(\Delta) \geq 12$. Let $\pi$ be a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{uniformizer of $R$}. The \CrefAndHyperrefIfExist{definition:admissible_change_of_variables_for_a_weierstrass_equation_over_a_commutative_ring_with_unity}{admissible change of variables}
+        \begin{align*}
+        x &= \pi^2 x' \\
+        y &= \pi^3 y'
+        \end{align*}
+        yields a Weierstrass equation in the variables $x'$ and $y'$ whose discriminant $\Delta'$ satisfies
+        $$\Delta' = \pi^{-12} \Delta.$$
+        by \Cref{theorem:effects_of_admissible_change_of_variables_on_a_gneeral_weierstass_equation_on_discriminant_and_j_invariant} In fact, the resulting Weierstrass equation is still over $R$, and hence the original Weierstrass equation over $R$ could not have been minimal. 
+
+        \item This holds because a change of variables affects the valuation of $\Delta$, $c_4$, and $c_6$ by a multiple of $12$, $4$, and $6$ respectively.
+
+        \item \TODO{}
+
+    \end{enumerate}
+\end{proof}
+
+For general local fields $K$, Tate's algorithm determines whether a given equation is minimal for the ring of integers \TODO{cite}
+
+
+\TODO{talk about when global minimal weierstrass equations exist, say over global fields, cf. Silverman proposition VIII 8.2, Corollray 8.3}
+
+
+\subsection{Isogenies of abelian varieties}
+\input{../_definitions/definition_isogeny_of_abelian_schemes_over_a_scheme.tex}
+\input{../_definitions/definition_isogenous_abelian_varieties_over_a_field.tex}
+
+
+\section{N\'eron models of abelian varieties}
+
+
+\TODO{define smooth, separated, finite type morphism of schemes}
+\begin{definition}[Néron mapping property]
+Let $R$ be a \CrefAndHyperrefIfExist{definition:dedekind_domain}{Dedekind domain} with \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field $K$}, and let $A/K$ be an abelian variety.  
+A smooth separated \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{group scheme} $\mathcal{A}/R$ of finite type extending $A$ satisfies the \hldef{Néron mapping property} if for every smooth $R$-scheme $S$ and every $K$-morphism $f_K: S_K \to A$, there exists a unique $R$-morphism $f: S \to \mathcal{A}$ extending $f_K$.
+\end{definition}
+
+\begin{definition}[Néron model of an abelian variety]
+Let $K$ be a field that is the fraction field of a \CrefAndHyperrefIfExist{definition:dedekind_domain}{Dedekind domain} $R$, and let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety}.  
+A \hldef{Néron model of $A$ over $R$} is a smooth separated group scheme $\mathcal{A}/R$ of finite type such that:
+\begin{itemize}
+    \item The generic fiber of $\mathcal{A}$ is $A$.
+    \item $\mathcal{A}$ satisfies the Néron mapping property.
+\end{itemize}
+
+If such a model exists, it is unique up to unique isomorphism.
+\end{definition}
+
+
+\section{Reduction}
+
+% \begin{definition}[Non-archimedean place of a global field]
+% Let $K$ be a global field. A \hldef{non-archimedean place} $v$ of $K$ is an equivalence class of non-trivial non-archimedean absolute values on $K$.  
+
+% Associated to such a place $v$ are the following:
+% \begin{itemize}
+%     \item The completion $K_v$ of $K$ at $v$.
+%     \item The valuation ring $\mathcal{O}_v = \{ x \in K_v : |x|_v \leq 1 \}$.
+%     \item The maximal ideal $\mathfrak{m}_v = \{ x \in K_v : |x|_v < 1 \}$.
+%     \item The residue field $k_v = \mathcal{O}_v / \mathfrak{m}_v$.
+% \end{itemize}
+% \end{definition}
+
+
+
+\TODO{read the following definitions}
+\TODO{define neron model of an abelian variety}
+\TODO{what kind of field is $K$ here?}
+\begin{notation}[Reduction of abelian varieties at a non-archimedean place]
+Let $A/K$ be an abelian variety and let $v$ be a non-archimedean place of $K$.  
+Denote by $\mathcal{A}/\mathcal{O}_v$ the Néron model of $A$ over $\mathcal{O}_v$, which is a smooth, separated, finite type group scheme over $\mathcal{O}_v$ with generic fiber $A$.
+
+The special fiber $\mathcal{A}_v := \mathcal{A} \otimes_{\mathcal{O}_v} k_v$ is called the \hl{$\text{reduction of $A$ at $v$}$}.  
+\end{notation}
+
+\begin{definition}[Reduction type of an abelian variety over a non-archimedean place]
+Let $A/K$ be an abelian variety, $v$ a non-archimedean place of $K$, and $\mathcal{A}/\mathcal{O}_v$ its Néron model.  
+The reduction type of $A$ at $v$ is defined as follows:
+
+\begin{itemize}
+    \item $A$ has \hldef{good reduction at $v$} if $\mathcal{A}_v$ is an abelian variety (i.e., smooth, connected, complete, of dimension equal to $\dim A$).
+    \item $A$ has \hldef{bad reduction at $v$} if $\mathcal{A}_v$ is not an abelian variety.
+        \begin{itemize}
+            \item Within bad reduction, $A$ has \hldef{multiplicative reduction at $v$} if the connected component $\mathcal{A}_v^0$ of $\mathcal{A}_v$ is an extension of an abelian variety by a torus of positive dimension.
+            \item $A$ has \hldef{additive reduction at $v$} if $\mathcal{A}_v^0$ has a non-trivial unipotent subgroup.
+        \end{itemize}
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Reduction type of an abelian variety over a global field]
+Let $A/K$ be an abelian variety over a global field $K$.  
+The \hldef{reduction type of $A$ at a place $v$ of $K$} is the classification of the reduction of $A$ over $v$ as good, multiplicative, or additive, according to the preceding definition at all non-archimedean places. At archimedean places, reduction type is not defined.
+\end{definition}
+
+
+
+\section{Mordell-Weil theorem for abelian varieties over global fields}
+
+\input{../_concepts/theorem_mordell_weil_theorem_for_abelian_varieties_over_global_fields.tex}
+
+\section{Selmer group for an isogeny of abelian varieties over global fields}
+
+
+\input{../_definitions/definition_principal_homogeneous_space_for_a_group_scheme_over_a_base_scheme.tex}
+
+\input{../_definitions/definition_weil_chatelet_group_of_an_abelian_variety_over_a_field.tex}
+
+\input{../_concepts/theorem_the_weil_chatelet_group_of_an_abelian_variety_over_a_field_is_in_bijection_with_the_first_galois_cohomology_group_of_the_abelian_variety.tex}
+
+\input{../_definitions/definition_kummer_map_associated_to_an_isogeny_of_an_abelian_variety.tex}
+
+\input{../_definitions/definition_selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field.tex}
+
+
+The Selmer group is a finite, computable abelian group. %which plays a central role in the arithmetic of $A$ over $K$.
+
+\begin{remark}
+    \TODO{discuss variants of selmer groups}
+There are many variants of selmer groups. 
+\end{remark}
+
+\TODO{define the shafarevich group}
+\TODO{read the following statements}
+
+
+% \begin{theorem}[Basic properties of Selmer groups for isogenies of abelian varieties over global fields]
+% Let $K$ be a global field, and let $A$ and $B$ be abelian varieties defined over $K$.  
+% Suppose $\varphi: A \to B$ is an isogeny defined over $K$.  
+% Denote by $G_K = \mathrm{Gal}(\overline{K}/K)$ the absolute Galois group of $K$.  
+
+% Then the \hldef{Selmer group} $\mathrm{Sel}^\varphi(A/K) \subset H^1(G_K, \ker \varphi)$ defined by
+% $$\mathrm{Sel}^\varphi(A/K) := \ker \left( H^1(G_K, \ker \varphi) \to \prod_v H^1(G_v, A)[\varphi] \right),$$
+% where the product runs over all places $v$ of $K$, and $G_v \subset G_K$ is a decomposition group at $v$, satisfies the following fundamental properties:
+% \begin{itemize}
+%     \item $\mathrm{Sel}^\varphi(A/K)$ is a finite abelian group.
+%     \item There is an exact sequence
+%     $$0 \to B(K)/\varphi(A(K)) \xrightarrow{\delta_\varphi} \mathrm{Sel}^\varphi(A/K) \to \Sha(A/K)[\varphi] \to 0,$$
+%     where $\delta_\varphi$ is the global Kummer map associated to $\varphi$, and $\Sha(A/K)$ is the Tate–Shafarevich group of $A/K$.
+%     \item The Selmer group fits into the commutative diagram relating global and local Kummer maps:
+%     \[
+%     \begin{tikzcd}
+%     0 \ar[r] & B(K)/\varphi(A(K)) \ar[r, "\delta_\varphi"] \ar[d] & \mathrm{Sel}^\varphi(A/K) \ar[r] \ar[d] & \Sha(A/K)[\varphi] \ar[r] \ar[d] & 0 \\
+%     0 \ar[r] & \prod_v B(K_v)/\varphi(A(K_v)) \ar[r, "\delta_{\varphi_v}"] & \prod_v H^1(G_v, A[\varphi]) \ar[r] & \prod_v H^1(G_v, A)(\varphi) \ar[r] & 0,
+%     \end{tikzcd}
+%     \]
+%     where $K_v$ are completions of $K$ at places $v$, and $\delta_{\varphi_v}$ are the local Kummer maps.
+% \end{itemize}
+% These properties establish the Selmer group as a finite intermediate subgroup controlling the descent obstruction and linking the arithmetic of $A$ and $B$ with local-global principles.
+% \end{theorem}
+
+\begin{proposition}[Equivalent characterizations of the Selmer group]
+With notation as above, the Selmer group $\mathrm{Sel}^\varphi(A/K)$ admits the following equivalent descriptions:
+\begin{itemize}
+    \item It is the subgroup of $H^1(G_K, \ker \varphi)$ consisting of classes that are locally in the image of the local Kummer maps $\delta_{\varphi_v}: B(K_v)/\varphi(A(K_v)) \to H^1(G_v, A[\varphi])$ for every place $v$ of $K$.
+    \item It consists of Galois cohomology classes of $\ker \varphi$ that come from global torsors under $A$ which become trivial locally everywhere.
+    \item It can be viewed as the preimage of the local images under the restriction maps:
+    $$\mathrm{Sel}^\varphi(A/K) = \left\{ \xi \in H^1(G_K, \ker \varphi) \ \middle|\ \mathrm{res}_v(\xi) \in \mathrm{Im}(\delta_{\varphi_v}) \ \forall v \right\}.$$
+\end{itemize}
+\end{proposition}
+
+\begin{corollary}[Functors of Selmer groups under isogenies]
+Let $\varphi: A \to B$ and $\psi: B \to C$ be isogenies of abelian varieties over a global field $K$.  
+There is a natural map of Selmer groups
+$$\mathrm{Sel}^\varphi(A/K) \to \mathrm{Sel}^{\psi \circ \varphi}(A/K)$$
+induced by composition of isogenies, compatible with the connecting Kummer maps and functorial in the category of isogenies and abelian varieties.
+\end{corollary}
+
+
+
+
+\section{Heights of elliptic curves}
+
+\subsection{Heights of points in projective varieties over number fields}
+
+\begin{definition}[Absolute value and height on projective space] \label{definition:height_of_points_on_projective_space_over_a_global_field}
+    \TODO{define the product formula}
+    Let $K$ be a global field equipped with a set of normalized absolute values $M_K$ satisfying the product formula. For each $v \in M_K$, let $|\cdot|_v$ denote the corresponding absolute value on $K$.
+
+    Consider a point 
+    $$P = (x_0 : x_1 : \cdots : x_n) \in \mathbb{P}^n(K).$$
+
+    The \hldef{height} \hl{$H(P)$} of $P$ is defined as
+    $$H(P) = \prod_{v \in M_K} \max \{ |x_0|_v, |x_1|_v, \ldots, |x_n|_v \}.$$
+
+    The \hldef{logarithmic height} (or \hldef{log height}) of $P$ is defined as
+    $$\hlin{h(P) = \log H(P) = \sum_{v \in M_K} \log \max \{ |x_0|_v, |x_1|_v, \ldots, |x_n|_v \}.}$$
+\end{definition}
+
+
+\subsection{Heights of elliptic curves over number fields}
+
+\input{../_definitions/definition_naive_height_of_an_elliptic_curve_over_a_number_field.tex}
+
+    \TODO{read tjhe following}
+\begin{definition}[Height of an elliptic curve over a number field or function field]
+    \TODO{define non-logarithmic height}
+    Let $K$ be a global field, i.e., either a number field or a function field. Fix a set of normalized absolute values $M_K$ on $K$ satisfying the product formula.
+
+    Let $E/K$ be an elliptic curve given by a Weierstrass equation with coefficients in $K$. The \hldef{(logarithmic) height of $E$} is defined by
+    $$h(E) = \frac{1}{[K:\mathbb{Q}]} \sum_{v \in M_K} n_v \, \log \max \big\{ |4a_4|_v^3, |27a_6|_v^2 \big\},$$
+    where $a_4, a_6$ are the coefficients of the minimal Weierstrass equation of $E$, $|\cdot|_v$ are the normalized absolute values on $K$, and $n_v$ are the local degrees.
+
+    This height measures the arithmetic complexity of the elliptic curve and generalizes the classical height notion on points to the curve itself.
+\end{definition}
+
+
+\subsection{Heights functions of elliptic curves over number fields}
+
+    \TODO{read tjhe following}
+
+\begin{definition}[Weil height function on elliptic curves]
+Let $K$ be a global field with a set of absolute values $M_K$ normalized so that the product formula holds. Let $E/K$ be an elliptic curve defined by a Weierstrass equation with coefficients in $K$.
+
+The \hldef{(logarithmic) height} of a point $P = (x:y:z) \in E(\overline{K})$ (projective coordinates) is defined by
+$$h(P) = \frac{1}{[L : K]} \sum_{v \in M_L} \log \max\{ |x|_v, |y|_v, |z|_v \},$$
+where $L$ is a finite extension of $K$ over which $P$ is defined, and the sum is taken over all places $v$ of $L$, with $|\cdot|_v$ suitably normalized absolute values.
+
+The \hldef{height of the elliptic curve} $E$ itself is defined by
+$$h(E) = h(j(E)),$$
+where $j(E)$ is the $j$-invariant of $E$.
+\end{definition}
+
+\begin{definition}[Naive height and canonical height]
+Given an elliptic curve $E/K$ and a point $P \in E(\overline{K})$, the \hldef{naive height} $h(P)$ is as above. The \hldef{canonical height} $\hat{h}(P)$ is a quadratic form on $E(\overline{K})$ defined by the Néron-Tate construction, satisfying
+\[
+\hat{h}(nP) = n^2 \hat{h}(P), \quad \text{and} \quad |\hat{h}(P) - h(P)| < C
+\]
+for some constant $C$ depending on $E$ and $K$.
+\end{definition}
+
+
+
+\section{Serre's open image theorem}
+
+Serre's celebrated open image theorem was originally proved for elliptic curves over number fields without complex multiplication. 
+\TODO{complex multiplication}
+\begin{theorem}[Serre's open image theorem, {\cite[Th\'eor\`eme 2]{serre_pgpofce}}] \label{theorem:serres_original_open_image_theorem_for_elliptic_curves_over_number_fields_without_geometric_complex_multiplication}
+    Let $E/K$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} over a \CrefAndHyperrefIfExist{global_field}{number field} such that $E$ does not have complex multiplication over $\overline{K}$. \TODO{complex multiplication, algebraically closed field extension, algebraic closure}. For all but finitely many prime numbers $\ell$, the Galois representation
+    $$\Gal(\overline{K} / K) \to \Aut(T_\ell E)$$
+    on the $\ell$-adic Tate module $T_\ell E$ of $E$ is surjective.
+    \TODO{$\ell$-adic tate module}
+\end{theorem}
+
+Serre later proved a generalization for abelian varieties:
+\begin{theorem}[{\cite[Corollaire au Th\'eor\`eme 3]{serre_lettre_vigneras}}] \label{theorem:serres_generalized_open_image_theorem_for_abelian_varieties_over_number_fields_without_geometric_complex_multiplication}
+    Let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $n$ over a \CrefAndHyperrefIfExist{definition:global_field}{number field} such that $\End(A_{\overline{K}}) = \bbZ$. \TODO{complete}
+    \begin{enumerate}
+        \item For all but finitely many primes $\ell$, the ``mod-$\ell$'' Galois representation
+        $$\Gal(\overline{K} / K) \to \Aut(A[\ell](\overline{K})) \cong \mathrm{GSp}_{2n}(\bbF_\ell)$$
+        is surjective, where $\Aut(A[\ell](\overline{K}))$ is the group of automorphisms on the $\bbF_\ell$-vector space $A[\ell](\overline{K})$ preserving the Weil pairing \TODO{Weil pairing}
+
+        \item For all but finitely many primes $\ell$, the ``$\ell$-adic'' Galois representation
+        $$\Gal(\overline{K} / K) \to \Aut(T_\ell A) \cong \mathrm{GSp}_{2n}(\bbZ_\ell)$$
+        is surjective, where $\Aut(T_\ell A)$ is the group of automorphisms on the $\bbZ_\ell$-module $T_\ell A$ preserving the Weil pairing 
+        \TODO{Weil pairing, Tate module}
+
+        \item The image of the ``ad\'elic'' Galois representation
+        $$\Gal(\overline{K} / K) \to \prod_{\ell}' \Aut(V_\ell A) \cong \prod_{\ell}' \mathrm{GSp}_{2n}(\bbQ_\ell)$$
+        is open (with respect to the ad\'elic topology), where $\prod_{\ell}' \Aut(V_\ell A)$ is the \CrefAndHyperrefIfExist{definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces}{restricted product} of the groups $\Aut(V_\ell A)$ of automorphisms on the $\bbQ_\ell$-vectors spaces $V_\ell A = V_\ell A \otimes_{\bbZ_\ell} \bbQ_\ell$ preserving the Weil pairing.
+    \end{enumerate}
+\end{theorem}
+
+
+
+
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_unit_of_a_ring.tex}
+\input{../_definitions/definition_field_of_fractions_of_an_integral_domain.tex}
+
+\input{../_definitions/definition_discrete_valuation_ring.tex}
+
+\input{../_definitions/definition_dedekind_domain.tex}
+
+\input{../_definitions/definition_algebraic_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_homomorphism_of_algebraic_groups_over_a_scheme.tex}
+
+\input{../_definitions/definition_isogeny_of_algebraic_group_schemes_over_a_scheme.tex}
+
+\input{../_definitions/definition_scheme.tex}
+\input{../_definitions/definition_global_field.tex}
+
+\input{../_definitions/definition_place_of_a_global_field.tex}
+\input{../_definitions/definition_restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces.tex}
+\input{../_definitions/definition_adeles_and_ideles_of_a_global_field.tex}
