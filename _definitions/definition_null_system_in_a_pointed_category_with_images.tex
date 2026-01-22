@@ -1,0 +1,18 @@
+\begin{definition}  \label{definition:null_system_in_a_pointed_category_with_images}
+    Let $I$ be the \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} of non-negative integers $\mathbb{N}$ with the standard ordering $\geq$ (i.e. $I$ has arrows $\cdots \rightarrow 2 \rightarrow 1 \rightarrow 0$) and let $\{A_i, \phi_{ji}\}_{i \in I}$ be an \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system} of objects (so a \CrefAndHyperrefIfExist{definition:tower_of_objects_in_a_category}{tower}) in a \CrefAndHyperrefIfExist{definition:pointed_category}{pointed category} $\mathcal{C}$ where \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{images} are well-defined (such as the category of sets, abelian groups, or modules).
+
+    The system is said to be a \hldef{null system} if there exists $r \geq 0$ such that for every $i \in I$, the transition map $\phi_{(i+r)i}: A_{i+r} \to A_i$ is the \CrefAndHyperrefIfExist{definition:zero_morphism_in_a_pointed_category}{zero morphism}.
+
+    \TextIfExists{definition:shifted_tower_of_objects_in_a_category}{
+    Equivalently, the tower is a null system if there exists an integer $r \geq 0$ such that the \CrefAndHyperrefIfExist{definition:tower_of_objects_in_a_category}{morphism of towers} $A[r] \to A$ (\Cref{definition:shifted_tower_of_objects_in_a_category}) is the \CrefAndHyperrefIfExist{definition:zero_morphism_in_a_pointed_category}{zero morphism}.
+        \TODO{The category of towers $\mathcal{C}^I$ is pointed as $\mathcal{C}$ is pointed; the zero morphism is defined component-wise.}
+    }
+
+    % \TextIfExists{definition:shifted_tower_of_objects_in_a_category}{
+    %     Equivalently, the tower is a null system if for any integer $n$, there exists an integer $r \geq 0$ such that $A[r] \to A$ (\Cref{definition:shifted_tower_of_objects_in_a_category}) is the \CrefAndHyperrefIfExist{definition:zero_morphism_in_a_pointed_category}{zero morphism}.
+    %     \TODO{comment on how the category of towers is pointed}
+    %     % $$\operatorname{im}(A[r] \to A) = \operatorname{im}(A[t] \to A)$$
+    %     % \Cref{definition:shifted_tower_of_objects_in_a_category} for all $t \geq r$. 
+    % }
+
+\end{definition}

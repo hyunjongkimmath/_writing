@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:2_category_of_categories_relative_to_a_grothendieck_universe}
+    Let $\mathcal{U}$ be a fixed \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe}.
+    The category \CrefAndHyperrefIfExist{definition:category_of_categories_relative_to_a_grothendieck_universe}{$U-\mathbf{Cat}$} can be enriched with the structure of a \CrefAndHyperrefIfExist{definition:strict_2_category}{strict $2$-category} as follows:
+    \begin{itemize}
+        \item The objects/$0$-cells are all \CrefAndHyperrefIfExist{definition:locally_small_category}{$U$-small categories}.
+        \item Given $U$-small categories $\calC,\calD$, the category $\Hom(\calC,\calD) = \Hom_{U-\mathbf{Cat}}(\calC,\calD)$ is the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category} $\Fun(\calC,\calD)$; Recall that 
+        \begin{itemize}
+            \item the objects of $\Fun(\calC,\calD)$ are \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors} $\calC \to \calD$
+            \item the morphisms between functors $F,G: \calC \to \calD$ are \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} $F \Rightarrow G$.
+        \end{itemize}
+        note that $\Fun(\calC,\calD)$ is a $U$-small category. 
+
+        \item The identity objects $\id_\calC \in \operatorname{Ob}(\Fun(\calC,\calC))$ are given by the standard identity functors
+        \item For every triple $\calC, \calD, \calE$ of $U$-small categories, the composition functors
+        $$\Fun(\calC,\calD) \times \Fun(\calD,\calE) \to \Fun(\calC,\calE)$$
+        are given by the standard composition of functors
+    \end{itemize}
+\end{definition}

@@ -13,8 +13,7 @@
             \[
             h: j \to k
             \] 
-            \TODO{equalizer}
-            that is an equalizer of $f$ and $g$, i.e. satisfies 
+            that satisfies 
             \[
             h \circ f = h \circ g.
             \]
@@ -35,13 +34,12 @@
             \hfill
             \begin{minipage}{0.45\textwidth}
                 \centering
-                % Diagram 2: "Equalizer" (Convergence)
                 \begin{tikzcd}[row sep=large, column sep=large]
                     i \arrow[r, "f", shift left] \arrow[r, "g"', shift right] & 
                     j \arrow[r, "h", dashed] & 
                     k
                 \end{tikzcd}
-                \caption*{Condition 2: Equalizer}
+                \caption*{Condition 2: Coequalizing map}
             \end{minipage}
         \end{figure}
         In other words, $\mathcal{I}$ is nonempty, any finite diagram of objects admits a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone}, and any pair of parallel morphisms become equal after post-composition with an appropriate morphism.
@@ -58,7 +56,7 @@
         \[
         h: k \to j
         \] 
-        that is a coequalizer of $f$ and $g$, i.e. satisfies
+        that satisfies
         \[
         f \circ h = g \circ h.
         \]
@@ -79,13 +77,12 @@
         \hfill
         \begin{minipage}{0.45\textwidth}
             \centering
-            % Diagram 2: "Equalizer" (Pre-composition)
             \begin{tikzcd}[row sep=large, column sep=large]
                 k \arrow[r, "h", dashed] &
                 j \arrow[r, "f", shift left] \arrow[r, "g"', shift right] & 
                 i
             \end{tikzcd}
-            \caption*{Condition 2: Equalizer}
+            \caption*{Condition 2: Equalizing map}
         \end{minipage}
     \end{figure}
 

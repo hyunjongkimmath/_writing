@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:tower_of_objects_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} and let $I$ be the \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} of non-negative integers $\mathbb{N}$ with the standard ordering $\geq$ (i.e. $I$ has arrows $\cdots \rightarrow 2 \rightarrow 1 \rightarrow 0$).
+A \hldef{tower in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $X: I \rightarrow \mathcal{C}$. Explicitly, a tower consists of a sequence of objects $\{A_i\}_{i \in \mathbb{N}}$ and morphisms $f_i: A_i \rightarrow A_{i-1}$ for each $i \geq 1$:
+$$ \cdots \xrightarrow{f_3} A_2 \xrightarrow{f_2} A_1 \xrightarrow{f_1} A_0.$$
+Moreover a \hldef{morphism of towers} is a morphism of towers as objects of the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category} $\calC^I$.
+% Unless otherwise specified, the category of towers 
+\end{definition}

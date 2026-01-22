@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:tensor_product_functor_on_the_category_of_tensor_composable_bimodules_over_all_rings}
+    Let $\mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod$ be the \CrefAndHyperrefIfExist{definition:category_of_tensor_composable_bimodules_over_all_rings}{category of tensor composable bimodules}.
+    The \hldef{tensor product functor} \hl{$\otimes: \mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod \to \mathcal{B}imod$} is defined as follows:
+    \begin{itemize}
+        \item On objects: $\otimes((R, S, M), (S, T, N)) = (R, T, M \otimes_S N)$ (\Cref{definition:tensor_product_of_bimodules_of_rings}).
+        \item On morphisms: $\otimes((f, g, \phi), (g, h, \psi)) = (f, h, \phi \otimes \psi)$, where $\phi \otimes \psi$ is the unique group homomorphism satisfying $(\phi \otimes \psi)(m \otimes n) = \phi(m) \otimes \psi(n)$.
+    \end{itemize}
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{definition}[cf. {\cite[Definition 3.5.6]{weibel}}] \label{definition:mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images}
+Let $I$ be a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{directed set} and let $\{A_i, \phi_{ji}\}_{i \in I}$ be an \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system} of objects in a category $\mathcal{C}$ where \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{images} are well-defined (such as the category of sets, abelian groups, or modules).
+
+The system is said to satisfy the \hldef{Mittag-Leffler condition} if for every index $i \in I$, there exists an index $j \geq i$ such that for all $k \geq j$, the image of the transition map $\phi_{ki}: A_k \to A_i$ is equal to the image of $\phi_{ji}: A_j \to A_i$. 
+
+For a fixed $i$, let $I_{k,i} = \text{im}(\phi_{ki}) \subseteq A_i$ for all $k \geq i$. The condition states that the decreasing family of subobjects 
+$$ A_i \supseteq I_{i,i} \supseteq I_{i+1,i} \supseteq I_{i+2,i} \supseteq \cdots $$
+becomes stationary.
+
+\end{definition}

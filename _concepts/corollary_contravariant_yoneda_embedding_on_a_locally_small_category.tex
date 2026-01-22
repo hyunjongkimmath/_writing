@@ -1,0 +1,9 @@
+\begin{corollary}[Contravariant Yoneda Embedding] \label{corollary:contravariant_yoneda_embedding_on_a_locally_small_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. The functor
+$$h_\bullet: \mathcal{C} \to \mathbf{Set}^{\mathcal{C}^{\operatorname{op}}}$$
+defined on objects by $A \mapsto h_A = \operatorname{Hom}_{\mathcal{C}}(-, A)$ and on morphisms by $f \mapsto h_f = (f \circ -)$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}. That is, for any objects $A, B$ in $\mathcal{C}$, the map
+$$\operatorname{Hom}_{\mathcal{C}}(A, B) \to \operatorname{Nat}(h_A, h_B)$$
+given by sending a morphism $f: A \to B$ to the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} $h_f: h_A \to h_B$ (post-composition by $f$) is a bijection.
+
+Consequently, $\mathcal{C}$ embeds as a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} of the category of presheaves $\mathbf{Set}^{\mathcal{C}^{\operatorname{op}}}$.
+\end{corollary}

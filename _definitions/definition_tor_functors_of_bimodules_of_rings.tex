@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:tor_functors_of_bimodules_of_rings}
+    Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}, let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, and let $N$ be an $S$-$T$ bimodule. Let $n \geq 0$ be an integer.
+    The \hldef{Tor of $M$ and $N$}, denoted by \hl{$\Tor_n(M,N)$} or \hl{$\Tor_n^S(M,N)$} (or other notations such as \hl{$\Tor_n^S(_{R} M_S, {}_S N_T))$} or \hl{$_{R}(\Tor_n^S(M,N))_{T}$} to further emphasize the module structures), is defined in the following ways:
+    \begin{enumerate}
+        \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{$n$th left derived functor} $L_n(M \otimes_S -)(N)$ of the \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact functor} $M \otimes_S - : _{S} \mathbf{Mod}_{T} \to  _{R} \mathbf{Mod}_{T}$ \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}\CrefIfExists{definition:tensor_product_of_bimodules_of_rings} (\Cref{theorem:tensor_hom_adjunction_for_bimodules_of_rings}) (\Cref{proposition:left_right_adjoint_is_right_left_exact})
+
+        \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{$n$th left derived functor} $L_n(- \otimes_S N)(M)$ of the \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact functor} $- \otimes_S N : {}_R \mathbf{Mod}_S \to {}_R \mathbf{Mod}_T$ \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}\CrefIfExists{definition:tensor_product_of_bimodules_of_rings} (\Cref{theorem:tensor_hom_adjunction_for_bimodules_of_rings}) (\Cref{proposition:left_right_adjoint_is_right_left_exact}).
+    \end{enumerate}
+    The two definitions turn out to coincide up to natural isomorphism. \TODO{ref}
+    \TODO{discuss how it can be computed by flat's or projectives}
+\end{definition}

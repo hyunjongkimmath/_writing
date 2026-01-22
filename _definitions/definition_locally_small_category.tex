@@ -6,7 +6,11 @@ In some contexts, a locally small category may simply be called a \hldef{categor
 A category $\mathcal{C}$ is called a \hldef{small category} if it is a locally small category and the class $\operatorname{Ob}(\mathcal{C})$ of objects is a set.
 
 \TextIfExists{definition:grothendieck_universe}{
-Given a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe} $U$, we can define the notion of a \hldef{$U$-locally small category} and of a \hldef{$U$-small category} similarly.
+Given a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe} $U$, we can define the notion of a \hldef{$U$-locally small category} and of a \hldef{$U$-small category} similarly. More explicitly, 
+\begin{enumerate}
+    \item a $U$-locally small category is a category such that for every pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, the collection $\operatorname{Hom}_{\mathcal{C}}(X,Y)$ of morphisms between them is a $U$-set.
+    \item a $U$-small category is a category such that $\operatorname{Ob}(\mathcal{C})$ is a $U$-set and for every pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, the collection $\operatorname{Hom}_{\mathcal{C}}(X,Y)$ of morphisms between them is a $U$-set; in particular the collection of all objects and morhpisms in a $U$-small category is a $U$-set.
+\end{enumerate}
 }
 \end{definition}
 

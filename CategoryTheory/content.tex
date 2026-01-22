@@ -295,7 +295,7 @@ commute in the homotopy-coherent sense in $\mathcal{C}$.
 \section{Additive and abelian categories}
 
 \TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
-\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_additive_category_preadditive_category.tex}
 \input{../_definitions/definition_additive_functor_between_additive_categories.tex}
 \input{../_definitions/definition_abelian_category.tex}
 
@@ -342,7 +342,7 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \begin{example}
     \begin{enumerate}
         \item A \hyperrefIfExists{definition:category_enriched_in_a_monoidal_category}{category enriched in} $\Sets$ is equivalent to a \hyperrefIfExists{definition:locally_small_category}{locally small category}. 
-        \item A category enriched in $\Ab$ is equivalent to a \hyperrefIfExists{definition:additive_category}{pre-additive category}. 
+        \item A category enriched in $\Ab$ is equivalent to a \hyperrefIfExists{definition:additive_category_preadditive_category}{pre-additive category}. 
         \TODO{TODO: define an $R$-linear category and a $k$-linear category}
         \item Let $R$ be a commutative ring. A category enriched in $R\mathrm{-Mod}$ is equivalent to a $R$-linear category. 
         \item Let $k$ be a field. A category enriched in $k\mathrm{-Vect}$ is equivalent to a $k$-linear category. 
@@ -453,81 +453,39 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \subsubsection{Sheafy functors}
 
 \input{../_definitions/definition_sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site.tex}
-
 \input{../_concepts/proposition_category_of_sheaves_on_a_site_valued_in_product_category_is_equivalent_to_product_of_categories_of_sheaves_on_the_site.tex}
-
 \input{../_concepts/theorem_adjunction_between_sheafy_functors_from_adjoint_bifunctors.tex}
 
 \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
 \input{../_definitions/definition_tensor_product_of_bimodules_of_rings.tex}
 
-\begin{definition}[Sheafified Tensor Product] \label{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
-    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}) and let $\calR, \calS, \calT$ be sheaves of rings on $(\calD, K)$. Let $\calM$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calR$-$\calS$ bimodules} and $\calN$ be a sheaf of $\calS$-$\calT$ bimodules. 
-    The \hldef{sheafified tensor product}, denoted \hl{$\calM \otimes_{\calS} \calN$}, is the sheaf of $\calR$-$\calT$ bimodules defined as the \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification} of the section-wise tensor product presheaf:
-    \[ U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U). \]
-    \CrefIfExists{definition:tensor_product_of_bimodules_of_rings}
-    Explicitly, $\calM \otimes_{\calS} \calN = a(U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U))$, where $a$ is the sheafification functor.
+\input{../_definitions/definition_morphism_between_bimodules_of_different_rings_over_a_morphism_of_the_rings.tex}
+\input{../_definitions/definition_category_of_all_bimodules_over_all_rings.tex}
 
-    \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
-    In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified tensor product is the evaluation of the sheafy functor $\mathscr{F}$ induced by the algebraic tensor product $F: \calA \times \calB \to \calC$ under assumption (1). Here, $\calA, \calB, \calC$ are the categories of all bimodules over all rings \TODO{category of all bimodules over all rings}. Specifically, if $\mathbb{M} := (\calR, \calS, \calM) \in \Sh(\calD, K; \calA)$ and $\mathbb{N} := (\calS, \calT, \calN) \in \Sh(\calD, K; \calB)$, then the sheafified tensor product is the module component of the sheaf $\mathscr{F}(\mathbb{M}, \mathbb{N}) \in \Sh(\calD, K; \calC)$, which is the triple $(\calR, \calT, \calM \otimes_{\calS} \calN)$.
-    }
+\input{../_definitions/definition_category_of_tensor_composable_bimodules_over_all_rings.tex}
 
-    % In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified tensor product is the sheafy functor $\mathscr{F}$ induced by the algebraic tensor product functor $F: \calA \times \calB \to \calC$ where $\calA, \calB, \calC$ are the categories of bimodules over rings. It satisfies assumption (1) of said definition, as the section-wise tensor product generally fails to be a sheaf and requires the sheafification functor $a$.
-\end{definition}
+\input{../_definitions/definition_tensor_product_functor_on_the_category_of_tensor_composable_bimodules_over_all_rings.tex}
+
+\begin{proposition}
+The tensor product functor is associative up to a natural isomorphism. For any three composable bimodules ${}_R M_S$, ${}_S N_T$, and ${}_T P_U$, there exists a natural isomorphism in $\mathcal{B}imod$:
+$$\alpha_{M,N,P}: (M \otimes_S N) \otimes_T P \xrightarrow{\cong} M \otimes_S (N \otimes_T P)$$
+defined by the mapping $((m \otimes n) \otimes p) \mapsto (m \otimes (n \otimes p))$. This data, along with the unit bimodules ${}_R R_R$, endows $\mathcal{B}imod$ with the structure of a \CrefAndHyperrefIfExist{definition:bicategory}{bicategory}.
+\end{proposition}
+
+
+\input{../_definitions/definition_category_of_hom_composable_bimodules_over_all_rings.tex}
+
+
+
+
+
+\input{../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
 
  
 
-\begin{definition}[Sheafified Hom] \label{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
-    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}) and let $\calR, \calS, \calT$ be sheaves of rings on $(\calD, K)$. Let $\calM$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calR$-$\calS$ bimodules} and $\calN$ be a sheaf of $\calR$-$\calT$ bimodules.
+\input{../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
 
-    The \hldef{sheafified Hom}, denoted by notations such as \hl{$\mathcal{H}om_{\calR}(\calM, \calN)$}, \hl{$\mathscr{H}om_{\calR}(\calM, \calN)$}, or \hl{$\underline{\mathrm{Hom}}_{\calR}(\calM, \calN)$}, is the sheaf of $\calS$-$\calT$ bimodules defined section-wise by:
-    \[ \mathcal{H}om_{\calR}(\calM, \calN)(U) = \operatorname{Hom}_{\Sh(\calD/U, K|_U; \operatorname{Mod}(\calR|_U))}(\calM|_U, \calN|_U). \]
-    (\Cref{definition:category_of_objects_over_under_a_fixed_object_in_a_category}) (\Cref{definition:site_induced_by_a_site_on_an_over_category}) (\Cref{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site}) 
-
-    Equivalently, it is the unique sheaf which satisfies the right adjoint property relative to the sheafified tensor product (\Cref{theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}). 
-
-    \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
-    In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom corresponds to the right adjoint $\mathscr{G}$ to the sheafified tensor product $\mathscr{F}$. While the general framework defines sheafy functors via section-wise application, the internal Hom for sheaves of modules requires the restriction-based definition (using $\calD/U$) to correctly represent the right adjoint in the category of sheaves, ensuring compatibility with the varying ring structure $\calR$.
-
-    Also in the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom is the evaluation of the sheafy functor $\mathscr{G}$ induced by the algebraic Hom functor $G: \calA^{\op} \times \calC \to \calB$ under assumption (2). Given input sheaves $\mathbb{M} := (\calR, \calS, \calM)$ and $\mathbb{N} := (\calR, \calT, \calN)$, the result is the sheaf $\mathscr{G}(\mathbb{M}, \mathbb{N}) = (\calS, \calT, \mathcal{H}om_{\calR}(\calM, \calN))$. Because $G$ is a right adjoint in the base categories, it is a continuous functor (i.e., it preserves limits); thus, $\mathscr{G}$ can be defined section-wise as in Case (2) of the framework. This section-wise construction $U \mapsto \operatorname{Hom}_{\calR(U)}(\calM(U), \calN(U))$ is naturally isomorphic to the restriction-based internal Hom defined above, as both satisfy the same local-to-global universal property.
-
-    }
-
-    % \TextIfExists{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}{
-    % In the framework of \Cref{definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site}, the sheafified Hom is the evaluation of the sheafy functor $\mathscr{G}$ induced by the algebraic Hom functor $G: \calA^{\op} \times \calC \to \calB$ under assumption (2). Given input sheaves $\mathbb{M} := (\calR, \calS, \calM)$ and $\mathbb{P} := (\calR, \calT, \calP)$, the result is the sheaf $\mathscr{G}(\mathbb{M}, \mathbb{P}) = (\calS, \calT, \mathcal{H}om_{\calR}(\calM, \calP))$. Because $G$ is a right adjoint in the base categories, it is a continuous functor; thus, $\mathscr{G}$ is defined section-wise as in Case (2) of the framework, which is naturally isomorphic to the restriction-based internal Hom defined above.
-    % }
-\end{definition}
-
-\begin{theorem}[Tensor-Hom Adjunction for Sheaves of Bimodules] \label{theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
-    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}). Let $\calR, \calS, \calT$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of rings on $(\calD, K)$. Let $\calM$ be a sheaf of $\calR$-$\calS$ \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{bimodules}, $\calN$ be a sheaf of $\calS$-$\calT$ bimodules, and $\calP$ be a sheaf of $\calR$-$\calT$ bimodules.
-    
-    Then there is a natural isomorphism:
-    \[ \operatorname{Hom}_{\Sh(\calR\text{-}\calT)}(\calM \otimes_{\calS} \calN, \calP) \cong \operatorname{Hom}_{\Sh(\calS\text{-}\calT)}(\calN, \mathcal{H}om_{\calR}(\calM, \calP)) \]
-    where $\calM \otimes_{\calS} \calN$ is the sheafified tensor product and $\mathcal{H}om_{\calR}(\calM, \calP)$ is the sheaf of local $\calR$-linear homomorphisms.
-\end{theorem}
-\begin{proof}
-    \TODO{Verify this proof
-    We apply \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors} by specifying the categories $\calA, \calB, \calC$ and the functors $F, G$ as follows:
-
-    \begin{enumerate}
-        \item \textbf{Categories:} Let $\calA$ be the category whose objects are triples $(R, S, M)$ where $M$ is an $R$-$S$ bimodule. Define $\calB$ and $\calC$ similarly for $S$-$T$ and $R$-$T$ bimodules.
-        \item \textbf{Base Functors:} Define $F: \calA \times \calB \to \calC$ by $(M, N) \mapsto M \otimes_S N$ and $G: \calA^{\op} \times \calC \to \calB$ by $(M, P) \mapsto \operatorname{Hom}_R(M, P)$. 
-        At each component, $F(A, -) \dashv G(A, -)$ is the standard algebraic tensor-hom adjunction for bimodules.
-        \item \textbf{Sheaf Interpretation:} The sheaves $\calM, \calN, \calP$ are viewed as objects in $\Sh(\calD, K; \calA)$, $\Sh(\calD, K; \calB)$, and $\Sh(\calD, K; \calC)$ respectively, where the ring components of these sheaves are fixed to be the sheaves $\calR, \calS, \calT$.
-    \end{enumerate}
-
-    By \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors}, the sheafy functor $\mathscr{F}$ associated to the tensor product is:
-    \[ \mathscr{F}(\calM, \calN) = a(U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U)) \]
-    which is precisely the definition of the sheaf of $\calR$-$\calT$ bimodules $\calM \otimes_{\calS} \calN$.
-
-    The right adjoint functor $\mathscr{G}_{\calM}$ is defined section-wise by:
-    \[ \mathscr{G}_{\calM}(\calP) : U \mapsto \operatorname{Hom}_{\calR(U)}(\calM(U), \calP(U)) \]
-    Per the theorem, since $G$ is a right adjoint, $\mathscr{G}_{\calM}(\calP)$ is a sheaf. In the category of modules, this section-wise Hom sheaf is naturally isomorphic to the internal sheaf $\mathcal{H}om_{\calR}(\calM, \calP)$ because any morphism of sheaves $\calM|_U \to \calP|_U$ is uniquely determined by its action on sections when the sheafification of the section-wise Hom agrees with the internal Hom.
-
-    Thus, the general adjunction $\mathscr{F}(\calM, -) \dashv \mathscr{G}_{\calM}(-)$ specializes to the required isomorphism of Hom-sets in the category of sheaves of bimodules.
-    }
-\end{proof}
-
+\input{../_concepts/theorem_tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
 
 \subsubsection{Topos}
 
@@ -584,13 +542,30 @@ We might want to study categories whose hom-sets carry additional structure beyo
 
 \subsubsection{Sheafification}
 \input{../_definitions/definition_sheafification_functor_on_a_site.tex}
-
 \input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex}
-
 \input{../_concepts/theorem_sheafification_for_sheaves_of_sets_on_a_topological_space_exist.tex}
 
+\input{../_definitions/definition_ipc_property_of_a_category_that_admits_small_products_and_small_filtered_limits.tex}
 
-The following expresses the idea that sheafification functors exist for small enough sites.
+\input{../_concepts/proposition_IPC_property_of_categories_that_admit_small_products_and_small_filtered_limits_is_preserved_by_small_products.tex}
+
+\input{../_concepts/proposition_categories_of_sets_functors_from_small_categories_to_sets_and_modules_satisfy_ipc_property.tex}
+
+\begin{proposition}[{\cite[Proposition 3.1.11(iii)]}]
+    \TODO{think about whether local smallness can be removed}
+    Let $\calA$ be a \CrefAndHyperrefIfExist{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} that admits \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} and small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered limits}.
+
+    Assume that there exist a set $I$ and a functor $\lambda: \calA \to \Sets^I$ \CrefIfExists{definition:category_of_sets}\CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category} such that 
+    \begin{itemize}
+        \item $\lambda$ commutes with \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}
+        \item $\lambda$ commutes with small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered inductive limits}
+        \item $\lambda$ is conservative \TODO{conservative}
+    \end{itemize}
+    Then $\calA$ satisfies the IPC-property
+\end{proposition}
+
+
+The following expresses the idea that sheafification functors exist for small enough sites when the value category is nice enough.
 
 \input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
 
@@ -698,7 +673,7 @@ Let $(\mathcal{C},J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topol
 \input{../_definitions/definition_preadditive_category_generated_by_a_quiver.tex}
 \input{../_definitions/definition_walking_chain_complex_category.tex}
 \input{../_definitions/definition_additive_functor_category_between_preadditive_categories.tex}
-\input{../_concepts/proposition_category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category.tex}
+\input{../_concepts/proposition_cat_of_chain_complexes_in_a_preadd_cat_is_eq_to_the_cat_of_add_functors_from_the_walking_chain_complex_category.tex}
 \input{../_concepts/lemma_additive_functor_category_from_small_preadditive_categories_preserves.tex}
 \input{../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex}
 
@@ -907,6 +882,48 @@ A basic class of \CrefAndHyperrefIfExist{definition:infty_category_quasi_categor
 
 \section{Higher Category Theory}
 
+\subsection{$2$-categories}
+
+\input{../_definitions/definition_strict_2_category.tex}
+
+\input{../_definitions/definition_bicategory.tex}
+
+\input{../_concepts/lemma_all_strict_2_categories_are_weak_2_categories.tex}
+\begin{proof}
+    In a strict $2$-category, the strict associativity and the strict unit laws in particular yield associators and left/right unitors.
+\end{proof}
+
+\input{../_definitions/definition_category_of_small_categories.tex}
+\input{../_definitions/definition_category_of_categories_relative_to_a_grothendieck_universe.tex}
+
+\input{../_definitions/definition_2_category_of_categories_relative_to_a_grothendieck_universe.tex}
+
+
+
+\input{../_definitions/definition_pseudofunctor_between_weak_2_categories.tex}
+
+
+\input{../_concepts/theorem_coherence_conditions_for_pseudofunctor_between_weak_2_categories_to_be_well_defined.tex}
+
+
+
+\input{../_definitions/definition_pseudonatural_transformation_between_pseudofunctors_between_weak_2_categories.tex}
+
+\input{../_definitions/definition_modification_between_pseudonatural_transformations_between_pseudofunctors_between_weak_2_caetgories.tex}
+
+\input{../_definitions/definition_biequivalence_between_weak_2_categories.tex}
+
+\input{../_concepts/theorem_pseudofunctor_between_weak_2_categories_is_a_biequivalence_if_and_only_if_it_is_locally_an_equivalence_and_is_biessentially_surjective_on_objects.tex}
+
+
+
+
+
+
+\input{../_concepts/theorem_weak_2_categories_are_biequivalent_to_strict_2_categories.tex}
+
+
+
 \subsection{$n$-categories}
 
 \begin{notation}
@@ -915,9 +932,9 @@ For integers $n \ge 0$, we define inductively the category of $n$-categories.
 % We denote by $\hl{$n\text{-}\mathbf{Cat}$}$ the category (or higher category) of all strict $n$-categories, and by $\hl{$\infty\text{-}\mathbf{Cat}$}$ the category (or higher category) of all $\infty$-categories.  
 \end{notation}
 
-\input{../_definitions/definition_strict_n_category.tex}
+In a strict $n$-category, the associativity and unit axioms are specified ``strictly'' ---- i.e. they are expressed in terms of literal equalities as opposed to looser isomorphisms.
 
-\input{../_definitions/definition_bicategory.tex}
+\input{../_definitions/definition_strict_n_category.tex}
 
 \input{../_definitions/definition_weak_n_category_tamsamani_simpson.tex}
 
@@ -1181,6 +1198,8 @@ with monoidal structure maps induced by the external product and the lax symmetr
 
 \section{Set Theory}
 
+\input{../_definitions/definition_zermelo_fraenkel_set_theory.tex}
+
 \input{../_definitions/definition_function_of_sets.tex}
 
 \input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
@@ -1204,9 +1223,10 @@ with monoidal structure maps induced by the external product and the lax symmetr
 \input{../_definitions/definition_ring_homomorphism.tex}
 \input{../_definitions/definition_group.tex}
 \input{../_definitions/definition_group_homomorphism.tex}
-\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
-
 \input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
+\input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
+
 
 \section{Schemes}
 \input{../_definitions/definition_etale_morphism_of_schemes.tex}
@@ -1231,7 +1251,44 @@ Recall that the collection of all sets within Zermelo-Fraenkel set theory is a p
 
 
 
+\input{../_definitions/definition_transitive_set.tex}
+
+\begin{proposition}
+For any set $x$, the following conditions are equivalent:
+\begin{enumerate}
+    \item $x$ is a \CrefAndHyperrefIfExist{definition:transitive_set}{transitive set}.
+    \item $\cup x \subseteq x$.
+    \item $x \subseteq \mathcal{P}(x)$, where \hl{$\mathcal{P}(x)$} denotes the power set of $x$.
+\end{enumerate}
+\end{proposition}
+
+\input{../_definitions/definition_transitive_closure_of_a_set.tex}
+
+\input{../_definitions/definition_ordinal_number.tex}
+\begin{theorem}
+An \CrefAndHyperrefIfExist{definition:ordinal_number}{ordinal} is a \CrefAndHyperrefIfExist{definition:transitive_set}{transitive set} that is strictly well-ordered by the membership relation $\in$. \TODO{strictly well-ordered}
+\end{theorem}
+
+\input{../_definitions/definition_hereditarily_finite_sets.tex}
+
+\input{../_concepts/proposition_collection_of_hereditarily_finite_sets_is_a_set.tex}
+
+\begin{theorem}
+A set $x$ is \CrefAndHyperrefIfExist{definition:hereditarily_finite_sets}{hereditarily finite} if and only if $x$ is finite and every element $y \in x$ is also a hereditarily finite set.
+\end{theorem}
+
+\begin{proposition}
+The structure $(V_\omega, \in)$ satisfies all the axioms of \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Zermelo-Fraenkel set theory} excluding the Axiom of Infinity.
+\end{proposition}
+
+\input{../_concepts/theorem_set_of_all_hereditarily_finite_sets_is_a_grothendieck_universe.tex}
+
+\input{../_definitions/definition_tarski_grothendieck_set_theory.tex}
+
+\input{../_definitions/definition_hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory.tex}
+
 
 
 \input{../_definitions/definition_compact_topological_space.tex}
 \input{../_definitions/definition_separation_axioms_of_topology.tex}
+\input{../_definitions/definition_category_fibered_in_groupoids_over_a_category.tex}

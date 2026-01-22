@@ -1,0 +1,36 @@
+\begin{definition} \label{definition:strict_2_category}
+    A \hldef{strict $2$-category} consists of:
+    \begin{enumerate}
+        \item A collection \hl{$\operatorname{Ob}(\mathcal{C})$} of objects, referred to as the \hldef{$0$-cells}.
+        \item For each pair of objects $x,y \in \operatorname{Ob}(\mathcal{C})$, a \CrefAndHyperrefIfExist{definition:category}{category} \hl{$\Hom(x,y) = \Hom_\calC(x,y)$}.
+        \begin{enumerate}
+            \item The objects in this category are called the \hldef{$1$-morphisms} or \hldef{$1$-cells of $\calC$}.
+            \item The morphisms in this category are called the \hldef{$2$-morphisms} or \hldef{$2$-cells of $\calC$}.
+        \end{enumerate}
+        \item For each object $x \in \operatorname{Ob}(\calC)$, an object 
+        $$\id_x \in \Hom_\calC(x,x)$$
+        called the \hldef{identity object},
+        \item For each triple of objects $x,y,z \in \operatorname{Ob}(\calC)$, A functor
+        $$\circ_{x,y,z}:\Hom_\calC(x,y) \times \Hom_\calC(y,z) \to \Hom_\calC(x,z)$$
+        \CrefIfExists{definition:product_category_of_a_family_of_categories} called \hldef{composition}
+    \end{enumerate}
+    that satisfy the following:
+    \begin{enumerate}
+        \item \textbf{(Strict associativity)} For any quadruple of objects $w,x,y,z \in \Ob(\calC)$, the two compositions
+        $$ \circ_{w,y,z} \circ (1 \times \circ_{w,x,y}), \qquad \circ_{w,x,z} \circ (\circ_{x,y,z} \times 1) $$
+        are \emph{equal} as functors
+        \TODO{what is $1$?}
+        $$ \mathrm{Hom}_{\mathcal{C}}(y,z) \times \mathrm{Hom}_{\mathcal{C}}(x,y) \times \mathrm{Hom}_{\mathcal{C}}(w,x) \to \mathrm{Hom}_{\mathcal{C}}(w,z).  $$
+
+        \item \textbf{(Strict unit laws)}  
+        % For each object $x \in \mathrm{Ob}(\mathcal{C})$, there exists a distinguished identity element
+        % $$ \mathrm{id}_x \in \mathrm{Hom}_{\mathcal{C}}(x,x), $$
+        % such that
+        for all $x, y \in \mathrm{Ob}(\mathcal{C})$,
+        $$ \circ_{x,x,y}(\mathrm{id}_x, -) = 1_{\mathrm{Hom}_{\mathcal{C}}(x,y)}, \qquad \circ_{x,y,y}(-, \mathrm{id}_y) = 1_{\mathrm{Hom}_{\mathcal{C}}(x,y)}.  $$
+        That is, composing with an identity morphism acts as the identity functor.
+    \end{enumerate}
+    \TextIfExists{definition:strict_n_category}{Roughly speaking, a strict $2$-category is a \CrefAndHyperrefIfExist{definition:strict_n_category}{strict $n$-category} for $n = 2$, at least when a strict $0$-category is understood to be a set.
+    %; if one assumes the \CrefAndHyperrefIfExist{definition:tarski_grothendieck_set_theory}{axiom of universes}, then note that any set is a $\mathscr{U}$-set for some large enough \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $\mathscr{U}$, so we may say that the notion of strict $2$-categories is the notion strict $n$-categories with respect to a large enough universe.
+    }
+\end{definition}

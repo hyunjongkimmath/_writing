@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:pseudofunctor_between_weak_2_categories}
+A \hldef{pseudofunctor} $F: \mathcal{C} \to \mathcal{D}$ between \CrefAndHyperrefIfExist{definition:bicategory}{weak 2-categories} $\mathcal{C}$ and $\mathcal{D}$ consists of:
+\begin{itemize}
+    \item An assignment for each object $x \in \mathcal{C}$ to an object $Fx \in \mathcal{D}$.
+    \item For each pair of objects $x, y \in \mathcal{C}$, a functor $F_{x,y}: \mathcal{C}(x,y) \to \mathcal{D}(Fx, Fy)$ between the mapping categories.
+    \item For each object $x \in \mathcal{C}$, a 2-isomorphism \hl{$F_{id_x}: id_{Fx} \Rightarrow F(id_x)$} called the \hldef{identity constraint}.
+    \item For each pair of composable 1-morphisms $f: x \to y$ and $g: y \to z$ in $\mathcal{C}$, a 2-isomorphism \hl{$F_{g,f}: Fg \circ Ff \Rightarrow F(g \circ f)$} called the \hldef{composition constraint}, which is natural in $f$ and $g$.
+\end{itemize}
+
+The identity 2-isomorphism is often denoted by \hl{$\phi_x: id_{Fx} \cong F(id_x)$} and the composition 2-isomorphism by \hl{$\phi_{g,f}: Fg \circ Ff \cong F(g \circ f)$}.
+
+\end{definition}

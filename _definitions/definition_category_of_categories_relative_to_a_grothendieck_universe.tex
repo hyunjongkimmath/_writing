@@ -1,10 +1,13 @@
 \begin{definition} \label{definition:category_of_categories_relative_to_a_grothendieck_universe}
-Let $\mathcal{U}$ be a fixed \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe}. The \hldef{category of categories} (relative to $\mathcal{U}$) is the category defined by:
+Let $\mathcal{U}$ be a fixed \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe}. The \hldef{category of categories (relative to $\mathcal{U}$)} or the \hldef{category of $U$-small categories} is the category defined by:
 \begin{itemize}
-    \item The objects are all \CrefAndHyperrefIfExist{definition:category}{categories} $\mathcal{C}$ such that $\text{Ob}(\mathcal{C}) \in \mathcal{U}$ (often called $\mathcal{U}$-categories).
+    \item The objects are all \CrefAndHyperrefIfExist{definition:locally_small_category}{$U$-small} \CrefAndHyperrefIfExist{definition:category}{categories} $\mathcal{C}$.
     \item The morphisms are \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors} between such categories.
 \end{itemize}
-This category is denoted by
-\hl{$\mathbf{CAT}$}
-In this context, $\mathbf{Cat}$ (the category of categories belonging to $\mathcal{U}$) is an object of $\mathbf{CAT}$.
+This category is denoted by \hl{$U-\mathbf{Cat}$} or by \hl{$\mathbf{Cat}$}, if $U$ is understood.
+
+In the case that \CrefAndHyperrefIfExist{definition:tarski_grothendieck_set_theory}{Tarski-Grothendieck} set theory is assumed (so in particular, the axiom of universes is assumed), one often adopts the convention of denoting $U_n-\mathbf{Cat}$ (\Cref{definition:hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory}) by \hl{$\mathbf{Cat}$} and $U_{n+1}-\mathbf{Cat}$ (\Cref{definition:hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory}) by \hl{$\mathbf{CAT}$}. Thus, for $n = 1$, $\mathbf{Cat}$ would be the category of small categories, whereas $\mathbf{CAT}$ would serve as the ``category of large categories'' which consists of many common categories that are too large to be $U_1$-categories such as $\mathbf{Set}$, $\mathbf{Grp}$, $\mathbf{Top}$ or even $\mathbf{Cat}$.
+
+% denotes $U_2-\mathbf{Cat}$ (\Cref{definition:hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory}) by \hl{$\mathbf{CAT}$}.
+% In this context, $\mathbf{Cat}$ (the category of categories belonging to $\mathcal{U}$) is an object of $\mathbf{CAT}$.
 \end{definition}

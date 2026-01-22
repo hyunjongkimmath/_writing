@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:modification_between_pseudonatural_transformations_between_pseudofunctors_between_weak_2_caetgories}
+Let $F, G: \mathcal{C} \to \mathcal{D}$ be \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctors} between \CrefAndHyperrefIfExist{definition:bicategory}{weak 2-categories (bicategories)}.
+A \hldef{modification $\Gamma: \alpha \Rrightarrow \beta$ between pseudonatural transformations} $\alpha, \beta: F \Rightarrow G$ is a collection of 2-morphisms $\Gamma_x: \alpha_x \Rightarrow \beta_x$ in $\mathcal{D}$ for each $x \in \mathcal{C}$, such that for every 1-morphism $f: x \to y$ in $\mathcal{C}$, the following square of 2-morphisms commutes:
+$$ \begin{array}{ccc}
+Gf \circ \alpha_x & \xrightarrow{\alpha_f} & \alpha_y \circ Ff \\
+\downarrow 1 \circ \Gamma_x & & \downarrow \Gamma_y \circ 1 \\
+Gf \circ \beta_x & \xrightarrow{\beta_f} & \beta_y \circ Ff
+\end{array} $$
+\end{definition}

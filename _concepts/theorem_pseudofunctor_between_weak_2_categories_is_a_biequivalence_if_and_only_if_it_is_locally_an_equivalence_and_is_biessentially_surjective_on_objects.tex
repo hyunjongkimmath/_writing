@@ -1,0 +1,11 @@
+\begin{theorem} \label{theorem:pseudofunctor_between_weak_2_categories_is_a_biequivalence_if_and_only_if_it_is_locally_an_equivalence_and_is_biessentially_surjective_on_objects}
+Let $F: \mathcal{C} \to \mathcal{D}$ be \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctors} between \CrefAndHyperrefIfExist{definition:bicategory}{weak 2-categories (bicategories)}.
+The \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctor} $F: \mathcal{C} \to \mathcal{D}$ is a \CrefAndHyperrefIfExist{definition:biequivalence_between_weak_2_categories}{biequivalence} if and only if the following two conditions hold:
+\begin{enumerate}
+    \item $F$ is locally an equivalence: For every pair of objects $x, y \in \mathcal{C}$, the functor $F_{x,y}: \mathcal{C}(x,y) \to \mathcal{D}(Fx, Fy)$ is an equivalence of categories.
+    \TODO{biessentially surjective}
+    \item $F$ is \hldef{biessentially} surjective on objects: For every object $d \in \mathcal{D}$, there exists an object $x \in \mathcal{C}$ and an equivalence $Fx \simeq d$ in the bicategory $\mathcal{D}$.
+\end{enumerate}
+
+% there exists a pseudofunctor $G: \mathcal{D} \to \mathcal{C}$ and pseudonatural transformations $\eta: id_{\mathcal{C}} \Rightarrow G \circ F$ and $\varepsilon: F \circ G \Rightarrow id_{\mathcal{D}}$ that are internal equivalences in the respective bicategories of functors.
+\end{theorem}

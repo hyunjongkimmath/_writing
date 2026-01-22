@@ -18,8 +18,12 @@
     \begin{itemize}
         \item For a \CrefAndHyperrefIfExist{definition:cochain_complex}{cochain complex} $K^\bullet$, its \hldef{cohomology object in degree $i$} is defined as the quotient of the object of $i$-cocycles by the object of $i$-coboundaries:
         $$ \hlin{H^i(K^\bullet) := Z^i(K) / B^i(K) = \ker(d^i) / \operatorname{im}(d^{i-1}).} $$
+        In fact, each $H^i$ is a functor $H^i: \mathbf{Ch}^\bullet(\calA) \to \calA$\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}; given a morphism $f^\bullet: K^\bullet \to L^\bullet$ of cochain complexes, it is thus \CrefAndHyperref{definition:functor_between_categories}{customary to write} \hl{$H^i(f^\bullet): H^i(K^\bullet) \to H^i(L^\bullet)$} for the induced morphism on the $i$th cohomology objects.
 
         \item For a \CrefAndHyperrefIfExist{definition:chain_complex}{chain complex} $K_\bullet$, its \hldef{homology object in degree $i$} is defined as the quotient of the object of $i$-cycles by the object of $i$-boundaries:
         $$ \hlin{H_i(K_\bullet) := Z_i(K) / B_i(K). = \ker(d_i) / \operatorname{im}(d_{i+1}).} $$
+        In fact, each $H_i$ is a functor $H_i: \mathbf{Ch}_\bullet(\calA) \to \calA$\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}; given a morphism $f_\bullet: K_\bullet \to L_\bullet$ of cochain complexes, it is thus \CrefAndHyperref{definition:functor_between_categories}{customary to write} \hl{$H_i(f_\bullet): H_i(K_\bullet) \to H_i(L_\bullet)$} for the induced morphism on the $i$th homology objects.
+.
     \end{itemize}
+    See \Cref{proposition:homology_and_cohomology_of_complexes_in_an_abelian_category_are_functorial}
 \end{definition}

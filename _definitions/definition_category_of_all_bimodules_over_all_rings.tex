@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:category_of_all_bimodules_over_all_rings}
+    Let $\mathcal{R}ing$ be the \CrefAndHyperrefIfExist{definition:category_of_rings}{category of (associative, with identity) rings}.
+    Define the \hldef{category of all bimodules over all rings} as the category, denoted by notations such as \hl{$\mathcal{B}imod$}, as follows:
+\begin{itemize}
+    \item Objects: Triples $(R, S, M)$ where $(R, S)$ is an object of \CrefAndHyperrefIfExist{definition:product_category_of_a_family_of_categories}{$\mathcal{R}ing^2$} and $M$ is an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R, S)$-bimodule}.
+    \item Morphisms: A morphism $(f, g, \phi): (R, S, M) \to (R', S', M')$ where $(f, g)$ is a morphism in $\mathcal{R}ing^2$ and $\phi: M \to M'$ is a bimodule morphism over $(f, g)$.
+    \item Composition: $(f', g', \phi') \circ (f, g, \phi) = (f' \circ f, g' \circ g, \phi' \circ \phi)$.
+\end{itemize}
+
+    Note that there is a canonical projection functor $\mathcal{B}imod \to \mathcal{R}ing^2$ defined by $(R, S, M) \mapsto (R, S)$ and $(f, g, \phi) \mapsto (f, g)$. This functor exhibits $\mathcal{B}imod$ as a fibered category \TODO{define fibered category} over $\mathcal{R}ing^2$. For any morphism $(f, g): (R, S) \to (R', S')$, the cartesian lift of an object $(R', S', M')$ is given by the $(R, S)$-bimodule ${}_f M'_g$ where actions are defined via restriction of scalars: $r \cdot m \cdot s = f(r) \cdot m \cdot g(s)$.
+\end{definition}

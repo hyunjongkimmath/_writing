@@ -1,12 +1,12 @@
 \begin{theorem} \label{theorem:the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star}
     Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}.
-    The \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules} is a an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck} category and an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$AB4*$} category.
+    The \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules} is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck} category and an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$AB4*$} category.
 \end{theorem}
 
 \begin{proof}
     We handwave details.
 
-    Given $R$-$S$-bimodules $M$ and $N$, the set $\operatorname{Hom}_{{}_R \mathrm{Mod}_S}(M,N)$ is an abelian group. Moreover, there is a $0$-object, namely the zero module in ${}_R \mathrm{Mod}_S$. Therefore, ${}_R \mathrm{Mod}_S$ is \CrefAndHyperrefIfExist{definition:additive_category}{preadditive}. The direct sum of finitely many $R$-$S$-bimodules is their \CrefAndHyperrefIfExist{definition:coproduct_of_modules_of_rings}{coproduct}. Therefore, ${}_R \mathrm{Mod}_S$ is \CrefAndHyperrefIfExist{definition:additive_category}{additive}.
+    Given $R$-$S$-bimodules $M$ and $N$, the set $\operatorname{Hom}_{{}_R \mathrm{Mod}_S}(M,N)$ is an abelian group. Moreover, there is a $0$-object, namely the zero module in ${}_R \mathrm{Mod}_S$. Therefore, ${}_R \mathrm{Mod}_S$ is \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{preadditive}. The direct sum of finitely many $R$-$S$-bimodules is their \CrefAndHyperrefIfExist{definition:coproduct_of_modules_of_rings}{coproduct}. Therefore, ${}_R \mathrm{Mod}_S$ is \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive}.
 
     Given a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism} $f: M \to N$ be $R$-$S$-bimodules, \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_coimage_of_a_module_homomorphism}{$\ker f$ and $\operatorname{coker} f$} are the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{categorical kernel and cokernel} of $f$ in \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{${}_R \mathrm{Mod}_S$}. Moreover, the \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms} in ${}_R \mathrm{Mod}_S$ are the injective module homomorphisms $f: M \to N$; such an $f$ is the kernel of its cokernel. In other words, ${}_R \mathrm{Mod}_S$ satisfies $AB1$ and $AB2$ and hence is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
 
@@ -16,7 +16,7 @@
     \begin{equation} \label{eq:right_exact_sequence_of_direct_system_of_exact_ring_modules}
     \varinjlim_{j \in J} A_j \to \varinjlim_{j \in J} B_j \to \varinjlim_{j \in J} C_j \to 0.
     \end{equation}
-    is left exact as well. Take some element of the kernel of $\varinjlim_{j \in J} A_j \to \varinjlim_{j \in J} B_j$; such an element is represented by some element $a_j \in A_j$ for some $j \in J$. Since its image is zero in $\varinjlim{j \in J} B_j$, it must be zero as an element of $B_k$ for some $k \in J$. Since $J$ is filtered, there exists some $k' \in J$ so that there are arrows $j \to k'$ and $k \to k'$ and so that the image of $a_j$ in $B_{k'}$ is $0$. The image of $a_j$ in $A_{k'}$ is then $0$ due to the assumption that 
+    is left exact as well. Take some element\footnote{Recall \Cref{construction_of_direct_limit_in_a_category_of_sets_with_finitary_operations}} of the kernel of $\varinjlim_{j \in J} A_j \to \varinjlim_{j \in J} B_j$; such an element is represented by some element $a_j \in A_j$ for some $j \in J$. Since its image is zero in $\varinjlim_{j \in J} B_j$, it must be zero as an element of $B_k$ for some $k \in J$. Since $J$ is filtered, there exists some $k' \in J$ so that there are arrows $j \to k'$ and $k \to k'$ and so that the image of $a_j$ in $B_{k'}$ is $0$. The image of $a_j$ in $A_{k'}$ is then $0$ due to the assumption that 
     $$0 \to A_{k'} \to B_{k'} \to C_{k'} \to 0$$
     is exact. Therefore, $a_j$ is $0$ in $\varinjlim_{j \in J} A_j$, so \eqref{eq:right_exact_sequence_of_direct_system_of_exact_ring_modules} is left exact as claimed and ${}_R \mathrm{Mod}_S$ is $AB5$.
 

@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:shifted_tower_of_objects_in_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} and let $I$ be the \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} of non-negative integers $\mathbb{N}$ with the standard ordering $\geq$ (i.e. $I$ has arrows $\cdots \rightarrow 2 \rightarrow 1 \rightarrow 0$) (or more generally let $I$ be the poset of integers $\bbZ$ with similar ordering).
+
+    Given a \CrefAndHyperrefIfExist{definition:tower_of_objects_in_a_category}{tower} $A = (A_i, u_i)_{i \in I}$ where $u_i: A_i \to A_{i-1}$ (for $i \geq 1$ if $\bbN$ is the collection of objects of $I$)  and $r \geq 0$, the \hldef{shifted tower} \hl{$A[r]$} is the tower $A[r] = (A[r]_i, u[r]_i)$ given by $A[r]_i = A_{r+i}$ and whose transition maps are given by $u[r]_i: A[r]_i = A{r+i} \xrightarrow{u_{r+i}} A_{r+i-1} =  A[r]_{i-1}$.
+
+    Note that there is a \CrefAndHyperrefIfExist{definition:tower_of_objects_in_a_category}{morphism of towers} $A[r] \to A$ where $A[r]_i \to A_i$ is given by the transition morphism $A_{r+i} \to A_i$.
+\end{definition}

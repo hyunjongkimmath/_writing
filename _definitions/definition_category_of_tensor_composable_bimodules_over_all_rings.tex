@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:category_of_tensor_composable_bimodules_over_all_rings}
+The \hldef{category of (tensor) composable bimodules}, denotable by notations such as \hl{$\mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod$}, is the \TODO{fiber product in what sense} fiber product of the category \CrefAndHyperrefIfExist{definition:category_of_all_bimodules_over_all_rings}{$\mathcal{B}imod$} of all bimodules over all rings with itself over the category \CrefAndHyperrefIfExist{definition:category_of_rings}{$\mathcal{R}ing$} of all (associative, unital) rings with respect to the functors
+\begin{align*}
+\mathcal{B}imod \to \mathcal{R}ing^2 \xrightarrow{\operatorname{pr}_1} \mathcal{R}ing \\
+\mathcal{B}imod \to \mathcal{R}ing^2 \xrightarrow{\operatorname{pr}_2} \mathcal{R}ing 
+\end{align*}
+where $\operatorname{pr}_1$ and $\operatorname{pr}_2$ are the projection functors.
+
+Specifically, it is the category whose objects are pairs of bimodules $((R, S, M), (S, T, N))$ sharing a common middle ring $S$, and whose morphisms are pairs of morphisms $((f, g, \phi), (g, h, \psi))$ such that the second ring component of the first morphism and the first ring component of the second morphism coincide as $g: S \to S'$.
+\end{definition}

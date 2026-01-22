@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  4 JAN 2026 13:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  18 JAN 2026 12:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1012,7 +1012,12 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 [1
 \openout5 = `HomologicalAlgebra.ist'.
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[2])
 \tf@toc=\write8
 \openout8 = `HomologicalAlgebra.toc'.
 
@@ -1020,33 +1025,28 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \@gls@deffile=\write9
 \openout9 = `HomologicalAlgebra.glsdefs'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[2]) (../_definitions/definition_opposite_category_of_a_category.tex
+) (../_definitions/definition_opposite_category_of_a_category.tex
 
 [3]) (../_definitions/definition_functor_between_categories.tex) (../_definitions/definition_natural_transformation_between_functors_between_categories.tex
 
 [4]) (../_definitions/definition_locally_small_category.tex) (../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex) (../_definitions/definition_full_subcategory_of_a_category.tex) (../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex
+
+[5]
 Overfull \hbox (8.90968pt too wide) in paragraph at lines 6--7
 []$\OML/cmm/m/it/12 F$ \T1/cmr/m/n/12 is called []\T1/cmr/m/it/12 full \T1/cmr/m/n/12 if for ev-ery pair of ob-jects $\OML/cmm/m/it/12 x; y \OMS/cmsy/m/n/12 2 []\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , the in-duced rule/assignment/class
  []
 
+) (../_definitions/definition_equivalence_of_categories.tex) (../_definitions/definition_essentially_small_category.tex) (../_definitions/definition_product_category_of_a_family_of_categories.tex
 
+[6]) (../_definitions/definition_n_ary_functor.tex) (../_concepts/lemma_Hom_functor_on_an_enriched_category_is_contravariant_in_the_first_argument_and_covariant_in_the_second.tex
 
-[5]) (../_definitions/definition_equivalence_of_categories.tex) (../_definitions/definition_essentially_small_category.tex) (../_definitions/definition_product_category_of_a_family_of_categories.tex
-
-[6]) (../_definitions/definition_n_ary_functor.tex) (../_concepts/lemma_Hom_functor_on_an_enriched_category_is_contravariant_in_the_first_argument_and_covariant_in_the_second.tex) (../_definitions/definition_ringed_space.tex
-
-[7]) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
+[7]) (../_definitions/definition_ringed_space.tex) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
 
 [8]) (../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits.tex
 
-[9]) (../_definitions/definition_sheafification_functor_on_a_site.tex) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex) (../_concepts/lemma_final_object_is_projective_limit_of_empty_diagram.tex
+[9]) (../_definitions/definition_sheafification_functor_on_a_site.tex) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex
 
-[10]) (../_definitions/definition_topos.tex) (../_concepts/lemma_topos_has_a_final_object.tex) (../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex) (../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex
+[10]) (../_concepts/lemma_final_object_is_projective_limit_of_empty_diagram.tex) (../_definitions/definition_topos.tex) (../_concepts/lemma_topos_has_a_final_object.tex) (../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex) (../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex
 
 [11]) (../_definitions/definition_subobject_of_an_object_of_an_additive_category.tex) (../_definitions/definition_quotient_object_of_an_object_of_an_abelian_category_by_a_subobject.tex) (../_definitions/definition_image_coimage_of_a_morphism_in_a_category.tex
 
@@ -1054,74 +1054,78 @@ Overfull \hbox (8.90968pt too wide) in paragraph at lines 6--7
 
 [13]
 
-[14]) (../_concepts/../_concepts/theorem_limits_and_colimits_as_functors_from_functor_category_to_value_category.tex) (../_concepts/../_concepts/theorem_limits_colimits_essentially_small.tex
+[14]) (../_concepts/../_concepts/theorem_limits_and_colimits_as_functors_from_functor_category_to_value_category.tex
 
-[15]) (../_definitions/../_definitions/definition_small_and_finite_limits_and_colimits_in_a_category.tex) (../_concepts/../_concepts/theorem_limits_colimits_are_equalizers_coequaulizers_of_products_coproducts.tex
+[15]) (../_concepts/../_concepts/theorem_limits_colimits_essentially_small.tex) (../_definitions/../_definitions/definition_small_and_finite_limits_and_colimits_in_a_category.tex) (../_concepts/../_concepts/theorem_limits_colimits_are_equalizers_coequaulizers_of_products_coproducts.tex
 
 [16]) (../_definitions/../_definitions/definition_partially_ordered_set.tex) (../_definitions/../_definitions/definition_filtered_cofiltered_category.tex
 
-[17]) (../_definitions/../_definitions/definition_thin_category.tex) (../_concepts/../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex) (../_definitions/../_definitions/definition_system_in_a_category_indexed_by_a_directed_poset.tex
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18]) (../_definitions/../_definitions/definition_projective_and_inductive_limits_in_categories.tex)) (../_concepts/lemma_bifunctors_induce_functors_to_a_functor_category_and_natural_transformations.tex) (../_definitions/definition_comparison_morphism_of_limits_and_colimits_under_functors.tex
 
-[19]) (../_definitions/definition_functor_preserving_limit_colimit_of_a_diagram.tex) (../_definitions/definition_continuous_cocontinuous_functor_between_categories.tex) (../_concepts/theorem_right_left_adjoints_commute_with_limits_colimits.tex
 
-[20]) (../_concepts/theorem_colimits_commute_with_colimits_and_limits_commute_with_limits.tex
+[17]) (../_definitions/../_definitions/definition_thin_category.tex) (../_concepts/../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex
 
-[21]) (../_concepts/proposition_limits_and_colimits_in_functor_categories_may_be_computed_pointwise.tex) (../_definitions/definition_diagonal_functor_from_a_category_to_a_diagram_category_of_the_category.tex) (../_concepts/theorem_limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index.tex
+[18]) (../_definitions/../_definitions/definition_system_in_a_category_indexed_by_a_directed_poset.tex) (../_definitions/../_definitions/definition_projective_and_inductive_limits_in_categories.tex)) (../_concepts/lemma_bifunctors_induce_functors_to_a_functor_category_and_natural_transformations.tex
 
-[22]) (../_definitions/definition_initial_final_zero_objects_of_a_category.tex) (../_concepts/lemma_initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory.tex) (../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex
+[19]) (../_definitions/definition_comparison_morphism_of_limits_and_colimits_under_functors.tex) (../_definitions/definition_functor_preserving_limit_colimit_of_a_diagram.tex) (../_definitions/definition_continuous_cocontinuous_functor_between_categories.tex
 
-[23]) (../_definitions/definition_product_of_finitely_many_objects_in_a_category.tex
+[20]) (../_concepts/theorem_right_left_adjoints_commute_with_limits_colimits.tex) (../_concepts/theorem_colimits_commute_with_colimits_and_limits_commute_with_limits.tex
 
-[24]) (../_definitions/definition_complete_and_cocomplete_category.tex) (../_definitions/definition_additive_category.tex) (../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex) (../_definitions/definition_additive_functor_between_additive_categories.tex
+[21]) (../_concepts/proposition_limits_and_colimits_in_functor_categories_may_be_computed_pointwise.tex) (../_definitions/definition_diagonal_functor_from_a_category_to_a_diagram_category_of_the_category.tex
 
-[25]) (../_definitions/definition_abelian_category.tex) (../_concepts/proposition_diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian.tex) (../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex
+[22]) (../_concepts/theorem_limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index.tex) (../_definitions/definition_initial_final_zero_objects_of_a_category.tex) (../_concepts/lemma_initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory.tex
 
-[26]) (../_concepts/lemma_equalizer_coequalizer_in_an_additive_category_are_given_by_kernel_and_cokernel.tex) (../_concepts/lemma_abelian_categories_are_finitely_complete_and_finitely_cocomplete.tex
+[23]) (../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex) (../_definitions/definition_product_of_finitely_many_objects_in_a_category.tex
 
-[27]) (../_concepts/proposition_examples_of_abelian_categories.tex) (../_concepts/proposition_monomorphisms_are_the_same_as_kernels_and_epimorphisms_are_the_same_as_cokernels_in_abelian_categories.tex) (../_definitions/definition_exact_functor_between_abelian_categories.tex
+[24]) (../_definitions/definition_complete_and_cocomplete_category.tex) (../_definitions/definition_additive_category_preadditive_category.tex) (../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex
 
-[28]) (../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex) (../_definitions/definition_short_exact_sequence_in_an_additive_category.tex) (../_concepts/proposition_Hom_functors_on_abelian_categories_are_left_exact.tex
+[25]) (../_definitions/definition_additive_functor_between_additive_categories.tex) (../_definitions/definition_pre_abelian_category.tex) (../_definitions/definition_abelian_category.tex
+
+[26]) (../_concepts/proposition_diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian.tex) (../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex
+
+[27]) (../_concepts/lemma_equalizer_coequalizer_in_an_additive_category_are_given_by_kernel_and_cokernel.tex) (../_concepts/lemma_abelian_categories_are_finitely_complete_and_finitely_cocomplete.tex) (../_concepts/proposition_examples_of_abelian_categories.tex) (../_concepts/proposition_monomorphisms_are_the_same_as_kernels_and_epimorphisms_are_the_same_as_cokernels_in_abelian_categories.tex
+
+[28]) (../_definitions/definition_exact_functor_between_abelian_categories.tex) (../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex) (../_definitions/definition_short_exact_sequence_in_an_additive_category.tex) (../_concepts/proposition_Hom_functors_on_abelian_categories_are_left_exact.tex
 
 [29]) (../_concepts/theorem_functor_category_of_an_abelian_category_indexed_by_a_small_category_is_abelian.tex) (../_concepts/proposition_limits_colimits_in_abelian_category_are_left_right_exact.tex
 
 [30]) (../_concepts/proposition_full_and_faithful_additive_functor_between_abelian_categories_reflects_exactness.tex) (../_concepts/theorem_freyd_mitchell_embedding_theorem_for_small_abelian_categories.tex) (../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex) (../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex
 
-[31]) (../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex) (../_definitions/definition_generator_of_a_category.tex
+[31]) (../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex) (../_concepts/theorem_contravariant_yoneda_lemma_on_a_locally_small_category.tex
 
-[32]) (../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex
+[32]) (../_concepts/corollary_contravariant_yoneda_embedding_on_a_locally_small_category.tex) (../_definitions/definition_generator_of_a_category.tex
 
-[33]) (../_concepts/lemma_Ab5_category_with_a_family_of_generators_is_grothendieck.tex) (../_concepts/theorem_examples_of_grothendieck_categories.tex
+[33]) (../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex
 
-[34]) (../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex) (../_definitions/definition_topological_group.tex
+[34]) (../_concepts/lemma_Ab5_category_with_a_family_of_generators_is_grothendieck.tex) (../_concepts/theorem_examples_of_grothendieck_categories.tex) (../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex
 
-[35]) (../_definitions/definition_compact_topological_space.tex) (../_definitions/definition_separation_axioms_of_topology.tex) (../_definitions/definition_locally_compact_group.tex) (../_definitions/definition_field.tex) (../_definitions/definition_vector_space_over_a_field.tex
+[35]) (../_definitions/definition_topological_group.tex) (../_definitions/definition_compact_topological_space.tex
 
-[36]) (../_concepts/theorem_category_of_compact_hausdorff_abelian_groups_is_AB5_star.tex) (../_concepts/theorem_category_of_k_vector_spaces_is_AB_5_star.tex) (../_concepts/theorem_category_of_R_modules_is_AB_4_star.tex) (../_concepts/proposition_stability_and_constructions_of_grothendieck_categories.tex
+[36]) (../_definitions/definition_separation_axioms_of_topology.tex) (../_definitions/definition_locally_compact_group.tex) (../_definitions/definition_field.tex) (../_definitions/definition_vector_space_over_a_field.tex
 
-[37]) (../_definitions/definition_strict_abelian_subcategory_of_an_abelian_category.tex) (../_definitions/definition_chain_complex_in_an_additive_category.tex
+[37]) (../_concepts/theorem_category_of_compact_hausdorff_abelian_groups_is_AB5_star.tex) (../_concepts/theorem_category_of_k_vector_spaces_is_AB_5_star.tex) (../_concepts/theorem_category_of_R_modules_is_AB_4_star.tex) (../_concepts/proposition_stability_and_constructions_of_grothendieck_categories.tex
 
-[38]) (../_remarks/remark_cohomological_vs_homological_conventions.tex
+[38]) (../_definitions/definition_strict_abelian_subcategory_of_an_abelian_category.tex) (../_definitions/definition_chain_complex_in_an_additive_category.tex
 
-[39]) (../_conventions/convention_homological_algebra_is_discussed_in_cohomological_terms.tex) (../_definitions/definition_quiver.tex) (../_definitions/definition_path_category_generated_by_a_quiver.tex) (../_definitions/definition_preadditive_category_generated_by_a_quiver.tex) (../_definitions/definition_walking_chain_complex_category.tex) (../_definitions/definition_additive_functor_category_between_preadditive_categories.tex
+[39]) (../_remarks/remark_cohomological_vs_homological_conventions.tex) (../_conventions/convention_homological_algebra_is_discussed_in_cohomological_terms.tex) (../_definitions/definition_quiver.tex
 
-[40]) (../_concepts/proposition_category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category.tex) (../_concepts/lemma_additive_functor_category_from_small_preadditive_categories_preserves.tex) (../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex) (../_concepts/proposition_limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise.tex
+[40]) (../_definitions/definition_path_category_generated_by_a_quiver.tex) (../_definitions/definition_preadditive_category_generated_by_a_quiver.tex) (../_definitions/definition_walking_chain_complex_category.tex) (../_definitions/definition_additive_functor_category_between_preadditive_categories.tex) (../_concepts/proposition_category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category.tex
 
-[41]) (../_definitions/definition_boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex.tex) (../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex) (../_definitions/definition_acyclic_complex_of_objects_in_an_abelian_category.tex
+[41]) (../_concepts/lemma_additive_functor_category_from_small_preadditive_categories_preserves.tex) (../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex) (../_concepts/proposition_limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise.tex) (../_definitions/definition_boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex.tex
 
-[42]) (../_concepts/proposition_exact_sequence_in_a_diagram_category_of_an_abelian_category_indexed_by_a_small_category_is_given_by_componentwise_exact_sequences.tex) (../_definitions/definition_bounded_complex_in_an_additive_category.tex
+[42]) (../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex) (../_definitions/definition_acyclic_complex_of_objects_in_an_abelian_category.tex
 
-[43]) (../_definitions/definition_quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category.tex) (../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex) (../_concepts/theorem_long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category.tex
+[43]) (../_concepts/proposition_exact_sequence_in_a_diagram_category_of_an_abelian_category_indexed_by_a_small_category_is_given_by_componentwise_exact_sequences.tex) (../_definitions/definition_bounded_complex_in_an_additive_category.tex) (../_definitions/definition_quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category.tex
+
+[44]) (../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex) (../_concepts/theorem_long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category.tex
 Overfull \hbox (26.91728pt too wide) in paragraph at lines 5--7
 []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]; d[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 D[]; d[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , and $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E[]; d[]\OT1/cmr/m/n/12 )$
  []
 
 
 
-[44]) (../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex) (../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex) (../_definitions/definition_stupid_truncation_of_a_chain_complex_in_an_additive_category.tex
-
-[45]
+[45]) (../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex) (../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex) (../_definitions/definition_stupid_truncation_of_a_chain_complex_in_an_additive_category.tex
 Overfull \hbox (51.84163pt too wide) in paragraph at lines 23--24
 [][][][][][][]
  []
@@ -1132,6 +1136,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--24
  []
 
 
+
+[46]
 Overfull \hbox (51.84163pt too wide) in paragraph at lines 56--57
 [][][][][][][]
  []
@@ -1172,8 +1178,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
  []
 
 
-
-[46]
 Overfull \hbox (1.093pt too wide) detected at line 86
 []
  []
@@ -1189,6 +1193,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
  []
 
 
+
+[47]
 Overfull \hbox (51.84163pt too wide) in paragraph at lines 110--111
 [][][][][][][]
  []
@@ -1198,30 +1204,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-) (../_concepts/proposition_chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations.tex
+) (../_concepts/proposition_chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations.tex) (../_definitions/definition_mapping_cone_of_a_map_of_chain_cochain_complexes.tex
 
-[47]) (../_definitions/definition_mapping_cone_of_a_map_of_chain_cochain_complexes.tex
+[48]) (../_definitions/definition_injective_and_projective_objects_in_a_category.tex
 
-[48]) (../_definitions/definition_injective_and_projective_objects_in_a_category.tex) (../_concepts/lemma_injective_objects_in_a_category_are_projective_in_the_opposite_category.tex) (../_concepts/lemma_examples_of_projective_and_injective_objects.tex
+[49]) (../_concepts/lemma_injective_objects_in_a_category_are_projective_in_the_opposite_category.tex) (../_concepts/lemma_examples_of_projective_and_injective_objects.tex) (../_concepts/theorem_baers_criterion_for_injectivity_of_module_over_a_ring.tex) (../_concepts/lemma_injective_projective_objects_on_a_locally_small_category_induce_hom_functors_that_take_monomorphisms_epimoprhisms_to_surjections.tex
 
-[49]) (../_concepts/theorem_baers_criterion_for_injectivity_of_module_over_a_ring.tex) (../_concepts/lemma_injective_projective_objects_on_a_locally_small_category_induce_hom_functors_that_take_monomorphisms_epimoprhisms_to_surjections.tex) (../_concepts/lemma_injective_projective_objects_in_an_abelian_category_have_exact_Hom_functors.tex
+[50]) (../_concepts/lemma_injective_projective_objects_in_an_abelian_category_have_exact_Hom_functors.tex) (../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex
 
-[50]) (../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex) (../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex) (../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex
+[51]) (../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex) (../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex) (../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex
 
-[51]) (../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex) (../_concepts/lemma_projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution.tex
+[52]) (../_concepts/lemma_projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution.tex
 Overfull \hbox (1.89471pt too wide) in paragraph at lines 6--7
 []\T1/cmr/m/n/12 A []in-jec-tive ob-ject[] (Def-i-ni-tion []4.1.1[]) $\OMS/cmsy/m/n/12 I$ \T1/cmr/m/n/12 al-ways has a []in-jec-tive res-o-lu-tion[] (Def-i-ni-tion []4.2.4[])
  []
 
 ) (../_concepts/lemma_an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class.tex
 
-[52]) (../_concepts/proposition_abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes.tex
+[53]) (../_concepts/proposition_abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes.tex
 
-[53]
+[54]
 
-[54]) (../_concepts/lemma_projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy.tex
-
-[55]
+[55]) (../_concepts/lemma_projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy.tex
 LaTeX Font Info:    Trying to load font information for U+euf on input line 24.
  (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
@@ -1229,50 +1233,55 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 [56]) (../_definitions/definition_left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives.tex
 
-[57]) (../_concepts/lemma_horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories.tex
+[57]
 
-[58]) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined.tex
-
-[59])
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 327.
+[58]) (../_concepts/lemma_horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories.tex
+Underfull \vbox (badness 1648) has occurred while \output is active []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 327.
 
+[59]) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined.tex
+
+[60])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 328.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\delta' on input line 328.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 328.
 
 (../_definitions/definition_homological_cohomological_delta_functor_between_abelian_categories.tex
 
-[60]) (../_concepts/theorem_long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors.tex
+[61]) (../_concepts/theorem_long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors.tex
 
-[61]) (../_definitions/definition_homological_cohomological_dimension_of_objects_in_abelian_categories_with_enough_projectives_injectives.tex) (../_definitions/definition_cohomological_homological_dimension_of_a_left_right_exact_functor_on_an_abelian_category_with_enough_projectives_injectives.tex
+[62]) (../_definitions/definition_homological_cohomological_dimension_of_objects_in_abelian_categories_with_enough_projectives_injectives.tex) (../_definitions/definition_cohomological_homological_dimension_of_a_left_right_exact_functor_on_an_abelian_category_with_enough_projectives_injectives.tex
 
-[62])
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 355.
-
+[63])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 355.
+(hyperref)                removing `math shift' on input line 356.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 356.
 
 (../_definitions/definition_F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories.tex) (../_definitions/definition_F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories.tex) (../_concepts/lemma_any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor.tex
 
-[63]) (../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex
+[64]) (../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex
 
-[64]
+[65]
 Overfull \hbox (10.16444pt too wide) in paragraph at lines 47--49
 \T1/cmr/m/n/12 so $\OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) [] [](\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 ))$\T1/cmr/m/n/12 . We found that $\OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ,
  []
 
-) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions.tex
+) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions.tex)
 
-[65]) (../_definitions/definition_double_complex_of_objects_in_an_additive_category.tex) (../_definitions/definition_morphism_of_double_complex_of_objects_in_an_additive_category.tex
+[66] (../_definitions/definition_double_complex_of_objects_in_an_additive_category.tex) (../_definitions/definition_morphism_of_double_complex_of_objects_in_an_additive_category.tex
 Overfull \hbox (7.83142pt too wide) in paragraph at lines 15--16
 [][][][][][][]
  []
@@ -1282,13 +1291,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
+) (../_concepts/theorem_category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes.tex
 
+[67]) (../_concepts/lemma_small_product_of_additive_categories_is_additive.tex) (../_definitions/definition_n_ary_additive_functor_between_additive_categories.tex
 
-[66]) (../_concepts/theorem_category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes.tex) (../_concepts/lemma_small_product_of_additive_categories_is_additive.tex) (../_definitions/definition_n_ary_additive_functor_between_additive_categories.tex
+[68]) (../_definitions/definition_double_complex_associated_to_biadditive_functor_and_chain_complexes.tex) (../_definitions/definition_bounded_double_complex_of_objects_in_an_additive_category.tex
 
-[67]) (../_definitions/definition_double_complex_associated_to_biadditive_functor_and_chain_complexes.tex) (../_definitions/definition_bounded_double_complex_of_objects_in_an_additive_category.tex
-
-[68]) (../_definitions/definition_total_complexes_of_a_double_complex_of_objects_in_an_additive_category.tex
+[69]) (../_definitions/definition_total_complexes_of_a_double_complex_of_objects_in_an_additive_category.tex
 Overfull \hbox (7.83142pt too wide) in paragraph at lines 9--10
 [][][][][][][]
  []
@@ -1300,49 +1309,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
 ) (../_concepts/lemma_total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic.tex
 
-[69]) (../_concepts/lemma_acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns.tex
+[70]) (../_concepts/lemma_acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns.tex
 
-[70]) (../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor.tex
+[71]) (../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor.tex
 
-[71]) (../_definitions/definition_flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex
+[72]) (../_definitions/definition_flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex
 
-[72]) (../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex
+[73]) (../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex
 
-[73]
+[74]
 Overfull \hbox (19.82pt too wide) in paragraph at lines 22--23
 []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 C$ \T1/cmr/m/n/12 be the dou-ble com-plex of ob-jects in $\OMS/cmsy/m/n/12 C$ \T1/cmr/m/n/12 ob-tained from $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]; P[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 by adding $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A; P[]\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1])$
  []
 
 ) (../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex
+Overfull \hbox (16.9217pt too wide) in paragraph at lines 25--27
+\T1/cmr/m/n/12 is a nat-u-ral iso-mor-phism. By sym-me-try, there is a nat-u-ral iso-mor-phism $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]P[]\OT1/cmr/m/n/12 ))) []
+ []
 
-[74]) (../_definitions/definition_flat_dimension_of_objects_of_abelian_categories_with_.tex
 
-[75]) (../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex
 
-[76]) (../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex)
+[75]) (../_definitions/definition_flat_dimension_of_objects_of_abelian_categories_with_.tex
 
-[77] (../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex) (../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex
+[76]) (../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex
 
-[78]) (../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex) (../_excerpts/../_excerpts/excerpts_derived_categories.tex (../_excerpts/../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex
+[77]) (../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex)
 
-[79]) (../_excerpts/../_definitions/definition_triangulated_category.tex
+[78] (../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex) (../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex
 
-[80]) (../_excerpts/../_definitions/definition_exact_functor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category.tex
+[79]) (../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex) (../_excerpts/../_excerpts/excerpts_derived_categories.tex (../_excerpts/../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex
 
-[81]) (../_excerpts/../_definitions/definition_exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category.tex) (../_excerpts/../_concepts/proposition_homotopy_category_of_an_additive_category_is_a_triangulated_category.tex
+[80]) (../_excerpts/../_definitions/definition_triangulated_category.tex
 
-[82]) (../_excerpts/../_concepts/theorem_additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories.tex
+[81]) (../_excerpts/../_definitions/definition_exact_functor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 83 undefined on input line 1.
+[82]) (../_excerpts/../_definitions/definition_exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category.tex) (../_excerpts/../_concepts/proposition_homotopy_category_of_an_additive_category_is_a_triangulated_category.tex
 
-) (../_excerpts/../_definitions/definition_multiplicative_system_of_morphisms_in_a_category.tex) (../_excerpts/../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_excerpts/../_definitions/definition_saturated_multiplicative_system_in_a_category.tex
+[83]) (../_excerpts/../_concepts/theorem_additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories.tex) (../_excerpts/../_definitions/definition_multiplicative_system_of_morphisms_in_a_category.tex) (../_excerpts/../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_excerpts/../_definitions/definition_saturated_multiplicative_system_in_a_category.tex
 Overfull \hbox (2.37277pt too wide) in paragraph at lines 2--3
 []\T1/cmr/bx/n/12 Definition 5.2.3. []\T1/cmr/m/n/12 A []mul-ti-plica-tive sys-tem[] (Def-i-ni-tion []5.2.1[]) $\OML/cmm/m/it/12 S$ \T1/cmr/m/n/12 in a []cat-e-gory[] (Def-i-ni-tion []1.0.1[])
  []
 
 ) (../_excerpts/../_concepts/proposition_multiplicative_systems_may_as_well_be_saturated.tex
 
-[83]) (../_excerpts/../_definitions/definition_derived_category_of_an_abelian_category.tex) (../_excerpts/../_conventions/convention_objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category.tex) (../_excerpts/../_definitions/definition_category_of_bounded_complexes_of_injectives_projectives.tex
+[84]) (../_excerpts/../_definitions/definition_derived_category_of_an_abelian_category.tex) (../_excerpts/../_conventions/convention_objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category.tex) (../_excerpts/../_definitions/definition_category_of_bounded_complexes_of_injectives_projectives.tex
 Overfull \hbox (5.27486pt too wide) in paragraph at lines 2--3
 []\T1/cmr/bx/n/12 Definition 5.3.3. []\T1/cmr/m/n/12 Let $\OMS/cmsy/m/n/12 A$ \T1/cmr/m/n/12 be an []ad-di-tive cat-e-gory[] (Def-i-ni-tion []2.0.6[]). For $\OT1/cmr/m/n/12 ? \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 +\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ; b; []\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 ,
  []
@@ -1354,130 +1364,141 @@ Overfull \hbox (1.9891pt too wide) in paragraph at lines 4--5
 
 
 
-[84]) (../_excerpts/../_definitions/definition_total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories.tex
+[85]) (../_excerpts/../_definitions/definition_total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories.tex
 Overfull \hbox (12.85172pt too wide) in paragraph at lines 9--10
 []\T1/cmr/m/n/12 Dually, a []\T1/cmr/m/it/12 (to[]-[]tal)[] [][][]left[] [][][]de[]-[]rived[] [][][]func[]-[]tor[] [][][]on[] [][][][][] [][][]on[] [][][][] \T1/cmr/m/n/12 is an ex-act func-tor [][]
  []
 
 ) (../_excerpts/../_concepts/proposition_exact_functor_between_abelian_categories_induces_functor_on_derived_categories.tex
 
-[85]) (../_excerpts/../_concepts/theorem_existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories.tex) (../_concepts/corollary_additive_functor_bewteen_abelian_categories_has_a_right_or_left_total_derived_functor_if_the_source_abelian_category_has_enough_injectives_or_projectives.tex
+[86]) (../_excerpts/../_concepts/theorem_existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories.tex) (../_concepts/corollary_additive_functor_bewteen_abelian_categories_has_a_right_or_left_total_derived_functor_if_the_source_abelian_category_has_enough_injectives_or_projectives.tex
 
-[86]) (../_excerpts/../_concepts/corollary_cohomology_of_a_total_derived_functor_of_an_additive_functor_between_abelian_categories_can_be_calculated_by_hyper_derived_functors.tex)
+[87]) (../_excerpts/../_concepts/corollary_cohomology_of_a_total_derived_functor_of_an_additive_functor_between_abelian_categories_can_be_calculated_by_hyper_derived_functors.tex) (../_excerpts/../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 87 undefined on input line 71.
+[88]) (../_excerpts/../_definitions/definition_essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category.tex) (../_excerpts/../_concepts/proposition_condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant.tex
 
-(../_excerpts/../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex
+[89]) (../_excerpts/../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex
 
-[87]) (../_excerpts/../_definitions/definition_essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category.tex) (../_excerpts/../_concepts/proposition_condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant.tex
+[90]) (../_excerpts/../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex
 
-[88]) (../_excerpts/../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex
+[91]) (../_excerpts/../_definitions/definition_right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories.tex) (../_excerpts/../_concepts/proposition_derived_multifunc_of_an_add_multifunc_of_ab_cats_on_cohom_bdd_cats_commutes_with_inclusion_to_unbdd_cats.tex)
 
-LaTeX Warning: Citation `SGA4_III' on page 89 undefined on input line 1.
+[92]) (../_definitions/definition_left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories.tex
 
+[93]) (../_concepts/proposition_total_derived_functors_for_biadditive_functors_on_abelian_categories_are_well_defined_if_both_source_categories_have_enough_projectives_injectives.tex
 
+[94]) (../_definitions/definition_derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor.tex) (../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex) (../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex
 
-[89]) (../_excerpts/../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex
+[95])
 
-[90]) (../_excerpts/../_definitions/definition_right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories.tex
+[96] (../_definitions/definition_serre_subcategory_of_an_abelian_category.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 91 undefined on input line 1.
+[97]) (../_definitions/definition_thick_subcategory_of_a_triangulated_category.tex) (../_concepts/proposition_subcategory_of_homotopy_category_of_an_abelian_category_whose_cohomology_objects_belong_to_a_serre_subcategory_is_a_triangulated_subcategory.tex) (../_notations/notation_homotopy_categories_of_an_abelian_category_whose_homology_objects_are_in_a_serre_subcategory.tex) (../_notations/notation_subcategory_of_derived_category_of_an_abelian_category_whose_homology_objects_belong_to_a_serre_subcategory.tex) (../_definitions/definition_tower_of_objects_in_a_category.tex) (../_definitions/definition_shifted_tower_of_objects_in_a_category.tex
 
-) (../_concepts/proposition_derived_multifunctor_of_an_additive_multifunctor_of_abelian_categories_on_cohomologically_bounded_categories_commutes_with_inclusion_to_unbounded_categories.tex
+[98]) (../_definitions/definition_derived_inverse_limit_functor_of_towers_in_a_complete_abelian_category.tex) (../_concepts/theorem_higher_derived_functors_for_an_AB4_star_grothendieck_category_vanish.tex) (../_definitions/definition_pointed_category.tex) (../_definitions/definition_zero_morphism_in_a_pointed_category.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 91 undefined on input line 1.
+[99]) (../_definitions/definition_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images.tex) (../_definitions/definition_trivial_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_pointed_category.tex) (../_definitions/definition_null_system_in_a_pointed_category_with_images.tex) (../_definitions/definition_artin_rees_mittag_leffler_condition_on_a_tower_in_a_category_with_images.tex
 
+[100]) (../_concepts/lemma_trivial_mittag_leffler_condition_implies_mittag_leffler_condition.tex) (../_concepts/lemma_null_systems_satisfy_trivial_mittag_leffler_condition.tex) (../_concepts/lemma_artin_rees_mittag_leffler_condition_implies_mittag_leffler_condition.tex) (../_definitions/definition_sieve_on_an_object_in_a_category.tex) (../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 91 undefined on input line 13.
+[101]) (../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex) (../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex
 
-)
+[102]) (../_definitions/definition_essentially_small_site.tex) (../_definitions/definition_presheaf_on_a_category.tex
 
-LaTeX Warning: Citation `SGA4_III' on page 91 undefined on input line 88.
-
-
-
-[91]) (../_definitions/definition_left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories.tex
-
-[92]) (../_concepts/proposition_total_derived_functors_for_biadditive_functors_on_abelian_categories_are_well_defined_if_both_source_categories_have_enough_projectives_injectives.tex
-
-[93]) (../_definitions/definition_derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor.tex) (../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex) (../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex
-
-[94])
-
-[95] (../_definitions/definition_serre_subcategory_of_an_abelian_category.tex
-
-[96]) (../_definitions/definition_thick_subcategory_of_a_triangulated_category.tex) (../_concepts/proposition_subcategory_of_homotopy_category_of_an_abelian_category_whose_cohomology_objects_belong_to_a_serre_subcategory_is_a_triangulated_subcategory.tex) (../_notations/notation_homotopy_categories_of_an_abelian_category_whose_homology_objects_are_in_a_serre_subcategory.tex) (../_notations/notation_subcategory_of_derived_category_of_an_abelian_category_whose_homology_objects_belong_to_a_serre_subcategory.tex) (../_definitions/definition_sieve_on_an_object_in_a_category.tex
-
-[97]) (../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex) (../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex) (../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex
-
-[98]) (../_definitions/definition_essentially_small_site.tex) (../_definitions/definition_presheaf_on_a_category.tex
-
-[99]) (../_definitions/definition_sheaf_on_a_site.tex
+[103]) (../_definitions/definition_sheaf_on_a_site.tex
 Overfull \hbox (14.29218pt too wide) in paragraph at lines 14--15
 []\T1/cmr/m/n/12 In par-tic-u-lar, when we are work-ing with a []Grothendieck pre-topol-ogy[] (Def-i-ni-tion []C.0.22[])
  []
 
+) (../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex
 
-
-[100]) (../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex
+[104]
 Overfull \hbox (1.18437pt too wide) in paragraph at lines 23--25
 \T1/cmr/m/n/12 Here, the mor-phism $\OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! [][] F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 and the two mor-phisms $[][] \OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[]\OT1/cmr/m/n/12 ) \U/msa/m/n/12 ^^S [][] \OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[] \OMS/cmsy/m/n/12 \
  []
 
 ) (../_definitions/definition_categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category.tex
 
-[101]
+[105]
 Overfull \hbox (4.33629pt too wide) in paragraph at lines 13--14
 []\T1/cmr/m/n/12 Equivalently, the cat-e-gories of presheaves and sheaves are the cat-e-gories $[]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 D\OT1/cmr/m/n/12 )$
  []
 
-) (../_definitions/definition_continuous_functor_of_sites.tex) (../_definitions/definition_inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism.tex
+) (../_definitions/definition_continuous_functor_of_sites.tex) (../_definitions/definition_inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism.tex) (../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex
 
-[102]) (../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex) (../_concepts/theorem_adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites.tex
+[106]) (../_concepts/theorem_adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites.tex) (../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex
 
-[103]) (../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex) (../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex) (../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex
+[107]) (../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex) (../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex
 
-[104]) (../_concepts/theorem_comparison_lemma_of_sheaves_on_a_site_and_sheaves_on_a_small_topologically_generating_family.tex
+[108]) (../_concepts/theorem_comparison_lemma_of_sheaves_on_a_site_and_sheaves_on_a_small_topologically_generating_family.tex
 
-[105]) (../_definitions/definition_ringed_site.tex
+[109]) (../_definitions/definition_ringed_site.tex) (../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex
 
-[106]) (../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex) (../_concepts/proposition_final_object_of_category_of_locally_small_objects_represents_a_final_object_of_the_category_of_set_valued_presheaves.tex) (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex
+[110]) (../_concepts/proposition_final_object_of_category_of_locally_small_objects_represents_a_final_object_of_the_category_of_set_valued_presheaves.tex) (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex) (../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex
 
-[107]) (../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex <xymatrix 2x2 141> <xymatrix 2x2 141>) (../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex
-
-[108]
+[111] <xymatrix 2x2 141> <xymatrix 2x2 141>) (../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex
 Overfull \hbox (3.52489pt too wide) in paragraph at lines 5--6
 []\T1/cmr/m/n/12 Assume that []global sec-tions ob-jects $\OT1/cmr/m/n/12 ^^@(\OMS/cmsy/m/n/12 G\OT1/cmr/m/n/12 )$[] \T1/cmr/m/n/12 (Def-i-ni-tion []6.2.1[]) ex-ist for all ob-jects $\OMS/cmsy/m/n/12 G$ \T1/cmr/m/n/12 of $[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$[][][]
  []
 
-) (../_definitions/definition_coherent_site.tex) (../_definitions/definition_coherent_topos.tex
-
-[109]) (../_concepts/theorem_examples_of_coherent_sites.tex) (../_concepts/theorem_sheaf_cohomology_on_a_ringed_site_with_a_final_object_commutes_with_filtered_colimits.tex
-Underfull \vbox (badness 1231) has occurred while \output is active []
 
 
+[112]) (../_definitions/definition_coherent_site.tex) (../_definitions/definition_coherent_topos.tex
 
-[110]) (../_definitions/definition_graded_object_in_an_abelian_category.tex) (../_definitions/definition_morphism_of_graded_objects_in_an_abelian_category.tex) (../_definitions/definition_category_of_graded_objects_in_an_abelian_category.tex) (../_concepts/proposition_category_of_graded_objects_in_an_abelian_category_is_abelian.tex) (../_definitions/definition_graded_subobject_of_a_graded_object_of_an_abelian_category.tex) (../_definitions/definition_graded_module_of_rings.tex) (../_definitions/definition_bigraded_object_in_an_abelian_category.tex) (../_definitions/definition_differential_on_a_bigraded_object_in_an_abelian_category.tex
+[113]) (../_concepts/theorem_examples_of_coherent_sites.tex) (../_concepts/theorem_sheaf_cohomology_on_a_ringed_site_with_a_final_object_commutes_with_filtered_colimits.tex) (../_definitions/definition_sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site.tex
 
-[111]) (../_definitions/definition_homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category.tex) (../_definitions/definition_filtration_on_an_object_of_an_abelian_category.tex) (../_definitions/definition_exhaustive_separated_filtrations_on_an_abelian_category.tex
+[114]) (../_concepts/proposition_category_of_sheaves_on_a_site_valued_in_product_category_is_equivalent_to_product_of_categories_of_sheaves_on_the_site.tex) (../_concepts/theorem_adjunction_between_sheafy_functors_from_adjoint_bifunctors.tex
 
-[112]) (../_definitions/definition_filtered_graded_object_in_an_abelian_category.tex
+[115]
+Overfull \hbox (5.90439pt too wide) in paragraph at lines 15--17
+\T1/cmr/m/n/12 Note that since $\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 R\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 is a []right ad-joint[] (Def-i-ni-tion []C.0.16[]), []it pre-serves[] (The-o-rem []1.3.17[])
+ []
+
+) (../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
+
+LaTeX Warning: Hyper reference `definition:tensor_product_functor_on_the_category_of_tensor_composable_bimodules_over_all_rings' on page 116 undefined on input line 15.
+
+
+LaTeX Warning: Reference `definition:category_of_all_bimodules_over_all_rings' on page 1 undefined on input line 15.
+
+
+LaTeX Warning: Reference `definition:category_of_tensor_composable_bimodules_over_all_rings' on page 1 undefined on input line 15.
+
+
+
+[116]) (../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
+Overfull \hbox (33.34918pt too wide) in paragraph at lines 4--5
+[]\T1/cmr/m/n/12 The []\T1/cmr/m/it/12 sheafi[]-[]fied[] [][][]Hom\T1/cmr/m/n/12 , de-noted by no-ta-tions such as [][], [][], or [][],
+ []
+
+
+LaTeX Warning: Reference `definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site' on page 1 undefined on input line 6.
+
+) (../_concepts/theorem_tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
+
+[117])
+
+[118] (../_definitions/definition_graded_object_in_an_abelian_category.tex) (../_definitions/definition_morphism_of_graded_objects_in_an_abelian_category.tex) (../_definitions/definition_category_of_graded_objects_in_an_abelian_category.tex) (../_concepts/proposition_category_of_graded_objects_in_an_abelian_category_is_abelian.tex) (../_definitions/definition_graded_subobject_of_a_graded_object_of_an_abelian_category.tex) (../_definitions/definition_graded_module_of_rings.tex
+
+[119]) (../_definitions/definition_bigraded_object_in_an_abelian_category.tex) (../_definitions/definition_differential_on_a_bigraded_object_in_an_abelian_category.tex) (../_definitions/definition_homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category.tex) (../_definitions/definition_filtration_on_an_object_of_an_abelian_category.tex
+
+[120]) (../_definitions/definition_exhaustive_separated_filtrations_on_an_abelian_category.tex) (../_definitions/definition_filtered_graded_object_in_an_abelian_category.tex
 Overfull \hbox (11.68475pt too wide) in paragraph at lines 2--5
 []\T1/cmr/bx/n/12 Definition 7.0.12. []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M; F\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be a [](in-creas-ing or de-creas-ing) fil-tered ob-ject[] (Def-i-ni-tion []7.0.10[])
  []
 
 ) (../_definitions/definition_bigraded_object_associated_to_a_filtered_graded_object.tex) (../_definitions/definition_spectral_sequence_in_an_abelian_category.tex
 
-[113]) (../_definitions/definition_stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page.tex) (../_definitions/definition_converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex
+[121]) (../_definitions/definition_stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page.tex) (../_definitions/definition_converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex
 
-[114]) (../_definitions/definition_strong_convergence__to_a_filtered_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex) (../_definitions/definition_first_quadrant_spectral_sequence.tex)
+[122]) (../_definitions/definition_strong_convergence__to_a_filtered_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex) (../_definitions/definition_first_quadrant_spectral_sequence.tex)
 
-[115] (../_definitions/definition_monoidal_category.tex
+[123]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[116]
+[124] (../_definitions/definition_monoidal_category.tex
 LaTeX Font Info:    Freeze math alphabet allocation in version normal.
 (Font)              Allocated math groups: 14 (local: 2) on input line 5.
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 5.
@@ -1645,6 +1666,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+
+
+[125]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
@@ -1726,9 +1750,6 @@ Overfull \hbox (53.34123pt too wide) detected at line 22
 []
  []
 
-
-
-[117]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
@@ -1900,6 +1921,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 15.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 15.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 15.
+
+
+[126]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 15.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 16.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 17.
@@ -1918,9 +1942,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
-
-
-[118]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
@@ -1975,6 +1996,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
+
+
+[127]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
@@ -1987,9 +2011,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
-
-
-[119]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 12.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 16.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 16.
@@ -2078,7 +2099,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
-) (../_definitions/definition_quasi_coherent_sheaf_on_a_general_scheme.tex
+
+
+[128]) (../_definitions/definition_quasi_coherent_sheaf_on_a_general_scheme.tex
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
@@ -2101,9 +2124,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
-
-
-[120]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
@@ -2148,6 +2168,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
+
+
+[129]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
@@ -2185,9 +2208,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
-
-
-[121]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 28.
@@ -2283,6 +2303,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 29.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 30.
+
+
+[130]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 32.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 32.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 32.
@@ -2336,9 +2359,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
-
-
-[122]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
@@ -2451,6 +2471,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+
+
+[131]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 18.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 18.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 18.
@@ -2477,9 +2500,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 32.
-
-
-[123]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 32.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 34.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 34.
@@ -2545,6 +2565,16 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
@@ -2566,6 +2596,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
+
+
+[132]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 16.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 16.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
@@ -2606,9 +2639,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
-
-
-[124]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
@@ -2650,7 +2680,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
-) (../_definitions/definition_tensor_product_of_bimodules_of_rings.tex
+
+
+[133]) (../_definitions/definition_tensor_product_of_bimodules_of_rings.tex
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
@@ -2705,9 +2737,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
-
-
-[125]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 12.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 18.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 18.
@@ -2755,6 +2784,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
+
+
+[134]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 35.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 38.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 38.
@@ -2791,9 +2823,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
-
-
-[126]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 10.
@@ -2876,6 +2905,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
+
+
+[135]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 8.
@@ -2970,9 +3002,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 31.
-
-
-[127]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 34.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 34.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 34.
@@ -3049,6 +3078,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 5.
+
+
+[136]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 7.
@@ -3078,9 +3110,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
-
-
-[128]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
@@ -3225,6 +3254,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
+
+
+[137]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 11.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 14.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 15.
@@ -3282,9 +3314,7 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 25.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 25.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 25.
-
-
-[129]) (../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex
+) (../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
@@ -3332,7 +3362,9 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 6.
-) (../_definitions/definition_symmetric_monoidal_category.tex
+
+
+[138]) (../_definitions/definition_symmetric_monoidal_category.tex
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 3.
@@ -3470,9 +3502,6 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 21.
-
-
-[130]
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 22.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 23.
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 26.
@@ -3508,9 +3537,59 @@ LaTeX Font Info:    No math alphabet change to frozen version normal on input li
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 29.
 )) (./HomologicalAlgebra.bbl
 LaTeX Font Info:    No math alphabet change to frozen version normal on input line 2.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 4.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 27.
-LaTeX Font Info:    No math alphabet change to frozen version normal on input line 33.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 9.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 26.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 26.
+
+
+[139]
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 49.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 54.
+LaTeX Font Info:    No math alphabet change to frozen version normal on input line 67.
 )
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
@@ -3519,7 +3598,7 @@ This document will not have a glossary.
 
 
 
-[131] (./HomologicalAlgebra.aux)
+[140] (./HomologicalAlgebra.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
@@ -3532,21 +3611,21 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `HomologicalAlgebra.out' has not changed.
-(rerunfilecheck)             Checksum: 0F2828C4127F97C9504F6DAEF0B313F6;13376.
+(rerunfilecheck)             Checksum: A7BC0C4DFC5C8BAE8C986469DF65FD06;15171.
  ) 
 Here is how much of TeX's memory you used:
- 38929 strings out of 473254
- 872073 string characters out of 5722066
- 1125351 words of memory out of 5000000
- 59546 multiletter control sequences out of 15000+600000
+ 39179 strings out of 473254
+ 889474 string characters out of 5722066
+ 1121005 words of memory out of 5000000
+ 59676 multiletter control sequences out of 15000+600000
  588802 words of font info for 136 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  121i,19n,124p,3361b,1322s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on HomologicalAlgebra.pdf (131 pages, 1170894 bytes).
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on HomologicalAlgebra.pdf (140 pages, 1232499 bytes).
 PDF statistics:
- 5033 PDF objects out of 5155 (max. 8388607)
- 4776 compressed objects within 48 object streams
- 913 named destinations out of 1000 (max. 500000)
- 373 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5471 PDF objects out of 6186 (max. 8388607)
+ 5199 compressed objects within 52 object streams
+ 967 named destinations out of 1000 (max. 500000)
+ 421 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,28 @@
+\begin{theorem} \label{theorem:coherence_conditions_for_pseudofunctor_between_weak_2_categories_to_be_well_defined}
+    Let $\calC$ and $\calD$ be \CrefAndHyperrefIfExist{definition:bicategory}{weak $2$-categories}.
+    For a \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctor} $F: \mathcal{C} \to \mathcal{D}$ to be well-defined, the constraints must satisfy the following coherence conditions:
+    \begin{enumerate}
+        \item Associativity Coherence: For any three composable 1-morphisms $f, g, h$, the following diagram of 2-isomorphisms commutes:
+        $$ \begin{array}{ccc}
+        (Fh \circ Fg) \circ Ff & \xrightarrow{\alpha_{Fx,Fy,Fz}} & Fh \circ (Fg \circ Ff) \\
+        \downarrow \phi_{h,g} \circ 1 & & \downarrow 1 \circ \phi_{g,f} \\
+        F(h \circ g) \circ Ff & & Fh \circ F(g \circ f) \\
+        \downarrow \phi_{h \circ g, f} & & \downarrow \phi_{h, g \circ f} \\
+        F((h \circ g) \circ f) & \xrightarrow{F(\alpha_{x,y,z})} & F(h \circ (g \circ f))
+        \end{array} $$
+        where $\alpha$ denotes the associator in the respective bicategories.
+        \item Unit Coherence: For any 1-morphism $f: x \to y$, the following diagrams commute:
+        $$ \begin{array}{ccc}
+        id_{Fy} \circ Ff & \xrightarrow{\ell_{Ff}} & Ff \\
+        \downarrow \phi_y \circ 1 & & \uparrow F(\ell_f) \\
+        F(id_y) \circ Ff & \xrightarrow{\phi_{id_y, f}} & F(id_y \circ f)
+        \end{array} 
+        \quad \text{and} \quad
+        \begin{array}{ccc}
+        Ff \circ id_{Fx} & \xrightarrow{r_{Ff}} & Ff \\
+        \downarrow 1 \circ \phi_x & & \uparrow F(r_f) \\
+        Ff \circ F(id_x) & \xrightarrow{\phi_{f, id_x}} & F(f \circ id_x)
+        \end{array} $$
+        where $\ell$ and $r$ denote the left and right unitors.
+    \end{enumerate}
+\end{theorem}

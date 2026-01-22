@@ -1,0 +1,21 @@
+\begin{definition}[Additive category] \label{definition:additive_category_preadditive_category}
+Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. 
+\begin{enumerate}
+    \item $\calA$ is said to be a \hldef{preadditive category} if the following hold:
+    \begin{itemize}
+        \item For any two objects $A, B$ in $\mathcal{A}$, the set $\operatorname{Hom}_{\mathcal{A}}(A, B)$ is an \CrefAndHyperrefIfExist{definition:group}{abelian group}, and composition of morphisms is bilinear.
+        \item There is a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{zero object} $0$ in $\mathcal{A}$.
+    \end{itemize}
+    \TextIfExists{definition:category_enriched_in_a_monoidal_category}{Equvialently, a preadditive cateogry $\calA$ is a (necessarily locally small) category \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{enriched in} the \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category} $\Ab$ that also possesses a zero object.}
+
+    \item
+    If $\calA$ is preadditive, then it is called \hldef{additive} if it additionally satisfies the following:
+    \begin{itemize}
+        \item For any two objects $A, B$ in $\mathcal{A}$, there exists a \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product object $A \times B$}, often written \hl{$A \oplus B$}, called the \hldef{direct sum of $A$ and $B$}. In fact, $A \oplus B$ is not only a product but also a \CrefAndHyperrefIfExist{definition:coproduct_of_modules_of_rings}{coproduct} of $A$ and $B$\CrefIfExists{lemma:finite_products_and_finite_coproducts_coincide_in_preadditive_categories}.
+    \end{itemize}
+
+    Given a finite collection $\{A_i\}_i$ of objects $A_i$ in an additive category $\calA$, we may more generally speak of the \hldef{direct sum} \hl{$\bigoplus_i A_i$}; it has canonical injections from and projections to each $A_i$.
+
+
+\end{enumerate}
+\end{definition}

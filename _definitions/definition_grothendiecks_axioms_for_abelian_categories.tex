@@ -15,14 +15,14 @@ Grothendieck introduced the following hierarchy of additional axioms to express 
     \item Since $\mathcal{A}$ is abelian (and hence \CrefAndHyperrefIfExist{lemma:equalizer_coequalizer_in_an_additive_category_are_given_by_kernel_and_cokernel}{admits} \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizers} as \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_coimage_of_a_module_homomorphism}{kernels}), this is equivalent to requiring that $\mathcal{A}$ has all small \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts} (direct sums).
   \end{itemize}
 
-  \item \hldef{AB4}: The category $\mathcal{A}$ satisfies AB3, and coproducts are \emph{exact}.
+  \item \hldef{AB4}: The category $\mathcal{A}$ satisfies AB3, and coproducts are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact} (when regarded as functors $\bigoplus_I: \calA^I \to \calA$).
   \begin{itemize}
     \item That is, the coproduct of a family of short exact sequences is a short exact sequence. Explicitly, for any family of short exact sequences $0 \to A_i \to B_i \to C_i \to 0$ indexed by a set $I$, the sequence
     \[ 0 \to \bigoplus_{i \in I} A_i \to \bigoplus_{i \in I} B_i \to \bigoplus_{i \in I} C_i \to 0 \]
     is exact in $\mathcal{A}$.
   \end{itemize}
 
-  \item \hldef{AB5}: The category $\mathcal{A}$ satisfies AB3, and \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} are \emph{exact}.
+  \item \hldef{AB5}: The category $\mathcal{A}$ satisfies AB3, and \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} are \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact} (when regarded as functors $\varinjlim_J: \calA^J \to \calA$).
   \begin{itemize}
     \item Equivalently, for any \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered} index category $J$ and any \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{directed system} of short exact sequences $0 \to A_j \to B_j \to C_j \to 0$, the colimit sequence
     \[ 0 \to \varinjlim A_j \to \varinjlim B_j \to \varinjlim C_j \to 0 \]

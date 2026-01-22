@@ -1,0 +1,7 @@
+\begin{definition}[cf. {\cite[Definition 3.1.10]{kashiwara_schapira_cs}}] \label{definition:ipc_property_of_a_category_that_admits_small_products_and_small_filtered_limits}
+    Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} that admits \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} and small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered limits}.
+    For any family $\{I_s\}_{s \in S}$ of small and \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered categories} and any family $\{\alpha_s: I_s \to \calA\}_{s \in S}$ indexed by a small set $S$, there is a canonical morphism
+    $$    colim \left( \prod_s I_s \stackrel{k \mapsto \prod_s \alpha_s(\pi_s(k))}{\to} A \right) \to \prod_s colim \alpha_s$$
+    % $$\colim \left(\prod_{s \in S} I_s \xrightarrow{} \right)$$
+    We say that $\calA$ satisfies the \hldef{IPC-property} (\hldef{inductive-limit-product commutation property}) if any such canonical morphism is an isomorphism.
+\end{definition}

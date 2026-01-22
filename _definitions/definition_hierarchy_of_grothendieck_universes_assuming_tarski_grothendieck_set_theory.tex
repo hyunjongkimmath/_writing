@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory}
+    Given an axiom system containing the \CrefAndHyperrefIfExist{definition:tarski_grothendieck_set_theory}{Tarski-Grothendieck set theory} axioms, the \hldef{hierarchy of Grothendieck universes} consists of the \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universes} $U_n$ for $n \in \mathbb{N} \cup \{0\}$ constructed as follows:
+    \begin{enumerate}
+        \item Base case: $U_0 \coloneq V_\omega$, the set of all \CrefAndHyperrefIfExist{definition:hereditarily_finite_sets}{hereditarily finite sets}.
+        \item Successor step: For each $n \geq 0$, $U_{n+1}$ is the unique minimal Grothendieck universe such that $U_n \in U_{n+1}$.
+    \end{enumerate}
+    In particular, $U_n \in U_{n+1}$ and $U_n \subset U_{n+1}$ for all $n$.
+\end{definition}

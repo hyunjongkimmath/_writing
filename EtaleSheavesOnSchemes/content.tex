@@ -608,7 +608,15 @@ These categories are related via the following commutative diagram of functors:
 \subsection{\texorpdfstring{$\lambda$}{lambda}-adic sheaves}
 \input{../_definitions/definition_lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals.tex}
 
-\input{../_definitions/definition_artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site.tex}
+% The \CrefAndHyperrefIfExist{definition:mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images}{Mittag-Leffler condition} and the Artin-Rees\TODO{}
+\CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaves} are specific inverse systems of torsion sheaves; imposing the \CrefAndHyperrefIfExist{definition:mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images}{Mittag-Leffler condition} ensures the existence of the limit as a sheaf and the stronger \CrefAndHyperrefIfExist{definition:artin_rees_mittag_leffler_condition_on_a_tower_in_a_category_with_images}{Artin-Rees-Mittag-Leffler condition} yields an abelian category. 
+
+\input{../_definitions/definition_tower_of_objects_in_a_category.tex}
+\input{../_definitions/definition_shifted_tower_of_objects_in_a_category.tex}
+\input{../_definitions/definition_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images.tex}
+\input{../_definitions/definition_trivial_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_pointed_category.tex}
+\input{../_definitions/definition_null_system_in_a_pointed_category_with_images.tex}
+\input{../_definitions/definition_artin_rees_mittag_leffler_condition_on_a_tower_in_a_category_with_images.tex}
 
 % \begin{definition}[Artin–Rees–Mittag–Leffler condition]
 % Let $R$ be a commutative ring, $\lambda \subseteq R$ an ideal, and let $\{\mathcal{F}_n\}_{n\geq 1}$ be an \hyperrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system}\CrefIfExists{definition:system_in_a_category_indexed_by_a_directed_poset} of \hyperrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals}{$\lambda$-torsion sheaves}\CrefIfExists{definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals} of $R$-modules on $X_{\text{ét}}$. This system satisfies the \hldef{Artin–Rees–Mittag–Leffler (A–R–M–L) condition} if for every $n\geq 1$, there exists $m\geq n$ such that for all $m'\geq m$,

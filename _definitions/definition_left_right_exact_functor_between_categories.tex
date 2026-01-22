@@ -1,11 +1,15 @@
 \begin{definition} \label{definition:left_right_exact_functor_between_categories}
 Let $\mathcal{C}$ and $\mathcal{D}$ be categories.
 \begin{enumerate}
-    \item Assume $\mathcal{C}$ admits all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}. A functor $F: \mathcal{C} \to \mathcal{D}$ is called \hldef{left exact} if it preserves all finite limits. Explicitly, for every finite diagram $D: \mathcal{J} \to \mathcal{C}$, the canonical map
+    \item Assume $\mathcal{C}$ admits all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}. A functor $F: \mathcal{C} \to \mathcal{D}$ is called \hldef{left exact} if it preserves all finite limits. Explicitly, for every finite diagram $D: \mathcal{J} \to \mathcal{C}$, the limit
+    $$\varprojlim (F \circ D)$$
+    exists and the canonical map
     $$ F(\varprojlim D) \xrightarrow{\cong} \varprojlim (F \circ D) $$
     is an isomorphism.
     
-    \item Assume $\mathcal{C}$ admits all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits}. A functor $F: \mathcal{C} \to \mathcal{D}$ is called \hldef{right exact} if it preserves all finite colimits. Explicitly, for every finite diagram $D: \mathcal{J} \to \mathcal{C}$, the canonical map
+    \item Assume $\mathcal{C}$ admits all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits}. A functor $F: \mathcal{C} \to \mathcal{D}$ is called \hldef{right exact} if it preserves all finite colimits. Explicitly, for every finite diagram $D: \mathcal{J} \to \mathcal{C}$, the colimit
+    $$\varinjlim (F \circ D)$$
+    exists and the canonical map
     $$ \varinjlim (F \circ D) \xrightarrow{\cong} F(\varinjlim D) $$
     is an isomorphism.
     

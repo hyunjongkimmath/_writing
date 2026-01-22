@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:ext_functors_of_bimodules_of_rings}
+    Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}, let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, and let $N$ be an $R$-$T$ bimodule. Let $n \geq 0$ be an integer.
+    The \hldef{Ext of $M$ and $N$}, denoted by \hl{$\Ext^n(M,N)$} or \hl{$\Ext_R^n(M,N)$} (or other notations such as \hl{$\Ext_R^n({}_{R} M_S, {}_{R} N_T)$} or \hl{${}_{S}(\Ext_R^n(M,N))_{T}$} to further emphasize the module structures), is defined in the following ways:
+    \begin{enumerate}
+        \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{$n$th right derived functor} $R^n \Hom_R(M, -)(N)$ of the \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor} $\Hom_R(M, -) : {}_{R} \mathbf{Mod}_{T} \to {}_{S} \mathbf{Mod}_{T}$ \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}\CrefIfExists{definition:hom_functor_of_bimodules_of_rings} (\Cref{theorem:tensor_hom_adjunction_for_bimodules_of_rings}) (\Cref{proposition:left_right_adjoint_is_right_left_exact})
+
+        \item as the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{$n$th right derived functor} $R^n \Hom_R(-, N)(M)$ of the \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact functor} $\Hom_R(-, N) : ({}_{R} \mathbf{Mod}_{S})^{\text{op}} \to {}_{S} \mathbf{Mod}_{T}$ \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}\CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{definition:hom_functor_of_bimodules_of_rings} (\Cref{theorem:tensor_hom_adjunction_for_bimodules_of_rings}) (\Cref{proposition:left_right_adjoint_is_right_left_exact}).
+    \end{enumerate}
+    The two definitions turn out to coincide up to natural isomorphism. \TODO{ref}
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:pseudonatural_transformation_between_pseudofunctors_between_weak_2_categories}
+Let $F, G: \mathcal{C} \to \mathcal{D}$ be \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctors} between \CrefAndHyperrefIfExist{definition:bicategory}{weak 2-categories (bicategories)}.
+A \hldef{pseudonatural transformation} $\alpha: F \Rightarrow G$ consists of:
+\begin{itemize}
+    \item For each object $x \in \mathcal{C}$, a 1-morphism $\alpha_x: Fx \to Gx$ in $\mathcal{D}$.
+    \item For each 1-morphism $f: x \to y$ in $\mathcal{C}$, an invertible 2-morphism (a 2-isomorphism) $\alpha_f: Gf \circ \alpha_x \Rightarrow \alpha_y \circ Ff$ in $\mathcal{D}$.
+\end{itemize}
+These data must satisfy two coherence conditions:
+    \TODO{make diagrams of these conditions}
+\begin{enumerate}
+    \item Naturality with respect to 2-morphisms $\sigma: f \Rightarrow g$: The 2-morphisms $\alpha_f$ and $\alpha_g$ must be compatible with $F\sigma$ and $G\sigma$.
+    \item Compatibility with composition and identities: The 2-isomorphisms $\alpha_f$ must respect the composition constraints $\phi_{g,f}$ and identity constraints $\phi_x$ of the pseudofunctors.
+\end{enumerate}
+
+The 2-isomorphism $\alpha_f$ in a pseudonatural transformation is often called the \hldef{filler of the naturality square}.
+\end{definition}

@@ -86,12 +86,13 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 
 
 \input{../_definitions/definition_complete_and_cocomplete_category.tex}
-\input{../_definitions/definition_additive_category.tex}
+\input{../_definitions/definition_additive_category_preadditive_category.tex}
 
 \input{../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex}
 
 \input{../_definitions/definition_additive_functor_between_additive_categories.tex}
 
+\input{../_definitions/definition_pre_abelian_category.tex}
 \input{../_definitions/definition_abelian_category.tex}
 \input{../_concepts/proposition_diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian.tex}
 
@@ -130,7 +131,8 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 \input{../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex}
 \input{../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex}
 \input{../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex}
-
+\input{../_concepts/theorem_contravariant_yoneda_lemma_on_a_locally_small_category.tex}
+\input{../_concepts/corollary_contravariant_yoneda_embedding_on_a_locally_small_category.tex}
 \input{../_definitions/definition_generator_of_a_category.tex}
 
 
@@ -215,7 +217,7 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 \input{../_definitions/definition_preadditive_category_generated_by_a_quiver.tex}
 \input{../_definitions/definition_walking_chain_complex_category.tex}
 \input{../_definitions/definition_additive_functor_category_between_preadditive_categories.tex}
-\input{../_concepts/proposition_category_of_chain_complexes_of_objects_in_a_preadditive_category_is_equivalent_to_the_category_of_additive_functors_from_the_walking_chain_complex_category.tex}
+\input{../_concepts/proposition_cat_of_chain_complexes_in_a_preadd_cat_is_eq_to_the_cat_of_add_functors_from_the_walking_chain_complex_category.tex}
 \input{../_concepts/lemma_additive_functor_category_from_small_preadditive_categories_preserves.tex}
 \input{../_concepts/proposition_category_of_chain_complexes_in_an_additive_category_is_additive.tex}
 \input{../_concepts/proposition_limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise.tex}
@@ -285,7 +287,6 @@ In this section, we list out some basic facts about \CrefAndHyperref{definition:
 In fact, a generalization is possible: if the abelian category $\calA$ has enough objects in a class $\calX$ (on the right/left) \emph{complex}, then the complex has a ``resolution'' by objects of $\calX$. 
 
 \input{../_concepts/proposition_abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes.tex}
-
 \input{../_concepts/lemma_projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy.tex}
 
 
@@ -540,6 +541,50 @@ We extend the ideas from \Cref{subsubsection:derived_functors_for_biadditive_fun
 
 
 
+\subsection{Derived functors of the inverse limit}
+
+
+\input{../_definitions/definition_tower_of_objects_in_a_category.tex}
+\input{../_definitions/definition_shifted_tower_of_objects_in_a_category.tex}
+
+\input{../_definitions/definition_derived_inverse_limit_functor_of_towers_in_a_complete_abelian_category.tex}
+
+
+\input{../_concepts/theorem_higher_derived_functors_for_an_AB4_star_grothendieck_category_vanish.tex}
+
+\begin{proposition}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} satisfying \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{(AB4*)}. For a \CrefAndHyperrefIfExist{definition:tower_of_objects_in_a_category}{tower} $A = \{A_i\}$ of objects in $\mathcal{A}$, the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{first derived functor $R^1 \lim A_i$} can be computed via the following exact sequence:
+$$ 0 \rightarrow \lim A_i \rightarrow \prod_{i \in \mathbb{N}} A_i \xrightarrow{d} \prod_{i \in \mathbb{N}} A_i \rightarrow \lim^1 A_i \rightarrow 0 $$
+where the map $d$ is defined on the components by the difference of the identity and the transition maps: $d(\{a_i\}) = \{a_i - f_{i+1}(a_{i+1})\}$.
+\end{proposition}
+
+
+\input{../_definitions/definition_pointed_category.tex}
+\input{../_definitions/definition_zero_morphism_in_a_pointed_category.tex}
+\input{../_definitions/definition_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images.tex}
+
+\input{../_definitions/definition_trivial_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_pointed_category.tex}
+
+
+\input{../_definitions/definition_null_system_in_a_pointed_category_with_images.tex}
+
+\input{../_definitions/definition_artin_rees_mittag_leffler_condition_on_a_tower_in_a_category_with_images.tex}
+
+\input{../_concepts/lemma_trivial_mittag_leffler_condition_implies_mittag_leffler_condition.tex}
+\input{../_concepts/lemma_null_systems_satisfy_trivial_mittag_leffler_condition.tex}
+\input{../_concepts/lemma_artin_rees_mittag_leffler_condition_implies_mittag_leffler_condition.tex}
+
+\begin{proposition}
+    \TODO{say how lim 1 vanishes for ML systems, cf. webiel 3.5.7}
+
+\end{proposition}
+
+
+
+
+
+
+
 \section{Sheaves and sheaf cohomology}
 
 \subsection{Sites and sheaves}
@@ -588,6 +633,44 @@ We show that sheaf cohomology commutes with filtered colimits.
 
 \input{../_concepts/theorem_examples_of_coherent_sites.tex}
 \input{../_concepts/theorem_sheaf_cohomology_on_a_ringed_site_with_a_final_object_commutes_with_filtered_colimits.tex}
+
+\subsection{Sheafy Tor and Ext, and derived tensor product and Hom on sheaves}
+
+\subsubsection{General sheafy functors}
+\TODO{}
+
+\input{../_definitions/definition_sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site.tex}
+\input{../_concepts/proposition_category_of_sheaves_on_a_site_valued_in_product_category_is_equivalent_to_product_of_categories_of_sheaves_on_the_site.tex}
+\input{../_concepts/theorem_adjunction_between_sheafy_functors_from_adjoint_bifunctors.tex}
+
+\subsubsection{Tensor product and Hom's of sheaves }
+
+\input{../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+\input{../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+
+\input{../_concepts/theorem_tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+
+
+\subsubsection{Sheafy Tor and Ext}
+
+\TODO{}
+
+
+\subsubsection{Derived tensor product and Hom on sheaves}
+
+\begin{definition}[cf. {\cite[Expos\'e XVII, Proposition 4.1.7.]{SGA4_III}}]
+    Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}). Let $\calR, \calS, \calT$ be sheaves of rings on $(\calC, J)$. 
+
+    The \CrefAndHyperrefIfExist{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}{tensor product functor}
+    $$\otimes: {}_{\calR} \mathsf{Mod}_{\calS} \times {}_{\calS} \mathsf{Mod}_{\calT} \to  {}_{\calR} \mathsf{Mod}_{\calT}$$
+    \CrefIfExists{definition:module_over_a_sheaf_of_rings_on_a_site} \CrefAndHyperrefIfExist{theorem:additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories}{induces} an \CrefAndHyperrefIfExist{definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category}{exact multifunctor}
+    $$\otimes = K(\otimes): K^-({}_{\calR} \mathsf{Mod}_{\calS} ) \times K^-({}_{\calS} \mathsf{Mod}_{\calT}) \to  K^-({}_{\calR} \mathsf{Mod}_{\calT})$$
+    (\Cref{definition:homotopy_category_of_chain_complexes_of_an_additive_category}).
+    The functor $\otimes = K(\otimes)$ is \CrefAndHyperrefIfExist{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{left differentiable} into a \hldef{(total derived) tensor product functor}
+    $$\hlin{\stackrel{\mathbf{L}}{\otimes}: D^-({}_{\calR} \mathsf{Mod}_{\calS} ) \times D^-({}_{\calS} \mathsf{Mod}_{\calT}) \to  D^-({}_{\calR} \mathsf{Mod}_{\calT})}$$
+    (\Cref{definition:derived_category_of_an_abelian_category}) \TODO{prove that the functor is indeed left differentiable, say by appealing to \Cref{theorem:derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist} along with the fact that enough flats exist in the category of sheaves of modules, and that the homotopy and derived categories of products of abelian categories are equivalent to the products of homotopy and derived categories of the individual abelian categories} 
+\end{definition}
+
 
 \section{Spectral Sequences}
 

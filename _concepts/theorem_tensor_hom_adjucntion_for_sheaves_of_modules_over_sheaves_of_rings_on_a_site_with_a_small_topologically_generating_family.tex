@@ -1,0 +1,29 @@
+\begin{theorem}[Tensor-Hom Adjunction for Sheaves of Bimodules] \label{theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
+    Let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} that admits a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{small topologically generating family} (e.g. by being \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}). Let $\calR, \calS, \calT$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of rings on $(\calD, K)$. Let $\calM$ be a sheaf of $\calR$-$\calS$ \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{bimodules}, $\calN$ be a sheaf of $\calS$-$\calT$ bimodules, and $\calP$ be a sheaf of $\calR$-$\calT$ bimodules.
+    
+    Then there is a natural isomorphism:
+    \[ \operatorname{Hom}_{\Sh(\calR\text{-}\calT)}(\calM \otimes_{\calS} \calN, \calP) \cong \operatorname{Hom}_{\Sh(\calS\text{-}\calT)}(\calN, \mathcal{H}om_{\calR}(\calM, \calP)) \]
+    where $\calM \otimes_{\calS} \calN$ is the sheafified tensor product and $\mathcal{H}om_{\calR}(\calM, \calP)$ is the sheaf of local $\calR$-linear homomorphisms.
+\end{theorem}
+\begin{proof}
+    \TODO{Verify this proof
+    We apply \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors} by specifying the categories $\calA, \calB, \calC$ and the functors $F, G$ as follows:
+
+    \begin{enumerate}
+        \item \textbf{Categories:} Let $\calA$ be the category whose objects are triples $(R, S, M)$ where $M$ is an $R$-$S$ bimodule. Define $\calB$ and $\calC$ similarly for $S$-$T$ and $R$-$T$ bimodules.
+        \item \textbf{Base Functors:} Define $F: \calA \times \calB \to \calC$ by $(M, N) \mapsto M \otimes_S N$ and $G: \calA^{\op} \times \calC \to \calB$ by $(M, P) \mapsto \operatorname{Hom}_R(M, P)$. 
+        At each component, $F(A, -) \dashv G(A, -)$ is the standard algebraic tensor-hom adjunction for bimodules.
+        \item \textbf{Sheaf Interpretation:} The sheaves $\calM, \calN, \calP$ are viewed as objects in $\Sh(\calD, K; \calA)$, $\Sh(\calD, K; \calB)$, and $\Sh(\calD, K; \calC)$ respectively, where the ring components of these sheaves are fixed to be the sheaves $\calR, \calS, \calT$.
+    \end{enumerate}
+
+    By \Cref{theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors}, the sheafy functor $\mathscr{F}$ associated to the tensor product is:
+    \[ \mathscr{F}(\calM, \calN) = a(U \mapsto \calM(U) \otimes_{\calS(U)} \calN(U)) \]
+    which is precisely the definition of the sheaf of $\calR$-$\calT$ bimodules $\calM \otimes_{\calS} \calN$.
+
+    The right adjoint functor $\mathscr{G}_{\calM}$ is defined section-wise by:
+    \[ \mathscr{G}_{\calM}(\calP) : U \mapsto \operatorname{Hom}_{\calR(U)}(\calM(U), \calP(U)) \]
+    Per the theorem, since $G$ is a right adjoint, $\mathscr{G}_{\calM}(\calP)$ is a sheaf. In the category of modules, this section-wise Hom sheaf is naturally isomorphic to the internal sheaf $\mathcal{H}om_{\calR}(\calM, \calP)$ because any morphism of sheaves $\calM|_U \to \calP|_U$ is uniquely determined by its action on sections when the sheafification of the section-wise Hom agrees with the internal Hom.
+
+    Thus, the general adjunction $\mathscr{F}(\calM, -) \dashv \mathscr{G}_{\calM}(-)$ specializes to the required isomorphism of Hom-sets in the category of sheaves of bimodules.
+    }
+\end{proof}

@@ -1,23 +1,23 @@
 \begin{theorem}{cf. {\cite[Expos\'e II, Th\'eor\`eme 3.4]{SGA4_I}}} \label{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}
     \begin{enumerate}
         \item Let $U$ be a universe. Let $\calC$ be a \hyperrefIfExists{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{$U$-site}\CrefIfExists{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}. A \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits}{sheafification functor}
-        $$a: \Shv(\calC, \USets) \to \PreShv(\calC, \USets).$$
+        $$a: \PreShv(\calC, \USets) \to \Shv(\calC, \USets).$$
         exists. 
         % The inclusion functor 
         % $$i: \PreShv(\calC, \USets) \hookrightarrow \Shv(\calC, \USets)$$
         % has a \hyperrefIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint functor}\CrefIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}
 
         \item Let $\calC$ be a site whose underlying category is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} and which has a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topologically generating family} that is a set (rather than a proper class). A sheafification functor 
-        $$a: \Shv(\calC, \Sets) \to \PreShv(\calC, \Sets)$$
+        $$a: \PreShv(\calC, \Sets) \to \Shv(\calC, \Sets)$$
         exists.
 
-        \item (see e.g. {\cite[3]{nlab:sheafification}}) Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} on an \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small category} $\calC$. Suppose that the category $\calA$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete, cocomplete}, that small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} in $\calA$ are exact, and that $\calA$ satisfies the IPC-property. A \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+        \TODO{It may be the case that I need to assume $\calA$ to be locally small; if so, recheck all the statements that use this.}
+        \item (see e.g. {\cite[3]{nlab:sheafification}}, \cite[Theorem 17.4.7]{kashiwara_schapira_cs}) Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} on an \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small category} $\calC$. Suppose that the category $\calA$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete, cocomplete}, that small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} in $\calA$ are \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{exact}, and that $\calA$ satisfies the \CrefAndHyperrefIfExist{definition:ipc_property_of_a_category_that_admits_small_products_and_small_filtered_limits}{IPC-property}. A \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
         $$a: \PreShv(\calC, \calA) \to \Shv(\calC, \calA) $$
         exists.
-        \TODO{IPC-property, exactess in this context.}
 
-        \TODO{state as a fact that these categories are complete, cocomplete, with small filtered colimits that are exact}
-        This is true for instance of $\calA = \mathbf{Set}, \mathbf{Grp}$, $k-\mathbf{Alg}$ for a field $k$, or $\mathbf{Mod}_R$ for a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative unital) ring $R$}.
+        \TODO{state as a fact that the category of groups and $k$-algebras are complete, cocomplete, with small filtered colimits that are exact}
+        This is true for instance of $\calA = \mathbf{Set}$\CrefIfExists{proposition:categories_of_sets_functors_from_small_categories_to_sets_and_modules_satisfy_ipc_property},  $\mathbf{Grp}$, $k-\mathbf{Alg}$ for a field $k$, or $\mathbf{Mod}_R$\CrefIfExists{proposition:categories_of_sets_functors_from_small_categories_to_sets_and_modules_satisfy_ipc_property} for a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative unital) ring $R$}.
     \end{enumerate}
 \end{theorem}
 \begin{remark}
