@@ -1,0 +1,17 @@
+\begin{corollary} \label{corollary:colimits_limits_in_abelian_categories_are_right_left_exact}
+    \TODO{this should be more true of more general categories}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian cateogry} and $\mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small index category}.
+
+    \begin{enumerate}
+        \item Assume that $\calA$ admits all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} of shape $\calJ$ (e.g. $\calA$ is \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab3}). The colimit functor 
+        $$\operatorname{colim}: \calA^{\mathcal{J}} \to \calA$$
+        \CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category}\footnote{Recall that $\calA^{\mathcal{J}}$ is abelian (\Cref{proposition:diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian})} is \CrefAndHyperref{definition:left_right_exact_functor_between_categories}{right exact}.
+
+        \item Assume that $\calA$ admits all \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} of shape $\calJ$ (e.g. $\calA$ is \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab3$*$}). The limit functor 
+        $$\operatorname{lim}: \calA^{\mathcal{J}} \to \calA$$
+        \CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category} is \CrefAndHyperref{definition:left_right_exact_functor_between_categories}{left exact}.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    This follows from \Cref{theorem:limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index} and \Cref{proposition:left_right_adjoint_is_right_left_exact}
+\end{proof}

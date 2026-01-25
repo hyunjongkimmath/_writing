@@ -32,7 +32,16 @@ In the case that $\mathcal{C}$ and $\mathcal{D}$ are \CrefAndHyperrefIfExist{def
 \begin{align*}
 \operatorname{Hom}_{\mathcal{D}}(F(X), Y) \cong \operatorname{Hom}_{\mathcal{C}}(X, G(Y))
 \end{align*}
-that is natural in both $X$ and $Y$. In this case, the \hldef{unit of the adjunction} is the natural transformation $\eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow G F$ such that, 
+that is natural in both $X$ and $Y$. More precisely, there are two functors 
+$$\calC^{\op} \times \calD \to \Sets$$
+given by 
+\begin{align*}
+(X,Y) &\mapsto \operatorname{Hom}_{\mathcal{D}}(F(X), Y) \\
+(X,Y) &\mapsto \operatorname{Hom}_{\mathcal{C}}(X, G(Y))
+\end{align*}
+respectively, and there is a natural isomorphism between them.
+
+In this case, the \hldef{unit of the adjunction} is the natural transformation $\eta : \mathrm{Id}_{\mathcal{C}} \Rightarrow G F$ such that, 
 \begin{enumerate}
     \item for every $X \in \calC$, the morphism $\eta_X: X \to GF(X)$ (each called a \hldef{unit morphism}) in $\calC$ is obtained as the image of $\id_{F(X)}$ via the adjoint isomorphism
     $$\Hom_\calD(F(X), F(X)) \cong \Hom_\calC(X, GF(X)). $$
@@ -41,12 +50,4 @@ that is natural in both $X$ and $Y$. In this case, the \hldef{unit of the adjunc
     $$\Hom_\calC(G(Y), G(Y)) \cong \Hom_\calD(FG(Y), Y).$$
 
 \end{enumerate}
-
-
-% Let $F : \mathcal{C} \to \mathcal{D}$ and $G : \mathcal{D} \to \mathcal{C}$ be functors. 
-% $F$ is a \hldef{left adjoint to $G$} and $G$ is a \hldef{right adjoint to $F$} (written \hl{$F \dashv G$}) if for every object $A$ in $\mathcal{C}$ and $B$ in $\mathcal{D}$ there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}
-% \begin{align*}
-% \operatorname{Hom}_{\mathcal{D}}(F(A), B) \cong \operatorname{Hom}_{\mathcal{C}}(A, G(B))
-% \end{align*}
-% that is natural in both $A$ and $B$.
 \end{definition}

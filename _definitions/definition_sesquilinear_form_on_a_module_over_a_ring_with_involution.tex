@@ -1,9 +1,27 @@
+% \begin{definition} \label{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}
+% Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $M$ be a left $A$-module.
+% A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $b: M \times M \to A$ such that for all $u, v, w \in M$ and $a \in A$:
+% \begin{enumerate}
+%     \item $b(u + v, w) = b(u, w) + b(v, w)$ and $b(u, v + w) = b(u, v) + b(u, w)$;
+%     \item $b(au, v) = ab(u, v)$ (linear in the first variable);
+%     \item $b(u, av) = b(u, v)\sigma(a)$ (conjugate-linear in the second variable).
+% \end{enumerate}
+% Alternatively, one can impose the convention that the module $M$ be a right module and that the sesquilinear form is so that the first variable is conjugate linear and the second variable is linear; for example, \cite{knus} adopts this latter convention.
+
+% A module equipped with a sesquilinear form may be called a \hldef{sesquilinear module}.
+
+% We may denote the set of sesquilinear forms on $M$ by \hl{$\operatorname{Sesq}_A(M)$}. It is a module over the \CrefAndHyperref{definition:center_of_a_ring}{center of $A$}.
+% \end{definition}
+
 \begin{definition} \label{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}
-Let $(R, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $M$ be a left $R$-module.
-A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $\phi: M \times M \to R$ such that for all $u, v, w \in M$ and $a \in R$:
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $M$ be a \CrefAndHyperref{definition:module_of_a_ring}{right $A$-module}.
+A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $b: M \times M \to A$ such that for all $u, v, w \in M$ and $a \in A$:
 \begin{enumerate}
-    \item $\phi(u + v, w) = \phi(u, w) + \phi(v, w)$ and $\phi(u, v + w) = \phi(u, v) + \phi(u, w)$;
-    \item $\phi(au, v) = a\phi(u, v)$ (linear in the first variable);
-    \item $\phi(u, av) = \phi(u, v)\sigma(a)$ (conjugate-linear in the second variable).
+    \item $b(u + v, w) = b(u, w) + b(v, w)$ and $b(u, v + w) = b(u, v) + b(u, w)$;
+    \item $b(ua, v) = \sigma(a)b(u, v)$ (conjugate-linear in the first variable);
+    \item $b(u, va) = b(u, v)a$ (linear in the second variable).
 \end{enumerate}
+Alternatively, one can impose the convention that the module $M$ be a left module and that the sesquilinear form is so that the first variable is linear and the second variable is conjugate-linear. The above convention is used in \cite{knus_qhfr}.
+
+We may denote the set of sesquilinear forms on $M$ by \hl{$\operatorname{Sesq}_A(M)$}. It is a module over the \CrefAndHyperref{definition:center_of_a_ring}{center of $A$}.
 \end{definition}

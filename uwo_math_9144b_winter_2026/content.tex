@@ -389,6 +389,33 @@ We note that Hom's and tensor products induce \CrefAndHyperrefIfExist{definition
 One particularly nice kind of additive functor is an exact functor
 
 \input{../_definitions/definition_short_exact_sequence_in_an_additive_category.tex}
+
+\begin{definition} \label{definition:split_exact_sequence_in_an_additive_category}
+A \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category} $\mathcal{A}$ is \hldef{split exact} if there exists a morphism $s: C \to B$ (called a \hldef{section}) such that $g \circ s = \text{id}_C$, or \CrefAndHyperrefIfExist{theorem:equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split}{equivalently}, a morphism $r: B \to A$ (called a \hldef{retraction}) such that $r \circ f = \text{id}_A$.
+\end{definition}
+
+\begin{theorem} \label{theorem:equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. For a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the following conditions are equivalent:
+\begin{enumerate}
+    \item The sequence is \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{split exact}.
+    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{section}) $s: C \to B$ such that $g \circ s = \text{id}_C$.
+    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{retraction}) $r: B \to A$ such that $r \circ f = \text{id}_A$.
+    \item There exists an isomorphism $\varphi: B \xrightarrow{\cong} A \oplus C$ such that the following diagram commutes:
+    $$
+    \begin{CD}
+    0 @>>> A @>f>> B @>g>> C @>>> 0 \\
+    @. @| @V{\varphi}VV @| @. \\
+    0 @>>> A @>{\iota_1}>> A \oplus C @>{\pi_2}>> C @>>> 0
+    \end{CD}
+    $$
+    where $\iota_1$ is the canonical injection and $\pi_2$ is the canonical projection.
+\end{enumerate}
+\end{theorem}
+
+\begin{proposition}
+In an additive category $\mathcal{A}$, any split exact sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ is preserved by any additive functor $F: \mathcal{A} \to \mathcal{B}$ to another additive category $\mathcal{B}$. That is, $0 \to F(A) \xrightarrow{F(f)} F(B) \xrightarrow{F(g)} F(C) \to 0$ is also a split exact sequence.
+\end{proposition}
+
 \input{../_definitions/definition_left_right_exact_functor_between_categories.tex}
 \input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
 \input{../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex}
@@ -409,22 +436,6 @@ The five-lemma may also be proven using the Freyd-Mitchell embedding theorem
 \input{../_concepts/lemma_five_lemma.tex}
 
 
-\subsubsection{Grothendieck's additional axioms for abelian categories}
-
-In fact, Grothendieck posed certain additional axioms that some abelian categories might enjoy.
-
-\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
-\input{../_definitions/definition_generator_of_a_category.tex}
-
-\input{../_concepts/theorem_examples_of_grothendieck_categories.tex}
-\begin{lemma} \label{lemma:construction_of_direct_limit_in_a_category_of_sets_with_finitary_operations}
-    Let $\calC$ be a category of sets with finitary operations (e.g. the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of modules over a ring}, the category of monoids, the category of semigroups, the category of groups, the category of Lie algebras, the category of Lie algebras, etc.) \TODO{define category of sets with finitary operations}.
-    Let $F: I \to \calC$ be a small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct system}. The \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit} $\varinjlim_{i \in I} F(i)$ can be constructed as the quotient of the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} $\coprod_{i \in I} F(i)$ given by the following equivalence relation: for $i,j \in I$, the elements $x_i \in F(i)$ and $x_j \in F(j)$ are equivalent if there exists some $k$ with $i \leq k$ and $j \leq k$ such that $f_{ik}(x_i) = f_{jk}(x_j)$. In particular, the operations on the objects of $\calC$ induce natural operations on this set making it into an object of $\calC$.
-\end{lemma}
-\input{../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex}
-
-
-
 \subsection{Adjoint functors}
 
 \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{Adjoint functors} enjoy nice properties, especially in homological algebra. 
@@ -437,11 +448,26 @@ One of the most essential adjunction of functors in algebra would be the tensor-
 
 \input{../_concepts/theorem_tensor_hom_adjunction_for_bimodules_of_rings.tex}
 
+Another useful adjunction is a adjunction of limit and colimit functors:
 
-\TODO{}
+\input{../_concepts/theorem_limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index.tex}
 
 \input{../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex}
 \input{../_concepts/proposition_tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact.tex}
+\input{../_concepts/corollary_colimits_limits_in_abelian_categories_are_right_left_exact.tex}
+
+\subsubsection{Grothendieck's additional axioms for abelian categories}
+
+In fact, Grothendieck posed certain additional axioms that some abelian categories might enjoy.
+
+\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
+\input{../_definitions/definition_generator_of_a_category.tex}
+
+\input{../_concepts/theorem_examples_of_grothendieck_categories.tex}
+\input{../_concepts/lemma_construction_of_direct_limit_in_a_category_of_sets_with_finitary_operations.tex}
+\input{../_concepts/theorem_the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star.tex}
+
+
 
 
 \section{Chain complexes of objects in additive categories}
@@ -450,9 +476,14 @@ One of the most essential adjunction of functors in algebra would be the tensor-
 
 \input{../_definitions/definition_chain_complex_in_an_additive_category.tex}
 
+\input{../_definitions/definition_acyclic_complex_of_objects_in_an_abelian_category.tex}
+
+
 \begin{example}
-    \TODO{simple examples of chain complexes}
+    All \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequences} in an additive category can be regarded as chain complexes, once we assign indices to the objects
 \end{example}
+
+    \TODO{simple examples of chain complexes}
 
 \begin{example}
     Some examples of chain complexes include  \TODO{}
@@ -460,6 +491,8 @@ One of the most essential adjunction of functors in algebra would be the tensor-
         \item The \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}{singular chain complex} of a topological space.
     \end{enumerate}
 \end{example}
+
+\input{../_concepts/proposition_exact_sequence_in_a_diagram_category_of_an_abelian_category_indexed_by_a_small_category_is_given_by_componentwise_exact_sequences.tex}
 
 
 
@@ -478,18 +511,62 @@ One of the most essential adjunction of functors in algebra would be the tensor-
 \subsection{Homology and cohomology of a chain complex}
 
 \input{../_definitions/definition_boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex.tex}
-\input{../_definitions/definition_acyclic_complex_of_objects_in_an_abelian_category.tex}
-\input{../_concepts/proposition_exact_sequence_in_a_diagram_category_of_an_abelian_category_indexed_by_a_small_category_is_given_by_componentwise_exact_sequences.tex}
 \input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex}
 
-\begin{proposition} \label{proposition:homology_and_cohomology_of_complexes_in_an_abelian_category_are_functorial}
-    \begin{enumerate}
-        \item Let $f_\bullet: C_\bullet \to D_\bullet$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. This morphism sends \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{boundaries to boundaries} and \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{cycles to cycles}. More preicsely, for all $i \in \bbZ$, $f_i: C_i \to D_i$ restricts to morphisms $Z_i(C_\bullet) \to Z_i(D_\bullet)$ and $B_i(C_\bullet) \to B_i(D_\bullet)$. Therefore, there are induced morphisms $H_i(f_\bullet): H_i(C_\bullet) \to H_i(D_\bullet)$ which are in fact functorial, i.e. respect composition.
+\begin{example}[The Singular Complex of a Point]
+The simplest non-zero geometric example is the chain complex of a single point $X = \{*\}$. In singular homology, there is exactly one map $\sigma_n: \Delta^n \to X$ for each $n \geq 0$. Thus, $C_n(X) \cong \mathbb{Z}$ for all $n \geq 0$. The boundary map $d_n: C_n \to C_{n-1}$ is given by the alternating sum of face maps, which results in:
+\[
+\dots \xrightarrow{\text{id}} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \xrightarrow{\text{id}} \mathbb{Z} \xrightarrow{0} \mathbb{Z} \to 0
+\]
+The homology groups are $H_0(X) \cong \mathbb{Z}$ and $H_n(X) = 0$ for $n > 0$.
+\end{example}
 
-        \item Let $f^\bullet: C^\bullet \to D^\bullet$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of cochain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. This morphism sends \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{coboundaries to coboundaries} and \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{cocycles to cocycles}. More precisely, for all $i \in \bbZ$, $f^i: C^i \to D^i$ restricts to morphisms $Z^i(C^\bullet) \to Z^i(D^\bullet)$ and $B^i(C^\bullet) \to B^i(D^\bullet)$. Therefore, there are induced morphisms \hl{$H^i(f^\bullet): H^i(C^\bullet) \to H^i(D^\bullet)$} which are functorial, i.e. respect composition.
-    \end{enumerate}
-\end{proposition}
+\begin{example}[The Algebraic Complex of a Ring Element]
+Let $R$ be a ring and $x \in R$ be an element. We can define a chain complex $C_\bullet$ of $R$-modules concentrated in degrees 1 and 0:
+\[
+0 \to R \xrightarrow{d_1} R \to 0
+\]
+where $d_1(r) = xr$. Since $d_0 = 0$, the condition $d_0 \circ d_1 = 0$ is trivially satisfied. The homology groups are:
+\begin{itemize}
+    \item $H_1(C_\bullet) = \text{ker}(\cdot x) = \{r \in R \mid xr = 0\}$, the $x$-torsion of $R$.
+    \item $H_0(C_\bullet) = \text{coker}(\cdot x) = R/xR$.
+\end{itemize}
+\end{example}
 
+\begin{example}[Acyclic Complexes from Exact Sequences]
+A chain complex $C_\bullet$ is said to be \textit{acyclic} if $H_n(C_\bullet) = 0$ for all $n$. Any short exact sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ in an abelian category $\calA$ can be viewed as an acyclic chain complex:
+\[
+\dots \to 0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0 \to \dots
+\]
+The condition $g \circ f = 0$ is guaranteed by the fact that $\text{im}(f) = \text{ker}(g)$, which simultaneously ensures that the homology at object $B$ is zero.
+\end{example}
+
+\begin{example}[The Simplicial Triangle]
+Let $K$ be a 2-simplex (a triangle) with vertices $\{v_0, v_1, v_2\}$. There is an associated chain complex
+$$\cdots \to 0 \to C_2 \to C_1 \to C_0 \to 0 \to \cdots$$
+of abelian groups. The chain groups are:
+\begin{itemize}
+    \item $C_0 = \mathbb{Z}\langle v_0, v_1, v_2 \rangle$ (rank 3)
+    \item $C_1 = \mathbb{Z}\langle [v_0,v_1], [v_1,v_2], [v_0,v_2] \rangle$ (rank 3)
+    \item $C_2 = \mathbb{Z}\langle [v_0,v_1,v_2] \rangle$ (rank 1)
+\end{itemize}
+The boundary map $d_2: C_2 \to C_1$ is $d_2([v_0,v_1,v_2]) = [v_1,v_2] - [v_0,v_2] + [v_0,v_1]$. One can verify that $d_1 \circ d_2 = 0$ by calculating the boundaries of the resulting edges.
+\end{example}
+
+
+
+\input{../_concepts/proposition_homology_and_cohomology_of_complexes_in_an_abelian_category_are_functorial.tex}
+
+\input{../_definitions/definition_quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category.tex}
+
+\begin{remark}
+    Let $C_\bullet$ and $D_\bullet$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    Even if $H_n(C_\bullet)$ and $H_n(D_\bullet)$ are isomorphic for all $n$, there need not exist a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} $C_\bullet \to D_\bullet$.
+\end{remark}
+
+\input{../_concepts/theorem_long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category.tex}
+
+% \input{../_definitions/definition_derived_category_of_an_abelian_category.tex}
 
 \subsection{Singular homology groups of a topological space}
 
@@ -501,13 +578,48 @@ One of the most essential adjunction of functors in algebra would be the tensor-
 
 \input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
 
+\TODO{talk about CW-complexes and how singular homology is in practice computed with CW complex homology}
+
+
 \subsection{Homotopy between morphisms of topological spaces}
 \input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
-\TODO{}
+\TODO{homotopy of maps of topological spaces results in chain homotopy for singular homology}
 
 \subsection{Chain homotopy between morphisms of chain complexes}
 
 \input{../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex}
+\input{../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex}
+\begin{lemma} \label{lemma:null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps}
+    Let $\calA$ be an \CrefAndHyperref{definition:abelian_category}{abelian category}. Let $f_\bullet: C_\bullet \to D_\bullet$ (resp. $f^\bullet: C^\bullet \to D^\bullet$) be a \CrefAndHyperref{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} (resp. of cochain complexes). 
+    If $f_\bullet$ is \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{null homotopic} (resp. $f^\bullet$ is null homotopic), then the induced maps 
+    $$H_n(f_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
+    of \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology} 
+    (resp. 
+    $$H^n(f^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
+    of cohomology)
+    are zero. 
+\end{lemma}
+\begin{proof}
+    \TODO{}
+\end{proof}
+
+\begin{lemma} \label{lemma:chain_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yield_same_homology_maps}
+    Let $\calA$ be an \CrefAndHyperref{definition:abelian_category}{abelian category}. Let $f_\bullet, g_\bullet: C_\bullet \to D_\bullet$ (resp. $f^\bullet, g^\bullet: C^\bullet \to D^\bullet$) be a \CrefAndHyperref{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} (resp. of cochain complexes) that are \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopic}. 
+    The induced maps 
+    $$H_n(f_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
+    and
+    $$H_n(g_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
+    of \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology} 
+    (resp. 
+    $$H^n(f^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
+    and
+    $$H^n(g^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
+    of cohomology)
+    are equal. 
+\end{lemma}
+\begin{proof}
+    This follows from Lemma \ref{lemma:null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps}.
+\end{proof}
 
 \subsection{Mapping cones of morphisms between topological spaces}
 \TODO{}
@@ -520,11 +632,37 @@ One of the most essential adjunction of functors in algebra would be the tensor-
 
 This section roughly follows \cite[Section 2]{weibel}.
 
+\subsection{$\delta$-functors}
+
+$\delta$-functors are nice enough functors that yield long exact sequences of homology/cohomology from short exact sequences. The main general examples of (universal) $\delta$-functors are \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of \CrefAndHyperref{definition:exact_functor_between_abelian_categories}{right/left exact functors} (\Cref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}). In particular, the \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology/cohomology} functors $\mathbf{Ch}(\calA) \to \calA$ are the quintessential examples of (universal) $\delta$-functors.
+
+\input{../_definitions/definition_homological_cohomological_delta_functor_between_abelian_categories.tex}
+\TODO{universal delta functors}
+
 \subsection{Abelian categories with enough objects of a class and resolutions}
+
+To be able to define and compute \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of right/left exact functors, the source abelian category needs to ``\CrefAndHyperref{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{have enough objects}'' of certain classes; in practice, these classes would be the classes of \CrefAndHyperref{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}{projective} (or \CrefAndHyperref{definition:flat_left_right_module_over_a_ring}{flat} objects when the functor considered is a kind of tensor product, e.g. \Cref{definition:tensor_product_of_bimodules_of_rings}) or \CrefAndHyperref{definition:injective_and_projective_objects_in_a_category}{injective} objects. When the abelian category has enough objects, every object has an appropriate \CrefAndHyperref{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolution}, see \Cref{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}.
+
 \input{../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex}
+
+The most basic classes of objects that we will use to consider resolutions are injective and projective objects
+\input{../_definitions/definition_injective_and_projective_objects_in_a_category.tex}
 \input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
 \input{../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex}
+
+Baer's criterion describes injective objects in a category of modules.
+\input{../_concepts/theorem_baers_criterion_for_injectivity_of_module_over_a_ring.tex}
+
+There are multiple equivalent ways to describe projective objects in a category of modules.
+\input{../_definitions/definition_projective_bimodule_over_rings.tex}
+
+When a tensor product is being considered, ``flat'' objects are used to construct resolutions; in particular, in a category of modules, the notion of flatness is as follows:
+\input{../_definitions/definition_flat_left_right_module_over_a_ring.tex}
+
+
+Intuitively speaking, resolutions are approximations of an object in an abelian category by acyclic sequences.
 \input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+
 \input{../_concepts/lemma_projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution.tex}
 
 \input{../_concepts/lemma_an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class.tex}
@@ -543,7 +681,7 @@ In fact, a generalization is possible: if the abelian category $\calA$ has enoug
 \input{../_definitions/definition_left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives.tex}
 \input{../_concepts/lemma_horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories.tex}
 \input{../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined.tex}
-
+\input{../_concepts/theorem_long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors.tex}
 
 \subsection{Tor and Ext}
 
@@ -557,7 +695,7 @@ Recall by \Cref{proposition:left_right_adjoint_is_right_left_exact} that left/ri
 
 \subsection{Balancing Ext and Tor}
 
-The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} agree with each other and similarly for \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$}\TODO{ref}. 
+The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} agree with each other and similarly for \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$}\TODO{ref}. \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{Double complexes} are useful to do so. 
 
 \subsubsection{Double complexes}
 
@@ -694,10 +832,8 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 \section{Assignment 2: Due Feb 6 (Problems not yet complete)}
 
-\TODO{some problems on tensor products}
-
 \begin{problem}
-    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $\{M_i\}_{i \in I}$ be a small family of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Prove that $\prod_{i \in I} M_i$ and $\bigoplus_{i \in I} M_i$ as constructed in \Cref{definition:product_of_modules_of_rings} \Cref{definition:coproduct_of_modules_of_rings} are respectively the categorical \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product and coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$S$-bimodule}.
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $\{M_i\}_{i \in I}$ be a small family of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Prove that $\prod_{i \in I} M_i$ and $\bigoplus_{i \in I} M_i$ as constructed in \Cref{definition:product_of_modules_of_rings} and \Cref{definition:coproduct_of_modules_of_rings} are respectively the categorical \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product and coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$S$-bimodule}. In particular, note that when $I$ is infinite, the product and coproduct do NOT coincide.
 \end{problem}
 
 \begin{problem}
@@ -717,8 +853,17 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     Let $R,S,T,U$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $M$ be an $R-S$-bidmodule, let $N$ be an $S-T$-bimodule, and let $P$ be an $T-U$-bimodule. Show that the tensor products $(M \otimes_S N) \otimes_T P$ and $M \otimes_S (N \otimes_T P)$ are isomorphic using \Cref{problem:yoneda_phliosophy} and the \CrefAndHyperrefIfExist{theorem:tensor_hom_adjunction_for_bimodules_of_rings}{tensor-Hom adjunction}\footnote{In fact, the tensor products are naturally isomorphic, and you should think about what that means precisely, but I am not telling you to prove that the isomorphism is naturally isomorphic}. In particular, do not write out an explicit isomorphism between the tensor products.
 \end{problem}
 
+
 \begin{problem}
-    Prove the following, called the short five lemma. Do not assume the general five lemma. 
+    Let $F: \calC \to \calD$ and $G: \calD \to \calC$ be an \CrefAndHyperref{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint pair} $F \dashv G$ of functors between \CrefAndHyperref{definition:locally_small_category}{locally small categories}. Prove that the right adjoint $G$ is \CrefAndHyperref{definition:full_and_faithful_functor_between_locally_small_categories}{faithful} if and only if the \CrefAndHyperref{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{counit morphism} $\varepsilon_D: FG(D) \to D$ is an \CrefAndHyperref{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} for every object $D$ of $\calD$. 
+
+    (Dually, the left adjoint $F$ is faithful if and only if the unit morphism $C \to GF(C)$ is a monomorphism for every object $C$ of $\calD$, but I am not asking you to prove this.)
+\end{problem}
+
+
+
+\begin{problem}
+    Prove the following, called the short five lemma. Do not assume the general \CrefAndHyperref{lemma:five_lemma}{five lemma}. 
     % You may use the snake lemma.
 
     % The Short Five Lemma in a General Abelian Category
@@ -732,15 +877,48 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     \end{tikzcd}
     \]
     \begin{enumerate}
-        \item If $\alpha$ and $\gamma$ are monomorphisms, then $\beta$ is a monomorphism.
+        \item If $\alpha$ and $\gamma$ are \CrefAndHyperref{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms}, then $\beta$ is a monomorphism.
         \item If $\alpha$ and $\gamma$ are epimorphisms, then $\beta$ is an epimorphism.
         \item If $\alpha$ and $\gamma$ are isomorphisms, then $\beta$ is an isomorphism.
     \end{enumerate}
-    
-
-
 \end{problem}
 
+\begin{problem}
+    Show that the \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} (in the \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{category of abelian groups})
+    $$0 \to \bbZ \xrightarrow{1 \mapsto p} \bbZ \to \bbZ/p \to 0$$
+    is not \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split}.
+\end{problem}
+
+\begin{problem}
+    Let $R = \mathbb{Z}[t]/(1-t^2)$. Let $A = R/(1-t)$ and let $B = R/(1+t)$. Show that the short exact sequence
+    $$0 \to B \xrightarrow{1 \mapsto 1-t} R \to A \to 0$$
+    is 
+    \begin{enumerate}
+        \item \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} as a short exact sequence of \CrefAndHyperrefIfExist{definition:group}{abelian groups}.
+        \item not \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} as a short exact sequence of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules}.
+    \end{enumerate}
+    
+\end{problem}
+
+
+
+
+\section{Assignment 3: Due Feb 20}
+
+
+\begin{problem}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $\{A_{\bullet, i}\}_{i \in I}$ be a small collection of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\calA$.
+    \begin{enumerate}
+        \item precisely show that there exists a ``canonical'' ``comparison'' morphism  
+        $$\bigoplus_{i \in I} H_n(A_{\bullet, i}) \to H_n\left( \bigoplus_{i \in I} A_{\bullet, i} \right)$$
+        coming from the \CrefAndHyperrefIfExist{proposition:homology_and_cohomology_of_complexes_in_an_abelian_category_are_functorial}{functoriality} of $H_n$, the canonical ``inclusion'' morphisms for \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts}\footnote{the canonical morphisms for general coproducts refer to the morphisms $C_i \to \coprod_{i \in I} C_i$}
+
+        \item Show that if $\calA$ satisfies \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB4}, then 
+        $$\bigoplus_{i \in I} H_n(A_{\bullet,i}) \cong H_n\left( \bigoplus_{i \in I} A_{\bullet,i} \right)$$
+        (In fact, the canonical comparison morphism would be such an isomorphism, and if you solve this problem ``correctly'', then the isomorphism that you produce will be the canonical comparison morphism, but I am not asking you to carefully justify that the isomorphism that you produce is the canonical comparison morphism).
+    \end{enumerate}
+    
+\end{problem}
 
 
 \appendix

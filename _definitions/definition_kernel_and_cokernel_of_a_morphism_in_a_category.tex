@@ -10,12 +10,21 @@ Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large)} \Cr
     \end{enumerate}
     The kernel, if it exists, is unique up to unique \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{isomorphism}. \hl{$\ker(f)$} denotes the object $K$ determined (up to isomorphism) by a kernel of $f$.
 
+    \TextIfExists{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{
+        Equivalently, $\ker(f)$ is the \CrefAndHyperref{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer} of $f$ and the $0$ morphism $X \to Y$.
+    }
+
     \item a morphism $p: Y \to Q$ is called the \hldef{cokernel of $f$} if:
     \begin{enumerate}
         \item $p \circ f = 0$, where $0$ is the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{zero morphism} $X \to Q$,
         \item for any morphism $g: Y \to Z$ such that $g \circ f = 0$, there exists a unique morphism $v: Q \to Z$ such that $g = v \circ p$.
     \end{enumerate}
     The cokernel, if it exists, is unique up to unique isomorphism. \hl{$\operatorname{coker}(f)$} denotes the object $Q$ determined (up to isomorphism) by a cokernel of $f$.
+
+    \TextIfExists{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{
+        Equivalently, $\coker(f)$ is the \CrefAndHyperref{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{coequalizer} of $f$ and the $0$ morphism $X \to Y$.
+    }
+
 \end{enumerate}
 
 \end{definition}

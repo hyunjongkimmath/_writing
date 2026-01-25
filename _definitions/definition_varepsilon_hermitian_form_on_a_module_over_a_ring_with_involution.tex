@@ -1,0 +1,14 @@
+% \begin{definition} \label{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}
+% Let $(R, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}.
+% A \hldef{hermitian form on $M$} is a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{$\sigma$-sesquilinear form} $\phi: M \times M \to R$ satisfying the symmetry condition:
+% $$ \phi(v, u) = \sigma(\phi(u, v)) $$
+% for all $u, v \in M$. The pair $(M, \phi)$ is often called a \hldef{hermitian module}.
+% \end{definition}
+\begin{definition} \label{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, let $\varepsilon \in Z(A)$ be an element such that $\varepsilon \cdot \sigma(\varepsilon) = 1$, and let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}.
+A \hldef{$\varepsilon$-hermitian form on $M$} (or simply \hldef{hermitian form on $M$}, especially when $\varepsilon$ is understood or is just $1$) is a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{$\sigma$-sesquilinear form} $\phi: M \times M \to A$ satisfying the symmetry condition:
+$$ \phi(y, x) = \varepsilon \cdot \sigma(\phi(x, y)) $$
+for all $x, y \in M$. The pair $(M, \phi)$ is often called a \hldef{hermitian module}.
+
+$1$-hermitian forms are may simply be called \hldef{hermitian forms}, and $(-1)$-hermitian forms are called \hldef{skew-hermitian forms}.
+\end{definition}

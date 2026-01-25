@@ -1,5 +1,19 @@
+% \begin{definition} \label{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}
+% Let $(A, \sigma)$ be a ring with involution and $M$ a right $A$-module equipped with a sesquilinear form $b: M \times M \to A$. The \hldef{adjoint map of $b$} is the morphism of $A$-modules
+% $$ \hat{b}: M \to M^*, \quad u \mapsto (v \mapsto b(u, v)) $$
+% where $M^* = \operatorname{Hom}_A(M, A)_\sigma$ is the \CrefAndHyperrefIfExist{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}{twisted dual module}. 
+% \end{definition}
+
 \begin{definition} \label{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}
-Let $(R, \sigma)$ be a ring with involution and $M$ a left $R$-module equipped with a sesquilinear form $\phi: M \times M \to R$. The \hldef{adjoint map of $\phi$} is the morphism of $R$-modules
-$$ \hat{\phi}: M \to M^\vee, \quad u \mapsto (v \mapsto \phi(v, u)) $$
-where $M^\vee = \operatorname{Hom}_R(M, R)_\sigma$ is the \CrefAndHyperrefIfExist{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}{twisted dual module}.
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module} equipped with a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $b: M \times M \to A$. We define two $A$-linear mappings associated with $b$:
+\begin{enumerate}
+    \item The \hldef{left adjoint map} is the morphism of $A$-modules:
+    $$ \hat{b}_l: M \to M^*, \quad u \mapsto (v \mapsto b(u, v)) $$
+    where $M^* = \operatorname{Hom}_A(M, A)_\sigma$ is the \CrefAndHyperrefIfExist{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}{twisted dual module}.
+    \item The \hldef{right adjoint map} is the morphism of $A$-modules:
+    $$ \hat{b}_r: M \to M^*, \quad v \mapsto (u \mapsto \sigma(b(u, v))) $$
+\end{enumerate}
+If $b$ is an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-hermitian form}, these maps are related by $\hat{b}_l = \hat{b}_r \cdot \varepsilon$ (under the standard identification of the module and its dual).
+
+When we simply talk about the \hldef{adjoint map} of $b$ on the right $A$-module $M$, we will mean the left adjoint and denote it by \hl{$\hat{b}$}.
 \end{definition}

@@ -57,3 +57,35 @@
 
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{why kernel and cokernel are left/right exact}
+Consider the following commutative diagram in $\mathcal{A}$ with exact rows, where the vertical maps are the differentials of the respective complexes:
+\begin{equation} \label{eq:snake_setup}
+\begin{tikzcd}
+0 \ar[r] & C_n / \operatorname{im}(d_{n+1}^C) \ar[r, "\bar{\alpha}_n"] \ar[d, "\bar{d}_n^C"] & D_n / \operatorname{im}(d_{n+1}^D) \ar[r, "\bar{\beta}_n"] \ar[d, "\bar{d}_n^D"] & E_n / \operatorname{im}(d_{n+1}^E) \ar[r] \ar[d, "\bar{d}_n^E"] & 0 \\
+0 \ar[r] & \ker(d_{n-1}^C) \ar[r, "\alpha_{n-1}"] & \ker(d_{n-1}^D) \ar[r, "\beta_{n-1}"] & \ker(d_{n-1}^E) \ar[r] & 0
+\end{tikzcd}
+\end{equation}
+
+The rows are exact because the original sequence of complexes is exact and the functors $\ker(d_{n-1})$ and $\coker(d_{n+1})$ are respectively left and right exact. Specifically, the bottom row is exact at the right because $\beta_n$ is surjective and the complexes satisfy the cycle condition. \TODO{why is the bottom row exact at the right and why is the top row exact at the left}
+
+We now apply the \CrefAndHyperrefIfExist{proposition:snake_lemma}{Snake Lemma} to this diagram. To identify the resulting terms, we calculate the kernel and cokernel of the vertical map $\bar{d}_n^C$ (and similarly for $D$ and $E$):
+\begin{itemize}
+    \item \textbf{Kernel:} The kernel of $\bar{d}_n^C: C_n / \operatorname{im}(d_{n+1}^C) \to \ker(d_{n-1}^C)$ consists of elements\footnote{Since elements are invoked in this argument, the \CrefAndHyperref{theorem:freyd_mitchell_embedding_theorem_for_small_abelian_categories}{Freyd-Mitchell embedding theorem} should technically be used for this argument; nevertheless, one can argue that $\ker(\bar{d}_n^C) = H_n(C_\bullet)$ purely categorically.} $x + \operatorname{im}(d_{n+1}^C)$ such that $d_n^C(x) = 0$, i.e. $x \in \ker(d_n^C)$. Therefore,
+    \[ \ker(\bar{d}_n^C) = \ker(d_n^C) / \operatorname{im}(d_{n+1}^C) = H_n(C_\bullet). \]
+    
+    \item \textbf{Cokernel:} The cokernel of $\bar{d}_n^C$ is the quotient of the target by the image. The target is $\ker(d_{n-1}^C)$ and the image is $\operatorname{im}(d_n^C)$. Thus,
+    \[ \coker(\bar{d}_n^C) = \ker(d_{n-1}^C) / \operatorname{im}(d_n^C) = H_{n-1}(C_\bullet). \]
+\end{itemize}
+
+Applying the Snake Lemma to \eqref{eq:snake_setup} yields the exact sequence:
+\[
+\ker(\bar{d}_n^C) \to \ker(\bar{d}_n^D) \to \ker(\bar{d}_n^E) \xrightarrow{\delta_n} \coker(\bar{d}_n^C) \to \coker(\bar{d}_n^D) \to \coker(\bar{d}_n^E)
+\]
+Substituting the homology groups identified above, we obtain:
+\[
+H_n(C_\bullet) \xrightarrow{H_n(\alpha)} H_n(D_\bullet) \xrightarrow{H_n(\beta)} H_n(E_\bullet) \xrightarrow{\delta_n} H_{n-1}(C_\bullet) \xrightarrow{H_{n-1}(\alpha)} H_{n-1}(D_\bullet) \xrightarrow{H_{n-1}(\beta)} H_{n-1}(E_\bullet)
+\]
+Since this construction exists for every $n \in \bbZ$, we can splice these sequences together to form the bi-infinite long exact sequence. The naturality of the sequence follows from the naturality of the Snake Lemma and the functoriality of the kernel and cokernel constructions.
+\end{proof}

@@ -1,3 +1,99 @@
 \begin{proposition} \label{proposition:left_right_adjoint_is_right_left_exact}
-    Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories} and let $F: \calA \to \calB$ and $G: \calB \to \calA$ be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint} \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functors}, say with $F \dashv G$ (i.e. $F$ is left adjoint to $G$). The left adjoint functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and and the right adjoint functor $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}
+    Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories} and let $F: \calA \to \calB$ and $G: \calB \to \calA$ be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint} \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{functors}, say with $F \dashv G$ (i.e. $F$ is left adjoint to $G$). 
+    \begin{enumerate}
+        \item The functors $F$ and $G$ are \CrefAndHyperref{definition:additive_functor_between_additive_categories}{additive}.
+        \item The left adjoint functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and and the right adjoint functor $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+
+    For each pair of objects $X,Y \in \calA$, let us write $\alpha = \alpha_{X,Y}$ for the isomorphism
+    $$\alpha = \alpha_{X,Y}: \Hom_\calB(F(X), Y) \xrightarrow{\sim} \Hom_\calA(X, G(Y))$$
+    given by the adjunction. We note that this isomorphism is a priori an isomorphism of sets, i.e. a bijection.
+
+    Given a morphism $f: X' \to X$ in $\calA$, the fact that the $\alpha_{X,Y}$ are natural isomorphisms with respect to the first input means that we have the commuting diagrams
+    \begin{equation} \label{eq:asdfasdf}
+    \begin{tikzcd}
+        \Hom_\calB(F(X), Y) \ar[r, "\alpha_{X, Y}"] \ar[d, "- \circ F(f)"] & \Hom_\calA(X, G(Y)) \ar[d, "- \circ f"] \\
+        \Hom_\calB(F(X'), Y) \ar[r, "\alpha_{X', Y}"] & \Hom_\calA(X', G(Y)).
+    \end{tikzcd}
+    \end{equation}
+
+    % For each pair of objects $A_1,A_2 \in \calA$, let us write $\alpha = \alpha_{A_1,A_2}$ for the isomorphism
+    % $$\alpha = \alpha_{A_1,A_2}: \Hom_\calB(F(A_1), F(A_2)) \xrightarrow{\sim} \Hom_\calA(A_1, GF(A_2))$$
+    % given by the adjunction. We note that this isomorphism is a priori an isomorphism of sets, i.e. a bijection.
+
+    % The fact that the $\alpha_{A_1,A_2}$ are natural isomorphisms with respect to the first input means that we have the commuting diagrams
+    % \begin{equation} \label{eq:asdfasdf}
+    % \begin{tikzcd}
+    %     \Hom_\calD(F(A_2), F(A_2)) \ar[r, "\alpha_{A_2, A_2}"] \ar[d, "- \circ F(f)"] & \Hom_\calC(A_2, GF(A_2)) \ar[d, "- \circ f"] \\
+    %     \Hom_\calD(F(A_1), F(A_2)) \ar[r, "\alpha_{A_1, A_2}"] & \Hom_\calC(A_1, GF(A_2)).
+    % \end{tikzcd}
+    % \end{equation}
+
+    \begin{enumerate}
+        \item We show that $F$ is additive; that $G$ is additive can be obtained dually. To do so, we need to show that for all objects $A_1,A_2 \in \calA$, the induced map
+        $$F_{A_1,A_2}: \Hom_\calA(A_1,A_2) \to \Hom_{\calB}(F(A_1), F(A_2))$$
+        is a group homomorphism of abelian groups. In other words, given morphisms $f,g: A_1 \to A_2$, we need to show that $F(f+g) = F(f) + F(g)$. 
+
+        Write $\eta: \operatorname{Id}_{\calA} \to GF$ for the unit natural transformation; in particular, given each object $A \in \calA$, we write $\eta_A: A \to GF(A)$ for the \CrefAndHyperref{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit morphism}. 
+        
+        % For each pair of objects $A_1,A_2 \in \calA$, let us write $\alpha = \alpha_{A_1,A_2}$ for the isomorphism
+        % $$\alpha = \alpha_{A_1,A_2}: \Hom_\calB(F(A_1), F(A_2)) \xrightarrow{\sim} \Hom_\calA(A_1, GF(A_2))$$
+        % given by the adjunction;
+        % we note that while this isomorphism turns out to be an isomorphism of abelian groups, we only use that it is an isomorphism of sets.
+        
+        For each $f: A_1 \to A_2$, we claim that 
+        \begin{equation} \label{eq:left_adjoint_is_additive_adjunction_and_}
+        \alpha(F(f)) = \eta_{A_2} \circ f.
+        \end{equation}
+        To see this, we use \eqref{eq:asdfasdf} in the case of $X = A_2$, $Y = F(A_2)$, and $X' = A_1$. Start with $\id_{\calD} \in \Hom_\calD(F(A_2), F(A_2))$ in the upper left corner. Traversing to the right then down sends $\id_{\calD}$ to the unit map $\eta_{A_2}$ via $\alpha$ and then to $\eta_{A_2} \circ f$. Traversing down then to the right sends $\id_{\calD}$ to $F(f)$ then to $\alpha(F(f))$. Therefore, \eqref{eq:left_adjoint_is_additive_adjunction_and_} holds.
+
+        In particular, 
+        $$\alpha(F(f+g)) = \eta_B \circ (f+g).$$
+        Since $f+g: A_1 \to A_2$ and $\eta_{A_2}: A_2 \to GF(A_2)$ are morphisms in the abelian category $\calB$, where composition of morphisms is distributive over addition, we have
+        $$\eta_{A_2} \circ (f+g) = (\eta_{A_2} \circ f) + (\eta_{A_2} \circ g).$$
+        Applying \eqref{eq:left_adjoint_is_additive_adjunction_and_}, we have
+        $$\alpha(F(f+g)) = \alpha(F(f)) + \alpha(F(g)).$$
+        Since $\alpha$ is an isomorphism of sets, we conclude
+        $$F(f+g) = F(f) + F(g)$$
+
+        \item We show that $F$ is right exact; that $G$ is left exact can be obtained dually. It suffices to show that $F$ preserves \CrefAndHyperref{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{cokernels}, i.e. that if $f: A_1 \to A_2$ is a morphism in $\calA$, then $F(\coker f) \cong \coker F(f)$. Let $q: A_2 \to Q$ be the cokernel of $f$. 
+        \begin{center}
+        \begin{tikzcd}
+            A_1 \ar[r, "f"] & A_2 \ar[r, "q"] & Q
+        \end{tikzcd}
+        \end{center}
+        We show that $F(q): F(A_2) \to F(Q)$ is the cokernel of $F(f)$, i.e. that $F(q)$ possesses the universal property of $\coker F(f)$. 
+        \begin{center}
+        \begin{tikzcd}
+            F(A_1) \ar[r, "F(f)"] & F(A_2) \ar[r, "F(q)"] & F(Q)
+        \end{tikzcd}
+        \end{center}
+        Equivalently, we show that $F(\coker f)$ possesses the universal property of $\coker F(f)$. Since $F$ is additive, note that 
+        $$F(q) \circ F(f) = F(q \circ f) = F(0) = 0.$$
+        Now suppose that $g: F(A_2) \to Z$ is a morphism such that $g \circ F(f) = 0$. We need to show that $g$ factors uniquely through $F(q)$. 
+
+        Apply the commutativity of \eqref{eq:asdfasdf} in the case that $X = A_2$, $Y = Z$, and $X' = A_1$; this yields
+        $$\alpha(g \circ F(f)) = \alpha(g) \circ f.$$
+        Since $g \circ F(f) = 0$, we have $\alpha(g) \circ f = 0$ in $\calA$. By the universal property of $\coker f$, the map $\alpha(g)$ factors uniquely through $\coker(f)$, i.e. there is a unique map $\psi: Q \to G(Z)$ such that $\psi \circ q = \alpha(g)$.
+        \begin{center}
+        \begin{tikzcd}
+            A_1 \ar[r, "f"] & A_2 \ar[r, "q"] \ar[rd, "\alpha(g)", swap] & Q \ar[d, dotted, "\exists ! \psi"] \\
+            & & G(Z) 
+        \end{tikzcd}
+        \end{center}
+        Applying $\alpha^{-1}$, we have 
+        $$\alpha^{-1}(\psi \circ q) = g.$$
+        By the naturality of the adjunction isomorphism in the first variable again, we obtain 
+        $$g = \alpha^{-1}(\psi \circ q) = \alpha^{-1}(\psi) \circ F(q).$$
+        In particular, 
+        \begin{center}
+        \begin{tikzcd}
+            F(A_1) \ar[r, "F(f)"] & F(A_2) \ar[r, "F(q)"] \ar[rd, "g", swap] & F(Q) \ar[d, dotted, "\alpha^{-1}(\psi)"] \\
+            & & Z
+        \end{tikzcd}
+        \end{center}
+        commutes. In fact, $\alpha^{-1}(\psi)$ is the unique morphism making the above commute because $\alpha$ is a bijection and $\psi$ is unique. Therefore, $F(q): F(A_2) \to F(Q)$ is indeed the cokernel of $F(f)$ as desired.
+    \end{enumerate}
+\end{proof}

@@ -1,6 +1,7 @@
 \begin{definition} \label{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}
-Let $(R, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $N$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}.
-The \hldef{twisted dual module}, denoted \hl{$N^\vee$} or \hl{$\operatorname{Hom}_R(N, R)_\sigma$}, is the set of all \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-linear maps} $f: N \to R$, equipped with the left $R$-module structure given by
-$$ (r \cdot f)(n) = f(n) \sigma(r) $$
-for all $r \in R$, $f \in N^\vee$, $n \in N$.
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $N$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}.
+The \hldef{twisted dual module}, denoted by notations such as \hl{$N^*$}, (or sometimes \hl{$N^\vee$}; not to be confused with the standard \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{dual} $N^\vee$) or \hl{$\operatorname{Hom}_A(N, A)_\sigma$}, is the set of all \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$A$-linear maps} $f: N \to A$, equipped with the left $A$-module structure given by
+$$ (f \cdot r)(n) = \sigma(r) \cdot f(n) $$
+for all $r \in A$, $f \in N^\vee$, $n \in N$.
+Equivalently, it may be constructed as $\overline{M^\vee}$, where by $\overline{\cdot}$, we mean the \CrefAndHyperref{definition:opposite_module_of_a_module_over_a_ring_with_involution}{opposite module} and by ${\cdot}^\vee$, we mean the \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{standard dual}. The construction $\overline{M^\vee}$ is \CrefAndHyperref{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to $(\overline{M})^\vee$.
 \end{definition}

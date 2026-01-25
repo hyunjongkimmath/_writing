@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:functor_of_sesquilinear_forms_on_modules_over_ring_with_involution}
+    Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. 
+    The construction \CrefAndHyperref{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{$M \mapsto \Sesq_A(M)$} is functorial; there is a \CrefAndHyperref{definition:functor_between_categories}{contravariant functor}
+    $$\Sesq_A: \Mod_{A}^{\op} \to {}_{Z(A)} \Mod_{Z(A)}$$
+    \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}(\Cref{definition:center_of_a_ring})
+    that sends a homomorphism $\varphi: M_1 \to M_2$ of $A$-modules to the $Z(A)$-linear map
+    $$\Sesq_A(\varphi): \Sesq_A(M_2) \to \Sesq_A(M_1), \quad \Sesq_A(\varphi)(b)(x,y) = b(\varphi(x), \varphi(y)).$$
+    Equivalently, the corresponding map 
+    $$\Hom_A(M_2, M_2^*) \to \Hom_A(M_1, M_1^*)$$
+    for the adjoints is given by $h \mapsto \varphi^* h_\varphi$ (\Cref{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}). 
+\end{definition}

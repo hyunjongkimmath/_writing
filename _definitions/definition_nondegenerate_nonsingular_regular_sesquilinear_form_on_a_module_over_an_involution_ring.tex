@@ -1,0 +1,21 @@
+% \begin{definition} \label{definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring}
+% Let $(R, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} equipped with a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $\phi: M \times M \to R$.
+% The form $\phi$ is \hldef{nondegenerate} if the induced \CrefAndHyperrefIfExist{defintiion:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{adjoint map}
+% $$\hat{\phi}: M \to M^\vee, \quad u \mapsto (v \mapsto \phi(v, u))$$
+% is injective.
+% \end{definition}
+
+\begin{definition} \label{definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring}
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module} equipped with a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $\phi: M \times M \to A$.
+Let 
+$$\hat{\phi}: M \to M^*, \quad x \mapsto \phi(x, \cdot)$$
+be the induced (left) \CrefAndHyperrefIfExist{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{adjoint map}.
+\begin{enumerate}
+    \item The form $\phi$ is said to be \hldef{nondegenerate} if $\hat{\phi}$ is injective.
+
+    In the case where $\phi$ is an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-hermitian form}, this condition is equivalent to requiring that $\phi(x, y) = 0$ for all $y \in M$ implies $x = 0$.
+
+    \item The form $\phi$ is said to be \hldef{nonsingular} or \hldef{regular} if $\hat{\phi}$ is an isomorphism.
+\end{enumerate}
+\end{definition}
+
