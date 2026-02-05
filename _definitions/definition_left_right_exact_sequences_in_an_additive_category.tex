@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:left_right_exact_sequences_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+
+\begin{enumerate}
+    \item A sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C$ in $\mathcal{A}$ is called \hldef{left exact} if $f$ is a \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}{kernel} of $g$. 
+    
+    \item A sequence $A \xrightarrow{f} B \xrightarrow{g} C \to 0$ in $\mathcal{A}$ is called \hldef{right exact} if $g$ is a \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}{cokernel} of $f$.
+\end{enumerate}
+
+% In the context of an additive category, these conditions are equivalent to the following conditions on the represented functors for every object $M \in \mathcal{A}$:
+% \begin{itemize}
+%     \item The sequence is left exact if and only if the sequence of abelian groups
+%     $$ 0 \to \Hom_{\mathcal{A}}(M, A) \xrightarrow{f_*} \Hom_{\mathcal{A}}(M, B) \xrightarrow{g_*} \Hom_{\mathcal{A}}(M, C) $$
+%     is exact.
+%     \item The sequence is right exact if and only if the sequence of abelian groups
+%     $$ 0 \to \Hom_{\mathcal{A}}(C, M) \xrightarrow{g^*} \Hom_{\mathcal{A}}(B, M) \xrightarrow{f^*} \Hom_{\mathcal{A}}(A, M) $$
+%     is exact.
+% \end{itemize}
+\end{definition}

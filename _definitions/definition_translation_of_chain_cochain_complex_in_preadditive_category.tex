@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:translation_of_chain_cochain_complex_in_preadditive_category}
+    Let $\calA$ be a \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{preadditive category}.
+    \begin{enumerate}
+        \item Let $C_{\bullet}$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in $\mathcal{A}$. For any $k \in \mathbb{Z}$, the \hldef{translation (or shift) of $C_{\bullet}$ by $k$}, denoted \hl{$C[k]_{\bullet}$}, is the chain complex defined by:
+        $$(C[k])_n = C_{n-k}$$
+        with \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{differential} $d[k]_n: (C[k])_n \to (C[k])_{n-1}$ defined by:
+        $$d[k]_n = (-1)^k d_{n-k}$$
+
+        \item Let $C^{\bullet}$ be a \CrefAndHyperrefIfExist{definition:cochain_complex}{cochain complex} in $\mathcal{A}$. For any $k \in \mathbb{Z}$, the \hldef{translation (or shift) of $C^{\bullet}$ by $k$}, denoted \hl{$C[k]^{\bullet}$}, is the cochain complex defined by:
+        $$(C[k])^n = C^{n+k}$$
+        with differential $d[k]^n: (C[k])^n \to (C[k])^{n+1}$ defined by:
+        $$d[k]^n = (-1)^k d^{n+k}$$
+    \end{enumerate}
+
+    If $f: C \to D$ is a morphism of (co)\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}, the \hldef{translated morphism} \hl{$f[k]: C[k] \to D[k]$} is defined component-wise by $f[k]_n = f_{n-k}$ for chain complexes and $f[k]^n = f^{n+k}$ for \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complexes}.
+
+    In fact, the translation operation $[k]$ defines an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive} automorphism of the category of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} $\mathbf{Ch}_\bullet(\mathcal{A})$ and the category of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complexes} $\mathbf{Ch}^\bullet(\mathcal{A})$. In particular, for any integers $k, m$, there is an identity of functors $[k] \circ [m] = [k+m]$.
+\end{definition}

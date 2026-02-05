@@ -1,0 +1,8 @@
+\begin{theorem}[Relative Künneth Theorem for Singular Homology] \label{theorem:relative_kunneth_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups}
+Let $(X, A)$ and $(Y, B)$ be \CrefAndHyperrefIfExist{definition:topological_space}{pairs of topological spaces} such that $A \subseteq X$ and $B \subseteq Y$ are open (or $(X, A)$ and $(Y, B)$ are \CrefAndHyperrefIfExist{definition:CW_pair}{CW pairs}). 
+If $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{principal ideal domain} and $H_n(X, A; R)$ is \CrefAndHyperrefIfExist{definition:finitely_generated_module}{finitely generated} for all $n$, then for each $n$ there exists a natural short exact sequence:
+$$ 0 \to \bigoplus_{i+j=n} H_i(X, A; R) \otimes_R H_j(Y, B; R) \xrightarrow{\times} H_n(X \times Y, A \times Y \cup X \times B; R) \to \bigoplus_{i+j=n-1} \operatorname{Tor}_1^R(H_i(X, A; R), H_j(Y, B; R)) \to 0 $$
+\TODO{define relative cross product}
+where $\times$ is the relative homological cross product. This sequence \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits} (non-naturally), and if $R$ is a field, the $\operatorname{Tor}$ terms vanish, providing a clean isomorphism:
+$$ H_n(X \times Y, A \times Y \cup X \times B; R) \cong \bigoplus_{i+j=n} H_i(X, A; R) \otimes_R H_j(Y, B; R) $$
+\end{theorem}

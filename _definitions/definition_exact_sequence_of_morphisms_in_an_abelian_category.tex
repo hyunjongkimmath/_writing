@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:exact_sequence_of_morphisms_in_an_abelian_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $X' \xrightarrow{f} X \xrightarrow{g} X''$ be (a sequence of) morphisms in $\calA$.
+    We say that the sequence is \hldef{exact at $X$} if the image of $f$ is equal to the kernel of $g$. More precisely, we mean that
+    \begin{enumerate}
+        \item $g \circ f = 0$ (which implies that there is a canonical morphism $\operatorname{im} f \to \ker g$\CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}\CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}, which is is fact a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism}), and that
+        \item the canonical morphism $\operatorname{im} f \to \ker g$ is in fact an isomorphism.
+    \end{enumerate}
+\end{definition}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  3 DEC 2025 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  29 JAN 2026 08:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1004,6 +1004,16 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \openout8 = `A1Homotopy.toc'.
 
  (./content.tex (../_definitions/definition_pointed_object_of_a_category_with_a_final_object.tex <xymatrix 2x2 120>) (../_definitions/definition_pointed_sheaves_of_sets_on_a_site_simplicial_pointed_sheaves_of_sets_on_a_site.tex
+Overfull \hbox (48.51665pt too wide) in paragraph at lines 2--4
+[][][]\T1/cmr/m/it/12 sheaves\T1/cmr/m/n/12 ) of sets on $\OML/cmm/m/it/12 T$ \T1/cmr/m/n/12 is the cat-e-gory [][] (resp. [][])
+ []
+
+
+Overfull \hbox (46.81496pt too wide) in paragraph at lines 2--4
+\T1/cmr/m/n/12 of []pointed ob-jects in[] (Def-i-ni-tion []2.0.2[]) $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 T; []\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 (resp. $\OT1/cmr/m/n/12 ^^A[] [](\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 ) = ^^A[] [](\OML/cmm/m/it/12 T; []\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 );
+ []
+
+
 
 [2]) (../_definitions/definition_pointification_of_an_object_in_a_category_with_a_final_object.tex) (../_concepts/lemma_pointification_and_forgetful_functor_adjunction.tex) (../_definitions/definition_elementary_distinguished_square_in_the_category_of_somoth_schemes_over_a_scheme.tex
 
@@ -1026,13 +1036,13 @@ LaTeX Warning: Reference `notation:sheaves_of_a_site' on page 1 undefined on inp
 [9]) (../_definitions/definition_simplicial_weak_equivalences_cofibrations_and_fibrations_for_simplicial_sheaves_on_a_site.tex) (../_concepts/theorem_simplicial_model_category_structure_on_simplicial_sheaves.tex) (../_definitions/definition_simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site.tex
 
 [10]) (../_definitions/definition_A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site.tex) (../_concepts/theorem_A_model_category_and_A_localization_fnctor.tex) (../_definitions/definition_interval_in_a_site_with_enough_points.tex
-
-[11]
 Overfull \hbox (7.83142pt too wide) in paragraph at lines 9--11
 [][][][][][][]
  []
 
-) (../_definitions/definition_I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval.tex)
+
+
+[11]) (../_definitions/definition_I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval.tex)
 
 [12] (../_concepts/theorem_I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval.tex) (../_definitions/definition_A1_local_weak_equivalence_fibration_of_simplicial_sheaves_of_sets_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme.tex
 Overfull \hbox (2.5547pt too wide) in paragraph at lines 2--4
@@ -1075,9 +1085,9 @@ Overfull \hbox (7.03815pt too wide) in paragraph at lines 4--6
 
 LaTeX Warning: Reference `proposition:infty_groupoids_are_equivalent_to_kan_complexes' on page 1 undefined on input line 4.
 
-) (../_definitions/definition_homotopy_groups_of_a_kan_simplicial_set.tex
 
-[19]) (../_definitions/definition_homotopy_groups_of_maps_from_a_smooth_scheme_to_a_sheaf_of_sets_on_the_nisnevich_site_with_respect_to_a_base_point_over_a_noetherian_scheme_of_finite_dimension.tex) (../_definitions/definition_A1_weak_equivalence_of_simplicial_sheaves_of_sets_on_the_nisnevich_topology_over_a_noetherian_finite_dimensional_scheme.tex) (../_definitions/definition_proper_model_category.tex
+
+[19]) (../_definitions/definition_homotopy_groups_of_a_kan_simplicial_set.tex) (../_definitions/definition_homotopy_groups_of_maps_from_a_smooth_scheme_to_a_sheaf_of_sets_on_the_nisnevich_site_with_respect_to_a_base_point_over_a_noetherian_scheme_of_finite_dimension.tex) (../_definitions/definition_A1_weak_equivalence_of_simplicial_sheaves_of_sets_on_the_nisnevich_topology_over_a_noetherian_finite_dimensional_scheme.tex) (../_definitions/definition_proper_model_category.tex
 
 [20]) (../_concepts/theorem_homotopy_category_of_ordinary_sheaves_on_nisnevich_site_is_equivalent_to_unstable_homotopy_category.tex) (../_definitions/definition_A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups.tex
 
@@ -1130,74 +1140,84 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 [32]) (../_definitions/definition_equivalence_of_categories.tex) (../_definitions/definition_locally_small_category.tex) (../_definitions/definition_presheaf_on_a_category.tex
 
-[33]) (../_definitions/definition_grothendieck_topology_on_a_category.tex
+[33]) (../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex
 
-[34]) (../_definitions/definition_sheaf_on_a_site.tex
+[34]
 
-[35]) (../_definitions/definition_sheafification_functor_on_a_site.tex) (../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex
+LaTeX Warning: Hyper reference `definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category' on page 35 undefined on input line 62.
 
-LaTeX Warning: Reference `lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small' on page 36 undefined on input line 16.
 
-) (../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex
+LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 35 undefined on input line 62.
+
+) (../_definitions/definition_sheaf_on_a_site.tex
+Underfull \vbox (badness 5147) has occurred while \output is active []
+
+
+
+[35]
+
+LaTeX Warning: Hyper reference `definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category' on page 36 undefined on input line 14.
+
+
+LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 36 undefined on input line 14.
+
+) (../_definitions/definition_sheafification_functor_on_a_site.tex) (../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex
 
 [36]
 
+LaTeX Warning: Reference `lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small' on page 37 undefined on input line 16.
+
+) (../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex
+
 [37]) (../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex
 
-[38]) (../_definitions/definition_adjoint_functors_between_categories.tex) (../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex) (../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex <xymatrix 2x2 141>
+[38]) (../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex
 
-[39] <xymatrix 2x2 141>) (../_definitions/definition_category_enriched_in_a_monoidal_category.tex
+[39]) (../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex) (../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex <xymatrix 2x2 141>
+
+[40] <xymatrix 2x2 141>) (../_definitions/definition_category_enriched_in_a_monoidal_category.tex
 Overfull \hbox (53.34123pt too wide) detected at line 22
 []
  []
 
 
-Underfull \vbox (badness 3189) has occurred while \output is active []
 
-
-
-[40]) (../_definitions/definition_n_ary_functor.tex) (../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex
-
-[41]
+[41]) (../_definitions/definition_n_ary_functor.tex) (../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex
 
 LaTeX Warning: Reference `proposition:examples_of_abelian_categories' on page 1 undefined on input line 15.
 
-) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex
-
-[42]) (../_definitions/definition_constant_sheaf_on_a_site_with_sheafification.tex) (../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex
-
-[43]) (../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex
-Overfull \hbox (12.00761pt too wide) in paragraph at lines 2--3
-[]\T1/cmr/bx/n/12 Definition A.0.28 \T1/cmr/m/n/12 (Slice site)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; ^^\\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be a []site[] (Def-i-ni-tion []A.0.9[]), where $\OML/cmm/m/it/12 ^^\$ \T1/cmr/m/n/12 is a Grothendieck
- []
-
-) (../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex) (../_definitions/definition_topos.tex
-Overfull \hbox (13.52559pt too wide) in paragraph at lines 4--5
-[]\T1/cmr/m/n/12 A []\T1/cmr/m/it/12 (sheaf/Grothendieck)[] [][][]topos \T1/cmr/m/n/12 is a []cat-e-gory[] (Def-i-ni-tion []A.0.1[]) []equiv-a-lent[] (Def-i-ni-tion []A.0.5[])
- []
 
 
+[42]) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex
 
-[44]) (../_concepts/proposition_category_of_sheaves_is_closed_under_finite_projective_limits_and_arbitrary_corpoducts.tex) (../_concepts/lemma_final_object_is_projective_limit_of_empty_diagram.tex) (../_concepts/lemma_topos_has_a_final_object.tex) (../_definitions/definition_morphism_of_topoi.tex) (../_definitions/definition_point_of_a_topos.tex) (../_definitions/definition_site_with_enough_points.tex)
+[43]
 
-[45] (../_definitions/definition_topological_space.tex) (../_definitions/definition_free_simplicial_abelian_group_of_a_simplicial_set.tex) (../_definitions/definition_scheme.tex) (../_definitions/definition_morphism_of_schemes.tex) (../_definitions/definition_locally_noetherian_and_noetherian_scheme.tex
+LaTeX Warning: Citation `kashiwara_schapira_cs' on page 44 undefined on input line 15.
 
-[46]) (../_definitions/definition_smooth_morphism_of_schemes.tex) (../_definitions/definition_smooth_at_a_point_for_a_finite_type_scheme_over_a_field.tex
+) (../_definitions/definition_constant_sheaf_on_a_site_with_sheafification.tex) (../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex
 
-[47]) (../_definitions/definition_etale_morphism_of_schemes.tex) (../_definitions/definition_scheme_over_a_scheme.tex) (../_definitions/definition_dimension_of_a_scheme.tex
+[44]) (../_definitions/definition_site_induced_by_a_site_on_an_over_category.tex) (../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex) (../_definitions/definition_topos.tex
 
-[48]) (../_definitions/definition_field.tex) (../_definitions/definition_filtered_cofiltered_category.tex
+[45]) (../_concepts/proposition_category_of_sheaves_is_closed_under_finite_projective_limits_and_arbitrary_corpoducts.tex) (../_concepts/lemma_final_object_is_projective_limit_of_empty_diagram.tex) (../_concepts/lemma_topos_has_a_final_object.tex) (../_definitions/definition_morphism_of_topoi.tex) (../_definitions/definition_point_of_a_topos.tex
 
-[49]) (../_definitions/definition_projective_and_inductive_limits_in_categories.tex) (../_definitions/definition_algebraic_variety_over_a_field.tex) (../_definitions/definition_extension_of_a_field.tex
+[46]) (../_definitions/definition_site_with_enough_points.tex) (../_definitions/definition_topological_space.tex) (../_definitions/definition_free_simplicial_abelian_group_of_a_simplicial_set.tex) (../_definitions/definition_scheme.tex) (../_definitions/definition_morphism_of_schemes.tex
 
-[50]) (../_definitions/definition_affine_scheme.tex) (../_definitions/definition_separable_algebraic_field_extension.tex) (../_definitions/definition_separable_field_extension_general.tex
+[47]) (../_definitions/definition_locally_noetherian_and_noetherian_scheme.tex) (../_definitions/definition_smooth_morphism_of_schemes.tex) (../_definitions/definition_smooth_at_a_point_for_a_finite_type_scheme_over_a_field.tex
+
+[48]) (../_definitions/definition_etale_morphism_of_schemes.tex) (../_definitions/definition_scheme_over_a_scheme.tex
+
+[49]) (../_definitions/definition_dimension_of_a_scheme.tex) (../_definitions/definition_field.tex) (../_definitions/definition_filtered_cofiltered_category.tex
+
+[50]) (../_definitions/definition_projective_and_inductive_limits_in_categories.tex
+
+[51]) (../_definitions/definition_algebraic_variety_over_a_field.tex) (../_definitions/definition_extension_of_a_field.tex) (../_definitions/definition_affine_scheme.tex) (../_definitions/definition_separable_algebraic_field_extension.tex) (../_definitions/definition_separable_field_extension_general.tex
 Overfull \hbox (17.78896pt too wide) in paragraph at lines 2--5
 []\T1/cmr/bx/n/12 Definition D.0.17 \T1/cmr/m/n/12 (Sep-a-ra-ble field ex-ten-sion)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 E=F$ \T1/cmr/m/n/12 be a []field ex-ten-sion[] (Def-i-ni-tion []D.0.14[]).
  []
 
 )) (./A1Homotopy.bbl
 
-[51]
+[52]
 Underfull \hbox (badness 1194) in paragraph at lines 60--64
 []\T1/cmr/m/n/10 nLab au-thors. sheafi-fi-ca-tion. []$\T1/cmtt/m/n/10 https : / / ncatlab . org / nlab / show / sheafification$[]\T1/cmr/m/n/10 , Sep-tem-ber
  []
@@ -1210,7 +1230,7 @@ This document will not have a glossary.
 
 
 
-[52] (./A1Homotopy.aux)
+[53] (./A1Homotopy.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
@@ -1222,22 +1242,28 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `A1Homotopy.out' has not changed.
-(rerunfilecheck)             Checksum: 2467F7245D11A28A01B12F8DD23AE480;7735.
+
+Package rerunfilecheck Warning: File `A1Homotopy.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `A1Homotopy.out':
+(rerunfilecheck)             Before: 5655B84D3163A172BDF02CA4568D4FAE;7763
+(rerunfilecheck)             After:  2467F7245D11A28A01B12F8DD23AE480;7735.
  ) 
 Here is how much of TeX's memory you used:
- 35550 strings out of 473254
- 701780 string characters out of 5722066
- 1083120 words of memory out of 5000000
- 57242 multiletter control sequences out of 15000+600000
+ 35644 strings out of 473254
+ 704694 string characters out of 5722066
+ 1085233 words of memory out of 5000000
+ 57329 multiletter control sequences out of 15000+600000
  585981 words of font info for 129 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  121i,18n,124p,3345b,1317s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on A1Homotopy.pdf (52 pages, 717047 bytes).
+Output written on A1Homotopy.pdf (53 pages, 729295 bytes).
 PDF statistics:
- 1906 PDF objects out of 2073 (max. 8388607)
- 1770 compressed objects within 18 object streams
- 377 named destinations out of 1000 (max. 500000)
+ 1882 PDF objects out of 2073 (max. 8388607)
+ 1745 compressed objects within 18 object streams
+ 384 named destinations out of 1000 (max. 500000)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

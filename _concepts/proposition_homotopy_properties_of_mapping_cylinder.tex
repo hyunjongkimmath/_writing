@@ -1,0 +1,11 @@
+\begin{proposition} \label{proposition:homotopy_properties_of_mapping_cylinder}
+Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and $f: X \to Y$ a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}. 
+
+The \CrefAndHyperrefIfExist{mapping_cylinder_of_a_map_of_topological_spaces}{mapping cylinder} $M_f$ satisfies the following fundamental homotopy properties:
+\TODO{deformation retraction, cofibration}
+\begin{enumerate}
+    \item \textbf{Deformation Retraction:} The mapping cylinder $M_f$ deformation retracts onto the subspace $Y \times \{1\} \cong Y$ via the map $H_t(x, s) = (x, (1-t)s + t)$ and $H_t(y) = y$. Thus, the inclusion $j: Y \hookrightarrow M_f$ is a homotopy equivalence.
+    \item \textbf{Cofibration:} The natural inclusion $i: X \hookrightarrow M_f$ defined by $x \mapsto (x, 0)$ is a cofibration.
+    \item \textbf{Factorization:} Every continuous map $f: X \to Y$ factors as $f = r \circ i$, where $i: X \hookrightarrow M_f$ is an inclusion and $r: M_f \to Y$ is a homotopy equivalence (the retraction).
+\end{enumerate}
+\end{proposition}

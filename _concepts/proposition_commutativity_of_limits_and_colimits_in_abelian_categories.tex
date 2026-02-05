@@ -1,0 +1,31 @@
+\begin{proposition}[Commutativity of Limits and Colimits in Abelian Categories] \label{proposition:commutativity_of_limits_and_colimits_in_abelian_categories}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{Abelian category}, and let $F: I \times J \to \mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:n_ary_functor}{bifunctor}.
+
+\begin{enumerate}
+    \item \textbf{Finite Limits and Colimits:} 
+    If $I$ and $J$ are finite \CrefAndHyperrefIfExist{definition:category}{categories}, then the following \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphisms} always hold in $\mathcal{A}$:
+    \begin{align}
+        \lim_{i \in I} \lim_{j \in J} F(i, j) &\cong \lim_{(i, j) \in I \times J} F(i, j) \cong \lim_{j \in J} \lim_{i \in I} F(i, j) \\
+        \operatorname{colim}_{i \in I} \operatorname{colim}_{j \in J} F(i, j) &\cong \operatorname{colim}_{(i, j) \in I \times J} F(i, j) \cong \operatorname{colim}_{j \in J} \operatorname{colim}_{i \in I} F(i, j)
+    \end{align}
+    \CrefIfExists{definition:limit_and_colimit_of_a_diagram_in_a_category}
+    In particular, for any finite family of morphisms $f_k: A_k \to B_k$ indexed by $k \in K$, we have $\ker(\bigoplus f_k) \cong \bigoplus \ker(f_k)$ and $\operatorname{coker}(\bigoplus f_k) \cong \bigoplus \operatorname{coker}(f_k)$\CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}.
+
+    \item \textbf{Small Colimits (Axiom AB3):} 
+    If $\mathcal{A}$ satisfies axiom \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB3} and $I, J$ are \CrefAndHyperrefIfExist{definition:locally_small_category}{small categories}, the iterated \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist and commute:
+    \begin{equation}
+        \operatorname{colim}_{i \in I} \operatorname{colim}_{j \in J} F(i, j) \cong \operatorname{colim}_{(i, j) \in I \times J} F(i, j) \cong \operatorname{colim}_{j \in J} \operatorname{colim}_{i \in I} F(i, j)
+    \end{equation}
+    Specifically, this implies that the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}{cokernel} of a \CrefAndHyperrefIfExist{definition:locally_small_category}{small} coproduct of morphisms is the coproduct of the \CrefAndHyperrefIfExist{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}{cokernels}: $\operatorname{coker}(\coprod f_k) \cong \coprod \operatorname{coker}(f_k)$.
+
+    \item \textbf{Small Limits (Axiom AB3$^*$):} 
+    If $\mathcal{A}$ satisfies axiom \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB3}$^*$ and $I, J$ are \CrefAndHyperrefIfExist{definition:locally_small_category}{small categories}, the iterated \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} exist and commute:
+    \begin{equation}
+        \lim_{i \in I} \lim_{j \in J} F(i, j) \cong \lim_{(i, j) \in I \times J} F(i, j) \cong \lim_{j \in J} \lim_{i \in I} F(i, j)
+    \end{equation}
+    Specifically, this implies that the \CrefAndHyperrefIfExist{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}{kernel} of a small \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} of morphisms is the product of the \CrefAndHyperrefIfExist{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}{kernels}: $\ker(\prod f_k) \cong \prod \ker(f_k)$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+    These are consequences of \Cref{theorem:limits_commute_with_limits_and_colimits_commute_with_colimits}.
+\end{proof}

@@ -1,0 +1,216 @@
+\begin{lemma} \label{lemma:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}.
+    \begin{enumerate}
+        \item 
+        Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a morphism of
+        \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in the additive category $\mathcal{A}$.
+
+        Then there is a natural \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} of chain complexes
+        \[
+        0 \longrightarrow (D_\bullet, d^D_\bullet)
+        \xrightarrow{i}
+        \bigl(\operatorname{\CrefAndHyperrefIfExist{}{Cone}}(f)_\bullet, d^{\operatorname{Cone}(f)}_\bullet\bigr)
+        \xrightarrow{p}
+        (C_\bullet[-1], d^{C[-1]}_\bullet)
+        \longrightarrow 0,
+        \]
+        where $C_\bullet[-1]$ denotes the shifted \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} with
+        \[
+        (C_\bullet[-1])_n = C_{n-1}, \qquad
+        d^{C[-1]}_n := -\,d^C_{n-1}.
+        \]
+
+        More explicitly:
+
+        \begin{itemize}
+        \item At the level of \CrefAndHyperrefIfExist{definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set}{objects}, by \Cref{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category} we have
+        \[
+            \operatorname{Cone}(f)_n = D_n \oplus C_{n-1}.
+        \]
+
+        \item The \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{differential} of the cone is
+        \[
+            d^{\operatorname{Cone}(f)}_n
+            =
+            \begin{pmatrix}
+            d^D_n & f_{n-1} \\
+            0     & -d^C_{n-1}
+            \end{pmatrix}
+            :
+            D_n \oplus C_{n-1} \longrightarrow D_{n-1} \oplus C_{n-2}.
+        \]
+
+        \item The inclusion $i : D_\bullet \to \operatorname{Cone}(f)_\bullet$ is given in degree $n$ by
+        \[
+            i_n : D_n \longrightarrow D_n \oplus C_{n-1}, \qquad
+            i_n(d) = (d, 0).
+        \]
+        This is a chain map, since
+        \[
+            d^{\operatorname{Cone}(f)}_n \circ i_n(d)
+            =
+            d^{\operatorname{Cone}(f)}_n(d,0)
+            =
+            (d^D_n(d), 0)
+            =
+            i_{n-1}\bigl(d^D_n(d)\bigr).
+        \]
+
+        \item The projection $p : \operatorname{Cone}(f)_\bullet \to C_\bullet[-1]$ is given in degree $n$ by
+        \[
+            p_n : D_n \oplus C_{n-1} \longrightarrow C_{n-1}, \qquad
+            p_n(d,c) = c.
+        \]
+        This is a chain map when we use the shifted differential on $C_\bullet[-1]$:
+        \[
+            d^{C[-1]}_n \circ p_n(d,c)
+            =
+            -d^C_{n-1}(c),
+        \]
+        while
+        \[
+            p_{n-1}\circ d^{\operatorname{Cone}(f)}_n(d,c)
+            =
+            p_{n-1}\bigl(d^D_n(d) + f_{n-1}(c),\, -d^C_{n-1}(c)\bigr)
+            =
+            -d^C_{n-1}(c),
+        \]
+        so $d^{C[-1]}_n \circ p_n = p_{n-1}\circ d^{\operatorname{Cone}(f)}_n$.
+
+        \item For each $n$, the underlying sequence in $\mathcal{A}$
+        \[
+            0 \longrightarrow D_n
+            \xrightarrow{i_n}
+            D_n \oplus C_{n-1}
+            \xrightarrow{p_n}
+            C_{n-1}
+            \longrightarrow 0
+        \]
+        is \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split exact} (with splitting given by the obvious inclusion and projection),
+        hence \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact} in the \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive} sense.
+        \end{itemize}
+
+        Thus the cone of $f$ fits into a degreewise \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} short exact sequence of chain complexes
+        \[
+        0 \longrightarrow D_\bullet
+        \xrightarrow{i}
+        \operatorname{Cone}(f)_\bullet
+        \xrightarrow{p}
+        C_\bullet[-1]
+        \longrightarrow 0.
+        \]
+
+        \item Dually, let $g : (C^\bullet, d_C^\bullet) \to (D^\bullet, d_D^\bullet)$ be a
+        morphism of cochain complexes in $\mathcal{A}$.
+
+        Then there is a natural \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complexes}
+        \[
+        0 \longrightarrow (C^\bullet[1], d_{C[1]}^\bullet)
+        \xrightarrow{j}
+        \bigl(\operatorname{Cone}(g)^\bullet, d_{\operatorname{Cone}(g)}^\bullet\bigr)
+        \xrightarrow{q}
+        (D^\bullet, d_D^\bullet)
+        \longrightarrow 0,
+        \]
+        where the shifted \CrefAndHyperrefIfExist{definition:cochain_complex_of_objects_in_an_additive_category}{cochain complex} $C^\bullet[1]$ is defined by
+        \[
+            (C^\bullet[1])^n = C^{n+1}, \qquad
+            d_{C[1]}^n := -\,d_C^{n+1}.
+        \]
+
+        More explicitly:
+
+        \begin{itemize}
+        \item At the level of objects, by
+        Definition~\ref{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}
+        we have
+        \[
+            \operatorname{Cone}(g)^n = D^n \oplus C^{n+1}.
+        \]
+
+        \item The differential of the cone is
+        \[
+        d_{\operatorname{Cone}(g)}^n
+        =
+        \begin{pmatrix}
+        d_D^n & g^{n+1} \\
+        0     & -d_C^{n+1}
+        \end{pmatrix}
+        : D^n \oplus C^{n+1} \longrightarrow D^{n+1} \oplus C^{n+2}.
+        \]
+
+        \item The inclusion $j : C^\bullet[1] \to \operatorname{Cone}(g)^\bullet$ is given in degree $n$ by
+        \[
+            j^n : (C^\bullet[1])^n = C^{n+1} \longrightarrow D^n \oplus C^{n+1}, \qquad
+            j^n(c) = (0, c).
+        \]
+        This is a cochain map, since
+        \[
+            d_{\operatorname{Cone}(g)}^n \circ j^n(c)
+            =
+            d_{\operatorname{Cone}(g)}^n(0,c)
+            =
+            \bigl(g^{n+1}(c), -d_C^{n+1}(c)\bigr),
+        \]
+        while
+        \[
+            j^{n+1}\bigl(d_{C[1]}^n(c)\bigr)
+            =
+            j^{n+1}\bigl(-d_C^{n+1}(c)\bigr)
+            =
+            \bigl(0, -d_C^{n+1}(c)\bigr),
+        \]
+        and the equality
+        \(
+        d_{\operatorname{Cone}(g)}^n \circ j^n
+        =
+        j^{n+1} \circ d_{C[1]}^n
+        \)
+        follows from the defining relation
+        \(g^{n+1}\circ d_C^{n} = d_D^{n}\circ g^{n}\) on the original complexes (after reindexing).
+
+        \item The projection $q : \operatorname{Cone}(g)^\bullet \to D^\bullet$ is given in degree $n$ by
+        \[
+            q^n : D^n \oplus C^{n+1} \longrightarrow D^n, \qquad
+            q^n(d,c) = d.
+        \]
+        This is a cochain map:
+        \[
+            d_D^n \circ q^n(d,c)
+            =
+            d_D^n(d),
+        \]
+        while
+        \[
+            q^{n+1}\circ d_{\operatorname{Cone}(g)}^n(d,c)
+            =
+            q^{n+1}\bigl(d_D^n(d) + g^{n+1}(c),\, -d_C^{n+1}(c)\bigr)
+            =
+            d_D^n(d) + g^{n+1}(c),
+        \]
+        and again the compatibility with the differentials is ensured by the fact that $g$ is a morphism of cochain complexes.
+
+        \item For each $n$, the underlying sequence in $\mathcal{A}$
+        \[
+            0 \longrightarrow C^{n+1}
+            \xrightarrow{j^n}
+            D^n \oplus C^{n+1}
+            \xrightarrow{q^n}
+            D^n
+            \longrightarrow 0
+        \]
+        is split exact (with splitting given by the obvious inclusion and projection),
+        hence exact in the additive sense.
+        \end{itemize}
+
+        Thus the cone of $g$ fits into a degreewise split short exact sequence of cochain complexes
+        \[
+        0 \longrightarrow C^\bullet[1]
+        \xrightarrow{j}
+        \operatorname{Cone}(g)^\bullet
+        \xrightarrow{q}
+        D^\bullet
+        \longrightarrow 0.
+        \]
+    \end{enumerate}
+\end{lemma}

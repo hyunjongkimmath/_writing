@@ -5,6 +5,7 @@
         \[
         -\otimes_R M : \mathrm{Mod}_R \to \mathbf{Ab}
         \]
+        \TODO{comment on how I might as well be talking about other more specific kinds of modules}
         \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} from the category of right $R$-modules to abelian groups is exact; that is, for every exact sequence of right $R$-modules
         \[
         0 \to N' \to N \to N'' \to 0,
@@ -16,8 +17,7 @@
         is exact.
 
 
-        \TODO{tor}
-        Equivalently, $M$ is flat if $\mathrm{Tor}_1^R(-,M) = 0$.
+        Equivalently, $M$ is flat if $\mathrm{Tor}_1^R(-,M) = 0$(\Cref{definition:tor_functors_of_bimodules_of_rings}).
 
         \item Let $M$ be a right $R$-module. The module $M$ is said to be \hldef{flat (with respect to the right $R$-module structure)} if the functor
 
@@ -33,6 +33,8 @@
         0 \to M \otimes_R N'  \to M \otimes_R N \to M \otimes_R N'' \to 0
         \]
         is exact.
+
+        Equivalently, $M$ is flat if $\mathrm{Tor}_1^R(M,-) = 0$(\Cref{definition:tor_functors_of_bimodules_of_rings}).
 
     \end{enumerate}
     \TextIfExists{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{Equivalently in either case, $M$ is flat if it is \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat with respect to the biadditive functor $$- \otimes_R -: \mathbf{Mod}_R \times {}_R \mathbf{Mod} \to \Ab.$$}}

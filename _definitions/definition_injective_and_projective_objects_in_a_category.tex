@@ -2,7 +2,7 @@
 \begin{definition}[Injective and Projective objects in a general category] \label{definition:injective_and_projective_objects_in_a_category}
 Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}
 \begin{itemize}
-    \item An object $I \in \mathcal{C}$ is called \hldef{injective} if for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $m: A \to B$ in $\mathcal{C}$ and every morphism $f: A \to I$, there exists a morphism $\tilde{f}: B \to I$ such that the diagram
+    \item An object $I \in \mathcal{C}$ is called \hldef{injective} if it satisfies the following extension property: for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $m: A \to B$ in $\mathcal{C}$ and every morphism $f: A \to I$, there exists a morphism $\tilde{f}: B \to I$ such that the diagram
     \[
     \begin{tikzcd}
     A \arrow[r, "f"] \arrow[d, "m", hook] & I \\
@@ -11,7 +11,7 @@ Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}
     \]
     commutes, i.e., $\tilde{f} \circ m = f$.
 
-    \item Dually, an object $P \in \mathcal{C}$ is called \hldef{projective} if for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} $e: X \to Y$ in $\mathcal{C}$ and every morphism $g: P \to Y$, there exists a morphism $\tilde{g}: P \to X$ such that the diagram
+    \item Dually, an object $P \in \mathcal{C}$ is called \hldef{projective} if it satisfies the following lifting property: for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} $e: X \to Y$ in $\mathcal{C}$ and every morphism $g: P \to Y$, there exists a morphism $\tilde{g}: P \to X$ such that the diagram
     \[
     \begin{tikzcd}
     & P \arrow[ld, dashed, "\tilde{g}"'] \arrow[d, "g"] \\

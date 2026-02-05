@@ -1,0 +1,33 @@
+\begin{lemma} \label{lemma:monomorphisms_epimorphisin_abelian_categories_are_preserved_by_pullbacks}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $f: A_1 \to B$, $g: A_2 \to B$ be morphisms in $\calA$.     
+    If $f$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} (resp. \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism}), then the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{pullback} morphism $A_1 \times_B A_2 \to A_2$ of $f$ by $g$ is a monomorphism (resp. epimorphism).
+\end{lemma}
+\begin{proof}
+    We prove the monomorphism case; the epimorphism case is similar. 
+    In $\calA$, a morphism is a monomorphism if and only if its kernel is zero by \Cref{lemma:monomorphism_epimorphism_in_abelian_category_is_equivalent_to_map_with_zero_kernel_cokernel}. Let $p_2: A_1 \times_B A_2 \to A_2$ be the pullback of $f$ along $g$. 
+    By \Cref{proposition:commutativity_of_limits_and_colimits_in_abelian_categories}, kernels in $\calA$ commute with pullbacks, which are limits. In this case, this tells us that $\ker(p_2)$ fits in the following cartesian diagram:
+    \[
+    \begin{tikzcd}[row sep=large, column sep=large]
+        \ker(p_2) \arrow[r] \arrow[d] \arrow[dr, phantom, "\lrcorner", very near start] & \ker(f) \arrow[d] \\
+        A_1 \times_B A_2 \arrow[r, "p_1"] \arrow[d, "p_2"] & A_1 \arrow[d, "f"] \\
+        A_2 \arrow[r, "g"] & B
+    \end{tikzcd}
+    \]
+    Since $\ker(f) = 0$, $\ker(p_2) \cong 0$.
+
+    % By \Cref{proposition:commutativity_of_limits_and_colimits_in_abelian_categories}, the kernel (a limit) commutes with the pullback (a limit). Therefore, $\ker(p_2)$ is isomorphic to the pullback of the kernels of the vertical maps in the original square. Specifically, we consider the limit of the diagram:
+    % \[
+    % \begin{tikzcd}
+    %     \ker(p_2) \arrow[r] \arrow[d] \arrow[dr, phantom, "\lrcorner", very near start] & \ker(f) \arrow[d] \\
+    %     0 \arrow[r] & 0
+    % \end{tikzcd}
+    % \]
+    % Since $f$ is a monomorphism, $\ker(f) \cong 0$. The diagram then becomes a pullback of zero morphisms over the zero object:
+    % \[
+    % \begin{tikzcd}
+    %     \ker(p_2) \arrow[r] \arrow[d] \arrow[dr, phantom, "\lrcorner", very near start] & 0 \arrow[d] \\
+    %     0 \arrow[r] & 0
+    % \end{tikzcd}
+    % \]
+    % The pullback of $0 \to 0 \leftarrow 0$ is uniquely $0$. Thus, $\ker(p_2) \cong 0$, which proves that $p_2$ is a monomorphism.
+\end{proof}

@@ -1,0 +1,13 @@
+\begin{theorem}[Universal Coefficient Theorem for Singular Homology] \label{theorem:universal_coefficient_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups}
+Let $(X, A)$ be a pair of topological spaces and $G$ an \CrefAndHyperrefIfExist{definition:group}{abelian group}. For each $n \in \mathbb{Z}$, there exists a natural short exact sequence:
+$$ 0 \to H_n(X, A; \mathbb{Z}) \otimes_{\mathbb{Z}} G \xrightarrow{\mu} H_n(X, A; G) \xrightarrow{\beta} \operatorname{Tor}_1^{\mathbb{Z}}(H_{n-1}(X, A; \mathbb{Z}), G) \to 0 $$
+where:
+\begin{itemize}
+    \item $H_n(X, A; \mathbb{Z})$ is the integral singular homology.
+    \item $\mu$ is the \hldef{tensor product map} defined by $\mu([c] \otimes g) = [c \otimes g]$.
+    \item $\operatorname{Tor}_1^{\mathbb{Z}}$ is the first torsion product functor \TODO{define Tor functor}.
+    \item $\beta$ is a natural surjection that identifies the kernel of $\mu$.
+\end{itemize}
+Furthermore, this sequence \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits} (albeit non-naturally), meaning there is a non-natural isomorphism:
+$$ H_n(X, A; G) \cong (H_n(X, A; \mathbb{Z}) \otimes_{\mathbb{Z}} G) \oplus \operatorname{Tor}_1^{\mathbb{Z}}(H_{n-1}(X, A; \mathbb{Z}), G) $$
+\end{theorem}

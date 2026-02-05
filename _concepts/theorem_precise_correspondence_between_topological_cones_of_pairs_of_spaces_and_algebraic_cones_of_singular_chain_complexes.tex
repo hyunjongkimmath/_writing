@@ -1,0 +1,12 @@
+\begin{theorem} \label{theorem:precise_correspondence_between_topological_cones_of_pairs_of_spaces_and_algebraic_cones_of_singular_chain_complexes}
+Let $f: (X, A) \to (Y, B)$ be a \CrefAndHyperrefIfExist{definition:map_of_pairs_of_topological_spaces}{map of pairs}. The \CrefAndHyperref{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{algebraic mapping cone} $\operatorname{Cone}(f_\#)$ is the chain complex obtained by "collapsing" the domain component of the mapping cylinder:
+
+\begin{enumerate}
+    \item \textbf{Algebraic Quotient:} There is a natural isomorphism of chain complexes:
+    $$ C_\bullet(C_f, C_{f|_A} \cup \{v\}; G) \cong \operatorname{Cyl}(f_\#) / C_\bullet(X, A; G) \cong \operatorname{Cone}(f_\#). $$
+    
+    \item \textbf{The Origin of the Matrix Differential:} The matrix differential 
+    $d^{\operatorname{Cone}(f)} = \begin{pmatrix} d^D & f \\ 0 & -d^C \end{pmatrix}$
+    precisely tracks the boundary of the "prisms" created by the cone construction. The term $f$ represents the base of the cone attached to $Y$, while $-d^C$ represents the lateral boundary of the cone, with the sign change arising from the boundary of a product formula $\partial(c \otimes e) = \partial c \otimes e + (-1)^{\deg c} c \otimes \partial e$.
+\end{enumerate}
+\end{theorem}

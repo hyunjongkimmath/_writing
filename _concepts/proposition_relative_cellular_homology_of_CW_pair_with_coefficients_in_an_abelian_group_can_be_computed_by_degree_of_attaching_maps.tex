@@ -1,0 +1,10 @@
+\begin{proposition} \label{proposition:relative_cellular_homology_of_CW_pair_with_coefficients_in_an_abelian_group_can_be_computed_by_degree_of_attaching_maps}
+Let $G$ be an abelian group. Let $(X, A)$ be a \CrefAndHyperrefIfExist{definition:CW_pair}{CW pair}.  
+
+\TODO{degree}
+The cellular boundary map $d_n^G: C_n^{CW}(X,A;G) \to C_{n-1}^{CW}(X,A;G)$ (\Cref{definition:relative_absolute_cellular_chain_complex_of_CW_pair_complex}) can be computed via the degree of attaching maps. For an $n$-cell $e_{\alpha}^n$ and its coefficient $g \in G$:
+$$d_n^G(g e_{\alpha}^n) = \sum_{\beta} g [e_{\alpha}^n : e_{\beta}^{n-1}] e_{\beta}^{n-1}$$
+The incidence number $[e_{\alpha}^n : e_{\beta}^{n-1}]$ is the degree of the map $S^{n-1} \to S^{n-1}$ defined by the composition:
+$$S^{n-1} \cong \partial D^n \xrightarrow{\phi_{\alpha}} X^{n-1} \to X^{n-1}/(X^{n-1} \setminus e_{\beta}^{n-1}) \cong S^{n-1}$$
+where $\phi_{\alpha}$ is the restriction of the characteristic map to the boundary \TODO{define topological degree}.
+\end{proposition}

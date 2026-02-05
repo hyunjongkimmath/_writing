@@ -1,0 +1,11 @@
+\begin{definition}[Cellular Complex] \label{definition:cellular_complex}
+A \hldef{cellular complex} is a topological space $X$ equipped with a partition into subspaces called \hldef{open $n$-cells} \hl{$e_{\alpha}^n$}, each homeomorphic to an open $n$-dimensional ball $B^n$, such that:
+\begin{itemize}
+    \item The \hldef{$n$-skeleton} is defined inductively as $X^n = \bigcup_{k \le n} \bigcup_{\alpha} e_{\alpha}^k$.
+    \item For each $n$-cell $e_{\alpha}^n$, there exists a continuous \hldef{characteristic map} \hl{$\Phi_{\alpha}: D^n \to X$} from the closed $n$-disk which:
+    \begin{enumerate}
+        \item Restricts to a homeomorphism on the interior $\text{int}(D^n) \cong e_{\alpha}^n$.
+        \item Maps the boundary $\partial D^n$ into the $(n-1)$-skeleton $X^{n-1}$.
+    \end{enumerate}
+\end{itemize}
+\end{definition}

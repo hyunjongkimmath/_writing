@@ -1,0 +1,23 @@
+\begin{definition} \label{definition:left_right_projective_injective_flat_dimension_of_a_module_over_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring} and $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}. 
+\begin{enumerate}
+    \item The \hldef{(left) projective dimension of $M$}, denoted \hl{$\operatorname{pd}_R(M)$}, is the supremum of lengths $n$ of finite \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions}:
+    $$0 \to P_n \to \dots \to P_1 \to P_0 \to M \to 0$$
+    If no such finite \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolution} exists, $\operatorname{pd}_R(M) = \infty$.
+    \item The \hldef{(left) injective dimension of $M$}, denoted \hl{$\operatorname{id}_R(M)$}, is the supremum of lengths $n$ of finite \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolutions}:
+    $$0 \to M \to E^0 \to E^1 \to \dots \to E^n \to 0$$
+    If no such finite resolution exists, $\operatorname{id}_R(M) = \infty$.
+    \item The \hldef{(left) flat dimension of $M$}, denoted \hl{$\operatorname{fd}_R(M)$}, is the supremum of lengths $n$ of finite \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}:
+    $$0 \to F_n \to \dots \to F_1 \to F_0 \to M \to 0$$
+\end{enumerate}
+
+\TextIfExists{definition:left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects}{In other words, 
+\begin{itemize}
+    \item the projective dimension of $M$ is the left $\calX$ dimension in the sense of \Cref{definition:left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects} where $\calX$ is the class of (left) projective $R$-modules,
+    \item the injective dimension of $M$ is the right $\calX$ dimension in the sense of \Cref{definition:left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects} where $\calX$ is the class of (left) projective $R$-modules, and
+    \item the flat dimension of $M$ is the left $\calX$ dimension in the sense of \Cref{definition:left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects} where $\calX$ is the class of (left) projective $R$-modules.
+\end{itemize}
+}
+
+\CrefAndHyperrefIfExist{definition:module_of_a_ring}{Right-module projective/injective/flat} dimensions are defined analogously using resolutions of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}.
+\end{definition}

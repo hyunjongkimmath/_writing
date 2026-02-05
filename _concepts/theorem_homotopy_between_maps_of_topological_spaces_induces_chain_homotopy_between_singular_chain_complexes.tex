@@ -1,0 +1,8 @@
+\begin{theorem} \label{theorem:homotopy_between_maps_of_topological_spaces_induces_chain_homotopy_between_singular_chain_complexes}
+Let $(X, A)$ and $(Y, B)$ be \CrefAndHyperrefIfExist{definition:topological_space}{pairs of topological spaces}, and let $G$ be an \CrefAndHyperrefIfExist{definition:group}{abelian group}. Let $f, g: (X, A) \to (Y, B)$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps} of pairs. 
+
+If $f$ and $g$ are \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopic} (denoted $f \simeq g$), then the \CrefAndHyperrefIfExist{proposition:functoriality_of_singular_chain_complex_of_topological_spaces_with_coefficients_in_abelian_groups}{induced chain maps} $f_{\#}, g_{\#}: C_{\bullet}(X, A; G) \to C_{\bullet}(Y, B; G)$ on the \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}{singular chain complexes} are \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopic}.
+
+Specifically, if $H: (X \times I, A \times I) \to (Y, B)$ is a homotopy from $f$ to $g$, there exists a \hldef{prism operator} \hl{$P_n: C_n(X, A; G) \to C_{n+1}(Y, B; G)$} such that:
+$$ \partial_{n+1} P_n + P_{n-1} \partial_n = g_{\#} - f_{\#} $$
+\end{theorem}

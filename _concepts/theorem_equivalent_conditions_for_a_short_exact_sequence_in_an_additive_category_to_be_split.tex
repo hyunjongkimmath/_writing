@@ -1,0 +1,17 @@
+\begin{theorem} \label{theorem:equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. For a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the following conditions are equivalent:
+\begin{enumerate}
+    \item The sequence is \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{split exact}.
+    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{section}) $s: C \to B$ such that $g \circ s = \text{id}_C$.
+    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{retraction}) $r: B \to A$ such that $r \circ f = \text{id}_A$.
+    \item There exists an isomorphism $\varphi: B \xrightarrow{\cong} A \oplus C$ such that the following diagram commutes:
+    $$
+    \begin{CD}
+    0 @>>> A @>f>> B @>g>> C @>>> 0 \\
+    @. @| @V{\varphi}VV @| @. \\
+    0 @>>> A @>{\iota_1}>> A \oplus C @>{\pi_2}>> C @>>> 0
+    \end{CD}
+    $$
+    where $\iota_1$ is the canonical injection and $\pi_2$ is the canonical projection.
+\end{enumerate}
+\end{theorem}

@@ -1,0 +1,18 @@
+\begin{theorem} \label{theorem:precise_correspondence_between_topological_cylinder_of_pairs_of_spaces_and_algebraic_cylinders_of_singular_chain_complexes}
+    \TODO{}
+Let $f: (X, A) \to (Y, B)$ be a \CrefAndHyperrefIfExist{definition:map_of_pairs_of_topological_spaces}{map of pairs of topological spaces} and $G$ an \CrefAndHyperrefIfExist{definition:group}{abelian group}. Let $f_\#: C_\bullet(X,A;G) \to C_\bullet(Y,B;G)$ be the \CrefAndHyperrefIfExist{proposition:functoriality_of_singular_chain_complex_of_topological_spaces_with_coefficients_in_abelian_groups}{induced chain map} of \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}{singular chain complexes}.
+
+The \CrefAndHyperref{definition:mapping_cylinder_of_a_map_of_chain_cochain_complexes}{algebraic mapping cylinder} of the $f_\#: C_\bullet(X,A;G) \to C_\bullet(Y,B;G)$ arises from the topological \CrefAndHyperref{definition:mapping_cylinder_of_a_map_of_pairs_of_topological_spaces}{mapping cylinder of pairs} via the following precise relationship:
+
+\begin{enumerate}
+    \item \textbf{Cylindrical Decomposition:} The singular chain complex of the cylinder $C_\bullet(X \times I)$ is chain homotopic to the \CrefAndHyperrefIfExist{definition:tensor_product_of_chain_complexes}{tensor product of complexes} $C_\bullet(X) \otimes C_\bullet(I)$. 
+    
+    \item \textbf{The Interval Complex:} The singular complex of the interval $C_\bullet(I)$ is homotopy equivalent to the simple complex $K_\bullet$:
+    $$ K_1 \xrightarrow{\partial} K_0, \quad \mathbb{Z}[e] \xrightarrow{\partial} \mathbb{Z}[v_1] \oplus \mathbb{Z}[v_0] $$
+    where $\partial(e) = v_1 - v_0$.
+    
+    \item \textbf{Emergence of the Algebraic Cylinder:} Applying the \CrefAndHyperrefIfExist{definition:pushout_of_chain_complexes}{algebraic pushout} to the diagram induced by the topological gluing $(x, 1) \sim f(x)$ yields:
+    $$ C_\bullet(M_f; G) \simeq \operatorname{Cyl}(f_\#) := C_\bullet(X; G) \oplus C_{\bullet-1}(X; G) \oplus C_\bullet(Y; G). $$
+    The "convoluted" differential in $\operatorname{Cyl}(f_\#)$ is the unique differential making this a homotopy pushout in the category of chain complexes.
+\end{enumerate}
+\end{theorem}

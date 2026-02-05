@@ -1,0 +1,12 @@
+\begin{definition}[Singular cocycles and coboundaries] \label{definition:singular_n_cocycles_coboundaries_of_a_topological_space_with_coefficients_in_an_abelian_group}
+Let $(C^\bullet(X, A; G), \delta^n)$ be the \CrefAndHyperrefIfExist{definition:singular_cochain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}{singular cochain complex}.
+
+\begin{enumerate}
+    \item A \hldef{singular $n$-cocycle} is an element of the subgroup
+    $$\hlin{Z^n(X, A; G) = \ker(\delta^n : C^n(X, A; G) \to C^{n+1}(X, A; G))}.$$
+    
+    \item A \hldef{singular $n$-coboundary} is an element of the subgroup
+    $$\hlin{B^n(X, A; G) = \operatorname{im}(\delta^{n-1} : C^{n-1}(X, A; G) \to C^n(X, A; G))}.$$
+\end{enumerate}
+By the property $\delta^n \circ \delta^{n-1} = 0$, we have $B^n(X, A; G) \subseteq Z^n(X, A; G)$.
+\end{definition}

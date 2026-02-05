@@ -1,0 +1,56 @@
+\begin{lemma}[Long Exact Sequence of the Mapping Cone]  \label{lemma:long_exact_sequence_of_mapping_cone_of_chain_map_in_an_abelian_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a morphism of
+        \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\calA$. Then the \CrefAndHyperrefIfExist{definition:short_exact_sequence_of_chain_complexes}{short exact sequence} of chain complexes
+        \[
+        0 \longrightarrow D_\bullet
+        \xrightarrow{i}
+        \operatorname{\CrefAndHyperrefIfExist{}{Cone}}(f)_\bullet
+        \xrightarrow{p}
+        C_\bullet[-1]
+        \longrightarrow 0
+        \]
+        from \Cref{lemma:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence} induces a \CrefAndHyperrefIfExist{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}{long exact sequence in homology}:
+        \begin{equation}\label{equation:long_exact_homology_sequence_cone}
+        \cdots \to H_n(D_\bullet)
+        \xrightarrow{H_n(i)}
+        H_n\bigl(\operatorname{Cone}(f)_\bullet\bigr)
+        \xrightarrow{H_n(p)}
+        H_{n-1}(C_\bullet)
+        \xrightarrow{f_*^{n-1}}
+        H_{n-1}(D_\bullet)
+        \xrightarrow{H_{n-1}(i)}
+        H_{n-1}\bigl(\operatorname{Cone}(f)_\bullet\bigr)
+        \to \cdots
+        \end{equation}
+
+        \item Dually, let $g : (C^\bullet, d_C^\bullet) \to (D^\bullet, d_D^\bullet)$ be a
+        morphism of cochain complexes in $\calA$. Then the short exact sequence of cochain complexes
+        \[
+        0 \longrightarrow C^\bullet[1]
+        \xrightarrow{j}
+        \operatorname{Cone}(g)^\bullet
+        \xrightarrow{q}
+        D^\bullet
+        \longrightarrow 0
+        \]
+        from \Cref{lemma:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence} induces a \CrefAndHyperrefIfExist{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}{long exact sequence in cohomology}:
+        \begin{equation}\label{equation:long_exact_cohomology_sequence_cone}
+        \cdots \to H^{n-1}(C^\bullet)
+        \xrightarrow{H^{n-1}(g)}
+        H^n(D^\bullet)
+        \xrightarrow{H^n(q)}
+        H^n\bigl(\operatorname{Cone}(g)^\bullet\bigr)
+        \xrightarrow{H^n(j)}
+        H^n(C^\bullet[1])
+        \xrightarrow{H^n(g)}
+        H^{n+1}(D^\bullet)
+        \to \cdots
+        \end{equation}
+        Note that $H^n(C^\bullet[1]) \cong H^{n+1}(C^\bullet)$ naturally.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    This follows from \Cref{lemma:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence} and \Cref{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}.
+\end{proof}

@@ -345,6 +345,11 @@ One noteworthy fact is that if a category has all \CrefAndHyperrefIfExist{defini
 \input{../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex}
 \input{../_concepts/theorem_limits_colimits_are_equalizers_coequaulizers_of_products_coproducts.tex}
 
+We can consider limits of limits or colimits of colimits as long as the diagrams are set up for such notions to make sense; under nice enough circumstances, limits commute with limits and colimits commute with colimits.
+
+\input{../_concepts/theorem_limits_commute_with_limits_and_colimits_commute_with_colimits.tex}
+
+
 
 
 \subsection{Additive categories}
@@ -357,21 +362,30 @@ Given modules $M$ and $N$, notice that \CrefAndHyperrefIfExist{definition:hom_of
 \input{../_definitions/definition_pointed_category.tex}
 \input{../_definitions/definition_zero_morphism_in_a_pointed_category.tex}
 
-
 \input{../_definitions/definition_additive_category_preadditive_category.tex}
 \input{../_concepts/lemma_finite_products_and_finite_coproducts_coincide_in_preadditive_categories.tex}
 
-In fact, morphisms between modules have kernels, cokernels, and nice images and coimages
+In fact, morphisms between modules have kernels, cokernels, and nice images and coimages; the same can be said of morphisms between general abelian categories. Much of our intuition about exact sequences in categories of modules carries over to exact sequences in abelian categories 
 
-\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_pointed_category.tex}
+\input{../_concepts/lemma_kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers.tex}
 \input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
+\input{../_concepts/lemma_kernels_cokernels_in_pointed_categories_are_monomorphisms_epimorphisms.tex}
 \input{../_definitions/definition_image_coimage_of_a_morphism_in_a_category.tex}
 
 \input{../_concepts/lemma_kernel_cokernel_image_coimage_of_modules_over_rings_are_categorical.tex}
 
 \input{../_definitions/definition_abelian_category.tex}
 
+Here are some nice categorical facts about abelian categories to keep in mind:
+
+\input{../_concepts/lemma_kernels_and_cokernels_are_tantamount_to_equalizers_and_coequalizers_in_abelian_categories.tex}
+\input{../_concepts/lemma_abelian_categories_admits_finite_limits_colimits.tex}
 \input{../_concepts/proposition_diagram_category_of_a_preadditive_additive_abelian_category_indexed_by_a_small_category_is_preadditive_additive_abelian.tex}
+
+\input{../_concepts/proposition_commutativity_of_limits_and_colimits_in_abelian_categories.tex}
+
+\input{../_concepts/lemma_monomorphism_epimorphism_in_abelian_category_is_equivalent_to_map_with_zero_kernel_cokernel.tex}
 
 
 \subsection{Additive functors between additive categories}
@@ -386,39 +400,29 @@ We note that Hom's and tensor products induce \CrefAndHyperrefIfExist{definition
 
 \subsubsection{Exact functors between abelian categories}
 
-One particularly nice kind of additive functor is an exact functor
+One particularly nice kind of additive functor is an exact functor.
 
+\input{../_definitions/definition_left_right_exact_sequences_in_an_additive_category.tex}
 \input{../_definitions/definition_short_exact_sequence_in_an_additive_category.tex}
 
-\begin{definition} \label{definition:split_exact_sequence_in_an_additive_category}
-A \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category} $\mathcal{A}$ is \hldef{split exact} if there exists a morphism $s: C \to B$ (called a \hldef{section}) such that $g \circ s = \text{id}_C$, or \CrefAndHyperrefIfExist{theorem:equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split}{equivalently}, a morphism $r: B \to A$ (called a \hldef{retraction}) such that $r \circ f = \text{id}_A$.
-\end{definition}
+\input{../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex}
 
-\begin{theorem} \label{theorem:equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split}
-Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. For a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the following conditions are equivalent:
-\begin{enumerate}
-    \item The sequence is \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{split exact}.
-    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{section}) $s: C \to B$ such that $g \circ s = \text{id}_C$.
-    \item There exists a morphism (i.e. a \CrefAndHyperref{definition:split_exact_sequence_in_an_additive_category}{retraction}) $r: B \to A$ such that $r \circ f = \text{id}_A$.
-    \item There exists an isomorphism $\varphi: B \xrightarrow{\cong} A \oplus C$ such that the following diagram commutes:
-    $$
-    \begin{CD}
-    0 @>>> A @>f>> B @>g>> C @>>> 0 \\
-    @. @| @V{\varphi}VV @| @. \\
-    0 @>>> A @>{\iota_1}>> A \oplus C @>{\pi_2}>> C @>>> 0
-    \end{CD}
-    $$
-    where $\iota_1$ is the canonical injection and $\pi_2$ is the canonical projection.
-\end{enumerate}
-\end{theorem}
+Although we have defined left/right/short exact sequences in additive categories, it is probably most useful to think about left/right/short exact sequences in abelian categories, where kernels/cokernels/images/coimages are guaranteed to exist.
+\input{../_definitions/definition_exact_sequence_of_morphisms_in_an_abelian_category.tex}
+\input{../_concepts/lemma_criteria_for_sequence_in_abelian_category_to_be_left_right_exact.tex}
 
-\begin{proposition}
-In an additive category $\mathcal{A}$, any split exact sequence $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$ is preserved by any additive functor $F: \mathcal{A} \to \mathcal{B}$ to another additive category $\mathcal{B}$. That is, $0 \to F(A) \xrightarrow{F(f)} F(B) \xrightarrow{F(g)} F(C) \to 0$ is also a split exact sequence.
-\end{proposition}
+\input{../_definitions/definition_split_exact_sequence_in_an_additive_category.tex}
+
+\input{../_concepts/theorem_equivalent_conditions_for_a_short_exact_sequence_in_an_additive_category_to_be_split.tex}
+
+\input{../_concepts/proposition_additive_functors_between_additive_categories_preserve_split_exact_sequences.tex}
+
+There are notions of left/right exactness of \emph{functors} --- a left/right exact functor between additive categories is one that preserves left/right exact sequences. One can more generally discuss left/right exact functors between more general categories by the property of preserving finite limits/colimits.
 
 \input{../_definitions/definition_left_right_exact_functor_between_categories.tex}
 \input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
-\input{../_concepts/lemma_additive_functor_between_abelian_categories_is_exact_if_and_only_if_it_preserves_kernels_and_cokernels.tex}
+\input{../_concepts/proposition_Hom_functors_on_abelian_categories_are_left_exact.tex}
+\input{../_concepts/lemma_equivalent_conditions_for_an_additive_functor_between_abelian_categories_to_be_left_right_exact.tex}
 
 \input{../_concepts/theorem_freyd_mitchell_embedding_theorem_for_small_abelian_categories.tex}
 
@@ -442,7 +446,6 @@ The five-lemma may also be proven using the Freyd-Mitchell embedding theorem
 
 \input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
 
-\TODO{examples of adjoint functors}
 
 One of the most essential adjunction of functors in algebra would be the tensor-hom adjunction:
 
@@ -452,7 +455,7 @@ Another useful adjunction is a adjunction of limit and colimit functors:
 
 \input{../_concepts/theorem_limit_and_colimit_are_left_right_adjoint_to_diagonal_functor_for_locally_small_base_and_small_index.tex}
 
-\input{../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex}
+\input{../_concepts/proposition_left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats.tex}
 \input{../_concepts/proposition_tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact.tex}
 \input{../_concepts/corollary_colimits_limits_in_abelian_categories_are_right_left_exact.tex}
 
@@ -493,6 +496,8 @@ In fact, Grothendieck posed certain additional axioms that some abelian categori
 \end{example}
 
 \input{../_concepts/proposition_exact_sequence_in_a_diagram_category_of_an_abelian_category_indexed_by_a_small_category_is_given_by_componentwise_exact_sequences.tex}
+
+\input{../_definitions/definition_translation_of_chain_cochain_complex_in_preadditive_category.tex}
 
 
 
@@ -568,65 +573,266 @@ The boundary map $d_2: C_2 \to C_1$ is $d_2([v_0,v_1,v_2]) = [v_1,v_2] - [v_0,v_
 
 % \input{../_definitions/definition_derived_category_of_an_abelian_category.tex}
 
-\subsection{Singular homology groups of a topological space}
+\subsection{Singular homology and cohomology groups of a topological space}
+
+\CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}{Singular chain complexes} of topological spaces are one of the quintessential examples of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}. Many notions, such as \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cones} or \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy}, in the general theory of chain complexes, can be seen as formalized constructions of those notions from the theory of singular chain complexes.
+
+\subsubsection{Singular homology definitions}
 
 \input{../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex}
 \TODO{comment on functoriality}
 \input{../_definitions/definition_singular_simplex_of_a_topological_space.tex}
-\input{../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_a_commutative_ring_with_unity.tex}
-\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring.tex}
+\input{../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group.tex}
 
-\input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
+\input{../_definitions/definition_singular_n_cycles_boundaries_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+\input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group.tex}
 
-\TODO{talk about CW-complexes and how singular homology is in practice computed with CW complex homology}
+Note that \CrefAndHyperrefIfExist{definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group}{singular chain groups} are generally very large, so it is difficult to carry out computations with them; in particular, it is often not feasible in practice to compute singular homology/cohomology groups using the definition. Instead, if the topological spaces are nice enough (see \Cref{proposition:nice_classes_of_spaces_that_are_CW_complexes}), i.e. are ``homotopy equivalent'' to simplicial complexes or are \CrefAndHyperrefIfExist{definition:CW_complex}{CW complexes}, then the singular homology/cohomology can be computed using \CrefAndHyperrefIfExist{}{}simplicial homology/cohomology or \CrefAndHyperrefIfExist{proposition:relative_cellular_homology_of_CW_pair_with_coefficients_in_an_abelian_group_can_be_computed_by_degree_of_attaching_maps}{cellular homology}/cohomology.
+
+\input{../_concepts/proposition_functoriality_of_singular_chain_complex_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+
+\subsubsection{Singular cohomology definitions}
+
+\TODO{go through these definitions carefully}
+
+\input{../_definitions/definition_singular_cochain_group_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_definitions/definition_singular_cochain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_definitions/definition_singular_n_cocycles_coboundaries_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_definitions/definition_singular_cohomology_and_relative_singular_cohomology_of_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+
+\input{../_concepts/proposition_functoriality_of_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+
+\subsubsection{Universal coefficient theorems of singular homology and cohomology}
+
+The unviersal coefficient theorems (\Cref{theorem:universal_coefficient_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups}) (\Cref{theorem:universal_coefficient_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups}) tell us how to relate \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology}/\CrefAndHyperrefIfExist{definition:singular_cohomology_and_relative_singular_cohomology_of_topological_space_with_coefficients_in_an_abelian_group}{cohomology} with coefficients in $\bbZ$ with those with general coefficients. Such universal coefficient theorems motivate the notions of \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$} and \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} and more generally, \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors}.
+
+\input{../_concepts/theorem_universal_coefficient_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+\input{../_concepts/theorem_universal_coefficient_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+\input{../_concepts/theorem_relative_kunneth_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+\input{../_concepts/theorem_relative_kunneth_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups.tex}
+
+
+\subsubsection{Simplicial homology}
+
+\TODO{verify these definitions}
+
+\begin{definition} 
+An \hldef{abstract simplicial complex} $K$ is a collection of finite non-empty subsets of a set of vertices $V$, called \hldef{simplices}, such that for every $\sigma \in K$, every non-empty subset $\tau \subseteq \sigma$ (called a \hldef{face}) is also in $K$. An $n$-simplex is a simplex consisting of $n+1$ vertices. The \hldef{geometric realization} $|K|$ is the union of the corresponding geometric simplices in $\mathbb{R}^V$ equipped with the \hldef{weak topology} (the finest topology such that the inclusion of each simplex is continuous).
+\end{definition}
+
+\begin{definition} 
+A \hldef{abstract simplicial pair $(K, L)$} consists of an abstract simplicial complex $K$ and a \hldef{subcomplex} $L \subseteq K$, which is a subset of $K$ that is itself an abstract simplicial complex. 
+\end{definition}
+
+\begin{definition} 
+An \hldef{oriented simplex} is a simplex $\sigma \in K$ with a chosen ordering of its vertices, where two orderings are considered equivalent if they differ by an even permutation. We denote an oriented simplex by $[v_0, \dots, v_n]$.
+
+Let $G$ be an abelian group. The \hldef{group of simplicial $n$-chains} $C_n^{\Delta}(K; G)$ is the free abelian group generated by the oriented $n$-simplices of $K$ with coefficients in $G$, subject to the relation $[v_{\sigma(0)}, \dots, v_{\sigma(n)}] = \text{sgn}(\sigma) [v_0, \dots, v_n]$.
+
+For a abstract simplicial pair $(K, L)$, the \hldef{relative group of simplicial $n$-chains} \hl{$C_n^{\Delta}(K, L; G)$} is the quotient group:
+$$C_n^{\Delta}(K, L; G) := C_n^{\Delta}(K; G) / C_n^{\Delta}(L; G)$$
+\end{definition}
+
+\begin{lemma} 
+For an abstract simplicial complex $K$, the group $C_n^{\Delta}(K; G)$ is isomorphic to the cellular chain group of its geometric realization:
+$$C_n^{\Delta}(K; G) \cong H_n(|K|^n, |K|^{n-1}; G)$$
+where $|K|^n$ denotes the $n$-skeleton of the geometric realization.
+\end{lemma}
+
+\begin{definition} 
+The \hldef{simplicial boundary map} \hl{$\partial_n: C_n^{\Delta}(K, L; G) \to C_{n-1}^{\Delta}(K, L; G)$} is the map induced on the quotient by:
+$$\partial_n([v_0, \dots, v_n]) = \sum_{i=0}^n (-1)^i [v_0, \dots, \hat{v}_i, \dots, v_n]$$
+This map satisfies $\partial_n \circ \partial_{n+1} = 0$, forming the \hldef{simplicial chain complex} $(C_{\bullet}^{\Delta}(K, L; G), \partial_{\bullet})$.
+\end{definition}
+
+\begin{definition} 
+The \hldef{relative simplicial homology groups} \hl{$H_n^{\Delta}(K, L; G)$} are defined as:
+$$H_n^{\Delta}(K, L; G) = \frac{\ker(\partial_n)}{\text{im}(\partial_{n+1})}$$
+\end{definition}
+
+\begin{theorem} 
+For any abstract simplicial pair $(K, L)$ where $K$ is an abstract simplicial complex, there is a natural isomorphism:
+$$H_n^{\Delta}(K, L; G) \cong H_n(|K|, |L|; G)$$
+\end{theorem}
+
+\begin{example}
+The $n$-simplex $\Delta^n$ is an abstract simplicial complex consisting of $n+1$ vertices and all their subsets. Its boundary $\partial \Delta^n$ is the subcomplex of all proper subsets. The pair $(\Delta^n, \partial \Delta^n)$ provides a triangulation of the disk $D^n$ relative to its boundary $S^{n-1}$. The group $C_n^{\Delta}(\Delta^n, \partial \Delta^n; \mathbb{Z})$ is $\mathbb{Z}$, generated by the single $n$-simplex. Since all $(n-1)$-faces are in the subcomplex $\partial \Delta^n$, they are zero in the quotient, making the boundary map zero. Thus $H_n^{\Delta}(\Delta^n, \partial \Delta^n; \mathbb{Z}) \cong \mathbb{Z}$.
+\end{example}
+
+\begin{example}
+The 2-torus $T^2$ can be triangulated as an abstract simplicial complex $K$. While $C_n^{\Delta}$ contains more generators than a CW complex (requiring at least 14 triangles and 21 edges), the resulting homology groups are identical:
+$$H_1^{\Delta}(K; \mathbb{Z}) \cong \mathbb{Z}^2, \quad H_2^{\Delta}(K; \mathbb{Z}) \cong \mathbb{Z}$$
+\end{example}
+
+
+\subsubsection{CW-complexes}
+
+
+\input{../_definitions/definition_cellular_complex.tex}
+\input{../_definitions/definition_CW_complex.tex}
+
+\input{../_concepts/proposition_nice_classes_of_spaces_that_are_CW_complexes.tex}
+
+\input{../_definitions/definition_CW_pair.tex}
+
+\input{../_definitions/definition_relative_absolute_group_of_cellular_n_chains_of_a_CW_pair_complex.tex}
+
+\input{../_concepts/lemma_relative_cellular_chain_group_of_CW_pair_with_coefficients_in_an_abelian_group_is_isomorphic_to_a_singular_homology_group.tex}
+
+\input{../_definitions/definition_relative_absolute_cellular_chain_complex_of_CW_pair_complex.tex}
+
+\input{../_definitions/definition_relative_absolute_cellular_homology_groups_of_CW_pair_complex.tex}
+
+\input{../_concepts/theorem_isomorphism_theorem_between_cellular_homology_and_singular_homology_of_CW_pair_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_concepts/proposition_relative_cellular_homology_of_CW_pair_with_coefficients_in_an_abelian_group_can_be_computed_by_degree_of_attaching_maps.tex}
+
+
+\begin{example}
+The $n$-sphere $S^n$ for $n > 0$ can be given a CW structure with one 0-cell $e^0$ and one $n$-cell $e^n$. The characteristic map for $e^n$ maps $\partial D^n$ to $e^0$.
+The cellular chain groups are:
+$$C_k^{CW}(S^n; \mathbb{Z}) \cong 
+\begin{cases} 
+\mathbb{Z} & \text{if } k = 0, n \\
+0 & \text{otherwise}
+\end{cases}$$
+If $n > 1$, the boundary maps $d_k$ must be zero because there are no adjacent non-zero chain groups. Thus:
+$$H_k(S^n; \mathbb{Z}) \cong 
+\begin{cases} 
+\mathbb{Z} & \text{if } k = 0, n \\
+0 & \text{otherwise}
+\end{cases}$$
+\end{example}
+
+\begin{example}
+The Real Projective Plane $\mathbb{RP}^2$ has a CW structure with one 0-cell $e^0$, one 1-cell $e^1$, and one 2-cell $e^2$. The 1-skeleton is $S^1$. The 2-cell is attached to the 1-skeleton by a map of degree 2 (the map $z \mapsto z^2$ on the unit circle).
+The cellular chain complex is:
+$$0 \to \mathbb{Z} \xrightarrow{d_2} \mathbb{Z} \xrightarrow{d_1} \mathbb{Z} \to 0$$
+The map $d_1$ is the zero map because it maps the 1-cell to $e^0 - e^0$. The map $d_2$ is multiplication by the degree of the attaching map, which is $2$.
+Therefore:
+$$H_0(\mathbb{RP}^2; \mathbb{Z}) \cong \mathbb{Z}, \quad H_1(\mathbb{RP}^2; \mathbb{Z}) \cong \mathbb{Z}/2\mathbb{Z}, \quad H_2(\mathbb{RP}^2; \mathbb{Z}) \cong 0$$
+\end{example}
+
+\begin{example}
+The complex projective space $\mathbb{CP}^n$ has a CW structure with exactly one cell in each even dimension $0, 2, 4, \dots, 2n$. 
+Because there are no cells in odd dimensions, all boundary maps $d_k$ in the cellular chain complex must be zero (as either the domain or codomain is 0). 
+Consequently, the homology groups are:
+$$H_k(\mathbb{CP}^n; \mathbb{Z}) \cong 
+\begin{cases} 
+\mathbb{Z} & \text{if } k \in \{0, 2, \dots, 2n\} \\
+0 & \text{otherwise}
+\end{cases}$$
+\end{example}
+
+\begin{example}
+The 2-torus $T^2$ admits a CW structure with:
+\begin{itemize}
+    \item One 0-cell: $e^0$ (the vertex where all corners of the square meet).
+    \item Two 1-cells: $a$ and $b$ (the horizontal and vertical edges).
+    \item One 2-cell: $f$ (the interior of the square).
+\end{itemize}
+The cellular chain groups with integer coefficients are:
+$$C_2^{CW}(T^2) \cong \mathbb{Z} \langle f \rangle, \quad C_1^{CW}(T^2) \cong \mathbb{Z} \langle a, b \rangle, \quad C_0^{CW}(T^2) \cong \mathbb{Z} \langle e^0 \rangle$$
+The boundary maps are computed as follows:
+\begin{itemize}
+    \item $d_1(a) = e^0 - e^0 = 0$ and $d_1(b) = e^0 - e^0 = 0$. Thus, $d_1$ is the zero map.
+    \item The boundary of the 2-cell $f$ follows the word $aba^{-1}b^{-1}$. In the abelian group $C_1^{CW}$, this becomes $a + b - a - b = 0$. Thus, $d_2$ is the zero map.
+\end{itemize}
+Since all boundary maps are zero, the homology groups are isomorphic to the chain groups:
+$$H_0(T^2; \mathbb{Z}) \cong \mathbb{Z}, \quad H_1(T^2; \mathbb{Z}) \cong \mathbb{Z}^2, \quad H_2(T^2; \mathbb{Z}) \cong \mathbb{Z}$$
+\end{example}
+
 
 
 \subsection{Homotopy between morphisms of topological spaces}
 \input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+\input{../_definitions/definition_homotopy_equivalence_between_topological_spaces.tex}
+
 \TODO{homotopy of maps of topological spaces results in chain homotopy for singular homology}
+
+\TODO{verify}
+
+\input{../_concepts/theorem_homotopy_between_maps_of_topological_spaces_induces_chain_homotopy_between_singular_chain_complexes.tex}
+
+
+
+\input{../_concepts/corollary_homotopy_maps_between_maps_of_topological_spaces_induce_same_singular_homology.tex}
+
+\input{../_concepts/theorem_homotopy_equivalent_pairs_of_topological_spaces_have_homotopy_equivalent_chain_complexes.tex}
 
 \subsection{Chain homotopy between morphisms of chain complexes}
 
 \input{../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex}
 \input{../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex}
-\begin{lemma} \label{lemma:null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps}
-    Let $\calA$ be an \CrefAndHyperref{definition:abelian_category}{abelian category}. Let $f_\bullet: C_\bullet \to D_\bullet$ (resp. $f^\bullet: C^\bullet \to D^\bullet$) be a \CrefAndHyperref{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} (resp. of cochain complexes). 
-    If $f_\bullet$ is \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{null homotopic} (resp. $f^\bullet$ is null homotopic), then the induced maps 
-    $$H_n(f_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
-    of \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology} 
-    (resp. 
-    $$H^n(f^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
-    of cohomology)
-    are zero. 
-\end{lemma}
-\begin{proof}
-    \TODO{}
-\end{proof}
+\input{../_concepts/lemma_chain_homotopic_chain_complexes_in_additive_categories_are_preserved_by_additive_functors.tex}
+\input{../_concepts/lemma_null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps.tex}
 
-\begin{lemma} \label{lemma:chain_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yield_same_homology_maps}
-    Let $\calA$ be an \CrefAndHyperref{definition:abelian_category}{abelian category}. Let $f_\bullet, g_\bullet: C_\bullet \to D_\bullet$ (resp. $f^\bullet, g^\bullet: C^\bullet \to D^\bullet$) be a \CrefAndHyperref{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} (resp. of cochain complexes) that are \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopic}. 
-    The induced maps 
-    $$H_n(f_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
-    and
-    $$H_n(g_\bullet): H_n(C_\bullet) \to H_n(D_\bullet)$$
-    of \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology} 
-    (resp. 
-    $$H^n(f^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
-    and
-    $$H^n(g^\bullet): H^n(C^\bullet) \to H^n(D^\bullet)$$
-    of cohomology)
-    are equal. 
+\input{../_concepts/lemma_chain_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yield_same_homology_maps.tex}
+
+\input{../_definitions/definition_split_complex_in_an_additive_category.tex}
+\begin{lemma}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+    A chain/\CrefAndHyperrefIfExist{definition:cochain_complex_of_objects_in_an_additive_category}{cochain complex} $C$ in $\calA$ is \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} if and only if the identity map on $C$ is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{null homotopic}.
 \end{lemma}
-\begin{proof}
-    This follows from Lemma \ref{lemma:null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps}.
-\end{proof}
+
 
 \subsection{Mapping cones of morphisms between topological spaces}
-\TODO{}
+
+\input{../_definitions/definition_mapping_cylinder_of_a_map_of_topological_spaces_and_pairs.tex}
+
+
+
+\input{../_definitions/definition_mapping_cone_of_a_map_of_topological_spaces_and_pairs.tex}
+\input{../_concepts/proposition_homotopy_properties_of_mapping_cylinder_for_pairs.tex}
+\input{../_concepts/theorem_long_exact_sequence_for_mapping_cone_of_pairs_for_singular_homology.tex}
+
+
+
+\input{../_concepts/proposition_homotopy_properties_of_mapping_cylinder.tex}
+
+\input{../_concepts/proposition_relative_mapping_cone_and_homology.tex}
+
+
 
 \subsection{Mapping cones of morphisms between chain complexes}
 
-\input{../_definitions/definition_mapping_cone_of_a_map_of_chain_cochain_complexes.tex}
+
+
+\input{../_definitions/definition_mapping_cylinder_of_a_map_of_chain_cochain_complexes.tex}
+
+\input{../_concepts/proposition_properties_of_mapping_cylinder_of_a_map_of_chain_complexes_in_an_additive_category.tex}
+
+\input{../_definitions/definition_mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category.tex}
+
+\input{../_concepts/lemma_relation_between_mapping_cone_and_mapping_cylinder_of_chain_complexes.tex}
+\input{../_concepts/lemma_mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence.tex}
+\input{../_concepts/lemma_long_exact_sequence_of_mapping_cone_of_chain_map_in_an_abelian_category.tex}
+In accordance to the following and \Cref{lemma:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category_fits_into_a_split_exact_sequence}, studying whether a morphism of complexes is a quasi-isomorphism is tantamount to studying the split exact sequence of the mapping cone.
+\input{../_concepts/corollary_morphism_of_chain_cochain_complexes_in_an_abelian_category_is_quasi_isomorphism_if_and_only_if_mapping_cone_is_acyclic.tex}
+
+
+
+
+\subsubsection{Mapping cones for morphisms of topological spaces are mapping cones of the chain maps of the singular chain complexes}
+
+Just as morphisms of pairs of topological spaces possess the notion of \CrefAndHyperrefIfExist{definition:mapping_cylinder_of_a_map_of_topological_spaces_and_pairs}{mapping cylinders} and \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_topological_spaces_and_pairs}{}cones, morphisms of chain complexes also possess analogous notions; while the construction of chain mapping cylinders and cones are convoluted and seem ad hoc, they ultimately come from topology. 
+
+
+\input{../_concepts/theorem_precise_correspondence_between_topological_cylinder_of_pairs_of_spaces_and_algebraic_cylinders_of_singular_chain_complexes.tex}
+
+\input{../_concepts/theorem_precise_correspondence_between_topological_cones_of_pairs_of_spaces_and_algebraic_cones_of_singular_chain_complexes.tex}
+
+
 
 \section{Derived functors}
 
@@ -637,7 +843,19 @@ This section roughly follows \cite[Section 2]{weibel}.
 $\delta$-functors are nice enough functors that yield long exact sequences of homology/cohomology from short exact sequences. The main general examples of (universal) $\delta$-functors are \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of \CrefAndHyperref{definition:exact_functor_between_abelian_categories}{right/left exact functors} (\Cref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}). In particular, the \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology/cohomology} functors $\mathbf{Ch}(\calA) \to \calA$ are the quintessential examples of (universal) $\delta$-functors.
 
 \input{../_definitions/definition_homological_cohomological_delta_functor_between_abelian_categories.tex}
-\TODO{universal delta functors}
+
+
+\input{../_definitions/definition_universal_homological_cohomological_delta_functor_between_abelian_cateogries.tex}
+
+
+% \begin{proposition}
+% If a cohomological $\delta$-functor $(T^n)_{n \geq 0}$ is effaceable, i.e., for each $n > 0$ and each object $A \in \mathcal{A}$ there is a monomorphism $A \to I$ such that $T^n(A) \to T^n(I)$ is the zero map, then $(T^n)_{n \geq 0}$ is universal.
+% \end{proposition}
+
+% \begin{proposition}
+% If a homological $\delta$-functor $(T_n)_{n \geq 0}$ is coeffaceable, i.e., for each $n > 0$ and each object $A \in \mathcal{A}$ there is an epimorphism $P \to A$ such that $T_n(P) \to T_n(A)$ is the zero map, then $(T_n)_{n \geq 0}$ is universal.
+% \end{proposition}
+
 
 \subsection{Abelian categories with enough objects of a class and resolutions}
 
@@ -645,20 +863,83 @@ To be able to define and compute \CrefAndHyperref{definition:left_right_derived_
 
 \input{../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex}
 
+\subsubsection{Injective and projective objects}
+
 The most basic classes of objects that we will use to consider resolutions are injective and projective objects
 \input{../_definitions/definition_injective_and_projective_objects_in_a_category.tex}
+
+\input{../_concepts/lemma_monomorphisms_epimorphisin_abelian_categories_are_preserved_by_pullbacks.tex}
+
+\input{../_concepts/proposition_equivalent_conditions_projective_injective.tex}
+
 \input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
 \input{../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex}
+However, not all common abelian categories possess enough injectives or projectives:
+\input{../_concepts/proposition_category_of_finitely_generated_abelian_groups_does_not_have_enough_injectives.tex}
+
+Categories of sheaves (on topological spaces) of abelian groups (or more generally of modules over sheaves of rings) do not generally have enough projectives.
+
+
 
 Baer's criterion describes injective objects in a category of modules.
 \input{../_concepts/theorem_baers_criterion_for_injectivity_of_module_over_a_ring.tex}
 
 There are multiple equivalent ways to describe projective objects in a category of modules.
 \input{../_definitions/definition_projective_bimodule_over_rings.tex}
+\input{../_definitions/definition_injective_bimodule_over_rings.tex}
+
+\input{../_concepts/proposition_equivalent_conditions_for_bimodules_over_rings.tex}
+
+
+\input{../_definitions/definition_free_bimodule_over_rings.tex}
+
+\input{../_definitions/definition_direct_summand_of_an_object_in_an_additive_category.tex}
+
+\input{../_concepts/proposition_free_bimodule_over_rings_are_projective.tex}
+\input{../_concepts/proposition_projective_module_over_local_ring_or_pid_are_free.tex}
+
+\subsubsection{Flat modules}
 
 When a tensor product is being considered, ``flat'' objects are used to construct resolutions; in particular, in a category of modules, the notion of flatness is as follows:
 \input{../_definitions/definition_flat_left_right_module_over_a_ring.tex}
+\TODO{forgetful functor from category of modules to category of abelian groups is faithful and exact.}
+\input{../_concepts/proposition_projective_modules_are_flat.tex}
 
+\input{../_definitions/definition_perfect_ring.tex}
+
+
+\input{../_definitions/definition_jacobson_radical_of_a_ring.tex}
+
+
+
+\input{../_definitions/definition_left_right_T_nilpotent_subset_of_a_ring.tex}
+
+\input{../_definitions/definition_projective_cover_of_a_module_over_a_ring.tex}
+
+\input{../_concepts/theorem_equivalent_conditions_for_a_ring_to_be_left_right_perfect.tex}
+
+\begin{proposition}
+If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} \TODO{define quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ \TODO{define mapping cone of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}} is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
+\end{proposition}
+
+\input{../_concepts/corollary_left_right_artinian_rings_are_left_right_perfect.tex}
+
+A related notion to flatness is torsion-freeness:
+
+\input{../_definitions/definition_zero_divisor_of_a_ring.tex}
+\input{../_definitions/definition_torsion_free_one_sided_module_over_a_ring.tex}
+
+\input{../_concepts/proposition_torsion_free_modules_over_dedekind_rings_are_flat.tex}
+
+The relationships among free, projective, flat, and torsion-free modules can be summarized in the following diagram found in Wikipedia's page on projective modules:
+
+\begin{center}
+\begin{tikzcd}[column sep=huge, row sep=large]
+\text{free} \arrow[r, Rightarrow] & \text{projective} \arrow[r, Rightarrow] \arrow[l, dotted, bend left, "\text{local ring or PID}"'] & \text{flat} \arrow[r, Rightarrow] \arrow[l, dotted, bend left, "\text{perfect ring}"'] & \text{torsion-free} \arrow[l, dotted, bend left, "\text{Dedekind ring}"']
+\end{tikzcd}
+\end{center}
+
+\subsubsection{Resolutions}
 
 Intuitively speaking, resolutions are approximations of an object in an abelian category by acyclic sequences.
 \input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
@@ -683,10 +964,22 @@ In fact, a generalization is possible: if the abelian category $\calA$ has enoug
 \input{../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_are_well_defined.tex}
 \input{../_concepts/theorem_long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors.tex}
 
+
+\subsection{$F$-acyclic objects}
+
+More generally, resolutions by $F$-acyclic objects, instead of projectives or injectives, may be used to compute derived functors.
+
+\input{../_definitions/definition_F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories.tex}
+\input{../_definitions/definition_F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories.tex}
+\input{../_concepts/lemma_any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor.tex}
+\input{../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex}
+\input{../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions.tex}
+
+
 \subsection{Tor and Ext}
 
 
-Recall by \Cref{proposition:left_right_adjoint_is_right_left_exact} that left/right adjoint functors between abelian categories are right/left exact. Also recall the \CrefAndHyperrefIfExist{theorem:tensor_hom_adjunction_for_bimodules_of_rings}{tensor-hom adjunction} of modules. We can thus define derived functors as follows:
+Recall by \Cref{proposition:left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats} that left/right adjoint functors between abelian categories are right/left exact. Also recall the \CrefAndHyperrefIfExist{theorem:tensor_hom_adjunction_for_bimodules_of_rings}{tensor-hom adjunction} of modules. We can thus define derived functors as follows:
 
 \input{../_definitions/definition_tor_functors_of_bimodules_of_rings.tex}
 
@@ -696,6 +989,8 @@ Recall by \Cref{proposition:left_right_adjoint_is_right_left_exact} that left/ri
 \subsection{Balancing Ext and Tor}
 
 The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} agree with each other and similarly for \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$}\TODO{ref}. \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{Double complexes} are useful to do so. 
+
+
 
 \subsubsection{Double complexes}
 
@@ -709,15 +1004,87 @@ The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definiti
 
 \input{../_concepts/lemma_total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic.tex}
 \input{../_concepts/lemma_acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns.tex}
+
+\subsubsection{Flat objects with respect to biadditive functors}
+
+\input{../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex}
+\input{../_definitions/definition_has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor.tex}
+\input{../_definitions/definition_flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex}
+
+\subsubsection{Derived functors for biadditive functors computed via resolutions of flat objects} \label{subsubsection:derived_functors_for_biadditive_functors_computed_via_resolutions_of_flat_objects}
+
+\input{../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex}
 \input{../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex}
 \input{../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex}
-\input{../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex}
 
 \TODO{state the balancing theorems of Ext and Tor explicitly}
+
+\subsection{Tor/derived functor of a (right exact) biadditive functor via projective resolutions or flat resolutions}
+
+Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functor} of a \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} may be computed via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}; this seems to be a departure from the notion of a \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of a single-variate \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} additive functor, which a priori uses \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions}. The motivation for this is that certain common abelian categories, such as those of \CrefAndHyperref{definition:sheaf_on_a_site}{sheaves} of abelian groups or \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_site}{modules}, may \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} (with respect to the bi-additive functor of interest, which is a right exact ``tensor product'' $\otimes$ in common contexts) but not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough projectives}, so projective resolutions have not be available to compute the derived functors. Nevertheless, in the case that the abelian categories involved may both have enough flats and have enough projectives (e.g. when the abelian categories are the categories of abelian groups or modules over rings), then using either flat resolutions or projective resolutions to compute the derived functors of the bi-additive functor (which again is usually some kind of right exact ``tensor product'' $\otimes$) will yield the same result, see \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors}. 
+
+
+\input{../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex}
+
+
+\begin{remark}
+    Some common abelian categories do not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{have enough projectives}, but nevertheless \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} and hence Tor objects are well defined as per \Cref{theorem:balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor}. One such abelian category is the category of torsion abelian groups. Similarly, some categories of sheaves of torsion abelian groups on some sites may also have enought flats, but not enough projectives.
+\end{remark}
+
+\input{../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex}
+
+
+\input{../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex}
+
+
+\input{../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex}
+ 
+\input{../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex}
+
  
 
 
 \section{Ext and Tor}
+
+\subsection{Universal Coefficient Theorems and K\"unneth Formulae}
+
+The universal coefficient theorems and K\"unneth formulae quantify the extent to which $\otimes$ and $\Hom$ fail to commute with homology/cohomology.
+
+\input{../_definitions/definition_hereditary_ring.tex}
+
+\input{../_concepts/theorem_homological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
+\input{../_concepts/theorem_cohomological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
+\input{../_concepts/theorem_universal_coefficient_theorem_for_homology_for_modules_over_a_ring.tex}
+\input{../_concepts/theorem_universal_coefficient_theorem_for_cohomology_for_modules_over_a_ring.tex}
+
+
+\section{Homological dimension}
+
+
+
+\input{../_definitions/definition_left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects.tex}
+
+\input{../_definitions/definition_cohomological_homological_dimension_of_a_left_right_exact_functor_between_abelian_categories.tex}
+
+
+
+\begin{proposition}
+Let $F: \mathcal{A} \to \mathcal{B}$ be a left exact functor and $\mathcal{I}$ the class of injective objects in $\mathcal{A}$. If $\mathcal{A}$ has enough injectives, then for any $M \in \mathcal{A}$, the right $\mathcal{I}$-dimension (injective dimension) of $M$ provides an upper bound for the cohomological dimension of $F$ at $M$:
+$$ \min \{ n \mid R^iF(M) = 0 \text{ for all } i > n \} \leq \operatorname{cores}_{\mathcal{I}}(M) $$
+\end{proposition}
+
+
+
+
+\input{../_definitions/definition_left_right_projective_injective_flat_dimension_of_a_module_over_a_ring.tex}
+
+\input{../_definitions/definition_left_right_global_dimension_of_a_ring.tex}
+
+\input{../_definitions/definition_tor_dimension_of_a_ring.tex}
+
+\input{../_concepts/theorem_global_dimension_theorem_for_rings.tex}
+
+\input{../_concepts/theorem_tor_dimension_theorem_for_rings.tex}
 
 
 
@@ -756,7 +1123,7 @@ Note that on a topological space $X$, it is natural to talk about open sets $\{U
 
 \section{Left/right derived functors of right/left exact functors}
 
-\section{}
+\import{../_excerpts}{excerpts_derived_categories.tex}
 
 \newpage
 
@@ -920,6 +1287,18 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     
 \end{problem}
 
+\begin{problem}
+    Suppose that $f,g: B_\bullet \to C_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{homotopic} \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain maps} of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+    Show that the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cones} $\operatorname{cone}(f)$ and $\operatorname{cone}(g)$ are isomorphic chain complexes.
+\end{problem}
+
+\begin{problem}
+    Suppose that $f: C_\bullet \to D_\bullet$ is a chain map of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+    Show that $f$ is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{null-homotopic} via a chain homotopy $s$ if and only if $f$ extends to a chain map $\operatorname{cone}(f) \to D$ given by $(-s, f)$. 
+\end{problem}
+
+
+
 
 \appendix
 
@@ -1004,3 +1383,18 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \input{../_definitions/definition_C_k_morphism_between_C_k_manifolds.tex}
 \input{../_definitions/definition_C_k_manifold.tex}
 \input{../_definitions/definition_opposite_ring_of_a_ring.tex}
+
+\input{../_definitions/definition_subspace_of_a_topological_space.tex}
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+\input{../_definitions/definition_principal_ideal_ring.tex}
+\input{../_definitions/definition_finitely_generated_modules_over_rings.tex}
+\input{../_definitions/definition_equivalence_relation_on_a_set.tex}
+
+
+\input{../_definitions/definition_pair_of_topological_spaces.tex}
+
+\input{../_definitions/definition_map_of_pairs_of_topological_spaces.tex}
+
+
+
+\input{../_definitions/definition_category_of_pairs_of_topological_spaces.tex}

@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:projective_modules_are_flat}
+    Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}.
+    If $P$ is a \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule}, then $P$ is both \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} with respect to the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} structure and flat with respect to the right $S$-\CrefAndHyperrefIfExist{definition:module_of_a_ring}{module} structure. In other words, the \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}
+    $$-\otimes_R P : \mathrm{Mod}_R \to \mathbf{Mod}_S$$
+    and 
+    $$P \otimes_S - : {}_S \mathrm{Mod} \to {}_R \mathbf{Mod}$$
+    \CrefIfExists{definition:tensor_product_of_bimodules_of_rings}
+    are \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
+\end{proposition}
+
+\begin{proof}
+    Recall that tensor products are right exact by \Cref{proposition:tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact}. It thus suffices to show that tensor products are left exact. By \Cref{theorem:the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star}, the category of $R$-$S$-bimodules is \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck} and hence \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB4}
+    \TODO{}
+\end{proof}

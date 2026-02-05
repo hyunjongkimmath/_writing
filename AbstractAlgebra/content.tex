@@ -19,14 +19,7 @@
 
 \input{../_definitions/definition_coset_of_a_subgroup_of_a_group_by_an_element.tex}
 
-\begin{definition} \label{definition:index_of_a_subgroup_in_a_group}
-    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}.
-    The \hldef{index of $H$ in $G$} is the \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality} of the set 
-    $$\{gH: g \in G\}$$
-    of left cosets of $H$ in $G$. This is equivalent to the cardinality of the set 
-    $$\{Hg: g \in G\}$$
-    of right cosets of $H$ in $G$.
-\end{definition}
+\input{../_definitions/definition_index_of_a_subgroup_in_a_group.tex}
 
 
 
@@ -35,40 +28,17 @@
 
 
 
-\begin{definition} \label{definition:kernel_image_of_group_homomorphism}
-Let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
-\begin{enumerate}
-    \item The \hldef{kernel of $\phi$}, denoted \hl{$\operatorname{ker}(\phi)$}, is the set of elements in $G$ that map to the identity element of $H$:
-    $$ \operatorname{ker}(\phi) = \{ g \in G \mid \phi(g) = e_H \} $$
-    where $e_H$ is the identity element of $H$. 
-
-    \item The \hldef{image of $\phi$,} denoted \hl{$\operatorname{im}(\phi)$} or \hl{$\phi(G)$}, is the set of elements in $H$ that are the image of some element in $G$:
-    $$ \operatorname{im}(\phi) = \{ h \in H \mid \exists g \in G, \phi(g) = h \} $$
-\end{enumerate}
-\end{definition}
+\input{../_definitions/definition_kernel_image_of_group_homomorphism.tex}
 
 
-\begin{proposition} \label{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}
-Let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
-\begin{enumerate}
-    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel $\operatorname{ker}(\phi)$} is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
-    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image} $\operatorname{im}(\phi)$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $H$.
-    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $\operatorname{ker}(\phi) = \{e_G\}$, where $e_G$ is the identity element of $G$.
-    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} if and only if $\operatorname{im}(\phi) = H$.
-\end{enumerate}
-\end{proposition}
+\input{../_concepts/proposition_basic_facts_about_kernel_and_image_of_group_homomorphisms.tex}
 
 
 \input{../_definitions/definition_quotient_of_a_group_by_a_normal_subgroup.tex}
 
-\begin{proposition} \label{proposition:quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation}
-Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $N$ a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
-The binary operation of the \CrefAndHyperrefIfExist{definition:quotient_group_of_a_group_by_a_normal_subgroup}{quotient group} $G/N$ is well defined and $G/N$ is indeed a group.
-\end{proposition}
+\input{../_concepts/proposition_quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation.tex}
 
-\begin{theorem} \label{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}
-The map $\pi: G \to G/N$ defined by $\pi(g) = gN$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} with \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel} $N$. This map is called the \hldef{canonical projection} or \hldef{natural homomorphism}.
-\end{theorem}
+\input{../_concepts/theorem_canonical_projection_from_group_to_quotient_by_normal_subgroup.tex}
 
 
 
@@ -168,28 +138,10 @@ The map $\pi: G \to G/N$ defined by $\pi(g) = gN$ is a \CrefAndHyperrefIfExist{d
 \subsection{Short exact sequences of general groups}
 
 
-\begin{definition} \label{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}
-    \begin{enumerate}
-        \item 
-        A sequence of \CrefAndHyperrefIfExist{definition:group}{groups} and \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphisms}
-        $$ \dots \xrightarrow{\phi_{i-1}} G_i \xrightarrow{\phi_i} G_{i+1} \xrightarrow{\phi_{i+1}} \dots $$
-        is called \hldef{exact at $G_i$} if \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{$\operatorname{im}(\phi_{i-1}) = \operatorname{ker}(\phi_i)$}. The sequence is called an \hldef{exact sequence} if it is exact at every group $G_i$.
-
-        \item A \hldef{short exact sequence of groups} is an exact sequence of the form
-        $$ 1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1 $$
-        where $1$ denotes the trivial group. Exactness implies that $\iota$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}, $\pi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, and $\operatorname{im}(\iota) = \operatorname{ker}(\pi)$.
-    \end{enumerate}
-\end{definition}
+\input{../_definitions/definition_exact_sequence_short_exact_sequence_of_group_homomorphisms.tex}
 
 
-\begin{definition} \label{definition:section_and_splitting_of_a_short_exact_sequence_of_groups}
-Let $1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1$ be a short exact sequence of groups. 
-\begin{enumerate}
-    \item A \hldef{section} (or \hldef{splitting homomorphism)} of the short exact sequence is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $s: H \to G$ such that $\pi \circ s = \operatorname{id}_H$.
-
-    \item The short exact sequence $1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1$ is said to \hldef{split} if there exists a section $s: H \to G$.
-\end{enumerate}
-\end{definition}
+\input{../_definitions/definition_section_and_splitting_of_a_short_exact_sequence_of_groups.tex}
 
 
 
@@ -355,6 +307,21 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_definitions/definition_jacobson_radical_of_a_ring.tex}
 
+
+
+\input{../_definitions/definition_nilpotent_ideal_of_a_ring.tex}
+
+\input{../_definitions/definition_simple_irreducible_semisimple_module_over_a_ring.tex}
+
+\input{../_definitions/definition_semisimple_ring.tex}
+
+\input{../_concepts/proposition_equivalent_conditions_for_a_ring_to_be_semisimple.tex}
+
+\input{../_concepts/proposition_ring_is_left_semisimple_if_and_only_if_right_semisimple.tex}
+
+
+
+
 \input{../_definitions/definition_local_ring.tex}
 
 \input{../_definitions/definition_multiplicative_subset_of_a_ring.tex}
@@ -418,7 +385,7 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 \input{../_concepts/theorem_tensor_hom_adjunction_for_bimodules_of_rings.tex}
 
-\input{../_concepts/proposition_left_right_adjoint_is_right_left_exact.tex}
+\input{../_concepts/proposition_left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats.tex}
 
 \input{../_concepts/proposition_tensor_product_of_modules_is_right_exact_hom_of_modules_is_left_exact.tex}
 
@@ -459,6 +426,21 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 \input{../_definitions/definition_principal_ideal_ring.tex}
 \input{../_definitions/definition_unique_factorization_domain.tex}
+
+\subsubsection{Artinian and Noetherian rings}
+
+
+
+
+\input{../_definitions/definition_ascending_descending_chain_condition_on_a_partially_ordered_set.tex}
+\input{../_definitions/definition_noetherian_artinian_module_over_a_ring.tex}
+
+\input{../_definitions/definition_left_right_artinian_ring.tex}
+
+\input{../_concepts/proposition_properties_of_artinian_rings.tex}
+
+\input{../_concepts/theorem_ring_is_left_artinian_if_and_only_if_left_noetherian_and_has_krull_dimension_zero.tex}
+
 
 
 
@@ -580,7 +562,7 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 
 \input{../_definitions/definition_product_of_finitely_many_objects_in_a_category.tex}
-\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_pointed_category.tex}
 \input{../_definitions/definition_image_coimage_of_a_morphism_in_a_category.tex}
 \input{../_definitions/definition_complete_and_cocomplete_category.tex}
 \input{../_definitions/definition_filtered_cofiltered_category.tex}

@@ -1,0 +1,23 @@
+\begin{lemma} \label{lemma:criteria_for_sequence_in_abelian_category_to_be_left_right_exact}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $X' \xrightarrow{f} X \xrightarrow{g} X''$ be morphisms in $\calA$.
+    \begin{enumerate}
+        \item  The following are equivalent:
+        \begin{enumerate}
+            \item $0 \to X' \xrightarrow{f} X \xrightarrow{g} X''$ is \CrefAndHyperref{definition:left_right_exact_sequences_in_an_additive_category}{left exact} in the sense that $f$ is a kernel of $g$. 
+            \item $0 \to X' \xrightarrow{f} X \xrightarrow{g} X''$ is \CrefAndHyperref{definition:exact_sequence_of_morphisms_in_an_abelian_category}{exact} at $X'$ and at $X$.
+            \item $f$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} and $\ker g \cong \operatorname{im} f$ \CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category} \CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}.
+        \end{enumerate}
+        \item  The following are equivalent:
+        \begin{enumerate}
+            \item $X' \xrightarrow{f} X \xrightarrow{g} X'' \to 0$ is \CrefAndHyperref{definition:left_right_exact_sequences_in_an_additive_category}{right exact} in the sense that $g$ is a cokernel of $f$. 
+            \item $X' \xrightarrow{f} X \xrightarrow{g} X'' \to 0$ is \CrefAndHyperref{definition:exact_sequence_of_morphisms_in_an_abelian_category}{exact} at $X$ and at $X''$. 
+            \item $g$ is an \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} and $\ker g \cong \operatorname{im} f$ \CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category} \CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}.
+        \end{enumerate}
+        \item  The following are equivalent
+        \begin{enumerate}
+            \item $0 \to X' \xrightarrow{f} X \xrightarrow{g} X'' \to 0$ is \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{(short) exact} in the sense of being left and right exact, i.e. $f$ is a kernel of $g$ and $g$ is a cokernel of $f$,
+            \item $0 \to X' \xrightarrow{f} X \xrightarrow{g} X'' \to 0$ is \CrefAndHyperrefIfExist{definition:exact_sequence_of_morphisms_in_an_abelian_category}{exact} at $X'$, $X$, and $X''$,
+            \item $f$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism}, $g$ is an epimorphism, and $\ker g \cong \operatorname{im} f$ \CrefIfExists{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category} \CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}.
+        \end{enumerate}
+    \end{enumerate}
+\end{lemma}

@@ -6,7 +6,7 @@
         $$ \mathbf{s}\mathcal{C} := \mathbf{Fun}(\Delta^{\mathrm{op}}, \mathcal{C}).$$
         \CrefIfExists{definition:opposite_category_of_a_category} \CrefIfExists{definition:simplex_category} In particular, a morphism between objects $X,Y:\Delta^{\op} \to \calC$ in this category is a natural transform $X \Rightarrow Y$ from $X$ to $Y$ as functors. 
 
-        An object $X$ of $\mathbf{s}\mathcal{C}$ is called a \hldef{simplicial object of $\mathcal{C}$}, and, by \CrefAndHyperrefIfExist{definition:functor_between_categories}{definition}, consists of a family of objects $\{X_n\}_{n \ge 0}$ in $\mathcal{C}$ together with morphisms
+        An object $X$ of $\mathbf{s}\mathcal{C}$ is called a \hldef{simplicial object of $\mathcal{C}$}, and, by definition\CrefIfExists{definition:functor_between_categories}, consists of a family of objects $\{X_n\}_{n \ge 0}$ in $\mathcal{C}$ together with morphisms
         $$ X(\theta) : X_n \to X_m, \quad \text{for each } \theta : [m] \to [n] \text{ in } \Delta, $$
         satisfying the functoriality conditions
         $$ X(\mathrm{id}_{[n]}) = \mathrm{id}_{X_n}, \qquad X(\theta \circ \psi) = X(\psi) \circ X(\theta).  $$

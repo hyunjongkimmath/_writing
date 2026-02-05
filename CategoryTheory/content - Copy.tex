@@ -84,7 +84,7 @@
 
 \input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
 
-\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_category.tex}
+\input{../_definitions/definition_kernel_and_cokernel_of_a_morphism_in_a_pointed_category.tex}
 
 \subsubsection{Essential image of a functor between categories}
 
@@ -182,8 +182,8 @@ We might want to study (locally small) categories whose hom-sets carry additiona
 
 \begin{example}
     \begin{enumerate}
-        \item A \hyperrefIfExists{definition:category_enriched_in_a_monoidal_category}{category enriched in} $\Sets$ is equivalent to a \hyperrefIfExists{definition:locally_small_category}{locally small category}. 
-        \item A category enriched in $\Ab$ is equivalent to a \hyperrefIfExists{definition:additive_category_preadditive_category}{pre-additive category}. 
+        \item A \CrefAndHyperrefIfExist{definition:category_enriched_in_a_monoidal_category}{category enriched in} $\Sets$ is equivalent to a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. 
+        \item A category enriched in $\Ab$ is equivalent to a \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{pre-additive category}. 
         \TODO{TODO: define an $R$-linear category and a $k$-linear category}
         \item Let $R$ be a commutative ring. A category enriched in $R\mathrm{-Mod}$ is equivalent to a $R$-linear category. 
         \item Let $k$ be a field. A category enriched in $k\mathrm{-Vect}$ is equivalent to a $k$-linear category. 
@@ -201,7 +201,7 @@ We might want to study (locally small) categories whose hom-sets carry additiona
     Even when $\calC$ is ($U$-)locally small and ($\calA$ is ($U$-)locally small), $\PreShv(\calC, \calA)$ may not be locally small.
 \end{remark}
 \begin{remark}
-    In practice, one might treat $\calC$ as if it were a small category, even when it is technically not a small category, to treat $\PreShv(\calC, \calA)$ as if it were a locally small category. For example, in algebraic geometry, we might take $\calC$ to be the \hyperrefIfExists{definition:small_etale_site_of_a_scheme}{small \'etale site $X_{\et}$}\CrefIfExists{definition:small_etale_site_of_a_scheme} of some scheme $X$; this is not a small category. Instead, we might technically replace $X_{\et}$ with a small category, e.g. the set of \'etale maps $U \to X$ of the following form: $U$ is obtained by patching the schemes attached to quotients of rings of the form $A[T_1,T_2,\ldots]$ where $A = \Gamma(V, \calO_X)$ for some open affine $V \subset X$ and $\{T_1,T_2,\ldots\}$ is a fixed countable set of symbols. Such technicalities of replacing $\calC$ with a small category are often glossed over.
+    In practice, one might treat $\calC$ as if it were a small category, even when it is technically not a small category, to treat $\PreShv(\calC, \calA)$ as if it were a locally small category. For example, in algebraic geometry, we might take $\calC$ to be the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site $X_{\et}$}\CrefIfExists{definition:small_etale_site_of_a_scheme} of some scheme $X$; this is not a small category. Instead, we might technically replace $X_{\et}$ with a small category, e.g. the set of \'etale maps $U \to X$ of the following form: $U$ is obtained by patching the schemes attached to quotients of rings of the form $A[T_1,T_2,\ldots]$ where $A = \Gamma(V, \calO_X)$ for some open affine $V \subset X$ and $\{T_1,T_2,\ldots\}$ is a fixed countable set of symbols. Such technicalities of replacing $\calC$ with a small category are often glossed over.
 \end{remark}
 
 \input{../_definitions/definition_small_etale_site_of_a_scheme.tex}
@@ -254,7 +254,7 @@ Recall that the collection of all sets within Zermelo-Fraenkel set theory is a p
 
 \input{../_definitions/definition_grothendieck_universe.tex}
 % \begin{definition}[U-Smallness] \label{definition:U_small}
-%     Let $U$ be a \hyperrefIfExists{definition:grothendieck_universe}{Grothendieck universe}\CrefIfExists{definition:grothendieck_universe}. A set $X$ is called \hldef{$U$-small} if $X \in U$. 
+%     Let $U$ be a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe}. A set $X$ is called \hldef{$U$-small} if $X \in U$. 
 % \end{definition}
 \begin{remark}
     Given a Grothendieck universe $U$, the collection of all $U$-small sets is $U$ itself, which contrasts against the fact that the collection of all sets (for the ZF (and ZFC) axioms) is a proper class.

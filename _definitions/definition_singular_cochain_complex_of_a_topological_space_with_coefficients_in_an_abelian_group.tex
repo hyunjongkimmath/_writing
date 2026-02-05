@@ -1,0 +1,9 @@
+\begin{definition}[Singular cochain complex and coboundary operator] \label{definition:singular_cochain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and $G$ an abelian group. For each $n \ge 0$, the \hldef{coboundary operator}
+$$\delta^n : C^n(X; G) \to C^{n+1}(X; G)$$
+is the dual of the \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}{singular boundary operator} $\partial_{n+1}$. Specifically, for a cochain $\varphi \in C^n(X; G)$ and a simplex $\sigma \in S_{n+1}(X)$:
+$$\hlin{(\delta^n \varphi)(\sigma) = \varphi(\partial_{n+1} \sigma) = \sum_{i=0}^{n+1} (-1)^i \varphi(\sigma \circ \delta_i)}$$
+where $\delta_i$ is the $i$-th face inclusion. Since $\partial_n \circ \partial_{n+1} = 0$, it follows that $\delta^{n+1} \circ \delta^n = 0$. 
+
+The sequence $(C^n(X, A; G), \delta^n)$ forms a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} called the \hldef{singular cochain complex} of $(X, A)$ with coefficients in $G$, denoted by \hl{$C^\bullet(X, A; G)$}.
+\end{definition}

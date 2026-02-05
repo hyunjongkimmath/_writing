@@ -1,15 +1,14 @@
-\begin{proposition} \label{proposition:left_right_adjoint_is_right_left_exact}
-    Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories} and let $F: \calA \to \calB$ and $G: \calB \to \calA$ be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint} \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{functors}, say with $F \dashv G$ (i.e. $F$ is left adjoint to $G$). 
+\begin{proposition} \label{proposition:left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats}
+    Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive categories} and let $F: \calA \to \calB$ and $G: \calB \to \calA$ be \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint} \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}, say with $F \dashv G$ (i.e. $F$ is left adjoint to $G$). 
     \begin{enumerate}
-        \item The functors $F$ and $G$ are \CrefAndHyperref{definition:additive_functor_between_additive_categories}{additive}.
-        \item The left adjoint functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and and the right adjoint functor $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}
+        \item Assuming that the adjunction isomorphisms
+        $$\alpha = \alpha_{X,Y}: \Hom_\calB(F(X), Y) \xrightarrow{\sim} \Hom_\calA(X, G(Y))$$
+        are isomorphisms of abelian groups for each pair of objects $X,Y \in \calA$, the functors $F$ and $G$ are \CrefAndHyperref{definition:additive_functor_between_additive_categories}{additive}.
+        \item If $\calA$ and $\calB$ are \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}, then the left adjoint functor $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and and the right adjoint functor $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}.
     \end{enumerate}
 \end{proposition}
 \begin{proof}
 
-    For each pair of objects $X,Y \in \calA$, let us write $\alpha = \alpha_{X,Y}$ for the isomorphism
-    $$\alpha = \alpha_{X,Y}: \Hom_\calB(F(X), Y) \xrightarrow{\sim} \Hom_\calA(X, G(Y))$$
-    given by the adjunction. We note that this isomorphism is a priori an isomorphism of sets, i.e. a bijection.
 
     Given a morphism $f: X' \to X$ in $\calA$, the fact that the $\alpha_{X,Y}$ are natural isomorphisms with respect to the first input means that we have the commuting diagrams
     \begin{equation} \label{eq:asdfasdf}
@@ -55,10 +54,10 @@
         $$\eta_{A_2} \circ (f+g) = (\eta_{A_2} \circ f) + (\eta_{A_2} \circ g).$$
         Applying \eqref{eq:left_adjoint_is_additive_adjunction_and_}, we have
         $$\alpha(F(f+g)) = \alpha(F(f)) + \alpha(F(g)).$$
-        Since $\alpha$ is an isomorphism of sets, we conclude
+        Since $\alpha$ is assumed to be an isomorphism of groups, we conclude
         $$F(f+g) = F(f) + F(g)$$
 
-        \item We show that $F$ is right exact; that $G$ is left exact can be obtained dually. It suffices to show that $F$ preserves \CrefAndHyperref{definition:kernel_and_cokernel_of_a_morphism_in_a_category}{cokernels}, i.e. that if $f: A_1 \to A_2$ is a morphism in $\calA$, then $F(\coker f) \cong \coker F(f)$. Let $q: A_2 \to Q$ be the cokernel of $f$. 
+        \item We show that $F$ is right exact; that $G$ is left exact can be obtained dually. It suffices to show that $F$ preserves \CrefAndHyperref{definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category}{cokernels}, i.e. that if $f: A_1 \to A_2$ is a morphism in $\calA$, then $F(\coker f) \cong \coker F(f)$. Let $q: A_2 \to Q$ be the cokernel of $f$. 
         \begin{center}
         \begin{tikzcd}
             A_1 \ar[r, "f"] & A_2 \ar[r, "q"] & Q

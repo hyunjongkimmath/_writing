@@ -44,7 +44,7 @@ Unless otherwise specified, all base rings (and in particular fields) $R$ for wh
 
 \begin{claim}
     \TODO{TODO: define topologically generating/generating}
-    Let $k$ be a finite field and let $l$ be an algebraic extension of $k$. The \hyperrefIfExists{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}{arithmetic Frobenius element $\Frob_{l} = \Frob_{l/k}$}\CrefIfExists{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields} generates (resp. topologically generates) the Galois group $\Gal(l/k)$ if $l/k$ is a finite (resp. profinite) extension.
+    Let $k$ be a finite field and let $l$ be an algebraic extension of $k$. The \CrefAndHyperrefIfExist{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}{arithmetic Frobenius element $\Frob_{l} = \Frob_{l/k}$}\CrefIfExists{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields} generates (resp. topologically generates) the Galois group $\Gal(l/k)$ if $l/k$ is a finite (resp. profinite) extension.
     % \begin{enumerate}
     %     \item If $l/k$ is a finite extension, then the element $\Frob_{l} = \Frob_{l/k}$ generates the finite group $\Gal(l/k)$\CrefIfExists{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}.
     %     \item If $l/k$ is an infinite extension, then the element $\Frob_{l} = \Frob_{l/k}$ topologically generates the profinite group $\Gal(l/k)$. 
@@ -58,7 +58,7 @@ For a scheme of prime characteristic, there are various notions of Frobenius map
 \input{../_definitions/definition_characteristic_a_prime_for_a_scheme.tex}
 
 \begin{lemma}
-    Let $p$ be a prime number. A scheme $X$ is of \hyperrefIfExists{definition:characteristic_a_prime_for_a_scheme}{characteristic $p$} if and only if the structure morphism $X \to \Spec \bbZ$ factors through $X \to \Spec \Fp$. 
+    Let $p$ be a prime number. A scheme $X$ is of \CrefAndHyperrefIfExist{definition:characteristic_a_prime_for_a_scheme}{characteristic $p$} if and only if the structure morphism $X \to \Spec \bbZ$ factors through $X \to \Spec \Fp$. 
 \end{lemma}
 
 \subsection{Absolute Frobenius morphisms on a scheme of prime characteristic}
@@ -70,7 +70,7 @@ Below defines the notion of an absolute Frobenius morphism of a scheme of prime 
 \input{../_definitions/definition_restriction_of_scalars_by_Frobenius_for_a_scheme.tex}
 
 \begin{claim}
-    Let $S$ be a scheme of prime characteristic $p$. For any $n \geq 0$, the assignment \hyperrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{$X \mapsto X_{F, p^n}$} is functorial.
+    Let $S$ be a scheme of prime characteristic $p$. For any $n \geq 0$, the assignment \CrefAndHyperrefIfExist{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{$X \mapsto X_{F, p^n}$} is functorial.
 \end{claim}
 
 \subsection{Restrict and Extension of scalars for a scheme over a scheme of prime characteristic}
@@ -79,7 +79,7 @@ Below defines the notion of an absolute Frobenius morphism of a scheme of prime 
 
 \subsection{Relative, arithmetic, and geometric Frobenius morphisms of schemes over schemes of prime characteristic}
 
-We now can define three kinds of Frobenius morphisms (\Cref{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}, \Cref{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}, \Cref{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}), which unlike the \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{absolute morphism of a scheme}, are all ``relative'' and thus depend on the base scheme $S$ over which the scheme $X$ is defined.
+We now can define three kinds of Frobenius morphisms (\Cref{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}, \Cref{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}, \Cref{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}), which unlike the \CrefAndHyperrefIfExist{definition:absolute_frobenius_morphism_on_a_scheme}{absolute morphism of a scheme}, are all ``relative'' and thus depend on the base scheme $S$ over which the scheme $X$ is defined.
 
 
 \input{../_definitions/definition_relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic.tex}
@@ -99,19 +99,19 @@ Unlike the arithmetic Frobenius morphism of $X/S$, the geometric Frobenius morph
     Let $S$ be a scheme of prime characteristic $p$. Assume that the absolute Frobenius morphism $F_{S}$ (Definition \ref{definition:absolute_frobenius_morphism_on_a_scheme}) is invertible. Let $n \geq 1$ be an integer.
     The \hldef{geometric $p^n$th Frobenius morphism of $X/S$} is the morphism
     $$(\id_X, F_{X,1/p^n}):  X^{(1/p^n)} = X \times_S S_{F,1/p^n} \to X \times_S S \cong X$$
-    where $X^{(1/p^n)}$ is the \hyperrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars of $X/S$ by the $1/p^n$th power Frobenius morphism}\CrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius} and $S_{F,1/p^n}$ is the \hyperrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{restriction of scalars for $S$ (over $S$) by the $p^n$th power Frobenius}\CrefIfExists{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}.
+    where $X^{(1/p^n)}$ is the \CrefAndHyperrefIfExist{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars of $X/S$ by the $1/p^n$th power Frobenius morphism} and $S_{F,1/p^n}$ is the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_by_Frobenius_for_a_scheme}{restriction of scalars for $S$ (over $S$) by the $p^n$th power Frobenius}.
 
     In the case that $n = 1$, this is referred to as the \hldef{geometric Frobenius morphism of $X/S$}.
 \end{definition}
 
 \begin{remark}
-The \hyperrefIfExists{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{arithmetic} and \hyperrefIfExists{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}{geometric Frobenii} of a scheme $X/S$ act inversely on rational points\CrefIfExists{proposition:arithmetic_and_geometric_frobenius_details}.
+The \CrefAndHyperrefIfExist{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{arithmetic} and \CrefAndHyperrefIfExist{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}{geometric Frobenii} of a scheme $X/S$ act inversely on rational points\CrefIfExists{proposition:arithmetic_and_geometric_frobenius_details}.
 \end{remark}
 
 \section{Interpretations of the arithmetic and geometric Frobenii of schemes over finite fields}
 
 \begin{proposition} \label{proposition:twist_of_scheme_is_isomorphic_to_scheme_if_absolute_frobenius_on_base_is_identity}
-    Let $X$ be a scheme over an $S$-scheme of prime characteristic $p$. For $n \geq 0$, assume that the \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{$p^n$th power absolute Frobenius morphism $F_{S, p^n}: S \to S$} is the identity morphism on $S$. The \hyperrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars/twist $X^{(p^n)}$} is naturally isomorphic to $X$ as an $S$-scheme. 
+    Let $X$ be a scheme over an $S$-scheme of prime characteristic $p$. For $n \geq 0$, assume that the \CrefAndHyperrefIfExist{definition:absolute_frobenius_morphism_on_a_scheme}{$p^n$th power absolute Frobenius morphism $F_{S, p^n}: S \to S$} is the identity morphism on $S$. The \CrefAndHyperrefIfExist{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars/twist $X^{(p^n)}$} is naturally isomorphic to $X$ as an $S$-scheme. 
 \end{proposition}
 \begin{proof}
     By definition, $X^{(p^n)}$ fits in the following Cartesian diagram:
@@ -125,19 +125,19 @@ The \hyperrefIfExists{definition:arithmetic_frobenius_morphism_of_a_scheme_over_
 \end{proof}
 
 \begin{corollary}
-    Let $X$ be a scheme over $\Fq$. For all $n \geq 0$, the \hyperrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars/twist $X^{(q^n)}$} is naturally isomorphic to $X$ as an $\Fq$-scheme.
+    Let $X$ be a scheme over $\Fq$. For all $n \geq 0$, the \CrefAndHyperrefIfExist{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius}{extension of scalars/twist $X^{(q^n)}$} is naturally isomorphic to $X$ as an $\Fq$-scheme.
 \end{corollary}
 
 \begin{proposition} \label{proposition:arithmetic_and_geometric_frobenius_details}
     Let $S$ be a scheme of prime characteristic $p$. Let $X$ be a scheme over $S$; say that the structure morphism $X \to S$ is affine locally given by $\Spec A[X_i]_{i \in I}/(f_j)_{j \in J} \to \Spec A$ where $A[X] = A[X_i]_{i \in I}$ is the polynomial ring over $A$ in some set of generators $\{X_i\}_{i \in I}$ and $f_j \in A[X_i]_{i \in I}$ are some polynomials in the variables $X_i$\footnote{Note that each $f_j$ depends only on finitely many of the variables $X_i$.}. For $n \in \bbZ$ and for $f \in A[X_i]_{i \in I}$, let $f^{(p^n)}$ be the polynomial whose coefficients are $p^n$th powers of those of $f$ assuming that such $p^n$th powers exist, i.e. writing $f$ as a finite sum $f = \sum_K a_K X^K$ with $a_K \in A$, we have $f^{(p^n)} = \sum_K a_K^{p^n} X^K$.
 
     \begin{enumerate}
-        \item For $n \geq 0$, the \hyperrefIfExists{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{arithmetic $p^n$th power Frobenius morphism} $X^{(p^n)} \to X$\CrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius} is given affine locally by \label{part:arithmetic_frobenius_details}  
+        \item For $n \geq 0$, the \CrefAndHyperrefIfExist{definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{arithmetic $p^n$th power Frobenius morphism} $X^{(p^n)} \to X$\CrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius} is given affine locally by \label{part:arithmetic_frobenius_details}  
         $$\Spec A[Y_i]_{i \in I} / (f^{(p^n)}_j)_{j \in J} \to \Spec A[X_i]_{i \in I} / (f_j)_{j \in J}.$$
         The corresponding ring morphism is $A[X_i]_{i \in I} / (f_j)_{j \in J} \to A[Y_i]_{i \in I} / (f^{(p^n)}_j)_{j \in J}$ given by $\sum_K a_K X^K \mapsto \sum_K a_K^{p^n} Y^K$. 
         Furthermore, a point $(y_i)_{i \in I}$ of $X^{(p^n)}(A)$ is sent to the point $(y_i^{p^n})_{i \in I}$ of $X(A)$.  
 
-        \item Assume that the \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{absolute Frobenius morphism on $S$} is invertible. For $n \geq 0$, the \hyperrefIfExists{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}{geometric $p^n$th power Frobenius morphism} $X^{(1/p^n)} \to X$ \label{part:geometric_frobenius_details}
+        \item Assume that the \CrefAndHyperrefIfExist{definition:absolute_frobenius_morphism_on_a_scheme}{absolute Frobenius morphism on $S$} is invertible. For $n \geq 0$, the \CrefAndHyperrefIfExist{definition:geometric_frobenius_of_a_scheme_over_a_scheme_of_prime_characteristic_with_invertible_absolute_frobenius}{geometric $p^n$th power Frobenius morphism} $X^{(1/p^n)} \to X$ \label{part:geometric_frobenius_details}
         is given affine locally by 
         $$\Spec A[Y_i]_{i \in I} / (f^{(1/p^n)}_j)_{j \in J} \to \Spec A[X_i]_{i \in I} / (f_j)_{j \in J}.$$
         The corresponding ring morphism is $A[X_i]_{i \in I} / (f_j)_{j \in J} \to A[Y_i]_{i \in I} / (f^{(1/p^n)}_j)_{j \in J}$ given by $\sum_K a_K X^K \mapsto \sum_K a_K^{1/p^n} Y^K$. 
@@ -222,8 +222,8 @@ cf. \cite[XV]{sga5} \cite[10.3]{fu_ect}
     $$\calF(U) \xrightarrow{\Frob_{U|X, p^n}} \calF(U^{(p^n)/X}) \cong \calF(\Frob_{X,p^n}^{-1}(U)) = (\Frob_{X,p^n})_*(\calF)(U)$$
     where 
     \begin{itemize}
-    \item \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{$\Frob_{X, p^n}: X \to X$} is the \hyperrefIfExists{definition:absolute_frobenius_morphism_on_a_scheme}{$p^n$th power Absolute Frobenius morphism of $X$}, and
-    \item \hyperrefIfExists{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{$\Frob_{U|X, p^n}: U \to U^{(p)/X}$}\CrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius} is the \hyperrefIfExists{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{$p^n$th power relative Frobenius morphism of $U \to X$}.
+    \item \CrefAndHyperrefIfExist{definition:absolute_frobenius_morphism_on_a_scheme}{$\Frob_{X, p^n}: X \to X$} is the \CrefAndHyperrefIfExist{definition:absolute_frobenius_morphism_on_a_scheme}{$p^n$th power Absolute Frobenius morphism of $X$}, and
+    \item \CrefAndHyperrefIfExist{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{$\Frob_{U|X, p^n}: U \to U^{(p)/X}$}\CrefIfExists{definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius} is the \CrefAndHyperrefIfExist{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{$p^n$th power relative Frobenius morphism of $U \to X$}.
     \end{itemize}
 \end{lemma}
 
@@ -234,7 +234,7 @@ cf. \cite[XV]{sga5} \cite[10.3]{fu_ect}
     
     Define a sheaf morphism
     $$\hlin{\Frob_{\calF,p^n}^*: \Frob_{X,p^n}^* \calF \to \calF}$$
-    as the \hyperrefIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint morphism} to the isomorphism 
+    as the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint morphism} to the isomorphism 
     $$\calF \to (\Frob_{X,p^n})_*(\calF)$$
     of \Cref{lemma:there_is_an_isomorphism_from_an_etale_sheaf_on_a_scheme_of_characteristic_p_to_its_pushforward_under_frobenius}; $\Frob_{\calF,p^n}^*$ is in fact a sheaf isomorphism. 
 
@@ -251,7 +251,7 @@ cf. \cite[XV]{sga5} \cite[10.3]{fu_ect}
 \TODO{TODO: notate $H_c^i$, cite the adjunction}
     Let $X$ be a scheme of characteristic $p$. Let $n \geq 1$ be an integer. Let $K \in D^+(X)$ be an object in the bounded below derived category of sheaves of abelian groups on $X$. 
     
-    Note that the \hyperrefIfExists{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit morphism} for the adjunction between $\Frob_{X,q^n}^*$ and $R\Frob_{X,q^n*}$ yields a morphism 
+    Note that the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit morphism} for the adjunction between $\Frob_{X,q^n}^*$ and $R\Frob_{X,q^n*}$ yields a morphism 
     $$H_c^i(X, K) \to H_c^i(X, R\Frob_{X,q^n*} \Frob_{X,q^n}^* K)$$
     on compactly supported cohomology groups. The codomain of such a map is naturally isomorphic to $H_c^i(X, \Frob_{X,q^n}^* K)$ because $\Frob_{X,q^n*}$ is proper and hence $R\Frob_{X,q^n*} \cong R\Frob_{X,q^n!}$ and because compactly supported derived pushforwards preserve $H_c^i$. We can then obtain the following endomorphism of $H_c^i(X, K)$:
     $$H_c^i(X, K) \to H_c^i(X, R\Frob_{X,q^n*} \Frob_{X,q^n}^* K) \cong H_c^i(X, \Frob_{X,q^n}^* K) \xrightarrow{\Frob_{K,p^n}^*} H_c^i(X, K).$$

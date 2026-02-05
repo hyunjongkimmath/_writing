@@ -1,0 +1,14 @@
+\begin{definition}[Singular cochain group with coefficients] \label{definition:singular_cochain_group_of_a_topological_space_with_coefficients_in_an_abelian_group}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, $A \subseteq X$ a \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace}, and $G$ an abelian group. 
+
+\begin{enumerate}
+    \item The \hldef{singular $n$-cochain group of $X$ with coefficients in $G$} is the abelian group defined as the dual of the integral singular chain group:
+    $$\hlin{C^n(X; G) = \operatorname{Hom}(C_n(X; \bbZ), G).}$$
+    Elements of $C^n(X; G)$ are called \hldef{singular $n$-cochains} and are functions $\varphi: S_n(X) \to G$ that assign an element of $G$ to each singular $n$-simplex in $X$.
+
+    \item The \hldef{relative singular $n$-cochain group of $(X, A)$ with coefficients in $G$} is the subgroup of $C^n(X; G)$ consisting of cochains that vanish on all singular simplices in $A$:
+    $$\hlin{C^n(X, A; G) = \ker(i^*: C^n(X; G) \to C^n(A; G)) \cong \operatorname{Hom}(C_n(X, A; \bbZ), G)}$$
+    where $i: A \hookrightarrow X$ is the inclusion map.
+\end{enumerate}
+When $G = R$ is a \CrefAndHyperrefIfExist{definition:ring}{ring}, $C^n(X, A; R)$ inherits the structure of an $R$-module.
+\end{definition}

@@ -1,6 +1,7 @@
-\begin{definition} \label{definition:mapping_cone_of_a_map_of_chain_cochain_complexes}
+\begin{definition} \label{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}
     \begin{enumerate}
-        \item Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category $\mathcal{A}$}.
+        \item Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in $\calA$.
 
         The \hldef{mapping cone of $f$}, denoted \hl{$\operatorname{Cone}(f)$}, is the chain complex defined by:
         \begin{itemize}
@@ -27,5 +28,6 @@
         \end{itemize}
 
         This construction defines a cochain complex, i.e., $d_{\operatorname{Cone}(g)}^{n+1} \circ d_{\operatorname{Cone}(g)}^n = 0$.
-            \end{enumerate}
+        \end{enumerate}
+    Given a chain complex $(C_\bullet, d_\bullet)$ (or a cochain complex), its \hldef{mapping cone} \hl{$\operatorname{Cone}(C_\bullet)$} simply refers to the mapping cone of the identity morphism $\id_{C_\bullet}: C_\bullet \to C_\bullet$. 
 \end{definition}

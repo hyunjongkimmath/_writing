@@ -1,0 +1,25 @@
+\begin{theorem}[Fubini Theorem for Limits and Co\CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}] \label{theorem:limits_commute_with_limits_and_colimits_commute_with_colimits}
+Let $I$ and $J$ be \CrefAndHyperrefIfExist{definition:category}{categories} and $F: I \times J \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:n_ary_functor}{bifunctor}.
+
+\begin{enumerate}
+    \item \textbf{Iterated Limits:}
+    Suppose the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product} limit $\lim_{(i, j) \in I \times J} F(i, j)$ exists. If for each $i \in I$ the partial limit $\lim_{j \in J} F(i, j)$ exists, then the iterated limit $\lim_{i \in I} (\lim_{j \in J} F(i, j))$ necessarily exists and there is a unique \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}:
+    \begin{equation}
+        \lim_{i \in I} \lim_{j \in J} F(i, j) \cong \lim_{(i, j) \in I \times J} F(i, j)
+    \end{equation}
+    Consequently, if the product limit exists and all partial limits $\lim_{j \in J} F(i, j)$ and $\lim_{i \in I} F(i, j)$ exist, then both iterated limits exist and commute:
+    \begin{equation}
+        \lim_{i \in I} \lim_{j \in J} F(i, j) \cong \lim_{j \in J} \lim_{i \in I} F(i, j)
+    \end{equation}
+
+    \item \textbf{Iterated Colimits:} 
+    Suppose the product colimit $\text{colim}_{(i, j) \in I \times J} F(i, j)$ exists. If for each $i \in I$ the partial colimit $\text{colim}_{j \in J} F(i, j)$ exists, then the iterated colimit $\text{colim}_{i \in I} (\text{colim}_{j \in J} F(i, j))$ necessarily exists and there is a unique natural isomorphism:
+    \begin{equation}
+        \text{colim}_{i \in I} \text{colim}_{j \in J} F(i, j) \cong \text{colim}_{(i, j) \in I \times J} F(i, j)
+    \end{equation}
+    Consequently, if the product colimit exists and all partial colimits $\text{colim}_{j \in J} F(i, j)$ and $\text{colim}_{i \in I} F(i, j)$ exist, then both iterated colimits exist and commute:
+    \begin{equation}
+        \text{colim}_{i \in I} \text{colim}_{j \in J} F(i, j) \cong \text{colim}_{j \in J} \text{colim}_{i \in I} F(i, j)
+    \end{equation}
+\end{enumerate}
+\end{theorem}

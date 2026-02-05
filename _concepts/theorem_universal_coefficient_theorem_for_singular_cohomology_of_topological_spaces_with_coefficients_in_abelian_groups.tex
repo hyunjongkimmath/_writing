@@ -1,0 +1,11 @@
+\begin{theorem}[Universal Coefficient Theorem for Cohomology] \label{theorem:universal_coefficient_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups}
+Let $(X, A)$ be a pair of topological spaces and $G$ an abelian group. For each $n \in \mathbb{Z}$, there exists a natural short exact sequence:
+$$0 \to \operatorname{Ext}_{\mathbb{Z}}^1(H_{n-1}(X, A; \mathbb{Z}), G) \to H^n(X, A; G) \xrightarrow{h} \operatorname{Hom}_{\mathbb{Z}}(H_n(X, A; \mathbb{Z}), G) \to 0$$
+where:
+\begin{itemize}
+    \item $h$ is the \hldef{evaluation homomorphism} defined by $h([\varphi])([c]) = \varphi(c)$.
+    \item $\operatorname{Ext}_{\mathbb{Z}}^1$ is the first extension product functor \TODO{define Ext functor}.
+\end{itemize}
+Furthermore, this sequence \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits}, though the splitting is not natural, yielding the isomorphism:
+$$H^n(X, A; G) \cong \operatorname{Hom}_{\mathbb{Z}}(H_n(X, A; \mathbb{Z}), G) \oplus \operatorname{Ext}_{\mathbb{Z}}^1(H_{n-1}(X, A; \mathbb{Z}), G)$$
+\end{theorem}

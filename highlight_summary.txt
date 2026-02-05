@@ -1,0 +1,4922 @@
+- definition_
+    - adjoint Dolbeault operators
+    - $\partial^*$
+    - $\overline{\partial}^*$
+    - \partial^* = - \star \overline{\partial} \star, \quad \overline{\partial}^* = - \star \partial \star.
+    - Dolbeault Laplacians
+    - \Delta_\partial := \partial \partial^* + \partial^* \partial, \quad \Delta_{\overline{\partial}} := \overline{\partial} \overline{\partial}^* + \overline{\partial}^* \overline{\partial}.
+    - Hodge Laplacian on $(p,q)$
+    - \Delta := d d^* + d^* d,
+    - $d^* = \partial^* + \overline{\partial}^*$
+- definition:2_fiber_product_of_1_morphisms_in_a_2_category
+    - 2-fiber product
+    - 2-pullback
+    - $X \times_Z Y$
+- definition:A1_homotopy_group_sheaf_of_an_object_of_the_pointed_unstable_A1_homotopy_category_over_a_noetherian_finite_dimensional_scheme
+    - $n$th $\bbA^1$-homotopy sheaf
+    - $\pinAone(X)$
+- definition:A1_homotopy_theoretic_space_over_a_noetherian_scheme_of_finite_dimension
+    - spaces
+    - $\simpnissheaves$
+    - $\Spc$
+    - $\bbA^1$-homotopy (theoretic) space
+    - motivic space
+- definition:A1_invariant_strongly_A1_invariant_strictly_A1_invariant_sheaves_of_sets_groups_ab_groups
+    - $\bbA^1$-invariant
+    - strongly $\bbA^1$-invariant
+    - strictly $\bbA^1$-invariant
+- definition:A1_local_weak_equivalence_fibration_of_simplicial_sheaves_of_sets_on_the_nisnevich_site_over_a_noetherian_finite_dimensional_scheme
+    - $\bbA^1$-local
+    - \calH_{s,\bbA^1}(S) = \calH_{s,\bbA^1}(\ShvNisSmS)
+    - $\bbA^1$-weak equivalence
+    - $\bbA^1$-fibration
+    - $\bbA^1$-weak equivalence
+    - $\bbA^1$-fibration
+- definition:A1_model_structure_on_the_category_of_simp_sheaves_of_sets_on_the_nis_site_over_a_noeth_scheme_of_fin_dim_and_the_unstable_A1_homotopy_category
+    - $\bbA^1$-model structure on $\simpnissheaves$
+    - (unstable) $\bbA^1$-homotopy category (of smooth schemes over $S$)
+    - (unstable) motivic category over $S$
+    - $\calH(S)$
+    - $\calH^{\bbA^1}(S)$
+    - (pointed) $\bbA^1$-model structure on $\pointedsimpnissheaves$
+    - (unstable) pointed $\bbA^1$-homotopy category (of smooth scehemes over $S$)
+    - (unstable) motivic homotopy category over $S$
+    - $\calH_\bullet(S)$
+    - $\calH_\bullet^{\bbA^1}(S)$
+    - $\calH(S)_\bullet$
+    - $\calH^{\bbA^1}(S)_\bullet$
+    - $[X,Y]_\bullet$
+    - $[X,Y]$
+- definition:A1_weak_equivalence_of_simplicial_sheaves_of_sets_on_the_nisnevich_topology_over_a_noetherian_finite_dimensional_scheme
+    - $\bbA^1$-weak equivalence
+    - weak equivalence
+- definition:abelian_category
+    - abelian category
+- definition:abelian_scheme_over_a_scheme
+    - abelian scheme over $S$
+- definition:abelian_variety_over_a_field
+    - abelian variety over $k$
+- definition:absolute_frobenius_endomorphism_of_a_ring
+    - $R^p$
+- definition:absolute_frobenius_morphism_on_a_scheme
+    - $p^n$th power absolute Frobenius morphism on $X$
+    - $F_{X,p^n}$
+    - $\Frob_{X,p^n}$
+    - absolute Frobenius morphism on $X$
+    - $F_{X}$
+    - $F_{X, 1/p^n}$
+    - $\Frob_{X,1/p^n}$
+    - $1/p^n$th power absolute Frobenius morphism on $X$
+- definition:absolute_value_on_a_field
+    - absolute value on $F$
+- definition:absorbing_zero_of_a_monoid
+    - absorbing zero
+    - zero element
+    - z + \gamma = z \quad \text{and} \quad \gamma + z = z.
+    - $0$
+    - $\infty$
+- definition:absorbing_zero_positive_cone_in_a_monoid
+    - positive cone in $\Gamma$
+- definition:accumulation_point_in_an_extended_metric_space
+    - accumulation point of $A$ (with respect to $d$
+- definition:action_of_a_group_scheme_on_a_scheme
+    - action of the group scheme $G$ on an $S$-scheme $X$
+    - left action
+    - right action
+    - left/right action of the group scheme $G$ on an $S$-scheme $X$
+- definition:acyclic_complex_of_objects_in_an_abelian_category
+    - acyclic at $C_n$
+    - exact at $C_n$
+    - acyclic
+    - exact
+- definition:additive_category_preadditive_category
+    - preadditive category
+    - additive
+    - $A \oplus B$
+    - direct sum of $A$ and $B$
+    - direct sum
+    - $\bigoplus_i A_i$
+- definition:additive_functor_between_additive_categories
+    - additive functor
+    - additive functor
+- definition:additive_functor_category_between_preadditive_categories
+    - additive functor category
+    - $\text{Add}(\mathcal{A}, \mathcal{B})$
+- definition:additive_group_scheme_over_a_scheme
+    - additive group scheme over $S$
+    - $\bbG_{a} = \bbG_{a,S}$
+    - additive group scheme over a ring $R$
+- definition:additive_sheaf_on_the_small_etale_site_of_a_scheme
+    - additive sheaf
+    - $\mathbb{G}_a$
+    - additive group scheme
+- definition:adeles_and_ideles_of_a_global_field
+    - adèle ring of $K$
+    - $\mathbb{A}_K$
+    - \mathbb{A}_K = \left\{ (x_v)_v \in \prod_{v \in M_K} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non\text{-}archimedean $v$} \right\}.
+    - idèle group of $K$
+    - $\mathbb{A}_K^\times$
+    - $\bbI_K$
+    - \bbI_K = \mathbb{A}_K^\times = \left\{ (x_v)_v \in \prod_{v \in M_K} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non\text{-}archimedean $v$} \right\},
+    - adèle ring outside $S$ of $K$
+    - $\mathbb{A}_K^S$
+    - $\mathbb{A}_{K,S}$
+    - \mathbb{A}_{K,S} = \mathbb{A}_K^S = \left\{ (x_v)_v \in \prod_{v \in M_K \setminus S} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non-archimedean } v \right\}.
+    - idèle group outside $S$ of $K$
+    - $(\mathbb{A}_K^\times)^S$
+    - $(\mathbb{A}_{K,S}^\times)$
+    - $\bbI_K^S$
+    - $\bbI_{K,S}$
+    - (\mathbb{A}_K^\times)^S = \left\{ (x_v)_v \in \prod_{v \in M_K \setminus S} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non-archimedean } v \right\}.
+    - ring of finite adèles of $K$
+    - $\mathbb{A}_{K, \mathrm{fin}}$
+    - $\mathbb{A}_{K}^{\mathrm{fin}}$
+    - $\mathbb{A}_{K, \mathrm{f}}$
+    - $\mathbb{A}_{K}^{\mathrm{f}}$
+    - \mathbb{A}_{K, \mathrm{fin}} := \mathbb{A}_K^{M_K^\infty} = \left\{ (x_v)_v \in \prod_{v \notin M_K^\infty} K_v \;\middle|\; x_v \in \mathcal{O}_v \text{ for all but finitely many non-archimedean } v \right\}.
+    - finite idèle group of $K$
+    - $\mathbb{A}_{K, \mathrm{fin}}^\times$
+    - $\mathbb{I}_{K, \mathrm{fin}}$
+    - $\mathbb{I}_{K}^{\mathrm{fin}}$
+    - $\mathbb{I}_{K, \mathrm{f}}$
+    - $\mathbb{I}_{K}^{\mathrm{f}}$
+    - \mathbb{A}_{K, \mathrm{fin}}^\times := (\mathbb{A}_K^\times)^{M_K^\infty} = \left\{ (x_v)_v \in \prod_{v \notin M_K^\infty} K_v^\times \;\middle|\; x_v \in \mathcal{O}_v^\times \text{ for all but finitely many non-archimedean } v \right\}.
+- definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors
+    - adjunction between $F$ and $G$
+    - unit
+    - counit
+    - left adjoint to $G$
+    - right adjoint to $F$
+    - $F \dashv G$
+    - unit of the adjunction
+    - unit morphism
+    - counit morphism
+- definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution
+    - adjoint map of $b$
+    - left adjoint map
+    - right adjoint map
+    - adjoint map
+    - $\hat{b}$
+- definition:admissible_change_of_variables_for_a_weierstrass_equation_over_a_commutative_ring_with_unity
+    - admissible change of variables
+    - isomorphism of Weierstrass equations
+- definition:affine_groupoid_scheme_over_a_scheme
+    - affine groupoid scheme over $S$
+    - affine groupoid over $S$
+    - Source
+    - Target
+    - Identity
+    - Multiplication
+    - Inverse
+- definition:affine_morphism_of_schemes
+    - affine morphism
+- definition:affine_open_subscheme_of_a_scheme
+    - affine open subset/subscheme of $X$
+- definition:affine_scheme
+    - $\mathrm{Spec}(A)$
+    - Zariski topology
+    - vanishing loci
+    - V(I) = \{\mathfrak{p} \in \mathrm{Spec}(A) : I \subseteq \mathfrak{p}\}
+    - $\mathcal{O}_{\mathrm{Spec}(A)}$
+    - structure sheaf of $\Spec A$
+    - affine scheme associated to $A$
+    - $D(f)$
+- definition:affine_space_of_dimension_n_over_a_scheme
+    - affine space of dimension $n$ over $S$
+    - $\mathbb{A}^n_S$
+- definition:aleph_numbers
+    - aleph numbers
+    - uncountable cardinal
+- definition:algebraically_closed_field
+    - algebraically closed
+- definition:algebraically_closure_of_a_field
+    - algebraic closure of $K$
+    - $\overline{K}$
+- definition:algebraically_independent_elements_of_an_extension_field_over_a_base_field
+    - algebraically independent over $F$
+- definition:algebraic_curve_over_a_field
+    - algebraic curve over $k$
+    - complete
+    - complete
+    - $k$
+    - geometrically connected
+- definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension
+    - algebraic element over $K$
+    - minimal polynomial of $x$ over $K$
+    - transcendental element over $K$
+    - algebraic extension
+- definition:algebraic_group_scheme_over_a_scheme
+    - algebraic group scheme over $S$
+    - $S$-group scheme
+    - $m: G \times_S G \to G$
+    - multiplication
+    - $i: G \to G$
+    - inverse
+    - $e: S \to G$
+    - identity
+    - affine group scheme over $S$
+    - $k$-algebraic group
+    - algebraic group (scheme) over $k$
+    - $k$-group variety
+    - $k$-algebraic group
+    - algebraic group over $k$
+    - $k$-group variety
+    - affine algebraic $k$-group
+- definition:algebraic_singular_simplicial_set_of_morphisms_from_a_smooth_scheme_to_a_nisnevich_sheaf_of_sets_over_a_noetherian_scheme_of_finite_dimension
+    - $\operatorname{Sing}_\bullet(X)(U)$
+    - algebraic singular simplicial set (of morphisms from $U$ to $X$)
+- definition:algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness
+    - algebraic space over $S$ for the topology $\tau$
+- definition:algebraic_torus_over_a_field
+    - (algebraic) torus
+- definition:algebraic_variety_over_a_field
+    - (algebraic) variety over $k$
+- definition:algebraic_vector_bundle_over_a_scheme
+    - algebraic vector bundle
+    - vector bundle
+    - (algebraic) line bundle
+    - invertible sheaf
+- definition:algebra_of_a_ring
+    - $R$-algebra
+    - structure map
+- definition:algebra_over_a_sheaf_of_rings_on_a_site
+    - $\mathcal{O}$-algebra
+    - morphism of $\mathcal{O}$-algebras
+    - category of $\mathcal{O}$-algebras
+    - $\mathbf{Alg}(\mathcal{O})$
+- definition:almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension
+    - almost complex structure on $M$
+- definition:alternation_of_an_integral_noetherian_scheme
+    - alteration of $X$
+- definition:archimedean_absolute_value_on_a_field
+    - non-archimedean
+    - archimedean
+- definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields
+    - $p^n$th power Frobenius automorphism on $k$
+    - arithmetic Frobenius automorphism on $l$ (over the base field $k$)
+    - $\Frob_{l/k}$
+    - $\Frob_{l}$
+    - geometric Frobenius automorphism on $l$
+    - arithmetic/geometric Frobenius automorphism
+- definition:arithmetic_fourier_transform_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field
+    - arithmetic Fourier transform function of $M$
+    - $S(M, -): \widehat{G} \to \Qellbar$
+    - $S(M)$
+- definition:arithmetic_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic
+    - arithmetic $p^n$th power Frobenius morphism of $X/S$
+    - arithmetic Frobenius morphism of $X/S$
+    - Frobenius automorphism of $S$
+- definition:arithmetic_genus_of_a_proper_algebraic_curve_over_a_field
+    - arithmetic genus of $C$
+    - $p_a(C)$
+    - $p_a(C) = \dim_k H^1(C, \mathcal{O}_C)$
+- definition:arrow_category_of_a_category
+    - arrow category of $\mathcal{C}$
+    - $\mathcal{C}^{\to}$
+    - $\text{Arr}(\mathcal{C})$
+    - $\mathcal{C}^{\mathbf{2}}$
+- definition:artin_rees_mittag_leffler_condition_on_an_inverse_system_of_sheaves_of_abelian_groups_on_a_scheme_for_the_small_etale_site
+    - Mittag–Leffler (ML) condition
+    - Artin-Rees-Mittag-Leffler (ARML) condition
+    - null system
+    - Artin-Rees-Mittag-Leffler (ARML) condition
+- definition:artin_schreier_morphism_of_the_additive_group_over_a_scheme
+    - Artin--Schreier morphism
+    - \begin{align*}
+\bbG_{a,S} &\to \bbG_{a,S} \\
+T &\mapsto T^p - T
+\end{align*}
+    - $\operatorname{AS}$
+- definition:artin_schreier_sheaf_of_a_character_on_the_additive_group_of_a_finite_field
+    - Artin-Schreier sheaf of $\psi$
+    - Artin-Schreier local system of $\psi$
+    - $\calL_\psi$
+- definition:artin_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes
+    - Artin stack/algebraic stack over $S$ for $\tau$
+- definition:atlas_on_a_topological_manifold
+    - atlas
+    - compatible
+    - maximal
+- definition:automorphism_group_of_a_field_extension
+    - $K$-automorphism
+    - automorphism group of the extension $L/K$
+    - $\mathrm{Aut}(L/K)$
+    - $\Aut_K(L)$
+- definition:automorphism_group_of_a_scheme_over_a_scheme
+    - automorphism group of $X$ over $S$
+    - $\operatorname{Aut}(X/S) = \operatorname{Aut}_S(X)$
+- definition:automorphism_of_an_object_of_a_category_automorphism_group_of_an_object_of_a_locally_small_category
+    - automorphism of $X$
+    - automorphism group of $X$
+    - $\operatorname{Aut}_{\mathcal{C}}(X)$
+- definition:automorphism_of_a_group_automorphism_group_of_a_group
+    - automorphism of $G$
+    - automorphism group of a group $G$,
+    - $\operatorname{Aut}(G)$
+- definition:A_local_object_A_weak_equivalence_A_fibration_of_simplicial_homotopy_category_of_sheaves_of_a_small_site
+    - $A$-local
+    - $\calH_{s,A}(T)$
+    - $A$-weak equivalence
+    - $A$-fibration
+    - $A$-weak equivalence
+    - $A$-fibration
+- definition:A_R_category_of_inverse_systems_of_lambda_torsion_sheaves_on_small_etale_site
+    - A–R category of inverse systems of $\lambda$-torsion sheaves on $X_{\text{ét}}$
+    - $\mathrm{AR}(\lambda\text{-tors}(X))$
+- definition:banach_space
+    - Banach space
+    - Banach space over $k$
+- definition:basepoint_of_a_simplicial_set
+    - (base)point
+    - basepoint vertex
+    - pointed simplicial set
+- definition:base_change_of_a_morphism_in_a_category_by_a_morphism
+    - base change of $f$ by $g$
+- definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category
+    - basis for a Grothendieck topology
+    - Grothendieck pretopology
+    - pretopology
+    - coverings
+    - covering families
+- definition:basis_for_a_topology
+    - basis
+    - base
+- definition:basis_of_a_vector_space_over_a_field
+    - basis of $V$
+    - dimension of $V$ over $F$
+    - rank of $V$ over $F$
+    - \dim_F(V)
+- definition:bicategory
+    - bicategory
+    - weak $2$-category
+    - 0-cells
+    - objects
+    - $\mathcal{B}(A, B)$
+    - 1-cells
+    - 2-cells
+    - \odot_{ABC}: \mathcal{B}(B, C) \times \mathcal{B}(A, B) \to \mathcal{B}(A, C)
+    - g \odot f
+    - $I_A \in \mathcal{B}(A, A)$
+    - associator
+    - left and right unitors
+- definition:biequivalence_between_weak_2_categories
+    - biequivalence
+- definition:bigraded_object_associated_to_a_filtered_graded_object
+    - associated graded object
+    - $\text{Gr}^F(M)$
+- definition:bigraded_object_in_an_abelian_category
+    - bigraded object in $\mathcal{A}$
+    - $E = \{E_{p,q}\}_{p,q \in \mathbb{Z}}$
+- definition:big_etale_site_of_a_scheme
+    - big étale site on $S$
+    - $(\Sch/S)_{\et}$
+    - \'etale cover of $X$
+- definition:big_fppf_site_of_a_scheme
+    - big fppf site of $S$
+    - $(\mathit{Sch}/S)_{fppf}$
+- definition:big_site_on_the_category_of_schemes_over_a_scheme_and_small_site
+    - $E$-covering of an object $X$ of $C/S$
+    - $E$-topology on $C/S$
+    - $E$-site over $S$
+    - big $E$-site on $S$
+    - small $E$-site on $S$
+- definition:biholomorphic_map_of_open_subsets_of_complex_space
+    - biholomorphic map of subsets of $\mathbb{C}$
+    - biholomorphism between $U$ and $V$
+    - (complex-)analytically isomorphic as open subsets of $\mathbb{C}$
+- definition:module_of_a_ring
+    - $R$-$S$-bimodule
+    - $R$-$S$-module
+    - R \times M \to M, \quad (r,m) \mapsto r \cdot m
+    - M \times S \to M, \quad (m,s) \mapsto m \cdot s
+- definition:borel_sigma_algebra_of_a_topological_space
+    - Borel $\sigma$-algebra
+    - \mathcal{B}(X)
+    - \mathcal{B}(X,\mathcal{T})
+- definition:borel_subgroup_scheme_of_a_connected_reductive_group_scheme_over_a_scheme
+    - Borel subgroup
+    - Borel subgroup scheme of $G$
+    - maximal Borel subgroup
+- definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex
+    - $n$-cycles
+    - $Z_n(C)$
+    - $n$-boundaries
+    - $B_n(C)$
+    - cochain complex in $\mathcal{A}$
+    - $n$-cocycles
+    - $Z^n(C)$
+    - $n$-coboundaries
+    - $B^n(C)$
+- definition:boundary_weil_divisor_on_an_integral_scheme
+    - boundary divisor
+- definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category
+    - bounded above
+    - bounded below
+    - bounded
+    - cohomologically bounded above
+    - cohomologically bounded below
+    - cohomologically bounded
+    - bounded above
+    - bounded below
+    - bounded
+    - bounded
+    - homologically bounded above
+    - homologically bounded below
+    - homologically bounded
+    - bounded
+    - bounded above
+    - bounded below
+    - cohomologically bounded
+    - bounded
+    - bounded above
+    - bounded below
+    - homologically bounded
+- definition:bounded_double_complex_of_objects_in_an_additive_category
+    - bounded above
+    - bounded below
+    - bounded
+    - first quadrant
+    - third quadrant
+    - locally finite along diagonals
+    - locally bounded along diagonals
+    - bounded in total degree
+- definition:bundle_of_k_forms_n_smooth_manifold
+    - $\Omega^l M$
+    - bundle of $l$-forms on $M$
+    - smooth/differentiable $l$-form
+    - $\Omega^l(M)$
+    - $\Omega^l(M;\bbR)$
+    - $l$-form on $M$
+    - $\Omega_c^l(M) = \Omega_c^l(M; \bbR) \subseteq \Omega^l(M)$
+- definition:canonical_orientation_of_a_chart_on_a_topological_manifold
+    - orientation of the chart $(U,\varhpi)$
+    - orientation for the chart $(U, \varphi)$
+    - oriented
+- definition:canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category
+    - canonical truncations
+    - \begin{align*}
+    (\tau_{\ge n} A)_i &=
+    \begin{cases}
+        A_i, & i > n, \\
+        \ker(d_n : A_n \to A_{n-1}), & i = n, \\
+        0, & i < n,
+    \end{cases}
+    &
+    (\tau_{\le n} A)_i &=
+    \begin{cases}
+        0, & i > n, \\
+        \mathrm{coker}(d_{n+1} : A_{n+1} \to A_n), & i = n, \\
+        A_i, & i < n.
+    \end{cases}
+    \end{align*}
+    - \begin{align*}
+    \tau_{\ge n},\, \tau_{\le n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+    \end{align*}
+    - truncation functors
+    - canonical truncations of $A^\bullet$
+    - \begin{align*}
+    (\tau_{\le n} A)^i &=
+    \begin{cases}
+        A^i, & i < n, \\
+        \ker(d^n : A^n \to A^{n+1}), & i = n, \\
+        0, & i > n,
+    \end{cases}
+    &
+    (\tau_{\ge n} A)^i &=
+    \begin{cases}
+        0, & i < n, \\
+        \mathrm{coker}(d^{n-1} : A^{n-1} \to A^n), & i = n, \\
+        A^i, & i > n.
+    \end{cases}
+    \end{align*}
+    - \begin{align*}
+    \tau_{\le n},\, \tau_{\ge n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+    \end{align*}
+    - canonical truncations
+    - % \begin{align*}
+% (\tau_{\ge n} A)_i &=
+%   \begin{cases}
+%     A_i, & i > n, \\
+%     \ker(d_n : A_n \to A_{n-1}), & i = n, \\
+%     0, & i < n,
+%   \end{cases}
+% &
+% (\tau_{\le n} A)_i &=
+%   \begin{cases}
+%     0, & i > n, \\
+%     \mathrm{coker}(d_{n+1} : A_{n+1} \to A_n), & i = n, \\
+%     A_i, & i < n.
+%   \end{cases}
+% \end{align*}
+%
+    - % \begin{align*}
+% \tau_{\ge n},\, \tau_{\le n} : \mathbf{Ch}(\mathcal{A}) \to \mathbf{Ch}(\mathcal{A}),
+% \end{align*}
+%
+    - truncation functors
+- definition:cardinal_number_and_cardinality_of_a_set
+    - cardinal number
+    - cardinal
+    - cardinality of an arbitrary set $X$
+    - $|X|$
+    - $\operatorname{card}(X)$
+    - $\# X$
+- definition:cartesian_closed_category
+    - cartesian closed
+    - $1$
+    - $A \times B$
+- definition:cartesian_product_of_two_objects_in_a_category_over_an_object
+    - cartesian product of $X$ and $Y$ over $Z$ in $\mathcal{C}$
+    - fiber product
+    - pullback diagram
+    - $X \times_Z Y$
+    - projection morphisms
+    - cartesian square
+- definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set
+    - object of $X$
+    - $x \in X$
+    - $x \in \Ob X$
+    - morphism
+    - $f: x \to y$
+    - identity morphism of $x$
+    - $\operatorname{id}_X = s_0(X): \Delta^1 \to X$
+    - composition of $f$ and $g$
+    - composite of $f$ and $g$ with respect to the composition $F$
+- definition:categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category
+    - $\PreShv(X, \calD)$
+    - $\PreShv(X)$
+    - $\Shv(X, \calD)$
+    - $\Shv(X)$
+- definition:category
+    - $\operatorname{Ob}(\mathcal{C})$
+    - \operatorname{Hom}_{\mathcal{C}}(X,Y)
+    - hom-class
+    - $\operatorname{Hom}(X,Y)$
+    - $\operatorname{hom}_{\mathcal{C}}(X,Y)$
+    - $\operatorname{hom}(X,Y)$
+    - $(g,f) \mapsto g \circ f$
+    - identity morphism
+    - \operatorname{id}_X \in \operatorname{Hom}_{\mathcal{C}}(X,X).
+    - $X \in \calC$
+    - ordinary category
+    - large category
+    - class category
+    - category
+- definition:category_enriched_in_a_monoidal_category
+    - category enriched in $\mathcal{V}$
+    - $\mathcal{V}$-enriched category
+    - $\mathcal{V}$-category
+    - $\operatorname{Ob}(\mathcal{C})$
+    - objects
+    - $X \in \operatorname{Ob}(\mathcal{C})$
+    - $X \in \calC$
+    - $\underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \in \operatorname{Ob}(\mathcal{V})$
+    - morphisms
+    - $\calC(X,Y)$
+    - $\Hom(X,Y) = \Hom_\calC(X,Y)$
+    - $\operatorname{Mor}(X,Y) = \operatorname{Mor}_{\calC}(X,Y)$
+    - composition morphism
+    - unit morphism
+    - $\eta_X : \mathbf{1} \to \underline{\operatorname{Hom}}_{\mathcal{C}}(X,X)$
+- definition:category_fibered_in_groupoids_over_a_category
+    - category fibred in groupoids over $\mathcal{C}$
+    - fiber category
+    - $\mathcal{X}_U$
+- definition:category_of_algebras_over_a_ring
+    - category of algebras over $R$
+    - category of $R$-algebras
+    - $\mathbf{Alg}_R$
+    - $R\text{-}\mathbf{Alg}$
+    - category of commutative $R$-algebras
+    - $\mathbf{CAlg}_R$
+    - $\mathbf{CommAlg}_R$
+- definition:category_of_all_bimodules_over_all_rings
+    - category of all bimodules over all rings
+    - $\mathcal{B}imod$
+- definition:category_of_bounded_complexes_of_injectives_projectives
+    - $K^?(\calI)$
+    - $K^?(\calP)$
+- definition:category_of_categories_relative_to_a_grothendieck_universe
+    - category of categories (relative to $\mathcal{U}$)
+    - category of $U$-small categories
+    - $U-\mathbf{Cat}$
+    - $\mathbf{Cat}$
+    - $\mathbf{Cat}$
+    - $\mathbf{CAT}$
+    - $\mathbf{CAT}$
+- definition:category_of_chain_complexes_of_objects_in_an_additive_category_as_a_dg_category
+    - $\mathrm{Ch}(\calA)$
+- definition:category_of_graded_objects_in_an_abelian_category
+    - category of graded objects in $\mathcal{A}$
+    - $\text{Gr}(\mathcal{A})$
+- definition:category_of_groups_of_abelian_groups
+    - category of groups
+    - $\mathbf{Grp}$
+    - category of abelian groups
+    - $\mathbf{Ab}$
+- definition:category_of_hom_composable_bimodules_over_all_rings
+    - category of Hom composable bimodules
+    - $\mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod$
+- definition:category_of_modules_and_bimodules_over_rings
+    - category of $(R,S)$-bimodules
+    - ${}_R\mathsf{Mod}_S$
+    - category of left $R$-modules
+    - ${}_R\mathsf{Mod}$
+    - $R-\mathbf{Mod}$
+    - category of right $R$-modules
+    - $\mathsf{Mod}_R$
+    - $\mathbf{Mod}-R$
+- definition:category_of_objects_over_under_a_fixed_object_in_a_category
+    - category of objects over $X$
+    - slice category of $X$ in $\calC$
+    - over category of $X$ in $\calC$
+    - $\mathcal{C}/X$
+    - $\mathcal{C}_{/X}$
+    - $(\mathcal{C} \downarrow X)$
+    - category of objects under $X$
+    - coslice category of $X$ in $\calC$
+    - under category of $X$ in $\calC$
+    - $X/\mathcal{C}$
+    - $X \backslash \calC$
+    - $\mathcal{C}_{X/}$
+    - $(X \downarrow \calC)$
+- definition:category_of_opens_of_a_topological_space
+    - category of opens of $X$
+    - $\mathbf{Open}(X)$
+    - $\mathrm{Open}(X)$
+    - $\mathrm{Ouv}(X)$
+- definition:category_of_pairs_of_topological_spaces
+    - category of pairs of topological spaces
+    - $\mathbf{Top}_{\text{pair}}$
+    - $\mathbf{Top}_{\text{rel}}$
+- definition:category_of_rings
+    - category of rings
+    - $\mathbf{Ring}$
+    - category of commutative rings
+    - $\mathbf{CommRing}$
+    - $\mathbf{CRing}$
+- definition:category_of_rings_over_a_ring
+    - category of rings over $R$
+    - category of $R$-rings
+    - $\mathbf{Ring}_R$
+    - $\mathbf{CommRing}_R$
+    - $\mathbf{CRing}_R$
+- definition:category_of_sets
+    - $\mathrm{Set}$
+    - $\mathbf{Set}$
+    - $\mathrm{Sets}$
+    - $\mathbf{Sets}$
+    - $(\mathrm{Set})$
+    - $(\mathbf{Set})$
+    - $(\mathrm{Sets})$
+    - $(\mathbf{Sets})$
+- definition:category_of_small_categories
+    - category of small categories
+    - $\mathbf{Cat}$
+- definition:category_of_tensor_composable_bimodules_over_all_rings
+    - category of (tensor) composable bimodules
+    - $\mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod$
+- definition:category_of_topological_spaces
+    - category of topological spaces
+    - $\mathrm{Top}$
+    - $\mathbf{Top}$
+- definition:category_of_vector_spaces_over_a_field
+    - category of vector spaces over $k$
+    - category of finite dimensional vector spaces over $k$
+    - $\mathrm{Vec}_k$
+    - $\mathbf{Vec}_k$
+    - $\mathrm{FinVec}_k$
+    - $\mathbf{FinVec}_k$
+- definition:cauchy_sequence_in_an_extended_metric_space
+    - Cauchy sequence
+- definition:center_of_a_ring
+    - center of $R$
+    - $Z(R)$
+- definition:centralizer_of_a_subgroup_of_a_group
+    - centralizer of $S$ in $G$
+    - C_G(S) = \{ g \in G : g s = s g \text{ for all } s \in S \}
+- definition:central_algebra_over_a_commutative_ring
+    - central $R$-algebra
+- definition:chain_complex_of_objects_in_an_additive_category
+    - chain complex
+    - terms in degree $i$
+    - differentials in degree $i$
+    - $K^\bullet = (K^i, d^i)_{i \in I}$
+    - morphism of chain complexes
+    - chain map
+    - $\mathrm{Ch}(\mathcal{A})$
+    - $\mathbf{Ch}(\mathcal{A})$
+    - \operatorname{Hom}(K^\bullet, L^\bullet)=  \operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K^\bullet, L^\bullet)
+    - morphism of cochain complexes
+    - $\mathrm{Ch}(\mathcal{A})$
+    - $\mathbf{Ch}(\mathcal{A})$
+    - chain complex
+    - terms in degree $i$
+    - boundary maps
+    - differentials in degree $i$
+    - $K_\bullet = (K_i, d_i)_{i \in I}$
+    - cochain complex
+    - coboundary maps
+    - $K^\bullet = (K^i, d^i)_{i \in I}$
+    - morphism of chain complexes
+    - chain map
+    - morphism of cochain complexes
+    - $\mathrm{Ch}(\mathcal{A})$
+    - $\mathbf{Ch}(\mathcal{A})$
+    - $\mathrm{Ch}_\bullet(\mathcal{A})$
+    - $\mathrm{Ch}^\bullet(\mathcal{A})$
+    - \operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K_\bullet, L_\bullet)
+- definition:chain_homotopy_between_chain_maps_between_complexes
+    - chain homotopy from $f_\bullet$ to $g_\bullet$
+    - chain homotopic
+    - $f_\bullet \simeq g_\bullet$
+    - chain contraction
+    - null homotopic
+    - chain homotopy equivalence
+    - chain homotopy inverses of each other
+- definition:characteristic_a_prime_for_a_scheme
+    - characteristic $p$
+- definition:characteristic_of_a_ring
+    - characteristic of $R$
+    - $\operatorname{char}(R)$
+- definition:determinant_over_total_cohomology_of_a_complex
+    - determinant of $F^\bullet$ (on/over the total cohomology of $K^\bullet$)
+    - \det(F^\bullet) := \prod_{i \in \mathbb{Z}} \det\bigl(H^i(F) \mid H^i(K^\bullet)\bigr)^{(-1)^i},
+    - determinant of $1 - t F^\bullet$ (on/over the total cohomology of $K^\bullet$)
+    - \det\bigl(1 - t F^\bullet \mid H^*(K^\bullet)\bigr) := \prod_{i \in \mathbb{Z}} \det\bigl(1 - t H^i(F) \mid H^i(K^\bullet)\bigr)^{(-1)^i},
+    - characteristic (rational) function of $F^\bullet$ on (the total cohomology of) $K^\bullet$
+    - cohomological characteristic (rational) function of $F^\bullet$
+    - alternating product of characteristic polynomials of $F^\bullet$ (over cohomology)
+    - cohomological determinant of $1-tF$ on (the total cohomology) of $K^\bullet$
+- definition:chart_on_a_topological_manifold
+    - (coordinate) chart on a topological manifold $M$ of dimension $n$
+    - coordinate map
+    - coordinates of $p$
+    - (coordinate) chart on a topological manifold with boundary $M$ of dimension $n$
+    - coordinate map
+    - coordinates of $p$
+    - boundary point
+    - interior point
+- definition:closed_category
+    - closed category
+    - \underline{\mathrm{Hom}} : \mathcal{C}^{\mathrm{op}} \times \mathcal{C} \to \mathcal{C}
+    - internal hom-functor
+    - left evaluation morphism
+    - j_X : I \to \underline{\mathrm{Hom}}(X,X)
+    - $I$
+    - left composition morphisms
+    - L^X_{Y,Z} : \underline{\mathrm{Hom}}(Y,Z) \otimes \underline{\mathrm{Hom}}(X,Y) \to \underline{\mathrm{Hom}}(X,Z)
+- definition:closed_half_space_in_euclidean_space
+    - closed half-space
+    - $\mathbb{H}^n \subset \bbR^n$
+    - $\bbR_+^n$
+    - $\bbR_{\geq 0}^n$
+- definition:closed_monoidal_category
+    - closed monoidal category
+- definition:closure_of_a_subspace_of_a_topological_space
+    - closure of $A$ in $X$
+    - $\overline{A}$
+- definition:coarser_finer_than_for_sites_on_a_category
+    - finer than $J'$
+    - $J'$ is coarser than $J$
+- definition:cocartesian_sum_of_two_objects_in_a_category_under_an_object
+    - cocartesian sum of $X$ and $Y$ under $Z$ in $\mathcal{C}$
+    - fiber coproduct
+    - pushout diagram
+    - $X \amalg_Z Y$
+    - inclusion morphisms
+    - cocartesian square
+- definition:codimension_of_an_irreducible_closed_subset_in_a_topological_space
+    - codimension of $Y$ in $X$
+    - $\operatorname{codim}(Y, X)$
+- definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism
+    - co-extension of scalars
+    - co-extension
+    - co-extension of scalars functor
+    - coinduction functor
+    - $f^!$
+    - $\CoInd_R^S$
+- definition:cofinal_subset_and_cofinality_of_a_limit_ordinal
+    - cofinal in $\alpha$
+    - cofinality of $\alpha$
+    - $\operatorname{cf}(\alpha)$
+- definition:coherent_object_in_a_locally_small_site
+    - coherent object
+- definition:coherent_sheaf_on_a_ringed_site
+    - coherent
+- definition:coherent_sheaf_on_a_ringed_space
+    - coherent
+- definition:coherent_sheaf_on_a_scheme
+    - coherent
+    - \operatorname{Coh}(X)
+- definition:coherent_site
+    - coherent site
+- definition:coherent_topos
+    - coherent topos
+    - pretopos
+- definition:cohomological_homological_dimension_of_a_left_right_exact_functor_on_an_abelian_category_with_enough_projectives_injectives
+    - cohomological dimension of $F$
+    - $\operatorname{cdim}(F)$
+    - $\operatorname{cd}(F)$
+    - homological dimension of $F$
+    - $\operatorname{hdim}(F)$
+    - $\operatorname{hd}(F)$
+- definition:comma_category_of_two_functors_to_a_category
+    - comma category
+    - $(S \downarrow T)$
+    - $(S, T)$
+    - $S/T$
+- definition:commutative_binary_operation
+    - abelian
+    - commutative
+- definition:commutative_ring
+    - commutative (unital) ring
+    - ring
+- definition:compactly_generated_topological_space
+    - compactly generated
+    - k-space
+- definition:compact_subset_of_a_topological_space_alternate_definition
+    - compact
+- definition:compact_topological_space
+    - compact
+    - quasi-compactness
+- definition:comparison_morphism_of_limits_and_colimits_under_functors
+    - canonical colimit comparison morphism
+    - canonical limit comparison morphism
+- definition:compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category
+    - compatible with the triangulation
+- definition:complement_of_a_set_by_a_subset
+    - complement of $A$ (with respect to $U$)
+    - $A^{c}$
+    - $U \setminus A$
+- definition:completed_hecke_L_function_of_a_hecke_character_of_a_number_field
+    - completed (Hecke) $L$-function
+    - \Lambda(s, \chi) := \left( |\Delta_{K/\mathbb{Q}}| \cdot N(\mathfrak{f}(\chi)) \right)^{\frac{s}{2}} \cdot \prod_{v \mid \infty} L_v(s, \chi) \cdot L(s, \chi),
+    - infinite local factors
+    - $L_v(s, \chi)$
+    - L_v(s, \chi) := \begin{cases} \Gamma_{\mathbb{R}}(s + \kappa_v) := \pi^{-\frac{s+\kappa_v}{2}} \Gamma\left(\frac{s + \kappa_v}{2}\right), & \text{if } v \text{ is a real place}, \\ \Gamma_{\mathbb{C}}(s + \kappa_v) := 2 (2\pi)^{-(s+\kappa_v)} \Gamma(s + \kappa_v), & \text{if } v \text{ is a complex place}, \end{cases}
+- definition:complete_and_cocomplete_category
+    - complete
+    - finitely complete
+    - cocomplete
+    - finitely cocomplete
+- definition:complete_extended_metric_space
+    - complete
+- definition:completion_of_an_extended_metric_space
+    - completion of $(X, d)$
+    - the completion of $X$ (with respect to $d$)
+- definition:completion_of_a_global_field_at_a_place
+    - completion of $K$ at $v$
+    - $K_v$
+- definition:complexification_of_a_free_abelian_group_of_finite_rank
+    - complexification
+    - L_{\mathbb{C}} := L \otimes_{\mathbb{Z}} \mathbb{C}.
+    - \overline{\cdot}: L_{\mathbb{C}} \to L_{\mathbb{C}}
+    - complex conjugation on $L_{\mathbb{C}}$
+- definition:complexification_of_a_real_vector_bundle_over_a_complex_manifold
+    - complexified vector bundle of $E$
+    - $E^\mathbb{C} \to M$
+    - complexified tangent bundle
+    - $T_{\mathbb{C}}X$
+    - complexified cotangent bundle
+    - $T_{\mathbb{C}}^* X$
+- definition:complex_analytic_manifold
+    - complex (analytic) manifold $M$ of complex dimension $n$ (without boundary)
+    - complex manifold $M$ of complex dimension $n$ with boundary
+- definition:composition_of_binary_relations_on_sets
+    - composition
+    - $S \circ R$
+    - S \circ R = \{ (x, z) \in X \times Z \mid \exists y \in Y \text{ such that } x R y \text{ and } y S z \}.
+- definition:concrete_category_over_a_category
+    - concrete category over $\mathcal{X}$
+    - underlying functor
+    - forgetful functor
+    - concrete category
+    - underlying set
+    - underlying function
+- definition:cone_generated_by_a_subset_of_a_real_vector_space
+    - cone generated by $S$
+    - $\operatorname{cone}(S)$
+    - \operatorname{cone}(S) = \left\{ \sum_{v \in S} \lambda_v v \mid \lambda_v \ge 0, \text{ and } \lambda_v = 0 \text{ for all but finitely many } v \right\}.
+    - polyhedral cone
+- definition:conjugation_of_group_elements_and_subgroup_by_a_group_element
+    - conjugate of $h$ by $g$
+    - conjugate of $H$ by $g$
+- definition:connected_topological_space
+    - connected topological space
+    - connected
+- definition:relative_connection_on_a_quasi_coherent_O_X_module
+    - connection on $\mathcal{E}$ relative to $T$
+    - curvature of the relative connection $\nabla$
+    - flat
+    - integrable
+    - morphism of relative connections
+- definition:connection_on_a_quasi_coherent_O_X_module_on_a_scheme_over_a_ring
+    - connection on $\mathcal{E}$
+    - curvature of the connection $\nabla$
+    - \nabla^2 : \mathcal{E} \to \mathcal{E} \otimes_{\mathcal{O}_X} \Omega^2_{X/k}
+    - flat
+    - integrable
+    - morphism of connections
+- definition:constant_sheaf_on_a_site_with_sheafification
+    - constant presheaf on $\calC$ with value $A$
+    - constant sheaf on $\calC$ with value $A$
+    - constant sheaf on $\calC$ associated to $A$
+    - $\underline{A}$
+    - $A$
+    - constant $\calO$-module
+    - constant $A$-module
+- definition:constructible_sheaf_on_a_small_site_on_a_scheme_or_a_topological_space
+    - constructible
+- definition:constructive_zermelo_fraenkel_set_theory
+    - Constructive Zermelo--Fraenkel set theory
+    - $\mathsf{CZF}$
+    - intuitionistic logic
+- definition:continuous_cocontinuous_functor_between_categories
+    - continuous
+    - cocontinuous
+- definition:continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map
+    - f^{-1} : \operatorname{Open}(Y) \to \operatorname{Open}(X), \quad U \mapsto f^{-1}(U).
+- definition:continuous_functor_of_sites
+    - continuous functor of sites
+    - morphism of sites
+    - morphism of sites
+- definition:continuous_map_between_open_subsets_of_euclidean_spaces
+    - continuous morphism
+    - continuous map
+    - map between topological spaces
+    - $C(U,V) = C^0(U, V)$
+- definition:continuous_map_of_topological_spaces
+    - continuous
+    - \forall V \in \mathcal{T}_Y, \; f^{-1}(V) \in \mathcal{T}_X.
+    - map of topological spaces
+    - $C(X,Y)$
+    - $\operatorname{Hom}_{\mathrm{Top}}(X,Y)$
+    - $\operatorname{Top}(X,Y)$
+    - category of topological spaces
+    - $C(X,Y)$
+    - $\operatorname{Hom}_{\mathrm{Top}}(X,Y)$
+    - $\operatorname{Top}(X,Y)$
+- definition:convergence_and_limits_in_extended_metric_space
+    - converges to a point $x \in X$
+    - limit of the sequence $(x_n)$
+    - \lim_{n \to \infty} x_n = x \quad \text{or} \quad x_n \to x
+- definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category
+    - converges to $H$
+    - $E^r_{p,q} \Rightarrow H_{p+q}$
+    - converges to $H$
+    - $E_r^{p,q} \Rightarrow H^{p+q}$
+    - abutment of the spectral sequence
+- definition:convex_cone_in_a_finite_dimensional_real_vector_space
+    - convex cone
+- definition:coproduct_of_modules_of_rings
+    - coproduct (direct sum) of the family $\{M_i\}_{i \in I}$
+    - $\bigoplus_{i \in I} M_i$
+    - $M_1 \oplus \cdots \oplus M_n$
+- definition:coset_of_a_subgroup_of_a_group_by_an_element
+    - left coset of $H$ in $G$ determined by $g$
+    - gH := \{gh \mid h \in H\}
+    - right coset of $H$ in $G$ determined by $g$
+    - Hg := \{hg \mid h \in H\}
+- definition:cotangent_bundle_of_a_smooth_manifold
+    - cotangent bundle of $M$
+    - (T^*M, \pi_{T^*M}, M)
+    - $\Omega M$
+    - $\Omega M$
+    - cotangent bundle of $M$
+    - $\Omega M$
+- definition:cotangent_space_and_tangent_space_of_a_scheme_at_a_point
+    - cotangent space of $X$ at $x$
+    - $T^*_x X$
+    - tangent space of $X$ at $x$
+    - $T_x X$
+- definition:countable_finite_uncountable_sets
+    - countably infinite
+    - countable
+    - finite
+    - at most countable
+    - uncountable
+- definition:CW_complex
+    - CW complex
+    - open $n$-cells
+    - $n$-skeleton
+    - $X^n = \bigcup_{k \le n} \bigcup_{\alpha} e_{\alpha}^k$
+- definition:CW_pair
+    - CW pair $(X, A)$
+    - subcomplex
+- definition:C_k_atlas_on_a_topological_manifold
+    - $C^k$-atlas
+    - smooth atlas
+    - $C^k$-atlas
+    - smooth atlas
+- definition:C_k_compatible_charts_on_a_topological_manifold
+    - chart on $M$
+    - $C^k$-compatible
+    - smoothly compatible
+- definition:C_k_manifold
+    - $n$-dimensional $C^k$/$k$-differentiable-(real)manifold with boundary (resp. without boundary)
+    - smooth/differentiable (real) manifold
+- definition:C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns
+    - $C^k$-morphism
+    - $C^k$-map
+    - $C^k(U, V)$
+    - $C^k$-function on $U$
+    - $C^k(U)$
+    - $C^k$-diffeomorphism
+    - smooth morphism/map/function/diffeomorphism
+    - $C^k$-morphism
+    - $C^k$-map
+    - $k$-times continuously differentiable
+    - $C^k(U, V)$
+    - $C^k$-function on $U$
+    - $C^k(U)$
+    - $C^k$-diffeomorphism
+    - smooth morphism/map/function/diffeomorphism
+    - $C^k$-morphism
+    - $C^k$-map
+    - $C^k(U, V)$
+    - $C^k$-function on $U$
+    - $C^k(U)$
+    - $C^k$-diffeomorphism
+    - smooth morphism/map/function/diffeomorphism
+- definition:C_k_morphism_between_C_k_manifolds
+    - $C^k$-morphism
+    - $C^k$-map
+    - $C^k$-diffeomorphism
+    - $C^k(M,N)$
+    - $C^k(M)$
+    - $C^k$-functions
+    - $C^k$-morphism
+    - $C^k$-map
+    - $C^k$-diffeomorphism
+    - $C^k(M,N)$
+    - $C^k(M)$
+    - $C^k$-functions
+- definition:C_k_vector_bundle_on_C_k_manifold
+    - $C^k$ vector bundle of rank $r$ over $M$
+    - total space
+    - projection map
+    - $E_p := \pi^{-1}(\{p\})$
+    - local trivializations
+    - transition functions
+    - t_{\alpha \beta} : U_\alpha \cap U_\beta \to \mathrm{GL}(r, \mathbb{R})
+    - $C^k$-section of $E$ over an open subset $U \subseteq M$
+    - \Gamma^{C^k}(U, E) = \Gamma^{C^k}(U, E;\bbR) = E^{C^k}(U) = E^{C^k}(U;\bbR)
+    - \Gamma(U, E) = \Gamma(U, E;\bbR) = E(U) = E(U;\bbR)
+    - global $C^k$-section of $E$
+    - $\Gamma_k(E)$
+    - $\Gamma(E)$
+    - $\Gamma_k(E;\bbR)$
+    - (continuous) section of $E$
+    - smooth section of $E$
+    - $C^k$ vector bundle of rank $r$ over $M$
+    - total space
+    - projection map
+    - local trivializations
+    - transition functions
+    - t_{\alpha \beta} : U_\alpha \cap U_\beta \to \mathrm{GL}(r, \mathbb{R})
+    - $C^k$-section of $E$ over an open subset $U \subseteq M$
+    - \Gamma^{C^k}(U, E) = \Gamma^{C^k}(U, E;\bbR) = E^{C^k}(U) = E^{C^k}(U;\bbR)
+    - \Gamma(U, E) = \Gamma(U, E;\bbR) = E(U) = E(U;\bbR)
+    - global $C^k$-section of $E$
+    - $\Gamma_k(E)$
+    - $\Gamma(E)$
+    - $\Gamma_k(E;\bbR)$
+    - (continuous) section of $E$
+    - smooth section of $E$
+- definition:dedekind_domain
+    - Dedekind domain
+- definition:dedekind_zeta_function_of_a_number_field
+    - Dedekind zeta function of $K$
+- definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories
+    - defined at a family $(A_i, B_j)$
+    - value of $RF$ at $(A_i, B_j)$
+    - right derivable
+    - adapted for $RF$
+    - deployed for $RF$
+    - d\'eploy\'ee pour $RF$
+    - defined at a family $(A_i, B_j)$
+    - left derivable
+    - adapted for $LF$
+    - deployed for $LF$
+    - d\'eploy\'ee pour $LF$
+- definition:degree_of_a_field_extension
+    - degree
+    - $[L:K] := \dim_K(L)$
+    - finite field extension
+    - finite extension of $K$
+- definition:deligne_mumford_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes
+    - Deligne--Mumford stack over $S$
+- definition:deligne_torus
+    - Deligne torus
+    - \mathbb{S} := \mathrm{Res}_{\mathbb{C}/\mathbb{R}} \mathbb{G}_{m,\mathbb{C}}.
+- definition:dense_subset_of_a_topological_space
+    - dense in $X$
+- definition:derivative_of_a_real_valued_function_on_a_real_interval
+    - differentiable at $a$
+    - derivative of $f$ at $a$
+    - $f'(a)$
+- definition:derived_category_of_an_abelian_category
+    - derived category
+    - $D(\mathcal{A})$
+    - $q$
+    - $Q$
+    - $D^+(\calA)$
+    - $D^-(\calA)$
+    - $D^b(\calA)$
+    - $K^{\infty, +}(\calA)$
+    - $K^{\infty, -}(\calA)$
+    - $K^{\infty, b}(\calA)$
+    - $K^{\infty, \emptyset}(\calA)$
+    - $K^{?,??}(\calA)$
+- definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme
+    - $D^-(X,R)$
+    - $K \Lotimes R/\lambda^{n+1}$
+    - $D_c^b(X,R)$
+- definition:derived_inverse_limit_functor_of_towers_in_a_complete_abelian_category
+    - $n$th derived inverse limit functor
+    - $\lim^n A_i$
+    - $R^n \lim: \mathcal{A}^I \rightarrow \mathcal{A}$
+- definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor
+    - $M \otimes^L -$
+    - $- \otimes^L N$
+    - $M \otimes^L -: D^-(\calB) \to D(\calC)$
+    - $- \otimes^L N: D^-(\calA) \to D(\calC)$
+- definition:dg_category_over_a_ring
+    - dg-category
+    - $\mathrm{Hom}_\mathcal{C}(X,Y) = (\mathrm{Hom}^n_\mathcal{C}(X,Y), d)$
+    - \circ : \mathrm{Hom}_\mathcal{C}(Y,Z) \otimes_k \mathrm{Hom}_\mathcal{C}(X,Y) \to \mathrm{Hom}_\mathcal{C}(X,Z)
+    - $1_X \in \mathrm{Hom}_\mathcal{C}^0(X,X)$
+- definition:diagonal_functor_from_a_category_to_a_diagram_category_of_the_category
+    - diagonal functor
+    - \Delta: \mathcal{C} \to \mathcal{C}^{\mathcal{J}}
+- definition:diagonal_morphism_of_an_object_over_an_object_in_a_category
+    - diagonal morphism of $X$
+    - \Delta_X: X \to X \times X
+    - diagonal morphism of $f$
+    - \Delta_f = \Delta_X : X \to X \times_Z X
+- definition:diagonal_morphism_of_a_morphism_of_schemes
+    - diagonal morphism associated to $f$
+    - $$\Delta_f : X \to X \times_Y X$$
+- definition:diagram_in_a_category_indexed_by_a_small_category
+    - diagram of shape $I$ in $\mathcal{C}$
+    - $\{ D(i) \}_{i \in \mathrm{Ob}(I)}$
+    - system
+    - index category
+    - indexing category of the diagram $D$
+    - morphism of diagrams
+    - category of $I$-shaped diagrams in $\mathcal{C}$
+    - diagram category (of $I$-shaped diagrams in $\calC$)
+    - $\mathcal{C}^I$
+    - $[I, \calC]$
+    - $\operatorname{Fun}(I, \calC)$
+    - functor category of functors $I \to \calC$
+- definition:differential_on_a_bigraded_object_in_an_abelian_category
+    - differential of bidegree $(\delta_p, \delta_q)$ on $E$
+    - d: E_{p,q} \to E_{p+\delta_p, q+\delta_q}
+    - differential bigraded object
+    - $E_{p,q}$
+    - $(-r, r-1)$
+    - $E^{p,q}$
+    - $(r, 1-r)$
+- definition:dimension_of_a_scheme
+    - dimension at a point $x \in |X|$
+    - dimension of the scheme $X$
+    - \dim(X) := \sup_{x \in |X|} \dim_x(X).
+- definition:dimension_of_a_topological_space
+    - dimension of $X$
+    - Krull dimension of $X$
+    - $\dim(X)$
+- definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism
+    - pushforward/direct image sheaf
+    - $u^s \calF$
+    - u^s \mathcal{F} := \mathcal{F} \circ u : \calC^{\mathrm{op}} \to \mathcal{A}.
+    - direct image/pushforward functor
+    - u^s : \operatorname{Sh}(\calD,K;\mathcal{A}) \to \operatorname{Sh}(\calC,J;\mathcal{A}).
+    - $f_* \calF$
+    - direct image/pushforward of $\calF$ under $f$
+    - direct image/pushforward functor
+    - f_* : \operatorname{Sh}(\calD,K;\mathcal{A}) \to \operatorname{Sh}(\calC,J;\mathcal{A}).
+- definition:direct_image_of_a_sheaf_on_a_topological_space
+    - pushforward
+    - direct image presheaf
+    - $f_* \mathcal{F}$
+- definition:direct_summand_of_an_object_of_an_additive_category
+    - direct summand of $X$
+- definition:dirichlet_character_modulo_a_nonnegative_integer
+    - Dirichlet character modulo $k$
+- definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer
+    - $L$-function/series of $\chi$
+    - L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s},
+- definition:discrete_absolute_value_on_a_field
+    - discrete
+- definition:discrete_topological_space_of_a_set
+    - discrete topology on $X$
+    - $\mathcal{T}_{\mathrm{disc}}$
+    - discrete topological space
+- definition:discrete_valuation_on_a_field
+    - discrete
+- definition:discrete_valuation_ring
+    - discrete valuation ring (DVR)
+    - uniformizer of $R$
+    - (normalized) discrete valuation
+- definition:discriminant_of_a_general_weierstrass_equation
+    - discriminant of the general Weierstrass equation
+    - $\Delta \in R$
+- definition:division_ring
+    - division ring
+    - skew field
+    - sfield
+- definition:dolbeault_operators_on_forms_of_and_dolbeault_cohomology_groups_of_a_complex_manifold
+    - \partial: \Omega^{p,q}(X) \xrightarrow{d} \Omega^{p+q+1}(X; \bbC) \xrightarrow{\pi^{p+1,q}} \Omega^{p+1,q}(X), \quad \overline{\partial}: \Omega^{p,q}(X) \xrightarrow{d} \Omega^{p+q+1}(X; \bbC) \xrightarrow{\pi^{p,q+1}} \Omega^{p,q+1}(X)
+    - Dolbeault cohomology groups
+    - H^{p,q}_{\overline{\partial}}(X) := \frac{\ker \left(\overline{\partial} : \Omega^{p,q}(X) \to \Omega^{p,q+1}(X)\right)}{\operatorname{im} \left(\overline{\partial} : \Omega^{p,q-1}(X) \to \Omega^{p,q}(X)\right)}.
+- definition:domain_and_range_of_a_binary_relation
+    - domain of $R$
+    - \operatorname{dom}(R) = \{ x \in X \mid \exists y \in Y, x R y \}.
+    - range
+    - image
+    - \operatorname{ran}(R) = \{ y \in Y \mid \exists x \in X, x R y \}.
+- definition:double_complex_associated_to_biadditive_functor_and_chain_complexes
+    - $F(X_\bullet, Y_\bullet)$
+- definition:double_complex_of_objects_in_an_additive_category
+    - double complex
+    - bicomplex
+    - anti-commutativity relation
+- definition:downward_upward_closed_subcategory_of_a_category
+    - downward closed
+    - upward closed
+- definition:dual_bundle_of_a_C_k_vector_bundle
+    - dual bundle of $E$
+    - $(E^*, \pi_{E^*}, M)$
+    - local trivializations of $E^*$
+    - dual bundle of $E$
+    - $(E^*, \pi_{E^*}, M)$
+    - induced local trivializations of $E^*$
+- definition:dual_of_a_left_right_two_sided_module
+    - (right) dual module of $M$
+    - M^* = M^\vee \coloneq \operatorname{Hom}_R(M, R)
+    - (left) dual module of $M$
+    - {}^* M = {}^\vee M \coloneq \operatorname{Hom}_R(M, R)
+    - \,{}^*M = \operatorname{Hom}_R(M, R)
+    - left dual module
+    - dual of $M$
+    - $M^\vee$
+    - V^* = V^\vee \coloneq  \operatorname{Hom}_F(V, F)
+    - dual vector space of $V$
+- definition:effective_Q_divisor_on_a_scheme
+    - effective
+- definition:effective_weil_divisor_on_a_scheme
+    - effective divisor
+- definition:elementary_distinguished_square_in_the_category_of_somoth_schemes_over_a_scheme
+    - elementary distinguished square in the category $\Sm/S$
+- definition:elliptic_curve_over_a_ring_given_by_a_projective_weierstrass_equation_with_invertible_discriminant
+    - elliptic curve over $R$ given by a projective Weierstrass equation
+    - point at infinity
+    - elliptic curve over $R$ defined by the projective Weierstrass equation
+    - discriminant
+    - $\Delta = \Delta_{\calE}$
+    - $j$-invariant
+    - $j = j_{\calE}$
+    - elliptic curve over $R$ given by the projective Weierstrass equation
+- definition:elliptic_curve_over_a_scheme
+    - elliptic curve over $S$
+    - zero section
+- definition:ell_adic_sheaf_Z_ell_on_small_etale_site_of_a_scheme
+    - $\ell$-adic sheaf
+    - $\mathbb{Z}_\ell$
+    - \mathbb{Z}_\ell := \varprojlim_k \mathbb{Z}/\ell^k \mathbb{Z},
+    - $\ell$-adic sheaves
+- definition:ell_adic_tate_twist_sheaves_on_the_small_etale_site_of_a_scheme
+    - \mathbb{Z}_\ell(1) := \varprojlim_{k} \mu_{\ell^k},
+    - $d$-th Tate twist
+    - \mathbb{Z}_\ell(d) := \underbrace{\mathbb{Z}_\ell(1) \otimes_{\mathbb{Z}_\ell} \cdots \otimes_{\mathbb{Z}_\ell} \mathbb{Z}_\ell(1)}_{d \text{ times}}.
+- definition:embedding_dimension_of_a_noetherian_local_ring_and_a_regular_local_ring
+    - embedding dimension of $A$
+    - regular local ring
+- definition:end_coend_of_functor_from_opposite_and_category_to_category
+    - end of $S$
+    - \int_{c \in C} S(c,c) \quad \text{or} \quad \int_C S.
+    - coend of $S$
+    - \int^{c \in C} S(c,c) \quad \text{or} \quad \int^C S.
+- definition:enriched_functor_between_categories_enriched_in_a_
+    - $\mathcal{V}$-functor between $\mathcal{C}$ and $\mathcal{D}$
+    - enriched functor between $\calC$ and $\calD$
+- definition:equalizer_and_coequalizer_of_morphisms_in_a_category
+    - equalizer of $f$ and $g$
+    - equalizer diagram is exact
+    - coequalizer of $f$ and $g$
+    - coequalizer diagram is exact
+- definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation
+    - equivalence class of $x$
+    - $[x]$
+    - $[x]_{\sim}$
+    - [x] = \{ y \in X \mid x \sim y \}.
+    - quotient set of $X$ by $\sim$
+    - $X / {\sim}$
+- definition:equivalence_of_categories
+    - equivalence of categories
+    - (natural) inverses of each other
+- definition:equivalence_relation_on_a_set
+    - equivalence relation on a set $X$
+- definition:equivalent_absolute_values_on_a_field
+    - equivalent
+- definition:essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category
+    - essentially constant
+    - essentially constant
+    - value/limit/constant value of the Ind/Pro object
+    - object representing the Ind/Pro object
+- definition:essentially_small_category
+    - essentially small
+- definition:essentially_small_site
+    - essentially small site
+- definition:essential_image_of_a_functor_between_categories
+    - essential image of $F$
+    - \mathrm{EssIm}(F) = \{\, d \in \mathrm{Ob}(\mathcal{D}) \mid \exists c \in \mathrm{Ob}(\mathcal{C}), \, F(c) \cong d \,\},
+- definition:etale_algebra_over_a_commutative_ring
+    - étale $R$-algebra
+- definition:etale_cohomology_group_of_a_scheme_with_coefficients_in_an_abelian_group
+    - étale cohomology groups of $X$ with coefficients in $A$
+    - H^i_{\mathrm{\acute{e}t}}(X, A) := H^i_{\mathrm{\acute{e}t}}(X, \underline{A}).
+- definition:etale_cohomology_of_a_sheaf_of_abelian_groups_on_the_small_etale_site_of_a_schem
+    - étale cohomology groups of $X$ with coefficients in $\mathcal{F}$
+- definition:etale_fundamental_group_of_a_connected_scheme
+    - \'etale fundamental group of $S$ at a geometric point $\bars : \Spec(\Omega) \to S$
+    - \pioneet(S, \bars) := \varprojlim_{X \to S} \mathrm{Aut}_S(X),
+- definition:etale_morphism_of_schemes
+    - \'etale
+    - finite \'etale cover
+- definition:etale_O_X_algebra_over_a_scheme
+    - étale $X$-algebra
+- definition:euclidean_n_space
+    - $\mathbb{R}^n$
+    - \mathbb{R}^n = \{ (x_1, x_2, \dots, x_n) : x_i \in \mathbb{R} \text{ for all } i=1,\dots,n \}
+    - Euclidean n-space
+    - Euclidean norm
+    - \|x\| = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2}
+    - d(x,y) = \|x - y\|
+    - Euclidean topology
+- definition:exact_functor_between_abelian_categories
+    - left exact
+    - right exact
+    - exact
+- definition:exact_functor_between_triangulated_categories
+    - exact
+    - morphism between triangulated categories
+- definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category
+    - exact multifunctor of variance $\varepsilon$
+    - exact covariant multifunctor
+- definition:exact_sequence_of_morphisms_in_an_abelian_category
+    - exact at $X$
+- definition:examples_of_common_categories
+    - category of sets
+    - $\mathbf{Set}$
+    - $\mathrm{Set}$
+    - $\mathbf{Sets}$
+    - $(\mathbf{Set})$
+    - category of groups
+    - $\mathbf{Grp}$
+    - $\mathrm{Grp}$
+    - $\mathbf{Groups}$
+    - category of abelian groups
+    - $\mathbf{Ab}$
+    - $\mathrm{Ab}$
+    - $\mathbf{AbGrp}$
+    - category of (left/right/two-sided)$R$-modules
+    - $\mathbf{Mod}_R$
+    - $R\text{-Mod}$
+    - category of vector spaces over $k$
+    - $\mathbf{Vect}_k$
+    - $k\text{-Vect}$
+    - $\mathrm{Vect}(k)$
+    - category of topological spaces
+    - $\mathbf{Top}$
+    - $\mathrm{Top}$
+    - $\mathbf{TopSpaces}$
+    - category of rings
+    - $\mathbf{Ring}$
+    - $\mathrm{Ring}$
+    - category of commutative rings
+    - $\mathbf{CRing}$
+    - $\mathrm{CRing}$
+    - $\mathbf{CommRing}$
+    - category of fields
+    - $\mathbf{Field}$
+    - $\mathrm{Field}$
+    - $\mathbf{Fields}$
+    - category of monoids
+    - $\mathbf{Mon}$
+    - $\mathrm{Mon}$
+    - $\mathbf{Monoids}$
+    - category of semigroups
+    - $\mathbf{SemiGrp}$
+    - $\mathrm{SGrp}$
+    - $\mathbf{Semigroups}$
+    - category of sheaves of sets on $X$
+    - $\mathbf{Sh}(X)$
+    - $\mathrm{Sh}(X)$
+    - category of small categories
+    - $\mathbf{Cat}$
+    - $\mathrm{Cat}$
+    - $\mathbf{Categories}$
+    - opposite category
+    - $\mathcal{C}^{\mathrm{op}}$
+    - $\mathcal{C}^{op}$
+    - functor category
+    - $[\mathcal{C},\mathcal{D}]$
+    - $\mathrm{Fun}(\mathcal{C},\mathcal{D})$
+- definition:exhaustive_separated_filtrations_on_an_abelian_category
+    - exhaustive
+    - separated
+    - exhaustive
+    - separated
+- definition:exponential_object_in_a_category_evaluation_morphism_transpose_currying_of_a_morphism_on_a_product_object
+    - exponential object from $Y$ to $Z$
+    - $Z^Y$
+    - $[Y, Z]$
+    - $\underline{\hom}(Y, Z)$
+    - \text{ev}: Z^Y \times Y \to Z
+    - evaluation morphism
+    - $\tilde{f}: X \to Z^Y$
+    - transpose
+    - currying of $f$
+- definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value
+    - extended metric induced by the extended norm
+    - d : V \times V \to [0, \infty]
+- definition:extended_metric_on_a_set
+    - extended metric
+    - extended metric space
+    - metric
+    - metric space
+- definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value
+    - extended norm on $V$
+    - extended normed (vector) space
+    - norm
+    - normed (vector) space
+- definition:extension_by_zero_of_a_sheaf_on_a_topological_space_under_open_immersion
+    - extension by zero functor
+    - j_! : \mathrm{Sh}(U) \to \mathrm{Sh}(X)
+- definition:extension_by_zero_of_a_sheaf_on_the_small_etale_site_on_a_scheme_under_open_immersion
+    - extension by zero functor
+    - j_! : \mathrm{Sh}(\mathit{Et}/U) \to \mathrm{Sh}(\mathit{Et}/X)
+- definition:extension_of_a_field
+    - extension field (or just an extension) of $K$
+    - $L/K$
+    - field extension
+    - subfield of $L$
+- definition:extension_of_a_ring
+    - extension ring of $R$
+    - extension of rings
+- definition:extension_of_scalars_for_modules_along_ring_homomorphisms
+    - extension of scalars
+    - base change
+    - base change functor
+    - extension of scalars functor
+    - induction functor
+    - $f^*$
+    - $S \otimes_R -$
+    - $- \otimes_R S$
+    - $\operatorname{Ind}_R^S$
+    - base change of the algebra $A$ along $f$
+    - A_S := S \otimes_R A
+    - $f^*: \mathbf{Alg}_R \to \mathbf{Ring}_S$
+    - $f^*: \mathbf{Ring}_R \to \mathbf{Ring}_S$
+- definition:extension_of_scalars_of_a_scheme_of_prime_characteristic_by_frobenius
+    - extension of scalars of $X$ by $p^n$th power Frobenius
+    - X^{(p^n)/S} = X^{(p^n)} \coloneq X \times_S S_{\Frob, p^n}
+    - extension of scalars of $X$ by Frobenius
+    - twist of $X$ by Frobenius
+    - $X^{(1/p^n)/S} = X^{(1/p^n)}$
+- definition:exterior_derivative_on_smooth_k_forms_on_a_smooth_manifold
+    - exterior derivative
+    - d: \Omega^m(U) \to \Omega^{m+1}(U)
+- definition:kth_exterior_power_of_vector_bundle
+    - $l$th exterior power of $E$
+    - $\bigwedge^l E$
+- definition:vector_bundle
+    - real vector bundle
+    - total space
+    - base space
+    - bundle projection
+    - $k$th exterior power of $V$
+    - $\bigwedge^k V$
+- definition:ext_functors_of_bimodules_of_rings
+    - Ext of $M$ and $N$
+    - $\Ext^n(M,N)$
+    - $\Ext_R^n(M,N)$
+    - $\Ext_R^n({}_{R} M_S, {}_{R} N_T)$
+    - ${}_{S}(\Ext_R^n(M,N))_{T}$
+- definition:face_of_convex_cone_in_a_finite_dimensional_real_vector_space
+    - face of $\sigma$
+- definition:faithfully_flat_left_right_module_over_a_ring
+    - faithfully flat left/right $R$-module
+- definition:faithfully_flat_morphism_of_schemes
+    - faithfully flat
+    - flat
+    - surjective
+    - flat
+    - surjective
+- definition:faithful_representation_of_an_affine_algebraic_group_scheme_over_a_scheme
+    - faithful
+- definition:fan_in_a_finite_dimensional_real_vector_space
+    - fan in $N_{\mathbb{R}}$
+- definition:fan_of_affine_space
+    - fan of affine space $\mathbb{A}^n$
+    - $\Sigma_{\mathbb{A}^n}$
+- definition:fan_of_a_hirzebruch_surface
+    - fan of a Hirzebruch surface $\mathcal{H}_r$
+- definition:fan_of_projective_space
+    - fan of projective space $\mathbb{P}^n$
+    - $\Sigma_{\mathbb{P}^n}$
+- definition:fan_of_torus
+    - fan of the torus $\bbG_m^n$
+    - $\Sigma_{\bbG_m^n}$
+- definition:fiber_functor_on_a_pre_tannakian_category_and_neutral_tannakian_category_over_a_commutative_ring
+    - Tannakian category over $R$
+    - fiber functor over $k$
+    - neutral Tannakian category over $R$
+    - fiber functor over $R$
+- definition:fiber_of_a_map_of_topological_spaces_over_a_point
+    - fiber of $f$ over $y$
+    - $\mathrm{Fib}_f(y)$
+    - $X_y$
+- definition:fiber_of_a_morphism_of_schemes_at_a_point
+    - fiber of $f$ at $y$
+    - $X_y$
+- definition:fibrant_cofibrant_object_in_a_model_category
+    - fibrant
+    - cofibrant
+- definition:field
+    - field
+- definition:field_automorphism
+    - field automorphism of $L$
+- definition:field_generated_by_elements
+    - field generated by $S$ over $K$
+    - $K(S)$
+    - $K(x_1, \dots, x_n)$
+    - simple field extension
+- definition:field_homomorphism
+    - field homomorphism
+    - $K$ embeds into $L$
+    - isomorphism
+    - $\operatorname{Hom}(K, L)$
+    - $F$-embedding of $K$ into $L$
+    - $\operatorname{Hom}_F(K, L)$
+- definition:field_of_complex_numbers
+    - field of complex numbers
+    - $\mathbb{C}$
+- definition:field_of_fractions_of_an_integral_domain
+    - $\tfrac{a}{b}$
+    - field of fractions of $R$
+    - $\operatorname{Frac}(R)$
+- definition:field_of_real_numbers
+    - field of real numbers
+    - $\mathbb{R}$
+- definition:filtered_cofiltered_category
+    - filtered category
+    - Cofiltered category
+- definition:filtered_graded_object_in_an_abelian_category
+    - compatible with the grading
+    - filtered graded object
+- definition:filtration_on_an_object_of_an_abelian_category
+    - filtration $F$ on $M$
+    - increasing filtration
+    - ascending filtration
+    - \dots \hookrightarrow F_{p-1}M \hookrightarrow F_pM \hookrightarrow F_{p+1}M \hookrightarrow \dots \hookrightarrow M.
+    - decreasing filtration
+    - descending filtration
+    - \dots \hookrightarrow F^{p+1}M \hookrightarrow F^pM \hookrightarrow F^{p-1}M \hookrightarrow \dots \hookrightarrow M.
+    - filtered object
+- definition:finitely_generated_algebra_over_a_not_necessarily_commutative_ring
+    - finitely generated $R$-algebra
+    - of finite type
+- definition:finitely_generated_field_extension
+    - finitely generated
+- definition:finitely_generated_modules_over_rings
+    - finitely generated
+    - finitely generated
+- definition:finitely_presented_algebra_over_a_not_necessarily_commutative_ring
+    - finitely presented
+- definition:finite_algebra_over_a_ring
+    - finite $B$-algebra
+- definition:finite_index_subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme
+    - finite index subgroup scheme
+- definition:finite_morphism_of_schemes
+    - finite morphism
+- definition:finite_ordinal
+    - finite ordinal
+    - natural number
+    - infinite ordinals
+    - transfinite ordinals
+- definition:finite_type_morphism_of_schemes
+    - finite type morphism
+    - finite type scheme over $Y$
+    - finite type $Y$-scheme
+    - $Y$-scheme of finite type
+- definition:first_and_second_countable_topological_space
+    - first countable
+    - second countable
+- definition:first_quadrant_spectral_sequence
+    - first quadrant spectral sequence
+    - first quadrant spectral sequence
+- definition:fixed_point_set_of_a_group_acting_on_a_set
+    - fixed point set of $H$ in $X$
+    - X^H = \{ x \in X : h \cdot x = x \text{ for all } h \in H \}
+- definition:flat_algebra_over_a_ring
+    - flat over $R$
+    - flat
+- definition:flat_dimension_of_objects_of_abelian_categories_with_
+    - Tor dimension of $M$
+    - $\mathrm{tdim}(M)$
+    - $\mathrm{td}(M)$
+    - Tor dimension of $N$
+    - $\mathrm{tdim}(N)$
+    - $\mathrm{td}(N)$
+- definition:flat_left_right_module_over_a_ring
+    - flat (with respect to the left $R$-module structure)
+    - flat (with respect to the right $R$-module structure)
+- definition:flat_morphism_of_schemes
+    - flat at $x$
+    - flat
+    - faithfully flat
+- definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor
+    - flat (with respect to $F$ on the left)
+    - flat (with respect to $F$ on the right)
+- definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor
+    - flat (left-)resolution of an object $F \in \mathcal{A}$
+    - flat (left-)resolution of an object $G \in \mathcal{B}$
+    - flat right-resolution
+- definition:flat_ring_homomorphism
+    - flat as a left module
+    - flat (as a left module)
+    - flat as a right module
+    - flat (as a right module)
+    - flatness of $R$-algebras
+    - flat over $R$
+    - faithfully flat (as a left/right $R$-module)
+- definition:forgetful_functor_between_categories
+    - forgetful functor
+- definition:fourier_transform_functor_on_the_cohomologically_bounded_derived_category_of_ell_adic_sheaves_on_the_additive_group_over_a_finite_field_associated_to_a_character_on_the_additive_group_of_the_finite_field
+    - Fourier transform functor associated to $\psi$
+    - Deligne's (arithmetic) Fourier transform associated to $\psi$
+    - T_\psi: \Dbc(\bbG_a, \Qellbar) \to \Dbc(\bbG_a, \Qellbar)
+- definition:fourier_transform_of_an_L_1_function_on_R
+    - (forward) Fourier transform of $f$
+    - inverse Fourier transform of $f$
+    - $\calF[f](t) = \hat{f}(t): \bbR \to \bbC$
+    - $\calF^{-1}[g](t): \bbR \to \bbC$
+- definition:fourier_transform_of_an_L_2_function
+    - Fourier transform
+    - $\hat{f}$
+- definition:fourier_transform_of_a_function_on_a_locally_compact_abelian_group
+    - Fourier transform
+    - $\calF[f] = \hat{f} : \widehat{G} \to \mathbb{C}$
+    - inverse Fourier transform
+    - $\calF^{-1}[g]: G \to \bbC$
+- definition:free_abelian_group_generated_by_a_set
+    - free abelian group generated by $S$
+    - $\mathbb{Z}[S]$
+    - \mathbb{Z}^{(S)} := \bigoplus_{s \in S} \mathbb{Z} s
+- definition:free_and_locally_free_modules_on_a_ringed_site
+    - free sheaf of $\mathcal{O}$-modules of rank $I$
+    - free sheaf
+    - $\mathcal{O}^{\oplus n}$
+    - locally free of rank $n$ on $U$
+    - algebraic vector bundle of rank $n$
+    - (algebraic) line bundle
+    - invertible sheaf
+- definition:free_associative_algebra_over_a_ring
+    - free associative $R$-algebra on the variables $\{x_i\}_{i \in I}$
+    - $R\langle x_i \mid i \in I \rangle$
+    - $R\langle x_i  \rangle_{i \in I}$
+    - $R\langle y_1,\ldots,y_n \rangle$
+- definition:free_group_generated_by_a_set
+    - free group generated by $S$
+    - $F(S)$
+    - $\langle S \rangle$
+- definition:free_simplicial_abelian_group_of_a_simplicial_set
+    - free simplicial abelian group
+    - $\bbZ[X]$
+    - $\bbZ(X)$
+- definition:frobenius_endomorphism_on_a_scheme_over_a_scheme_with_invertible_finite_order_absolute_frobenius_morphism
+    - $p^n$th power Frobenius endomorphism on $X$
+    - $\Frob_{X/S,p^n}$
+    - $\Frob_{X,p^n}$
+    - $\Frob_{X/S}$
+    - $\Frob_{X}$
+- definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field
+    - Frobenius trace function of $M$ over $\Fqn$
+    - t_M(x;\Fqn) = \sum_{i \in \bbZ} (-1)^i \operatorname{Tr}(\operatorname{Frob}_{q^n}|H^i(M)_{\barx} )
+- definition:full_and_faithful_functor_between_locally_small_categories
+    - full
+    - faithful
+    - fully faithful
+- definition:full_subcategory_of_a_category
+    - full subcategory
+- definition:function_field_over_a_field
+    - function field over $k$
+    - function field in $n$ variables over $k$
+    - $k(x_1,\ldots,x_n)$
+    - function field of one variable over $k$
+    - algebraic function field over $k$
+    - $k(x)$
+- definition:function_of_sets
+    - map
+    - function
+    - $f : X \to Y$
+    - domain
+    - codomain of $f$
+    - category of sets
+    - $\mathrm{Set}$
+    - $\mathbf{Set}$
+    - $\mathrm{Sets}$
+    - $\mathbf{Sets}$
+    - $(\mathrm{Set})$
+    - $(\mathbf{Set})$
+    - $(\mathrm{Sets})$
+    - $(\mathbf{Sets})$
+- definition:functor_between_categories
+    - functor $F: \calC \to \calD$ (from $\mathcal{C}$ to $\mathcal{D}$)
+    - covariant functors
+    - contravariant functor from $\calC$ to $\calD$
+- definition:functor_between_infty_categories
+    - functor of quasi-categories from $C$ to $D$
+- definition:functor_preserving_limit_colimit_of_a_diagram
+    - preserves the limit of $D$
+    - preserves the colimit of $D$
+- definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories
+    - $F$-acyclic
+    - $F$-acyclic
+- definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories
+    - An (left) $F$-acyclic resolution
+    - An (right) $F$-acyclic resolution
+- definition:galois_extension_of_fields
+    - Galois extension
+    - Galois group
+    - $\Gal(L/K)$
+- definition:galois_morphism_of_schemes
+    - Galois
+    - Galois cover/Galois covering
+    - Galois $G$-cover/morphism
+    - finite Galois covering
+    - finite Galois cover of $Y$
+- definition:gamma_function
+    - Gamma function
+    - $\Gamma : \{ z \in \mathbb{C} : \Re(z) > 0 \} \to \mathbb{C}$
+- definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects
+    - $L_n^{II}F(A, B) = L_n^{II}(F(A, -))(B)$
+    - $R_{II}^{n}F(A, B) = R_{II}^{n}(F(A, -))(B)$
+    - $L_n^{I}F(A, B) = L_n^{I}(F(-, B))(A)$
+    - $R_{I}^{n}F(A, B) = R_{I}^{n}(F(-, B))(A)$
+    - $\Tor_n^{II}(A,B)$
+    - $\Tor_n^{I}(A,B)$
+    - Tor objects
+    - $\mathrm{Ext}_n^{II}(A,B)$
+    - $\mathrm{Ext}_n^{I}(A,B)$
+    - Ext objects
+- definition:general_linear_group_over_a_scheme
+    - general linear group over $S$
+    - $\operatorname{GL}_{n,S}$
+    - $\operatorname{GL}_n/S$
+    - $\operatorname{GL}_n$
+- definition:general_linear_group_scheme_of_a_locally_free_O_S_module_on_a_scheme
+    - general linear group scheme associated to $\mathcal{E}$
+    - $\mathrm{GL}(\mathcal{E})$
+- definition:generator_of_a_category
+    - generator
+    - separator
+    - generating family
+- definition:generic_point_of_a_topological_space
+    - generic point of $X$
+    - generic point of $Z$
+- definition:geometrically_connected_scheme_over_a_field
+    - geometrically connected over $k$
+- definition:geometric_fiber_of_a_morphism_of_schemes_at_a_geometric_point
+    - geometric fiber of $f$ at $\bar{y}$
+    - $X_{\bar{y}}$
+- definition:geometric_frobenius_action_of_a_derived_object_on_a_scheme_of_characteristic_p_at_a_stalk
+    - \Frob_{\barx}: K_{\barx} \to K_{\barx}
+    - geometric Frobenius action on $K$ at the stalk at $\barx$
+    - $\Frob_{\barx, q}$
+    - $\Frob_{q}$
+- definition:geometric_morphism_between_topoi
+    - geometric morphism from $\mathcal{F}$ to $\mathcal{E}$
+    - $(f^*, f_*)$
+    - $f^*$
+    - inverse image functor
+    - $f_*$
+    - direct image functor
+    - morphism of topoi
+- definition:geometric_point_of_a_scheme
+    - geometric point of $S$
+- definition:geometric_property_of_a_scheme_over_a_field
+    - geometric property of a $k$-scheme
+    - property "holding geometrically"
+- definition:geometric_realization_of_a_simplicial_category_as_a_topological_category
+    - geometric realization of $\mathcal{C}$
+    - $|\mathcal{C}|$
+- definition:geometric_realization_of_a_simplicial_set
+    - geometric realization of $S$
+    - $|S|$
+- definition:geometric_simplex_of_independent_points_in_a_real_vector_space
+    - $k$-simplex in topology
+    - geometric $k$-simplex
+    - [v_0, v_1, \dots, v_k] := \left\{ \sum_{i=0}^k t_i v_i \ \middle| \ t_i \ge 0, \ \sum_{i=0}^k t_i = 1 \right\}.
+    - standard topological $n$-simplex
+    - $\Delta^n$
+    - $|\Delta^n|$
+- definition:geometric_vector_bundle_over_a_scheme
+    - geometric vector bundle of rank $n$ on $S$
+    - geometric line bundle on $S$
+- definition:global_field
+    - global field
+    - number field
+    - global function field
+- definition:graded_module_of_rings
+    - graded $R$-$S$-bimodule
+    - homogeneous element of degree $n$
+- definition:graded_object_in_an_abelian_category
+    - graded object in $\mathcal{A}$
+    - $M = \{M_n\}_{n \in \mathbb{Z}}$
+- definition:graded_ring_by_a_monoid
+    - $\Gamma$-graded ring
+    - R_\gamma \cdot R_\delta \subseteq R_{\gamma + \delta} \quad \text{for all } \gamma, \delta \in \Gamma.
+    - homogeneous elements of degree $\gamma$
+    - homogeneous components of $r$
+- definition:graded_subobject_of_a_graded_object_of_an_abelian_category
+    - graded subobject of $M$
+    - \iota_n: N_n \hookrightarrow M_n
+- definition:grothendiecks_additional_axioms_for_abelian_categories
+    - Ab1
+    - Ab2
+    - Ab2\textsuperscript{*}
+    - AB3
+    - AB4
+    - AB5
+    - Grothendieck category
+    - AB6
+    - AB3\textsuperscript{*}
+    - AB4\textsuperscript{*}
+    - AB5\textsuperscript{*}
+    - AB3
+    - AB4
+    - AB5
+    - Grothendieck category
+    - AB6
+    - AB3\textsuperscript{*}
+    - AB4\textsuperscript{*}
+    - AB5\textsuperscript{*}
+- definition:grothendieck_topology_generated_by_a_pretopology
+    - Grothendieck topology generated by $K$
+    - $J_K$
+- definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family
+    - Grothendieck topology
+    - covering sieves
+    - covering families
+    - Grothendieck pretopology
+    - site
+    - topologically generating family
+    - $\mathscr{U}$-site
+    - Grothendieck topology on $C$
+    - coverings of $U$
+    - Grothendieck topology on $\calC$
+    - $J(U)$
+    - covering sieve of $U$
+    - topology
+    - site
+    - covering family of $U$ (with respect to the site/topology)
+    - cover of $U$ (with respect to the site/topology)
+    - topologically generating family of the site/topology
+    - generating family/collection of the site/topology
+    - topologically generating family
+    - generating family/collection
+    - $\mathscr{U}$-site
+    - $\mathscr{U}$-small
+    - small site
+    - locally small site
+- definition:grothendieck_universe
+    - Grothendieck universe
+    - universe
+    - $U$-small
+    - $U$-set
+- definition:group
+    - group
+    - $e \in G$
+    - $g^{-1} \in G$
+    - identity element of $G$
+    - inverse of $g$
+    - abelian group
+    - commutative group
+    - abelian
+    - commutative
+- definition:groupoid
+    - groupoid
+    - set of objects
+    - set of arrows
+    - Source
+    - Target
+    - Identity
+    - Composition
+    - G_1 \times_{s, G_0, t} G_1 := \{ (g, h) \in G_1 \times G_1 \mid s(g) = t(h) \}
+    - Inverse
+- definition:groupoid_object_in_a_category
+    - groupoid object in $\mathcal{C}$
+    - Source
+    - Target
+    - Identity
+    - Composition
+    - Inverse
+- definition:group_homomorphism
+    - group homomorphism
+    - category of groups
+    - group isomorphism
+- definition:group_object_in_a_category_with_a_final_object
+    - group object in $\mathcal{C}$
+    - inverse morphism
+- definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field
+    - group of adelic points of $G$
+    - $G(\mathbb{A}_K)$
+    - group of adelic points of $G$ outside $S$
+    - $G(\mathbb{A}_{K,S})$
+    - group of finite adelic points
+    - $G(\mathbb{A}_{K,{\mathrm{fin}}}) = G(\mathbb{A}_K^{\mathrm{fin}})$
+    - group of archimedean adelic points
+    - $G(K_\infty)$
+- definition:G_delta_set_and_F_sigma_set_of_a_topological_space
+    - $G_\delta$ set
+    - A = \bigcap_{n \in \mathbb{N}} U_n
+    - $F_\sigma$ set
+    - A = \bigcup_{n \in \mathbb{N}} F_n
+- definition:haar_measure_on_a_locally_compact_group
+    - left Haar measure
+    - right Haar measure
+    - two-sidedinvariant
+    - Haar measure
+- definition:harmonic_forms_on_a_smooth_oriented_riemannian_manifold
+    - harmonic
+    - \mathcal{H}^k(M) := \{ \omega \in \Omega^k(M) : \Delta \omega = 0 \}.
+- definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor
+    - $\mathcal{A}$ has enough flat objects with respect to $\otimes$
+    - $\mathcal{B}$ has enough flat objects with respect to $\otimes$
+- definition:has_enough_injectives_or_projectives_for_an_abelian_category
+    - have enough injectives
+    - have enough projectives
+- definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category
+    - has enough objects of class $\calX$ on the left (resp. on the right)
+- definition:has_enough_points_for_a_topos
+    - have enough points
+- definition:has_geometrically_connected_fibers_for_a_morphism_of_schemes
+    - $f$ has geometrically connected fibers
+- definition:hecke_character_of_a_number_field
+    - Hecke character
+    - Größencharacter
+    - $\infty$-type
+    - unitary Hecke character
+- definition:hecke_L_function_of_a_hecke_character_of_a_number_field
+    - Hecke $L$-function of $\chi$
+    - L(s, \chi) = \sum_{\mathfrak{a}} \chi(x_\mathfrak{a})N(\mathfrak{a})^{-s}
+- definition:henselization_of_a_local_ring
+    - henselization of $R$
+- definition:hereditarily_finite_sets
+    - hereditarily finite set
+    - $V_\omega$
+- definition:hermitian_form_on_a_sheaf_of_rings_with_involution_on_a_site
+    - hermitian form on $\mathcal{E}$
+- definition:hermitian_metric_on_a_smooth_manifold_of_even_real_dimension
+    - Hermitian metric on $M$
+- definition:hermitian_symmetric_domain
+    - Hermitian symmetric domain
+- definition:hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory
+    - hierarchy of Grothendieck universes
+- definition:hilbert_space
+    - Hilbert space
+- definition:hirzebruch_surfaces_as_toric_varieties
+    - Hirzebruch surface
+- definition:hirzebruch_surface_over_a_field
+    - Hirzebruch surface of degree $n$
+    - $\mathbb{F}_n$
+    - $\Sigma_n$
+    - \mathbb{F}_n = \mathbb{P}(\mathcal{O}_{\mathbb{P}^1} \oplus \mathcal{O}_{\mathbb{P}^1}(n)) = \operatorname{Proj}\left( \operatorname{Sym}^\bullet(\mathcal{O}_{\mathbb{P}^1} \oplus \mathcal{O}_{\mathbb{P}^1}(n)) \right).
+- definition:hodge_filtration_on_a_free_abelian_group_of_finite_rank_hodge_filtration_associated_to_a_hodge_structure
+    - Hodge filtration of weight $k$ on $L$
+    - $$L^{p,q} := F^p \cap \overline{F^q}$$
+    - (pure) Hodge structure associated to the Hodge filtration
+    - Hodge filtration associated to the Hodge structure
+    - F^p := \bigoplus_{r \ge p} L^{r,k-r}.
+- definition:hodge_star_operator_of_a_smooth_oriented_riemannian_manifold
+    - Hodge star operator
+    - \star : \Omega^k(M) \to \Omega^{n-k}(M)
+- definition_holomorphic_and_anti_holomorphic_tangent_bundles_of_a_complex_manifold
+    - $T^{1,0} X := \ker (J - i \,\mathrm{id})$
+    - holomorphic tangent bundle
+    - $T^{0,1} X := \ker (J + i \,\mathrm{id})$
+    - anti-holomorphic tangent bundle
+    - $T^{1,0*} X$
+    - holomorphic cotangent bundle
+    - $T^{0,1*} X$
+    - anti-holomorphic cotangent bundle
+- definition:holomorphic_function_from_a_subset_of_Cn_to_Cm
+    - holomorphic/(complex) analytic/complex differentiable function at a point $a \in U$
+    - complex derivative
+    - complex Fréchet derivative
+    - complex derivative of $f$ at $a$
+    - $f'(z_0)$
+    - complex derivative of $f$ at $z_0$
+    - holomorphic/analytic on $U$
+    - entire
+- definition:holomorphic_morphism_of_sheaves_of_O_X_modules_on_a_complex_analytic_space
+    - holomorphic morphism
+- definition:holomorphism_and_biholomoprhism_of_complex_manifolds
+    - holomorphism of complex manifolds
+    - biholomorphism of complex manifolds
+- definition:homeomorphism_of_topological_spaces
+    - homeomorphism
+    - homeomorphic
+- definition:homogeneous_ideal_of_a_graded_ring_by_a_monoid
+    - homogeneous
+    - graded
+- definition:homogeneous_prime_and_maximal_ideal_of_a_graded_ring_by_a_monoid
+    - homogeneous prime ideal of $R$
+    - homogeneous maximal ideal of $R$
+- definition:homological_cohomological_delta_functor_between_abelian_categories
+    - homological $\delta$ functor from $\mathcal{A}$ to $\mathcal{B}$
+    - connecting morphism
+    - \delta_n(A',A,A'') : T_n(A'') \to T_{n-1}(A'
+    - cohomological $\delta$-functor from $\mathcal{A}$ to $\mathcal{B}$
+    - connecting morphisms
+    - morphism of (homological) $\delta$-functors
+- definition:homological_cohomological_dimension_of_objects_in_abelian_categories_with_enough_projectives_injectives
+    - homological/projective dimension of $M$
+    - $\mathrm{hdim}(M)$
+    - $\mathrm{hd}(M)$
+    - cohomological/injective dimension of $M$
+    - $\mathrm{cdim}(M)$
+    - $\mathrm{cd}(M)$
+- definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category
+    - cohomology object in degree $i$
+    - H^i(K^\bullet) := \ker(d^i) / \operatorname{im}(d^{i-1})
+    - homology object in degree $i$
+    - H_i(K_\bullet) := \ker(d_i) / \operatorname{im}(d_{i+1})
+    - cohomology object in degree $i$
+    - H^i(K^\bullet) := Z^i(K) / B^i(K) = \ker(d^i) / \operatorname{im}(d^{i-1}).
+    - $H^i(f^\bullet): H^i(K^\bullet) \to H^i(L^\bullet)$
+    - homology object in degree $i$
+    - H_i(K_\bullet) := Z_i(K) / B_i(K). = \ker(d_i) / \operatorname{im}(d_{i+1}).
+    - $H_i(f_\bullet): H_i(K_\bullet) \to H_i(L_\bullet)$
+- definition:homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category
+    - homology
+    - cohomology
+    - $H(E, d)$
+    - homological bidegree
+    - H_{p,q}(E, d) = \frac{\ker(d: E_{p,q} \to E_{p-r, q+r-1})}{\text{im}(d: E_{p+r, q-r+1} \to E_{p,q})}.
+    - cohomological bidegree
+    - H^{p,q}(E, d) = \frac{\ker(d: E^{p,q} \to E^{p+r, q-r+1})}{\text{im}(d: E^{p-r, q+r-1} \to E^{p,q})}.
+- definition:homomorphism_of_algebraic_groups_over_a_scheme
+    - homomorphism of algebraic groups
+    - isomorphism of algebraic groups (over $S$)
+    - isomorphic $S$-algebraic groups
+- definition:homomorphism_of_modules_over_a_ring
+    - $R$-$S$-bimodule homomorphism
+    - $R$-$S$-linear
+    - left/right/two-sided $R$-module homomorphism
+    - $R$-linear
+    - left/right/two-sided module homomorphism
+    - $R$-linear
+- definition:homotopy_category_of_a_model_category
+    - homotopy category
+    - homotopy category of $\mathcal{M}$
+    - $\mathrm{Ho}(\mathcal{M})$
+    - $\mathrm{h}(\calM)$
+- definition:homotopy_category_of_a_simplicial_category
+    - homotopy category of $\calC$
+    - $\mathrm{h}\calC$
+- definition:homotopy_category_of_a_simplicial_set
+    - homotopy category
+    - $\mathrm{h}S$
+- definition:homotopy_category_of_chain_complexes_of_an_additive_category
+    - homotopy category
+    - $K(\mathcal{A})$
+    - $K^+(\calA)$
+    - $K^-(\calA)$
+    - $K^b(\calA)$
+    - $K^{\infty, +}(\calA)$
+    - $K^{\infty, -}(\calA)$
+    - $K^{\infty, b}(\calA)$
+    - $K^{\infty, \emptyset}(\calA)$
+    - $K^{?,??}(\calA)$
+    - homotopy category
+    - $K(\mathcal{A})$
+- definition:homotopy_category_of_the_category_of_simplicial_sets
+    - homotopy category of (the category of) simplicial sets
+    - $\mathrm{Ho}(\mathbf{s}\Sets)$
+    - $\mathrm{h}(\Sets_\Delta)$
+- definition:homotopy_category_of_topological_spaces
+    - homotopy category of topological spaces
+    - $\text{hTop}$
+- definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset
+    - homotopy class relative to $K$
+    - homotopy class of maps relative to $K$
+    - $[f]_K$
+    - homotopy class
+    - homotopy class of maps
+    - $[f]$
+    - $[X,Y]$
+    - homotopy class relative to $K$
+    - homotopy class relative to $K$
+    - $[f]_K$
+    - homotopy class
+    - homotopy class
+    - $[f]$
+    - $[(X,x_0),(Y,y_0)]$
+    - $[X,Y]$
+- definition:homotopy_equivalence_between_topological_spaces
+    - homotopy equivalence relative to $K$
+    - homotopy inverse relative to $K$ of $f$
+    - homotopy equivalent relative to $K$
+    - $(X,K) \simeq (Y,f(K))$ rel $K$
+    - homotopy eqiuvalence
+    - homotopy inverse of $f$
+    - homotopy equivalent
+    - $X \simeq Y$
+    - homotopy equivalence relative to $K$
+    - homotopy inverse relative to $K$ of $f$
+    - homotopy equivalent relative to $K$
+    - $(X,K) \simeq (Y,f(K))$ rel $K$
+    - homotopy equivalence
+    - homotopy inverse of $f$
+    - homotopy equivalent
+    - $(X,x_0) \simeq (Y,y_0)$
+- definition:homotopy_groups_of_a_kan_simplicial_set
+    - $n$-th homotopy group of $X$ at $x$
+    - $\pi_n(X,x)$
+- definition:homotopy_groups_of_a_pointed_topological_space
+    - $n$-th homotopy group of $X$ at $x_0$
+    - $\pi_n(X,x_0)$
+    - fundamental group of $(X,x_0)$
+- definition:homotopy_groups_of_maps_from_a_smooth_scheme_to_a_sheaf_of_sets_on_the_nisnevich_site_with_respect_to_a_base_point_over_a_noetherian_scheme_of_finite_dimension
+    - homotopy groups
+    - $\pi_{i,U}^{\bbA^1}(X,x)$
+- definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset
+    - homotopy between two maps $f,g \in C(X,Y)$ relative to $K$
+    - homotopic relative to $K$
+    - $f \simeq g \text{ rel } K$
+    - homotopy between two maps $f,g \in C(X,Y)$
+    - $f \simeq g$
+    - homotopy of based maps $f,g \in C_*(X,Y)$ relative to $K$
+    - based homotopic relative to $K$
+    - $f \simeq g \text{ rel } K$
+    - homotopy of based maps $f,g \in C_*(X,Y)$
+    - homotopy of based maps
+    - based homotopy
+    - $f \simeq g$
+- definition:hom_of_left_right_bi_modules_of_rings
+    - homomorphism group of left $R$-modules from $M$ to $N$
+    - \Hom(M,N) = \mathrm{Hom}_R(M, N) := \{ f : M \to N \mid f \text{ is a left $R$-module homomorphism} \}.
+    - homomorphism group of right $R$-modules from $M$ to $N$
+    - \Hom(M,N) = \mathrm{Hom}_R(M, N) := \{ f : M \to N \mid f \text{ is a right $R$-module homomorphism} \}.
+    - homomorphism group of $R$-$S$-bimodules from $M$ to $N$
+    - \Hom(M,N) = \Hom_{R-S}(M,N) \coloneq \{f: M \to N | f \text{ is a } R-S\text{-bimodule homomorphism} \}
+    - abelian group
+    - pointwise addition
+    - $0$
+    - $-f$
+- definition:hopf_algebra_over_a_commutative_ring
+    - Hopf algebra over $R$
+    - antipode
+- definition:hopf_algebroid_over_a_commutative_ring
+    - Hopf algebroid over $R$
+    - Left and Right Units
+    - Counit
+    - Comultiplication
+    - Antipode
+- definition:horn_of_the_nth_standard_simplex
+    - $i$th horn of the $n$th standard simplex
+    - $\Lambda^i[n]$
+- definition:hyperbolic_plane_over_a_commutative_ring
+    - hyperbolic plane
+- definition:ideal_generated_by_a_subset_of_a_ring
+    - left ideal generated by $X$
+    - right ideal generated by $X$
+    - two-sided ideal generated by $X$
+    - finitely generated
+    - principal
+- definition:ideal_of_a_ring
+    - left ideal of $R$
+    - right ideal of $R$
+    - two-sided ideal
+    - ideal
+    - $I \unlhd R$
+    - proper
+- definition:idelic_norm_of_the_ideles_of_a_global_field
+    - idelic norm
+    - module
+    - |\cdot| : \mathbb{A}_F^\times \to \mathbb{R}_{>0}
+- definition:identity_component_of_a_group_scheme_over_a_scheme
+    - identity component or neutral component of $G$
+    - $G^0$
+    - identity component of $G$
+    - $G^0$
+- definition:identity_function_on_a_set
+    - identity function on $X$
+    - $\mathrm{id}_X$
+- definition:identity_functor_on_a_category
+    - identity functor on $\mathcal{C}$
+    - $1_{\mathcal{C}} \colon \mathcal{C} \to \mathcal{C}$
+    - $\text{id}_{\mathcal{C}}$
+- definition:image_coimage_of_a_morphism_in_a_category
+    - image of $f$
+    - image of $f$ in $\mathcal{C}$
+    - coimage of $f$
+    - coimage of $f$ in $\mathcal{C}$
+- definition:image_of_a_functor_between_categories
+    - image of $F$
+    - $\mathrm{Im}(F)$
+- definition:induced_ring_homomorphism_of_stalks_for_a_morphism_of_ringed_spaces
+    - ring homomorphism induced by $f$ on the stalks
+- definition:induced_topology_on_a_category_by_a_functor_to_a_site
+    - induced topology
+    - $u^*K$
+    - pullback topology)
+- definition:ind_etale_algebra_over_a_commutative_ring
+    - ind-étale over $R$
+- definition:ind_etale_morphism_of_schemes
+    - ind-étale
+- definition:ind_pro_category_of_a_locally_small_category
+    - Ind-category of $\mathcal{C}$
+    - $\mathrm{Ind}(\mathcal{C})$
+    - Ind-objects of $\calC$
+    - Pro-category of $\mathcal{C}$
+    - $\mathrm{Pro}(\mathcal{C})$
+    - Pro-objects of $\calC$
+- definition:infinite_dimensional_affine_space_over_a_scheme_indexed_by_a_set
+    - affine space over $S$ indexed by $I$
+    - $\mathbb{A}^I_S$
+    - $\mathbb{A}^{(I)}_S$
+    - \mathbb{A}^I_S = \underline{\operatorname{Spec}} \mathcal{O}_S[x_i \mid i \in I] = S \times_{\operatorname{Spec} \mathbb{Z}} \operatorname{Spec} \mathbb{Z}[x_i \mid i \in I],
+    - $\mathbb{A}^\infty_S$
+- definition:infty_category_of_infty_categories
+    - $\infty$-category of $\infty$-categories
+    - \mathrm{Cat}_\infty^{\mathcal U}\coloneqq N_\Delta\big(\mathbf{QCat}_{\mathcal U}^\Delta\big).
+- definition:infty_category_of_spaces
+    - $\infty$-category of spaces
+- definition:infty_category_quasi_category
+    - quasi-category
+    - $(\infty, 1)$-category
+    - $\infty$-category
+- definition:infty_groupoid_infty_0_category
+    - $\infty$-groupoid
+    - $(\infty, 0)$-category
+    - anima
+- definition:initial_final_zero_objects_of_a_category
+    - initial object
+    - final object
+    - terminal object
+    - zero object
+- definition:injective_and_projective_objects_in_a_category
+    - injective
+    - projective
+- definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category
+    - right resolution of $M$
+    - injective resolution of $M$
+    - left resolution of $M$
+    - injective resolution of $M$
+    - injective resolution
+    - quasi-isomorphism
+    - projective resolution
+    - quasi-isomorphism
+- definition:injective_surjective_bijective_map_of_sets
+    - injective
+    - one-to-one
+    - surjective
+    - onto
+    - bijective
+    - inverse map
+    - $f^{-1} : Y \to X$
+- definition:injective_surjective_morphisms_of_sheaves_of_sets_on_a_site
+    - injective
+    - surjective
+- definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers
+    - inner product on a vector space $V$ over a field $\mathbb{F}$
+    - inner product space
+- definition:integrable_almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension
+    - integrable
+    - N_J (X, Y) := [X, Y] + J([JX, Y]) + J([X, JY]) - [JX, JY]
+- definition:integrable_complex_valued_function_on_the_real_line
+    - integrable
+- definition:integral_element_over_a_ring
+    - integral over $R$
+    - integral extension
+    - integral closure of $R$ in $A$
+    - integrally closed
+- definition:integral_scheme
+    - integral scheme
+- definition:interior_and_boundary_of_topological_space
+    - interior of $A$
+    - $\operatorname{int}(A)$
+    - \operatorname{int}(A) = \bigcup \{ U \in \mathcal{T} : U \subseteq A \}
+    - boundary of $A$
+    - $\partial A$
+    - \partial A = \overline{A} \setminus \operatorname{int}(A)
+- definition:internal_hom_object_in_a_category
+    - internal hom object from $X$ to $Y$
+    - \mathrm{ev}_{X,Y}: \underline{\mathrm{Hom}}(X,Y) \otimes X \to Y
+    - \otimes : \mathcal{C}^{\mathrm{op}} \times \mathcal{C} \to \mathcal{C}
+    - closed category
+    - closed monoidal category
+    - \underline{\mathrm{Hom}}(X,Y)
+    - \mathrm{ev}_{X,Y} : \underline{\mathrm{Hom}}(X,Y) \otimes X \to Y.
+- definition:intersection_of_sets
+    - intersection of the family $\{A_i\}_{i \in I}$
+    - $\bigcap_{i \in I} A_i$
+    - $A_1 \cap \cdots \cap A_n$
+- definition:interval_in_a_site_with_enough_points
+    - interval in $T$
+    - \begin{align*}
+        \mu: I \times I \to I \\
+        i_0,i_1: \pt \to I
+    \end{align*}
+    - site with interval
+- definition:interval_in_the_real_line
+    - interval in the real line
+    - \begin{align*}
+(a,b)      &= \{x \in \mathbb{R} : a < x < b\},\\
+[a,b]      &= \{x \in \mathbb{R} : a \leq x \leq b\},\\
+(a,b]      &= \{x \in \mathbb{R} : a < x \leq b\},\\
+[a,b)      &= \{x \in \mathbb{R} : a \leq x < b\},\\
+(a,\infty) &= \{x \in \mathbb{R} : a < x\},\\
+[a,\infty) &= \{x \in \mathbb{R} : a \leq x\},\\
+(-\infty,b) &= \{x \in \mathbb{R} : x < b\},\\
+(-\infty,b] &= \{x \in \mathbb{R} : x \leq b\}.
+\end{align*}
+    - open interval
+    - closed interval
+    - half open interval
+- definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies
+    - inverse image
+    - $f^* \calG$
+    - direct image
+    - $f_* \calF$
+- definition:inverse_image_of_a_sheaf_on_a_topological_space
+    - pullback
+    - inverse image presheaf
+    - $f^{-1} \mathcal{G}$
+    - pullback
+    - inverse image sheaf
+    - $f^* \calG$
+- definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism
+    - direct image/pushforward sheaf of $\mathcal{G}$ under $u$
+    - u_*\mathcal{G} : \calD^{\mathrm{op}} \to \mathcal{A}, \quad V \mapsto \varprojlim_{(u \downarrow V)^{\op}} \mathcal{G}(U),
+    - direct image functor
+    - u_* : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(\calD,K;\mathcal{A})
+    - $f^* \calG$
+    - inverse image/pullback of $\calG$ under $f$
+    - inverse image/pullback functor
+    - f^* : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(D,K;\mathcal{A}).
+    - inverse image/pullback sheaf of $\mathcal{G}$ under $u$
+    - u_s \mathcal{G} : \calD^{\mathrm{op}} \to \mathcal{A}, \quad V \mapsto a \left( \varinjlim_{(V \downarrow u)} \mathcal{G}(U) \right),
+    - inverse image/pullback functor
+    - u_s : \operatorname{Sh}(\calC,J;\mathcal{A}) \to \operatorname{Sh}(\calD,K;\mathcal{A})
+    - $f^{*} \calG$
+    - $f^{-1} \calG$
+    - inverse image/pullback of $\calG$ under $f$
+- definition:inverse_relation
+    - inverse relation
+    - converse relation
+    - $R^{-1}$
+    - $R^{\operatorname{op}}$
+    - R^{-1} = \{ (y, x) \in Y \times X \mid (x, y) \in R \}.
+- definition:involution_on_an_object_in_a_category
+    - $\mathcal{C}$
+    - involution on an object $X \in \operatorname{Ob}(\mathcal{C})$
+- definition:involution_on_a_ring
+    - involution on $R$
+    - $\cdot \mapsto \overline{\cdot}$
+    - ring with involution
+- definition:involution_on_a_sheaf_of_rings_on_a_site
+    - $(\mathcal{S}, \tau)$
+    - involution on $\mathcal{O}$
+    - $\sigma: \mathcal{O} \to \mathcal{O}^{\operatorname{op}}$
+- definition:ipc_property_of_a_category_that_admits_small_products_and_small_filtered_limits
+    - IPC-property
+    - inductive-limit-product commutation property
+- definition:irreducible_topological_space
+    - irreducible topological space
+- definition:irrelevant_ideal_of_a_graded_ring_by_a_monoid_with_an_absorbing_zero_or_ordered_monoid_with_zero_degre_the_identity
+    - irrelevant ideal of $R$
+    - $R_+$
+- definition:isogenous_abelian_varieties_over_a_field
+    - isogenous
+    - $A \sim B$
+- definition:isogeny_of_abelian_schemes_over_a_scheme
+    - isogeny of abelian schemes over $S$
+    - $S$-isogeny of abelian schemes
+    - isogenies of abelian varieties
+    - $\ker \varphi$
+    - $A[\varphi]$
+- definition:isogeny_of_algebraic_group_schemes_over_a_scheme
+    - isogeny of $S$-algebraic groups
+- definition:isometry_between_extended_metric_spaces
+    - isometry
+    - isometric isomorphism
+    - isometric
+- definition:isometry_between_modules_with_sesquilinear_forms_over_ring_with_involution
+    - isometry
+    - isometric
+- definition:isometry_of_quadratic_modules_over_an_involution_ring
+    - isometry
+    - \emph{isometric}
+    - $(M,q) \cong (M',q')$
+- definition:isomorphism_in_a_category
+    - isomorphism
+    - inverse of $f$
+    - isomorphic objects
+    - $x \cong y$
+- definition:isotropic_vector_subspace_anisotropic_quadratic_form_of_a_module_over_a_commutative_ring_with_quadratic_form
+    - \emph{isotropic}
+    - \emph{isotropic}
+    - \emph{anisotropic}
+- definition:I_local_weak_I_weak_equivalence_I_weak_fibration_for_morphisms_of_simplicial_sheaves_on_a_site_with_interval
+    - $I$-local
+    - $\calH_{s,I}(T)$
+    - $I$-weak equivalence
+    - $I$-weak fibration
+    - $I$-weak equivalence
+    - $I$-fibration
+- definition:jacobson_radical_of_a_ring
+    - Jacobson radical of $R$
+    - $J(R)$
+- definition:joyal_model_structure_on_the_category_of_simplicial_sets
+    - Joyal model structure
+- definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant
+    - j-invariant
+    - j-invariant
+    - $j \in R$
+- definition:kan_complex
+    - Kan complex
+    - Kan simplicial set
+    - quasi-category
+    - $\infty$-category
+- definition:kan_extension_condition_for_a_horn_for_a_simplicial_set
+    - satisfies the Kan condition/extension condition
+- definition:kernel_and_cokernel_of_a_morphism_in_a_pointed_category
+    - kernel of $f$
+    - $\ker(f)$
+    - cokernel of $f$
+    - $\operatorname{coker}(f)$
+- definition:kernel_image_cokernel_of_a_module_homomorphism_over_a_ring
+    - kernel of $\varphi$
+    - \ker(\varphi) := \{ m \in M \mid \varphi(m) = 0 \} \subseteq M.
+    - image of $\varphi$
+    - \operatorname{im}(\varphi) := \{ \varphi(m) \mid m \in M \} \subseteq N.
+    - cokernel of $\varphi$
+    - \operatorname{coker}(\varphi) := N / \operatorname{im}(\varphi).
+    - kernel, image, and cokernel
+    - kernel of $\varphi$
+    - \ker(\varphi) := \{ m \in M \mid \varphi(m) = 0 \} \subseteq M.
+    - image of $\varphi$
+    - \operatorname{im}(\varphi) := \{ \varphi(m) \mid m \in M \} \subseteq N.
+    - cokernel of $\varphi$
+    - \operatorname{coker}(\varphi) := N / \operatorname{im}(\varphi).
+    - coimage of $\varphi$
+    - \operatorname{coim}(\varphi) := M / \ker(\varphi).
+    - kernel, image, cokernel, and coimage
+- definition:krull_dimension_of_a_commutative_ring
+    - Krull dimension of $R$
+    - $\dim(R)$
+    - \mathfrak{p}_0 \subsetneq \mathfrak{p}_1 \subsetneq \dots \subsetneq \mathfrak{p}_n
+- definition:kummer_map_associated_to_an_isogeny_of_an_abelian_variety
+    - Kummer map associated to the isogeny $\varphi$
+    - Kummer map associated to $\varphi$
+    - $\delta_\varphi$
+- definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field
+    - $\calL_\chi$
+    - Kummer sheaf associated to $\chi$
+- definition:kummer_sheaf_of_a_character_on_the_tensor_product_of_commutative_group_schemes_over_a_finite_field
+    - $\calL_b$
+- definition:K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor
+    - $K$-flat (with respect to $F$ on the left, resp. right)
+- definition:k_form_on_a_smooth_manifold
+    - $\Omega^k(M)$
+    - (smooth differential) $k$-forms on $M$
+- definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring
+    - $\lambda$-adic sheaf on $X$
+    - lisse
+    - A–R $\lambda$-adic sheaf
+- definition:lambda_torsion_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site_for_a_sheaf_of_ideals
+    - $\lambda$-torsion sheaf
+    - $\lambda$-torsion sheaf
+- definition:lang_map_of_an_endomorphism_of_an_algebraic_group
+    - Lang map associated to $F$
+    - $L: G \to G$
+    - Lang isogeny of $G$
+- definition:laplacian_operator_on_a_smooth_oriented_riemannian_manifold
+    - \delta := (-1)^{nk + n + 1} \star d \star : \Omega^k(M) \to \Omega^{k-1}(M).
+    - Laplacian operator
+    - Hodge Laplacian
+    - \Delta := d \delta + \delta d : \Omega^k(M) \to \Omega^k(M).
+- defintion:lattice_over_a_commutative_ring
+    - lattice
+    - $R$-lattice
+    - $R$-lattice in $V$
+    - $N_L$
+    - lattice
+    - $N_\mathbb{R}$
+- definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set
+    - least upper bound of $S$ in $X$
+    - supremum of $S$ in $X$
+    - greatest lower bound of $S$ in $X$
+    - infimum of $S$ in $X$
+- definition:lebesgue_integral_of_measurable_functions_into_the
+    - measurable
+    - simple function on $X$
+    - Lebesgue integral of $s$ with respect to $\mu$
+    - \int_X s\,d\mu := \sum_{k=1}^m a_k \mu(A_k)
+    - Lebesgue integral of $f$
+    - \int_X f\,d\mu := \sup\Bigl\{\int_X s\,d\mu : s \text{ is a simple function with } 0 \le s \le f\Bigr\}.
+    - (Lebesgue) integrable
+    - Lebesgue integral
+- definition:lebesgue_measure_on_Rn
+    - Lebesgue measure on $\mathbb{R}^n$
+- definition:left_and_right_group_actions_on_a_set
+    - left group action of $G$ on $X$
+    - \varphi : G \times X \to X
+    - image of $x$ under the action of $g$
+    - $g \cdot x$
+    - G \curvearrowright X
+    - right group action of $G$ on $X$
+    - \psi : X \times G \to X
+    - image of $x$ under the right action of $g$
+    - $x \cdot g$
+    - X \curvearrowleft G
+- definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories
+    - $LF(M,-)$
+    - $LF(-,N)$
+    - $RF(M,-)$
+    - $RF(-,N)$
+    - $LF(M, -): D^-(\calB) \to D(\calC)$
+- definition:left_right_action_of_a_group_object_in_a_category
+    - left/right action of $G$ on $X$
+- definition:left_right_action_of_a_monoid_object_in_a_category
+    - left action of $M$ on $X$
+    - right action of $M$ on $X$
+- definition:left_right_action_of_a_semigroup_object_in_a_category_with_a_
+    - left action of $G$ on $X$
+    - right action of $G$ on $X$
+- definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives
+    - left derived object
+    - $L_n F A \in \calB$
+    - higher left derived objects
+    - left derived functors
+    - L_n F : \mathcal{A} \to \mathcal{B}, \quad A \mapsto L_n F(A).
+    - higher left derived functors
+    - right derived object
+    - $R_n F A \in \calB$
+    - $R^n FA$
+    - higher right derived objects
+    - right derived functors
+    - R_n F : \mathcal{A} \to \mathcal{B}, \quad A \mapsto R_n F(A).
+    - $R^n F$
+    - higher right derived functors
+    - left derived functors
+    - L_n F : \mathcal{A} \to \mathcal{B}, \quad n \geq 0,
+    - right derived functors
+    - R^n F : \mathcal{A} \to \mathcal{B}, \quad n \geq 0,
+- definition:left_right_exact_functor_between_categories
+    - left exact
+    - right exact
+    - exact
+- definition:left_right_exact_sequences_in_an_additive_category
+    - left exact
+    - right exact
+- definition:left_right_identity_element_of_a_binary_operation
+    - left identity element
+    - right identity element
+    - identity element
+    - neutral element
+- definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category
+    - right resolution of $M$
+    - injective resolution of $M$
+    - left resolution of $M$
+    - $\mathcal{X}$-left resolution
+    - $\mathcal{X}$-right resolution
+    - projective resolution of $M$
+    - injective resolution of $M$
+- definition:length_of_an_object_of_an_abelian_category
+    - length of $X$
+    - finite length
+    - $\mathrm{length} X$
+    - $\mathrm{len} X$
+- definition:limit_and_colimit_of_a_diagram_in_a_category
+    - cone to the diagram $D$
+    - limit of $D$
+    - $\lim_{i \in I} D$
+    - $\lim D$
+    - cocone from the diagram $D$
+    - colimit of $D$
+    - $\colim_{i \in I} D$
+    - $\colim D$
+    - finite
+    - small
+    - projective limit
+    - inverse limit
+    - inductive limit
+    - direct limit
+- definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point
+    - $f$ has limit $L$ at $a$
+- definition:limit_ordinal
+    - limit ordinal
+- definition:linearly_independent_elements_of_a_module_over_a_ring
+    - linearly independent over $R$
+    - linearly independent over $R$
+    - linearly independent over $R$
+    - linearly independent over $R$
+- definition:linear_algebraic_group_of_unit_upper_triangular_matrices_over_a_scheme
+    - linear algebraic group of unit upper triangular $n \times n$ matrices over $S$
+    - $U_{n,S} = UT_{n,S}$
+    - $U_n/S = UT_n/S$
+    - $U_n = UT_n$
+- definition:linear_algebraic_group_over_a_scheme
+    - linear algebraic group over $S$
+- definition:linear_category_over_a_commutative_ring
+    - $R$-linear category
+    - $R$-linear category
+    - $R$-linear functor $F: \calC \to \calD$ between $R$-linear categories
+- definition:linear_combination_of_elements_in_a_module
+    - ($R$-$S$-)linear combination of $x_1,\ldots,x_n$
+    - ($R$-$S$-)linear combination of the $m_i$ over $R$
+    - llinear combination of elements $\{m_i\}_{i \in I} \subseteq M$
+    - linear combination of $x_1, \dots, x_n$ over $R$
+    - linear combination of $x_1, \dots, x_n$ over $R$
+    - linear combination of $x_1, \dots, x_n$ over $R$ (as a two-sided module)
+- definition:localization_of_a_category_by_a_multiplicative_system
+    - localization
+    - $\mathcal{C}[S^{-1}]$
+    - Q: \mathcal{C} \to \mathcal{C}[S^{-1}]
+- definition:localization_of_a_commutative_ring_by_a_multiplicative_subset
+    - localization of $R$ at $S$
+    - $S^{-1}R$
+    - $\frac{r}{s}$
+    - $R_f$
+    - $R_P := S^{-1}R$
+    - localization of $R$ at $P$
+- definition:locally_closed_imersion_of_schemes
+    - locally closed immersion
+    - immersion
+    - locally closed subscheme of $X$
+- definition:locally_closed_subset_of_a_topological_space
+    - locally closed subset
+- definition:locally_compact_group
+    - locally compact group
+    - locally compact abelian group
+- definition:locally_compact_topological_space
+    - locally compact
+- definition:locally_constant_sheaf_on_a_site_with_sheafification
+    - locally constant sheaf on $U$ with value $A$
+    - locally constant sheaf with value $A$
+    - locally constant $\calO$-module
+    - locally free of rank $r$ over $\calO$
+    - free of rank $r$ over $\calO$
+    - of finite type
+    - locally constant $A$-module
+    - locally free of rank $r$ over $\Lambda$
+    - of finite type
+    - locally constant
+    - finite rank over $\Lambda$
+- definition:locally_noetherian_and_noetherian_scheme
+    - locally Noetherian
+    - Noetherian
+- definition:locally_of_finite_presentation_finite_presentation_morphism_of_schemes
+    - locally of finite presentation
+    - finite presentation
+- definition:locally_ringed_space_on_a_topological_space
+    - locally ringed space
+    - $\mathfrak{m}_x$
+    - maximal ideal at $x$
+- definition:locally_small_category
+    - locally small category
+    - hom-set
+    - category
+    - small category
+    - $U$-locally small category
+    - $U$-small category
+- definition:local_and_global_frames_of_the_tangent_bundle_of_a_differentiable_manifold
+    - local $C^k$ frame of $TM$ over $U$
+    - local frame over $U$
+    - global $C^k$ frame of $TM$
+    - global frame
+- definition:local_and_global_vector_field_on_a_C_k_manifold
+    - local $C^{k-1}$ vector field on $U$
+    - global $C^{k-1}$ vector field on $M$
+    - $C^{k-1}$ vector field on $M$
+- definition:local_field
+    - local field
+    - archimedean
+    - non-archimedean
+- definition:local_L_factor_of_a_constructible_complex_on_a_scheme_of_finite_type_over_a_finite_field_at_a_point
+    - local factor of the $L$-function at $x$
+    - L_x(K_0, t) := \det\left( 1 - t^{d(x)} \,\mathrm{Frob}_x \mid H^*(K_{0, \bar{x}}) \right)^{-1},
+- definition:local_morphism_of_local_rings
+    - local morphism
+    - local homomorphism
+- definition:local_ring
+    - local ring
+    - $\mathfrak{m}_R$
+- definition:local_system_of_Lambda_modules_on_a_scheme
+    - local system of $\Lambda$-modules on $X$
+- definition:log_smooth_morphism_of_log_schemes_log_regular_log_scheme
+    - log smooth
+    - log regular
+- definition:log_structure_associated_to_a_normal_crossings_divisor_of_a_scheme
+    - standard log structure associated to the pair $(X, D)$
+    - M = \{f \in \mathcal{O}_X \mid f|_U \in \mathcal{O}_U^* \} \subseteq \mathcal{O}_X,
+    - log structure defined by the divisor $D$
+- definition:log_structure_associated_to_a_pre_log_structure_on_a_scheme
+    - log structure associated to a pre-log structure
+- definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function
+    - partition of $[a,b]$
+    - lower Riemann sum
+    - upper Riemann sum
+    - L(f,P) = \sum_{k=1}^n m_k (x_k - x_{k-1}), \qquad U(f,P) = \sum_{k=1}^n M_k (x_k - x_{k-1}).
+    - lower Riemann integral of $f$
+    - upper Riemann integral of $f$
+    - Riemann integrable on $[a,b]$
+    - \int_a^b f(x)\,dx
+    - Riemann integral of $f$ over $[a,b]$
+- definition:L_function_of_a_constructible_complex_on_a_scheme_of_finite_type_over_a_finite_field
+    - L-function of $K_0$
+    - L(X_0, K_0, t) := \prod_{x \in |X_0|} L_x(K_0, t) = \prod_{x \in |X_0|} \det\left( 1 - t^{d(x)} \,\mathrm{Frob}_x \mid H^*(K_{0, \bar{x}}) \right)^{-1}.
+    - Grothendieck $L$-function
+- definition:L_p_norm_on_a_measure_space
+    - $L^{p}$-norm
+    - \|f\|_{p} = \left( \int_{X} |f(x)|^{p} \, d\mu(x) \right)^{\frac{1}{p}}.
+    - $L^\infty$-norm
+    - \|f\|_{\infty} = \inf \{ M \geq 0 : |f(x)| \leq M \quad \text{for } \mu\text{-almost every } x \in X \}.
+    - $L^{p}$ space on $X$
+    - L^{p}(X) = L^{p}(X, \mu) =\left\{ f : X \to \mathbb{C} \mid f \text{ is measurable and } \|f\|_p < \infty \right\}.
+    - $L^p$-function on the measure space $X$.
+    - $L^\infty$ space on $X$
+    - $L^{\infty}(X) = L^{\infty}(X, \mu)$
+- definition:mapping_cone_of_a_map_of_chain_cochain_complexes
+    - mapping cone of $f$
+    - $\operatorname{Cone}(f)$
+    - mapping cone of $g$
+    - $\operatorname{Cone}(g)$
+- definition:mapping_cone_of_a_map_of_topological_spaces_and_pairs
+    - mapping cone of $f$
+    - $C_f$
+    - mapping cone of $f$
+    - $C_f$
+    - relative mapping cone of $f$
+    - mapping cone of the map of pairs $f$
+    - $(C_f, C_{f|_A})$
+- definition:mapping_cylinder_of_a_map_of_chain_cochain_complexes
+    - mapping cylinder of $f$
+    - $\operatorname{Cyl}(f)$
+    - mapping cylinder of $g$
+    - $\operatorname{Cyl}(g)$
+- definition:mapping_cylinder_of_a_map_of_topological_spaces_and_pairs
+    - mapping cylinder of $f$
+    - $M_f$
+    - relative mapping cylinder of $f$
+    - mapping cylinder of the map of pairs $f$
+    - $(M_f, M_{f|_A})$
+- definition:mapping_space_between_objects_of_a_simplicial_set
+    - mapping space between $x$ and $y$
+    - $\operatorname{Mor}(x,y)$
+- definition:map_of_pairs_of_topological_spaces
+    - map of pairs
+- definition:matrix_over_a_ring
+    - M_{m,n}(R) = \{ (a_{ij}) \mid a_{ij} \in R \text{ for all } i,j \}.
+    - matrices over $R$
+    - $A+B$
+    - $AB$
+- definition:maximal_sieve_on_an_object_in_a_category
+    - maximal sieve on $U$
+- definition:measure_on_a_measurable_space_and_measure_space
+    - measure on $(X,\mathcal{A})$
+    - measure space
+- definition:mellin_transform_of_a_measurable_function_on_the_positive_real_numbers
+    - Mellin transform of $f$
+    - $\mathcal{M}[f] : \mathbb{C} \to \mathbb{C}$
+- definition:metric_tensor_on_a_smooth_manifold
+    - metric tensor on $M$
+- definition:minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain
+    - minimal Weierstrass model of $E$ over $R$
+    - minimal Weierstrass equation of $E/R$
+    - local minimal Weierstrass model
+    - local minimal Weierstrass equation
+    - global minimal Weierstrass model
+    - global minimal Weierstrass equation
+- definition:mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_category_with_images
+    - Mittag-Leffler condition
+- definition:model_category
+    - model category
+    - closed model category
+    - Weak equivalences
+    - Fibrations
+    - Cofibrations
+    - acyclic fibration
+    - trivial fibration
+    - acyclic cofibration
+    - trivial cofibration
+- definition:model_for_the_homotopy_theory_of_infty_1_categories
+    - model for the homotopy theory of $(\infty,1)$-categories
+- definition:modification_between_pseudonatural_transformations_between_pseudofunctors_between_weak_2_caetgories
+    - modification $\Gamma: \alpha \Rrightarrow \beta$ between pseudonatural transformations
+- definition:module_object_over_a_ring_object_in_a_category_with_a_final_object
+    - $R$-module object in $\mathcal{C}$
+- definition:module_of_a_ring
+    - left $R$-module
+    - right $R$-module
+    - $R$-$S$-bimodule
+    - $R$-$S$-module
+    - R \times M \to M, \quad (r,m) \mapsto r \cdot m
+    - M \times S \to M, \quad (m,s) \mapsto m \cdot s
+    - two-sided $R$-module
+    - $R$-bimodule
+    - $R$-$R$-bimodule
+    - $R$-modules
+    - natural bimodule structure
+- definition:module_over_a_sheaf_of_rings_on_a_site
+    - $(\mathcal{A}, \mathcal{B})$-bimodule
+    - bimodule over $(\mathcal{A}, \mathcal{B})$
+    - homomorphism of $(\mathcal{A}, \mathcal{B})$-bimodules
+    - $(\mathcal{A}, \mathcal{B})$-linear morphism
+    - $ \mathcal{A}\text{-}\mathcal{B}\text{-}\mathsf{Mod} $
+    - $ {}_{\mathcal{A}}\mathsf{Mod}_{\mathcal{B}} $
+    - (left/right/two-sided) $\mathcal{O}$-module
+    - morphism of $\mathcal{O}$-modules
+    - category of $\mathcal{O}$-modules
+    - $\mathbf{Mod}(\mathcal{O})$
+- definition:monoid
+    - monoid
+    - identity element
+- definition:monoidal_category
+    - monoidal category
+    - tensor product
+    - unit object
+    - $\mathbb{I}$
+    - $\mathds{1}$
+    - associator
+    - left and right unitors
+- definition:monoidal_functor_between_monoidal_categories
+    - monoidal functor
+- definition:monoid_object_in_a_category_with_a_final_object
+    - monoid object in $\mathcal{C}$
+    - unit morphism
+- definition:monomorphism_and_epimorphism_in_categories
+    - monomorphism
+    - monic morphism
+    - epimorphism
+    - epic morphism
+- definition:moore_complex_of_a_simplicial_object_in_an_abelian_category
+    - X_\bullet: \Delta^{op} \to \mathcal{A}
+    - Moore complex
+    - normalized chain complex
+    - complex of normalized chains
+    - $M(X_\bullet) \in \mathrm{Ch}_{\geq 0}(\mathcal{A})$
+    - M_n(X_\bullet) := \bigcap_{i=1}^n \ker (d_i: X_n \to X_{n-1}),
+    - d_n := d_0|_{M_n(X_\bullet)}.
+- definition:morphism_between_bimodules_of_different_rings_over_a_morphism_of_the_rings
+    - bimodule morphism over a morphism $(f, g) \in \text{Hom}_{\mathcal{R}ing^2}((R, S), (R', S'))$
+- definition:morphism_between_modules_with_sesquilinear_forms_over_an_involution_ring
+    - morphism
+- definition:morphism_induced_on_stalks_by_a_morphism_of_presheaves_on_a_topological_space_valued_in_a_category_with_direct_limits
+    - $\varphi_x: \mathcal{F}_x \to \mathcal{G}_x$
+- definition:chain_complex_of_objects_in_an_additive_category
+    - morphism of chain complexes
+    - chain map
+    - $\mathrm{Ch}(\mathcal{A})$
+    - $\mathbf{Ch}(\mathcal{A})$
+    - \operatorname{Hom}(K^\bullet, L^\bullet)=  \operatorname{Hom}_{\mathrm{Ch}(\mathcal{A})}(K^\bullet, L^\bullet)
+    - morphism of cochain complexes
+    - $\mathrm{Ch}(\mathcal{A})$
+    - $\mathbf{Ch}(\mathcal{A})$
+- definition:morphism_of_C_k_vector_bundles_over_a_C_k_manifold_with_or_without_boundary
+    - morphism of $C^k$ vector bundles over $M$
+    - $C^k$ vector bundle morphism covering the identity of $M$
+    - bundle map
+- definition:morphism_of_double_complex_of_objects_in_an_additive_category
+    - morphism of double complexes
+    - \begin{align*}
+    d'_B{}^{p,q} \circ f^{p,q} &= f^{p+1,q} \circ d'_A{}^{p,q}, \\ 
+    d''_B{}^{p,q} \circ f^{p,q} &= f^{p,q+1} \circ d''_A{}^{p,q}.
+    \end{align*}
+    - $\mathbf{DC}(\mathcal{A})$
+- definition:morphism_of_graded_objects_in_an_abelian_category
+    - morphism of graded objects
+    - f = \{f_n: M_n \to N_n\}_{n \in \mathbb{Z}}.
+- definition:morphism_of_locally_ringed_spaces
+    - morphism of locally ringed spaces
+- definition:morphism_of_log_schemes
+    - morphism of log schemes
+- definition:morphism_of_presheaves_on_a_topological_space
+    - morphism of presheaves
+    - morphism of sheaves
+- definition:morphism_of_ringed_spaces
+    - morphism of ringed spaces
+- definition:morphism_of_schemes
+    - morphism of schemes
+    - $\mathrm{Sch}$
+    - $\mathbf{Sch}$
+- definition:morphism_of_sheaves_with_a_property_of_morphisms_of_S_schemes_preserved_under_base_change_and_tau_local_on_the_base
+    - has property $\mathcal{P}$
+- definition:morphism_of_sites
+    - morphism of sites
+- definition:morphism_of_vector_spaces
+    - (homo)morphism of vector spaces over $F$
+    - $F$-linear map
+    - \operatorname{Hom}_F(V,W)
+- definition:morse_kelley_set_theory
+    - Morse--Kelley set theory
+    - $\mathsf{MK}$
+    - Impredicative Class Comprehension Schema
+- definition:multilinear_map_of_modules_over_rings
+    - multilinear map
+    - multilinear form
+    - multilinear map
+    - multilinear form
+    - bilinear maps/forms
+    - trilinear maps/forms
+- definition:multiplicative_group_scheme_over_a_scheme
+    - multiplicative group scheme over $S$
+    - $\mathbb{G}_{m,S}$
+- definition:multiplicative_subset_of_a_ring
+    - multiplicative subset
+- definition:multiplicative_system_of_morphisms_in_a_category
+    - multiplicative system $S$ in $\mathcal{C}$
+- definition:naive_height_of_an_elliptic_curve_over_a_number_field
+    - (naive multiplicative) height of an elliptic curve
+    - H(E) = \inf_{\substack{a,b \in K \\ E \cong_K E(a,b)}} H([a^3,b^2,1])
+    - (naive logarithmic) height of an elliptic curve
+    - h(E) = \inf_{\substack{a,b \in K \\ E \cong_K E(a,b)}} h([a^3,b^2,1])
+- definition:natural_transformation_between_enriched_functors_between_categories_enriched_in_a_monoidal_category
+    - $\mathcal{V}$-natural transformation
+    - \alpha_x: I \to \mathcal{B}(Fx, Gx)
+- definition:natural_transformation_between_functors_between_categories
+    - natural transformation $\eta$ between $F$ and $G$
+    - $\eta: F \Rightarrow G$
+    - natural isomorphism
+- definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space
+    - open neighborhood of $x$
+    - neighborhood of $x$
+    - neighborhood basis
+    - local base
+    - form a base of neighborhoods
+- definition:nerve_of_a_category
+    - nerve of $\calC$
+    - $N(\calC)$
+- definition:new_foundations_with_urelements
+    - New Foundations with Urelements
+    - $\mathsf{NFU}$
+    - urelements
+    - \exists y \forall x \, (x \in y \iff \phi(x))
+- definition:nilpotent_element_of_a_ring
+    - nilpotent element
+- definition:nilradical_of_a_commutative_ring
+    - nilradical of $R$
+    - $\mathfrak{N}(R)$
+    - $\sqrt{(0)}$
+- definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension
+    - Nisnevich topology on $\Sm/S$
+    - (big) Nisnevich site of $S$
+    - $(\mathrm{Sm}/S)_{\mathrm{Nis}}$
+    - $(\mathbf{Sm}/S)_{\mathrm{Nis}}$
+    - Nisnevich covering
+- definition:noetherian_ring
+    - left-Noetherian
+    - right-Noetherian
+    - Noetherian
+- definition:nonarchimedean_absolute_value_induced_by_a_discrete_valuation_on_a_field
+    - |x|_v := \begin{cases} c^{v(x)} & \text{if } x \in K^\times \\ 0 &\text{if } x = 0 \end{cases}
+- definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring
+    - nondegenerate
+    - nondegenerate
+    - nonsingular
+    - regular
+- definition:nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring
+    - \emph{non-degenerate}
+- definition:normalizer_of_a_subgroup_of_a_group
+    - normalizer of $H$ in $G$
+    - N_G(H) = \{ g \in G : g H g^{-1} = H \}
+- definition:normalizer_subgroup_of_a_group_representation_on_a_submodule
+    - normalizer subgroup of $N$ in $G$
+    - \operatorname{Normalizer}_G(N)
+    - ``setwise stabilizer'' of $N$ in $G$
+- definition:normal_and_factorial_scheme
+    - normal
+    - factorial
+- definition:normal_crossings_effective_Q_divisor_on_a_regular_scheme
+    - simple normal crossings at a point $x \in X$
+    - simple normal crossings
+    - normal crossings
+- definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme
+    - normal subgroup scheme of $G$
+    - characteristic subgroup scheme of $G$
+- definition:normal_subgroup_of_a_group
+    - normal subgroup of $G$
+    - $N \trianglelefteq G$
+- definition:norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space
+    - norm induced by $\langle \cdot, \cdot \rangle$
+    - \|\cdot\|: V \to \mathbb{R}_{\geq 0}
+- definition:null_system_in_a_pointed_category_with_images
+    - null system
+- definition:n_ary_additive_functor_between_additive_categories
+    - n-ary additive functor
+    - multilinear functor
+    - biadditive functor
+- definition:n_ary_functor
+    - n-ary functor
+    - multivariable functor
+    - multivariate functor
+    - multifunctor
+    - bifunctor
+    - ternary functor/trifunctor
+- definition:n_ary_functor_of_categories_enriched_in_a_monoidal_category
+    - $n$-ary enriched functor
+    - multivariable enriched functor
+- definition:n_ary_relation_on_sets
+    - $n$-ary relation
+    - arity
+    - degree
+    - domains of the relation
+    - related
+    - $n$-ary relation on the set $X$
+    - unary relation
+    - binary relation
+    - ternary relation
+- definition:omega_ordinal
+    - $\omega$
+    - $\mathbb{N}$
+- definition:open_and_closed_immersions_of_schemes
+    - open immersion
+    - closed immersion
+- definition:open_and_closed_map_of_topological_spaces
+    - open map
+    - closed map
+- definition:open_and_closed_subscheme_of_a_scheme
+    - open subscheme of $X$
+    - closed subscheme of $X$
+- definition:open_covering_of_a_topological_space
+    - open covering of $X$
+- definition:opposite_category_of_a_category
+    - opposite category
+    - $\mathcal{C}^{\mathrm{op}}$
+- definition:opposite_module_of_a_general_bimodule_over_rings
+    - opposite module
+    - $M^{op}$
+- definition:opposite_module_of_a_module_over_a_ring_with_involution
+    - opposite module
+    - conjugate module
+    - $M^{op}$
+    - $\overline{M}$
+- definition:opposite_of_a_category_enriched_in_a_monoidal_category
+    - opposite $\mathcal{V}$-category of $\mathcal{C}$
+    - $\mathcal{C}^{\mathrm{op}}$
+- definition:opposite_ring_of_a_ring
+    - opposite ring of $R$
+- definition:orbit_of_a_group_action
+    - orbit of $x$
+    - G \cdot x = \{ g \cdot x : g \in G \}
+- definition:ordered_field_complete_ordered_field
+    - ordered field
+    - complete ordered field
+- definition:ordered_monoid
+    - ordered monoid
+    - a \cdot c \le b \cdot c \quad \text{and} \quad c \cdot a \le c \cdot b.
+    - totally ordered monoid
+- definition:ordinal_number
+    - ordinal number
+    - ordinal
+    - transitive
+    - strictly well-ordered
+    - $\operatorname{Ord}$
+    - $\mathbf{ON}$
+    - $\alpha < \beta$
+    - $\alpha \le \beta$
+- definition:orientation_of_a_differentiable_manifold_with_or_without_boundary
+    - orientation on $M$ at $p$
+    - pointwise orientation of $M$
+    - (positively) oriented
+    - negative oriented
+    - continuous
+    - orientation of $M$
+    - orientable
+    - nonorientable
+    - oriented manifold (with or without boundary)
+    - 
+    - pointwise orientation of $M$ at $p$
+    - local orientation of $M$ at $p$
+- definition:orientation_of_a_real_vector_space
+    - orientation of $V$
+    - positively oriented with respect to $(e_1,\ldots,e_n)$
+    - orientations of $V$
+    - oriented real vector space
+- definition:orthogonal_group_over_a_scheme_for_a_quadratic_form
+    - orthogonal group
+    - $\operatorname{O}(q)$
+- definition:orthogonal_unitary_group_of_module_with_sesquilinear_form_over_a_ring_with_involution
+    - orthgonal
+    - unitary group of (M,b)
+    - $O(M,b)$
+    - $O_A(M,b)$
+    - $U(M,b)$
+    - $U_A(M,b)$
+- definition:pair_of_topological_spaces
+    - pair of topological spaces
+    - pair
+- definition:partially_ordered_set
+    - partially ordered set
+    - poset
+    - ordered set
+    - Reflexivity:
+    - Antisymmetry:
+    - Transitivity:
+    - order
+    - partial order
+    - directed partially ordered set
+    - codirected partially ordered set
+    - downward directed poset
+- definition:path_and_loop_in_a_topological_space
+    - path in $X$ from $x_0$ to $x_1$
+    - path in $X$
+    - loop in $X$ based at $x_0 \in X$
+    - loop in $X$
+- definition:path_category_generated_by_a_quiver
+    - path category generated by $Q$
+    - $\mathcal{F}(Q)$
+    - path of length $n \ge 1$ from $x$ to $y$
+- definition:place_of_a_global_field
+    - place of $F$
+    - archimedean place
+    - non-archimedean place
+    - $|\cdot|_v$
+- definition:pointed_category
+    - pointed category
+- definition:pointed_object_of_a_category_with_a_final_object
+    - pointed object of $\calC$
+    - category of pointed objects of $\calC$
+    - $C_\bullet$
+    - $C_\ast$
+- definition:pointed_sheaves_of_sets_on_a_site_simplicial_pointed_sheaves_of_sets_on_a_site
+    - pointed sheaves
+    - simplicial pointed sheaves
+    - $\Shv(T)_\bullet = \Shv(T, \Sets)_\bullet$
+    - $\Deltaop\Shv(T)_\bullet = \Deltaop\Shv(T, \Sets)_\bullet$
+    - sheaves of pointed sets
+    - simplicial sheaves of pointed sets
+- definition:pointed_space_in_motivic_homotopy_theory
+    - point
+    - pointed space
+- definition:pointed_topological_space
+    - pointed/based (topological) space
+    - base point of $X$
+    - morphism of pointed spaces
+    - based map
+    - continuous map
+    - category of pointed spaces
+    - $\mathrm{Top}_*$
+    - $\mathrm{Top}_\bullet$
+    - $\mathbf{Top}_*$
+    - $\mathbf{Top}_\bullet$
+    - $C_*(X,Y)$
+    - $C_\bullet(X,Y)$
+    - $\mathrm{Top}_*(X,Y)$
+    - $\mathrm{Top}_\bullet(X,Y)$
+    - $\Hom_{\mathrm{Top}_\bullet}(X,Y)$
+- definition:pointification_of_an_object_in_a_category_with_a_final_object
+    - pointification of an object $X$ of $\calC$
+    - $X_+ \coloneq X \coprod *$
+    - forgetful functor
+- definition:point_of_a_topos
+    - point of a topos $E$
+    - stalk of $A$ at $x$ of $A$ at $x$
+- definition:polyhedral_cone_in_a_finite_dimensional_real_vector_space
+    - polyhedral cone
+- definition:polynomial_ring_over_a_commutative_ring
+    - polynomial ring in variables $\{x_i\}$ over $R$
+    - $R[x_i \mid i \in I]$
+    - $R[x_i]_{i \in }$
+    - $R[y_1,\ldots,y_n]$
+- definition:pontryagin_dual_of_a_locally_compact_abelian_group
+    - Pontryagin dual of $G$
+    - \widehat{G} = \{\, \chi : G \to S^1 \mid \chi \text{ is a continuous group homomorphism} \,\},
+- definition:power_set_of_a_set
+    - power set of $A$
+    - $\mathcal{P}(A)$
+- definition:preadditive_category_generated_by_a_quiver
+    - preadditive category generated by $Q$
+    - $\mathbb{Z}Q$
+- definition:preimage_of_an_open_subset_of_a_locally_ringed_spaces_under_a_morphism_of_locally_ringed_spaces
+    - preimage of an open subset $V \subseteq Y$
+    - f^{-1}(V) := \{ x \in X \mid f(x) \in V \} \subseteq X.
+- definition:preimage_of_an_open_subset_of_a_ringed_spaces_under_a_morphism_of_ringed_spaces
+    - preimage of $V$ under $f$
+    - f^{-1}(V) := \{ x \in X \mid f(x) \in V \} \subseteq X
+- definition:preimage_of_an_open_subset_of_a_scheme_under_a_morphism_of_schemes
+    - preimage of $V$ under $f$
+    - f^{-1}(V) := \{ x \in X \mid f(x) \in V \} \subseteq X.
+    - scheme-theoretic preimage of $V$ under $f$
+- definition:preimage_of_a_subset_of_the_codomain_of_a_set_map
+    - preimage of $B$ under $f$
+    - inverse image of $B$ under $f$
+    - f^{-1}(B) := \{ x \in X : f(x) \in B \} \subseteq X.
+    - $f^{-1}(y)$
+- definition:presheaf_on_a_category
+    - presheaf $\mathcal{F}$ on $C$ with values in $\mathcal{A}$
+    - $U$-valued sections/sections evaluated at $U$ of $\calF$
+    - restriction map
+    - morphism of presheaves
+    - $U$-presheaf on $\calC$
+    - presheaf category/category of $\calA$-valued presheaves on $\calC$
+    - $\calA^{\calC^{\op}}$
+    - $\PreShv(\calC, \calA)$
+    - $[\calC^{\op}, \calA]$
+    - $\PreShv(\calC)$
+- definition:presheaf_on_a_topological_space
+    - presheaf (of objects of $\calD$/valued in $\calD$) on $X$
+    - sections of $\mathcal{F}$ over $U$
+    - restriction map
+    - presheaf of sets/groups/rings/etc. on the topological space $X$
+    - $\Gamma(U, \calF)$
+    - global sections object of $\calF$
+- definition:pre_abelian_category
+    - pre-abelian
+- definition:pre_logarithmic_structure_and_logarithmic_structure_on_a_scheme_and_log_scheme
+    - pre-logarithmic structure on $X$
+    - logarithmic structure
+    - log scheme
+- definition:pre_tannakian_category_over_a_commutative_ring
+    - pre-Tannakian category over $R$
+    - $R$-pre-Tannakian category
+    - $X^{\vee}$
+    - pre-Tannakian category
+    - pre-Tannakian category over $R$
+    - $R$ pre-Tannakian category
+    - pre-Tannakian $R$-category
+    - $X^{\vee}$
+    - $X^{\vee}$
+    - pre-Tannakian category over $R$
+    - tensor product
+    - \otimes : \mathcal{C} \times \mathcal{C} \to \mathcal{C}
+    - $\mathbb{I} \in \mathrm{Ob}(\mathcal{C})$
+    - $\mathds{1}$
+- definition:prime_and_maximal_ideal_of_a_ring
+    - prime ideal
+    - maximal
+- definition:prime_and_weil_divisor_on_a_scheme
+    - prime divisor on $X$
+    - Weil divisor
+    - divisor
+- definition:prime_subfield_of_a_field
+    - prime subfield of $K$
+- definition:principal_homogeneous_space_for_a_group_scheme_over_a_base_scheme
+    - principal homogeneous space
+    - $G$-torsor
+- definition:principal_ideal_ring
+    - principal ideal ring (PIR)
+    - principal ideal domain (PID)
+- definition:principal_weil_divisor_on_and_divisor_class_group_of_a_locally_noetherian_scheme
+    - principal Weil divisor
+    - $(f)$
+    - $\operatorname{div}(f)$
+    - (f) = \sum_{Y} v_Y(f) Y,
+    - divisor class group of $X$
+    - $\operatorname{Cl}(X)$
+- definition:product_and_coproduct_of_objects_in_a_category
+    - product of the family $\{X_i\}$
+    - $\prod_{i \in I} X_i$
+    - coproduct
+    - direct sum
+    - $\coprod_{i \in I} X_i$
+    - $\oplus_{i \in I} X_i$
+- definition:product_category_of_a_family_of_categories
+    - product category of the family
+    - \prod_{i\in I} \mathcal{C}_i
+    - $\times$
+    - $\calC_i \times \calC_j$
+- definition:product_of_categories_enriched_in_a_monoidal_category
+    - product $\mathcal{M}$-enriched category of the family
+    - \prod_{i \in I} \mathcal{C}_i
+    - $\mathcal{C}_i \times \mathcal{C}_j$
+- definition:biproduct_of_objects_in_a_category_with_a_zero_object
+    - biproduct of $c_1$ and $c_2$
+    - \bigl(c_1 \oplus c_2, p_1: c_1 \oplus c_2 \to c_1, p_2: c_1 \oplus c_2 \to c_2, i_1: c_1 \to c_1 \oplus c_2, i_2: c_2 \to c_1 \oplus c_2 \bigr)
+    - biproduct of a finite family of objects of $\calC$
+    - product of $c_1, c_2, \dots, c_n$
+    - \bigl( c_1 \times c_2 \times \cdots \times c_n,\ 
+p_1 : c_1 \times \cdots \times c_n \to c_1,\ 
+\dots,\ 
+p_n : c_1 \times \cdots \times c_n \to c_n \bigr)
+    - projection morphisms
+    - product morphism
+    - $\prod_{i=1}^n c_i$
+    - $c_1 \oplus \cdots \oplus c_n$
+    - $\oplus_{i=1}^n c_i$
+    - binary product
+    - biproduct
+- definition:product_of_groups
+    - (direct) product of the family $\{G_i\}_{i \in I}$
+    - $\prod_{i \in I} G_i$
+    - $G^I$
+    - $G^n$
+    - $G^{\oplus I}$
+    - $G^{\oplus n}$
+    - $G_1 \times \cdots \times G_n$
+- definition:product_of_ideals_of_a_ring
+    - product ideal
+    - $I J$
+- definition:product_of_modules_of_rings
+    - (direct) product of the family $\{M_i\}_{i \in I}$
+    - $M_1 \times \cdots \times M_n$
+    - $M^I$
+    - $M^{\oplus I}$
+    - $M^n$
+    - $M^{\oplus n}$
+- definition:product_of_sets
+    - Cartesian product of the family $\{A_i\}_{i \in I}$
+    - $\prod_{i \in I} A_i$
+    - $A^I$
+    - $A^n$
+    - $A_1 \times \cdots \times A_n$
+- definition:profinite_etale_cover_of_schemes
+    - profinite-étale cover
+    - pro-finite cover
+    - Y = \varprojlim_{i \in I} Y_i
+    - universal profinite-\'etale/pro-finite cover of $X$
+- definition:profinite_group
+    - profinite group
+    - profinite topology
+- definition:projective_and_inductive_limits_in_categories
+    - \varprojlim_{i\in I} D(i)
+    - cofiltered (inverse/projective) limit
+    - \varinjlim_{i\in I} D(i)
+    - filtered colimit
+    - direct/inductive/injective limit
+- definition:projective_bimodule_over_rings
+    - projective $R$-$S$-bimodule
+    - biprojective
+- definition:projective_space_of_dimension_n_over_a_scheme
+    - projective space of dimension $n$ over $S$
+    - $\mathbb{P}^n_S$
+    - \mathbb{P}^n_S = \mathbf{Proj}(\mathcal{O}_S[T_0, \dots, T_n]).
+- definition:projective_spectrum_of_a_Z_geq_0_graded_commutative_ring
+    - projective spectrum of $R$
+    - $\operatorname{Proj}(R)$
+    - Zariski topology
+    - V(\mathfrak{a}) = \{ \mathfrak{p} \in \operatorname{Proj}(R) \mid \mathfrak{a} \subseteq \mathfrak{p} \}
+    - D_+(f) = \{ \mathfrak{p} \in \operatorname{Proj}(R) \mid f \notin \mathfrak{p} \}
+    - \mathcal{O}_{\operatorname{Proj}(R)}(D_+(f)) = R_{(f)},
+- definition:property_of_a_morphism_of_schemes_over_a_scheme_preserved_under_base_change
+    - preserved under base change
+- definition:proper_class_in_a_two_sorted_first_order_language_with_variables_for_sets_and_classes
+    - proper
+- definition:proper_model_category
+    - left proper
+    - right proper
+    - proper
+- definition:proper_morphism_of_schemes
+    - proper
+- definition:pseudofunctor_between_weak_2_categories
+    - pseudofunctor
+    - $F_{id_x}: id_{Fx} \Rightarrow F(id_x)$
+    - identity constraint
+    - $F_{g,f}: Fg \circ Ff \Rightarrow F(g \circ f)$
+    - composition constraint
+    - $\phi_x: id_{Fx} \cong F(id_x)$
+    - $\phi_{g,f}: Fg \circ Ff \cong F(g \circ f)$
+- definition:pseudonatural_transformation_between_pseudofunctors_between_weak_2_categories
+    - pseudonatural transformation
+    - filler of the naturality square
+- definition:pseudo_riemannian_manifold
+    - pseudo-Riemannian manifold
+    - signature of $g$
+- definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object
+    - pullback sieve
+    - $f^*S$
+    - basechange sieve
+    - $S \times_U V$
+- definition:pure_dimensional_scheme
+    - pure dimensional
+    - equidimensional
+    - $\dim(Z_i)$
+- definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group
+    - (pure) Hodge structure of weight $k$ on $L$
+    - $L^{p,q}$
+    - Hodge components
+    - bidegree of the component $L^{p,q}$
+- definition:pushout_of_objects_under_an_object_in_a_category
+    - pushout of $X$ and $Y$ under $Z$ in $\mathcal{C}$
+    - $X \amalg_Z Y$
+    - inclusion morphisms
+    - cocartesian square
+- definition:p_q_form_on_a_complex_manifold
+    - $(p,q)$-forms on $X$
+    - \Omega^{p,q}(X) := \Gamma\Big(X, \wedge^p T^{1,0*} X \otimes \wedge^q T^{0,1*} X\Big),
+- definition:p_subgroup_of_a_finite_group
+    - $p$-subgroup
+- definition:quadratic_formm_on_a_module_over_a_commutative_ring
+    - \emph{quadratic form} on a $R$-module $M$
+    - $b_q: M \times M \to R$
+    - \emph{polarization} of $q$
+    - $B_q$
+    - $\langle x , y\rangle = B_q(x,y)$
+    - quadratic module
+- definition:quadratic_form_over_a_ring_with_involution
+    - \emph{quadratic form} on a right $R$-module $M$
+    - \emph{quadratic form} on a left $R$-module $N$
+    - \emph{quadratic form} on a right $R$-module $M$
+    - $B_q: M \times M \to R$
+    - \emph{polarization} of $q$
+    - associated Hermitian form
+    - $\langle x, y \rangle_R = B_q(x,y)$
+    - \emph{polarization} of $q$
+    - associated Hermitian form
+    - quadratic module
+- definition:quasifinite_morphism_of_schemes
+    - quasifinite
+- definition:quasi_character_of_a_locally_compact_hausdorff_group
+    - quasicharacter of $G$
+    - unitary
+    - character
+    - finite
+- definition:quasi_coherent_sheaf_on_an_affine_scheme
+    - $\widetilde{M}$
+    - sheaf associated to $M$
+    - quasi-coherent
+- definition:quasi_coherent_sheaf_on_a_general_scheme
+    - quasi-coherent
+    - \operatorname{QCoh}(X)
+- definition:quasi_coherent_sheaf_on_a_ringed_site
+    - quasi-coherent
+- definition:quasi_coherent_sheaf_on_a_ringed_space
+    - quasi-coherent
+- definition:quasi_compact_finitely_presentable_object_in_a_locally_small_category
+    - quasi-compact
+    - compact
+    - finitely presentable
+- definition:quasi_compact_morphism_in_a_locally_small_site
+    - quasi-compact
+- definition:quasi_compact_morphism_of_schemes
+    - quasi-compact
+- definition:quasi_compact_object_in_a_locally_small_site
+    - quasi-compact (relative to the topology $J$)
+- definition:quasi_compact_quasi_separated_coherent_scheme
+    - qcqs
+    - coherent
+- definition:quasi_compact_scheme
+    - quasi-compact scheme
+- definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category
+    - quasi-isomorphism
+- definition:quasi_separated_morphism_of_schemes
+    - quasi-separated
+    - separated
+    - quasi-separated $Y$-scheme
+    - quasi-separated scheme over $Y$
+    - quasi-separated scheme
+- definition:quasi_seperated_morphism_in_a_locally_small_site
+    - quasi-separated with respect to $J$
+    - $\Delta: X \to X \times X$
+- definition:quillen_serre_model_structure_on_the_category_of_topological_spaces
+    - Quillen model structure (on the category of topological spaces)
+    - classical model structure on the category of topological spaces
+    - Serre model structure
+    - Quillen-Serre model structure
+- definition:quiver
+    - quiver
+    - vertices
+    - arrows
+    - source
+    - target
+- definition:quotient_module_of_a_module_by_a_module_of_a_ring
+    - quotient $R$-$S$-bidmodule of $M$ by $N$
+    - $M/N$
+    - quotient $R$-module
+    - $M/N$
+- definition:quotient_object_of_an_object_of_an_abelian_category_by_a_subobject
+    - quotient object of $X$ by $A$
+- definition:quotient_of_an_algebraic_group_scheme_by_an_algebraic_subgroup_scheme
+    - quotient sheaf
+    - $G/H$
+    - quotient of $G$ by $H$
+- definition:quotient_of_a_group_by_a_normal_subgroup
+    - quotient group of $G$ by $N$
+    - $G/N$
+- definition:quotient_representation_of_a_representation_of_a_group_on_a_left_module_on_a_ring
+    - quotient representation of $G$
+- definition:quotient_ring_of_a_ring_by_a_two_sided_ideal
+    - quotient ring of $R$ by $I$
+- definition:Q_divisor_on_a_scheme
+    - $\mathbb{Q}$-divisor on $X$
+- definition:radical_of_an_ideal_of_a_commutative_ring
+    - radical of $I$
+    - $\sqrt{I}$
+    - $\operatorname{rad}(I)$
+- definition:rational_polyhedral_cone_with_respect_to_a_lattice_in_a_finite_dimensional_real_vector_space
+    - rational (with respect to $N$)
+- definition:real_and_complex_fields_as_complete_fields
+    - $\mathbb{R}$
+    - real numbers
+- definition:reduced_ring
+    - reduced ring
+- definition:reduced_scheme
+    - reduced scheme
+- definition:reductive_linear_algebraic_group_over_a_scheme
+    - unipotent radical of $G$
+    - $\mathrm{Rad}_u(G)$
+    - reductive
+    - reductive
+- definition:reflective_subcategory_of_a_category
+    - reflective
+    - reflector
+    - reflection arrow of $c$ into $\mathcal{D}$
+- definition:reflects_a_type_of_morphism_for_a_functor_between_categories
+    - reflects $\mathcal{P}$-morphisms
+- definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set
+    - reflexive
+    - symmetric
+    - antisymmetric
+    - transitive
+    - total
+    - connected
+- definition:regular_and_singular_cardinals
+    - singular cardinal
+    - cofinality
+    - regular cardinal
+- definition:regular_at_a_point_for_a_scheme_regular_scheme_nonsingular_scheme
+    - regular at a point $x \in X$
+    - nonsingular at a point $x \in X$
+    - singular at $x$
+    - singularity of $X$
+    - regular scheme
+    - nonsingular scheme
+    - singular
+- definition:regular_ring
+    - regular ring
+- definition:regular_system_of_parameters_of_a_noetherian_local_ring
+    - regular system of parameters
+- definition:related_to_for_a_binary_relation
+    - related to $y$ by $R$
+    - x R y \quad \text{or} \quad x \sim_R y.
+- definition:relative_absolute_cellular_chain_complex_of_CW_pair_complex
+    - relative cellular chain complex
+    - $(C_{\bullet}^{CW}(X, A; G), d_{\bullet}^G)$
+    - $d_n^G: C_n^{CW}(X, A; G) \to C_{n-1}^{CW}(X, A; G)$
+    - cellular boundary map
+- definition:relative_absolute_cellular_homology_groups_of_CW_pair_complex
+    - relative cellular homology groups
+    - $H_n^{CW}(X, A; G)$
+    - absolute cellular homology groups
+    - $H_n^{CW}(X; G)$
+- definition:relative_absolute_group_of_cellular_n_chains_of_a_CW_pair_complex
+    - relative group of cellular $n$-chains
+    - $C_n^{CW}(X, A; G)$
+    - absolute group of cellular $n$-chains of the CW complex $X$
+    - $C_n^{CW}(X; G) = C_n^{CW}(X,\emptyset;G)$
+- definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic
+    - relative $p^n$th power Frobenius morphism of $X/S$
+    - $F_{X/S, p^n}$
+    - $F_{X|S, p^n}$
+    - $Frob_{X/S, p^n}$
+    - $Frob_{X|S, p^n}$
+    - relative Frobenius morphism of $X/S$
+    - $F_{X/S}$
+    - $F_{X|S}$
+    - $Frob_{X/S}$
+    - $Frob_{X|S}$
+- definition:relative_proj_of_a_quasi_coherent_graded_sheaf_of_O_algebras_on_a_scheme
+    - relative Proj of $\mathcal{S}$
+    - $\mathbf{Proj}(\mathcal{S})$
+    - $\mathcal{P}roj(\mathcal{S})$
+    - $\underline{\operatorname{Proj}}(\calA)$
+    - X_U = \operatorname{Proj}(S(U)).
+- definition:relative_slice_category_of_objects_over_an_object_relative_to_a_functor
+    - relative slice category
+    - relative over-category
+    - category of objects over $U$ relative to $u$
+    - $(u \downarrow U)$
+    - $u/U$
+- definition:relative_spectrum_of_a_quasi_coherent_sheaf_of_O_algebras_on_a_scheme
+    - relative spectrum of $\mathcal{A}$
+    - $\mathbf{Spec}(\mathcal{A})$
+    - $\mathcal{S}pec(\mathcal{A})$
+    - $\underline{\operatorname{Spec}}(\calA)$
+- definition:replete_subcategory_of_a_category
+    - replete
+- definition:representable_by_algebraic_spaces_for_a_1_morphism_of_stacks_in_groupoids_over_a_site_on_S_schemes
+    - representable by algebraic spaces
+- definition:representable_by_schemes_for_a_morphism_of_presheaves_on_Sch_S
+    - representable by schemes
+- definition:representable_functor_on_a_category_enriched_in_a_monoidal_category
+    - functor of points
+    - $h_X$
+    - representable
+    - co-representable
+- definition:representable_functor_on_a_locally_small_category
+    - functor of points
+    - $h_X$
+    - representable
+    - co-representable
+    - $h^X: \calC \to \Sets$
+- definition:representable_morphism_between_presheaves_on_a_category
+    - representable
+- definition:representation_of_an_affine_algebraic_group_scheme_over_a_scheme
+    - representation of $G$ on $\mathcal{E}$
+- definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring
+    - representation of $G$ on the $R$-module $M$
+    - \rho : G \to \operatorname{Aut}_R(M)
+    - $G$-module over $R$
+    - representation of $G$ on a right $R$-module
+- definition:representation_of_a_group_on_a_vector_space_over_a_field
+    - representation of $G$ on $V$
+    - representation of $G$
+- definition:representation_of_a_topological_group_on_a_topologcal_vector_space_over_a_topological_field
+    - representation of $G$ on $V$
+    - representation of $G$ on $V$
+- definition:residue_field_of_a_ring_at_a_point
+    - residue field of $R$
+    - \kappa(R) := R/\mathfrak{m}.
+    - residue field of $R$ at $\mathfrak{p}$
+    - \kappa(\mathfrak{p}) := \mathrm{Frac}(R_{\mathfrak{p}}/\mathfrak{p} R_{\mathfrak{p}}),
+- definition:residue_field_of_a_scheme_at_a_point
+    - residue field of the scheme $X$ at the point $x$
+    - \kappa(x) = \kappa(\mathcal{O}_{X,x}) := \mathcal{O}_{X,x} / \mathfrak{m}_x.
+- definition:resolution_of_singularities_of_a_reduced_noetherian_scheme_scheme
+    - resolution of singularities of $X$
+- definition:restricted_product_of_a_family_of_sets_with_respect_to_a_family_of_distinguished_subsets
+    - restricted product of the family $\{X_i\}_{i \in I}$ with respect to the subsets $\{K_i\}_{i \in I}$
+    - \prod_{i \in I}' X_i
+- definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces
+    - restricted product topology
+- definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site
+    - restriction of $\calF$ to $U$
+    - $\calF|_U$
+- definition:restriction_of_scalars_by_Frobenius_for_a_scheme
+    - restriction of scalars for $X/S$ by $p^n$th power Frobenius
+    - $X/S_{F, p^n}$
+    - $X/S_{\Frob, p^n}$
+    - $X_{F, p^n}$
+    - $X_{\Frob, p^n}$
+    - restriction of scalars for $X$ by Frobenius
+    - $X_F$
+    - $X_{\Frob}$
+- definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring
+    - restriction of scalars of $M$ along $\varphi$
+    - $\varphi_* M$
+    - $_R M$
+    - $\varphi_* M$
+    - $M_R$
+    - restriction of scalars functor for modules
+    - $ \varphi_*: {}_S\text{Mod}_T \to {}_R\text{Mod}_T $
+    - $ \varphi_*: {}_T \text{Mod}_S \to {}_T \text{Mod}_R $
+    - forgetful functor
+    - restriction of scalars functor for rings
+    - $ \varphi_*: \mathsf{Ring}_S \to \mathsf{Ring}_R $
+- definition:riemannian_metric_of_a_smooth_manifold_and_a_riemannian_manifold
+    - Riemannian metric on $M$
+    - Riemannian manifold (with or without boundary)
+- definition:riemann_zeta_function
+    - Riemann zeta function
+    - \zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.
+- definition:right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories
+    - right acyclic for $F$
+    - left acyclic for $F$
+- definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems
+    - right derived functor $RF$ of $F$ relative to $(S_i, \Sigma_j)$ and $T$
+    - RF: \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) \to \text{Ind}(\mathscr{C}(T^{-1}))
+    - left derived functor $LF$ of $F$ relative to $(S_i, \Sigma_j)$ and $T$
+    - LF: \prod_{i=1}^n \mathscr{A}_i(S_i^{-1}) \times \prod_{j=1}^m \mathscr{B}_j(\Sigma_j^{-1}) \to \text{Pro}(\mathscr{C}(T^{-1}))
+- definition:right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories
+    - right (resp. left) derived multifunctors of $F$
+    - $RF$
+    - $LF$
+- definition:rigid_category
+    - rigid category
+    - left dual
+    - $X^{\vee}$
+    - right dual
+    - ${}^{\vee}\!X$
+    - \begin{align*}
+&\mathrm{ev}_X: X^{\vee} \otimes X \to \mathbb{I}, \qquad \mathrm{coev}_X: \mathbb{I} \to X \otimes X^{\vee}, \\
+&\widetilde{\mathrm{ev}}_X: X \otimes {}^{\vee}\!X \to \mathbb{I}, \qquad \widetilde{\mathrm{coev}}_X: \mathbb{I} \to {}^{\vee}\!X \otimes X,
+\end{align*}
+    - zig-zag identities
+    - evaluation map for the left dual
+    - evaluation map for the right dual
+    - coevaluation map for the left dual
+    - coevaluation map for the right dual
+- definition:ring
+    - ring
+    - $0 \in R$
+    - $-a \in R$
+    - $1 \in R$
+    - addition
+    - multiplication
+    - additive identity
+    - multiplicative identity
+    - commutative
+    - unitary ring
+- definition:ringed_site
+    - ringed site
+    - morphism of ringed sites
+- definition:ringed_space
+    - ringed space
+    - $\mathcal{O}_X$
+    - structure sheaf of $X$
+- definition:ring_homomorphism
+    - ring homomorphism
+    - ring isomorphism
+    - $R$-ring
+    - $R$-algebra
+- definition:ring_object_in_a_category_with_a_terminal_object
+    - ring object in $\mathcal{C}$
+- definition:ring_of_integers_of_a_global_or_local_ring
+    - ring of integers of $K$
+    - integer ring of $K$
+    - $\mathcal{O}_K$
+    - $\mathscr{O}_K$
+- definition:saturated_multiplicative_system_in_a_category
+    - saturated
+- definition:scheme
+    - scheme
+- definition:scheme_over_a_scheme
+    - scheme over $S$
+    - $S$-scheme
+    - structure morphism of the scheme $X$ over $S$
+    - $R$-scheme
+    - scheme over $R$
+    - morphism of $S$-schemes
+    - $S$-scheme morphism
+    - $\mathrm{Sch}_S$
+    - $\mathrm{Sch}_{/S}$
+    - $\mathrm{Sch}/S$
+    - $\mathbf{Sch}_S$
+    - $\mathbf{Sch}_{/S}$
+    - $\mathbf{Sch}/S$
+    - $\mathrm{Sch}_R$
+- definition:schwartz_bruhat_space_of_a_locally_compact_abelian_group
+    - Schwartz-Bruhat space
+    - $\mathcal{S}(G)$
+- definition:schwartz_space_on_Rn
+    - Schwartz space
+    - $\mathcal{S}(\mathbb{R}^n)$
+    - p_{\alpha, \beta}(f) := \sup_{x \in \mathbb{R}^n} |x^\alpha D^\beta f(x)|.
+- definition:sections_of_a_presheaf_on_a_category_valued_in_a_category
+    - sections functor evaluated at $U$
+    - \Gamma(U, -) : \mathrm{PSh}(\mathcal{C}, \mathcal{D}) \to \mathcal{D}
+    - global sections of $\calF$
+    - $\Gamma(\calF)$
+    - \Gamma : \mathrm{PSh}(\mathcal{C}, \mathcal{D}) \to \mathcal{D}
+    - global sections functor on $\mathrm{PSh}(\mathcal{C}, \mathcal{D})$
+- definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field
+    - $\mathrm{Sel}^\varphi(A/K)$
+    - $\mathrm{Sel}^{(\varphi)}(A/K)$
+    - Selmer group of $\varphi$ over $K$
+- definition:semidirect_product_of_groups_external_and_internal
+    - external semidirect product of $N$ and $H$ with respect to $\varphi$
+    - $N \rtimes_\varphi H$
+    - internal semidirect product of a subgroup $N$ and a subgroup $H$
+- definition:semigroup
+    - semigroup
+    - commutative
+- definition:semigroup_object_in_a_category
+    - semigroup object in $\mathcal{C}$
+    - multiplication morphism
+    - abelian
+    - commutative
+- definition:semisimple_additive_category
+    - semisimple category
+- definition:semisimple_object_of_an_additive_category
+    - semisimple
+- definition:separable_algebraic_field_extension
+    - separable over $K$
+    - inseparable over $K$
+    - separable extension
+- definition:separable_field_extension_general
+    - separable
+- definition:separably_closed_field
+    - separably closed
+- definition:separably_closed_field_extension
+    - separable closure of $K$
+    - $K^{\text{sep}}$
+    - $\overline{K}$
+- definition:separating_transcendence_basis_of_a_field_extension
+    - separating transcendence basis
+- definition:separation_axioms_of_topology
+    - T$_0$
+    - Kolmogorov
+    - T$_1$
+    - Fréchet
+    - T$_2$
+    - Hausdorff
+    - regular
+    - T$_3$
+    - completely regular
+    - T$_{3\frac{1}{2}}$
+    - normal
+    - T$_4$
+    - T$_5$
+    - perfectly normal
+    - T$_6$
+- definition:sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm
+    - converges to a function $f: X \to \mathbb{R}$ (or $f: X \to \mathbb{C}$) in the $L^p$ norm
+    - limit of $(f_n)_{n=1}^\infty$ for the $L^p$ norm on $X$
+    - f = \lim_{n \to \infty} f_n \text{ in } L^p
+    - f_n \to f \text{ in } L^p
+- definition:serre_subcategory_of_an_abelian_category
+    - Serre subcategory
+    - thick subcategory
+- definition:sesquilinear_form_associated_to_a_homomorphism_from_a_module_to_its_twisted_dual
+    - sesquilinear form associated to $h$
+    - $b_h: M \times M \to A$
+- definition:sesquilinear_form_on_a_module_over_a_ring_with_involution
+    - $\sigma$-sesquilinear form
+    - sesquilinear form
+    - sesquilinear module
+    - $\operatorname{Sesq}_A(M)$
+    - $\sigma$-sesquilinear form
+    - sesquilinear form
+    - $\operatorname{Sesq}_A(M)$
+- definition:sesquilinear_form_on_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site
+    - sesquilinear form on $\mathcal{E}$
+- definition:sesquilinear_space_varepsilon_hermitian_space
+    - (sesquilinear) space
+    - $\varepsilon$-hermitian space
+- definition:sheafification_functor_on_a_site
+    - sheafification functor
+    - sheaf associated to $P$
+- definition:sheafification_of_a_presheaf_on_a_topological_space
+    - sheafification of $\mathcal{F}$
+    - sheafification functor
+    - sheaf associated to $P$
+- definition:sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits
+    - sheaf associated to the presheaf $\mathcal{P}$
+    - sheaffification of the presheaf $\calP$
+    - $\mathcal{P}^+$
+    - $a\calP$
+- definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family
+    - sheafified tensor product
+    - $\calM \otimes_{\calS} \calN$
+- definition:sheafy_functor_of_a_functor_between_two_categories_for_the_categories_of_sheaves_on_a_site
+    - sheafy functor
+    - $\mathscr{F}$
+    - $\mathscr{F}$
+- definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site
+    - $n$-th (abelian) (global) sheaf cohomology group of $\mathcal{F}$
+    - H^n(\mathcal{C}, J; \mathcal{F}) := R^n \Gamma(\mathcal{F}),
+    - $n$-th (abelian) sheaf cohomology group of $\mathcal{F}$ of sections at $U$
+    - H^n(U, \mathcal{F}) := (R^n \Gamma(U,-))(\mathcal{F}),
+    - sheaf cohomology groups of $\mathcal{F}$
+- definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family
+    - sheafified Hom
+    - $\mathcal{H}om_{\calR}(\calM, \calN)$
+    - $\mathscr{H}om_{\calR}(\calM, \calN)$
+    - $\underline{\mathrm{Hom}}_{\calR}(\calM, \calN)$
+- definition:sheaf_of_A1_connected_components_of_an_unbased_space
+    - $\pinAone[0](X)$
+    - sheaf of $\bbA^1$-connected components of $X$
+- definition:sheaf_of_ideals_for_a_sheaf_of_rings_on_a_site
+    - sheaf of (left/right/two-sided) ideals
+- definition:sheaf_of_nth_roots_of_unity_on_the_small_etale_site_of_a_scheme
+    - $\mu_n$
+    - $\mu_n$
+- definition:sheaf_on_a_site
+    - sheaf on the site $(\calC, J)$ valued in $\calA$
+    - morphism between the sheaves
+    - $U$-sheaf
+    - sheaf category/category of $\calA$-valued sheaves on $\calC$
+    - $\Shv(\calC, \calA)$
+    - $\Shv(\calC, J, \calA)$
+    - $\Sh(\calC, \calA)$
+    - $\Sh(\calC, J, \calA)$
+    - $\Shv(\calC)$
+    - $\Shv(\calC, J)$
+    - $\Sh(\calC)$
+    - $\Sh(\calC, J)$
+    - sheaf on the site $(\calC, J)$ valued in $\calA$
+    - sheaf on the site $(\calC,J)$ valued in $\calA$
+    - sheaf on the site $(\calC,J)$ valued in $\calA$
+    - morphism of sheaves
+    - $U$-sheaf
+    - sheaf category/category of $\calA$-valued sheaves on $\calC$
+    - $\Shv(\calC, \calA)$
+    - $\Shv(\calC, J, \calA)$
+    - $\Sh(\calC, \calA)$
+    - $\Sh(\calC, J, \calA)$
+    - $\Shv(\calC)$
+    - $\Shv(\calC, J)$
+    - $\Sh(\calC)$
+    - $\Sh(\calC, J)$
+- definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object
+    - sheaf
+    - sheaf axioms
+- definition:shifted_tower_of_objects_in_a_category
+    - shifted tower
+    - $A[r]$
+- definition:shift_of_a_quasi_coherent_graded_sheaf_of_algebras_on_a_scheme
+    - $n$-th shifted graded module of $\mathcal{M}$
+    - $\mathcal{M}(n)$
+    - \mathcal{M}(n)_d = \mathcal{M}_{n+d}.
+- definition:short_exact_sequence_in_an_additive_category
+    - short exact sequence
+- definition:sieve_on_an_object_in_a_category
+    - sieve $S$ on the category $C$
+    - sieve $S$ on an object $U \in \operatorname{Ob}(C)$
+    - $f$ factors through $U$
+- definition:sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms
+    - generated
+    - sieve generated by $\mathcal{S}$
+    - $(\mathcal{S})$
+    - $\langle \mathcal{S} \rangle$
+- definition:sigma_algebra_on_a_set_and_measure_space
+    - $\sigma$-algebra on $X$
+    - measurable space
+- definition:signature_of_an_element_of_the_symmetric_group_on_a_finite_set
+    - parity of $\tau$
+    - signature of $\tau$
+    - sign of $\tau$
+    - $\mathrm{sgn}(\tau)$
+    - signature or sign of an element of $\mathfrak{S}_X$
+    - $\mathrm{sgn}(\sigma)$
+- definition:simplex_category
+    - simplex category
+    - nonempty finite ordinal category
+    - $\Delta$
+    - $[n] := \{0, 1, 2, \dots, n\}$
+- definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps
+    - $X_n := X([n])$
+    - $n$-simplices of $X$
+    - $n$-simplex of $X$
+    - set of $n$-simplices of $X$
+    - vertex of $X$
+    - edge of $X$
+    - simplicial morphism
+    - $j$th face map of the $n$-simplicies
+    - d_j = X(p_j): X_n \to X_{n-1}, \quad p_j: [n-1] \to [n], \quad p_j(i) = \begin{cases} i &\text{if } i < j  \\ i+1 &\text{if } i \geq j \end{cases}
+    - $\partial_j$
+    - $j$th degeneracy map of the $n$-simplicies
+    - s_j = X(q_j): X_n \to X_{n+1}, \quad q_j: [n+1] \to [n], \quad q_j(i) = \begin{cases} i &\text{if } i \leq j  \\ i-1 &\text{if } i > j \end{cases}
+    - $Y^n := Y([n])$
+    - $n$-cosimplicies of $Y$
+    - $n$-cosimplex of $Y$
+    - set of $n$-cosimplices of $Y$
+    - cosimplicial morphism
+    - $j$th coface map of the $n$-cosimplicies
+    - d^j = Y(p_j) : Y^n \to Y^{n+1}, \quad p_j : [n] \to [n+1], \quad p_j(i) = 
+    \begin{cases}
+    i & \text{if } i < j \\
+    i + 1 & \text{if } i \geq j
+    \end{cases}
+    - $\partial^j$
+    - $j$th codegeneracy map of the $n$-cosimplicies
+    - s^j = Y(q_j): Y^n \to Y^{n-1}, \quad q_j: [n] \to [n-1], \quad q_j(i) =
+    \begin{cases}
+    i & \text{if } i \leq j \\
+    i - 1 & \text{if } i > j
+    \end{cases}
+    - coface map
+    - codegeneracy map
+    - (co)face/degeneracy of a the $n$-(co)simplicies of a (co)simplicial object
+- definition:simple_module_of_a_ring
+    - simple
+- definition:simple_object_of_an_additive_category
+    - simple
+    - irreducible
+- definition:simple_ring
+    - simple
+- definition:simplicial_category
+    - simplicial category
+    - $\mathbf{Cat}_\Delta$
+    - $\mathbf{sCat}$
+- definition:simplicial_category_of_simplicial_sets
+    - $Y^X$
+    - exponential simplicial set from $X$ to $Y$
+    - simplicial mapping object from $X$ to $Y$
+    - simplicial category of simplicial sets
+    - $\mathbf{s}\mathbf{Sets}$
+    - $\mathbf{Sets}_\Delta$
+    - $\Fun(X,Y)$
+    - functor $\infty$-category from $X$ to $Y$
+- definition:simplicial_cosimplicial_object_in_a_category
+    - category of simplicial objects in $\mathcal{C}$
+    - $\mathbf{s}\mathcal{C}$
+    - $\operatorname{Simp} \mathcal{C}$
+    - $\calC_\Delta$
+    - $(\Delta^{\op})^{\calC}$
+    - $\Deltaop C$
+    - simplicial object of $\mathcal{C}$
+    - category of cosimplicial objects in $\mathcal{C}$
+    - $\mathbf{c}\mathcal{C}$
+    - $\operatorname{Cosimp} \mathcal{C}$
+    - $\Delta^{\calC}$
+    - cosimplicial object of $\mathcal{C}$
+    - (co)simplicial set, group, topological space, ring, etc.
+    - $\Sets_\Delta$
+    - $\mathbf{Grps}_\Delta$
+    - $\mathbf{Top}_\Delta$
+    - $\mathbf{Rings}_\Delta$
+    - (co)simplicial map
+- definition:simplicial_cosimplicial_subset_of_a_simplicial_cosimplicial_set
+    - simplicial subset of $X$
+    - cosimplicial subset
+- definition:simplicial_model_category_struture_on_the_category_of_simplicial_sheaves_on_a_small_site_and_simplicial_homotopy_category_of_a_site
+    - simplicial model category structure on $\Deltaop\Shv(T)$
+    - simplicial homotopy category of $T$ (or of $\Shv(T)$ or of $\Deltaop\Shv(T)$)
+    - $\calH_s(T)$
+    - (pointed) simplicial model category structure on $\Deltaop \Shv(T)_\bullet$
+    - pointed simplicial homotopy category of $T$ (or of $\Shv(T)$ or of $\Deltaop\Shv(T)$)
+    - $\calH_s(T)_\bullet$
+    - $\calH_{s\bullet}(T)$
+- definition:simplicial_model_structure_on_a_category
+    - simplicial model structure  on $\mathcal{M}$
+- definition:simplicial_nerve_of_a_simplicial_category
+    - (simplicial) nerve
+    - $N(\mathcal{C})$
+    - homotopy coherent nerve of $\calC$
+- definition:simplicial_path_category_of_a_simplex_of_a_finite_nonempty_linearly_ordered_set
+    - simplicial path category
+    - $\mathfrak{C}[\Delta^J]$
+    - $\mathfrak{C}: \Sets_{\Delta} \to \mathbf{Cat}_\Delta$
+- definition:simplicial_suspension_functor_and_simplicial_loop_functor_on_pointed_simplicial_sheaves_of_sets_on_a_site
+    - $S_s^1$
+    - simplicial circle (on $T$)
+    - simplicial suspension functor
+    - \Sigma_s: \Deltaop(\Shv(T))_\bullet \to \Deltaop(\Shv(T))_\bullet, \quad (X,x) \mapsto S_s^1 \wedge (X,x)
+    - simplicial loop functor
+    - $\Omega_s^1(-) := \underline{\Hom}_\bullet(S_s^1, -)$
+    - $\Sigma^n = \Sigma_s^n$
+    - $\Omega^n = \Omega_s^n$
+- definition:simplicial_weak_equivalences_cofibrations_and_fibrations_for_simplicial_sheaves_on_a_site
+    - (simplicial) weak eqiuvalence
+    - (simplicial) cofibration
+    - (simplicial) fibration
+    - simplicial weak equivalence
+    - simplicial cofibration
+    - simplicial fibration
+- definition:singularity_of_a_scheme
+    - singularity of $X$
+    - normal crossings singularity
+    - rational singularity
+    - canonical singularity
+    - log canonical singularity
+    - log terminal singularity
+- definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group
+    - boundary operator
+    - (absolute) singular chain complex of $X$ with coefficients in $G$
+    - $C_\bullet(X;G)$
+    - $\partial_n$
+    - relative singular chain complex of the pair $(X,A)$ with coefficients in $G$
+    - $C_\bullet(X,A;G)$
+- definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group
+    - singular $n$-chain group of $X$ with coefficients in $R$
+    - $C_n(X;R)$
+    - singular $n$-chains in $X$ with coefficients in $R$
+    - C_n(X,A;R) = C_n(X;R)/C_n(A;R)
+    - relative singular $n$-chain groups of $X$ in $A$ with coefficients in $R$
+    - relative singular $n$-chains in $X$ relative to $A$ with coefficients in $R$
+    - $C_n(X)$
+    - $C_n(X,A)$
+    - singular $n$-chain group of $X$ with coefficients in $G$
+    - C_n(X;G) = C_n(X; \bbZ) \otimes_\bbZ G.
+    - singular $n$-chains in $X$ with coefficients in $G$
+    - relative singular $n$-chain group of $X$ in $A$ with coefficients in $G$
+    - C_n(X,A;G) = C_n(X;G) / C_n(A;G)
+    - singular $n$-chains in $X$ relative to $A$ with coefficients in $G$
+- definition:singular_cochain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group
+    - coboundary operator
+    - (\delta^n \varphi)(\sigma) = \varphi(\partial_{n+1} \sigma) = \sum_{i=0}^{n+1} (-1)^i \varphi(\sigma \circ \delta_i)
+    - singular cochain complex
+    - $C^\bullet(X, A; G)$
+- definition:singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring
+    - singular $n$-cochain group of $X$ with coefficients in $R$
+    - C^n(X;R) = \operatorname{Hom}_R(C_n(X;R), R)
+    - coboundary operators
+    - \delta^n : C^n(X;R) \to C^{n+1}(X;R), \quad \delta^n(\varphi) = \varphi \circ \partial_{n+1}.
+    - singular cochain complex of $X$ with coefficients in $R$
+    - relative singular $n$-cochain group of $(X,A)$ with coefficients in $R$
+    - C^n(X,A;R) = \operatorname{Hom}_R(C_n(X,A;R), R)
+    - relative singular cochain complex of $(X,A)$ with coefficients in $R$
+- definition:singular_cochain_group_of_a_topological_space_with_coefficients_in_an_abelian_group
+    - singular $n$-cochain group of $X$ with coefficients in $G$
+    - C^n(X; G) = \operatorname{Hom}(C_n(X; \bbZ), G).
+    - singular $n$-cochains
+    - relative singular $n$-cochain group of $(X, A)$ with coefficients in $G$
+    - C^n(X, A; G) = \ker(i^*: C^n(X; G) \to C^n(A; G)) \cong \operatorname{Hom}(C_n(X, A; \bbZ), G)
+- definition:singular_cohomology_and_relative_singular_cohomology_of_topological_space_with_coefficients_in_an_abelian_group
+    - (absolute) $n$-th singular cohomology group of $X$ with coefficients in $G$
+    - H^n(X; G) = Z^n(X; G) / B^n(X; G)
+    - $n$-th relative singular cohomology group of $(X, A)$ with coefficients in $G$
+    - H^n(X, A; G) = Z^n(X, A; G) / B^n(X, A; G)
+- definition:singular_cohomology_group_relative_singular_cohomology_group_of_topological_space_with_coefficients_in_a_commutative_ring
+    - $n$-th singular cohomology group of $X$ with coefficients in $R$
+    - H^n(X;R) = \ker(\delta^n)/\operatorname{im}(\delta^{n-1}).
+    - relative cohomology groups of $(X,A)$
+    - H^n(X,A;R) = H^n(C^*(X,A;R)).
+- definition:singular_complex_of_a_topological_space
+    - singular complex of $\mathcal{C}$
+    - $\mathrm{Sing}(\mathcal{C})$
+    - $\mathrm{Sing}(\mathcal{C})$
+- definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group
+    - (absolute) $n$-th singular homology group of $X$ with coefficients in $G$
+    - H_n(X;G) = H_n(C_*(X;G)) = \ker \partial_n / \operatorname{im} \partial_{n+1}
+    - $n$-th relative singular homology group of $(X,A)$ with coefficients in $G$
+    - H_n(X,A;G) = H_n(C_*(X,A;G)) = \ker \partial_n / \operatorname{im} \partial_{n+1}
+    - $H_n(X)$
+    - $H_n(X,A)$
+- definition:singular_n_cocycles_coboundaries_of_a_topological_space_with_coefficients_in_an_abelian_group
+    - singular $n$-cocycle
+    - Z^n(X, A; G) = \ker(\delta^n : C^n(X, A; G) \to C^{n+1}(X, A; G))
+    - singular $n$-coboundary
+    - B^n(X, A; G) = \operatorname{im}(\delta^{n-1} : C^{n-1}(X, A; G) \to C^n(X, A; G))
+- definition:singular_n_cycles_boundaries_of_a_topological_space_with_coefficients_in_an_abelian_group
+    - relative singular chain complex
+    - (absolute) singular $n$-cycle group in $X$ with coefficients in $G$
+    - Z_n(X;G) = \ker(\partial_n : C_n(X;G) \to C_{n-1}(X;G))
+    - relative singular $n$-cycle group of $X$ relative to $A$
+    - Z_n(X,A;G) = \ker(\partial_n : C_n(X,A;G) \to C_{n-1}(X,A;G))
+    - (absolute) singular $n$-boundary group in $X$ with coefficients in $G$
+    - B_n(X;G) = \operatorname{im}(\partial_{n+1} : C_{n+1}(X;G) \to C_n(X;G))
+    - relative singular $n$-boundary group of $X$ relative to $A$
+    - B_n(X,A;G) = \operatorname{im}(\partial_{n+1} : C_{n+1}(X,A;G) \to C_n(X,A;G))
+- definition:singular_simplex_of_a_topological_space
+    - singular $n$-simplex in $X$
+    - $S_n(X)$
+- definition:singular_simplicial_category_of_a_topological_category
+    - singular simplicial category
+    - $\operatorname{Sing} \calC$
+- definition:site_induced_by_a_site_on_an_over_category
+    - slice site
+    - over site
+    - site on the slice category $\mathcal{C}_{/X}$
+    - site induced on the over category $\mathcal{C}_{/X}$
+    - localization of the site $\calC$ at the object $X$
+    - $\tau_{/X}$
+    - $\tau|_{X}$
+    - $\tau/X$
+    - j_X: \calC/X \to \calC
+- definition:site_of_opens_on_a_topological_space
+    - small site associated to $X$
+    - the site of open covers of $X$
+    - the canonical site on $\operatorname{Open} X$
+- definition:site_with_enough_points
+    - enough points
+    - enough points
+- definition:small_and_finite_limits_and_colimits_in_a_category
+    - finite
+    - small
+- definition:small_etale_site_of_a_scheme
+    - small étale site on $X$
+    - $X_{\et}$
+    - $X_{\mathrm{\acute{e}tale}}$
+    - $\mathrm{Et}_{/X}$
+- definition:small_set
+    - small set
+    - small set
+    - universe of small sets
+    - small
+- definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field
+    - smooth at a point $x \in X$
+    - smooth
+- definition:smooth_morphism_of_schemes
+    - smooth
+    - smooth scheme over $S$
+    - category of smooth schemes over $S$
+    - $\mathrm{Sm}/S$
+    - $\mathbf{Sm}/S$
+    - $\mathrm{Sm}_S$
+    - $\mathbf{Sm}_S$
+- definition:Omega_k_M
+    - $\Omega^k(M)$
+    - space of $k$-times continuously differentiable differential forms on $M$
+- definition:span_a_module_over_a_ring_for_elements_of_the_module
+    - span $M$ (as an $R$-$S$-bimodule)
+    - span $M$ (as a left/right/two-sided $R$-module)
+    - generating set
+    - spanning set of $M$ over $R$
+    - span $M$ over $R$
+    - span $M$ over $R$
+    - span $M$ over $R$
+    - generating set
+    - spanning set of $M$ over $R$
+- definition:special_linear_group_over_a_scheme
+    - special linear group
+    - $\operatorname{SL}_{n,S}$
+- definition:special_orthogonal_group_over_a_scheme_for_a_quadratic_form
+    - special orthogonal group
+    - $\operatorname{SO}(q)$
+- definition:special_unitary_group_over_a_scheme
+    - special unitary group
+    - $\operatorname{SU}(h)$
+- definition:spectral_sequence_in_an_abelian_category
+    - homological spectral sequence (starting at page $r_0$) in $\mathcal{A}$
+    - $r$-th page
+    - cohomological spectral sequence (starting at page $r_0$) in $\mathcal{A}$
+- definition:splitting_field_of_polynomials_over_a_field_normal_field_extension
+    - splitting field of $S$ over $K$
+    - normal extension
+- definition:split_exact_sequence_in_an_additive_category
+    - split exact
+    - section
+    - retraction
+- definition:stabilizer_of_an_element_of_a_set_under_a_group_action
+    - stabilizer of $x$ in $G$
+    - \operatorname{Stab}_G(x) = \{ g \in G : g \cdot x = x \}
+- definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page
+    - stabilize
+    - limit term
+    - infinity page
+    - $E^\infty_{p,q}$
+    - stabilize
+    - limit term
+    - infinity page
+    - $E_\infty^{p,q}$
+- definition:stack_in_groupoids_over_a_site
+    - stack in groupoids over $\mathcal{C}$
+    - stack over $\mathcal{C}$
+- definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point
+    - stalk of $\mathcal{F}$
+    - $\mathcal{F}_x$
+    - germ of a section at $x$
+- definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point
+    - stalk of $\mathcal{F}$ at $\bar{x}$
+- definition:stalk_of_a_topos_at_a_point
+    - $p: \mathbf{Set} \to \mathcal{E}$
+    - $p^*: \mathcal{E} \to \mathbf{Set}$
+    - stalk functor associated with the point $p$
+    - $p^*(F)$
+    - stalk of $F$ at the point $p$
+- definition:standard_model_structure_on_the_category_of_simplicial_sets
+    - standard model category structure on $\mathsf{sSet}$
+    - Kan model structure
+    - Quillen model structure
+    - Kan-Quillen model structure
+    - weak homotopy equivalence between the simplicial sets $X$ and $Y$
+    - (Kan) fibration
+- definition:standard_n_simplex
+    - $\Delta^n$
+    - $\Delta^{[n]}$
+    - $\Delta[n]$
+    - standard $n$-simplex
+    - $\Delta^J$
+    - Standard simplicial $n$-simplex functor
+    - standard $n$-cosimplex
+- definition:standard_orientation_on_R_n
+    - standard orientation on $\mathbb{R}^n$
+    - positively oriented
+- definition:standard_simplicial_scheme_over_a_scheme
+    - ``standard'' simplicial scheme over $S$
+    - $\Delta_S^\bullet$
+    - $\Delta_S^n \subset \bbA_S^{n+1}$
+- definition:standard_topological_geometric_simplicial_topological_space
+    - standard topological/geometric simplicial (topological) space
+    - $\Delta^\bullet$
+    - $|\Delta^\bullet|$
+- definition:strictly_henselian_ring
+    - strictly henselian ring
+- definition:strict_2_category
+    - strict $2$-category
+    - $\operatorname{Ob}(\mathcal{C})$
+    - $0$-cells
+    - $\Hom(x,y) = \Hom_\calC(x,y)$
+    - $1$-morphisms
+    - $1$-cells of $\calC$
+    - $2$-morphisms
+    - $2$-cells of $\calC$
+    - identity object
+    - composition
+- definition:strict_abelian_subcategory_of_an_abelian_category
+    - strict abelian subcategory of $\mathcal{A}$
+- definition:strict_full_subcategory_of_a_category
+    - strict full subcategory
+- definition:strict_henselization_of_a_local_ring
+    - strict henselization
+    - $R^{sh}$
+- definition:strict_n_category
+    - strict $0$-category
+    - strict $(n+1)$-category
+    - $0$-cell
+    - $0$-morphism
+    - $k$-cells
+    - $k$-morphisms
+    - identity
+    - $\id_x \in \Hom_\calC(x,x)$
+    - \circ_{x,y,z}: \mathrm{Hom}_{\mathcal{C}}(y, z) \times \mathrm{Hom}_{\mathcal{C}}(x, y) \to \mathrm{Hom}_{\mathcal{C}}(x, z)
+- definition:strongly_connected_algebraic_group_scheme_over_a_scheme
+    - strongly connected algebraic group scheme
+- definition:strongly_convex_cone_in_a_finite_dimensional_real_vector_space
+    - strongly convex
+- definition:strong_convergence__to_a_filtered_graded_object_for_a_spectral_sequence_in_an_abelian_category
+    - strong convergence
+- definition:strong_identity_component_of_an_algebraic_group_scheme_over_a_scheme
+    - strong identity component
+    - $G^{\mathrm{so}}$
+- definition:stupid_truncation_of_a_chain_complex_in_an_additive_category
+    - stupid/brutal truncations of $A_\bullet$
+    - \begin{align*}
+    (\sigma_{\le n} A)_i &=
+    \begin{cases}
+        0, & i > n, \\
+        A_i, & i \le n,
+    \end{cases}
+    &
+    (\sigma_{\ge n} A)_i &=
+    \begin{cases}
+        A_i, & i \ge n, \\
+        0, & i < n.
+    \end{cases}
+    \end{align*}
+    - stupid truncations of $A^\bullet$
+    - \begin{align*}
+    (\sigma_{\ge n} A)^i &=
+    \begin{cases}
+        0, & i < n, \\
+        A^i, & i \ge n,
+    \end{cases}
+    &
+    (\sigma_{\le n} A)^i &=
+    \begin{cases}
+        A^i, & i \le n, \\
+        0, & i > n.
+    \end{cases}
+    \end{align*}
+- definition:subalgebra_of_an_algebra_over_a_not_necessarily_commutative_ring
+    - $R$-subalgebra
+- definition:subalgebra_of_an_algebra_over_a_not_necessarily_commutative_ring_generated_by_a_subset
+    - subalgebra of $A$ generated by $S$
+    - $\langle S \rangle = \langle S \rangle_R$
+    - subalgebra generated by $S$
+    - $R[S]$
+- definition:subcategory_of_a_category
+    - subcategory
+- definition:subgroup_of_a_group
+    - subgroup of $G$
+    - $H \leq G$
+- definition:subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme
+    - subgroup scheme
+    - algebraic subgroup
+- definition:submodule_of_a_module_generated_by_elements
+    - sub-bimodule of $M$ generated by $X$
+    - $\langle X \rangle = \langle X \rangle_{R,S}$
+    - submodule of $M$ generated by $X$
+    - $r \cdot x \cdot s$
+    - $\langle X \rangle_{R,S} = \left\{ \sum_{i=1}^n r_i x_i s_i \mid n \in \mathbb{N}, r_i \in R, s_i \in S, x_i \in X \right\}$
+- definition:submodule_of_a_module_over_a_ring
+    - $R$-$S$-submodule of $M$
+    - left/right/two-sided $R$-submodule of $M$
+    - left/right/two-sided $R$-submodule of $M$
+    - $R$-$S$-submodule of $M$
+- definition:subobject_classifier_in_a_category_with_a_final_object
+    - subobject classifier
+    - $\Omega$
+    - $\text{true}: 1 \to \Omega$
+    - $m: U \hookrightarrow X$
+    - $\chi_m: X \to \Omega$
+    - characteristic morphism of $m$
+- definition:subobject_of_an_object_of_an_additive_category
+    - subobject of $X$
+- definition:subquotient_of_an_object_in_an_abelian_category
+    - subquotient object of $X$
+- definition:subrepresentation_of_a_representation_of_a_group_on_a_left_module_on_a_ring
+    - subrepresentation of $\rho$
+- definition:subring_of_a_ring
+    - subring of $R$
+- definition:subset_of_a_set
+    - subset of $B$
+    - $A \subseteq B$
+    - $A \subset B$
+    - proper subset of $B$
+    - $A \subsetneq B$
+- definition:subsheaf_of_a_sheaf_on_a_site
+    - subsheaf $\mathcal{G}$ of $\mathcal{F}$
+- definition:subspace_of_a_topological_space
+    - subspace topology
+    - \mathcal{T}_Y \;:=\; \{ U \cap Y : U \in \mathcal{T} \}.
+    - subspace of $(X, \mathcal{T})$
+- definition:successor_cardinal_of_a_cardinal_and_limit_cardinal
+    - successor cardinal
+    - $\lambda^+$
+    - limit cardinal
+- definition:successor_ordinal_of_an_ordinal
+    - successor ordinal
+    - immediate successor of $\beta$
+    - $\beta + 1$
+- definition:supporting_hyperplane_of_a_convex_cone_in_a_finite_dimensional_real_vector_space
+    - supporting hyperplane of $\sigma$
+- definition:support_of_a_Q_divisor_on_a_scheme
+    - support of a divisor $D$
+    - $\operatorname{Supp}(D)$
+- definition:support_of_a_section_of_a_C_k_vector_bundle_over_a_C_k_manifold
+    - support
+    - \operatorname{supp}(s) = \overline{ \left\{ x \in M : s(x) \neq 0 \right\} }
+    - compactly supported
+    - $\Gamma_c(E) = \Gamma_c(M) = \Gamma_c(M;\bbR)$
+- definition:support_of_a_weil_divisor_on_a_scheme
+    - support of a divisor $D$
+    - $\operatorname{Supp}(D)$
+- definition:sylow_p_subgroup_of_a_finite_group
+    - Sylow $p$-subgroup
+    - $\operatorname{Syl}_p(G)$
+    - $n_p(G)$
+    - $n_p$
+- definition:symmetric_antisymmetric_alternating_multilienar_forms_over_rings
+    - symmetric
+    - antisymmetric
+    - alternating
+    - bilinear forms
+- definition:symmetric_exterior_power_of_a_two_sided_module_over_a_ring
+    - symmetric power of $M$ of degree $n$
+    - $S_R^n(M)$
+    - $\Sym^n(M) = \Sym_R^n(M)$
+    - exterior power of $M$ of degree $n$
+- definition:symmetric_group_on_a_set
+    - symmetric group on $X$
+    - permutation group on $X$
+    - $\mathfrak{S}_X$
+    - $S_X$
+    - $\Sym_X$
+    - permutations
+    - $\mathfrak{S}_n$
+    - $S_n$
+    - $\Sym_n$
+- definition:symmetric_monoidal_category
+    - symmetric monoidal category
+    - \gamma_{X,Y}: X \otimes Y \xrightarrow{\cong} Y \otimes X
+    - closed symmetric monoidal category
+- definition:symmetric_monoidal_functor_between_symmetric_monoidal_categories
+    - symmetric monoidal functor
+- definition:symmetric_power_of_a_vector_bundle_on_a_topological_manifold
+    - $l$th symmetric power of $E$
+    - $\Sym^l E$
+- definition:system_in_a_category_indexed_by_a_directed_poset
+    - filtered
+    - cofiltered
+    - directed
+    - codirected
+    - direct system
+    - inductive system
+    - inverse system
+    - projective system
+    - filtered direct/inductive system
+- definition:tangent_bundle_of_a_smooth_manifold
+    - tangent bundle of $M$
+    - tangent bundle of $M$
+    - (TM, \pi, M)
+    - tangent bundle of $M$
+- definition:tangent_space_of_a_topological_manifold_at_a_point
+    - tangent space of $M$ at the point $p$
+    - $T_p M$
+    - tangent vector of $M$ at $p$
+    - cotangent space of $M$ at $p$
+    - $T_p^* M$
+    - cotangent vector of $M$ at $p$
+    - tangent space of $M$ at the point $p$
+    - $T_p M$
+    - cotangent space of $M$ at the point $p$
+    - $T_p^* M$
+- definition:tarski_grothendieck_set_theory
+    - Tarski--Grothendieck set theory
+    - $\mathsf{TG}$
+    - Tarski's Axiom of Universes
+    - \forall x \, \exists U \, (U \text{ is a Grothendieck universe} \land x \in U)
+- definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme
+    - $\tau$-local on the base
+    - $\tau$-local on the target
+    - local on the base for the $\tau$-topology
+- definition:tensor_category_over_a_commutative_ring
+    - tensor category over $R$
+    - tensor category over $R$
+    - $R$-linear symmetric monoidal category
+- definition:tensor_product_functor_on_the_category_of_tensor_composable_bimodules_over_all_rings
+    - tensor product functor
+    - $\otimes: \mathcal{B}imod \times_{\mathcal{R}ing} \mathcal{B}imod \to \mathcal{B}imod$
+- definition:tensor_product_of_a_ring_and_an_algebra_over_a_ring
+    - tensor product ring
+    - $R \otimes_k S$
+- definition:tensor_product_of_bimodules_of_rings
+    - tensor product of $M$ and $N$ over $S$
+    - $m \otimes n$
+    - pure tensor
+    - pure tensors
+    - $n$-fold tensor product
+    - $M^{\otimes n} = M^{\otimes_R n}$
+- definition:tensor_product_of_chain_complexes_of_objects_of_additive_categories_with_an_additive_bifunctor
+    - tensor product double complex
+    - $C_\bullet \otimes D_\bullet$
+    - (total) tensor product chain complex
+    - $(\Tot(T)_{\bullet}, d^{\Tot})$
+    - $\Tot^{\oplus}(P \otimes Q)$
+- definition:thick_subcategory_of_a_triangulated_category
+    - thick
+    - epaisse
+- definition:thin_category
+    - thin category
+    - \mathrm{Hom}_{\mathcal{C}}(X,Y)
+- definition:topological_category
+    - topological category
+    - $\mathcal{C}at_{\text{top}}$
+- definition:topological_field
+    - topological field
+- definition:topological_group
+    - topological group
+- definition:topological_manifold
+    - topological manifold of dimension $n$
+    - manifold
+    - real manifold
+    - topological manifold with boundary of dimension $n$
+    - boundary point
+    - interior point
+    - $\partial M$
+    - boundary of $M$
+    - manifold with boundary
+    - real manifold with boundary
+    - topological manifold without boundary
+    - topological manifold with or without boundary
+- definition:topological_nerve_of_a_topological_category
+    - (topological) nerve
+    - $N(\mathcal{C})$
+- definition:topological_ring
+    - topological ring
+- definition:topological_space
+    - topology on $X$
+    - topological space
+    - open sets
+    - closed
+    - $\mathrm{Top}(X)$
+    - $\mathbf{Top}(X)$
+    - $\mathsf{Top}(X)$
+- definition:topological_vector_space_over_a_topological_field
+    - topological vector space over $F$
+    - $F$-topological vector space
+- definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric
+    - B(x, \varepsilon) := \{ y \in X : d(x, y) < \varepsilon \}
+    - open ball of radisu $\varepsilon$ centered at $x$
+    - topology induced by $d$ on $X$
+- definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value
+    - topology induced by the extended norm $\|\cdot\|$ on $V$
+    - B(x, \varepsilon) := \{ y \in V : \|y - x\| < \varepsilon \}
+    - open ball of radius $\varepsilon$ around $x$
+- definition:topology_on_a_field_induced_by_an_absolute_value
+    - topology induced by $|\cdot|$ on $K$
+    - B(x, \varepsilon) := \{ y \in K : |y - x| < \varepsilon \} \subseteq U.
+    - open ball of radius $\varepsilon$ around $x$
+- definition:topos
+    - (sheaf/Grothendieck) topos
+    - $U$-(sheaf )topos
+    - elementary topos
+    - Grothendieck topos
+    - sheaf topos
+    - small
+    - $\mathscr{U}$-topos
+    - elementary topos
+    - $\scrU$-topos
+    - topos
+- definition:topos_of_objects_over_a_fixed_object_of_a_topos
+    - slice topos
+    - over topos
+- definition:toric_variety_over_a_field
+    - toric scheme over $S$
+    - toric scheme
+    - toric variety over $k$
+- definition:torsion_for_a_set_of_primes_on_a_sheaf_of_abelian_groups_on_a_site
+    - $\mathcal{P}$-torsion sheaf
+- definition:torsion_sheaf_of_abelian_groups_on_a_site
+    - torsion sheaf of abelian groups
+- definition:torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object
+    - $\mathcal{G}$-torsor
+    - principal $\calG$-bundle
+    - principal $\calG$-homogeneous space
+    - trivial on $U$
+- definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category
+    - Tor objects
+    - \mathrm{Tor}_n(A, B) = \Tor_n^{\calA, \calB}(A,B)
+    - \mathrm{Tor}_n^S(A, B)
+- definition:tor_functors_of_bimodules_of_rings
+    - Tor of $M$ and $N$
+    - $\Tor_n(M,N)$
+    - $\Tor_n^S(M,N)$
+    - $\Tor_n^S(_{R} M_S, {}_S N_T))$
+    - $_{R}(\Tor_n^S(M,N))_{T}$
+- definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category
+    - \begin{align*}
+    \Tot_{\oplus}^n(A) &= \bigoplus_{p+q=n} A^{p,q}, \\
+    \Tot_{\Pi}^n(A) &= \prod_{p+q=n} A^{p,q}.
+    \end{align*}
+    - direct-sum total complex
+    - product total complex
+    - $\Tot^{\oplus}(A)$
+    - $\Tot^{\Pi}(A)$
+- definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories
+    - (total) right derived functor on $F$ on $K(\calA)$
+    - $RF: D(\calA) \to D(\calB)$
+    - (total) left derived functor on $F$ on $K(\calA)$
+    - $LF: D(\calA) \to D(\calB)$
+- definition:total_order_linear_order_on_a_set
+    - total order
+    - linear order
+    - totally ordered set
+- definition:tower_of_objects_in_a_category
+    - tower in $\mathcal{C}$
+    - morphism of towers
+- definition:transcendence_basis_of_a_field_extension
+    - transcendence basis
+- definition:transcendence_degree_of_a_field_extension
+    - transcendence degree of $E$ over $F$
+    - $\operatorname{tr.deg}_F(E)$
+    - $\operatorname{trdeg}_F(E)$
+- definition:transition_map_between_charts_on_a_topological_manifold
+    - chart transition map
+    - change of coordinates map
+- definition:transitive_closure_of_a_set
+    - transitive closure of a set $x$
+    - $\text{tc}(x)$
+- definition:transitive_set
+    - transitive set
+- definition:triangulated_category
+    - triangulated category
+    - $\Sigma$
+    - shift
+    - suspension functor
+- definition:tricategory
+    - weak 3-category
+    - tricategory
+    - pentagon modification
+    - middle triangle modification
+    - left/right triangle modifications
+    - non-abelian pentagon equation
+- definition:trivializer_of_a_subrepresentation_of_a_representation_of_a_group_on_a_left_module
+    - trivializer of $N$ in $G$
+    - \operatorname{Triv}_G(N) = \{ g \in G : \rho(g)(n) = n \text{ for all } n \in N \}
+- definition:trivial_absolute_value_on_a_field
+    - trivial absolute value on $K$
+    - |\cdot|_{\mathrm{triv}} : K \to \mathbb{R}_{\geq 0}
+- definition:trivial_log_structure_on_a_scheme
+    - trivial log structure on $X$
+- definition:trivial_mittag_leffler_condition_for_an_inverse_system_of_objects_in_a_pointed_category
+    - trivial Mittag-Leffler condition
+- definition:trivial_topological_space_of_a_set
+    - indiscrete topology
+    - trivial topology
+    - $\mathcal{T}_{\mathrm{indisc}}$
+    - indiscrete topological space
+- definition:twisted_dual_module_of_a_module_over_a_ring_with_involution
+    - twisted dual module
+    - $N^*$
+    - $N^\vee$
+    - $\operatorname{Hom}_A(N, A)_\sigma$
+- definition:twisting_sheaf_of_serre_of_degree_n_on_projective_space_over_a_scheme
+    - twisting sheaf of Serre of degree $n$
+    - $\mathcal{O}_{\mathbb{P}^m_S}(n)$
+    - line bundle of degree $n$
+- definition:underlying_ordinary_category_of_enriched_category
+    - underlying ordinary category
+    - $\mathcal{A}_0$
+- definition:union_of_sets
+    - union of the family $\{A_i\}_{i \in I}$
+    - $\bigcup_{i \in I} A_i$
+    - $A_1 \cup A_2 \cup \cdots \cup A_n$
+- definition:unipotent_algebraic_group_over_a_scheme
+    - unipotent
+    - unipotent
+- definition:unipotent_element_in_a_linear_algebraic_group
+    - unipotent element
+- definition:unipotent_radical_of_a_group_scheme_that_is_smooth_finitely_presented_and_with_connected_geometric_fibers_over_a_scheme
+    - unipotent radical of $G$
+    - $\mathrm{Rad}_u(G)$
+- definition:unique_factorization_domain
+    - unique factorization domain (UFD)
+    - factorial ring
+- definition:unitary_group_over_a_scheme
+    - unitary group over $S$
+    - $\operatorname{U}(h)$
+- definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors
+    - unit of the adjunction
+    - unit morphism
+    - counit of the adjunction
+    - counit morphism
+- definition:unit_of_a_ring
+    - unit
+    - invertible element of $R$
+    - multiplicative inverse of $u$
+    - $u^{-1}$
+    - $R^\times$
+    - $R^*$
+    - group of units
+    - unit group
+- definition:unit_upper_triangular_matrix_over_a_ring
+    - unitriangular group
+    - group of unit upper triangular matrices
+    - $U_n$
+    - $UT_n$
+- definition:universally_closed_morphism_of_schemes
+    - universally closed
+- definition:unramified_morphism_of_schemes
+    - unramified
+- definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set
+    - upper bound
+    - lower bound
+- definition:valuation_on_a_field
+    - valuation on $K$
+    - valued field
+- definition:valuation_ring_of_a_valued_field
+    - $v : K \to \Gamma$
+    - valuation ring of the valued field $(K,v)$
+    - \mathcal{O}_v := \{ x \in K \mid v(x) \geq 0 \}
+    - \mathfrak{m}_v := \{ x \in K \mid v(x) > 0 \}
+    - residue field
+    - $\kappa_v := \mathcal{O}_v / \mathfrak{m}_v$
+- definition:vanish_at_infinity_for_a_complex_valued_function_on_a_locally_compact_hausdorff_space
+    - vanish at infinity
+    - $C_0(X)$
+- definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution
+    - hermitian form on $M$
+    - hermitian module
+    - $\varepsilon$-hermitian form on $M$
+    - hermitian form on $M$
+    - hermitian module
+    - hermitian forms
+    - skew-hermitian forms
+- definition:vector_space_over_a_field
+    - vector space over $k$
+    - $k$-vector space
+    - scalar multiplication
+- definition:von_neumann_bernays_godel_set_theory
+    - von Neumann--Bernays--Gödel set theory
+    - $\mathsf{NBG}$
+- definition:walking_chain_complex_category
+    - walking chain complex category
+    - $\mathcal{I}$
+- definition:weakly_etale_morphism_of_schemes
+    - weakly étale
+- definition:weakly_hausdorff_topological_space
+    - weakly Hausdorff
+- definition:weakly_unramified_morphism_of_schemes
+    - weakly unramified
+    - locally quasi-finite
+- definition:weak_homotopy_equivalence_of_topological_spaces
+    - weak homotopy equivalence
+- definition:weak_infty_category
+    - $\infty$-category
+    - weak $\infty$-category
+    - $(\infty,1)$-category
+    - inner horn-filling condition
+    - $\infty$-functors
+    - $\infty\text{-}\mathbf{Cat}$
+- definition:weak_n_category_tamsamani_simpson
+    - weak $n$-category
+    - weak $n$-category
+    - equivalence
+- definition:wedge_and_smash_products_of_pointed_simplicial_sheaves_of_sets_on_a_site
+    - wedge product
+    - $(X,x) \vee (Y,y)$
+    - smash product
+    - $(X,x) \wedge (Y,y)$
+- definition:wedge_cowedge_between_functor_from_opposite_and_category_to_category_and_object_of_target
+    - wedge from $d$ to $S$
+    - \begin{align*}
+\omega: d \to S,
+\end{align*}
+    - cowedge from $S$ to $d$
+    - \begin{align*}
+\beta: S \to d,
+\end{align*}
+    - cowedge condition
+- definition:weierstrass_equation_over_a_ring
+    - general Weierstrass equation over $R$
+    - (short) Weierstrass equation over $R$
+    - general Weierstrass equation over $R$
+    - short Weierstrass equation over $R$
+- definition:weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain
+    - Weierstrass model of $E$ over $R$
+- definition:weil_chatelet_group_of_an_abelian_variety_over_a_field
+    - Weil–Châtelet group of $A$ over $k$
+    - $\mathrm{WC}(A/k)$
+- definition:zariski_cotangent_space_of_tangent_space_of_a_local_ring
+    - Zariski cotangent space
+    - Zariski tangent space
+    - tangent space
+    - $T_A$
+    - $T_{\mathfrak{m}}(A)$
+    - T_A = \operatorname{Hom}_k(\mathfrak{m}/\mathfrak{m}^2, k).
+- definition:zermelo_fraenkel_set_theory
+    - axioms of Zermelo–Fraenkel set theory (ZF)
+    - Axiom of Choice (AC)
+    - \forall X\, [(\forall A \in X\, A \neq \varnothing) \rightarrow \exists f\, (\operatorname{dom}(f) = X \wedge \forall A \in X\, f(A) \in A)]
+    - Zermelo–Fraenkel set theory with Choice (ZFC)
+- definition:zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site
+    - $0$th and $1$st (nonabelian) sheaf cohomology sets
+    - $\displaystyle H^0(\calC, J, \mathcal{G}) := \Gamma(\calG)$
+    - $\displaystyle H^1(\calC, J, \mathcal{G})$
+    - $\mathcal{G}$-torsor
+- definition:zero_divisor_of_a_ring
+    - left zero-divisor
+    - left regular
+    - left cancellable
+    - right zero-divisor
+    - right regular
+    - right cancellable
+    - zero-divisor
+    - two-sided zero-divisor
+    - regular
+    - cancellable
+    - non-zero-divisor
+    - nonzero zero divisor
+    - nontrivial zero divisor
+    - domain
+    - integral domain
+- definition:zero_morphism_in_a_pointed_category
+    - zero morphism
+    - 0_{XY} : X \to 0 \to Y,
+- definition:zero_ring
+    - zero ring
+    - trivial ring
+- definition:zeta_integral_of_a_schwartz_bruhat_function_on_the_adeles_by_a_quasi_character_on_the_ideles_of_a_number_field
+    - zeta integral/function of $\varphi$ and $\chi$
+    - Z(\varphi, \chi, s) \;=\; \int_{\mathbb{A}_F^\times} \varphi(x)\,\chi(x)\,|x|_{\mathbb{A}_F}^{\,s}\, d^\times x,
+- notation:auxiliary_invariants_for_a_general_weierstrass_equation
+    - \begin{align*}
+    b_2 &= a_1^2 + 4a_2, \\
+    b_4 &= 2a_4 + a_1 a_3, \\
+    b_6 &= a_3^2 + 4a_6, \\
+    b_8 &= a_1^2 a_6 + 4 a_2 a_6 - a_1 a_3 a_4 + a_2 a_3^2 - a_4^2. \\
+    c_{4}&=b_{2}^{2}-24 b_{4} \\
+    c_{6}&=-b_{2}^{3}+36 b_{2} b_{4}-216 b_{6}
+    \end{align*}
+- notation:homotopy_categories_of_an_abelian_category_whose_homology_objects_are_in_a_serre_subcategory
+    - $K_{\calA'}(\calA)$
+    - $K_{\calA'}^?(\calA)$
+    - $K_{\calA'}^{?,??}(\calA)$
+- notation:natural_numbers
+    - $\mathbb{N}$
+- notation:Sch_S_as_the_category_of_schemes_over_a_scheme
+    - $\Sch/S$
+- notation:subcategory_of_derived_category_of_an_abelian_category_whose_homology_objects_belong_to_a_serre_subcategory
+    - $D_{\calA'}^?(\calA)$
+- corollary:add_func_bewteen_ab_cats_has_a_right_or_left_total_derived_func_if_the_source_ab_cat_has_enough_injs_or_projs
+    - $RF: D^+(\calA) \to D(\calB)$
+    - $LF: D^-(\calA) \to D(\calB)$
+- lemma:functor_from_category_of_simplicial_sets_to_category_of_simplicial_categories
+    - $\mathfrak{C}: \Sets_{\Delta} \to \mathbf{Cat}_\Delta$
+- proposition:A1_model_structure_on_category_of_simplicial_nisnevich_sheaves
+    - L_{\bbA^1}: \calH_{s}(\ShvNisSmS) \to \calH_{s,\bbA^1}(S),
+    - $\bbA^1$-localization functor of spaces
+    - $\bbA^1$-localization functor of pointed spaces
+    - $L_{\bbA^1}$
+- proposition:category_of_graded_objects_in_an_abelian_category_is_abelian
+    - $\text{Gr}(\mathcal{A})$
+- proposition:common_examples_of_sites
+    - small sites associated to $X$
+    - small Zariski site
+    - small étale site
+    - small Nisnevich site
+    - small fppf site
+    - small fpqc site
+    - small crystalline site
+- proposition:exact_functor_between_abelian_categories_induces_functor_on_derived_categories
+    - $F$
+- proposition:multiplicative_systems_may_as_well_be_saturated
+    - $\bar{S}$
+- theorem:additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories
+    - $K(F)$
+    - K(F): K(\calA) \to K(\calB)
+    - $K(F)$
+- theorem:A_model_category_and_A_localization_fnctor
+    - L_A: \calH_{s}(T) \to \calH_{s,A}(T),
+    - $A$-localization functor
+- theorem:examples_of_coherent_sites
+    - coherent scheme
+    - Noetherian scheme
+    - quasi-compact
+    - étale
+    - canonical topology
+    - coherent theory
+    - syntactic category
+    - classifying topos
+- theorem:fans_of_a_real_fin_dim_vector_space_correspond_to_normal_separated_toric_varieties_over_an_algebraicaly_closed_field
+    - $X_\Sigma$
+- theorem:homotopy_between_maps_of_topological_spaces_induces_chain_homotopy_between_singular_chain_complexes
+    - prism operator
+    - $P_n: C_n(X, A; G) \to C_{n+1}(Y, B; G)$
+- theorem:I_model_category_of_simplicial_sheaves_on_a_small_site_with_interval
+    - $I$-model category on $\Delta^{\op}\Shv(T)$
+    - $L_I: \calH_{s}(T) \to \calH_{s,I}(T)$
+    - $I$-localization functor
+- theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category
+    - long exact sequence
+    - $\delta_n: H_n(E_\bullet) \to H_{n-1}(C_\bullet)$
+    - connecting homomorphisms
+    - long exact sequence
+    - $\delta^{n}: H^{n}(E^\bullet) \to H^{n+1}(C^\bullet)$
+    - connecting homomorphisms
+- theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields
+    - Mordell--Weil rank of $E$ over $K$
+    - algebraic rank of $E$ over $K$
+- theorem:pseudofunctor_between_weak_2_categories_is_a_biequivalence_if_and_only_if_it_is_locally_an_equivalence_and_is_biessentially_surjective_on_objects
+    - biessentially
+- theorem:sheaves_represented_by_objects_of_small_site_is_a_generating_family_for_the_topos_of_the_site
+    - $a \circ y : \mathcal{C} \to \mathcal{E}$
+- theorem:universal_coefficient_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups
+    - evaluation homomorphism
+- theorem:universal_coefficient_theorem_for_singular_homology_of_topological_spaces_with_coefficients_in_abelian_groups
+    - tensor product map
+- theorem:witt_decomposition_theorem_for_quadratic_forms_over_fields
+    - \emph{Witt index} of $q$

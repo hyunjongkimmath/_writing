@@ -16,7 +16,7 @@ Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_o
     \item Given sheaves $\calF, \calG: \calC^{\op} \to \calA$ on the site $(\calC, J)$, a \hldef{morphism between the sheaves} is a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{morphism} between $\calF$ and $\calG$ as presheaves.
 
 
-    \item Let $U$ be a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe}. A \hldef{$U$-sheaf} typically refers to a $U$-presheaf that is a sheaf for a $U$-site. In other words, a $U$-sheaf is a sheaf on a site whose underlying category is \hyperrefIfExists{definition:locally_small_category}{$U$-locally small}\CrefIfExists{definition:locally_small_category} and which has a $U$-small topologically generating family such that the sheaf is valued in $U$-sets.
+    \item Let $U$ be a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe}. A \hldef{$U$-sheaf} typically refers to a $U$-presheaf that is a sheaf for a $U$-site. In other words, a $U$-sheaf is a sheaf on a site whose underlying category is \CrefAndHyperrefIfExist{definition:locally_small_category}{$U$-locally small} and which has a $U$-small topologically generating family such that the sheaf is valued in $U$-sets.
 
     \item The \hldef{sheaf category/category of $\calA$-valued sheaves on $\calC$} is the (large) category defined as the full subcategory of $\PreShv(\calC, \calA)$ whose objects are the sheaves on $\calC$ with values in $\calA$. Common notations for the sheaf category include \hl{$\Shv(\calC, \calA)$}, \hl{$\Shv(\calC, J, \calA)$}, \hl{$\Sh(\calC, \calA)$}, \hl{$\Sh(\calC, J, \calA)$}. If the value category $\calA$ is clear from context, then notations such as \hl{$\Shv(\calC)$}, \hl{$\Shv(\calC, J)$}, \hl{$\Sh(\calC)$}, \hl{$\Sh(\calC, J)$} are also common.
 
@@ -29,7 +29,7 @@ Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_o
 %     % Consider the subcategory of $C$ consisting of the objects $U_i$ and $U_i \times_U U_j$, together with these morphisms.
 %     Given any presheaf $\calF: C^{\op} \to \calA$, there is a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} in $\calA$ consisting of objects $\calF(U_i)$ and $\calF(U_i \times_U U_j)$ and morphisms $\calF(U_i) \to \calF(U_i \times_U U_j)$. The presheaf $\calF$ is called a \hldef{sheaf on the site $(\calC, J)$ valued in $\calA$} if, for every object $U$ of $\calC$ and every covering $\{U_i \to U\}_{i \in I}$ in $J$, the sections object $\calF(U)$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the aforementioned diagram:
     
-%     % A \hyperrefIfExists{definition:presheaf_on_a_category}{presheaf}\CrefIfExists{definition:presheaf_on_a_category} $\mathcal{F}: C^{\mathrm{op}} \to \mathcal{A}$ is a \hldef{sheaf on the site $(\calC,J)$ valued in $\calA$} if, for every object $U$ of $\calC$ and every covering $\{U_i \to U\}_{i \in I}$ in $J$, the sections object $\calF(U)$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the sections objects $\calF(U_i)$:
+%     % A \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $\mathcal{F}: C^{\mathrm{op}} \to \mathcal{A}$ is a \hldef{sheaf on the site $(\calC,J)$ valued in $\calA$} if, for every object $U$ of $\calC$ and every covering $\{U_i \to U\}_{i \in I}$ in $J$, the sections object $\calF(U)$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} of the sections objects $\calF(U_i)$:
 %     % $$\calF(U) \cong \varprojlim_{}$$
     
 %     % following sequence is an \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer} in $\mathcal{A}$:
@@ -38,16 +38,16 @@ Let $(\calC, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_o
 %     % \]
 %     % where the first map sends $s$ to $(\mathcal{F}(U_i \to U)(s))_i$ and the arrows to $(\mathcal{F}(U_i \times_U U_j \to U_i)(s_i))_{i,j}$ and $(\mathcal{F}(U_i \times_U U_j \to U_j)(s_j))_{i,j}$, respectively.
 
-%     % \item A \hyperrefIfExists{definition:presheaf_on_a_category}{presheaf}\CrefIfExists{definition:presheaf_on_a_category} $\mathcal{F}: C^{\mathrm{op}} \to \mathcal{A}$ is a \hldef{sheaf on the site $(\calC,J)$ valued in $\calA$} if, for every object $U$ of $\calC$ and every covering $\{U_i \to U\}_{i \in I}$ in $J$, the following sequence is an \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer} in $\mathcal{A}$:
+%     % \item A \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $\mathcal{F}: C^{\mathrm{op}} \to \mathcal{A}$ is a \hldef{sheaf on the site $(\calC,J)$ valued in $\calA$} if, for every object $U$ of $\calC$ and every covering $\{U_i \to U\}_{i \in I}$ in $J$, the following sequence is an \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizer} in $\mathcal{A}$:
 %     % \[
 %     % \mathcal{F}(U) \to \prod_{i} \mathcal{F}(U_i) \rightrightarrows \prod_{i, j} \mathcal{F}(U_i \times_U U_j)
 %     % \]
 %     % where the first map sends $s$ to $(\mathcal{F}(U_i \to U)(s))_i$ and the arrows to $(\mathcal{F}(U_i \times_U U_j \to U_i)(s_i))_{i,j}$ and $(\mathcal{F}(U_i \times_U U_j \to U_j)(s_j))_{i,j}$, respectively.
 
-%     \item A \hldef{morphism of sheaves} $\calF: \calC^{\op} \to \calA$ is a \hyperrefIfExists{definition:presheaf_on_a_category}{morphism as presheaves}\CrefIfExists{definition:presheaf_on_a_category}. 
+%     \item A \hldef{morphism of sheaves} $\calF: \calC^{\op} \to \calA$ is a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{morphism as presheaves}. 
 
 
-%     \item Let $U$ be a \hyperrefIfExists{definition:grothendieck_universe}{universe}\CrefIfExists{definition:grothendieck_universe}. A \hldef{$U$-sheaf} typically refers to a $U$-presheaf that is a sheaf for a $U$-site. In other words, a $U$-sheaf is a sheaf on a site whose underlying category is \hyperrefIfExists{definition:locally_small_category}{$U$-locally small}\CrefIfExists{definition:locally_small_category} and which has a $U$-small topologically generating family such that the sheaf is valued in $U$-sets.
+%     \item Let $U$ be a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe}. A \hldef{$U$-sheaf} typically refers to a $U$-presheaf that is a sheaf for a $U$-site. In other words, a $U$-sheaf is a sheaf on a site whose underlying category is \CrefAndHyperrefIfExist{definition:locally_small_category}{$U$-locally small} and which has a $U$-small topologically generating family such that the sheaf is valued in $U$-sets.
 
 %     \item The \hldef{sheaf category/category of $\calA$-valued sheaves on $\calC$} is the (large) category defined as the full subcategory of $\PreShv(\calC, \calA)$ whose objects are the sheaves on $C$ with values in $\calA$. Common notations for the sheaf category include \hl{$\Shv(\calC, \calA)$}, \hl{$\Shv(\calC, J, \calA)$}, \hl{$\Sh(\calC, \calA)$}, \hl{$\Sh(\calC, J, \calA)$}. If the value category $\calA$ is clear from context, then notations such as \hl{$\Shv(\calC)$}, \hl{$\Shv(\calC, J)$}, \hl{$\Sh(\calC)$}, \hl{$\Sh(\calC, J)$} are also common.
 

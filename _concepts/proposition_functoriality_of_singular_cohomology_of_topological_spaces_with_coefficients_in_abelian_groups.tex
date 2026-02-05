@@ -1,0 +1,12 @@
+\begin{proposition}[Contravariant functoriality of cohomology] \label{proposition:functoriality_of_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups}
+The construction of singular cohomology satisfies the following functorial properties:
+\begin{enumerate}
+    \item \textbf{Contravariance:} For a fixed coefficient group $G$, the assignment of the $n$-th singular cohomology group to a pair of spaces $(X, A) \mapsto H^n(X, A; G)$ defines a contravariant functor from the category of pairs $\mathbf{Top}_{pair}$ to the category of abelian groups $\mathbf{Ab}$.
+    
+    \item \textbf{Induced Maps:} A continuous map of pairs $f: (X, A) \to (Y, B)$ induces a group homomorphism, called the pullback map:
+    $$f^*: H^n(Y, B; G) \to H^n(X, A; G)$$
+    defined on the level of cochains by $f^\#(\varphi)(\sigma) = \varphi(f \circ \sigma)$.
+    
+    \item \textbf{Bifunctoriality:} Viewed as a function of the coefficients, the construction is covariant. Thus, $H^n(-; -)$ is a contravariant functor in the first variable and a covariant functor in the second variable.
+\end{enumerate}
+\end{proposition}

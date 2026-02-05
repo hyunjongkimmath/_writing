@@ -1,0 +1,35 @@
+\begin{definition}[Singular chain group with coefficients] \label{definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $A \subseteq X$ be a \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace}, and let $S_n(X)$ be the set of \CrefAndHyperrefIfExist{definition:singular_simplex_of_a_topological_space}{singular $n$-simplices in $X$}. 
+\begin{enumerate}
+    \item Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}.  
+
+    \begin{enumerate}
+        \item The \hldef{singular $n$-chain group of $X$ with coefficients in $R$} is the free $R$-module \hl{$C_n(X;R)$} whose elements are finite formal linear combinations
+        $$\sum_i r_i\, \sigma_i, \quad \text{with } \sigma_i \in S_n(X), \ r_i \in R.$$
+        Elements of $C_n(X;R)$ are called \hldef{singular $n$-chains in $X$ with coefficients in $R$}.
+
+        \item If $A \subseteq X$ is a subspace, the quotient groups
+        $$\hlin{C_n(X,A;R) = C_n(X;R)/C_n(A;R)}$$
+        may be referred to as the \hldef{relative singular $n$-chain groups of $X$ in $A$ with coefficients in $R$} and elements of this group may be referred to as \hldef{relative singular $n$-chains in $X$ relative to $A$ with coefficients in $R$}.
+    \end{enumerate}
+    In either case, when $R = \bbZ$, the ring $R$ may be suppressed from notation, so we may write \hl{$C_n(X)$} and \hl{$C_n(X,A)$} for $C_n(X,\bbZ)$ and $C_n(X,A,\bbZ)$ respectively.
+
+    \item Let $G$ be an \CrefAndHyperrefIfExist{definition:group}{abelian group}. 
+    \begin{enumerate}
+        \item More generally, the \hldef{singular $n$-chain group of $X$ with coefficients in $G$} is the abelian group 
+        $$\hlin{C_n(X;G) = C_n(X; \bbZ) \otimes_\bbZ G.}$$
+        (\Cref{definition:tensor_product_of_bimodules_of_rings})
+        In particular, an element of $C_n(X;G)$ is a finite formal sum
+        $$\sum_i g_i \sigma_i , \quad g_i \in G, \sigma_i \in S_n(X).$$
+        Elements of $C_n(X;G)$ are called \hldef{singular $n$-chains in $X$ with coefficients in $G$}.
+
+        \item Similarly, the \hldef{relative singular $n$-chain group of $X$ in $A$ with coefficients in $G$} is the quotient group
+        $$\hlin{C_n(X,A;G) = C_n(X;G) / C_n(A;G)}$$
+        Elements of $C_n(X,A;G)$ are called \hldef{singular $n$-chains in $X$ relative to $A$ with coefficients in $G$}.
+    \end{enumerate}
+    When $G = R$ is a ring, note that the notions of $C_n(X;R)$ where $R$ is taken as a ring and where $R$ is taken as an abelian group are equivalent; similarly for $C_n(X,A;R)$.
+    \end{enumerate}
+
+    We note that, in general $C_n(X;G) \cong C_n(X, \emptyset; G)$. 
+
+\end{definition}

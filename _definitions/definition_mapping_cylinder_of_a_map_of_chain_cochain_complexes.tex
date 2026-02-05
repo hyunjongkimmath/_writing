@@ -1,0 +1,31 @@
+\begin{definition} \label{definition:mapping_cylinder_of_a_map_of_chain_cochain_complexes}
+    \begin{enumerate}
+        \item Let $f : (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category $\mathcal{A}$}.
+
+        The \hldef{mapping cylinder of $f$}, denoted \hl{$\operatorname{Cyl}(f)$}, is the chain complex defined by:
+        \begin{itemize}
+        \item Objects: For each $n$, 
+        $$\operatorname{Cyl}(f)_n = C_n \oplus C_{n-1} \oplus D_n.$$
+        \item Differential: For each $n$, define
+        $$d^{\operatorname{Cyl}(f)}_n : \operatorname{Cyl}(f)_n \to \operatorname{Cyl}(f)_{n-1}$$
+        by the matrix morphism
+        $$d^{\operatorname{Cyl}(f)}_n = \begin{pmatrix} d^C_n & -\operatorname{id}_{C_{n-1}} & 0 \\ 0 & -d^C_{n-1} & 0 \\ 0 & f_{n-1} & d^D_n \end{pmatrix} : \begin{pmatrix} C_n \\ C_{n-1} \\ D_n \end{pmatrix} \to \begin{pmatrix} C_{n-1} \\ C_{n-2} \\ D_{n-1} \end{pmatrix}.$$
+        \end{itemize}
+
+        This construction defines a chain complex, i.e., $d^{\operatorname{Cyl}(f)}_{n-1} \circ d^{\operatorname{Cyl}(f)}_n = 0$.
+
+        \item Dually, let $g : (C^\bullet, d_C^\bullet) \to (D^\bullet, d_D^\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of cochain complexes} in $\mathcal{A}$. 
+
+        The \hldef{mapping cylinder of $g$}, denoted \hl{$\operatorname{Cyl}(g)$}, is the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} defined by:
+        \begin{itemize}
+        \item Objects: For each $n$, 
+        $$\operatorname{Cyl}(g)^n = C^n \oplus C^{n+1} \oplus D^n.$$
+        \item Differential: For each $n$, define
+        $$d_{\operatorname{Cyl}(g)}^n : \operatorname{Cyl}(g)^n \to \operatorname{Cyl}(g)^{n+1}$$
+        by the matrix morphism
+        $$d_{\operatorname{Cyl}(g)}^n = \begin{pmatrix} d_C^n & -\operatorname{id}_{C^{n+1}} & 0 \\ 0 & -d_C^{n+1} & 0 \\ 0 & g^{n+1} & d_D^n \end{pmatrix} : \begin{pmatrix} C^n \\ C^{n+1} \\ D^n \end{pmatrix} \to \begin{pmatrix} C^{n+1} \\ C^{n+2} \\ D^{n+1} \end{pmatrix}.$$
+        \end{itemize}
+
+        This construction defines a cochain complex, i.e., $d_{\operatorname{Cyl}(g)}^{n+1} \circ d_{\operatorname{Cyl}(g)}^n = 0$.
+    \end{enumerate}
+\end{definition}

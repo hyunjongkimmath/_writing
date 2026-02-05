@@ -1,9 +1,9 @@
 
 \begin{definition}[Homotopy category $K(\mathcal{A})$] \label{definition:homotopy_category_of_chain_complexes_of_an_additive_category}
-Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category_preadditive_category}{additive category}\CrefIfExists{definition:additive_category_preadditive_category}. 
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
     \TODO{describe the distinguished triangles of this category}
 \begin{enumerate}
-    \item The \hldef{homotopy category} \hl{$K(\mathcal{A})$} has as objects the (cochain) complexes over $\mathcal{A}$, and as morphisms the \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{cochain maps}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category} modulo \hyperrefIfExists{definition:chain_homotopy_between_chain_maps_between_complexes}{cochain homotopy equivalence}\CrefIfExists{definition:chain_homotopy_between_chain_maps_between_complexes}. More explicitly,
+    \item The \hldef{homotopy category} \hl{$K(\mathcal{A})$} has as objects the (cochain) complexes over $\mathcal{A}$, and as morphisms the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain maps} modulo \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{cochain homotopy equivalence}. More explicitly,
     \[
     \mathrm{Hom}_{K(\mathcal{A})}(C^\bullet, D^\bullet) := \frac{\{\text{cochain maps } C^\bullet \to D^\bullet\}}{\{\text{cochain homotopies}\}},
     \]
@@ -13,7 +13,7 @@ Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category_preadditi
     \[
     F: \mathcal{A} \to \mathcal{B}
     \]
-    be an \hyperrefIfExists{definition:additive_functor_between_additive_categories}{additive functor}\CrefIfExists{definition:additive_functor_between_additive_categories} of additive categories.
+    be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} of additive categories.
 
     The functor $F$ naturally induces a functor between the homotopy categories of complexes,
     \[
@@ -30,18 +30,18 @@ Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category_preadditi
 
     The functor $K(F)$ respects cochain homotopies, thus it is well-defined on the homotopy category.
 
-    \item (See \cite[Cat\'egories d\'eriv\'ees Chapitre 1 2-3]{SGA4_5} for notation) We write \hldef{$K^+(\calA)$}, \hldef{$K^-(\calA)$}, and \hldef{$K^b(\calA)$} for the full subcategories of \hyperrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded below, bounded abaove, and bounded}\CrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category} complexes respectively. 
+    \item (See \cite[Cat\'egories d\'eriv\'ees Chapitre 1 2-3]{SGA4_5} for notation) We write \hldef{$K^+(\calA)$}, \hldef{$K^-(\calA)$}, and \hldef{$K^b(\calA)$} for the full subcategories of \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded below, bounded abaove, and bounded} complexes respectively. 
 
-    \item (See \cite[Cat\'egories d\'eriv\'ees Chapitre 1 2-3]{SGA4_5} for notation) If $\calA$ is abelian, we may also write \hldef{$K^{\infty, +}(\calA)$}, \hldef{$K^{\infty, -}(\calA)$}, \hldef{$K^{\infty, b}(\calA)$}, and \hldef{$K^{\infty, \emptyset}(\calA)$} for the full subcategories of \hyperrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded below, cohomologically bounded abaove, cohomologically bounded}\CrefIfExists{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}, and \hyperrefIfExists{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complexes}\CrefIfExists{definition:acyclic_complex_of_objects_in_an_abelian_category} respectively. We may further write \hldef{$K^{?,??}(\calA)$} for the full subcategory where $? \in \{+,-,b\}$ indicates the boundedness of the complex and $?? \in \{+,-,b,(\text{blank})\}$ indicates the cohomological boundedness of the complex.
+    \item (See \cite[Cat\'egories d\'eriv\'ees Chapitre 1 2-3]{SGA4_5} for notation) If $\calA$ is abelian, we may also write \hldef{$K^{\infty, +}(\calA)$}, \hldef{$K^{\infty, -}(\calA)$}, \hldef{$K^{\infty, b}(\calA)$}, and \hldef{$K^{\infty, \emptyset}(\calA)$} for the full subcategories of \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded below, cohomologically bounded abaove, cohomologically bounded}, and \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complexes} respectively. We may further write \hldef{$K^{?,??}(\calA)$} for the full subcategory where $? \in \{+,-,b\}$ indicates the boundedness of the complex and $?? \in \{+,-,b,(\text{blank})\}$ indicates the cohomological boundedness of the complex.
     
 \end{enumerate}
 The various categories here \CrefAndHyperrefIfExist{proposition:homotopy_category_of_an_additive_category_is_a_triangulated_category}{are} triangulated categories.
 \end{definition}
 
 % \begin{definition}[Homotopy category $K(\mathcal{A})$] \label{definition:homotopy_category_of_chain_complexes_of_an_additive_category}
-% Let $\mathcal{A}$ be an \hyperrefIfExists{definition:additive_category_preadditive_category}{additive category}\CrefIfExists{definition:additive_category_preadditive_category}. 
+% Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
 % \begin{enumerate}
-%     \item The \hldef{homotopy category} \hl{$K(\mathcal{A})$} has as objects the complexes over $\mathcal{A}$, and as morphisms the \hyperrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}{chain maps}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category} modulo \hyperrefIfExists{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy equivalence}\CrefIfExists{definition:chain_homotopy_between_chain_maps_between_complexes}. More explicitly,
+%     \item The \hldef{homotopy category} \hl{$K(\mathcal{A})$} has as objects the complexes over $\mathcal{A}$, and as morphisms the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain maps} modulo \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy equivalence}. More explicitly,
 %     \[
 %     \mathrm{Hom}_{K(\mathcal{A})}(C_\bullet, D_\bullet) := \frac{\{\text{chain maps } C_\bullet \to D_\bullet\}}{\{\text{chain homotopies}\}},
 %     \]
@@ -51,7 +51,7 @@ The various categories here \CrefAndHyperrefIfExist{proposition:homotopy_categor
 %     \[
 %     F: \mathcal{A} \to \mathcal{B}
 %     \]
-%     be an \hyperrefIfExists{definition:additive_functor_between_additive_categories}{additive functor}\CrefIfExists{definition:additive_functor_between_additive_categories} of additive categories.
+%     be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} of additive categories.
 
 %     The functor $F$ naturally induces a functor between the homotopy categories of complexes,
 %     \[

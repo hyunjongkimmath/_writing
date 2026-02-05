@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}
+    \begin{enumerate}
+        \item 
+        A sequence of \CrefAndHyperrefIfExist{definition:group}{groups} and \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphisms}
+        $$ \dots \xrightarrow{\phi_{i-1}} G_i \xrightarrow{\phi_i} G_{i+1} \xrightarrow{\phi_{i+1}} \dots $$
+        is called \hldef{exact at $G_i$} if \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{$\operatorname{im}(\phi_{i-1}) = \operatorname{ker}(\phi_i)$}. The sequence is called an \hldef{exact sequence} if it is exact at every group $G_i$.
+
+        \item A \hldef{short exact sequence of groups} is an exact sequence of the form
+        $$ 1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1 $$
+        where $1$ denotes the trivial group. Exactness implies that $\iota$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}, $\pi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, and $\operatorname{im}(\iota) = \operatorname{ker}(\pi)$.
+    \end{enumerate}
+\end{definition}

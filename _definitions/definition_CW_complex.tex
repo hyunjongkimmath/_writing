@@ -1,0 +1,24 @@
+% \begin{definition} \label{definition:CW_complex}
+%     \TODO{open ball}
+% A \hldef{CW complex} is a \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff} topological space $X$ equipped with a partition into subspaces called \hldef{open $n$-cells} $e_{\alpha}^n$, each homeomorphic to an open $n$-dimensional ball $B^n$, such that:
+% \begin{itemize}
+%     \item For each $n$-cell $e_{\alpha}^n$, there exists a continuous characteristic map $\Phi_{\alpha}: D^n \to X$ from the closed $n$-disk which restricts to a homeomorphism on the interior and maps the boundary $\partial D^n$ into the $(n-1)$-skeleton $X^{n-1}$.
+
+%     \item (Closure Finiteness) The closure of each cell $\overline{e_{\alpha}^n}$ is contained in a finite union of cells of dimension less than or equal to $n$.
+
+%     \item (Weak Topology) A subset $A \subseteq X$ is closed if and only if $A \cap \overline{e_{\alpha}^n}$ is closed for every cell $e_{\alpha}^n$.
+
+% \end{itemize}
+% The \hldef{$n$-skeleton} is defined as \hl{$X^n = \bigcup_{k \le n} \bigcup_{\alpha} e_{\alpha}^k$}.
+% \end{definition}
+
+\begin{definition}[CW Complex] \label{definition:CW_complex}
+A \textbf{CW complex} is a \CrefAndHyperrefIfExist{definition:cellular_complex}{cellular complex} $X$ that satisfies the following conditions:
+\begin{itemize}
+    \item \textbf{Hausdorff:} $X$ is a \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff space}.
+    
+    \item \textbf{C (Closure Finiteness):} The closure of each cell $\overline{e_{\alpha}^n}$ is contained in a finite union of cells of dimension less than or equal to $n$.
+    
+    \item \textbf{W (Weak Topology):} A subset $A \subseteq X$ is closed if and only if $A \cap \overline{e_{\alpha}^n}$ is closed for every cell $e_{\alpha}^n$.
+\end{itemize}
+\end{definition}

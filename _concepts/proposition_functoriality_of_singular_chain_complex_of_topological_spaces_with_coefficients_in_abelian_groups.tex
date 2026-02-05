@@ -1,0 +1,21 @@
+\begin{proposition}[Functoriality of the singular chain complex] \label{proposition:functoriality_of_singular_chain_complex_of_topological_spaces_with_coefficients_in_abelian_groups}
+    \TODO{}
+The construction of the singular chain complex satisfies the following functorial properties:
+
+\begin{enumerate}
+    \item \textbf{Bifunctoriality:} The assignment of a singular chain complex to a pair of spaces and an abelian group defines a covariant bifunctor
+    $$C_\bullet(-; -) : \mathbf{Top}_{pair} \times \mathbf{Ab} \to \mathbf{Ch}(\mathbf{Ab})$$
+    \TODO{category of pairs of topological spaces}
+    where $\mathbf{Top}_{pair}$ is the \CrefAndHyperrefIfExist{definition:category_of_pairs_of_topological_spaces}{category of pairs} $(X, A)$ of topological spaces and $\mathbf{Ch}(\mathbf{Ab})$ is the category of chain complexes of abelian groups. 
+    
+    A morphism $(f, \phi) : ((X, A), G) \to ((Y, B), H)$ consists of a continuous map of pairs $f: (X, A) \to (Y, B)$ and a group homomorphism $\phi: G \to H$. This induces a chain map:
+    $$(f, \phi)_\# : C_\bullet(X, A; G) \to C_\bullet(Y, B; H)$$
+    defined on chains by $(f, \phi)_\# \left( \sum_i g_i \sigma_i \right) = \sum_i \phi(g_i) (f \circ \sigma_i)$.
+
+    \item \textbf{Restriction to Modules:} For a fixed \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} $R$, the construction restricts to a covariant functor
+    $$C_\bullet(-; R) : \mathbf{Top}_{pair} \to \mathbf{Ch}(R\text{-Mod})$$
+    where $\mathbf{Ch}(R\text{-Mod})$ is the category of chain complexes of $R$-modules. In this case, the induced maps $f_\#$ are $R$-module homomorphisms.
+
+    \item \textbf{Compatibility with Ring Homomorphisms:} If $\psi: R \to S$ is a homomorphism of commutative rings, there is a natural transformation of functors from $C_\bullet(-; R)$ to $C_\bullet(-; S)$ induced by the change of coefficients.
+\end{enumerate}
+\end{proposition}

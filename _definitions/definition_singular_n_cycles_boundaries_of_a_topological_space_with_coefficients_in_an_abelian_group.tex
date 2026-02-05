@@ -1,0 +1,23 @@
+\begin{definition}[Singular cycles and singular boundaries] \label{definition:singular_n_cycles_boundaries_of_a_topological_space_with_coefficients_in_an_abelian_group}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, $A \subseteq X$ a \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace}, and $G$ an abelian group. Let $(C_\bullet(X;G), \partial_n)$ and $(C_\bullet(X,A;G), \partial_n)$ be the \CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}{singular chain complex} and \hldef{relative singular chain complex}, respectively.
+
+\begin{enumerate}
+    \item A \hldef{(absolute) singular $n$-cycle group in $X$ with coefficients in $G$} is an element of the subgroup
+    $$\hlin{Z_n(X;G) = \ker(\partial_n : C_n(X;G) \to C_{n-1}(X;G))}.$$
+    More generally, a \hldef{relative singular $n$-cycle group of $X$ relative to $A$} is an element of
+    $$\hlin{Z_n(X,A;G) = \ker(\partial_n : C_n(X,A;G) \to C_{n-1}(X,A;G))}.$$
+    Geometrically, these are $n$-chains whose boundary is zero (in the absolute case) or whose boundary lies entirely within $A$ (in the relative case).
+
+    \item A \hldef{(absolute) singular $n$-boundary group in $X$ with coefficients in $G$} is an element of the subgroup
+    $$\hlin{B_n(X;G) = \operatorname{im}(\partial_{n+1} : C_{n+1}(X;G) \to C_n(X;G))}.$$
+    More generally, a \hldef{relative singular $n$-boundary group of $X$ relative to $A$} is an element of
+    $$\hlin{B_n(X,A;G) = \operatorname{im}(\partial_{n+1} : C_{n+1}(X,A;G) \to C_n(X,A;G))}.$$
+\end{enumerate}
+
+By the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} property $\partial_n \circ \partial_{n+1} = 0$, the $n$-boundaries are always contained within their corresponding $n$-cycles, i.e. $B_n(X,A;G) \subseteq Z_n(X,A;G)$. 
+
+\TextIfExists{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{
+Note that the absolute and relative \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology groups} are the resulting quotient groups:
+$$H_n(X;G) = Z_n(X;G) / B_n(X;G) \quad \text{and} \quad H_n(X,A;G) = Z_n(X,A;G) / B_n(X,A;G).$$
+}
+\end{definition}

@@ -1,14 +1,38 @@
 \begin{proposition} \label{proposition:Hom_functors_on_abelian_categories_are_left_exact}
-Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $A \in \mathrm{Ob}(\mathcal{A})$. Then the covariant Hom functor
-$$\operatorname{Hom}_{\mathcal{A}}(A,-): \mathcal{A} \to \mathbf{Ab}$$
-is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and the contravariant Hom functor
-$$\operatorname{Hom}_{\mathcal{A}}(-,A): \mathcal{A}^{\mathrm{op}} \to \mathbf{Ab}$$
-\CrefIfExists{definition:opposite_category_of_a_category} is also left exact. Explicitly, given a left exact sequence
-$$0 \to X' \to X \to X'', $$
-we have a left exact sequence
-$$0 \to \Hom_\calA(A, X') \to \Hom_{\calA}(A, X) \to \Hom_{\calA}(A, X''), $$
-and given a right exact sequence
-$$X' \to X \to X'' \to 0$$
-we have a left exact sequence
-$$0 \to \Hom_\calA(X'', A) \to \Hom_{\calA}(X, A) \to \Hom_{\calA}(X', A).$$
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $A \in \mathrm{Ob}(\mathcal{A})$. Then the covariant Hom functor
+    $$\operatorname{Hom}_{\mathcal{A}}(A,-): \mathcal{A} \to \mathbf{Ab}$$
+    is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and the contravariant Hom functor
+    $$\operatorname{Hom}_{\mathcal{A}}(-,A): \mathcal{A}^{\mathrm{op}} \to \mathbf{Ab}$$
+    \CrefIfExists{definition:opposite_category_of_a_category} is also left exact. Explicitly, 
+    \begin{enumerate}
+        \item given a \CrefAndHyperrefIfExist{definition:left_right_exact_sequences_in_an_additive_category}{left exact sequence}
+        $$0 \to X' \xrightarrow{f} X \xrightarrow{g} X'', $$
+        we have a left exact sequence (of abelian groups)
+        $$0 \to \Hom_\calA(A, X') \xrightarrow{f \circ -} \Hom_{\calA}(A, X) \xrightarrow{g \circ -} \Hom_{\calA}(A, X''), $$
+        and 
+        \item dually, given a right exact sequence
+        $$X' \xrightarrow{f} X \xrightarrow{g} X'' \to 0$$
+        we have a left exact sequence
+        $$0 \to \Hom_\calA(X'', A) \xrightarrow{- \circ g} \Hom_{\calA}(X, A) \xrightarrow{- \circ f} \Hom_{\calA}(X', A).$$
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+    We prove that the covariant Hom functor is left exact; that the contravariant Hom functor is left exact follows dually.  
+    Suppose that 
+    $$0 \to X' \xrightarrow{f} X \xrightarrow{g} X'', $$
+    is left exact, i.e. $f$ is a kernel of $g$. 
+    We want to show that the sequence
+    $$0 \to \Hom_\calA(A, X') \xrightarrow{f \circ -} \Hom_{\calA}(A, X) \xrightarrow{g \circ -} \Hom_{\calA}(A, X''), $$
+    of abelian groups is left exact. To see that 
+    $$\Hom_\calA(A, X') \xrightarrow{f \circ -} \Hom_{\calA}(A, X)$$
+    is injective, say that $h \in \Hom_\calA(A,X')$ satisfies $f \circ h = 0$. Since $f$ is a kernel, which are \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphisms} by \Cref{lemma:kernels_cokernels_in_pointed_categories_are_monomorphisms_epimorphisms}, $h = 0$. Thus, $\ker(f \circ -) = \{0\}$, so the abelian group homomorphism $f \circ -$ is injective.
+
+    Clearly, the composition
+    $$\Hom_\calA(A, X') \xrightarrow{f \circ -} \Hom_{\calA}(A, X) \xrightarrow{g \circ -} \Hom_{\calA}(A, X'')$$
+    is the zero map of abelian groups --- given $h \in \Hom_\calA(A, X')$, the composition $g \circ f \circ h$ equals $0$ because $f$ is the kernel of $g$. Therefore, $\operatorname{im}(f \circ -) \subseteq \ker(g \circ -)$.
+
+
+    It remains to show that $\operatorname{im}(f \circ -) \supseteq \ker(g \circ -)$.  Let $\phi \in \ker(g \circ -)$, which means $\phi: A \to X$ is a morphism in $\calA$ such that $g \circ \phi = 0$. By the universal property of the kernel $f: X' \to X$ of $g$, there exists a unique morphism $u: A \to X'$ such that $f \circ u = \phi$.  In terms of our functorial maps, this says $(f \circ -)(u) = \phi$, which proves that $\phi \in \operatorname{im}(f \circ -)$. Thus $\ker(g \circ -) = \operatorname{im}(f \circ -)$, and the sequence of 
+    abelian groups is left exact.
+
+\end{proof}

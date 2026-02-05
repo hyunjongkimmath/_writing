@@ -1,0 +1,17 @@
+\begin{lemma} \label{lemma:equivalent_conditions_for_an_additive_functor_between_abelian_categories_to_be_left_right_exact}
+    Let \[ F: \mathcal{A} \to \mathcal{B} \] be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. 
+    \begin{enumerate}
+        \item The following are equivalent: 
+        \begin{enumerate}
+            \item $F$ is \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{left exact} in the sense of preserving all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}.
+            \item $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} in the sense of preserving \CrefAndHyperrefIfExist{definition:left_right_exact_sequences_in_an_additive_category}{left exact sequences}, i.e. for every exact sequence $0 \to X' \to X \to X''$, the sequence $0 \to F(X') \to F(X) \to F(X'')$ is also exact.
+            \item $F$ preserves all \CrefAndHyperrefIfExist{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}{kernels}. 
+        \end{enumerate}
+        \item Dually, the following are equivalent: 
+        \begin{enumerate}
+            \item $F$ is \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{right exact} in the sense of preserving all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits}.
+            \item $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in the sense of preserving \CrefAndHyperrefIfExist{definition:left_right_exact_sequences_in_an_additive_category}{right exact sequences}, i.e. for every exact sequence $X' \to X \to X'' \to 0$, the sequence $F(X') \to F(X) \to F(X'') \to 0$ is also exact.
+            \item $F$ preserves all \CrefAndHyperrefIfExist{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}{cokernels}. 
+        \end{enumerate}
+    \end{enumerate}
+\end{lemma}

@@ -1,0 +1,12 @@
+\begin{proposition} \label{proposition:properties_of_mapping_cylinder_of_a_map_of_chain_complexes_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category} and let $f: (C_\bullet, d^C_\bullet) \to (D_\bullet, d^D_\bullet)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphism of chain complexes} in $\mathcal{A}$.
+
+\begin{enumerate}
+    \item \textbf{Factorization:} The morphism $f$ factors as the composition $p \circ \alpha$, where $\alpha: C_\bullet \to \operatorname{Cyl}(f)$ is the canonical inclusion $c_n \mapsto (c_n, 0, 0)$ and $p: \operatorname{Cyl}(f) \to D_\bullet$ is the projection $(c_n, c_{n-1}, d_n) \mapsto f(c_n) + d_n$.
+    
+    \item \textbf{Homotopy Equivalence:} The projection $p: \operatorname{Cyl}(f) \to D_\bullet$ is a \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy equivalence}. Thus, the mapping cylinder is isomorphic to $D_\bullet$ in the \CrefAndHyperrefIfExist{definition:homotopy_category_of_chain_complexes_of_an_additive_category}{homotopy category} $K(\mathcal{A})$.
+    
+    \item \textbf{Cofibration Analog:} The inclusion $\alpha: C_\bullet \to \operatorname{Cyl}(f)$ is a split monomorphism in each degree, representing the algebraic analog of a topological cofibration.
+    \TODO{cofibration}
+\end{enumerate}
+\end{proposition}

@@ -73,11 +73,11 @@ We now extend the analytic notion of Fourier transform in Section \ref{section:f
 \input{../_concepts/lemma_left_haar_measures_on_a_locally_compact_group_are_unique_up_to_scalars.tex}
 
 \begin{notation}
-    Given a \hyperrefIfExists{definition:locally_compact_group}{locally compact group} $G$, fix a left Haar measure on $G$; integration with respect to this Haar measure would often be denoted by \hl{$\int_G dg$}
+    Given a \CrefAndHyperrefIfExist{definition:locally_compact_group}{locally compact group} $G$, fix a left Haar measure on $G$; integration with respect to this Haar measure would often be denoted by \hl{$\int_G dg$}
 \end{notation}
 
 \begin{definition}
-    Let \( G \) be a \hyperrefIfExists{definition:locally_compact_group}{locally compact group} with a fixed left Haar measure \( \mu \). For functions $f_1, f_2: G \to \bbC$, their \hldef{convolution} \( f_1 * f_2 \in L^1(G) \) is defined by
+    Let \( G \) be a \CrefAndHyperrefIfExist{definition:locally_compact_group}{locally compact group} with a fixed left Haar measure \( \mu \). For functions $f_1, f_2: G \to \bbC$, their \hldef{convolution} \( f_1 * f_2 \in L^1(G) \) is defined by
 
     $$\hlin{(f_1 * f_2)(x) = \int_G f_1(y) f_2(y^{-1} x) \, d\mu(y)}$$
 
@@ -86,7 +86,7 @@ We now extend the analytic notion of Fourier transform in Section \ref{section:f
 
 \TODO{TODO: define a Banach algebra}
 \begin{lemma}
-    Let $G$ be a \hyperrefIfExists{definition:locally_compact_group}{locally compact group}. 
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:locally_compact_group}{locally compact group}. 
     \begin{enumerate}
         \item For $f_1,f_2 \in L^1(G)$, we have \[ \|f_1 * f_2\|_1 \leq \|f_1\|_1 \|f_2\|_1.  \]
         \item The convolution $*$ makes $L^1(G)$ into a Banach algebra (without unit).
@@ -118,7 +118,7 @@ We now extend the analytic notion of Fourier transform in Section \ref{section:f
 \end{lemma}
 
 \begin{notation}\label{notation:bilinear_pairing_notation_for_evaluation_of_a_character}
-    Let \( G \) be a \hyperrefIfExists{definition:locally_compact_group}{locally compact abelian group}. Given $g \in G$ and \hyperrefIfExists{definition:pontryagin_dual_of_a_locally_compact_abelian_group}{$\chi \in \widehat{G}$}, write \hl{$\langle g, \chi \rangle$} for $\chi(g) \in \bbC$. 
+    Let \( G \) be a \CrefAndHyperrefIfExist{definition:locally_compact_group}{locally compact abelian group}. Given $g \in G$ and \CrefAndHyperrefIfExist{definition:pontryagin_dual_of_a_locally_compact_abelian_group}{$\chi \in \widehat{G}$}, write \hl{$\langle g, \chi \rangle$} for $\chi(g) \in \bbC$. 
 \end{notation}
 
 
@@ -176,7 +176,7 @@ In other words, the Fourier transform of the function $u \mapsto f(e^{u})$ is eq
 
 \subsection{Fourier transform of the trace function of a cohomologically bounded complex of constructible sheaves on a comutative algebraic group over a finite field}
 
-We give an abstract definition for the Fourier transform of a function on a finite group of rational points on an algebraic group. The case of interest\CrefIfExists{definition:arithmetic_fourier_transform_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field} is when base field is finite and the function is the \hyperrefIfExists{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}{Frobenius trace function}\CrefIfExists{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}.   
+We give an abstract definition for the Fourier transform of a function on a finite group of rational points on an algebraic group. The case of interest\CrefIfExists{definition:arithmetic_fourier_transform_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field} is when base field is finite and the function is the \CrefAndHyperrefIfExist{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}{Frobenius trace function}.   
 
 \begin{definition} \label{definition:fourier_transform_of_a_function_on_a_finite_group_of_rational_points_of_an_algebraic_group_over_a_field}
     % Let $G/\bbF_q$ be a 
@@ -193,7 +193,7 @@ In studying arithmetic Fourier transforms for functions on algebraic groups over
 \input{../_definitions/definition_frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field.tex}
 
 \begin{notation} \label{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}
-    Given an algebraic group $G$ over a finite field $\bbF_q$, and when a prime $\ell \neq \Char \bbF_q$ is understood in context, let \hl{$\widehat{G}(\Fqn)$} denote the set of \hyperrefIfExists{definition:quasi_character_of_a_locally_compact_hausdorff_group}{(unitary) characters} $\chi: G \to \Qellbar^\times$. Let \hl{$\widehat{G}$} denote the union
+    Given an algebraic group $G$ over a finite field $\bbF_q$, and when a prime $\ell \neq \Char \bbF_q$ is understood in context, let \hl{$\widehat{G}(\Fqn)$} denote the set of \CrefAndHyperrefIfExist{definition:quasi_character_of_a_locally_compact_hausdorff_group}{(unitary) characters} $\chi: G \to \Qellbar^\times$. Let \hl{$\widehat{G}$} denote the union
     $\bigcup_{n\geq 1} \widehat{G}(\Fqn)$.
 \end{notation}
 
@@ -213,7 +213,7 @@ Let $G$ be a connected commutative algebraic group over a finite field $\Fq$, an
 \begin{itemize}
     \item Let $M \in \Dbc(G, \Qellbar)$. The \hldef{twist} \hl{$M_\chi$} of $M$ by $\chi$ is the object 
     $$M_\chi = M_{\Fqn} \otimes \calL_{\chi}$$
-    where $M_{\Fqn}$ is the pullback of $M$ under the base change map $G_{\Fqn} \to G$ and \hyperrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{$\calL_{\chi}$} is the \hyperrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{Kummer sheaf associated to $\chi$}\CrefIfExists{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}.
+    where $M_{\Fqn}$ is the pullback of $M$ under the base change map $G_{\Fqn} \to G$ and \CrefAndHyperrefIfExist{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{$\calL_{\chi}$} is the \CrefAndHyperrefIfExist{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{Kummer sheaf associated to $\chi$}.
 
     \item More generally, let $\pi: X \to G_{\Fqn}$ be some morphism of schemes over $\Fqn$ and let $M \in \Dbc(X, \Qellbar)$. The \hl{twist} \hldef{$M_\chi$} of $M$ by $\chi$ is the object
     $$M_\chi = M \otimes \calL_\chi.$$
@@ -230,13 +230,13 @@ Let $G$ be a connected commutative algebraic group over a finite field $\Fq$, le
 
 \TODO{TODO: define $*_!$, negligible objects, generic subset}
 \begin{enumerate}
-    \item $S(M, \chi) = S(M_\chi, 1_n)$ for any \hyperrefIfExists{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
+    \item $S(M, \chi) = S(M_\chi, 1_n)$ for any \CrefAndHyperrefIfExist{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
     
     \item Given any homomorphism $f: G \to H$ of connected commutative algebraic groups over $\Fq$ and for any $n \geq 1$, we have 
     $$S(Rf_! M , 1_{H,n}) = S(M,1_{G,n})$$
     where $1_{G,n} \in \widehat{G}(\Fqn)$ and $1_{H,n} \in \widehat{H}(\Fqn)$ denote the trivial characters.
 
-    \item $S(M *_! N, \chi) = S(M, \chi) \cdot S(N,\chi)$ for any \hyperrefIfExists{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
+    \item $S(M *_! N, \chi) = S(M, \chi) \cdot S(N,\chi)$ for any \CrefAndHyperrefIfExist{notation:characters_of_the_points_of_an_algebraic_group_over_a_finite_field}{$\chi \in \widehat{G}(\Fqn)$}. 
 
     \item If $M$ is negligible, then $S(M,\chi) = 0$ for $\chi$ in a generic subset of $\widehat{G}$. The converse holds if $M$ is perverse.
 \end{enumerate}
@@ -574,7 +574,7 @@ for $\mathcal{L}$ a sufficiently ample line bundle, where $\operatorname{ind}(\m
 \begin{convention}
     Let $1 \leq p \leq \infty$. Unless otherwise specified, 
     \begin{enumerate}
-        \item the $L^p$-space on a measure space is assumed to be made into a metric space by equipping it with the \hyperrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{metric induced by}\CrefIfExists{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value} the \hyperrefIfExists{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}\CrefIfExists{definition:L_p_norm_on_a_measure_space}.  
+        \item the $L^p$-space on a measure space is assumed to be made into a metric space by equipping it with the \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{metric induced by} the \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}.  
         \item the space of all measurable functions on $X$ is assumed to be made into an extended metric space by equipping it with the extended metric induced by the $L^p$-norm.  
     \end{enumerate}
 \end{convention}
@@ -622,7 +622,7 @@ We also can speak of measurable functions converging, with respect to an $L^p$-n
 % \end{definition}
 
 
-Any element in the $L^p$-space $L^p(X, \mu)$ of a general measure space can be $L^p$-approximated by simple functions with finite measure support. We formulate this idea in terms of \emph{density} of subspaces of $L^p(X, \mu)$ with respect to the \hyperrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{topology induced by}\CrefIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value} the \hyperrefIfExists{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}\CrefIfExists{definition:L_p_norm_on_a_measure_space}
+Any element in the $L^p$-space $L^p(X, \mu)$ of a general measure space can be $L^p$-approximated by simple functions with finite measure support. We formulate this idea in terms of \emph{density} of subspaces of $L^p(X, \mu)$ with respect to the \CrefAndHyperrefIfExist{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{topology induced by} the \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^p$-norm}
 
 \begin{notation}
     Let $(X,\calA, \mu)$ be a measure space. Let \hl{$C_c(X)$} be the class of all continuous (complex) functions on $X$ whose support is compact. 

@@ -1,0 +1,50 @@
+\begin{proposition} \label{proposition:equivalent_conditions_projective_injective}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $P, I \in \mathcal{A}$. 
+
+    The following are \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} for an object $I$ (Injective conditions):
+    \begin{enumerate}
+        \item $I$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}: for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} $f: A \to B$, any morphism $g: A \to I$ factors through $f$.
+        \item The \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} $\operatorname{Hom}_{\mathcal{A}}(-, I)$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}.
+        \item Every \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to I \to B \to C \to 0$ \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits}.
+    \end{enumerate}
+    
+    Dually, the following are equivalent for an object $P$:
+    \begin{enumerate}
+        \item $P$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective}: for every \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} $f: M \to N$, any morphism $g: P \to N$ factors through $f$.
+        \item The \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $\operatorname{Hom}_{\mathcal{A}}(P, -)$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}.
+        \item Every \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \to B \to P \to 0$ \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits}.
+    \end{enumerate}
+
+\end{proposition}
+\begin{proof}
+    We prove the projective case; the injective case follows by duality in the opposite category $\mathcal{A}^{\operatorname{op}}$.
+
+    $(1 \implies 2)$: The functor $\operatorname{Hom}_{\mathcal{A}}(P, -)$ is always \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left-exact}. To show it is exact, we show it preserves \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphisms}. Let $f: M \to N$ be an epimorphism. By the lifting property of $P$, any $g$ factors through $f$ as seen in the following diagram:
+    \[
+    \begin{tikzcd}
+        & P \arrow[d, "g"] \arrow[dl, dashed, "h"'] \\
+        M \arrow[r, "f"'] & N \arrow[r] & 0
+    \end{tikzcd}
+    \]
+    The existence of $h$ such that $f \circ h = g$ implies that $f_*: \operatorname{Hom}(P, M) \to \operatorname{Hom}(P, N)$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, hence the functor is exact.
+
+    $(2 \implies 3)$: Consider the \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} $0 \to A \to B \xrightarrow{f} P \to 0$. Applying the exact functor $\operatorname{Hom}_{\mathcal{A}}(P, -)$ yields:
+    \[
+        \operatorname{Hom}_{\mathcal{A}}(P, B) \xrightarrow{f_*} \operatorname{Hom}_{\mathcal{A}}(P, P) \to 0
+    \]
+    Since $f_*$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, $\operatorname{id}_P$ has a preimage $s: P \to B$ such that $f \circ s = \operatorname{id}_P$. This $s$ is a section, so the sequence \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits}:
+    \[
+    \begin{tikzcd}
+        0 \arrow[r] & A \arrow[r] & B \arrow[r, "f"'] & P \arrow[r] \arrow[l, bend right, dashed, "s"'] & 0
+    \end{tikzcd}
+    \]
+
+    $(3 \implies 1)$: Given an epimorphism $f: M \to N$ and map $g: P \to N$, form the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{pullback} $M \times_N P$; note that $\calA$ admits finite limits by \Cref{lemma:abelian_categories_admits_finite_limits_colimits}. Since $f$ is an epimorphism, the projection $\pi_P$ is an epimorphism by \Cref{lemma:monomorphisms_epimorphisin_abelian_categories_are_preserved_by_pullbacks}. The resulting SES \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits} by assumption:
+    \[
+    \begin{tikzcd}
+        M \times_N P \arrow[r, "\pi_P"'] \arrow[d, "\pi_M"] & P \arrow[d, "g"] \arrow[l, bend left, dashed, "s"] \\
+        M \arrow[r, "f"] & N
+    \end{tikzcd}
+    \]
+    The composition $h = \pi_M \circ s$ provides the required lift since $f \circ (\pi_M \circ s) = g \circ \pi_P \circ s = g \circ \operatorname{id}_P = g$.
+\end{proof}

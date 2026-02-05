@@ -1,7 +1,7 @@
 \begin{definition}[Category enriched in a monoidal category] \label{definition:category_enriched_in_a_monoidal_category}
 Let $(\mathcal{V}, \otimes, \mathbf{1})$ be a \CrefAndHyperrefIfExist{definition:monoidal_category}{monoidal category}. A \hldef{category enriched in $\mathcal{V}$} (or a \hldef{$\mathcal{V}$-enriched category} or a \hldef{$\mathcal{V}$-category}) $\mathcal{C}$ consists of the following data:
 \begin{itemize}
-    \item A class \hl{$\operatorname{Ob}(\mathcal{C})$} of \hldef{objects}. As with \hyperrefIfExists{definition:category}{regular categories}, we may write \hl{$X \in \operatorname{Ob}(\mathcal{C})$} or \hl{$X \in \calC$} to mean that $X$ is an object of $\calC$.  
+    \item A class \hl{$\operatorname{Ob}(\mathcal{C})$} of \hldef{objects}. As with \CrefAndHyperrefIfExist{definition:category}{regular categories}, we may write \hl{$X \in \operatorname{Ob}(\mathcal{C})$} or \hl{$X \in \calC$} to mean that $X$ is an object of $\calC$.  
     \item For each pair of objects $X, Y \in \operatorname{Ob}(\mathcal{C})$, an object \hl{$\underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \in \operatorname{Ob}(\mathcal{V})$} of \hldef{morphisms}; it is an object of the monoidal category $\mathcal{V}$. It is also often denoted by notations such as \hl{$\calC(X,Y)$}, \hl{$\Hom(X,Y) = \Hom_\calC(X,Y)$}, or \hl{$\operatorname{Mor}(X,Y) = \operatorname{Mor}_{\calC}(X,Y)$}.
     \item For each triple $X,Y,Z \in \operatorname{Ob}(\mathcal{C})$, a \hldef{composition morphism} 
     $$\mu_{X,Y,Z} : \underline{\operatorname{Hom}}_{\mathcal{C}}(Y,Z) \otimes \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Y) \to \underline{\operatorname{Hom}}_{\mathcal{C}}(X,Z).$$

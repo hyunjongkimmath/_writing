@@ -1,0 +1,20 @@
+\begin{lemma} \label{lemma:kernels_and_cokernels_are_tantamount_to_equalizers_and_coequalizers_in_abelian_categories}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. All \CrefAndHyperrefIfExist{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}{kernels} are tantamount to \CrefAndHyperrefIfExist{definition:equalizer_and_coequalizer_of_morphisms_in_a_category}{equalizers} and all cokernels are tantamount to coequalizers in $\calA$. More precisely, 
+    \begin{enumerate}
+        \item
+        \begin{itemize}
+        \item Given a morphism $f: X \to Y$ in $\calA$, $\ker f$ is isomorphic to the equalizer of $f$ and the zero morphism $0:X \to Y$. 
+        \item Given morphisms $f,g: X \to Y$ in $\calA$, the equalizer of $f$ and $g$ is isomorphic to $\ker(f-g)$.  
+        \end{itemize}
+
+        \item
+        \begin{itemize}
+        \item Given a morphism $f: X \to Y$ in $\calA$, $\coker f$ is isomorphic to the coequalizer of $f$ and the zero morphism $0:X \to Y$. 
+        \item Given morphisms $f,g: X \to Y$ in $\calA$, the coequalizer of $f$ and $g$ is isomorphic to $\coker(f-g)$.  
+        \end{itemize}
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    All kernels and cokernels are equalizers and coequalizers in the claimed sense by \Cref{lemma:kernel_cokernel_of_morphisms_in_a_pointed_category_are_equalizers_coequalizers}. One can conversely see that the equalizer/coequalizer of $f$ and $g$ has the same universal property as $\ker(f-g)$/$\coker(f-g)$.
+\end{proof}

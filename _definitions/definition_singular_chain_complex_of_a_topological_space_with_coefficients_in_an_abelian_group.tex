@@ -1,0 +1,18 @@
+\begin{definition}[Singular chain complex with coefficients] \label{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $A \subseteq X$ be a \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace}, and let $G$ be an abelian group. 
+
+For each $n \ge 1$, define the \hldef{boundary operator}
+$$\partial_n : C_n(X;G) \to C_{n-1}(X;G)$$
+\CrefIfExists{definition:singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group} by
+$$\partial_n(\sigma) = \sum_{i=0}^n (-1)^i\, \sigma \circ \delta_i,$$
+where $\delta_i : \Delta^{n-1} \to \Delta^n$ is the $i$-th face inclusion, and extend $\partial_n$ to $C_n(X;G)$ linearly. For $n \leq 0$, we simply let $\partial_n = 0$
+
+One can verify that $(C_n(X;G), \partial_n)$ forms a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} in the \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{of abelian groups}. This chain complex is called the \hldef{(absolute) singular chain complex of $X$ with coefficients in $G$} and is often denoted by \hl{$C_\bullet(X;G)$}.
+ 
+Then the boundary maps above induce maps 
+$$C_n(X,A;G) \to C_{n-1}(X,A;G)$$
+on the relative chain groups $C_n(X,A;G)$, yielding a chain complex of abelian groups whose boundary maps, often also denoted by \hl{$\partial_n$}, are induced by the boundary operators $\partial_n$ above; this chain complex may be called the \hldef{relative singular chain complex of the pair $(X,A)$ with coefficients in $G$} and is often denoted by \hl{$C_\bullet(X,A;G)$}.
+
+In the case that $G = R$ is a (not necessarily commutative) ring, then the boundary maps of $C_\bullet(X;R)$ and $C_\bullet(X,A;R)$ are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $R$-module homomorphisms}:
+$$\partial \left( \sum_i r_i\sigma_i \right) = \sum_i r_i \partial(\sigma_i)$$
+\end{definition}

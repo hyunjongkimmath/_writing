@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:monomorphism_epimorphism_in_abelian_category_is_equivalent_to_map_with_zero_kernel_cokernel}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+\begin{enumerate}
+\item A morphism $f\colon A\to B$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} if and only if $\ker f=0$\CrefIfExists{definition:kernel_cokerne}.
+\item A morphism $f\colon A\to B$ is an \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} if and only if $\coker f=0$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+    We prove that $f$ is a monomorphism if and only if $\ker f=0$. The other statement is dually true.
+
+    ($\Rightarrow$) Suppose $f$ is a monomorphism. Let $k\colon\ker f\to A$ be the kernel inclusion. Then $f \circ k=0 = f \circ 0$. Since $f$ is a monomorphism, $k=0$, so $\ker f=0$.
+
+    ($\Leftarrow$) Suppose $\ker f=0$. Let $g,h\colon B\to C$ satisfy $gf=hf$. Let $d=g-h\colon B\to C$. Then $df=0$. The kernel inclusion $k\colon\ker f\to A$ satisfies $dk=0$, so $k=0$ and $\ker d=0$. Thus $d=0$ and $g=h$, so $f$ is a monomorphism. 
+\end{proof}

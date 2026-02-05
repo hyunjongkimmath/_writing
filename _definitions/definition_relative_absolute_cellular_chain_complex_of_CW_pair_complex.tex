@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:relative_absolute_cellular_chain_complex_of_CW_pair_complex}
+Let $G$ be an abelian group. Let $(X, A)$ be a \CrefAndHyperrefIfExist{definition:CW_pair}{CW pair}.  
+
+The \hldef{relative cellular chain complex} \hl{$(C_{\bullet}^{CW}(X, A; G), d_{\bullet}^G)$} is defined as the \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} whose objects are \CrefAndHyperref{definition:relative_absolute_group_of_cellular_n_chains_of_a_CW_pair_complex}{$C_n^{CW}(X, A; G)$}, which are isomorphic to $H_n(X^n \cup A, X^{n-1} \cup A; G)$ by \Cref{lemma:relative_cellular_chain_group_of_CW_pair_with_coefficients_in_an_abelian_group_is_isomorphic_to_a_singular_homology_group}. 
+
+The \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{boundary map} \hl{$d_n^G: C_n^{CW}(X, A; G) \to C_{n-1}^{CW}(X, A; G)$}, called the \hldef{cellular boundary map}, is defined via the composition $j_{n-1} \circ \partial_n$:
+$$H_n(X^n \cup A, X^{n-1} \cup A; G) \xrightarrow{\partial_n} H_{n-1}(X^{n-1} \cup A; G) \xrightarrow{j_{n-1}} H_{n-1}(X^{n-1} \cup A, X^{n-2} \cup A; G)$$
+where $\partial_n$ is the connecting homomorphism of the long exact sequence of the pair $(X^n \cup A, X^{n-1} \cup A)$ and $j_{n-1}$ is the map induced by the inclusion of pairs.
+\end{definition}

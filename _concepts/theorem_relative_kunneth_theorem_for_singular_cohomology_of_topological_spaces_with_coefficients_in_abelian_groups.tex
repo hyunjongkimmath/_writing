@@ -1,0 +1,10 @@
+\begin{theorem}[Relative Künneth Theorem for Singular Cohomology] \label{theorem:relative_kunneth_theorem_for_singular_cohomology_of_topological_spaces_with_coefficients_in_abelian_groups}
+Let $(X, A)$ and $(Y, B)$ be \CrefAndHyperrefIfExist{definition:topological_space}{pairs of topological spaces} such that $A \subseteq X$ and $B \subseteq Y$ are open (or $(X, A)$ and $(Y, B)$ are \CrefAndHyperrefIfExist{definition:CW_pair}{CW pairs}). Let $R$ be a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{principal ideal domain}.
+
+If $H_n(X, A; R)$ is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} for all $n$, there is a natural short exact sequence:
+$$ 0 \to \bigoplus_{i+j=n} H^i(X, A; R) \otimes_R H^j(Y, B; R) \xrightarrow{\times} H^n(X \times Y, A \times Y \cup X \times B; R) \to \bigoplus_{i+j=n+1} \operatorname{Tor}_1^R(H^i(X, A; R), H^j(Y, B; R)) \to 0 $$
+\TODO{define relative cohomological cross product}
+where $\times$ is the relative cohomological cross product. If $R$ is a field, this simplifies to an isomorphism of \CrefAndHyperrefIfExist{definition:graded_ring}{graded $R$-algebras}:
+$$ H^*(X \times Y, A \times Y \cup X \times B; R) \cong H^*(X, A; R) \otimes_R H^*(Y, B; R) $$
+\TODO{discuss graded ring structure of relative cohomology}
+\end{theorem}
