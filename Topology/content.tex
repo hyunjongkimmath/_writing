@@ -63,6 +63,25 @@ Here is an alternate, essentially equivalent definition, of compactness:
 \input{../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex}
 
 
+\subsection{Constructions of topological spaces from other topological spaces}
+
+
+\input{../_definitions/definition_product_of_sets.tex}
+
+\input{../_definitions/definition_box_topology_on_a_cartesian_product_of_topological_spaces.tex}
+\input{../_definitions/definition_product_topology_on_a_cartesian_product_of_topological_spaces.tex}
+
+
+\begin{proposition}
+Let $I$ be an index set and $\{X_i\}_{i \in I}$ be a collection of \CrefAndHyperrefIfExist{definition:topological_spaces}{topological spaces}. Let $X = \prod_{i \in I} X_i$ be the \CrefAndHyperrefIfExist{definition:product_of_sets}{set theoretic Cartesian product} of these spaces. 
+
+If $X = \prod_{i \in I} X_i$ is endowed with the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}, then a \CrefAndHyperrefIfExist{definition:function_of_sets}{function} $f: Z \to X$ from a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} $Z$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} if and only if each component function $f_i = p_i \circ f: Z \to X_i$ is continuous. 
+
+This universal property generally fails for the \CrefAndHyperrefIfExist{definition:box_topology_on_a_cartesian_product_of_topological_spaces}{box topology} when $I$ is \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{infinite}.
+\end{proposition}
+
+\input{../_concepts/theorem_tychonoffs_theorem_for_the_compactness_of_a_small_product_of_compact_topological_spaces.tex}
+
 
 
 \subsection{Compactly generated}
@@ -196,7 +215,7 @@ The notions of homotopy have the following variants:
 \input{../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group.tex}
 
 
-\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring.tex}
+\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
 
 \input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group.tex}
 

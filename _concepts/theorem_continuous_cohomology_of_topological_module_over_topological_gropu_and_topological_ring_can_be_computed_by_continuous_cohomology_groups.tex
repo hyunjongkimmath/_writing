@@ -1,0 +1,16 @@
+\begin{theorem} \label{theorem:continuous_cohomology_of_topological_module_over_topological_gropu_and_topological_ring_can_be_computed_by_continuous_cohomology_groups}
+    \TODO{verify these facts}
+
+Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} and $G$ a \CrefAndHyperrefIfExist{definition:topological_group}{topological group}. Let $R\text{-}\mathbf{TopMod}_G$ be the \CrefAndHyperrefIfExist{definition:category_of_topological_modules_over_a_group_ring_of_a_topological_group_over_a_topological_ring}{category of (left) topological $G$-modules over $R$}.
+
+Consider the \CrefAndHyperrefIfExist{definition:G_invariant_functor_of_topological_group_module_over_topological_ring}{$G$-invariant functor} $(-)^G: R\text{-}\mathbf{TopMod}_G \to R\text{-}\mathbf{TopMod}$ (\Cref{definition:categories_of_topological_modules_over_topological_rings}).
+
+Assume either of the following:
+\begin{enumerate}
+    \item $G$ is \CrefAndHyperrefIfExist{definition:profinite_group}{profinite}, $R$ is discrete, and $M$ is \CrefAndHyperrefIfExist{definition:discrete_group}{discrete}; in this case, by the ``right derived functors of $(-)^G$'', we mean the right derived functor on the category of discrete $G$-modules, which has enough injectives \TODO{cite; apparently the category of discrete $G$-modules over a topological ring $R$ where $G$ is profinite is an abelian category with enough injectives}.
+    \item $G$ is locally compact, and $M$ is complete; in this case, by the ``right derived functors of $(-)^G$'', we mean the right derived functor in the sense of relative homological algebra, using resolutions that split as sequences of topological spaces \TODO{figureo ut what this means}.
+\end{enumerate}
+
+The \CrefAndHyperrefIfExist{definition:continuous_cohomology_groups_of_a_topological_module_over_a_topological_group_and_a_topological_ring}{continuous cohomology groups} $H^n_{\text{cont}}(G,M)$, i.e. the  \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomology} of the \CrefAndHyperrefIfExist{definition:continuous_cochain_complex_of_a_topological_module_over_a_group_ring_of_a_topological_group_over_a_topological_ring}{continuous cochain complex} $C^\bullet_{\text{cont}}(G, M)$, is naturally isomorphic to the the right derived functors of $(-)^G$. In other words,
+$$H^n(C^\bullet_{\text{cont}}(G, M)) \cong (R^n(-^G))(M)$$
+\end{theorem}

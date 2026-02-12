@@ -2,7 +2,7 @@
 % Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}.
 
 % \begin{enumerate}
-%     \item \textbf{Extension-Restriction adjunction:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_for_modules_along_ring_homomorphisms}{extension of scalars functor} $f^* \coloneqq S \otimes_R -$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor} $f_*$.
+%     \item \textbf{Extension-Restriction adjunction:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms}{extension of scalars functor} $f^* \coloneqq S \otimes_R -$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor} $f_*$.
     
 %     Explicitly, for any left $R$-module $M$ and any left $S$-module $N$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
 %     \[
@@ -13,7 +13,7 @@
 %         \Psi \mapsto (m \mapsto \Psi(1 \otimes m)).
 %     \]
 
-%     \item \textbf{Restriction-Coextension adjunction:} The \CrefAndHyperrefIfExist{definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor} $f^! \coloneqq \Hom_R(S, -)$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor $f_*$.
+%     \item \textbf{Restriction-Coextension adjunction:} The \CrefAndHyperrefIfExist{definition:coextension_coinduction_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor} $f^! \coloneqq \Hom_R(S, -)$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor $f_*$.
     
 %     Explicitly, for any left $S$-module $N$ and any left $R$-module $M$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
 %     \[ \Hom_R(f_*N, M) \cong \Hom_S(N, \Hom_R(S, M)) \]
@@ -28,7 +28,7 @@ Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessar
 \begin{enumerate}
     \item \textbf{Extension-Restriction adjunction:}
     \begin{enumerate}
-        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_for_modules_along_ring_homomorphisms}{extension of scalars functor}
+        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms}{extension of scalars functor}
         \[ f^* = S \otimes_R - : {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T \]
         \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}
         is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor}
@@ -50,7 +50,7 @@ Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessar
 
     \item \textbf{Restriction-Coextension adjunction:}
     \begin{enumerate}
-        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:coextension_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor}
+        \item \textbf{Restriction on the Left:} The \CrefAndHyperrefIfExist{definition:coextension_coinduction_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor}
         \[ f^! = \Hom_R(S, -) : {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T \]
         is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor
         \[ f_* : {}_S\mathsf{Mod}_T \to {}_R\mathsf{Mod}_T. \]

@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:topological_module_over_topological_rings}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:topological_ring}{topological rings}. 
+A \hldef{topological $(R, S)$-bimodule} is an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R, S)$-bimodule} $M$ equipped with a \CrefAndHyperrefIfExist{definition:topological_space}{topology} such that:
+\begin{enumerate}
+    \item $M$ is a \CrefAndHyperrefIfExist{definition:topological_group}{topological abelian group} under addition.
+    \item The left action map $R \times M \to M$, defined by $(r, m) \mapsto rm$, is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}.
+    \item The right action map $M \times S \to M$, defined by $(m, s) \mapsto ms$, is continuous.
+\end{enumerate}
+Here, the product sets $R \times M$ and $M \times S$ are endowed with the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}.
+
+
+A \hldef{left topological $R$-module} is a topological $(R, \mathbb{Z})$-bimodule, where $\mathbb{Z}$ carries the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology}.  Similarly, a \hldef{right topological $R$-module} is a topological $(\mathbb{Z}, R)$-bimodule, where $\mathbb{Z}$ carries the discrete topology. Furthemore, a \hldef{two-sided topological $R$-module} is a topological $(R, R)$-bimodule.
+
+The discrete topology on $\mathbb{Z}$ ensures that the required continuity of the $\mathbb{Z}$-action is satisfied by any topological abelian group $M$, as the map $\mathbb{Z} \times M \to M$ is continuous if and only if for each $n \in \mathbb{Z}$, the map $m \mapsto nm$ is continuous.
+\end{definition}

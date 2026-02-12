@@ -267,9 +267,9 @@ Two fundamental functors on categories of modules are given by \CrefAndHyperrefI
 
 \subsubsection{Extension/Restriction/co-extension of scalars}
 
-\input{../_definitions/definition_extension_of_scalars_for_modules_along_ring_homomorphisms.tex}
+\input{../_definitions/definition_extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms.tex}
 \input{../_definitions/definition_restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring.tex}
-\input{../_definitions/definition_coextension_of_scalars_of_modules_along_a_ring_homomorphism.tex}
+\input{../_definitions/definition_coextension_coinduction_of_scalars_of_modules_along_a_ring_homomorphism.tex}
 
 \input{../_concepts/theorem_extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings.tex}
 
@@ -918,8 +918,8 @@ When a tensor product is being considered, ``flat'' objects are used to construc
 
 \input{../_concepts/theorem_equivalent_conditions_for_a_ring_to_be_left_right_perfect.tex}
 
-\begin{proposition}
-If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} \TODO{define quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ \TODO{define mapping cone of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}} is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
+\begin{proposition} 
+If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
 \end{proposition}
 
 \input{../_concepts/corollary_left_right_artinian_rings_are_left_right_perfect.tex}
@@ -1025,13 +1025,15 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 
 
 \input{../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex}
-
+\input{../_definitions/definition_ext_functor_on_a_general_abelian_category}
 
 \begin{remark}
     Some common abelian categories do not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{have enough projectives}, but nevertheless \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} and hence Tor objects are well defined as per \Cref{theorem:balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor}. One such abelian category is the category of torsion abelian groups. Similarly, some categories of sheaves of torsion abelian groups on some sites may also have enought flats, but not enough projectives.
 \end{remark}
 
 \input{../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex}
+\input{../_concepts/theorem_ext_objects_for_general_abelian_categories_are_well_defined_even_if_some_combination_of_projectives_or_injectives_exist.tex}
+\input{../_concepts/corollary_ext_objects_of_modules_over_rings_are_well_defined.tex}
 
 
 \input{../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex}
@@ -1040,6 +1042,7 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 \input{../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex}
  
 \input{../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex}
+\input{../_concepts/corollary_tor_objects_of_modules_over_rings_are_well_defined.tex}
 
  
 

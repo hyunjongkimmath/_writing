@@ -1,0 +1,14 @@
+\begin{theorem}[Frobenius reciprocity] \label{theorem:induction_restriction_restriction_coinduction_adjunction_for_group_algebras_over_rings}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}, let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}, and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}. 
+
+    The \CrefAndHyperrefIfExist{definition:restriction_of_a_group_module_over_a_ring_to_a_subgroup}{restriction functor $\text{Res}^G_H$} admits both a \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} and a right adjoint:
+    \begin{enumerate}
+        \item \CrefAndHyperrefIfExist{definition:induction_of_a_group_module_over_a_ring_to_a_supergroup}{Induction} is the left adjoint to restriction:
+        $$\text{Hom}_{R[G]}(\text{Ind}^G_H(W), V) \cong \text{Hom}_{R[H]}(W, \text{Res}^G_H(V))$$
+        \item Restriction is the left adjoint to \CrefAndHyperrefIfExist{definition:coinduction_of_a_group_module_over_a_ring_to_a_supergroup}{coinduction}:
+        $$\text{Hom}_{R[H]}(\text{Res}^G_H(V), W) \cong \text{Hom}_{R[G]}(V, \text{Coind}^G_H(W))$$
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    This is an immediate reformulation of \Cref{theorem:extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings} in the case that the ring homomorphism is the inclusion $R[H] \hookrightarrow R[G]$.
+\end{proof}

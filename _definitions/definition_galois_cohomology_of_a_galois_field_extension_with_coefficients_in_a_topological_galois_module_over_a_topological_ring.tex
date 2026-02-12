@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} (e.g., a $\ell$-adic \CrefAndHyperrefIfExist{definition:ring}{ring} $\mathbb{Z}_\ell$) \TODO{ell-adic ring}.
+    \begin{enumerate}
+        \item Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois field extension}.   Let $M$ be a \CrefAndHyperrefIfExist{definition:topological_module_over_a_group_ring_of_a_topological_gropu_over_a_topological_ring}{topological $G$-module} over $R$
+
+        The \hldef{Galois cohomology group of $L/K$ with coefficients in $M$} is:
+        $$\hlin{H^n(L/K, M) = H^n_{\text{cont}}(\Gal(L/K), M)}$$
+        (\Cref{definition:continuous_cohomology_groups_of_a_topological_module_over_a_topological_group_and_a_topological_ring}).
+
+        \TODO{absolute galois group}
+        \item Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field} with absolute Galois group $G_K = \Gal(\overline{K}/K)$. Let $M$ be a \CrefAndHyperrefIfExist{definition:topological_module_over_a_group_ring_of_a_topological_gropu_over_a_topological_ring}{topological $G$-module} over $R$.
+
+        The \hldef{Galois cohomology group of $K$ with coefficients in $M$} is:
+        $$\hlin{H^n(K, M) = H^n(\overline{K}/K, M) = H^n_{\text{cont}}(\Gal(\overline{K}/K), M)}.$$
+    \end{enumerate}
+
+This framework is used to define $\ell$-adic cohomology, where $M$ is often a $\mathbb{Z}_\ell$-module or a $\mathbb{Q}_\ell$-vector space arising from the Tate module of an abelian variety or the étale cohomology of a variety.
+\end{definition}

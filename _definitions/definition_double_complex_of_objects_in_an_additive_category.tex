@@ -1,14 +1,57 @@
 \begin{definition} \label{definition:double_complex_of_objects_in_an_additive_category}
-Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. A \hldef{double complex} (also called a \hldef{bicomplex}) in $\mathcal{A}$ is a collection of objects
-$$ \{ A^{p,q} \}_{(p,q)\in\mathbb{Z}^2} $$
-together with morphisms
-$$ d'_A{}^{p,q} : A^{p,q} \to A^{p+1,q}, \quad d''_A{}^{p,q} : A^{p,q} \to A^{p,q+1}, $$
-satisfying the identities
-$$ (d'_A)^{p+1,q} \circ (d'_A)^{p,q} = 0, \qquad (d''_A)^{p,q+1} \circ (d''_A)^{p,q} = 0, $$
-and the \hldef{anti-commutativity relation}
-$$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} + (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+\begin{enumerate}
+    \item A \hldef{(cohomological) double complex} (also called a \hldef{bicomplex}) in $\mathcal{A}$ is a collection of objects
+    $$ \{ A^{p,q} \}_{(p,q)\in\mathbb{Z}^2} $$
+    together with morphisms
+    $$ d'_A{}^{p,q} : A^{p,q} \to A^{p+1,q}, \quad d''_A{}^{p,q} : A^{p,q} \to A^{p,q+1}, $$
+    satisfying the identities
+    $$ (d'_A)^{p+1,q} \circ (d'_A)^{p,q} = 0, \qquad (d''_A)^{p,q+1} \circ (d''_A)^{p,q} = 0, $$
+    and the \hldef{anti-commutativity relation}
+    $$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} + (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
 
-An alternative (equivalent) convention defines a double complex $(A^{p,q},d'_A,d''_A)$ so that
-$$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} - (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
-This convention differs by a sign and corresponds to replacing $d''_A$ by $-d''_A$. Thus, both conventions are equivalent up to the natural isomorphism $A^{p,q}\mapsto A^{p,q}$, $d'_A\mapsto d'_A$, $d''_A\mapsto -d''_A$.
+    \begin{center}
+    \begin{tikzcd}
+        & \vdots & \vdots & \\
+        \dots \arrow[r] & A^{p,q+1} \arrow[r, "d'"] \arrow[u, "d''"] & A^{p+1,q+1} \arrow[r] \arrow[u, "d''"] & \dots \\
+        \dots \arrow[r] & A^{p,q} \arrow[r, "d'"{below}] \arrow[u, "d''"] & A^{p+1,q} \arrow[r] \arrow[u, "d''"{right}] & \dots \\
+        & \vdots \arrow[u] & \vdots \arrow[u] & 
+    \end{tikzcd}
+
+    \end{center}
+
+    An alternative (equivalent) convention defines a double complex $(A^{p,q},d'_A,d''_A)$ so that
+    $$ (d''_A)^{p+1,q} \circ (d'_A)^{p,q} - (d'_A)^{p,q+1} \circ (d''_A)^{p,q} = 0.  $$
+    This convention differs by a sign and corresponds to replacing $d''_A$ by $-d''_A$. Thus, both conventions are equivalent up to the natural isomorphism $A^{p,q}\mapsto A^{p,q}$, $d'_A\mapsto d'_A$, $d''_A\mapsto -d''_A$.
+
+
+    \item A \hldef{(homological) double complex} (also called a \hldef{bicomplex}) in $\mathcal{A}$ is a collection of objects $\{ A_{p,q} \}_{(p,q)\in\mathbb{Z}^2}$ together with morphisms
+    $$ d'_A{}_{p,q} : A_{p,q} \to A_{p-1,q}, \quad d''_A{}_{p,q} : A_{p,q} \to A_{p,q-1}, $$
+    satisfying the identities
+    $$ (d'_A)_{p-1,q} \circ (d'_A)_{p,q} = 0, \qquad (d''_A)_{p,q-1} \circ (d''_A)_{p,q} = 0, $$
+    and the \hldef{anti-commutativity relation}
+    $$ (d''_A)_{p-1,q} \circ (d'_A)_{p,q} + (d'_A)_{p,q-1} \circ (d''_A)_{p,q} = 0. $$
+
+    \begin{center}
+    \begin{tikzcd}
+        & \vdots \arrow[d] & \vdots \arrow[d] & \\
+        \dots & A_{p,q} \arrow[l] \arrow[d, "d''"] & A_{p+1,q} \arrow[l, "d'"] \arrow[d, "d''"] & \dots \arrow[l] \\
+        \dots & A_{p,q-1} \arrow[l] \arrow[d] & A_{p+1,q-1} \arrow[l, "d'"{above}] \arrow[d] & \dots \arrow[l] \\
+        & \vdots & \vdots & 
+    \end{tikzcd}
+    \end{center}
+    
+    An alternative (equivalent) convention defines a homological double complex $(A_{p,q}, d'_A, d''_A)$ such that the horizontal and vertical maps satisfy the \hldef{commutativity relation}
+    $$ (d''_A)_{p-1,q} \circ (d'_A)_{p,q} = (d'_A)_{p,q-1} \circ (d''_A)_{p,q}. $$
+    The two conventions are equivalent under the assignment $(d'_A, d''_A) \mapsto (d'_A, (-1)^p d''_A)$ or simply by replacing $d''_A$ with $-d''_A$.
+\end{enumerate}
+
+The choice to speak of cohomological double complexes or homological ones is merely a choice of convention; the theories are equivalent. Any homological double complex $A_{\bullet,\bullet}$ can be viewed as a cohomological double complex $A^{\bullet,\bullet}$ by setting $A^{p,q} = A_{-p,-q}$. Under this re-indexing, the decreasing differentials $d_{p,q} : A_{p,q} \to A_{p-1,q}$ correspond to increasing differentials $d^{-p,-q} : A^{-p,-q} \to A^{-p+1,-q}$. 
+
+In practice, the homological notation is standard in the study of derived functors of right-exact functors (such as the Tor functor), while the cohomological notation is preferred for left-exact functors (such as the Ext functor and sheaf cohomology). This symmetry ensures that any result proved for one type of double complex—such as the existence of a spectral sequence or the properties of the total complex—has a mirror image in the other.
 \end{definition}
+
+
+\begin{remark}
+    The homological/cohomological conventions for the theory of double complexes may not be kept consistent in this document. 
+\end{remark}

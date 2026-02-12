@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:topological_module_over_a_group_ring_of_a_topological_gropu_over_a_topological_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} and $G$ be a \CrefAndHyperrefIfExist{definition:topological_group}{topological group}. 
+
+A \hldef{(left) topological $G$-module over $R$} is a \CrefAndHyperrefIfExist{definition:topological_module_over_topological_rings}{(left) topological $R$-module} $M$ equipped with a \CrefAndHyperrefIfExist{definition:action_of_a_group_on_an_abelian_group}{(left) $G$-action} $\rho: G \times M \to M$ such that:
+\begin{enumerate}
+    \item $M$ is a \CrefAndHyperrefIfExist{definition:topological_group}{topological abelian group} (addition $+: M \times M \to M$ and inversion $-: M \to M$ are \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}).
+    \item The $R$-module structure is continuous (scalar multiplication $R \times M \to M$ is continuous).
+    \item The $G$-action is \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-linear}: $g \cdot (r_1 m_1 + r_2 m_2) = r_1 (g \cdot m_1) + r_2 (g \cdot m_2)$ for all $g \in G, r_i \in R, m_i \in M$.
+    \item The action map $\rho$ is jointly continuous with respect to the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology} on $G \times M$.
+\end{enumerate}
+
+Symmetricaly, we may define \hldef{right topological $G$-modules over $R$}.
+
+If $R$ is equipped with the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology} (a common case for base rings like $\mathbb{Z}$ or fields $k$), the continuity of scalar multiplication $R \times M \to M$ reduces to the requirement that for each $r \in R$, the map $m \mapsto rm$ is continuous on $M$.
+
+A \hldef{topological $G$-module} refers to a topological $G$-module over $\bbZ$, where $\bbZ$ is equipped with the discrete topology, unless there is a clear choice of implicit base ring.
+
+\end{definition}

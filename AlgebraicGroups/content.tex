@@ -242,45 +242,130 @@ Some standard examples of maximal compact subgroups of reductive linear algebrai
 
 \input{../_definitions/definition_center_of_a_ring.tex}
 
+\subsubsection{Involution ring}
 \input{../_definitions/definition_involution_on_an_object_in_a_category.tex}
+\input{../_definitions/definition_trivial_involution_on_an_object_in_a_category.tex}
 \input{../_definitions/definition_involution_on_a_ring.tex}
+\begin{definition} \label{definition:homomorphism_of_involution_rings}
+    A \hldef{homomorphism/morphism $\varphi: ( A, \sigma_A) \to (B,\sigma_B)$ of involution rings} is a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\varphi: A \to B$ such that $\sigma_B(\varphi(a)) = \varphi(\sigma_A(a))$ for all $a \in A$.
+\end{definition}
+\input{../_definitions/definition_trivial_involution_on_a_ring.tex}
+\input{../_definitions/definition_algebra_with_involution_over_a_ring_with_involution.tex}
+
+\subsection{Sesquilinear forms on modules over involution rings}
+
 \input{../_definitions/definition_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
 \input{../_definitions/definition_functor_of_sesquilinear_forms_on_modules_over_ring_with_involution.tex}
 \input{../_definitions/definition_morphism_between_modules_with_sesquilinear_forms_over_an_involution_ring.tex}
 \input{../_definitions/definition_isometry_between_modules_with_sesquilinear_forms_over_ring_with_involution.tex}
+\input{../_definitions/definition_category_of_modules_with_sesquilinear_forms_over_a_ring_with_involution.tex}
 \input{../_definitions/definition_orthogonal_unitary_group_of_module_with_sesquilinear_form_over_a_ring_with_involution.tex}
+
+\subsubsection{Twisted dual modules on involution rings}
 \input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
+\input{../_definitions/definition_canonical_map_from_a_module_to_its_double_dual.tex}
 
 \input{../_definitions/definition_opposite_module_of_a_module_over_a_ring_with_involution.tex}
 \input{../_concepts/proposition_opposite_module_of_module_over_ring_with_convolution_is_equivalence_of_categories.tex}
 
-\begin{definition}
-
-\end{definition}
 \input{../_definitions/definition_twisted_dual_module_of_a_module_over_a_ring_with_involution.tex}
-\begin{lemma}
-    \TODO{knus 2.1.1}
-\end{lemma}
+\input{../_concepts/lemma_twisted_dual_module_of_a_module_over_a_ring_with_involution_can_be_defined_as_opposite_of_dual_or_dual_of_opposite.tex}
+
+\input{../_definitions/definition_canonical_morphism_from_a_module_over_an_involution_ring_to_its_double_dual.tex}
+
+\subsubsection{Sesquilinear forms $M \times M \to A$ are equivalent to maps $M \to M^*$}
+
 \input{../_definitions/definition_adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
 \input{../_definitions/definition_sesquilinear_form_associated_to_a_homomorphism_from_a_module_to_its_twisted_dual.tex}
 \input{../_concepts/lemma_sesquilinear_forms_on_modules_over_rings_with_involutions_correspond_to_morphisms_to_twisted_dual_module.tex}
+\input{../_definitions/definition_conjugate_transpose_sesquilinear_form_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_concepts/lemma_ad_of_conj_trans_of_sesq_form_over_module_on_a_involution_ring_is_composition_of_canonical_map_and_twisted_dual_of_adjoint.tex}
+
+\subsection{$\varepsilon$-Hermitian forms on modules over involution rings}
 \input{../_definitions/definition_varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_category_of_modules_with_varepsilon_hermitian_forms_over_a_ring_with_involution.tex}
 \input{../_definitions/definition_nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring.tex}
 
-\begin{lemma}
-    \TODO{define $S_\varepsilon$}
-\end{lemma}
+\input{../_definitions/definition_form_and_operator_symmetrizer_maps_for_sesquilinear_forms_on_modules_over_rings_with_involutions.tex}
+\input{../_notations/notation_spaces_of_varepsilon_hermitian_forms_and_even_varepsilon_hermitian_forms_on_module_over_a_ring_with_involution.tex}
 
-\TODO{construct the space of hermitian forms and the space of even hermtiian forms as in Knus}
-\begin{definition}
-    \TODO{define the even $\varepsilon$ hermitian forms}
-\end{definition}
-\input{../_definitions/definition_sesquilinear_space_varepsilon_hermitian_space.tex}
+\input{../_definitions/definition_even_varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution.tex}
+
+\subsection{Sesquilinear and Hermitian modules and spaces}
+
+\subsubsection{Sesquilinear and Hermitian modules}
+
+\input{../_definitions/definition_sesquilinear_module_over_a_ring_with_involution.tex}
+
+\input{../_definitions/definition_varepsilon_hermitian_module_over_a_ring_with_involution.tex}
+
+\input{../_definitions/definition_category_of_varepsilon_hermitian_modules_over_a_ring_with_involution.tex}
+
+\subsubsection{Sesquilinear and Hermitian spaces}
+
+\input{../_definitions/definition_sesquilinear_space_varepsilon_hermitian_space_over_a_ring_with_involution.tex}
+
+\input{../_definitions/definition_category_of_varepsilon_hermitian_spaces_over_a_ring_with_involution.tex}
 
 \input{../_concepts/proposition_sesquilinear_form_on_a_finitely_generated_projective_module_over_an_involution_ring_is_nondegenerate_if_and_only_if_adjoint_map_is_isomorphism.tex}
+
+\subsection{Unitary rings and unitary modules over unitary rings}
+
+
+\subsection{Base change of Sesquilinear forms, Hermitian forms, and Unitary modules}
+
+\begin{lemma}[{\cite[Chapter I, 7.1]{weibel}}]
+Let $\eta \to A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. 
+Given a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module} $M$ and there is a right $A'$\CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{-module homomorphism} 
+$$j_M: M^* \otimes_A A' \to (M \otimes_A A')^* = \Hom_{A'}(M', A')$$
+(\Cref{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}) (\Cref{definition:extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms}) (\Cref{definition:hom_of_left_right_bi_modules_of_rings}) given by 
+$$j_M(f \otimes a')(m \otimes b') = \overline{a}' \eta(f(m)) b'$$
+for $f \in M^*$, and $a',b' \in A'$. The maps $j_M$ specify a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of right $A'$-modules}.
+
+If $M$ is a \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} right $A$-module, then $j_A$ is an isomorphism.
+\end{lemma}
+
+\begin{definition}
+    Let $\eta \to A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $\varepsilon \in Z(A)$ satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$.
+\end{definition}
+
+
+
+\subsection{Symmetric algebras with involution rings}
+
+
+\input{../_definitions/definition_frobenius_algebra_over_a_ring.tex}
+\input{../_definitions/definition_symmetric_algebra_over_a_rnig.tex}
+
+\input{../_definitions/definition_group_ring_of_a_group_over_a_ring.tex}
+\begin{definition} \label{definition:canonical_involution_on_a_group_ring_over_a_ring_with_involution}
+    Let $(R, \sigma_R)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}.
+
+    The \hldef{canonical involution on the group ring $R[G]$} \CrefIfExists{definition:group_ring_of_a_group_over_a_ring} is the \CrefAndHyperrefIfExist{definition:algebra_with_involution_over_a_ring_with_involution}{$R$-linear involution} given by
+    $$\overline{\sum r_g g} = \sum {\sigma_R(r_g) g^{-1}}.$$
+
+    If $R$ is not specified with an involution structure, then usually, the canonical involution on $R[G]$ refers to the above in the case that $R$ is equipped with the \CrefAndHyperrefIfExist{definition:trivial_involution_on_a_ring}{trivial involution}.
+\end{definition}
+\begin{example} \label{example:examples_of_symmetric_algebras_over_rings}
+   The following are examples of symmetric algebras: 
+   \begin{enumerate}
+    \item Finite field extensions \TODO{}
+    \item Finite \'etale $R$-algebras \TODO{}
+    \item Azumaya $R$-algebras \TODO{}
+    \item \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{Group rings} $R[G]$ eqiupped with the \CrefAndHyperrefIfExist{definition:canonical_involution_on_a_group_ring_over_a_ring_with_involution}{canonical involution} where $R$ is \CrefAndHyperrefIfExist{definition:ring}{commutative ring} and a $G$ is a finite group are symmetric.
+   \end{enumerate}
+\end{example}
+
+\input{../_definitions/definition_admits_a_symmetric_algebra_with_involution_over_a_ring_for_a_bilinear_form_on_a_finitely_generated_projective_module.tex}
+\input{../_definitions/definition_category_of_varepsilon_hermitian_space_over_a_ring_that_admits_a_symmetric_algebra_with_involution.tex}
+\input{../_concepts/theorem_cats_varepsilon_herm_spaces_over_inv_ring_and_of_varepsilon_herm_space_over_a_ring_that_admits_a_symm_alg_with_inv_are_equivalent.tex}
+
+
+\subsection{Involution, sesquilinearity, hermitian form over sheaves of rings}
 \input{../_definitions/definition_involution_on_a_sheaf_of_rings_on_a_site.tex}
 \input{../_definitions/definition_sesquilinear_form_on_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
 \input{../_definitions/definition_hermitian_form_on_a_sheaf_of_rings_with_involution_on_a_site.tex}
+
 
 
 \section{Miscellaneous definitions}

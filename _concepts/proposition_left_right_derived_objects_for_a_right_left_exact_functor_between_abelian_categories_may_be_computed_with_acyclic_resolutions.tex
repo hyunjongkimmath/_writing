@@ -1,24 +1,94 @@
 \begin{proposition}[cf.{\cite[Exercise 2.4.3]{weibel}}] \label{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions}
     Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}. Let $A$ be an object of $\calA$. 
     \begin{enumerate}
-        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
-        $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
-        of $A$ exists in $\calA$. Let 
+        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} and suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}.
+        % , and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution}
+        % $$\cdots \to P_2 \to P_1 \to P_0 \to A \to 0$$
+        % of $A$ exists in $\calA$. 
+        Let 
         $$\cdots \to Q_2 \to Q_1 \to Q_0 \to A \to 0$$
         be any \CrefAndHyperrefIfExist{definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories}{$F$-acyclic (left) resolution} of $A$ in $\calA$. For all $n$, there are natural isomorphisms
-        $$H_n(F(P_\bullet)) \cong H_n(F(Q_\bullet)).$$
-        In particular, the left derived objects $L_n F (A)$ may be computed using any $F$-acyclic (left) resolution of $A$ and are independent of the choice of left resolution. In particular, since all projective objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $L_n F(A)$ is well defined.
+        $$L_nF(A) \cong H_n(F(Q_\bullet)).$$
+        In particular, the left derived objects $L_n F (A)$ may be computed using any $F$-acyclic (left) resolution of $A$ and are independent of the choice of $F$-acyclic resolution. In particular, since all projective objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $L_n F(A)$ is well defined.
 
-        \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
-        $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
-        of $A$ exists in $\calA$. Let 
+        \item Dually, suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}, and suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}.
+        
+        % and suppose that a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution}
+        % $$0 \to A \to I^0 \to I^1 \to I^2 \to \cdots$$
+        % of $A$ exists in $\calA$. 
+        Let 
         $$0 \to A \to Q^0 \to Q^1 \to Q^2 \to \cdots$$
         be any \CrefAndHyperrefIfExist{definition:F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories}{$F$-acyclic (right) resolution} of $A$ in $\calA$. For all $n$, there are natural isomorphisms
-        $$H_n(F(I^\bullet)) \cong H_n(F(Q^\bullet)).$$
-        In particular, the right derived objects $R_n F (A)$ may be computed using any $F$-acyclic (right) resolution of $A$ and are independent of the choice of right resolution. In particular, since all injectives objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $R_n F(A)$ is well defined.
+        $$(R^n F)(A) \cong H^n(F(Q^\bullet)).$$
+        In particular, the right derived objects $R_n F (A)$ may be computed using any $F$-acyclic (right) resolution of $A$ and are independent of the choice of $F$-acyclic. In particular, since all injectives objects are $F$-acyclic (\Cref{lemma:any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor}), $R_n F(A)$ is well defined.
     \end{enumerate}
 \end{proposition}
 
 \begin{proof}
     \TODO{There is a ``dimension shifting'' fact that goes into proving this kind of thing.}
 \end{proof}
+
+% \begin{proof}
+%     We prove (1) by induction on $n$ using dimension shifting (\Cref{lemma:dimension_shifting_lemma_for_acyclic_syzygies}). Let $K_0 = \ker(Q_0 \to A)$ and $K_n = \ker(Q_n \to Q_{n-1})$ for $n \geq 1$. We have the short exact sequence $0 \to K_0 \to Q_0 \to A \to 0$. We also have the short exact sequence $0 \to K_n \to Q_n \to K_{n-1} \to 0$; since $0 \to K_n \to Q_n \to Q_{n-1} \to \cdots \to Q_0 \to A \to 0$ is exact, we have $K_{n-1} = \ker(Q_{n-1} \to Q_{n-2}) = \operatorname{im}(Q_{n} \to Q_{n-1})$.
+
+%     We wish to obtain the long exact sequences of \Cref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors} of the $L_i F$ for these short exact sequences --- to do so, it is necessary to verify that $A$, $K_0$, $K_{n-1}$, and $K_n$ have projective resolutions. By assumption, $A$ has a projective resolution $P_\bullet \to A$. Let $\Omega_1 = \ker(P_0 \to A)$. By the \CrefAndHyperref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}{Comparison Theorem}, the identity map $\operatorname{id}_A: A \to A$ lifts to a chain map $f: P_\bullet \to Q_\bullet$. This chain map induces a commutative diagram with exact rows:
+%     \begin{center}
+%     \begin{tikzcd}
+%         0 \arrow[r] & \Omega_1 \arrow[r] \arrow[d, "f^{(1)}"] & P_0 \arrow[r] \arrow[d, "f_0"] & A \arrow[r] \arrow[d, "\operatorname{id}_A"] & 0 \\
+%         0 \arrow[r] & K_0 \arrow[r] & Q_0 \arrow[r] & A \arrow[r] & 0
+%     \end{tikzcd}
+%     \end{center}
+%     Since $P_{\bullet \geq 1} \to \Omega_1$ is a projective resolution, and the truncated map $f_{\bullet \geq 1}: P_{\bullet \geq 1} \to Q_{\bullet \geq 1}$ is a lift of $f^{(1)}$, it follows that the derived objects $L_i F(A)$ and $L_i F(K_0)$ can be compared via the long exact sequences associated to these rows. 
+
+%     Specifically, the diagram of long exact sequences commutes by naturality. Since $P_0$ is projective and $Q_0$ is $F$-acyclic, $L_i F(P_0) = L_i F(Q_0) = 0$ for $i > 0$. The five-lemma (or a direct diagram chase) then identifies $L_i F(A) \cong L_{i-1} F(K_0)$ for $i \geq 2$. By repeating this process for each $K_n$, we ensure that the existence of the projective resolution for $A$ is sufficient to justify every step of the dimension shifting argument.
+        
+
+
+
+
+
+% %     By assumption, $A$ has a projective resolution. 
+
+
+%     Applying the \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} of left derived functors to $0 \to K_0 \to Q_0 \to A \to 0$, and noting that $L_i F(Q_0) = 0$ for $i > 0$ because $Q_0$ is $F$-acyclic, we obtain $L_i F(A) \cong L_{i-1} F(K_0)$ for $i \geq 2$ and $L_1 F(A) \cong \ker(F(K_0) \to F(Q_0))$. 
+
+
+%     By the right exactness of $F$, the sequence $F(Q_1) \to F(Q_0) \to F(A) \to 0$ is exact, so $H_0(F(Q_\bullet)) \cong F(A) = L_0 F(A)$. For $n=1$, the sequence $F(Q_2) \to F(Q_1) \to F(K_0) \to 0$ shows that $H_1(F(Q_\bullet)) \cong \ker(F(K_0) \to F(Q_0)) \cong L_1 F(A)$.
+
+%     For $n \geq 2$, the isomorphism $L_n F(A) \cong L_{n-1} F(K_0)$ allows us to shift the index. By the inductive hypothesis applied to the $F$-acyclic resolution $\cdots \to Q_2 \to Q_1 \to K_0 \to 0$ of $K_0$, we have $L_{n-1} F(K_0) \cong H_{n-1}(F(Q_{\bullet \geq 1}))$, which is precisely $H_n(F(Q_\bullet))$. The naturality follows from the naturality of the connecting homomorphisms in the long exact sequences. Statement (2) follows by the dual argument.
+% \end{proof}
+
+% \begin{proof}
+%     We prove (1). Let $P_\bullet \to A \to 0$ be the given projective resolution and $Q_\bullet \to A \to 0$ be any $F$-acyclic resolution. By \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}, the identity $\operatorname{id}_A$ lifts to a chain map $f: P_\bullet \to Q_\bullet$. We show by induction on $n$ that the induced map $f_*: H_n(F(P_\bullet)) \to H_n(F(Q_\bullet))$ is an isomorphism.
+
+%     \textbf{Base Case ($n=0$):} Since $F$ is right exact and the rows of the resolutions are exact at $A$ and $Q_0$ (resp. $P_0$), the sequences $F(Q_1) \to F(Q_0) \to F(A) \to 0$ and $F(P_1) \to F(P_0) \to F(A) \to 0$ are exact. Thus, $H_0(F(Q_\bullet)) \cong F(A)$ and $H_0(F(P_\bullet)) \cong F(A)$. Since $f$ lifts $\operatorname{id}_A$, the induced map on $H_0$ is the identity $\operatorname{id}_{F(A)}$, which is an isomorphism.
+
+%     \textbf{Inductive Step:} Suppose $f_*$ is an isomorphism for $n-1$. For any ``left complex'' $C_\bullet = \cdots \to C_2 \to C_1 \to C_0 \to 0$, let $C_{\bullet \geq 1}$ denote the truncated complex shifted such that $(C_{\bullet \geq 1})_k = C_{k+1}$, and let $\bar{C}_0$ be the complex concentrated in degree 0 with value $C_0$. We have a short exact sequence of complexes:
+%     $$0 \to C_{\bullet \geq 1} \to C_\bullet \to \bar{C}_0 \to 0$$
+
+
+%     This sequence is split-exact in every degree $k$. Consequently, the additive functor $F$ preserves this exactness, yielding a short exact sequence of complexes in $\calB$:
+%     \begin{equation} \label{eq:split_short_exact_sequence_of_F_truncation}
+%     0 \to F(C_{\bullet \geq 1}) \to F(C_\bullet) \to F(\bar{C}_0) \to 0
+%     \end{equation}
+%     Applying the \CrefAndHyperrefIfExist{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}{long exact sequence of homology} to the above (which exists for any SES of complexes without further assumptions), and noting that $H_k(F(\bar{C}_0)) = 0$ for $k \geq 1$, we obtain the connecting isomorphism:
+%     $$\partial: H_k(F(C_\bullet)) \xrightarrow{\cong} H_{k-1}(F(C_{\bullet \geq 1})) \quad \text{for } k \geq 2$$
+%     Applying this to both $P_\bullet$ and $Q_\bullet$, the naturality of the connecting homomorphism gives a commutative square:
+%     \begin{center}
+%     \begin{tikzcd}
+%         H_n(F(P_\bullet)) \arrow[r, "\partial", "\cong"'] \arrow[d, "f_*"] & H_{n-1}(F(P_{\bullet \geq 1})) \arrow[d, "(f_{\geq 1})_*"] \\
+%         H_n(F(Q_\bullet)) \arrow[r, "\partial", "\cong"'] & H_{n-1}(F(Q_{\bullet \geq 1}))
+%     \end{tikzcd}
+%     \end{center}
+%     Note that $P_{\bullet \geq 1}$ is a projective resolution of $\Omega_1 = \ker(P_0 \to A)$ and $Q_{\bullet \geq 1}$ is an $F$-acyclic resolution of $K_0 = \ker(Q_0 \to A)$. By the inductive hypothesis, $(f_{\geq 1})_*$ is an isomorphism, which implies $f_*$ is an isomorphism for $n \geq 2$.
+
+%     For $n=1$, we consider the boundary of the homology sequence. The homology long exact sequence coming from \eqref{eq:split_short_exact_sequence_of_F_truncation} in the case of $C_\bullet = P_\bullet$ yields
+%     $$H_1(F(P_\bullet)) \to H_1(F(\overline{P}_0)) \to H_0(F(P_{\bullet \geq 1})) \to H_0(F(P_\bullet)) \to H_0(F(\overline{P}_0)) \to 0.$$
+%     Since $H_1(F(\bar{P}_0)) = 0$ and $H_0(F(P_{\bullet \geq 1})) = \operatorname{coker}(F(P_2) \to F(P_1)) \cong F(\Omega_1)$, the above can be re-written as 
+%     $$0 \to H_1(F(P_\bullet)) \to F(\Omega_1) \to F(P_0) \to F(A) \to 0.$$
+%     This identifies $H_1(F(P_\bullet)) \cong \ker(F(\Omega_1) \to F(P_0))$.
+    
+%     The same holds for $Q_\bullet$. The map $f_*$ on $H_1$ is then the map between these kernels, which is an isomorphism by the Five Lemma or direct diagram chase on the induced maps of SESs.
+
+%     Since any two projective resolutions are $F$-acyclic, they yield isomorphic homology. Thus $L_n F(A)$ is well-defined and independent of the choice of resolution. Statement (2) follows by the dual argument.
+% \end{proof}

@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:morphism_of_topological_modules_over_topological_rings}
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:topological_ring}{topological rings}, and let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:topological_module_over_topological_rings}{topological $(R, S)$-bimodules}. A \hldef{morphism of topological $(R, S)$-bimodules} is a map $f: M \to N$ such that:
+\begin{enumerate}
+    \item $f$ is a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism of $(R, S)$-bimodules} in the algebraic sense: $f(rm + m's) = r f(m) + f(m')s$ for all $r \in R, s \in S$, and $m, m' \in M$.
+    \item $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} with respect to the topologies on $M$ and $N$.
+
+\end{enumerate}
+
+
+    A \hldef{morphism of left topological $R$-modules} is a morphism of topological $(R, \mathbb{Z})$-bimodules where $\bbZ$ is endowed with the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology}. Similarly, a \hldef{morphism of right topological $R$-modules} is a morphism of topological $(\mathbb{Z}, R)$-bimodules where $\bbZ$ is endowed with the discrete topology. Furthermore, a \hldef{morphism of two-sided topological $R$-modules} is a morphism of topological $(R, R)$-bimodules.
+
+    In the case of a left topological $R$-module, the condition of being a $(\mathbb{Z}, \text{discrete})$-bimodule morphism reduces to $f$ being an $R$-linear continuous map of topological abelian groups, as the $\mathbb{Z}$-linearity $f(nz) = nf(z)$ is automatically satisfied by any continuous homomorphism of topological abelian groups.
+\end{definition}

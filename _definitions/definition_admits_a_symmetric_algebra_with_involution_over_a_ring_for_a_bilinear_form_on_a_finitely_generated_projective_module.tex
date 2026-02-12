@@ -1,0 +1,20 @@
+\begin{definition}[cf. {\cite[Chapter I. 7.4]{knus_qhfr}} in the case that the base ring is commutative] \label{definition:admits_a_symmetric_algebra_with_involution_over_a_ring_for_a_bilinear_form_on_a_finitely_generated_projective_module}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}, and $A$ a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_rnig}{symmetric $R$-algebra} with an \CrefAndHyperrefIfExist{definition:algebra_with_involution_over_a_ring_with_involution}{$R$-linear involution} $\sigma: A \to A$ denoted by $\bar{a}$.
+    Let $N$ be a \CrefAndHyperrefIfExist{definition:finitely_generated_algebra_over_a_not_necessarily_commutative_ring}{finitely generated} \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}. 
+    We view $N$ also as an $(R, A)$-bimodule via the $R$-algebra structure of $A$.
+
+    An $R$-valued form $k: N \otimes_{\mathbb{Z}} N \to R$ (which is tantamount to a bilinear form $N \times N \to R$ (\Cref{proposition:universal_property_of_the_tensor_product_of_bimodules})) is said to \hldef{admit $A$} if 
+    it is an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$(R, R)$-bimodule} map that factors through the tensor product over $A$.
+    Specifically, it must satisfy:
+    \begin{enumerate}
+        \item \textbf{Balanced over $A$:} For all $x, y \in N$ and $a \in A$,
+        $$ k(xa, y) = k(x, ay) $$
+        where the right action of $A$ on the left side is the module action, 
+        and the left action of $A$ on the right side is defined via the involution: $ay := y\overline{a}$.
+        \item \textbf{Compatibility with $R$-structure:} For all $r_1, r_2 \in R$,
+        $$ k(r_1x, yr_2) = r_1 k(x, y) r_2 $$
+    \end{enumerate}
+    This is equivalent to $k$ inducing a well-defined $(R, R)$-bimodule homomorphism:
+    $$ \tilde{k}: N \otimes_{A} \overline{N} \longrightarrow R $$
+    where $\overline{N}$ is the \CrefAndHyperrefIfExist{definition:opposite_module_of_a_module_over_a_ring_with_involution}{opposite} of $N$ as a right module over the involution ring $A$.
+\end{definition}

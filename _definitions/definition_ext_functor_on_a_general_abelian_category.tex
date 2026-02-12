@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:ext_functor_on_a_general_abelian_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+    For objects $A_1,A_2 \in \calA$, the \hldef{Ext objects}
+    $$\Ext^n(A,B) = \Ext^n_{\calA}(A,B)$$
+    \TODO{I think they would be equivalent when defined}
+    may be defined in one of the several not-necessarily-equivalent ways:
+    \begin{enumerate}
+        \item As the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{right derived functors} of $\Hom_\calA(A_1, -): \calA \to \Ab$ computed via \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolutions} of $A_2$ in $\calA$, assuming that such an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution} exists.
+
+        \item As the right derived functors of $\Hom_\calA(-, A_2): \calA^{\op} \to \Ab$ computed by injective resolutions of $A_1$ in $\calA^{\op}$ (i.e. \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} of $A_1$ in $\calA$), assuming that such a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolution} exists.
+    \end{enumerate}
+    In particular, by identifying the \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functor}
+    $$\Hom_{\calA}: \calA^{\op} \times \calA \to \Ab,$$
+    which is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} in each variable, with the biadditive functor
+    $$\Hom_{\calA}^{\op}: \calA \times \calA^{\op} \to \Ab^{\op}$$
+    \TODO{talk about how functors A -> B are equivalent to functors Aop -> Bop, say Fun(A,B) cong Fun(Aop, Bop) is an isomorphism of categories}
+    that is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} in each variable, one can see that the above definitions are special cases of the definitions in \Cref{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category} that involve projective resolutions --- the $\Ext$ objects are \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived objects} of $\Hom_{\calA}^{\op}$ computed via projective resolutions in each variable. The above definitions are furthermore special cases of the definitions in \Cref{definition:tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category} that involve \CrefAndHyperrefIfExist{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions} because projective and injective objects in an abelian category respectively make the covariant and contravariant Hom functors exact, see \Cref{lemma:injective_projective_objects_in_an_abelian_category_have_exact_Hom_functors} and because \CrefAndHyperref{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flatness} in this general context is defined in terms of the exactness of the biadditive functor.  
+\end{definition}

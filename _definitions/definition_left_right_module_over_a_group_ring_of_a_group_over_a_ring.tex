@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. 
+Write $R[G]$ for the associated \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group ring}.
+\begin{enumerate}
+    \item A \hldef{left $R[G]$-module} or a \hldef{$G$-module over $R$ on the left} is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} $A$ equipped with a left \CrefAndHyperrefIfExist{definition:action_of_a_group_on_an_abelian_group}{$G$-action} such that for all $g \in G$, $r \in R$, and $a, a' \in A$:
+    \begin{itemize}
+        \item $g(ra) = r(ga)$ (The $G$-action is $R$-linear).
+        \item $g(a + a') = ga + ga'$ (The $G$-action is additive).
+    \end{itemize}
+
+    \item A \hldef{right $R[G]$-module} or a \hldef{$G$-module over $R$ on the right} is a right \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module} $A$ equipped with a right $G$-action such that for all $g \in G$, $r \in R$, and $a, a' \in A$:
+    \begin{itemize}
+        \item $(ar)g = (ag)r$ (The $G$-action is $R$-linear).
+        \item $(a + a')g = ag + a'g$ (The $G$-action is additive).
+    \end{itemize}
+\end{enumerate}
+Equivalently, a left (resp. right) $R[G]$-module is an \CrefAndHyperrefIfExist{definition:group}{abelian group} $A$ together with a ring homomorphism $\rho: R[G] \to \text{End}_{\mathbb{Z}}(A)$ (resp. $\rho: R[G]^{op} \to \text{End}_{\mathbb{Z}}(A)$).
+
+Equivalently, a left/right $R[G]$-module is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right module} of the group ring $R[G]$.
+\end{definition}

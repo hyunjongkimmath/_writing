@@ -1,0 +1,36 @@
+\begin{corollary} \label{corollary:group_homology_cohomology_of_a_module_over_a_group_ring_over_a_ring_can_be_computed_by_bar_resolutions}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. Let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{left/right $R[G]$-module}.
+
+The \CrefAndHyperrefIfExist{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}{group homology and cohomology} of $G$ with coefficients in $A$ can be computed via the following identifications:
+
+\begin{enumerate}
+    \item \textbf{Homology:} 
+    \begin{itemize}
+
+        \item If $A$ is a right $R[G]$-module, then $H_n(G, A)$ is the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homologies} of the complexes $A \otimes_{R[G]} B_\bullet$ and $A \otimes_{R[G]} \overline{B}_\bullet$, where $B_\bullet$ and $\overline{B}_\bullet$ are the \CrefAndHyperrefIfExist{definition:unnormalized_bar_resolution_of_a_ring_over_a_group_algebra}{unnormalized} and \CrefAndHyperrefIfExist{definition_normalized_bar_resolution_of_a_ring_over_a_group_algebra}{normalized} bar resolutions constructed as resolutions of left $R[G]$-modules.
+        
+        \item If $A$ is a left $R[G]$-module, then $H_n(G, A)$ is the homologies of the complexes $B'_\bullet \otimes_{R[G]} A$ and $\overline{B}'_\bullet \otimes_{R[G]} A$, where $B'_\bullet$ and $\overline{B}'_\bullet$ are constructed as resolutions of right $R[G]$-modules.
+    
+    \end{itemize}
+
+    \item \textbf{Cohomology:}
+    
+    \begin{itemize}
+        \item If $A$ is a left $R[G]$-module, then $H^n(G, A)$ is the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomologies} of the complexes $\Hom_{R[G]-\bbZ}(B_\bullet, A)$ and $\Hom_{R[G]-\bbZ}(\overline{B}_\bullet, A)$, where $B_\bullet$ and $\overline{B}_\bullet$ are constructed as resolutions of left $R[G]$-modules.
+        
+        \item If $A$ is a right $R[G]$-module, then $H^n(G, A)$ is the cohomologies of the complexes $\Hom_{\bbZ-R[G]}(B'_\bullet, A)$ and $\Hom_{\bbZ-R[G]}(\overline{B}'_\bullet, A)$, where $B'_\bullet$ and $\overline{B}'_\bullet$ are constructed as resolutions of right $R[G]$-modules.
+    \end{itemize}
+\end{enumerate}
+
+% Consequently, these yield the natural isomorphisms to the \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{Tor} and \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{Ext} functors established in \Cref{corollary:group_homology_cohomology_are_just_tor_and_ext_functors_by_trivial_module_over_group_ring}.
+\end{corollary}
+\begin{proof}
+    This follows from the following:
+    \begin{itemize}
+        \item \Cref{corollary:group_homology_cohomology_are_just_tor_and_ext_functors_by_trivial_module_over_group_ring}, 
+        \item that \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$ functors} of modules can be computed with \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} in either input, 
+        \item that \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$ functors} of modules can be computed with projective resolutions in the first input, 
+        \item that \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free modules} are \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} (\Cref{proposition:free_bimodule_over_rings_are_projective}).
+        \item that the normalized and unnoramlized bar resolutions are (left) resolutions by free $R[G]$-modules (\Cref{theorem:unnormalized_and_normalized_bar_resolutions_of_group_rings_are_resolutions}).
+    \end{itemize}
+\end{proof}

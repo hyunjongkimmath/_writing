@@ -1,0 +1,26 @@
+\begin{definition} \label{definition:action_of_a_group_on_an_abelian_group}
+Let $G$ be a group and $A$ an abelian group. 
+
+\begin{enumerate}
+
+    \item An \hldef{action of $G$ on $A$ on the left} is a map $\cdot: G \times A \to A$ such that for all $g, h \in G$ and $a, b \in A$:
+
+    \begin{itemize}
+        \item $g \cdot (a + b) = (g \cdot a) + (g \cdot b)$ (the action is by automorphisms of $A$)
+        \item $(gh) \cdot a = g \cdot (h \cdot a)$
+        \item $1_G \cdot a = a$
+    \end{itemize}
+
+    \item An \hldef{action of $G$ on $A$ on the right} is a map $\cdot: A \times G \to A$ such that for all $g, h \in G$ and $a, b \in A$:
+    \begin{itemize}
+        \item $(a + b) \cdot g = (a \cdot g) + (b \cdot g)$ (the action is by automorphisms of $A$)
+        \item $a \cdot (gh) = (a \cdot g) \cdot h$
+        \item $a \cdot 1_G = a$
+    \end{itemize}
+\end{enumerate}
+In particular, an action of $G$ on $A$ is an \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{action of $G$} on the underlying set of $A$ with extra conditions.
+
+When such an action is specified, $A$ is called a \hldef{$G$-module} (or more specifically, a \hldef{$\mathbb{Z}[G]$-module}). 
+
+\TextIfExists{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{Note that this definition is a special case of \Cref{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring} in the case that the base ring $R$ is $\bbZ$.}
+\end{definition}

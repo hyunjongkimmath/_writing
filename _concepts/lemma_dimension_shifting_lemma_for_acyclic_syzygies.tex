@@ -15,11 +15,23 @@
                 \item $L_i F(A) \cong L_{i-m-1} F(M_m)$ for $i \geq m+2$ and 
                 \item $L_{m+1} F(A) \cong \ker (F(M_m) \to F(C_m))$. 
             \end{enumerate}
-
-
         \end{enumerate}
 
-        \item \TODO{dual statement}
+        \item Suppose that $G: \calA \to \calB$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}. 
+        \begin{enumerate}
+
+            \item Suppose that $0 \to A \to I \to N \to 0$ is a short exact sequence in $\calA$ where $I$ is $G$-acyclic, and that $A$ and $N$ have \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolutions}. We have $R^i G(A) \cong R^{i-1} G(N)$ for $i \geq 2$ and $R^1 G(A) \cong \coker(G(I) \to G(N))$.  
+
+            \item Suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}.
+            Let
+            $$0 \to A \to I_0 \to I_1 \to \cdots \to I_m \to N_m \to 0$$
+            be an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complex} with the $I_j$ \CrefAndHyperrefIfExist{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$G$-acyclic}. We have
+            \begin{enumerate}
+                \item $R^i G(A) \cong R^{i-m-1} G(N_m)$ for $i \geq m+2$ and 
+                \item $R^{m+1} G(A) \cong \coker (G(I_m) \to G(N_m))$. 
+            \end{enumerate}
+
+        \end{enumerate}
 
     \end{enumerate}
 

@@ -1,0 +1,18 @@
+\begin{definition}[{\cite[Chapter I, After Lemma 2.1.1]{knus_qhfr}}] \label{definition:canonical_morphism_from_a_module_over_an_involution_ring_to_its_double_dual}
+    Let $A$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} denoted by $a \mapsto \overline{a}$. 
+
+    Given a left/right $A$-module $M$, one can speak of the double \CrefAndHyperrefIfExist{lemma:twisted_dual_module_of_a_module_over_a_ring_with_involution_can_be_defined_as_opposite_of_dual_or_dual_of_opposite}{(twisted) dual module} $(M^*)^*$. 
+
+    By \Cref{lemma:twisted_dual_module_of_a_module_over_a_ring_with_involution_can_be_defined_as_opposite_of_dual_or_dual_of_opposite}, there is a canonical isomorphism
+    $$\overline{T_{M^\vee}}: \overline{\overline{(M^\vee)^\vee}} \to M^{**}$$
+    (\Cref{definition:dual_of_a_left_right_two_sided_module}) (\Cref{definition:opposite_module_of_a_module_over_a_ring_with_involution}).  Define the \hldef{canonical morphism from $M$ to its double (twisted) dual} as the composition
+    $$\hlin{\operatorname{can}_M: M \to (M^{\vee})^\vee \cong \overline{\overline{(M^\vee)^\vee}} \xrightarrow{\overline{T_{M^\vee}}} M^{**}}$$
+    where $M \to (M^{\vee})^\vee$ is the \CrefAndHyperrefIfExist{definition:canonical_map_from_a_module_to_its_double_dual}{canonical evaluation map}. 
+
+    More explicitly, $\operatorname{can}_M(m) = m^{**} \in M^{**}$, where $m^{**}(f) = \overline{f(m)}$. Moreover, $\operatorname{can}_M$ specifies a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} from the \CrefAndHyperrefIfExist{definition:identity_functor_on_a_category}{identity functor} to the double dual functor on the appropriate \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $A$-modules}:
+    \begin{align*}
+        \operatorname{can}_M: \id_{{}_A \Mod} \Rightarrow (-)^{**}:  {}_A \Mod \to {}_A \Mod\\
+        \operatorname{can}_M: \id_{\Mod_A } \Rightarrow (-)^{**}: \Mod_A  \to \Mod_A 
+    \end{align*}
+
+\end{definition}

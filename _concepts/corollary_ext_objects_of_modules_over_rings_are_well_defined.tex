@@ -1,0 +1,14 @@
+\begin{corollary} \label{corollary:ext_objects_of_modules_over_rings_are_well_defined}
+    Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}, let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, and let $N$ be an $R$-$T$ bimodule. Let $n \geq 0$ be an integer.
+
+    The \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{Ext} objects $\Ext^n(M,N)$ are well defined up to \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism}, independent of 
+    \begin{itemize}
+        \item Whether a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolution} of $M$ or an \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolution} of $N$ is used to compute the \CrefAndHyperrefIfExist{definition:total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories}{right derived functor},
+        \item the choice of projective resolution of $M$ and,
+        \item the choice of injective resolution of $N$.
+    \end{itemize}
+\end{corollary}
+
+\begin{proof}
+    Note that categories of bimodules over rings have enough projectives and enough injectives (\Cref{theorem:examples_of_abelian_categories_with_enough_injectives_or_projectives}), so projective and injective resolutions of $M$ and $N$ exist by \Cref{proposition:abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes}. The statement follow from \Cref{theorem:ext_objects_for_general_abelian_categories_are_well_defined_even_if_some_combination_of_projectives_or_injectives_exist}.
+\end{proof}

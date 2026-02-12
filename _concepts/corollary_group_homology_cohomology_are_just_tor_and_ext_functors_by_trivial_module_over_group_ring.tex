@@ -1,0 +1,25 @@
+\begin{corollary} \label{corollary:group_homology_cohomology_are_just_tor_and_ext_functors_by_trivial_module_over_group_ring}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. Let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{left/right $R[G]$-module}.
+    \begin{enumerate}
+        \item If $A$ is a left $R[G]$-module, then
+        $$H_*(G;A) \cong \Tor_*^{R[G]}(R, A)$$
+        (\Cref{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}) (\Cref{definition:tor_functors_of_bimodules_of_rings}).
+        \item If $A$ is a right $R[G]$-module, then
+        $$H_*(G;A) \cong \Tor_*^{R[G]}(A, R)$$
+        (\Cref{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}) (\Cref{definition:tor_functors_of_bimodules_of_rings}).
+
+        \item If $A$ is a left $R[G]$-module, then
+        $$H^*(G;A) \cong \Ext_{R[G]}^{*}(R, A)$$
+        (\Cref{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}) (\Cref{definition:ext_functors_of_bimodules_of_rings}); note here that $\Ext_{R[G]}$ is the right derived functor of $\Hom_{R[G]-\bbZ}$ (\Cref{definition:hom_of_left_right_bi_modules_of_rings})
+        \item If $A$ is a right $R[G]$-module, then
+        $$H^*(G;A) \cong \Ext_{R[G]}^{*}(R, A)$$
+        (\Cref{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}) (\Cref{definition:ext_functors_of_bimodules_of_rings}); note here that $\Ext_{R[G]}$ is the right derived functor of $\Hom_{\bbZ-R[G]}$ (\Cref{definition:hom_of_left_right_bi_modules_of_rings})
+
+    \end{enumerate}
+    In all of the above statements, $R$ is regarded as a \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial $R[G]$-module}.
+\end{corollary}
+\begin{proof}
+    By definition, $H_n(G,A)$ is the $n$th left derived functor of the coinvariant functor $-_G$, which is naturally isomorphic to $R \otimes_{R[G]} -$ (for left $R[G]$-modules $A$) by \Cref{lemma:invariant_coinvariant_functors_for_group_rings_are_naturally_isomorphic_to_tensor_hom_by_trivial_module}. The $n$th left derived functor of $R \otimes_{R[G]} -$ is by definition $\Tor_n^{R[G]}(R,-)$. 
+
+    Similarly, argue that $H^*(G;A)$ is the $n$th right derived functor of the invariant functor $-^G$, which is naturally isomorphic to $\Hom_{R[G]}(R, A)$ (for left $R[G]$-modules $A$) by \Cref{lemma:invariant_coinvariant_functors_for_group_rings_are_naturally_isomorphic_to_tensor_hom_by_trivial_module}. The $n$th left derived functor of $\Hom_{R[G]}(R, -)$ is by definition $\Ext^n_{R[G]}(R,-)$. 
+\end{proof}

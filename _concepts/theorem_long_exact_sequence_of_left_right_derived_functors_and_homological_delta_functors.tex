@@ -1,4 +1,4 @@
-\begin{theorem}[cf. {\cite[Theorem 2.4.6]{weibel}}] \label{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}
+\begin{theorem}[cf. {\cite[Theorem 2.4.6, Theorem 2.4.7, 2.5.1]{weibel}}] \label{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}
     Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
     \begin{enumerate}
         \item Suppose that $F$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact}. 
@@ -9,7 +9,7 @@
             $$\cdots \xrightarrow{\partial} L_i F(A') \to L_iF(A) \to L_iF(A'') \xrightarrow{\partial} L_{i-1} F(A') \to L_{i-1}F(A) \to L_{i-1}F(A'') \xrightarrow{\partial} \cdots$$
             of \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects} and this long exact sequence is natural.
 
-            \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, then the derived functor $L_* F$ form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{homological $\delta$-functor}.
+            \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, then the derived functor $L_* F$ form a \CrefAndHyperrefIfExist{definition:universal_homological_cohomological_delta_functor_between_abelian_cateogries}{universal homological $\delta$-functor}. 
         \end{enumerate}
 
         \item Suppose that $G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact}. 
@@ -22,7 +22,7 @@
                 $$
                 of \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects}, and this long exact sequence is natural.
 
-                \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, then the derived functors $R^* G$ form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{cohomological $\delta$-functor}.
+                \item If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, then the derived functors $R^* G$ form a \CrefAndHyperrefIfExist{definition:universal_homological_cohomological_delta_functor_between_abelian_cateogries}{universal cohomological $\delta$-functor}.
             \end{enumerate}
     \end{enumerate}
 \end{theorem}
@@ -31,13 +31,96 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}
-        \item By the \CrefAndHyperrefIfExist{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}{Horseshoe lemma}, there is a projective resolution $P \to A$ fitting into a short exact sequence $0 \to P' \to P \to P'' \to 0$. Since the $P_n''$ are projective, each sequence $0 \to P_n' \to P_n \to P_n'' \to 0$ is split exact. \TODO{show that SES's ending in projective objects are split}. Since $F$ is additive, each sequence 
+        \item By the \CrefAndHyperrefIfExist{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}{Horseshoe lemma}, there is a projective resolution $P \to A$ fitting into a short exact sequence $0 \to P' \to P \to P'' \to 0$. Since the $P_n''$ are projective, each sequence $0 \to P_n' \to P_n \to P_n'' \to 0$ is \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split exact} by \Cref{proposition:equivalent_conditions_projective_injective}. Since $F$ is additive and since $P_n \cong P_n' \oplus P_n''$, we have isomorphisms $F(P_n) \cong F(P_n') \oplus F(P_n'')$ making each sequence 
         $$0 \to F(P_n') \to F(P_n) \to F(P_n'') \to 0$$
-        is split exact in $\calB$ \TODO{show why}. Therefore,
+        is split exact in $\calB$. Therefore,
         $$0 \to F(P') \to F(P) \to F(P'') \to 0$$
-        is a short exact sequence of chain complex. Its associated \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence in homology} is the desired long exact sequence. 
+        is a short exact sequence of chain complexes in $\calB$. Its associated \CrefAndHyperrefIfExist{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence in homology} is the desired long exact sequence. 
 
-        We now show that the long exact sequence is natural. \TODO{continue}
+        \medskip
+
+        We now show that the long exact sequence is natural. In other words, given a commutative diagram 
+        \begin{center}
+        \begin{tikzcd}
+            0 \arrow[r] & A' \arrow[r] \arrow[d, "f'"] & A \arrow[r] \arrow[d, "f"] & A'' \arrow[r] \arrow[d, "f''"] & 0 \\
+            0 \arrow[r] & B' \arrow[r] & B \arrow[r] & B'' \arrow[r] & 0
+        \end{tikzcd}
+        \end{center}
+        in $\calA$ such that $A'$, $A''$, $B'$, and $B''$ have projective resolutions, we want to show that the morphisms
+        $$L_i F(f'): L_i F(A') \to L_iF(B'), \quad L_i F(f): L_i F(A) \to L_iF(B), \quad L_iF(f''): L_i F(A'') \to L_iF(B'')$$
+        arising from the functoriality of the $L_i F$ yield a morphism
+        \begin{center}
+            \begin{tikzcd}
+            \cdots \arrow[r] & L_i F(A') \arrow[d, "L_i F(f')"] \arrow[r] & L_i F(A) \arrow[d, "L_i F(f)"] \arrow[r] & L_i F(A'') \arrow[d, "L_i F(f'')"] \arrow[r, "\partial"] & L_{i-1} F(A') \arrow[d, "L_{i-1} F(f')"] \arrow[r] & \cdots \\
+            \cdots \arrow[r] & L_i F(B') \arrow[r] & L_i F(B) \arrow[r] & L_i F(B'') \arrow[r, "\partial"] & L_{1-1} F(B') \arrow[r] & \cdots
+        \end{tikzcd}
+        \end{center}
+        of the long exact sequences \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{as chain complexes}
+        
+
+        \medskip
+        Say that we given \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} $\epsilon': P' \to A'$, $\epsilon'': P'' \to A''$, $\eta': Q' \to B'$, and $\eta'' : Q'' \to B''$. Obtain projective resolutions $\epsilon: P \to A$ and $\eta: Q \to B$ via the Horshoe Lemma (\Cref{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}). Obtain chain maps $F': P' \to Q'$ and $F'': P'' \to Q''$ lifting $f'$ and $f''$ respectively via \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}. 
+
+        \medskip
+        We show that there is also a chain map $F: P \to Q$ lifting $f$ that also yields the following commutative diagram of maps in $\mathbf{Ch}(\calA)$ with exact rows:
+        \begin{center}
+        \begin{tikzcd}
+            0 \arrow[r] & P' \arrow[r] \arrow[d, "F'"] & P \arrow[r] \arrow[d, "F"] & P'' \arrow[r] \arrow[d, "F''"] & 0 \\
+            0 \arrow[r] & Q' \arrow[r] & Q \arrow[r] & Q'' \arrow[r] & 0
+        \end{tikzcd}
+        \end{center}
+
+
+        \medskip
+        The Horseshoe Lemma construction provides the following split-exact sequences in each degree $n$:
+        \begin{center}
+        \begin{tikzcd}
+            0 \arrow[r] & P'_n \arrow[r, "i_n"] & P_n \arrow[r, "p_n"] \arrow[l, bend left, "s_n"] & P''_n \arrow[r] \arrow[l, bend left, "t_n"] & 0 \\
+            0 \arrow[r] & Q'_n \arrow[r, "j_n"] & Q_n \arrow[r, "q_n"] \arrow[l, bend left, "u_n"] & Q''_n \arrow[r] \arrow[l, bend left, "v_n"] & 0
+        \end{tikzcd}
+        \end{center}
+        where $P_n \cong P'_n \oplus P''_n$ and $Q_n \cong Q'_n \oplus Q''_n$.
+
+        \medskip
+        We define the chain map $F_n: P_n \to Q_n$ in terms of the isomorphisms $P_n \cong P'_n \oplus P''_n$ and $Q_n \cong Q'_n \oplus Q''_n$ as the block matrix:
+        $$
+        F_n = \begin{pmatrix} 
+        F'_n & \gamma_n \\ 
+        0 & F''_n 
+        \end{pmatrix} : P'_n \oplus P''_n \to Q'_n \oplus Q''_n
+        $$
+        where $\gamma_n: P''_n \to Q'_n$ is a morphism chosen such that $F$ commutes with the differentials $d^P$ and $d^Q$, i.e. $d^Q \circ F = F \circ d^P$. In other words, the following diagrams need to commute:
+        \begin{center}
+        \begin{tikzcd}[ampersand replacement=~]
+            P'_n \oplus P''_n \arrow[rr, "{\begin{pmatrix} F'_n & \gamma_n \\ 0 & F''_n \end{pmatrix}}"] \arrow[d, "{\begin{pmatrix} d^{P'}_n & \delta'_n \\ 0 & d^{P''}_n \end{pmatrix}}"'] ~ ~ Q'_n \oplus Q''_n \arrow[d, "{\begin{pmatrix} d^{Q'}_n & \delta_n \\ 0 & d^{Q''}_n \end{pmatrix}}"] \\
+            P'_{n-1} \oplus P''_{n-1} \arrow[rr, "{\begin{pmatrix} F'_{n-1} & \gamma_{n-1} \\ 0 & F''_{n-1} \end{pmatrix}}"] ~ ~ Q'_{n-1} \oplus Q''_{n-1}
+        \end{tikzcd}
+        \end{center}
+
+
+        \medskip
+        Expanding the matrix multiplication $d^Q_n F_n = F_{n-1} d^P_n$, the diagonal entries commute by the definition of $F'$ and $F''$. The upper-right entry yields the condition:
+        \begin{equation} \label{eq:gamma_condition}
+        d^{Q'}_n \gamma_n + \delta_n F''_n = F'_{n-1} \delta'_n + \gamma_{n-1} d^{P''}_n
+        \end{equation}
+
+
+        \medskip
+        We construct $\gamma_n$ by induction on $n$:
+        \begin{itemize}
+            \item \textbf{Base Case ($n=0$):} Since $P_{-1} = 0$, the condition simplifies to the lifting property. Using the projectivity of $P''_0$, we lift the map through the resolution to obtain $\gamma_0$.
+            \item \textbf{Inductive Step:} Suppose $\gamma_{n-1}$ is defined. Let $\Psi_n = F'_{n-1} \delta'_n + \gamma_{n-1} d^{P''}_n - \delta_n F''_n$. We want to find $\gamma_n$ such that $d^{Q'}_n \gamma_n = \Psi_n$.
+            \item \textbf{Verification:} Applying $d^{Q'}_{n-1}$ to $\Psi_n$ yields zero:
+            $$d^{Q'}_{n-1} \Psi_n = d^{Q'}_{n-1}F'_{n-1} \delta'_n + d^{Q'}_{n-1}\gamma_{n-1} d^{P''}_n - d^{Q'}_{n-1}\delta_n F''_n$$
+            By substituting the inductive hypothesis for $d^{Q'}_{n-1}\gamma_{n-1}$ and using the fact that differentials squares are zero, the terms cancel out. Since $P''_n$ is projective, there exists a lift $\gamma_n: P''_n \to Q'_n$ satisfying \eqref{eq:gamma_condition}.
+        \end{itemize}
+
+        \medskip
+        Applying $F$ to the resulting morphism of SESs of complexes and invoking the naturality of the homology long exact sequence completes the proof.
+
+        \item That $L_* F$ form a homological $\delta$-functor is essentially the content of the above. We refer to \cite[Theorem 2.4.7]{weibel} for the proof that the homological $\delta$-functor is in fact universal.
+
     \end{enumerate}
+    \item This is dual to the previous part.
 \end{enumerate}
 \end{proof}

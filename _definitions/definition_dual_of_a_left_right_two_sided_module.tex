@@ -1,13 +1,13 @@
 \begin{definition} \label{definition:dual_of_a_left_right_two_sided_module}
-Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. Depending on the module structure of $M$, we define its dual module as follows:
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. Depending on the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{module} structure of $M$, we define its dual module as follows:
 \begin{enumerate}
     \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}, then the \hldef{(right) dual module of $M$} is 
-    $$\hlin{M^* = M^\vee \coloneq \operatorname{Hom}_R(M, R)}.$$
+    $$\hlin{M^* = M^\vee \coloneq \operatorname{Hom}_R(M, R) = \operatorname{Hom}_{R-\bbZ}(M, R)}.$$
     \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
     Note that it is a right $R$-module, as $M$ is a $R-\bbZ$-bimodule and $R$ is an $R-R$-bimodule. 
 
     \item If $M$ is a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}, then the \hldef{(left) dual module of $M$} is 
-    $$\hlin{{}^* M = {}^\vee M \coloneq \operatorname{Hom}_R(M, R)}.$$
+    $$\hlin{{}^* M = {}^\vee M \coloneq \operatorname{Hom}_R(M, R) = \Hom_{\bbZ-R}(M,R)}.$$
     \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
     Note that it is a left $R$-module, as $M$ is a $\bbZ-R$-bimodule and $R$ is an $R-R$-bimodule. 
 
@@ -26,7 +26,13 @@ Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutati
 \end{enumerate}
 If a convention for the rightness or the leftness of modules is fixed, then the appropriate dual module is often denoted by \hl{$M^\vee$}.
 
-In any case, the functor $M \mapsto M^\vee$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} from the appropriate \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of modules} to itself.
+In any case, the functor $M \mapsto M^\vee$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant functor} from the appropriate \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of modules} to itself. More explicitly, the dual module constructions yield functors
+\begin{align*}
+(-)^\vee: _{R} \Mod^{\op} \to \Mod_R \\
+(-)^\vee: \Mod_{R}^{\op}  \to _{R} \Mod.
+\end{align*}
+\CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}
+
 
 If $R$ is a \CrefAndHyperrefIfExist{definition:field}{field} $F$ and $V$ is an \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}, then the dual module
 $$\hlin{V^* = V^\vee \coloneq  \operatorname{Hom}_F(V, F)}$$

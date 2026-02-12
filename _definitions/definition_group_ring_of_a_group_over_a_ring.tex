@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:group_ring_of_a_group_over_a_ring}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}.
+
+The \hldef{group ring} \hl{$R[G]$}, also denoted \hl{$RG$}, is the set of all formal linear combinations of the form
+$$ \sum_{g \in G} r_g g $$
+where $r_g \in R$ and $r_g = 0$ for all but finitely many $g \in G$. This set is endowed with a ring structure via:
+\begin{itemize}
+    \item Addition:
+    $$ \left( \sum_{g \in G} r_g g \right) + \left( \sum_{g \in G} s_g g \right) = \sum_{g \in G} (r_g + s_g) g $$
+    \item Multiplication: Defined by the extension of the group law and the requirement that $R$ and $G$ commute ($rg = gr$):
+    $$ \left( \sum_{g \in G} r_g g \right) \left( \sum_{h \in G} s_h h \right) = \sum_{k \in G} \left( \sum_{gh=k} r_g s_h \right) k $$
+\end{itemize}
+The identity element of $R[G]$ is $1_R 1_G$.
+
+$R[G]$ may also be called the \hldef{group algebra of $G$ over $R$} as the natural ring homomorphism $R \to R[G]$ sending $r \mapsto r 1_G$ is an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{algebra}
+\end{definition}

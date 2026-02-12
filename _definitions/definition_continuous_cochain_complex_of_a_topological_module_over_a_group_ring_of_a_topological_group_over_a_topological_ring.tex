@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:continuous_cochain_complex_of_a_topological_module_over_a_group_ring_of_a_topological_group_over_a_topological_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} and $G$ a \CrefAndHyperrefIfExist{definition:topological_group}{topological group}. Let $R\text{-}\mathbf{TopMod}_G$ be the \CrefAndHyperrefIfExist{definition:category_of_topological_modules_over_a_group_ring_of_a_topological_group_over_a_topological_ring}{category of (left) topological $G$-modules over $R$}.
+
+Let $M$ be an object in $R\text{-}\mathbf{TopMod}_G$. The \hldef{continuous cochain complex} \hl{$C^\bullet_{\text{cont}}(G, M)$} is defined as follows:
+\begin{enumerate}
+    \item $C^n_{\text{cont}}(G, M) = \text{Map}_{\text{cont}}(G^n, M)$, the $R$-module of continuous maps from $G^n$ to $M$.
+    \item The \hldef{coboundary map} \hl{$d^n: C^n_{\text{cont}}(G, M) \to C^{n+1}_{\text{cont}}(G, M)$} is given by:
+    $$(d^n f)(g_1, \dots, g_{n+1}) = g_1 f(g_2, \dots, g_{n+1}) + \sum_{i=1}^n (-1)^i f(g_1, \dots, g_i g_{i+1}, \dots, g_{n+1}) + (-1)^{n+1} f(g_1, \dots, g_n)$$
+\end{enumerate}
+\end{definition}

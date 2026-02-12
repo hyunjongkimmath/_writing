@@ -1,0 +1,20 @@
+\begin{definition} [{\cite[Chapter I, 2.3]{knus_qhfr}}]\label{definition:form_and_operator_symmetrizer_maps_for_sesquilinear_forms_on_modules_over_rings_with_involutions}
+    Let $A$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution} denoted by $\overline{\cdot}$, let $\varepsilon \in Z(A)$ satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$, and let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{(right) $A$-module}. 
+
+    The \hldef{form symmetrizer map} is the map 
+    $$\hlin{S_\varepsilon: \Sesq_A(M) \to \Sesq_A(M), \quad b \mapsto b + \varepsilon b^*,}$$
+    (\Cref{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}) (\Cref{definition:conjugate_transpose_sesquilinear_form_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}). It corresponds corresponds under the \CrefAndHyperrefIfExist{definition:center_of_a_ring}{$Z(A)$}-module isomorphism 
+    \begin{align*}
+    \Sesq_A(M) &\cong \Hom_A(M, M^*) \\
+    b &\mapsto h_b \\
+    b_h &\mapsfrom h
+    \end{align*}
+    (\Cref{lemma:sesquilinear_forms_on_modules_over_rings_with_involutions_correspond_to_morphisms_to_twisted_dual_module}) (\Cref{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}) (\Cref{definition:sesquilinear_form_associated_to_a_homomorphism_from_a_module_to_its_twisted_dual}) to the \hldef{operator symmetrizer map}
+    $$\hlin{S_\varepsilon: \Hom_A(M, M^*) \to \Hom_A(M, M^*), \quad h \mapsto h + \varepsilon \cdot (h^* \circ \operatorname{can}_M),}$$
+    (\Cref{definition:canonical_morphism_from_a_module_over_an_involution_ring_to_its_double_dual})  where $h^*: M^{**} \to M^{*}$ is the morphism induced from $h: M \to M^{*}$ by the contravariance of the \CrefAndHyperrefIfExist{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}{twisted dual} functor $(-)^*$. In other words, we have 
+    $$h_{S_{\varepsilon}(b)} = S_{\varepsilon}(h_b)$$
+    (\Cref{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}).
+
+
+
+\end{definition}

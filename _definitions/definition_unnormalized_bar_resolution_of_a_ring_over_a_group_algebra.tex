@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:unnormalized_bar_resolution_of_a_ring_over_a_group_algebra}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring} and $G$ a \CrefAndHyperrefIfExist{definition:group}{group}. Apply \Cref{notation:basis_elements_for_n_fold_cartesian_product_of_a_group}.
+
+The \hldef{unnormalized bar resolution of $R$ over $R[G]$} is the complex \hl{$B_\bullet = B_{\bullet}(R[G])$} of (left) $R[G]$-modules where each $B_n$ is the \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free $R[G]$-module} with \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{basis} $G^n$. Noting that the free $R$-module with basis $G^n$ can be described by 
+$$R[G]^{\otimes_R n} = \underbrace{R[G] \otimes_R R[G] \otimes_R \cdots \otimes_R R[G]}_{n \text{ times}}$$
+where all of the copies of $R[G]$ are considered with the two-sided $R$-module structure, further note that $B_n$, the free $R[G]$-module with basis $G^n$, is thus identifiable as 
+$$B_n = R[G] \otimes_R R[G]^{\otimes_R n} \cong \underbrace{R[G] \otimes_R R[G] \dots \otimes_R R[G]}_{n+1 \text{ times}}$$
+where the first copy of $R[G]$ is considered with its $R[G]-R$-bimodule structure.
+
+The \hldef{differential} \hl{$d_n: B_n \to B_{n-1}$} is defined on the $R[G]$-basis by:
+$$d_n(g_0[g_1 | \dots | g_n]) = g_0 g_1[g_2 | \dots | g_n] + \left( \sum_{i=1}^{n-1} (-1)^i g_0[g_1 | \dots | g_i g_{i+1} | \dots | g_n] \right) + (-1)^n g_0[g_1 | \dots | g_{n-1}]$$
+and extended $R[G]$-linearly. 
+
+This resolution is indeed (\Cref{theorem:unnormalized_and_normalized_bar_resolutions_of_group_rings_are_resolutions}) a resolution
+$\dots \to B_2 \to B_1 \to B_0 \to R \to 0,$
+more precisely a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} by free modules, of the \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial $R[G]$-module} $R$, where the map $\epsilon: B_0 \to R$ is given by $\epsilon(g_0[]) = 1$; note that this is identifiable with the \CrefAndHyperref{definition:augmentation_map_of_a_group_ring_to_its_base_ring}{augmentation map} $\epsilon: R[G] \to R$ given by $\epsilon(g) = 1$ for all $g \in G$.
+
+Symmetrically, one can alternatively construct $B_\bullet$ as a (left free) resolution of $R$ of right $R[G]$-modules.
+\end{definition}
