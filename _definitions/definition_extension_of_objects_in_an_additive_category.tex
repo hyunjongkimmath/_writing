@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:extension_of_objects_in_an_additive_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. Let $A,B \in \calA$. 
+
+    An \hldef{extension of $A$ by $B$} refers to a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} of the form 
+    $$0 \to B \to X \to A \to 0.$$ 
+
+    Two extensions 
+    \begin{align*}
+    \xi: 0 \to B \to X \to A \to 0 \text{ and} \\
+    \xi': 0 \to B \to X' \to A \to 0 \text{ and} \\
+    \end{align*}
+    of $A$ by $B$ are said to be \hldef{equivalent} if there is a commutative diagram
+    \begin{center}
+    \begin{tikzcd}
+    \xi:  & 0 \arrow[r] & B \arrow[r] \arrow[d, equal] & X \arrow[r] \arrow[d, "\cong"] & A \arrow[r] \arrow[d, equal] & 0 \\
+    \xi': & 0 \arrow[r] & B \arrow[r]                  & X' \arrow[r]                  & A \arrow[r]                  & 0
+    \end{tikzcd}
+    \end{center}
+
+    An extension is \hldef{split} if it is equivalent to a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split exact sequence} 
+    $$0 \to B \to A \oplus B \to A \to 0.$$
+\end{definition}

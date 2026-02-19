@@ -1,0 +1,30 @@
+\begin{definition}[Categories of Inverse and Direct Sequences of objects in a category]
+\label{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+    \begin{enumerate}
+        \item  The \hldef{category of inverse sequences} or \hldef{Pro-category indexed by $\mathbb{N}$}, denoted by \hl{$\mathrm{Pro}_{\mathbb{N}}(\mathcal{C})$} or \hl{$\calC^\bbN$} (following notation for \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor categories}), is defined as follows:
+        \begin{itemize}
+            \item Objects are sequences $(M_n, p_n)_{n \geq 1}$ where for each $n \geq 1$, $M_n \in \mathrm{Ob}(\mathcal{C})$ and $p_n : M_{n+1} \to M_n$ is a morphism in $\mathcal{C}$.
+            \item A morphism $f : (M_n, p_n) \to (N_n, q_n)$ consists of a collection of morphisms $\{f_n : M_n \to N_n\}_{n \geq 1}$ in $\mathcal{C}$ satisfying the compatibility condition
+            $$
+            \forall n \geq 1, \quad q_n \circ f_{n+1} = f_n \circ p_n.
+            $$
+        \end{itemize}
+        Composition and identities are defined componentwise. 
+
+        \TextIfExists{definition:tower_of_objects_in_a_category}{The notions of inverse sequences and their morphisms are equivalent to those of \CrefAndHyperref{definition:tower_of_objects_in_a_category}{towers} up to indexing.}
+
+
+        \item The \hldef{category of direct sequences} or \hldef{Ind-category indexed by $\mathbb{N}$}, denoted by \hl{$\mathrm{Ind}_{\mathbb{N}}(\mathcal{C})$}, is defined as follows:
+        \begin{itemize}
+            \item Objects are sequences $(M_n, i_n)_{n \geq 1}$ where for each $n \geq 1$, $M_n \in \mathrm{Ob}(\mathcal{C})$ and $i_n : M_n \to M_{n+1}$ is a morphism in $\mathcal{C}$.
+            \item A morphism $f : (M_n, i_n) \to (N_n, j_n)$ consists of a collection of morphisms $\{f_n : M_n \to N_n\}_{n \geq 1}$ in $\mathcal{C}$ satisfying the compatibility condition
+            $$
+            \forall n \geq 1, \quad j_n \circ f_n = f_{n+1} \circ i_n.
+            $$
+        \end{itemize}
+        Composition and identities are defined componentwise.
+    \end{enumerate}
+
+    Equivalently, $\mathrm{Pro}_{\mathbb{N}}(\mathcal{C})$ and $\mathrm{Ind}_{\bbN}(\calC)$ may be regarded as the functor categories $\operatorname{Fun}(\mathbb{N}^{\op}, \calC)$ and $\operatorname{Fun}(\mathbb{N}, \calC)$ respectively, where $\bbN$ is \CrefAndHyperrefIfExist{lemma:posets_correspond_to_small_filtered_thin_categories}{regarded} as a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} category with objects $1,2,\ldots$ with a unique morphism $n \to m$ if and only if $n \leq m$.
+\end{definition}

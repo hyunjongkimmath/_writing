@@ -1,0 +1,21 @@
+\begin{lemma} \label{lemma:bounded_above_complex_of_flat_objects_are_K_flat_with_respect_to_bi_daditive_functor_on_abelian_categories_where_target_is_AB5}
+    Let $\calA, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $F: \calA \times \calB \to \calC$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor}. Assume that $\calC$ is \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}.
+    \begin{enumerate}
+        \item
+        
+        Suppose that $F(X,-): \calB \to \calC$ preserves \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} for all objects $X \in \calA$.
+        % is a \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{}right adjoint functor for all 
+        Let $P^\bullet$ be a \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{(cohomologically) bounded above} complex of objects of $\calA$ that are \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat} with respect to $F$ on the left. The complex $P^\bullet$ is \CrefAndHyperrefIfExist{definition:K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor}{$K$-flat with respect to $F$ on the left for direct sum total complexes}.
+
+        \item Suppose that $F(-,Y): \calA \to \calC$ preserves \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} for all objects $Y \in \calB$. Let $P^\bullet$ be a bounded above complex of objects in $\calB$ that are flat with respect to $F$ on the right. The complex $P^\bullet$ is $K$-flat with respect to $F$ on the right for direct sum total complexes.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    We show the claimed statement in the case that $P^\bullet$ is a complex of flat objects of $\calA$ with respect to $F$ on the left; the other case can be argued symmetrically. Let $M^\bullet$ be an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complex} of objects in $\calA$. Writing $\tau_{\leq k} M^\bullet$ for the \CrefAndHyperrefIfExist{definition:stupid_truncation_of_a_chain_complex_in_an_additive_category}{brutal truncation} of $M^\bullet$, note that $M^\bullet$ is the filtered colimit of these truncations (\Cref{proposition:chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations}):
+    $$M^\bullet = \varinjlim_k \tau_{\leq k} M^\bullet.$$
+    Since $F(X,-): \calB \to \calC$ preserves filtered colimits, so does $F(X^\bullet, -): \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$\CrefIfExists{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} by \Cref{lemma:bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories}. Therefore,
+    $$\Tot^{\oplus} F(P^\bullet, M^\bullet) \cong \Tot^{\oplus} F(P^\bullet, \varinjlim_k \tau_{\leq k} M^\bullet) \cong \varinjlim_{k} \Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet).$$
+    Since $\tau_{\leq k} M^\bullet$ is bounded above and is of flat objects, the double complex \CrefAndHyperrefIfExist{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}{$F(P^\bullet, \tau_{\leq k} M^\bullet)$} is \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded above}, and each row is acyclic. Since $\calC$ satisfies Ab$5$, $\Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet)$ is acyclic by Lemma \ref{lemma:acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns}. That $\calC$ satisfies AB$5$ further implies that 
+    $$H^n(\Tot^{\oplus}  F(P^\bullet, M^\bullet)) \cong \varinjlim_{k} H^n \Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet) = 0,$$
+    i.e. $\Tot^{\oplus}  F(P^\bullet, M^\bullet)$ is acyclic. Therefore, $P^\bullet$ is $K$-flat as desired. 
+\end{proof}

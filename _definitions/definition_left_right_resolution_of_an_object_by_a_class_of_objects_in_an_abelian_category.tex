@@ -1,4 +1,4 @@
-\begin{definition} \label{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}
+\begin{definition} \label{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}
 Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $\mathcal{X}$ be a class of objects in $\mathcal{A}$. Let $M$ be an object of $\calA$.
 
 \begin{enumerate}
@@ -12,11 +12,11 @@ Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abe
     $$\cdots P_2 \to P_1 \to P_0 \to M \to 0$$
     is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{exact}.
     
-    \item An \hldef{$\mathcal{X}$-left resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} by objects of $X$, i.e. an exact complex
+    \item An \hldef{$\mathcal{X}$-left resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{left resolution} by objects of $X$, i.e. an exact complex
     $$ \cdots \to X_2 \to X_1 \to X_0 \to M \to 0 $$
     with each $X_i \in \mathcal{X}$.
 
-    \item An \hldef{$\mathcal{X}$-right resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{right resolution} by objects of $X$, i.e. an exact complex
+    \item An \hldef{$\mathcal{X}$-right resolution} of an object $M \in \mathcal{A}$ a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{right resolution} by objects of $X$, i.e. an exact complex
     $$ 0 \to M \to X^0 \to X^1 \to X^2 \to \cdots $$
     with each $X_i \in \mathcal{X}$.
 
@@ -24,5 +24,9 @@ Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abe
 
     \item An \hldef{injective resolution of $M$} is a right resolution $I^\bullet$ for which the objects $I^i$ are all \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}.
 \end{enumerate}
+
+\TextIfExists{definition:left_right_resolution_of_a_chain_complex_in_an_abelian_category}{
+The notion of right/left resolutions above may be regarded as special cases of the notions of right/left resolutions of \Cref{definition:left_right_resolution_of_a_chain_complex_in_an_abelian_category} where $\calA$ is embedded into the category $\mathbf{Ch}(\calA)$ by identifying an object $A$ of $\calA$ with the (co)chain complex concentrated in degree $0$ associated to $A$ --- the right/left resolutions as defined above are then right/left resolutions of $A^\bullet$ by cochain/chain complexes $K^\bullet$ whose negative degree components are $0$.
+}
 
 \end{definition}

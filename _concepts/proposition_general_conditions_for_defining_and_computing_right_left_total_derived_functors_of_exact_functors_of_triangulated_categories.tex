@@ -1,0 +1,27 @@
+\begin{proposition}[see {\cite[Tag 06XN, 05S8]{stacks-project}}] \label{proposition:general_conditions_for_defining_and_computing_right_left_total_derived_functors_of_exact_functors_of_triangulated_categories}
+    Suppose that $F: \calD \to \calD'$ is an \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functor} of \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories} and that $S$ is a \CrefAndHyperrefIfExist{definition:saturated_multiplicative_system_in_a_category}{saturated multiplicative system} in $\calD$ \CrefAndHyperrefIfExist{definition:compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category}{compatible with} the structure of the \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} on $\calD$, i.e. $s: X \to Y$ is in $S$ if and only if $s[1]: X[1] \to Y[1]$ is in $S$ and  
+    for every commutative diagram in $\calD$ where the rows are distinguished triangles:
+    \[
+    \begin{array}{ccccccc}
+    X & \xrightarrow{f} & Y & \to & Z & \to & X[1] \\
+    \downarrow^{s_1} & & \downarrow^{s_2} & & \exists \downarrow^{s_3} & & \downarrow^{s_1[1]} \\
+    X' & \xrightarrow{f'} & Y' & \to & Z' & \to & X'[1]
+    \end{array}
+    \]
+    if $s_1, s_2 \in S$, there exists a morphism $s_3 \in S$ making the entire diagram commute.
+
+    If there exists a subcollection $\mathcal{I} \subset \text{Ob}(\mathcal{D})$ such that
+    \begin{enumerate}
+        \item for all $X \in \text{Ob}(\mathcal{D})$ there exists $s : X \to X'$ in $S$ with $X' \in \mathcal{I}$, and
+        \item for every arrow $s : X \to X'$ in $S$ with $X, X' \in \mathcal{I}$ the map $F(s) : F(X) \to F(X')$ is an isomorphism,
+    \end{enumerate}
+    then \CrefAndHyperref{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{$RF$} is everywhere \CrefAndHyperref{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{defined} and every $X \in \mathcal{I}$ computes $RF$. 
+    
+    Dually, if there exists a subcollection $\mathcal{P} \subset \text{Ob}(\mathcal{D})$ such that
+    \begin{enumerate}
+        \item for all $X \in \text{Ob}(\mathcal{D})$ there exists $s : X' \to X$ in $S$ with $X' \in \mathcal{P}$, and
+        \item for every arrow $s : X \to X'$ in $S$ with $X, X' \in \mathcal{P}$ the map $F(s) : F(X) \to F(X')$ is an isomorphism,
+    \end{enumerate}
+    then $LF$ is everywhere defined and every $X \in \mathcal{P}$ computes $LF$.
+    \TODO{\Cref{proposition:object_is_deployed_for_an_exact_func_of_tri_categories_iff_fun_preserves_the_terminal_nature_of_the_object_relative_to_resolutions} should be relevant}
+\end{proposition}

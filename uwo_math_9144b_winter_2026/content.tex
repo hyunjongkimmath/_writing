@@ -859,7 +859,7 @@ $\delta$-functors are nice enough functors that yield long exact sequences of ho
 
 \subsection{Abelian categories with enough objects of a class and resolutions}
 
-To be able to define and compute \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of right/left exact functors, the source abelian category needs to ``\CrefAndHyperref{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{have enough objects}'' of certain classes; in practice, these classes would be the classes of \CrefAndHyperref{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}{projective} (or \CrefAndHyperref{definition:flat_left_right_module_over_a_ring}{flat} objects when the functor considered is a kind of tensor product, e.g. \Cref{definition:tensor_product_of_bimodules_of_rings}) or \CrefAndHyperref{definition:injective_and_projective_objects_in_a_category}{injective} objects. When the abelian category has enough objects, every object has an appropriate \CrefAndHyperref{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolution}, see \Cref{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}.
+To be able to define and compute \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of right/left exact functors, the source abelian category needs to ``\CrefAndHyperref{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{have enough objects}'' of certain classes; in practice, these classes would be the classes of \CrefAndHyperref{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}{projective} (or \CrefAndHyperref{definition:flat_left_right_module_over_a_ring}{flat} objects when the functor considered is a kind of tensor product, e.g. \Cref{definition:tensor_product_of_bimodules_of_rings}) or \CrefAndHyperref{definition:injective_and_projective_objects_in_a_category}{injective} objects. When the abelian category has enough objects, every object has an appropriate \CrefAndHyperref{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolution}, see \Cref{lemma:an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class}.
 
 \input{../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex}
 
@@ -870,7 +870,7 @@ The most basic classes of objects that we will use to consider resolutions are i
 
 \input{../_concepts/lemma_monomorphisms_epimorphisin_abelian_categories_are_preserved_by_pullbacks.tex}
 
-\input{../_concepts/proposition_equivalent_conditions_projective_injective.tex}
+\input{../_concepts/proposition_equivalent_conditions_projective_injective_objects_in_abelian_categories.tex}
 
 \input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
 \input{../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex}
@@ -895,7 +895,7 @@ There are multiple equivalent ways to describe projective objects in a category 
 
 \input{../_definitions/definition_direct_summand_of_an_object_in_an_additive_category.tex}
 
-\input{../_concepts/proposition_free_bimodule_over_rings_are_projective.tex}
+\input{../_concepts/proposition_module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module.tex}
 \input{../_concepts/proposition_projective_module_over_local_ring_or_pid_are_free.tex}
 
 \subsubsection{Flat modules}
@@ -942,7 +942,7 @@ The relationships among free, projective, flat, and torsion-free modules can be 
 \subsubsection{Resolutions}
 
 Intuitively speaking, resolutions are approximations of an object in an abelian category by acyclic sequences.
-\input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category.tex}
 
 \input{../_concepts/lemma_projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution.tex}
 
@@ -1021,7 +1021,7 @@ The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definiti
 
 \subsection{Tor/derived functor of a (right exact) biadditive functor via projective resolutions or flat resolutions}
 
-Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functor} of a \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} may be computed via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}; this seems to be a departure from the notion of a \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of a single-variate \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} additive functor, which a priori uses \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions}. The motivation for this is that certain common abelian categories, such as those of \CrefAndHyperref{definition:sheaf_on_a_site}{sheaves} of abelian groups or \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_site}{modules}, may \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} (with respect to the bi-additive functor of interest, which is a right exact ``tensor product'' $\otimes$ in common contexts) but not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough projectives}, so projective resolutions have not be available to compute the derived functors. Nevertheless, in the case that the abelian categories involved may both have enough flats and have enough projectives (e.g. when the abelian categories are the categories of abelian groups or modules over rings), then using either flat resolutions or projective resolutions to compute the derived functors of the bi-additive functor (which again is usually some kind of right exact ``tensor product'' $\otimes$) will yield the same result, see \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors}. 
+Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functor} of a \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} may be computed via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}; this seems to be a departure from the notion of a \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of a single-variate \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} additive functor, which a priori uses \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolutions}. The motivation for this is that certain common abelian categories, such as those of \CrefAndHyperref{definition:sheaf_on_a_site}{sheaves} of abelian groups or \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_site}{modules}, may \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} (with respect to the bi-additive functor of interest, which is a right exact ``tensor product'' $\otimes$ in common contexts) but not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough projectives}, so projective resolutions have not be available to compute the derived functors. Nevertheless, in the case that the abelian categories involved may both have enough flats and have enough projectives (e.g. when the abelian categories are the categories of abelian groups or modules over rings), then using either flat resolutions or projective resolutions to compute the derived functors of the bi-additive functor (which again is usually some kind of right exact ``tensor product'' $\otimes$) will yield the same result, see \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors}. 
 
 
 \input{../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex}
@@ -1045,9 +1045,48 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 \input{../_concepts/corollary_tor_objects_of_modules_over_rings_are_well_defined.tex}
 
  
-
-
 \section{Ext and Tor}
+
+
+\subsection{Tor for abelian groups}
+\input{../_concepts/proposition_tor_for_abelian_groups.tex}
+\input{../_concepts/proposition_tor_of_Q_mod_Z_is_torsion_subgroup_of_other_abelian_group.tex}
+
+\input{../_concepts/proposition_higher_tor_for_abelian_groups_of_torsion_free_abelian_group_vanish.tex}
+
+\subsection{Tor and Flatness}
+
+\input{../_concepts/theorem_localization_of_a_ring_by_a_central_multiplicative_subset_is_a_flat_module.tex}
+
+\input{../_concepts/proposition_module_over_a_ring_is_flat_if_and_only_if_higher_tors_vanish.tex}
+
+\TODO{flat base change 3.2.9, 3.2.10}
+\TODO{localization for Tor 3.2.13}
+
+
+\subsection{Ext and extensions}
+
+\input{../_definitions/definition_extension_of_objects_in_an_additive_category.tex}
+
+\input{../_concepts/lemma_if_first_ext_functor_in_an_abelian_category_is_zero_then_extensions_are_split.tex}
+\begin{proof}
+    First suppose that $\calA$ has enough projectives so that $\Ext^1(A,-): \calA \to \Ab$ is defined as a \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functor}. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the \CrefAndHyperref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} in $\Ext^n(A,-)$ yields an exact sequence
+    $$\Hom(A,X) \to \Hom(A,A) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
+    so the identity map $\id_A \in \Hom(A,A)$ lifts to a map $\sigma: A \to X$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{section} of $X \to A$. Thus, $\xi$ is split. 
+
+    Dually, suppose that $\calA$ has enough injectives so that $\Ext^1(-,B): \calA^{\op} \to \Ab$ is defined as a derived functor. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the long exact sequence in $\Ext^n(-, B)$ yields the exact sequence 
+    $$\Hom(X, B) \to \Hom(B,B) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
+    This time, $\id_B \in \Hom(B,B)$ thus extends to a map $X \to B$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{retract} of $B \to X$. Thus, $\xi$ is split.
+\end{proof}
+
+\input{../_definitions/definition_characteristic_class_of_an_extension_of_objects_in_an_abelian_category.tex}
+
+\begin{lemma}
+    \TODO{show these notions agree}
+\end{lemma}
+
+\input{../_concepts/theorem_ext_one_corresponds_to_equivalence_classes_of_extensions.tex}
+
 
 \subsection{Universal Coefficient Theorems and K\"unneth Formulae}
 
@@ -1297,7 +1336,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 \begin{problem}
     Suppose that $f: C_\bullet \to D_\bullet$ is a chain map of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
-    Show that $f$ is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{null-homotopic} via a chain homotopy $s$ if and only if $f$ extends to a chain map $\operatorname{cone}(f) \to D$ given by $(-s, f)$. 
+    Show that $f$ is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{null-homotopic} via a chain homotopy $s$ (where $s_n: C_n \to D_{n+1}$) if and only if there exists a chain map $g: \operatorname{cone}(f)_\bullet \to D_\bullet$ (\Cref{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}) such that $g_n = (\id_{D_n}, s_{n-1})$. 
 \end{problem}
 
 

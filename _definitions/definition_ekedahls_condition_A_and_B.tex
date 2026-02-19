@@ -1,0 +1,14 @@
+\begin{definition}[{\cite[Section 1]{ekedahl_af}}]  \label{definition:ekedahls_condition_A_and_B}
+    Assume \Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}.
+   \begin{enumerate}
+    \item We may say that $(S,R)$ \hldef{satisfies Ekedahl's condition $A$} if the following holds: there exists a class \hl{$S^{\text{gen}}$} of \CrefAndHyperrefIfExist{definition:generator_of_a_category}{generators of $S$} and an integer $N$ such that for all $T \in S^{\text{gen}}$, all $R/m$-\CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{modules} $M$, and $i > N$, we have $H^i(T,M) = 0$ (\Cref{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}).
+
+    \item We may say that $(S,R)$ \hldef{satisfies Ekedahl's condition $B$} if the following hold: 
+    \begin{itemize}
+        \item there is an integer $N$ such that for every $n \geq 1$ and locally on $(\calC, J)$, there is a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{left resolution} $F_n^\bullet \to R/m^n$ of $R/m^n$ by a complex of (right) $R$-modules of finitely generated free objects such that $\pi^* F_n^\bullet \to \pi^*(R/m^n)$ is a resolution modulo \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}{essentially zero systems}, where $\pi: (\mathrm{Pro}_{\bbN}(S), R_\bullet) \to (S,R)$ is considered as a morphism of ringed topoi. 
+
+        \item $m^n/m^{n+1}$ is, locally on $(\calC, J)$, of finite Tor-dimension over $R/m$. \TODO{finite Tor dimension}
+    \end{itemize}
+    
+   \end{enumerate}  
+\end{definition}

@@ -1,0 +1,28 @@
+\begin{proposition} \label{proposition:bounded_above_below_complex_of_projective_injective_objects_is_K_projective_injective}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+    \begin{enumerate}
+        \item If $P_\bullet$ is a \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded above} homological chain complex (or equivalently a bounded below cohomological chain complex) of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective objects}, then $P_\bullet$ is \CrefAndHyperrefIfExist{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-projective}.
+        $$ \cdots \to P_{i+1} \to P_i \to 0 \to 0 \to \cdots $$
+
+        \item If $I^\bullet$ is a \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded below} cohomological chain complex (or equivalently a bounded above homological chain complex)  of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective objects}, then $I^\bullet$ is \CrefAndHyperrefIfExist{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-injective}.
+        $$ \cdots \to 0 \to 0 \to I^i \to I^{i+1} \to \cdots $$
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \TODO{verify the following}
+    We prove (1). By the characterization of $K$-projectivity, it suffices to show that for any acyclic complex $N^\bullet$, every chain map $f: P^\bullet \to N^\bullet$ is homotopic to zero ($f \sim 0$).
+    
+    Assume without loss of generality that $P^n = 0$ for $n > 0$. We construct a homotopy $h^n: P^n \to N^{n-1}$ such that $f^n = d_N^{n-1}h^n + h^{n+1}d_P^n$ by descending induction on $n$.
+    
+    \textbf{Base Case:} For $n=0$, since $P^1=0$, the chain map condition $d_N^0 f^0 = f^1 d_P^0$ implies $d_N^0 f^0 = 0$. Thus $\text{im}(f^0) \subseteq \ker(d_N^0)$. By the acyclicity of $N^\bullet$, $\ker(d_N^0) = \text{im}(d_N^{-1})$. Because $P^0$ is projective, $f^0$ factors through the surjection $N^{-1} \to \text{im}(d_N^{-1})$, providing $h^0: P^0 \to N^{-1}$ such that $d_N^{-1}h^0 = f^0$. Setting $h^1 = 0$, we have $f^0 = d_N^{-1}h^0 + h^1 d_P^0$.
+    
+    \textbf{Inductive Step:} Suppose we have constructed $\{h^k\}_{k > n}$ satisfying the homotopy relation. Consider the map $g = f^n - h^{n+1}d_P^n: P^n \to N^n$. We check its image under $d_N^n$:
+    \begin{align*}
+        d_N^n g &= d_N^n f^n - d_N^n h^{n+1} d_P^n \\
+        &= f^{n+1} d_P^n - (f^{n+1} - h^{n+2} d_P^{n+1}) d_P^n \\
+        &= f^{n+1} d_P^n - f^{n+1} d_P^n + h^{n+2} d_P^{n+1} d_P^n = 0.
+    \end{align*}
+    Thus $\text{im}(g) \subseteq \ker(d_N^n)$. By acyclicity, $\ker(d_N^n) = \text{im}(d_N^{n-1})$. Since $P^n$ is projective, $g$ factors through the surjection $d_N^{n-1}$, yielding $h^n: P^n \to N^{n-1}$ such that $d_N^{n-1}h^n = g = f^n - h^{n+1}d_P^n$. 
+    
+    This construction provides a well-defined sequence of maps $(h^n)_{n \in \mathbb{Z}}$ defining a homotopy $h: f \sim 0$. Thus $\text{Mor}_{K(\mathcal{A})}(P^\bullet, N^\bullet) = 0$, proving $P^\bullet$ is $K$-projective. The proof for (2) is dual, using ascending induction starting from the lowest non-zero degree of $I^\bullet$.
+\end{proof}

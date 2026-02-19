@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:morphism_of_ringed_topoi}
+    Let $(E, \mathcal{O}_E)$ and $(E', \mathcal{O}_{E'})$ be \CrefAndHyperrefIfExist{definition:ringed_topos}{ringed topoi}.
+    A \hldef{morphism of ringed topoi} $f: (E, \mathcal{O}_E) \to (E', \mathcal{O}_{E'})$ is a pair $(f, f^\#)$ where:
+    \begin{enumerate}
+        \item $f: E \to E'$ is a \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{geometric morphism of topoi}.
+        \item $f^\#: \mathcal{O}_{E'} \to f_* \mathcal{O}_E$ is a morphism of \CrefAndHyperrefIfExist{definition:ring_object_in_a_category_with_a_terminal_object}{ring objects} in $E'$, where $f_*$ is the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{direct image functor} of $f$.
+    \end{enumerate}
+    Equivalently, the second datum can be given by the adjoint morphism $f^\#: f^* \mathcal{O}_{E'} \to \mathcal{O}_E$ of ring objects in $E$, where $f^*$ is the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{inverse image functor} of $f$.
+\end{definition}

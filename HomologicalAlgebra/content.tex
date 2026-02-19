@@ -109,6 +109,7 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 \input{../_definitions/definition_exact_functor_between_abelian_categories.tex}
 
 \input{../_concepts/proposition_left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats.tex}
+\input{../_concepts/lemma_left_right_exact_functor_between_abelian_categories_is_additive.tex}
 
 \input{../_definitions/definition_short_exact_sequence_in_an_additive_category.tex}
 
@@ -265,7 +266,7 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 
 \input{../_definitions/definition_free_bimodule_over_rings.tex}
 \input{../_definitions/definition_projective_bimodule_over_rings.tex}
-\input{../_concepts/proposition_free_bimodule_over_rings_are_projective.tex}
+\input{../_concepts/proposition_module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module.tex}
 
 \input{../_concepts/theorem_baers_criterion_for_injectivity_of_module_over_a_ring.tex}
 
@@ -278,20 +279,23 @@ Intuitively, Baer's criterion reduces the problem of verifying injectivity of a 
 
 \subsection{Resolutions of objects by chain complexes}
 
-In this section, we list out some basic facts about \CrefAndHyperref{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions}, particular of \CrefAndHyperref{definition:injective_and_projective_objects_in_a_category}{injective or projective} objects. These will be needed to define \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors}
+In this section, we list out some basic facts about \CrefAndHyperref{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolutions}, particular of \CrefAndHyperref{definition:injective_and_projective_objects_in_a_category}{injective or projective} objects. These will be needed to define \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors}
 
 \input{../_definitions/definition_has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category.tex}
 \input{../_definitions/definition_has_enough_injectives_or_projectives_for_an_abelian_category.tex}
 \input{../_concepts/theorem_examples_of_abelian_categories_with_enough_injectives_or_projectives.tex}
-\input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category.tex}
 \input{../_concepts/lemma_projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution.tex}
 
 \input{../_concepts/lemma_an_object_of_abelian_category_with_enough_objects_of_a_class_on_the_right_left_has_right_left_resolution_by_the_class.tex}
 
 In fact, a generalization is possible: if the abelian category $\calA$ has enough objects in a class $\calX$ (on the right/left) \emph{complex}, then the complex has a ``resolution'' by objects of $\calX$. 
 
+
 \input{../_concepts/proposition_abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes.tex}
 \input{../_concepts/lemma_projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy.tex}
+
+
 
 
 
@@ -357,7 +361,7 @@ In fact, a generalization is possible: if the abelian category $\calA$ has enoug
 
 \subsection{$F$-acyclic objects}
 
-Recall by definition that \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors} are computed using \CrefAndHyperrefIfExist{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}{projective/injective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions}. In \Cref{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions}, we see that derived functors can be more generally computed with resolutions of \CrefAndHyperref{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic}. 
+Recall by definition that \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors} are computed using \CrefAndHyperrefIfExist{lemma:projective_injective_objects_in_an_abelian_category_always_have_a_projective_injctive_resolution}{projective/injective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolutions}. In \Cref{proposition:left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions}, we see that derived functors can be more generally computed with resolutions of \CrefAndHyperref{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic}. 
 
 \input{../_definitions/definition_F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories.tex}
 \input{../_definitions/definition_F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories.tex}
@@ -368,7 +372,7 @@ Recall by definition that \CrefAndHyperref{definition:left_right_derived_functor
 
 \subsection{Double complexes}
 
-Just as we define and compute \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors} of (\CrefAndHyperref{definition:exact_functor_between_abelian_categories}{left/right exact}) single-variate \CrefAndHyperref{definition:additive_functor_between_additive_categories}{additive functors} by (projective/injective/$F$-acyclic) \CrefAndHyperref{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions} of objects, we can define and compute \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functors} of \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive} functors via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}. To show that such derived functors of bi-additive functors are well defined under mild conditions (see \Cref{theorem:balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions}), it is useful (see \Cref{lemma:applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res}) to use obtain (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{double complexes} from the biadditive functor.
+Just as we define and compute \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functors} of (\CrefAndHyperref{definition:exact_functor_between_abelian_categories}{left/right exact}) single-variate \CrefAndHyperref{definition:additive_functor_between_additive_categories}{additive functors} by (projective/injective/$F$-acyclic) \CrefAndHyperref{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolutions} of objects, we can define and compute \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functors} of \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive} functors via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}. To show that such derived functors of bi-additive functors are well defined under mild conditions (see \Cref{theorem:balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions}), it is useful (see \Cref{lemma:applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res}) to use obtain (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{double complexes} from the biadditive functor.
 
 \input{../_definitions/definition_double_complex_of_objects_in_an_additive_category.tex}
 
@@ -448,7 +452,7 @@ where $D^{[m,n]}(\mathcal{A})$ denotes complexes with cohomology supported betwe
 
 \subsection{Tor/derived functor of a (right exact) biadditive functor via projective resolutions or flat resolutions}
 
-Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functor} of a \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} may be computed via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}; this seems to be a departure from the notion of a \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of a single-variate \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} additive functor, which a priori uses \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{resolutions}. The motivation for this is that certain common abelian categories, such as those of \CrefAndHyperref{definition:sheaf_on_a_site}{sheaves} of abelian groups or \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_site}{modules}, may \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} (with respect to the bi-additive functor of interest, which is a right exact ``tensor product'' $\otimes$ in common contexts) but not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough projectives}, so projective resolutions have not be available to compute the derived functors. Nevertheless, in the case that the abelian categories involved may both have enough flats and have enough projectives (e.g. when the abelian categories are the categories of abelian groups or modules over rings), then using either flat resolutions or projective resolutions to compute the derived functors of the bi-additive functor (which again is usually some kind of right exact ``tensor product'' $\otimes$) will yield the same result, see \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors}. 
+Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects}{derived functor} of a \CrefAndHyperref{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor} may be computed via \CrefAndHyperref{definition:flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat resolutions}; this seems to be a departure from the notion of a \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left derived functor} of a single-variate \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} additive functor, which a priori uses \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolutions}. The motivation for this is that certain common abelian categories, such as those of \CrefAndHyperref{definition:sheaf_on_a_site}{sheaves} of abelian groups or \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_site}{modules}, may \CrefAndHyperrefIfExist{definition:has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor}{have enough flats} (with respect to the bi-additive functor of interest, which is a right exact ``tensor product'' $\otimes$ in common contexts) but not \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough projectives}, so projective resolutions have not be available to compute the derived functors. Nevertheless, in the case that the abelian categories involved may both have enough flats and have enough projectives (e.g. when the abelian categories are the categories of abelian groups or modules over rings), then using either flat resolutions or projective resolutions to compute the derived functors of the bi-additive functor (which again is usually some kind of right exact ``tensor product'' $\otimes$) will yield the same result, see \Cref{corollary:right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors}. 
 
 
 \input{../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex}
@@ -490,6 +494,17 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 \import{../_excerpts}{excerpts_derived_categories.tex}
 
 
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Total derived functors of biadditive functors}
 
 We extend the ideas from \Cref{subsubsection:derived_functors_for_biadditive_functors_computed_via_resolutions_of_flat_objects}
@@ -505,30 +520,6 @@ We extend the ideas from \Cref{subsubsection:derived_functors_for_biadditive_fun
 
 \input{../_definitions/definition_derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor.tex}
 
-\input{../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex}
-\input{../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex}
-
-\begin{lemma}
-    Let $\calA, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}, and let $F: \calA \times \calB \to \calC$ be a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{bi-additive functor}. Assume that $\calC$ is \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Ab5}.
-    \begin{enumerate}
-        \item
-        
-        Suppose that $F(X,-): \calB \to \calC$ preserves \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} for all objects $X \in \calA$.
-        % is a \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{}right adjoint functor for all 
-        Let $P^\bullet$ be a \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{bounded above} complex of objects of $\calA$ that are \CrefAndHyperrefIfExist{definition:flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor}{flat} with respect to $F$ on the left. The complex $P^\bullet$ is \CrefAndHyperrefIfExist{definition:K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor}{$K$-flat} with respect to $F$ on the left.
-
-        \item Suppose that $F(-,Y): \calA \to \calC$ preserves \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} for all objects $Y \in \calB$. Let $P^\bullet$ be a bounded above complex of objects in $\calB$ that are flat with respect to $F$ on the right. The complex $P^\bullet$ is $K$-flat with respect to $F$ on the right.
-    \end{enumerate}
-\end{lemma}
-\begin{proof}
-    We show the claimed statement in the case that $P^\bullet$ is a complex of flat objects of $\calA$ with respect to $F$ on the left; the other case can be argued symmetrically. Let $M^\bullet$ be an \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic complex} of objects in $\calA$. Writing $\tau_{\leq k} M^\bullet$ for the \CrefAndHyperrefIfExist{definition:stupid_truncation_of_a_chain_complex_in_an_additive_category}{brutal truncation} of $M^\bullet$, note that $M^\bullet$ is the filtered colimit of these truncations (\Cref{proposition:chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations}):
-    $$M^\bullet = \varinjlim_k \tau_{\leq k} M^\bullet.$$
-    Since $F(X,-): \calB \to \calC$ preserves filtered colimits, so does $F(X^\bullet, -): \mathbf{Ch}(\calB) \to \mathbf{DC}(\calC)$\CrefIfExists{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}\CrefIfExists{definition:morphism_of_double_complex_of_objects_in_an_additive_category} by \Cref{lemma:bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories}. Therefore,
-    $$\Tot^{\oplus} F(P^\bullet, M^\bullet) \cong \Tot^{\oplus} F(P^\bullet, \varinjlim_k \tau_{\leq k} M^\bullet) \cong \varinjlim_{k} \Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet).$$
-    Since $\tau_{\leq k} M^\bullet$ is bounded above and is of flat objects, the double complex \CrefAndHyperrefIfExist{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}{$F(P^\bullet, \tau_{\leq k} M^\bullet)$} is \CrefAndHyperrefIfExist{definition:bounded_double_complex_of_objects_in_an_additive_category}{bounded above}, and each row is acyclic. Since $\calC$ satisfies Ab$5$, $\Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet)$ is acyclic by Lemma \ref{lemma:acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns}. That $\calC$ satisfies AB$5$ further implies that 
-    $$H^n(\Tot^{\oplus}  F(P^\bullet, M^\bullet)) \cong \varinjlim_{k} H^n \Tot^{\oplus} F(P^\bullet, \tau_{\leq k} M^\bullet) = 0,$$
-    i.e. $\Tot^{\oplus}  F(P^\bullet, M^\bullet)$ is acyclic. Therefore, $P^\bullet$ is $K$-flat as desired. 
-\end{proof}
 
 
 

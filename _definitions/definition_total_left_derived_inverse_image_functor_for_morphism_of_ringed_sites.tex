@@ -1,0 +1,9 @@
+\begin{definition}[cf. {\cite[Tag 06YY]{stacks-project}}] \label{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}
+    Let $(\calC, J, \calO_\calC)$, $(\calD, K, \calO_\calD)$ be a \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small} \CrefAndHyperrefIfExist{definition:ringed_site}{ringed sites} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{with pretopologies}. \TODO{the ``pretopology'' part should be loosened} Let $f: (\calC, J, \calO_\calC) \to (\calD, K, \calO_\calD)$ be a \CrefAndHyperref{definition:morphism_of_ringed_sites}{morphism of ringed sites}.
+
+    The \hldef{(total) derived direct image} or \hldef{(total) derived pushforward functor} \hl{$Lf^*$} is the functor
+    $$Lf^*: D(\calO_\calD) \to D(\calO_\calC)$$
+    (\Cref{notation:derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site})
+    defined as the \CrefAndHyperrefIfExist{definition:right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories}{left derived functor} of the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image functor} $f^*$. Explicitly, given an object $K \in D(\calO_\calD)$, $Lf^*(K)$ is given as follows: Let $\calF^\bullet$ be any (left) \CrefAndHyperref{definition:K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor}{$K$-flat} (with respect to $\otimes_{\calO_\calD}$ either on the left or right, depending on whether we are considering right or left $\calO_\calD$-modules) \CrefAndHyperref{definition:left_right_resolution_of_a_chain_complex_in_an_abelian_category}{resolution} of $M$, which exists by \Cref{proposition:there_are_enough_K_flat_resolutions_for_modules_on_an_essentially_small_ringed_site}
+    \TODO{justify the well definedness}
+\end{definition}

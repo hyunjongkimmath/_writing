@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:morphism_of_ringed_sites}
+    Let $((\mathcal{C}, J), \mathcal{O}_{\mathcal{C}})$ and $((\mathcal{D}, K), \mathcal{O}_{\mathcal{D}})$ be \CrefAndHyperref{definition:ringed_site}{ringed sites}. 
+
+    A \hldef{morphism of ringed sites} $f: ((\mathcal{C}, J), \mathcal{O}_{\mathcal{C}}) \to ((\mathcal{D}, K), \mathcal{O}_{\mathcal{D}})$ is a pair $(f, f^\#)$ where:
+    \begin{enumerate}
+        \item $f: (\mathcal{C}, J) \to (\mathcal{D}, K)$ is a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{morphism of sites}.
+        \item $f^\#: \mathcal{O}_{\mathcal{D}} \to f_* \mathcal{O}_{\mathcal{C}}$ (\Cref{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}) is a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{morphism of sheaves of rings} on the site $(\mathcal{D}, K)$.
+    \end{enumerate}
+    Equivalently, the morphism $f^\#$ a morphism can be described by the \CrefAndHyperrefIfExist{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{adjoint} morphism (\Cref{theorem:adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites}) $f^\#: f^{-1} \mathcal{O}_{\mathcal{D}} \to \mathcal{O}_{\mathcal{C}}$ of sheaves of rings on $(\mathcal{C}, J)$, where $f^{-1}$ is the \CrefAndHyperref{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image functor} of sheaves.
+\end{definition}

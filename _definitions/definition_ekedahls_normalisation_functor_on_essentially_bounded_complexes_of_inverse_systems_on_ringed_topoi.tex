@@ -1,0 +1,20 @@
+\begin{definition}  \label{definition:ekedahls_normalisation_functor_on_essentially_bounded_complexes_of_inverse_systems_on_ringed_topoi}
+    Assume \Cref{context:ekedahl_af_superscript_for_ekedahls_categories} and let $M \in D^*(\mathrm{Pro}_{\bbN}, R_\bullet)$. 
+
+    Define $\widehat{M} := L\pi^* (R\pi_* M)$ (\Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}) (\Cref{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}) (\Cref{definition:essentially_constant_complex_of_abelian_group_objects_in_the_category_of_inverse_direct_sequences_of_objects_in_a_topos}), where 
+    \begin{itemize}
+        \item $R\pi_*$ is given by 
+        \begin{itemize}
+            \item the literal derived direct image functor of $\pi_*$ (\Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}) if \CrefAndHyperrefIfExist{definition:ekedahls_condition_A_and_B}{Ekedahl's condition A} holds 
+            \item \Cref{definition:derived_direct_image_of_essentially_bounded_complex_of_an_inverse_sequence_of_abelian_group_objects_in_a_topos} if \CrefAndHyperrefIfExist{definition:ekedahls_condition_A_and_B}{Ekedahl's condition A} does not hold (so in particular \CrefAndHyperrefIfExist{definition:ekedahls_condition_A_and_B}{Ekedahl's condition B} holds)
+        \end{itemize}
+        \item $L \pi^*$ is the \CrefAndHyperrefIfExist{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{derived inverse image functor} of $\pi^*$.
+
+    \end{itemize}
+
+    In any case, $\widehat{-}$ is a functor 
+        $$D^*(\mathrm{Pro}_{\bbN}, R_\bullet) \to D(\mathrm{Pro}_{\bbN}, R_\bullet)$$
+        where the source is either a literal derived category as per \Cref{notation:derived_category_of_category_of_modules_of_a_ringed_site} or a category from \Cref{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}, depending on whether Ekedahl's condition A holds, and the target is always a literal derived category.
+
+    Moreover, in any case, there is a morphism $\widehat{M} \to M$ --- if Ekedahl's condition A holds, then it is given by the adjunction of (\Cref{proposition:adjoint_functors_between_abelian_categories_induce_adjunctions_of_derived_functors_when_defined}) $L\pi^*$ and $R\pi_*$, and otherwise, it is induced by morphisms $\widehat{M} \to \tau_{\geq i} M$.
+\end{definition}

@@ -36,4 +36,24 @@ Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category
 
     Since $\Sets$ has all limits and colimits \TODO{} and hence has all projective and inductive limits and since $\calC$ is locally small, $\mathrm{Ind}(\calC)$ and $\mathrm{Pro}(\calC)$ are locally small.
 
+
+    The \hldef{canonical embedding of a locally small category $\mathscr{C}$ into its Ind-category or Pro-category} is defined by treating each object as a "constant" diagram. Let $\mathbf{1}$ be the category with a single object $*$ and its identity morphism.
+
+    \begin{enumerate}
+    \item  The Embedding $\iota_{\mathrm{Ind}}: \mathscr{C} \to \mathrm{Ind}(\mathscr{C})$:
+    \begin{itemize}
+        \item Objects: An object $C \in \mathscr{C}$ is mapped to the functor $X: \mathbf{1} \to \mathscr{C}$ sending $*$ to $C$. This represents $C$ as a formal filtered colimit over the trivial index category.
+        \item Morphisms: Given objects $X$ (representing $C$) and $Y$ (representing $D$), the Hom-set in the Ind-category simplifies:
+            $$ \mathrm{Hom}_{\mathrm{Ind}(\mathscr{C})}(X, Y) \cong \varprojlim_{i \in \mathbf{1}} \varinjlim_{j \in \mathbf{1}} \mathrm{Hom}_{\mathscr{C}}(X_i, Y_j) \cong \mathrm{Hom}_{\mathscr{C}}(C, D). $$
+    \end{itemize}
+
+    \item  The Embedding $\iota_{\mathrm{Pro}}: \mathscr{C} \to \mathrm{Pro}(\mathscr{C})$:
+    \begin{itemize}
+        \item Objects: An object $C \in \mathscr{C}$ is mapped to the functor $X: \mathbf{1} \to \mathscr{C}$ sending $*$ to $C$, representing $C$ as a formal cofiltered limit.
+        \item Morphisms: Similarly, the Pro-morphism definition reduces to:
+            $$ \mathrm{Hom}_{\mathrm{Pro}(\mathscr{C})}(X, Y) \cong \varinjlim_{j \in \mathbf{1}} \varprojlim_{i \in \mathbf{1}} \mathrm{Hom}_{\mathscr{C}}(X_i, Y_j) \cong \mathrm{Hom}_{\mathscr{C}}(C, D). $$
+    \end{itemize}
+    \end{enumerate}
+    In both cases, the functor $\iota$ is fully faithful, allowing us to identify $\mathscr{C}$ with a full subcategory of its respective completion. Given an object $C$ of $\mathscr{C}$, the pro/ind-object $\iota(C)$ may be called the \hldef{constant pro/ind-object of $C$}.
+
 \end{definition}

@@ -1,0 +1,8 @@
+\begin{theorem} [cf. {\cite[Tag 08J9]{stacks-project}}] \label{theorem:total_derived_tensor_hom_adjunction_for_modules_on_a_ringed_site}
+    Let $(\calC, J, \calO)$ be an \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small} \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{with a pretopology}. \TODO{this pretopology condition should be loosened}
+
+    Let $K,L,M$ be objects of $D(\calO)$ (\Cref{notation:derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site}). There is a canonical isomorphism
+    $$R\calH om(K, R \calH om(L,M)) \cong R\calH om(K \otimes_{\calO}^L L, M)$$
+    (\Cref{definition:derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}) (\Cref{definition:derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}) in $D(\calO)$ functorial in $K,L,M$. Taking the zeroth sheaf cohomology (or equivalently global sections) of both sides, one obtains the adjunction
+    $$\Hom_{D(\calO)}(K, R \calH om(L,M)) \cong \Hom_{D(\calO)}(K \otimes_{\calO}^L L, M).$$
+\end{theorem}

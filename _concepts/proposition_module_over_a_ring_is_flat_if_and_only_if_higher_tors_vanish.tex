@@ -1,0 +1,17 @@
+\begin{proposition}[{\cite[Exercise 3.2.1]{weibel}}] \label{proposition:module_over_a_ring_is_flat_if_and_only_if_higher_tors_vanish}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}.
+    \begin{enumerate}
+        \item Given a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module} $A$, the following are equivalent:
+        \begin{enumerate}
+            \item $A$ is \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat}.
+            \item $\Tor_n^R(A,B) = 0$ (\Cref{definition:tor_functors_of_bimodules_of_rings}) for all $n \neq 0$ and all \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules} $B$.
+            \item $\Tor_1^R(A,B) = 0$ for all left $R$-modules $B$.
+        \end{enumerate}
+        \item Dually, Given a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} $B$, the following are equivalent:
+        \begin{enumerate}
+            \item $A$ is flat.
+            \item $\Tor_n^R(A,B) = 0$ for all $n \neq 0$ and all \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-modules} $A$.
+            \item $\Tor_1^R(A,B) = 0$ for all right $R$-modules $A$.
+        \end{enumerate}
+    \end{enumerate}
+\end{proposition}

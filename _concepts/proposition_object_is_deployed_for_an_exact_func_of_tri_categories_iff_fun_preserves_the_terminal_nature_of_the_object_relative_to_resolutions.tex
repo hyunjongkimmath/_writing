@@ -1,0 +1,36 @@
+\begin{proposition}[cf. {\cite{spaltenstein_ruc}}] \label{proposition:object_is_deployed_for_an_exact_func_of_tri_categories_iff_fun_preserves_the_terminal_nature_of_the_object_relative_to_resolutions}
+    Let $(\mathscr{A}_i)_{1 \le i \le n}$ and $(\mathscr{B}_j)_{1 \le j \le m}$ be families of \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}, and let $\mathscr{C}$ be a triangulated category. Let 
+    $$F: \prod_{i=1}^n \mathscr{A}_i \times \prod_{j=1}^m \mathscr{B}_j \to \mathscr{C}$$ 
+    be an \CrefAndHyperrefIfExist{definition:exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category}{exact multifunctor}, covariant in $\mathscr{A}_i$ and contravariant in $\mathscr{B}_j$. Let $S_i, T_j, U$ be \CrefAndHyperrefIfExist{definition:saturated_multiplicative_system_in_a_category}{saturated multiplicative systems} in $\mathscr{A}_i, \mathscr{B}_j, \mathscr{C}$ respectively assumed \CrefAndHyperrefIfExist{definition:compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category}{compatible with the triangulated structure} of its respective category. 
+    
+    % Write 
+    % \begin{align*}
+    % Q_{A_i}&: \mathscr{A}_i \to \mathscr{A}_i(S_i^{-1}) \\ 
+    % Q_{B_j}&: \mathscr{B}_j \to \mathscr{B}_j(T_j^{-1}) \\
+    % Q_{C}&: \mathscr{C} \to \mathscr{C}(U^{-1})
+    % \end{align*}
+    % for the \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{localization functors}. Write $\iota$ for the appropriate \CrefAndHyperref{definition:ind_pro_category_of_a_locally_small_category}{canonical embedding functors of the localized categories into their Ind or Pro categories}.
+
+    A family $(A_i, B_j)$ is \CrefAndHyperref{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{adapted (or deployed/unfolded)} for \CrefAndHyperref{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{$RF$} if and only if the following holds: 
+    For every family of morphisms $s_i: A_i \to X_i$ in $S_i$ and $t_j: Y_j \to B_j$ in $T_j$, there exist morphisms $\sigma_i: X_i \to \mathcal{X}_i$ in $S_i$ and $\tau_j: \mathcal{Y}_j \to Y_j$ in $T_j$ such that the induced morphism in $\mathscr{C}$
+    $$F(\sigma_i \circ s_i, t_j \circ \tau_j): F(A_i, B_j) \to F(\mathcal{X}_i, \mathcal{Y}_j)$$
+    is an isomorphism in the localized category $\mathscr{C}(U^{-1})$ (i.e., its image under $Q_C$ is an isomorphism, or equivalently, it is an element of $U$).
+    
+    See also \Cref{proposition:general_conditions_for_defining_and_computing_right_left_total_derived_functors_of_exact_functors_of_triangulated_categories}
+\end{proposition}
+\begin{proof}
+    \TODO{verify this proof}
+    Let $\mathscr{D} = \prod_i \mathscr{A}_i \times \prod_j \mathscr{B}_j^{op}$ and let $S$ be the product multiplicative system $\prod_i S_i \times \prod_j T_j^{op}$. The right derived functor $RF$ evaluated at an object $\mathbf{A} = (A_i, B_j)$ is defined as the Ind-object in $\mathscr{C}(U^{-1})$ represented by the diagram:
+    \[ RF(\mathbf{A}) = \text{``}\varinjlim_{\mathbf{A} \to \mathbf{X} \in S}\text{''} Q_C(F(\mathbf{X})) \]
+    By definition, $\mathbf{A}$ is \textit{adapted} (deployed) for $RF$ if the natural morphism from the constant Ind-object to the system is an isomorphism:
+    \[ \eta: \iota(Q_C(F(\mathbf{A}))) \xrightarrow{\cong} RF(Q_{\mathscr{D}}(\mathbf{A})) \quad \text{in } \text{Ind}(\mathscr{C}(U^{-1})) \]
+
+    \noindent \textbf{($\implies$)} Suppose $\mathbf{A}$ is adapted. An isomorphism in an Ind-category $\text{Ind}(\mathcal{M})$ between a constant object $M$ and a filtered system $\{N_k\}_{k \in K}$ implies that for every index $k \in K$ (representing a resolution $\mathbf{A} \to \mathbf{X}$), there exists a morphism $k \to \ell$ in the filtering category (representing a further resolution $\mathbf{X} \to \boldsymbol{\mathcal{X}}$) such that the composite map $M \to N_\ell$ is an isomorphism in $\mathcal{M}$. 
+    
+    Translating this to our categories: for any family of morphisms $s_i: A_i \to X_i$ and $t_j: Y_j \to B_j$ (defining the resolution $\mathbf{A} \to \mathbf{X}$), there must exist a further resolution $\mathbf{X} \to \boldsymbol{\mathcal{X}}$ (defined by $\sigma_i: X_i \to \mathcal{X}_i$ and $\tau_j: \mathcal{Y}_j \to Y_j$) such that the induced morphism $Q_C(F(\mathbf{A})) \to Q_C(F(\boldsymbol{\mathcal{X}}))$ is an isomorphism in $\mathscr{C}(U^{-1})$. This is exactly the condition stated.
+
+    \vspace{1em}
+    \noindent \textbf{($\impliedby$)} Conversely, assume the condition holds. Let $J$ be the category of resolutions of $\mathbf{A}$. The condition implies that the constant object $Q_C(F(\mathbf{A}))$ is \textit{cofinal} in the system defining $RF(\mathbf{A})$. 
+    
+    Specifically, the assumption guarantees that for every $\mathbf{X} \in J$, there is a $\boldsymbol{\mathcal{X}} \in J$ further in the diagram such that $Q_C(F(\mathbf{A}))$ and $Q_C(F(\boldsymbol{\mathcal{X}}))$ are isomorphic via the transition maps of the system. In the category of Ind-objects, if a filtered system contains a cofinal subsystem of objects isomorphic to a constant object $M$, then the Ind-limit of that system is isomorphic to $M$. Thus, $RF(\mathbf{A}) \cong \iota(Q_C(F(\mathbf{A})))$, which means $\mathbf{A}$ is adapted.
+\end{proof}

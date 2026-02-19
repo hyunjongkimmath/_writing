@@ -3,7 +3,7 @@
 
 \subsection{Homotopy category of chain complexes of an additive category}
 
-We will define homotopy categories and derived categories using the cohomological convention\CrefIfExists{convention:homological_algebra_is_discussed_in_cohomological_terms}
+We will define homotopy categories and derived categories using the cohomological convention\CrefIfExists{definition:chain_complex_of_objects_in_an_additive_category}
 
 \input{../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex}
 \input{../_definitions/definition_triangulated_category.tex}
@@ -78,6 +78,12 @@ The following subsection mostly takes the point of view of \cite[Expos\'e XVII, 
 \input{../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex}
 \input{../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex}
 
+\input{../_concepts/proposition_object_is_deployed_for_an_exact_func_of_tri_categories_iff_fun_preserves_the_terminal_nature_of_the_object_relative_to_resolutions.tex}
+\input{../_concepts/proposition_complex_in_an_abelian_category_is_deployed_in_homotopy_category_for_an_additive_functor_iff_fun_preserves_terminal_nature_of_quasi_isomorphisms.tex}
+
+
+
+
 \subsubsection{Derived multifunctors of additive multifunctors between abelian categories}
 \input{../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex}
 
@@ -85,12 +91,7 @@ The following subsection mostly takes the point of view of \cite[Expos\'e XVII, 
 
 \input{../_concepts/proposition_derived_multifunc_of_an_add_multifunc_of_ab_cats_on_cohom_bdd_cats_commutes_with_inclusion_to_unbdd_cats.tex}
 
-\begin{theorem}[{\cite[Expos\'e XVII, Proposition 1.2.7.]{SGA4_III}}] \label{theorem:derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist}
-    \TODO{}
-    Let $F: \calA \to \calB$ be an \CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive functor} between \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories}.
-
-    If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_objects_of_a_class_on_the_left_right_for_an_abelian_category}{has enough objects} that are \CrefAndHyperrefIfExist{definition:right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories}{acyclic for} $LF$ (resp. for $RF$), the \CrefAndHyperrefIfExist{definition:right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems}{derived functor} $LF: D^-(\calA) \to D^-(\calB)$ (resp. $RF: D^+(\calA) \to D^+(\calB)$) is \CrefAndHyperrefIfExist{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{left (resp. right) derivable} and every \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{homologically upper bounded} (resp. homologically lower bounded) complex of acyclics for $LF$ (resp. for $RF$) is \CrefAndHyperrefIfExist{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{adapted for $LF$ (resp. for $RF$)}.
-\end{theorem}
+\input{../_concepts/theorem_derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist.tex}
 
 \TODO{
     \begin{itemize}
@@ -131,3 +132,75 @@ The following subsection mostly takes the point of view of \cite[Expos\'e XVII, 
     \end{itemize}
 \end{itemize}
 }
+
+
+\subsection{$K$-flat resolutions of chain complexes with respect to bi-additive functors}
+
+
+\input{../_definitions/definition_left_right_resolution_of_a_chain_complex_in_an_abelian_category.tex}
+\input{../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex}
+\input{../_definitions/definition_internal_hom_complex_of_chain_complexes_in_an_additive_category.tex}
+
+\input{../_definitions/definition_K_injective_projective_complex_in_an_abelian_category.tex}
+\input{../_concepts/proposition_object_in_an_abelian_category_is_K_projective_injective_iff_projective_injective.tex}
+\input{../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_if_part_of_distinguished_triangle_of_two_K_projectives_injectives.tex}
+\input{../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_iff_shifts_are.tex}
+\input{../_concepts/proposition_equivalent_conditions_for_a_complex_in_an_abelian_category_to_be_K_projective_K_injective.tex}
+\input{../_concepts/proposition_bounded_above_below_complex_of_projective_injective_objects_is_K_projective_injective.tex}
+
+\input{../_concepts/theorem_AB5_AB5_star_categories_with_left_right_resolutions_for_bounded_complexes_by_a_class_has_resolutions_for_all_complexes_by_the_class.tex}
+
+\input{../_concepts/corollary_AB5_AB5_star_categories_with_enough_projectives_injectives_have_K_projective_injective_resolutions.tex}
+
+\input{../_concepts/theorem_grothendieck_categories_have_enough_K_injective_complexe.tex}
+
+\input{../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex}
+
+\input{../_concepts/lemma_bounded_above_complex_of_flat_objects_are_K_flat_with_respect_to_bi_daditive_functor_on_abelian_categories_where_target_is_AB5.tex}
+
+
+\subsection{General conditions for defining derived functors}
+
+\input{../_concepts/proposition_general_conditions_for_defining_and_computing_right_left_total_derived_functors_of_exact_functors_of_triangulated_categories.tex}
+\input{../_concepts/proposition_exact_functor_from_homotopy_category_of_abelian_category_with_enough_K_injective_complexes_has_defined_derived_functor.tex}
+
+\subsubsection{Adjunction of derived functors of adjoint functors}
+
+
+\input{../_concepts/proposition_adjoint_exact_functors_of_triangulated_categories_induce_adjunctions_for_derived_functors_when_defined.tex}
+\input{../_concepts/proposition_adjoint_functors_between_abelian_categories_induce_adjunctions_of_derived_functors_when_defined.tex}
+\input{../_concepts/proposition_adjoint_functors_between_abelian_categories_induce_adjunctions_of_derived_functors_if_they_exist_fully.tex}
+
+
+
+
+\subsection{Having enough $K$-injectives and flats for sheaves of modules}
+
+\input{../_concepts/theorem_category_of_modules_over_an_essentially_small_ringed_site_has_enough_K_injectives.tex}
+
+\input{../_definitions/definition_flat_module_over_a_sheaf_of_rings_on_an_essentially_small_site.tex}
+\input{../_concepts/proposition_category_of_sheaves_of_modules_over_a_ringed_site_on_an_essentially_small_site_has_enough_flats.tex}
+\input{../_concepts/proposition_there_are_enough_K_flat_resolutions_for_modules_on_an_essentially_small_ringed_site.tex}
+
+\subsection{Definitions of derived functors for modules of ringed sites}
+
+\input{../_notations/notation_derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site.tex}
+
+\input{../_definitions/definition_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex}
+
+\input{../_definitions/definition_derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex}
+\input{../_definitions/definition_derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex}
+
+\input{../_concepts/theorem_total_derived_tensor_hom_adjunction_for_modules_on_a_ringed_site.tex}
+
+\input{../_definitions/definition_morphism_of_ringed_sites.tex}
+\input{../_definitions/definition_total_right_derived_direct_image_functor_for_morphism_of_ringed_sites.tex}
+\input{../_definitions/definition_total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites.tex}
+\begin{theorem} \label{theorem:total_left_derived_inverse_image_total_right_derived_direct_image_adjunction_for_morphism_of_ringed_sites}
+    Let $(\calC, J, \calO_\calC)$, $(\calD, K, \calO_\calD)$ be a \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small} \CrefAndHyperrefIfExist{definition:ringed_site}{ringed sites} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{with pretopologies}. \TODO{the ``pretopology'' part should be loosened} Let $f: (\calC, J, \calO_\calC) \to (\calD, K, \calO_\calD)$ be a \CrefAndHyperref{definition:morphism_of_ringed_sites}{morphism of ringed sites}.
+
+    The functors \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_sites}{$Rf_*$} and \CrefAndHyperrefIfExist{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{$Lf^*$} are adjoint, i.e. for all $L \in D(\calO_\calC)$ and $M \in D(\calO_\calD)$, we have natural isomorphisms
+    $$\Hom_{D(\calO_\calC)}(Lf^* M, L) \cong \Hom_{D(\calO_\calD)}(M, Rf_* L)$$
+\end{theorem}
+
+\TODO{total derived sheaf cohomology}

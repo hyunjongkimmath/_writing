@@ -5,7 +5,7 @@
         \begin{enumerate}
             \item Let 
             $$0 \to A' \to A \to A'' \to 0$$
-            be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} $P' \to A'$ and $P'' \to A''$. There exists a long exact sequence
+            be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{projective resolutions} $P' \to A'$ and $P'' \to A''$. There exists a long exact sequence
             $$\cdots \xrightarrow{\partial} L_i F(A') \to L_iF(A) \to L_iF(A'') \xrightarrow{\partial} L_{i-1} F(A') \to L_{i-1}F(A) \to L_{i-1}F(A'') \xrightarrow{\partial} \cdots$$
             of \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived objects} and this long exact sequence is natural.
 
@@ -16,7 +16,7 @@
             \begin{enumerate}
                 \item Let 
                 $$0 \to A' \to A \to A'' \to 0$$
-                be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{injective resolutions} $I' \to A'$, $I \to A$, and $I'' \to A''$. There exists a long exact sequence
+                be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\calA$. Suppose that there exist \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{injective resolutions} $I' \to A'$, $I \to A$, and $I'' \to A''$. There exists a long exact sequence
                 $$
                 \cdots \xrightarrow{\partial} R^i G(A') \to R^i G(A) \to R^i G(A'') \xrightarrow{\partial} R^{i+1} G(A') \to R^{i+1} G(A) \to R^{i+1} G(A'') \xrightarrow{\partial} \cdots
                 $$
@@ -31,7 +31,7 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}
-        \item By the \CrefAndHyperrefIfExist{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}{Horseshoe lemma}, there is a projective resolution $P \to A$ fitting into a short exact sequence $0 \to P' \to P \to P'' \to 0$. Since the $P_n''$ are projective, each sequence $0 \to P_n' \to P_n \to P_n'' \to 0$ is \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split exact} by \Cref{proposition:equivalent_conditions_projective_injective}. Since $F$ is additive and since $P_n \cong P_n' \oplus P_n''$, we have isomorphisms $F(P_n) \cong F(P_n') \oplus F(P_n'')$ making each sequence 
+        \item By the \CrefAndHyperrefIfExist{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}{Horseshoe lemma}, there is a projective resolution $P \to A$ fitting into a short exact sequence $0 \to P' \to P \to P'' \to 0$. Since the $P_n''$ are projective, each sequence $0 \to P_n' \to P_n \to P_n'' \to 0$ is \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split exact} by \Cref{proposition:equivalent_conditions_projective_injective_objects_in_abelian_categories}. Since $F$ is additive and since $P_n \cong P_n' \oplus P_n''$, we have isomorphisms $F(P_n) \cong F(P_n') \oplus F(P_n'')$ making each sequence 
         $$0 \to F(P_n') \to F(P_n) \to F(P_n'') \to 0$$
         is split exact in $\calB$. Therefore,
         $$0 \to F(P') \to F(P) \to F(P'') \to 0$$
@@ -59,7 +59,7 @@
         
 
         \medskip
-        Say that we given \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{projective resolutions} $\epsilon': P' \to A'$, $\epsilon'': P'' \to A''$, $\eta': Q' \to B'$, and $\eta'' : Q'' \to B''$. Obtain projective resolutions $\epsilon: P \to A$ and $\eta: Q \to B$ via the Horshoe Lemma (\Cref{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}). Obtain chain maps $F': P' \to Q'$ and $F'': P'' \to Q''$ lifting $f'$ and $f''$ respectively via \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}. 
+        Say that we given \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{projective resolutions} $\epsilon': P' \to A'$, $\epsilon'': P'' \to A''$, $\eta': Q' \to B'$, and $\eta'' : Q'' \to B''$. Obtain projective resolutions $\epsilon: P \to A$ and $\eta: Q \to B$ via the Horshoe Lemma (\Cref{lemma:horseshoe_lemma_of_projective_injective_resolutions_in_abelian_categories}). Obtain chain maps $F': P' \to Q'$ and $F'': P'' \to Q''$ lifting $f'$ and $f''$ respectively via \Cref{lemma:projective_injective_complex_with_map_to_from_object_with_left_right_resolution_lifts_uniquely_up_to_chain_homotopy}. 
 
         \medskip
         We show that there is also a chain map $F: P \to Q$ lifting $f$ that also yields the following commutative diagram of maps in $\mathbf{Ch}(\calA)$ with exact rows:

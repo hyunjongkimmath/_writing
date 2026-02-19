@@ -1,0 +1,9 @@
+\begin{proposition} \label{proposition:morphism_of_sites_to_morphism_of_topoi}
+    Let $f: (\mathcal{D}, K) \to (\mathcal{C}, J)$ be a morphism of sites defined by a continuous functor $u: \mathcal{C} \to \mathcal{D}$. 
+    Then $f$ induces a morphism of topoi $f: \Sh(\mathcal{D}, K) \to \Sh(\mathcal{C}, J)$ in the following manner:
+    \begin{enumerate}
+        \item The direct image functor $f_*: \Sh(\mathcal{D}, K) \to \Sh(\mathcal{C}, J)$ is given by the restriction of sheaves along $u$, i.e., $f_*(F) = F \circ u$ for any sheaf $F$ on $(\mathcal{D}, K)$.
+        \item The inverse image functor $f^*: \Sh(\mathcal{C}, J) \to \Sh(\mathcal{D}, K)$ is the left adjoint to $f_*$, constructed as the sheafification of the extension of presheaves along $u$.
+    \end{enumerate}
+    By the definition of a morphism of sites, $f^*$ is left exact, and the pair $(f_*, f^*)$ constitutes a morphism of topoi.
+\end{proposition}

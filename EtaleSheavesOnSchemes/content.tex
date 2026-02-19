@@ -919,195 +919,81 @@ Here is another, more general, formulation of the rationality statement of the W
 
 \section{Ekedahl's formalism}
 
-\TODO{discuss what \cite{ekedahl_af} does} We will discuss Ekedahl's formalism on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site} of finite type and seperated schemes over regular bases of dimension $0$ or $1$ 
+% \TODO{discuss what \cite{ekedahl_af} does} We will discuss Ekedahl's formalism on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site} of finite type and seperated schemes over regular bases of dimension $0$ or $1$ 
 
-\begin{remark}
-    Ekedahl's definitions and notations \cite{ekedahl_af} are developed in terms of a ringed topos $(S,R)$. We will develop definitions and notations of his theory in terms of a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}. 
-\end{remark}
+Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\ell)$ (from which the categories $D_c^b(X, \bbQ_\ell)$ and $D_c^b(X, \Qellbar)$ were produced)), intuitively but not precisely thought of as being like a derived category of $\ell$-adic sheaves, by taking a $2$-limit of derived categories $D_c^b(X, \bbZ/\ell^n \bbZ)$. In particular, the objects of $D_c^b(X, \bbZ_\ell)$ are inverse systems of objects coming from various derived categories. Starting from a general ringed topos $(S, R)$, Ekedahl \cite{ekedahl_af} produced an adic-formalism that is based upon taking literal complexes of sheaves of modules on a ringed topos $(\mathrm{Pro}_\bbN(S), R_\bullet)$ over $(S,R)$ defined on the topos $\mathrm{Pro}_\bbN(S)$ of inverse systems in $S$, and which is itself equipped with an ``adic ring'' structure $R_\bullet$. Ekedahl demonstrated that his categories \CrefAndHyperrefIfExist{definition:ekedahls_adic_category_of_a_ringed_site}{$D_{\mathrm{Ek}}^*(S, R)$}, under nice circumstances, satisfy nice properties (\Cref{theorem:six_functor_formalism_of_ekedahls_adic_categories_on_schemes}) that Deligne's categories ought to satisfy. Bhatt and Scholze \cite{bhatt_scholze_pfgs} unified Ekedahl's framework with Deligne's construction. 
 
-\begin{definition}[Categories of Inverse and Direct Sequences of objects in a category]
-\label{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}
-    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
-    \begin{enumerate}
-        \item  The \hldef{category of inverse sequences} or \hldef{Pro-category indexed by $\mathbb{N}$}, denoted by \hl{$\mathrm{Pro}_{\mathbb{N}}(\mathcal{C})$}, is defined as follows:
-        \begin{itemize}
-            \item Objects are sequences $(M_n, p_n)_{n \geq 1}$ where for each $n \geq 1$, $M_n \in \mathrm{Ob}(\mathcal{C})$ and $p_n : M_{n+1} \to M_n$ is a morphism in $\mathcal{C}$.
-            \item A morphism $f : (M_n, p_n) \to (N_n, q_n)$ consists of a collection of morphisms $\{f_n : M_n \to N_n\}_{n \geq 1}$ in $\mathcal{C}$ satisfying the compatibility condition
-            $$
-            \forall n \geq 1, \quad q_n \circ f_{n+1} = f_n \circ p_n.
-            $$
-        \end{itemize}
-        Composition and identities are defined componentwise. 
-
-
-        \item The \hldef{category of direct sequences} or \hldef{Ind-category indexed by $\mathbb{N}$}, denoted by \hl{$\mathrm{Ind}_{\mathbb{N}}(\mathcal{C})$}, is defined as follows:
-        \begin{itemize}
-            \item Objects are sequences $(M_n, i_n)_{n \geq 1}$ where for each $n \geq 1$, $M_n \in \mathrm{Ob}(\mathcal{C})$ and $i_n : M_n \to M_{n+1}$ is a morphism in $\mathcal{C}$.
-            \item A morphism $f : (M_n, i_n) \to (N_n, j_n)$ consists of a collection of morphisms $\{f_n : M_n \to N_n\}_{n \geq 1}$ in $\mathcal{C}$ satisfying the compatibility condition
-            $$
-            \forall n \geq 1, \quad j_n \circ f_n = f_{n+1} \circ i_n.
-            $$
-        \end{itemize}
-        Composition and identities are defined componentwise.
-    \end{enumerate}
-
-    Equivalently, $\mathrm{Pro}_{\mathbb{N}}(\mathcal{C})$ and $\mathrm{Ind}_{\bbN}(\calC)$ may be regarded as the functor categories $\operatorname{Fun}(\mathbb{N}^{\op}, \calC)$ and $\operatorname{Fun}(\mathbb{N}, \calC)$ respectively, where $\bbN$ is \CrefAndHyperrefIfExist{lemma:posets_correspond_to_small_filtered_thin_categories}{regarded} as a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{poset} category with objects $1,2,\ldots$ with a unique morphism $n \to m$ if and only if $n \leq m$.
-\end{definition}
+\input{../_definitions/definition_category_of_inverse_direct_sequences_of_objects_in_a_category.tex}
 
 \begin{context} \label{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}
-    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
+    % Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write \hl{$S$} for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. 
+    Let \hl{$(S, R)$} be a ringed topos and let \hl{$m \subseteq R$} be a two-sided ideal.
+    Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
 
 \end{context}
 
 
-\begin{context} \label{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}
-    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}. Write $\pi: \mathrm{Pro}_\bbN(S) \to S$ for the topos morphism \TODO{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. 
+\begin{context} \label{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}
+    % Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}. 
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:topos}{topos}.
+    Write \hl{$\pi: \mathrm{Pro}_\bbN(S) \to S$} (\Cref{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}) for the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. For each $n > 0$, further write \hl{$i_n: S \to S^N$} for the topos morphism satisfying $i_n^* M_\bullet = M_n$. 
+
 \end{context}
 
-\begin{definition} \label{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}
-    % Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself.
-    % Write $\pi: \mathrm{Pro}_\bbN(S) \to S$ for the topos morphism \TODO{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. 
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}.
-    There is a ring object, which we might sometimes denote by \hl{$R_\bullet$}, given by the projective system
-    $$\cdots \to R/m^{n+1} \to R/m^n \to  \cdots.$$
-    When $\mathrm{Pro}_\bbN(S)$ is equipped with $R_\bullet$, $\pi$ is a morphism of ringed topoi. \TODO{morphism of ringed topoi}. In particular, for an object $M$ of the ringed topos $(S, R)$, its pullback $\pi^* M$ is the inverse system $\{M \otimes_R R_n\}_{n \geq 1}$. 
-\end{definition}
+\input{../_definitions/definition_ringed_site_structure_on_category_of_inverse_sequences_of_a_site.tex}
 
-\begin{definition} \label{definition:essentially_zero_inverse_sequence_of_sheaves_of_abelian_groups_on_a_site}
-%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
-    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}
+\input{../_definitions/definition_essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site.tex}
 
-   \begin{enumerate}
-    \item We say that an abelian group object $M_\bullet$ of $\mathrm{Pro}_\bbN(S)$ is \hldef{essentially zero} if there is a covering of the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} of $S$ such that, when $M_\bullet$ is restricted to each element of the covering, there is for all $n$ an $m \geq n$ such that the map $M_m \to M_n$ in $M_\bullet$ is zero. 
-
-    \item Let $M^\bullet$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of abelian group objects of $\mathrm{Pro}_{\bbN}(S)$. We say that $M^\bullet$ is \hldef{essentially zero} if \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$H^i(M^\bullet)$} is essentially zero for all $i$.
-
-    The category of essentially zero complexes form a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated subcategory} of the category of complexes of abelian group objects of $\mathrm{Pro}_{\bbN}(S)$.
-
-    One may say that $M^\bullet$ is \hldef{essentially bounded}, \hldef{essentially bounded from below}, or \hldef{essentially bounded from above}, if $H^m(M^\bullet)$ is essentially zero for all $m$ with $|m| \gg 0$, $-m \gg 0$, and $m \gg 0$ respectively. 
-
-    The \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{(derived) categories} of essentially bounded, essentially bounded from below, and essentially bounded from above complexes of $R$-module objects of $\mathrm{Pro}_{\bbN}(S)$ may be denoted by \hl{$D^{eb}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$}, \hl{$D^{e+}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$}, and \hl{$D^{e-}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$} respectively\footnote{In \cite{ekedahl_af}, these are denoted by $D^{eb}(S^\bbN-R_\bullet)$, etc.}. 
-    
-   \end{enumerate}
-\end{definition}
-
-\begin{notation} \label{notation:derived_category_of_category_of_modules_of_a_ringed_site}
-    Let $(S,R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site}. Write \hl{$D(S, R)$} for the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{derived category} of the category of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$R$-modules}. Accordingly, \hl{$D^+(S, R)$}, \hl{$D^-(S,R)$}, and \hl{$D^b(A)$} may be used to denote the full subcategories of \CrefAndHyperrefIfExist{definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category}{cohomologically bounded below, cohomologically bounded above, and cohomologically bounded complexes} respectively, cf. \Cref{definition:derived_category_of_an_abelian_category}
-    % $D(\mathrm{Pro}_\bbN(S), R_\bullet)$
-\end{notation}
+\input{../_notations/notation_derived_category_of_category_of_modules_of_a_ringed_site.tex}
 
 
-\begin{definition}[{\cite[Section 1]{ekedahl_af}}]  \label{definition:ekedahls_condition_A_and_B}
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}.
-%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself.
-%    Write $\pi: \mathrm{Pro}_\bbN(S) \to S$ be the topos morphism \TODO{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
-   \begin{enumerate}
-    \item We may say that $(\calC, J, R)$ or $(S,R)$ \hldef{satisfies Ekedahl's condition $A$} if the following holds: there exists a class $S^{\text{gen}}$ of \CrefAndHyperrefIfExist{definition:generator_of_a_category}{generators of $S$} and an integer $N$ such that for all $T \in S^{\text{gen}}$, all $R/m$-\CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{modules} $M$, and $i > N$, we have $H^i(T,M) = 0$.
+\input{../_definitions/definition_ekedahls_condition_A_and_B.tex}
 
-    \item We may say that $(\calC, J, R)$ or $(S,R)$ \hldef{satisfies Ekedahl's condition $B$} if the following hold: 
-    \begin{itemize}
-        \item there is an integer $N$ such that for every $n \geq 1$ and locally on $(\calC, J)$, there is a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_a_class_of_objects_in_an_abelian_category}{left resolution} $F_n^\bullet \to R/m^n$ of $R/m^n$ by a complex of (right) $R$-modules of finitely generated free objects such that $\pi^* F_n^\bullet \to \pi^*(R/m^n)$ is a resolution modulo essentially zero systems \TODO{essentially zero system}, where $\pi: (\mathrm{Pro}_{\bbN}(S), R_\bullet) \to (S,R)$ is considered as a morphism of ringed topoi. 
+\input{../_concepts/lemma_derived_direct_image_to_underlying_topos_of_cohomologically_bounded_below_complexes_of_ab_group_objects_in_inv_direct_sequence_cat_on_topos_vanishes.tex}
 
-        \item $m^n/m^{n+1}$ is, locally on $(\calC, J)$, of finite Tor-dimension over $R/m$. \TODO{finite Tor dimension}
-    \end{itemize}
-    
-   \end{enumerate}  
-\end{definition}
+\input{../_definitions/definition_essentially_constant_complex_of_abelian_group_objects_in_the_category_of_inverse_direct_sequences_of_objects_in_a_topos.tex}
 
-\begin{notation}[{\cite[After Lemma 1.1]{ekedahl_af}}] \label{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}
-    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}
-%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
+\input{../_notations/notation_ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds.tex}
 
-   Given $M \in D^{e+}(\mathrm{Pro}_\bbN(S), \bbZ_\bullet)$, \cite{ekedahl_af} lets \hl{$\tau(M)$} denote the following:
-   \begin{itemize}
-    \item If $(\calC, J, R)$ satisifes \CrefAndHyperrefIfExist{definition:ekedahls_condition_A_and_B}{Ekedahl's condition $A$}, then $\tau(M) = M$. 
-    \item Otherwise, $\tau(M)$ is the pro-object
-    $$(\cdots \to \tau_{i - 1} M \to \tau_{\geq i} M \to \tau_{i +1} M \to \cdots)$$
-    (\Cref{definition:canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category}).
-   \end{itemize}
-   \TODO{Talk about $R\pi_* M$}
-\end{notation}
-
-
-\begin{definition}[{\cite[Definition 2.1]{ekedahl_af}}] \label{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}
-%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself.
-%    Write $\pi: \mathrm{Pro}_\bbN(S) \to S$ for the topos morphism \TODO{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
-
-    Let $M,N$ be objects \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$D(\mathrm{Pro}_\bbN(S), R_\bullet)$}.
-    \begin{enumerate}
-        \item We may say that $M$ is an \hldef{$R$-complex} if $\pi^*(R_1) \otimes_{R_\bullet}^L M$ \TODO{derived tensor product} is essentially constant \TODO{essentially constant}
-
-        \item $M$ is \hldef{negligible} if $\pi^*(R_1) \otimes_{R_\bullet}^L M$ is \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_of_sheaves_of_abelian_groups_on_a_site}{essentially zero}.
-
-
-        \item $M$ is \hldef{normalised} if $\tau(\widehat{M}) \to \tau(M)$ (\Cref{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds})\TODO{$\widehat{M}$; what is the morphism $\tau(\widehat{M}) \to \tau(M)$} is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism}. 
-
-        \item A morphism $M \to N$ is \hldef{essentially an isomorphism} if it has a negligible \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone}.
-    \end{enumerate}
-\end{definition}
+\input{../_definitions/definition_derived_direct_image_of_essentially_bounded_complex_of_an_inverse_sequence_of_abelian_group_objects_in_a_topos.tex}
 
 \begin{context} \label{context:ekedahl_af_superscript_for_ekedahls_categories}
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}; in particular, \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences} is also assumed. Assume that \CrefAndHyperref{definition:ekedahls_condition_A_and_B}{Ekedahl's condition $A$ or $B$ holds}.
+    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences} and \Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}. Assume that \CrefAndHyperref{definition:ekedahls_condition_A_and_B}{Ekedahl's condition $A$ or $B$ holds}.
     Let 
     $$
     * = \begin{cases} - &\text{if Ekedahl's condition A holds} \\ e+ &\text{if Ekedahl's condition B holds} \\ (\text{blank}) &\text{if both Ekedahl's condition A and condition B hold}. \end{cases}
     $$
-    In particular, we will consider the category \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$D^-(\mathrm{Pro}_\bbN, R_\bullet)$}, \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_of_sheaves_of_abelian_groups_on_a_site}{$D^{e+}(\mathrm{Pro}_\bbN, R_\bullet)$}, or \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$D(\mathrm{Pro}_\bbN, R_\bullet)$}, depending on which combination of A and B holds. 
+    In particular, we will consider the category \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$D^-(\mathrm{Pro}_\bbN, R_\bullet)$}, \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}{$D^{e+}(\mathrm{Pro}_\bbN, R_\bullet)$}, or \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$D(\mathrm{Pro}_\bbN, R_\bullet)$}, depending on which combination of A and B holds. 
 \end{context}
 
-\begin{proposition}[{\cite[Proposition 2.2]{ekedahl_af}}]
+
+\input{../_definitions/definition_ekedahls_normalisation_functor_on_essentially_bounded_complexes_of_inverse_systems_on_ringed_topoi.tex}
+
+
+\input{../_definitions/definition_ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism.tex}
+
+\begin{proposition}[{\cite[Proposition 2.2]{ekedahl_af}}] 
     Assume \Cref{context:ekedahl_af_superscript_for_ekedahls_categories}.
     \begin{enumerate}
-        \item $M$ is an \CrefAndHyperrefIfExist{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}{$R$-complex} if and only if $\tau(\widehat{M}) \to \tau(M)$ (\Cref{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}) \TODO{$\widehat{M}$} is \CrefAndHyperrefIfExist{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}{essentially an isomorphism}.
+        \item $M$ is an \CrefAndHyperrefIfExist{definition:ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism}{$R$-complex} if and only if $\tau(\widehat{M}) \to \tau(M)$ (\Cref{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}) (\Cref{definition:ekedahls_normalisation_functor_on_essentially_bounded_complexes_of_inverse_systems_on_ringed_topoi}) is \CrefAndHyperrefIfExist{definition:ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism}{essentially an isomorphism}.
 
-        \item $M$ is \CrefAndHyperrefIfExist{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}{normalised} if and only if $R_n \otimes_{R_{n+1}}^L i_{n+1}^* M \to i_n^* M$ is an isomorphism for all $n$. \TODO{tensor product, $i_n^*$}
+        \item $M$ is \CrefAndHyperrefIfExist{definition:ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism}{normalised} if and only if $R_n \otimes_{R_{n+1}}^L i_{n+1}^* M \to i_n^* M$ (\Cref{definition:derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}) (\Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}) is an isomorphism for all $n$.
 
-        \item Let $?$ be $-$, $+$, or blank if Ekedahl's condition A, condition B, or conditions A and B hold respectively. Let \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$M' \in D^?(S,R)$}.  The object $L\pi^* M'$ \TODO{$L\pi^*$} belongs to $D^?(\mathrm{Pro}_\bbN, R_\bullet)$. In particular, $\widehat{M}$ is normalised. 
+        \item Let $?$ be $-$, $+$, or blank if Ekedahl's condition A, condition B, or conditions A and B hold respectively. Let \CrefAndHyperrefIfExist{notation:derived_category_of_category_of_modules_of_a_ringed_site}{$M' \in D^?(S,R)$}.  The object $L\pi^* M'$ (\Cref{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}) (\Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}) belongs to $D^?(\mathrm{Pro}_\bbN, R_\bullet)$. In particular, $\widehat{M}$ is normalised. 
     \end{enumerate}
 \end{proposition}
 
 
-\begin{definition}[cf. {\cite[Definition 2.5]{ekedahl_af}}] \label{definition:ekedahls_adic_category_of_a_ringed_site}
-    \TODO{I don't think this is quite the right definition of Ekedahl's category; somehow, the conditoin that the transition maps induce isomorphisms need to be incorporated.}
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}.
+\input{../_definitions/definition_ekedahls_adic_category_of_a_ringed_site.tex}
 
-    Denote by \hl{$D_{\mathrm{Ek}}(S, R)$} or \hl{$D_{\mathrm{Ek}}(\calC, R)$} the category whose objects are \CrefAndHyperrefIfExist{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}{$R$-complexes} and morphisms are the morphisms \CrefAndHyperrefIfExist{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}{$\tau(M) \to \tau(N)$} with \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_of_sheaves_of_abelian_groups_on_a_site}{essential isomorphisms} inverted. For $* \in \{b,+,-\}$, Denote by \hl{$D_{\mathrm{Ek}}^*(S,R)$} or \hl{$D_{\mathrm{Ek}}^*(\calC,R)$} the full subcategory whose objects are the complexes which are \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_of_sheaves_of_abelian_groups_on_a_site}{essentially bounded, essentially bounded from below, and essentially bounded from above} respectively. 
+\input{../_definitions/definition_ekedahls_adic_reduction_functor_and_normalization_representative_functor.tex}
 
-    It is appropriate to call these categories \hldef{``Ekedahl's adic categories''}. By abuse of language in conflict with the terminology of \Cref{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}, \cite{ekedahl_af} calls the objects of $D_{\mathrm{Ek}}(S,R)$ \hldef{$R$-complexes}.
-\end{definition}
+\input{../_concepts/theorem_ekedahls_normalization_functor_is_an_equivalent_of_categories_to_the_category_of_normalised_R_complexes.tex}
 
-\begin{theorem}[{\cite[Proposition 2.7]{ekedahl_af}}]
-    Assume \Cref{context:ekedahl_af_topos_moprhism_from_Pro_N_S_to_S}. Let $* \in \{b,+,-\}$. 
-    \begin{enumerate}
-        \item $R_1 \otimes_R^L (-): D_{\mathrm{Ek}}(S,R) \to D(S,R_1)$ \TODO{tensor product} (\Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}, \Cref{definition:ekedahls_adic_category_of_a_ringed_site}, \Cref{notation:derived_category_of_category_of_modules_of_a_ringed_site}) is conservative. \TODO{conservative functor}
 
-        \item Letting $D_{\mathrm{norm}}^*(\mathrm{Pro}_\bbN(S), R_\bullet) \subset D^*(\mathrm{Pro}_\bbN(S), R_\bullet)$ (\Cref{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}, \Cref{notation:derived_category_of_category_of_modules_of_a_ringed_site}) be the subcategory of \CrefAndHyperrefIfExist{definition:ekedahl_af_R_complex_negligible_normalised_objects_of_the_derived_category_of_modules_over_ring_of_category_of_inverse_sequences_essentially_an_isomorphism}{normalised $R$-complexes}. The canonical functor
-        $$D_{\mathrm{norm}}^*(\mathrm{Pro}_\bbN(S), R_\bullet) \to D_{\mathrm{Ek}}^*(S-R)$$
-        \TODO{What is this canonical functor}
-        and the functor
-        $$(\widehat{-}): D_{\mathrm{Ek}}^*(S-R) \to D_{\mathrm{norm}}^*(\mathrm{Pro}_\bbN(S), R_\bullet)$$
-        are inverse \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalences of categories}.
-    \end{enumerate}
-\end{theorem}
 
-\begin{theorem}[{\cite[Theorem 6.3]{ekedahl_af}}]
-    \TODO{regular ring, scheme}
-     Let $S$ be a regular scheme of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} at most $1$. Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative}, \CrefAndHyperrefIfExist{definition:local_ring}{local}, regular ring with maximal ideal $m$ such that the residue field $R_1 = R/m$ is of positive characteristic invertible in $\calO_s$. Write $R$ also for the  \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} of $R$ on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$S_{\et}$}. Let $c$ be the full subcategory of the category of sheaves of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$R_1$-modules} whose objects are \CrefAndHyperrefIfExist{definition:constructible_sheaf_on_a_small_site_on_a_scheme_or_a_topological_space}{constructible}.
+\input{../_concepts/theorem_six_functor_formalism_of_ekedahls_adic_categories_on_schemes.tex}
 
-     Let $X,Y$ be $S$-schemes
-     \begin{enumerate}
-        \item The category \TODO{Ekedahl's constructible, bounded category}$D_c^b(X_{\et}, R)$ and the functor
-        $$R_1 \otimes_R^L (-): D_c^b(X_{\et}, R) \to D_c^b(X_{\et}, R_1)$$
-        is a conservative triangulated functor \TODO{conservative triangulated functor}
-
-        \item $D_c^b(X_{\et}, R)$ has a $t$-structure \TODO{} whose heart is equivalent to the category of $m$-adic constructible sheaves and for which every object of $D_c^b(X_{\et}, R)$ has finite amplitude, i.e. $D_c^b(X_{\et}, R) = \bigcup_{i \in \bbZ} D_c^b(X_{\et}, R)^{\geq i} = \bigcup_{i \in \bbZ} D_c^b(X_{\et}, R)^{\leq i}$. 
-
-        \item \TODO{tensor and RHom}
-        \item \TODO{pushforward, pullback}
-        \item \TODO{perverse sheaves}
-     \end{enumerate}
-\end{theorem}
 
 
 \section{Pro-\'etale topology}
@@ -1205,7 +1091,7 @@ Here is another, more general, formulation of the rationality statement of the W
 
 \input{../_definitions/definition_canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category.tex}
 
-\input{../_definitions/definition_left_right_resolution_of_a_class_of_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category.tex}
 
 \subsection{Schemes}
 

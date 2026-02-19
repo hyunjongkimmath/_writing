@@ -1,6 +1,7 @@
 
 \begin{definition} \label{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}
-Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity} and let $S \subseteq R$ be a \CrefAndHyperrefIfExist{definition:multiplicative_subset_of_a_ring}{multiplicative subset}.  
+
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $S \subseteq Z(R)$ be a \CrefAndHyperrefIfExist{definition:multiplicative_subset_of_a_ring}{multiplicative subset} contained in the \CrefAndHyperrefIfExist{definition:center_of_a_ring}{center} of $R$.  
 The \hldef{localization of $R$ at $S$}, denoted by \hl{$S^{-1}R$}, is the ring whose elements are equivalence classes of pairs $(r,s) \in R \times S$ under the equivalence relation
 $$(r,s) \sim (r',s') \iff \exists u \in S \ \text{such that}\ u(sr' - s'r) = 0.$$
 Write \hl{$\frac{r}{s}$} for the equivalence class of $(r,s)$. Addition and multiplication on representatives are defined by
@@ -10,8 +11,9 @@ Write \hl{$\frac{r}{s}$} for the equivalence class of $(r,s)$. Addition and mult
 \end{align*}
 The map $r \mapsto \frac{r}{1}$ defines a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}; therefore, $S^{-1}R$ is naturally an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
 
-Given an element $f \in R$, the localization of $R$ at $S = \{f^n: n\geq 0 \}$ is denoted by \hl{$R_f$}.
+Given an element $f \in Z(R)$, the localization of $R$ at $S = \{f^n: n\geq 0 \}$ is denoted by \hl{$R_f$}.
 
-If $P$ is a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideal of $R$}, then \hldef{$R_P := S^{-1}R$} with $S = R \setminus P$ is called the \hldef{localization of $R$ at $P$}. It is a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} whose \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} is given by 
+
+In the case that $R$ is a commutative ring and if $P$ is a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideal of $R$}, then \hldef{$R_P := S^{-1}R$} with $S = R \setminus P$ is called the \hldef{localization of $R$ at $P$}. It is a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} whose \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} is given by 
 $$S^{-1}P = \{ \frac{p}{s} \in R_P: p \in P \}.$$
 \end{definition}

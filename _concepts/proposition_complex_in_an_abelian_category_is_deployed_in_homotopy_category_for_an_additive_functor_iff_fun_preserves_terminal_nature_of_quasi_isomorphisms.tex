@@ -1,0 +1,13 @@
+\begin{proposition}[cf. {\cite{spaltenstein_ruc}}] \label{proposition:complex_in_an_abelian_category_is_deployed_in_homotopy_category_for_an_additive_functor_iff_fun_preserves_terminal_nature_of_quasi_isomorphisms}
+    Let $(\mathcal{A}_i)_{1 \le i \le n}$ and $(\mathcal{B}_j)_{1 \le j \le m}$ be families of abelian categories, and let $\mathcal{C}$ be an abelian category. Let 
+    \[ F: \prod_{i=1}^n \mathcal{A}_i \times \prod_{j=1}^m \mathcal{B}_j \to \mathcal{C} \] 
+    be an additive multifunctor, covariant in $K(\mathcal{A}_i)$ and contravariant in $K(\mathcal{B}_j)$. 
+    
+    A family of complexes $(A_i^\bullet, B_j^\bullet)$ is \CrefAndHyperref{definition:defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories}{adapted (or deployed/unfolded)} for the \CrefAndHyperref{definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories}{right derived functor} $RF$ if and only if the following holds: 
+    For every family of \CrefAndHyperref{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphisms} $s_i: A_i^\bullet \to X_i^\bullet$ and $t_j: Y_j^\bullet \to B_j^\bullet$, there exist quasi-isomorphisms $\sigma_i: X_i^\bullet \to \mathcal{X}_i^\bullet$ and $\tau_j: \mathcal{Y}_j^\bullet \to Y_j^\bullet$ such that the induced morphism in $K(\mathcal{C})$
+    \[ F(\sigma_i \circ s_i, t_j \circ \tau_j): F(A_i^\bullet, B_j^\bullet) \to F(\mathcal{X}_i^\bullet, \mathcal{Y}_j^\bullet) \]
+    is a quasi-isomorphism (i.e., an isomorphism in the derived category $D(\mathcal{C})$).
+\end{proposition}
+\begin{proof}
+    This follows from \Cref{proposition:object_is_deployed_for_an_exact_func_of_tri_categories_iff_fun_preserves_the_terminal_nature_of_the_object_relative_to_resolutions}.
+\end{proof}

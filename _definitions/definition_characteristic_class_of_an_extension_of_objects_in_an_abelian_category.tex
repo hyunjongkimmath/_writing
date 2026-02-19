@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:characteristic_class_of_an_extension_of_objects_in_an_abelian_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $A,B \in \calA$.
+
+    \begin{enumerate}
+        \item Suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives} so that $\Ext^1(A,-): \calA \to \Ab$ is defined as a \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functor}.
+        
+        Given an extension $\xi: 0 \to B \to X \to A \to 0$, the \CrefAndHyperref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} in $\Ext^n(A,-)$ yields an exact sequence
+            $$\Hom(A,X) \to \Hom(A,A) \xrightarrow{\partial} \Ext^1(A,B)$$
+        Define \hl{$\Theta(\xi) = \partial(\id_A)$}, called the \hldef{characteristic class of $\xi$}. 
+
+
+        \item Suppose that $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives} so that $\Ext^1(-,B): \calA^{\text{op}} \to \Ab$ is defined as a \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functor}.
+        
+        Given an extension $\xi: 0 \to B \to X \to A \to 0$, the \CrefAndHyperref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} in $\Ext^n(-,B)$ yields an exact sequence
+            $$\Hom(X,B) \to \Hom(B,B) \xrightarrow{\partial} \Ext^1(A,B)$$
+        Define \hl{$\Theta(\xi) = \partial(\id_B)$} called the \hldef{characteristic class of $\xi$}.
+    \end{enumerate}
+    \TODO{show these notions agree}
+\end{definition}

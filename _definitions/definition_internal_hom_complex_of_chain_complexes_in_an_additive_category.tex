@@ -1,0 +1,29 @@
+\begin{definition} \label{definition:internal_hom_complex_of_chain_complexes_in_an_additive_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+
+    Given \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{(cochain) complexes} $K^\bullet, L^\bullet$ of objects in $\calA$, the \hldef{internal Hom complex} \hl{$\operatorname{Hom}^\bullet(K^\bullet, L^\bullet)$}, also called the \hldef{(product) total Hom complex} or the \hldef{complex of morphisms from $K^\bullet$ to $L^\bullet$} and also denoted by notations such as \hl{$\underline{\operatorname{Hom}}(X,Y)$} depending on the context, is the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{product total complex} $\Tot^{\prod}(\Hom(K^\bullet, L^\bullet))$  where $\Hom(K^\bullet, L^\bullet)$ is the double complex associated to (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) the biadditive functor $\Hom: \calA^{\op} \times A \to \Ab$. More explicitly, $\Hom^\bullet(K^\bullet, L^\bullet)$ is the complex of objects in $\Ab$ given by
+
+    \begin{itemize}
+        \item Objects: In each degree $n \in \mathbb{Z}$, the object is the product
+        $$ \mathrm{Hom}^n(K^\bullet, L^\bullet) = \prod_{p \in \mathbb{Z}} \mathrm{Hom}_{\calA}(K^p, L^{p+n}). $$
+        An element $f \in \mathrm{Hom}^n(K^\bullet, L^\bullet)$ is thus a family of morphisms $(f_p)_{p \in \mathbb{Z}}$ where $f_p: K^p \to L^{p+n}$.
+        \item Differential: The differential $d^n: \mathrm{Hom}^n(K^\bullet, L^\bullet) \to \mathrm{Hom}^{n+1}(K^\bullet, L^\bullet)$ is defined for each component $f = (f_p)$ by
+        $$ (d^n f)_p = d_L^{p+n} \circ f_p - (-1)^n f_{p+1} \circ d_K^p, $$
+        where $d_K$ and $d_L$ are the differentials of the complexes $K^\bullet$ and $L^\bullet$ respectively.
+    \end{itemize}
+
+    Under this construction, the \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{$0$-cocycles} of $\mathrm{Hom}^\bullet(K^\bullet, L^\bullet)$ correspond precisely to the chain maps from $K^\bullet$ to $L^\bullet$, and the \CrefAndHyperrefIfExist{definition:boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex}{$0$-coboundaries} correspond to those chain maps which are \CrefAndHyperref{definition:chain_homotopy_between_chain_maps_between_complexes}{null-homotopic}.
+
+    If $K_\bullet$ and $L_\bullet$ are chain complexes written with homological conventions instead, then the internal Hom complex should be denoted by \hl{$\Hom_\bullet(K_\bullet, L_\bullet)$} instead; explicitly, $\Hom_\bullet(K_\bullet, L_\bullet)$ is the complex of objects in $\Ab$ given by 
+    \begin{itemize}
+        \item Objects: In each degree $n \in \mathbb{Z}$, the object is the product
+        $$ \mathrm{Hom}_n(K_\bullet, L_\bullet) = \prod_{p \in \mathbb{Z}} \mathrm{Hom}_{\calA}(K_p, L_{p+n}). $$
+        An element $f \in \mathrm{Hom}_n(K_\bullet, L_\bullet)$ is a family of morphisms $(f_p)_{p \in \mathbb{Z}}$ such that $f_p: K_p \to L_{p+n}$.
+        \item Differential: The differential $d_n: \mathrm{Hom}_n(K_\bullet, L_\bullet) \to \mathrm{Hom}_{n-1}(K_\bullet, L_\bullet)$ is defined for a family $f = (f_p)$ by
+        $$ (d_n f)_p = d_L^{p+n} \circ f_p - (-1)^n f_{p-1} \circ d_K^p, $$
+        where $d_K^p: K_p \to K_{p-1}$ and $d_L^q: L_q \to L_{q-1}$ are the homological differentials.
+    \end{itemize}
+
+    As in the cohomological case, the $0$-cycles of $\mathrm{Hom}_\bullet(K_\bullet, L_\bullet)$ are precisely the chain maps between the complexes, and the $0$-boundaries are the null-homotopic chain maps.
+
+\end{definition}

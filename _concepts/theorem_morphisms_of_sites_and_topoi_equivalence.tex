@@ -1,0 +1,19 @@
+\begin{theorem} \label{theorem:morphisms_of_sites_and_topoi_equivalence}
+    \TODO{}
+    Let $(\mathcal{C}, J)$ and $(\mathcal{D}, K)$ be sites. 
+    Let $u: \mathcal{C} \to \mathcal{D}$ be a functor.
+    The functor $u$ defines a morphism of sites $f: (\mathcal{D}, K) \to (\mathcal{C}, J)$ if and only if the following conditions hold:
+    \begin{enumerate}
+        \item The functor $u$ is continuous, i.e., for every covering sieve $S \in J(X)$ in $\mathcal{C}$, the sieve $u(S)$ generates a covering sieve in $K(u(X))$.
+        \item The functor $u$ is cocontinuous \TODO{define cocontinuous functor of sites}, or equivalently, the associated inverse image functor $u^*: \Sh(\mathcal{C}, J) \to \Sh(\mathcal{D}, K)$ is left exact.
+    \end{enumerate}
+    Under these conditions, there exists a unique (up to unique 2-isomorphism) geometric morphism of topoi $f: \Sh(\mathcal{D}, K) \to \Sh(\mathcal{C}, J)$ such that the following diagram of functors commutes up to natural isomorphism:
+    $$
+    \begin{array}{ccc}
+    \mathcal{C} & \xrightarrow{u} & \mathcal{D} \\
+    \downarrow h_{\mathcal{C}} & & \downarrow h_{\mathcal{D}} \\
+    \Sh(\mathcal{C}, J) & \xrightarrow{f^*} & \Sh(\mathcal{D}, K)
+    \end{array}
+    $$
+    where $h_{\mathcal{C}}$ and $h_{\mathcal{D}}$ are the \TODO{define sheafified Yoneda embedding}.
+\end{theorem}

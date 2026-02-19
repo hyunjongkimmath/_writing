@@ -1,0 +1,35 @@
+\begin{proposition}[{\cite[1.4. Proposition, 1.5. Proposition]{spaltenstein_ruc}}] \label{proposition:equivalent_conditions_for_a_complex_in_an_abelian_category_to_be_K_projective_K_injective}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}, and let \CrefAndHyperrefIfExist{definition:homotopy_category_of_chain_complexes_of_an_additive_category}{$K(\mathcal{A})$} and \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{$D(\mathcal{A})$} be its homotopy and derived categories, respectively.
+    
+    \begin{enumerate}
+        \item For every \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} $A^{\bullet}$ in $\mathcal{A}$, the following conditions are equivalent:
+        \begin{enumerate}
+            \item $A^{\bullet}$ is \CrefAndHyperrefIfExist{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-projective}.
+            \item For every $S^{\bullet} \in K(\mathcal{A})$, the natural homomorphism 
+            \[ \operatorname{Mor}_{K(\mathcal{A})}(A^{\bullet}, S^{\bullet}) \to \operatorname{Mor}_{D(\mathcal{A})}(A^{\bullet}, S^{\bullet}) \]
+            is an isomorphism.
+            \item For every diagram in $K(\mathcal{A})$
+            \[ \begin{tikzcd}
+                & A^\bullet \arrow[d, "f"] \arrow[ld, dashed, "g"'] \\
+                X^\bullet \arrow[r, "s"'] & S^\bullet
+            \end{tikzcd} \]
+            where $s$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism}, there exists a unique morphism $g: A^{\bullet} \to X^{\bullet}$ such that $s \circ g = f$ in $K(\mathcal{A})$.
+            \item For every quasi-isomorphism $u: S^{\bullet} \to A^{\bullet}$ in $K(\mathcal{A})$, there exists a morphism $v: A^{\bullet} \to S^{\bullet}$ such that $u \circ v = 1_{A^{\bullet}}$ in $K(\mathcal{A})$.
+        \end{enumerate}
+
+        \item Similarly, for every $A^{\bullet}$ in $\mathcal{A}$, the following conditions are equivalent:
+        \begin{enumerate}
+            \item $A^{\bullet}$ is \CrefAndHyperrefIfExist{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-injective}.
+            \item For every $S^{\bullet} \in K(\mathcal{A})$, the natural homomorphism
+            \[ \operatorname{Mor}_{K(\mathcal{A})}(S^{\bullet}, A^{\bullet}) \to \operatorname{Mor}_{D(\mathcal{A})}(S^{\bullet}, A^{\bullet}) \]
+            is an isomorphism.
+            \item For every diagram in $K(\mathcal{A})$
+            \[ \begin{tikzcd}
+                S^\bullet \arrow[r, "s"] \arrow[d, "f"'] & X^\bullet \arrow[ld, dashed, "g"] \\
+                A^\bullet & 
+            \end{tikzcd} \]
+            where $s$ is a quasi-isomorphism, there exists a unique morphism $g: X^{\bullet} \to A^{\bullet}$ such that $g \circ s = f$ in $K(\mathcal{A})$.
+            \item For every quasi-isomorphism $u: A^{\bullet} \to S^{\bullet}$ in $K(\mathcal{A})$, there exists a morphism $v: S^{\bullet} \to A^{\bullet}$ such that $v \circ u = 1_{A^{\bullet}}$ in $K(\mathcal{A})$.
+        \end{enumerate}
+    \end{enumerate}
+\end{proposition}

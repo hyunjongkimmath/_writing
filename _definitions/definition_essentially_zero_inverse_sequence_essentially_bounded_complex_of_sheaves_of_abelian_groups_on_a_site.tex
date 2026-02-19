@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}
+%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
+    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}
+
+   \begin{enumerate}
+    \item We say that an abelian group object $M_\bullet$ of \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{$\mathrm{Pro}_\bbN(S)$} is \hldef{essentially zero} if there is a covering of the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object} of $S$ such that, when $M_\bullet$ is restricted to each element of the covering, there is for all $n$ an $m \geq n$ such that the map $M_m \to M_n$ in $M_\bullet$ is zero. 
+
+    \item Let $M^\bullet$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of abelian group objects of $\mathrm{Pro}_{\bbN}(S)$. We say that $M^\bullet$ is \hldef{essentially zero} if \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{$H^i(M^\bullet)$} is essentially zero for all $i$.
+
+    The category of essentially zero complexes form a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated subcategory} of the category of complexes of abelian group objects of $\mathrm{Pro}_{\bbN}(S)$.
+
+    One may say that $M^\bullet$ is \hldef{essentially bounded}, \hldef{essentially bounded from below}, or \hldef{essentially bounded from above}, if $H^m(M^\bullet)$ is essentially zero for all $m$ with $|m| \gg 0$, $-m \gg 0$, and $m \gg 0$ respectively. 
+
+    The \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{(derived) categories} of essentially bounded, essentially bounded from below, and essentially bounded from above complexes of $R$-module objects of $\mathrm{Pro}_{\bbN}(S)$ may be denoted by \hl{$D^{eb}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$}, \hl{$D^{e+}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$}, and \hl{$D^{e-}(\mathrm{Pro}_{\bbN}(S), R_\bullet)$} respectively. \cite{ekedahl_af} denotes these as \hl{$D^{eb}(S^\bbN-R_\bullet)$}, etc. Moreover, \cite{ekedahl_af} denotes \hl{$D^{eb}(S^\bbN-\text{ab})$} etc. in the case that $R = \bbZ$. 
+   \end{enumerate}
+\end{definition}

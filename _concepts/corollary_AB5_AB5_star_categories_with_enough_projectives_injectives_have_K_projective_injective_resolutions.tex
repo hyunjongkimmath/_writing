@@ -1,0 +1,17 @@
+\begin{corollary}[{\cite[3.5. Corollary, 3.9. Corollary]{spaltenstein_ruc}}] \label{corollary:AB5_AB5_star_categories_with_enough_projectives_injectives_have_K_projective_injective_resolutions}
+    \begin{enumerate}
+        \item Let $\calA$ be an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB5} \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough projectives}, then every complex in $\calC$ has a left \CrefAndHyperref{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-projective} \CrefAndHyperref{definition:left_right_resolution_of_a_chain_complex_in_an_abelian_category}{resolution}.
+        \TODO{bounded complex of projectives is $K$-projective}
+        
+        \item Dually, let $\calA$ be an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB$5^*$} \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. If $\calA$ \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}, then every complex in $\calC$ has a right \CrefAndHyperref{definition:K_injective_projective_complex_in_an_abelian_category}{$K$-injective} \CrefAndHyperref{definition:left_right_resolution_of_a_chain_complex_in_an_abelian_category}{resolution}.
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    \begin{enumerate}
+        \item 
+        Since $\calA$ has enough projectives, any bounded above homological complex in $\calA$ has a left-resolution \Cref{proposition:abelian_category_with_enough_objets_of_a_class_on_the_right_left_has_resolutions_of_complexes} by a bounded above homological complex of projective objects, which is $K$-projective by \Cref{proposition:bounded_above_below_complex_of_projective_injective_objects_is_K_projective_injective}. Therefore, any complex in $\calA$ has a left-resolution by a $K$-projective object by \Cref{theorem:AB5_AB5_star_categories_with_left_right_resolutions_for_bounded_complexes_by_a_class_has_resolutions_for_all_complexes_by_the_class}
+
+        \item This is dual to the previous part.
+        % \item Note that projective objects are exact with respect to $\Hom: \calA^{\op} \times \calA \to \Ab$ on the left for the 
+    \end{enumerate}
+\end{proof}

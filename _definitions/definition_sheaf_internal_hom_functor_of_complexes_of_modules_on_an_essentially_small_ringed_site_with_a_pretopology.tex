@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}
+    Let $(\calC, J, \calO)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} whose underlying \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} is \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}.
+
+    Given \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{(cochain) complexes} $K^\bullet, L^\bullet$ of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{(say right) $\calO$-modules}, the \hldef{internal sheaf/sheafy Hom complex} \hl{$\mathcal{H}om^\bullet(K^\bullet, L^\bullet)$}, also called the \hldef{(product) total sheaf Hom complex}, but not to be confused with the \CrefAndHyperref{definition:internal_hom_complex_of_chain_complexes_in_an_additive_category}{internal hom complex} $\operatorname{Hom}^\bullet(K^\bullet, L^\bullet)$, is the \CrefAndHyperrefIfExist{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}{product total complex} $\Tot^{\prod}(\mathcal{H}om(K^\bullet, L^\bullet))$, where $\mathcal{H}om(K^\bullet, L^\bullet)$ is the double complex associated to (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) the \CrefAndHyperref{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}{sheaf hom functor} $$\mathcal{H}om: \Mod_{\calO}^{\op} \times \Mod_{\calO} \to \Sh(\calC, J; \bbZ)$$ 
+    (\Cref{definition:module_over_a_sheaf_of_rings_on_a_site}) (\Cref{definition:sheaf_on_a_site}).
+
+    More explicitly, $\mathcal{H}om^\bullet(K^\bullet, L^\bullet)$ is the complex of objects in $\Sh(\calC, J; \bbZ)$ given by 
+    \begin{itemize}
+        \item \textbf{Objects:} In each degree $n \in \mathbb{Z}$, the sheaf of $\mathbb{Z}$-modules is the product
+        $$ \mathcal{H}om^n(K^\bullet, L^\bullet) = \prod_{p \in \mathbb{Z}} \mathcal{H}om_{\mathcal{O}}(K^p, L^{p+n}). $$
+        A local section $f \in \mathcal{H}om^n(K^\bullet, L^\bullet)(U)$ for an object $U \in \mathcal{C}$ is a family of $\mathcal{O}|_U$-linear morphisms $f_p: K^p|_U \to L^{p+n}|_U$.
+        \item \textbf{Differential:} The differential $d^n: \mathcal{H}om^n(K^\bullet, L^\bullet) \to \mathcal{H}om^{n+1}(K^\bullet, L^\bullet)$ is defined for a family of local morphisms $f = (f_p)$ by 
+        $$ (d^n f)_p = d_L^{p+n} \circ f_p - (-1)^n f_{p+1} \circ d_K^p, $$
+        where $d_K^p: K^p \to K^{p+1}$ and $d_L^q: L^q \to L^{q+1}$ are the cohomological differentials of the complexes.
+    \end{itemize}
+\end{definition}

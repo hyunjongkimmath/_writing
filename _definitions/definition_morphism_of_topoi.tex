@@ -1,5 +1,5 @@
-{\cite[Expos\'e IV D\'efinition 3.1]{SGA4_I}, see \cite[Definition 2.1]{nlab:geometric_morphism}}
-    Let $E$ and $E'$ be topoi (in a universe $\scrU$). A \hldef{(continuous) morphism $f: E \to E'$} is a triple \hl{$f = (f_*, f^*, \varphi)$} consisting of functors
+\begin{definition} {\cite[Expos\'e IV D\'efinition 3.1]{SGA4_I}, see \cite[Definition 2.1]{nlab:geometric_morphism}} \label{definition:morphism_of_topoi}
+    Let $E$ and $E'$ be \CrefAndHyperrefIfExist{definition:topos}{topoi} (in a universe $\scrU$, if such a universe is available). A \hldef{(continuous) morphism $f: E \to E'$} is a triple \hl{$f = (f_*, f^*, \varphi)$} consisting of functors
     $$f_*: E \to E', \quad f^*: E' \to E$$
     and an \hldef{adjunction isomorphism}
     $$\varphi: \Hom_E(u^*(X'), Y) \xrightarrow{\sim} \Hom_{E'}(X', u_*(Y))$$
@@ -8,3 +8,5 @@
 
     This notion of morphism of topoi is also referred to as \hldef{geometric morphism of topoi}.
     
+
+\end{definition}

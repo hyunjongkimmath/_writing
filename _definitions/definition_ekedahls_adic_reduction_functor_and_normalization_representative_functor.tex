@@ -1,0 +1,20 @@
+\begin{definition}[{\cite[Definition-Lemma 2.6.]{ekedahl_af}}]  \label{definition:ekedahls_adic_reduction_functor_and_normalization_representative_functor}
+ Assume \Cref{context:ekedahl_af_superscript_for_ekedahls_categories}.
+ As per \Cref{notation:derived_category_of_category_of_modules_of_a_ringed_site}, write $D^*(\mathrm{Pro}_{\bbN}(S), R_\bullet)$ (for $* \in \{+,-,b\}$) and $D(S, R / m^n R)$ respectively for the appropriate \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{derived categories} of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{modules} of the \CrefAndHyperrefIfExist{definition:ringed_topos}{ringed topoi} $(\mathrm{Pro}(S^\bbN), R_\bullet)$ and $(S, R / m^n R)$
+ \begin{enumerate}
+    \item The functor 
+    $$R / m^n R \otimes_R^L R\pi_*(-): D^*(\mathrm{Pro}_{\bbN}(S), R_\bullet) \to D(S, R / m^n R)$$
+    (\Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}) , 
+    $$R\pi_*:D(\mathrm{Pro}_{\bbN}(S), R_\bullet) \to D(S, R)$$
+    is the \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_sites}{right derived direct image} of $\pi: (\mathrm{Pro}_{\bbN}(S), R_\bullet) \to (S, R)$, and 
+    $$R/m^n R \otimes_R^L - : D(S,R) \to D(S, R/m^n R)$$
+    is the \CrefAndHyperrefIfExist{definition:derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}{left derived tensor product} by $R/m^n R$, 
+    factors through $D_{\text{Ek}}(S, R)$ (\Cref{definition:ekedahls_adic_category_of_a_ringed_site}) to yield a functor denoted by
+    $$\hlin{R / m^n R \otimes_R^L -: D_{\text{Ek}}(S, R) \to D(S, R / m^n R)}$$
+
+    \item The functor 
+    $$(\widehat{-}): D^*(\mathrm{Pro}_{\bbN}(S), R_\bullet) \to D(\mathrm{Pro}_{\bbN}(S), R_\bullet)$$
+    (\Cref{definition:ekedahls_normalisation_functor_on_essentially_bounded_complexes_of_inverse_systems_on_ringed_topoi}) factors through $D_{\text{Ek}}(S, R)$ (\Cref{definition:ekedahls_adic_category_of_a_ringed_site}) to yield a functor $D_{\text{Ek}}(S, R) \to D(\mathrm{Pro}_{\bbN}(S), R_\bullet)$ which will also be denoted by $(\widehat{-})$.
+    
+ \end{enumerate}
+\end{definition}

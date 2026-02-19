@@ -1,0 +1,12 @@
+\begin{notation}[{\cite[After Lemma 1.1]{ekedahl_af}}] \label{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}
+    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}.
+%    Let $(\calC, J, R)$ be a \CrefAndHyperrefIfExist{definition:ringed_site}{ringed site} and let $m \subseteq R$ be a two-sided ideal. Write $S$ for the \CrefAndHyperrefIfExist{definition:topos}{topos} of $(\calC, J)$. Let $\mathrm{Pro}_\bbN(S)$ be the \CrefAndHyperrefIfExist{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}{category of inverse sequences of $S$}; this is equivalent to the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{functor category $[\bbN^{\op}, S]$} and is a \CrefAndHyperrefIfExist{theorem:functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos}{topos} itself. Regard it as a ringed topos equipped with \CrefAndHyperref{definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site}{$R_\bullet$}.
+
+   Given $M \in D^{e+}(\mathrm{Pro}_\bbN(S), \bbZ_\bullet)$ (\Cref{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}), \cite{ekedahl_af} lets \hl{$\tau(M)$} denote the following:
+   \begin{itemize}
+    \item If $(\calC, J, R)$ satisifes \CrefAndHyperrefIfExist{definition:ekedahls_condition_A_and_B}{Ekedahl's condition $A$}, then $\tau(M) = M$, regarded as the \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{constant pro-object}. 
+    \item Otherwise, $\tau(M)$ is the \CrefAndHyperrefIfExist{definition:ind_pro_category_of_a_locally_small_category}{pro-object}
+    $$(\cdots \to \tau_{\geq i - 1} M \to \tau_{\geq i} M \to \tau_{\geq i +1} M \to \cdots)$$
+    (\Cref{definition:canonical_truncation_of_chain_complexes_of_objects_in_an_abelian_category}).
+   \end{itemize}
+\end{notation}
