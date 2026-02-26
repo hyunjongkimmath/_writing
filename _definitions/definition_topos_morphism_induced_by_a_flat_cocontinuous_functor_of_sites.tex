@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites}
+    Let $u: \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:cocontinuous_functor_of_sites}{cocontinuous functor of small sites} that is also \CrefAndHyperrefIfExist{definition:flat_functor_between_categories}{flat}.
+    The \hldef{topos morphism induced by $u$} is the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{morphism of topoi}
+    $$f : \Sh(\calC, J) \to \Sh(\calD, K)$$
+    defined by the following pair of \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint functors}:
+    \begin{itemize}
+        \item The \textbf{inverse image} $f^* : \Sh(\calD, K) \to \Sh(\calC, J)$ is the \CrefAndHyperrefIfExist{definition:inverse_image_of_sheaves_along_a_cocontinuous_functor_of_sites}{inverse image}/precomposition functor $u^*$, given by $f^*(\mathcal{H}) = \mathcal{H} \circ u$. Because $u$ is cocontinuous, $\mathcal{H} \circ u$ is automatically a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf}; because $u$ is \CrefAndHyperrefIfExist{definition:flat_functor_between_categories}{flat}, $f^*$ is \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{left exact}.
+        \item The \textbf{direct image} $f_* : \Sh(\calC, J) \to \Sh(\calD, K)$ is the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the precomposition functor. \TODO{why does this exist? Apparently, this right adjoint is the right kan extension} \TODO{Also apparently, there is an adjoint functor theorem that states that a colimit-presering functor between Grothendieck topoi always has a right adjoint}
+    \end{itemize}
+
+    The notion of a topos morphism induced by a cocontinuous flat functor of small sites should not be mistaken for the notion of a \CrefAndHyperrefIfExist{definition:topos_morphism_induced_by_a_morphism_of_small_sites}{topos morphism induced by a morphism of small sites} (which is in particular a continuous flat functor). 
+
+    \TextIfExists{definition:topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor}{
+    See also \Cref{definition:topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor}.
+    }
+\end{definition}

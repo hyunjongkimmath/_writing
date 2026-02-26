@@ -410,6 +410,7 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \subsubsection{Grothendieck topologies}
 
 \input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex}
 \input{../_definitions/definition_grothendieck_topology_generated_by_a_pretopology.tex}
 
 \input{../_definitions/definition_coarser_finer_than_for_sites_on_a_category.tex}
@@ -515,7 +516,7 @@ defined by the mapping $((m \otimes n) \otimes p) \mapsto (m \otimes (n \otimes 
 
 \input{../_definitions/definition_point_of_a_topos.tex}
 
-\input{../_definitions/definition_stalk_of_a_topos_at_a_point.tex}
+\input{../_definitions/definition_stalk_of_an_object_of_a_topos_at_a_point_of_the_topos.tex}
 
 \begin{remark}
     If $\mathcal{E}$ is the topos of sheaves on a topological space $X$, a classical point $x \in X$ induces a point of the topos $p_x: \mathbf{Set} \to \text{Sh}(X)$. In this case, the stalk functor $p_x^*$ is equivalent to the classical stalk functor at $x$, which is defined as the colimit of sections over open neighborhoods of $x$.
@@ -542,14 +543,27 @@ defined by the mapping $((m \otimes n) \otimes p) \mapsto (m \otimes (n \otimes 
 
 \input{../_concepts/proposition_identity_functor_from_finer_site_to_coarser_site_on_the_same_category_is_continuous_and_induces_a_site_morphism.tex}
 
+\subsubsection{cocontinuous functors between sites}
+
+\input{../_definitions/definition_cocontinuous_functor_of_sites.tex}
+\input{../_concepts/proposition_functor_between_sites_is_cocontinuous_if_and_only_if_precomposition_functor_sends_sheaves_to_sheaves.tex}
+\input{../_definitions/definition_left_kan_extension_of_presheaves_along_a_functor_of_sheaves_along_cocontinuous_functor_of_sites.tex}
+\input{../_definitions/definition_inverse_image_of_sheaves_along_a_cocontinuous_functor_of_sites.tex}
+
 \subsubsection{Morphisms of sites and of topoi}
 
-\input{../_concepts/proposition_morphism_of_sites_to_morphism_of_topoi.tex}
+There are multiple types of morphisms of topoi induced by functors between sites, depending on whether said functors are continuous or cocontinuous (with additional hypotheses)
 
+\input{../_definitions/definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex}
+\input{../_definitions/definition_flat_functor_between_categories.tex}
+\input{../_definitions/definition_topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites.tex}
+\input{../_definitions/definition_topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor.tex}
 
-\input{../_concepts/theorem_morphisms_of_sites_and_topoi_equivalence.tex}
+% \input{../_concepts/proposition_morphism_of_sites_to_morphism_of_topoi.tex}
 
-\input{../_concepts/proposition_morphism_of_topoi_from_functor.tex}
+% \input{../_concepts/theorem_morphisms_of_sites_and_topoi_equivalence.tex}
+
+% \input{../_concepts/proposition_morphism_of_topoi_from_functor.tex}
 
 
 

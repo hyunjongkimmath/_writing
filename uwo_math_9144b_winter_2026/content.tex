@@ -988,7 +988,7 @@ Recall by \Cref{proposition:left_right_adjoint_of_add_cats_is_add_and_right_left
 
 \subsection{Balancing Ext and Tor}
 
-The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} agree with each other and similarly for \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$}\TODO{ref}. \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{Double complexes} are useful to do so. 
+The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext$} agree with each other (\Cref{corollary:ext_objects_of_modules_over_rings_are_well_defined}) and similarly for \CrefAndHyperrefIfExist{definition:tor_functors_of_bimodules_of_rings}{$\Tor$} (\Cref{corollary:tor_objects_of_modules_over_rings_are_well_defined}). \CrefAndHyperref{definition:double_complex_of_objects_in_an_additive_category}{Double complexes} are useful to do so. 
 
 
 
@@ -1093,6 +1093,12 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 The universal coefficient theorems and K\"unneth formulae quantify the extent to which $\otimes$ and $\Hom$ fail to commute with homology/cohomology.
 
 \input{../_definitions/definition_hereditary_ring.tex}
+\begin{lemma} \label{lemma:pids_are_hereditary}
+    Any \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID} is a \CrefAndHyperrefIfExist{definition:hereditary_ring}{hereditary ring} (both on the left and the right).
+\end{lemma}
+\begin{lemma} \label{lemma:commutative_dedekind_domains_are_hereditary}
+    Any \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative} \CrefAndHyperrefIfExist{definition:dedekind_domain}{Dedekind domain}  is a hereditary ring (both on the left and the right).
+\end{lemma}
 
 \input{../_concepts/theorem_homological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
 \input{../_concepts/theorem_cohomological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
@@ -1121,11 +1127,8 @@ $$ \min \{ n \mid R^iF(M) = 0 \text{ for all } i > n \} \leq \operatorname{cores
 \input{../_definitions/definition_left_right_projective_injective_flat_dimension_of_a_module_over_a_ring.tex}
 
 \input{../_definitions/definition_left_right_global_dimension_of_a_ring.tex}
-
 \input{../_definitions/definition_tor_dimension_of_a_ring.tex}
-
 \input{../_concepts/theorem_global_dimension_theorem_for_rings.tex}
-
 \input{../_concepts/theorem_tor_dimension_theorem_for_rings.tex}
 
 
@@ -1148,19 +1151,63 @@ Sheaves (say on a topological space) of abelian groups form an abelian category 
 
 Note that on a topological space $X$, it is natural to talk about open sets $\{U_i\}$ which cover an open set $U$ of $X$. One can express more general notions of ``coverings'' of objects in a category through the notion of a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``site''}, which consists of a category and a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``Grothendieck topology''} on the category. The notion of \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{``sheaf on a topological space''} above is a specialization of this more general notion.
 
+\subsubsection{Sheaves on more general sites}
+
+A \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} is a \CrefAndHyperrefIfExist{definition:category}{category} equipped with a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology}, which is a notion that generalizes the idea for an object to have ``covers''. One then has a general notion of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on a site; a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf on a topological space $X$} is then simply a sheaf on the category \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} equipped with \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{its canonical Grothendieck topology}. It can therefore be fruitful to gain intuition about sheaves in general by studying sheaves on topological spaces and to have the understanding that many notions discussed for sheaves on topological spaces are special cases of those for sheaves on general sites. We may at times state definitions and concepts in terms of sheaves on somewhat general sites (e.g. sites that are \CrefAndHyperrefIfExist{definition:small_site_locally_small_site_U_site_U_small_site_U_topology}{small}/are \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}/have a small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topologically generating family}), but it should be understood that they specialize to sheaves on topological spaces (valued in sets).
+
+A \CrefAndHyperrefIfExist{definition:topos}{(Grothendieck) topos} is a category that is \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent to} a category of sheaves valued in sets on some \CrefAndHyperrefIfExist{definition:big_site_on_the_category_of_schemes_over_a_scheme_and_small_site}{small site}, or equivalently a category that satisfies Giraud's axioms. The theory of topoi is quite robust and appears in many contexts. Moreover, all \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small categories} are basically \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategories} of \CrefAndHyperrefIfExist{definition:topos}{topoi} essentially due to \CrefAndHyperrefIfExist{corollary:yoneda_embedding_on_a_locally_small_category}{Yoneda embedding}.
+
+See \Cref{section:appendix_grothendieck_topologies}.
+
 \subsubsection{Sheafification of presheaves}
 
 \input{../_definitions/definition_categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category.tex}
-\input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space_valued_in_a_category_admitting_direct_colimits.tex}
+\input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex}
+
 
 \subsubsection{Sheaf of rings, ringed spaces, and sheaves of modules}
 
 \input{../_definitions/definition_ringed_space.tex}
 
-\TODO{define module sheaf on a topological space}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+\TODO{talk about how O-modules form a grothendieck abelian category }
+
+\TODO{do definitions of sheaf hom for topological spaces}
+\input{../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+\input{../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+
+% \TODO{define module sheaf on a topological space}
 % \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
 
-\TODO{define sheaf hom, sheaf tensor product}
+\subsubsection{Pullbacks and pushforwards}
+
+\input{../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex}
+
+\subsubsection{The definition of schemes}
+
+Now that we have defined the notion of sheaves on topological spaces, the definition of schemes is not too far off.
+
+\input{../_definitions/definition_affine_scheme.tex}
+\input{../_definitions/definition_locally_ringed_space_on_a_topological_space.tex}
+\input{../_definitions/definition_morphism_of_ringed_spaces.tex}
+\input{../_definitions/definition_morphism_of_locally_ringed_spaces.tex}
+\input{../_definitions/definition_scheme.tex}
+
+
+
+\subsubsection{Sheaf cohomology}
+
+\input{../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex}
+\input{../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+
+While the above notion of sheaf cohomology is for sheaves of abelian groups, there are sensible notions of zeroth and first sheaf cohomology for sheaves of not-necessarily abelian groups
+
+\input{../_definitions/definition_torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object.tex}
+\input{../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex}
+\input{../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex}
+
 
 
 \section{Left/right derived functors of right/left exact functors}
@@ -1340,7 +1387,45 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 
+\section{Assignment 4: Due Mar 6}
 
+
+\begin{problem}
+\begin{enumerate}
+    \item Compute $\Tor_n^{\Z}(\Z/a \bbZ, \Z/b \bbZ)$ (\Cref{definition:tor_functors_of_bimodules_of_rings}) for all $n \geq 0$ and integers $a,b \geq 1$.
+    
+    \item Compute $\Ext_{\Z}^n(\Q, \Z)$ (\Cref{definition:ext_functors_of_bimodules_of_rings}) for all $n \geq 0$. 
+    
+    \item Let $R = \Z[C_2]$ be the \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group ring} of the cyclic group of order 2, $C_2 = \{1, \sigma\}$. Compute $\Ext_R^n(\Z, \Z)$ for all $n \geq 0$, where $\Z$ is viewed as a trivial $R$-module (i.e., $\sigma \cdot 1 = 1$).
+    
+    \item Compute $\Tor_1^{\Z}(\Q, \Z/a \bbZ)$ for $a > 1$. 
+
+    % \item compute $\Ext_{\bbZ}(\bbQ/\bbZ, \bbZ)$ for all $n \geq 0$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Say that $a_1,b_1,a_2,b_2$ are integers such that $H_i(A_\bullet) = 0$ for $i \not\in [a_1,b_1]$ and $H_i(B_\bullet) = 0$ for $i \not \in [a_2,b_2]$. 
+    \begin{enumerate}
+        \item Show that $H_i(\Tot^\bigoplus (A_\bullet \otimes B_\bullet) ) = 0$ (\Cref{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}) (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) for $i \not \in [a_1+a_2, b_1+b_2+1]$. 
+        \item If $R$ is a field then show that $H_i(\Tot^\bigoplus (A_\bullet \otimes B_\bullet) ) = 0$ for $i \not \in [a_1+a_2, b_1+b_2]$. 
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and $x \in R$ be an element. Prove that $x$ is a \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{zero-divisor} in $R$ if and only if $\Tor_1^R(R/(x), R) \neq 0$.
+\end{problem}
+
+\begin{problem}
+    Let $R = k[x]/x^n$ for a field $k$ and where $n \geq 2$. Let $M = R/(x^a)$ and $N = R/(x^b)$ with $1 \leq a,b < n$. Compute \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext_R^i(M,N)$} for all $i \geq 0$. 
+    (Hint: trying to compute every $\Ext_R^i(M,N)$ for every $i$ using a resolution will probably be very annoying. Consider the following short exact sequence:
+    $$0 \to R/(x^{n-a}) \xrightarrow{\cdot x^a} R \to M \to 0.$$
+    )
+\end{problem}
+
+\begin{problem}
+    Compute $\Ext_\bbZ^1(\bbQ / \bbZ, \bbZ / n \bbZ)$.
+\end{problem}
 
 \appendix
 
@@ -1357,12 +1442,14 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 \input{../_definitions/definition_concrete_category_over_a_category.tex}
 
-\section{Grothendieck topologies}
+\section{Grothendieck topologies} \label{section:appendix_grothendieck_topologies}
 
 \input{../_definitions/definition_sieve_on_an_object_in_a_category.tex}
 \input{../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex}
 \input{../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex}
+\input{../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex}
 \input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex}
 \input{../_definitions/definition_site_of_opens_on_a_topological_space.tex}
 \input{../_definitions/definition_sheaf_on_a_site.tex}
 

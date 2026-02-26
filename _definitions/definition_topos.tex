@@ -1,22 +1,13 @@
-% \begin{definition}[Topos] \label{definition:topos}
-%     There are a multitude of notions of topos. Here are some that we consider; more notions may be added later.
-%     \begin{enumerate}
-%         \item A \hldef{(sheaf/Grothendieck) topos} is a \CrefAndHyperrefIfExist{definition:category}{category} \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the category of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of sets on some \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. That is, there exists a site $(C, J)$ such that the category is equivalent to $\operatorname{Sh}(C, J)$, the category of sheaves of sets on $(C, J)$.
-%         \item Let $U$ be a universe. A \hldef{$U$-(sheaf )topos} is a category equivalent to the category of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{$U$-sheaves} (valued in $U$-sets) \cite[Expos\'e IV D\'efinition 1.1]{SGA4_I}
-
-%         \item An \hldef{elementary topos} is a cateogry which has all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}, is cartesian closed, and has a subobject classifier \TODO{cartesian closed, subobject classifier}
-%     \end{enumerate}
-% \end{definition}
-
 \begin{definition}[Topos] \label{definition:topos}
     There are multiple notions of a topos depending on the context (geometric vs. logical).
     \begin{enumerate}
-        \item A \hldef{Grothendieck topos} (or \hldef{sheaf topos}) is a \CrefAndHyperrefIfExist{definition:category}{category} \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the category of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of sets on a \hldef{small} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. That is, there exists a small site $(\mathcal{C}, J)$ such that the category is equivalent to $\operatorname{Sh}(\mathcal{C}, J)$.
-        
-        \item Let $\mathscr{U}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe}. A \hldef{$\mathscr{U}$-topos} is a category equivalent to the category of sheaves of sets on a $\mathscr{U}$-small site $(\mathcal{C}, J)$, where the sheaves take values in the category of $\mathscr{U}$-sets ($\mathbf{Set}_{\mathscr{U}}$). \cite[Expos\'e IV D\'efinition 1.1]{SGA4_I}
+        \item A \hldef{Grothendieck topos} (or \hldef{sheaf topos}) is a \CrefAndHyperrefIfExist{definition:category}{category} \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the category of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of sets on a \CrefAndHyperrefIfExist{definition:small_site}{small site}. That is, there exists a small site $(\mathcal{C}, J)$ such that the category is equivalent to $\operatorname{Sh}(\mathcal{C}, J, \Sets)$\CrefIfExists{definition:category_of_sets}.
+
+        If a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe} $\mathscr{U}$ is available, then a \hldef{$\mathscr{U}$-(Grothendieck/sheaf )topos} is a category \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent to} the category of sheaves of \CrefAndHyperrefIfExist{definition:grothendieck_universe}{$\mathscr{U}$-sets} on a \CrefAndHyperrefIfExist{definition:small_site_locally_small_site_U_site_U_small_site_U_topology}{$\mathscr{U}$-small site} $(\mathcal{C}, J)$ \cite[Expos\'e IV D\'efinition 1.1]{SGA4_I}.
 
         \item An \hldef{elementary topos} is a category which has all finite \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits}, is \CrefAndHyperrefIfExist{definition:cartesian_closed_category}{cartesian closed}, and has a \CrefAndHyperrefIfExist{definition:subobject_classifier_in_a_category_with_a_final_object}{subobject classifier}.
     \end{enumerate}
+    Unless otherwise specified, a \hldef{topos} refers to a Grothendieck/sheaf topos. The plural for topos is \hldef{topoi}.
     \textit{Remark:} Every Grothendieck topos is an elementary topos, but the converse is not true (e.g., the category of finite sets is an elementary topos but not a Grothendieck topos).
 \end{definition}
 

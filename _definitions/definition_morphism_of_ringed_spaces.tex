@@ -7,8 +7,9 @@
         \item a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} $f: X \to Y$, and
         \item a \CrefAndHyperrefIfExist{definition:morphism_of_presheaves_on_a_topological_space}{morphism of} \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves of rings}
         $$f^\#: \mathcal{O}_Y \to f_* \mathcal{O}_X,$$
-        where $f_* \mathcal{O}_X$ is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image sheaf} of $\mathcal{O}_X$ on $Y$.
-        \TODO{state the adjunction between direct image and inverse image}
+        on $Y$ where $f_* \mathcal{O}_X$ is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image sheaf} of $\mathcal{O}_X$ on $Y$. Equivalently, due to the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} between \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} and \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_on_a_topological_space}{inverse image} (\Cref{theorem:adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map}), such a morphism can alternatively be given by a morphism of sheaves of rings 
+        $$f^* \mathcal{O}_Y \to \mathcal{O}_X$$
+        on $X$.
     \end{itemize}
     Equivalently, for each open set $V \subseteq Y$, there is a ring homomorphism
     $$f^\#(V): \mathcal{O}_Y(V) \to \mathcal{O}_X(f^{-1}(V)),$$

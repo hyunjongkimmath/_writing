@@ -1,12 +1,12 @@
 \begin{definition} {\cite[Expos\'e IV D\'efinition 3.1]{SGA4_I}, see \cite[Definition 2.1]{nlab:geometric_morphism}} \label{definition:morphism_of_topoi}
-    Let $E$ and $E'$ be \CrefAndHyperrefIfExist{definition:topos}{topoi} (in a universe $\scrU$, if such a universe is available). A \hldef{(continuous) morphism $f: E \to E'$} is a triple \hl{$f = (f_*, f^*, \varphi)$} consisting of functors
-    $$f_*: E \to E', \quad f^*: E' \to E$$
-    and an \hldef{adjunction isomorphism}
-    $$\varphi: \Hom_E(u^*(X'), Y) \xrightarrow{\sim} \Hom_{E'}(X', u_*(Y))$$
-    of \CrefAndHyperrefIfExist{definition:n_ary_functor}{bifunctors} in $X' \in \Ob E'$ and $Y \in \Ob E$ such that $f^*$ commutes with finite (projective) limits.
-    The functors $f_*$ and $f^*$ are respectively called the \hldef{direct image functor of $f$} and the \hldef{inverse image functor of $f$}.
+    Let $E$ and $E'$ be \CrefAndHyperrefIfExist{definition:topos}{topoi} (or \CrefAndHyperrefIfExist{definition:topos}{$\scrU$-topoi} if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{Grothendieck universe} is available). A \hldef{(continuous) morphism $f: E \to E'$ of topoi} is a triple \hl{$f = (f_*, f^*, \varphi)$} consisting of
+    \begin{enumerate}
+        \item A functor $f_*: E \to E'$, called the \hldef{direct image functor of $f$}, 
+        \item A functor $f^*: E' \to E$, called the \hldef{inverse image functor of $f$}, 
+        \item An \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $\varphi: f^* \dashv f_*$
+    \end{enumerate}
+    such that $f^*$ is \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{left exact}, i.e. commutes with finite limits. Note that the adjunction implies that $f^*$ is right exact as well.
 
     This notion of morphism of topoi is also referred to as \hldef{geometric morphism of topoi}.
-    
 
 \end{definition}

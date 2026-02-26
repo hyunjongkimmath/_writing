@@ -1,13 +1,13 @@
 
 \begin{definition}[Pullback (inverse image) of a sheaf] \label{definition:inverse_image_of_a_sheaf_on_a_topological_space}
-    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $\calD$ be a category  with a \CrefAndHyperrefIfExist{lemma:initial_or_final_object_in_a_category_that_is_also_in_a_full_subcategory_is_initial_or_final_in_the_subcategory}{terminal object}.
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $\calD$ be a category  with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object}.
     
     \begin{enumerate}
         \item  Let $\mathcal{G}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $Y$ valued in a $\calD$}.  
         The \hldef{pullback} or \hldef{inverse image presheaf} 
         \hl{$f^{-1} \mathcal{G}$} on $X$ is defined as the presheaf 
         $$U \mapsto \varinjlim_{V \supseteq f(U)} \mathcal{G}(V)$$
-        where $U$ ranges over open subsets of $X$ and the colimit is taken over all open subsets $V \subseteq Y$ containing $f(U)$.  
+        provided these \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist for all $U$, where $U$ ranges over open subsets of $X$ and the colimit is taken over all open subsets $V \subseteq Y$ containing $f(U)$.  
         \TextIfExists{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{This construction admits a natural isomorphism
         $$(f^{-1}\mathcal{G})_x \to \mathcal{G}_{f(x)}$$
         of \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks} for every $x \in X$.}  
@@ -28,4 +28,5 @@
         }
 
     \end{enumerate}
+    If $\calD$ is the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}, of groups, of abelian groups, of modules over rings, for example, then the relevant \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} needed to define the inverse image presheaves and the sheafifcation needed to define the inverse image sheaves exist.
 \end{definition}

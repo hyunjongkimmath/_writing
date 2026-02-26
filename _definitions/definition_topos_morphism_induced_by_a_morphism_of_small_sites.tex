@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:topos_morphism_induced_by_a_morphism_of_small_sites}
+    Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:small_site_locally_small_site_U_site_U_small_site_U_topology}{small sites}. let $u: \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{morphism of sites}.
+
+    The \hldef{morphism of topoi induced by $u$} is the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{topos morphism} $f: \Sh(\calD, K; \Sets) \to \Sh(\calC, J; \Sets)$ given by $f_* = u_*$ (\Cref{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}), which is defined by precomposition, and $f^* = a \circ \operatorname{Lan}_u$ where $\operatorname{Lan}_u$ is \CrefAndHyperrefIfExist{definition:left_kan_extension_of_presheaves_along_a_functor_of_sheaves_along_cocontinuous_functor_of_sites}{left Kan extension} and $a$ is \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification}. 
+
+    It turns out that that there is indeed an adjunction $f^* \dashv f_*$ \TODO{why; appraently, there is a presheaf level adjunction bewteen $Lan$ and $u^*$. } and that $f^*$ is indeed left exact \TODO{why}.
+
+    Therefore, whenever we talk about a property or a notion concerning a topos morphism, that property or notion may be sensibly extended to concern sites.
+
+    The notion of a topos morphism induced by a morphism of small sites should not be mistaken for the notion of a \CrefAndHyperrefIfExist{definition:topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites}{topos morphism induced by} a \CrefAndHyperrefIfExist{definition:cocontinuous_functor_of_sites}{cocontinuous} \CrefAndHyperrefIfExist{definition:flat_functor_between_categories}{flat functor} of small sites.
+
+    \TextIfExists{definition:topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor}{
+    See also \Cref{definition:topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor}.
+    }
+\end{definition}
+\begin{remark}
+    In fact, for every morphism $f: \calE \to \calF$ of topoi, there are some sites $(\calC, J)$ and $(\calD, K)$ (which may even be taken to be small) whose categories of sheaves of sets are $\calE$ and $\calF$ and there is some morphism $u: (\calD, K) \to (\calC, J)$ whose induced topos morphism is $f$. However, this assignment is not injective.
+\end{remark}

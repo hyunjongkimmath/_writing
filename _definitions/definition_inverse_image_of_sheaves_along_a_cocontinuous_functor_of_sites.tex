@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:inverse_image_of_sheaves_along_a_cocontinuous_functor_of_sites}
+Let $(\calC,J)$ and $(\calD,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} and let $u : \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:cocontinuous_functor_of_sites}{cocontinuous functor of sites}.  Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
+
+The \hldef{pullback/inverse image functor under $u$}
+$$\hlin{u^* : \operatorname{Sh}(\calD,K;\mathcal{A}) \to \operatorname{Sh}(\calC,J;\mathcal{A})}$$
+is defined as the restriction of the precomposition functor $u_* : \operatorname{PreSh}(\calD; \mathcal{A}) \to \operatorname{PreSh}(\calC; \mathcal{A})$ given by $P \mapsto P \circ u$. 
+
+Specifically, for any sheaf $\mathcal{H} \in \operatorname{Sh}(\calD,K;\mathcal{A})$, the \hldef{pullback sheaf} is:
+$$\hlin{(u^* \mathcal{H})(U) = \mathcal{H}(u(U)).}$$
+
+The inverse image $u^*$ of a cocontinuous functor of sites should not be confused with the notion of the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image of a continuous functor of sites}, as these two notions are different constructions, even when $u$ is both continuous and cocontinuous. On the other hand, note that the ``inverse image of a cocontinuous functor of sites'' and the ``\CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image of a continuous functor of sites}'' share the same constructions, i.e. by precomposition. More precisely, if $u: \calC \to \calD$ is a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous} and cocontinuous functor of sites, then the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image $u_*$ of $u$ as a continuous functor} and the inverse image $u^*$ of $u$ as a cocontinuous functor are exactly the same.
+
+By the properties of cocontinuous functors, if $\mathcal{H}$ is a sheaf on $(\calD, K)$, then $u^* \mathcal{H}$ is automatically a sheaf on $(\calC, J)$ without further sheafification. This functor $u^*$ serves as the right adjoint to the \CrefAndHyperrefIfExist{definition:left_kan_extension_of_presheaves_along_a_functor_of_sheaves_along_cocontinuous_functor_of_sites}{sheafified left Kan extension} $u_!$.
+\end{definition}

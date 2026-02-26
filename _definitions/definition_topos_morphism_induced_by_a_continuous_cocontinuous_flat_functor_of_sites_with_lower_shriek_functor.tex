@@ -1,0 +1,28 @@
+\begin{definition} \label{definition:topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor}
+    Let $u: \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} of \CrefAndHyperrefIfExist{definition:small_site_locally_small_site_U_site_U_small_site_U_topology}{small sites} that is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}, \CrefAndHyperrefIfExist{definition:cocontinuous_functor_of_sites}{cocontinuous}, and \CrefAndHyperrefIfExist{definition:flat_functor_between_categories}{flat}.
+    The \hldef{(essential) morphism of topoi induced by $u$} usually refers to the \CrefAndHyperrefIfExist{definition:topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites}{morphism of topoi induced by $u$ as a} \CrefAndHyperrefIfExist{definition:cocontinuous_functor_of_sites}{cocontinuous} and \CrefAndHyperrefIfExist{definition:flat_functor_between_categories}{flat functor}, and not the \CrefAndHyperrefIfExist{definition:topos_morphism_induced_by_a_morphism_of_small_sites}{morphism of topoi induced by $u$ as a} morphism of sites. \TODO{is morphism of sites = continuous + flat functor?}
+
+    More explicitly, this morphism of topoi is the morphism 
+    $$f : \Sh(\calC, J) \to \Sh(\calD, K)$$
+    whose
+    \begin{itemize}
+        \item Inverse image $f^*$ is precomposition/\CrefAndHyperrefIfExist{definition:inverse_image_of_sheaves_along_a_cocontinuous_functor_of_sites}{inverse image} $u^*$ of $u$ as a cocontinuous functor, not as a continuous functor
+        \item Direct image $f_*$ is right adjoint to $f^*$.
+    \end{itemize}
+    Furthermore, since $u$ is continuous, $f^*$ has a left adjoint denoted by \hl{$f_!$} and called by names such as the \hldef{lower shriek of $f$}, the \hldef{exceptional direct image of $f$}, or the \hldef{extension by zero of $f$}, and which is \CrefAndHyperref{definition:topos_morphism_induced_by_a_morphism_of_small_sites}{given by} $f_! = a \circ \operatorname{Lan}_u$.  
+
+    To summarize, there are adjunctions $f_! \dashv f^* \dashv f_*$.
+
+    Nevertheless, one can talk about the morphism of topoi in the other direct --- regarding $u$ as a continuous and flat functor, one has a topos morphism 
+    $$g : \operatorname{Sh}(\calD, K) \to \operatorname{Sh}(\calC, J)$$
+    in the other direction whose 
+    \begin{enumerate}
+        \item Inverse image $g^*$ is given by $a \circ \operatorname{Lan}_u$
+        \item Direct image $g_*$ is given by precomposition/\CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} $u_*$ of $u$ as a continuous functor, not as a cocontinuous functor.
+    \end{enumerate}
+    Furthermore, since $u$ is cocontinuous, $g_*$ has a right adjoint, denoted by \hl{$g^!$} and called by names such as the \hldef{upper shriek of $g$} or the \hldef{exceptional inverse image of $g$} . 
+
+    To summarize, there are adjunctions $g^* \dashv g_* \dashv g^!$.
+
+    Moreover, in the above notations, $f_! = g^*$, $f^* = g_*$, and $f_* = g^!$.
+\end{definition}

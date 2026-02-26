@@ -937,8 +937,18 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
     % Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}. 
     Let $S$ be a \CrefAndHyperrefIfExist{definition:topos}{topos}.
     Write \hl{$\pi: \mathrm{Pro}_\bbN(S) \to S$} (\Cref{definition:category_of_inverse_direct_sequences_of_objects_in_a_category}) for the \CrefAndHyperrefIfExist{definition:morphism_of_topoi}{topos morphism} given by $\pi_* M_\bullet = \varprojlim M_\bullet$ and $\pi^* M = \{M, \id\}_{n \geq 1}$, i.e. the system consisting of the objects $M$ at each level and the identity maps between them. For each $n > 0$, further write \hl{$i_n: S \to S^N$} for the topos morphism satisfying $i_n^* M_\bullet = M_n$. 
-
 \end{context}
+
+\begin{context}[{\cite[Section 1]{ekedahl_af}}] \label{context:ekedahl_af_nice_resolutions_exist_on_R_mod_m_n} 
+    Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences} and \Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}. 
+
+    Assume for every $n$ there exists, locally on $S$, a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{resolution} $F_n^\bullet \to R/m^n$ of $R/m^n$ by a complex of right $R$-modules which is finitely generated free in each degree and such that modulo \CrefAndHyperrefIfExist{definition:essentially_zero_inverse_sequence_essentially_bounded_complex_of_sheaves_of_abelian_groups_on_a_site}{essentially zero systems} $\pi^* F_n^\bullet \to \pi^*(R/m^n)$ is a resolution.
+
+    For example, this is satisfied when $R$ is the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant} sheaf of a noetherian, commutative, and local ring whose maximal ideal is $m$. Moreover, if this assumption is true of $(R,m)$, then it is also true of $(R[G], m[G])$ where $G$ is a group object in $S$.
+
+    This assumption is assumed throughout \cite{ekedahl_af}
+\end{context}
+
 
 \input{../_definitions/definition_ringed_site_structure_on_category_of_inverse_sequences_of_a_site.tex}
 
@@ -973,7 +983,7 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 \input{../_definitions/definition_ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism.tex}
 
 \begin{proposition}[{\cite[Proposition 2.2]{ekedahl_af}}] 
-    Assume \Cref{context:ekedahl_af_superscript_for_ekedahls_categories}.
+        Assume \Cref{context:ekedahl_af_ringed_topos_category_of_inverse_sequences}, \Cref{context:ekedahl_af_topos_morphisms_to_and_from_Pro_N_S_to_S}, \Cref{context:ekedahl_af_superscript_for_ekedahls_categories}, and \Cref{context:ekedahl_af_nice_resolutions_exist_on_R_mod_m_n} 
     \begin{enumerate}
         \item $M$ is an \CrefAndHyperrefIfExist{definition:ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism}{$R$-complex} if and only if $\tau(\widehat{M}) \to \tau(M)$ (\Cref{notation:ekedahl_af_tau_M_either_pro_object_of_truncations_or_M_depending_on_whether_ekedahls_condition_A_holds}) (\Cref{definition:ekedahls_normalisation_functor_on_essentially_bounded_complexes_of_inverse_systems_on_ringed_topoi}) is \CrefAndHyperrefIfExist{definition:ekedahl_af_R_comp_neg_norm_objs_of_the_der_cat_of_modules_over_ring_of_cat_of_inv_seqs_essentially_an_isomorphism}{essentially an isomorphism}.
 
@@ -1118,6 +1128,7 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 \input{../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex}
 
 \input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex}
 
 
 \input{../_definitions/definition_category_of_objects_over_under_a_fixed_object_in_a_category.tex}

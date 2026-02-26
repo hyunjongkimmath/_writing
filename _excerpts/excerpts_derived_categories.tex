@@ -194,13 +194,15 @@ The following subsection mostly takes the point of view of \cite[Expos\'e XVII, 
 \input{../_concepts/theorem_total_derived_tensor_hom_adjunction_for_modules_on_a_ringed_site.tex}
 
 \input{../_definitions/definition_morphism_of_ringed_sites.tex}
-\input{../_definitions/definition_total_right_derived_direct_image_functor_for_morphism_of_ringed_sites.tex}
+\input{../_definitions/definition_total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi.tex}
 \input{../_definitions/definition_total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites.tex}
 \begin{theorem} \label{theorem:total_left_derived_inverse_image_total_right_derived_direct_image_adjunction_for_morphism_of_ringed_sites}
-    Let $(\calC, J, \calO_\calC)$, $(\calD, K, \calO_\calD)$ be a \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small} \CrefAndHyperrefIfExist{definition:ringed_site}{ringed sites} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{with pretopologies}. \TODO{the ``pretopology'' part should be loosened} Let $f: (\calC, J, \calO_\calC) \to (\calD, K, \calO_\calD)$ be a \CrefAndHyperref{definition:morphism_of_ringed_sites}{morphism of ringed sites}.
+    Let $f: (\calC, \calO_\calC) \to (\calD, \calO_\calD)$ be a \CrefAndHyperrefIfExist{definition:morphism_of_ringed_topoi}{morphism of ringed topoi}.
+    % Let $(\calC, J, \calO_\calC)$, $(\calD, K, \calO_\calD)$ be a \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small} \CrefAndHyperrefIfExist{definition:ringed_site}{ringed sites} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{with pretopologies}. \TODO{the ``pretopology'' part should be loosened} Let $f: (\calC, J, \calO_\calC) \to (\calD, K, \calO_\calD)$ be a \CrefAndHyperref{definition:morphism_of_ringed_sites}{morphism of ringed sites}.
 
-    The functors \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_sites}{$Rf_*$} and \CrefAndHyperrefIfExist{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{$Lf^*$} are adjoint, i.e. for all $L \in D(\calO_\calC)$ and $M \in D(\calO_\calD)$, we have natural isomorphisms
+    The functors \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi}{$Rf_*$} and \CrefAndHyperrefIfExist{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{$Lf^*$} are adjoint, i.e. for all $L \in D(\calO_\calC)$ and $M \in D(\calO_\calD)$, we have natural isomorphisms
     $$\Hom_{D(\calO_\calC)}(Lf^* M, L) \cong \Hom_{D(\calO_\calD)}(M, Rf_* L)$$
+    (\Cref{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi}) (\Cref{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites})
 \end{theorem}
 
 \TODO{total derived sheaf cohomology}
