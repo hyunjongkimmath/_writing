@@ -1,0 +1,26 @@
+\begin{definition}[{\cite[Definition II.2.1]{kiehl_weissauer_wcps}}] \label{definition:t_structure_on_a_triangulated_category}
+    Let $D$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category}.
+
+A \hl{$t$-structure on $D$} consists of two \CrefAndHyperrefIfExist{definition:strictly_full_subcategory_of_a_category}{strictly full subcategories}
+\footnote{A \hldef{strictly full subcategory of a category} is a subcategory that is full and also closed under isomorphism.}
+\hl{$\Dleqzero$} and \hl{$\Dgeqzero$} of $D$ such that, writing
+
+\hlalign{
+\begin{align*}
+    \Dleqn &= \Dleqzero[-n] \\ 
+    \Dgeqn &= \Dgeqzero[-n]
+\end{align*}
+}
+\CrefIfExists{definition:tensor_triangulated_category}
+
+we have 
+\begin{enumerate}
+    \item $\Hom(\Dleqzero, \Dgeqn[1]) = 0$,
+    \item $\Dleqzero \subset \Dleqn[1]$ and $\Dgeqn[1] \subset \Dgeqzero$, and \label{item:inclusions_of_t_structure_categories}
+    \item for every object $E$ in $D$ there exists a \CrefAndHyperrefIfExist{definition:triangulated_category}{distinguished triangle} $(A,E,B)$ with $A \in \Dleqzero$ and $B \in \Dgeqn[1]$. 
+\end{enumerate}
+
+A \hldef{$t$-category} is a triangulated category equipped with a $t$-structure.
+
+Given a $t$-structure $t$ on $D$, the \hldef{core of $t$} is the \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} \hl{$\Core(D) = \Core_t(D) \coloneq \Dleqzero \cap \Dgeqzero$}  of $D$. It is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} (\Cref{theorem:core_of_a_triangulated_category_with_a_t_structure_is_abelian_category}).
+\end{definition}

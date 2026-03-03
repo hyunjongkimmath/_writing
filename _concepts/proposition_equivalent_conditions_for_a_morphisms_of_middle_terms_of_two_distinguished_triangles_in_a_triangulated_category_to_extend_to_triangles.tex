@@ -1,0 +1,18 @@
+\begin{proposition}[{\cite[Proposition 1.1.9.]{beilinson_berstein_deligne_atlesI}}] \label{proposition:equivalent_conditions_for_a_morphisms_of_middle_terms_of_two_distinguished_triangles_in_a_triangulated_category_to_extend_to_triangles}
+Let $\mathcal{T}$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category}. Let $(X, Y, Z, u, v, d)$ and $(X', Y', Z', u', v', d')$ be two \CrefAndHyperrefIfExist{definition:triangulated_category}{distinguished triangles} in $\mathcal{T}$. Let $g: Y \to Y'$ be a morphism in $\mathcal{T}$. Consider the following commutative diagram:
+\begin{center}
+\begin{tikzcd}
+X \arrow[r, "u"] \arrow[d, "f", dashed] & Y \arrow[r, "v"] \arrow[d, "g"] & Z \arrow[r, "d"] \arrow[d, "h", dashed] & X[1] \arrow[d, "{f[1]}", dashed] \\
+X' \arrow[r, "u'"] & Y' \arrow[r, "v'"] & Z' \arrow[r, "d'"] & X'[1]
+\end{tikzcd}
+\end{center}
+The following conditions are equivalent:
+\begin{itemize}
+    \item[(a)] The composition $v' \circ g \circ u = 0$.
+    \item[(b)] There exists a morphism $f: X \to X'$ such that $g \circ u = u' \circ f$.
+    \item[(b')] There exists a morphism $h: Z \to Z'$ such that $h \circ v = v' \circ g$.
+    \TODO{morphism of distinguished triangles}
+    \item[(c)] There exists a morphism of triangles $(f, g, h)$ from $(X, Y, Z)$ to $(X', Y', Z')$.
+\end{itemize}
+If these conditions are verified, and if $\text{Hom}_{\mathcal{T}}(X, Z'[-1]) = 0$, the morphism $f$ (resp. $h$) of (b) (resp. (b')) is unique.
+\end{proposition}

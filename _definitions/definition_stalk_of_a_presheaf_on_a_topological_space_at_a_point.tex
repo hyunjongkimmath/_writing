@@ -3,11 +3,15 @@
     Let $X$ be a topological space, and let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:category}{category}
     % admitting \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct colimits} (e.g. the category of sets, groups, abelian groups, modules over rings, or vector spaces over fields).
     Let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $X$ valued in $\calD$}.  
-    For a point $x \in X$, the \hldef{stalk of $\mathcal{F}$} at $x$, denoted \hl{$\mathcal{F}_x$}, is defined as the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit}
+    For a point $x \in X$, the \hldef{stalk of $\mathcal{F}$ at $x$}, denoted \hl{$\mathcal{F}_x$}, is defined as the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered direct limit}
     $$\mathcal{F}_x := \varinjlim_{x \in U} \mathcal{F}(U),$$
     where the limit ranges over all open neighborhoods $U$ of $x$ in $X$ ordered by inclusion, assuming that such a direct limit exists. 
 
-    If $\calD$ is some kind of category of sets (e.g. $\calD = \Sets$, $\mathbf{Grps}$, $\mathbf{Rings}$), then an element of $\mathcal{F}_x$ is called a \hldef{germ of a section at $x$}. Concretely, a germ at $x$ is given by a pair $(U,s)$ with $U$ an open neighborhood of $x$ and $s \in \mathcal{F}(U)$, modulo the equivalence relation: $(U,s) \sim (V,t)$ if there exists an open neighborhood $W \subseteq U \cap V$ of $x$ such that $s|_W = t|_W$.
+    If $\calD$ is some kind of category of sets (e.g. $\calD = \Sets$, $\mathbf{Grps}$, $\mathbf{Rings}$), then an element of $\mathcal{F}_x$ is called a \hldef{germ of a section at $x$}. Concretely, a germ at $x$ is given by a pair $(U,s)$ with $U$ an open neighborhood of $x$ and $s \in \mathcal{F}(U)$, modulo the equivalence relation: $(U,s) \sim (V,t)$ if there exists an open neighborhood $W \subseteq U \cap V$ of $x$ such that $s|_W = t|_W$, see also \Cref{definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex}.
 
-    If $\mathcal{F}$ is a sheaf of groups, rings, or modules, then each stalk $\mathcal{F}_x$ inherits some corresponding algebraic structure.
+    If $\mathcal{F}$ is a presheaf of groups, rings, or modules, then each stalk $\mathcal{F}_x$ inherits some corresponding algebraic structure. More generally, if $\calD$ is so that $\calF_x$ exists for every presheaf $\calF \in \PreShv(X, \calD)$ (resp. every sheaf $\calF \in \Sh(X, \calD)$), then $\calF \mapsto \calF_x$ is a functor $\PreShv(X, \calD) \to \calD$ (resp. $\Sh(X, \calD) \to \calD$).
+
+    \TextIfExists{definition:stalk_of_an_object_of_a_topos_at_a_point_of_the_topos}{
+        This notion of stalk is a specialization of the more general notion of a stalk of an object of a \CrefAndHyperrefIfExist{definition:topos}{topos} at a point of said topos (\Cref{definition:stalk_of_an_object_of_a_topos_at_a_point_of_the_topos})
+    }
 \end{definition}

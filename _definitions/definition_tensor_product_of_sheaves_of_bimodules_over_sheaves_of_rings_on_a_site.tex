@@ -1,0 +1,35 @@
+\begin{definition}[Tensor product of sheaves of bimodules] \label{definition:tensor_product_of_sheaves_of_bimodules_over_sheaves_of_rings_on_a_site}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. Let $\mathcal{R}, \mathcal{S}, \mathcal{T}$ be (not necessarily commutative) \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of \CrefAndHyperrefIfExist{definition:ring}{rings} on $\mathcal{C}$. Let $\mathcal{M}$ be an \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$(\mathcal{R}, \mathcal{S})$-bimodule}, and let $\mathcal{N}$ be an $(\mathcal{S}, \mathcal{T})$-bimodule.
+
+\TODO{Consolidate with \CrefIfExists{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}}
+
+\begin{enumerate}
+    \item Define the \hldef{presheaf tensor product}
+    \hl{$\mathcal{M} \otimes_{p,\mathcal{S}} \mathcal{N}$} to be the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} of abelian groups given by
+    $$ U \longmapsto \mathcal{M}(U) \otimes_{\mathcal{S}(U)} \mathcal{N}(U).$$
+    \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} As a presheaf, it has the structure of a $\calR-\calT$-bimodule \TODO{bimodule for a presheaf}.
+
+    \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+    $$\Shv(\calC, \Sets) \to \PreShv(\calC, \Sets)$$
+    exists.  The \hldef{tensor product of sheaves $\mathcal{M}$ and $\mathcal{N}$}, denoted \hl{$\mathcal{M} \otimes_{\mathcal{S}} \mathcal{N}$}, is defined to be the \CrefAndHyperrefIfExist{definition:sheafification}{sheafification} of the presheaf $\mathcal{M} \otimes_{p,\mathcal{S}} \mathcal{N}$. This tensor product becomes naturally an $(\mathcal{R}, \mathcal{T})$-bimodule.
+
+\end{enumerate}
+
+The left $\mathcal{R}$-action and right $\mathcal{T}$-action are induced by the presheaf actions defined section-wise by
+\begin{align*}
+r \cdot (m \otimes n) &= (r \cdot m) \otimes n, \\
+(m \otimes n) \cdot t &= m \otimes (n \cdot t),
+\end{align*}
+for all $r \in \mathcal{R}(U)$, $t \in \mathcal{T}(U)$, $m \in \mathcal{M}(U)$, and $n \in \mathcal{N}(U)$. The sheafification functor preserves these actions, yielding the required bimodule structure on $\mathcal{M} \otimes_{\mathcal{S}} \mathcal{N}$.
+
+
+Inductively, given sheaves of rings $\mathcal{R}_0, \ldots, \mathcal{R}_k$ and $(\mathcal{R}_{i-1}, \mathcal{R}_i)$-bimodules $\mathcal{M}_i$ for $i = 1, \ldots, k$, we may speak of the tensor product
+$$ \hlin{\mathcal{M}_0 \otimes_{\mathcal{R}_1} \mathcal{M}_1 \otimes_{\mathcal{R}_2} \cdots \otimes_{\mathcal{R}_{k-1}} \mathcal{M}_k. }$$
+Tensor products of sheaves are associative up to canonical isomorphism\TODO{}, allowing us to omit parentheses. This iterated tensor product carries a natural $(\mathcal{R}_0, \mathcal{R}_k)$-bimodule structure.
+
+\TextIfExists{definition:n_ary_additive_functor_between_additive_categories}{In general, the assignment $(\mathcal{M}_0, \ldots, \mathcal{M}_k) \mapsto \mathcal{M}_0 \otimes_{\mathcal{R}_1} \cdots \otimes_{\mathcal{R}_{k-1}} \mathcal{M}_k$ defines a \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{$(k+1)$-ary additive functor}
+$$ {}_{\mathcal{R}_0}\mathbf{Mod}_{\mathcal{R}_1} \times \cdots \times {}_{\mathcal{R}_{k-1}}\mathbf{Mod}_{\mathcal{R}_k} \to {}_{\mathcal{R}_0} \mathbf{Mod}_{\mathcal{R}_k} $$
+()\Cref{proposition:examples_of_abelian_categories}).}
+
+Given a sheaf of rings $\mathcal{R}$ and a two-sided $\mathcal{R}$-module $\mathcal{M}$, we may also speak of the \hldef{$n$-fold tensor product} \hl{$\mathcal{M}^{\otimes n} = \mathcal{M}^{\otimes_{\mathcal{R}} n}$}.
+\end{definition}

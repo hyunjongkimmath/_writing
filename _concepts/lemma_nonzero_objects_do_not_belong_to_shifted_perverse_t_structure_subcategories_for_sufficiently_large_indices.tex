@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:nonzero_objects_do_not_belong_to_shifted_perverse_t_structure_subcategories_for_sufficiently_large_indices}
+    \TODO{}
+    For nonzero $B \in \Dbc(X)$, 
+    \begin{enumerate}
+        \item $B \notin \pDgeqn(X)$ for all $n \ll 0$.
+        \item $B \notin \pDleqn(X)$ for all $n \gg 0$. 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    The condition $B \in \pDgeqn(X)$ is equivalent to the statement 
+    $$\dim \Supp(\scrH^{-i} B) \leq i+n \quad \text{for all } i \in \bbZ$$
+    by Lemma \ref{lemma:shifted_semiperverse_definition}. %Since $B \in \Dbc(X)$, only finitely many of the $\scrH^i B$ are nonzero and
+    Since $B$ is assumed to be nonzero, at least one of the $\scrH^{-i} B$ must be nonzero; the inequality $\dim \Supp(\scrH^{-i} B) \leq i+n$ cannot hold whenever $n < -i$. Therefore, $B$ cannot be an object of $\pDgeqn(X)$ for any such $n$. Similarly, $B \notin \pDleqn(X)$ for all $n \gg 0$ as well.
+\end{proof}

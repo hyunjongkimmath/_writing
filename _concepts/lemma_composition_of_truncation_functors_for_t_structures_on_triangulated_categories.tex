@@ -1,0 +1,20 @@
+\begin{lemma} \label{lemma:composition_of_truncation_functors_for_t_structures_on_triangulated_categories}
+        Let $D$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} and let $(\Dleqzero, \Dgeqzero)$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$.
+
+    We have 
+    \begin{align*}
+    \tauleqn[m] \circ \tauleqn &= \tauleqn[m] \quad \text{for} \quad m \leq n \\
+    \taugeqn[m] \circ \taugeqn &= \tauleqn[n] \quad \text{for} \quad m \leq n.
+    \end{align*}
+\end{lemma}
+
+\begin{proof}
+    We prove the first statement. By Yoneda's lemma, it suffices to show that there are natural isomorphisms
+    \begin{align*}
+    \Hom_{\Dleqn[m]}(A, \tauleqn[m] \tauleqn B) \cong \Hom_{\Dleqn[m]}(A, \tauleqn[m] B)
+    \end{align*}
+    for all objects $A \in \Dleqn[m]$ and $B \in D$. By \Cref{proposition:adjunction_of_inclusion_functors_of_t_structures_on_triangulated_categories}, the left hand side is isomorphic to $\Hom_{D}(A, \tauleqn B)$. As $A \in \Dleqn[m] \subset \Dleqn$, $B \in \Dleqn$, and $\Dleqn$ is a full subcategory of $D$, the Hom-group $\Hom_{D}(A, \tauleqn B)$ is identifiable with the Hom-group $\Hom_{\Dleqn}(A, \tauleqn B)$. In turn, this Hom-group is identifiable with $\Hom_{D}(A, B)$, which is identifiable with $\Hom_{\Dleqn[m]}(A, \tauleqn[m] B)$ as desired by the adjunction of $\tauleqn$. 
+    
+    \begin{align*}
+    \end{align*}
+\end{proof}

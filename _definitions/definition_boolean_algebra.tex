@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:boolean_algebra}
+A \hldef{Boolean algebra} is a set $B$ equipped with two binary operations \hl{$\lor$} (\hldef{join}) and \hl{$\land$} (\hldef{meet}), a unary operation \hl{$\neg$} (\hldef{complement}), and two distinct elements $0$ (\hldef{bottom}) and $1$ (\hldef{top}), such that for all $x, y, z \in B$:
+\begin{itemize}
+    \item $x \lor (y \lor z) = (x \lor y) \lor z$ and $x \land (y \land z) = (x \land \land z)$ (associativity).
+    \item $x \lor y = y \lor x$ and $x \land y = y \land x$ (commutativity).
+    \item $x \land (x \lor y) = x$ and $x \lor (x \land y) = x$ (absorption).
+    \item $x \land (y \lor z) = (x \land y) \lor (x \land z)$ and $x \lor (y \land z) = (x \lor y) \land (x \lor z)$ (distributivity).
+    \item $x \lor (\neg x) = 1$ and $x \land (\neg x) = 0$ (complements).
+\end{itemize}
+\end{definition}

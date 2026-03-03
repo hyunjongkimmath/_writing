@@ -1,0 +1,21 @@
+\begin{lemma}[Compatibility, see {\cite[Lemma II.2.4]{kiehl_weissauer_wcps}}] \label{lemma:compatibility_of_t_structure_on_triangulated_category_with_truncation_functor}
+    Let $D$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} and let $(\Dleqzero, \Dgeqzero)$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$.
+
+    We have 
+    \begin{align*}
+        \taugeqn[m](\Dleqn) &\subset \Dleqn \\
+        \tauleqn[m](\Dgeqn) &\subset \Dgeqn \\
+    \end{align*}
+    (\Cref{proposition:adjunction_of_inclusion_functors_of_t_structures_on_triangulated_categories})
+    for all $m,n \in \bbZ$. We have 
+    $$\taugeqn[m](\Dleqn) = \tauleqn(\Dgeqn[m]) = 0$$
+    for $m > n$.
+\end{lemma}
+
+\begin{proof}
+    We prove the first inclusion. For $n < m$ and $X \in \Dleqn$ the unit map $X \to \taugeqn[m] X$ of the adjunction for $\taugeqn[m]$ is zero as a consequence of the axioms of a $t$-structure. The adjunction then implies that $\Hom(\taugeqn[m] X, \taugeqn[m] X) = 0$, so $\taugeqn[m] X = 0$. 
+
+    Now suppose that $m \leq n$. If $X \in \Dleqn$, then $\tauleqn[m-1](X) \in \Dleqn[m-1] \subset \Dleqn[n+1]$. In the distinguished triangle $(\tauleqn[m-1] X , X , \taugeqn[m] X)$ and applying the extensions Lemma \ref{lemma:extension_of_objects_in_t_structures_for_triangulated_categories_are_in_t_structures}, we have that $\taugeqn[m] X \in \Dleqn$.
+
+    Similarly, the second incluskion holds. Note that we already proved the vanishing.
+\end{proof}

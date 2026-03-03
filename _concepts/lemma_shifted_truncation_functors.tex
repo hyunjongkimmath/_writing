@@ -1,0 +1,26 @@
+\begin{lemma} \label{lemma:shifted_truncation_functors}
+
+    Let $D$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{triangulated category} and let $(\Dleqzero, \Dgeqzero)$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$.
+
+    We have
+    \begin{align*}
+    \tauleqn[n+1](X) &= (\tauleqn(X[1]))[-1] \\
+    \taugeqn[n+1](X) &= (\taugeqn (X[1]))[-1].
+    \end{align*}
+
+    Equivalently, 
+    \begin{align*}
+    \tauleqn(X) &= (\tauleqzero(X[n]))[-n] \\
+    \taugeqn(X) &= (\taugeqzero(X[n]))[-n].
+    \end{align*}
+    for all integer $n$.
+\end{lemma}
+
+\begin{proof}
+Note that for $n = 0$, these are trivially true. Inductively suppose that these are true for $n = m$. We then have 
+\begin{align*}
+    \tauleqn[m+1](X) &= \tauleqn[m](X[1])[-1] = (\tauleqzero(X[n+1])[-n])[-1] = \tauleqzero(X[n+1])[-n-1] \\
+    \taugeqn[m+1](X) &= \taugeqn[m](X[1])[-1] = (\taugeqzero(X[n+1])[-n])[-1] = \taugeqzero(X[n+1])[-n-1]
+\end{align*}
+and hence the desired equalities holds for all $n \geq 0$ by induction. Similar steps demonstrate the desired equalities for $n \leq 0$ as well. 
+\end{proof}

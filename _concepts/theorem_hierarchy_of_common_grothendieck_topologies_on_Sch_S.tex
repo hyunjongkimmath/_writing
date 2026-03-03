@@ -1,0 +1,18 @@
+\begin{theorem}[Hierarchy of Grothendieck topologies on $\mathrm{Sch}/S$] \label{theorem:hierarchy_of_common_grothendieck_topologies_on_Sch_S}
+    Let $S$ be a scheme and consider the following \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topologies} on the category \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$\mathrm{Sch}/S$ of schemes over $S$}:
+    \[
+    \mathrm{Zar} \quad \text{(Zariski)}, \quad \mathrm{Nis} \quad \text{(Nisnevich)}, \quad \mathrm{\acute{E}t} \quad \text{(étale)}, \quad \mathrm{fppf}, \quad \mathrm{fpqc}.
+    \]
+    (\Cref{definition:big_zariski_site_of_a_scheme}, \Cref{definition:nisnevich_topology_on_a_noetherian_scheme_of_finite_dimension}, \Cref{definition:big_etale_site_of_a_scheme}, \Cref{definition:big_fppf_site_of_a_scheme}, \Cref{definition:big_fpqc_site_of_a_scheme})
+
+    Then these topologies satisfy the chain of refinements (fineness) relations
+    \[
+    \mathrm{Zar} \; \prec \; \mathrm{Nis} \; \prec \; \mathrm{\acute{E}t} \; \prec \; \mathrm{fppf} \; \prec \; \mathrm{fpqc},
+    \]
+    meaning that each topology is strictly \CrefAndHyperrefIfExist{definition:coarser_and_finer_grothendieck_topologies}{finer} than the previous one, i.e., every covering in a coarser topology is a covering in any finer topology.
+
+    More explicitly, for every object $X \in \mathrm{Sch}/S$,
+    $$
+    \mathrm{Cov}_{\mathrm{Zar}}(X) \subsetneq \mathrm{Cov}_{\mathrm{Nis}}(X) \subsetneq \mathrm{Cov}_{\mathrm{\acute{E}t}}(X) \subsetneq \mathrm{Cov}_{\mathrm{fppf}}(X) \subsetneq \mathrm{Cov}_{\mathrm{fpqc}}(X).
+    $$
+\end{theorem}

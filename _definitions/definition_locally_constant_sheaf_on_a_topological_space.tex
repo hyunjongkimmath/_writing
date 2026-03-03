@@ -1,5 +1,15 @@
-\begin{definition}[Locally Constant Sheaf]
-Let \( X \) be a topological space. A sheaf \( \mathcal{F} \) of abelian groups on \( X \) is said to be \hldef{locally constant} if it is locally constant with respect to the topological site associated to the topological space. In other words, $\mathcal{F}$ is locally constant if for every point \( x \in X \), there exists an open neighborhood \( U \subseteq X \) of \( x \) such that the restriction \( \mathcal{F}|_U \) is isomorphic to a constant sheaf on \( U \).
+\begin{definition}[Locally Constant Sheaf] \label{definition:locally_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
+Let \( X \) be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
+    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+exists.
+
+A \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} \( \mathcal{F} \) on \( X \) valued in $\calA$ is said to be \hldef{locally constant} if for every point \( x \in X \), there exists an open neighborhood \( U \subseteq X \) of \( x \) such that the \CrefAndHyperrefIfExist{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}{restriction} \( \mathcal{F}|_U \) is isomorphic to a \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on \( U \) valued in $\calA$.
+
+\TextIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification}{
+    In other words, the sheaf $\calF$ is locally constant if it is if it is locally constant in the sense of \Cref{definition:locally_constant_sheaf_on_a_site_with_sheafification} with respect to the \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{site associated to the $X$}.
+}
+
+% if it is locally constant with respect to the topological site associated to the topological space. In other words, $\mathcal{F}$ is locally constant if for every point \( x \in X \), there exists an open neighborhood \( U \subseteq X \) of \( x \) such that the \CrefAndHyperrefIfExist{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}{restriction} \( \mathcal{F}|_U \) is isomorphic to a constant sheaf on \( U \).
 
 Accordingly, $\mathcal{F}$ is \hldef{of finite rank} if for each such open neighborhood \( U \), the constant sheaf \( \mathcal{F}|_U \) is isomorphic to the constant sheaf associated to a finite-dimensional vector space (or finitely generated free abelian group) over the base ring.
 \TextIfExists{definition:locally_constant_sheaf_on_a_site_with_sheafification}{Equivalently, a locally constant sheaf on a topological space is a \CrefAndHyperrefIfExist{locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaf} for the natural site of the topological space.}

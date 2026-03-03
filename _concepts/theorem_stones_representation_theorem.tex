@@ -1,0 +1,9 @@
+\begin{theorem}[Stone's representation theorem]\label{theorem:stones_representation_theorem}
+Stone's representation theorem states that there is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{contravariant} \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories} (a duality) between the \CrefAndHyperrefIfExist{definition:category_of_boolean_algebras}{category of Boolean algebras} $\mathsf{Bool}$ and the \CrefAndHyperrefIfExist{definition:category_of_stone_spaces}{category of Stone spaces} $\mathsf{Stone}$. This equivalence is realized by the following pair of contravariant functors:
+\begin{itemize}
+    \item $\mathcal{S}: \mathsf{Bool} \to \mathsf{Stone}$, which maps a \CrefAndHyperrefIfExist{definition:boolean_algebra}{Boolean algebra} $B$ to its Stone space $Spec(B)$ of \CrefAndHyperrefIfExist{definition:filter_and_ultrafilter_on_a_boolean_algebra}{ultrafilters}.
+    \item $\mathcal{C}: \mathsf{Stone} \to \mathsf{Bool}$, which maps a Stone space $X$ to its Boolean algebra of \CrefAndHyperrefIfExist{definition:clopen_subset_of_a_topological_space}{clopen subsets} $\mathsf{Clopen}(X)$.
+\end{itemize}
+For any Boolean algebra $B$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} $B \cong \mathcal{C}(\mathcal{S}(B))$, and for any Stone space $X$, there is a natural \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} $X \cong \mathcal{S}(\mathcal{C}(X))$.
+
+\end{theorem}

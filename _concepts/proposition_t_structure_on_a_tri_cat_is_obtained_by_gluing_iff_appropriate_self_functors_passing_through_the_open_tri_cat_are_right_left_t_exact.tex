@@ -1,0 +1,15 @@
+\begin{proposition}[{\cite[Proposition 1.4.12.]{beilinson_berstein_deligne_atlesI}}] \label{proposition:t_structure_on_a_tri_cat_is_obtained_by_gluing_iff_appropriate_self_functors_passing_through_the_open_tri_cat_are_right_left_t_exact}
+Assume \Cref{context:general_gluing_framework_for_t_structures_on_triangulated_categories}. Let $(D^{\leq 0}, D^{\geq 0})$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$. The following are equivalent:
+\begin{enumerate}
+    \item $j_! j^*: D \to D$ is \CrefAndHyperrefIfExist{definition:t_left_exact_right_exact_functors_between_triangulated_categories_with_t_structures}{right $t$-exact}.
+    \item $j_* j^*: D \to D$ is \CrefAndHyperrefIfExist{definition:t_left_exact_right_exact_functors_between_triangulated_categories_with_t_structures}{left $t$-exact}.
+    \item The $t$-structure of $D$ is obtained by gluing $t$-structures on $D_U$ and $D_F$.
+\end{enumerate}
+More explicitly, if the above hold, then the $t$-structures on $D_U$ and $D_F$ are respectively $(D_U^{\leq 0}, D_U^{\geq 0})$ and $(D_F^{\leq 0}, D_F^{\geq 0})$ uniquely given by 
+\begin{align*}
+    D_U^{\leq 0} &= j^*(D^{\leq 0}) \\
+    D_U^{\geq 0} &= j^*(D^{\geq 0}) \\
+    D_F^{\leq 0} &= i^*(D^{\leq 0}) \\
+    D_F^{\geq 0} &= i^!(D^{\geq 0}) \\
+\end{align*}
+\end{proposition}

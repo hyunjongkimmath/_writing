@@ -8,12 +8,27 @@ The purpose of this document is to compile common notions in basic topology.
 \subsection{Topological spaces}
 
 \input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_clopen_subset_of_a_topological_space.tex}
+
+\subsubsection{Generating topologies from subsets}
+
+\input{../_definitions/definition_coarser_finer_topologies_on_a_set.tex}
+\input{../_concepts/proposition_coarser_and_finer_topologies_and_continuous_maps.tex}
+\input{../_concepts/proposition_topology_generated_by_a_collection_of_subsets_is_the_coarset_topology_making_the_members_open.tex}
+
+\input{../_definitions/definition_topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology.tex}
+\input{../_concepts/proposition_subset_of_a_topology_generated_by_a_collection_of_subsets_is_open_if_and_only_if_union_of_finite_intersections.tex}
+\input{../_concepts/proposition_function_of_topological_spaces_is_continuous_if_and_only_if_subbasis_members_are_pulled_back_to_open_sets.tex}
 
 \subsubsection{Basis of a topological space}
 
 \input{../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex}
 \input{../_definitions/definition_basis_for_a_topology.tex}
+
+
 \input{../_definitions/definition_first_and_second_countable_topological_space.tex}
+
+
 
 \subsubsection{Separation axioms}
 \input{../_definitions/definition_G_delta_set_and_F_sigma_set_of_a_topological_space.tex}
@@ -30,7 +45,13 @@ The purpose of this document is to compile common notions in basic topology.
 
 \subsection{Properties of topological spaces}
 \input{../_definitions/definition_dense_subset_of_a_topological_space.tex}
-\input{../_definitions/definition_connected_topological_space.tex}
+
+\input{../_definitions/definition_disconnected_and_connected_topological_spaces.tex}
+\input{../_definitions/definition_connected_component_of_a_point_of_a_topological_space.tex}
+\input{../_definitions/definition_totally_disconnected_topological_space.tex}
+\input{../_concepts/proposition_compact_hausdorff_space_is_totally_disconnected_iff_clopen_subsets_form_a_basis.tex}
+
+
 
 \subsubsection{Compact topological spaces}
 \input{../_definitions/definition_compact_topological_space.tex}
@@ -170,6 +191,24 @@ Therefore, \(\Phi\) is a unique isometry between the completions, and the comple
 
 % Notation: Euclidean n-space
 \input{../_definitions/definition_euclidean_n_space.tex}
+
+\subsection{Stone spaces, ultrafilters, and Boolean algebras}
+
+\input{../_definitions/definition_stone_space.tex}
+\input{../_definitions/definition_category_of_stone_spaces.tex}
+
+\input{../_definitions/definition_boolean_algebra.tex}
+\input{../_definitions/definition_morphism_of_boolean_algebras.tex}
+\input{../_definitions/definition_category_of_boolean_algebras.tex}
+\input{../_concepts/proposition_function_between_boolean_algebras_is_a_morphism_of_boolean_algebras_iff_it_is_a_ring_homomorphism_between_the_boolean_rings.tex}
+
+\input{../_definitions/definition_filter_and_ultrafilter_on_a_boolean_algebra.tex}
+\input{../_concepts/proposition_filter_is_an_ultrafilter_if_and_only_if_every_element_or_negation_is_in_it.tex}
+
+\input{../_definitions/definition_stone_space_of_a_boolean_algebra.tex}
+
+\input{../_concepts/theorem_stones_representation_theorem.tex}
+
 
 \section{Homotopy}
 

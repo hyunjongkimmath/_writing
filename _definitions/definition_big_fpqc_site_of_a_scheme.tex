@@ -1,0 +1,16 @@
+\begin{definition}[big fpqc site] \label{definition:big_fpqc_site_of_a_scheme}
+    \TODO{}
+Let $S$ be a scheme. The \hldef{big fpqc site of $S$}, denoted by \hl{$(\mathrm{Sch}/S)_{\mathrm{fpqc}}$}, is following \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}:
+\begin{enumerate}
+    \item The underlying category is the category \CrefAndHyperrefIfExist{notation:Sch_S_as_the_category_of_schemes_over_a_scheme}{$\Sch/S$} of all schemes over $S$.
+
+    \item A family of morphisms $\{f_i: X_i \to X\}_{i \in I}$ in $\Sch/S$ is a covering family in $(\mathrm{Sch}/S)_{\mathrm{fpqc}}$ if 
+    \begin{itemize}
+        \item each $f_i$ is a \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat} morphism 
+        \item for each affine open $U \subseteq X$, there exists a finite subset $J \subseteq I$ and affineo pen subsets $U_j \subseteq X_j$ for each $j \in J$ such that $U = \bigcup_{j \in J} f_j(U_j)$. 
+        % exists a finite set $K$, a map $i: K \to I$, and affine opens $U_{i(k)} \subseteq T_{i(k)}$ such that $U = \bigcup_{k \in K} \varphi_{i(k)}(U_{i(k)})$
+        % of \CrefAndHyperrefIfExist{definition:finitely_presented_algebra_over_a_not_necessarily_commutative_ring}{locally of finite presentation} such that $\bigcup_i f_i(X_i) = f(X)$. Such a cover is called an \hldef{fppf cover of $X$}.
+    \end{itemize}
+    Such a cover is called an \hldef{fpqc cover of $X$}.
+\end{enumerate}
+\end{definition}

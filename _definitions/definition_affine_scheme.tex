@@ -6,9 +6,19 @@ $$\hlin{V(I) = \{\mathfrak{p} \in \mathrm{Spec}(A) : I \subseteq \mathfrak{p}\}}
 for ideals $I \subseteq A$.  
 Define the sheaf \hl{$\mathcal{O}_{\mathrm{Spec}(A)}$}, called the \hldef{structure sheaf of $\Spec A$}, by 
 $$\mathcal{O}_{\mathrm{Spec}(A)}(U) = \{ \ \text{locally defined fractions of elements of $A$ on $U$} \ \},$$
-for each open set $U \subseteq \mathrm{Spec}(A)$. It is the case that the stalk at $\mathfrak{p} \in \mathrm{Spec}(A)$ is canonically the \CrefAndHyperrefIfExist{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}{localization $A_{\mathfrak{p}}$}.  
+for each open set $U \subseteq \mathrm{Spec}(A)$. More precisely, $\mathcal{O}_{\mathrm{Spec}(A)}(U)$ can be described as the set of functions $s: U \to \coprod_{\mathfrak{p} \in U} A_\mathfrak{p}$ \CrefIfExists{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset} such that  
+\begin{enumerate}
+    \item For each $\mathfrak{p} \in U$, the value $s(\mathfrak{p})$ lies in the localization $A_\mathfrak{p}$
+    \item For each $\mathfrak{p} \in U$, there exists an open neighborhood $V \subseteq U$ containing $\mathfrak{p}$ and elements $a$, $f \in A$ such that for all $\mathfrak{q} \in V$, 
+    \begin{itemize}
+        \item $f \not \in \mathfrak{q}$, so that the fraction $\frac{a}{f}$ is well-defined in $A_\mathfrak{q}$.
+        \item $s(\mathfrak{q}) = \frac{a}{f}$ in $A_\mathfrak{q}$. 
+    \end{itemize}
+\end{enumerate}
+
+It is the case that the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalk} at $\mathfrak{p} \in \mathrm{Spec}(A)$ is canonically the localization $A_{\mathfrak{p}}$.  
 Then $(\mathrm{Spec}(A), \mathcal{O}_{\mathrm{Spec}(A)})$ is a \CrefAndHyperrefIfExist{definition:locally_ringed_space_on_a_topological_space}{locally ringed space}, called the \hldef{affine scheme associated to $A$}.
 
 Moreover, given $f \in A$, we define the locus \hl{$D(f)$} by 
-$$D(f) = \Spec A \setminus V((f)) = \{ \mathfrak{p} \in \operatorname{Spec} A : f \notin \mathfrak{p} \}$$
+$$D(f) = \Spec A \setminus V((f)) = \{ \mathfrak{p} \in \operatorname{Spec} A : f \not\in \mathfrak{p} \}$$
 \end{definition}

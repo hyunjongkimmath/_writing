@@ -927,6 +927,24 @@ If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \Cref
 A related notion to flatness is torsion-freeness:
 
 \input{../_definitions/definition_zero_divisor_of_a_ring.tex}
+
+\begin{definition}[Zero-divisor and Non-zero-divisor on a Module] \label{definition:zero_divisor_on_a_module_over_a_ring}
+Let $R$ be a ring and let $r \in R$ be an element. 
+
+\begin{enumerate}
+    \item Let $M$ be a left $R$-module. 
+    \begin{itemize}
+        \item The element $r$ is a \hldef{(left) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $rm = 0$. Equivalently, $r$ is a zero-divisor on $M$ if the left-multiplication map $\lambda_r \colon M \to M$ defined by $\lambda_r(m) = rm$ is not injective.
+        \item Otherwise, the element $r$ is a \hldef{(left) non-zero-divisor on $M$} (or is \hldef{$M$-regular}), meaning $\lambda_r$ is injective.
+    \end{itemize}
+
+    \item Let $M$ be a right $R$-module.
+    \begin{itemize}
+        \item The element $r$ is a \hldef{(right) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $mr = 0$. Equivalently, the right-multiplication map $\rho_r \colon M \to M$ defined by $\rho_r(m) = mr$ is not injective.
+        \item Otherwise, the element $r$ is a \hldef{(right) non-zero-divisor on $M$}, meaning $\rho_r$ is injective.
+    \end{itemize}
+\end{enumerate}
+\end{definition}
 \input{../_definitions/definition_torsion_free_one_sided_module_over_a_ring.tex}
 
 \input{../_concepts/proposition_torsion_free_modules_over_dedekind_rings_are_flat.tex}
@@ -1016,8 +1034,6 @@ The goal is to show that the two definitions of \CrefAndHyperrefIfExist{definiti
 \input{../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex}
 \input{../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex}
 \input{../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex}
-
-\TODO{state the balancing theorems of Ext and Tor explicitly}
 
 \subsection{Tor/derived functor of a (right exact) biadditive functor via projective resolutions or flat resolutions}
 
@@ -1139,19 +1155,133 @@ $$ \min \{ n \mid R^iF(M) = 0 \text{ for all } i > n \} \leq \operatorname{cores
 Sheaves (say on a topological space) of abelian groups form an abelian category with a rich theory.
 
 
-\subsubsection{Presheaves and sheaves on topological spaces}
+\subsection{Presheaves and sheaves on topological spaces}
 
 \input{../_definitions/definition_presheaf_on_a_category.tex}
 \input{../_definitions/definition_category_of_opens_of_a_topological_space.tex}
 \input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
 \input{../_definitions/definition_presheaf_on_a_topological_space.tex}
+
+\input{../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex}
+
 \input{../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
 
-\TODO{examples of presheaves and sheaves on topological spaces}
+\input{../_definitions/definition_morphism_of_presheaves_on_a_topological_space.tex}
+
+\TODO{talk about how $\gamma$-objects in categories of sheaves valued in sets are equivalent to categories valued in $\gamma$-sets}
+
+\subsubsection{Examples of sheaves}
+
+\begin{example}
+    The following are examples of \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves on topological spaces}:
+    \begin{enumerate}
+        \item Given \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} $X$ and $Y$, let $\underline{Y}: \mathbf{Open}(X)^{\op} \to \Sets$ (\Cref{definition:category_of_opens_of_a_topological_space}) be given by $\underline{Y}(U) = C(U,Y)$, the set of \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps} $U \to Y$. 
+
+        The sheaf condition here expresses the topological fact that `continuous maps that are pairwise compatible on intersections glue uniquely to continuous maps'.
+
+        \item In particular, given sets $X$ and $Y$, one can consider them with the discrete topology, in which case the above sheaf $\underline{Y}$ assigns to a general subset $U$ of $X$ the set of functions $U \to Y$. 
+
+        This captures the intuition that `functions that are pairwise compatible on intersections glue uniquely to functions'.
+
+        \item Similarly, for $k \in \bbZ^{\geq 0} \cup \{\infty\}$, and given \CrefAndHyperrefIfExist{definition:C_k_manifold}{$C^k$-differentiable manifolds} $M$ and $N$ with or without boundary, let $\underline{N}^k: \mathbf{Open}(M)^{\op} \to \Sets$ be given by $\underline{N}^k(U) = C^k(U, N)$, the set of \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^k$-maps} $U \to N$.
+
+        \item Similarly, and given \CrefAndHyperrefIfExist{definition:complex_analytic_manifold}{complex analytic manifolds} $M$ and $N$ with or without boundary, let $\underline{N}: \mathbf{Open}(M)^{\op} \to \Sets$ be given by $\underline{N}(U) = C^k(U, N)$, the set of complex analytic maps $U \to N$.
+        \TODO{complex analytic maps}
+
+        \item In particular, given an open subset $D \subseteq \bbC$, the functor $\mathbf{Open}(D)^{\op} \to \Sets$ given by $U \mapsto \{f: U \to \bbC: f \text{ holomorphic}\}$ is a sheaf.
+
+        The sheaf condition here expresses the complex analytic fact that `holomorphic functions that are pairwise compatible on intersections glue to uniquely to holomorphic functions'.
+    \end{enumerate}
+\end{example}
+
+\begin{definition}[Constant sheaf on a topological space] \label{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} denoted $1$, and let $A$ be an object of $\calA$.
+
+    \begin{enumerate}
+        \item The \hldef{constant presheaf on $X$ with value $A$} is the \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} $P_A$ defined by
+        \[
+        P_A(U) = \begin{cases} 
+        A & \text{if } U \neq \emptyset \\
+        1 & \text{if } U = \emptyset
+        \end{cases}
+        \]
+        where for any inclusion of non-empty open sets $V \subseteq U$, the restriction map is the identity $\text{id}_A$, and for any inclusion $\emptyset \subseteq U$, the restriction map is the unique morphism $P_A(U) \to 1$.
+
+        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
+        $$a: \PreShv(X, \calA) \to \Shv(X, \calA)$$
+        exists. The \hldef{constant sheaf on $X$ associated to $A$}, denoted \hl{$\underline{A}$} or sometimes just \hl{$A$}, is the \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheaf associated to} the constant presheaf $P$ with value $A$ defined above.
+
+        % \item Let $\calO$ be a sheaf of (not-necessarily commutative) rings on $X$. Assume that the \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{global sections ring $\Gamma(X, \calO)$} exists. A \hldef{constant $\calO$-module} is an \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-module} $\calF$ which is isomorphic as an $\calO$-module to the sheafification of a constant presheaf of modules. Specifically, if $M$ is a module over the ring $\Gamma(X, \calO)$, the constant $\calO$-module $\underline{M}$ is the sheaf associated to the presheaf $U \mapsto M$ (with the empty set mapping to $0$).
+
+        % In the case that $\calO$ is the constant sheaf $\underline{R}$ associated to a ring $R$, a constant $\calO$-module is simply called a \hldef{constant $R$-module}.
+    \end{enumerate}
+\end{definition}
+
+
+\TODO{describe constant sheaves on sets by the connectivity of $X$.}
+
+\begin{definition}[Skyscraper sheaf] \label{definition:skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $x \in X$ be a point. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$. 
+    Given an object $E \in \text{ob}(\calA)$, the \hldef{skyscraper sheaf at $x$ with value $E$}, denoted \hl{$i_{x,*}(E)$} or sometimes \hl{$E_x$}, is the sheaf defined for each open set $U \subseteq X$ by
+    \[
+    (i_{x,*}(E))(U) = \begin{cases} 
+    E & \text{if } x \in U \\
+    1 & \text{if } x \notin U
+    \end{cases}
+    \]
+    The restriction maps $\rho_{UV}: (i_{x,*}(E))(U) \to (i_{x,*}(E))(V)$ for an inclusion $V \subseteq U$ are defined as:
+    \begin{itemize}
+        \item The identity map $\text{id}_E$ if $x \in V$ (which implies $x \in U$).
+        \item The unique morphism to the terminal object $E \to 1$ if $x \in U$ but $x \notin V$.
+        \item The identity map $\text{id}_1$ if $x \notin U$ (which implies $x \notin V$).
+    \end{itemize}
+
+    Equivalently, this skyscraper sheaf is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} of the sheaf given by $\mathbf{Open}(x)^{\op} \mapsto \calA, \quad x \mapsto E$ under the embedding $i_x: x \hookrightarrow X$.
+\end{definition}
+
+
+\TODO{define additive group, multiplicative group, roots of unity, etc.}
+\begin{definition} \label{definition:additive_group_sheaf_on_a_ringed_space}
+    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
+
+    The \hldef{additive group} \hl{$\bbG_a = \bbG_{a,(X, \calO_X)}$} is simply the sheaf $\calO_X$ regarded as a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} of abelian groups on $X$.
+\end{definition}
+
+\begin{definition} \label{definition:multiplicative_group_sheaf_on_a_ringed_space}
+    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
+
+    The \hldef{multiplicative group} \hl{$\bbG_m = \bbG_{m,(X, \calO_X)}$}, also written \hl{$\calO_X^\times$}, is the sheaf $\mathbf{Open}(X)^{\op} \to \mathbf{Grp}$ given as follows:
+    $$\calO_X^\times(U) = \{s \in \calO_X(U): \text{ there exists some } t \in \calO_X(U) \text{ such that } st = 1 \}.$$
+\end{definition}
+
+\begin{definition} \label{definition:sheaf_of_roots_of_unity_on_a_ringed_space}
+    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
+
+    Given an integer $n \geq 1$, the \hldef{sheaf of $n$th roots of unity} is the sheaf \hl{$\mu_n = \mu_{n,(X,\calO_X)} : \mathbf{Open}(X)^{\op} \to \mathbf{Grp}$} given as follows:
+    $$\mu_{n}(U) = \{s \in \calO_X^\times(U): s^n = 1\}.$$
+\end{definition}
+
+
+
+
+Another particularly interesting example of a sheaf is that of the \CrefAndHyperrefIfExist{definition:affine_scheme}{structure sheaf of an affine scheme}.
+
+
+\begin{lemma} \label{lemma:category_of_presheaves_of_sheaves_on_topological_space_valued_in_a_locally_small_category_is_locally_small}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $\calA$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:category}{category} $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}.
+        \item The category $\Sh(X, \calA)$ is locally small.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Note that \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, so $\PreShv(X, \calA)$ is locally small by \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}. The category $\Sh(X, \calA)$ is necessarily a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{(full) subcategory} of $\PreShv(X, \calA)$ and is thus locally small.
+\end{proof}
+
+
+\subsection{Sheaves on more general sites}
 
 Note that on a topological space $X$, it is natural to talk about open sets $\{U_i\}$ which cover an open set $U$ of $X$. One can express more general notions of ``coverings'' of objects in a category through the notion of a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``site''}, which consists of a category and a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{``Grothendieck topology''} on the category. The notion of \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{``sheaf on a topological space''} above is a specialization of this more general notion.
-
-\subsubsection{Sheaves on more general sites}
 
 A \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site} is a \CrefAndHyperrefIfExist{definition:category}{category} equipped with a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology}, which is a notion that generalizes the idea for an object to have ``covers''. One then has a general notion of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on a site; a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf on a topological space $X$} is then simply a sheaf on the category \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} equipped with \CrefAndHyperrefIfExist{definition:site_of_opens_on_a_topological_space}{its canonical Grothendieck topology}. It can therefore be fruitful to gain intuition about sheaves in general by studying sheaves on topological spaces and to have the understanding that many notions discussed for sheaves on topological spaces are special cases of those for sheaves on general sites. We may at times state definitions and concepts in terms of sheaves on somewhat general sites (e.g. sites that are \CrefAndHyperrefIfExist{definition:small_site_locally_small_site_U_site_U_small_site_U_topology}{small}/are \CrefAndHyperrefIfExist{definition:essentially_small_site}{essentially small}/have a small \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topologically generating family}), but it should be understood that they specialize to sheaves on topological spaces (valued in sets).
 
@@ -1159,13 +1289,162 @@ A \CrefAndHyperrefIfExist{definition:topos}{(Grothendieck) topos} is a category 
 
 See \Cref{section:appendix_grothendieck_topologies}.
 
-\subsubsection{Sheafification of presheaves}
+\subsection{Sheafification of presheaves on topological spaces}
 
 \input{../_definitions/definition_categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category.tex}
 \input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex}
 
 
-\subsubsection{Sheaf of rings, ringed spaces, and sheaves of modules}
+\begin{definition}[(Co)limits in Presheaf Categories]
+    \TODO{verify}
+    Let $\calC$ be a category and $\calA$ a category. Let $I$ be an index category.
+    \begin{enumerate}
+        \item If $\calA$ admits colimits of shape $I$, the \textbf{presheaf colimit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
+        \[ (\varinjlim_{i \in I} F(i))(U) \coloneqq \varinjlim_{i \in I} (F(i)(U)) \]
+        for every $U \in \text{ob}(\calC)$.
+        \item If $\calA$ admits limits of shape $I$, the \textbf{presheaf limit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
+        \[ (\varprojlim_{i \in I} F(i))(U) \coloneqq \varprojlim_{i \in I} (F(i)(U)) \]
+        for every $U \in \text{ob}(\calC)$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Limits in Sheaf Categories]
+    \TODO{verify}
+    Let $(\calC, J)$ be a site and $\calA$ a category admitting limits of shape $I$. The category $\Shv(\calC, J, \calA)$ is closed under $I$-indexed limits in $\PreShv(\calC, \calA)$. Specifically, for any diagram $F: I \to \Shv(\calC, J, \calA)$, the limit exists in the category of sheaves and is preserved by the natural inclusion $i: \Shv(\calC, J, \calA) \hookrightarrow \PreShv(\calC, \calA)$:
+    \[ \varprojlim_{\Shv} F \cong \varprojlim_{\PreShv} i \circ F \]
+\end{definition}
+
+\begin{definition}[Colimits in Sheaf Categories]
+    \TODO{verify}
+
+    Let $(\calC, J)$ be a site and $\calA$ a category admitting colimits of shape $I$. Suppose there exists a \textbf{sheafification functor} (a reflector) $a: \PreShv(\calC, \calA) \to \Shv(\calC, J, \calA)$ left adjoint to the inclusion $i$. For any diagram $F: I \to \Shv(\calC, J, \calA)$, the colimit in the category of sheaves is constructed by:
+    \[ \varinjlim_{\Shv} F \coloneqq a \left( \varinjlim_{\PreShv} i \circ F \right) \]
+\end{definition}
+
+\begin{definition}[Plus-Functor and Exactness]
+    \TODO{verify}
+    Let $(\calC, J)$ be a site. For a presheaf $\calP \in \PreShv(\calC, \calA)$, the \textbf{plus-functor} is defined by
+    \[ \calP^+(U) \coloneqq \varinjlim_{S \in J(U)} \text{Hom}_{\PreShv}(S, \calP) \]
+    where $J(U)$ is the filtered system of sieves covering $U$. If $\calA$ is AB5 and admits colimits indexed by $J(U)$, the functor $(-)^+: \PreShv \to \PreShv$ is exact. Consequently, if the sheafification functor $a \cong (+)^2$ exists, it is an exact functor.
+\end{definition}
+
+
+\subsection{Sections functors}
+
+Sections functors are left exact
+\TODO{define sections for topological spaces}
+
+\input{../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex}
+
+
+\subsection{Stalks of presheaves and sheaves on topological spaces}
+
+\input{../_definitions/definition_stalk_of_a_presheaf_on_a_topological_space_at_a_point.tex}
+
+\begin{proposition}
+    \TODO{prove that if $\calA$ is AB5 and sheafification exists, then the sheafification is exact; appraently this should be true on a general small site}
+\end{proposition}
+
+\begin{proposition}
+    \TODO{verify this for general $\calA$; this is certainly true for modules.}
+    \TODO{prove that if $\calA$ is AB5 and sheafification exists, then the sheafification is exact}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
+    \TODO{verify these}
+    \begin{enumerate}
+        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{pre-additive category}, then \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{$\PreShv(X, \calA)$} and \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{$\Shv(X, \calA)$} are pre-\CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive}.
+        \item If $\calA$ is an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}, then $\PreShv(X, \calA)$ and $\Shv(X, \calA)$ are additive.
+        \item Suppose that $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+        \begin{enumerate}
+            \item The category $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}. 
+            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists and is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, $\Shv(X, \calA)$ is abelian.
+        \end{enumerate}
+        \item Suppose that $\calA$ is an AB$n$ category for $n \in \{3,4,5\}$. 
+        \begin{enumerate}
+            \item $\PreShv(X, \calA)$ is AB$n$. 
+            \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists. Further suppose that $a$ is exact for $n \in \{4,5\}$, $\Shv(X, \calA)$ is AB$n$. In particular, the exactness condition is not needed for $n = 3$. Moreover, the exactness condition is always satisfied for $n = 5$.
+        \end{enumerate}
+        \item Suppose that $\calA$ is AB$5$ and \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}.
+        \begin{enumerate}
+            \item $\PreShv(X, \calA)$ has enough injectives.
+            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists, $\Shv(X, \calA)$ has enough injectives.
+        \end{enumerate}
+        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck category}, then so are $\PreShv(X, \calA)$ and $\Shv(X, \calA)$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \begin{enumerate}
+        \item  \TODO{}
+    \end{enumerate}
+\end{proof}
+
+\begin{proposition}
+    \TODO{verify this for general $\calA$; this is certainly true for modules.}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB5 category}. Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $x \in X$ be a point. 
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalk} functor $\calF \mapsto \calF_x$ is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor} $\PreShv(X, \calA) \to \calA$ (\Cref{definition:presheaf_on_a_topological_space}). 
+        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification} functor 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+        exists. The stalk functor $\calF \mapsto \calF_x$ is an exact functor $\Shv(X, \calA) \to \calA$. 
+        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification} functor 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+        exists. A sequence 
+        $$0 \to \calF \to \calG \to \calH \to 0$$
+        is \CrefAndHyperrefIfExist{definition:exact_sequence_of_morphisms_in_an_abelian_category}{exact} if and only if the induced sequences 
+        $$0 \to \calF_x \to \calG_x \to \calH_x \to 0$$
+        on stalks are exact for all $x \in X$. 
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \TODO{}
+\end{proof}
+
+\TODO{define surjection, injection of sheaves of sets}
+
+\begin{proposition} \label{proposition:morphism_of_sheaves_on_topological_space_valued_in_nice_enough_category_with_enough_direct_limits_is_isomorphism_iff_all_stalk_morphisms_are}
+    \TODO{verify this for general $\calA$; it is true for $\calA = \Sets$}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object}. Assume that for all $x \in X$ and all $\calF \in \Sh(X, \calA)$, the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks} $\calF_x$ exist in $\calA$. 
+    
+    A \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf morphism} $f: \calF \to \calG$ in $\Sh(X, \calA)$ is an isomorphism if and only if all of the stalk morphisms $f: \calF_x \to \calG_x$ are isomorphisms. In particular, $\mathbf{Open}(X)$ is a site \CrefAndHyperrefIfExist{definition:site_with_enough_points}{with enough points}.
+\end{proposition}
+\begin{proof}
+    \TODO{}
+\end{proof}
+
+
+
+
+
+\subsubsection{Sheaf theoretic statements of analysis and manifolds}
+
+In complex analysis, one considers the complex logarithm function $\log(z)$. Consider the following statements:
+\begin{itemize}
+    \item $\log(z)$ can be locally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} at any point in $X = \mathbb{C} \setminus \{0\}$. 
+    \item $\log(z)$ cannot be globally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $X$.
+\end{itemize}
+There is also a sequence
+$$0 \to \underline{\bbZ} \xrightarrow{n \mapsto 2 \pi i n} \calO \xrightarrow{\exp} \calO^* \to 1$$
+\TODO{ref}
+of sheaves of abelian groups on $X$. One can verify that it is a short exact sequence by checking exactness at all stalks \TODO{}. The first statement is tantamount to saying that $\calO \xrightarrow{\exp} \calO^*$ is a surjection of sheaves \TODO{}. The second statement is tantamount to saying that the map $\calO(X) \xrightarrow{\exp} \calO^*(X)$ on global sections is not a surjection. 
+
+Once we study sheaf cohomology, we obtain the cohomological long exact sequence 
+\begin{align*}
+0 &\to \Gamma(X, \underline{\bbZ}) \to \Gamma(X, \calO) \xrightarrow{\exp} \Gamma(X, \calO^*) \\
+&\to H^1(X, \underline{\bbZ}) \to \cdots
+\end{align*}
+
+
+It can be locally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} near any point in $X = \mathbb{C} \setminus \{0\}$. 
+
+Letting $\calO$ be the sheaf on $X$ of holomorphic functions (i.e. $\calO(U) = \{f: U \to \bbC \text{ holomorphic}\}$ for any $U \subseteq X$ open),
+
+
+\subsection{Sheaf of rings, ringed spaces, and sheaves of modules}
 
 \input{../_definitions/definition_ringed_space.tex}
 
@@ -1179,11 +1458,27 @@ See \Cref{section:appendix_grothendieck_topologies}.
 % \TODO{define module sheaf on a topological space}
 % \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
 
-\subsubsection{Pullbacks and pushforwards}
+\subsection{Pullbacks and pushforwards}
 
 \input{../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex}
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_definitions/definition_restriction_of_a_presheaf_sheaf_on_a_topological_space.tex}
 \input{../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex}
+
+\subsection{Locally constant sheaves}
+
+% \begin{definition} \label{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
+%     Let \( X \) be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+%     with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
+%         $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+%     exists. Let $A$ be an object of $\calA$. 
+
+%     The constant sheaf on $X$ 
+% \end{definition}
+\input{../_definitions/definition_locally_constant_sheaf_on_a_topological_space.tex}
+
+\TODO{talk about examples of locally constant sheaves, how they are equivalent to representations or to bundles, how they are locally isomorhpic to constant sheaves and yet are not isomorphic to constant sheaves}
+\TODO{talk about how sheaves of sets on topological spaces are equivalent to etale spaces over the topological spaces}
 
 \subsubsection{The definition of schemes}
 
@@ -1199,7 +1494,8 @@ Now that we have defined the notion of sheaves on topological spaces, the defini
 
 \subsubsection{Sheaf cohomology}
 
-\input{../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex}
+
+
 \input{../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
 
 While the above notion of sheaf cohomology is for sheaves of abelian groups, there are sensible notions of zeroth and first sheaf cohomology for sheaves of not-necessarily abelian groups
@@ -1208,6 +1504,7 @@ While the above notion of sheaf cohomology is for sheaves of abelian groups, the
 \input{../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex}
 \input{../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex}
 
+\TODO{talk about Cech cohomology and how it compares to sheaf cohomology}
 
 
 \section{Left/right derived functors of right/left exact functors}
@@ -1405,7 +1702,11 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 \begin{problem}
-    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Say that $a_1,b_1,a_2,b_2$ are integers such that $H_i(A_\bullet) = 0$ for $i \not\in [a_1,b_1]$ and $H_i(B_\bullet) = 0$ for $i \not \in [a_2,b_2]$. 
+    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Further assume that $A_\bullet$ is bounded below\footnote{I claim that this hypothesis is not necessary for the truth of the statements in this problem, but also there is a fact in these notes stated in a way that uses this hypothesis.} as a (homological) chain complex, i.e. it is of the form
+    $$\cdots \to A_{n_0 + 2} \to A_{n_0 +1} \to A_{n_0} \to 0 \to 0 \to 0 \to \cdots $$
+    for some integer $n_0$.
+    
+    Say that $a_1,b_1,a_2,b_2$ are integers such that $H_i(A_\bullet) = 0$ for $i \not\in [a_1,b_1]$ and $H_i(B_\bullet) = 0$ for $i \not \in [a_2,b_2]$. 
     \begin{enumerate}
         \item Show that $H_i(\Tot^\bigoplus (A_\bullet \otimes B_\bullet) ) = 0$ (\Cref{definition:total_complexes_of_a_double_complex_of_objects_in_an_additive_category}) (\Cref{definition:double_complex_associated_to_biadditive_functor_and_chain_complexes}) for $i \not \in [a_1+a_2, b_1+b_2+1]$. 
         \item If $R$ is a field then show that $H_i(\Tot^\bigoplus (A_\bullet \otimes B_\bullet) ) = 0$ for $i \not \in [a_1+a_2, b_1+b_2]$. 
@@ -1413,8 +1714,10 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 \begin{problem}
-    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and $x \in R$ be an element. Prove that $x$ is a \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{zero-divisor} in $R$ if and only if $\Tor_1^R(R/(x), R) \neq 0$.
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and let $M$ be a module over $R$. 
+    Prove that a \CrefAndHyperref{definition:zero_divisor_of_a_ring}{non-zero divisor} $x \in R$ is a \CrefAndHyperref{definition:zero_divisor_on_a_module_over_a_ring}{zero-divisor of $M$} if and only if $\Tor_1^R(R/(x), M) \neq 0$ (\Cref{definition:tor_functors_of_bimodules_of_rings}).
 \end{problem}
+
 
 \begin{problem}
     Let $R = k[x]/x^n$ for a field $k$ and where $n \geq 2$. Let $M = R/(x^a)$ and $N = R/(x^b)$ with $1 \leq a,b < n$. Compute \CrefAndHyperrefIfExist{definition:ext_functors_of_bimodules_of_rings}{$\Ext_R^i(M,N)$} for all $i \geq 0$. 
@@ -1452,12 +1755,19 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \input{../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex}
 \input{../_definitions/definition_site_of_opens_on_a_topological_space.tex}
 \input{../_definitions/definition_sheaf_on_a_site.tex}
+\input{../_definitions/definition_topos.tex}
+\input{../_definitions/definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex}
+\input{../_definitions/definition_topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites.tex}
+\input{../_definitions/definition_topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor.tex}
 
 
 \input{../_definitions/definition_sheafification_functor_on_a_site.tex}
 \input{../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex}
 \input{../_definitions/definition_ringed_site.tex}
 \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+
+\input{../_definitions/definition_stalk_of_an_object_of_a_topos_at_a_point_of_the_topos.tex}
+\input{../_definitions/definition_locally_constant_sheaf_on_a_site_with_sheafification.tex}
 
 \section{Miscellaneous definitions}
 

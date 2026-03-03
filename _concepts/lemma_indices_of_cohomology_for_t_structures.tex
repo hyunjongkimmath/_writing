@@ -1,0 +1,29 @@
+\begin{lemma} \label{lemma:indices_of_cohomology_for_t_structures}
+    Let $D$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} and let $(\Dleqzero, \Dgeqzero)$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$. Let $X \in D$. 
+    
+    We have 
+    \begin{enumerate}
+    \item $H^a(X[b]) = H^{a+b}(X) = H^0(X[a+b])$ (\Cref{definition:cohomology_functors_for_a_triangulated_category_with_a_t_structure}) for all $a,b \in \bbZ$, and
+    \item $H^n(X) = (\tauleqn \taugeqn X)[n]$ (\Cref{proposition:adjunction_of_inclusion_functors_of_t_structures_on_triangulated_categories}) \CrefIfExists{definition:triangulated_category} for all $n \in \bbZ$. 
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    \begin{enumerate}
+        \item Observe that
+        \begin{align*}
+            H^a(X[b]) = H^0((X[b])[a]) = H^0(X[a+b]) = H^{a+b}(X).
+        \end{align*}
+
+        \item The left hand side equals
+        \begin{align*}
+            H^0(X[n]) = \tauleqzero \taugeqzero (X[n]),
+        \end{align*}
+        whereas the right hand side equals
+        \begin{align*}
+            \tauleqn((\taugeqzero(X[n]))[-n])[n] &= \tauleqzero(\taugeqzero(X[n]))[-n][n] \\
+            &= \tauleqzero(\taugeqzero(X[n]))
+        \end{align*}
+        by Lemma \ref{lemma:shifted_truncation_functors}.
+    \end{enumerate}
+\end{proof}

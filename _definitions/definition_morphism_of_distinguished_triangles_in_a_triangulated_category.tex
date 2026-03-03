@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:morphism_of_distinguished_triangles_in_a_triangulated_category}
+Let $\mathcal{T}$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category}. Let $(X, Y, Z, u, v, d)$ and $(X', Y', Z', u', v', d')$ be two \CrefAndHyperrefIfExist{definition:triangulated_category}{distinguished triangles} in $\mathcal{T}$. A \hldef{morphism of triangles} is a triple $(f, g, h)$ of morphisms $f: X \to X'$, $g: Y \to Y'$, and $h: Z \to Z'$ such that the following diagram commutes:
+\begin{center}
+\begin{tikzcd}
+X \arrow[r, "u"] \arrow[d, "f"] & Y \arrow[r, "v"] \arrow[d, "g"] & Z \arrow[r, "d"] \arrow[d, "h"] & X[1] \arrow[d, "{f[1]}"] \\
+X' \arrow[r, "u'"] & Y' \arrow[r, "v'"] & Z' \arrow[r, "d'"] & X'[1]
+\end{tikzcd}
+\end{center}
+That is, the relations $g \circ u = u' \circ f$, $h \circ v = v' \circ g$, and $f[1] \circ d = d' \circ h$ must all hold.
+\end{definition}

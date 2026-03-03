@@ -3,6 +3,10 @@
 \title{Topology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage[sort=standard]{glossaries} 
+\makeglossaries
+\setcounter{tocdepth}{3}
+
 \begin{document}
 
 \maketitle
@@ -10,6 +14,9 @@
 \tableofcontents
 
 \input{content.tex}
+
+% \glsaddallunused
+% \printglossaries
 
 \bibliographystyle{alpha}
 \bibliography{../_bib/references.bib}

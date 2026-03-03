@@ -1,0 +1,20 @@
+\begin{lemma}[Orthogonality, see {\cite[Lemma II.2.2]{kiehl_weissauer_wcps}}] \label{lemma:orthogonality_of_objects_in_triangulated_categories_with_t_structures}
+        Let $D$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} and let $(\Dleqzero, \Dgeqzero)$ be a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D$.
+    Let $E \in D$. The following are equivalent:
+    \begin{enumerate}
+        \item $E \in \Dgeqn[n+1]$ \label{item:orthogonality_i}
+        \item $\Hom(\Dleqn, E) = 0$. \label{item:orthogonality_ii}
+    \end{enumerate}
+    The following are equivalent:
+    \begin{enumerate}
+        \item $E \in \Dleqn[n-1]$ 
+        \item $\Hom(E, \Dgeqn) = 0$. 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    We show the former equivalence for $n = 0$ --- the dual equivalence and both equivalences for general $n$ can be easily deduced. Note that \eqref{item:orthogonality_ii} immediately implies \eqref{item:orthogonality_i} by the axioms of a $t$-structure. Conversely, we first deduce that $\tau_{\leq 0}(E) = 0$ by the adjunction isomorphism and \Cref{lemma:composition_of_truncation_functors_for_t_structures_on_triangulated_categories}:
+    $$\Hom_{\Dleqzero}(\tauleqzero(E), \tauleqzero(E)) \cong \Hom_{D}(\tauleqzero \tauleqzero(E), E) \subset \Hom_{D}(\tauleqzero(E), E) = 0.$$
+    Taking the distinguished triangle
+    $$\tauleqzero(E) \to E \to \taugeqn[1](E) \to \tauleqzero(E)[1]$$
+    of \Cref{proposition:distinguished_triangles_for_t_structures_on_triangulated_categories_given_by_truncation_are_unique} and rotating it appropriately, Claim \ref{lemma:isomorphisms_in_distinguished_triangles_can_only_occur_if_and_only_if_zero_object} shows that $E \cong \tau_{\geq 1}(E)$ and hence $E \in \Dgeqn[n+1]$.
+\end{proof}

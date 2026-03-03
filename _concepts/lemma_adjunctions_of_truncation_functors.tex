@@ -1,0 +1,18 @@
+\begin{lemma} \label{lemma:adjunctions_of_truncation_functors}
+    For all integers $n$, there are (left-right) adjunctions
+    \begin{align*}
+        (\Dleqn \hookrightarrow D) \dashv (\tauleqn: D \to \Dleqn ) \\
+        (\taugeqn: D \to \Dgeqn ) \dashv (\Dgeqn \hookrightarrow D) \\
+    \end{align*}
+    \TODO{}
+\end{lemma}
+
+\begin{proof}
+    We show the first adjunction --- The second adjunction can be shown similarly. The adjunction holds for $n = 1$ by Claim \ref{claim:adjunction_of_truncation_functors}. The desired adjunction is a natural isomorphism 
+    $$\Hom_{D}(A,B) \cong \Hom_{\Dleqn}(A, \tauleqn B)$$
+    for all $A \in \Dleqn$ and $B \in D$. This is equivalent to the isomorphism
+    $$\Hom_{D}(A,B) \cong \Hom_{\Dleqn}(A, \tauleqzero(B[n])[-n]).$$
+    The right hand side Hom-group is equivalent to the Hom-group
+    $$\Hom_{\Dleqzero}(A[n], \tauleqzero(B[n])) \cong \Hom_{D}(A[n], B[n]) \cong \Hom_{D}(A,B)$$
+    and hence the desired isomorphism holds. 
+\end{proof}
