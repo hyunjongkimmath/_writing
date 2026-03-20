@@ -1,0 +1,38 @@
+\begin{proposition}  \label{proposition:circumstances_under_which_categories_of_sheaves_and_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_abelian}
+    \TODO{verify this for general $\calA$; this is certainly true for modules.}
+    \TODO{prove that if $\calA$ is AB5 and sheafification exists, then the sheafification is exact}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
+    \TODO{verify these}
+    \begin{enumerate}
+        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{pre-additive category}, then \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{$\PreShv(X, \calA)$} and \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{$\Shv(X, \calA)$} are pre-\CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive}.
+        \item If $\calA$ is an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}, then $\PreShv(X, \calA)$ and $\Shv(X, \calA)$ are additive.
+        \item Suppose that $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+        \begin{enumerate}
+            \item The category $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}. 
+            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists and is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, $\Shv(X, \calA)$ is abelian.
+        \end{enumerate}
+        \item Suppose that $\calA$ is an AB$n$ category for $n \in \{3,4,5\}$. 
+        \begin{enumerate}
+            \item $\PreShv(X, \calA)$ is AB$n$. 
+            \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists. Further suppose that $a$ is exact for $n \in \{4,5\}$, $\Shv(X, \calA)$ is AB$n$. In particular, the exactness condition is not needed for $n = 3$. Moreover, the exactness condition is always satisfied for $n = 5$.
+        \end{enumerate}
+        \item Suppose that $\calA$ is AB$5$ and \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}.
+        \begin{enumerate}
+            \item $\PreShv(X, \calA)$ has enough injectives.
+            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+            exists, $\Shv(X, \calA)$ has enough injectives.
+        \end{enumerate}
+        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck category}, then so are $\PreShv(X, \calA)$ and $\Shv(X, \calA)$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item  \TODO{}
+    \end{enumerate}
+\end{proof}

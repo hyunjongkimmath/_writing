@@ -893,7 +893,7 @@ There are multiple equivalent ways to describe projective objects in a category 
 
 \input{../_definitions/definition_free_bimodule_over_rings.tex}
 
-\input{../_definitions/definition_direct_summand_of_an_object_in_an_additive_category.tex}
+\input{../_definitions/definition_direct_summand_of_an_object_of_an_additive_category.tex}
 
 \input{../_concepts/proposition_module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module.tex}
 \input{../_concepts/proposition_projective_module_over_local_ring_or_pid_are_free.tex}
@@ -928,23 +928,8 @@ A related notion to flatness is torsion-freeness:
 
 \input{../_definitions/definition_zero_divisor_of_a_ring.tex}
 
-\begin{definition}[Zero-divisor and Non-zero-divisor on a Module] \label{definition:zero_divisor_on_a_module_over_a_ring}
-Let $R$ be a ring and let $r \in R$ be an element. 
+\input{../_definitions/definition_zero_divisor_on_a_module_over_a_ring.tex}
 
-\begin{enumerate}
-    \item Let $M$ be a left $R$-module. 
-    \begin{itemize}
-        \item The element $r$ is a \hldef{(left) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $rm = 0$. Equivalently, $r$ is a zero-divisor on $M$ if the left-multiplication map $\lambda_r \colon M \to M$ defined by $\lambda_r(m) = rm$ is not injective.
-        \item Otherwise, the element $r$ is a \hldef{(left) non-zero-divisor on $M$} (or is \hldef{$M$-regular}), meaning $\lambda_r$ is injective.
-    \end{itemize}
-
-    \item Let $M$ be a right $R$-module.
-    \begin{itemize}
-        \item The element $r$ is a \hldef{(right) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $mr = 0$. Equivalently, the right-multiplication map $\rho_r \colon M \to M$ defined by $\rho_r(m) = mr$ is not injective.
-        \item Otherwise, the element $r$ is a \hldef{(right) non-zero-divisor on $M$}, meaning $\rho_r$ is injective.
-    \end{itemize}
-\end{enumerate}
-\end{definition}
 \input{../_definitions/definition_torsion_free_one_sided_module_over_a_ring.tex}
 
 \input{../_concepts/proposition_torsion_free_modules_over_dedekind_rings_are_flat.tex}
@@ -1085,15 +1070,6 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 \input{../_definitions/definition_extension_of_objects_in_an_additive_category.tex}
 
 \input{../_concepts/lemma_if_first_ext_functor_in_an_abelian_category_is_zero_then_extensions_are_split.tex}
-\begin{proof}
-    First suppose that $\calA$ has enough projectives so that $\Ext^1(A,-): \calA \to \Ab$ is defined as a \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functor}. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the \CrefAndHyperref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} in $\Ext^n(A,-)$ yields an exact sequence
-    $$\Hom(A,X) \to \Hom(A,A) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
-    so the identity map $\id_A \in \Hom(A,A)$ lifts to a map $\sigma: A \to X$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{section} of $X \to A$. Thus, $\xi$ is split. 
-
-    Dually, suppose that $\calA$ has enough injectives so that $\Ext^1(-,B): \calA^{\op} \to \Ab$ is defined as a derived functor. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the long exact sequence in $\Ext^n(-, B)$ yields the exact sequence 
-    $$\Hom(X, B) \to \Hom(B,B) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
-    This time, $\id_B \in \Hom(B,B)$ thus extends to a map $X \to B$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{retract} of $B \to X$. Thus, $\xi$ is split.
-\end{proof}
 
 \input{../_definitions/definition_characteristic_class_of_an_extension_of_objects_in_an_abelian_category.tex}
 
@@ -1109,12 +1085,8 @@ Recall that the \CrefAndHyperref{definition:generalized_derived_functors_for_bia
 The universal coefficient theorems and K\"unneth formulae quantify the extent to which $\otimes$ and $\Hom$ fail to commute with homology/cohomology.
 
 \input{../_definitions/definition_hereditary_ring.tex}
-\begin{lemma} \label{lemma:pids_are_hereditary}
-    Any \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID} is a \CrefAndHyperrefIfExist{definition:hereditary_ring}{hereditary ring} (both on the left and the right).
-\end{lemma}
-\begin{lemma} \label{lemma:commutative_dedekind_domains_are_hereditary}
-    Any \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative} \CrefAndHyperrefIfExist{definition:dedekind_domain}{Dedekind domain}  is a hereditary ring (both on the left and the right).
-\end{lemma}
+\input{../_concepts/lemma_pids_are_hereditary.tex}
+\input{../_concepts/lemma_commutative_dedekind_domains_are_hereditary.tex}
 
 \input{../_concepts/theorem_homological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
 \input{../_concepts/theorem_cohomological_kunneth_formula_for_complexes_of_modules_over_rings.tex}
@@ -1194,90 +1166,26 @@ Sheaves (say on a topological space) of abelian groups form an abelian category 
     \end{enumerate}
 \end{example}
 
-\begin{definition}[Constant sheaf on a topological space] \label{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} denoted $1$, and let $A$ be an object of $\calA$.
+\input{../_definitions/definition_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification.tex}
 
-    \begin{enumerate}
-        \item The \hldef{constant presheaf on $X$ with value $A$} is the \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} $P_A$ defined by
-        \[
-        P_A(U) = \begin{cases} 
-        A & \text{if } U \neq \emptyset \\
-        1 & \text{if } U = \emptyset
-        \end{cases}
-        \]
-        where for any inclusion of non-empty open sets $V \subseteq U$, the restriction map is the identity $\text{id}_A$, and for any inclusion $\emptyset \subseteq U$, the restriction map is the unique morphism $P_A(U) \to 1$.
-
-        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
-        $$a: \PreShv(X, \calA) \to \Shv(X, \calA)$$
-        exists. The \hldef{constant sheaf on $X$ associated to $A$}, denoted \hl{$\underline{A}$} or sometimes just \hl{$A$}, is the \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheaf associated to} the constant presheaf $P$ with value $A$ defined above.
-
-        % \item Let $\calO$ be a sheaf of (not-necessarily commutative) rings on $X$. Assume that the \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{global sections ring $\Gamma(X, \calO)$} exists. A \hldef{constant $\calO$-module} is an \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-module} $\calF$ which is isomorphic as an $\calO$-module to the sheafification of a constant presheaf of modules. Specifically, if $M$ is a module over the ring $\Gamma(X, \calO)$, the constant $\calO$-module $\underline{M}$ is the sheaf associated to the presheaf $U \mapsto M$ (with the empty set mapping to $0$).
-
-        % In the case that $\calO$ is the constant sheaf $\underline{R}$ associated to a ring $R$, a constant $\calO$-module is simply called a \hldef{constant $R$-module}.
-    \end{enumerate}
-\end{definition}
+\input{../_concepts/lemma_categories_of_sheaves_presheaves_on_a_singleton_set_are_equivalent_to_value_category.tex}
 
 
 \TODO{describe constant sheaves on sets by the connectivity of $X$.}
 
-\begin{definition}[Skyscraper sheaf] \label{definition:skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $x \in X$ be a point. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$. 
-    Given an object $E \in \text{ob}(\calA)$, the \hldef{skyscraper sheaf at $x$ with value $E$}, denoted \hl{$i_{x,*}(E)$} or sometimes \hl{$E_x$}, is the sheaf defined for each open set $U \subseteq X$ by
-    \[
-    (i_{x,*}(E))(U) = \begin{cases} 
-    E & \text{if } x \in U \\
-    1 & \text{if } x \notin U
-    \end{cases}
-    \]
-    The restriction maps $\rho_{UV}: (i_{x,*}(E))(U) \to (i_{x,*}(E))(V)$ for an inclusion $V \subseteq U$ are defined as:
-    \begin{itemize}
-        \item The identity map $\text{id}_E$ if $x \in V$ (which implies $x \in U$).
-        \item The unique morphism to the terminal object $E \to 1$ if $x \in U$ but $x \notin V$.
-        \item The identity map $\text{id}_1$ if $x \notin U$ (which implies $x \notin V$).
-    \end{itemize}
-
-    Equivalently, this skyscraper sheaf is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} of the sheaf given by $\mathbf{Open}(x)^{\op} \mapsto \calA, \quad x \mapsto E$ under the embedding $i_x: x \hookrightarrow X$.
-\end{definition}
-
+\input{../_definitions/definition_skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
 
 \TODO{define additive group, multiplicative group, roots of unity, etc.}
-\begin{definition} \label{definition:additive_group_sheaf_on_a_ringed_space}
-    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
-
-    The \hldef{additive group} \hl{$\bbG_a = \bbG_{a,(X, \calO_X)}$} is simply the sheaf $\calO_X$ regarded as a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf} of abelian groups on $X$.
-\end{definition}
-
-\begin{definition} \label{definition:multiplicative_group_sheaf_on_a_ringed_space}
-    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
-
-    The \hldef{multiplicative group} \hl{$\bbG_m = \bbG_{m,(X, \calO_X)}$}, also written \hl{$\calO_X^\times$}, is the sheaf $\mathbf{Open}(X)^{\op} \to \mathbf{Grp}$ given as follows:
-    $$\calO_X^\times(U) = \{s \in \calO_X(U): \text{ there exists some } t \in \calO_X(U) \text{ such that } st = 1 \}.$$
-\end{definition}
-
-\begin{definition} \label{definition:sheaf_of_roots_of_unity_on_a_ringed_space}
-    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
-
-    Given an integer $n \geq 1$, the \hldef{sheaf of $n$th roots of unity} is the sheaf \hl{$\mu_n = \mu_{n,(X,\calO_X)} : \mathbf{Open}(X)^{\op} \to \mathbf{Grp}$} given as follows:
-    $$\mu_{n}(U) = \{s \in \calO_X^\times(U): s^n = 1\}.$$
-\end{definition}
+\input{../_definitions/definition_additive_group_sheaf_on_a_ringed_space.tex}
+\input{../_definitions/definition_multiplicative_group_sheaf_on_a_ringed_space.tex}
+\input{../_definitions/definition_sheaf_of_roots_of_unity_on_a_ringed_space.tex}
 
 
 
 
 Another particularly interesting example of a sheaf is that of the \CrefAndHyperrefIfExist{definition:affine_scheme}{structure sheaf of an affine scheme}.
 
-
-\begin{lemma} \label{lemma:category_of_presheaves_of_sheaves_on_topological_space_valued_in_a_locally_small_category_is_locally_small}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $\calA$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
-    \begin{enumerate}
-        \item The \CrefAndHyperrefIfExist{definition:category}{category} $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}.
-        \item The category $\Sh(X, \calA)$ is locally small.
-    \end{enumerate}
-\end{lemma}
-\begin{proof}
-    Note that \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, so $\PreShv(X, \calA)$ is locally small by \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}. The category $\Sh(X, \calA)$ is necessarily a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{(full) subcategory} of $\PreShv(X, \calA)$ and is thus locally small.
-\end{proof}
-
+\input{../_concepts/lemma_category_of_presheaves_of_sheaves_on_topological_space_valued_in_a_locally_small_category_is_locally_small.tex}
 
 \subsection{Sheaves on more general sites}
 
@@ -1295,31 +1203,11 @@ See \Cref{section:appendix_grothendieck_topologies}.
 \input{../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex}
 
 
-\begin{definition}[(Co)limits in Presheaf Categories]
-    \TODO{verify}
-    Let $\calC$ be a category and $\calA$ a category. Let $I$ be an index category.
-    \begin{enumerate}
-        \item If $\calA$ admits colimits of shape $I$, the \textbf{presheaf colimit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
-        \[ (\varinjlim_{i \in I} F(i))(U) \coloneqq \varinjlim_{i \in I} (F(i)(U)) \]
-        for every $U \in \text{ob}(\calC)$.
-        \item If $\calA$ admits limits of shape $I$, the \textbf{presheaf limit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
-        \[ (\varprojlim_{i \in I} F(i))(U) \coloneqq \varprojlim_{i \in I} (F(i)(U)) \]
-        for every $U \in \text{ob}(\calC)$.
-    \end{enumerate}
-\end{definition}
+\input{../_definitions/definition_colimit_in_a_presheaf_category.tex}
 
-\begin{definition}[Limits in Sheaf Categories]
-    \TODO{verify}
-    Let $(\calC, J)$ be a site and $\calA$ a category admitting limits of shape $I$. The category $\Shv(\calC, J, \calA)$ is closed under $I$-indexed limits in $\PreShv(\calC, \calA)$. Specifically, for any diagram $F: I \to \Shv(\calC, J, \calA)$, the limit exists in the category of sheaves and is preserved by the natural inclusion $i: \Shv(\calC, J, \calA) \hookrightarrow \PreShv(\calC, \calA)$:
-    \[ \varprojlim_{\Shv} F \cong \varprojlim_{\PreShv} i \circ F \]
-\end{definition}
+\input{../_definitions/definition_limit_in_a_sheaf_category.tex}
 
-\begin{definition}[Colimits in Sheaf Categories]
-    \TODO{verify}
-
-    Let $(\calC, J)$ be a site and $\calA$ a category admitting colimits of shape $I$. Suppose there exists a \textbf{sheafification functor} (a reflector) $a: \PreShv(\calC, \calA) \to \Shv(\calC, J, \calA)$ left adjoint to the inclusion $i$. For any diagram $F: I \to \Shv(\calC, J, \calA)$, the colimit in the category of sheaves is constructed by:
-    \[ \varinjlim_{\Shv} F \coloneqq a \left( \varinjlim_{\PreShv} i \circ F \right) \]
-\end{definition}
+\input{../_definitions/definition_colimit_in_a_sheaf_category.tex}
 
 \begin{definition}[Plus-Functor and Exactness]
     \TODO{verify}
@@ -1331,10 +1219,10 @@ See \Cref{section:appendix_grothendieck_topologies}.
 
 \subsection{Sections functors}
 
-Sections functors are left exact
-\TODO{define sections for topological spaces}
+Sections functors are left exact.
 
 \input{../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex}
+\input{../_concepts/proposition_sections_functors_on_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_left_exact.tex}
 
 
 \subsection{Stalks of presheaves and sheaves on topological spaces}
@@ -1345,76 +1233,13 @@ Sections functors are left exact
     \TODO{prove that if $\calA$ is AB5 and sheafification exists, then the sheafification is exact; appraently this should be true on a general small site}
 \end{proposition}
 
-\begin{proposition}
-    \TODO{verify this for general $\calA$; this is certainly true for modules.}
-    \TODO{prove that if $\calA$ is AB5 and sheafification exists, then the sheafification is exact}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
-    \TODO{verify these}
-    \begin{enumerate}
-        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{pre-additive category}, then \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{$\PreShv(X, \calA)$} and \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{$\Shv(X, \calA)$} are pre-\CrefAndHyperrefIfExist{definition:additive_functor_between_additive_categories}{additive}.
-        \item If $\calA$ is an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}, then $\PreShv(X, \calA)$ and $\Shv(X, \calA)$ are additive.
-        \item Suppose that $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
-        \begin{enumerate}
-            \item The category $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:abelian_category}{abelian}. 
-            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
-                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-            exists and is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}, $\Shv(X, \calA)$ is abelian.
-        \end{enumerate}
-        \item Suppose that $\calA$ is an AB$n$ category for $n \in \{3,4,5\}$. 
-        \begin{enumerate}
-            \item $\PreShv(X, \calA)$ is AB$n$. 
-            \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
-                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-            exists. Further suppose that $a$ is exact for $n \in \{4,5\}$, $\Shv(X, \calA)$ is AB$n$. In particular, the exactness condition is not needed for $n = 3$. Moreover, the exactness condition is always satisfied for $n = 5$.
-        \end{enumerate}
-        \item Suppose that $\calA$ is AB$5$ and \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}.
-        \begin{enumerate}
-            \item $\PreShv(X, \calA)$ has enough injectives.
-            \item Assuming that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
-                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-            exists, $\Shv(X, \calA)$ has enough injectives.
-        \end{enumerate}
-        \item If $\calA$ is a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{Grothendieck category}, then so are $\PreShv(X, \calA)$ and $\Shv(X, \calA)$.
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    \begin{enumerate}
-        \item  \TODO{}
-    \end{enumerate}
-\end{proof}
-
-\begin{proposition}
-    \TODO{verify this for general $\calA$; this is certainly true for modules.}
-    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB5 category}. Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $x \in X$ be a point. 
-    \begin{enumerate}
-        \item The \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalk} functor $\calF \mapsto \calF_x$ is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor} $\PreShv(X, \calA) \to \calA$ (\Cref{definition:presheaf_on_a_topological_space}). 
-        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification} functor 
-                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-        exists. The stalk functor $\calF \mapsto \calF_x$ is an exact functor $\Shv(X, \calA) \to \calA$. 
-        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification} functor 
-                $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-        exists. A sequence 
-        $$0 \to \calF \to \calG \to \calH \to 0$$
-        is \CrefAndHyperrefIfExist{definition:exact_sequence_of_morphisms_in_an_abelian_category}{exact} if and only if the induced sequences 
-        $$0 \to \calF_x \to \calG_x \to \calH_x \to 0$$
-        on stalks are exact for all $x \in X$. 
-    \end{enumerate}
-\end{proposition}
-\begin{proof}
-    \TODO{}
-\end{proof}
+\input{../_concepts/proposition_circumstances_under_which_categories_of_sheaves_and_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_abelian.tex}
+\input{../_concepts/proposition_stalk_functor_for_presheaves_and_sheaves_on_a_topological_space_valued_in_an_AB5_category_is_exact.tex}
 
 \TODO{define surjection, injection of sheaves of sets}
 
-\begin{proposition} \label{proposition:morphism_of_sheaves_on_topological_space_valued_in_nice_enough_category_with_enough_direct_limits_is_isomorphism_iff_all_stalk_morphisms_are}
-    \TODO{verify this for general $\calA$; it is true for $\calA = \Sets$}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object}. Assume that for all $x \in X$ and all $\calF \in \Sh(X, \calA)$, the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks} $\calF_x$ exist in $\calA$. 
-    
-    A \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf morphism} $f: \calF \to \calG$ in $\Sh(X, \calA)$ is an isomorphism if and only if all of the stalk morphisms $f: \calF_x \to \calG_x$ are isomorphisms. In particular, $\mathbf{Open}(X)$ is a site \CrefAndHyperrefIfExist{definition:site_with_enough_points}{with enough points}.
-\end{proposition}
-\begin{proof}
-    \TODO{}
-\end{proof}
+\input{../_concepts/proposition_morphism_of_sheaves_on_topological_space_valued_in_nice_enough_category_with_enough_direct_limits_is_isomorphism_iff_all_stalk_morphisms_are.tex}
+\input{../_concepts/proposition_morphism_of_sheaves_on_topological_space_valued_in_sets_is_isomorphism.tex}
 
 
 
@@ -1422,26 +1247,28 @@ Sections functors are left exact
 
 \subsubsection{Sheaf theoretic statements of analysis and manifolds}
 
-In complex analysis, one considers the complex logarithm function $\log(z)$. Consider the following statements:
+\begin{example} \label{example:exact_sequence_of_exponential_of_holomorphic_functions}
+One function studied in complex analysis is the complex logarithm function $\log(z)$. Consider the following (true) statements:
 \begin{itemize}
     \item $\log(z)$ can be locally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} at any point in $X = \mathbb{C} \setminus \{0\}$. 
     \item $\log(z)$ cannot be globally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $X$.
 \end{itemize}
-There is also a sequence
+
+
+Let $\calO$ be the sheaf on $X$ of holomorphic functions (i.e. $\calO(U) = \{f: U \to \bbC \text{ holomorphic}\}$ for any $U \subseteq X$ open).  There is a sequence
 $$0 \to \underline{\bbZ} \xrightarrow{n \mapsto 2 \pi i n} \calO \xrightarrow{\exp} \calO^* \to 1$$
 \TODO{ref}
-of sheaves of abelian groups on $X$. One can verify that it is a short exact sequence by checking exactness at all stalks \TODO{}. The first statement is tantamount to saying that $\calO \xrightarrow{\exp} \calO^*$ is a surjection of sheaves \TODO{}. The second statement is tantamount to saying that the map $\calO(X) \xrightarrow{\exp} \calO^*(X)$ on global sections is not a surjection. 
+of sheaves of abelian groups on $X$. One can verify that it is a short exact sequence by checking exactness at all stalks \TODO{}. The first statement is tantamount to saying that $\calO \xrightarrow{\exp} \calO^*$ is a surjection of sheaves \TODO{} --- one can verify this at the level of stalks . The second statement is tantamount to saying that the map $\Gamma(X, \calO) \xrightarrow{\exp} \Gamma(X, \calO^*)$ on global sections is not a surjection. 
 
+\TODO{}
 Once we study sheaf cohomology, we obtain the cohomological long exact sequence 
 \begin{align*}
 0 &\to \Gamma(X, \underline{\bbZ}) \to \Gamma(X, \calO) \xrightarrow{\exp} \Gamma(X, \calO^*) \\
-&\to H^1(X, \underline{\bbZ}) \to \cdots
+&\xrightarrow{\delta} H^1(X, \underline{\bbZ}) \to \cdots
 \end{align*}
 
-
-It can be locally defined as a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} near any point in $X = \mathbb{C} \setminus \{0\}$. 
-
-Letting $\calO$ be the sheaf on $X$ of holomorphic functions (i.e. $\calO(U) = \{f: U \to \bbC \text{ holomorphic}\}$ for any $U \subseteq X$ open),
+To show that $\Gamma(X, \calO) \xrightarrow{\exp} \Gamma(X, \calO^*)$ is not a surjection, one can then show that the image of the connecting morphism $\delta: \Gamma(X, \calO^*) \to H^1(X, \underline{\bbZ})$ is not zero. 
+\end{example}
 
 
 \subsection{Sheaf of rings, ringed spaces, and sheaves of modules}
@@ -1449,11 +1276,16 @@ Letting $\calO$ be the sheaf on $X$ of holomorphic functions (i.e. $\calO(U) = \
 \input{../_definitions/definition_ringed_space.tex}
 
 \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_ringed_space.tex}
+
+\input{../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex}
+
 \TODO{talk about how O-modules form a grothendieck abelian category }
 
 \TODO{do definitions of sheaf hom for topological spaces}
 \input{../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
 \input{../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+\input{../_concepts/theorem_tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
 
 % \TODO{define module sheaf on a topological space}
 % \input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
@@ -1462,23 +1294,69 @@ Letting $\calO$ be the sheaf on $X$ of holomorphic functions (i.e. $\calO(U) = \
 
 \input{../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex}
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex}
+
 \input{../_definitions/definition_restriction_of_a_presheaf_sheaf_on_a_topological_space.tex}
+
+\input{../_concepts/lemma_restriction_of_presheaf_on_a_topological_space_to_a_point_is_the_presheaf_whose_global_sections_is_the_stalk.tex}
+
+% \input{../_definitions/definition_restriction_of_a_presheaf_sheaf_on_a_topological_space.tex}
 \input{../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex}
 
-\subsection{Locally constant sheaves}
+\Cref{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_topological_space_has_enough_injectives} is an application of the properties of \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_on_a_topological_space}{inverse images} and \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct images}; we can show that the category of $\calO_X$-modules \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives} (cf. \Cref{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives})
 
-% \begin{definition} \label{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
-%     Let \( X \) be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
-%     with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
-%         $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-%     exists. Let $A$ be an object of $\calA$. 
+\input{../_concepts/lemma_injective_projective_objects_in_a_category_are_closed_under_products_coproducts.tex}
 
-%     The constant sheaf on $X$ 
-% \end{definition}
+
+\input{../_concepts/lemma_skyscraper_sheaf_at_a_point_of_a_ringed_space_of_injective_module_is_an_injective_object.tex}
+
+\input{../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_topological_space_has_enough_injectives.tex}
+
+
+\input{../_definitions/definition_godement_sheaf_of_a_sheaf_on_a_ringed_spcae.tex}
+
+\input{../_definitions/definition_flasque_flabby_sheaf_of_sets_on_a_topological_space.tex}
+
+\input{../_concepts/lemma_godement_sheaf_of_a_sheaf_of_modules_on_a_ringed_space_is_flasque.tex}
+
+\input{../_concepts/theorem_the_category_of_sheaves_of_modules_on_a_ringed_space_has_enough_flasque_sheaves.tex}
+
+\input{../_concepts/theorem_godement_resolution_of_a_sheaf_of_modules_on_a_ringed_space.tex}
+
+Additionally, flasque sheaves are acyclic for direct image functors and hence right resolutions by flasque sheaves may be used to compute left derived direct image functors.
+
+
+\input{../_concepts/proposition_flasque_sheaves_on_a_ringed_space_are_acyclic_for_the_global_sections_functor_and_for_any_direct_image_functor.tex}
+
+\input{../_concepts/proposition_injective_module_over_a_ringed_space_is_flasque.tex}
+
+
+\subsubsection{Locally constant sheaves}
+
 \input{../_definitions/definition_locally_constant_sheaf_on_a_topological_space.tex}
 
+
 \TODO{talk about examples of locally constant sheaves, how they are equivalent to representations or to bundles, how they are locally isomorhpic to constant sheaves and yet are not isomorphic to constant sheaves}
+
 \TODO{talk about how sheaves of sets on topological spaces are equivalent to etale spaces over the topological spaces}
+
+The following is an essential idea; it has analogues for more sheaves of more general sites such as the \'etale site of a scheme.
+
+\begin{theorem}  \label{theorem:locally_constant_sheaves_of_R_modules_on_a_connected_locally_path_connected_semi_locally_simply_connected_are_equivalent_to_representation_of_fundamental_group}
+    Let $X$ Be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected}, \CrefAndHyperrefIfExist{definition:locally_path_connected_topological_space}{locally path connected}, and \CrefAndHyperrefIfExist{definition:semi_locally_simply_connected_space}{semi-locally simply connected}. Let $x \in X$. Let $R$ be a ring.
+    There is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence} 
+    $$\mathbf{LCS}(X,R) \simeq \mathbf{Rep}_R(\pi_1(X,x))$$
+    \TODO{$\mathbf{LCS}(X,R)$}
+    of categories where $\mathbf{LCS}(X,R)$ is the category of \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaves} of $R$-modules, and $\mathbf{Rep}_R(\pi_1(X,x))$ is the category of \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{$R$-linear representations} of the fundamental group $\pi_1(X,x)$. 
+
+    \TODO{fiber, }
+    \TODO{associated bundle}
+    \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{Natural inverse equivalences} are given as follows: given a locally constant sheaf $\calF$, the fiber at the basepoint $x$ is the module $M = \calF_x$\CrefIfExists{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}, and for any \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{loop} $\gamma$ in $X$ based at $x$, ``lifting'' sections along the loop defines an automorphism of $M$, which in turn defines a representation $\rho: \pi_1(X,x) \to \Aut_R(M)$. Given a representation  $\rho: \pi_1(X,x) \to \Aut_R(M)$, and letting $\widetilde{X}$ be the \CrefAndHyperrefIfExist{definition:universal_cover_of_a_topological_space}{universal cover} of $X$, form the associated bundle of the locally constant sheaf as the quotient
+    $$\calF = (\widetilde{X} \times M) / \pi_1(X,x)$$
+    where $\pi_1$ acts on $\widetilde{X}$ via deck transformations and on $M$ via the representation $\rho$.
+\end{theorem}
+
+\subsubsection{Vector bundles}
+
 
 \subsubsection{The definition of schemes}
 
@@ -1497,6 +1375,7 @@ Now that we have defined the notion of sheaves on topological spaces, the defini
 
 
 \input{../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification.tex}
 
 While the above notion of sheaf cohomology is for sheaves of abelian groups, there are sensible notions of zeroth and first sheaf cohomology for sheaves of not-necessarily abelian groups
 
@@ -1504,7 +1383,249 @@ While the above notion of sheaf cohomology is for sheaves of abelian groups, the
 \input{../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex}
 \input{../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex}
 
-\TODO{talk about Cech cohomology and how it compares to sheaf cohomology}
+
+\subsection{\v{C}ech cohomology}
+
+\TODO{Cech cohomology for more general sites}
+
+\input{../_definitions/definition_cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space.tex}
+
+\begin{remark} \label{remark:cech_cohomology_with_respect_to_arbitrary_open_cover_may_not_have_long_exact_sequence}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$AB3$ category}. Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
+    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+    exists so that $\Sh(X, \calA)$ is an abelian caetgory (\Cref{proposition:circumstances_under_which_categories_of_sheaves_and_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_abelian}).
+
+    Given an arbitrary \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\calU$, the \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors} 
+    $$\{\check{H}^p(\calU,-): \Sh(X, \calA) \to \calA \}_{p \geq 0}$$
+    \CrefIfExists{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}\CrefIfExists{definition:category_of_groups_of_abelian_groups}\CrefIfExists{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}
+    may not form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{cohomological $\delta$-functor}. In other words, \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequences}
+    $$0 \to \calF' \to \calF \to \calF'' \to 0$$
+    in $\Sh(X, \calA)$ may not yield \CrefAndHyperrefIfExist{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}{long exact sequences} of the form
+    \begin{align*}
+    0 &\to \check{H}^0(\calU, \calF') \to  \check{H}^0(\calU, \calF) \to \check{H}^0(\calU, \calF'')  \\
+    &\to \check{H}^1(\calU, \calF') \to \check{H}^1(\calU, \calF) \to \check{H}^1(\calU, \calF'') \\ 
+    &\to \cdots.
+    \end{align*}
+    This is because, for general $\calU$, the sequence 
+    $$0 \to C^\bullet(\calU, \calF') \to C^\bullet(\calU, \calF) \to C^\bullet(\calU, \calF'') \to 0$$
+    is generally only \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} because sections are left exact \CrefIfExists{proposition:sections_functors_on_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_left_exact}. 
+
+    On the other hand, at least in the case that $\calA = \Ab$ and given any open cover $\calU$ of $X$, there is a long exact sequence
+    \begin{align*}
+    0 &\to \check{H}^0(X, \calF') \to  \check{H}^0(X, \calF) \to \check{H}^0(X, \calF'')  \\
+    &\to \check{H}^1(X, \calF') \to \check{H}^1(X, \calF) \to \check{H}^1(X, \calF'') \\
+    &\to \cdots.
+    \end{align*}
+\end{remark}
+
+\input{../_concepts/lemma_short_exact_sequence_of_sheaves_of_abelian_groups_on_a_topological_space_yields_short_exact_sequence_of_colimits_of_cech_complexes.tex}
+
+\input{../_concepts/proposition_cech_cohomology_for_sheaves_of_abelian_groups_on_a_topological_space_induce_long_exact_sequences.tex}
+
+
+
+Leray's theorem \Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf} states that \v{C}ech cohomology $\check{H}(\calU, \calF)$ with respect to an acyclic cover naturally agrees with sheaf cohomology $H^p(X, \calF)$. Moroever, \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} states that \v{C}ech cohomology $\check{H}(X, \calF)$ agrees with sheaf cohomology $H^p(X,\calF)$ under nice enough circumstances. 
+
+
+\input{../_definitions/definition_acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space.tex}
+
+\input{../_definitions/definition_good_open_cover_of_a_topological_space.tex}
+\begin{definition} \label{definition:semi_good_open_cover_of_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
+    We will say that an \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\{U_i\}_{i \in I}$ is a \hldef{semi-good open cover} if every finite intersection $\bigcap_{j=1}^n U_{i_j}$ is empty or is a disjoint union of \CrefAndHyperrefIfExist{definition:contractible_topological_space}{contractible} open subsets.
+\end{definition}
+\begin{remark}
+    The terminology of ``semi-good cover'' is probably not standard. 
+\end{remark}
+
+\begin{theorem} \label{theorem:constant_sheaves_are_acyclic_on_contractible_and_loc_contr_spaces}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} with \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough injectives} and such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
+    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+    exists. In particular, the notion of \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology objects} is well defined. Moreover, these conditions are satisfied for $\calA = \Ab$\CrefIfExists{theorem:examples_of_abelian_categories_with_enough_injectives_or_projectives}\CrefIfExists{theorem:sheafification_for_sheaves_of_sets_on_a_topological_space_exist}.  Let $\calF$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf of} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X$.
+    
+    Assuming that $X$ is a contractible and locally contractible topological space and $\calF$ is a \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on $X$ valued in $\calA$, the \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology objects $H^p(X, \calF)$} all vanish for $p > 0$. 
+\end{theorem}
+
+% \begin{corollary}
+%     Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} with \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough injectives} and such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
+%     $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
+%     exists. In particular, the notion of \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology objects} is well defined. Moreover, these conditions are satisfied for $\calA = \Ab$\CrefIfExists{theorem:examples_of_abelian_categories_with_enough_injectives_or_projectives}\CrefIfExists{theorem:sheafification_for_sheaves_of_sets_on_a_topological_space_exist}.  Let $\calF$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf of} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X$.
+
+%     Assume that $X$ is a locally contractible topological space. 
+    
+% \end{corollary}
+
+\input{../_concepts/proposition_nice_circumstances_for_an_open_cover_to_be_acyclic_for_a_sheaf_of_abelian_groups.tex}
+
+
+\input{../_concepts/proposition_every_smooth_manifold_has_a_good_open_cover.tex}
+
+\input{../_concepts/theorem_lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf.tex}
+
+\input{../_concepts/theorem_cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space.tex}
+
+
+Let us compute some examples of \v{C}ech cohomology groups (which may coincide with sheaf cohomology as per \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space}). 
+
+\begin{example}
+    Let us compute $\check{H}^p(S^1, \underline{\bbZ})$ \CrefIfExists{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}\CrefIfExists{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}. Take $\calU = \{U_0,U_1,U_2\}$ to consist of three arcs each covering about $120^\circ$ and overlapping slightly --- note that this open cover is \CrefAndHyperrefIfExist{definition:good_open_cover_of_a_topological_space}{good} and that $S^1$ is a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold}, so \Cref{proposition:nice_circumstances_for_an_open_cover_to_be_acyclic_for_a_sheaf_of_abelian_groups} states that $\calU$ is \CrefAndHyperrefIfExist{definition:acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space}{acyclic} for $\underline{\bbZ}$ and hence Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) and \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} together show that $\check{H}^p(\calU, \calF) \cong \check{H}^p(S^1, \calF)$ (and that these are isomorphic to \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology} $H^p(S^1, \calF)$). 
+
+    The complex is given by 
+    $$C^0(\calU, \underline{\bbZ}) = \Gamma(U_0, \underline{\bbZ}) \oplus \Gamma(U_1, \underline{\bbZ}) \oplus \Gamma(U_2, \underline{\bbZ}) = \bbZ \oplus \bbZ \oplus \bbZ$$
+    $$C^1(\calU, \underline{\bbZ}) = \Gamma(U_0 \cap U_1, \underline{\bbZ}) \oplus \Gamma(U_0 \cap U_2, \underline{\bbZ}) \oplus \Gamma(U_1 \cap U_2, \underline{\bbZ}) = \bbZ \oplus \bbZ \oplus \bbZ$$
+    $$C^2(\calU, \underline{\bbZ}) = \Gamma(U_0 \cap U_1 \cap U_2, \underline{\bbZ}) = \Gamma(\emptyset, \underline{\bbZ}) = 0$$
+
+    The differential map 
+    $$d^0: C^0(\calU, \underline{\bbZ}) \to C^1(\calU, \underline{\bbZ})$$
+    is given by 
+    $$d^0(s_0,s_1,s_2) = (s_1-s_0, s_2-s_1, s_0-s_2)$$
+    computing the cohomology of the cochain complex yields
+    $$\check{H}^0(S^1, \underline{\bbZ}) \cong \bbZ$$
+    $$\check{H}^1(S^1, \underline{\bbZ}) \cong \bbZ.$$
+\end{example}
+
+\begin{example}
+    Let $r \in \bbQ^\times$ and let $\calF_r$ be the \CrefAndHyperrefIfExist{definition:locally_constant_sheaf}{locally constant sheaf} of $\bbQ$-vector spaces on $S^1$ with ``monodromy'' $r$ --- by this, we mean that $\calF_r$ is the (isomorphism class of) sheaf on $S^1$ corresponding to (\Cref{theorem:locally_constant_sheaves_of_R_modules_on_a_connected_locally_path_connected_semi_locally_simply_connected_are_equivalent_to_representation_of_fundamental_group}) the homomorphism $\pi_1(S^1,x) \to \Aut(\bbQ) \cong \bbQ^\times$ given by sending a generator of $\pi_1(S^1, x)$ to $r \in \bbQ^\times$. 
+    
+    Consider the \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\calU = \{U_0, U_1\}$ consisting of two overlapping semicircles. The intersection $U_0 \cap U_1 = V_a \sqcup V_b$ is a disjoint union of two \CrefAndHyperrefIfExist{definition:contractible_topological_space}{contractible} arcs, making $\calU$ a \CrefAndHyperrefIfExist{definition:semi_good_open_cover_of_a_topological_space}{semi-good cover}. 
+
+    As the specification of $\calF_r$ by monodromy only determines its isomorphism class, we provide an explicit description of a representative element. Since each $U_i$ is \CrefAndHyperrefIfExist{definition:contractible_topological_space}{contractible} and locally contractible, the restriction $\calF_r|_{U_i}$ is a \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} with value $\bbQ$. Thus, we have isomorphisms $\phi_i: \Gamma(U_i, \calF_r) \xrightarrow{\sim} \bbQ_i$, where $\bbQ_0, \bbQ_1$ are two copies of $\bbQ$.
+
+    Note that $\Gamma(U_0 \cap U_1, \calF_r) \cong \Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r)$. Since $V_a, V_b \subset U_i$ are inclusions of contractible sets into a larger contractible set, the restriction maps $\Gamma(U_i, \calF_r) \to \Gamma(V_j, \calF_r)$ are isomorphisms. By identifying each $\Gamma(V_j, \calF_r)$ with $\Gamma(U_i, \calF_r)$ via these internal restrictions, the map $\Gamma(U_i, \calF_r) \to \Gamma(U_0 \cap U_1, \calF_r)$ is identified with the diagonal:
+    $$s \mapsto (s, s) \in \Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r).$$
+
+    The monodromy $r$ is encoded in the transition between the choices of basis $1 \in \bbQ_0$ and $1 \in \bbQ_1$. We construct $\calF_r$ such that:
+    \begin{enumerate}
+        \item On the overlap $V_a$, the identification $\bbQ_0 \cong \Gamma(V_a, \calF_r) \cong \bbQ_1$ is the identity ($1 \mapsto 1$).
+        \item On the overlap $V_b$, the identification $\bbQ_0 \cong \Gamma(V_b, \calF_r) \cong \bbQ_1$ is multiplication by $r$ ($1 \mapsto r$).
+    \end{enumerate}
+
+    With these identifications, an element $(c_0, c_1) \in \bbQ_0 \oplus \bbQ_1$ maps via the Čech differential $d^0$ to:
+    $$d^0(c_0, c_1) = (c_1 - c_0, c_1 - r c_0) \in \bbQ \oplus \bbQ.$$
+    For $r \neq 1$, the only solution to $d^0(c_0, c_1) = (0, 0)$ is $c_0 = c_1 = 0$, implying $\check{H}^0(S^1, \calF_r) = 0$. 
+
+    To compute $\check{H}^1(S^1, \calF_r) = \text{coker } d^0$, we observe that for any target vector $(a, b) \in \bbQ \oplus \bbQ$, we seek $(c_0, c_1)$ such that:
+    $$ \begin{cases} c_1 - c_0 = a \\ c_1 - r c_0 = b \end{cases} $$
+    Subtracting the first equation from the second yields $(1-r)c_0 = b - a$. Since $r \neq 1$, we can solve for $c_0 = \frac{b-a}{1-r}$ and subsequently $c_1 = a + c_0$. Thus, $d^0$ is \CrefAndHyperrefIfExist{definition:surjective_function}{surjective}, and the quotient group $\check{H}^1(S^1, \calF_r)$ is zero.
+    
+    % As our specification of $\calF_r$ by monodromy only specifies its isomorphism class, we shall pick out a more explicit description of a specific element of this isomorphism class. We take the perspective that $\calF_r$ should necessarily \CrefAndHyperrefIfExist{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}{restrict to a} constant sheaf with value $\bbQ$ on on $U_i$ for $i = 0,1$ \TODO{justify}. 
+
+    % Note that $\Gamma(U_0 \cap U_1, \calF_r) \cong \Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r)$. The above perspective demands that we identify each of $\Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r)$ with $\Gamma(U_0, \calF_r)$ for each $i$, in which case the restriction maps  
+    % $$\Gamma(U_i, \calF_r) \to \Gamma(U_0 \cap U_1, \calF_r)$$
+    % are identified with the diagonal maps 
+    % $$\Gamma(U_i, \calF_r) \xrightarrow{\id, \id} \Gamma(U_i, \calF_r) \oplus \Gamma(U_i, \calF_r).$$
+    % Further note that $\Gamma(U_i, \calF_r)$ is isomorphic to $\bbQ$ and an isomorphism $\phi: \bbQ \xrightarrow{\sim} \Gamma(U_i, \calF_r)$ corresponds to a choice of \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{basis} of $\Gamma(U_i, \calF_r)$ by sending $\phi$ to $\phi(1)$. We construct $\calF_r$ in such a way that 
+    % \begin{enumerate}
+    %     \item we let $\bbQ_0$ and $\bbQ_1$ be two copies of $\bbQ$,
+    %     \item we choose bases $s_i \in \Gamma(U_i, \calF_r)$, and  
+    %     \item the composition 
+    %     $$\bbQ_0 \cong \Gamma(U_0, \calF_r) \xrightarrow{s_0 \mapsto s_1} \Gamma(U_1, \calF_r) \to \bbQ_1$$
+    %     sends $1$ to $r$.
+    % \end{enumerate}
+    
+     
+
+    % and we choose 
+    
+    % We choose bases $s_i \in \Gamma(U_i, \calF_r)$ such that 
+    
+    % in such a way that the composition 
+    % $$\bbQ \cong \Gamma(U_0, \calF_r) $$
+    
+
+    % To compute the \CrefAndHyperrefIfExist{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}{Čech cohomology}, we fix local isomorphisms (trivializations) $\psi_0: \calF_r|_{U_0} \xrightarrow{\cong} \underline{\bbQ}_{U_0}$ and $\psi_1: \calF_r|_{U_1} \xrightarrow{\cong} \underline{\bbQ}_{U_1}$. Under these maps, a section $s_i \in \Gamma(U_i, \calF_r)$ is represented by a constant $c_i \in \bbQ$. 
+
+    % The "twist" $r$ appears in the transition functions $\psi_1 \circ \psi_0^{-1}$ on the overlaps. By the definition of a sheaf with monodromy $r$, we can choose our trivializations such that:
+    % \begin{itemize}
+    %     \item On $V_a$, the sections match "normally": $\psi_1 \circ \psi_0^{-1} = \text{id}_{\bbQ}$. Thus, a global section must satisfy $c_1 = c_0$.
+    %     \item On $V_b$, we have completed a loop around $S^1$, so the sections match "via the monodromy": $\psi_1 \circ \psi_0^{-1} = r \cdot \text{id}_{\bbQ}$. Thus, a global section must satisfy $c_1 = r c_0$.
+    % \end{itemize}
+
+    % The Čech differential $d^0: C^0(\calU, \calF_r) \to C^1(\calU, \calF_r)$ measures the failure of these local constants $(c_0, c_1)$ to glue according to these transitions. Identifying $C^0 \cong \bbQ \oplus \bbQ$ and $C^1 \cong \bbQ \oplus \bbQ$, the map is:
+    % $$d^0(c_0, c_1) = (\text{restriction to } V_a, \text{restriction to } V_b) = (c_1 - c_0, c_1 - r c_0)$$
+
+    % \begin{enumerate}
+    %     \item $\check{H}^0(S^1, \calF_r) = \ker d^0$: This requires $c_1 = c_0$ and $c_1 = r c_0$, which implies $(r-1)c_0 = 0$. 
+    %     If $r \neq 1$, then $c_0 = 0$, so $\check{H}^0(S^1, \calF_r) = 0$.
+        
+    %     \item $\check{H}^1(S^1, \calF_r) = \text{coker } d^0$: For any $(a, b) \in C^1$, we check if there exist $(c_0, c_1)$ such that $c_1 - c_0 = a$ and $c_1 - r c_0 = b$. Subtracting the first from the second gives $(1-r)c_0 = b - a$. 
+    %     If $r \neq 1$, $1-r$ is invertible in $\bbQ$, so we can always solve for $c_0$ and $c_1$. Thus $d^0$ is surjective and $\check{H}^1(S^1, \calF_r) = 0$.
+    % \end{enumerate}
+\end{example}
+
+
+\begin{example}
+    As per the situation in \Cref{example:exact_sequence_of_exponential_of_holomorphic_functions}, let $X = \mathbb{C} \setminus \{0\}$, let $\calO_X$ be the sheaf of holomorphic functions on $X$, and let $\calO_X^*$ be the sheaf of multiplicatively invertible holomorphic functions on $X$. There is a short exact sequence
+    $$0 \to \underline{\bbZ} \xrightarrow{n \mapsto 2 \pi i n} \calO_X \xrightarrow{f \mapsto \exp(f) } \calO_X^* \to 1$$
+    of sheaves of abelian groups on $X$. 
+
+    We show that the global section $z \in \Gamma(X, \calO_X^*)$ is not in the image of $\exp: \Gamma(X, \calO_X) \to \Gamma(X, \calO_X^*)$. 
+
+    By \Cref{proposition:cech_cohomology_for_sheaves_of_abelian_groups_on_a_topological_space_induce_long_exact_sequences}, the is an exact sequence
+    \begin{equation}  \label{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence}
+        0 \to \check{H}^0(X,\underline{\bbZ}) \to \check{H}^0(X, \calO_X)  \to \check{H}^0(X, \calO_X^*) \xrightarrow{\delta} \check{H}^1(X,\underline{\bbZ}) 
+    \end{equation}
+    The degree $0$ cohomology terms are identifiable with the global sections $\Gamma(X, -)$. To show that $z$ is not in the image of $\exp: \Gamma(X, \calO_X) \to \Gamma(X, \calO_X^*)$ is equivalent to show that $\delta(z) \in \check{H}^1(X,\underline{\bbZ})$ is nonzero. It is the case that $\check{H}^0(\calU,-)$ is naturally isomorphic to $\Gamma(X,-)$ for any open cover $\calU$ of $X$, so $\check{H}^0(X,-)$ is also naturally isomorphic to $\Gamma(X,-)$. . Moreover, $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $H^1(X, \underline{\bbZ})$ by \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} since $X$ is a manifold and hence \CrefAndHyperrefIfExist{theorem:nice_enough_topological_spaces_are_paracompact}{is} a paracompact Hausdorff space. If $\calU$ is an open cover that is acyclic for $\bbZ$ then Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) implies that $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $\check{H}^1(\calU, \underline{\bbZ})$. Therefore, as long as $\calU$ is an acyclic open cover for $\bbZ$, the exact sequence \eqref{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence} is identifiable as
+    \begin{equation} \label{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence_with_respect_to_nice_cover}
+        0 \to \check{H}^0(\calU,\underline{\bbZ}) \to \check{H}^0(\calU, \calO_X)  \to \check{H}^0(\calU, \calO_X^*) \xrightarrow{\delta} \check{H}^1(\calU,\underline{\bbZ}) 
+    \end{equation}
+.
+
+    % In fact, this long exact seqeunce may be computed via \v{C}ech cohomology with respect to any open cover $\calU$ of $X$ that is acyclic for $\bbZ$, $\calO_X$, and $\calO_X^*$, i.e. the above long exact sequence may be naturally identified with a long exact sequence
+    % \begin{align*}
+    %     0 &\to \check{H}^0(\calU,\underline{\bbZ}) \to \check{H}^0(\calU, \calO_X)  \to \check{H}^0(\calU, \calO_X^*) \\
+    %     &\xrightarrow{\delta} \check{H}^1(\calU,\underline{\bbZ}) \to \cdots .
+    % \end{align*}
+    % This is due to the following:
+    % \begin{enumerate}
+    %     \item The fact that $X$ is a topological manifold and hence \CrefAndHyperrefIfExist{theorem:nice_enough_topological_spaces_are_paracompact}{is} a paracompact Hausdorff space, 
+    %     \item \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space}, which then concludes that $\check{H}^p(X, -) \cong H^p(X,-)$, and 
+    %     \item Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}), which states that $\check{H}^p(\calU, -) \cong H^p(X,-)$ as long as $\calU$ is acyclic for the sheaves.
+    % \end{enumerate}
+
+    % Moreover, 
+    We also choose $\calU$ to be nice enough so that 
+    \begin{equation} \label{equation:short_exact_sequence_of_cech_complexes_for_exponentiation_of_holomorphic_functions_and_nice_cover}
+    0 \to C^\bullet(\calU, \underline{\bbZ}) \to C^\bullet(\calU, \calO_X) \to C^\bullet(\calU, \calO_X^*),
+    \end{equation}
+    which is a priori only left exact, is also a short exact sequence; this allows us to compute $\delta(z)$ using the diagram chasing logic of the \CrefAndHyperrefIfExist{proposition:snake_lemma}{Snake lemma}. 
+
+    We let $\calU = \{U_0, U_1\}$ be given by $U_0 = \mathbb{C} \setminus (-\infty, 0]$ and $U_1 = \mathbb{C} \setminus [0,\infty)$. Note that the intersection $U_{01} = U_0 \cap U_1$ has two disjoint connected components, which we describe as $V_{\text{up}}$ and $V_{\text{low}}$, given as the upper half-plane and lower half-plane respectively. To say that \eqref{equation:short_exact_sequence_of_cech_complexes_for_exponentiation_of_holomorphic_functions_and_nice_cover} is exact is tantamount to saying that $\Gamma(U, \calO_X) \xrightarrow{\exp} \Gamma(U, \calO_X^*)$ is surjective for all $U \in \{U_0, U_1, U_{01}\}$, which is true due by complex analysis. 
+    
+    To have the exact sequence \Cref{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence_with_respect_to_nice_cover}, recall that we need to justify that $\calU$ is acyclic for $\underline{\bbZ}$, i.e. that 
+    $$H^q(U_0, \underline{\bbZ}), H^q(U_1, \underline{\bbZ}), H^q(U_0 \cap U_1, \underline{\bbZ}) = 0.$$
+    The first two vanish due to \Cref{theorem:constant_sheaves_are_acyclic_on_contractible_and_loc_contr_spaces} because $U_0$ and $U_1$ are contractible and $\underline{\bbZ}$ is constant. The third is identifiable with $H^q(V_{\text{up}}, \underline{\bbZ}) \oplus H^q(V_{\text{low}}, \underline{\bbZ})$, which is also $0$.
+    
+    We now compute $\delta(z)$. The diagram
+    \begin{center}
+    \begin{tikzcd}
+        0 \ar[r] & C^0(\calU, \underline{\bbZ}) \ar[r] \ar[d] & C^0(\calU, \calO_X) \ar[r] \ar[d] & C^0(\calU, \calO_X^*) \ar[r] \ar[d] & 0 \\
+        0 \ar[r] & C^1(\calU, \underline{\bbZ}) \ar[r] \ar[d] & C^1(\calU, \calO_X) \ar[r] \ar[d] & C^1(\calU, \calO_X^*) \ar[r] \ar[d] & 0 \\
+                 & \vdots                                     & \vdots                            & \vdots                              & 
+        \end{tikzcd}
+    \end{center}
+    is identified with 
+    \begin{center}
+        \begin{tikzcd}
+            0 \ar[r] & \Gamma(U_0, \underline{\bbZ}) \oplus \Gamma(U_1, \underline{\bbZ}) \ar[r] \ar[d, "d^0"] & \Gamma(U_0, \calO_X) \oplus \Gamma(U_1, \calO_X) \ar[r] \ar[d, "d^0"] & \Gamma(U_0, \calO_X^*) \oplus \Gamma(U_1, \calO_X^*) \ar[r] \ar[d, "d^0"] & 0 \\
+            0 \ar[r] & \Gamma(U_0 \cap U_1, \underline{\bbZ}) \ar[r] \ar[d]                                    & \Gamma(U_0 \cap U_1, \calO_X) \ar[r] \ar[d]                           & \Gamma(U_0 \cap U_1, \calO_X^*) \ar[r] \ar[d]                            & 0 \\
+                    & 0                                                                                       & 0                                                                     & 0                                                                        & 
+        \end{tikzcd}
+    \end{center}
+    In the nonzero upper right corner, $z \in \check{H}^0(X, \calO_X^*) \cong \check{H}^0(\calU, \calO_X^*)$ is represented by $(z,z) \in \Gamma(U_0, \calO_X^*) \oplus \Gamma(U_1, \calO_X^*)$. Lift $(z,z)$ to $f \in \Gamma(U_0, \calO_X) \oplus \Gamma(U_1, \calO_X)$ by letting $f = (f_0,f_1)$ for local lifts $f_i \in \Gamma(U_i, \calO_X)$ of $z \in \Gamma(U_i, \calO_X^*)$; in other words, $f_i$ is a local logarithm $\log z$ on $U_i$. The differential $d(f) \in C^1(\calU, \calO_X) = \Gamma(U_0 \cap U_1, \calO_X)$ is $f_1 - f_0$, as a function on $U_0 \cap U\Gamma(U_0 \cap U_1, \calO_X)_1$. Note that the image of this in $\Gamma(U_0 \cap U_1, \calO_X^*)$ is $0$, so there exists a unique element $c_{01} \in \Gamma(U_0 \cap U_1, \underline{Z})$ whose image in $\Gamma(U_0 \cap U_1, \calO_X)$ is $f_1 - f_0$. By the logic of the Snake lemma, this $c_{01}$ is well defined, no matter how $f$ was chosen.
+
+    Explicitly, let $f_0(z) = \log |z| + i \arg(z)$ with $\arg(z) \in (-\pi, \pi)$ and let $f_1(z) = \log |z| + i \arg(z)$ with $\arg(z) \in (0, 2 \pi)$. We note that 
+    $$f_1(z) - f_0(z) = \begin{cases} 0 &\text{if } z \in V_{\text{up}} \\ 2\pi i &\text{if } z \in V_{\text{low}} \end{cases}.$$
+    Therefore, $c_{01} \in \Gamma(U_0 \cap U_1, \underline{Z})$ is the section on $U_0 \cap U_1$ given by $0$ on $V_{\text{up}}$ and $1$ on $V_{\text{low}}$. 
+
+    Now the differential map 
+    $$d^0: \Gamma(U_0, \underline{\bbZ}) \oplus \Gamma(U_1, \underline{\bbZ}) \to \Gamma(U_0 \cap U_1, \underline{\bbZ})$$
+    is given by
+    $$\bbZ \oplus \bbZ \to \bbZ \oplus \bbZ, \quad (a,b) \mapsto (a-b, a-b).$$
+    The cokernel of this map, which is exactly $\check{H}^1(\calU, \underline{\bbZ})$ by definition, is thus the quotient of $\bbZ \oplus \bbZ$ by pairs of the form $(a-b, a-b)$ for $a,b \in \bbZ$. This quotient is isomorphic to $\bbZ$ and the element $c_{01} = (0,1)$ is can be identified with $1$ in this $\bbZ$. Therefore, $\delta(z)$ is a generator of $\check{H}^1(\calU, \underline{\bbZ}) \cong \check{H}^1(X, \underline{\bbZ}) \cong \bbZ$.
+    
+\end{example}
+
 
 
 \section{Left/right derived functors of right/left exact functors}
@@ -1730,6 +1851,64 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     Compute $\Ext_\bbZ^1(\bbQ / \bbZ, \bbZ / n \bbZ)$.
 \end{problem}
 
+\section{Assignment 5 Due Mar 27}
+
+\begin{problem}
+    Let $f: X \to Y$ be a continuous map of topological spaces. 
+    \begin{enumerate}
+        \item Show that for all $\calG \in \Sh(Y, \Ab)$ and all $x \in X$,  
+        $$(f^{-1} \calG)_x \cong \calG_{f(x)}$$
+
+        \item Show that $f^*: \Sh(Y, \Ab) \to \Sh(X, \Ab)$ is exact.
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Let $i: Z \hookrightarrow X$ be the embedding of a \CrefAndHyperrefIfExist{definition:topological_space}{closed subspace} $Z$ of $X$. Show that $i_*: \Sh(\calZ, \Ab) \to \Sh(\calZ, \Ab)$ (\Cref{definition:direct_image_of_a_sheaf_on_a_topological_space}) (\Cref{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}) is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor}.
+\end{problem}
+
+\begin{problem}
+    Let $(X,\calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}. 
+    \begin{enumerate}
+        \item Let $\calF$ and $\calG$ respectively be a right and left \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}{sheaves of $\calO_X$-modules}. 
+        \begin{enumerate}
+            \item 
+            For any $U \subseteq X$ \CrefAndHyperrefIfExist{definition:topological_space}{open}, show that $\calF|_U \otimes_{\calO_X} \calG|_U$ (\Cref{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}) (\Cref{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}) and $(\calF \otimes_{\calO_X} \calG)|_U$ are \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic}. 
+
+            \item For any $x \in X$, show that $(\calF \otimes_{\calO_X} \calG)_x \cong \calF_x \otimes_{\calO_{X,x}} \calG_x$ (\Cref{definition:tensor_product_of_bimodules_of_rings}) (\Cref{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}).
+        \end{enumerate}
+
+        \item Let $\calF$ and $\calG$ both be (left) \CrefAndHyperref{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}{sheaves of $\calO_X$-modules}. 
+        \begin{enumerate}
+            \item For any $U \subseteq X$ open, show that $\mathcal{H}om_{\calO_X}(\calF, \calG)|_U$ (\Cref{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family})  (\Cref{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}) is naturally isomorphic to $\mathcal{H}om_{\calO_U}(\calF|_U, \calG|_U)$. 
+            \item For any $x \in X$, show that there is a canonical morphism $\mathcal{H}om_{\calO_X}(\calF, \calG)_x \to \Hom_{\calO_{X,x}} (\calF_x, \calG_x)$ (\Cref{definition:hom_of_left_right_bi_modules_of_rings}); one should be aware that this canonical morphism is not generally an isomorphism, but is an isomorphism under ``nice'' circumstances, more specifically when $\calF$ is ``locally finitely presented''.
+        \end{enumerate}
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}
+    Let $\bbR\bbP^2$ be the real projective plane. Let $\pi: S^2 \to \bbR\bbP^2, \quad (x,y,z) \mapsto [x:y:z]$ be the standard quotient map that identifies antipodal points, i.e. $\pi(x) = \pi(-x)$ for all $x \in S^2$. Define a sheaf $\Lambda$ on $\bbR\bbP^2$ as follows:
+    \begin{center}
+        For an open subset $U \subseteq \bbR\bbP^2$, let $\Gamma(U, \Lambda)$ be the set of continuous functions $f: \pi^{-1}(U) \to \bbZ$ (where $\bbZ$ is equipped with the discrete topology) such that for all $x \in \pi^{-1}(U)$, we have $f(-x) = -f(x)$. 
+    \end{center}
+    Let $\calU = \{U_0, U_1,U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
+    \begin{itemize}
+        \item $U_0$: the set of points $[x:y:z]$ such that $|x| > \sqrt{y^2+z^2}$.
+        \item $U_1$: the set of points $[x:y:z]$ such that $|y| > \sqrt{x^2+z^2}$.
+        \item $U_2$: the set of points $[x:y:z]$ such that $|z| > \sqrt{x^2+y^2}$.
+    \end{itemize}
+    \begin{enumerate}
+        \item Show that $\Lambda$ is a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{locally constant sheaf}.
+
+        \item Compute the \CrefAndHyperrefIfExist{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}{\v{C}ech cohomology groups} $\check{H}^p(\calU, \bbR\bbP^2)$.
+
+        \item Prove that $\check{H}^p(\calU, \bbR\bbP^2) \cong \check{H}^p(X, \bbR\bbP^2)$. You may use without proof the following:
+        \begin{center}
+            Let $X$ be a contractible, locally path connected, and semi-locally simply connected space (e.g. all of the connected components in all of the finite intersections of them embers of $\calU$ satisfy these conditions). All locally constant sheaves on $X$ are constant. 
+        \end{center}
+    \end{enumerate}
+\end{problem}
+
 \appendix
 
 \section{}
@@ -1837,3 +2016,17 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 
 \input{../_definitions/definition_category_of_pairs_of_topological_spaces.tex}
+
+
+\input{../_definitions/definition_open_refinement_of_an_open_cover_of_a_topological_space.tex}
+\input{../_definitions/definition_locally_finite_open_cover_of_a_topological_spcae.tex}
+\input{../_definitions/definition_paracompact_topological_space.tex}
+
+\input{../_concepts/theorem_nice_enough_topological_spaces_are_paracompact.tex}
+
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+\input{../_definitions/definition_quasi_compact_scheme.tex}
+\input{../_definitions/definition_quasi_separated_morphism_of_schemes.tex}
+\input{../_definitions/definition_contractible_topological_space.tex}
+\input{../_definitions/definition_locally_contractible_topological_space.tex}
+\input{../_definitions/definition_semi_locally_simply_connected_space.tex}

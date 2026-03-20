@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:place_of_a_field}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}. A \hldef{place of $K$} is some function of the form $P: K \to L \cup \{\infty\}$ where $L$ is a field satisfying:
+    \begin{enumerate}
+        \item $P(0) = 0$
+        \item $P(1) = 1$.
+        \item $P(x+y) = P(x) + P(y)$
+        \item $P(x \cdot y) = P(x) \cdot P(y)$
+    \end{enumerate}
+    where $\infty$ satisfies the following rules:
+    \begin{enumerate}
+        \item $x+\infty = \infty$ for all $x \in L$
+        \item $x \cdot \infty = \infty$ for $x \neq 0$.
+        \item $\infty + \infty$ is undefined
+        \item $0 \cdot \infty$ is undefined.  
+    \end{enumerate}
+    It should be noted that there are conventions that define $\infty + \infty$ as $\infty$. 
+\end{definition}

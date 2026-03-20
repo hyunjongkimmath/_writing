@@ -1,0 +1,4 @@
+\begin{definition} \label{definition:cofibration_of_topological_spaces}
+Let $X$ be a topological space and let $A \subseteq X$ be a subspace. The inclusion map $i:A \hookrightarrow X$ is called a \hldef{cofibration} if it satisfies the \hldef{Homotopy Extension Property (HEP)}: for every space $Y$, every map $f:A \to Y$ and every homotopy $H:X \times I \to Y$ with $H(a, t) = f(a)$ for all $a \in A$ and all $t \in I$, there exists a homotopy $\tilde H:X \times I \to Y$ extending $H$ such that $\tilde H|_{A \times I} = H|_{A \times I}$ and $\tilde H(x,0) = f(x)$ for all $x \in A$.
+Equivalently, the inclusion $i:A \hookrightarrow X$ has the left lifting property with respect to every map that is a fibration.
+\end{definition}

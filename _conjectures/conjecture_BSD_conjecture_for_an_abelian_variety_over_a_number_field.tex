@@ -1,0 +1,20 @@
+\begin{conjecture}[{\cite{tate_ocbsdga}}, cf. {\cite{jorza_bsdcavnf}}] \label{conjecture:BSD_conjecture_for_an_abelian_variety_over_a_number_field}
+    Let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:number_field}{number field}. Write $L(A,s)$ for the Hasse-Weil $L$-function of $A$. 
+    \begin{enumerate}
+        \item (\hldef{weak BSD conjecture}; {\cite[(A)]{tate_ocbsdga}}) The order of vanishing of $L$ at $1$ equals the \CrefAndHyperrefIfExist{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank of $A$}.
+        \TODO{define regulartor, shafarevich-tate group, and a statement that Sha is finite}
+        \item (\hldef{strong BSD conjecture}; {\cite[(B)]{tate_ocbsdga}}, cf. {\cite[Conjecture 3.15]{jorza_bsdcavnf}}) Let $A(K)_{\mathrm{tors}}$ and $A^\vee(K)_{\mathrm{tors}}$ be the torsion subgroups of $A(K)$ and $A^\vee(K)$ respectively. Let $R_A$ be the regulator of $A$, and let $\Sha(A/K)$ be the Shafarevich-Tate group, which is finite. We have 
+        $$\frac{L^{(r)}(A,1)}{r! \int_{A(\bbA_K)} d\mu_{A,w,\Lambda} } = \frac{R_A|\Sha(A/K)|}{|A(K)_{\mathrm{tors}}| \cdot |A^\vee(K)_{\mathrm{tors}}|}.$$
+        \TODO{define the measure used in the integral}
+        It may be of interest from the computational perspective to rewrite the above equation in the form
+        $$\frac{1}{r!} L^{(r)}(A,1) = \frac{P_A \cdot R_A \cdot |\Sha(A/K)| \cdot \prod_{v \in M_K^0} c_v}{\sqrt{|D_K|}^d \cdot |A(K)_{\mathrm{tors}}| \cdot |A^\vee(K)_{\mathrm{tors}}|} $$
+        where 
+        \TODO{define period, tamagawa number, absolute discriminant}
+        \begin{itemize}
+            \item $P_A$ is the the period of $A$
+            \item $M_K^0$ is the collection of finite places of $K$
+            \item $c_v$ is the Tamagawa number at the finite place $v \in M_K^0$
+            \item $D_K$ is the absolute discriminant of $K$
+        \end{itemize}
+    \end{enumerate} 
+\end{conjecture}

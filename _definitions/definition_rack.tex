@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:rack} 	
+    A \hldef{rack} is a set $c$ equipped with an \hldef{action map} 
+    $$\hlin{\triangleright: c \times c 	\to c, \quad (a,b) \mapsto a \triangleright b}$$
+    satisfying the following equivalent definitions:
+    \begin{enumerate}
+        \item for all $n \geq 1$ and all $1 \leq i \leq n-1$, the operation
+        \begin{align*} 		\sigma_i : c^n & \rightarrow c^n \\ 		(x_1, \ldots, x_{i-1}, x_i, x_{i+1}, x_{i+2}, \ldots, x_n) & \mapsto 		(x_1, \ldots, x_{i-1}, x_{i+1}, x_{i+1} \triangleright x_i, x_{i+2}, \ldots, 		x_n) 	\end{align*}
+        defines an action of the \CrefAndHyperrefIfExist{definition:artin_braid_group}{braid group $B_n$} where $\sigma_i \in B_n$ is the $i$th elementary braid.
+        
+        \item the map $x \triangleright (-): c \to c$ is a bijection for each $x \in c$ and $x \triangleright (y \triangleright z) = (x \triangleright y) \triangleright (x \triangleright z)$. 
+    \end{enumerate}
+\end{definition}

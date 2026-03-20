@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:mordell_weil_rank_and_n_selmer_group_structure_probability_distribution_of_elliptic_curves_over_a_global_function_field_of_odd_characteristic}
+    Let $\Fq$ be a finite field of odd characteristic and let $n \geq 2$. 
+    \begin{enumerate}
+        \item (cf. \cite[1.2.1, Definition 1.3]{feng_landesman_rains_gdsgecff}) Let $(\operatorname{rk}, \operatorname{Sel}_n)^d_{\Fq}$ be the joint probability distribution on $\bbZ_{\geq 0} \times \Ab_n$, where $\Ab_n$ is the set of isomorphism classes of finite $\bbZ/n\bbZ$-modules, assigning to a pair $(r,G) \in \bbZ_{\geq 0} \times \Ab_n$ the proportion of isomorphism classes of \CrefAndHyperref{definition:height_of_an_elliptic_curve_over_a_global_function_field_of_odd_characteristic}{height} $d$ elliptic curves over $\Fq(t)$ with \CrefAndHyperref{theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields}{Mordell-Weil rank} and \CrefAndHyperref{definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field}{$n$-Selmer group} isomorphic to $G$. More precisely,
+        $$\Prob((\rk, \Sel_n)^d_{\Fq} = (r,G)) = \frac{\# \{E/\Fq(t) : h(E) = d, \rk(E) = r, \Sel_n(E) \simeq G \}}{\#\{E/\Fq(t): h(E) = d\}}.$$
+
+        \item (cf. \cite[Definition 5.12]{feng_landesman_rains_gdsgecff}) Let $(\rk^{\mathrm{BKLPR}}, \Sel_n^{\mathrm{BKLPR}})$ be the joint distribution on $\bbZ_{\geq 0} \times \Ab_n$ defined by 
+        $$\Prob((\rk^{\mathrm{BKLPR}}, \Sel_n^{\mathrm{BKLPR}}) = (r,G)) = \begin{cases} \frac{1}{2} \mathscr{T}_{r, \bbZ/n\bbZ} & \text{if } r \leq 1\\ 0 &\text{if } r \geq 2\end{cases} $$
+        \TODO{define $\mathscr{T}_{r, \bbZ/n\bbZ}$}
+
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{theorem} \label{theorem:lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained}
+Let $p_X: (\tilde{X}, \tilde{x}_0) \to (X, x_0)$ and $p_Y: (\tilde{Y}, \tilde{y}_0) \to (Y, y_0)$ be covering spaces of \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological spaces}. Let $f: (X, x_0) \to (Y, y_0)$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}, and assume $\tilde{X}$ is \CrefAndHyperrefIfExist{definition:path_connected_topological_space}{path-connected} and \CrefAndHyperrefIfExist{definition:locally_path_connected_topological_space}{locally path-connected}. 
+
+There exists a unique continuous lift $\tilde{f}: (\tilde{X}, \tilde{x}_0) \to (\tilde{Y}, \tilde{y}_0)$ such that $p_Y \circ \tilde{f} = f \circ p_X$ if and only if 
+$$f_*(p_{X*}(\pi_1(\tilde{X}, \tilde{x}_0))) \subseteq p_{Y*}(\pi_1(\tilde{Y}, \tilde{y}_0))$$
+In the specific case where $f$ is the identity on $X$, this provides the necessary and sufficient condition for the existence of a morphism of covering spaces (pointed or unpointed). Any such morphism between connected covering spaces is itself a covering map.
+\TextIfExists{theorem:lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained}{
+See also \Cref{theorem:lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained}.
+}
+\end{theorem}

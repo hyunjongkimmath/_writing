@@ -1,0 +1,25 @@
+\begin{definition}[Relative homotopy groups of pointed pairs] \label{definition:relative_homotopy_groups_of_pointed_pairs_of_topological_spaces}
+    For any \CrefAndHyperrefIfExist{definition:pointed_pair_of_topological_spaces}{pointed pair of topological spaces} $(X,A,x_0)$ and an integer $n \ge 1$, the \hldef{$n$-th relative homotopy set of $(X,A)$ at $x_0$}, denoted \hl{$\pi_n(X,A,x_0)$}, is defined as the set of all \CrefAndHyperrefIfExist{definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset}{homotopy classes (rel.\ $J^{n-1}$)} of \CrefAndHyperrefIfExist{definition:n_tuple_of_topological_spaces}{maps of triples}
+    $$f : (I^n, \partial I^n, J^{n-1}) \to (X, A, \{x_0\}),$$
+    where $I^n = [0,1]^n$ is the $n$-cube, $\partial I^n$ is its \CrefAndHyperrefIfExist{definition:interior_and_boundary_of_topological_space}{boundary}, and 
+    $$J^{n-1} \coloneqq \overline{\partial I^n \setminus (I^{n-1} \times \{1\})} = (I^{n-1} \times \{0\}) \cup (\partial I^{n-1} \times I) \subseteq \partial I^n.$$
+    
+    Explicitly, an element of $\pi_n(X,A,x_0)$ is represented by a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $f : I^n \to X$ such that:
+    \begin{enumerate}
+        \item $f(\partial I^n) \subseteq A$,
+        \item $f(J^{n-1}) = \{x_0\}$.
+    \end{enumerate}
+
+    Equivalently, $\pi_n(X,A,x_0)$ can be defined as the set of all homotopy classes of \CrefAndHyperrefIfExist{definition:map_of_pairs_of_topological_spaces}{maps of pairs}
+    $$f : (D^n, S^{n-1}, s_0) \to (X, A, x_0),$$
+    where $D^n$ is the $n$-disk, $S^{n-1}$ is its boundary sphere, and $s_0 \in S^{n-1}$ is a base point.
+
+    For $n \ge 2$, $\pi_n(X,A,x_0)$ is a group under the concatenation of maps in the first coordinate, and for $n \ge 3$, it is abelian. As such:
+    \begin{enumerate}
+        \item For $n = 1$, the assignment $(X,A,x_0) \mapsto \pi_1(X,A,x_0)$ is a functor $\mathbf{Top}_{*, \text{pair}} \to \Sets$\CrefIfExists{definition:category_of_sets},
+        \item For $n = 2$, it is a functor $\mathbf{Top}_{*, \text{pair}} \to \mathbf{Grp}$\CrefIfExists{definition:category_of_groups_of_abelian_groups},
+        \item For $n \ge 3$, it is a functor $\mathbf{Top}_{*, \text{pair}} \to \mathbf{Ab}$\CrefIfExists{definition:category_of_groups_of_abelian_groups}.
+    \end{enumerate}
+    
+    For $n \ge 2$, $\pi_n(X,A,x_0)$ is called the \hldef{$n$-th relative homotopy group of $(X,A)$ at $x_0$}. Given a map $f: (X,A,x_0) \to (Y,B,y_0)$ of pointed pairs, the induced map $\pi_n(X,A,x_0) \to \pi_n(Y,B,y_0)$ is denoted by \hl{$f_*$}.
+\end{definition}

@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:fibration_of_topological_spaces}
+Let $X$ and $B$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and let $p:X \to B$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}. 
+
+The map $p$ is called a \hldef{fibration} or a \hldef{Serre fibration} if it satisfies the \hldef{Homotopy Lifting Property (HLP)}: for every space $Y$, every map $f:Y \to X$, every homotopy $H:Y \times I \to B$ with $H(y,0) = p(f(y))$ for all $y \in Y$, and whenever a lift $\tilde f_0:Y \to X$ of $H(\cdot,0)$ is given, there exists a homotopy $\tilde H:Y \times I \to X$ such that
+$$
+\tilde H(y,0) = \tilde f_0(y) \quad \text{for all } y \in Y,\\
+p \circ \tilde H = H \quad \text{on } Y \times I.
+$$
+Equivalently, for all $Y$, the map
+\[
+\operatorname{Map}(Y,X) \to \operatorname{Map}(Y,B),\quad f \mapsto p \circ f
+\]
+has the right lifting property with respect to the inclusion $\operatorname{Map}(Y,\ast) \hookrightarrow \operatorname{Map}(Y \times I, B)$ encoded by the HLP.
+\end{definition}

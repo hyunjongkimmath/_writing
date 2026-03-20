@@ -1,0 +1,20 @@
+\begin{theorem}[e.g. see {\cite[Tag 01DU]{stacks-project}}] \label{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_topological_space_has_enough_injectives}
+    Let $(X, \calO_X)$ be a ringed space. The category $\mathbf{Mod}(\mathcal{O}_X)$ of $\calO$-modules is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} that \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{has enough injectives}. 
+
+    \TextIfExists{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives}{
+        This fact is merely a special case of \Cref{theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives}. 
+    }
+\end{theorem}
+
+\begin{proof}
+    Let $\calF \in \mathbf{Mod}(\mathcal{O}_X)$. For every point $x \in X$, the stalk $\calF_x$ is a $\calO_{X,x}$\CrefAndHyperrefIfExist{definition:module_of_a_ring}{-module}. The category of $\calO_{X,x}$-modules has enough injectives (\Cref{theorem:examples_of_abelian_categories_with_enough_injectives_or_projectives}), so there exists an injective object $I_x$ and a monomorphism $\calF_x \hookrightarrow I_x$ of $\calO_{X,x}$-modules.
+    
+    Define the following sheaf:
+    $$\calI = \prod_{x \in X} (i_x)_* I_x$$
+    (\Cref{definition:limit_in_a_sheaf_category})\CrefIfExists{definition:product_and_coproduct_of_objects_in_a_category}\CrefIfExists{definition:skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object}\CrefIfExists{definition:direct_image_of_a_sheaf_on_a_topological_space} where $(i_x)_* I_x$ is the skyscraper sheaf at $x$ with value $I_x$. 
+
+    We produce a natural morphism $\calF \to \calI$ --- note that products for sheaves of sets are constructible as products of presheaves (without needing to apply sheafification), so this is tantamount to producing morphisms $\calF \to (i_x)_* \underline{I_x}$ for every $x$. By the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} of \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_on_a_topological_space}{invers images} and \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct images} (\Cref{theorem:adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map}), such a morphism corresponds to a morphism $(i_x)^* \calF \to \underline{I_x}$, which is equivalent to (\Cref{lemma:restriction_of_presheaf_on_a_topological_space_to_a_point_is_the_presheaf_whose_global_sections_is_the_stalk}) a morphism $\calF_x \to \calI_x$ --- we already have such a morphism and in fact an injection.
+
+    \TODO{injection of sheaves}
+    The morphism $\calF \to \calI$ is a monomorphism, i.e. an injection of sheaves, because (\Cref{proposition:morphism_of_sheaves_on_topological_space_valued_in_nice_enough_category_with_enough_direct_limits_is_isomorphism_iff_all_stalk_morphisms_are}) the induced morphism $\calF_x \to \calI_x$ on stalks is simply $\calF_x \to I_x$ \TODO{justify}, which is injective. Moreover, $\calI$ is an injective object by \Cref{lemma:skyscraper_sheaf_at_a_point_of_a_ringed_space_of_injective_module_is_an_injective_object}. Therefore, $\mathbf{Mod}(\mathcal{O}_X)$ indeed has enough injectives. 
+\end{proof}

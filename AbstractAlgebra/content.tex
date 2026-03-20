@@ -15,6 +15,10 @@
 \input{../_definitions/definition_category_of_groups_of_abelian_groups.tex}
 
 \input{../_definitions/definition_subgroup_of_a_group.tex}
+\input{../_definitions/definition_subgroup_of_a_group_generated_by_elements.tex}
+
+\input{../_definitions/definition_finitely_generated_group.tex}
+
 \input{../_definitions/definition_conjugation_of_group_elements_and_subgroup_by_a_group_element.tex}
 
 \input{../_definitions/definition_coset_of_a_subgroup_of_a_group_by_an_element.tex}
@@ -174,27 +178,26 @@
 
 \subsubsection{Rings, division rings, and fields}
 \input{../_definitions/definition_ring.tex}
-
 \input{../_definitions/definition_opposite_ring_of_a_ring.tex}
-
-
 \input{../_definitions/definition_commutative_ring.tex}
-
 \input{../_definitions/definition_center_of_a_ring.tex}
 
 
 
 \input{../_definitions/definition_zero_ring.tex}
-
 \input{../_definitions/definition_zero_divisor_of_a_ring.tex}
+\input{../_definitions/definition_domain_integral_domain.tex}
 \input{../_definitions/definition_unit_of_a_ring.tex}
+
+\input{../_definitions/definition_irreducible_element_of_a_ring.tex}
+\input{../_definitions/definition_divisibility_of_elements_of_rings.tex}
+\input{../_definitions/definition_prime_element_of_a_ring.tex}
 
 \input{../_definitions/definition_division_ring.tex}
 
 \input{../_definitions/definition_field.tex}
-\begin{lemma}
-    Let $F$ be a field. Its \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit group $F^\times$} as a set equals $F - \{0\}$.
-\end{lemma}
+
+\input{../_concepts/lemma_unit_group_of_a_field_just_excludes_zero.tex}
 
 A prominent example of a field would be the field of fractions of an integral domain.
 
@@ -230,16 +233,28 @@ A prominent example of a field would be the field of fractions of an integral do
 \input{../_definitions/definition_free_associative_algebra_over_a_ring.tex}
 
 \input{../_definitions/definition_polynomial_ring_over_a_commutative_ring.tex}
-
-
-
-
-
-
+\input{../_concepts/lemma_polynomial_ring_over_an_integral_domain_is_an_integral_domain.tex}
+\input{../_definitions/definition_function_field_over_an_integral_domain_in_finitely_many_variables.tex}
 
 \input{../_definitions/definition_subring_of_a_ring.tex}
 
 \input{../_definitions/definition_extension_of_a_ring.tex}
+
+\subsection{Arithmetic}
+
+\input{../_definitions/definition_ordered_ring.tex}
+\input{../_definitions/definition_ring_of_integers.tex}
+\input{../_definitions/definition_field_of_rational_numbers.tex}
+\input{../_definitions/definition_prime_number.tex}
+
+
+\subsection{Finite field}
+
+\input{../_definitions/definition_power_of_an_element_of_a_ring_by_a_nonnegative_integer.tex}
+
+\input{../_definitions/definition_finite_field.tex}
+
+\input{../_concepts/theorem_finite_fields_are_exactly_characterized_by_their_cardinality.tex}
 
 \subsection{Modules of a ring}
 
@@ -459,7 +474,7 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 \subsection{Multilinear maps}
 \input{../_definitions/definition_multilinear_map_of_modules_over_rings.tex}
-\input{../_definitions/definition_symmetric_antisymmetric_alternating_multilienar_forms_over_rings.tex}
+\input{../_definitions/definition_symmetric_antisymmetric_alternating_multilinear_forms_over_rings.tex}
 
 
 \input{../_definitions/definition_action_of_symmetric_group_on_tensor_power_on_a_two_sided_over_a_ring.tex}
@@ -509,6 +524,28 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 \subsection{Profinite groups}
 \input{../_definitions/definition_profinite_group.tex}
+
+\input{../_definitions/definition_category_of_profinite_groups.tex}
+
+\input{../_definitions/definition_profinite_completion_of_a_group.tex}
+
+
+\input{../_concepts/proposition_profinite_completion_of_a_group_is_a_profinite_group.tex}
+
+\input{../_concepts/theorem_profinite_completion_is_left_adjoint_to_inclusion_functor.tex}
+
+\begin{proposition}
+    \TODO{}
+Let $G$ be a group and $\iota: G \to \widehat{G}$ be the canonical map to its profinite completion. The map $\iota$ is injective if and only if $G$ is residually finite.
+\end{proposition}
+
+\input{../_definitions/definition_subgroup_of_profinite_group_topologically_generated_by_elements.tex}
+
+\input{../_definitions/definition_topologically_finitely_generated_profinite_group.tex}
+
+\input{../_definitions/definition_strongly_complete_profinite_group.tex}
+
+\input{../_concepts/theorem_nikolov_segal_fgpgIscub_every_topologically_finitely_generated_profinite_group_is_strongly_complete.tex}
 
 
 \appendix

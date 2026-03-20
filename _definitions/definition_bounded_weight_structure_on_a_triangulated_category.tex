@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:bounded_weight_structure_on_a_triangulated_category}
+Let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category}. 
+A \CrefAndHyperrefIfExist{definition:weight_structure_on_a_triangulated_category}{weight structure} $w = (\mathcal{D}_{w \leq 0}, \mathcal{D}_{w \geq 0})$ on $\mathcal{D}$ is said to be \hldef{bounded} if it satisfies the following two conditions:
+\begin{enumerate}
+    \item $\mathcal{D} = \bigcup_{n \in \mathbb{Z}} \mathcal{D}_{w \leq n}$
+    \item $\mathcal{D} = \bigcup_{n \in \mathbb{Z}} \mathcal{D}_{w \geq n}$
+\end{enumerate}
+where $\mathcal{D}_{w \leq n} = \mathcal{D}_{w \leq 0}[n]$ and $\mathcal{D}_{w \geq n} = \mathcal{D}_{w \geq 0}[n]$ are the shifted subcategories.
+\end{definition}

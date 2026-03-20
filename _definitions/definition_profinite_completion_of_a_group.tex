@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:profinite_completion_of_a_group}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. 
+The \hldef{profinite completion of $G$}, denoted by \hl{$\widehat{G}$}, is the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit} of the \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system} consisting of the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient groups} $G/N$ where $N$ runs over all \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroups} of \CrefAndHyperrefIfExist{definition:index_of_a_subgroup_in_a_group}{finite index} in $G$, ordered by inclusion. In other words,
+$$\widehat{G} = \varprojlim_{N \in \mathcal{N}} G/N$$
+where $\mathcal{N} = \{ N \trianglelefteq G : [G:N] < \infty \}$.
+
+There exists a canonical homomorphism $\iota: G \to \widehat{G}$ defined by $g \mapsto (gN)_{N \in \mathcal{N}}$, where $\mathcal{N}$ is the set of normal subgroups of finite index in $G$.
+\end{definition}

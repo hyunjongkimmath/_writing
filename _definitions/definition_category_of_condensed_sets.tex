@@ -1,0 +1,9 @@
+\begin{definition}[{\cite[After Definition 2.4.]{clausen_scholze_cmcg}}] \label{definition:category_of_condensed_sets}
+    The \hldef{category of condensed sets}, denoted \hl{$\operatorname{CondSet}$}, is the colimit category \TODO{define limit/colimit categories}
+    $$\operatorname{CondSet} \coloneq \varinjlim_{\kappa} \operatorname{CondSet}_\kappa$$
+    (\Cref{definition:kappa_small_profinite_set_for_a_cardinal}) over all \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinals} $\kappa$, where the functors $\operatorname{CondSet}_{\kappa} \to \operatorname{CondSet}_{\kappa'}$ for $\kappa < \kappa'$ are the pullback functors of the inclusion functors $\operatorname{Prof}_{\kappa} \hookrightarrow \operatorname{Prof}_{\kappa'}$.
+    \TODO{pullback functors}
+
+    % This category is just as well-behaved as each individual $\operatorname{CondSet}_\kappa$ in terms of its topos-theoretic exactness properties
+    This category is generated under colimits by arbitrary profinite sets \TODO{explain more on the yoneda embedding}
+\end{definition}

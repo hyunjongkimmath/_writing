@@ -12,7 +12,7 @@ The purpose of this document is to compile common notions in basic topology.
 
 \subsubsection{Generating topologies from subsets}
 
-\input{../_definitions/definition_coarser_finer_topologies_on_a_set.tex}
+\input{../_definitions/definition_coarser_smaller_finer_larger_for_topologies_on_a_set.tex}
 \input{../_concepts/proposition_coarser_and_finer_topologies_and_continuous_maps.tex}
 \input{../_concepts/proposition_topology_generated_by_a_collection_of_subsets_is_the_coarset_topology_making_the_members_open.tex}
 
@@ -192,6 +192,26 @@ Therefore, \(\Phi\) is a unique isometry between the completions, and the comple
 % Notation: Euclidean n-space
 \input{../_definitions/definition_euclidean_n_space.tex}
 
+\subsection{Connectivity of topological spaces}
+
+\input{../_definitions/definition_path_connected_topological_space.tex}
+\input{../_definitions/definition_locally_path_connected_topological_space.tex}
+\input{../_definitions/definition_path_component_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_simply_connected_iff_path_connected_and_every_continuous_map_from_the_circle_is_null_homotopic.tex}
+
+\begin{proposition}
+    \TODO{}
+Let $X$ be a topological space. If $X$ is contractible, then $X$ is simply connected. The converse is not true in general; for example, the $n$-dimensional sphere $S^n$ is simply connected for $n \geq 2$ but is not contractible.
+\end{proposition}
+
+\input{../_definitions/definition_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_locally_simply_connected_topological_space_is_locally_path_connected_and_semi_locally_simply_connected.tex}
+\input{../_concepts/proposition_topological_manifolds_are_locally_simply_connected.tex}
+\input{../_definitions/definition_locally_contractible_topological_space.tex}
+\input{../_definitions/definition_semi_locally_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_semi_local_simply_connected_iff_every_point_has_open_neighborhood_such_that_every_loop_based_there_is_null_homotopic_in_ambient_space.tex}
+
 \subsection{Stone spaces, ultrafilters, and Boolean algebras}
 
 \input{../_definitions/definition_stone_space.tex}
@@ -209,6 +229,28 @@ Therefore, \(\Phi\) is a unique isometry between the completions, and the comple
 
 \input{../_concepts/theorem_stones_representation_theorem.tex}
 
+\section{Covering spaces}
+
+\input{../_definitions/definition_covering_space_of_a_topological_space.tex}
+\input{../_definitions/definition_morphism_of_covering_spaces_of_a_topological_space.tex}
+\input{../_definitions/definition_deck_transformation_of_a_covering_space.tex}
+\input{../_definitions/definition_universal_cover_of_a_topological_space.tex}
+
+\input{../_concepts/theorem_map_of_fundamental_groups_induced_by_covering_of_a_path_connected_and_locally_path_connected_space_is_injective.tex}
+
+\input{../_definitions/definition_lift_of_a_continuous_map_under_a_covering_of_topological_spaces.tex}
+
+\begin{proposition}
+Every simply \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} topological space space is \CrefAndHyperrefIfExist{definition:semi_locally_simply_connected_space}{semi-locally simply connected}. Furthermore, every locally simply connected space is semi-locally simply connected. However, there exist semi-locally simply connected spaces, such as the \CrefAndHyperrefIfExist{definition:polyhedral_cone_in_a_finite_dimensional_real_vector_space}{cone} over the Hawaiian earring, that are not locally simply connected.
+\textit{Remark:} \TODO{define locally simply connected}.
+\end{proposition}
+
+\input{../_definitions/definition_normal_covering_space_of_a_topological_space.tex}
+\input{../_concepts/theorem_lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_universal_cover_exists_for_connected_locally_path_connected_semi_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_isom_class_of_conn_pointed_covers_of_a_conn_loc_path_conn_semiloc_simp_conn_pointed_space_corresponds_to_subgroup_of_fund_gp.tex}
+\input{../_concepts/theorem_deck_transformation_group_of_a_connected_pointed_covering_is_quotient.tex}
 
 \section{Homotopy}
 
@@ -233,15 +275,15 @@ The notions of homotopy have the following variants:
 \input{../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex}
 
 
-
 \input{../_definitions/definition_path_and_loop_in_a_topological_space.tex}
 
-
-
 \input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
-
+\input{../_definitions/definition_relative_homotopy_groups_of_pointed_pairs_of_topological_spaces.tex}
 
 \input{../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex}
+
+
+
 
 \section{Singular homology and cohomology}
 

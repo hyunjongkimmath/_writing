@@ -3,3 +3,12 @@
 
     If \CrefAndHyperrefIfExist{definition:ext_functor_on_a_general_abelian_category}{$\Ext^1(A,B) = 0$}, then every \CrefAndHyperrefIfExist{definition:extension_of_objects_in_an_additive_category}{extension} of $A$ by $B$ is \CrefAndHyperrefIfExist{definition:extension_of_objects_in_an_additive_category}{split}.
 \end{lemma}
+\begin{proof}
+    First suppose that $\calA$ has enough projectives so that $\Ext^1(A,-): \calA \to \Ab$ is defined as a \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived functor}. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the \CrefAndHyperref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}{long exact sequence} in $\Ext^n(A,-)$ yields an exact sequence
+    $$\Hom(A,X) \to \Hom(A,A) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
+    so the identity map $\id_A \in \Hom(A,A)$ lifts to a map $\sigma: A \to X$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{section} of $X \to A$. Thus, $\xi$ is split. 
+
+    Dually, suppose that $\calA$ has enough injectives so that $\Ext^1(-,B): \calA^{\op} \to \Ab$ is defined as a derived functor. Given an extension $\xi: 0 \to B \to X \to A \to 0$, the long exact sequence in $\Ext^n(-, B)$ yields the exact sequence 
+    $$\Hom(X, B) \to \Hom(B,B) \xrightarrow{\partial} \Ext^1(A,B) = 0$$
+    This time, $\id_B \in \Hom(B,B)$ thus extends to a map $X \to B$ that is in fact a \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{retract} of $B \to X$. Thus, $\xi$ is split.
+\end{proof}

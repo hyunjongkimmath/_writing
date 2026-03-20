@@ -1,0 +1,13 @@
+\begin{lemma} \label{lemma:categories_of_sheaves_presheaves_on_a_singleton_set_are_equivalent_to_value_category}
+    Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final object}. Let $\{x\}$ be a singleton \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. The following categories are \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent}:
+    \begin{enumerate}
+        \item $\calA$
+        \item $\PreShv(\{x\}, \calA)$ \CrefIfExists{definition:presheaf_on_a_topological_space}
+        \item $\Shv(\{x\}, \calA)$ \CrefIfExists{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}
+    \end{enumerate}
+    Explicitly, an equivalence $\calA \to \Shv(\{x\}, \calA)$ sends $A \in \calA$ to the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on $\{x\}$ valued in $A$, and sends $\calP \in \Shv(\{x\}, \calA)$ to $\calP(\{x\})$; these assignments also describe an equivalence between $\calA$ and $\PreShv(\{x\}, \calA)$.
+
+    Moreover, a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
+    $$\PreShv(\{x\}, \calA) \to \Shv(\{x\}, \calA)$$
+    can simply be given by the identity assignment.
+\end{lemma}

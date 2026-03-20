@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:mapping_class_group_of_a_connected_oriented_topological_manifold_with_or_without_boundary_relative_to_subsets}
+Let $M$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected}, \CrefAndHyperrefIfExist{definition:orientation_of_a_topological_manifold_with_or_without_boundary_using_singular_homology}{oriented} \CrefAndHyperrefIfExist{definition:topological_manifold}{topological $n$-manifold with or without boundary}. Let $A,B \subseteq M$ be subsets. Let \CrefAndHyperref{notation:homeomorphism_groups_of_a_topological_space_manifolds}{$\text{Homeo}^{+}(M, A, B)$} be the group of orientation-preserving homeomorphisms of $M$ that fix $A$ pointwise and that fix $B$ setwise.
+
+The \hldef{(topological) mapping class group of $M$ (with respect to $A$ and $B$)}, which may be denoted \hl{$\text{Mod}(M, A, B)$} or \hl{$\text{Mod}_{\text{Top}}(M, A, B)$}, is the group of \CrefAndHyperref{definition:isotopic_homeomorphisms_between_topological_spaces}{isotopy classes} of these homeomorphisms, defined by the quotient
+$$\text{Mod}(M, A, B) = \text{Homeo}^{+}(M, A, B) / \text{Homeo}_{0}(M, A, B)$$
+where $\text{Homeo}_{0}(M, A, B)$ is the normal subgroup consisting of homeomorphisms \CrefAndHyperref{definition:isotopy_between_topological_spaces_between_homeomorphisms_relative_to_a_subspace}{isotopic} to the identity via an isotopy fixing $A$ pointwise throughout the isotopy and fixing $B$ setwise throughout the isotopy.
+
+
+The \hldef{(topological) mapping class group} of $M$ without reference to explicit subsets $A$ and $B$ usually refers to the mapping class group $\text{Mod}(M, \partial M, \emptyset)$. It may often be denoted as \hl{$\text{Mod}(M)$} or as \hl{$\text{Mod}(M, \partial M)$} for emphasis.
+
+In the case that $A$ is a closed subset and $B$ is a finite subset, recall that $\operatorname{Homeo}^+(M,A,B)$ is a closed subgroup of $\operatorname{Homeo}^+(M)$ with the \CrefAndHyperrefIfExist{definition:compact_open_topology_on_the_set_of_continuous_maps_between_topological_spaces_and_function_space}{compact open topology}. In this case, $\text{Mod}(M,A,B)$ is isomorphic to the group $\pi_0(\operatorname{Homeo}^+(M, A,B))$ of path components of $\operatorname{Homeo}^+(M, A,B)$. This group of path components inherits a group structure from the topological group structure on $\operatorname{Homeo}^+(M, A, B)$. 
+\end{definition}

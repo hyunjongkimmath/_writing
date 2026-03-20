@@ -1,0 +1,26 @@
+\begin{theorem} \label{theorem:mapping_class_group_on_a_connected_oriented_manifold_with_respect_to_subsets_maps_to_automorphism_group_of_fundamental_group}
+    Let $M$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected}, \CrefAndHyperrefIfExist{definition:orientation_of_a_topological_manifold_with_or_without_boundary_using_singular_homology}{oriented} \CrefAndHyperrefIfExist{definition:topological_manifold}{topological $n$-manifold with or without boundary}. Let $A,B \subseteq M$ be subsets. Let $x_0 \in A$ be a fixed basepoint of $M$. 
+
+    \begin{enumerate}
+        \item 
+        There is a well-defined group homomorphism
+        $$\Phi: \Mod(M,A,B) \to \operatorname{Aut}(\pi_1(M,x_0))$$ 
+        (\Cref{definition:mapping_class_group_of_a_connected_oriented_topological_manifold_with_or_without_boundary_relative_to_subsets})\CrefIfExists{definition:homotopy_groups_of_a_pointed_topological_space}
+        defined by $[f] \mapsto f_*$ where $f_*$ is the automorphism $\pi_1(M,x_0) \to \pi_1(M,x_0)$ induced by $f: (M,x_0) \to (M,x_0)$. In particular, isotopic elements of $\operatorname{Homeo}^+(M,A,B)$ (\Cref{notation:homeomorphism_groups_of_a_topological_space_manifolds}) are sent to the same automorphism on $\pi_1(M,x_0)$.
+        \TODO{If $x_0$ is not fixed pointwise, then one only gets a map to the outer automorhpism group.}
+
+        \item Assuming that $x_0 \not\in B$, there is a well-defined group homomorphism
+        $$\Phi: \Mod(M,A,B) \to \operatorname{Aut}(\pi_1(M \setminus B,x_0))$$ 
+        defined by $[f] \mapsto (f|_{M \setminus B})_*$. This follows from the fact that any representative $f$ restricts to a pointed homeomorphism of the complement.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+
+    \begin{enumerate}
+        \item  \TODO{}
+        \item  Take the composition 
+        $$\Mod(M,A,B) \xrightarrow{\operatorname{res}} \Mod(M \setminus B, A \setminus B, \emptyset) \xrightarrow{\Phi'} \Aut(\pi_1(M \setminus B, x_0));$$
+        where $\operatorname{res}$ is the homomorhpism induced by restricting homeomorphisms and isotopies to the complement, and $\Phi'$ is the homomorphism obtained by applying the previous part to the triple $(M \setminus B, A \setminus B, \emptyset)$.
+    \end{enumerate}
+
+\end{proof}

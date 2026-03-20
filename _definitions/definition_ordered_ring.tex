@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:ordered_ring}
+    An \hldef{ordered ring} is a \CrefAndHyperrefIfExist{definition:ring}{ring} $(R, +, \cdot)$ together with a subset $P \subset R$ of \hldef{positive elements} satisfying the following three axioms:
+    \begin{enumerate}
+        \item $P$ is closed under addition: if $a, b \in P$, then $a + b \in P$.
+        \item $P$ is closed under multiplication: if $a, b \in P$, then $ab \in P$.
+        \item \hldef{Trichotomy}: for every $a \in R$, exactly one of $a \in P$, $-a \in P$, or $a = 0$ holds.
+    \end{enumerate}
+    We define a \CrefAndHyperref{definition:total_order_linear_order_on_a_set}{total order} on $R$ by setting \hl{$a < b$} if and only if $b - a \in P$.
+\end{definition}

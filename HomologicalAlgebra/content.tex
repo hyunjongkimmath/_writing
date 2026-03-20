@@ -685,6 +685,19 @@ We show that sheaf cohomology commutes with filtered colimits.
 \input{../_definitions/definition_graded_module_of_rings.tex}
 \input{../_definitions/definition_bigraded_object_in_an_abelian_category.tex}
 \input{../_definitions/definition_differential_on_a_bigraded_object_in_an_abelian_category.tex}
+\begin{definition} \label{definition:morphism_between_differential_bigraded_objects_in_an_additive_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. Let $(E, d)$ and $(F, \delta)$ be two \CrefAndHyperrefIfExist{definition:differential_on_a_bigraded_object_in_an_abelian_category}{differential bigraded objects} in $\mathcal{A}$ where the differentials $d$ and $\delta$ have the same bidegree $(\delta_p, \delta_q)$.
+A \hldef{morphism of differential bigraded objects $f: (E, d) \to (F, \delta)$} is a collection of morphisms $f_{p,q}: E_{p,q} \to F_{p,q}$ in $\mathcal{A}$ for all $p,q \in \mathbb{Z}$ such that the following \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} commutes for every pair $(p,q)$:
+$$
+\begin{array}{ccc}
+E_{p,q} & \xrightarrow{f_{p,q}} & F_{p,q} \\
+d \downarrow & & \downarrow \delta \\
+E_{p+\delta_p, q+\delta_q} & \xrightarrow{f_{p+\delta_p, q+\delta_q}} & F_{p+\delta_p, q+\delta_q}
+\end{array}
+$$
+That is, $f_{p+\delta_p, q+\delta_q} \circ d = \delta \circ f_{p,q}$ for all $p, q \in \mathbb{Z}$.
+\end{definition}
+
 \input{../_definitions/definition_homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category.tex}
 
 
@@ -705,8 +718,83 @@ We show that sheaf cohomology commutes with filtered colimits.
 
 \input{../_definitions/definition_spectral_sequence_in_an_abelian_category.tex}
 
+\begin{definition} \label{definition:morphism_of_spectral_sequences_in_an_abelian_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $r_0$ an integer.
+\begin{enumerate}
+    \item Let $E = \{E^r_{p,q}, d^r_{p,q}\}_{r \ge r_0}$ and $F = \{F^r_{p,q}, \delta^r_{p,q}\}_{r \ge r_0}$ be two homological \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{spectral sequences} in $\mathcal{A}$. A \hldef{morphism of homological spectral sequences $f: E \to F$} is a collection of morphisms $f^r_{p,q}: E^r_{p,q} \to F^r_{p,q}$ for each $r \ge r_0$ and all $p,q \in \mathbb{Z}$ such that:
+    \begin{enumerate}
+        \item Each $f^r$ is a \CrefAndHyperrefIfExist{definition:morphism_between_differential_bigraded_objects_in_an_additive_category}{morphism of differential bigraded objects}, i.e., $f^r_{p-r, q+r-1} \circ d^r_{p,q} = \delta^r_{p,q} \circ f^r_{p,q}$;
+        \item For each $r \ge r_0$, the morphism $f^{r+1}_{p,q}$ is the morphism induced by $f^r_{p,q}$ on homology, identifying $E^{r+1}_{p,q}$ with $H_{p,q}(E^r, d^r)$ and $F^{r+1}_{p,q}$ with $H_{p,q}(F^r, \delta^r)$.
+    \end{enumerate}
+    \item Let $E = \{E_r^{p,q}, d_r^{p,q}\}_{r \ge r_0}$ and $F = \{F_r^{p,q}, \delta_r^{p,q}\}_{r \ge r_0}$ be two \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequences} in $\mathcal{A}$. A \hldef{morphism of cohomological spectral sequences $f: E \to F$} is a collection of morphisms $f_r^{p,q}: E_r^{p,q} \to F_r^{p,q}$ for each $r \ge r_0$ and all $p,q \in \mathbb{Z}$ such that:
+    \begin{enumerate}
+        \item Each $f_r$ is a \CrefAndHyperrefIfExist{definition:morphism_between_differential_bigraded_objects_in_an_additive_category}{morphism of differential bigraded objects}, i.e., $f_r^{p+r, q-r+1} \circ d_r^{p,q} = \delta_r^{p,q} \circ f_r^{p,q}$;
+        \item For each $r \ge r_0$, the morphism $f_{r+1}^{p,q}$ is the morphism induced by $f_r^{p,q}$ on cohomology, identifying $E_{r+1}^{p,q}$ with $H^{p,q}(E_r, d_r)$ and $F_{r+1}^{p,q}$ with $H^{p,q}(F_r, \delta_r)$.
+    \end{enumerate}
+\end{enumerate}
+\end{definition}
+
+
+\begin{lemma}[Mapping lemma, see {\cite[Mapping Lemma 5.2.4.]{weibel}}] \label{lemma:mapping_lemma_for_spectral_sequences_in_abelian_categories}
+Let $\mathcal{A}$ be an abelian category and $r_0$ an integer.
+\begin{enumerate}
+    \item Let $f: E \to E'$ be a \CrefAndHyperrefIfExist{definition:morphism_of_spectral_sequences_in_an_abelian_category}{morphism of homological spectral sequences} in $\mathcal{A}$ starting at page $r_0$. If there exists some $r \ge r_0$ such that the morphism $f^r_{p,q}: E^r_{p,q} \to E'^r_{p,q}$ is an isomorphism for all $p, q \in \mathbb{Z}$, then $f^s_{p,q}: E^s_{p,q} \to E'^s_{p,q}$ is an isomorphism for all $s \ge r$ and all $p, q \in \mathbb{Z}$.
+    \item Let $f: E \to E'$ be a morphism of \CrefAndHyperrefIfExist{definition:morphism_of_spectral_sequences_in_an_abelian_category}{cohomological spectral sequences} in $\mathcal{A}$ starting at page $r_0$. If there exists some $r \ge r_0$ such that the morphism $f_r^{p,q}: E_r^{p,q} \to E_r'^{p,q}$ is an isomorphism for all $p, q \in \mathbb{Z}$, then $f_s^{p,q}: E_s^{p,q} \to E_s'^{p,q}$ is an isomorphism for all $s \ge r$ and all $p, q \in \mathbb{Z}$.
+\end{enumerate}
+\textit{Remark:} In the limit, if the spectral sequences are convergent, this implies an isomorphism on the abutments. \TODO{define convergence of a spectral sequence}
+\end{lemma}
+
 
 \input{../_definitions/definition_stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page.tex}
+
+\begin{definition}[{\cite[5.2.11]{weibel}}] \label{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $H = \{H_n\}_{n \in \mathbb{Z}}$ be a \CrefAndHyperrefIfExist{definition:graded_object_in_an_abelian_category}{graded object} in $\mathcal{A}$.
+
+    \begin{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. We say that $E$ \hldef{weakly converges to $H$}, denoted \hl{$E^r_{p,q} \Rightarrow H_{p+q}$}, if:
+        \begin{enumerate}
+            \item For every pair $(p,q)$, the term $E^r_{p,q}$ \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilizes} to a limit $E^\infty_{p,q}$.
+            \item Each object $H_n$ is equipped with an \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{increasing filtration}
+            $$F: \cdots \subseteq F_{p-1} H_n \subseteq F_p H_n \subseteq F_{p+1} H_n \subseteq \cdots \subseteq H_n$$
+            such that there is an isomorphism:
+            $$E^\infty_{p,q} \cong \text{Gr}^F_{p,q}(H) := \frac{F_p H_{p+q}}{F_{p-1} H_{p+q}}.$$
+
+        \end{enumerate}
+
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. We say that $E$ \hldef{weakly converges to $H$}, denoted \hl{$E_r^{p,q} \Rightarrow H^{p+q}$}, if:
+        \begin{enumerate}
+            \item For every pair $(p,q)$, the term $E_r^{p,q}$ \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stabilizes} to a limit $E_\infty^{p,q}$.
+            \item Each object $H^n$ (where $H$ is viewed as co-graded, $H^n = H_{-n}$) is equipped with a \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{decreasing filtration} 
+            $$F: H^n \supseteq \cdots \supseteq F^{p-1} H^n \supseteq F^p H^n \supseteq F^{p+1} H^n \supseteq \cdots$$
+            such that there is an isomorphism
+            $$E_\infty^{p,q} \cong \text{Gr}_F^{p,q}(H) := \frac{F^p H^{p+q}}{F^{p+1} H^{p+q}}.$$
+        \end{enumerate}
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[{\cite[5.2.11]{weibel}}] \label{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+
+    \begin{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a homological spectral sequence. We say that $E$ \hldef{approaches $H$} (or \hldef{abuts to $H$}) if:
+        \begin{itemize}
+            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to an increasing filtration
+            $$F: \cdots \subseteq F_{p-1} H_n \subseteq F_p H_n \subseteq F_{p+1} H_n \subseteq \cdots \subseteq H_n,$$
+            and
+            \item the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}; that is, for every $n \in \mathbb{Z}$:
+            $$H_n = \bigcup_p F_p H_n \quad \text{and} \quad \bigcap_p F_p H_n = 0.$$
+        \end{itemize}
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a cohomological spectral sequence. We say that $E$ \hldef{approaches $H$} (or \hldef{abuts to $H$}) if:
+        \begin{itemize}
+            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to a decreasing filtration
+            $$F: H^n \supseteq \cdots \supseteq F^p H^n \supseteq F^{p+1} H^n \supseteq F^{p+2} H^n \supseteq \cdots,$$
+            and
+            \item the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}; that is, for every $n \in \mathbb{Z}$:
+            $$H^n = \bigcup_p F^p H^n \quad \text{and} \quad \bigcap_p F^p H^n = 0.$$
+        \end{itemize}
+    \end{enumerate}
+\end{definition}
+
 
 \input{../_definitions/definition_converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex}
 
@@ -717,21 +805,27 @@ We show that sheaf cohomology commutes with filtered colimits.
     $$0 \to F_{p-1} H_n \to F_p H_n \to E^\infty_{p, n-p} \to 0.$$
 \end{remark}
 
-
-
 \input{../_definitions/definition_first_quadrant_spectral_sequence.tex}
 
-\begin{definition}
+\begin{definition} \label{definition:bounded_homological_cohomological_spectral_sequence}
+    \TODO{}
     Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
     \begin{enumerate}
         \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} $E$ is called \hldef{bounded} if for every integer $n$, there are only finitely many pairs $(p,q)$ with $p+q=n$ such that $E^{r_0}_{p,q} \neq 0$.
+
         Boundedness ensures that the \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{filtration} on the \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{abutment} $H_n$ is finite, which is a key condition for \CrefAndHyperrefIfExist{definition:strong_convergence__to_a_filtered_graded_object_for_a_spectral_sequence_in_an_abelian_category}{strong convergence}.
 
         \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} $E$ is called \hldef{bounded} if for every integer $n$, there are only finitely many pairs $(p,q)$ with $p+q=n$ such that $E_{r_0}^{p,q} \neq 0$.
+
         Boundedness ensures that the filtration on the abutment $H^n$ is finite.
+
+        \item A homological spectral sequence is said to be \hldef{bounded below} if for each $n$ there is an integer $s = s(n)$ such that the terms $E_{pq}^a$ with $n = p+q$ vanish for all $p < s$. 
+
+        \item A cohomological spectral sequence is said to be \hldef{bounded below} if for each $n$ there is an integer $s = s(n)$ such that the terms $E^{pq}_a$ with $n = p+q$ vanish for all $p > s$. 
+
+
     \end{enumerate}
 \end{definition}
-
 
 
 
@@ -759,15 +853,6 @@ We show that sheaf cohomology commutes with filtered colimits.
 - [Purpose: the fundamental existence theorem used in applications]
 - [Dependencies: Filtered chain complex, convergence]
 
-[SPECIALIZED] Double Complex (Bicomplex) $C_{p,q}$
-- A bigraded module with two commuting (or anticommuting) differentials $d_h: C_{p,q} \to C_{p-1,q}$ and $d_v: C_{p,q} \to C_{p,q-1}$
-- [Purpose: a specific type of filtered complex that yields two spectral sequences]
-- [Dependencies: Chain complex]
-
-[STRUCTURAL] Total Complex of a Double Complex $\text{Tot}(C)_n$
-- The chain complex defined by $\text{Tot}(C)_n = \bigoplus_{p+q=n} C_{p,q}$ with differential $D = d_h + d_v$
-- [Purpose: the object to which the double complex spectral sequences converge]
-- [Dependencies: Double complex]
 
 [THEOREM] Spectral Sequences of a Double Complex
 - There are two spectral sequences associated to $C_{p,q}$, one filtering by rows ($^{I}E$) and one by columns ($^{II}E$), both converging to $H_*(\text{Tot}(C))$

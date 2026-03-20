@@ -1,0 +1,15 @@
+\begin{theorem}[Godement Resolution] \label{theorem:godement_resolution_of_a_sheaf_of_modules_on_a_ringed_space}
+    Let $(X, \calO_X)$ be a ringed space. Every $\calO_X$-module $\calF$ admits a canonical \CrefAndHyperrefIfExist{definition:resolution_of_an_object_in_an_abelian_category}{resolution} by \CrefAndHyperrefIfExist{definition:flasque_flabby_sheaf_of_sets_on_a_topological_space}{flasque sheaves}:
+    $$0 \to \calF \xrightarrow{d^{-1}} \calC^0(\calF) \xrightarrow{d^0} \calC^1(\calF) \xrightarrow{d^1} \calC^2(\calF) \to \dots$$
+    where the sheaves $\calC^n(\calF)$ are defined inductively as follows:
+    \begin{enumerate}
+        \item Let $\calC^0(\calF)$ be the \CrefAndHyperrefIfExist{definition:godement_sheaf_of_a_sheaf_on_a_ringed_spcae}{Godement sheaf} of $\calF$.
+        \item Let $\calZ^1 = \coker(d^{-1}: \calF \to \calC^0(\calF))$. Define $\calC^1(\calF) := \calC^0(\calZ^1)$, and let $d^0$ be the composition $\calC^0(\calF) \twoheadrightarrow \calZ^1 \hookrightarrow \calC^1(\calF)$.
+        \item Inductively, let $\calZ^{n+1} = \coker(\calC^{n-1}(\calF) \to \calC^n(\calF))$ and $\calC^{n+1}(\calF) := \calC^0(\calZ^{n+1})$.
+    \end{enumerate}
+    The resulting complex $\calC^\bullet(\calF)$ is an \CrefAndHyperrefIfExist{definition:acyclic_object_for_a_functor}{acyclic resolution} for the global sections functor $\Gamma(X, -)$.
+\end{theorem}
+\begin{proof}
+    \TODO{verify}
+    By construction, each $\calC^n(\calF)$ is a Godement sheaf of some $\calO_X$-module, and thus is flasque by \Cref{lemma:godement_sheaf_is_flasque}. Exactness at each $\calC^n(\calF)$ follows from the local exactness of the kernel-cokernel sequences in the abelian category $\Mod(\calO_X)$. Since flasque sheaves are $\Gamma(X, -)$-acyclic (\Cref{proposition:flasque_sheaves_have_no_higher_cohomology}), $\calC^\bullet(\calF)$ can be used to compute the \CrefAndHyperrefIfExist{definition:sheaf_cohomology_groups}{sheaf cohomology} $H^i(X, \calF)$.
+\end{proof}

@@ -1,7 +1,27 @@
-\begin{definition}[Homotopy groups] \label{definition:homotopy_groups_of_a_pointed_topological_space}
-For any \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological space} $(X,x_0)$ and integer $n \ge 0$, the \hldef{$n$-th homotopy group of $X$ at $x_0$}, denoted \hl{$\pi_n(X,x_0)$}, is defined as the set of all \CrefAndHyperrefIfExist{definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset}{homotopy classes (rel.\ $\partial I^n$)} of based maps
-$$f : (I^n, \partial I^n) \to (X,x_0),$$
-where $I^n = [0,1]^n$. For $n \ge 1$, $\pi_n(X,x_0)$ is a group under concatenation of based maps, and for $n \ge 2$, it is abelian.
+\begin{definition}[Homotopy groups of a pointed topological space] \label{definition:homotopy_groups_of_a_pointed_topological_space}
+For any \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological space} $(X,x_0)$ and integer $n \ge 0$, the \hldef{$n$-th homotopy set of $X$ at $x_0$}, denoted \hl{$\pi_n(X,x_0)$}, is defined as the set of all \CrefAndHyperrefIfExist{definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset}{homotopy classes (rel.\ $\partial I^n$)} of \CrefAndHyperrefIfExist{definition:map_of_pairs_of_topological_spaces}{paired maps}
+$$f : (I^n, \partial I^n) \to (X,\{x_0\}),$$
+where $I^n = [0,1]^n$ and $\partial I^0$ is taken to be the singleton $I^0$ instead of the literal \CrefAndHyperrefIfExist{definition:interior_and_boundary_of_topological_space}{boundary} thereof. Equivalently, one can also define it as the set of all homotopy classes of \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed maps}
+$$f: (S^n, s_0) \to (X,x_0),$$
+where $S^n$ is the $n$-sphere \TODO{} and $s_0 \in S^n$ is a choice of base point. In other words, $\pi_n(X,x_0)$ is by definition $[(S^n, s_0), (X,x_0)]_{*}$\CrefIfExists{definition:homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset}.
+
+For $n \ge 1$, $\pi_n(X,x_0)$ is a group under concatenation of pointed maps, and for $n \ge 2$, it is abelian. As such, for $n \geq 1$, it is appropriate to refer to $\pi_n(X,x_0)$ as the \hldef{$n$th homotopy group of $(X,x_0)$}.
 
 The \hldef{fundamental group of $(X,x_0)$} refers to $\pi_1(X,x_0)$. Equivalently, it is the group of homotopy classes (rel.\ endpoints) of \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{loops} $\gamma : [0,1] \to X$ satisfying $\gamma(0)=\gamma(1)=x_0$. 
+
+For every $n \ge 0$, the assignment $(X,x_0) \mapsto \pi_n(X,x_0)$ is functorial --- in fact
+\begin{enumerate}
+    \item For $n = 0$, it is a functor $\mathrm{Top}_* \to \Sets$\CrefIfExists{definition:category_of_sets},
+    \item For $n = 1$, it is a functor $\mathrm{Top}_* \to \mathbf{Grp}$\CrefIfExists{definition:category_of_groups_of_abelian_groups},
+    \item For $n \geq 2$, it is a functor $\mathrm{Top}_* \to \mathbf{Ab}$(\CrefIfExists{definition:category_of_groups_of_abelian_groups}).
+\end{enumerate}
+
+Given a map $f: (X,x_0) \to (Y,y_0)$ of pointed spaces, the induced map $\pi_n(X,x_0) \to \pi_n(Y,y_0)$ is often denoted by \hl{$f_*$}.
+
+\TextIfExists{definition:relative_homotopy_groups_of_pointed_pairs_of_topological_spaces}{
+The homotopy set $\pi_n(X,x_0)$ is naturally isomorphic to the \CrefAndHyperrefIfExist{definition:relative_homotopy_groups_of_pointed_pairs_of_topological_spaces}{relative homotopy set $\pi_n(X,\{x_0\},x_0)$}.
+}
+
+We further note that the set $\pi_n(X,x_0) = [(S^n, s_0), (X,x_0)]_{*}$ is identifiable with $\pi_0(\operatorname{Map}_*((S^n, s_0), (X,x_0)))$\CrefIfExists{proposition:based_homotopy_classes_of_maps_between_based_spaces_correspond_to_path_components_of_function_space}. 
+
 \end{definition}

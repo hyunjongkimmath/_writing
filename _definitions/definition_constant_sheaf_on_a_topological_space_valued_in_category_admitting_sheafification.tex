@@ -1,0 +1,22 @@
+\begin{definition}[Constant sheaf on a topological space] \label{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} denoted $1$, and let $A$ be an object of $\calA$.
+
+    \begin{enumerate}
+        \item The \hldef{constant presheaf on $X$ with value $A$} is the \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} $P_A$ defined by
+        \[
+        P_A(U) = \begin{cases} 
+        A & \text{if } U \neq \emptyset \\
+        1 & \text{if } U = \emptyset
+        \end{cases}
+        \]
+        where for any inclusion of non-empty open sets $V \subseteq U$, the restriction map is the identity $\text{id}_A$, and for any inclusion $\emptyset \subseteq U$, the restriction map is the unique morphism $P_A(U) \to 1$.
+
+        \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor} 
+        $$a: \PreShv(X, \calA) \to \Shv(X, \calA)$$
+        exists. The \hldef{constant sheaf on $X$ associated to $A$}, denoted \hl{$\underline{A}$} or sometimes just \hl{$A$}, is the \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheaf associated to} the constant presheaf $P$ with value $A$ defined above.
+
+        % \item Let $\calO$ be a sheaf of (not-necessarily commutative) rings on $X$. Assume that the \CrefAndHyperrefIfExist{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}{global sections ring $\Gamma(X, \calO)$} exists. A \hldef{constant $\calO$-module} is an \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-module} $\calF$ which is isomorphic as an $\calO$-module to the sheafification of a constant presheaf of modules. Specifically, if $M$ is a module over the ring $\Gamma(X, \calO)$, the constant $\calO$-module $\underline{M}$ is the sheaf associated to the presheaf $U \mapsto M$ (with the empty set mapping to $0$).
+
+        % In the case that $\calO$ is the constant sheaf $\underline{R}$ associated to a ring $R$, a constant $\calO$-module is simply called a \hldef{constant $R$-module}.
+    \end{enumerate}
+\end{definition}

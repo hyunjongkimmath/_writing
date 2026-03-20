@@ -30,25 +30,32 @@ Given a \CrefAndHyperrefIfExist{definition:local_field}{local field} $K$ with ab
 
 \input{../_concepts/theorem_local_fields_are_complete.tex}
 
+\input{../_concepts/theorem_classification_of_local_fields.tex}
 
-\begin{theorem} \label{theorem:classification_of_local_fields}
-    \TODO{TODO: define Laurent seires}
-Up to isomorphism, \CrefAndHyperrefIfExist{definition:local_field}{local fields} consists precisely of:
-\begin{itemize}
-    \item $\mathbb{R}$ and $\mathbb{C}$, which are the \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{archimedean} local fields),
-    \item finite extensions of $\mathbb{Q}_p$ for a prime $p$, which are the nonarchimedean local fields of characteristic $0$, and
-    \item finite extensions of $\mathbb{F}_p((t))$, the field of formal Laurent series over a finite field, which are the non-archimedean local fields of positive characteristic.
-\end{itemize}
-\end{theorem}
 
 \subsection{Global fields}
 
+
+\input{../_definitions/definition_number_field.tex}
+\input{../_definitions/definition_global_function_field.tex}
 \input{../_definitions/definition_global_field.tex}
 
 \input{../_definitions/definition_equivalent_absolute_values_on_a_field.tex}
+\input{../_definitions/definition_place_of_a_field.tex}
+\input{../_definitions/definition_equivalent_places_of_a_field.tex}
 \input{../_definitions/definition_place_of_a_global_field.tex}
+\input{../_concepts/theorem_places_of_a_global_field_are_equivalences_classes_of_nontrivial_absolute_values.tex}
+
+
 
 \input{../_definitions/definition_completion_of_a_global_field_at_a_place.tex}
+
+\subsection{Rings of integers of local and global fields}
+\input{../_definitions/definition_ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain.tex}
+\input{../_definitions/definition_ring_of_integers_of_a_global_or_local_ring.tex}
+
+\input{../_concepts/theorem_rings_of_integers_of_global_fields_or_nonarchimedean_local_fields_are_dedekind_domains.tex}
+
 
 \subsection{Local fields are exactly the completions of global fields at places}
 
@@ -58,11 +65,28 @@ Up to isomorphism, \CrefAndHyperrefIfExist{definition:local_field}{local fields}
     Conversely, all local fields can be obtained as completions of global fields at places.
 \end{remark}
 
-\subsection{Rings of integers of local and global fields}
-\input{../_definitions/definition_ring_of_integers_of_a_global_or_local_ring.tex}
+\input{../_definitions/definition_absolute_norm_of_an_ideal_of_the_ring_of_integers_of_a_global_or_local_field.tex}
 
-\input{../_concepts/theorem_rings_of_integers_of_global_fields_or_nonarchimedean_local_fields_are_dedekind_domains.tex}
+\input{../_definitions/definition_p_adic_valuation_and_absolute_value_on_a_number_field.tex}
 
+\input{../_concepts/theorem_classification_of_places_of_global_fields.tex}
+
+
+
+
+\subsection{Ramification and inertia of extensions of local and global fields}
+
+\input{../_definitions/definition_extension_of_a_valuation_of_a_field_to_an_extension_field.tex}
+
+\input{../_contexts/context_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_ramification_index_of_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_inertial_degree_of_extension_of_valuation_fields.tex}
+
+\input{../_definitions/definition_unramified_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_totally_ramified_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_tamely_and_wildly_ramified_extension_of_valuation_fields.tex}
+
+% \input{../_definitions/definition_tamely_ramified_extension_of_valuation_fields.tex}
 
 
 
@@ -83,7 +107,7 @@ The Chebotarev density theorem is a statement that Frobenius elements $\mathrm{F
 
 \begin{theorem}[Chebotarev Density Theorem for number fields]
     \TODO{define unramified prime}
-Let $L/K$ be a finite \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:global_field}{number fields} with \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group $G = \mathrm{Gal}(L/K)$}. For a conjugacy class $C \subseteq G$, let 
+Let $L/K$ be a finite \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:number_field}{number fields} with \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group $G = \mathrm{Gal}(L/K)$}. For a conjugacy class $C \subseteq G$, let 
 \[ \pi_C(x) = \#\{ \, \mathfrak{p} \subseteq \mathcal{O}_K : N\mathfrak{p} \leq x,\ \mathfrak{p} \text{ unramified in } L,\ \mathrm{Frob}_{\mathfrak{p}} \in C \,\} \]
 be the number of prime ideals $\mathfrak{p}$ of $K$ with norm at most $x$ whose Frobenius conjugacy class $\mathrm{Frob}_{\mathfrak{p}}$ in $G$ equals $C$.
 
@@ -97,7 +121,7 @@ where $\pi(x)$ is the number of prime ideals $\mathfrak{p} \subseteq \mathcal{O}
 
 
 \begin{theorem}[Chebotarev Density theorem for function fields, see e.g. {\cite[Theorem 9.13A, 9.13B]{rosen}}]
-Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:global_field}{global function fields} with Galois group $G = \Gal(L/K)$. Let $C \subset G$ be a conjugacy class in $G$ and $S_K'$ be the set of primes of $K$ which are unramified in $L$. \TODO{continue statement}
+Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} of \CrefAndHyperrefIfExist{definition:global_function_field}{global function fields} with Galois group $G = \Gal(L/K)$. Let $C \subset G$ be a conjugacy class in $G$ and $S_K'$ be the set of primes of $K$ which are unramified in $L$. \TODO{continue statement}
 \end{theorem}
 
 
@@ -144,6 +168,7 @@ Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Ga
 
 \section{Miscellaneous definitions}
 
+
 \subsection{Abstract algebra}
 
 \input{../_definitions/definition_commutative_ring.tex}
@@ -157,6 +182,8 @@ Let $L/K$ be a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Ga
 
 \input{../_definitions/definition_principal_ideal_ring.tex}
 \input{../_definitions/definition_unique_factorization_domain.tex}
+
+\input{../_definitions/definition_function_field_over_an_integral_domain_in_finitely_many_variables.tex}
 
 
 \subsection{Absolute values and norms}

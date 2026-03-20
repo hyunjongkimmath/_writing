@@ -1,0 +1,52 @@
+\begin{definition} \label{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $\calA$ be a \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{AB$3^*$ category}, let $\calF$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf on $X$ valued in} $\calA$, and let $\calU = \{U_i\}_{i \in I}$ be an \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} of $X$. Impose a total ordering on the index set $I$. 
+    \begin{enumerate}
+        \item For $i_0,i_1,\ldots,i_p \in I$, write 
+        $$U_{i_0,\ldots,i_p} \coloneq U_{i_0} \cap U_{i_1} \cap \cdots \cap U_{i_p}.$$
+        The \hldef{object of $p$-cochains of $\calU$ on $\calF$} is the product
+        $$\hlin{C^p(\calU, \calF) = \prod_{i_0 < \cdots < i_p} \calF(U_{i_0,\ldots,i_p}).}$$
+        In particular, an element $\alpha \in C^p(\calU, \calF)$ precisely corresponds to a tuple of elements of $\calF(U_{i_0,\ldots,i_p})$; write \hl{$\alpha_{i_0,\ldots,i_p}$} for the element of $\calF(U_{i_0,\ldots,i_p})$ corresponding $\alpha$.
+
+        % \item Define the \hldef{coboundary operator} 
+
+        %     \hlalign{
+        %     \begin{align*}
+        %         d^p: C^p(\calU, \calF) &\to C^{p+1}(\calU, \calF)
+        %         \end{align*}
+        %         }
+
+        % so that 
+        % $$\pi_{i_0,\ldots,i_{p+1}} \circ d^p = \sum_{j=0}^{p+1}(-1)^j \operatorname{res}|_{U_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}, U_{i_0, \ldots, i_{p+1}}} \circ \pi_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}$$
+        % \CrefIfExists{definition:presheaf_on_a_topological_space}  where $\pi_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}: \prod_{i_0 < \cdots < i_p} \calF(U_{i_0})...$ is the projection map. At the level of elements, the coboundary operator is given by ...
+
+        \item Define the \hldef{coboundary operator} 
+
+            \hlalign{
+            \begin{align*}
+                d^p: C^p(\calU, \calF) &\to C^{p+1}(\calU, \calF)
+                \end{align*}
+                }
+
+        so that 
+        $$\pi_{i_0,\ldots,i_{p+1}} \circ d^p = \sum_{j=0}^{p+1}(-1)^j \operatorname{res}_{U_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}, U_{i_0, \ldots, i_{p+1}}} \circ \pi_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}$$
+        \CrefIfExists{definition:presheaf_on_a_topological_space} where $\pi_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}: C^p(\calU, \calF) \to \calF(U_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}})$ is the projection map from the product onto the factor indexed by the $(p+1)$-tuple $(i_0, \ldots, \hat{i}_j, \ldots, i_{p+1})$. 
+
+        At the level of generalized elements, for any object $A \in \calA$ and any morphism $\alpha \in \Hom_{\calA}(A \to C^p(\calU, \calF))$, the coboundary $d^p \circ \alpha$ is determined by its components:
+        % $$(d^p \circ \alpha)_{i_0,\ldots, i_{p+1}} = \sum_{j=0}^{p+1} (-1)^j \operatorname{res} \circ \alpha_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}}$$
+        $$(d^p \alpha)_{i_0,\ldots, i_{p+1}} = \sum_{j=0}^{p+1} (-1)^j \alpha_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}} \big|_{U_{i_0},\ldots, i_{p+1}}$$
+        where $\alpha_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}} = \pi_{i_0, \ldots, \hat{i}_j, \ldots, i_{p+1}} \circ \alpha$ is the component of $\alpha$ in the factor $\calF(U_{i_0, \dots, \hat{i}_j, \dots, i_{p+1}})$. 
+        
+        One can verify that $d^{p+1} \circ d^p = 0$ (for instance, by checking $d^{p+1} \circ d^p \circ \alpha = 0$ for all generalized elements $\alpha$) and hence that $(C^\bullet(\calU, \calF), d^\bullet)$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} of objects in $\calA$.
+        
+        % where \hl{$\hat{i}_j$} indicates that the index $i_j$ is omitted. One can verify that $d^{p+1} \circ d^p = 0$ and hence that $(C^\bullet(\calU, \calF), d^\bullet)$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complex} of objects in $\calA$.
+
+        \item The \hldef{$p$th \v{C}ech cohomology object of $\calF$ with respect to the cover $\calU$} is the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomology} of the cochain complex $(C^\bullet(\calU, \calF), d^\bullet)$:
+        $$\hlin{\check{H}^p(\calU, \calF) \coloneq H^p(C^\bullet(\calU, \calF)) = \ker(d^p) / \operatorname{im}(d^{p-1})}$$
+
+        \item Whenever an open cover $\calV$ of $X$ is a refinement of $\calU$, (i.e. every $V_j \in \calV$ is a subset of some $U_i \in \calU$), there is an induced map 
+        $$\check{H}^p(\calU, \calF) \to \check{H}^p(\calV, \calF).$$ 
+        on \v{C}ech cohomology groups. The collection of open covers of $X$ ordered by refinement specifies a \CrefAndHyperrefIfExist{definition:filtered_cofiltered_category}{filtered category} $\calC$, and the above maps on \v{C}ech cohomology groups yields a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} $\calC \to \calA$. Assuming that $\calA$ is additionally an \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$AB4$} category (in practice, the theory works better for $AB5$ categories), define the \hldef{$p$th \v{C}ech cohomology object of $X$ with coefficients in $\calF$} as 
+        $$\hlin{\check{H}^p(X, \calF) \coloneq \colim_{\calU \in C} \check{H}^p(\calU, \calF).}$$
+    \end{enumerate}
+    One often considers \v{C}ech cohomology for $\calA = \Ab$\CrefIfExists{definition:category_of_groups_of_abelian_groups}. 
+\end{definition}

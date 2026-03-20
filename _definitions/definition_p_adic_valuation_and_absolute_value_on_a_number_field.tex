@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:p_adic_valuation_and_absolute_value_on_a_number_field}
+    Let $K$ be a number field with ring of integers $\calO_K$. Let $\mathfrak{p}$ be a nonzero prime ideal of $\calO_K$. 
+    \begin{enumerate}
+        \item The \hldef{(normalized) $\mathfrak{p}$-adic valuation on $K$} refers to the \CrefAndHyperref{definition:discrete_valuation_on_a_field}{discrete valuation} \hl{$v_\mathfrak{p}$} defined by 
+        $$v_\mathfrak{p}(a) = \max\{n: a \in \mathfrak{p}^n \}$$
+        for $a \in \calO_K \setminus \{0\}$ and 
+        $$v_\mathfrak{p}(x) = v_\mathfrak{p}(a) - v_\mathfrak{p}(b)$$
+        if $x = \frac{a}{b}$ for $a,b \in \calO_K \setminus \{0\}$. This is well defined.
+
+        \item The \hldef{$\mathfrak{p}$-adic absolute value on $K$} refers to the \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{non-archimedean} \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute value} given by 
+        $$|x|_\mathfrak{p} = N(\mathfrak{p})^{-v_\mathfrak{p}(x)}$$
+        \CrefIfExists{definition:absolute_norm_of_an_ideal_of_the_ring_of_integers_of_a_global_or_local_field}.
+    \end{enumerate}
+\end{definition}

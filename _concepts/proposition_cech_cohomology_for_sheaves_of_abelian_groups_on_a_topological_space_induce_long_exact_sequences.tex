@@ -1,0 +1,29 @@
+\begin{proposition} \label{proposition:cech_cohomology_for_sheaves_of_abelian_groups_on_a_topological_space_induce_long_exact_sequences}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}.
+     The \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}
+    $$\{\check{H}^p(X,-): \Sh(X, \Ab) \to \Ab\}_{p \geq 0}$$
+    \CrefIfExists{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}\CrefIfExists{definition:category_of_groups_of_abelian_groups}\CrefIfExists{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}
+    form a \CrefAndHyperrefIfExist{definition:homological_cohomological_delta_functor_between_abelian_categories}{cohomological $\delta$-functor}.
+\end{proposition}
+\begin{proof}
+    Let 
+    $$0 \to \calF' \to \calF \to \calF'' \to 0$$
+    be a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} in $\Sh(X, \Ab)$. By \Cref{lemma:short_exact_sequence_of_sheaves_of_abelian_groups_on_a_topological_space_yields_short_exact_sequence_of_colimits_of_cech_complexes}, there is a short exact sequence
+    $$0 \to \varinjlim_{\calU} C^\bullet(\calU, \calF') \to \varinjlim_{\calU} C^\bullet(\calU, \calF) \to \varinjlim_{\calU} C^\bullet(\calU, \calF'') \to 0.$$
+    where the $\calU$ run over the \CrefAndHyperrefIfExist{definition:topological_space}{open} covers of $X$. 
+    Take the \CrefAndHyperrefIfExist{theorem:long_exact_sequence_in_homology_cohomology_of_a_short_exact_sequence_of_chain_complexes_in_an_abelian_category}{long exact sequence in cohomology}: 
+    \begin{align*}
+    0 &\to \check{H}^0(\varinjlim_{\calU} C^\bullet(\calU, \calF')) \to \check{H}^0(\varinjlim_{\calU} C^\bullet(\calU, \calF)) \to \check{H}^0(\varinjlim_{\calU} C^\bullet(\calU, \calF''))  \\
+    &\to \check{H}^1(\varinjlim_{\calU} C^\bullet(\calU, \calF'))
+    \end{align*}
+    Noting that $\Ab$ is an $AB5$ category (\Cref{theorem:examples_of_grothendieck_categories}) and hence filtered colimits are exact, the cohomology functors and the filtered colimits commute, yielding a long exact sequence
+    \begin{align*}
+    0 &\to \varinjlim_{\calU} \check{H}^0(C^\bullet(\calU, \calF')) \to \varinjlim_{\calU} \check{H}^0(C^\bullet(\calU, \calF)) \to \varinjlim_{\calU} \check{H}^0(C^\bullet(\calU, \calF''))  \\
+    &\to \varinjlim_{\calU} \check{H}^1(C^\bullet(\calU, \calF')).
+    \end{align*}
+    This is precisely a long exact sequence in \v{C}ech \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomology}:
+    \begin{align*}
+    0 &\to \check{H}^0(X, \calF') \to \check{H}^0(X, \calF) \to \check{H}^0(X, \calF'')  \\
+    &\to \check{H}^1(X, \calF')
+    \end{align*}
+\end{proof}

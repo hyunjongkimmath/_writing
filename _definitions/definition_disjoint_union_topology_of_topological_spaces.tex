@@ -1,0 +1,7 @@
+\begin{definition}[Disjoint union topology] \label{definition:disjoint_union_topology_of_topological_spaces}
+    Let $\{X_i\}_{i \in I}$ be an arbitrary small collection of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. The \hldef{disjoint union space} (or \hldef{topological sum}), denoted by \hl{$\coprod_{i \in I} X_i$}, is the set-theoretic \CrefAndHyperrefIfExist{definition:disjoint_union_of_sets}{disjoint union} $\bigcup_{i \in I} (X_i \times \{i\})$ endowed with the \hldef{disjoint union topology}, which is the \CrefAndHyperrefIfExist{definition:coarser_smaller_finer_larger_for_topologies_on_a_set}{finest topology} such that each canonical injection 
+    $$\iota_j : X_j \hookrightarrow \coprod_{i \in I} X_i, \quad x \mapsto (x, j)$$ 
+    is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}. 
+    
+    Specifically, a \CrefAndHyperrefIfExist{definition:subset_of_a_set}{subset} $U \subseteq \coprod_{i \in I} X_i$ is \CrefAndHyperrefIfExist{definition:topological_space}{open} if and only if $\iota_i^{-1}(U)$ is open in $X_i$ for every $i \in I$. The disjoint union \CrefAndHyperrefIfExist{definition:A1_homotopy_theoretic_space_over_a_noetherian_scheme_of_finite_dimension}{space} is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_topological_spaces}{category of topological spaces}.
+\end{definition}

@@ -1,0 +1,12 @@
+\begin{definition}[(Co)limits in Presheaf Categories] \label{definition:colimit_in_a_presheaf_category}
+    \TODO{verify}
+    Let $\calC$ be a category and $\calA$ a category. Let $I$ be an index category.
+    \begin{enumerate}
+        \item If $\calA$ admits colimits of shape $I$, the \textbf{presheaf colimit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
+        \[ (\varinjlim_{i \in I} F(i))(U) \coloneqq \varinjlim_{i \in I} (F(i)(U)) \]
+        for every $U \in \text{ob}(\calC)$.
+        \item If $\calA$ admits limits of shape $I$, the \textbf{presheaf limit} of a diagram $F: I \to \PreShv(\calC, \calA)$ is the presheaf defined pointwise by
+        \[ (\varprojlim_{i \in I} F(i))(U) \coloneqq \varprojlim_{i \in I} (F(i)(U)) \]
+        for every $U \in \text{ob}(\calC)$.
+    \end{enumerate}
+\end{definition}

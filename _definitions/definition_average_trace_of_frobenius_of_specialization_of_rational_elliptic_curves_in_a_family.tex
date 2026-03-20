@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:average_trace_of_frobenius_of_specialization_of_rational_elliptic_curves_in_a_family}
+    \TODO{define a non-split elliptic surface}
+    Let $\calE \to \bbP^1$ be a non-split elliptic surface over $\bbQ$ with \CrefAndHyperref{definition:weierstrass_equation_over_a_ring}{Weierstrass equation}
+    $$\calE: y^2 = x^3 + A(T) x + B(T)$$
+    with $4A(T)^3 + 27B(T)^2 \neq 0$; take $A(T), B(T) \in \bbZ[T]$. For $t \in \bbZ$, let \hl{$E_t$} be the specialization of $\calE$ obtained by letting $T = t$; for all but finitely many integers $t$, in fact for the $t$ at which the \CrefAndHyperref{definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant}{$j$-invariant} $j(\calE) \in \bbQ(T)$ is defined and nonvanishing, $E_t$ is an elliptic curve over $\bbQ$. Further let \hl{$E_{t,p}$} denote the reduction of $E_t/\bbQ$ at the prime $p$. \TODO{define reduction}
+    Write 
+    $$\hlin{A_p(\calE) = \frac{1}{p} \sum_{t=0}^{p-1} a_p(E_t)}$$
+    where $a_p(E_t)$ is the usual trace of Frobenius of $E_t$ at $p$ \TODO{define the trace of Frobenius at a prime, taking reduction into consideration}
+    and 
+    $$\hlin{S(N, \calE) = - \frac{1}{N} \sum_{p \text{ prime} \leq N} A_p(\calE) \cdot \log p}$$
+    One might refer to $S(N,\calE)$ as a \hldef{Nagao sum for $\calE$}.
+\end{definition}

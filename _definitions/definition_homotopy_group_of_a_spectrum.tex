@@ -1,0 +1,9 @@
+\begin{definition}[{\cite[Definition 2.1]{nlab:homotopy_group_of_a_spectrum}}] \label{definition:homotopy_group_of_a_spectrum}
+    Let $E$ be a \CrefAndHyperrefIfExist{definition:spectrum_of_topological_spaces}{spectrum}.
+    For $q \in \mathbb{Z}$, the \hldef{$q$th (stable) homotopy group of $E$} is the colimit
+    $$\hlin{\pi_q(E) := \colim_n \pi_{q+n}(E_n)}$$
+    where the colimit is taken over the maps
+    $$\pi_{q+n}(E_n) \xrightarrow{\Sigma} \pi_{q+n+1}(\Sigma E_n) \xrightarrow{\pi_{q+n+1}(\sigma_n^E)} \pi_{q+n+1}(E_{n+1})$$
+
+    Recall that we notated $\pi_q(\Sigma^\infty X)$ as the \CrefAndHyperrefIfExist{corollary:stable_homotopy_groups_of_pointed_topological_spaces_give_a_reduced_homology_theory}{$q$th stable homotopy group $\pi_q^s(X)$} of the based space $X$ and this indeed coincides with the $q$th homotopy group of the \CrefAndHyperrefIfExist{definition:suspension_spectrum_of_a_pointed_topological_space}{suspension spectrum} $\Sigma^\infty X$. 
+\end{definition}

@@ -1,0 +1,9 @@
+\begin{definition}[Godement Sheaf] \label{definition:godement_sheaf_of_a_sheaf_on_a_ringed_spcae}
+    Let $(X, \calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space} and $\calF \in \Mod(\calO_X)$. The \hldef{Godement sheaf associated to $\calF$}, denoted by \hl{$\calC^0(\calF)$}, is defined as the product of the \CrefAndHyperrefIfExist{definition:skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object}{skyscraper sheaves} of its \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalks}:
+    $$\calC^0(\calF) := \prod_{x \in X} (i_x)_* \underline{\calF_x}$$
+    (\Cref{definition:limit_in_a_sheaf_category})\CrefIfExists{definition:product_and_coproduct_of_objects_in_a_category} where $i_x: \{x\} \hookrightarrow X$ is the inclusion of the point $x$ and $\underline{\calF_x}$ denotes the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on $\{x\}$ with value the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{stalk} $\calF_x$. 
+    
+    There is a canonical \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_of_objects_in_a_category}{monomorphism} of $\calO_X$-modules:
+    $$d^{-1}: \calF \hookrightarrow \calC^0(\calF)$$
+    which, by the \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $(i_x^*, (i_x)_*)$, corresponds at each factor to the identity map on stalks $\text{id}: \calF_x \to \calF_x$.
+\end{definition}

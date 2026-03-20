@@ -1,0 +1,10 @@
+\begin{lemma} \label{lemma:category_of_presheaves_of_sheaves_on_topological_space_valued_in_a_locally_small_category_is_locally_small}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $\calA$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:category}{category} $\PreShv(X, \calA)$ is \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small}.
+        \item The category $\Sh(X, \calA)$ is locally small.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Note that \CrefAndHyperrefIfExist{definition:category_of_opens_of_a_topological_space}{$\mathbf{Open}(X)$} is a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, so $\PreShv(X, \calA)$ is locally small by \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}. The category $\Sh(X, \calA)$ is necessarily a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{(full) subcategory} of $\PreShv(X, \calA)$ and is thus locally small.
+\end{proof}

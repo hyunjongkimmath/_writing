@@ -1,0 +1,8 @@
+\begin{lemma} \label{lemma:godement_sheaf_of_a_sheaf_of_modules_on_a_ringed_space_is_flasque}
+    Let $(X,\calO_X)$ be a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
+    For any $\calF \in \Mod(\calO_X)$, the \CrefAndHyperrefIfExist{definition:godement_sheaf_of_a_sheaf_on_a_ringed_spcae}{Godement sheaf} $\calC^0(\calF)$ is \CrefAndHyperrefIfExist{definition:flasque_sheaf_of_sets_on_a_topological_space}{flasque} (flabby).
+\end{lemma}
+\begin{proof}
+    \TODO{verify}
+    A section of $\calC^0(\calF)$ over an open set $U \subseteq X$ is an element of $\prod_{x \in U} \calF_x$. Given such a section $s = (s_x)_{x \in U}$, we can define a global section $\tilde{s} = (\tilde{s}_x)_{x \in X}$ by setting $\tilde{s}_x = s_x$ if $x \in U$ and $\tilde{s}_x = 0$ if $x \notin U$. The restriction of $\tilde{s}$ to $U$ is clearly $s$, hence the restriction map $\Gamma(X, \calC^0(\calF)) \to \Gamma(U, \calC^0(\calF))$ is surjective.
+\end{proof}

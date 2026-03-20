@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:covering_space_of_a_topological_space}
+    \begin{enumerate}
+        \item Let $X$ be a \CrefAndHyperrefIfExist{definition:category_of_topological_spaces}{topological space}. 
+
+        A \hldef{covering space of $X$} is a pair $(\tilde{X}, p)$ where $\tilde{X}$ is a topological space and $p: \tilde{X} \to X$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} map such that for every $x \in X$, there exists an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} $U$ of $x$ (called an \hldef{evenly covered neighborhood)} for which the preimage $p^{-1}(U)$ is a \CrefAndHyperrefIfExist{definition:disjoint_union_of_topological_spaces}{disjoint union} of \CrefAndHyperrefIfExist{definition:topological_space}{open sets} $V_i \subset \tilde{X}$, each of which is mapped \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphically} onto $U$ by the restriction $p|_{V_i}$.
+
+        \item Let $(X,x_0)$ be a \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological space}. A \hldef{(pointed) covering of $(X,x_0)$} is a \CrefAndHyperrefIfExist{definition:pointed_topological_space}{pointed topological space} $(\tilde{X}, \tilde{x}_0)$ along with a covering $p: \tilde{X} \to X$ of $X$ such that $p$ is a \CrefAndHyperrefIfExist{definition:pointed_topological_space}{map of pointed space}.
+    \end{enumerate}
+\end{definition}

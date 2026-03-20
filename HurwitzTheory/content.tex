@@ -1,0 +1,271 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+
+
+
+\subsection{Surfaces}
+
+\input{../_definitions/definition_surface_as_a_manifold.tex}
+
+\input{../_concepts/proposition_surface_is_orientable_if_and_only_if_it_does_not_contain_a_subset_homeomorphic_to_a_mobius_strip.tex}
+
+\subsection{Euler characteristic and genus}
+
+\input{../_definitions/definition_euler_characteristic_of_a_topological_space.tex}
+
+\input{../_definitions/definition_genus_of_a_topological_space.tex}
+
+
+\input{../_concepts/theorem_compact_connected_orientable_surfaces_are_homeomorphic_if_and_only_if_they_have_the_same_genus.tex}
+
+\section{The Burau representations}
+
+\subsection{Braid groups}
+
+\subsubsection{Configuration spaces}
+
+\input{../_definitions/definition_ordered_configuration_space_of_n_points_in_a_topological_space.tex}
+\input{../_definitions/definition_unordered_configuration_space_of_n_points_in_a_topological_space.tex}
+\input{../_definitions/definition_artin_braid_group.tex}
+\input{../_concepts/proposition_artin_braid_group_is_isomorphic_to_mapping_class_group_of_homeomorphisms_of_disk_with_n_punctured_points_fixing_the_boundary_and_permuting_the_punctures.tex}
+\input{../_definitions/definition_pure_braid_group.tex}
+
+Configuration spaces can also be constructed for schemes.
+
+\begin{definition} \label{definition:ordered_configuration_space_of_n_points_in_a_scheme_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $X$ be a \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over $S$}. 
+    The \hldef{ordered configuration space of $n$ points in $X$ (over $S$)} refers to the $n$-fold \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} $X^n = X \times_S X \times_S \cdots \times_S X$.
+
+    Note that it \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{represents} the \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $\Sch/S \to \Sets: T \mapsto \Hom_{\Sch/S}(T, X)^n$\CrefIfExists{definition:scheme_over_a_scheme}. 
+\end{definition}
+
+
+
+\begin{definition} \label{definition:ordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $X$ be a \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over $S$}. 
+    The \hldef{configuration space of $n$ distinct points in $X$ (over $S$)} refers to the scheme 
+    $$\operatorname{Conf}_n(X) = X^n \setminus \bigcup_{1 \leq i < j \leq n} \Delta_{ij}$$
+    \CrefIfExists{definition:ordered_configuration_space_of_n_points_in_a_scheme_over_a_scheme}
+    where $\Delta_{ij} \subseteq X^n = X \times_S X \times_S \cdots \times_S X$ refers to the pairwise diagonal at the $i$ and $j$th coordinates --- it may be constructed by first taking the diagonal $\Delta \subseteq X_i \times_S X_j = X \times_S X$ where $X_i$ and $X_j$ are $i$th and $j$th copies of $X$ and by letting $\Delta_{ij}$ be the product of $\Delta$ with the copies of $X$ except the $i$th and $j$th ones.
+    \TODO{comment on how it represents tuples of points}
+
+    \TextIfExists{definition:unordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}{
+        This configuration space should not be confused with the \CrefAndHyperrefIfExist{definition:unordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}{unordered configuration space of $n$ distinct points in $X$ over $S$}, which some might also denote by $\operatorname{Conf}_n(X)$
+    }
+\end{definition}
+
+\begin{definition} \label{definition:unordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $X$ be a \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over $S$}. 
+    The \hldef{unordered configuration space of $n$ distinct points in $X$ (over $S$)} refers to the scheme 
+    $$\hlin{\operatorname{UConf}_n(X) = \operatorname{Conf}_n(X) / S_n}$$
+    \CrefIfExists{definition:ordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}\CrefIfExists{definition:symmetric_group_on_a_set} where $\operatorname{Conf}_n(X)$ is the ordered configuration space of $n$ distinct points in $X$ and $S_n$ acts on $\operatorname{Conf}_n(X)$ by permuting coordinates.
+
+    This unordered configuration space may be denoted by \hl{$\operatorname{Conf}_n(X)$}, which may overlap with notation for the ordered configuration space.
+
+    \TODO{comment on how it represents tuples of points}
+\end{definition}
+
+\begin{definition} \label{definition:unordered_configuration_space_of_colored_distinct_points_in_a_scheme_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $X$ be a \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over $S$}. 
+    For integers $n_1,\ldots,n_v \geq 1$ and $n = \sum_{i=1}^v n_i$, the \hldef{unordered configuration space of $n_1,\ldots,n_v$ distinct colored points in $X$ (over $S$)} refers to the scheme 
+    $$\hlin{\operatorname{UConf}_{n_1,\ldots,n_v}(X) = \operatorname{Conf}_n(X) / \prod_{i=1}^v S_{n_i}}$$
+    \CrefIfExists{definition:ordered_configuration_space_of_n_distinct_points_in_a_scheme_over_a_scheme}\CrefIfExists{definition:product_of_groups}\CrefIfExists{definition:symmetric_group_on_a_set} where $S_{n_i}$ acts by permuting the $n_i$ consecutive coordinates in the range $[n_1+\cdots + n_{i-1} + 1, n_1 + \cdots + n_i]$. 
+    \TODO{comment on how it represents tuples of points}
+
+    This configuration space may also be denoted as $\operatorname{UConf}_{n_1,\ldots,n_v}(X)$.
+\end{definition}
+
+
+
+
+
+\subsection{Defining the Burau representation}
+
+\subsubsection{Orientation by singular homology}
+
+\input{../_definitions/definition_local_orientation_of_a_topological_manifold_with_or_without_boundary_at_an_interior_point_using_local_singular_homology.tex}
+\input{../_definitions/definition_orientation_of_a_topological_manifold_with_or_without_boundary_using_singular_homology.tex}
+\input{../_definitions/definition_orientation_preserving_homeomorphism_between_oriented_topological_manifolds_with_or_without_boundary.tex}
+
+\input{../_definitions/definition_orientation_preserving_homeomorphism_group_of_a_topological_manifold_with_or_without_boundary.tex}
+
+
+\input{../_definitions/definition_orientation_preserving_homeomorphism_group_fixing_boundary_of_an_oriented_topological_manifold_with_or_without_boundary.tex}
+
+
+\input{../_concepts/theorem_homeomorphism_from_a_compact_connected_oriented_topological_manifold_to_itself_is_orientation_preserving_iff_relative_singular_homology_map_is_identity.tex}
+
+
+
+\subsection{Isotopy between topological spaces and between homeomorphisms of topological spaces}
+
+\input{../_definitions/definition_isotopy_between_topological_spaces.tex}
+\input{../_definitions/definition_isotopic_homeomorphisms_between_topological_spaces.tex}
+\input{../_definitions/definition_isotopy_between_topological_spaces_between_homeomorphisms_relative_to_a_subspace.tex}
+\input{../_definitions/definition_smooth_isotopy_on_a_smooth_manifold_between_diffeomorphisms_on_a_smooth_manifold.tex}
+
+\subsubsection{Mapping class groups of manifolds}
+
+\input{../_definitions/definition_compact_open_topology_on_the_set_of_continuous_maps_between_topological_spaces_and_function_space.tex}
+
+\input{../_definitions/definition_homeomorphism_group_of_a_topological_space.tex}
+\input{../_notations/notation_homeomorphism_groups_of_a_topological_space_manifolds.tex}
+
+\input{../_definitions/definition_mapping_class_group_of_a_connected_oriented_topological_manifold_with_or_without_boundary_relative_to_subsets.tex}
+
+\input{../_concepts/theorem_restriction_homomorphism_by_taking_out_finitely_many_points_for_mapping_class_group_of_an_oriented_topological_manifold_is_isomorphism_under_nice_conditions.tex}
+
+\input{../_concepts/theorem_mapping_class_group_on_a_connected_oriented_manifold_with_respect_to_subsets_maps_to_automorphism_group_of_fundamental_group.tex}
+
+
+\TODO{}
+\begin{notation}
+Let \hl{$S_{g,n}^b$} denote a connected, orientable surface (a 2-manifold) of genus $g$ with $n$ punctures and $b$ boundary components. We denote the mapping class group of this surface as \hl{$\text{Mod}(S_{g,n}^b)$}. When $n=0$ and $b=0$, we write \hl{$\text{Mod}(S_g)$}.
+\end{notation}
+
+\TODO{}
+\begin{definition}
+Let $S$ be an orientable surface and let $c$ be a simple closed curve on $S$. A \hldef{Dehn twist about $c$}, denoted \hl{$T_c$}, is an element of the mapping class group $\text{Mod}(S)$ represented by a homeomorphism obtained by cutting $S$ along $c$, rotating one boundary of the cut by $2\pi$, and reglueing.
+\end{definition}
+
+\TODO{}
+\begin{theorem}
+Let $S_{g,n}^b$ be a connected, orientable surface of finite type. For any integers $g, n, b \geq 0$, the mapping class group $\text{Mod}(S_{g,n}^b)$ is finitely generated. Specifically, if $b=0$ and $n=0$, the group $\text{Mod}(S_g)$ is generated by a finite set of Dehn twists about a collection of simple closed curves.
+\end{theorem}
+
+
+\TODO{}
+\begin{proposition}
+Let $S$ be a connected, orientable surface of genus $g$ with $n$ punctures and $b$ boundary components such that its Euler characteristic $\chi(S)$ is negative. The mapping class group $\text{Mod}(S)$ acts on the Teichmüller space $\mathcal{T}(S)$ by precomposition.
+\textit{Remark:} \TODO{define Teichmüller space}.
+\end{proposition}
+
+\TODO{}
+\begin{theorem}
+Let $S$ be a connected, orientable surface of finite type with $\chi(S) < 0$. The mapping class group $\text{Mod}(S)$ acts properly discontinuously on the Teichmüller space $\mathcal{T}(S)$. The quotient space
+$$\hlin{\mathcal{M}(S) = \mathcal{T}(S) / \text{Mod}(S)}$$
+is the moduli space of Riemann surfaces homeomorphic to $S$.
+\textit{Remark:} \TODO{define moduli space of Riemann surfaces}.
+\end{theorem}
+
+
+\input{../_definitions/definition_smooth_mapping_class_group_of_a_smooth_orientable_manifold_with_or_without_boundary.tex}
+
+\TODO{laruent polynomial ring}
+
+
+\subsection{The Burau representations}
+
+
+
+\input{../_definitions/definition_representation_of_a_mapping_class_group_on_the_singular_homology_groups_of_a_cover.tex}
+
+
+\begin{definition}
+    Let $\bbD \subseteq \bbR^2$ be a (closed unit) disk, let $x_1,\ldots,x_n \in \bbD$ be $n$-distinct points. Let $G$ be an abelian group (or ring). 
+    The \hldef{unreduced Burau representation}
+\end{definition}
+
+\TODO{define burau, gassner}
+
+\TODO{unreduced, reduced Burau representation}
+
+
+\TODO{relationship between $H_1(D)$, $H_1(D, x_0)$, $H_1(\tilde{D}, \tilde{x}_0)$, $H_1(\tilde{D}, p^{-1}(\tilde{x}_0))$}
+
+
+\input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
+
+
+\section{Hurwitz spaces}
+
+
+\subsection{Topological Hurwitz space}
+
+
+\subsection{Algebro-geometric Hurwitz space}
+
+
+\subsubsection{Nielsen classes}
+
+\subsubsection{Racks and quandles}
+
+\input{../_definitions/definition_rack.tex}
+\input{../_definitions/definition_homomorphism_of_racks.tex}
+\input{../_definitions/definition_category_of_racks.tex}
+
+\input{../_definitions/definition_left_translation_map_of_a_rack_by_an_element.tex}
+\input{../_definitions/definition_rack_of_a_conjugacy_invariant_subset_of_a_group.tex}
+\input{../_definitions/definition_automorphism_group_of_a_rack.tex}
+\input{../_definitions/definition_inner_automorphism_group_of_a_rack.tex}
+\input{../_definitions/definition_reduced_structure_group_of_a_rack.tex}
+\input{../_concepts/proposition_reduced_structure_group_of_a_rack_is_left_adjoint_to_conjugation_rack_of_a_group.tex}
+
+
+
+\input{../_definitions/definition_quandle.tex}
+\input{../_definitions/definition_homomorphism_of_quandles.tex}
+\input{../_definitions/definition_category_of_quandles.tex}
+\input{../_definitions/definition_quandleization_of_a_rack.tex}
+\input{../_concepts/proposition_quandleization_fucntor_is_left_adjoint_to_inclusion_of_category_of_quandles_in_racks.tex}
+
+
+\begin{definition} \label{definition:set_of_components_of_a_rack}
+    Let $c$ be a \CrefAndHyperrefIfExist{definition:rack}{rack}. 
+    There is a rack whose underlying set is the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbit} of $c$ under the action of the \CrefAndHyperrefIfExist{definition:reduced_structure_group_of_a_rack}{reduced structure group} of $c$ and whose action map is \CrefAndHyperrefIfExist{definition:topos_morphism_induced_by_a_morphism_of_small_sites}{given by} $x \rhd y = y$ for all $x,y \in c/c$. We may refer to this rack $c/c$ as the \hldef{set of components of the rack $c$}, the \hldef{set of orbits of the rack $c$}, the \hldef{orbit rack of $c$}, or the \hldef{constant rack of $c$}.
+\end{definition}
+
+
+
+\section{Lifting invariants}
+
+
+
+
+\section{Homological stability of Hurwitz spaces}
+
+
+
+
+
+
+
+
+
+\appendix
+
+\section{Connectivity of topological spaces}
+
+\input{../_definitions/definition_path_connected_topological_space.tex}
+\input{../_definitions/definition_locally_path_connected_topological_space.tex}
+\input{../_definitions/definition_path_component_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_simply_connected_iff_path_connected_and_every_continuous_map_from_the_circle_is_null_homotopic.tex}
+
+\input{../_definitions/definition_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_locally_simply_connected_topological_space_is_locally_path_connected_and_semi_locally_simply_connected.tex}
+\input{../_concepts/proposition_topological_manifolds_are_locally_simply_connected.tex}
+\input{../_definitions/definition_locally_contractible_topological_space.tex}
+\input{../_definitions/definition_semi_locally_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_semi_local_simply_connected_iff_every_point_has_open_neighborhood_such_that_every_loop_based_there_is_null_homotopic_in_ambient_space.tex}
+
+\section{Covering spaces}
+
+\input{../_definitions/definition_covering_space_of_a_topological_space.tex}
+\input{../_definitions/definition_morphism_of_covering_spaces_of_a_topological_space.tex}
+\input{../_definitions/definition_deck_transformation_of_a_covering_space.tex}
+\input{../_definitions/definition_universal_cover_of_a_topological_space.tex}
+\input{../_concepts/theorem_map_of_fundamental_groups_induced_by_covering_of_a_path_connected_and_locally_path_connected_space_is_injective.tex}
+\input{../_definitions/definition_lift_of_a_continuous_map_under_a_covering_of_topological_spaces.tex}
+
+\input{../_definitions/definition_normal_covering_space_of_a_topological_space.tex}
+\input{../_concepts/theorem_lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_universal_cover_exists_for_connected_locally_path_connected_semi_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_isom_class_of_conn_pointed_covers_of_a_conn_loc_path_conn_semiloc_simp_conn_pointed_space_corresponds_to_subgroup_of_fund_gp.tex}
+\input{../_concepts/theorem_deck_transformation_group_of_a_connected_pointed_covering_is_quotient.tex}
+
+
+\section{Miscellaneous definitions}
+\input{../_definitions/definition_conjugacy_invariant_subset_of_a_group.tex}

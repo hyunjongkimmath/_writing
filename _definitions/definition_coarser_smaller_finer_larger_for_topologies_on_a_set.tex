@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:coarser_smaller_finer_larger_for_topologies_on_a_set}
+    Let $X$ be a set. 
+    \begin{enumerate}
+        \item Let $\tau_1,\tau_2$ be \CrefAndHyperrefIfExist{definition:topological_space}{topologies on} $X$. Say that $\tau_1$ is \hldef{coarser than} (equivalently, \hldef{smaller than}) $\tau_2$ if $\tau_1 \subseteq \tau_2$, and that $\tau_1$ is \hldef{finer than} (equivalently, \hldef{larger than}) $\tau_2$ if $\tau_2 \subseteq \tau_1$. This means that every \CrefAndHyperrefIfExist{definition:subset_of_a_set}{subset} of $X$ that is \CrefAndHyperrefIfExist{definition:topological_space}{open} with respect to $\tau_1$ is also open with respect to $\tau_2$.
+        
+        These relations are denoted by \hl{$\tau_1 \preceq \tau_2$} for “$\tau_1$ coarser than $\tau_2$” and \hl{$\tau_1 \succeq \tau_2$} for “$\tau_1$ finer than $\tau_2$”; their strict versions are \hl{$\tau_1 \prec \tau_2$} and \hl{$\tau_1 \succ \tau_2$}, meaning proper inclusion.
+
+        \item Let $\mathcal{C}$ be some family of topologies on $X$. A topology $\tau \in \mathcal{C}$ is the \hldef{coarsest} (or \hldef{smallest}) element of $\mathcal{C}$ if for every $\sigma \in \mathcal{C}$ one has $\tau \subseteq \sigma$ (equivalently, $\tau \preceq \sigma$ for all $\sigma \in \mathcal{C}$). Dually, $\tau \in \mathcal{C}$ is the \hldef{finest} (or \hldef{largest}) element of $\mathcal{C}$ if for every $\sigma \in \mathcal{C}$ one has $\sigma \subseteq \tau$ (equivalently, $\sigma \preceq \tau$ for all $\sigma \in \mathcal{C}$).
+    \end{enumerate}
+\end{definition}
+% \begin{definition} \label{definition:coarser_smaller_finer_larger_for_topologies_on_a_set}
+% Let $X$ be a set and let $\tau_1$ and $\tau_2$ be two \CrefAndHyperrefIfExist{definition:topological_space}{topologies on} $X$. 
+% The \CrefAndHyperrefIfExist{definition:topological_space}{topology} $\tau_1$ is said to be \hldef{coarser than $\tau_2$} (or $\tau_2$ is \hldef{finer than $\tau_1$)} if $\tau_1 \subseteq \tau_2$. This means that every \CrefAndHyperrefIfExist{definition:subset_of_a_set}{subset} of $X$ that is \CrefAndHyperrefIfExist{definition:topological_space}{open} with respect to $\tau_1$ is also open with respect to $\tau_2$.
+% \end{definition}

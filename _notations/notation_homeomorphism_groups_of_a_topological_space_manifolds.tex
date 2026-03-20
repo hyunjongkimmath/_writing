@@ -1,0 +1,23 @@
+\begin{notation} \label{notation:homeomorphism_groups_of_a_topological_space_manifolds}
+    Let $M$ be a \CrefAndHyperrefIfExist{definition:category_of_topological_spaces}{topological space}.
+    % Let $M$ be a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold with or without boundary}. 
+    Let $A, B \subseteq M$ be subsets. 
+    
+    One may denote by notations roughly resembling \hl{$\operatorname{Homeo}(M,A,B)$} for the group of homeomorphisms $f: M \to M$ of $M$ that fix $A$ pointwise and that fix $B$ setwise, i.e. $f|_A = \id_A$ and $f(B) = B$. 
+    
+    Moreover, 
+    \begin{itemize}
+        \item When $M$ is an \CrefAndHyperrefIfExist{definition:orientation_of_a_topological_manifold_with_or_without_boundary_using_singular_homology}{oriented} manifold, one adds a superscript of $+$, e.g. \hl{$\operatorname{Homeo}^+(M,A,B)$}, to refer to the subgroup of orientation preserving homeomorphisms.
+
+        \item One adds a subscript of $0$, e.g. \hl{$\operatorname{Homeo}_0(M,A,B)$}, to refer to the subgroup of homeomorphisms $f: M \to M$ that are \CrefAndHyperrefIfExist{definition:isotopy_between_topological_spaces_between_homeomorphisms_relative_to_a_subspace}{isotopic} to $\id_M$ via some isotopy $H: M \times [0,1] \to M$ relative to $A$ such that $H|_{B \times \{t\}}: B \to M$ fixes $B$ setwise for all $t \in [0,1]$. 
+    \end{itemize}
+
+    In practice, the following are common notations that may occur:
+    \begin{itemize}
+        \item \hl{$\operatorname{Homeo}(M, \partial M)$} often denotes $\operatorname{Homeo}(M, \partial M, \emptyset)$, the group of homeomorphisms that fix the boundary of $M$ pointwise. However, when $M$ is a manifold with boundary, \hl{$\operatorname{Homeo}(M)$} may also be used to denote this very same group, which should not be confused with the group of all homeomorphisms of $M$. 
+
+        \item Letting finitely many points $p_1,\ldots,p_n \in M$,  \hl{$\operatorname{Homeo}(M, \{p_1,\ldots,p_n\})$} may denote, depending on the context, either $\operatorname{Homeo}(M, \{p_1,\ldots,p_n\}, \emptyset)$ or $\operatorname{Homeo}(M, \emptyset, \{p_1,\ldots,p_n\})$, which are the groups of homeomorphisms that fix the finitely many points pointwise and setwise, respectively. In particular, elements of the latter group may permute the finitely many points.
+    \end{itemize}
+
+    In the case that $M$ is a \CrefAndHyperrefIfExist{definition:topological_manifold}{topological manifold with or without boundary}, $\operatorname{Homeo}(M)$ is a \CrefAndHyperrefIfExist{definition:topological_group}{topological group} equipped with the \CrefAndHyperrefIfExist{definition:compact_open_topology_on_the_set_of_continuous_maps_between_topological_spaces_and_function_space}{compact open topology} inherited from the set $C(M,M)$ of \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous maps} $M \to M$. In this case, whenever $A$ is a closed subset of $M$ and $B$ is a finite subset of $M$, the subgroup $\operatorname{Homeo}(M,A,B)$ is in fact a closed subgroup of $\operatorname{Homeo}(M)$. 
+\end{notation}

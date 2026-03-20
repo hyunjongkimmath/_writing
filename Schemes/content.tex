@@ -103,12 +103,12 @@
 
 
 
-\subsubsection{Proj}
+\subsubsection{Proj and projective schemes}
 
 \input{../_definitions/definition_projective_spectrum_of_a_Z_geq_0_graded_commutative_ring.tex}
-
-
 \input{../_definitions/definition_projective_space_of_dimension_n_over_a_scheme.tex}
+
+\input{../_definitions/definition_projective_morphism_of_schemes_projective_scheme_over_a_scheme.tex}
 
 
 
@@ -353,6 +353,68 @@
 \input{../_definitions/definition_algebraic_curve_over_a_field.tex}
 
 \input{../_definitions/definition_arithmetic_genus_of_a_proper_algebraic_curve_over_a_field.tex}
+
+
+\section{Intersection theory}
+
+\subsection{Absolute Chow groups}
+
+\input{../_definitions/definition_k_dimensional_algebraic_cycles_of_a_noetherian_scheme.tex}
+
+\input{../_definitions/definition_rationally_equivalent_k_dimensional_algebraic_cycles_of_a_noetherian_scheme.tex}
+
+\input{../_definitions/definition_kth_chow_group_chow_group_of_codimension_p_of_a_noetherian_scheme.tex}
+
+\input{../_definitions/definition_operational_chow_ring_of_a_noetherian_scheme.tex}
+
+\begin{remark}
+The connection to "codimension $p$ cycles" arises from the map $A^p(X) \to A_{n-p}(X)$ defined by $c \mapsto c_{\text{id}_X}([X])$. If $X$ is smooth, this map is an isomorphism. In that case, for any cycle $\gamma \in A^p(X)$, the corresponding operation $c_{\gamma}$ is given by the \CrefAndHyperrefIfExist{definition:intersection_product}{intersection product}: $c_{\gamma, f}(\alpha) \coloneqq f^*(\gamma) \cdot \alpha$.
+\end{remark}
+
+\begin{proposition} 
+    \TODO{}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian scheme} of dimension $n$. 
+The relationship between the \CrefAndHyperrefIfExist{definition:operational_chow_ring}{operational Chow ring} $A^*(X)$ and the \CrefAndHyperrefIfExist{definition:k_dimensional_algebraic_cycles}{classical Chow groups} $A_*(X)$ is governed by the following properties:
+
+\begin{enumerate}
+    \item \textbf{The Cap Product (Action):} The total Chow group $A_*(X)$ is a \CrefAndHyperrefIfExist{definition:module}{graded module} over the ring $A^*(X)$. The action, denoted by the cap product 
+    \[ \cap: A^p(X) \otimes A_k(X) \to A_{k-p}(X), \]
+    is defined by $c \cap \alpha = c_{\mathrm{id}_X}(\alpha)$, where $c_{\mathrm{id}_X}$ is the homomorphism associated to the identity morphism on $X$.
+    
+    \item \textbf{The Poincaré Duality Map:} There exists a canonical homomorphism 
+    \[ \Phi: A^p(X) \to A_{n-p}(X) \]
+    defined by $\Phi(c) = c \cap [X]$, where $[X]$ is the \CrefAndHyperrefIfExist{definition:fundamental_cycle}{fundamental class} of $X$.
+    
+    \item \textbf{Smooth Case (Isomorphism):} If $X$ is a \CrefAndHyperrefIfExist{definition:smooth_variety}{smooth variety} (or more generally, a regular scheme), then $\Phi$ is an \CrefAndHyperrefIfExist{definition:isomorphism}{isomorphism}. In this case, every $k$-dimensional cycle $\alpha$ corresponds uniquely to an operational class $c_\alpha$ such that the ring multiplication in $A^*(X)$ coincides with the classical intersection product on $A_*(X)$.
+    
+    \item \textbf{Singular Case:} If $X$ is singular, $\Phi$ is generally neither injective nor surjective. The operational ring $A^*(X)$ captures only those "well-behaved" classes that can be pulled back and intersected consistently, whereas $A_*(X)$ contains all cycles regardless of their intersection properties.
+\end{enumerate}
+\end{proposition}
+
+\input{../_definitions/definition_chow_ring_of_smooth_variety_over_a_field.tex}
+
+\subsection{Relative Chow groups}
+
+\input{../_definitions/definition_k_dimensional_relative_algebraic_cycles_of_a_finite_type_scheme_over_a_noetherian_base.tex}
+
+
+\input{../_definitions/definition_rationally_equivalent_k_dimensional_relative_algebraic_cycles_of_a_finite_type_scheme_over_a_noetherian_base.tex}
+
+\input{../_definitions/definition_relative_chow_groups_of_a_finite_type_scheme_over_a_noetherian_base.tex}
+
+\input{../_definitions/definition_relative_operational_chow_ring_of_a_finite_type_scheme_over_a_noetherian_base.tex}
+
+\begin{proposition} 
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian base} $S$.
+\begin{enumerate}
+    \item \textbf{Cap Product:} $A_*(X/S)$ is a graded $A^*(X/S)$-module via $c \cap \alpha = c_{\mathrm{id}_X}(\alpha)$.
+    \item \textbf{Poincaré Duality Map:} There is a canonical map $\Phi: A^p(X/S) \to A_{n-p}(X/S)$ given by $c \mapsto c \cap [X/S]$, where $[X/S]$ is the relative fundamental class.
+    \item \textbf{Relative Smoothness:} If $X \to S$ is a \CrefAndHyperrefIfExist{definition:smooth_morphism}{smooth morphism}, $\Phi$ is an isomorphism, and the operational product coincides with the relative intersection product.
+    \item \textbf{Singular Case:} If $X \to S$ is not smooth, the operational ring $A^*(X/S)$ acts as the "cohomology" of $X/S$, while $A_*(X/S)$ acts as the "homology."
+\end{enumerate}
+\end{proposition}
+
+\input{../_definitions/definition_relative_chow_ring_of_a_smooth_projective_scheme_over_a_noetherian_base.tex}
 
 
 \section{Hirzebruch Surfaces}

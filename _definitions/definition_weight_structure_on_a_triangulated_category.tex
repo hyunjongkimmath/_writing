@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:weight_structure_on_a_triangulated_category} 
+Let $\mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} (such as Voevodsky's category of geometric mixed motives $DM_{gm}(k, R)$). A \hldef{weight structure on $\mathcal{D}$} is a pair of \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive} subcategories $(\mathcal{D}_{w \leq 0}, \mathcal{D}_{w \geq 0})$. For each $n \in \mathbb{Z}$, we denote:
+$$\hlin{\mathcal{D}_{w \leq n} \coloneqq \mathcal{D}_{w \leq 0}[n] \quad \text{and} \quad \mathcal{D}_{w \geq n} \coloneqq \mathcal{D}_{w \geq 0}[n].}$$
+These subcategories must satisfy the following axioms:
+\begin{enumerate} 
+    \item \textbf{Semi-invariance:} $\mathcal{D}_{w \leq 0} \subseteq \mathcal{D}_{w \leq 1}$ and $\mathcal{D}_{w \geq 1} \subseteq \mathcal{D}_{w \geq 0}$.
+    \item \textbf{Orthogonality:} For any objects $X \in \mathcal{D}_{w \leq 0}$ and $Y \in \mathcal{D}_{w \geq 1}$, we have $\Hom_{\mathcal{D}}(X, Y) = 0$. 
+    \item \textbf{Weight Filtration (Decomposition):} For any object $X \in \mathcal{D}$, there exists a \CrefAndHyperrefIfExist{definition:distinguished_triangle}{distinguished triangle} 
+    \[ A \to X \to B \to A[1] \] 
+    such that $A \in \mathcal{D}_{w \leq 0}$ and $B \in \mathcal{D}_{w \geq 1}$. 
+\end{enumerate} 
+The \hldef{heart of the weight structure} is the intersection \hl{$\mathcal{H} \mathcal{H}_w = \mathcal{D}_{w \leq 0} \cap \mathcal{D}_{w \geq 0}$}. It is generally an additive subcategory of $\calD$. 
+\end{definition}

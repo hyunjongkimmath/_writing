@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:stable_homotopy_groups_of_a_pointed_topological_space}
+    Let $X$ be a \hldef{pointed topological space}. 
+    The \hldef{$q$th stable homotopy group of $X$} is the group \hl{$\pi_q^s(X) = \pi_q(\Sigma^\infty X)$} defined as 
+    $$\pi_q^s(X) = \pi_q(\Sigma^\infty X) \coloneq \colim_{n} \pi_{q+n}(\Sigma^n X)$$
+    (\Cref{definition:homotopy_groups_of_a_pointed_topological_space})
+    where the colimit is of the filtered direct system of the maps 
+    \begin{align*}
+    \pi_{q+n} (\Sigma^n X) &\to \pi_{q+n+1}(\Sigma^{n+1} X) \\
+    [f] &\mapsto [\sigma_n \circ \Sigma f]
+    \end{align*}
+    where $\Sigma f: \Sigma S^{q+n} \to \Sigma(\Sigma^n X)$ is the \CrefAndHyperrefIfExist{definition:reduced_suspension_of_a_pointed_topological_space}{suspension} of the map $f: S^{q+n} \to \Sigma^n X$ and $\sigma_n; \Sigma(\Sigma^n X) \xrightarrow{\cong} \Sigma^{n+1} X$ is the canonical structure map of the \CrefAndHyperrefIfExist{definition:suspension_spectrum_of_a_pointed_topological_space}{suspension spectrum}.
+
+    By the \CrefAndHyperref{theorem:freudenthal_suspension_theorem}{Fruedenthal Suspension theorem}, $\Sigma^n: \pi_q(X) \to \pi_{q+n}(\Sigma^n X)$ is an isomorphism whenever $q < n-1$, so 
+    $$\pi_q(\Sigma^\infty X) \cong \pi_{q+n}(\Sigma^n X)$$
+    for any $n > q+1$. In particular, $\pi_q(\Sigma^\infty X)$ is abelian. 
+
+    See \CrefAndHyperref{definition:stable_homotopy_theory_on_pointed_topological_spaces}{stable homotopy theory}, which is the reduced homology theory \CrefAndHyperref{corollary:stable_homotopy_groups_of_pointed_topological_spaces_give_a_reduced_homology_theory}{given}  by the functors $\{X \mapsto \pi_q(\Sigma^\infty X)\}_{q}$.
+
+    The stable homotopy groups of $X$ coincide with the \CrefAndHyperrefIfExist{definition:homotopy_group_of_a_spectrum}{homotopy groups} of the \CrefAndHyperrefIfExist{definition:suspension_spectrum_of_a_pointed_topological_space}{suspension spectrum $\Sigma^\infty X$}. 
+\end{definition}

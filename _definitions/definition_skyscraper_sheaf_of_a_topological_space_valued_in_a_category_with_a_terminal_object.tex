@@ -1,0 +1,19 @@
+\begin{definition}[Skyscraper sheaf] \label{definition:skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and let $x \in X$ be a point. Let $\calA$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} $1$. 
+    Given an object $E \in \text{ob}(\calA)$, the \hldef{skyscraper sheaf at $x$ with value $E$}, denoted \hl{$i_{x,*}(E)$}, is the sheaf defined for each open set $U \subseteq X$ by
+    \[
+    (i_{x,*}(E))(U) = \begin{cases} 
+    E & \text{if } x \in U \\
+    1 & \text{if } x \notin U
+    \end{cases}
+    \]
+    The restriction maps $\rho_{UV}: (i_{x,*}(E))(U) \to (i_{x,*}(E))(V)$ for an inclusion $V \subseteq U$ are defined as:
+    \begin{itemize}
+        \item The identity map $\text{id}_E$ if $x \in V$ (which implies $x \in U$).
+        \item The unique morphism to the terminal object $E \to 1$ if $x \in U$ but $x \notin V$.
+        \item The identity map $\text{id}_1$ if $x \notin U$ (which implies $x \notin V$).
+    \end{itemize}
+
+    Equivalently, this skyscraper sheaf is the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} $(i_x)_*(\underline{E})$ of \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on $\{x\}$ with value $E$. As such, one might also denote the skyscraper sheaf as \hl{$(i_x)_*(E)$}.
+    
+\end{definition}

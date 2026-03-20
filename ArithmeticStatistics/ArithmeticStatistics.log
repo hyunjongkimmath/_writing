@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  13 SEP 2025 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  10 MAR 2026 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/hyunj/Documents/Obsidian/Math/_writing/ArithmeticStatistics/ArithmeticStatistics
-(c:/Users/hyunj/Documents/Obsidian/Math/_writing/ArithmeticStatistics/ArithmeticStatistics.tex
+**c:/Users/hyunj/Documents/Obsidian/Chores/math/_writing/ArithmeticStatistics/ArithmeticStatistics
+(c:/Users/hyunj/Documents/Obsidian/Chores/math/_writing/ArithmeticStatistics/ArithmeticStatistics.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
 (../_macros/macros.tex (c:/texlive/2024/texmf-dist/tex/latex/amscls/amsart.cls
@@ -866,7 +866,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \openout6 = `ArithmeticStatistics.toc'.
 
  (./content.tex
-Underfull \vbox (badness 3219) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -876,15 +876,15 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 15.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) (../_concepts/theorem_mordell_weil_theorem_for_abelian_varieties_over_global_fields.tex
 
-[2])
+[2]) (../_conjectures/conjecture_minimalist_conjecture_for_mordell_weil_ranks_of_elliptic_curves_over_global_fields.tex)
 
-[3]
+[3] (../_definitions/definition_height_of_an_elliptic_curve_over_a_global_function_field_of_odd_characteristic.tex) (../_definitions/definition_mordell_weil_rank_and_n_selmer_group_structure_probability_distribution_of_elliptic_curves_over_a_global_function_field_of_odd_characteristic.tex
 
-[4]
+[4]) (../_conjectures/conjecture_original_bsd_conjecture.tex) (../_conjectures/conjecture_BSD_conjecture_for_an_abelian_variety_over_a_number_field.tex
 
-[5]
+[5]) (../_definitions/definition_average_trace_of_frobenius_of_specialization_of_rational_elliptic_curves_in_a_family.tex
 
-[6]
+[6]) (../_conjectures/conjecture_nagaos_conjecture_on_the_mordell_weil_rank_of_elliptic_curves_over_Q_T.tex)
 
 [7] (../_definitions/definition_elliptic_curve_over_a_scheme.tex) (../_definitions/definition_weierstrass_equation_over_a_ring.tex
 
@@ -900,9 +900,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
 ) (../_definitions/definition_j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant.tex
 
-[9]) (../_definitions/definition_weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain.tex) (../_definitions/definition_minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain.tex)
+[9]) (../_definitions/definition_weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain.tex) (../_definitions/definition_minimal_weierstrass_model_of_elliptic_curve_over_fraction_field_of_dedekind_domain.tex) (../_conjectures/conjecture_tates_conjecture.tex
 
-[10] (../_definitions/definition_global_field.tex) (../_definitions/definition_abelian_variety_over_a_field.tex) (../_definitions/definition_selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field.tex
+[10]) (../_definitions/definition_global_field.tex
+
+LaTeX Warning: Hyper reference `definition:function_field_over_an_integral_domain_in_finitely_many_variables' on page 11 undefined on input line 5.
+
+) (../_definitions/definition_abelian_variety_over_a_field.tex) (../_definitions/definition_selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field.tex
 Overfull \hbox (14.47733pt too wide) in paragraph at lines 7--10
 []\T1/cmr/m/n/12 Denote by $\OML/cmm/m/it/12 G[] \OT1/cmr/m/n/12 = []([]\OML/cmm/m/it/12 =K\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 the ab-so-lute Ga-lois group of $\OML/cmm/m/it/12 K$\T1/cmr/m/n/12 , and by [][] (or [][])
  []
@@ -923,22 +927,26 @@ Overfull \hbox (11.44276pt too wide) in paragraph at lines 26--27
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `ArithmeticStatistics.out' has not changed.
 (rerunfilecheck)             Checksum: 1EE74A520D0CC57B656D3C0F7DDE64BE;5284.
  ) 
 Here is how much of TeX's memory you used:
- 29444 strings out of 473254
- 541156 string characters out of 5722066
- 949087 words of memory out of 5000000
- 51804 multiletter control sequences out of 15000+600000
+ 29558 strings out of 473254
+ 546999 string characters out of 5722066
+ 948917 words of memory out of 5000000
+ 51893 multiletter control sequences out of 15000+600000
  583461 words of font info for 120 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 121i,15n,124p,3358b,1105s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,15n,124p,3365b,1105s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cyrillic/wncyr10.pfb>
-Output written on ArithmeticStatistics.pdf (13 pages, 391615 bytes).
+Output written on ArithmeticStatistics.pdf (13 pages, 391174 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
- 428 compressed objects within 5 object streams
+ 492 PDF objects out of 1000 (max. 8388607)
+ 426 compressed objects within 5 object streams
  101 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

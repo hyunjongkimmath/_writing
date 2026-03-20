@@ -6,9 +6,24 @@ The \hldef{ring of integers of $K$} or \hldef{integer ring of $K$}, often denote
 \begin{itemize}
     \item In the case where $K$ is a number field, $\mathcal{O}_K$ is the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\mathbb{Z}$ in $K$, i.e.  
     $$\mathcal{O}_K := \{\, x \in K \mid x \text{ is a root of a monic polynomial } f(t) \in \mathbb{Z}[t] \,\}.$$  
-    \item In the case where $K$ is a global function field over a finite field, i.e. a finite extension of $\Fq(t)$, $\mathcal{O}_K$ is the integral closure of the polynomial ring $\Fq[t]$ in $K$.  
-    \item In the case where $K$ is a nonarchimedean local field with discrete valuation $v$, $\mathcal{O}_K$ is the \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_valued_field}{valuation ring $\calO_v$} of $v$, i.e.  
+    \TextIfExists{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{
+    Equivalently, $\calO_K$ is the \CrefAndHyperref{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{ring of integers of $K$ over $\bbZ$}. 
+    }
+
+    \item In the case where $K$ is a \CrefAndHyperrefIfExist{definition:global_function_field}{global function field} over a finite field, i.e. a finite extension of $\Fq(t)$\CrefIfExists{definition:function_field_over_an_integral_domain_in_finitely_many_variables}, $\mathcal{O}_K$ is the integral closure of the \CrefAndHyperrefIfExist{definition:polynomial_ring_over_a_commutative_ring}{polynomial ring} $\Fq[t]$ in $K$.  
+
+    \TextIfExists{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{
+    Equivalently, $\calO_K$ is the \CrefAndHyperref{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{ring of integers of $K$ over the polynomial ring $\Fq[t]$}. 
+    }
+
+    \item In the case where $K$ is a \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{nonarchimedean} \CrefAndHyperrefIfExist{definition:local_field}{local field} with \CrefAndHyperrefIfExist{definition:discrete_valuation_on_a_field}{discrete valuation} $v$, $\mathcal{O}_K$ is the \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_valued_field}{valuation ring $\calO_v$} of $v$, i.e.  
     $$\mathcal{O}_K := \calO_v = \{x \in K \mid v(x) \geq 0\}.$$
-    Equivalently, $K$ is the integral closure of $\bbZ_p$ or of $\Fp((t))$ under and identification of $K$ with\CrefIfExists{theorem:classification_of_local_fields} a finite extension of $\bbQ_p$ or $\Fp((t))$
+    Equivalently, identifying $K$ with\CrefIfExists{theorem:classification_of_local_fields} a finite extension of $\bbQ_p$ or $\Fp((t))$, the ring $\calO_K$ is the integral closure of $\bbZ_p$ or of $\Fp[[t]]$ in $K$.
+    \TextIfExists{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{
+        \TODO{}
+    In other words, $\calO_K$ is the \CrefAndHyperref{definition:ring_of_integers_of_an_extension_of_fraction_field_of_a_dedekind_domain}{ring of integers of $K$ over $\bbZ_p$ or over $\Fp[[t]]$}. 
+    }
+
+
 \end{itemize}
 \end{definition}

@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:orientation_preserving_homeomorphism_between_oriented_topological_manifolds_with_or_without_boundary}
+Let $M$ and $N$ be \CrefAndHyperref{definition:topological_manifold}{topological $n$-manifolds (with or without boundary)}, equipped with \CrefAndHyperref{definition:orientation_of_a_topological_manifold_with_or_without_boundary_using_singular_homology}{orientations} $\mu^M$ and $\mu^N$ respectively.
+
+A \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} $f: M \to N$ is \hldef{orientation-preserving} if for every $x \in \operatorname{int} M$, the induced isomorphism on local \CrefAndHyperref{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{homology}
+$$f_*: H_n(M, M \setminus \{x\}; \mathbb{Z}) \to H_n(N, N \setminus \{f(x)\}; \mathbb{Z})$$
+maps the chosen generator $\mu^M_x$ to the chosen generator $\mu^N_{f(x)}$.
+\end{definition}

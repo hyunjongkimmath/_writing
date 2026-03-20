@@ -1,0 +1,11 @@
+\begin{lemma} \label{lemma:injective_projective_objects_in_a_category_are_closed_under_products_coproducts}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+    \begin{enumerate}
+        \item If $\{I_\alpha\}_{\alpha}$ is a collection of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective objects} in $\calC$ such that $\prod_{\alpha} I_\alpha$\CrefIfExists{definition:product_and_coproduct_of_objects_in_a_category} exists in $\calC$, then $\prod_{\alpha} I_\alpha$ is injective.
+
+        \item Dually, if $\{I_\alpha\}_{\alpha}$ is a collection of \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective objects} in $\calC$ such that $\coprod_{\alpha} I_\alpha$\CrefIfExists{definition:product_and_coproduct_of_objects_in_a_category} exists in $\calC$, then $\coprod_{\alpha} I_\alpha$ is projective.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    We prove the statement about injective objects. Suppose that $m: A \to B$ is a monomorphism in $\calC$, and let $f: A \to \prod_{\alpha} I_\alpha$ be a morphism. Let $f_\alpha = \operatorname{proj}_\alpha \circ f: A \to I_\alpha$ where $\operatorname{proj}_\alpha: \prod_{\alpha} I_\alpha \to I_\alpha$ is the projection. Since $I_\alpha$ is injective, there exist morphisms $\tilde{f}_\alpha: B \to I_\alpha$ such that $\tilde{f}_\alpha \circ m = f_\alpha$. Let $\tilde{f}: B \to \prod_\alpha I_\alpha$ be the canonical morphism induced by the $\tilde{f}_\alpha$ by the universal property of the product. To show that $\tilde{f} \circ m = f$, it is tantamount to show that post-composing these maps with the projections $\operatorname{proj}_\alpha$ results in the same maps for all $\alpha$ --- doing so on $\tilde{f} \circ m$ results in $\operatorname{proj}_\alpha \circ (\tilde{f} \circ m) = \tilde{f}_\alpha \circ m = f_\alpha$ and doing so on $f$ results in $f_\alpha$.
+\end{proof}

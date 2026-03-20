@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:operational_chow_ring_of_a_noetherian_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian scheme}. 
+The \hldef{operational Chow group} of codimension $p$, denoted \hl{$A^p(X)$}, is defined as the set of all \textit{bivariant operations} $c$ that assign to every morphism $f: Y \to X$ a homomorphism 
+\[ c_f : A_k(Y) \to A_{k-p}(Y) \]
+for all $k$, such that the following compatibility conditions hold for any $f: Y \to X$:
+\begin{enumerate}
+    \item \textbf{Commutativity with Pushforward:} For any proper morphism $g: Y' \to Y$, we have $c_f \circ g_* = g_* \circ c_{fg}$.
+    \item \textbf{Commutativity with Pullback:} For any flat (or more generally, any l.c.i.) morphism $g: Y' \to Y$, we have $c_f \circ g^* = g^* \circ c_{fg}$.
+    \item \textbf{Commutativity with Intersections:} $c$ must commute with the refined intersection product for any pullback square involving a regular embedding.
+\end{enumerate}
+The \hldef{operational Chow ring} is the graded group \hl{$A^*(X) = \bigoplus_p A^p(X)$} equipped with the multiplication $c \cdot d$ defined by the \hldef{composition of operations}:
+\[ (c \cdot d)_f(\alpha) \coloneqq c_f(d_f(\alpha)) \quad \text{for all } \alpha \in A_k(Y). \]
+\end{definition}

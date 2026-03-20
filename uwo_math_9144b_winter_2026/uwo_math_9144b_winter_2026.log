@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  3 MAR 2026 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  20 MAR 2026 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -944,6 +944,12 @@ LaTeX Warning: Label `definition:homotopy_of_maps_of_topological_spaces_relative
 
 LaTeX Warning: Label `definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset@cref' multiply defined.
 
+
+LaTeX Warning: Label `definition:separation_axioms_of_topology' multiply defined.
+
+
+LaTeX Warning: Label `definition:separation_axioms_of_topology@cref' multiply defined.
+
 )
 \openout1 = `uwo_math_9144b_winter_2026.aux'.
 
@@ -1033,9 +1039,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout8 = `uwo_math_9144b_winter_2026.toc'.
 
  (./content.tex
-Overfull \vbox (1.37013pt too high) has occurred while \output is active []
-
-
 
 [4] (../_definitions/definition_category.tex
 \@gls@deffile=\write9
@@ -1049,12 +1052,12 @@ LaTeX Warning: Citation `SGA4_I' on page 6 undefined on input line 15.
 
 )
 
-[6] (../_definitions/definition_category_of_sets.tex) (../_definitions/definition_category_of_groups_of_abelian_groups.tex
-Underfull \vbox (badness 6910) has occurred while \output is active []
+[6] (../_definitions/definition_category_of_sets.tex
+Underfull \vbox (badness 1874) has occurred while \output is active []
 
 
 
-[7]
+[7]) (../_definitions/definition_category_of_groups_of_abelian_groups.tex
 
 LaTeX Warning: Hyper reference `abelian_category' on page 8 undefined on input line 6.
 
@@ -1063,9 +1066,9 @@ Overfull \hbox (7.87827pt too wide) in paragraph at lines 2--4
 []\T1/cmr/bx/n/12 Definition 1.1.10 \T1/cmr/m/n/12 (Pointed topo-log-i-cal space)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \T1/cmr/m/n/12 be a []topo-log-i-cal space[] (Def-i-ni-tion []C.0.5[])
  []
 
-) (../_definitions/definition_category_of_vector_spaces_over_a_field.tex) (../_definitions/definition_category_of_rings.tex
+) (../_definitions/definition_category_of_vector_spaces_over_a_field.tex
 
-[8]) (../_definitions/definition_isomorphism_in_a_category.tex
+[8]) (../_definitions/definition_category_of_rings.tex) (../_definitions/definition_isomorphism_in_a_category.tex
 Overfull \hbox (3.71011pt too wide) in paragraph at lines 3--5
 []\T1/cmr/bx/n/12 Definition 1.1.13 \T1/cmr/m/n/12 (Iso-mor-phism in a cat-e-gory)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OMS/cmsy/m/n/12 C$ \T1/cmr/m/n/12 be a [](large) cat-e-gory[] (Def-i-ni-tion []1.1.1[]),
  []
@@ -1077,9 +1080,9 @@ Overfull \hbox (31.03932pt too wide) detected at line 92
 []
  []
 
-(../_definitions/definition_identity_functor_on_a_category.tex
 
-[10]) (../_definitions/definition_forgetful_functor_between_categories.tex) (../_definitions/definition_natural_transformation_between_functors_between_categories.tex
+
+[10] (../_definitions/definition_identity_functor_on_a_category.tex) (../_definitions/definition_forgetful_functor_between_categories.tex) (../_definitions/definition_natural_transformation_between_functors_between_categories.tex
 
 [11]
 Overfull \hbox (7.19531pt too wide) in paragraph at lines 19--20
@@ -1100,9 +1103,9 @@ Overfull \hbox (8.90968pt too wide) in paragraph at lines 6--7
 
 ) (../_definitions/definition_subcategory_of_a_category.tex
 
-[13]) (../_definitions/definition_full_subcategory_of_a_category.tex) (../_definitions/definition_essential_image_of_a_functor_between_categories.tex) (../_definitions/definition_essentially_surjective_functor_between_categories.tex) (../_concepts/lemma_functor_between_locally_small_categories_is_equivalence_if_and_only_if_fully_faithful_and_essentially_surjective.tex
+[13]) (../_definitions/definition_full_subcategory_of_a_category.tex) (../_definitions/definition_essential_image_of_a_functor_between_categories.tex) (../_definitions/definition_essentially_surjective_functor_between_categories.tex)
 
-[14]) (../_definitions/definition_representable_functor_on_a_locally_small_category.tex) (../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex
+[14] (../_concepts/lemma_functor_between_locally_small_categories_is_equivalence_if_and_only_if_fully_faithful_and_essentially_surjective.tex) (../_definitions/definition_representable_functor_on_a_locally_small_category.tex) (../_concepts/theorem_yoneda_lemma_on_a_locally_small_category.tex
 
 [15]) (../_concepts/corollary_yoneda_embedding_on_a_locally_small_category.tex) (../_concepts/theorem_contravariant_yoneda_lemma_on_a_locally_small_category.tex) (../_concepts/corollary_contravariant_yoneda_embedding_on_a_locally_small_category.tex
 
@@ -1116,9 +1119,9 @@ Overfull \hbox (1.92151pt too wide) in paragraph at lines 5--6
 []\T1/cmr/m/n/12 The mor-phisms be-tween two small cat-e-gories $\OMS/cmsy/m/n/12 C$ \T1/cmr/m/n/12 and $\OMS/cmsy/m/n/12 D$ \T1/cmr/m/n/12 are the []func-tors[] (Def-i-ni-tion []1.2.2[])
  []
 
-) (../_definitions/definition_product_category_of_a_family_of_categories.tex
+)
 
-[17]) (../_definitions/definition_module_of_a_ring.tex
+[17] (../_definitions/definition_product_category_of_a_family_of_categories.tex) (../_definitions/definition_module_of_a_ring.tex
 
 [18]) (../_definitions/definition_homomorphism_of_modules_over_a_ring.tex
 
@@ -1341,9 +1344,9 @@ Overfull \hbox (60.11171pt too wide) in paragraph at lines 6--7
 
 [83]) (../_concepts/theorem_homotopy_between_maps_of_topological_spaces_induces_chain_homotopy_between_singular_chain_complexes.tex
 
-[84]) (../_concepts/corollary_homotopy_maps_between_maps_of_topological_spaces_induce_same_singular_homology.tex) (../_concepts/theorem_homotopy_equivalent_pairs_of_topological_spaces_have_homotopy_equivalent_chain_complexes.tex) (../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex) (../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex) (../_concepts/lemma_chain_homotopic_chain_complexes_in_additive_categories_are_preserved_by_additive_functors.tex
+[84]) (../_concepts/corollary_homotopy_maps_between_maps_of_topological_spaces_induce_same_singular_homology.tex) (../_concepts/theorem_homotopy_equivalent_pairs_of_topological_spaces_have_homotopy_equivalent_chain_complexes.tex) (../_definitions/definition_chain_homotopy_between_chain_maps_between_complexes.tex) (../_concepts/lemma_chain_homotopy_between_chain_maps_between_complexes_is_equivalence_relation.tex
 
-[85]) (../_concepts/lemma_null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps.tex) (../_concepts/lemma_chain_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yield_same_homology_maps.tex) (../_definitions/definition_split_complex_in_an_additive_category.tex) (../_definitions/definition_mapping_cylinder_of_a_map_of_topological_spaces_and_pairs.tex
+[85]) (../_concepts/lemma_chain_homotopic_chain_complexes_in_additive_categories_are_preserved_by_additive_functors.tex) (../_concepts/lemma_null_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yields_zero_homology_maps.tex) (../_concepts/lemma_chain_homotopic_morphism_of_chain_complexes_in_an_abelian_category_yield_same_homology_maps.tex) (../_definitions/definition_split_complex_in_an_additive_category.tex) (../_definitions/definition_mapping_cylinder_of_a_map_of_topological_spaces_and_pairs.tex
 
 [86]) (../_definitions/definition_mapping_cone_of_a_map_of_topological_spaces_and_pairs.tex) (../_concepts/proposition_homotopy_properties_of_mapping_cylinder_for_pairs.tex) (../_concepts/theorem_long_exact_sequence_for_mapping_cone_of_pairs_for_singular_homology.tex
 
@@ -1411,7 +1414,7 @@ LaTeX Warning: Reference `theorem:category_of_R_S_bimodules_is_equivalent_to_the
 
 [98]) (../_concepts/proposition_equivalent_conditions_for_bimodules_over_rings.tex) (../_definitions/definition_free_bimodule_over_rings.tex
 
-[99]) (../_definitions/definition_direct_summand_of_an_object_in_an_additive_category.tex) (../_concepts/proposition_module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module.tex) (../_concepts/proposition_projective_module_over_local_ring_or_pid_are_free.tex) (../_definitions/definition_flat_left_right_module_over_a_ring.tex
+[99]) (../_definitions/definition_direct_summand_of_an_object_of_an_additive_category.tex) (../_concepts/proposition_module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module.tex) (../_concepts/proposition_projective_module_over_local_ring_or_pid_are_free.tex) (../_definitions/definition_flat_left_right_module_over_a_ring.tex
 
 [100]) (../_concepts/proposition_projective_modules_are_flat.tex) (../_definitions/definition_perfect_ring.tex) (../_definitions/definition_jacobson_radical_of_a_ring.tex) (../_definitions/definition_left_right_T_nilpotent_subset_of_a_ring.tex
 
@@ -1420,7 +1423,7 @@ Overfull \hbox (6.92392pt too wide) in paragraph at lines 2--3
 []\T1/cmr/bx/n/12 Corollary 4.2.24. []\T1/cmr/m/n/12 Ev-ery left Ar-tinian []ring[] (Def-i-ni-tion []C.0.7[]) is []left per-fect[] (Def-i-ni-tion []4.2.18[]).
  []
 
-) (../_definitions/definition_zero_divisor_of_a_ring.tex
+) (../_definitions/definition_zero_divisor_of_a_ring.tex) (../_definitions/definition_zero_divisor_on_a_module_over_a_ring.tex
 
 [102]) (../_definitions/definition_torsion_free_one_sided_module_over_a_ring.tex) (../_concepts/proposition_torsion_free_modules_over_dedekind_rings_are_flat.tex) (../_definitions/definition_left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category.tex
 
@@ -1458,36 +1461,39 @@ Overfull \hbox (17.93404pt too wide) detected at line 50
 
 
 
-[113]
-
-[114])
+[113])
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 988.
+(hyperref)                removing `math shift' on input line 973.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 988.
+(hyperref)                removing `math shift' on input line 973.
 
-(../_definitions/definition_F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories.tex) (../_definitions/definition_F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories.tex
+(../_definitions/definition_F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories.tex
 
-[115]) (../_concepts/lemma_any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor.tex) (../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex
+[114]) (../_definitions/definition_F_acyclic_resolution_for_a_right_left_exact_functor_between_abelian_categories.tex) (../_concepts/lemma_any_projective_injective_object_of_an_abelian_category_is_acyclic_for_a_right_left_exact_functor.tex
+
+[115]) (../_concepts/lemma_dimension_shifting_lemma_for_acyclic_syzygies.tex
 
 [116]
 Overfull \hbox (10.16444pt too wide) in paragraph at lines 59--61
 \T1/cmr/m/n/12 so $\OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) [] [](\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 ))$\T1/cmr/m/n/12 . We found that $\OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M[]\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 L[]F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ,
  []
 
-) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions.tex
+) (../_concepts/proposition_left_right_derived_objects_for_a_right_left_exact_functor_between_abelian_categories_may_be_computed_with_acyclic_resolutions.tex) (../_definitions/definition_tor_functors_of_bimodules_of_rings.tex
 
-[117]) (../_definitions/definition_tor_functors_of_bimodules_of_rings.tex) (../_definitions/definition_ext_functors_of_bimodules_of_rings.tex
-
-[118]
+[117]) (../_definitions/definition_ext_functors_of_bimodules_of_rings.tex
 Overfull \hbox (4.98135pt too wide) in paragraph at lines 11--12
 []\T1/cmr/m/n/12 Note that the com-pu-ta-tion of $\OML/cmm/m/it/12 R[] [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 M; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 )(\OML/cmm/m/it/12 N\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 uses []in-jec-tive res-o-lu-tions[] (Def-i-ni-tion []4.2.29[])
  []
 
-) (../_definitions/definition_double_complex_of_objects_in_an_additive_category.tex
+)
+Underfull \vbox (badness 3323) has occurred while \output is active []
+
+
+
+[118] (../_definitions/definition_double_complex_of_objects_in_an_additive_category.tex
 
 [119]
 Overfull \hbox (26.63377pt too wide) in paragraph at lines 44--45
@@ -1495,8 +1501,6 @@ Overfull \hbox (26.63377pt too wide) in paragraph at lines 44--45
  []
 
 ) (../_definitions/definition_morphism_of_double_complex_of_objects_in_an_additive_category.tex
-
-[120]
 Overfull \hbox (51.84163pt too wide) in paragraph at lines 17--18
 [][][][][][][]
  []
@@ -1507,6 +1511,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
  []
 
 
+
+[120]
 Overfull \hbox (51.84163pt too wide) in paragraph at lines 32--33
 [][][][][][][]
  []
@@ -1516,9 +1522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
-) (../_definitions/definition_bounded_double_complex_of_objects_in_an_additive_category.tex
-
-[121]) (../_definitions/definition_total_complexes_of_a_double_complex_of_objects_in_an_additive_category.tex
+) (../_definitions/definition_bounded_double_complex_of_objects_in_an_additive_category.tex) (../_definitions/definition_total_complexes_of_a_double_complex_of_objects_in_an_additive_category.tex
 Overfull \hbox (7.83142pt too wide) in paragraph at lines 9--10
 [][][][][][][]
  []
@@ -1528,85 +1532,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-) (../_definitions/definition_double_complex_associated_to_biadditive_functor_and_chain_complexes.tex
+
+
+[121]) (../_definitions/definition_double_complex_associated_to_biadditive_functor_and_chain_complexes.tex
 
 [122]) (../_concepts/lemma_total_complexes_of_double_complex_with_bounded_diagonals_are_canonically_isomorphic.tex) (../_concepts/lemma_acyclic_assembly_lemma_for_bounded_double_complexes_with_exact_rows_or_columns.tex
 
-[123]) (../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex
+[123]) (../_definitions/definition_flat_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor.tex
 
-[124]) (../_definitions/definition_has_enough_flat_objects_for_an_abelian_category_with_respect_to_a_right_exact_bifunctor.tex) (../_definitions/definition_flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex
+[124]) (../_definitions/definition_flat_resolution_of_an_object_in_an_abelian_category_with_respect_to_a_right_exact_monoidal_product_functor.tex) (../_definitions/definition_generalized_derived_functors_for_biadditive_functors_of_abelian_categories_via_resolutions_by_flat_objects.tex
 
-[125]
+[125]) (../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex
 
-[126]) (../_concepts/lemma_applying_biadd_func_to_res_is_defined_up_to_quasi_iso_and_agrees_with_the_tot_complex_of_the_double_complex_of_the_biadd_func_on_the_two_res.tex
+[126]
 Overfull \hbox (19.82pt too wide) in paragraph at lines 22--23
 []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 C$ \T1/cmr/m/n/12 be the dou-ble com-plex of ob-jects in $\OMS/cmsy/m/n/12 C$ \T1/cmr/m/n/12 ob-tained from $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]; P[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 by adding $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A; P[]\OT1/cmr/m/n/12 [\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1])$
  []
 
+) (../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex
 
-
-[127]) (../_concepts/theorem_balancing_generalized_derived_functors_of_a_biadditive_functor_of_abelian_categories_computed_via_flat_resolutions.tex
+[127]
 Overfull \hbox (16.9217pt too wide) in paragraph at lines 25--27
 \T1/cmr/m/n/12 is a nat-u-ral iso-mor-phism. By sym-me-try, there is a nat-u-ral iso-mor-phism $\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ([](\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 P[]P[]\OT1/cmr/m/n/12 ))) []
  []
 
-)
+) (../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex
 
-[128] (../_definitions/definition_tor_functors_of_a_right_exact_monoidal_functor_on_an_abelian_category.tex
+[128]) (../_definitions/definition_ext_functor_on_a_general_abelian_category.tex
 
-[129]) (../_definitions/definition_ext_functor_on_a_general_abelian_category.tex) (../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex
+[129]) (../_concepts/theorem_balancing_of_tor_on_abelian_categories_with_right_exact_bifunctor.tex) (../_concepts/theorem_ext_objects_for_general_abelian_categories_are_well_defined_even_if_some_combination_of_projectives_or_injectives_exist.tex
 
-[130]) (../_concepts/theorem_ext_objects_for_general_abelian_categories_are_well_defined_even_if_some_combination_of_projectives_or_injectives_exist.tex
+[130]
 Overfull \hbox (3.58546pt too wide) in paragraph at lines 8--9
 []\T1/cmr/m/n/12 Dually, the ob-jects $[][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]; A[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 com-puted via []pro-jec-tive res-o-lu-tions[] (Def-i-ni-tion []4.2.29[])
  []
 
+) (../_concepts/corollary_ext_objects_of_modules_over_rings_are_well_defined.tex) (../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex
 
+[131]) (../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex
 
-[131]) (../_concepts/corollary_ext_objects_of_modules_over_rings_are_well_defined.tex) (../_concepts/lemma_flat_objects_are_acyclic_for_tensoring_by_any_object_if_enough_projectives_or_flats_exist.tex) (../_concepts/lemma_flat_resolution_lemma_of_tor_objects_of_abelian_categories_with_a_right_exact_bifunctor_assuming_that_category_has_enough_projectives_or_flats.tex
+[132]) (../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex) (../_concepts/corollary_tor_objects_of_modules_over_rings_are_well_defined.tex) (../_concepts/proposition_tor_for_abelian_groups.tex
 
-[132]) (../_concepts/corollary_right_exact_bifunctor_on_abelian_categories_with_enough_projectives_and_flats_yield_unambiguous_tors.tex) (../_concepts/corollary_tor_objects_of_modules_over_rings_are_well_defined.tex
+[133]) (../_concepts/proposition_tor_of_Q_mod_Z_is_torsion_subgroup_of_other_abelian_group.tex) (../_concepts/proposition_higher_tor_for_abelian_groups_of_torsion_free_abelian_group_vanish.tex) (../_concepts/theorem_localization_of_a_ring_by_a_central_multiplicative_subset_is_a_flat_module.tex) (../_concepts/proposition_module_over_a_ring_is_flat_if_and_only_if_higher_tors_vanish.tex) (../_definitions/definition_extension_of_objects_in_an_additive_category.tex
 
-[133]) (../_concepts/proposition_tor_for_abelian_groups.tex) (../_concepts/proposition_tor_of_Q_mod_Z_is_torsion_subgroup_of_other_abelian_group.tex) (../_concepts/proposition_higher_tor_for_abelian_groups_of_torsion_free_abelian_group_vanish.tex) (../_concepts/theorem_localization_of_a_ring_by_a_central_multiplicative_subset_is_a_flat_module.tex) (../_concepts/proposition_module_over_a_ring_is_flat_if_and_only_if_higher_tors_vanish.tex
+[134]) (../_concepts/lemma_if_first_ext_functor_in_an_abelian_category_is_zero_then_extensions_are_split.tex) (../_definitions/definition_characteristic_class_of_an_extension_of_objects_in_an_abelian_category.tex) (../_concepts/theorem_ext_one_corresponds_to_equivalence_classes_of_extensions.tex
 
-[134]) (../_definitions/definition_extension_of_objects_in_an_additive_category.tex) (../_concepts/lemma_if_first_ext_functor_in_an_abelian_category_is_zero_then_extensions_are_split.tex)
+[135]) (../_definitions/definition_hereditary_ring.tex) (../_concepts/lemma_pids_are_hereditary.tex) (../_concepts/lemma_commutative_dedekind_domains_are_hereditary.tex) (../_concepts/theorem_homological_kunneth_formula_for_complexes_of_modules_over_rings.tex) (../_concepts/theorem_cohomological_kunneth_formula_for_complexes_of_modules_over_rings.tex
 
-[135] (../_definitions/definition_characteristic_class_of_an_extension_of_objects_in_an_abelian_category.tex) (../_concepts/theorem_ext_one_corresponds_to_equivalence_classes_of_extensions.tex) (../_definitions/definition_hereditary_ring.tex)
+[136]) (../_concepts/theorem_universal_coefficient_theorem_for_homology_for_modules_over_a_ring.tex) (../_concepts/theorem_universal_coefficient_theorem_for_cohomology_for_modules_over_a_ring.tex) (../_definitions/definition_left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects.tex
 
-[136] (../_concepts/theorem_homological_kunneth_formula_for_complexes_of_modules_over_rings.tex) (../_concepts/theorem_cohomological_kunneth_formula_for_complexes_of_modules_over_rings.tex) (../_concepts/theorem_universal_coefficient_theorem_for_homology_for_modules_over_a_ring.tex) (../_concepts/theorem_universal_coefficient_theorem_for_cohomology_for_modules_over_a_ring.tex
+[137]) (../_definitions/definition_cohomological_homological_dimension_of_a_left_right_exact_functor_between_abelian_categories.tex) (../_definitions/definition_left_right_projective_injective_flat_dimension_of_a_module_over_a_ring.tex
 
-[137]) (../_definitions/definition_left_right_dimension_of_an_object_in_an_abelian_category_with_respect_to_resolutions_in_a_class_of_objects.tex) (../_definitions/definition_cohomological_homological_dimension_of_a_left_right_exact_functor_between_abelian_categories.tex)
+[138]) (../_definitions/definition_left_right_global_dimension_of_a_ring.tex) (../_definitions/definition_tor_dimension_of_a_ring.tex) (../_concepts/theorem_global_dimension_theorem_for_rings.tex) (../_concepts/theorem_tor_dimension_theorem_for_rings.tex) (../_definitions/definition_presheaf_on_a_category.tex
 
-[138] (../_definitions/definition_left_right_projective_injective_flat_dimension_of_a_module_over_a_ring.tex) (../_definitions/definition_left_right_global_dimension_of_a_ring.tex) (../_definitions/definition_tor_dimension_of_a_ring.tex) (../_concepts/theorem_global_dimension_theorem_for_rings.tex
+[139]
 
-[139]) (../_concepts/theorem_tor_dimension_theorem_for_rings.tex) (../_definitions/definition_presheaf_on_a_category.tex
+[140]) (../_definitions/definition_category_of_opens_of_a_topological_space.tex) (../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex) (../_definitions/definition_presheaf_on_a_topological_space.tex
 
-[140]) (../_definitions/definition_category_of_opens_of_a_topological_space.tex) (../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex
+[141]) (../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex) (../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex
 
-[141]) (../_definitions/definition_presheaf_on_a_topological_space.tex) (../_definitions/definition_sections_of_a_presheaf_on_a_category_valued_in_a_category.tex
-
-[142]) (../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex
-
-[143]
+[142]
 Overfull \hbox (1.18437pt too wide) in paragraph at lines 23--25
 \T1/cmr/m/n/12 Here, the mor-phism $\OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! [][] F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 and the two mor-phisms $[][] \OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[]\OT1/cmr/m/n/12 ) \U/msa/m/n/12 ^^S [][] \OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[] \OMS/cmsy/m/n/12 \
  []
 
-) (../_definitions/definition_morphism_of_presheaves_on_a_topological_space.tex)
-Overfull \hbox (9.05396pt too wide) in paragraph at lines 1176--1178
+) (../_definitions/definition_morphism_of_presheaves_on_a_topological_space.tex
+
+[143])
+Overfull \hbox (9.05396pt too wide) in paragraph at lines 1148--1150
 []\T1/cmr/bx/n/12 Example 7.1.8. []\T1/cmr/m/n/12 The fol-low-ing are ex-am-ples of []sheaves on topo-log-i-cal spaces[] (Def-i-ni-tion []7.1.6[]): 
  []
 
 
 
-[144]
+[144] (../_definitions/definition_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification.tex) (../_concepts/lemma_categories_of_sheaves_presheaves_on_a_singleton_set_are_equivalent_to_value_category.tex) (../_definitions/definition_skyscraper_sheaf_of_a_topological_space_valued_in_a_category_with_a_terminal_object.tex
 
-[145]
-Overfull \hbox (41.47247pt too wide) in paragraph at lines 1260--1261
+[145]) (../_definitions/definition_additive_group_sheaf_on_a_ringed_space.tex) (../_definitions/definition_multiplicative_group_sheaf_on_a_ringed_space.tex) (../_definitions/definition_sheaf_of_roots_of_unity_on_a_ringed_space.tex
+Overfull \hbox (41.47247pt too wide) in paragraph at lines 4--5
 []\T1/cmr/m/n/12 Given an in-te-ger $\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 1$\T1/cmr/m/n/12 , the []\T1/cmr/m/it/12 sheaf[] [][][]of[] [][][][]th[] [][][]roots[] [][][]of[] [][][]unity \T1/cmr/m/n/12 is the sheaf [][]
  []
 
-
+) (../_concepts/lemma_category_of_presheaves_of_sheaves_on_topological_space_valued_in_a_locally_small_category_is_locally_small.tex)
 
 [146] (../_definitions/definition_categories_of_presheaves_and_sheaves_on_a_topological_space_valued_in_a_category.tex
 Overfull \hbox (4.33629pt too wide) in paragraph at lines 13--14
@@ -1615,32 +1621,34 @@ Overfull \hbox (4.33629pt too wide) in paragraph at lines 13--14
 
 
 
-[147]) (../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex)
+[147]) (../_definitions/definition_sheafification_of_a_presheaf_on_a_topological_space.tex) (../_definitions/definition_colimit_in_a_presheaf_category.tex
 
-[148] (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex
+[148]) (../_definitions/definition_limit_in_a_sheaf_category.tex) (../_definitions/definition_colimit_in_a_sheaf_category.tex) (../_concepts/proposition_sections_functors_on_presheaves_vlaued_in_an_abelian_category_are_left_exact.tex
 
 [149]
 
 LaTeX Warning: Reference `proposition:examples_of_abelian_categories' on page 1 undefined on input line 15.
 
-) (../_definitions/definition_stalk_of_a_presheaf_on_a_topological_space_at_a_point.tex
+) (../_concepts/proposition_sections_functors_on_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_left_exact.tex) (../_definitions/definition_stalk_of_a_presheaf_on_a_topological_space_at_a_point.tex
 
 LaTeX Warning: Reference `definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex' on page 1 undefined on input line 10.
 
-)
+) (../_concepts/proposition_circumstances_under_which_categories_of_sheaves_and_presheaves_on_a_topological_space_valued_in_an_abelian_category_are_abelian.tex
 
-[150]
+[150]) (../_concepts/proposition_stalk_functor_for_presheaves_and_sheaves_on_a_topological_space_valued_in_an_AB5_category_is_exact.tex
 
-[151]
-Overfull \hbox (1.63719pt too wide) in paragraph at lines 1444--1445
-[]\T1/cmr/m/n/12 Letting $\OMS/cmsy/m/n/12 O$ \T1/cmr/m/n/12 be the sheaf on $\OML/cmm/m/it/12 X$ \T1/cmr/m/n/12 of holo-mor-phic func-tions (i.e. $\OMS/cmsy/m/n/12 O\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 f \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 U \OMS/cmsy/m/n/12 ! \U/msb/m/n/12 C[]\OMS/cmsy/m/n/12 g$
+[151]) (../_concepts/proposition_morphism_of_sheaves_on_topological_space_valued_in_nice_enough_category_with_enough_direct_limits_is_isomorphism_iff_all_stalk_morphisms_are.tex) (../_concepts/proposition_morphism_of_sheaves_on_topological_space_valued_in_sets_is_isomorphism.tex)
+
+[152] (../_definitions/definition_ringed_space.tex) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
+
+[153]
+Overfull \hbox (3.30063pt too wide) in paragraph at lines 56--57
+\T1/cmr/m/n/12 forms the []\T1/cmr/m/it/12 cat[]-[]e[]-[]gory[] [][][]of[] [][][][][]-[]mod[]-[]ules\T1/cmr/m/n/12 , de-noted [][]. The Hom func-tors $[][]$
  []
 
-(../_definitions/definition_ringed_space.tex) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
+) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_ringed_space.tex) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives.tex)
 
-[152]
-
-[153]) (../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
+[154] (../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
 Overfull \hbox (33.34918pt too wide) in paragraph at lines 4--5
 []\T1/cmr/m/n/12 The []\T1/cmr/m/it/12 sheafi[]-[]fied[] [][][]Hom\T1/cmr/m/n/12 , de-noted by no-ta-tions such as [][], [][], or [][],
  []
@@ -1654,51 +1662,118 @@ LaTeX Warning: Reference `definition:site_induced_by_a_site_on_an_over_category'
 
 LaTeX Warning: Reference `definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site' on page 1 undefined on input line 6.
 
+) (../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex) (../_concepts/theorem_tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex
 
-LaTeX Warning: Reference `theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family' on page 1 undefined on input line 8.
+LaTeX Warning: Reference `theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors' on page 1 undefined on input line 28.
 
-) (../_definitions/definition_sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex) (../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex
 
-[154]) (../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex) (../_definitions/definition_restriction_of_a_presheaf_sheaf_on_a_topological_space.tex
 
-[155]) (../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex) (../_definitions/definition_locally_constant_sheaf_on_a_topological_space.tex)
+[155]
 
-[156] (../_definitions/definition_affine_scheme.tex
-Overfull \hbox (1.9495pt too wide) in paragraph at lines 3--5
-[]\T1/cmr/bx/n/12 Definition 7.8.2 \T1/cmr/m/n/12 (Affine scheme)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 A$ \T1/cmr/m/n/12 be a []com-mu-ta-tive ring with unity[] (Def-i-ni-tion []C.0.9[]).
+LaTeX Warning: Reference `theorem:adjunction_between_sheafy_functors_from_adjoint_bifunctors' on page 1 undefined on input line 28.
+
+) (../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex
+
+[156]) (../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex) (../_definitions/definition_restriction_of_a_presheaf_sheaf_on_a_topological_space.tex) (../_concepts/lemma_restriction_of_presheaf_on_a_topological_space_to_a_point_is_the_presheaf_whose_global_sections_is_the_stalk.tex) (../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex
+
+[157]) (../_concepts/lemma_injective_projective_objects_in_a_category_are_closed_under_products_coproducts.tex) (../_concepts/lemma_skyscraper_sheaf_at_a_point_of_a_ringed_space_of_injective_module_is_an_injective_object.tex
+Overfull \hbox (37.11832pt too wide) in paragraph at lines 7--8
+[]\T1/cmr/m/n/12 By Propo-si-tion []4.2.4[], it is tan-ta-mount to show that the Hom-functor $[][]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i[]\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ) :
  []
 
-) (../_definitions/definition_locally_ringed_space_on_a_topological_space.tex) (../_definitions/definition_morphism_of_ringed_spaces.tex
-
-[157]) (../_definitions/definition_morphism_of_locally_ringed_spaces.tex) (../_definitions/definition_scheme.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex
-
-LaTeX Warning: Reference `theorem:category_of_modules_over_a_sheaf_of_rings_on_a_site_on_an_essentially_small_category_has_enough_injectives' on page 1 undefined on input line 3.
 
 
-Overfull \hbox (3.52489pt too wide) in paragraph at lines 5--6
+[158]) (../_concepts/theorem_category_of_modules_over_a_sheaf_of_rings_on_a_topological_space_has_enough_injectives.tex) (../_definitions/definition_godement_sheaf_of_a_sheaf_on_a_ringed_spcae.tex) (../_definitions/definition_flasque_flabby_sheaf_of_sets_on_a_topological_space.tex
+
+[159]) (../_concepts/lemma_godement_sheaf_of_a_sheaf_of_modules_on_a_ringed_space_is_flasque.tex) (../_concepts/theorem_the_category_of_sheaves_of_modules_on_a_ringed_space_has_enough_flasque_sheaves.tex) (../_concepts/theorem_godement_resolution_of_a_sheaf_of_modules_on_a_ringed_space.tex
+
+LaTeX Warning: Reference `lemma:godement_sheaf_is_flasque' on page 1 undefined on input line 14.
+
+
+LaTeX Warning: Reference `proposition:flasque_sheaves_have_no_higher_cohomology' on page 1 undefined on input line 14.
+
+) (../_concepts/proposition_flasque_sheaves_on_a_ringed_space_are_acyclic_for_the_global_sections_functor_and_for_any_direct_image_functor.tex
+Overfull \hbox (21.65727pt too wide) in paragraph at lines 6--7
+\T1/cmr/m/n/12 are []acyclic for[] (Def-i-ni-tion []4.4.1[]) the []di-rect im-age func-tor[] (Def-i-ni-tion []7.7.2[]) $\OML/cmm/m/it/12 f[] \OT1/cmr/m/n/12 : [](\OMS/cmsy/m/n/12 O[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
+ []
+
+) (../_concepts/proposition_injective_module_over_a_ringed_space_is_flasque.tex
+
+[160]) (../_definitions/definition_locally_constant_sheaf_on_a_topological_space.tex
+Overfull \hbox (1.20975pt too wide) in paragraph at lines 2--3
+[]\T1/cmr/bx/n/12 Definition 7.7.16 \T1/cmr/m/n/12 (Lo-cally Con-stant Sheaf)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \T1/cmr/m/n/12 be a []topo-log-i-cal space[] (Def-i-ni-tion []C.0.5[]).
+ []
+
+)
+
+[161] (../_definitions/definition_affine_scheme.tex) (../_definitions/definition_locally_ringed_space_on_a_topological_space.tex) (../_definitions/definition_morphism_of_ringed_spaces.tex
+
+[162]) (../_definitions/definition_morphism_of_locally_ringed_spaces.tex) (../_definitions/definition_scheme.tex) (../_definitions/definition_sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site.tex
+Overfull \hbox (3.52489pt too wide) in paragraph at lines 7--8
 []\T1/cmr/m/n/12 Assume that []global sec-tions ob-jects $\OT1/cmr/m/n/12 ^^@(\OMS/cmsy/m/n/12 G\OT1/cmr/m/n/12 )$[] \T1/cmr/m/n/12 (Def-i-ni-tion []7.1.5[]) ex-ist for all ob-jects $\OMS/cmsy/m/n/12 G$ \T1/cmr/m/n/12 of $[]\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 C\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$[][][]
  []
 
 
 
-[158]) (../_definitions/definition_torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object.tex) (../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex
+[163]) (../_definitions/definition_sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification.tex
 
-[159]) (../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex) (../_excerpts/../_excerpts/excerpts_derived_categories.tex (../_excerpts/../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex
+[164]) (../_definitions/definition_torsor_principal_homogeneous_space_of_a_sheaf_of_groups_on_a_site_over_an_object.tex) (../_definitions/definition_zeroth_and_first_nonabelian_sheaf_cohomology_of_a_sheaf_of_groups_on_a_site.tex) (../_concepts/proposition_zeroth_and_first_nonabelian_and_abelian_sheaf_cohomologies_of_a_sheaf_of_abelian_groups_on_.tex
 
-[160]) (../_excerpts/../_definitions/definition_triangulated_category.tex
+[165]) (../_definitions/definition_cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space.tex
+Overfull \hbox (51.84163pt too wide) in paragraph at lines 28--29
+[][][][][][][]
+ []
 
-[161]) (../_excerpts/../_definitions/definition_exact_functor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category.tex
 
-[162]) (../_excerpts/../_definitions/definition_exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category.tex) (../_excerpts/../_concepts/proposition_homotopy_category_of_an_additive_category_is_a_triangulated_category.tex
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
-[163]) (../_excerpts/../_concepts/theorem_additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories.tex) (../_excerpts/../_definitions/definition_multiplicative_system_of_morphisms_in_a_category.tex) (../_excerpts/../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_excerpts/../_definitions/definition_saturated_multiplicative_system_in_a_category.tex
+ []
+
+
+
+[166]
+Overfull \hbox (8.7517pt too wide) in paragraph at lines 36--38
+\T1/cmr/m/n/12 where $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ^^Y[] \OMS/cmsy/m/n/12 ^^N \OML/cmm/m/it/12 $ \T1/cmr/m/n/12 is the com-po-nent of $\OML/cmm/m/it/12 $ \T1/cmr/m/n/12 in the fac-tor $\OMS/cmsy/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 U[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . 
+ []
+
+)
+
+[167] (../_concepts/lemma_short_exact_sequence_of_sheaves_of_abelian_groups_on_a_topological_space_yields_short_exact_sequence_of_colimits_of_cech_complexes.tex) (../_concepts/proposition_cech_cohomology_for_sheaves_of_abelian_groups_on_a_topological_space_induce_long_exact_sequences.tex
+
+[168]) (../_definitions/definition_acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space.tex) (../_definitions/definition_good_open_cover_of_a_topological_space.tex)
+
+[169] (../_concepts/proposition_nice_circumstances_for_an_open_cover_to_be_acyclic_for_a_sheaf_of_abelian_groups.tex) (../_concepts/proposition_every_smooth_manifold_has_a_good_open_cover.tex) (../_concepts/theorem_lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf.tex) (../_concepts/theorem_cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space.tex)
+
+[170]
+
+[171]
+
+[172]
+Overfull \hbox (43.94182pt too wide) in paragraph at lines 1613--1614
+ [] 
+ []
+
+
+Underfull \vbox (badness 1609) has occurred while \output is active []
+
+
+
+[173] (../_excerpts/../_excerpts/excerpts_derived_categories.tex (../_excerpts/../_definitions/definition_homotopy_category_of_chain_complexes_of_an_additive_category.tex
+
+[174]) (../_excerpts/../_definitions/definition_triangulated_category.tex
+
+[175]) (../_excerpts/../_definitions/definition_exact_functor_between_triangulated_categories.tex) (../_excerpts/../_definitions/definition_compatible_with_triangulation_for_a_multiplicative_system_of_a_triangulated_category.tex) (../_excerpts/../_definitions/definition_exact_mixed_variance_multifunctor_from_triangulated_categories_to_a_triangulated_category.tex
+
+[176]) (../_excerpts/../_concepts/proposition_homotopy_category_of_an_additive_category_is_a_triangulated_category.tex) (../_excerpts/../_concepts/theorem_additive_functor_between_abelian_categories_induces_an_exact_functor_between_homotopy_categories_as_triangulated_categories.tex
+
+[177]) (../_excerpts/../_definitions/definition_multiplicative_system_of_morphisms_in_a_category.tex) (../_excerpts/../_definitions/definition_localization_of_a_category_by_a_multiplicative_system.tex) (../_excerpts/../_definitions/definition_saturated_multiplicative_system_in_a_category.tex
 Overfull \hbox (2.37277pt too wide) in paragraph at lines 2--3
 []\T1/cmr/bx/n/12 Definition 8.2.3. []\T1/cmr/m/n/12 A []mul-ti-plica-tive sys-tem[] (Def-i-ni-tion []8.2.1[]) $\OML/cmm/m/it/12 S$ \T1/cmr/m/n/12 in a []cat-e-gory[] (Def-i-ni-tion []1.1.1[])
  []
 
-) (../_excerpts/../_concepts/proposition_multiplicative_systems_may_as_well_be_saturated.tex
+) (../_excerpts/../_concepts/proposition_multiplicative_systems_may_as_well_be_saturated.tex) (../_excerpts/../_definitions/definition_derived_category_of_an_abelian_category.tex
 
-[164]) (../_excerpts/../_definitions/definition_derived_category_of_an_abelian_category.tex) (../_excerpts/../_conventions/convention_objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category.tex) (../_excerpts/../_definitions/definition_category_of_bounded_complexes_of_injectives_projectives.tex
+[178]) (../_excerpts/../_conventions/convention_objects_of_an_abelian_category_can_be_regarded_as_objects_of_the_derived_category.tex) (../_excerpts/../_definitions/definition_category_of_bounded_complexes_of_injectives_projectives.tex
 Overfull \hbox (5.27486pt too wide) in paragraph at lines 2--3
 []\T1/cmr/bx/n/12 Definition 8.3.3. []\T1/cmr/m/n/12 Let $\OMS/cmsy/m/n/12 A$ \T1/cmr/m/n/12 be an []ad-di-tive cat-e-gory[] (Def-i-ni-tion []2.3.4[]). For $\OT1/cmr/m/n/12 ? \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 +\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 ; b; []\OMS/cmsy/m/n/12 g$\T1/cmr/m/n/12 ,
  []
@@ -1710,31 +1785,31 @@ Overfull \hbox (1.9891pt too wide) in paragraph at lines 4--5
 
 
 
-[165]) (../_excerpts/../_definitions/definition_total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories.tex
+[179]) (../_excerpts/../_definitions/definition_total_derived_functor_of_an_exact_functor_between_homotopy_categories_of_abelian_categories.tex
 Overfull \hbox (12.85172pt too wide) in paragraph at lines 9--10
 []\T1/cmr/m/n/12 Dually, a []\T1/cmr/m/it/12 (to[]-[]tal)[] [][][]left[] [][][]de[]-[]rived[] [][][]func[]-[]tor[] [][][]on[] [][][][][] [][][]on[] [][][][] \T1/cmr/m/n/12 is an ex-act func-tor [][]
  []
 
 ) (../_excerpts/../_concepts/proposition_exact_functor_between_abelian_categories_induces_functor_on_derived_categories.tex
 
-[166]) (../_excerpts/../_concepts/theorem_existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories.tex) (../_excerpts/../_concepts/corollary_add_func_bewteen_ab_cats_has_a_right_or_left_total_derived_func_if_the_source_ab_cat_has_enough_injs_or_projs.tex
+[180]) (../_excerpts/../_concepts/theorem_existence_theorem_of_total_derived_functors_of_exact_functors_between_homotopy_categories.tex) (../_excerpts/../_concepts/corollary_add_func_bewteen_ab_cats_has_a_right_or_left_total_derived_func_if_the_source_ab_cat_has_enough_injs_or_projs.tex
 
-[167]) (../_excerpts/../_concepts/corollary_cohomology_of_a_total_derived_functor_of_an_additive_functor_between_abelian_categories_can_be_calculated_by_hyper_derived_functors.tex) (../_excerpts/../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex
+[181]) (../_excerpts/../_concepts/corollary_cohomology_of_a_total_derived_functor_of_an_additive_functor_between_abelian_categories_can_be_calculated_by_hyper_derived_functors.tex) (../_excerpts/../_definitions/definition_ind_pro_category_of_a_locally_small_category.tex
 
-[168]
+[182]
 
-[169]) (../_excerpts/../_definitions/definition_essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category.tex) (../_excerpts/../_concepts/proposition_condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant.tex) (../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex
+[183]) (../_excerpts/../_definitions/definition_essentially_constant_object_in_a_pro_ind_category_of_a_locally_small_category.tex) (../_excerpts/../_concepts/proposition_condition_for_ind_pro_object_of_filtered_index_category_to_be_essentially_constant.tex) (../_definitions/definition_right_left_derived_functor_of_a_exact_mixed_variant_multifunctor_between_triangulated_categories_relative_to_saturated_multiplicative_systems.tex
 
-[170]) (../_excerpts/../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex
+[184]) (../_excerpts/../_definitions/definition_defined_at_objects_derivable_and_adapted_objects_for_the_derived_functors_of_an_exact_multifunctor_between_triangulated_categories.tex
 
-[171]
+[185]
 Overfull \hbox (9.24803pt too wide) in paragraph at lines 26--27
 \T1/cmr/m/n/12 French) []\T1/cmr/m/it/12 un[]-[]folded[] [][][]for[] [][][][]\T1/cmr/m/n/12 , cf. [[]]) if the nat-u-ral mor-phism $\OML/cmm/m/it/12 LF\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Q[]A[]; Q[]B[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
  []
 
 ) (../_excerpts/../_concepts/proposition_object_is_deployed_for_an_exact_func_of_tri_categories_iff_fun_preserves_the_terminal_nature_of_the_object_relative_to_resolutions.tex
 
-[172]
+[186]
 Overfull \hbox (5.86024pt too wide) in paragraph at lines 14--16
 []\T1/cmr/m/n/12 A fam-ily $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A[]; B[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 is []adapted (or de-ployed/unfolded)[] (Def-i-ni-tion []8.5.5[]) for []$\OML/cmm/m/it/12 RF$[] \T1/cmr/m/n/12 (Def-i-ni-tion []8.5.4[])
  []
@@ -1743,58 +1818,56 @@ Overfull \hbox (5.86024pt too wide) in paragraph at lines 14--16
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
 (Font)              using `U/stmry/m/n' instead on input line 28.
 
+) (../_concepts/proposition_complex_in_an_abelian_category_is_deployed_in_homotopy_category_for_an_additive_functor_iff_fun_preserves_terminal_nature_of_quasi_isomorphisms.tex
 
+[187]
 
-[173]) (../_concepts/proposition_complex_in_an_abelian_category_is_deployed_in_homotopy_category_for_an_additive_functor_iff_fun_preserves_terminal_nature_of_quasi_isomorphisms.tex
+LaTeX Warning: Hyper reference `definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories' on page 188 undefined on input line 6.
 
-LaTeX Warning: Hyper reference `definition:left_and_right_total_derived_functors_of_biadditive_functors_of_abelian_categories' on page 174 undefined on input line 6.
+) (../_excerpts/../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex) (../_excerpts/../_definitions/definition_right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories.tex
 
-) (../_excerpts/../_definitions/definition_right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories.tex
+[188]) (../_excerpts/../_concepts/proposition_derived_multifunc_of_an_add_multifunc_of_ab_cats_on_cohom_bdd_cats_commutes_with_inclusion_to_unbdd_cats.tex) (../_excerpts/../_concepts/theorem_derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist.tex)
 
-[174]) (../_excerpts/../_definitions/definition_right_left_acyclic_for_an_additive_multifunctor_of_abelian_categories.tex) (../_excerpts/../_concepts/proposition_derived_multifunc_of_an_add_multifunc_of_ab_cats_on_cohom_bdd_cats_commutes_with_inclusion_to_unbdd_cats.tex) (../_excerpts/../_concepts/theorem_derived_functor_of_additive_functor_between_abelian_categories_is_defined_on_bounded_above_below_complexes_if_enough_acyclics_exist.tex)
-
-[175] (../_excerpts/../_definitions/definition_left_right_resolution_of_a_chain_complex_in_an_abelian_category.tex
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1.
-
+[189] (../_excerpts/../_definitions/definition_left_right_resolution_of_a_chain_complex_in_an_abelian_category.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
-[176]) (../_excerpts/../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex) (../_excerpts/../_definitions/definition_internal_hom_complex_of_chain_complexes_in_an_additive_category.tex
+) (../_excerpts/../_definitions/definition_K_flat_complex_in_an_abelian_category_with_respect_to_a_biadditive_functor.tex
 
-[177]) (../_excerpts/../_definitions/definition_K_injective_projective_complex_in_an_abelian_category.tex) (../_excerpts/../_concepts/proposition_object_in_an_abelian_category_is_K_projective_injective_iff_projective_injective.tex) (../_excerpts/../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_if_part_of_distinguished_triangle_of_two_K_projectives_injectives.tex) (../_excerpts/../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_iff_shifts_are.tex) (../_excerpts/../_concepts/proposition_equivalent_conditions_for_a_complex_in_an_abelian_category_to_be_K_projective_K_injective.tex
+[190]) (../_excerpts/../_definitions/definition_internal_hom_complex_of_chain_complexes_in_an_additive_category.tex) (../_excerpts/../_definitions/definition_K_injective_projective_complex_in_an_abelian_category.tex
 
-[178]) (../_excerpts/../_concepts/proposition_bounded_above_below_complex_of_projective_injective_objects_is_K_projective_injective.tex
+[191]) (../_excerpts/../_concepts/proposition_object_in_an_abelian_category_is_K_projective_injective_iff_projective_injective.tex) (../_excerpts/../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_if_part_of_distinguished_triangle_of_two_K_projectives_injectives.tex) (../_excerpts/../_concepts/proposition_complex_in_abelian_category_is_K_projective_K_injective_iff_shifts_are.tex) (../_excerpts/../_concepts/proposition_equivalent_conditions_for_a_complex_in_an_abelian_category_to_be_K_projective_K_injective.tex
+
+[192]) (../_excerpts/../_concepts/proposition_bounded_above_below_complex_of_projective_injective_objects_is_K_projective_injective.tex
 Overfull \hbox (8.79337pt too wide) in paragraph at lines 12--14
 []\T1/cmr/m/n/12 ($\OMS/cmsy/m/n/12 ^^?$ \T1/cmr/m/n/12 TODO: ver-ify the fol-low-ing)[] We prove (1). By the char-ac-ter-i-za-tion of $\OML/cmm/m/it/12 K$\T1/cmr/m/n/12 -projectivity,
  []
 
+) (../_excerpts/../_concepts/theorem_AB5_AB5_star_categories_with_left_right_resolutions_for_bounded_complexes_by_a_class_has_resolutions_for_all_complexes_by_the_class.tex
 
+[193]) (../_excerpts/../_concepts/corollary_AB5_AB5_star_categories_with_enough_projectives_injectives_have_K_projective_injective_resolutions.tex) (../_excerpts/../_concepts/theorem_grothendieck_categories_have_enough_K_injective_complexe.tex) (../_excerpts/../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex
 
-[179]) (../_excerpts/../_concepts/theorem_AB5_AB5_star_categories_with_left_right_resolutions_for_bounded_complexes_by_a_class_has_resolutions_for_all_complexes_by_the_class.tex) (../_excerpts/../_concepts/corollary_AB5_AB5_star_categories_with_enough_projectives_injectives_have_K_projective_injective_resolutions.tex) (../_excerpts/../_concepts/theorem_grothendieck_categories_have_enough_K_injective_complexe.tex) (../_excerpts/../_concepts/lemma_bi_additive_functor_on_additive_categories_that_preserves_colimits_or_limits_preserve_colimits_or_limtis_as_functor_on_chain_categories.tex
-
-[180]
+[194]
 
 LaTeX Warning: Reference `proposition:limit_and_colimit_or_diagram_of_chain_complexes_is_computed_pointwise' on page 1 undefined on input line 19.
 
 
-LaTeX Warning: Hyper reference `theorem:category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes' on page 181 undefined on input line 23.
+LaTeX Warning: Hyper reference `theorem:category_of_double_complexes_of_objects_of_an_additive_category_is_naturally_isomorphic_to_the_category_of_chain_complexes_of_chain_complexes' on page 195 undefined on input line 23.
 
-
-
-[181]) (../_excerpts/../_concepts/lemma_bounded_above_complex_of_flat_objects_are_K_flat_with_respect_to_bi_daditive_functor_on_abelian_categories_where_target_is_AB5.tex
+) (../_excerpts/../_concepts/lemma_bounded_above_complex_of_flat_objects_are_K_flat_with_respect_to_bi_daditive_functor_on_abelian_categories_where_target_is_AB5.tex
 
 LaTeX Warning: Reference `proposition:chain_complexes_in_additive_categories_are_limits_and_colimits_of_truncations' on page 1 undefined on input line 14.
 
-) (../_excerpts/../_concepts/proposition_general_conditions_for_defining_and_computing_right_left_total_derived_functors_of_exact_functors_of_triangulated_categories.tex
 
-[182]) (../_excerpts/../_concepts/proposition_exact_functor_from_homotopy_category_of_abelian_category_with_enough_K_injective_complexes_has_defined_derived_functor.tex) (../_excerpts/../_concepts/proposition_adjoint_exact_functors_of_triangulated_categories_induce_adjunctions_for_derived_functors_when_defined.tex
 
-[183]) (../_excerpts/../_concepts/proposition_adjoint_functors_between_abelian_categories_induce_adjunctions_of_derived_functors_when_defined.tex
+[195]) (../_excerpts/../_concepts/proposition_general_conditions_for_defining_and_computing_right_left_total_derived_functors_of_exact_functors_of_triangulated_categories.tex
+
+[196]) (../_excerpts/../_concepts/proposition_exact_functor_from_homotopy_category_of_abelian_category_with_enough_K_injective_complexes_has_defined_derived_functor.tex) (../_excerpts/../_concepts/proposition_adjoint_exact_functors_of_triangulated_categories_induce_adjunctions_for_derived_functors_when_defined.tex) (../_excerpts/../_concepts/proposition_adjoint_functors_between_abelian_categories_induce_adjunctions_of_derived_functors_when_defined.tex
 
 LaTeX Warning: Reference `lemma:left_right_exact_functor_between_abelian_categories_is_additive' on page 1 undefined on input line 2.
 
@@ -1807,30 +1880,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-) (../_excerpts/../_definitions/definition_flat_module_over_a_sheaf_of_rings_on_an_essentially_small_site.tex) (../_excerpts/../_concepts/proposition_category_of_sheaves_of_modules_over_a_ringed_site_on_an_essentially_small_site_has_enough_flats.tex) (../_excerpts/../_concepts/proposition_there_are_enough_K_flat_resolutions_for_modules_on_an_essentially_small_ringed_site.tex
 
-[184]
 
-LaTeX Warning: Reference `theorem:tensor_hom_adjucntion_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family' on page 1 undefined on input line 7.
-
+[197]) (../_excerpts/../_definitions/definition_flat_module_over_a_sheaf_of_rings_on_an_essentially_small_site.tex) (../_excerpts/../_concepts/proposition_category_of_sheaves_of_modules_over_a_ringed_site_on_an_essentially_small_site_has_enough_flats.tex) (../_excerpts/../_concepts/proposition_there_are_enough_K_flat_resolutions_for_modules_on_an_essentially_small_ringed_site.tex
 
 LaTeX Warning: Reference `theorem:right_left_adjoints_commute_with_limits_colimits' on page 1 undefined on input line 7.
 
-) (../_excerpts/../_notations/notation_derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site.tex) (../_excerpts/../_definitions/definition_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex
+) (../_excerpts/../_notations/notation_derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site.tex
+
+[198]) (../_excerpts/../_definitions/definition_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex
 Overfull \hbox (17.30925pt too wide) in paragraph at lines 4--4
 []\T1/cmr/m/n/12 Given [](cochain) com-plexes[] (Def-i-ni-tion []3.0.1[]) $\OML/cmm/m/it/12 K[]; L[]$ \T1/cmr/m/n/12 of [](say right) $\OMS/cmsy/m/n/12 O$\T1/cmr/m/n/12 -modules[] (Def-i-ni-tion []B.0.18[]),
  []
 
 ) (../_excerpts/../_definitions/definition_derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex
-
-[185]
 Overfull \hbox (63.23312pt too wide) in paragraph at lines 4--5
 []\T1/cmr/m/n/12 The []\T1/cmr/m/it/12 de[]-[]rived[] [][][](sheafy/sheaf)[] [][][]in[]-[]ter[]-[]nal[] [][][]hom[] [][][]func[]-[]tor \T1/cmr/m/n/12 is the func-tor [][]
  []
 
-) (../_excerpts/../_definitions/definition_derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex) (../_excerpts/../_concepts/theorem_total_derived_tensor_hom_adjunction_for_modules_on_a_ringed_site.tex) (../_excerpts/../_definitions/definition_morphism_of_ringed_sites.tex
+) (../_excerpts/../_definitions/definition_derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology.tex
 
-[186]
+[199]) (../_excerpts/../_concepts/theorem_total_derived_tensor_hom_adjunction_for_modules_on_a_ringed_site.tex) (../_excerpts/../_definitions/definition_morphism_of_ringed_sites.tex
 
 LaTeX Warning: Reference `definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism' on page 1 undefined on input line 7.
 
@@ -1838,25 +1908,29 @@ LaTeX Warning: Reference `definition:direct_image_of_a_sheaf_on_a_site_under_a_c
 LaTeX Warning: Reference `theorem:adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites' on page 1 undefined on input line 9.
 
 
-LaTeX Warning: Hyper reference `definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism' on page 187 undefined on input line 9.
+LaTeX Warning: Hyper reference `definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism' on page 200 undefined on input line 9.
 
-) (../_excerpts/../_definitions/definition_total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi.tex) (../_excerpts/../_definitions/definition_total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites.tex))
+) (../_excerpts/../_definitions/definition_total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi.tex
 
-[187]
+[200]) (../_excerpts/../_definitions/definition_total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites.tex))
 
-[188]
+[201]
 
-[189]
+[202]
 
-[190]
+[203]
 
-[191] (../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex
+[204]
 
-[192]) (../_definitions/definition_symmetric_monoidal_category.tex) (../_definitions/definition_grothendieck_universe.tex
+[205]
 
-[193]) (../_definitions/definition_tarski_grothendieck_set_theory.tex) (../_definitions/definition_hereditarily_finite_sets.tex
+[206] (../_definitions/definition_representable_functor_on_a_category_enriched_in_a_monoidal_category.tex
 
-LaTeX Warning: Hyper reference `proposition:collection_of_hereditarily_finite_sets_is_a_set' on page 194 undefined on input line 4.
+[207]) (../_definitions/definition_symmetric_monoidal_category.tex) (../_definitions/definition_grothendieck_universe.tex
+
+[208]) (../_definitions/definition_tarski_grothendieck_set_theory.tex) (../_definitions/definition_hereditarily_finite_sets.tex
+
+LaTeX Warning: Hyper reference `proposition:collection_of_hereditarily_finite_sets_is_a_set' on page 209 undefined on input line 4.
 
 ) (../_definitions/definition_hierarchy_of_grothendieck_universes_assuming_tarski_grothendieck_set_theory.tex
 Overfull \hbox (5.26369pt too wide) in paragraph at lines 2--4
@@ -1865,13 +1939,13 @@ Overfull \hbox (5.26369pt too wide) in paragraph at lines 2--4
 
 ) (../_definitions/definition_category_of_categories_relative_to_a_grothendieck_universe.tex) (../_definitions/definition_concrete_category_over_a_category.tex) (../_definitions/definition_sieve_on_an_object_in_a_category.tex
 
-LaTeX Warning: Citation `SGA4_I' on page 194 undefined on input line 1.
+LaTeX Warning: Citation `SGA4_I' on page 209 undefined on input line 1.
 
 
 
-[194]) (../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex) (../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex) (../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex) (../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex
+[209]) (../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex) (../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex) (../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex) (../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex
 
-LaTeX Warning: Citation `SGA4_I' on page 195 undefined on input line 11.
+LaTeX Warning: Citation `SGA4_I' on page 210 undefined on input line 11.
 
 
 Overfull \hbox (6.19147pt too wide) in paragraph at lines 11--13
@@ -1880,18 +1954,18 @@ Overfull \hbox (6.19147pt too wide) in paragraph at lines 11--13
 
 
 
-[195]
+[210]
 
-LaTeX Warning: Citation `SGA4_I' on page 196 undefined on input line 31.
-
-
-LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 196 undefined on input line 33.
+LaTeX Warning: Citation `SGA4_I' on page 211 undefined on input line 31.
 
 
-LaTeX Warning: Citation `SGA4_I' on page 196 undefined on input line 35.
+LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 211 undefined on input line 33.
 
 
-LaTeX Warning: Citation `SGA4_I' on page 196 undefined on input line 37.
+LaTeX Warning: Citation `SGA4_I' on page 211 undefined on input line 35.
+
+
+LaTeX Warning: Citation `SGA4_I' on page 211 undefined on input line 37.
 
 ) (../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex
 Overfull \hbox (4.17035pt too wide) in paragraph at lines 9--10
@@ -1900,9 +1974,9 @@ Overfull \hbox (4.17035pt too wide) in paragraph at lines 9--10
 
 ) (../_definitions/definition_site_of_opens_on_a_topological_space.tex
 
-[196]) (../_definitions/definition_sheaf_on_a_site.tex
+[211]) (../_definitions/definition_sheaf_on_a_site.tex
 
-LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 197 undefined on input line 15.
+LaTeX Warning: Hyper reference `definition:grothendieck_topology_generated_by_a_pretopology' on page 212 undefined on input line 15.
 
 
 Overfull \hbox (8.25337pt too wide) in paragraph at lines 15--16
@@ -1911,7 +1985,7 @@ Overfull \hbox (8.25337pt too wide) in paragraph at lines 15--16
 
 ) (../_definitions/definition_topos.tex
 
-LaTeX Warning: Citation `SGA4_I' on page 197 undefined on input line 6.
+LaTeX Warning: Citation `SGA4_I' on page 212 undefined on input line 6.
 
 
 Overfull \hbox (30.67789pt too wide) in paragraph at lines 6--7
@@ -1920,7 +1994,7 @@ Overfull \hbox (30.67789pt too wide) in paragraph at lines 6--7
 
 
 
-[197]) (../_definitions/definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex
+[212]) (../_definitions/definition_topos_morphism_induced_by_a_morphism_of_small_sites.tex
 
 LaTeX Warning: Reference `definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism' on page 1 undefined on input line 4.
 
@@ -1931,75 +2005,92 @@ Overfull \hbox (7.73456pt too wide) in paragraph at lines 4--5
 
 ) (../_definitions/definition_topos_morphism_induced_by_a_flat_cocontinuous_functor_of_sites.tex
 
-[198]) (../_definitions/definition_topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor.tex) (../_definitions/definition_sheafification_functor_on_a_site.tex
+[213]) (../_definitions/definition_topos_morphism_induced_by_a_continuous_cocontinuous_flat_functor_of_sites_with_lower_shriek_functor.tex) (../_definitions/definition_sheafification_functor_on_a_site.tex
 
-[199]) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex
+[214]) (../_concepts/theorem_sheafification_of_a_presheaf_of_sets_on_a_small_enough_site.tex
 
-LaTeX Warning: Citation `SGA4_I' on page 200 undefined on input line 1.
+LaTeX Warning: Citation `SGA4_I' on page 215 undefined on input line 1.
 
 ) (../_definitions/definition_ringed_site.tex
 
-[200]) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
+[215]) (../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex
 
-[201]) (../_definitions/definition_stalk_of_an_object_of_a_topos_at_a_point_of_the_topos.tex) (../_definitions/definition_locally_constant_sheaf_on_a_site_with_sheafification.tex
+[216]
+Overfull \hbox (3.30063pt too wide) in paragraph at lines 56--57
+\T1/cmr/m/n/12 forms the []\T1/cmr/m/it/12 cat[]-[]e[]-[]gory[] [][][]of[] [][][][][]-[]mod[]-[]ules\T1/cmr/m/n/12 , de-noted [][]. The Hom func-tors $[][]$
+ []
+
+) (../_definitions/definition_stalk_of_an_object_of_a_topos_at_a_point_of_the_topos.tex) (../_definitions/definition_locally_constant_sheaf_on_a_site_with_sheafification.tex
 
 LaTeX Warning: Reference `lemma:slice_category_has_final_object' on page 1 undefined on input line 28.
 
 
 
-[202]) (../_definitions/definition_function_of_sets.tex) (../_definitions/definition_monoid.tex) (../_definitions/definition_group.tex
+[217]) (../_definitions/definition_function_of_sets.tex) (../_definitions/definition_monoid.tex) (../_definitions/definition_group.tex
 
-[203]) (../_definitions/definition_group_homomorphism.tex
+[218]) (../_definitions/definition_group_homomorphism.tex
 Overfull \hbox (4.43431pt too wide) in paragraph at lines 3--4
 []\T1/cmr/bx/n/12 Definition C.0.4 \T1/cmr/m/n/12 (Group ho-mo-mor-phism)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G; \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 and $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H; \OMS/cmsy/m/n/12 ^^C\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be []groups[] (Def-i-ni-tion []C.0.3[]).
  []
 
-) (../_definitions/definition_topological_space.tex) (../_definitions/definition_continuous_map_of_topological_spaces.tex) (../_definitions/definition_ring.tex
+) (../_definitions/definition_topological_space.tex) (../_definitions/definition_continuous_map_of_topological_spaces.tex
 
-[204]) (../_definitions/definition_commutative_ring.tex) (../_definitions/definition_unit_of_a_ring.tex) (../_definitions/definition_division_ring.tex) (../_definitions/definition_field.tex
+[219]) (../_definitions/definition_ring.tex) (../_definitions/definition_commutative_ring.tex) (../_definitions/definition_unit_of_a_ring.tex) (../_definitions/definition_division_ring.tex
 
-[205]) (../_definitions/definition_ring_homomorphism.tex) (../_definitions/definition_vector_space_over_a_field.tex) (../_definitions/definition_morphism_of_vector_spaces.tex
+[220]) (../_definitions/definition_field.tex) (../_definitions/definition_ring_homomorphism.tex) (../_definitions/definition_vector_space_over_a_field.tex
 
-[206]) (../_definitions/definition_basis_of_a_vector_space_over_a_field.tex) (../_definitions/definition_partially_ordered_set.tex) (../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex) (../_definitions/definition_free_group_generated_by_a_set.tex
+[221]) (../_definitions/definition_morphism_of_vector_spaces.tex) (../_definitions/definition_basis_of_a_vector_space_over_a_field.tex) (../_definitions/definition_partially_ordered_set.tex) (../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex) (../_definitions/definition_free_group_generated_by_a_set.tex
 
-[207]) (../_definitions/definition_free_abelian_group_generated_by_a_set.tex) (../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex
-Overfull \hbox (1.64876pt too wide) in paragraph at lines 2--3
-[]\T1/cmr/bx/n/12 Definition C.0.21 \T1/cmr/m/n/12 (Ho-mo-topy groups)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 For any []pointed topo-log-i-cal space[] (Def-i-ni-tion []1.1.10[])
+[222]) (../_definitions/definition_free_abelian_group_generated_by_a_set.tex) (../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex
+Overfull \hbox (64.84662pt too wide) in paragraph at lines 25--26
+[]\T1/cmr/m/n/12 We fur-ther note that the set $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 ) = [(\OML/cmm/m/it/12 S[]; s[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )][]$ \T1/cmr/m/n/12 is iden-ti-fi-able with $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 ([][]((\OML/cmm/m/it/12 S[]; s[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )))$\T1/cmr/m/n/12 . 
  []
 
-) (../_definitions/definition_prime_and_maximal_ideal_of_a_ring.tex) (../_definitions/definition_affine_scheme.tex
+) (../_definitions/definition_prime_and_maximal_ideal_of_a_ring.tex
 
-[208]) (../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex
+[223]) (../_definitions/definition_affine_scheme.tex) (../_definitions/definition_cartesian_product_of_two_objects_in_a_category_over_an_object.tex
 
-[209]) (../_definitions/definition_semigroup_object_in_a_category.tex) (../_definitions/definition_monoid_object_in_a_category_with_a_final_object.tex) (../_definitions/definition_group_object_in_a_category_with_a_final_object.tex
+[224]) (../_definitions/definition_semigroup_object_in_a_category.tex) (../_definitions/definition_monoid_object_in_a_category_with_a_final_object.tex
 
-[210]) (../_definitions/definition_power_set_of_a_set.tex) (../_definitions/definition_algebra_of_a_ring.tex) (../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex
+[225]) (../_definitions/definition_group_object_in_a_category_with_a_final_object.tex) (../_definitions/definition_power_set_of_a_set.tex
 
-[211]) (../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex
+[226]) (../_definitions/definition_algebra_of_a_ring.tex) (../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex
 
-[212]) (../_definitions/definition_homotopy_category_of_topological_spaces.tex) (../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex) (../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex) (../_definitions/definition_C_k_morphism_between_C_k_manifolds.tex
+[227]) (../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex
 
-[213]) (../_definitions/definition_C_k_manifold.tex) (../_definitions/definition_opposite_ring_of_a_ring.tex) (../_definitions/definition_subspace_of_a_topological_space.tex) (../_definitions/definition_separation_axioms_of_topology.tex
+[228]) (../_definitions/definition_homotopy_category_of_topological_spaces.tex) (../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex) (../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex) (../_definitions/definition_C_k_morphism_between_C_k_manifolds.tex) (../_definitions/definition_C_k_manifold.tex
+
+[229]) (../_definitions/definition_opposite_ring_of_a_ring.tex) (../_definitions/definition_subspace_of_a_topological_space.tex) (../_definitions/definition_separation_axioms_of_topology.tex
 Overfull \hbox (2.72636pt too wide) in paragraph at lines 2--4
 []\T1/cmr/bx/n/12 Definition C.0.40 \T1/cmr/m/n/12 (Sep-a-ra-tion ax-ioms)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \OMS/cmsy/m/n/12 T\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be a []topo-log-i-cal space[] (Def-i-ni-tion []C.0.5[]). 
  []
 
+) (../_definitions/definition_principal_ideal_ring.tex
+
+LaTeX Warning: Hyper reference `definition:ideal_generated_by_a_subset_of_a_ring' on page 230 undefined on input line 4.
 
 
-[214]) (../_definitions/definition_principal_ideal_ring.tex
+LaTeX Warning: Hyper reference `definition:domain_integral_domain' on page 230 undefined on input line 5.
 
-LaTeX Warning: Hyper reference `definition:ideal_generated_by_a_subset_of_a_ring' on page 215 undefined on input line 4.
+) (../_definitions/definition_finitely_generated_modules_over_rings.tex
 
-) (../_definitions/definition_finitely_generated_modules_over_rings.tex) (../_definitions/definition_equivalence_relation_on_a_set.tex) (../_definitions/definition_pair_of_topological_spaces.tex) (../_definitions/definition_map_of_pairs_of_topological_spaces.tex) (../_definitions/definition_category_of_pairs_of_topological_spaces.tex
+[230]) (../_definitions/definition_equivalence_relation_on_a_set.tex) (../_definitions/definition_pair_of_topological_spaces.tex) (../_definitions/definition_map_of_pairs_of_topological_spaces.tex) (../_definitions/definition_category_of_pairs_of_topological_spaces.tex) (../_definitions/definition_open_refinement_of_an_open_cover_of_a_topological_space.tex) (../_definitions/definition_locally_finite_open_cover_of_a_topological_spcae.tex) (../_definitions/definition_paracompact_topological_space.tex) (../_concepts/theorem_nice_enough_topological_spaces_are_paracompact.tex
 
-[215])) (./uwo_math_9144b_winter_2026.bbl
+[231]) (../_definitions/definition_separation_axioms_of_topology.tex
+Overfull \hbox (2.72636pt too wide) in paragraph at lines 2--4
+[]\T1/cmr/bx/n/12 Definition C.0.51 \T1/cmr/m/n/12 (Sep-a-ra-tion ax-ioms)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \OMS/cmsy/m/n/12 T\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be a []topo-log-i-cal space[] (Def-i-ni-tion []C.0.5[]). 
+ []
 
-[216]
+) (../_definitions/definition_quasi_compact_scheme.tex) (../_definitions/definition_quasi_separated_morphism_of_schemes.tex) (../_definitions/definition_contractible_topological_space.tex) (../_definitions/definition_locally_contractible_topological_space.tex
+
+[232]) (../_definitions/definition_semi_locally_simply_connected_space.tex)) (./uwo_math_9144b_winter_2026.bbl
+
+[233]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[217]
+[234]
 Overfull \hbox (20.37529pt too wide) in paragraph at lines 282--285
 []\T1/cmr/m/n/10 Hyun Jong Kim. \T1/cmtt/m/n/10 trouver\T1/cmr/m/n/10 , 2023. GitHub repos-i-tory: https://github.com/hyunjongkimmath/trouver. 
  []
@@ -2009,12 +2100,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[218]
+[235]
 Underfull \hbox (badness 2158) in paragraph at lines 391--394
 []\T1/cmr/m/n/10 James S. Milne. Lie al-ge-bras, al-ge-braic groups, and lie groups, 2013. Avail-able at
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[236]
 Underfull \hbox (badness 10000) in paragraph at lines 468--472
 []\T1/cmr/m/n/10 nLab au-thors. sta-ble ho-mo-topy cat-e-gory. []$\T1/cmtt/m/n/10 https : / / ncatlab . org / nlab / show / stable +
  []
@@ -2024,12 +2120,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[219]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[220])
+[237])
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
@@ -2037,7 +2128,7 @@ This document will not have a glossary.
 
 
 
-[221] (./uwo_math_9144b_winter_2026.aux)
+[238] (./uwo_math_9144b_winter_2026.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
@@ -2053,21 +2144,21 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `uwo_math_9144b_winter_2026.out' has not changed.
-(rerunfilecheck)             Checksum: 7E8A08019BC7AD4B09017ECB246991AD;25149.
+(rerunfilecheck)             Checksum: C8604114BFA8047877F182B606B94515;25710.
  ) 
 Here is how much of TeX's memory you used:
- 42715 strings out of 473254
- 1032478 string characters out of 5722066
- 1193347 words of memory out of 5000000
- 62151 multiletter control sequences out of 15000+600000
+ 43495 strings out of 473254
+ 1079237 string characters out of 5722066
+ 1193661 words of memory out of 5000000
+ 62653 multiletter control sequences out of 15000+600000
  590847 words of font info for 136 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 121i,19n,124p,3377b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,21n,124p,3377b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on uwo_math_9144b_winter_2026.pdf (221 pages, 1764327 bytes).
+Output written on uwo_math_9144b_winter_2026.pdf (238 pages, 1863151 bytes).
 PDF statistics:
- 8797 PDF objects out of 8907 (max. 8388607)
- 8405 compressed objects within 85 object streams
- 1667 named destinations out of 1728 (max. 500000)
- 717 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9589 PDF objects out of 10688 (max. 8388607)
+ 9173 compressed objects within 92 object streams
+ 1790 named destinations out of 2073 (max. 500000)
+ 741 words of extra memory for PDF output out of 10000 (max. 10000000)
 

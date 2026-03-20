@@ -1,0 +1,11 @@
+\begin{definition}[Disjoint union of sets] \label{definition:disjoint_union_of_sets}
+    Let $\{X_i\}_{i \in I}$ be an arbitrary small collection of sets. The \hldef{disjoint union} of the collection, denoted by \hl{$\coprod_{i \in I} X_i$} or \hl{$\bigsqcup_{i \in I} X_i$}, is defined as the set
+    \[
+    \coprod_{i \in I} X_i \coloneqq \bigcup_{i \in I} \{ (x, i) : x \in X_i \}.
+    \]
+    The indices $i \in I$ serve as "tags" to ensure that the contributing sets are treated as disjoint, even if their underlying elements are the same. For each $j \in I$, there is a canonical injection
+    \[
+    \iota_j : X_j \hookrightarrow \coprod_{i \in I} X_i, \quad x \mapsto (x, j).
+    \]
+    The disjoint union is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_sets}{category of sets}. For a finite collection $X_1, \dots, X_n$, it is often denoted \hl{$X_1 \amalg \dots \amalg X_n$}.
+\end{definition}

@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:composition_of_corrs_of_relative_chow_motives_over_a_noetherian_base_with_coefficients_in_a_comm_ring}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian base scheme} and $R$ a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $X, Y,$ and $Z$ be \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} \CrefAndHyperrefIfExist{definition:projective_morphism_of_schemes_projective_scheme_over_a_scheme}{projective schemes} over $S$. \CrefAndHyperrefIfExist{corollary:stable_homotopy_groups_of_pointed_topological_spaces_give_a_reduced_homology_theory}{Given} two correspondences $f \in \mathrm{Corr}_R^r(X, Y)$ and $g \in \mathrm{Corr}_R^s(Y, Z)$, their \hldef{composition} $g \circ f \in \mathrm{Corr}_R^{r+s}(X, Z)$ is defined by the formula:
+\[ g \circ f \coloneqq (p_{XZ})_* \left( p_{XY}^*(f) \cdot p_{YZ}^*(g) \right) \]
+where the operations are defined as follows:
+\TODO{flat pullback, relative intersection product}
+\begin{itemize}
+    \item $p_{XY}, p_{YZ}, p_{XZ}$ are the natural projections from the \CrefAndHyperrefIfExist{definition:fiber_product}{triple fiber product} $X \times_S Y \times_S Z$ onto the respective factors (e.g., $p_{XY}: X \times_S Y \times_S Z \to X \times_S Y$).
+    \item $p^*$ denotes the flat pullback of cycles.
+    \item $(\cdot)$ denotes the relative intersection product in the Chow ring of the smooth scheme $X \times_S Y \times_S Z$.
+    \item $(p_{XZ})_*$ denotes the proper pushforward along the projection, which is proper since $Y \to S$ is a projective morphism.
+\end{itemize}
+This composition is associative and satisfies the degree additive property $\mathrm{deg}(g \circ f) = \mathrm{deg}(g) + \mathrm{deg}(f)$.
+\end{definition}

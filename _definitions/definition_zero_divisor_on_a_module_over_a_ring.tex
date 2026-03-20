@@ -1,0 +1,17 @@
+\begin{definition}[Zero-divisor and Non-zero-divisor on a Module] \label{definition:zero_divisor_on_a_module_over_a_ring}
+Let $R$ be a ring and let $r \in R$ be an element. 
+
+\begin{enumerate}
+    \item Let $M$ be a left $R$-module. 
+    \begin{itemize}
+        \item The element $r$ is a \hldef{(left) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $rm = 0$. Equivalently, $r$ is a zero-divisor on $M$ if the left-multiplication map $\lambda_r \colon M \to M$ defined by $\lambda_r(m) = rm$ is not injective.
+        \item Otherwise, the element $r$ is a \hldef{(left) non-zero-divisor on $M$} (or is \hldef{$M$-regular}), meaning $\lambda_r$ is injective.
+    \end{itemize}
+
+    \item Let $M$ be a right $R$-module.
+    \begin{itemize}
+        \item The element $r$ is a \hldef{(right) zero-divisor on $M$} if there exists a non-zero element $m \in M$ such that $mr = 0$. Equivalently, the right-multiplication map $\rho_r \colon M \to M$ defined by $\rho_r(m) = mr$ is not injective.
+        \item Otherwise, the element $r$ is a \hldef{(right) non-zero-divisor on $M$}, meaning $\rho_r$ is injective.
+    \end{itemize}
+\end{enumerate}
+\end{definition}
