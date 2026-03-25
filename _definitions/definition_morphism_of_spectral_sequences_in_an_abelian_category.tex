@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:morphism_of_spectral_sequences_in_an_abelian_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and $r_0$ an integer.
+\begin{enumerate}
+    \item Let $E = \{E^r_{p,q}, d^r_{p,q}\}_{r \ge r_0}$ and $F = \{F^r_{p,q}, \delta^r_{p,q}\}_{r \ge r_0}$ be two homological \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{spectral sequences} in $\mathcal{A}$. A \hldef{morphism of homological spectral sequences $f: E \to F$} is a collection of morphisms $f^r_{p,q}: E^r_{p,q} \to F^r_{p,q}$ for each $r \ge r_0$ and all $p,q \in \mathbb{Z}$ such that:
+    \begin{enumerate}
+        \item Each $f^r$ is a \CrefAndHyperrefIfExist{definition:morphism_between_differential_bigraded_objects_in_a_category_with_a_zero_object}{morphism of differential bigraded objects}, i.e., $f^r_{p-r, q+r-1} \circ d^r_{p,q} = \delta^r_{p,q} \circ f^r_{p,q}$;
+        \item For each $r \ge r_0$, the morphism $f^{r+1}_{p,q}$ is the morphism induced by $f^r_{p,q}$ on homology, identifying $E^{r+1}_{p,q}$ with $H_{p,q}(E^r, d^r)$ and $F^{r+1}_{p,q}$ with $H_{p,q}(F^r, \delta^r)$.
+    \end{enumerate}
+    \item Let $E = \{E_r^{p,q}, d_r^{p,q}\}_{r \ge r_0}$ and $F = \{F_r^{p,q}, \delta_r^{p,q}\}_{r \ge r_0}$ be two \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequences} in $\mathcal{A}$. A \hldef{morphism of cohomological spectral sequences $f: E \to F$} is a collection of morphisms $f_r^{p,q}: E_r^{p,q} \to F_r^{p,q}$ for each $r \ge r_0$ and all $p,q \in \mathbb{Z}$ such that:
+    \begin{enumerate}
+        \item Each $f_r$ is a \CrefAndHyperrefIfExist{definition:morphism_between_differential_bigraded_objects_in_a_category_with_a_zero_object}{morphism of differential bigraded objects}, i.e., $f_r^{p+r, q-r+1} \circ d_r^{p,q} = \delta_r^{p,q} \circ f_r^{p,q}$;
+        \item For each $r \ge r_0$, the morphism $f_{r+1}^{p,q}$ is the morphism induced by $f_r^{p,q}$ on cohomology, identifying $E_{r+1}^{p,q}$ with $H^{p,q}(E_r, d_r)$ and $F_{r+1}^{p,q}$ with $H^{p,q}(F_r, \delta_r)$.
+    \end{enumerate}
+\end{enumerate}
+\end{definition}

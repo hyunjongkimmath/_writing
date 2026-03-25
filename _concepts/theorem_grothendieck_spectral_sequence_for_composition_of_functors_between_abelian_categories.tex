@@ -1,0 +1,10 @@
+\begin{theorem}[Grothendieck Spectral Sequence, {\cite[5.8.3]{weibel}}] \label{theorem:grothendieck_spectral_sequence_for_composition_of_functors_between_abelian_categories}
+    Let $\calA, \calB, \calC$ be \CrefAndHyperrefIfExist{definition:abelian_category}{abelian categories} with \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough injectives}. Let $G: \calA \to \calB$ and $F: \calB \to \calC$ be \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors}. Assume that $G$ sends \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective objects} of $\calA$ to \CrefAndHyperrefIfExist{definition:F_acyclic_object_for_a_left_or_right_functor_between_abelian_categories}{$F$-acyclic objects} of $\calB$. 
+
+    There is a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} for each $A$ in $\calA$ starting in the second page:
+    $$E_2^{p,q} = (R^p F) (R^q G)(A) \Rightarrow R^{p+q} (FG) (A).$$
+    (\Cref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives})
+
+    The exact sequence of low degree terms is 
+    $$0 \to (R^1 F)(GA) \to R^1(FG)(A) \to F(R^1 G(A)) \to (R^2 F)(GA) \to R^2(FG)A$$
+\end{theorem}

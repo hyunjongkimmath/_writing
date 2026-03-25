@@ -1,0 +1,27 @@
+\begin{definition}[cf. {\cite[5.2.11]{weibel}}, {\cite[Tag 012U]{stacks-project}}] \label{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+
+    \begin{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} in $\calA$. We say that $E$ \hldef{approaches $H$} (or \hldef{abuts to $H$}) if
+        
+        :
+        \begin{itemize}
+            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to an increasing filtration
+            $$F: \cdots \subseteq F_{p-1} H_n \subseteq F_p H_n \subseteq F_{p+1} H_n \subseteq \cdots \subseteq H_n,$$
+            and
+            \item the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}; that is, for every $n \in \mathbb{Z}$:
+            $$H_n = \bigcup_p F_p H_n \quad \text{and} \quad \bigcap_p F_p H_n = 0.$$
+        \end{itemize}
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a cohomological spectral sequence. We say that $E$ \hldef{approaches $H$} (or \hldef{abuts to $H$}) if:
+        \begin{itemize}
+            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to a decreasing filtration
+            $$F: H^n \supseteq \cdots \supseteq F^p H^n \supseteq F^{p+1} H^n \supseteq F^{p+2} H^n \supseteq \cdots,$$
+            and
+            \item the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}; that is, for every $n \in \mathbb{Z}$:
+            $$H^n = \bigcup_p F^p H^n \quad \text{and} \quad \bigcap_p F^p H^n = 0.$$
+        \end{itemize}
+    \end{enumerate}
+    In either case, the object $H$ is called the \hldef{abutment of the spectral sequence}. Note that if the filtrations are finite, then they are automatically exhaustive and separated. 
+
+    It should be noted that terminology for these notions may be very inconsistent in the literature.
+\end{definition}

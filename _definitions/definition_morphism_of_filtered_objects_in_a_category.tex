@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:morphism_of_filtered_objects_in_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+\begin{enumerate}
+    \item Let $(M, F)$ and $(N, G)$ be \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtered objects} in $\mathcal{C}$ with increasing filtrations. 
+    A \hldef{morphism of filtered objects} $f: (M, F) \to (N, G)$ is a morphism $f: M \to N$ in $\mathcal{C}$ such that for every $p \in \mathbb{Z}$, the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{image} of the composition $F_p M \hookrightarrow M \xrightarrow{f} N$ exists and is a \CrefAndHyperrefIfExist{definition:subobject_of_an_object_of_a_category}{subobject} contained in $G_p N$, i.e. $f(F_p M) \subseteq G_p N$.
+
+    \item Let $(M, F)$ and $(N, G)$ be filtered objects with decreasing filtrations. A \hldef{morphism of filtered objects} $f: (M, F) \to (N, G)$ is a morphism $f: M \to N$ such that for every $p \in \mathbb{Z}$, the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{image} of the composition $F^p M \hookrightarrow M \xrightarrow{f} N$ exists  and is a \CrefAndHyperrefIfExist{definition:subobject_of_an_object_of_a_category}{subobject} contained in $G^p N$, i.e. $f(F^p M) \subseteq G^p N$.
+\end{enumerate}
+When $\calC$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}, note that images automatically exist.
+\end{definition}

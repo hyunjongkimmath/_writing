@@ -1,0 +1,20 @@
+# Directories - Using globstar to ensure all nested subdirectories are blocked
+**/.git/**
+**/.vscode/**
+**/_cover_letters/**
+**/_misc/**
+**/_presentations/**
+**/_publication_list/**
+**/_statements_and_proposals/**
+**/_weaviate_brain/**
+
+# Specific Files
+.gitignore
+LICENSE
+LICENSE.md
+LICENSE.txt
+
+# Root-level specific ignores
+_weaviate_brain/
+.git/
+.vscode/

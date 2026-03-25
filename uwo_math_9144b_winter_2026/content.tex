@@ -475,9 +475,9 @@ In fact, Grothendieck posed certain additional axioms that some abelian categori
 
 \section{Chain complexes of objects in additive categories}
 
-\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{Chain complexes} are made of a sequence of morphisms in an additive category such that the composition of any two conseuctive morphisms is $0$. The first kind of chain complexes one should keep in mind are chain complexes of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules} over a ring.
+\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{Chain complexes} are made of a sequence of morphisms in an additive category such that the composition of any two conseuctive morphisms is $0$. The first kind of chain complexes one should keep in mind are chain complexes of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules} over a ring.
 
-\input{../_definitions/definition_chain_complex_in_an_additive_category.tex}
+\input{../_definitions/definition_chain_complex_of_objects_in_a_preadditive_category.tex}
 
 \input{../_definitions/definition_acyclic_complex_of_objects_in_an_abelian_category.tex}
 
@@ -516,7 +516,7 @@ In fact, Grothendieck posed certain additional axioms that some abelian categori
 \subsection{Homology and cohomology of a chain complex}
 
 \input{../_definitions/definition_boundary_cycle_coboundary_cocyble_of_a_chain_cochain_complex.tex}
-\input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex}
+\input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category.tex}
 
 \begin{example}[The Singular Complex of a Point]
 The simplest non-zero geometric example is the chain complex of a single point $X = \{*\}$. In singular homology, there is exactly one map $\sigma_n: \Delta^n \to X$ for each $n \geq 0$. Thus, $C_n(X) \cong \mathbb{Z}$ for all $n \geq 0$. The boundary map $d_n: C_n \to C_{n-1}$ is given by the alternating sum of face maps, which results in:
@@ -565,7 +565,7 @@ The boundary map $d_2: C_2 \to C_1$ is $d_2([v_0,v_1,v_2]) = [v_1,v_2] - [v_0,v_
 \input{../_definitions/definition_quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category.tex}
 
 \begin{remark}
-    Let $C_\bullet$ and $D_\bullet$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    Let $C_\bullet$ and $D_\bullet$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
     Even if $H_n(C_\bullet)$ and $H_n(D_\bullet)$ are isomorphic for all $n$, there need not exist a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} $C_\bullet \to D_\bullet$.
 \end{remark}
 
@@ -575,7 +575,7 @@ The boundary map $d_2: C_2 \to C_1$ is $d_2([v_0,v_1,v_2]) = [v_1,v_2] - [v_0,v_
 
 \subsection{Singular homology and cohomology groups of a topological space}
 
-\CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}{Singular chain complexes} of topological spaces are one of the quintessential examples of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes}. Many notions, such as \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cones} or \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy}, in the general theory of chain complexes, can be seen as formalized constructions of those notions from the theory of singular chain complexes.
+\CrefAndHyperrefIfExist{definition:singular_chain_complex_of_a_topological_space_with_coefficients_in_a_commutative_ring}{Singular chain complexes} of topological spaces are one of the quintessential examples of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes}. Many notions, such as \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cones} or \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy}, in the general theory of chain complexes, can be seen as formalized constructions of those notions from the theory of singular chain complexes.
 
 \subsubsection{Singular homology definitions}
 
@@ -840,7 +840,7 @@ This section roughly follows \cite[Section 2]{weibel}.
 
 \subsection{$\delta$-functors}
 
-$\delta$-functors are nice enough functors that yield long exact sequences of homology/cohomology from short exact sequences. The main general examples of (universal) $\delta$-functors are \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of \CrefAndHyperref{definition:exact_functor_between_abelian_categories}{right/left exact functors} (\Cref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}). In particular, the \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology/cohomology} functors $\mathbf{Ch}(\calA) \to \calA$ are the quintessential examples of (universal) $\delta$-functors.
+$\delta$-functors are nice enough functors that yield long exact sequences of homology/cohomology from short exact sequences. The main general examples of (universal) $\delta$-functors are \CrefAndHyperref{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{left/right derived functors} of \CrefAndHyperref{definition:exact_functor_between_abelian_categories}{right/left exact functors} (\Cref{theorem:long_exact_sequence_of_left_right_derived_functors_and_homological_delta_functors}). In particular, the \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{homology/cohomology} functors $\mathbf{Ch}(\calA) \to \calA$ are the quintessential examples of (universal) $\delta$-functors.
 
 \input{../_definitions/definition_homological_cohomological_delta_functor_between_abelian_categories.tex}
 
@@ -919,7 +919,7 @@ When a tensor product is being considered, ``flat'' objects are used to construc
 \input{../_concepts/theorem_equivalent_conditions_for_a_ring_to_be_left_right_perfect.tex}
 
 \begin{proposition} 
-If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
+If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
 \end{proposition}
 
 \input{../_concepts/corollary_left_right_artinian_rings_are_left_right_perfect.tex}
@@ -1627,6 +1627,99 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \end{example}
 
 
+\section{Spectral Sequences}
+
+\subsection{Graded objects}
+
+\input{../_definitions/definition_graded_object_in_a_category.tex}
+\input{../_definitions/definition_morphism_of_graded_objects_in_an_abelian_category.tex}
+\input{../_definitions/definition_category_of_graded_objects_in_a_category.tex}
+\input{../_concepts/proposition_category_of_graded_objects_in_an_abelian_category_is_abelian.tex}
+\input{../_definitions/definition_graded_subobject_of_a_graded_object_of_a_category.tex}
+\input{../_definitions/definition_graded_module_of_rings.tex}
+
+\input{../_definitions/definition_differential_graded_object_in_a_category_with_a_zero_object.tex}
+\TODO{morphism of differential graded object}
+\input{../_concepts/lemma_differential_graded_object_in_a_preadditive_category_is_chain_complex.tex}
+
+\input{../_definitions/definition_bigraded_object_in_a_category.tex}
+\input{../_definitions/definition_differential_on_a_bigraded_object_in_a_category_with_a_zero_object.tex}
+\input{../_definitions/definition_morphism_between_differential_bigraded_objects_in_a_category_with_a_zero_object.tex}
+
+\input{../_definitions/definition_homology_and_cohomology_of_a_differential_bigraded_object_in_an_abelian_category.tex}
+
+\subsection{Filtered objects}
+
+\input{../_definitions/definition_filtration_on_an_object_of_a_category.tex}
+
+\input{../_definitions/definition_morphism_of_filtered_objects_in_a_category.tex}
+
+\input{../_definitions/definition_category_of_filtered_objects_in_a_category.tex}
+
+\input{../_definitions/definition_strict_morphism_of_filtered_objects_in_an_abelian_category.tex}
+
+
+\input{../_definitions/definition_exhaustive_separated_filtrations_on_an_abelian_category.tex}
+
+
+\subsection{Filtered graded objects}
+
+\input{../_definitions/definition_filtered_graded_object_in_a_category.tex}
+
+
+
+\input{../_definitions/definition_bigraded_object_associated_to_a_filtered_graded_object_in_an_abelian_category.tex}
+
+
+\subsection{Spectral sequences}
+
+\input{../_definitions/definition_spectral_sequence_in_an_abelian_category.tex}
+
+\input{../_definitions/definition_morphism_of_spectral_sequences_in_an_abelian_category.tex}
+
+\input{../_concepts/lemma_mapping_lemma_for_spectral_sequences_in_abelian_categories.tex}
+
+\input{../_definitions/definition_stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page.tex}
+
+\subsection{Convergence of spectral sequences to graded objects}
+
+\input{../_definitions/definition_weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex}
+
+\input{../_definitions/definition_abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category.tex}
+
+\input{../_definitions/definition_first_quadrant_spectral_sequence.tex}
+
+\input{../_definitions/definition_bounded_homological_cohomological_spectral_sequence.tex}
+
+\input{../_definitions/definition_regular_spectral_sequence_in_an_abelian_category.tex}
+
+
+\input{../_definitions/definition_converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex}
+
+\input{../_concepts/lemma_bounded_below_spectral_sequence_in_abelian_category_converges_to_any_graded_object_that_it_abuts_to.tex}
+
+\input{../_definitions/definition_compatible_with_a_morphism_between_spectral_sequences_in_an_abelian_category_for_filtered_objects_that_the_spectral_sequences_weakly_converge_to.tex}
+
+
+
+\input{../_concepts/theorem_comparison_theorem_of_spectral_sequences_in_an_abelian_category.tex}
+
+
+
+\subsection{Spectral sequence of a filtration of a chain complex}
+
+\input{../_concepts/theorem_construction_theorem_of_spectral_sequences_from_a_filtration_on_a_complex_in_a_abelian_category.tex}
+
+\TODO{classical convergence theorem}
+
+
+
+\input{../_concepts/theorem_grothendieck_spectral_sequence_for_composition_of_functors_between_abelian_categories.tex}
+
+\input{../_concepts/theorem_lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology.tex}
+
+
+
 
 \section{Left/right derived functors of right/left exact functors}
 
@@ -1781,7 +1874,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 
 \begin{problem}
-    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $\{A_{\bullet, i}\}_{i \in I}$ be a small collection of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in $\calA$.
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Let $\{A_{\bullet, i}\}_{i \in I}$ be a small collection of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} in $\calA$.
     \begin{enumerate}
         \item precisely show that there exists a ``canonical'' ``comparison'' morphism  
         $$\bigoplus_{i \in I} H_n(A_{\bullet, i}) \to H_n\left( \bigoplus_{i \in I} A_{\bullet, i} \right)$$
@@ -1795,12 +1888,12 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 \begin{problem}
-    Suppose that $f,g: B_\bullet \to C_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{homotopic} \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain maps} of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+    Suppose that $f,g: B_\bullet \to C_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{homotopic} \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain maps} of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
     Show that the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cones} $\operatorname{cone}(f)$ and $\operatorname{cone}(g)$ are isomorphic chain complexes.
 \end{problem}
 
 \begin{problem}
-    Suppose that $f: C_\bullet \to D_\bullet$ is a chain map of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
+    Suppose that $f: C_\bullet \to D_\bullet$ is a chain map of \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:additive_category_preadditive_category}{additive category}. 
     Show that $f$ is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{null-homotopic} via a chain homotopy $s$ (where $s_n: C_n \to D_{n+1}$) if and only if there exists a chain map $g: \operatorname{cone}(f)_\bullet \to D_\bullet$ (\Cref{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}) such that $g_n = (\id_{D_n}, s_{n-1})$. 
 \end{problem}
 
@@ -1823,7 +1916,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 \begin{problem}
-    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Further assume that $A_\bullet$ is bounded below\footnote{I claim that this hypothesis is not necessary for the truth of the statements in this problem, but also there is a fact in these notes stated in a way that uses this hypothesis.} as a (homological) chain complex, i.e. it is of the form
+    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Further assume that $A_\bullet$ is bounded below\footnote{I claim that this hypothesis is not necessary for the truth of the statements in this problem, but also there is a fact in these notes stated in a way that uses this hypothesis.} as a (homological) chain complex, i.e. it is of the form
     $$\cdots \to A_{n_0 + 2} \to A_{n_0 +1} \to A_{n_0} \to 0 \to 0 \to 0 \to \cdots $$
     for some integer $n_0$.
     
@@ -1857,14 +1950,15 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     Let $f: X \to Y$ be a continuous map of topological spaces. 
     \begin{enumerate}
         \item Show that for all $\calG \in \Sh(Y, \Ab)$ and all $x \in X$,  
-        $$(f^{-1} \calG)_x \cong \calG_{f(x)}$$
+        $$(f^{*} \calG)_x \cong \calG_{f(x)}$$
+        (\Cref{definition:inverse_image_of_a_sheaf_on_a_topological_space})
 
-        \item Show that $f^*: \Sh(Y, \Ab) \to \Sh(X, \Ab)$ is exact.
+        \item Show that $f^*: \Sh(Y, \Ab) \to \Sh(X, \Ab)$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact}.
     \end{enumerate}
 \end{problem}
 
 \begin{problem}
-    Let $i: Z \hookrightarrow X$ be the embedding of a \CrefAndHyperrefIfExist{definition:topological_space}{closed subspace} $Z$ of $X$. Show that $i_*: \Sh(\calZ, \Ab) \to \Sh(\calZ, \Ab)$ (\Cref{definition:direct_image_of_a_sheaf_on_a_topological_space}) (\Cref{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}) is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor}.
+    Let $i: Z \hookrightarrow X$ be the embedding of a \CrefAndHyperrefIfExist{definition:topological_space}{closed subspace} $Z$ of $X$. Show that $i_*: \Sh(Z, \Ab) \to \Sh(Z, \Ab)$ (\Cref{definition:direct_image_of_a_sheaf_on_a_topological_space}) (\Cref{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}) is an \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact functor}.
 \end{problem}
 
 \begin{problem}
@@ -1891,11 +1985,18 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     \begin{center}
         For an open subset $U \subseteq \bbR\bbP^2$, let $\Gamma(U, \Lambda)$ be the set of continuous functions $f: \pi^{-1}(U) \to \bbZ$ (where $\bbZ$ is equipped with the discrete topology) such that for all $x \in \pi^{-1}(U)$, we have $f(-x) = -f(x)$. 
     \end{center}
-    Let $\calU = \{U_0, U_1,U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
+    % Let $\calU = \{U_0, U_1,U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
+    % \begin{itemize}
+    %     \item $U_0$: the set of points $[x:y:z]$ such that $|x| > \sqrt{y^2+z^2}$.
+    %     \item $U_1$: the set of points $[x:y:z]$ such that $|y| > \sqrt{x^2+z^2}$.
+    %     \item $U_2$: the set of points $[x:y:z]$ such that $|z| > \sqrt{x^2+y^2}$.
+    % \end{itemize}
+    Let $\calU = \{U_0, U_1, U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
+    % standard open cover of $\bbR\bbP^2$ defined by the non-vanishing of the homogeneous coordinates:
     \begin{itemize}
-        \item $U_0$: the set of points $[x:y:z]$ such that $|x| > \sqrt{y^2+z^2}$.
-        \item $U_1$: the set of points $[x:y:z]$ such that $|y| > \sqrt{x^2+z^2}$.
-        \item $U_2$: the set of points $[x:y:z]$ such that $|z| > \sqrt{x^2+y^2}$.
+        \item $U_0 = \{ [x:y:z] \in \bbR\bbP^2 \mid x \neq 0 \}$
+        \item $U_1 = \{ [x:y:z] \in \bbR\bbP^2 \mid y \neq 0 \}$
+        \item $U_2 = \{ [x:y:z] \in \bbR\bbP^2 \mid z \neq 0 \}$
     \end{itemize}
     \begin{enumerate}
         \item Show that $\Lambda$ is a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{locally constant sheaf}.

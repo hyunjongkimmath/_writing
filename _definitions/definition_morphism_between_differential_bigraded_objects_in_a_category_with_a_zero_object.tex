@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:morphism_between_differential_bigraded_objects_in_a_category_with_a_zero_object}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} with a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{zero object} $0$. Let $(E, d)$ and $(F, \delta)$ be two \CrefAndHyperrefIfExist{definition:differential_on_a_bigraded_object_in_a_category_with_a_zero_object}{differential bigraded objects} in $\mathcal{A}$ where the differentials $d$ and $\delta$ have the same bidegree $(\delta_p, \delta_q)$.
+A \hldef{morphism of differential bigraded objects $f: (E, d) \to (F, \delta)$} is a collection of morphisms $f_{p,q}: E_{p,q} \to F_{p,q}$ in $\mathcal{A}$ for all $p,q \in \mathbb{Z}$ such that the following \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} commutes for every pair $(p,q)$:
+$$
+\begin{array}{ccc}
+E_{p,q} & \xrightarrow{f_{p,q}} & F_{p,q} \\
+d \downarrow & & \downarrow \delta \\
+E_{p+\delta_p, q+\delta_q} & \xrightarrow{f_{p+\delta_p, q+\delta_q}} & F_{p+\delta_p, q+\delta_q}
+\end{array}
+$$
+That is, $f_{p+\delta_p, q+\delta_q} \circ d = \delta \circ f_{p,q}$ for all $p, q \in \mathbb{Z}$.
+\end{definition}

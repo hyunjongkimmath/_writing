@@ -2,14 +2,14 @@
 
 \begin{enumerate}
     \item 
-    Let $(C_\bullet, d^C_\bullet)$, $(D_\bullet, d^D_\bullet)$, and $(E_\bullet, d^E_\bullet)$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Recall that \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\calA)$} is itself an abelian category (\Cref{proposition:category_of_chain_complexes_in_an_additive_category_is_additive}).
+    Let $(C_\bullet, d^C_\bullet)$, $(D_\bullet, d^D_\bullet)$, and $(E_\bullet, d^E_\bullet)$ be \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. Recall that \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{$\mathbf{Ch}(\calA)$} is itself an abelian category (\Cref{proposition:category_of_chain_complexes_in_an_additive_category_is_additive}).
     Assume that 
     \[ 0 \longrightarrow C_\bullet \xrightarrow{\alpha_\bullet} D_\bullet \xrightarrow{\beta_\bullet} E_\bullet \longrightarrow 0 \]
     is a \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequence} of chain complexes. Equivalently, for each integer $n$, 
     \[ 0 \to C_n \xrightarrow{\alpha_n} D_n \xrightarrow{\beta_n} E_n \to 0 \]
     is an exact sequence of $R$-modules.
 
-    Then there exists a natural \hldef{long exact sequence} in \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{homology}:
+    Then there exists a natural \hldef{long exact sequence} in \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{homology}:
     \[
     \cdots \longrightarrow H_{n+1}(E_\bullet) \xrightarrow{\delta_{n+1}} H_n(C_\bullet)
     \xrightarrow{H_n(\alpha)} H_n(D_\bullet)
@@ -19,12 +19,12 @@
     \]
     The homomorphisms \hl{$\delta_n: H_n(E_\bullet) \to H_{n-1}(C_\bullet)$} are called the \hldef{connecting homomorphisms} induced by the short exact sequence of chain complexes.
 
-    Moreover, this long exact sequence is natural with respect to \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{morphisms} of short exact sequences of chain complexes.
+    Moreover, this long exact sequence is natural with respect to \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{morphisms} of short exact sequences of chain complexes.
 
     \item Let $(C^\bullet, d_C^\bullet)$, $(D^\bullet, d_D^\bullet)$, and $(E^\bullet, d_E^\bullet)$ be 
-    \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{cochain complexes} 
+    \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{cochain complexes} 
     in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
-    Recall that \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_an_additive_category}{$\mathbf{Ch}(\calA)$} 
+    Recall that \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{$\mathbf{Ch}(\calA)$} 
     is itself an abelian category 
     (\Cref{proposition:category_of_chain_complexes_in_an_additive_category_is_additive}).
 
@@ -39,7 +39,7 @@
     \]
     is an exact sequence of $R$-modules.
 
-    Then there exists a natural \hldef{long exact sequence} in \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category}{cohomology}:
+    Then there exists a natural \hldef{long exact sequence} in \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{cohomology}:
     \[
     \cdots \longrightarrow H^{n-1}(E^\bullet) 
     \xrightarrow{\delta^{n-1}} H^{n}(C^\bullet)

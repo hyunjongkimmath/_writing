@@ -1,0 +1,36 @@
+\begin{theorem}[{\cite[Construction Theorem 5.4.1]{weibel}}, {\cite[012M]{stacks-project}}] \label{theorem:construction_theorem_of_spectral_sequences_from_a_filtration_on_a_complex_in_a_abelian_category}
+    Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}. 
+    \begin{enumerate}
+        \item Let $C_\bullet \in \mathbf{Ch}_\bullet(\calA)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{(homological) chain complex} and let 
+        $$F: \cdots \subseteq F_{p-1} C_\bullet \subseteq F_{p} C_\bullet \subseteq \cdots $$
+        be an \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{(increasing) filtration} of $C$. There is a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} $(E^r, d^r)_{r \geq 0}$ in $\calA$ whose $0$th and $1$st pages have objects given by 
+        \begin{align*}
+            E^0_{pq} &= \operatorname{Gr}_{p,q}(C_{\bullet}) = F_p C_{p+q} / F_{p-1} C_{p+q} \\
+            E^1_{pq} &= H_{p+q}(\operatorname{Gr}_p(C_{\bullet})) \\
+        \end{align*}
+        (\Cref{definition:bigraded_object_associated_to_a_filtered_graded_object_in_an_abelian_category}) (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category})
+        and whose $0$th page has differentials 
+        \begin{align*}
+            d^0_{pq}: E^0_{pq} = F_p C_{p+q} / F_{p-1} C_{p+q} \to F_p C_{p+q-1} / F_{p-1} C_{p+q-1} = E^0_{p, q-1}
+        \end{align*}
+        induced by the differential $d_{p+q}$ of the complex $C_\bullet$.
+
+        One might call $(E^r, d^r)_{r \geq 0}$ the \hldef{spectral sequence associated to the filtered complex $(C_\bullet, F)$}.
+
+        \item Let $C^\bullet \in \mathbf{Ch}^\bullet(\calA)$ be a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{cohomological complex} and let 
+        $$F:  \cdots \supseteq F^{p} C^\bullet  \supseteq F^{p+1} C^\bullet \supseteq \cdots $$
+        be a \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{(decreasing) filtration} of $C$. There is a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} $(E_r, d_r)_{r \geq 0}$ whose $0$th and $1$st pages have objects given by 
+        \begin{align*}
+            E_0^{pq} &= \operatorname{Gr}^{p,q}(C^{\bullet}) = F^p C^{p+q} / F^{p+1} C^{p+q}\\
+            E_1^{pq} &= H^{p+q}(\operatorname{Gr}^p(C^{\bullet})) \\
+        \end{align*}
+        (\Cref{definition:bigraded_object_associated_to_a_filtered_graded_object_in_an_abelian_category}) (\Cref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category})
+        and whose $0$th page has differentials 
+        \begin{align*}
+            d_0^{pq}: E_0^{pq} = F^p C^{p+q} / F^{p+1} C^{p+q} \to F^p C^{p+q+1} / F^{p+1} C^{p+q+1} = E_0^{p, q+1}
+        \end{align*}
+        induced by the differential $d^{p+q}$ of the complex $C^\bullet$.
+
+        One might call $(E_r, d_r)_{r \geq 0}$ the \hldef{spectral sequence associated to the filtered complex $(C^\bullet, F)$}.
+    \end{enumerate}
+\end{theorem}

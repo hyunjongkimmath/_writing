@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:bounded_homological_cohomological_spectral_sequence}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} $E$ is called \hldef{bounded} if for every integer $n$, there are only finitely many pairs $(p,q)$ with $p+q=n$ such that $E^{r_0}_{p,q} \neq 0$.
+
+        % Boundedness ensures that the filtration on the abutment $H^n$ is finite.
+
+        \item A \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} $E$ is called \hldef{bounded} if for every integer $n$, there are only finitely many pairs $(p,q)$ with $p+q=n$ such that $E_{r_0}^{p,q} \neq 0$.
+
+        % Boundedness ensures that the filtration on the abutment $H^n$ is finite.
+
+        \item A homological spectral sequence is said to be \hldef{bounded below} if for each $n$ there is an integer $s = s(n)$ such that the terms $E_{pq}^a$ with $n = p+q$ vanish for all $p < s$. 
+
+        \item A cohomological spectral sequence is said to be \hldef{bounded below} if for each $n$ there is an integer $s = s(n)$ such that the terms $E^{pq}_a$ with $n = p+q$ vanish for all $p > s$. 
+    \end{enumerate}
+\end{definition}

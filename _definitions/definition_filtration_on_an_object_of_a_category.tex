@@ -1,0 +1,30 @@
+\begin{definition} \label{definition:filtration_on_an_object_of_a_category}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+    A \hldef{filtration $F$ on an object $M \in \mathcal{C}$} is a family of \CrefAndHyperrefIfExist{definition:subobject_of_an_object_in_a_category}{subobjects} of $M$ indexed by $\mathbb{Z}$.
+
+    \begin{enumerate}
+        \item An \hldef{increasing filtration} is a family $\{F_p M\}_{p \in \mathbb{Z}}$ such that $F_p M \subseteq F_{p+1} M$ for all $p \in \mathbb{Z}$:
+        $$\dots \subseteq F_{p-1}M \subseteq F_pM \subseteq F_{p+1}M \subseteq \dots \subseteq M.$$
+        
+        \item A \hldef{decreasing filtration} is a family $\{F^p M\}_{p \in \mathbb{Z}}$ such that $F^{p+1} M \subseteq F^p M$ for all $p \in \mathbb{Z}$:
+        $$\dots \subseteq F^{p+1}M \subseteq F^pM \subseteq F^{p-1}M \subseteq \dots \subseteq M.$$
+    \end{enumerate}
+
+    The pair $(M, F)$ is called a \hldef{filtered object in $\mathcal{C}$}. 
+\end{definition}
+
+% \begin{definition} \label{definition:filtration_on_an_object_of_a_category}
+
+%     Let $M$ be an object in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} $\mathcal{A}$. 
+%     A \hldef{filtration $F$ on $M$} is a family of subobjects of $M$ indexed by $\mathbb{Z}$. There are two standard conventions:
+
+%     \begin{enumerate}
+%         \item An \hldef{increasing filtration} (or \hldef{ascending filtration}) is denoted by subscripts $\{F_p M\}_{p \in \mathbb{Z}}$ such that:
+%         $$\hlin{\dots \hookrightarrow F_{p-1}M \hookrightarrow F_pM \hookrightarrow F_{p+1}M \hookrightarrow \dots \hookrightarrow M.}$$
+        
+%         \item A \hldef{decreasing filtration} (or \hldef{descending filtration}) is denoted by superscripts $\{F^p M\}_{p \in \mathbb{Z}}$ such that:
+%         $$\hlin{\dots \hookrightarrow F^{p+1}M \hookrightarrow F^pM \hookrightarrow F^{p-1}M \hookrightarrow \dots \hookrightarrow M.}$$
+%     \end{enumerate}
+
+%     The pair $(M, F)$ is called a \hldef{filtered object}. 
+% \end{definition}

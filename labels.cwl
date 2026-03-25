@@ -1,1 +1,0 @@
-\CrefAndHyperrefIfExist{label}{text}#r

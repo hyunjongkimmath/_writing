@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:bigraded_object_associated_to_a_filtered_graded_object_in_an_abelian_category}
+    Let $(M, F)$ be a \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_a_category}{filtered graded object} in an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} $\mathcal{A}$. 
+    The \hldef{associated graded object} is the \CrefAndHyperrefIfExist{definition:bigraded_object_in_a_category}{bigraded object} defined as follows:
+
+    \begin{enumerate}
+        \item If $F = \{F_p M\}_{p \in \mathbb{Z}}$ is an \textbf{increasing filtration}, the associated graded object is denoted \hl{$\text{Gr}^F(M)$} or simply \hl{$\text{Gr}(M)$}. Its associated graded pieces $\text{Gr}^F_{p,q}(M)$ are defined by the \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequences}:
+        $$0 \to F_{p-1} M_{p+q} \to F_p M_{p+q} \to \text{Gr}^F_{p,q}(M) \to 0.$$
+        In other words, $\text{Gr}^F_{p,q}(M)$ is the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{cokernel} of the inclusion $F_{p-1} M_{p+q} \hookrightarrow F_p M_{p+q}$, i.e., $\text{Gr}^F_{p,q}(M) \cong F_p M_{p+q} / F_{p-1} M_{p+q}$.
+
+        \item If $F = \{F^p M\}_{p \in \mathbb{Z}}$ is a \textbf{decreasing filtration}, the associated graded object is denoted \hl{$\text{Gr}_F(M)$} or simply \hl{$\text{Gr}(M)$}. Its associated graded pieces $\text{Gr}_F^{p,q}(M)$ are defined by the \CrefAndHyperrefIfExist{definition:short_exact_sequence_in_an_additive_category}{short exact sequences}:
+        $$0 \to F^{p+1} M^{p+q} \to F^p M^{p+q} \to \text{Gr}_F^{p,q}(M) \to 0.$$
+        In other words, $\text{Gr}_F^{p,q}(M)$ is the \CrefAndHyperrefIfExist{definition:image_coimage_of_a_morphism_in_a_category}{cokernel} of the inclusion $F^{p+1} M^{p+q} \hookrightarrow F^p M^{p+q}$, i.e., $\text{Gr}_F^{p,q}(M) \cong F^p M^{p+q} / F^{p+1} M^{p+q}$.
+    \end{enumerate}
+\end{definition}

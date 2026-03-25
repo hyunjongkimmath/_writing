@@ -1,21 +1,24 @@
-\begin{definition} \label{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}
-    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $H = \{H_n\}_{n \in \mathbb{Z}}$ be a \CrefAndHyperrefIfExist{definition:graded_object_in_an_abelian_category}{graded object} in $\mathcal{A}$.
+\begin{definition}[cf. {\cite[5.2.5]{weibel}}, {\cite[Tag 012U]{stacks-project}}] \label{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} and let $H = \{H_n\}_{n \in \mathbb{Z}}$ be a \CrefAndHyperrefIfExist{definition:graded_object_in_a_category}{graded object} in $\mathcal{A}$.
 
     \begin{enumerate}
-        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. We say that $E$ \hldef{converges to $H$}, denoted \hl{$E^r_{p,q} \Rightarrow H_{p+q}$}, if:
-        \begin{enumerate}
-            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$, and
-            \item the weak convergence is with respect to finite, \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{increasing filtrations}
-            $$F: 0 = F_s H_n \subseteq \cdots \subseteq F_{p-1} H_n \subseteq F_p H_n \subseteq F_{p+1} H_n \subseteq \cdots \subseteq F_t H_n = H_n$$
-        \end{enumerate}
+        \item Let $E = \{E^r, d^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. We say that $E$ \hldef{converges to $H$} (more precisely, to $(H,F)$ with $F$ a collection of filtrations on the $H_n$), denoted \hl{$E^r_{p,q} \Rightarrow H_{p+q}$}, if $E$ \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abuts} to $H$, $E$ is \CrefAndHyperrefIfExist{definition:regular_spectral_sequence_in_an_abelian_category}{regular}, and $H_n = \varprojlim_{p} (H_n /F_p H_n)$ for each $n$.
+        
+        % :
+        % $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{increasing filtrations}.
 
-        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. We say that $E$ \hldef{converges to $H$}, denoted \hl{$E_r^{p,q} \Rightarrow H^{p+q}$}, if:
-        \begin{enumerate}
-            \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$, and
-            \item the weak convergence is with respect to finite, \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_an_abelian_category}{decreasing filtrations}
-            $$F: H^n = F^s H^n \supseteq \cdots \supseteq F^{p-1} H^n \supseteq F^p H^n \supseteq F^{p+1} H^n \supseteq \cdots \supseteq F^t H^n = 0$$
-        \end{enumerate}
+        \item Let $E = \{E_r, d_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. We say that $E$ \hldef{converges to $H$} (more precisely, to $(H,F)$ with $F$ as below), denoted \hl{$E_r^{p,q} \Rightarrow H^{p+q}$} if $E$ abuts to $H$, $E$ is regular, and $H^n = \varinjlim_{p} (H^n /F^p H^n)$ for each $n$.
+
+        
+        % , if:
+
+        % $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$ with respect to \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{decreasing filtrations}.
+
+        % \begin{enumerate}
+        %     \item $E$ \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weakly converges} to $H$, and
+        %     \item the weak convergence is with respect to finite, \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive, and separated} \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{decreasing filtrations}
+        %     $$F: H^n = F^s H^n \supseteq \cdots \supseteq F^{p-1} H^n \supseteq F^p H^n \supseteq F^{p+1} H^n \supseteq \cdots \supseteq F^t H^n = 0$$
+        % \end{enumerate}
     \end{enumerate}
-    In either case, the object $H$ is called the \hldef{abutment of the spectral sequence}.
-    Usually, $H$ is explicitly realized as the homology $H_*(C)$ or cohomology $H^*(C)$ of a filtered complex $C$.
+    % Usually, $H$ is explicitly realized as the homology $H_*(C)$ or cohomology $H^*(C)$ of a filtered complex $C$.
 \end{definition}
