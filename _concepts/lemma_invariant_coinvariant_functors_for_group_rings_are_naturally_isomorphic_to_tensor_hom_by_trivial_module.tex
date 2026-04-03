@@ -10,9 +10,30 @@
     of left $R$-modules by considering $R$ as an $R[G]$-$R$-bimodule.
 \end{lemma}
 
+% \begin{proof}
+%     \TODO{}
+%     Consider the functor
+%     $$\Hom_R(R, -): _{R}\Mod \to _{R[G]} \Mod$$
+%     where $\Hom_R$ here is the group of left $R$-module homomorphisms and $R$ is considered as an $R-R[G]$-bimodule.  
+% \end{proof}
+
+
 \begin{proof}
-    \TODO{}
-    Consider the functor
-    $$\Hom_R(R, -): _{R}\Mod \to _{R[G]} \Mod$$
-    where $\Hom_R$ here is the group of left $R$-module homomorphisms and $R$ is considered as an $R-R[G]$-bimodule.  
+    \begin{enumerate}
+        \item To show $A_G \cong R \otimes_{R[G]} A$, consider the $R$-linear map 
+        $\psi: A \to R \otimes_{R[G]} A$ defined by $a \mapsto 1 \otimes a$. 
+        For any $g \in G$ and $a \in A$, the tensor relation over $R[G]$ gives:
+        $$1 \otimes (ga) = (1 \cdot g) \otimes a = 1 \otimes a$$
+        since $R$ is a trivial right $R[G]$-module. Thus, $1 \otimes (ga - a) = 0$, so $\psi$ factors through the quotient $A_G = A / \langle ga - a \rangle$. 
+        The inverse is given by the map $R \otimes_{R[G]} A \to A_G$ sending $r \otimes a \mapsto r[a]$, which is well-defined by the same calculation. 
+        This is clearly natural in $A$.
+
+        \item To show $A^G \cong \Hom_{R[G]}(R, A)$, consider the evaluation map:
+        $$\text{ev}_1: \Hom_{R[G]}(R, A) \to A, \quad f \mapsto f(1)$$
+        Since $f$ is $R[G]$-linear and $R$ is a trivial left $R[G]$-module, we have:
+        $$f(1) = f(g \cdot 1) = g \cdot f(1)$$
+        for all $g \in G$. This implies $\text{ev}_1(f) \in A^G$. 
+        Conversely, any $a \in A^G$ defines an $R[G]$-linear map $f_a: R \to A$ via $f_a(r) = ra$. This is $G$-equivariant because $f_a(g \cdot r) = f_a(r) = ra$ and $g \cdot f_a(r) = g(ra) = r(ga) = ra$ (since $ga=a$). 
+        The maps $f \mapsto f(1)$ and $a \mapsto f_a$ are inverse $R$-module isomorphisms and are natural in $A$.
+    \end{enumerate}
 \end{proof}

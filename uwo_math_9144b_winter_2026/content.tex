@@ -1627,6 +1627,8 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \end{example}
 
 
+\import{../_excerpts}{excerpts_group_homology_cohomology.tex}
+
 \section{Spectral Sequences}
 
 \subsection{Graded objects}
@@ -1688,6 +1690,45 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \input{../_definitions/definition_abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category.tex}
 
 \input{../_definitions/definition_first_quadrant_spectral_sequence.tex}
+\begin{lemma} \label{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}
+    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+    \begin{enumerate}
+        \item 
+        Let $E = \{E^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. Suppose that $E$ \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abuts} to a \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_a_category}{filtered graded object} $H$ in $\calA$ where the \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtration} is increasing. The filtration on $H_n$ is finite. More specfically, the filration can be expressed in the form
+        $$0 = F_{-1} H_n \subseteq F_0 H_n \subseteq F_1 H_n \subseteq \cdots F_n H_n = H_n.$$
+
+        \item 
+        Let $E = \{E_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. Suppose that $E$ \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abuts} to a \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_a_category}{filtered graded object} $H$ in $\calA$ where the \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtration} is decreasing. The filtration on $H^n$ is finite. More specifically, the filtration can be expressed in the form
+        $$H^n = F^0 H^n \supseteq F^1 H^n \supseteq F^2 H^n \supseteq \cdots \supseteq F^n H^n \supseteq F^{n+1} H^n = 0.$$
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item By the \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weak convergence}, there are isomorphisms
+        $$E_{p,q}^\infty \cong \text{Gr}_p H_{p+q} := \frac{F_p H_{p+q}}{F_{p-1} H_{p+q}}$$
+        for all $p,q$. In particular, for a fixed $n$, we have $\text{Gr}_p H_n \cong E_{p, n-p}^\infty$. Since the spectral sequence is first quadrant, $E_{p,q}^r = 0$ if $p < 0$ or $q < 0$. This implies $E_{p, n-p}^\infty = 0$ whenever $p < 0$ or $p > n$.
+
+        Consequently, $\text{Gr}_p H_n = 0$ for $p < 0$ and $p > n$. This vanishing of the graded pieces means that the filtration stabilizes:
+        \begin{align*}
+            \cdots = F_{-2} H_n = F_{-1} H_n \quad \text{and} \quad F_n H_n = F_{n+1} H_n = \cdots
+        \end{align*}
+        Since the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}, we have $F_{-1} H_n = 0$ and $F_n H_n = H_n$. This yields the desired finite filtration:
+        $$0 = F_{-1} H_n \subseteq F_0 H_n \subseteq F_1 H_n \subseteq \cdots \subseteq F_n H_n = H_n.$$
+
+        \item By the \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weak convergence}, there are isomorphisms
+        $$E_\infty^{p,q} \cong \text{Gr}^p H^{p+q} := \frac{F^p H^{p+q}}{F^{p+1} H^{p+q}}$$
+        for all $p,q$. In particular, for a fixed $n$, we have $\text{Gr}^p H^n \cong E_\infty^{p, n-p}$. Since the spectral sequence is first quadrant, $E_r^{p,q} = 0$ if $p < 0$ or $q < 0$. This implies $E_\infty^{p, n-p} = 0$ whenever $p < 0$ or $p > n$.
+
+        Consequently, $\text{Gr}^p H^n = 0$ for $p < 0$ and $p > n$. This vanishing of the graded pieces means that the filtration stabilizes:
+        \begin{align*}
+            \cdots = F^{-1} H^n = F^0 H^n \quad \text{and} \quad F^n H^n = F^{n+1} H^n = \cdots
+        \end{align*}
+        Since the filtration is \CrefAndHyperrefIfExist{definition:exhaustive_separated_filtrations_on_an_abelian_category}{exhaustive and separated}, we have $F^0 H^n = H^n$ and $F^{n+1} H^n = 0$. This yields the desired finite filtration:
+        $$H^n = F^0 H^n \supseteq F^1 H^n \supseteq F^2 H^n \supseteq \cdots \supseteq F^n H^n \supseteq F^{n+1} H^n = 0.$$
+    \end{enumerate}
+    
+\end{proof}
+
 
 \input{../_definitions/definition_bounded_homological_cohomological_spectral_sequence.tex}
 
@@ -1697,6 +1738,14 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \input{../_definitions/definition_converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category.tex}
 
 \input{../_concepts/lemma_bounded_below_spectral_sequence_in_abelian_category_converges_to_any_graded_object_that_it_abuts_to.tex}
+
+\input{../_definitions/definition_base_fiber_terms_of_first_quadrant_spectral_sequence_in_an_abelian_category.tex}
+
+\input{../_definitions/definition_homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category.tex}
+
+The edge and fiber homomorphisms yield the five term exact sequence:
+
+\input{../_concepts/proposition_five_term_exact_sequence_exact_sequence_of_low_degree_terms_for_a_convergent_first_quadrant_spectral_sequence_in_an_abelian_category.tex}
 
 \input{../_definitions/definition_compatible_with_a_morphism_between_spectral_sequences_in_an_abelian_category_for_filtered_objects_that_the_spectral_sequences_weakly_converge_to.tex}
 
@@ -1714,9 +1763,182 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 
 
 
+\subsection{Grothendieck spectral sequences and consequences}
+
+One generality in which spectral sequences are useful would be Grothendieck spectral sequences.
+
 \input{../_concepts/theorem_grothendieck_spectral_sequence_for_composition_of_functors_between_abelian_categories.tex}
 
+\input{../_concepts/theorem_leray_spectral_sequence_for_sheaf_cohomology_and_a_continuous_map_of_topological_spaces.tex}
+\input{../_concepts/theorem_serre_spectral_sequence_for_singular_homology_groups_for_serre_fibration.tex}
 \input{../_concepts/theorem_lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology.tex}
+
+
+\subsection{Example computations using specctral sequences}
+
+\begin{example} \label{example:spectral_sequence_computation_of_singular_homology_of_complex_projective_space}
+    Let $k \geq 1$ be an integer. Consider the \CrefAndHyperrefIfExist{definition:fiber_bundle_of_topological_spaces}{fiber bundle} $S^1 \to S^{2k+1} \to \mathbb{C}\bbP^k$\CrefIfExists{definition:n_dimensional_unit_sphere}\CrefIfExists{definition:real_or_complex_projective_space}, where 
+    $$S^{2k+1} = \left\{(z_0,\ldots,z_k) \in \bbC^{k+1} : \sum |z_i|^2 = 1 \right\}$$
+    and the projection map $S^{2k+1} \to \bbC\bbP^k$ is given by 
+    $$(z_0,\ldots,z_k) \mapsto [z_0:\cdots:z_k].$$
+
+    Using the \CrefAndHyperrefIfExist{theorem:serre_spectral_sequence_for_singular_homology_groups_for_serre_fibration}{Leray-Serre spectral sequence}, let us compute the \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology groups} $H_p(\bbC \bbP^k, \bbZ)$, starting with the following knowledge:
+    \begin{enumerate}
+        \item for $k \geq 1$, 
+        \begin{align*}
+            H_p(S^k, \bbZ) = \begin{cases} \bbZ &\text{if } p = 0 \\ \bbZ &\text{if } p = k \\ 0 &\text{otherwise} \end{cases}
+        \end{align*}
+
+        \item $\bbC\bbP^k$ is \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected}\footnote{One can prove that $\pi_1(\bbC\bbP^k) = 0$\CrefIfExists{definition:homotopy_groups_of_a_pointed_topological_space} by appealing to the long exact sequence of homotopy groups for the fibration.}. In particular $H_0(\bbC \bbP^k, \bbZ) \cong \bbZ$ and the \CrefAndHyperrefIfExist{definition:homotopy_groups_of_a_pointed_topological_space}{fundamental group} $\pi_1(\bbC \bbP^k)$ is the trivial group and hence \Cref{theorem:serre_spectral_sequence_for_singular_homology_groups_for_serre_fibration} applies. 
+    \end{enumerate}
+    The spectral sequence and its \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergence} are given by
+    $$E_{p,q}^2 = H_p(\bbC\bbP^k, H_q(S^1, \bbZ)) \Rightarrow H_{p+q}(S^{2k+1}, \bbZ).$$
+    Note that $H_q(S^1, \bbZ)$ is $0$ for all $q \neq 0,1$ and is $\bbZ$ for $q = 0,1$. 
+
+    \begin{center}
+    \small
+    \begin{tikzcd}[
+        column sep=0.5em, 
+        row sep=3.5em,
+        nodes={inner sep=2pt},
+        arrows={shorten >=2pt, shorten <=2pt}
+    ]
+    % Row q=1
+    q=1 & H_0(\bbC\bbP^k, \mathbb{Z}) & H_1(\bbC\bbP^k, \mathbb{Z}) & H_2(\bbC\bbP^k, \mathbb{Z}) & H_3(\bbC\bbP^k, \mathbb{Z}) & \dots & H_{2k-1}(\bbC\bbP^k, \mathbb{Z}) & H_{2k}(\bbC\bbP^k, \mathbb{Z}) \\
+    % Row q=0 with p-labels nested underneath
+    q=0 & \underset{p=0}{H_0(\bbC\bbP^k, \mathbb{Z})} & \underset{p=1}{H_1(\bbC\bbP^k, \mathbb{Z})} & \underset{p=2}{H_2(\bbC\bbP^k, \mathbb{Z})} \ar[llu, "d^2_{2,0}"'] & \underset{p=3}{H_3(\bbC\bbP^k, \mathbb{Z})} \ar[llu, "d^2_{3,0}"'] & \dots & \underset{p=2k-1}{H_{2n-1}(\bbC\bbP^k, \mathbb{Z})} & \underset{p=2k}{H_{2k}(\bbC\bbP^k, \mathbb{Z})}
+    \end{tikzcd}
+    \end{center}
+
+
+    Writing $H_n = H_n(S^{2k+1}, \bbZ)$, the convergence (more precisely, the \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abutment}) of the spectral sequence to the filtered graded object $H = \{H_n\}_{n \in \bbZ}$ implies by \Cref{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration} that the filtrations on $H_n$ are of the form 
+    $$0 = F_{-1} H_n \subseteq F_0 H_n \subseteq F_1 H_n \subseteq \cdots F_n H_n = H_n$$
+    with 
+    $$E_{p,q}^\infty \cong \operatorname{Gr}_p H_{p+q} \coloneq F_p H_{p+q} / F_{p-1} H_{p+q}$$
+    (\Cref{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}) (\Cref{definition:bigraded_object_associated_to_a_filtered_graded_object_in_an_abelian_category})
+    
+    In particular, for $n = 1$, the filtration is 
+    $$0 = F_{-1} H_1 \subseteq F_0 H_1 \subseteq F_1 H_1 = H_1 = H_1(S^{2k+1}, \bbZ) = 0$$
+    so whenever $p+q = n = 1$, we have 
+    $$E_{p,q}^\infty \cong F_p H_{1} / F_{p-1} H_1 = 0.$$
+    Note that $E_{1,0}^2 = H_1(\bbC \bbP^k, \bbZ)$ is \CrefAndHyperrefIfExist{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}{stable}, so $E_{1,0}^\infty \cong E_{1,0}^2$ and hence 
+    $$0 = E_{p,q}^\infty \cong E_{1,0}^2 = H_1(\bbC \bbP^k, \bbZ).$$
+
+    Thus, $E^2$ is so far
+    \begin{center}
+    \small
+    \begin{tikzcd}[
+        column sep=1.8em, 
+        row sep=2.5em,
+        nodes={inner sep=2pt},
+        arrows={shorten >=2pt, shorten <=2pt}
+    ]
+    % Row q=1
+    q=1 & \mathbb{Z} & 0 & H_2(\bbC\bbP^k, \mathbb{Z}) & H_3(\bbC\bbP^k, \mathbb{Z}) & \dots & H_{2k-1}(\bbC\bbP^k, \bbZ) & H_{2k}(\bbC\bbP^k, \bbZ) \\
+    % Row q=0
+    q=0 & \mathbb{Z} & 0 & H_2(\bbC\bbP^k, \mathbb{Z}) \ar[llu] & H_3(\bbC\bbP^k, \mathbb{Z}) \ar[llu] & \dots & H_{2k-1}(\bbC\bbP^k, \bbZ) & H_{2k}(\bbC\bbP^k, \bbZ) \\
+    % Row for p-labels (provides clean spacing and fixes the "shape" error)
+    & p=0 & p=1 & p=2 & p=3 & & p=2k-1 & p=2k
+    \end{tikzcd}
+    \end{center}
+
+    We show that the differential $d_{2,0}^2: H_2(\bbC\bbP^k, \bbZ) \to \bbZ$ is an isomorphism. Noting that $E_{0,1}^3$ stabilizes, we have $E_{0,1}^\infty = E_{0,1}^3$. On the one hand, $E_{0,1}^\infty = 0$ from above. On the other, $E_{0,1}^3$ is the cokernel of $d_{2,0}^2: H_2(\bbC\bbP^k, \bbZ) \to \bbZ$. Therefore, this differential is surjective onto $\bbZ$. 
+    For $n = 2$, the filtration for $H_2 = H_2(S^{2k+1}, \bbZ)$ is of the form 
+    $$0 = F_{-1} H_2 \subseteq F_0 H_2 \subseteq F_1 H_2 \subseteq F_2 H_2 = H_2 = H_2(S^{2k+1}, \bbZ) = 0.$$
+    In particular, $E_{2,0}^\infty \cong F_2 H_2 / F_1 H_2 = 0$. Further noting that $E_{2,0}^3$ stabilizes, we have $0 = E_{2,0}^\infty = E_{2,0}^3$; in turn, this is the kernel of $d_{2,0}^2: H_2(\bbC\bbP^k, \bbZ) \to \bbZ$, so this differential is injective. Thus, the differential is an isomorphism as claimed, so $H_2(\bbC\bbP^k, \bbZ) \cong \bbZ$. 
+
+    We have thus shown that $E^2$ is 
+    \begin{center}
+    \small
+    \begin{tikzcd}[
+        column sep=1.8em, 
+        row sep=2.5em,
+        nodes={inner sep=2pt},
+        arrows={shorten >=2pt, shorten <=2pt}
+    ]
+    % Row q=1
+    q=1 & \mathbb{Z} & 0 & \mathbb{Z} & H_3(\bbC\bbP^k, \mathbb{Z}) & \dots & H_{2k-1} & H_{2k} \\
+    % Row q=0
+    q=0 & \mathbb{Z} & 0 & \mathbb{Z} \ar[llu, "d^2_{2,0}"'] & H_3(\bbC\bbP^k, \mathbb{Z}) \ar[llu, "d^2_{3,0}"'] & \dots & H_{2k-1} & H_{2k} \\
+    % Row for p-labels
+    & p=0 & p=1 & p=2 & p=3 & & p=2k-1 & p=2k
+    \end{tikzcd}
+    \end{center}
+
+    Similar analysis inductively proves that 
+    \begin{align*}
+        H_n(\bbC\bbP^k, \bbZ) \cong \begin{cases} \bbZ &\text{if } n \text{ even and } 0 \leq n \leq 2k \\ 0 &\text{otherwise } \end{cases}
+    \end{align*}
+
+    By \Cref{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}, the filtrations on $H^n = H^n(D_n, \bbZ)$ are of the form 
+    $$0 = F_{-1} H_n \subseteq F_0 H_n \subseteq F_1 H_n \subseteq \cdots F_n H_n = H_n$$
+
+\end{example}
+
+
+\begin{example}
+    Let $G = D_m$ be the dihedral group of order $2m$ for $m$ odd. Write $C_m$ for the cyclic group of order $m$. Let us compute the \hldef{group cohomology} $H^*(D_m, \bbZ)$ where $D_m$ acts trivially on $\bbZ$. 
+    
+    We have the \CrefAndHyperrefIfExist{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}{short exact sequence}
+    $$1 \to C_m \to D_m \to C_2 \to 1.$$
+
+    The \CrefAndHyperrefIfExist{theorem:lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology}{Hochschild-Serre spectral sequence} is then 
+    $$E_2^{p,q} = H^p(C_2, H^q(C_m, \bbZ)) \Rightarrow H^{p+q}(D_m, \bbZ) $$
+
+    Note that $C_m$ acts trivially on $\bbZ$, so 
+    $$H^q(C_m, \bbZ) \cong \begin{cases} \bbZ &\text{if } q = 0 \\ 0 &\text{if } q \text{ is odd} \\ \bbZ/m\bbZ &\text{otherwise } \end{cases} $$
+    by \Cref{proposition:group_homology_cohomology_for_cyclic_group}. As such, 
+
+    $$ E_2^{p,q} = H^p(C_2, H^q(C_m, \mathbb{Z})) \cong \begin{cases} 
+    \mathbb{Z} & \text{if } p = 0, q = 0 \\
+    \mathbb{Z}/2\mathbb{Z} & \text{if } p \text{ is even, } p \ge 2, q = 0 \\
+    0 & \text{if } q \text{ is odd} \\
+    0 & \text{if } q \text{ is even, } q \ge 2 \\
+    0 & \text{if } p \text{ is odd}
+    \end{cases} $$
+
+    \begin{center}
+    \small
+    \begin{tikzcd}[
+        column sep=2.5em, 
+        row sep=3em,
+        nodes={inner sep=2pt},
+        arrows={shorten >=2pt, shorten <=2pt}
+    ]
+    % Row q=2
+    q=2 & 0 & 0 & 0 & 0 & 0 & \dots \\
+    % Row q=1
+    q=1 & 0 & 0 & 0 & 0 & 0 & \dots \\
+    % Row q=0
+    q=0 & \mathbb{Z} & 0 & \mathbb{Z}/2\mathbb{Z} \ar[llu, "d_2^{2,0}", dashed] & 0 & \mathbb{Z}/2\mathbb{Z} \ar[llu, "d_2^{4,0}", dashed] & \dots \\
+    % Axis Row
+    & p=0 & p=1 & p=2 & p=3 & p=4 & 
+    \end{tikzcd}
+    \end{center}
+
+    We easily compute that 
+    $$E_\infty^{p,q} = \begin{cases} \bbZ &\text{if } p = 0, q = 0 \\ \bbZ / 2 \bbZ &\text{if } p \text{ is even}, p \geq 2, q = 0 \\ 0 &\text{otherwise} \end{cases} $$
+    The filtration on $H^n = H^n(D_m, \bbZ)$ is of the form 
+    $$H^n = F^0 H^n \supseteq F^1 H^n \supseteq \cdots \cdots F^{n+1} H^n = 0.$$
+    by \Cref{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}. Moreover, the \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weak convergence} of the spectral sequence means that we have 
+    $$E^{p,q}_\infty \cong F^{p} H^{p+q} / F^{p+1} H^{p+q}$$
+    For $n = 0$, the filtration is 
+    $$H^0 = F^0 H^0 \supseteq F^1 H^0 = 0$$
+    and $F^0 H^{0} / F^1 H^0 \cong E^{0,0}_\infty = \bbZ$, so $H^0 \cong \bbZ$. Moreover, for $n = 2$, the filtration is 
+    $$H^2 = F^0 H^2 \supseteq F^1 H^2 \supseteq F^2 H^2 \supseteq F^3 H^2 = 0$$
+    and 
+    \begin{align*}
+    F^0 H^2 / F^1 H^2 \cong E_\infty^{0,2} &= 0 \\ 
+    F^1 H^2 / F^2 H^2 \cong E_\infty^{1,1} &= 0 \\ 
+    F^2 H^2 / F^3 H^2 \cong E_\infty^{2,0} &= \bbZ/2\bbZ.
+    \end{align*}
+    Therefore, 
+    $$H^2 \cong \bbZ/2\bbZ.$$
+    Similarly analysis shows that $H^n \cong 0$ for $n$ odd and that $H^n \cong \bbZ/2\bbZ$ for $n \geq 2$ even. 
+    To conclude, 
+    $$H^n(D_m, \bbZ) = \begin{cases} \bbZ &\text{if } n = 0 \\ \bbZ / 2 \bbZ &\text{if } n \geq 2 \text{ is even} \\ 0 &\text{otherwise} \end{cases}$$
+
+\end{example}
 
 
 
@@ -1944,7 +2166,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     Compute $\Ext_\bbZ^1(\bbQ / \bbZ, \bbZ / n \bbZ)$.
 \end{problem}
 
-\section{Assignment 5 Due Mar 27}
+\section{Assignment 5: Due Mar 27}
 
 \begin{problem}
     Let $f: X \to Y$ be a continuous map of topological spaces. 
@@ -2008,6 +2230,28 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
             Let $X$ be a contractible, locally path connected, and semi-locally simply connected space (e.g. all of the connected components in all of the finite intersections of them embers of $\calU$ satisfy these conditions). All locally constant sheaves on $X$ are constant. 
         \end{center}
     \end{enumerate}
+\end{problem}
+
+\section{Assignment 6: Due Apr 10}
+
+\begin{problem}
+    Write $Fl(\bbC^3)$ for the Flag manifold. Disregarding what it actually is, it is  the total space of a \CrefAndHyperrefIfExist{definition:fiber_bundle_of_topological_spaces}{fiber bundle}:
+    $$\bbC\bbP^1 \to Fl(\bbC^3) \to \bbC\bbP^2.$$
+    Compute the \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology groups} $H_n(Fl(\bbC^3), \bbZ)$ using the \CrefAndHyperrefIfExist{theorem:leray_spectral_sequence_for_sheaf_cohomology_and_a_continuous_map_of_topological_spaces}{Leray-Serre spectral sequence}, noting that $\bbC\bbP^2$ is path connected and has trivial fundamental group. You should use the singular homology computations of $\bbC\bbP^k$ in \Cref{example:spectral_sequence_computation_of_singular_homology_of_complex_projective_space}. 
+
+    Hint: it will also be useful to recognize \Cref{proposition:equivalent_conditions_projective_injective_objects_in_abelian_categories} to note that every short exact sequence ending with a \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective object} \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{splits}.
+\end{problem}
+
+\begin{problem}
+   Let $A = \mathbb{Z}/3\mathbb{Z}$. Consider the subgroup of $A^3$ defined by elements whose coordinates sum to zero:
+    \[ N = \{ (a, b, c) \in A^3 : a + b + c = 0 \} \cong (\mathbb{Z}/3\mathbb{Z})^2 \]
+    Let the \CrefAndHyperrefIfExist{definition:symmetric_group_on_a_set}{symmetric group} $S_3$ act on $N$ by permuting the coordinates $(a, b, c)$. We define the \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{semidirect product}:
+    \[ T = N \rtimes S_3 \]
+    associated with this action.
+
+    Using the \CrefAndHyperrefIfExist{theorem:lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology}{Lyndon-Hochschild-Serre Spectral Sequence in cohomology} with coefficients in the finite field $\mathbb{F}_3$ (where $T$ acts trivially on $\mathbb{F}_3$), compute $H^1(T, \bbF_3)$. 
+
+    It would be useful to note \Cref{proposition:first_group_cohomology_of_a_module_of_a_group_ring_over_a_commutative_ring_is_isomorphic_to_homs}.
 \end{problem}
 
 \appendix
@@ -2122,8 +2366,10 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \input{../_definitions/definition_open_refinement_of_an_open_cover_of_a_topological_space.tex}
 \input{../_definitions/definition_locally_finite_open_cover_of_a_topological_spcae.tex}
 \input{../_definitions/definition_paracompact_topological_space.tex}
-
 \input{../_concepts/theorem_nice_enough_topological_spaces_are_paracompact.tex}
+\input{../_definitions/definition_serre_fibration_of_topological_spaces.tex}
+\input{../_definitions/definition_fiber_bundle_of_topological_spaces.tex}
+\input{../_concepts/proposition_any_fiber_bundle_of_topological_spaces_is_a_serre_fibration.tex}
 
 \input{../_definitions/definition_separation_axioms_of_topology.tex}
 \input{../_definitions/definition_quasi_compact_scheme.tex}
@@ -2131,3 +2377,5 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \input{../_definitions/definition_contractible_topological_space.tex}
 \input{../_definitions/definition_locally_contractible_topological_space.tex}
 \input{../_definitions/definition_semi_locally_simply_connected_space.tex}
+
+\input{../_definitions/definition_semidirect_product_of_groups_external_and_internal.tex}

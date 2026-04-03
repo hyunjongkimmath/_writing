@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category}
+Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
+\begin{enumerate}
+    \item Let $E^r_{p,q} \Rightarrow H_{p+q}$ (\Cref{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}) be a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. Let $0 = F_{-1}H_n \subseteq F_0 H_n \subseteq \dots \subseteq F_n H_n = H_n$ be the associated \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtration} (\Cref{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}) such that $E^\infty_{p,n-p} \cong F_p H_n / F_{p-1} H_n$ (\Cref{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}).
+    \begin{enumerate}
+        \item At the base $(n,0)$, there are no incoming differentials from the first quadrant, so $E^{r+1}_{n,0} = \ker(d^r: E^r_{n,0} \to E^r_{n-r, r-1})$. This induces a sequence of \CrefAndHyperrefIfExist{definition:subobject_of_an_object_of_a_category}{subobject} inclusions $E^\infty_{n,0} \hookrightarrow \dots \hookrightarrow E^3_{n,0} \hookrightarrow E^2_{n,0}$. The \hldef{homological base edge homomorphism} is the composite:
+        $$H_n = F_n H_n \twoheadrightarrow F_n H_n / F_{n-1} H_n \cong E^\infty_{n,0} \hookrightarrow E^2_{n,0}$$
+        
+        \item At the \CrefAndHyperrefIfExist{definition:fiber_of_a_map_of_topological_spaces_over_a_point}{fiber} $(0,n)$, there are no outgoing differentials to the first quadrant, so $E^{r+1}_{0,n} = E^r_{0,n} / \text{im}(d^r: E^r_{r, n-r+1} \to E^r_{0,n})$. This induces a sequence of \CrefAndHyperrefIfExist{definition:quotient_object_of_an_object_of_an_abelian_category_by_a_subobject}{quotient} maps $E^2_{0,n} \twoheadrightarrow E^3_{0,n} \twoheadrightarrow \dots \twoheadrightarrow E^\infty_{0,n}$. The \hldef{homological fiber edge homomorphism} is the composite:
+        $$E^2_{0,n} \twoheadrightarrow E^\infty_{0,n} \cong F_0 H_n / F_{-1} H_n \cong F_0 H_n \hookrightarrow H_n$$
+    \end{enumerate}
+
+    \item Let $E_r^{p,q} \Rightarrow H^{p+q}$ (\Cref{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}) be a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. Let $H^n = F^0 H^n \supseteq F^1 H^n \supseteq \dots \supseteq F^{n+1} H^n = 0$ be the associated filtration (\Cref{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}) such that $E_\infty^{p,n-p} \cong F^p H^n / F^{p+1} H^n$ (\Cref{definition:stabilize_for_a_spectral_sequence_in_an_abelian_category_and_infinity_page}).
+    \begin{enumerate}
+        \item At the base $(n,0)$, there are no outgoing differentials to the first quadrant, so $E_{r+1}^{n,0} = E_r^{n,0} / \text{im}(d_r: E_r^{n-r, r-1} \to E_r^{n,0})$. This induces a sequence of quotient maps $E_2^{n,0} \twoheadrightarrow E_3^{n,0} \twoheadrightarrow \dots \twoheadrightarrow E_\infty^{n,0}$. The \hldef{cohomological base edge homomorphism} is the composite:
+        $$E_2^{n,0} \twoheadrightarrow E_\infty^{n,0} \cong F^n H^n / F^{n+1} H^n \cong F^n H^n \hookrightarrow H^n$$
+
+        \item At the fiber $(0,n)$, there are no incoming differentials from the first quadrant, so $E_{r+1}^{0,n} = \ker(d_r: E_r^{0,n} \to E_r^{r, n-r+1})$. This induces a sequence of subobject inclusions $E_\infty^{0,n} \hookrightarrow \dots \hookrightarrow E_3^{0,n} \hookrightarrow E_2^{0,n}$. The \hldef{cohomological fiber edge homomorphism} is the composite:
+        $$H^n = F^0 H^n \twoheadrightarrow F^0 H^n / F^1 H^n \cong E_\infty^{0,n} \hookrightarrow E_2^{0,n}$$
+    \end{enumerate}
+\end{enumerate}
+\end{definition}

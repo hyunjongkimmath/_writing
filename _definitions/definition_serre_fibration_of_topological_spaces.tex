@@ -1,0 +1,12 @@
+\begin{definition}[Serre Fibration] \label{definition:serre_fibration_of_topological_spaces}
+    A \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $p: E \to B$ of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} is called a \hldef{Serre fibration} (or a \hldef{weak fibration}) if it has the \CrefAndHyperrefIfExist{definition:homotopy_lifting_property_for_a_continuous_map_of_topological_spaces_with_respect_to_a_topological_space}{homotopy lifting property} with respect to all \CrefAndHyperrefIfExist{definition:CW_complex}{CW complexes}.
+    
+    Equivalently, for every $n \geq 0$, and every commutative diagram of the form:
+    \[
+    \begin{tikzcd}
+    I^n \times \{0\} \arrow[r, "f"] \arrow[d, "i"'] & E \arrow[d, "p"] \\
+    I^n \times I \arrow[r, "H"] \arrow[ur, "\exists \tilde{H}", dashed] & B
+    \end{tikzcd}
+    \]
+    where $I = [0,1]$ is the unit interval and $I^n$ is the $n$-dimensional cube, there exists a continuous map $\tilde{H}: I^n \times I \to E$ making the entire diagram commute.
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{theorem}[Hilbert's theorem 90, multiplicative version, see e.g. {\cite[6.3.10]{weibel}}] \label{theorem:hilberts_theorem_90_multiplicative_version}
+    Let $L/K$ be a \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{finite} \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension of fields} with \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group} $G$. Note that the multiplicative group $L^\times$ is a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$G$-module} with $(L^\times)^G = K^\times$. 
+    We have 
+    $$H^1(G, L^\times) = 0.$$
+    \CrefIfExists{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}
+\end{theorem}
+
+\begin{proof}
+    \TODO{verify}
+    Let $\{a_\sigma\}_{\sigma \in G}$ be a \CrefAndHyperrefIfExist{definition:1_cocycle}{1-cocycle} in $Z^1(G, L^\times)$, so $a_{\sigma\tau} = a_\sigma \sigma(a_\tau)$ for all $\sigma, \tau \in G$. By the \CrefAndHyperrefIfExist{theorem:dedekinds_lemma_linear_independence_of_characters}{linear independence of characters}, the map $b: L \to L$ defined by $b(z) = \sum_{\tau \in G} a_\tau \tau(z)$ is not the zero map. Thus, there exists some $z \in L$ such that $\alpha := b(z) \in L^\times$. For any $\sigma \in G$, we calculate:
+    $$\sigma(\alpha) = \sum_{\tau \in G} \sigma(a_\tau) \sigma\tau(z)$$
+    Using the cocycle identity $\sigma(a_\tau) = a_\sigma^{-1} a_{\sigma\tau}$, we obtain:
+    $$\sigma(\alpha) = a_\sigma^{-1} \sum_{\tau \in G} a_{\sigma\tau} \sigma\tau(z) = a_\sigma^{-1} \alpha$$
+    Rearranging yields $a_\sigma = \alpha \sigma(\alpha)^{-1}$, which shows that the cocycle is a \CrefAndHyperrefIfExist{definition:1_coboundary}{1-coboundary} in $B^1(G, L^\times)$. Hence, $H^1(G, L^\times) = 0$.
+\end{proof}

@@ -2,12 +2,36 @@
     Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. Write $R[G]$ for the \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group ring} and let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{(left) $R[G]$-module}. 
 
     \begin{enumerate}
-        \item $A^G$ is the maximal \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial} \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $A$. Moreover, $-^G: _{R[G]}\Mod \to _{R}\Mod$\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial module functor} $_{R}\Mod \to _{R[G]}\Mod$. 
+        \item \CrefAndHyperrefIfExist{definition:invariant_subgroup_of_a_group_acting_on_an_abelian_group}{$A^G$} is the maximal \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial} \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $A$. Moreover, $-^G: {}_{R[G]}\Mod \to {}_{R}\Mod$\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial module functor} $_{R}\Mod \to {}_{R[G]}\Mod$. 
 
         In particular, $-^G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{left exact} (\Cref{proposition:left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats}).
 
-        \item $A_G$ is the maximal \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial} \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module} of $A$. Moreover, $-_G: _{R[G]}\Mod \to _{R}\Mod$\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial module functor} $_{R}\Mod \to _{R[G]}\Mod$.
+        \item \CrefAndHyperrefIfExist{definition:coinvariant_quotient_group_of_a_group_acting_on_an_abelian_group}{$A_G$} is the maximal \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial} \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module} of $A$. Moreover, $-_G: {}_{R[G]}\Mod \to {}_{R}\Mod$\CrefIfExists{definition:category_of_modules_and_bimodules_over_rings} is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:trivial_G_module_of_a_group_over_a_ring}{trivial module functor} $_{R}\Mod \to {}_{R[G]}\Mod$.
 
         In particular, $-_G$ is \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{right exact} (\Cref{proposition:left_right_adjoint_of_add_cats_is_add_and_right_left_exact_if_between_ab_cats}).
     \end{enumerate}
 \end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item By definition, $A^G$ consists of all $a \in A$ such that $ga = a$. Therefore, $A^G$ is the maximal trivial $R[G]$-submodule of $A$.
+
+        Let $M$ be any $R$-module and let $N$ be any $R[G]$-module. By \Cref{lemma:invariant_coinvariant_functors_for_group_rings_are_naturally_isomorphic_to_tensor_hom_by_trivial_module}, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} $N^G \cong \Hom_{R[G]}(R,N)$. Regarding $M$ as a trivial $R[G]$-module, we have a natural isomorphism
+        $$\Hom_{R[G]}(M, N) \cong \Hom_{R[G]}(R \otimes_R M, N) \cong \Hom_R(M, \Hom_{R[G]}(R,N))$$
+        where $R$ is given the structure of a trivial left $R[G]$-module. By \CrefAndHyperrefIfExist{theorem:tensor_hom_adjunction_for_bimodules_of_rings}{tensor-hom adjunction}, this is naturally isomorphic to 
+        $$\Hom_{R}(M, N^G)$$
+
+        \item Clearly, $A_G$ is a trivial $R[G]$-module. Moreover, for any quotient module of $A$ on which $G$ acts trivially, we must have that $ga$ and $a$ are identified in that quotient module for any $a \in A$ and $g \in G$. Thus, any quotient of $A$ that is a trivial $G$-module must be a quotient of $A_G$.
+
+        Let $M$ be any (left) $R[G]$-module and let $N$ be any (left) $R$-module. By \Cref{lemma:invariant_coinvariant_functors_for_group_rings_are_naturally_isomorphic_to_tensor_hom_by_trivial_module}, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} $M_G \cong M \otimes_{R[G]} R$ where $R$ is equipped with a $R$-$R[G]$-bimodule structure with the $R[G]$-module structure trivial. Therefore, we have a natural isomorphism
+        $$\Hom_R(M_G, N) \cong \Hom_{R[G]}(M, N)$$
+        where $N$ has the structure of a trivial (left) $R[G]$-module. The left hand side of the above natural isomorphism is thus identifiable as 
+        $$\Hom_R(M \otimes_{R[G]} R, N)$$
+        which is naturally isomorphic to 
+        $$\Hom_{R[G]}(M, \Hom_{R}(R, N))$$
+        by the tensor-hom adjunction. Since $G$ acts trivially on $R$, the induced $R[G]$-module structure on $\Hom_R(R, N)$ is also trivial: for any $\phi \in \Hom_R(R, N)$, $(g \cdot \phi)(r) = \phi(r \cdot g) = \phi(r)$.  Therefore, $R$-module $N$ is naturally isomorphic to $\Hom_R(R, N)$. We thus have a natural isomorphism 
+        $$\Hom_{R[G]}(M, \Hom_{R}(R, N)) \cong \Hom_{R[G]}(M, N)$$
+        which shows the desired adjunction
+        $$\Hom_R(M_G, N) \cong \Hom_{R[G]}(M, N)$$
+
+    \end{enumerate}
+\end{proof}

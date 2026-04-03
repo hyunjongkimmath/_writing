@@ -1,0 +1,13 @@
+\begin{theorem}[Hilbert's theorem 90, additive version, see e.g. {\cite[6.3.7]{weibel}}] \label{theorem:hliberts_theorem_90_additive_version}
+    Let $L/K$ be a \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{finite} \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension of fields} with \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group} $G$. Note that $L$ is a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$K[G]$-module} with $L^G, L_G \cong K$\CrefIfExists{lemma:invariant_coinvariant_functors_for_group_rings_are_adjoint_to_trivial_module_functor} as $K$-vector spaces. 
+    We have 
+    $$H^n(G,L), H_n(G,L) = 0 \text{ for } n \neq 0.$$
+    \CrefIfExists{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}
+\end{theorem}
+\begin{proof}
+    By the normal basis theorem \TODO{normal basis theorem}, there is an $x \in L$ such that $\{g(x): g\in G\}$ is a \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{basis} of $L$ as a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$K$-vector space}. Thus, $L \cong K[G] \cong \mathbb{Z}[G] \otimes_{\mathbb{Z}} K = \Ind_{\{1\}}^G K$ as $K[G]$-modules. By \CrefAndHyperrefIfExist{theorem:shapiros_lemma_for_group_homology_cohomology_of_a_module_over_a_group_ring_over_a_ring_and_of_its_induced_or_coinduced_module}{Shapiro's lemma}, 
+    $$H_n(G, L) \cong H_n(G, \Ind_{\{1\}}^G K) \cong H_n(\{1\}, K) = 0.$$
+    Moreover, recall by \Cref{proposition:induction_of_a_group_module_over_a_ring_to_a_supergroup_embeds_into_the_coinduction_and_is_an_isomorphism_if_the_index_is_finite} that $\Ind_{\{1\}}^G(K) \cong \CoInd_{\{1\}}^G(K)$ so we have 
+    $$H^n(G, L) \cong H^n(G, \CoInd_{\{1\}}^G K) \cong H^n(\{1\}, K) = 0$$
+    by Shapiro's lemma as well.
+\end{proof}

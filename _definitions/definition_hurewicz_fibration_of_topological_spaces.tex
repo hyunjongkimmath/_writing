@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:hurewicz_fibration_of_topological_spaces}
+    Let $p: E \to B$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. 
+    The map $p$ is called a \hldef{Hurewicz fibration} (or simply a \hldef{fibration}) if it has the \CrefAndHyperrefIfExist{definition:homotopy_lifting_property_for_a_continuous_map_of_topological_spaces_with_respect_to_a_topological_space}{homotopy lifting property} with respect to all topological spaces $X$. 
+
+    Equivalently, for every topological space $X$ and every commutative diagram of the form:
+    $$
+    \begin{tikzcd}
+    X \times \{0\} \arrow[r, "f"] \arrow[d, "i"'] & E \arrow[d, "p"] \\
+    X \times I \arrow[r, "H"] \arrow[ur, "\exists \tilde{H}", dashed] & B
+    \end{tikzcd}
+    $$
+    where $I = [0,1]$ is the unit interval and $i(x) = (x, 0)$, there exists a continuous map $\tilde{H}: X \times I \to E$ such that $p \circ \tilde{H} = H$ and $\tilde{H} \circ i = f$.
+\end{definition}

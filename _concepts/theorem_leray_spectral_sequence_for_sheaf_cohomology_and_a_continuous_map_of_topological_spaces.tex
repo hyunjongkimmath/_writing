@@ -1,0 +1,13 @@
+\begin{theorem}[Leray Spectral Sequence] \label{theorem:leray_spectral_sequence_for_sheaf_cohomology_and_a_continuous_map_of_topological_spaces}
+    Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and $\mathcal{F}$ a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf of} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X$.
+    
+    There is a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence} starting in the second page:
+    $$E_2^{p,q} = H^p(Y; R^q f_* \mathcal{F}) \Rightarrow H^{p+q}(X; \mathcal{F}).$$
+    where $H^*$ is \CrefAndHyperrefIfExist{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}{sheaf cohomology}.
+    
+    The \CrefAndHyperrefIfExist{definition:homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category}{base and fiber edge maps} in this spectral sequence are the natural maps:
+    $$H^p(Y; f_* \mathcal{F}) \to H^p(X; \mathcal{F}) \quad \text{and} \quad H^q(X; \mathcal{F}) \to H^0(Y; R^q f_* \mathcal{F})$$
+
+    The \CrefAndHyperrefIfExist{proposition:five_term_exact_sequence_exact_sequence_of_low_degree_terms_for_a_convergent_first_quadrant_spectral_sequence_in_an_abelian_category}{exact sequence of low degree terms} is:
+    $$0 \to H^1(Y; f_* \mathcal{F}) \to H^1(X; \mathcal{F}) \to H^0(Y; R^1 f_* \mathcal{F}) \to H^2(Y; f_* \mathcal{F}) \to H^2(X; \mathcal{F})$$
+\end{theorem}

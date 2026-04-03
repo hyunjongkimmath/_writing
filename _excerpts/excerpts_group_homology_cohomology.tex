@@ -1,0 +1,226 @@
+
+\section{Group homology/cohomology}
+
+\subsection{Types of groups}
+
+\input{../_definitions/definition_discrete_group.tex}
+
+\input{../_concepts/proposition_topological_group_is_discrete_if_and_only_if_identity_element_forms_an_open_set.tex}
+
+
+\subsection{Group ring of a group over a ring}
+
+
+\input{../_definitions/definition_group_ring_of_a_group_over_a_ring.tex}
+\input{../_definitions/definition_augmentation_map_of_a_group_ring_to_its_base_ring.tex}
+\input{../_definitions/definition_norm_element_of_a_group_algebra_of_a_finite_group_over_a_ring.tex}
+\input{../_definitions/definition_action_of_a_group_on_an_abelian_group.tex}
+\input{../_definitions/definition_left_right_module_over_a_group_ring_of_a_group_over_a_ring.tex}
+
+\subsection{Invariant/coinvariant functors and Group homology/cohomology}
+\input{../_definitions/definition_invariant_subgroup_of_a_group_acting_on_an_abelian_group.tex}
+\input{../_definitions/definition_coinvariant_quotient_group_of_a_group_acting_on_an_abelian_group.tex}
+\input{../_definitions/definition_trivial_G_module_of_a_group_over_a_ring.tex}
+\input{../_concepts/lemma_invariant_coinvariant_functors_for_group_rings_are_adjoint_to_trivial_module_functor.tex}
+\input{../_concepts/lemma_invariant_coinvariant_functors_for_group_rings_are_naturally_isomorphic_to_tensor_hom_by_trivial_module.tex}
+\input{../_definitions/definition_group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring.tex}
+\input{../_concepts/corollary_degree_zero_group_homology_cohomology_of_a_module_over_a_group_ring_over_a_ring_are_invariants_coinvariants.tex}
+\input{../_concepts/corollary_group_homology_cohomology_are_just_tor_and_ext_functors_by_trivial_module_over_group_ring.tex}
+
+\subsection{Computing group homology/cohomology from Bar resolutions}
+\input{../_notations/notation_basis_elements_for_n_fold_cartesian_product_of_a_group.tex}
+\input{../_definitions/definition_unnormalized_bar_resolution_of_a_ring_over_a_group_algebra.tex}
+\input{../_definitions/definition_normalized_bar_resolution_of_a_ring_over_a_group_algebra.tex}
+\input{../_concepts/theorem_unnormalized_and_normalized_bar_resolutions_of_group_rings_are_resolutions.tex}
+
+\input{../_concepts/corollary_group_homology_cohomology_of_a_module_over_a_group_ring_over_a_ring_can_be_computed_by_bar_resolutions.tex}
+
+
+\subsection{Computatations of group homology/cohomology in simple cases}
+
+\input{../_concepts/lemma_invariants_of_group_ring_is_generated_by_norm_element.tex}
+
+\input{../_concepts/proposition_invariants_of_group_ring_for_infinite_group_is_zero.tex}
+
+\subsubsection{Group homology/cohomology of cyclic groups}
+
+\input{../_concepts/lemma_group_ring_of_a_cyclic_group_has_periodic_free_resolution.tex}
+\input{../_concepts/proposition_group_homology_cohomology_for_cyclic_group.tex}
+
+\subsubsection{First group homology of trivial action on base ring}
+
+\input{../_concepts/lemma_quotient_of_augmentation_ideal_of_group_by_square_is_isomorphic_to_abelianization_of_group.tex}
+\input{../_concepts/proposition_first_group_homology_of_a_trivial_G_module_is_abelianization_of_group_tensored_with_module.tex}
+\input{../_concepts/proposition_first_group_cohomology_of_a_module_of_a_group_ring_over_a_commutative_ring_is_isomorphic_to_homs.tex}
+
+
+
+
+\TODO{e.g. weibel theorem 6.2.2, but do it over general rings}
+\TODO{define Tate cohomology group weibel definition 6.2.4}
+
+\subsection{Induction/Coinduction/Restriction of $G$-modules}
+
+
+\input{../_definitions/definition_restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring.tex}
+\input{../_definitions/definition_extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms.tex}
+\input{../_definitions/definition_coextension_coinduction_of_scalars_of_modules_along_a_ring_homomorphism.tex}
+\input{../_concepts/theorem_extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings.tex}
+
+
+\input{../_definitions/definition_restriction_of_a_group_module_over_a_ring_to_a_subgroup.tex}
+\input{../_definitions/definition_induction_of_a_group_module_over_a_ring_to_a_supergroup.tex}
+\input{../_definitions/definition_coinduction_of_a_group_module_over_a_ring_to_a_supergroup.tex}
+
+\input{../_concepts/proposition_induction_of_a_group_module_over_a_ring_to_a_supergroup_embeds_into_the_coinduction_and_is_an_isomorphism_if_the_index_is_finite.tex}
+\input{../_concepts/theorem_induction_restriction_restriction_coinduction_adjunction_for_group_algebras_over_rings.tex}
+
+\input{../_concepts/theorem_shapiros_lemma_for_group_homology_cohomology_of_a_module_over_a_group_ring_over_a_ring_and_of_its_induced_or_coinduced_module.tex}
+
+\input{../_concepts/theorem_hliberts_theorem_90_additive_version.tex}
+
+\input{../_concepts/theorem_hilberts_theorem_90_multiplicative_version.tex}
+
+\subsection{Modules over topological groups and topological rings}
+
+One general class of topological groups is that of profinite groups
+
+\input{../_definitions/definition_profinite_group.tex}
+\input{../_definitions/definition_topological_ring.tex}
+\input{../_definitions/definition_topological_group.tex}
+
+
+\input{../_definitions/definition_topological_module_over_topological_rings.tex}
+\input{../_definitions/definition_morphism_of_topological_modules_over_topological_rings.tex}
+\input{../_definitions/definition_categories_of_topological_modules_over_topological_rings.tex}
+
+\begin{proposition}
+An object $M \in R\text{-}\mathbf{TopMod}$ is precisely a topological abelian group equipped with a continuous left $R$-action that is distributive over addition. A morphism $f: M \to N$ in $R\text{-}\mathbf{TopMod}$ is a continuous $R$-linear map.
+\end{proposition}
+
+
+\begin{proposition}
+Let $M$ be an $R$-module. Endowing $M$ with a topology makes it a left topological $R$-module if and only if addition is continuous and the map $R \times M \to M$ is continuous. The right action of $(\mathbb{Z}, \text{discrete})$ is then automatically continuous if and only if addition is continuous, as the action $m \cdot n$ is simply iterated addition or its inverse.
+\end{proposition}
+
+
+\input{../_definitions/definition_topological_module_over_a_group_ring_of_a_topological_gropu_over_a_topological_ring.tex}
+
+\input{../_definitions/definition_morphism_of_topological_modules_of_a_group_ring.tex}
+
+\input{../_definitions/definition_category_of_topological_modules_over_a_group_ring_of_a_topological_group_over_a_topological_ring.tex}
+
+\subsection{Continuous cohomology of a topological module over a group ring of a topological group over a topological ring}
+
+
+\input{../_definitions/definition_G_invariant_functor_of_topological_group_module_over_topological_ring.tex}
+\input{../_definitions/definition_continuous_cochain_complex_of_a_topological_module_over_a_group_ring_of_a_topological_group_over_a_topological_ring.tex}
+\input{../_definitions/definition_continuous_cohomology_groups_of_a_topological_module_over_a_topological_group_and_a_topological_ring.tex}
+\input{../_concepts/theorem_continuous_cohomology_of_topological_module_over_topological_gropu_and_topological_ring_can_be_computed_by_continuous_cohomology_groups.tex}
+
+
+In particular, Galois cohomology groups are a instances of continuous cohomology groups.
+
+
+\input{../_definitions/definition_galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring.tex}
+
+\begin{proposition}
+    \TODO{is this true of more general profinite groups}
+If $M = \varprojlim M_i$ is an inverse limit of finite discrete $G$-modules $M_i$, the Galois cohomology groups for $n=1$ (and under certain conditions for $n > 1$) satisfy:
+$$H^n_{\text{cont}}(G, \varprojlim M_i) \cong \varprojlim H^n(G, M_i)$$
+where the right-hand side uses the standard cohomology for discrete modules.
+\end{proposition}
+
+\begin{theorem}
+    \TODO{}
+Let $K$ be a field and $M$ be a topological $G_K$-module over a topological ring $R$. If $0 \to A \to B \to C \to 0$ is a sequence of topological $G_K$-modules that is topologically split as a sequence of $R$-modules, there exists a long exact sequence of $R$-modules:
+$$\dots \to H^n(K, A) \to H^n(K, B) \to H^n(K, C) \to H^{n+1}(K, A) \to \dots$$
+\end{theorem}
+
+
+\subsection{Cohomological dimensions of groups}
+
+
+\input{../_definitions/definition_cohomological_dimension_of_a_group_over_a_ring.tex}
+
+
+\input{../_definitions/definition_continuous_cohomological_dimension_of_a_topological_group_over_a_topological_ring.tex}
+
+
+\input{../_definitions/definition_p_cohomological_dimension_of_a_topological_group.tex}
+
+
+
+\begin{remark}
+In the case of a discrete group $G$, these definitions recover the classical algebraic cohomological dimension by taking all modules to have the discrete topology. For locally compact groups, such as Lie groups, one often restricts the coefficients $M$ to a specific class, such as Fréchet spaces or Banach spaces, leading to the notion of continuous or bounded cohomological dimension.
+\end{remark}
+
+
+\begin{proposition}
+Let $G$ be a topological group. If $G$ contains a closed subgroup $H$, then $\text{cd}_p(H) \leq \text{cd}_p(G)$. If $G$ is a profinite group and $U$ is an open subgroup, then $\text{cd}_p(U) = \text{cd}_p(G)$, a result that does not hold for arbitrary topological groups without further compactness or finiteness assumptions.
+\end{proposition}
+
+
+% \begin{definition}
+% Let $p$ be a prime number and $G$ a profinite group. 
+% The \hldef{$p$-cohomological dimension of $G$}, denoted \hl{$\text{cd}_p(G)$}, is the infimum of the set of integers $n$ such that for every discrete periodic $G$-module $M$ whose elements have order a power of $p$, we have $H^i_{\text{cont}}(G, M) = 0$ for all $i > n$.
+% \end{definition}
+
+% \begin{definition}
+% The \hldef{cohomological dimension of a profinite group $G$} is defined as:
+% $$\text{cd}(G) = \sup_p \{ \text{cd}_p(G) \}$$
+% where the supremum is taken over all prime numbers $p$.
+% \end{definition}
+
+
+\begin{proposition}
+The cohomological dimension of a group $G$ over $R$ is equal to the projective dimension of $R$ as a left $R[G]$-module, where $R$ is equipped with the trivial $G$-action:
+$$\text{cd}_R(G) = \text{pd}_{R[G]}(R)$$
+\textit{Remark:} \TODO{define projective dimension}
+\end{proposition}
+
+\begin{theorem}
+Let $G$ be a profinite group and $H$ a closed subgroup. Then:
+\begin{enumerate}
+    \item $\text{cd}_p(H) \leq \text{cd}_p(G)$.
+    \item If $H$ is an open subgroup, or more generally if $H$ is the kernel of a continuous homomorphism to a finite group of order prime to $p$, then $\text{cd}_p(H) = \text{cd}_p(G)$.
+\end{enumerate}
+\end{theorem}
+
+\subsubsection{Cohomological dimensions of fields}
+
+\input{../_definitions/definition_p_cohomological_dimension_of_a_field.tex}
+\input{../_concepts/theorem_cohomological_dimensions_of_common_fields.tex}
+\input{../_concepts/theorem_tsens_theorem_on_the_cohomological_dimension_of_a_function_field_over_a_field.tex}
+\input{../_concepts/proposition_p_cohomological_dimension_of_positive_characteristic_field_is_at_most_one.tex}
+\input{../_concepts/theorem_field_of_formal_laurent_series_over_algebraically_closed_field_has_cohomological_dimension_equal_to_number_of_variables.tex}
+
+
+
+% \begin{definition}
+% A \hldef{profinite group} $G$ is a topological group that is the inverse limit of a system of finite discrete groups.
+
+% A \hldef{discrete $G$-module} is an abelian group $A$ with the discrete topology such that the action map $G \times A \to A$ is continuous. The \hldef{continuous cohomology} \hl{$H^n_{cont}(G, A)$} is the $n$-th right derived functor of the fixed-point functor in the category of discrete $G$-modules.
+
+% \end{definition}
+
+\begin{definition}
+Let $\mathfrak{g}$ be a Lie algebra over a field $k$ and $M$ a $\mathfrak{g}$-module. The \hldef{Chevalley-Eilenberg complex} \hl{$C^n(\mathfrak{g}, M) = \text{Hom}_k(\Lambda^n \mathfrak{g}, M)$} consists of alternating $n$-linear maps. The \hldef{Lie algebra cohomology} \hl{$H^n(\mathfrak{g}, M)$} is the cohomology of this complex with differential \hl{$d: C^n(\mathfrak{g}, M) \to C^{n+1}(\mathfrak{g}, M)$} given by:
+$$(df)(x_1, \dots, x_{n+1}) = \sum_{i < j} (-1)^{i+j} f([x_i, x_j], x_1, \dots, \hat{x}_i, \dots, \hat{x}_j, \dots, x_{n+1}) + \sum_i (-1)^{i+1} x_i \cdot f(x_1, \dots, \hat{x}_i, \dots, x_{n+1})$$
+\end{definition}
+
+\begin{definition}
+Let $G$ be a Lie group and $A$ a topological $G$-module. The \hldef{differentiable cohomology} \hl{$H^n_{diff}(G, A)$} is defined as the cohomology of the complex of smooth cochains $C^\infty(G^n, A)$. \textit{Remark: \TODO{define van Est isomorphism}}.
+\end{definition}
+
+\begin{definition}
+Let $S$ be a $k$-algebra and $M$ an $S$-bimodule. The \hldef{Hochschild cohomology} \hl{$HH^n(S, M)$} is defined as $\text{Ext}^n_{S \otimes_k S^{op}}(S, M)$. In the case of a group ring $S = k[G]$, this corresponds to the cohomology of $G$ acting on $M$ by conjugation.
+\end{definition}
+
+\begin{definition}
+Let $G$ be a discrete group and $A$ a \hldef{Banach $G$-module} (a Banach space with an isometric $G$-action). The \hldef{bounded cohomology} \hl{$H^n_b(G, A)$} is the cohomology of the complex of bounded cochains $C^n_b(G, A) = \{f: G^n \to A \mid \sup \|f(g_1, \dots, g_n)\| < \infty\}$ with the standard bar differential.
+\end{definition}
+
+\begin{definition}
+Let $G$ be an affine group scheme over a field $k$ and $M$ a rational $G$-module. \textit{Remark: \TODO{define affine group scheme}}. The cohomology \hl{$H^n(G, M)$} is defined as the Hochschild cohomology of the coordinate ring $k[G]$ in the category of $k[G]$-comodules.
+\end{definition}

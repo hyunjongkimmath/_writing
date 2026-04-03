@@ -1,15 +1,16 @@
 \begin{theorem}[{\cite[6.8.2]{weibel}}] \label{theorem:lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology}
-    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $N \trianglelefteq G$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme}{normal subgroup}.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $N \trianglelefteq G$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme}{normal subgroup}. Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $A$ be an \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[G]$-module}. 
 
     \begin{enumerate}
         \item There is a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}
-        $$E_{pq}^2 = H_p(G/H, H_q(H,A)) \Rightarrow H_{p+q}(G,A).$$
-        The edge homomorphisms \TODO{edge homomorhpism} $H_*(G,A) \to H_{*}(G/H; A_H)$ and $H_*(H,A)_{G/H} \to H_*(G,A)$ are induced from the coinflation and corestriction maps. \TODO{coinflation, corestriction}
+        $$E_{pq}^2 = H_p(G/N, H_q(N,A)) \Rightarrow H_{p+q}(G,A).$$
+        The \CrefAndHyperrefIfExist{definition:homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category}{edge homomorphisms} $H_*(G,A) \to H_{*}(G/N; A_N)$ and $H_*(N,A)_{G/N} \to H_*(G,A)$ are induced from the coinflation and corestriction maps. \TODO{coinflation, corestriction}
 
         \item There is a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}
-        $$E^{pq}_2 = H^p(G/H, H^q(H,A)) \Rightarrow H^{p+q}(G,A).$$
-        The edge homomorphisms \TODO{edge homomorhpism} $H^{*}(G/H; A^H) \to H^*(G,A)$ and $H^*(G,A) \to H^*(H,A)^{G/H}$ are induced from the inflation and restriction maps. \TODO{coinflation, corestriction}
-
-
+        $$E^{pq}_2 = H^p(G/N, H^q(N,A)) \Rightarrow H^{p+q}(G,A).$$
+        The \CrefAndHyperrefIfExist{definition:homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category}{edge homomorphisms} $H^{*}(G/N; A^N) \to H^*(G,A)$ and $H^*(G,A) \to H^*(N,A)^{G/N}$ are induced from the inflation and restriction maps. \TODO{coinflation, corestriction}
     \end{enumerate}
+    \TODO{exact sequence of low degree terms}
+
+    These spectral sequences may be referred to as the \hldef{Hochschild-Serre spectral sequences} or the \hldef{Lyndon-Hochschild-Serre spectral sequences in group homology/cohomology}.
 \end{theorem}

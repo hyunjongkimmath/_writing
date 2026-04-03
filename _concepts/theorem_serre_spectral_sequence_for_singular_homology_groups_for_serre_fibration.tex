@@ -1,0 +1,13 @@
+\begin{theorem}[Serre Spectral Sequence] \label{theorem:serre_spectral_sequence_for_singular_homology_groups_for_serre_fibration}
+    Let $F \hookrightarrow E \xrightarrow{\pi} B$ be a \CrefAndHyperrefIfExist{definition:serre_fibration_of_topological_spaces}{Serre fibration} with $B$ \CrefAndHyperrefIfExist{definition:path_connected_topological_space}{path connected}. Assume the \CrefAndHyperrefIfExist{definition:homotopy_groups_of_a_pointed_topological_space}{fundamental group} $\pi_1(B)$ acts trivially on $H_q(F; G)$.
+    
+    There is a \CrefAndHyperrefIfExist{definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{convergent} \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence} starting in the second page:
+    $$E^2_{p,q} = H_p(B; H_q(F; G)) \Rightarrow H_{p+q}(E; G).$$
+    where $H_*$ is \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology}. This spectral sequence is called the \hldef{Serre spectral sequence} or even the \hldef{Leray-Serre spectral sequence in singular homology for the Serre fibration}.
+    
+    The \CrefAndHyperrefIfExist{definition:homological_cohomological_base_fiber_edge_homomorphism_for_first_quadrant_convergent_spectral_sequence_in_an_abelian_category}{base and fiber edge maps} in this spectral sequence are the natural maps:
+    $$H_n(E; G) \to H_n(B; G) \quad \text{and} \quad H_n(F; G) \to H_n(E; G)$$
+
+    The \CrefAndHyperrefIfExist{proposition:five_term_exact_sequence_exact_sequence_of_low_degree_terms_for_a_convergent_first_quadrant_spectral_sequence_in_an_abelian_category}{exact sequence of low degree terms} is:
+    $$H_2(E; G) \to H_2(B; G) \to H_1(F; G) \to H_1(E; G) \to H_1(B; G) \to 0$$
+\end{theorem}

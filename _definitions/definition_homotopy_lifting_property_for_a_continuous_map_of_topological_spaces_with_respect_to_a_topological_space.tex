@@ -1,0 +1,16 @@
+\begin{definition}[Homotopy Lifting Property] \label{definition:homotopy_lifting_property_for_a_continuous_map_of_topological_spaces_with_respect_to_a_topological_space}
+    Let $p: E \to B$ be a \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous map}. 
+    The map $p$ is said to have the \hldef{homotopy lifting property (HLP) with respect to a topological space $X$} if, for every \CrefAndHyperrefIfExist{definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset}{homotopy} $H: X \times I \to B$ and every map $f: X \to E$ such that $p \circ f = H(\cdot, 0)$, there exists a homotopy $\tilde{H}: X \times I \to E$ such that:
+    \begin{enumerate}
+        \item $\tilde{H}(\cdot, 0) = f$ (the lift starts at the given map);
+        \item $p \circ \tilde{H} = H$ (the diagram commutes).
+    \end{enumerate}
+
+    In terms of diagrams, $p$ satisfies the HLP with respect to $X$ if every commutative solid square of the following form admits a dashed filler $\tilde{H}$:
+    \[
+    \begin{tikzcd}
+    X \times \{0\} \arrow[r, "f"] \arrow[d, hook] & E \arrow[d, "p"] \\
+    X \times I \arrow[r, "H"'] \arrow[ur, "\exists \tilde{H}", dashed] & B
+    \end{tikzcd}
+    \]
+\end{definition}

@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:fiber_bundle_of_topological_spaces}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
+A \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} $\pi: E \to B$ of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} is called a \hldef{fiber bundle with fiber $F$} if for every point $b \in B$, there exists an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} $U \subseteq B$ containing $b$ and a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} $\phi: \pi^{-1}(U) \to U \times F$ such that the following diagram commutes:
+$$
+\begin{tikzcd}
+\pi^{-1}(U) \arrow[rr, "\phi"] \arrow[dr, "\pi"'] & & U \times F \arrow[dl, "pr_1"] \\
+& U & 
+\end{tikzcd}
+$$
+where $pr_1: U \times F \to U$ is the projection onto the first factor. 
+The space $E$ is called the \hldef{total space}, $B$ is the \hldef{base space}, and the homeomorphism $\phi$ is called a \hldef{local trivialization of the fiber bundle over $U$}.
+
+It is also reasonable to write \hl{$F \hookrightarrow E \twoheadrightarrow B$} or simply \hl{$F \to E \to B$} to express the existence of a fiber bundle.
+\end{definition}

@@ -7,3 +7,13 @@
         \item $H_n(G, \text{Ind}^G_H(W)) \cong H_n(H, W)$ for all $n \geq 0$.
     \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    Let $P_\bullet \to \mathbb{Z}$ be a projective $\mathbb{Z}G$-resolution. Since $\mathbb{Z}G$ is a free $\mathbb{Z}H$-module, $P_\bullet$ is also a projective $\mathbb{Z}H$-resolution.
+    For homology:
+    $$ P \otimes_{\mathbb{Z}G} (\mathbb{Z}G \otimes_{\mathbb{Z}H} A) \cong (P \otimes_{\mathbb{Z}G} \mathbb{Z}G) \otimes_{\mathbb{Z}H} A \cong P \otimes_{\mathbb{Z}H} A $$
+    The left side computes $H_*(G, \Ind_H^G A)$ and the right side computes $H_*(H, A)$.
+    For cohomology, we use the Hom-tensor adjunction:
+    $$ \Hom_G(P, \Hom_H(\mathbb{Z}G, A)) \cong \Hom_H(P \otimes_{\mathbb{Z}G} \mathbb{Z}G, A) \cong \Hom_H(P, A) $$
+    taking cohomology on both sides yields the result.
+\end{proof}

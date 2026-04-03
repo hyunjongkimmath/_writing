@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  9 MAR 2026 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.5)  27 MAR 2026 10:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,8 +925,14 @@ Package glossaries Info: Writing glossary file Topology.glo on input line 7.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count363
 \l__pdf_internal_box=\box78
+) (./Topology.aux
+
+LaTeX Warning: Label `definition:euclidean_n_space' multiply defined.
+
+
+LaTeX Warning: Label `definition:euclidean_n_space@cref' multiply defined.
+
 )
-No file Topology.aux.
 \openout1 = `Topology.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -949,7 +955,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for OT2/cmr/m/n on input line 10.
 LaTeX Font Info:    Trying to load font information for OT2+cmr on input line 10.
-(c:/texlive/2024/texmf-dist/tex/latex/cyrillic/ot2cmr.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/cyrillic/ot2cmr.fd
 File: ot2cmr.fd 2001/08/11 v3.2c Computer Modern Cyrillic font definitions
 )
 LaTeX Font Info:    ... okay on input line 10.
@@ -972,6 +978,7 @@ LaTeX Font Info:    Trying to load font information for OT2+wncyr on input line 
 File: ot2wncyr.fd 1999/12/17 v3.2a Computer Modern Cyrillic font definitions
 )
 Package hyperref Info: Link coloring OFF on input line 10.
+ (./Topology.out) (./Topology.out)
 \@outlinefile=\write7
 \openout7 = `Topology.out'.
 
@@ -994,528 +1001,130 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (./Topology.glsdefs)
-No file Topology.toc.
-\tf@toc=\write8
-\openout8 = `Topology.toc'.
-
-(./content.tex (../_definitions/definition_topological_space.tex) (../_definitions/definition_clopen_subset_of_a_topological_space.tex) (../_definitions/definition_coarser_smaller_finer_larger_for_topologies_on_a_set.tex
+)) (./Topology.glsdefs) (./Topology.toc
 
 [1
 \openout5 = `Topology.ist'.
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]) (../_concepts/proposition_coarser_and_finer_topologies_and_continuous_maps.tex) (../_concepts/proposition_topology_generated_by_a_collection_of_subsets_is_the_coarset_topology_making_the_members_open.tex) (../_definitions/definition_topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology.tex) (../_concepts/proposition_subset_of_a_topology_generated_by_a_collection_of_subsets_is_open_if_and_only_if_union_of_finite_intersections.tex) (../_concepts/proposition_function_of_topological_spaces_is_continuous_if_and_only_if_subbasis_members_are_pulled_back_to_open_sets.tex) (../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex) (../_definitions/definition_basis_for_a_topology.tex
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+\tf@toc=\write8
+\openout8 = `Topology.toc'.
 
-LaTeX Warning: Hyper reference `definition:topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology' on page 2 undefined on input line 7.
+ (./content.tex (../_definitions/definition_topological_space.tex) (../_definitions/definition_clopen_subset_of_a_topological_space.tex
 
+[2]) (../_definitions/definition_coarser_smaller_finer_larger_for_topologies_on_a_set.tex) (../_concepts/proposition_coarser_and_finer_topologies_and_continuous_maps.tex) (../_concepts/proposition_topology_generated_by_a_collection_of_subsets_is_the_coarset_topology_making_the_members_open.tex) (../_definitions/definition_topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology.tex) (../_concepts/proposition_subset_of_a_topology_generated_by_a_collection_of_subsets_is_open_if_and_only_if_union_of_finite_intersections.tex) (../_concepts/proposition_function_of_topological_spaces_is_continuous_if_and_only_if_subbasis_members_are_pulled_back_to_open_sets.tex) (../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex
 
+[3]) (../_definitions/definition_basis_for_a_topology.tex) (../_definitions/definition_first_and_second_countable_topological_space.tex) (../_definitions/definition_G_delta_set_and_F_sigma_set_of_a_topological_space.tex) (../_definitions/definition_separation_axioms_of_topology.tex
 
-[2]) (../_definitions/definition_first_and_second_countable_topological_space.tex) (../_definitions/definition_G_delta_set_and_F_sigma_set_of_a_topological_space.tex) (../_definitions/definition_separation_axioms_of_topology.tex
+[4]) (../_definitions/definition_subspace_of_a_topological_space.tex) (../_conventions/convention_subset_of_a_topological_space_is_usually_considered_as_a_subspace.tex) (../_definitions/definition_discrete_topological_space_of_a_set.tex) (../_definitions/definition_trivial_topological_space_of_a_set.tex) (../_definitions/definition_closure_of_a_subspace_of_a_topological_space.tex
 
-[3]) (../_definitions/definition_subspace_of_a_topological_space.tex) (../_conventions/convention_subset_of_a_topological_space_is_usually_considered_as_a_subspace.tex) (../_definitions/definition_discrete_topological_space_of_a_set.tex) (../_definitions/definition_trivial_topological_space_of_a_set.tex) (../_definitions/definition_closure_of_a_subspace_of_a_topological_space.tex) (../_definitions/definition_dense_subset_of_a_topological_space.tex) (../_definitions/definition_disconnected_and_connected_topological_spaces.tex) (../_definitions/definition_connected_component_of_a_point_of_a_topological_space.tex) (../_definitions/definition_totally_disconnected_topological_space.tex
-
-[4]) (../_concepts/proposition_compact_hausdorff_space_is_totally_disconnected_iff_clopen_subsets_form_a_basis.tex) (../_definitions/definition_compact_topological_space.tex) (../_definitions/definition_compact_subset_of_a_topological_space_alternate_definition.tex)
-
-LaTeX Warning: Reference `definition:compact_subset_of_a_topological_space_alternate_definition' on page 1 undefined on input line 62.
-
-
-LaTeX Warning: Reference `definition:compact_topological_space' on page 1 undefined on input line 62.
-
-(../_definitions/definition_locally_compact_topological_space.tex) (../_definitions/definition_interior_and_boundary_of_topological_space.tex) (../_definitions/definition_continuous_map_of_topological_spaces.tex
-
-[5]) (../_definitions/definition_homeomorphism_of_topological_spaces.tex) (../_definitions/definition_pointed_topological_space.tex) (../_definitions/definition_preimage_of_a_subset_of_the_codomain_of_a_set_map.tex) (../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex) (../_definitions/definition_product_of_sets.tex
-
-[6]) (../_definitions/definition_box_topology_on_a_cartesian_product_of_topological_spaces.tex) (../_definitions/definition_product_topology_on_a_cartesian_product_of_topological_spaces.tex) (../_concepts/theorem_tychonoffs_theorem_for_the_compactness_of_a_small_product_of_compact_topological_spaces.tex) (../_definitions/definition_compactly_generated_topological_space.tex
-
-[7]) (../_definitions/definition_weakly_hausdorff_topological_space.tex) (../_definitions/definition_extended_metric_on_a_set.tex) (../_definitions/definition_isometry_between_extended_metric_spaces.tex) (../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex) (../_definitions/definition_topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric.tex
-
-[8]) (../_definitions/definition_convergence_and_limits_in_extended_metric_space.tex) (../_definitions/definition_cauchy_sequence_in_an_extended_metric_space.tex) (../_definitions/definition_complete_extended_metric_space.tex) (../_definitions/definition_completion_of_an_extended_metric_space.tex)
-
-[9] (../_definitions/definition_absolute_value_on_a_field.tex
-
-[10]) (../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex) (../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex) (../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex) (../_definitions/definition_norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space.tex
-
-[11]) (../_definitions/definition_euclidean_n_space.tex) (../_definitions/definition_path_connected_topological_space.tex) (../_definitions/definition_locally_path_connected_topological_space.tex) (../_definitions/definition_path_component_of_a_point_in_a_topological_space.tex) (../_definitions/definition_simply_connected_space.tex) (../_concepts/proposition_topological_space_is_simply_connected_iff_path_connected_and_every_continuous_map_from_the_circle_is_null_homotopic.tex)
-
-[12] (../_definitions/definition_locally_simply_connected_topological_space.tex) (../_concepts/proposition_locally_simply_connected_topological_space_is_locally_path_connected_and_semi_locally_simply_connected.tex) (../_concepts/proposition_topological_manifolds_are_locally_simply_connected.tex) (../_definitions/definition_locally_contractible_topological_space.tex) (../_definitions/definition_semi_locally_simply_connected_space.tex) (../_concepts/proposition_topological_space_is_semi_local_simply_connected_iff_every_point_has_open_neighborhood_such_that_every_loop_based_there_is_null_homotopic_in_ambient_space.tex) (../_definitions/definition_stone_space.tex) (../_definitions/definition_category_of_stone_spaces.tex) (../_definitions/definition_boolean_algebra.tex) (../_definitions/definition_morphism_of_boolean_algebras.tex
-
-[13]) (../_definitions/definition_category_of_boolean_algebras.tex) (../_concepts/proposition_function_between_boolean_algebras_is_a_morphism_of_boolean_algebras_iff_it_is_a_ring_homomorphism_between_the_boolean_rings.tex) (../_definitions/definition_filter_and_ultrafilter_on_a_boolean_algebra.tex) (../_concepts/proposition_filter_is_an_ultrafilter_if_and_only_if_every_element_or_negation_is_in_it.tex) (../_definitions/definition_stone_space_of_a_boolean_algebra.tex) (../_concepts/theorem_stones_representation_theorem.tex) (../_definitions/definition_covering_space_of_a_topological_space.tex
-
-[14]) (../_definitions/definition_morphism_of_covering_spaces_of_a_topological_space.tex) (../_definitions/definition_deck_transformation_of_a_covering_space.tex) (../_definitions/definition_universal_cover_of_a_topological_space.tex) (../_concepts/theorem_map_of_fundamental_groups_induced_by_covering_of_a_path_connected_and_locally_path_connected_space_is_injective.tex) (../_definitions/definition_lift_of_a_continuous_map_under_a_covering_of_topological_spaces.tex) (../_definitions/definition_normal_covering_space_of_a_topological_space.tex) (../_concepts/theorem_lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained.tex
-
-[15]) (../_concepts/theorem_lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained.tex) (../_concepts/theorem_universal_cover_exists_for_connected_locally_path_connected_semi_locally_simply_connected_topological_space.tex) (../_concepts/proposition_isom_class_of_conn_pointed_covers_of_a_conn_loc_path_conn_semiloc_simp_conn_pointed_space_corresponds_to_subgroup_of_fund_gp.tex
-Overfull \hbox (9.7187pt too wide) in paragraph at lines 4--5
-\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 and the set of sub-groups of $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 , via $\OT1/cmr/m/n/12 (([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; p\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 7! \OML/cmm/m/it/12 p[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 ))$\T1/cmr/m/n/12 . 
+[5]) (../_definitions/definition_dense_subset_of_a_topological_space.tex) (../_definitions/definition_disconnected_and_connected_topological_spaces.tex) (../_definitions/definition_connected_component_of_a_point_of_a_topological_space.tex) (../_definitions/definition_totally_disconnected_topological_space.tex) (../_concepts/proposition_compact_hausdorff_space_is_totally_disconnected_iff_clopen_subsets_form_a_basis.tex
+Overfull \hbox (6.42175pt too wide) in paragraph at lines 2--4
+[]\T1/cmr/bx/n/12 Proposition 1.2.5. []\T1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \T1/cmr/m/n/12 be a []com-pact[] (Def-i-ni-tion []1.2.6[]) []Haus-dorff space[] (Def-i-ni-tion []1.1.13[]).
  []
 
-) (../_concepts/theorem_deck_transformation_group_of_a_connected_pointed_covering_is_quotient.tex) (../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex
+) (../_definitions/definition_compact_topological_space.tex) (../_definitions/definition_compact_subset_of_a_topological_space_alternate_definition.tex) (../_definitions/definition_locally_compact_topological_space.tex
 
-[16]
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Incompatible list can't be unboxed.
-\SOUL@ulunderline ...men \kern \z@ }}\unhcopy \z@ 
-                                                  }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-Sorry, Pandora. (You sneaky devil.)
-I refuse to unbox an \hbox in vertical mode or vice versa.
-And I can't open any boxes in math mode.
+[6]) (../_definitions/definition_interior_and_boundary_of_topological_space.tex) (../_definitions/definition_continuous_map_of_topological_spaces.tex) (../_definitions/definition_homeomorphism_of_topological_spaces.tex) (../_definitions/definition_pointed_topological_space.tex
 
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[7]) (../_definitions/definition_preimage_of_a_subset_of_the_codomain_of_a_set_map.tex) (../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex) (../_definitions/definition_product_of_sets.tex) (../_definitions/definition_box_topology_on_a_cartesian_product_of_topological_spaces.tex) (../_definitions/definition_product_topology_on_a_cartesian_product_of_topological_spaces.tex
 
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@doword ...hskip \z@ \relax \the \SOUL@word }
-                                                  \let \SOUL@errmsg \SOUL@er...
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+[8]) (../_concepts/theorem_tychonoffs_theorem_for_the_compactness_of_a_small_product_of_compact_topological_spaces.tex) (../_definitions/definition_euclidean_n_space.tex) (../_definitions/definition_interval_in_the_real_line.tex
 
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[9]
+Overfull \hbox (7.83142pt too wide) in paragraph at lines 10--25
+[][][][][][]
+ []
 
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@dosyllable ...x {\SOUL@tt \the \SOUL@token }
-                                                  \advance \SOUL@syllwidth \...
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing { inserted.
-<to be read again> 
-                   }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing { inserted.
-<to be read again> 
-                   }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing { inserted.
-<to be read again> 
-                   }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@getkern #1#2#3->\setbox \tw@ \hbox {#1#3}
-                                               #2\wd \tw@ \setbox \tw@ \hbox...
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing { inserted.
-<to be read again> 
-                   \hbox 
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Missing $ inserted.
-<inserted text> 
-                $
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@ulunderline #1->{\setbox \z@ \hbox {#1}
-                                             \SOUL@dimen =\wd \z@ \SOUL@dime...
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Incompatible list can't be unboxed.
-\SOUL@ulunderline ...men \kern \z@ }}\unhcopy \z@ 
-                                                  }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-Sorry, Pandora. (You sneaky devil.)
-I refuse to unbox an \hbox in vertical mode or vice versa.
-And I can't open any boxes in math mode.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@ulunderline ...en \kern \z@ }}\unhcopy \z@ }
-                                                  
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@analyze ... \else \SOUL@dosyllable \fi \fi }
-                                                  
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Incompatible list can't be unboxed.
-\SOUL@ulunderline ...men \kern \z@ }}\unhcopy \z@ 
-                                                  }
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-Sorry, Pandora. (You sneaky devil.)
-I refuse to unbox an \hbox in vertical mode or vice versa.
-And I can't open any boxes in math mode.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:28: Extra }, or forgotten $.
-\SOUL@n ...rave \z@ \SOUL@do {#1}\SOUL@postamble }
-                                                  
-l.28 ...q g \text{ rel } K$} or $\hl{f \simeq_K g}
-                                                  $. This is an equivalence ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: LaTeX Error: Not allowed in LR mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31     \end{enumerate}
-                        
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: LaTeX Error: Not allowed in LR mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31     \end{enumerate}
-                        
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing } inserted.
-<inserted text> 
-                }
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex:31: Missing $ inserted.
-<inserted text> 
-                $
-l.31     \end{enumerate}
-                        
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-) (../_definitions/definition_homotopy_equivalence_between_topological_spaces.tex
-
-LaTeX Warning: Reference `definition:homotopy_of_maps_of_topological_spaces_relative_to_a_subset' on page 1 undefined on input line 7.
+) (../_definitions/definition_n_dimensional_unit_ball_disk.tex) (../_definitions/definition_n_dimensional_unit_sphere.tex) (../_definitions/definition_standard_unit_interval_in_the_real_lines.tex
+Overfull \hbox (4.35599pt too wide) in paragraph at lines 2--3
+[]\T1/cmr/bx/n/12 Definition 1.5.5. []\T1/cmr/m/n/12 The []\T1/cmr/m/it/12 stan[]-[]dard[] [][][]unit[] [][][]in[]-[]ter[]-[]val\T1/cmr/m/n/12 , de-noted by [][], is the []sub-space[] (Def-i-ni-tion []1.1.14[])
+ []
 
 
 
-[17]) (../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex
+[10]) (../_definitions/definition_n_dimensional_unit_cube_in_euclidean_space.tex) (../_definitions/definition_n_dimensional_torus.tex) (../_definitions/definition_real_or_complex_projective_space.tex) (../_definitions/definition_compactly_generated_topological_space.tex) (../_definitions/definition_weakly_hausdorff_topological_space.tex) (../_definitions/definition_extended_metric_on_a_set.tex
 
-[18]) (../_definitions/definition_homotopy_category_of_topological_spaces.tex) (../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex) (../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex) (../_definitions/definition_path_and_loop_in_a_topological_space.tex
+[11]) (../_definitions/definition_isometry_between_extended_metric_spaces.tex) (../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex) (../_definitions/definition_topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric.tex) (../_definitions/definition_convergence_and_limits_in_extended_metric_space.tex
 
-[19]) (../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex
+[12]) (../_definitions/definition_cauchy_sequence_in_an_extended_metric_space.tex) (../_definitions/definition_complete_extended_metric_space.tex) (../_definitions/definition_completion_of_an_extended_metric_space.tex)
+
+[13] (../_definitions/definition_absolute_value_on_a_field.tex) (../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex
+
+[14]) (../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex) (../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex) (../_definitions/definition_norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space.tex
+
+[15]) (../_definitions/definition_euclidean_n_space.tex) (../_definitions/definition_path_connected_topological_space.tex) (../_definitions/definition_locally_path_connected_topological_space.tex) (../_definitions/definition_path_component_of_a_point_in_a_topological_space.tex) (../_definitions/definition_simply_connected_space.tex
+
+[16]) (../_concepts/proposition_topological_space_is_simply_connected_iff_path_connected_and_every_continuous_map_from_the_circle_is_null_homotopic.tex) (../_definitions/definition_locally_simply_connected_topological_space.tex) (../_concepts/proposition_locally_simply_connected_topological_space_is_locally_path_connected_and_semi_locally_simply_connected.tex) (../_concepts/proposition_topological_manifolds_are_locally_simply_connected.tex) (../_definitions/definition_locally_contractible_topological_space.tex) (../_definitions/definition_semi_locally_simply_connected_space.tex) (../_concepts/proposition_topological_space_is_semi_local_simply_connected_iff_every_point_has_open_neighborhood_such_that_every_loop_based_there_is_null_homotopic_in_ambient_space.tex) (../_definitions/definition_stone_space.tex) (../_definitions/definition_category_of_stone_spaces.tex
+
+[17]) (../_definitions/definition_boolean_algebra.tex) (../_definitions/definition_morphism_of_boolean_algebras.tex) (../_definitions/definition_category_of_boolean_algebras.tex) (../_concepts/proposition_function_between_boolean_algebras_is_a_morphism_of_boolean_algebras_iff_it_is_a_ring_homomorphism_between_the_boolean_rings.tex) (../_definitions/definition_filter_and_ultrafilter_on_a_boolean_algebra.tex) (../_concepts/proposition_filter_is_an_ultrafilter_if_and_only_if_every_element_or_negation_is_in_it.tex) (../_definitions/definition_stone_space_of_a_boolean_algebra.tex) (../_concepts/theorem_stones_representation_theorem.tex
+
+[18]) (../_definitions/definition_covering_space_of_a_topological_space.tex) (../_definitions/definition_morphism_of_covering_spaces_of_a_topological_space.tex) (../_definitions/definition_deck_transformation_of_a_covering_space.tex) (../_definitions/definition_universal_cover_of_a_topological_space.tex) (../_concepts/theorem_map_of_fundamental_groups_induced_by_covering_of_a_path_connected_and_locally_path_connected_space_is_injective.tex) (../_definitions/definition_lift_of_a_continuous_map_under_a_covering_of_topological_spaces.tex
+
+[19]) (../_definitions/definition_normal_covering_space_of_a_topological_space.tex) (../_concepts/theorem_lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained.tex) (../_concepts/theorem_lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained.tex) (../_concepts/theorem_universal_cover_exists_for_connected_locally_path_connected_semi_locally_simply_connected_topological_space.tex) (../_concepts/proposition_isom_class_of_conn_pointed_covers_of_a_conn_loc_path_conn_semiloc_simp_conn_pointed_space_corresponds_to_subgroup_of_fund_gp.tex
+
+[20]) (../_concepts/theorem_deck_transformation_group_of_a_connected_pointed_covering_is_quotient.tex) (../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex
+
+[21]) (../_definitions/definition_homotopy_equivalence_between_topological_spaces.tex
+
+[22]) (../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex
+
+[23]) (../_definitions/definition_homotopy_category_of_topological_spaces.tex) (../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex) (../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex) (../_definitions/definition_path_and_loop_in_a_topological_space.tex) (../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex
+
+[24]
+Overfull \hbox (12.24234pt too wide) in paragraph at lines 23--24
+[]\T1/cmr/m/n/12 The ho-mo-topy set $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 is nat-u-rally iso-mor-phic to the []rel-a-tive ho-mo-topy set $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; x[]\OT1/cmr/m/n/12 )$[]
+ []
+
+
 Overfull \hbox (64.84662pt too wide) in paragraph at lines 25--26
 []\T1/cmr/m/n/12 We fur-ther note that the set $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 ) = [(\OML/cmm/m/it/12 S[]; s[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )][]$ \T1/cmr/m/n/12 is iden-ti-fi-able with $\OML/cmm/m/it/12 ^^Y[]\OT1/cmr/m/n/12 ([][]((\OML/cmm/m/it/12 S[]; s[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X; x[]\OT1/cmr/m/n/12 )))$\T1/cmr/m/n/12 . 
  []
 
 ) (../_definitions/definition_relative_homotopy_groups_of_pointed_pairs_of_topological_spaces.tex
 
-[20]) (../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex) (../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex) (../_definitions/definition_singular_simplex_of_a_topological_space.tex) (../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group.tex
+[25]) (../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex) (../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex) (../_definitions/definition_singular_simplex_of_a_topological_space.tex) (../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group.tex
 
-[21]
+[26]
 
 LaTeX Warning: Reference `definition:tensor_product_of_bimodules_of_rings' on page 1 undefined on input line 21.
 
 ) (../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group.tex
 
-[22]) (../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group.tex) (../_definitions/definition_singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex
+[27]) (../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group.tex) (../_definitions/definition_singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex
 
-[23]) (../_definitions/definition_singular_cohomology_group_relative_singular_cohomology_group_of_topological_space_with_coefficients_in_a_commutative_ring.tex) (../_definitions/definition_countable_finite_uncountable_sets.tex
+[28]) (../_definitions/definition_singular_cohomology_group_relative_singular_cohomology_group_of_topological_space_with_coefficients_in_a_commutative_ring.tex) (../_definitions/definition_CW_complex.tex) (../_definitions/definition_homotopy_lifting_property_for_a_continuous_map_of_topological_spaces_with_respect_to_a_topological_space.tex
+
+[29]) (../_definitions/definition_hurewicz_fibration_of_topological_spaces.tex) (../_definitions/definition_serre_fibration_of_topological_spaces.tex) (../_concepts/lemma_hurewicz_fibrations_are_serre_fibrations.tex
+Overfull \hbox (5.31462pt too wide) in paragraph at lines 2--3
+[]\T1/cmr/bx/n/12 Lemma 6.2.2. []\T1/cmr/m/n/12 Any []Hurewicz fi-bra-tion[] (Def-i-ni-tion []6.1.2[]) is a []Serre fi-bra-tion[] (Def-i-ni-tion []6.2.1[]). 
+ []
+
+) (../_definitions/definition_fiber_bundle_of_topological_spaces.tex
+
+[30]) (../_definitions/definition_paracompact_topological_space.tex) (../_concepts/theorem_nice_enough_topological_spaces_are_paracompact.tex) (../_concepts/proposition_fiber_bundles_with_paracompact_base_is_a_hurewicz_fibration.tex) (../_concepts/proposition_any_fiber_bundle_of_topological_spaces_is_a_serre_fibration.tex) (../_definitions/definition_countable_finite_uncountable_sets.tex
 Overfull \hbox (4.1469pt too wide) in paragraph at lines 5--6
 []\T1/cmr/m/n/12 The set $\OML/cmm/m/it/12 A$ \T1/cmr/m/n/12 is said to be []\T1/cmr/m/it/12 fi[]-[]nite \T1/cmr/m/n/12 if there ex-ists some $\OML/cmm/m/it/12 n \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 N$ \T1/cmr/m/n/12 and a bi-jec-tion $\OML/cmm/m/it/12 g \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; n\OMS/cmsy/m/n/12 g !
  []
 
-) (../_definitions/definition_injective_surjective_bijective_map_of_sets.tex) (../_definitions/definition_category.tex
+) (../_definitions/definition_injective_surjective_bijective_map_of_sets.tex
+
+[31]) (../_definitions/definition_category.tex
 \@gls@deffile=\write9
 \openout9 = `Topology.glsdefs'.
 
+) (../_definitions/definition_locally_small_category.tex
+
+[32]) (../_definitions/definition_group.tex) (../_definitions/definition_group_homomorphism.tex
+Overfull \hbox (4.43431pt too wide) in paragraph at lines 3--4
+[]\T1/cmr/bx/n/12 Definition C.0.2 \T1/cmr/m/n/12 (Group ho-mo-mor-phism)\T1/cmr/bx/n/12 . []\T1/cmr/m/n/12 Let $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G; \OMS/cmsy/m/n/12 ^^A\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 and $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H; \OMS/cmsy/m/n/12 ^^C\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 be []groups[] (Def-i-ni-tion []C.0.1[]).
+ []
 
 
-[24]) (../_definitions/definition_locally_small_category.tex
 
-[25]) (../_definitions/definition_group.tex) (../_definitions/definition_group_homomorphism.tex) (../_definitions/definition_commutative_ring.tex
+[33]) (../_definitions/definition_commutative_ring.tex) (../_definitions/definition_module_of_a_ring.tex
 
-[26]) (../_definitions/definition_module_of_a_ring.tex) (../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex
-
-[27]
+[34]) (../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex
 Overfull \hbox (68.09166pt too wide) detected at line 5
 []
  []
@@ -1525,28 +1134,30 @@ Overfull \hbox (75.92307pt too wide) detected at line 9
 []
  []
 
-) (../_definitions/definition_chain_complex_in_an_additive_category.tex
-
-[28]
-
-[29]) (../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_additive_category.tex
-
-LaTeX Warning: Hyper reference `definition:functor_between_categories' on page 30 undefined on input line 7.
 
 
-LaTeX Warning: Hyper reference `definition:functor_between_categories' on page 30 undefined on input line 11.
+[35]) (../_definitions/definition_chain_complex_of_objects_in_a_preadditive_category.tex
+
+[36]) (../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category.tex
+
+LaTeX Warning: Hyper reference `definition:functor_between_categories' on page 37 undefined on input line 7.
 
 
-LaTeX Warning: Reference `proposition:homology_and_cohomology_of_complexes_in_an_abelian_category_are_functorial' on page 1 undefined on input line 13.
+Overfull \hbox (26.38718pt too wide) in paragraph at lines 6--8
+\OML/cmm/m/it/12 f[] \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 K[] \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 L[]$ \T1/cmr/m/n/12 of cochain com-plexes, it is thus cus-tom-ary to write [][]
+ []
+
+
+LaTeX Warning: Hyper reference `definition:functor_between_categories' on page 37 undefined on input line 11.
 
 )) (./Topology.bbl
 
-[30]
+[37]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[31]
+[38]
 Overfull \hbox (20.37529pt too wide) in paragraph at lines 259--262
 []\T1/cmr/m/n/10 Hyun Jong Kim. \T1/cmtt/m/n/10 trouver\T1/cmr/m/n/10 , 2023. GitHub repos-i-tory: https://github.com/hyunjongkimmath/trouver. 
  []
@@ -1556,12 +1167,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[32]
+[39]
 Underfull \hbox (badness 2158) in paragraph at lines 353--356
 []\T1/cmr/m/n/10 James S. Milne. Lie al-ge-bras, al-ge-braic groups, and lie groups, 2013. Avail-able at
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 424--428
 []\T1/cmr/m/n/10 nLab au-thors. sta-ble ho-mo-topy cat-e-gory. []$\T1/cmtt/m/n/10 https : / / ncatlab . org / nlab / show / stable +
  []
@@ -1571,12 +1187,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[33]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[34])
+[41])
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
@@ -1584,7 +1195,7 @@ This document will not have a glossary.
 
 
 
-[35] (./Topology.aux)
+[42] (./Topology.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
@@ -1594,30 +1205,24 @@ L3 programming layer <2024-12-09>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Topology.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Topology.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D3C022DC73A4176DE5152D38545DF459;6847.
+Package rerunfilecheck Info: File `Topology.out' has not changed.
+(rerunfilecheck)             Checksum: 811C7C848684F02BA5BABE0C90632D66;7890.
  ) 
 Here is how much of TeX's memory you used:
- 34575 strings out of 473254
- 681290 string characters out of 5722066
- 1074001 words of memory out of 5000000
- 56277 multiletter control sequences out of 15000+600000
+ 35068 strings out of 473254
+ 698390 string characters out of 5722066
+ 1089110 words of memory out of 5000000
+ 56672 multiletter control sequences out of 15000+600000
  586099 words of font info for 125 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 121i,25n,124p,3341b,1041s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 121i,16n,124p,3341b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Topology.pdf (35 pages, 593264 bytes).
+Output written on Topology.pdf (42 pages, 659631 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 625 compressed objects within 7 object streams
- 363 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1648 PDF objects out of 1728 (max. 8388607)
+ 1532 compressed objects within 16 object streams
+ 400 named destinations out of 1000 (max. 500000)
+ 293 words of extra memory for PDF output out of 10000 (max. 10000000)
 
