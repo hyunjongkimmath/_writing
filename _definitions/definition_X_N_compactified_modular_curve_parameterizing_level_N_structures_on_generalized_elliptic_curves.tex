@@ -1,0 +1,17 @@
+\begin{definition}[Compactified modular curve $X(N)$] \label{definition:X_N_compactified_modular_curve_parameterizing_level_N_structures_on_generalized_elliptic_curves}
+Let $N \geq 1$ be an integer. The \hldef{compactified modular curve $X(N)$} is the proper smooth algebraic curve over $\mathbb{Z}[1/N, \zeta_N]$ that compactifies the affine fine moduli space $Y(N)$ representing the moduli stack $\mathcal{M}(N)$ (see \CrefAndHyperrefIfExist{definition:moduli_stack_of_elliptic_curves_with_full_level_N_structure}{Moduli Stack $\mathcal{M}(N)$}).
+
+More precisely, for $N \geq 3$, the affine modular curve $Y(N)$ is the fine moduli space representing the functor
+\[
+    Y(N): (\mathrm{Sch}/\mathbb{Z}[1/N, \zeta_N])^{\mathrm{op}} \longrightarrow \mathrm{Sets}
+\]
+sending an $\mathbb{Z}[1/N, \zeta_N]$-scheme $S$ to the set of isomorphism classes of pairs $(E, \alpha)$ where
+\begin{itemize}
+    \item $E$ is an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} over $S$, and
+    \item $\alpha: (\mathbb{Z}/N\mathbb{Z})_S^{\oplus 2} \xrightarrow{\sim} E[N]$ is a full level $N$ structure (see \CrefAndHyperrefIfExist{definition:moduli_stack_of_elliptic_curves_with_full_level_N_structure}{full level $N$ structure}).
+\end{itemize}
+
+The compactified curve $X(N)$ is obtained by adjoining finitely many \CrefAndHyperrefIfExist{definition:cusps_of_classical_modular_curves}{cusps} to $Y(N)$. Each cusp corresponds to a \CrefAndHyperrefIfExist{definition:tate_curve_over_a_complete_discrete_valuation_field}{Tate curve} $\mathbb{G}_m/q^{\mathbb{Z}}$ over a complete discrete valuation field, equipped with a full level $N$ structure on its generic fiber.
+
+The Galois group $\mathrm{GL}_2(\mathbb{Z}/N\mathbb{Z}) / \{\pm I\}$ acts on $X(N)$ by change of basis of the full level structure. The quotient of $X(N)$ by the image of $\Gamma_1(N) \subset \mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z})$ is the compactified modular curve $X_1(N)$, and the quotient by the image of $\Gamma_0(N)$ is the compactified modular curve $X_0(N)$.
+\end{definition}

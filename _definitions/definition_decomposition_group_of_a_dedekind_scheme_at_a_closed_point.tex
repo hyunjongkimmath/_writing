@@ -1,0 +1,8 @@
+\begin{definition}[Decomposition group of a Dedekind scheme at a closed point] \label{definition:decomposition_group_of_a_dedekind_scheme_at_a_closed_point}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:dedekind_scheme}{Dedekind scheme} with function field $K$. Fix a \CrefAndHyperrefIfExist{definition:separable_closure_of_a_field}{separable closure} $\bar{K}$ of $K$, and let $G_K = \Gal(\bar{K}/K)$ be the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} of $K$. Let $s \in S$ be a \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point}.
+
+    Choosing a prime $\bar{\mathfrak{s}}$ of the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\mathcal{O}_{S, s}$ in $\bar{K}$ is equivalent to choosing a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} $\bar{s} \to S$ lying over $s$. The \hldef{decomposition group of $S$ at $s$ (with respect to this choice)} is the subgroup:
+    $$\hlin{D_s = D(\bar{\mathfrak{s}} | s) = \{ \sigma \in G_K \mid \sigma(\bar{\mathfrak{s}}) = \bar{\mathfrak{s}} \} \subset G_K}$$
+
+    The decomposition group $D_s$ is well-defined up to conjugacy in $G_K$. There is a natural surjection $\phi: D_s \twoheadrightarrow \Gal(\overline{k(s)}/k(s))$, where $\overline{k(s)}$ is a separable closure of the residue field $k(s) = \mathcal{O}_{S, s} / \mathfrak{m}_s$. The kernel of this surjection is the inertia subgroup.
+\end{definition}

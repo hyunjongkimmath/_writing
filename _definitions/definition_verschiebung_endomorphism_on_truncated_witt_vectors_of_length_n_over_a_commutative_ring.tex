@@ -1,0 +1,29 @@
+% VERSCHIEBUNG MAP ON TRUNCATED WITT VECTORS - Definition of the Verschiebung operator
+\begin{definition}\label{definition:verschiebung_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, let $p$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime number}, and let $n \geq 1$ be an integer.
+
+The \hldef{Verschiebung endomorphism on truncated Witt vectors of length $n$ over $R$} is the map
+\hlalign{
+    \begin{align*}
+    V_n: W_n(R) &\to W_n(R) \\
+    (x_0, x_1, \dots, x_{n-2}, x_{n-1}) &\mapsto (0, x_0, x_1, \dots, x_{n-3}, x_{n-2}).
+    \end{align*}
+}
+
+The name "Verschiebung" is German for "shift" or "displacement," reflecting the fact that this map shifts all components one position to the right and inserts a zero in the first component.
+
+Key properties of the Verschiebung endomorphism:
+\begin{itemize}
+    \item $V_n$ is an \CrefAndHyperrefIfExist{definition:group_homomorphism}{additive homomorphism}, i.e., for all $\mathbf{x}, \mathbf{y} \in W_n(R)$, we have $V_n(\mathbf{x} \oplus \mathbf{y}) = V_n(\mathbf{x}) \oplus V_n(\mathbf{y})$.
+    \item $V_n$ is not a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} in general.
+    \item If $R$ has \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $p$, then for all $\mathbf{x} \in W_n(R)$ and $a \in R$, we have $V_n(a \cdot \mathbf{x}) = a^p \cdot V_n(\mathbf{x})$.
+\end{itemize}
+
+The Verschiebung endomorphism satisfies the fundamental identity with the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}{Frobenius endomorphism}:
+$$
+    \sigma_n \circ V_n = V_n \circ \sigma_n = p \cdot \mathrm{id}_{W_n(R)},
+$$
+where $\sigma_n$ is the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}{Frobenius endomorphism on truncated Witt vectors of length $n$ over $R$}.
+
+The Verschiebung endomorphisms are compatible with the projection homomorphisms $W_{n+1}(R) \to W_n(R)$, and thus induce a Verschiebung endomorphism $V: W(R) \to W(R)$ on the \CrefAndHyperrefIfExist{definition:witt_ring_of_a_commutative_ring}{full ring of Witt vectors}.
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{definition}[Dual graph and dual tree of a nodal curve] \label{definition:dual_graph_and_tree_of_a_nodal_curve}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected}, \CrefAndHyperrefIfExist{definition:reduced_scheme}{reduced} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} over a field $k$ whose only singularities are \CrefAndHyperrefIfExist{definition:ordinary_double_point_of_a_finite_type_scheme_over_a_field}{ordinary double points} (nodes). The \hldef{dual graph} $\Gamma_X$ of $X$ is the weighted multigraph defined as follows:
+    \TODO{weight multigraph}
+    \begin{itemize}
+        \item Each irreducible component $C_i$ of $X$ corresponds to a vertex $v_i$ of $\Gamma_X$, equipped with a weight $w(v_i) = g(C_i)$, the \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_connected_curve_over_a_field}{geometric genus} of $C_i$.
+        \item Each node of $X$ that is a self-intersection of an \CrefAndHyperrefIfExist{definition:irreducible_component_of_a_topological_space}{irreducible component} $C_i$ (i.e., two branches of the same component meet) corresponds to a loop edge at $v_i$. Each node formed by the intersection of two distinct components $C_i$ and $C_j$ corresponds to an edge between $v_i$ and $v_j$.
+        \item Each \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth} marked point on $C_i$ is recorded as a half-edge (or leg) attached to $v_i$.
+    \end{itemize}
+
+    The dual graph $\Gamma_X$ is said to be a \hldef{dual tree} if it contains no cycles, i.e., if the underlying unweighted graph is a tree. \end{definition}

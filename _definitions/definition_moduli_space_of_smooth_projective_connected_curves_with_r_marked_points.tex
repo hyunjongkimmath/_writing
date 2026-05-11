@@ -1,0 +1,17 @@
+\begin{definition}[$\mathcal{M}_{g,S;r}$: moduli of smooth projective connected curves with $r$ marked points over a base scheme] \label{definition:moduli_space_of_smooth_projective_connected_curves_with_r_marked_points}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, let $g \geq 0$ be an integer, and let $r \geq 0$ be an integer. The symbol \hldef{$\mathcal{M}_{g,S;r}$} denotes the \CrefAndHyperrefIfExist{definition:moduli_stack_over_a_scheme}{moduli stack} of smooth, projective, connected curves of genus $g$ over $S$ equipped with $r$ distinct marked points.
+
+    More precisely, $\mathcal{M}_{g,S;r}$ is the \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids} over $(\operatorname{Sch}/S)_{\text{fppf}}$ defined as follows. For an $S$-scheme $T$, let $\mathcal{M}_{g,S;r}(T)$ be the category whose objects are pairs $(C/T, (p_i)_{i=1}^r)$ consisting of:
+    \begin{itemize}
+        \item a morphism $C \to T$ that is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat}, \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}, and \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} with geometrically connected fibers of dimension $1$ (i.e., a smooth proper curve of genus $g$ over $T$),
+        \item sections $p_i: T \to C$ for $i = 1, \dots, r$, such that the images of $p_i$ and $p_j$ are disjoint in $C$ for all $i \neq j$.
+    \end{itemize}
+    A morphism from $(C'/T', (p'_i)_{i=1}^r)$ to $(C/T, (p_i)_{i=1}^r)$ over a morphism $f: T' \to T$ is a morphism of schemes $h: C' \to C$ fitting into a commutative diagram
+    $$\begin{tikzcd}
+        C' \ar[r, "h"] \ar[d] & C \ar[d] \\
+        T' \ar[r, "f"] & T
+    \end{tikzcd}$$
+    such that $h \circ p'_i = p_i \circ f$ for all $i = 1, \dots, r$.
+
+    When $S = \Spec \bbZ$, we write $\mathcal{M}_{g;r} := \mathcal{M}_{g,\Spec\bbZ;r}$. The stack $\mathcal{M}_{g,S;r}$ is a \CrefAndHyperrefIfExist{definition:deligne_mumford_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}{Deligne--Mumford stack} that is smooth and separated over $S$ of relative dimension $3g - 3 + r$, provided $2g - 2 + r > 0$.
+\end{definition}

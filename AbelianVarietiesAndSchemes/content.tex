@@ -1,0 +1,264 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+\section{Preliminaries on schemes}
+
+\subsection{Dedekind schemes and fibers}
+
+\input{../_definitions/definition_dedekind_scheme.tex}
+\input{../_concepts/proposition_dvrs_are_dedekind_domains.tex}
+\input{../_definitions/definition_special_and_generic_fiber_of_a_scheme_over_a_dedekind_scheme.tex}
+\input{../_definitions/definition_generic_point_of_a_topological_space.tex}
+\input{../_definitions/definition_closed_point_of_a_topological_space.tex}
+
+\subsection{Basic scheme-theoretic notions}
+
+\input{../_definitions/definition_morphism_of_schemes.tex}
+\input{../_definitions/definition_proper_morphism_of_schemes.tex}
+\input{../_definitions/definition_smooth_morphism_of_schemes.tex}
+\input{../_definitions/definition_affine_scheme.tex}
+\input{../_definitions/definition_integral_scheme.tex}
+\input{../_definitions/definition_locally_noetherian_and_noetherian_scheme.tex}
+\input{../_definitions/definition_normal_and_factorial_scheme.tex}
+\input{../_definitions/definition_dimension_of_a_topological_space.tex}
+\input{../_definitions/definition_residue_field_of_a_scheme_at_a_point.tex}
+\input{../_definitions/definition_function_field_over_an_integral_domain_in_finitely_many_variables.tex}
+
+\section{Algebraic group schemes and abelian varieties}
+
+\subsection{Group schemes}
+
+\input{../_definitions/definition_algebraic_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_identity_component_of_a_group_scheme_over_a_scheme.tex}
+\input{../_concepts/proposition_strong_identity_component_of_a_smooth_algebraic_group_scheme_over_a_field_equals_the_identity_component.tex}
+\input{../_definitions/definition_additive_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_multiplicative_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_kernel_of_a_homomorphism_of_group_schemes_over_a_scheme.tex}
+\input{../_definitions/definition_subgroup_scheme_of_an_algebraic_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_quotient_of_an_algebraic_group_scheme_by_an_algebraic_subgroup_scheme.tex}
+
+\subsection{Algebraic tori and semi-abelian group schemes}
+
+\input{../_definitions/definition_algebraic_torus_over_a_field.tex}
+\input{../_definitions/definition_semi_abelian_group_scheme_over_a_scheme.tex}
+
+\subsection{Abelian varieties}
+
+\input{../_definitions/definition_abelian_variety_over_a_field.tex}
+\input{../_definitions/definition_dual_abelian_variety_of_an_abelian_variety_over_a_field.tex}
+\input{../_definitions/definition_isogenous_abelian_varieties_over_a_field.tex}
+\input{../_definitions/definition_isogeny_of_abelian_varieties_over_a_field.tex}
+\input{../_definitions/definition_polarization_of_an_abelian_variety_over_a_field.tex}
+\input{../_definitions/definition_principal_polarization_of_an_abelian_variety_over_a_field.tex}
+\input{../_definitions/definition_weil_chatelet_group_of_an_abelian_variety_over_a_field.tex}
+
+\section{Picard groups and Jacobian varieties}
+
+
+
+\input{../_definitions/definition_picard_group_of_a_scheme.tex}
+
+\subsection{The relative Picard functor of a scheme over a scheme}
+
+\input{../_definitions/definition_relative_picard_functor_of_a_scheme_over_a_scheme.tex}
+
+\input{../_concepts/proposition_relative_picard_functor_of_a_scheme_over_a_scheme_is_sections_functor_of_first_derived_direct_image_of_sheaf_of_units.tex}
+
+\input{../_concepts/proposition_first_sheaf_cohomology_of_sheaf_of_units_on_scheme_is_same_for_fpqc_fppf_etale_zariski_tops.tex}
+
+\subsection{Representability of the relative Picard functor}
+
+\input{../_concepts/theorem_relative_picard_group_of_a_projective_finitely_presented_flat_morphism_of_schemes_with_integral_geometric_fibers_is_representable.tex}
+
+\input{../_concepts/theorem_relative_picard_functor_for_a_proper_scheme_over_a_field_is_representable_by_a_scheme.tex}
+
+\input{../_concepts/theorem_relative_picard_functor_of_a_proper_scheme_over_a_field_is_representable_by_a_locally_of_finite_type_scheme.tex}
+
+\begin{proposition}[{\cite[Section 8.4, Proposition 2]{bosch_lutkebohmert_raynaud_nm}}]
+    Let $f: X \longrightarrow S$ be a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}, \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat}, \CrefAndHyperrefIfExist{definition:locally_of_finite_presentation_finite_presentation_morphism_of_schemes}{locally of finite presentation} \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. 
+    Let $s$ be a point of $S$ such that $H^2\left(X_s, \mathcal{O}_{X_s}\right)=0$. \TODO{for what topology}
+    Then there exists an open neighborhood $U$ of $s$ such that $\left.\mathrm{Pic}_{X / S}\right|_U$ (\Cref{definition:relative_picard_functor_of_a_scheme_over_a_scheme})\CrefIfExists{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site} is formally smooth over $U$. \TODO{formally smooth}
+    \TODO{a theorem that says that sheaf cohomology for coherent sheaves on the zariski, etale, fppf topologies are all the same.}
+\end{proposition}
+
+\input{../_definitions/definition_picard_group_of_an_algebraic_space.tex}
+
+\subsection{Picard variety}
+
+\input{../_definitions/definition_picard_variety_of_a_smooth_projective_geometrically_integral_variety_over_a_field.tex}
+
+\TODO{representability by algebraic space}
+
+\subsection{Jacobian variety of a curve}
+
+\input{../_concepts/theorem_relative_picard_functor_of_a_proper_curver_over_a_field_is_a_smooth_scheme.tex}
+
+
+\input{../_definitions/definition_jacobian_of_a_curve_over_a_field.tex}
+
+\input{../_concepts/proposition_dimension_of_jacobian_variety_of_a_nice_curve_equals_geometric_genus.tex}
+
+\subsection{Coverings of curves from the Jacobian}
+
+\input{../_concepts/proposition_abelianized_etale_fundamental_group_of_nice_curve_coincides_with_etale_fundamental_group_of_jacobian.tex}
+
+\begin{proposition}
+    \TODO{talk about how 
+    $$H^1(X_{\text{et}},G) \cong \Hom_{\text{cont}}(\pi_1^{\text{et}}(X, \barx), G)$$
+    for finite groups $G$ and general connected schemes $X$.
+    }
+\end{proposition}
+
+\begin{proposition}[see {\cite[Chapter III, Corollary 9.6.]{milne_av}}]
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}, \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} over a \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose \CrefAndHyperrefIfExist{definition:connected_component_of_a_point_of_a_topological_space}{connected components} are \CrefAndHyperrefIfExist{definition:geometrically_connected_scheme_over_a_field}{geometrically connected}.
+    \TODO{handle the disconnectedness of $X$; apparently the abel-jacobi map would need to pick out rational points on all components. }
+    Let $P \in X(k)$. For all primes $\ell$, the map of \'etale cohomologyg roups $H^1(\Jac(X),\bbZ_\ell) \to H^1(X, \bbZ_\ell)$ induced by the embedding $X \hookrightarrow \Jac(X)$ is an isomorphism. 
+    \TODO{apparently this is still true for $\ell = p$ by a Witt vector arguement}
+\end{proposition}
+
+\TODO{look into SGA 1, Expose XI for result that relates etale fundamental group of abelian variety to adic tate module}
+
+\section{Abelian schemes}
+
+\input{../_definitions/definition_abelian_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_isogeny_of_abelian_schemes_over_a_scheme.tex}
+
+\section{Néron models}
+
+\input{../_definitions/definition_neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex.tex}
+
+\section{Reduction of abelian varieties}
+
+\subsection{Good and semi-abelian reduction}
+
+\input{../_definitions/definition_good_reduction_of_an_abelian_variety_over_a_dedekind_scheme.tex}
+\input{../_definitions/definition_abelian_and_semi_abelian_reduction_for_a_smooth_group_scheme_over_a_dedekind_scheme.tex}
+
+\subsection{Potential reduction}
+
+\input{../_definitions/definition_potential_good_and_semi_abelian_reduction_for_an_abelian_variety_over_the_function_field_of_a_dedekind_scheme.tex}
+
+\section{Galois representations and Tate modules}
+
+\subsection{Absolute Galois groups and decomposition theory}
+
+\input{../_definitions/definition_separable_closure_of_a_field.tex}
+\input{../_definitions/definition_absolute_galois_group_of_a_field.tex}
+\input{../_definitions/definition_decomposition_group_of_a_dedekind_scheme_at_a_closed_point.tex}
+\input{../_definitions/definition_inertia_group_in_the_absolute_galois_group_of_the_function_field_of_a_dedekind_scheme_at_a_closed_point.tex}
+
+\subsection{Tate modules and unramified representations}
+
+\input{../_definitions/definition_ell_adic_tate_module_of_an_abelian_variety.tex}
+\input{../_definitions/definition_unramified_galois_representation_for_a_dedekind_scheme_at_a_closed_point.tex}
+
+\section{The criterion of Néron--Ogg--Shafarevich}
+
+\input{../_concepts/theorem_criterion_of_neron_ogg_shafarevich_for_good_reduction_of_abelian_varieties.tex}
+
+% TODO{ell-adic sheaves and Tate twist sheaves for geometric statement}
+% \input{../_definitions/definition_ell_adic_sheaf_Z_ell_on_small_etale_site_of_a_scheme.tex}
+% \input{../_definitions/definition_ell_adic_tate_twist_sheaves_on_the_small_etale_site_of_a_scheme.tex}
+
+\section{Selmer theory}
+
+\input{../_definitions/definition_decomposition_group_of_a_finite_galois_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_inertia_group_of_a_finite_galois_extension_of_valuation_fields.tex}
+
+\input{../_definitions/definition_decomposition_group_of_a_general_galois_extension_of_valuation_fields.tex}
+\input{../_definitions/definition_inertia_group_of_a_general_galois_extension_of_valuation_fields.tex}
+
+\input{../_definitions/definition_kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field.tex}
+\input{../_definitions/definition_selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field.tex}
+
+\input{../_concepts/proposition_selmer_group_of_a_commutative_group_scheme_over_a_global_field_is_group_of_galois_cocycles_whose_restriction_are_local_mordell_weil_groups.tex}
+
+\begin{proposition}[{\cite[Proposition 2.7(d)]{cesnavicius_sgfcg}}] \label{proposition:cesnavicius_sgfcg_for_nice_enough_isog_between_frac_field_of_hensel_dvr_the_unram_first_galois_coh_on_the_kernel_is_the_image_of_the_kummer_map_and_the_first_fppf_coh}
+    \TODO{figure out how to have local tamagawa numbers applicable to this setting}
+    Let $S = \operatorname{Spec} \mathfrak{o}$\CrefIfExists{definition:affine_scheme} where $\mathfrak{o}$ is a \CrefAndHyperrefIfExist{definition:henselian_ring}{Henselian} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring} with \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} $K$ and \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} $k$. Let $\varphi: A \to B$ be a \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_varieties_over_a_field}{$K$-isogeny} of \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian varieties}. Write $\delta_\varphi: B(K) \to H^1(K, A[\varphi])$\CrefIfExists{definition:kernel_of_a_homomorphism_of_group_schemes_over_a_scheme} \CrefIfExists{definition:galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring} for the \CrefAndHyperrefIfExist{definition:kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field}{Kummer} map associated to $\varphi$. Let $\mathcal{A} / S$ and $\mathcal{B}/S$ be the \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron models} of $A$ and $B$ respectively, and lift $\varphi:A \to B$ to an isogeny $\varphi: \calA \to \calB$. Further write $\varphi: (\calA_k/\calA_k^0) \to (\calB_k/\calB_k^0)$\CrefIfExists{definition:identity_component_of_a_group_scheme_over_a_scheme} for the induced homomorphism between the \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale} $k$-group schemes of connected components of the \CrefAndHyperrefIfExist{definition:fiber_of_a_morphism_of_schemes_at_a_point}{fibers} $\calA_k$ and $\calB_k$. Let $c_A$ and $c_B$ respectively be the \CrefAndHyperrefIfExist{definition:local_tamagawa_numbers_of_abelian_varieties_over_local_fields}{local Tamagawa numbers} of $A$ and $B$.
+
+    Assuming that 
+    \begin{enumerate}
+        \item $\mathcal{A}[\varphi] \to S$ is \'etale 
+        (which holds whenever $\Char k \nmid \deg \varphi$\CrefIfExists{definition:degree_of_an_isogeny_of_group_schemes} for example \TODO{ref}), and 
+        \item We have 
+        $$\#(\calA_k/\calA_k^0(k)) = \#(\varphi(\calA_k/\calA_k^0)(k)) = \#(\calB_k/\calB_k^0(k))$$
+        (which holds whenever $\deg \varphi$ is coprime to $c_A \cdot c_B$ \TODO{ref})
+    \end{enumerate}
+    we have
+    $$H_{\text{unr}}^1 (K, A[\varphi]) = \operatorname{Im} \delta_{\varphi} = H_{\text{fppf}}^1(S, \mathcal{A}[\varphi])$$
+    (\Cref{definition:unramified_galois_cohomology_of_a_galois_module_over_a_ring_for_a_valuation_field}) (\Cref{definition:sheaf_cohomology_group_of_a_sheaf_of_modules_over_a_sheaf_of_rings_on_a_site}) (\Cref{definition:small_fppf_site_of_a_scheme})
+    \TODO{flat cohomology}
+\end{proposition}
+
+\begin{corollary} 
+    \TODO{if selmer groups can be extended to more general bases, then this should be generalizable to more general bases whose residue fields are all of a single characteristic}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_function_field}{global function field} over a finite field $\Fq$, and let $A$ and $B$ be \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{abelian group schemes} defined over $K$. Let $\varphi: A \to B$ be an \CrefAndHyperrefIfExist{definition:isogeny_of_algebraic_group_schemes_over_a_scheme}{isogeny defined over $K$}.  
+    Denote by $G_K = \mathrm{Gal}(\overline{K}/K)$ the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} of $K$. For each \CrefAndHyperrefIfExist{definition:place_of_a_global_field}{place} $v$ of $K$, fix an extension $v$ to $\barK$, which yields an embedding $\barK \subset \barK_v$ and a \CrefAndHyperrefIfExist{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}{decomposition group} $G_v \subset G_K$. Write $\operatorname{res}_v: H^1(K, A[\varphi]) \to H^1(G_v, A[\varphi])$ for the \CrefAndHyperrefIfExist{definition:restriction_map_of_continuous_group_cohomology_of_a_topological_group_on_a_topological_module}{restriction maps} induced by the inclusions $G_v \subset G_K$. Write $\delta_{\varphi_v}: B(K_v) / \varphi(A(K_v)) \to H^1(G_v, A[\varphi])$ for the local \CrefAndHyperrefIfExist{definition:kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field}{Kummer map} for $A/K_v$, and write $c_{A,v}$ and $c_{B,v}$ for the \CrefAndHyperrefIfExist{definition:local_tamagawa_numbers_of_abelian_varieties_over_local_fields}{local Tamagawa numbers} of $A$ and $B$ over \CrefAndHyperrefIfExist{definition:completion_of_a_global_field_at_a_place}{the completion $K_v$} of $K$ at $v$. 
+
+
+    % Let $K$ be a \CrefAndHyperrefIfExist{definition:global_function_field}{global function field} of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic $p$}. Let $\varphi: A \to B$ be an \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_varieties_over_a_field}{isogeny of abelian varieties over $K$}. For each \CrefAndHyperrefIfExist{definition:place_of_a_global_field}{place} $v$ of $K$, write $K_v$ for the \CrefAndHyperrefIfExist{definition:completion_of_a_global_field_at_a_place}{completion} of $K$ at $v$, write $G_v$ for the \CrefAndHyperrefIfExist{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}{decomposition group} of $v$, write $\delta_{\varphi_v}: B(K_v) / \varphi(A(K_v)) \to H^1(G_v, A[\varphi])$ for the local \CrefAndHyperrefIfExist{definition:kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field}{Kummer map} for $A/K_v$, and write $c_{A,v}$ and $c_{B,v}$ for the \CrefAndHyperrefIfExist{definition:local_tamagawa_numbers_of_abelian_varieties_over_local_fields}{local Tamagawa numbers} of $A$ and $B$ over \CrefAndHyperrefIfExist{definition:completion_of_a_global_field_at_a_place}{the completion $K_v$} of $K$ at $v$. 
+    
+    If $\deg \varphi$ is coprime to $p \cdot \prod_{v}  c_{A,v} \cdot\prod_{v} c_{B,v}$, then 
+    $$\Sel^{\varphi} = \{c \in H^1(K, A[\varphi]) : \text{ for every place } v \text{ of } K, \text{res}_v(C) \in H_{\text{unr}}^1 (K_p, A[\varphi]) \}$$
+    (\Cref{definition:unramified_galois_cohomology_of_a_galois_module_over_a_ring_for_a_valuation_field})
+    % Let $S = \operatorname{Spec} \mathfrak{o}$\CrefIfExists{definition:affine_scheme} where $\mathfrak{o}$ is a \CrefAndHyperrefIfExist{definition:henselian_ring}{Henselian} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring} with \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} $K$ and \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} $k$. Let $\phi: A \to B$ be a \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_varieties_over_a_field}{$K$-isogeny} of \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian varieties}. Write $\delta_\varphi: B(K) \to H^1(K, A[\varphi])$\CrefIfExists{definition:kernel_of_a_homomorphism_of_group_schemes_over_a_scheme} \CrefIfExists{definition:galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring} for the \CrefAndHyperrefIfExist{definition:kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field}{Kummer} map associated to $\varphi$. Let $\mathcal{A} / S$ and $\mathcal{B}/S$ be the \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron models} of $A$ and $B$ respectively, and lift $\phi:A \to B$ to an isogeny $\phi: \calA \to \calB$. Further write $\phi: (\calA_k/\calA_k^0) \to (\calB_k/\calB_k^0)$\CrefIfExists{definition:identity_component_of_a_group_scheme_over_a_scheme} for the induced homomorphism between the \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale} $k$-group schemes of connected components of the \CrefAndHyperrefIfExist{definition:fiber_of_a_morphism_of_schemes_at_a_point}{fibers} $\calA_k$ and $\calB_k$. Let $c_A$ and $c_B$ respectively be the \CrefAndHyperrefIfExist{definition:local_tamagawa_numbers_of_abelian_varieties_over_local_fields}{local Tamagawa numbers} of $A$ and $B$.
+
+    % Assuming that 
+    % \begin{enumerate}
+    %     \item $\mathcal{A}[\phi] \to S$ is \'etale 
+    %     (which holds whenever $\Char k \nmid \deg \phi$\CrefIfExists{definition:degree_of_an_isogeny_of_group_schemes} for example), and 
+    %     \item We have 
+    %     $$\#(\calA_k/\calA_k^0(k)) = \#(\phi(\calA_k/\calA_k^0)(k)) = \#(\calB_k/\calB_k^0(k))$$
+    %     (which holds whenever $\deg \phi$ is coprime to $c_A \cdot c_B$)
+    % \end{enumerate}
+
+    % we have
+    % $$\Sel^\phi(A/K) = \{c \in H^1(K, A[\phi]): \res_p(c) \in H_{\text{unr}}^1 (), \}$$
+\end{corollary}
+\begin{proof}
+    Let $S$ be the smooth projective curve over $\Fq$ corresponding to $K$. It is a Dedekind scheme of finite type over $\Fq$, so N\'eron models $\calA$ and $\calB$ of $A$ and $B$ over $S$ exist\CrefIfExists{theorem:neron_models_of_abelian_varieties_exist_over_dvrs_dedekind_schemes_of_finite_type_over_a_field_and_integer_rings_of_number_fields}. Writing $\varphi: \calA \to \calB$ for the isogeny lifting $\varphi$, we note that $\calA[\varphi]$ is \'etale over $S$ as a consequence of \Cref{proposition:multiplication_by_ell_for_commutative_group_scheme_over_general_base_is_etale_if_characteristic_of_residue_fields_is_different_from_ell}. 
+    This holds by a combination of \Cref{proposition:selmer_group_of_a_commutative_group_scheme_over_a_global_field_is_group_of_galois_cocycles_whose_restriction_are_local_mordell_weil_groups} and \Cref{proposition:cesnavicius_sgfcg_for_nice_enough_isog_between_frac_field_of_hensel_dvr_the_unram_first_galois_coh_on_the_kernel_is_the_image_of_the_kummer_map_and_the_first_fppf_coh} --- 
+    letting $\calA$ and $\calB$ be the N\'eron models of $A$ and $B$ over the smooth projective curve $S$ over $\Fq$ corresponding to $K$
+\end{proof}
+
+\appendix
+
+\section{Background definitions}
+
+\subsection{Basic algebra and set theory}
+
+\input{../_definitions/definition_prime_number.tex}
+\input{../_definitions/definition_characteristic_of_a_ring.tex}
+\input{../_definitions/definition_field.tex}
+\input{../_definitions/definition_galois_extension_of_fields.tex}
+\input{../_definitions/definition_profinite_set.tex}
+\input{../_definitions/definition_projective_and_inductive_limits_in_categories.tex}
+\input{../_definitions/definition_degree_of_a_field_extension.tex}
+
+\subsection{Schemes and topology}
+
+\input{../_definitions/definition_valuation_ring_of_a_nonarchimedean_valued_field.tex}
+\input{../_definitions/definition_integral_element_over_a_ring.tex}
+\input{../_definitions/definition_function_field_over_a_field.tex}
+\input{../_definitions/definition_geometric_fiber_of_a_morphism_of_schemes_at_a_geometric_point.tex}
+\input{../_definitions/definition_base_change_of_a_morphism_in_a_category_by_a_morphism.tex}
+\input{../_definitions/definition_geometrically_connected_scheme_over_a_field.tex}
+
+\subsection{Sheaves}
+
+\input{../_definitions/definition_sheaf_on_a_site.tex}
+\input{../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_site.tex}
+\input{../_definitions/definition_module_over_a_sheaf_of_rings_on_a_ringed_space.tex}
+\input{../_definitions/definition_free_and_locally_free_modules_on_a_ringed_site.tex}
+\input{../_definitions/definition_tensor_product_of_sheaves_of_bimodules_over_sheaves_of_rings_on_a_site.tex}
+\input{../_definitions/definition_sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family.tex}
+
+\input{../_definitions/definition_multiplicative_group_sheaf_of_a_ringed_site.tex}
+
+
+\subsection{Galois modules and representations}
+
+\input{../_definitions/definition_trivial_G_module_of_a_group_over_a_ring.tex}
+\input{../_definitions/definition_topological_module_over_topological_rings.tex}

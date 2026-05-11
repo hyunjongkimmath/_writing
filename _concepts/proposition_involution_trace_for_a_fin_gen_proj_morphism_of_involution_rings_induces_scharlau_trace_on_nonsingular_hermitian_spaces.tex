@@ -1,0 +1,31 @@
+\begin{proposition}[{\cite[Chapter I, (7.2.4) Proposition]{knus_qhfr}}] \label{proposition:involution_trace_for_a_fin_gen_proj_morphism_of_involution_rings_induces_scharlau_trace_on_nonsingular_hermitian_spaces}
+    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}, and assume that $A'$ is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} and \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}. 
+    Given a right $A'$-module $M'$, write $M'_{(A)}$ for the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction} of $M'$ as a right $A$-module (via $\eta$).
+    
+    Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace}.   
+    
+    % \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism of $A$-bimodules} such that 
+    % \begin{itemize}
+    %     \item $\tau(ayb) = a\tau(y)b$ for all $a,b \in A$ and $y \in A'_{(A)}$, i.e. $\tau: A'_{(A)} \to A$ is a bimodule homomorphism. 
+
+    %     \item $$\tau(\overline{a}) = \overline{\tau(a)}$$
+    %         for all $a \in A'$
+
+    %     \item The $1$-hermitian form $t_{A'/A}: A' \times A' \to A$ given by 
+    %     $$t_{A'/A}(x,y) = tau(\overline{x} y)$$
+    %     is \CrefAndHyperrefIfExist{definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring}{nonsingular}. 
+    % \end{itemize}
+
+    The \CrefAndHyperrefIfExist{definition:scharlau_transfer_functor_for_hermitian_spaces_on_involution_rings}{Scharlau transfer functors}
+    \begin{align*}
+        T: \mathfrak{Herm}^{\varepsilon'}(A) \to \mathfrak{Herm}^\varepsilon(A) \\ 
+        T: \mathfrak{Herm}_+^{\varepsilon'}(A) \to \mathfrak{Herm}_+^\varepsilon(A)
+    \end{align*}
+    induced by $\tau$ in turn induce functors
+
+    \hlalign{    \begin{align*}
+            T: \mathfrak{H}^{\varepsilon'}(A') \to \mathfrak{H}^\varepsilon(A) \\ 
+            T: \mathfrak{H}_+^{\varepsilon'}(A') \to \mathfrak{H}_+^\varepsilon(A)
+        \end{align*}}
+    (\Cref{definition:category_of_varepsilon_hermitian_spaces_over_a_ring_with_involution}) which may also be called \hldef{Scharlau transfer functors}.
+\end{proposition}

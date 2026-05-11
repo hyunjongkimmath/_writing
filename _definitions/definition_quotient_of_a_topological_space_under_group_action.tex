@@ -1,0 +1,17 @@
+\begin{definition}[Quotient of a topological space under group action] \label{definition:quotient_of_a_topological_space_under_group_action}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperref{definition:left_and_right_group_actions_on_a_set}{acting on} $X$ (say on the left).
+
+    The \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} $\sim_G$ associated to the action of $G$ on $X$ is defined by
+    $$x \sim_G y \iff \exists\, g \in G \text{ such that } y = g \cdot x.$$
+    The set of \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence classes} is called the \hldef{quotient space} (or \hldef{orbit space}), denoted
+    $$\hlin{G \backslash X,}$$
+    and consists of the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbits} $G \cdot x = \{g \cdot x : g \in G\}$ for $x \in X$. 
+
+    The quotient space $G \backslash X$ is equipped with the \hldef{quotient topology}, defined as follows: a subset $U \subseteq G \backslash X$ is open if and only if its \CrefAndHyperrefIfExist{definition:preimage_of_a_subset_of_the_codomain_of_a_set_map}{preimage} under the canonical projection $\pi : X \to G \backslash X$ is open in $X$. Equivalently, this quotient topology is the \CrefAndHyperrefIfExist{definition:coarser_smaller_finer_larger_for_topologies_on_a_set}{finest topology} on $G \backslash X$ such that $\pi$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}. Also equivalently the quotient space $G \backslash X$ is the \CrefAndHyperrefIfExist{definition:quotient_of_a_topological_space_with_respect_to_an_equivalence_relations}{quotient} space $X / \sim_G$ of $X$ with respect to the equivalence relation $\sim_G$.
+
+    The map $\pi : X \to G \backslash X$ is called the \hldef{quotient map} (or \hldef{orbit map}). It is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} and \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}. If the action of each $g \in G$ induces a \CrefAndHyperrefIfExist{definition:homeomorphism_of_topological_spaces}{homeomorphism} of $X$, then $\pi$ is also an \CrefAndHyperrefIfExist{definition:open_and_closed_map_of_topological_spaces}{open map}.
+
+    If $G$ acts freely (i.e., no non-identity element has a fixed point, as in the \CrefAndHyperrefIfExist{definition:free_action_of_a_group_on_a_set}{free action} definition) and properly discontinuously on $X$, then $\pi : X \to G \backslash X$ is a covering map.
+    % // NOTE: Depends on properly_discontinuous_action which is not yet vaulted -- reference will be filled in after vaulting.
+
+\end{definition}

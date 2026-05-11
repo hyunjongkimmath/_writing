@@ -1,0 +1,20 @@
+\begin{theorem} \label{theorem:adjunction_of_invrse_image_and_direct_image_for_sheaves_under_continuous_functor_of_sites_or_site_morphism}
+    % Let $(C,J)$ and $(D,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}  whose underlying categories are \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small} (or essentially $U$-small if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. 
+
+    Let $(C,J)$ and $(D,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} with \CrefAndHyperrefIfExist{definition:locally_small_category}{small} topologically generating families, and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. 
+
+        Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} (or $U$-locally small) category which has all small (or $U$-small) \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} and such that the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf category} $\operatorname{PreSh}(\calD,K;\mathcal{A})$ has \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification}. In particular, $\operatorname{Sh}(D,K;\mathcal{A})$ and $\operatorname{Sh}(C,J;\mathcal{A})$ are locally small\footnote{as a consequence of \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}}.
+
+        The \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image} and \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} functors 
+        $$u_s : \operatorname{Sh}(D,K;\mathcal{A}) \to \operatorname{Sh}(C,J;\mathcal{A})$$
+        $$u^s : \operatorname{Sh}(C,J;\mathcal{A}) \to \operatorname{Sh}(D,K;\mathcal{A})$$
+        are \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint}, i.e. for any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves}, 
+        \[
+        \calF \in\operatorname{Sh}(C,J;\mathcal{A}), \quad \mathcal{G} \in \operatorname{Sh}(D,K;\mathcal{A}),
+        \]
+        there is a natural isomorphism
+        $$\Hom_{\operatorname{Sh}(C,J;\mathcal{A})}(u_s\calG, \calF) \cong \Hom_{\operatorname{Sh}(D,K;\mathcal{A})}(\calG, u^s \calF).$$
+
+        In particular, if $u$ is the functor underlying a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $f: (\calD, K) \to (\calC, J)$, then there is a natural isomorphism 
+        $$\Hom_{\operatorname{Sh}(C,J;\mathcal{A})}(f^* \calG, \calF) \cong \Hom_{\operatorname{Sh}(D,K;\mathcal{A})}(\calG, f_* \calF).$$
+\end{theorem}

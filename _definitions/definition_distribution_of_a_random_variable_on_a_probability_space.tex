@@ -1,0 +1,10 @@
+\begin{definition}[Distribution (law) of a random variable on a probability space] \label{definition:distribution_of_a_random_variable_on_a_probability_space}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}, and let $X : \Omega \to S$ be a random variable taking values in a set $S$.
+
+The \hldef{distribution} (or \hldef{law}) of $X$, denoted \hl{$\mu_X$}, describes how the probability mass of $P$ is distributed over $S$ through $X$: for any event $A \subseteq S$ whose occurrence makes sense in context,
+$$\hlin{\mu_X(A) = P(X \in A)}.$$
+
+In the special case where $S = \mathbb{R}$, the distribution of $X$ is uniquely determined by its cumulative distribution function $F_X : \mathbb{R} \to [0, 1]$ given by
+$$\hlin{F_X(t) = P(X \leq t)}.$$
+\end{definition}
+

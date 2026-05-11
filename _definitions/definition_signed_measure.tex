@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:signed_measure}
+Let $(X, \mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measure_space}{measurable space}.
+
+A function $\mu : \mathcal{A} \to [-\infty, \infty]$ is called a \hldef{signed measure on $(X,\mathcal{A})$} if:
+\begin{enumerate}
+    \item $\mu(\varnothing) = 0$,
+    \item $\mu$ takes at most one of the values $+\infty$ and $-\infty$ (i.e.\ $\mu \not\equiv +\infty$ and $\mu \not\equiv -\infty$),
+    \item for every sequence $(A_n)_{n\ge 1}$ of pairwise disjoint sets in $\mathcal{A}$, the series $\sum_{n=1}^\infty \mu(A_n)$ converges to $\mu\bigl(\bigcup_{n=1}^\infty A_n\bigr)$ in the extended real line (with the convention that if the left-hand side is well-defined, then the right-hand side equals it; in particular, a series that would involve both $+\infty$ and $-\infty$ cannot occur).
+\end{enumerate}
+The triple $(X, \mathcal{A}, \mu)$ is called a \hldef{signed measure space}.
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{definition}[Inertia group in the absolute Galois group of the function field of a Dedekind scheme at a closed point] \label{definition:inertia_group_in_the_absolute_galois_group_of_the_function_field_of_a_dedekind_scheme_at_a_closed_point}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:dedekind_scheme}{Dedekind scheme} with function field $K$. Fix a \CrefAndHyperrefIfExist{definition:separable_closure_of_a_field}{separable closure} $\bar{K}$ of $K$, and let $G_K = \Gal(\bar{K}/K)$ be the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} of $K$. Let $s \in S$ be a \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point} with \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} $k(s) = \mathcal{O}_{S, s} / \mathfrak{m}_s$.
+
+    Choosing a prime $\bar{\mathfrak{s}}$ of the integral closure of $\mathcal{O}_{S, s}$ in $\bar{K}$ is equivalent to choosing a geometric point $\bar{s} \to S$ lying over $s$. This choice determines the \CrefAndHyperref{definition:decomposition_group_of_a_dedekind_scheme_at_a_closed_point}{decomposition group} $D_s = D(\bar{\mathfrak{s}} | s) \subset G_K$, together with a natural surjection $\phi: D_s \twoheadrightarrow \Gal(\overline{k(s)}/k(s))$, where $\overline{k(s)}$ is a separable closure of $k(s)$.
+
+    The \hldef{inertia group in the absolute Galois group of the function field of $S$ at $s$ (with respect to the choice of $\bar{\mathfrak{s}}$)} is the subgroup:
+    $$\hlin{I_s = I(\bar{\mathfrak{s}} | s) = \ker\left( D_s \xrightarrow{\phi} \Gal(\overline{k(s)}/k(s)) \right) \subset G_K}$$
+
+    Equivalently, $I_s$ consists of all automorphisms $\sigma \in G_K$ that induce the identity on the \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} of the \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_nonarchimedean_valued_field}{valuation ring} corresponding to $\bar{\mathfrak{s}}$.
+\end{definition}

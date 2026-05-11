@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:profinite_topology_on_Z}
+The \hldef{profinite topology} on $\mathbb{Z}$ is the topology whose basis of open neighbourhoods of $0$ is given by the subgroups $N\mathbb{Z}$ for all positive integers $N$:
+$\hlin{\mathcal{B}(0) = \{ N\mathbb{Z} : N \in \mathbb{Z}_{>0} \}}$.
+A basis of open neighbourhoods of any point $a \in \mathbb{Z}$ is given by the cosets $a + N\mathbb{Z}$.
+Equivalently, this is the coarsest topology on $\mathbb{Z}$ such that all quotient maps $\mathbb{Z} \to \mathbb{Z}/N\mathbb{Z}$ are continuous (where each $\mathbb{Z}/N\mathbb{Z}$ carries the discrete topology).
+The \hldef{profinite completion} $\widehat{\mathbb{Z}}$ of $\mathbb{Z}$ is the completion of $\mathbb{Z}$ with respect to this topology:
+$\hlin{\widehat{\mathbb{Z}} := \varprojlim_{N} \mathbb{Z}/N\mathbb{Z}}$.
+By the Chinese remainder theorem, one has $\hlin{\widehat{\mathbb{Z}} \cong \prod_{p} \mathbb{Z}_p}$, where the product runs over all primes $p$ and $\mathbb{Z}_p$ is the ring of $p$-adic integers.
+\end{definition}

@@ -1,0 +1,24 @@
+% \begin{definition}[$\mathcal{A}_g$: moduli space of principally polarized abelian varieties] \label{definition:moduli_space_of_principally_polarized_abelian_varieties}
+%     Let $g \geq 1$ be an integer.
+%     \TODO{what is this over? A general scheme or a field?}
+%     The symbol \hl{$\mathcal{A}_g$} denotes the moduli space (moduli stack) of principally polarized abelian varieties of dimension $g$. It parametrizes isomorphism classes of pairs $(A, \Theta)$ where $A$ is an abelian variety of dimension $g$ and $\Theta$ is a principal polarization on $A$.
+
+%     The dimension of $\mathcal{A}_g$ is $g(g+1)/2$.
+% \end{definition}
+
+\begin{definition}[$\mathcal{A}_{g,S}$: moduli of principally polarized abelian varieties over a base scheme] \label{definition:moduli_of_principally_polarized_abelian_varieties}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $g \geq 1$ be an integer. The symbol \hldef{$\mathcal{A}_{g,S}$} denotes the \CrefAndHyperrefIfExist{definition:moduli_stack_over_a_scheme}{moduli stack} of principally polarized abelian varieties of relative dimension $g$ over $S$.
+
+    More precisely, $\mathcal{A}_{g,S}$ is the \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids} over $(\operatorname{Sch}/S)_{\text{fppf}}$ defined as follows. For a scheme $T$ equipped with a morphism $f: T \to S$:
+    \begin{itemize}
+        \item An \textbf{object} over $T$ is a pair $(A, \lambda)$, where $A \to T$ is an \CrefAndHyperrefIfExist{definition:abelian_scheme_over_a_scheme}{abelian scheme over a scheme} of relative dimension $g$ and $\lambda: A \to A^\vee$ is a \CrefAndHyperrefIfExist{definition:principal_polarization_of_an_abelian_variety_over_a_field}{principal polarization}.
+        \item A \textbf{morphism} from $(A' \to T', \lambda')$ to $(A \to T, \lambda)$ over $f: T' \to T$ is a morphism of schemes $h: A' \to A$ fitting into a commutative diagram
+        $$\begin{tikzcd}
+            A' \ar[r, "h"] \ar[d] & A \ar[d] \\
+            T' \ar[r, "f"] & T
+        \end{tikzcd}$$
+        such that $h^*\lambda = \lambda'$, where $h^*\lambda$ denotes the pullback of $\lambda$ along $h$.
+    \end{itemize}
+
+    When $S = \operatorname{Spec} \mathbb{Z}$, we write $\mathcal{A}_g := \mathcal{A}_{g,\operatorname{Spec} \mathbb{Z}}$. The stack $\mathcal{A}_{g,S}$ is a \CrefAndHyperrefIfExist{definition:deligne_mumford_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}{Deligne--Mumford stack} that is \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} over $S$. The relative dimension of $\mathcal{A}_{g,S}$ over $S$ is $g(g+1)/2$.
+\end{definition}

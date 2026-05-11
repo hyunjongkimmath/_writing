@@ -1,0 +1,20 @@
+\begin{definition}[Variance and covariance] \label{definition:variance_and_covariance}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}.
+
+\begin{enumerate}
+    \item Let $X$ be an integrable real-valued random variable with $\mathbb{E}[X]$ finite. The \hldef{variance of $X$} is defined by
+    $$\hlin{\mathrm{Var}(X) := \mathbb{E}\left[(X - \mathbb{E}[X])^2\right]}.$$
+    Equivalently, if $\mathbb{E}[X^2] < \infty$, then
+    $$\mathrm{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2.$$
+
+    \item Let $X$ and $Y$ be integrable real-valued random variables with $\mathbb{E}[XY]$ finite. The \hldef{covariance of $X$ and $Y$} is defined by
+    $$\hlin{\mathrm{Cov}(X, Y) := \mathbb{E}\left[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])\right]}.$$
+    Equivalently, if $\mathbb{E}[X^2] < \infty$ and $\mathbb{E}[Y^2] < \infty$, then
+    $$\mathrm{Cov}(X, Y) = \mathbb{E}[XY] - \mathbb{E}[X]\,\mathbb{E}[Y].$$
+
+    The \hldef{correlation coefficient of $X$ and $Y$} (when $\mathrm{Var}(X) > 0$ and $\mathrm{Var}(Y) > 0$) is defined by
+    $$\hlin{\rho(X, Y) := \frac{\mathrm{Cov}(X, Y)}{\sqrt{\mathrm{Var}(X)}\,\sqrt{\mathrm{Var}(Y)}}}.$$
+\end{enumerate}
+
+A random variable $X$ has zero variance if and only if $X = \mathbb{E}[X]$ almost surely. Covariance is symmetric: $\mathrm{Cov}(X, Y) = \mathrm{Cov}(Y, X)$, and it is bilinear in its arguments.
+\end{definition}

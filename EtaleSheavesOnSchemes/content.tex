@@ -15,11 +15,57 @@
 
 \input{../_definitions/definition_automorphism_group_of_a_scheme_over_a_scheme.tex}
 
+
+\subsection{\'Etale covers}
+
 \input{../_definitions/definition_finite_morphism_of_schemes.tex}
+\input{../_definitions/definition_finite_etale_cover_of_a_scheme.tex}
+\input{../_definitions/definition_category_of_finite_etale_covers_of_a_scheme.tex}
 
 \input{../_definitions/definition_galois_morphism_of_schemes.tex}
 
 
+\section{Galois categories}
+
+\input{../_definitions/definition_pre_galois_category.tex}
+
+\input{../_definitions/definition_fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets.tex}
+\input{../_definitions/definition_connected_object_of_a_galois_category.tex}
+\input{../_definitions/definition_galois_object_of_a_galois_category.tex}
+
+\input{../_definitions/definition_natural_automorphism_of_a_functor_between_categories.tex}
+
+\input{../_definitions/definition_fundamental_group_of_a_galois_category.tex}
+
+\input{../_concepts/proposition_fundamental_group_of_a_galois_category_is_profinite.tex}
+
+\input{../_concepts/theorem_fiber_functor_on_a_galois_category_induces_equivalence_of_categories_to_category_of_finite_groups_with_continuous_action_by_fundamental_group.tex}
+
+
+\begin{proposition}
+    Let $(\calC, F)$ be a \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois category}. 
+
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{fiber functor} $F$ induces a bijection  
+        \begin{enumerate}
+            \item Isomorphism classes of \CrefAndHyperref{definition:connected_object_of_a_galois_category}{connected} \CrefAndHyperref{definition:galois_object_of_a_galois_category}{Galois objects} $X \in \calC$ whose \CrefAndHyperrefIfExist{definition:automorphism_of_an_object_of_a_category_automorphism_group_of_an_object_of_a_locally_small_category}{automorphism group} is isomorphic to $\Gamma$. 
+
+            \item Open (\Cref{proposition:galois_group_of_a_galois_extension_of_fields_is_profinite}) \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroups} $H \subseteq G$ such that $G/H \cong \Gamma$. 
+        \end{enumerate}
+
+        \item An object $X$ of $\calC$ is connected if and only i fthe image of $G \to \Sym(F(X))$\CrefIfExists{definition:symmetric_group_on_a_set} acts \CrefAndHyperrefIfExist{definition:transitive_group_action_of_a_group_acting_on_a_set}{transitively} on the set $F(X)$. 
+    \end{enumerate}
+\end{proposition}
+
+\TODO{category of finite etales over a scheme is galois category}
+
+
+\input{../_definitions/definition_exact_functor_between_galois_categories.tex}
+
+\TODO{stacks 0BN5}
+\input{../_concepts/lemma_exact_fucntor_of_galois_categories_corresponds_to_homomorhpism_of_fundamental_groups.tex}
+
+\input{../_concepts/lemma_equivalent_conditions_for_a_map_of_fundamental_groups_of_galois_categories_to_be_surjective.tex}
 
 
 \section{The \'etale fundamental group of a scheme at a geometric point}
@@ -32,9 +78,34 @@
 
 \input{../_definitions/definition_geometric_point_of_a_scheme.tex}
 
+\TODO{define fiber fucntor for finite etale covers at a geometric point}
+\TODO{state how fet is a galois category}
+\TODO{describe that connected schemes correspond to connected objects, geometric ponits correspond to fiber functors, geometric fibers correspond to $F(X)$,}
+
 \input{../_definitions/definition_etale_fundamental_group_of_a_connected_scheme.tex}
 
+\input{../_definitions/definition_fiber_functor_of_category_of_finite_etale_covers_of_a_scheme_given_by_a_geometric_point.tex}
+
+\input{../_concepts/lemma_category_of_finite_etale_covers_of_a_connected_scheme_is_a_galois_category_when_a_geometric_point_is_chosen.tex}
+
 \input{../_concepts/theorem_finite_etale_covers_of_a_connected_scheme_correspond_to_finite_sets_with_an_action_of_the_etale_fundamental_group.tex}
+
+\input{../_definitions/definition_base_change_functor_between_categories_of_finite_etale_covers_of_schemes.tex}
+
+\input{../_concepts/lemma_base_change_functor_for_cats_of_finite_etale_covers_for_morphism_of_connected_schemes_is_exact_functor_of_galois_categories.tex}
+
+\input{../_concepts/lemma_morphism_of_connected_schemes_induces_continuous_homomoprhism_of_etale_fundamental_groups.tex}
+
+
+
+\input{../_concepts/lemma_morphism_of_scheme_with_dense_image_induces_faithful_base_change_functor_on_categories_of_finite_etale_covers.tex}
+
+\input{../_concepts/lemma_dense_open_subscheme_of_a_nice_enough_connected_scheme_induces_surjection_of_etale_fundamental_groups.tex}
+\input{../_concepts/proposition_map_of_etale_fundamental_group_for_open_in_irreducible_geometrically_unibranch_scheme_is_surjective.tex}
+
+\input{../_concepts/proposition_mor_from_et_fund_grp_of_gen_pt_of_norm_int_sch_to_et_fund_grp_of_scheme_is_quo_map_of_gal_grp_of_sep_clos_of_func_field_to_gal_grp_of_max_unr_ext.tex}
+
+
 
 \section{Sheaves on the small \'etale site of a scheme}
 
@@ -172,33 +243,38 @@ As with Zariski (pre)sheaves (or more generally locally ringed spaces), one can 
 \input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
 \input{../_definitions/definition_continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism.tex}
 
+\input{../_definitions/definition_ringed_site.tex}
+\input{../_definitions/definition_morphism_of_ringed_sites.tex}
+
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
 
 
+
+\input{../_definitions/definition_direct_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
+
 \input{../_definitions/definition_inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
 
-\begin{theorem}
-    Let $(C,J)$ and $(D,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites}  whose underlying categories are \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small} (or essentially $U$-small if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} (or $U$-locally small) category which has all small (or $U$-small) \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}. In particular, $\operatorname{Sh}(D,K;\mathcal{A})$ and $\operatorname{Sh}(C,J;\mathcal{A})$ are locally small\footnote{as a consequence of \Cref{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}}.
 
-    The \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image} and \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} functors 
-    $$u^* : \operatorname{Sh}(D,K;\mathcal{A}) \to \operatorname{Sh}(C,J;\mathcal{A})$$
-    $$u_* : \operatorname{Sh}(C,J;\mathcal{A}) \to \operatorname{Sh}(D,K;\mathcal{A})$$
-    are \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint}
-    For any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves}, 
-    \[
-    \calF \in\operatorname{Sh}(C,J;\mathcal{A}), \quad \mathcal{G} \in \operatorname{Sh}(D,K;\mathcal{A}),
-    \]
-    there is a natural isomorphism
-    $$\Hom_{\operatorname{Sh}(C,J;\mathcal{A})}(u^*\calG, \calF) \cong \Hom_{\operatorname{Sh}(D,K;\mathcal{A})}(\calG, u_* \calF).$$
+\input{../_definitions/definition_inverse_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
 
-\end{theorem}
+
+\input{../_concepts/theorem_adjunction_of_invrse_image_and_direct_image_for_sheaves_under_continuous_functor_of_sites_or_site_morphism.tex}
+
+\input{../_concepts/theorem_adjunction_of_invrse_image_and_direct_image_for_sheaves_of_abelian_groups_under_continuous_functor_of_sites_or_site_morphism.tex}
+
+\input{../_definitions/definition_direct_image_of_a_module_on_a_ringed_site_via_a_morphism_of_ringed_sites.tex}
+
+\input{../_definitions/definition_inverse_image_of_a_module_on_a_ringed_site_via_a_morphism_of_ringed_sites.tex}
+
+
+\input{../_concepts/theorem_adjunction_of_inverse_image_and_direct_image_for_modules_on_ringed_sites_under_ringed_site_morphism.tex}
 
 \input{../_definitions/definition_inverse_image_of_a_sheaf_on_a_topological_space.tex}
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_topological_space.tex}
+\input{../_concepts/theorem_adjunction_between_inverse_image_and_direct_image_functors_for_sheaves_on_topological_spaces_under_a_continuous_map.tex}
 
 \input{../_definitions/definition_inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies.tex}
 
-\input{../_definitions/definition_ringed_site.tex}
 
 
 
@@ -351,12 +427,7 @@ Classically, given a noetherian scheme $X$ and a prime $\ell$ invertible on $X$,
 
 $\ell$-adic sheaves do not refer to literal sheaves on $X_{\et}$ with coefficients in $\ell$-adic rings such as $\bbZ_\ell$ or $\Qell$. In a purely formal sense, one could talk about sheaves on $X_{\et}$ with such coefficients, but the categories of such sheaves are too ill-behaved to be of arithmetic use. 
 
-\subsection{\texorpdfstring{$\ell$}{ell}-adic cohomology}
 
-$\ell$-adic cohomology does not refer to \CrefAndHyperref{definition:etale_cohomology_group_of_a_scheme_with_coefficients_in_an_abelian_group}{\'etale cohomology with coefficients} in the rings $\bbZ_\ell$ or $\bbQ_\ell$ . 
-
-\TODO{define $\ell$-adic sheaves (say with $R$, $E$, and $\Qellbar$-coefficients)}
-\TODO{define $\ell$-adic cohomology in $R$-coefficients, $E$-coefficients, and $\Qellbar$-coefficients}
 
 \subsection{The categories of \texorpdfstring{$\lambda$}{lambda}-adic sheaves and A-R \texorpdfstring{$\lambda$}{lambda}-adic sheaves}
 
@@ -417,10 +488,26 @@ Here is a basic example of a lambda adic sheaf:
 
 \input{../_concepts/theorem_categories_of_lambda_adic_and_A_R_lambda_adic_sheaves_over_the_ring_of_integers_of_a_finite_extension_of_Q_ell_are_equivalent.tex}
 
+\subsection{Rational coefficients}
+
+\input{../_definitions/definition_category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr.tex}
+
+\input{../_definitions/definition_category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr.tex}
+
+\subsubsection{Geometric stalks of $\lambda$-adic sheaves}
+
+\input{../_definitions/definition_geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme.tex}
+
+\input{../_definitions/definition_geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme_with_rational_coefficients.tex}
+
+
+
 \subsection{The category \texorpdfstring{$D_c^b(X,R)$}{Dcb(X,R)} of integral coefficients}
 
 For a scheme $X$, a prime $\ell$ invertible on $X$, and the ring of integers $R$ in a finite extension $E$ of $\Qell$, Deligne {\cite[I.I.2]{deligne_lcwii}} defined ``derived'' categories \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$D_c^b(X, R)$}, $D_c^b(X, E)$, and $D_c^b(X, \Qellbar)$, intuitively of ``integral'', ``rational'', and $\Qellbar$ coefficients respectively. These categories are not derived categories themselves but constructed $\lambda$-adically through the genuine derived categories $D_c^b(X,R/\lambda^n)$ of finite coefficients. loc.~cit.~ also established that the six functor formalisms on the categories $D_c^b(X, R/\lambda^n)$ induce a six functor formalism on $D_c^b(X,R)$ under suitable finiteness conditions, e.g. $X$ is of finite type over a regular base $S$ of dimension $\leq 1$, and that $D_c^b(X,R)$ is a triangulated category under other finiteness conditions, e.g. $X$ is of finite type over a finite field or an algebraically closed field.
 
+
+\input{../_definitions/definition_derived_category_of_bounded_above_complexes_of_adic_sheaves_on_a_scheme.tex}
 \input{../_definitions/definition_derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme.tex}
 
 
@@ -435,55 +522,7 @@ For a scheme $X$, a prime $\ell$ invertible on $X$, and the ring of integers $R$
     If $\calF = (\calF_n)$ is a torsion free $\lambda$-adic sheaf \TODO{define torsion free}, then $\calF$ defines an objects in $\Dbc(X,R)$. 
 \end{remark}
 
-\begin{definition}
-    \TODO{cite these things}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} scheme. Let $\ell$ be a prime number that is invertible on $X$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$.
-
-    \TODO{Define the six functors on $D_c^b(X,R/lambda^n)$}
-    Let $f: X \to Y$ be a morphism between noetherian-schemes over a base scheme $S$. Consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale sites} on $X$ and $Y$. Take objects $K=(K_n)$ and $L=(L_n)$ of \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$D_c^b(X,R)$} and $M = (M_n)$ of $D_c^b(Y,R)$. Define the following:
-    \begin{enumerate}
-        \item $$\hlin{f^* K = (f^* K_n)_n}$$
-        \CrefIfExists{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}\CrefIfExists{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}
-
-        \TODO{compactifiable morphism}
-        \item If $f$ is an $S$-compactifiable morphism over some base scheme $S$, 
-        $$\hlin{Rf_! K = (Rf_! K_n)}$$
-        \TODO{}
-        \item If $f$ is an $S$-compactifiable morphism where $S$ is a noetherian \CrefAndHyperrefIfExist{definition:regular_at_a_point_for_a_scheme_regular_scheme_nonsingular_scheme}{regular scheme} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $\leq 1$ and $X$ and $Y$ are $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type},
-
-        \hlalign{
-        \begin{align*}
-            Rf_* K &= (Rf_* K_n)_n \\
-            % Rf_! K &= (Rf_! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-            Rf^! K &= (Rf^! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-            K \Lotimes_R L &= (K_n \Lotimes_{R/\lambda^{n+1}} L_n) \\
-            R\mathscr{H}om(K,L) &= (R\mathscr{H}om)(K_n,L_n).
-        \end{align*}
-        }
-        \CrefIfExists{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}
-        \TODO{exceptional inverse image}
-        \CrefIfExists{definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor}\TODO{derived sheaf hom}
-    \end{enumerate}
-    % \CrefIfExists{}
-
-
-    % Let $R$ be a commutative ring and let $\lambda\subseteq R$ be an ideal. Let $S$ be a scheme. Let $f: X \to Y$ be a morphism between $S$-schemes. 
-
-    % \TODO{It might be necessary to but more conditions on $\lambda$, particularly that $R/\lambda$ is finite and has exponent that is invertible on $X$}
-
-    % Given objects $K=(K_n)$ and $L=(L_n)$ of $D_c^b(X,R)$\CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme} and $M = (M_n)$ of $D_c^b(Y,R)$, define
-    % \hlalign{
-    % \begin{align*}
-    %     Rf_* K &= (Rf_* K_n)_n \\
-    %     Rf_! K &= (Rf_! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-    %     Rf^! K &= (Rf^! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-    %     K \Lotimes_R L &= (K_n \Lotimes_{R/\lambda^{n+1}} L_n) \\
-    %     R\mathscr{H}om(K,L) &= (R\mathscr{H}om)(K_n,L_n).
-    % \end{align*}
-    % }
-    When they are defined, $Rf_* K$ and $Rf_! K$ are objects in $D_c^b(Y,R)$ and $f^* M, Rf^! M, K \otimes_R^L L$ and $R\mathscr{H}om(K,L)$ are objects in $D_c^b(X,R)$.
-    $Rf^! K$, $K \Lotimes_R L$, and $R\mathscr{H}om(K,L)$ may alternatively be denoted by notations such as \hl{$f^! K$}, \hl{$K \otimes_R L$}, and \hl{$\mathrm{RHom}(K,L)$} respectively.
-\end{definition}
+\input{../_definitions/definition_six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme.tex}
 
 \begin{proposition}
     Let $f: X \to Y$ be a morphism between noetherian schemes. Let $\ell$ be a prime number that is invertible on $X$ and $Y$. Let $R$ be the integral closure of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. Note that $R$ is a complete discrete valuation ring and let $\lambda$ be the maximal ideal of $R$.
@@ -498,6 +537,19 @@ For a scheme $X$, a prime $\ell$ invertible on $X$, and the ring of integers $R$
 \input{../_definitions/definition_algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension.tex}
 \input{../_definitions/definition_derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme.tex}
 
+\subsection{Geometric stalks of objects of $D_c^b$ categories}
+
+\input{../_definitions/definition_geometric_stalk_of_the_derived_category_of_the_category_of_etale_sheaves_of_abelian_groups_on_a_scheme.tex}
+
+\input{../_definitions/definition_geometric_stalk_of_object_of_bounded_derived_category_of_complexes_of_adic_etale_sheaves_on_a_scheme.tex}
+
+\input{../_definitions/definition_geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_integral_coefficients_in_a_complete_dvr.tex}
+
+\input{../_definitions/definition_geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_rational_coefficients.tex}
+
+\input{../_definitions/definition_geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_algebraic_rational_coefficients.tex}
+
+
 \section{Theorems}
 
 \begin{corollary}[Finiteness of cohomology]
@@ -507,7 +559,20 @@ Let $X$ be a variety of finite type over a separably closed field $k$, and let $
 \end{corollary}
 
 
+\subsection{\texorpdfstring{$\ell$}{ell}-adic cohomology}
+
+Deligne's $\ell$-adic cohomology does not refer to \CrefAndHyperref{definition:etale_cohomology_group_of_a_scheme_with_coefficients_in_an_abelian_group}{\'etale cohomology with coefficients} in the rings $\bbZ_\ell$ or $\bbQ_\ell$. Rather, it takes limits of \'etale cohomology with coefficients in finite rings.
+
+
+\input{../_definitions/definition_lambda_adic_cohomology_of_a_derived_etale_adic_sheaf_with_integral_coefficients_on_a_noetherian_scheme.tex}
+
+\input{../_definitions/definition_lambda_adic_cohomology_of_a_derived_etale_adic_sheaf_with_rational_coefficients_on_a_noetherian_scheme.tex}
+
 \subsection{Base change theorem}
+
+\begin{theorem}[Smooth base change theorem for \'etale sheaves with finite coefficients on schemes]
+    
+\end{theorem}
 
 \begin{proposition}[Smooth base change]
     \TODO{read}
@@ -606,6 +671,8 @@ $$
 where $\operatorname{Frob}_q$ is the geometric Frobenius acting on the $\ell$-adic étale cohomology groups of $X$.
 
 \end{theorem}
+
+\input{../_concepts/theorem_grothendieck_L_function_of_a_complex_is_a_determinant_of_the_total_compactly_supported_cohomology_of_the_complex.tex}
 
 \begin{theorem}[Grothendieck–Lefschetz trace formula in terms of traces]
 Let $X_0$ be a separated scheme of finite type over a finite field $\mathbb{F}_q$. Denote by $\overline{X} = X_0 \times_{\mathbb{F}_q} \overline{\mathbb{F}}_q$ the base change to an algebraic closure, and let $K_0 \in D_c^b(X_0, \overline{\mathbb{Q}}_\ell)$ be a bounded constructible complex of étale sheaves.
@@ -727,45 +794,19 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 
 \subsection{Adically complete derived modules in replete topoi}
 
-\begin{definition}[{\cite[Definition 3.5.2.]{bhatt_scholze_pfgs}}] \label{definition:m_adically_complete_derived_object_of_a_ringed_topos}
-    \TODO{ring on a topos}
-    Let $\calX$ be a \CrefAndHyperrefIfExist{definition:topos}{topos}, let $R$ be a ring on $\calX$, and let $\mathfrak{m} \subseteq R$ be a \CrefAndHyperrefIfExist{definition:sheaf_of_ideals_for_a_sheaf_of_rings_on_a_site}{two-sided ideal}. Let $\widehat{R} = \varprojlim_n R/\mathfrak{m}^n$ be the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{projective limit} of the sheaves $R/\mathfrak{m}^n$.
-
-    An object $K \in D(\calX, \widehat{R})$ (\Cref{notation:derived_categories_of_O_modules_on_an_essentially_small_site_ringed_site}) is called \hldef{$\mathfrak{m}$-adically complete} if the natural map $K \to R \varprojlim_n K \otimes_{\widehat{R}}^L R/\mathfrak{m}^n$ (\Cref{definition:right_left_derived_multifunctor_of_an_additive_multifunctor_between_abelian_categories}) (\Cref{definition:derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}) \TODO{justify the existence of this functor} is an equivalence.
-
-    Let \hl{$i: D_{\text{comp}}(\calX, \widehat{R}) \hookrightarrow D(\calX, \widehat{R})$}denote the full subcategory of such complexes.
-\end{definition}
+\input{../_definitions/definition_m_adically_complete_derived_object_of_a_ringed_topos.tex}
 
 \subsection{Realizing the left-completion of the derived category on the \'etale site via the pro-\'etale site}
 
-\begin{definition}[{\cite[Definition 5.3.1.]{bhatt_scholze_pfgs}}] \label{definition:derived_category_of_complexes_of_pro_etale_sheaves_whose_cohomology_are_continuously_constant}
-    Let $X$ be a scheme. 
-    We denote by \hl{$D_{\text{cc}}(X_{\text{pro\'et}})$} the full subcategory of $D(X_{\text{pro\'et}})$ (\Cref{notation:derived_category_of_sheaves_of_abelian_groups_on_small_site_of_a_scehem}) spanned by complexes whose \CrefAndHyperref{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{cohomology sheaves}
-\end{definition}
+\input{../_definitions/definition_derived_category_of_complexes_of_pro_etale_sheaves_whose_cohomology_are_continuously_constant.tex}
 
 
 \subsubsection{Comparison to Ekedahl's theory}
 
-\begin{definition}[{\cite[Definition 5.5.1.]{bhatt_scholze_pfgs}}] \label{definition:bhatt_scholzes_ekedahl_condition_B_for_etale_topos_of_scheme}
-    \TODO{complete ring with respect to ideal}
-    Let $R$ be a commutative \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian ring} complete for the \CrefAndHyperrefIfExist{definition:topological_space}{topology} defined by an \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} $\mathfrak{m} \subset R$. 
-
-    We say that $(R, \mathfrak{m})$ satisfy \hldef{Bhatt and Scholze's Ekedahl's condition B} if the following holds:
-    \begin{center}
-        \TODO{regular ideal of a ring}
-        $\mathfrak{m}$ is a regular ideal of $R$ and the $R/\mathfrak{m}$-module $\mathfrak{m}^n/\mathfrak{m}^{n+1}$ has finite flat dimension bounded independently of $n$. 
-    \end{center}
-
-    When considering $R$ and $\mathfrak{m}$ as \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant} \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$X_{\text{\'et}}$}, this condition may be slightly stronger than \Cref{definition:ekedahls_condition_A_and_B}{Ekedahl's condition B}.
-\end{definition}
+\input{../_definitions/definition_bhatt_scholzes_ekedahl_condition_B_for_etale_topos_of_scheme.tex}
 
 
-\begin{definition}[{\cite[Definition 5.5.3.]{bhatt_scholze_pfgs}}] \label{definition:pro_etale_analogue_of_ekedahls_adic_category_on_schemes}
-    \TODO{complete ring with respect to ideal}
-    Let $R$ be a commutative \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian ring} complete for the \CrefAndHyperrefIfExist{definition:topological_space}{topology} defined by an \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} $\mathfrak{m} \subset R$. 
-    Define \hl{$D_{\text{Ek}}(X_{\text{pro\'et}}, \widehat{R}) \subset D_{\text{comp}}(X_{\text{pro\'et}}, \widehat{R})$} (\Cref{definition:pro_etale_site_of_a_scheme}) \TODO{$D_comp$} as the full subcategory of complexes $K$ satisfying $K \otimes_{\widehat{R}} R/\mathfrak{m} \in D_{\text{cc}}(X_{\text{pro\'et}})$, i.e. satisfying $H^i(K \otimes_{\widehat{R}} R/\mathfrak{m}) \in \nu^* \operatorname{Ab}(X_{\text{\'et}})$ for all $i$ \TODO{$D_cc$, $\Ab(X_{et}), \nu$}. 
-    For $* \in \{+,-,b\}$, define \hl{$D_{\text{Ek}}^*(X_{\text{pro\'et}}, \widehat{R}) \subset D_{\text{Ek}}(X_{\text{pro\'et}}, \widehat{R})$} as the full subcategory with corresponding boundedness assumptions.
-\end{definition}
+\input{../_definitions/definition_pro_etale_analogue_of_ekedahls_adic_category_on_schemes.tex}
 
 \begin{proposition}[{\cite[Proposition 5.5.4.]{bhatt_scholze_pfgs}}] \label{comparison_of_ekedahls_category_on_etale_site_of_schemes_with_proetale_version}
     \TODO{complete ring with respect to ideal}

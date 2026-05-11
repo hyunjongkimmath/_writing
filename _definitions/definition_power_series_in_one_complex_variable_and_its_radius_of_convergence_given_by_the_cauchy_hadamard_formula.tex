@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}
+Let $(a_n)_{n=0}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:field_of_complex_numbers}{complex numbers}. 
+The \hldef{power series centered at $z_0 \in \mathbb{C}$ of this sequence} is the power series 
+$$\hlin{\sum_{n=0}^\infty a_n (z - z_0)^n}$$
+Its \hldef{radius of convergence} $R \in [0, \infty]$ is given by the Cauchy--Hadamard formula:
+$$R = \frac{1}{\limsup_{n \to \infty} |a_n|^{1/n}}$$
+with the conventions $1/0 = \infty$ and $1/\infty = 0$. 
+
+The power series converges absolutely and uniformly on every closed disk $\{z \in \mathbb{C} : |z - z_0| \leq r\}$ with $r < R$, and diverges for every $z$ with $|z - z_0| > R$.
+\end{definition}

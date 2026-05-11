@@ -1,0 +1,16 @@
+\begin{definition}[Smooth function] \label{definition:smooth_function_on_the_adelic_quotient_group_of_a_linear_algebraic_group_over_a_global_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$. 
+
+    Let $f: G(F) \backslash G(\A_F) \to \C$ be a function. We say $f$ is \hldef{smooth} if it is 
+        \TODO{define $G(\bbA_F)$, $G(\bbA_F^{\mathrm{fin}})$, $G(F_\infty)$}
+    \begin{enumerate}
+        \item locally constant in the non-archimedean directions, i.e. for every point $g = (g_v)_v \in G(\bbA_F)$, there exists an open compact subgroup $U = \prod_v U_v \subset G(\bbA_F^{\mathrm{fin}})$\CrefIfExists{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field} such that for all $u \in U$, we have 
+        $$f(gu) = f(g),$$
+        and
+        \item $C^\infty$ in each archimedean direction, i.e. for every point $g = (g_v)_v \in G(\bbA_F)$, the map 
+        $$G(F_\infty) \to \bbC, (h_v)_{v \mid \infty} \mapsto f(g \cdot(h_v)_{v \mid \infty})$$
+        \CrefIfExists{definition:group_of_adelic_points_of_an_algebraic_group_over_a_global_field}
+        is \CrefAndHyperrefIfExist{definition:C_k_morphism_between_C_k_manifolds}{$C^\infty$} as a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold}; note that $G(F_\infty) = \prod_{v \mid \infty} G(F_v)$ is a product of real and complex Lie groups.
+        \TODO{define real and omcplex lie groups}
+    \end{enumerate}
+\end{definition}

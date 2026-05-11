@@ -1,0 +1,16 @@
+\begin{definition}[Full level $N$ structure on an elliptic curve over a scheme] \label{definition:full_level_N_structure_on_an_elliptic_curve_over_a_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $N$ be a positive integer. Let $E/S$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve over $S$}. 
+    
+    The \CrefAndHyperrefIfExist{definition:torsion_subgroup_scheme_of_a_group_scheme}{$N$- torsion subgroup scheme of a group scheme} $E[N]$ of $E$ is a finite commutative group scheme over $S$ of rank at most $N^2$.
+
+    A \hldef{full level $N$ structure} (or \hldef{$\Gamma(N)$-structure}) on an elliptic curve $E/S$ is an ordered pair $(P, Q)$ of sections $P, Q \in E[N](S)$ such that the map
+    $$\bbZ/N\bbZ_S \times \bbZ/N\bbZ_S \xrightarrow{\sim} E[N]$$
+    sending $(a, b) \mapsto aP + bQ$ is an isomorphism of group schemes over $S$. Equivalently, $(P, Q)$ forms an ordered basis for $E[N]$ as a free $\bbZ/N\bbZ_S$-module of rank 2.
+
+    A full level $N$ structure on $E/S$ is equivalent to choosing an isomorphism of group schemes over $S$:
+    $$\phi : E[N] \xrightarrow{\sim} (\bbZ/N\bbZ)^2_S,$$
+    and two full level $N$ structures $(P, Q)$ and $(P', Q')$ differ by the action of an element of $\operatorname{GL}_2(\bbZ/N\bbZ)$.
+
+    \TODO{invertible on a scheme}
+    When $N$ is invertible on $S$ (i.e., the morphism $S \to \bbZ$ factors through $\bbZ[1/N]$), the group scheme $E[N]$ is etale and a full level $N$ structure is equivalent to choosing an ordered basis of the abstract abelian group $E[N] \cong (\bbZ/N\bbZ)^2$.
+\end{definition}

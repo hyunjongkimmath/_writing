@@ -1,0 +1,16 @@
+\begin{definition}[Height function on \(G(\mathbb{A}_F)\)] \label{definition:height_function_on_the_adelic_points_of_a_linear_algebraic_group_over_a_global_field_with_respect_to_an_embedding}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $\A_F$ be the \CrefAndHyperrefIfExist{definition:adeles_and_ideles_of_a_global_field}{ring of adeles of $F$}. Let $G$ be a \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{linear algebraic group} defined over $F$ embedded as an algebraic subgroup in \(\mathrm{GL}_n\).
+
+    For each place \(v\) of \(F\), let \(\|\cdot\|_v\) be a norm on \(G(F_v) \subseteq \mathrm{GL}_n(F_v)\) defined as follows:
+    \[
+    \|g_v\|_v := \max_{1 \leq i,j \leq n} |(g_v)_{ij}|_v,
+    \]
+    \TODO{define the usual absolute value on $F_v$}
+    where \(|\cdot|_v\) is the usual absolute value or valuation on \(F_v\).
+
+    Then, for \(g = (g_v)_{v} \in G(\mathbb{A}_F)\), define the adelic height function by the product
+    \[
+    \|g\| := \prod_{v} \|g_v\|_v,
+    \]
+    where the product converges due to \(\|g_v\|_v = 1\) for all but finitely many non-archimedean places.
+\end{definition}

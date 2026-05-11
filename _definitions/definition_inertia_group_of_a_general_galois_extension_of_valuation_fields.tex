@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:inertia_group_of_a_general_galois_extension_of_valuation_fields}
+    Assume \Cref{context:extension_of_valuation_fields} and further assume that $L/K$ is a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension}.
+
+    There is a natural surjective homomorphism 
+    $$D_w \to \Gal(k_w / k_v)$$
+    (\Cref{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields})
+    on the \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue fields}. The \hldef{inertia group of $L/K$} is its kernel: 
+    $$\hlin{I_w = \{\sigma \in D_w : \sigma(x) \equiv x \pmod{\mathfrak{m}_v} \text{ for all } x \in \mathcal{O}_v \}}.$$
+    (\Cref{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}) \CrefIfExists{definition:galois_extension_of_fields} It is also the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit} of the \CrefAndHyperrefIfExist{definition:decomposition_group_of_a_finite_galois_extension_of_valuation_fields}{decomposition groups} of the finite Galois subextensions $E/K$ within $L$ (with valuation restricted from the valuation of $L$). It is a closed subgroup of $D_w$.
+
+    Letting $(K,v)$ be a valuation field, its \hldef{inertia group} \hl{$I_{K,v}$} is the inertia group of $K^{\text{sep}} / K$ in the above sense where a valuation on $K^{\text{sep}}$ extending $v$ is fixed.
+
+\end{definition}

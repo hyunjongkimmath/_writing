@@ -1,0 +1,23 @@
+% P-ADIC NUMBERS FOR A PRIME OF A NUMBER FIELD - Definition of the field of p-adic numbers for a prime of a number field
+\begin{definition}\label{definition:p_adic_numbers_for_a_prime_of_a_number_field}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:number_field}{number field} with \CrefAndHyperrefIfExist{definition:ring_of_integers_of_a_global_or_local_ring}{ring of integers} $\calO_K$. Let $\mathfrak{p}$ be a nonzero \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideal} of $\calO_K$, and let $v_\mathfrak{p}$ denote the \CrefAndHyperrefIfExist{definition:p_adic_valuation_and_absolute_value_on_a_number_field}{$\mathfrak{p}$-adic valuation on $K$}.
+
+    Let $\calO_{K,\mathfrak{p}}$ be the \CrefAndHyperrefIfExist{definition:p_adic_integers_for_a_nonzero_prime_of_a_number_field}{ring of $\mathfrak{p}$-adic integers}, which is the \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space}{completion} of $\calO_K$ with respect to the \CrefAndHyperrefIfExist{definition:metric_induced_by_an_absolute_value_on_a_field}{metric induced by} $|\cdot|_\mathfrak{p}$. 
+
+    The \hldef{field of $\mathfrak{p}$-adic numbers of $K$}, denoted \hl{$K_\mathfrak{p}$}, refers to the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{field of fractions} of $\calO_{K,\mathfrak{p}}$. Equivalently, it is the \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space}{completion} of $K$ with respect to the $\mathfrak{p}$-adic absolute value.
+
+    The field $K_\mathfrak{p}$ can be described as
+    $$
+        K_\mathfrak{p} := \left\{ (x_n)_{n=1}^\infty \in \prod_{n=1}^\infty K/\mathfrak{p}^n : x_{n+1} \equiv x_n \pmod{\mathfrak{p}^n} \text{ for all } n \geq 1, \text{ and } \exists N \text{ such that } x_n \in \calO_K/\mathfrak{p}^n \text{ for all } n \geq N \right\},
+    $$
+    where the operations are defined componentwise.
+
+    The \CrefAndHyperrefIfExist{definition:p_adic_valuation_and_absolute_value_on_a_number_field}{$p$-adic valuation valuation $v_\mathfrak{p}$} and \CrefAndHyperrefIfExist{definition:p_adic_valuation_and_absolute_value_on_a_number_field}{$p$-adic absolute value $|\cdot|_{\mathfrak{p}}$} extend uniquely to a discrete valuation on $K_\mathfrak{p}$, still denoted by $v_\mathfrak{p}$. Under this extension:
+    \begin{enumerate}
+        \item $\calO_{K,\mathfrak{p}} = \{x \in K_\mathfrak{p} : v_\mathfrak{p}(x) \geq 0\}$ is the valuation ring of $K_\mathfrak{p}$.
+        \item The \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} of $\calO_{K,\mathfrak{p}}$ is $\mathfrak{p}\calO_{K,\mathfrak{p}} = \{x \in K_\mathfrak{p} : v_\mathfrak{p}(x) > 0\}$.
+        \item The \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} $K_\mathfrak{p}/\mathfrak{p}\calO_{K,\mathfrak{p}}$ is isomorphic to $\calO_K/\mathfrak{p}$, a \CrefAndHyperrefIfExist{definition:finite_field}{finite field}.
+    \end{enumerate}
+
+    In the special case where $K = \mathbb{Q}$ and $\mathfrak{p} = (p)$ for a rational prime $p$, we write $K_\mathfrak{p} = \mathbb{Q}_p$ and call it the field of \hl{$p$-adic numbers}.
+\end{definition}

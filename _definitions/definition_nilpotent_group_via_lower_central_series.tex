@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:nilpotent_group_via_lower_central_series}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}
+The \hldef{lower central series of $G$} is the descending sequence of subgroups defined recursively by
+$$\hlin{\gamma_1(G) = G, \quad \gamma_{i+1}(G) = [G, \gamma_i(G)]}$$
+\CrefIfExists{definition:commutator_of_two_subsets_of_a_group} for $i \geq 1$.
+
+The group $G$ is called a \hldef{nilpotent group} if there exists an integer $c \geq 0$ such that $\gamma_{c+1}(G) = \{e\}$, where $e$ is the identity element of $G$. The smallest such integer $c$ is called the \hldef{nilpotency class of $G$}.
+\end{definition}

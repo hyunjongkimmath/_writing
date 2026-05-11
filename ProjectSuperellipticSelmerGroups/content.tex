@@ -1,0 +1,98 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+
+
+\nocite{*}
+
+\section{The problems}
+
+\begin{definition} \label{definition:superelliptic_curve_over_a_field}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}. 
+    \TODO{projective closure, plane curve, affine equation}
+    \TODO{smooth completion of an affine curve}
+    A \hldef{superelliptic curve over $k$} is the smooth completion of the plane curve with affine equation of the form 
+    $$y^d = f(x)$$
+    where $f(x) \in k[x]$ and $d \geq 2$ is some integer.
+\end{definition}
+
+\begin{definition} \label{definition:mu_d_twist_of_a_superelliptic_curve_by_a_scalar}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Let $C$ be a \CrefAndHyperrefIfExist{definition:superelliptic_curve_over_a_field}{superelliptic curve} over $k$ given as the smooth completion of the plane curve with affine equation 
+    $$y^d = f(x)$$
+    where $f(x) \in k[x]$ and $d \geq 2$ is some integer.
+    Given an element $u \in k^\times$, the \hldef{$\mu_d$-twist of $C$} is the superelliptic curve given as the projective closure of the plane curve with affine equation
+    $$y^d = \frac{1}{u} f(x).$$
+\end{definition}
+
+Here is the main problem:
+
+\begin{context} \label{context:main_context_for_average_dimensions_of_selmer_groups_of_twists_of_superelliptic_curve_over_global_function_field}
+    Let $K = \Fq(t)$ be a \CrefAndHyperrefIfExist{definition:global_function_field}{global function field} of \CrefAndHyperrefIfExist{definition:characteristic_a_prime_for_a_scheme}{characteristic} coprime to $6$. Let $\ell \geq 5$ be a prime number such that $\gcd(\ell, q) = 1$. Write $F_{n,\ell}$ for the set of $\ell$th power free polynomials over $\Fq$ of degree $n$. Let $v$ be a prime number coprime to $6 q \ell$. 
+\end{context}
+
+\begin{context} \label{context:mu_ell_twists_of_superelliptic_curve_over_global_function_field}
+    Assume \Cref{context:main_context_for_average_dimensions_of_selmer_groups_of_twists_of_superelliptic_curve_over_global_function_field}. Fix a \CrefAndHyperrefIfExist{definition:superelliptic_curve_over_a_field}{superelliptic curve} $C/K$ whose affine equation is given by 
+    $$C : y^\ell = f(x)$$
+    for some non-trivial polynomial $f(x) \in K[x]$. 
+    
+    Given an $\ell$-th power free polynomial $g \in \Fq[t]$ write \hl{$C_g$} for the \CrefAndHyperrefIfExist{definition:mu_d_twist_of_a_superelliptic_curve_by_a_scalar}{$\mu_\ell$-twist} of $C$ by $g$. In other words $C_g$ is the smooth completion of the plane curve with affine equation of the form 
+    $$C_g: g y^\ell = f(x)$$
+\end{context}
+
+\begin{problem} \label{problem:main_average_dimensions_of_selmer_groups_of_twists_of_superelliptic_curve_over_global_function_field}
+    % Let $K = \Fq(t)$ be a \CrefAndHyperrefIfExist{definition:global_function_field}{global function field} of \CrefAndHyperrefIfExist{definition:characteristic_a_prime_for_a_scheme}{characteristic} coprime to $6$. Let $\ell \geq 5$ be a prime number such that $\gcd(\ell, q) = 1$. Write $F_{n,\ell}$ for the set of $\ell$th power free polynomials over $\Fq$ of degree $n$. Let $v$ be a prime number coprime to $6 q \ell$. 
+    Assume \Cref{context:main_context_for_average_dimensions_of_selmer_groups_of_twists_of_superelliptic_curve_over_global_function_field} and \Cref{context:mu_ell_twists_of_superelliptic_curve_over_global_function_field}
+
+    For each integer $j \geq 0$, what is the asymptotic value of the quantity
+    $$\frac{\# \{g \in F_{n,\ell}:  \dim_{\bbF_v} \Sel_v (\Jac(C_g) / K ) = j \} }{\#F_{n,\ell}}$$
+    (\Cref{definition:selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field}) (\Cref{definition:jacobian_of_a_curve_over_a_field})
+    as $n \to \infty$?
+\end{problem}
+
+
+
+Here are subproblems
+
+\begin{problem}
+\end{problem}
+
+\begin{problem}
+    Assume \Cref{context:main_context_for_average_dimensions_of_selmer_groups_of_twists_of_superelliptic_curve_over_global_function_field}.
+
+    Write $\mathcal{J}_g$ for the N\'eron model of $\Jac(C_g)$ over 
+\end{problem}
+
+\appendix
+
+
+\section{Abelian varieties}
+\input{../_definitions/definition_algebraic_variety_over_a_field.tex}
+\input{../_definitions/definition_algebraic_group_scheme_over_a_scheme.tex}
+\input{../_definitions/definition_homomorphism_of_algebraic_groups_over_a_scheme.tex}
+\input{../_definitions/definition_kernel_of_a_homomorphism_of_group_schemes_over_a_scheme.tex}
+\TODO{group variety}
+\input{../_definitions/definition_abelian_variety_over_a_field.tex}
+\input{../_definitions/definition_isogeny_of_abelian_varieties_over_a_field.tex}
+
+\subsection{Picard groups and Jacobians}
+
+\input{../_definitions/definition_picard_group_of_a_scheme.tex}
+\input{../_definitions/definition_picard_variety_of_a_smooth_projective_geometrically_integral_variety_over_a_field.tex}
+\input{../_definitions/definition_jacobian_of_a_curve_over_a_field.tex}
+
+\section{N\'eron models of abelian varieties}
+
+\input{../_definitions/definition_dedekind_domain.tex}
+\input{../_definitions/definition_dedekind_scheme.tex}
+\input{../_definitions/definition_special_and_generic_fiber_of_a_scheme_over_a_dedekind_scheme.tex}
+\input{../_definitions/definition_neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex.tex}
+
+\section{Galois cohomology}
+\input{../_definitions/definition_group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring.tex}
+
+\input{../_definitions/definition_continuous_cochain_complex_of_a_topological_module_over_a_group_ring_of_a_topological_group_over_a_topological_ring.tex}
+\input{../_definitions/definition_continuous_cohomology_groups_of_a_topological_module_over_a_topological_group_and_a_topological_ring.tex}
+\input{../_concepts/theorem_continuous_cohomology_of_topological_module_over_topological_gropu_and_topological_ring_can_be_computed_by_continuous_cohomology_groups.tex}
+\input{../_definitions/definition_galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring.tex}
+
+\section{Selmer groups}
+\input{../_definitions/definition_kummer_map_associated_to_an_isogeny_of_a_commutative_group_schemes_over_a_field.tex}
+\input{../_definitions/definition_selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field.tex}

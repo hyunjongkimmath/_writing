@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}
+Let $[a, b] \subset \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{closed real interval}. 
+\TODO{continuous path}
+\TODO{partition}
+A continuous path $\gamma : [a, b] \to \mathbb{C}$ is called a \hldef{piecewise continuously differentiable path} if there exists a partition $a = t_0 < t_1 < \cdots < t_k = b$ such that:
+\TODO{continuously differentiable}
+\begin{enumerate}
+  \item $\gamma$ is continuously differentiable on each open subinterval $(t_{i-1}, t_i)$ for $i = 1, \ldots, k$, and
+  \item the one-sided derivatives $\lim_{t \to t_{i-1}^+} \gamma'(t)$ and $\lim_{t \to t_i^-} \gamma'(t)$ exist (and are finite) for each $i = 1, \ldots, k$.
+\end{enumerate}
+The \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} $\gamma'(t)$ is defined for all $t \in [a, b] \setminus \{t_1, \ldots, t_{k-1}\}$.
+\end{definition}

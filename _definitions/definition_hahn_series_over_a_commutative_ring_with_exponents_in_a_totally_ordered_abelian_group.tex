@@ -1,0 +1,14 @@
+\begin{definition}[Hahn series over a commutative ring with exponents in a totally ordered abelian group] \label{definition:hahn_series_over_a_commutative_ring_with_exponents_in_a_totally_ordered_abelian_group}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and let $(\Gamma, +, \leq)$ be a \CrefAndHyperrefIfExist{definition:totally_ordered_abelian_group}{totally ordered abelian group}. The \hldef{ring of Hahn series} (or \hldef{generalized power series ring}) $R \llbracket t^\Gamma \rrbracket$ consists of all formal sums
+$$\sum_{\gamma \in \Gamma} a_\gamma t^\gamma,$$
+where each $a_\gamma \in R$, and the \hldef{support of the series}, defined as
+$$\operatorname{supp}\left(\sum_{\gamma \in \Gamma} a_\gamma t^\gamma\right) = \{\gamma \in \Gamma : a_\gamma \neq 0\},$$
+is a \CrefAndHyperrefIfExist{definition:well_ordered_set}{well-ordered subset} of $\Gamma$.
+
+Addition and multiplication in $R \llbracket t^\Gamma \rrbracket$ are defined by the usual rules for formal series:
+$$\sum_{\gamma \in \Gamma} a_\gamma t^\gamma + \sum_{\gamma \in \Gamma} b_\gamma t^\gamma = \sum_{\gamma \in \Gamma} (a_\gamma + b_\gamma) t^\gamma,$$
+$$\left(\sum_{\gamma \in \Gamma} a_\gamma t^\gamma\right) \cdot \left(\sum_{\delta \in \Gamma} b_\delta t^\delta\right) = \sum_{\eta \in \Gamma} c_\eta t^\eta, \quad \text{where } c_\eta = \sum_{\substack{\gamma + \delta = \eta \\ \gamma, \delta \in \Gamma}} a_\gamma b_\delta.$$
+The well-orderedness of the support ensures that each coefficient $c_\eta$ is a finite sum.
+
+If $R$ is a field and $\Gamma$ is divisible (i.e., for every $\gamma \in \Gamma$ and every nonzero integer $n$, there exists $\delta \in \Gamma$ such that $n\delta = \gamma$), then $R \llbracket t^\Gamma \rrbracket$ is also a field. In this case, it is called the \hldef{field of Hahn series} (or \hldef{generalized Laurent series field}).
+\end{definition}

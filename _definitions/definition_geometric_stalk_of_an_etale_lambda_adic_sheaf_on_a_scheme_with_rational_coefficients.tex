@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme_with_rational_coefficients}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$, let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, let $K$ be an algebraic extension of $E$, let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme} equipped with its on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site}, let $\calF$ be an object of $\Sh(X, K)$ (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}) (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}), and let $\overline{x} \in X$ be a geometric point.
+
+    By definition, $\calF$ is representable by an object $\calF_{E'}$ of $\Sh(X,E')$ for some finite extension $E'$ of $E$ in $K$. In turn, $\calF_{E'}$ is an object of $\Sh(X, R')$ where $R'$ is the integral closure of $R$ in $E'$ or equivalantly the ring of integers of $E'$. The \hldef{geometric stalk of $\calF$} is defined as
+    $$\hlin{\calF_{\overline{x}} \coloneq \calF_{E',\overline{x}} \otimes_{E'} K.}$$
+    (\Cref{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme})\CrefIfExists{definition:tensor_product_of_bimodules_of_rings}
+    It is not dependent on the choice of $E'$ or the representative $\calF_{E'}$. 
+
+    For each geometric point $\overline{x}$ of $X$, we have an exact functor
+    $$\calF \mapsto \calF_{\overline{x}}, \quad \Sh(X,K) \to \Mod(K).$$
+    \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}
+\end{definition}

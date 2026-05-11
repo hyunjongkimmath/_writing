@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:local_tamagawa_numbers_of_abelian_varieties_over_local_fields}
+
+    Let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{valuation field} $(K,v)$ with \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_nonarchimedean_valued_field}{ring of integers} $\calO_K$ and \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_nonarchimedean_valued_field}{residue field} $\kappa_v$. 
+    Assume that a N\'eron model $\calA / \calO_K$ be the \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron model} of $A$ exists (e.g. such a N\'eron model exists whenever $v$ is discrete by \Cref{theorem:neron_models_of_abelian_varieties_exist_over_dvrs_dedekind_schemes_of_finite_type_over_a_field_and_integer_rings_of_number_fields}). Write $\calA_v$ for the special \CrefAndHyperrefIfExist{definition:fiber_of_a_morphism_of_schemes_at_a_point}{fiber} of $\calA$, which is a \CrefAndHyperrefIfExist{definition:group}{commutative group} \CrefAndHyperrefIfExist{definition:scheme}{scheme} over $\kappa_v$.
+
+    The \hldef{local Tamagawa number of $A/K$} is defined as 
+    $$\hlin{c_v \coloneq |(\calA_v/\calA_v^0)(\kappa_v)| = \frac{\calA_v(\kappa_v)}{\calA_v^0(\kappa_v)}}.$$
+    (\Cref{definition:identity_component_of_a_group_scheme_over_a_scheme})
+
+    \TODO{points of identity reduction, reduction map}
+    \TODO{the following discussion might only really hold for local $K$ or perhaps more generally henselian $K$ --- check this }
+    It is worth noting that the subgroup $A_0(K)$ of \CrefAndHyperrefIfExist{definition:subgroup_of_sections_with_identity_reduction_at_a_point_for_a_group_scheme_over_a_scheme}{identity reduction} is by definition the preimage of $\calA_v^0(\kappa_v)$ under the \CrefAndHyperrefIfExist{definition:reduction_map_for_group_scheme_over_a_scheme_at_a_ponit}{reduction map} $A(K) \to \calA_v(\kappa_v)$. Since $\calA$ is a \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron model}, the reduction map is surjection \TODO{apparently Lang's theorem} and the local Tamagawa number consequently satisfies
+    \TODO{apparently generally the reduction map is surjective onto the nonsingular points}
+    $$c_v = [A(K): A_0(K)]$$
+
+\end{definition}

@@ -1,0 +1,22 @@
+\begin{definition}[Jacobian variety of a curve] \label{definition:jacobian_of_a_curve_over_a_field}
+
+    \TODO{separate out jacobian of just a proper curve and the jacobian of a nice curve}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} over a \CrefAndHyperrefIfExist{definition:field}{field} $k$.
+
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:relative_picard_functor_of_a_scheme_over_a_scheme}{relative Picard functor} $\Pic_{X/k}$ is \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable by} a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{group scheme} over $k$. The \hldef{(generalized) Jacobian of $X$} refers to the \CrefAndHyperrefIfExist{definition:identity_component_of_a_group_scheme_over_a_scheme}{identity component} $\Pic_{X/k}^0$ of this group scheme.
+
+        \item Now assume that $X$ is \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth}, is \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective}, and has \CrefAndHyperrefIfExist{definition:geometrically_connected_scheme_over_a_field}{geometrically connected} \CrefAndHyperrefIfExist{definition:connected_component_of_a_point_of_a_topological_space}{connected components}.
+        The Jacobian is an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over $k$ and may be called the \hldef{Jacobian variety of $X$}. It may be denoted by notations such as \hl{$\Jac(X)$}, \hl{$\Jac_X$}, or \hl{$J_X$}. 
+        
+        Under these assumptions, note that $\Jac(X)$ coincides with the \CrefAndHyperrefIfExist{definition:picard_variety_of_a_smooth_projective_geometrically_integral_variety_over_a_field}{Picard variety} of $X/k$. Equivalently, $J_X$ parametrizes isomorphism classes of degree-zero \CrefAndHyperrefIfExist{definition:free_and_locally_free_modules_on_a_ringed_site}{line bundles} on $X$, where a line bundle $\mathcal{L}$ has \hldef{degree zero} if its degree (computed as the sum of orders of any rational function defining it) vanishes. 
+
+        % Let $X$ be a \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth}, \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective}, \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} of \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}{genus} $g \geq 1$ over a \CrefAndHyperrefIfExist{definition:field}{field} $k$.
+
+
+        The Jacobian variety $\Jac(X)$ has \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $g$ where $g$ is the \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}{geometric genus} of $X$.
+
+        When $X$ is equipped with a base point, the Jacobian variety carries a canonical \CrefAndHyperrefIfExist{definition:principal_polarization_of_an_abelian_variety_over_a_field}{principal polarization} $\Theta$, making $(J_X, \Theta)$ a principally polarized abelian variety.
+    \end{enumerate}
+
+\end{definition}

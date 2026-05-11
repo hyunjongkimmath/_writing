@@ -1,15 +1,14 @@
 \begin{definition}[Smooth Morphism of Schemes] \label{definition:smooth_morphism_of_schemes}
-Let \(f: X \to S\) be a morphism of \CrefAndHyperrefIfExist{definition:scheme}{schemes}.
+Let \(f: X \to S\) be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism} of \CrefAndHyperrefIfExist{definition:scheme}{schemes}.
 
 We say that \(f\) is \hldef{smooth}, and that $X$ is a \hldef{smooth scheme over $S$}, if it satisfies the following conditions:
 
-\TODO{residue field}
 \begin{itemize}
     \item \(f\) is \CrefAndHyperrefIfExist{definition:locally_of_finite_presentation_finite_presentation_morphism_of_schemes}{locally of finite presentation}: for every point \(x \in X\), there exists an open neighborhood \(U \subseteq X\) of \(x\) and an open neighborhood \(V \subseteq S\) of \(f(x)\) such that the restriction \(f|_U : U \to V\) corresponds to a morphism of rings \( \mathcal{O}_S(V) \to \mathcal{O}_X(U) \) that is finitely presented.
     
     \item \(f\) is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat}: the induced map on local rings is flat.
     
-    \item For every point \(x \in X\), the fiber \(X_{f(x)} = X \times_S \Spec \kappa(f(x))\) is a smooth variety over the residue field \(\kappa(f(x))\), equivalently, the sheaf of relative Kähler differentials \(\Omega_{X/S}\) is locally free of finite rank.
+    \item For every point \(x \in X\), the fiber \(X_{f(x)} = X \times_S \Spec \kappa(f(x))\) is a smooth variety over the \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} \(\kappa(f(x))\), equivalently, the sheaf of relative Kähler differentials \(\Omega_{X/S}\) is locally free of finite rank.
 
 \end{itemize}
 

@@ -1,6 +1,7 @@
 \begin{definition} \label{definition:algebraic_group_scheme_over_a_scheme}
-Let $S$ be a scheme. An \hl{algebraic group scheme over $S$} (or an \hl{$S$-group scheme}) is a group object $G$ in the category of schemes over $S$; that is, $G$ is an $S$-scheme equipped with $S$-morphisms:
-\hl{$m: G \times_S G \to G$} (\hldef{multiplication}), \hl{$i: G \to G$} (\hldef{inverse}), and \hl{$e: S \to G$} (\hldef{identity}),
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. 
+An \hl{algebraic group scheme over $S$} (or an \hl{$S$-group scheme}) is a group object $G$ in the category of schemes over $S$; that is, $G$ is an $S$-scheme equipped with $S$-morphisms:
+\hl{$m: G \times_S G \to G$} (\hldef{multiplication}), \hl{$i: G \to G$} (\hldef{inverse}), and \hl{$e: S \to G$} (\hldef{identity}/\hldef{identity section}),
 satisfying the group axioms expressed by the commutativity of the following diagrams:
 
 \begin{enumerate}
@@ -34,6 +35,8 @@ satisfying the group axioms expressed by the commutativity of the following diag
 \end{enumerate}
 
 \TextIfExists{definition:group_object_in_a_category_with_a_final_object}{Equivalently, a group scheme over $S$ is a \CrefAndHyperrefIfExist{definition:group_object_in_a_category_with_a_final_object}{group object} in the \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{category of $S$-schemes}}
+
+If the multiplication map also satisfies the commutative axiom, then the group scheme $G$ is called \hldef{commutative} or \hldef{abelian}.
 
 If $G$ is \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine over} $S$, we call it an \hldef{affine group scheme over $S$}.
 

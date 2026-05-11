@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:kernel_of_a_morphism_of_sheaves_of_groups_on_a_topological_space}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\mathcal{F}$ and $\mathcal{G}$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves of groups} on $X$, and let $\phi: \mathcal{F} \to \mathcal{G}$ be a \CrefAndHyperrefIfExist{definition:morphism_of_sheaves_on_a_topological_space}{morphism of sheaves}.
+
+    The \hldef{kernel of $\phi$}, denoted by \hl{$\ker(\phi)$}, is the \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{presheaf} on $X$ defined as follows: for every open subset $U \subseteq X$,
+    $$\ker(\phi)(U) = \ker(\phi_U: \mathcal{F}(U) \to \mathcal{G}(U)),$$
+    where $\phi_U$ is the component map of $\phi$ at $U$. The \CrefAndHyperrefIfExist{definition:presheaf_on_a_topological_space}{restriction maps} for $\ker(\phi)$ are induced by those of $\mathcal{F}$.
+
+    Since the kernel of a group homomorphism is a subgroup, and subgroups are stable under restriction, this presheaf is already a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf}. Thus $\ker(\phi)$ is the sheaf on $X$ whose sections over any open $U$ are precisely those sections of $\mathcal{F}(U)$ that map to the identity section in $\mathcal{G}(U)$.
+
+    The kernel comes with a natural morphism of sheaves $i: \ker(\phi) \to \mathcal{F}$ such that $\phi \circ i$ is the trivial morphism, and it satisfies the following universal property: for any sheaf of groups $\mathcal{H}$ on $X$ and any morphism $f: \mathcal{H} \to \mathcal{F}$ such that $\phi \circ f$ is trivial, there exists a unique morphism $u: \mathcal{H} \to \ker(\phi)$ such that $f = i \circ u$.
+\end{definition}

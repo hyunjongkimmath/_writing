@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:decomposition_and_inertia_groups_of_open_subscheme_of_nice_scheme_at_point_in_complement_are_given_by_henselization}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{locally Noetherian}, \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal}, and \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} scheme. 
+    with \CrefAndHyperrefIfExist{definition:generic_point_of_a_topological_space}{generic point} $\eta$ and \CrefAndHyperrefIfExist{definition:function_field_over_a_field}{function field} $K$. Let $\overline{\eta}$ be a geometric point of $X$ whose image is $\eta$. Let $U \subseteq X$ be a non-empty \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{open subscheme}. Let $x \in X \setminus U$ be a point.
+    Let $\mathcal{O}_{X,x}^h$ be the \CrefAndHyperrefIfExist{definition:henselization_of_a_local_ring}{Henselization} of the \CrefAndHyperrefIfExist{definition:local_ring}{local ring} \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}{$\mathcal{O}_{X,x}$} and let $K_x^h$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $\mathcal{O}_{X,x}^h$. Note that there is a map
+    \begin{equation} \label{eq:map_from_pi_one_et_K_x_h_to_pi_one_et_U_eta_bar}
+    \pioneet(\Spec K_x^h, \overline{\eta}) \to \pioneet(U, \overline{\eta})
+    \end{equation}
+
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{decomposition group} $D_x$ is the image of the map \eqref{eq:map_from_pi_one_et_K_x_h_to_pi_one_et_U_eta_bar}
+        
+        \item The \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{inertia group} $I_x$ is the image of $$\ker\left( \pioneet(\Spec K_x^h, \overline{\eta}) \to \pioneet(\Spec \kappa(x), \overline{x})\right)$$ under \eqref{eq:map_from_pi_one_et_K_x_h_to_pi_one_et_U_eta_bar}
+    \end{enumerate}
+\end{proposition}

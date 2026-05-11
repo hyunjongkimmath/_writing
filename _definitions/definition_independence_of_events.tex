@@ -1,0 +1,14 @@
+\begin{definition}[Independence of events] \label{definition:independence_of_events}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}.
+
+\begin{enumerate}
+    \item A finite collection of events $A_1, A_2, \dots, A_n \in \mathcal{F}$ is called \hldef{independent} if for every nonempty subset $I \subseteq \{1, 2, \dots, n\}$,
+    $$P\left(\bigcap_{i \in I} A_i\right) = \prod_{i \in I} P(A_i).$$
+
+    \item An arbitrary (possibly infinite) collection of events $\mathcal{C} \subseteq \mathcal{F}$ is called \hldef{independent} if every finite subcollection of $\mathcal{C}$ is independent in the sense of item 1. That is, for any distinct $A_1, A_2, \dots, A_n \in \mathcal{C}$,
+    $$P\left(\bigcap_{i=1}^n A_i\right) = \prod_{i=1}^n P(A_i).$$
+\end{enumerate}
+
+A sequence $(A_n)_{n=1}^\infty$ of events is called an \hldef{independent sequence} if the set $\{A_1, A_2, \dots\}$ is independent.
+\end{definition}
+

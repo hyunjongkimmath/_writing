@@ -1,0 +1,8 @@
+\begin{theorem}[Tonelli's theorem (nonnegative case)] \label{theorem:tonelli_theorem}
+Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be two \CrefAndHyperrefIfExist{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{$\sigma$-finite measure spaces}. Let $\mathcal{A} \otimes \mathcal{B}$ be the \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product $\sigma$-algebra} and $\mu \times \nu$ the corresponding \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product measure}.
+
+Let $f : X \times Y \to [0,\infty]$ be a \CrefAndHyperrefIfExist{definition:measurable_function_from_a_measure_space_into_the_extended_real_line_or_complex_plane}{measurable function} with respect to $\mathcal{A} \otimes \mathcal{B}$. Then
+$$\int_{X \times Y} f\,d(\mu \times \nu) = \int_X \left(\int_Y f(x,y)\,d\nu(y)\right) d\mu(x) = \int_Y \left(\int_X f(x,y)\,d\mu(x)\right) d\nu(y),$$
+\Cref{definition:lebesgue_integral_of_measurable_functions_into_the}
+where all three integrals may be $+\infty$. In particular, $f$ is $(\mu \times \nu)$-integrable if and only if either iterated integral of $f$ is finite.
+\end{theorem}

@@ -1,0 +1,11 @@
+\begin{definition}[Moduli problem] \label{definition:moduli_problem_on_schemes}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. A \hldef{moduli problem over $S$} is a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}
+    $$\calM \to (\operatorname{Sch}/S),$$
+    where $(\operatorname{Sch}/S)$ denotes the category of schemes over $S$, viewed as a base category for the fibration.
+
+    \TODO{2-category of groupoids, pseudofunctor}
+    Equivalently, a moduli problem over $S$ is a functor $\calM$ from $(\operatorname{Sch}/S)^{\op}$ to the $(2)$-category of groupoids (i.e., a pseudofunctor), such that the associated Grothendieck construction yields a category fibered in groupoids. For each scheme $T/S$, the fiber category $\calM_T$ is called the \hldef{groupoid of objects of the moduli problem over $T$}.
+
+    An object of $\calM_T$ for some $T/S$ is called an \hldef{$T$-family} (or \hldef{$T$-point}) of the moduli problem. A morphism between two $T$-families $(x_1, T)$ and $(x_2, T)$ in $\calM_T$ is called an \hldef{isomorphism of families}.
+\end{definition}
+

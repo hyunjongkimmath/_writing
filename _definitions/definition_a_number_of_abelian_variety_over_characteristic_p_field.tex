@@ -1,0 +1,11 @@
+\begin{definition}[a-number of an abelian variety] \label{definition:a_number_of_abelian_variety_over_characteristic_p_field}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $g$ over a \CrefAndHyperrefIfExist{definition:field}{field} $k$ of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $p > 0$.
+    The \hldef{a-number} (or \hldef{$a$-invariant}) of $A$, denoted by \hl{$a(A)$}, is defined as
+    $$a(A) = \dim_k \mathrm{Hom}(\alpha_p, A),$$
+    where $\alpha_p = \mathrm{Spec}(k[x]/(x^p))$ with the additive group scheme structure.
+
+    \TODO{de rham cohomology}
+    Equivalently, $a(A) = \dim_k H^1_{\mathrm{dR}}(A/k)^F$, where $F$ is the Frobenius action on de Rham cohomology. The $a$-number satisfies $0 \leq a(A) \leq g$.
+
+    The $a$-number satisfies $1 \leq a(A) \leq g$. An abelian variety is \CrefAndHyperrefIfExist{definition:ordinary_and_supersingular_abelian_varieties_over_a_field_of_characteristic_p}{ordinary} if and only if $a(A) = 1$. For elliptic curves, $a(E) = 1$ if and only if $E$ is ordinary, while \CrefAndHyperrefIfExist{definition:ordinary_and_supersingular_abelian_varieties_over_a_field_of_characteristic_p}{supersingular} elliptic curves have $a(E) = 2$.
+\end{definition}

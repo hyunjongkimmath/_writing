@@ -1,0 +1,10 @@
+\begin{definition}[Congruence subgroup $\Gamma_1(N)$ of $\mathrm{SL}_2(\mathbb{Z})$] \label{definition:gamma_1_N_subgroup_of_SL_2_Z}
+    Let $N$ be a positive integer. The \hldef{congruence subgroup $\Gamma_1(N)$} is the \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $\mathrm{SL}_2(\mathbb{Z})$ defined by
+    $$\hlin{\Gamma_1(N) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) \;\middle|\; a \equiv d \equiv 1 \pmod{N},\; c \equiv 0 \pmod{N} \right\}.}$$
+
+    The subgroup $\Gamma_1(N)$ contains \CrefAndHyperref{definition:principal_congruence_subgroup_Gamma_N_of_SL_2_Z}{$\Gamma(N)$} as a normal subgroup, and there is an injective homomorphism
+    $$\Gamma_1(N) / \Gamma(N) \hookrightarrow (\mathbb{Z}/N\mathbb{Z})^\times$$
+    given by the map sending $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ to $a \pmod{N}$ (equivalently, $d \pmod{N}$). The injectivity follows from the fact that an element of $\Gamma_1(N)$ is determined modulo $N$ by its upper-left entry.
+
+    The subgroup $\Gamma_1(N)$ is used in the construction of the modular curve $X_1(N)$.
+\end{definition}

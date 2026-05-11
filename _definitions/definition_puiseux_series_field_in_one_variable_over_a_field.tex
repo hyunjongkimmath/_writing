@@ -1,0 +1,11 @@
+\begin{definition}[Puiseux series field in one variable over a field] \label{definition:puiseux_series_field_in_one_variable_over_a_field}
+Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}. The \hldef{field of Puiseux series in one variable over $k$}, denoted \hl{$k\{\{X\}\}$}, is the special case of the \CrefAndHyperrefIfExist{definition:hahn_series_over_a_commutative_ring_with_exponents_in_a_totally_ordered_abelian_group}{Hahn series field} where the exponent group is $\Gamma = (\mathbb{Q}, +, \leq)$ with its natural total order.
+
+Elements of $k\{\{X\}\}$ are formal sums
+$$\sum_{n=n_0}^{\infty} a_{r_n} X^{r_n},$$
+where each $r_n \in \mathbb{Q}$, and the support $\{r_n : a_{r_n} \neq 0\}$ is a well-ordered subset of $\mathbb{Q}$ (equivalently, for any lower bound $B \in \mathbb{Q}$, there are only finitely many $r_n < B$).
+
+Equivalently, the Puiseux series field $k\{\{X\}\}$ is the union of the Laurent series fields $k((X^{1/m}))$ over all $m \in \mathbb{Z}_{>0}$:
+$$k\{\{X\}\} = \bigcup_{m=1}^{\infty} k((X^{1/m})).$$
+Each $k((X^{1/m}))$ embeds into $k((X^{1/nm}))$ for all $n \in \mathbb{Z}_{>0}$, and the Puiseux series field is the direct limit of this system.
+\end{definition}

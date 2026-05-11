@@ -1,12 +1,23 @@
 \begin{definition} \label{definition:geometric_frobenius_action_of_a_derived_object_on_a_scheme_of_characteristic_p_at_a_stalk}
-    Let $X$ be a scheme of characteristic $p$. Let $x \in |X|$ be a closed point whose residue field is a finite field. Let $\barx$ be a geometric point over $X$. Let $K \in D(X)$ be an object in the derived category of sheaves of abelian groups on $X$. 
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} of \CrefAndHyperrefIfExist{definition:characteristic_a_prime_for_a_scheme}{characteristic} $p$. Let $x \in X$ be a \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point} whose \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} is a \CrefAndHyperrefIfExist{definition:finite_field}{finite field}. Let $\barx: \Spec \kappa(x)^s \to X$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} over $X$.
+    Let $K \in D(X, \Ab)$ be an object in the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{derived category} of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X_{\mathrm{\acute{e}t}}$\CrefIfExists{definition:small_etale_site_of_a_scheme}. 
  %Let $n \geq 1$ be an integer.
-    
-    The \CrefAndHyperrefIfExist{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}{geometric Frobenius automorphism} in $\Gal(\overline{\kappa(x)} / \kappa(x))$ can be identified as an automorphism 
-    $$\Spec \overline{\kappa(x)} \to \Spec \overline{\kappa(x)}$$
-    over $\Spec \kappa(x)$ and hence induces an action 
+
+    Recall that there is a \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}{stalk} functor 
+    $$\calF \mapsto \calF_{\overline{x}}: \Sh(X_{\text{ét}}, \Sets) \to \operatorname{Gal}(\kappa(x)^s / \kappa(x))-\Sets$$
+    \TODO{category of sets with continuous group action}
+    and that it is exact. It thus induces a 
+    \TODO{the exactness}
+
+    In particular, the \CrefAndHyperrefIfExist{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}{geometric Frobenius automorphism} in $\Gal(\overline{\kappa(x)} / \kappa(x))$ induces an automorphism 
     $$\hlin{\Frob_{\barx}: K_{\barx} \to K_{\barx}}$$
-    on the stalk. Up to isomorphism this action only depends on the closed point $x$ and not the choice of the geometric point $\barx$ above $x$.
+    on the stalk. Up to isomorphism this action only depends on the \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point} $x$ and not the choice of the geometric point $\barx$ above $x$.
+    
+    % The \CrefAndHyperrefIfExist{definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields}{geometric Frobenius automorphism} in $\Gal(\overline{\kappa(x)} / \kappa(x))$ can be identified as an automorphism 
+    % $$\Spec \overline{\kappa(x)} \to \Spec \overline{\kappa(x)}$$
+    % over $\Spec \kappa(x)$ and hence induces an action 
+    % $$\hlin{\Frob_{\barx}: K_{\barx} \to K_{\barx}}$$
+    % on the stalk. Up to isomorphism this action only depends on the \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point} $x$ and not the choice of the geometric point $\barx$ above $x$.
 
     This automorphism may be called the \hldef{geometric Frobenius action on $K$ at the stalk at $\barx$}. In case that the size of the residue field $\kappa(x)$ is $q$ (or is considered as $q$, say by virtue of changing the base field over which $X$ is defined) we may also denote the geometric Frobenius action using notations such as \hl{$\Frob_{\barx, q}$} or \hl{$\Frob_{q}$} to emphasize the size of $\kappa(x)$.
 \end{definition}

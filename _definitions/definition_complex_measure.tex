@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:complex_measure}
+Let $(X, \mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measure_space}{measurable space}.
+
+A function $\mu : \mathcal{A} \to \mathbb{C}$ is called a \hldef{complex measure on $(X,\mathcal{A})$} if:
+\begin{enumerate}
+    \item $\mu(\varnothing) = 0$,
+    \item for every sequence $(A_n)_{n\ge 1}$ of pairwise disjoint sets in $\mathcal{A}$, the series $\sum_{n=1}^\infty \mu(A_n)$ converges in $\mathbb{C}$ to $\mu\bigl(\bigcup_{n=1}^\infty A_n\bigr)$ (and the convergence is unconditional, i.e.\ independent of the ordering of terms).
+\end{enumerate}
+The triple $(X, \mathcal{A}, \mu)$ is called a \hldef{complex measure space}.
+\end{definition}

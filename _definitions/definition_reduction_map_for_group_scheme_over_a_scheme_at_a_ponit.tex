@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:reduction_map_for_group_scheme_over_a_scheme_at_a_ponit}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{group scheme} over a \CrefAndHyperrefIfExist{definition:scheme}{scheme} $S$. Let $s \in S$ be a \CrefAndHyperrefIfExist{definition:point_of_a_topos}{point}. Let $G_s$ be the \CrefAndHyperrefIfExist{definition:fiber_of_a_morphism_of_schemes_at_a_point}{fiber} of $G$ at $s$. It is a group scheme over the \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} $\kappa(s)$ .
+
+    There is a group homomorphism $G(S) \to G_s(\kappa(s))$\CrefIfExists{definition:point_on_a_scheme_valued_on_a_scheme} called the \hldef{reduction map} given by 
+
+    mapping each section $\sigma: S \to G$ to its pullback $\sigma_s: \text{Spec}(\kappa(s)) \to G_s$ along the canonical morphism $i_s: \text{Spec}(\kappa(s)) \to S$. Explicitly, the image of a section $\sigma$ is the unique morphism making the following diagram commute:
+    \[
+    \begin{tikzcd}
+    \text{Spec}(\kappa(s)) \arrow[r, "\sigma_s"] \arrow[d, "i_s"'] & G_s \arrow[d] \\
+    S \arrow[r, "\sigma"'] & G
+    \end{tikzcd}
+    \]
+\end{definition}

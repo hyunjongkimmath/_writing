@@ -3,6 +3,12 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{*}
+\providecommand\@newglossary[4]{}
+\@newglossary{main}{glg}{gls}{glo}
+\providecommand\@glsorder[1]{}
+\providecommand\@istfilename[1]{}
+\@istfilename{FieldTheory.ist}
+\@glsorder{word}
 \@writefile{toc}{\contentsline {section}{\tocsection {}{1}{Definitions}}{1}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.1}{Algebraic field extensions}}{1}{subsection.1.1}\protected@file@percent }
 \newlabel{definition:field}{{1.1.1}{1}{Field}{definition.1.1.1}{}}
@@ -10,7 +16,7 @@
 \newlabel{definition:field_homomorphism}{{1.1.2}{1}{}{definition.1.1.2}{}}
 \newlabel{definition:field_homomorphism@cref}{{[definition][2][1,1]1.1.2}{[1][1][]1}{}{}{}}
 \newlabel{proposition:field_homomorphism_is_injective}{{1.1.3}{2}{}{proposition.1.1.3}{}}
-\newlabel{proposition:field_homomorphism_is_injective@cref}{{[proposition][3][1,1]1.1.3}{[1][1][]2}{}{}{}}
+\newlabel{proposition:field_homomorphism_is_injective@cref}{{[proposition][3][1,1]1.1.3}{[1][2][]2}{}{}{}}
 \newlabel{definition:vector_space_over_a_field}{{1.1.4}{2}{Vector space over a field}{definition.1.1.4}{}}
 \newlabel{definition:vector_space_over_a_field@cref}{{[definition][4][1,1]1.1.4}{[1][2][]2}{}{}{}}
 \newlabel{definition:extension_of_a_field}{{1.1.5}{2}{Field Extension}{definition.1.1.5}{}}
@@ -21,12 +27,12 @@
 \newlabel{proposition:characteristic_of_a_field_is_zero_or_a_prime@cref}{{[proposition][7][1,1]1.1.7}{[1][2][]2}{}{}{}}
 \newlabel{definition:prime_subfield_of_a_field}{{1.1.8}{2}{}{definition.1.1.8}{}}
 \newlabel{definition:prime_subfield_of_a_field@cref}{{[definition][8][1,1]1.1.8}{[1][2][]2}{}{}{}}
-\newlabel{lemma:extension_of_a_field_is_a_vector_space}{{1.1.9}{2}{}{lemma.1.1.9}{}}
-\newlabel{lemma:extension_of_a_field_is_a_vector_space@cref}{{[lemma][9][1,1]1.1.9}{[1][2][]2}{}{}{}}
-\newlabel{definition:degree_of_a_field_extension}{{1.1.10}{2}{Degree of an Extension, Finite Extension}{definition.1.1.10}{}}
-\newlabel{definition:degree_of_a_field_extension@cref}{{[definition][10][1,1]1.1.10}{[1][2][]2}{}{}{}}
+\newlabel{lemma:extension_of_a_field_is_a_vector_space}{{1.1.9}{3}{}{lemma.1.1.9}{}}
+\newlabel{lemma:extension_of_a_field_is_a_vector_space@cref}{{[lemma][9][1,1]1.1.9}{[1][2][]3}{}{}{}}
+\newlabel{definition:degree_of_a_field_extension}{{1.1.10}{3}{Degree of an Extension, Finite Extension}{definition.1.1.10}{}}
+\newlabel{definition:degree_of_a_field_extension@cref}{{[definition][10][1,1]1.1.10}{[1][3][]3}{}{}{}}
 \newlabel{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{{1.1.11}{3}{Algebraic Element, Algebraic Extension}{definition.1.1.11}{}}
-\newlabel{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension@cref}{{[definition][11][1,1]1.1.11}{[1][2][]3}{}{}{}}
+\newlabel{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension@cref}{{[definition][11][1,1]1.1.11}{[1][3][]3}{}{}{}}
 \newlabel{definition:algebraically_closed_field}{{1.1.12}{3}{}{definition.1.1.12}{}}
 \newlabel{definition:algebraically_closed_field@cref}{{[definition][12][1,1]1.1.12}{[1][3][]3}{}{}{}}
 \newlabel{definition:algebraically_closure_of_a_field}{{1.1.13}{3}{}{definition.1.1.13}{}}
@@ -39,30 +45,32 @@
 \newlabel{definition:field_automorphism@cref}{{[definition][16][1,1]1.1.16}{[1][3][]3}{}{}{}}
 \newlabel{definition:automorphism_group_of_a_field_extension}{{1.1.17}{3}{Automorphism Group of a Field Extension}{definition.1.1.17}{}}
 \newlabel{definition:automorphism_group_of_a_field_extension@cref}{{[definition][17][1,1]1.1.17}{[1][3][]3}{}{}{}}
-\newlabel{definition:splitting_field_of_polynomials_over_a_field_normal_field_extension}{{1.1.18}{3}{Normal Extension}{definition.1.1.18}{}}
-\newlabel{definition:splitting_field_of_polynomials_over_a_field_normal_field_extension@cref}{{[definition][18][1,1]1.1.18}{[1][3][]3}{}{}{}}
+\newlabel{definition:splitting_field_of_polynomials_over_a_field_normal_field_extension}{{1.1.18}{4}{Normal Extension}{definition.1.1.18}{}}
+\newlabel{definition:splitting_field_of_polynomials_over_a_field_normal_field_extension@cref}{{[definition][18][1,1]1.1.18}{[1][4][]4}{}{}{}}
 \newlabel{definition:separable_algebraic_field_extension}{{1.1.19}{4}{Separable Element, Separable Extension}{definition.1.1.19}{}}
 \newlabel{definition:separable_algebraic_field_extension@cref}{{[definition][19][1,1]1.1.19}{[1][4][]4}{}{}{}}
-\newlabel{definition:separably_closed_field}{{1.1.20}{4}{}{definition.1.1.20}{}}
-\newlabel{definition:separably_closed_field@cref}{{[definition][20][1,1]1.1.20}{[1][4][]4}{}{}{}}
-\newlabel{definition:separably_closed_field_extension}{{1.1.21}{4}{}{definition.1.1.21}{}}
-\newlabel{definition:separably_closed_field_extension@cref}{{[definition][21][1,1]1.1.21}{[1][4][]4}{}{}{}}
-\newlabel{definition:galois_extension_of_fields}{{1.1.22}{4}{Galois Extension}{definition.1.1.22}{}}
-\newlabel{definition:galois_extension_of_fields@cref}{{[definition][22][1,1]1.1.22}{[1][4][]4}{}{}{}}
-\newlabel{theorem:galois_correspondence_of_subextensions_of_finite_galois_field_extensions}{{1.1.23}{4}{Fundamental Theorem of Galois Theory}{theorem.1.1.23}{}}
-\newlabel{theorem:galois_correspondence_of_subextensions_of_finite_galois_field_extensions@cref}{{[theorem][23][1,1]1.1.23}{[1][4][]4}{}{}{}}
-\newlabel{corollary:fixed_field_of_a_galois_group_is_base_field}{{1.1.24}{5}{Normality of the whole extension}{corollary.1.1.24}{}}
-\newlabel{corollary:fixed_field_of_a_galois_group_is_base_field@cref}{{[corollary][24][1,1]1.1.24}{[1][5][]5}{}{}{}}
-\newlabel{theorem:primitive_element_theorem_of_finite_separable_algebraic_field_extensions}{{1.1.25}{5}{Primitive element theorem}{theorem.1.1.25}{}}
-\newlabel{theorem:primitive_element_theorem_of_finite_separable_algebraic_field_extensions@cref}{{[theorem][25][1,1]1.1.25}{[1][5][]5}{}{}{}}
-\newlabel{theorem:infinite_galois_theory}{{1.1.27}{5}{Infinite Galois Theory}{theorem.1.1.27}{}}
-\newlabel{theorem:infinite_galois_theory@cref}{{[theorem][27][1,1]1.1.27}{[1][5][]5}{}{}{}}
-\newlabel{proposition:galois_group_of_a_galois_extension_of_fields_is_profinite}{{1.1.28}{5}{Krull topology characterization}{proposition.1.1.28}{}}
-\newlabel{proposition:galois_group_of_a_galois_extension_of_fields_is_profinite@cref}{{[proposition][28][1,1]1.1.28}{[1][5][]5}{}{}{}}
-\newlabel{definition:perfect_field}{{1.1.29}{5}{}{definition.1.1.29}{}}
-\newlabel{definition:perfect_field@cref}{{[definition][29][1,1]1.1.29}{[1][5][]5}{}{}{}}
-\newlabel{proposition:any_field_that_is_algebraically_closed_characteristic_zero_or_finite_is_perfect}{{1.1.30}{6}{}{proposition.1.1.30}{}}
-\newlabel{proposition:any_field_that_is_algebraically_closed_characteristic_zero_or_finite_is_perfect@cref}{{[proposition][30][1,1]1.1.30}{[1][6][]6}{}{}{}}
+\newlabel{proposition:finite_field_extension_is_separable_iff_there_are_degree_many_base_embeddings_of_extension_into_algebraic_closure}{{1.1.20}{4}{}{proposition.1.1.20}{}}
+\newlabel{proposition:finite_field_extension_is_separable_iff_there_are_degree_many_base_embeddings_of_extension_into_algebraic_closure@cref}{{[proposition][20][1,1]1.1.20}{[1][4][]4}{}{}{}}
+\newlabel{definition:separably_closed_field}{{1.1.21}{4}{}{definition.1.1.21}{}}
+\newlabel{definition:separably_closed_field@cref}{{[definition][21][1,1]1.1.21}{[1][4][]4}{}{}{}}
+\newlabel{definition:separably_closed_field_extension}{{1.1.22}{4}{}{definition.1.1.22}{}}
+\newlabel{definition:separably_closed_field_extension@cref}{{[definition][22][1,1]1.1.22}{[1][4][]4}{}{}{}}
+\newlabel{definition:galois_extension_of_fields}{{1.1.23}{4}{Galois Extension}{definition.1.1.23}{}}
+\newlabel{definition:galois_extension_of_fields@cref}{{[definition][23][1,1]1.1.23}{[1][4][]4}{}{}{}}
+\newlabel{theorem:galois_correspondence_of_subextensions_of_finite_galois_field_extensions}{{1.1.24}{5}{Fundamental Theorem of Galois Theory}{theorem.1.1.24}{}}
+\newlabel{theorem:galois_correspondence_of_subextensions_of_finite_galois_field_extensions@cref}{{[theorem][24][1,1]1.1.24}{[1][5][]5}{}{}{}}
+\newlabel{corollary:fixed_field_of_a_galois_group_is_base_field}{{1.1.25}{5}{Normality of the whole extension}{corollary.1.1.25}{}}
+\newlabel{corollary:fixed_field_of_a_galois_group_is_base_field@cref}{{[corollary][25][1,1]1.1.25}{[1][5][]5}{}{}{}}
+\newlabel{theorem:primitive_element_theorem_of_finite_separable_algebraic_field_extensions}{{1.1.26}{5}{Primitive element theorem}{theorem.1.1.26}{}}
+\newlabel{theorem:primitive_element_theorem_of_finite_separable_algebraic_field_extensions@cref}{{[theorem][26][1,1]1.1.26}{[1][5][]5}{}{}{}}
+\newlabel{theorem:infinite_galois_theory}{{1.1.28}{5}{Infinite Galois Theory}{theorem.1.1.28}{}}
+\newlabel{theorem:infinite_galois_theory@cref}{{[theorem][28][1,1]1.1.28}{[1][5][]5}{}{}{}}
+\newlabel{proposition:galois_group_of_a_galois_extension_of_fields_is_profinite}{{1.1.29}{6}{Krull topology characterization}{proposition.1.1.29}{}}
+\newlabel{proposition:galois_group_of_a_galois_extension_of_fields_is_profinite@cref}{{[proposition][29][1,1]1.1.29}{[1][6][]6}{}{}{}}
+\newlabel{definition:perfect_field}{{1.1.30}{6}{}{definition.1.1.30}{}}
+\newlabel{definition:perfect_field@cref}{{[definition][30][1,1]1.1.30}{[1][6][]6}{}{}{}}
+\newlabel{proposition:any_field_that_is_algebraically_closed_characteristic_zero_or_finite_is_perfect}{{1.1.31}{6}{}{proposition.1.1.31}{}}
+\newlabel{proposition:any_field_that_is_algebraically_closed_characteristic_zero_or_finite_is_perfect@cref}{{[proposition][31][1,1]1.1.31}{[1][6][]6}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.2}{Transcendence degrees}}{6}{subsection.1.2}\protected@file@percent }
 \newlabel{definition:algebraically_independent_elements_of_an_extension_field_over_a_base_field}{{1.2.1}{6}{Algebraically independent elements}{definition.1.2.1}{}}
 \newlabel{definition:algebraically_independent_elements_of_an_extension_field_over_a_base_field@cref}{{[definition][1][1,2]1.2.1}{[1][6][]6}{}{}{}}
@@ -70,34 +78,50 @@
 \newlabel{definition:transcendence_basis_of_a_field_extension@cref}{{[definition][2][1,2]1.2.2}{[1][6][]6}{}{}{}}
 \newlabel{definition:transcendence_degree_of_a_field_extension}{{1.2.3}{6}{Transcendence degree}{definition.1.2.3}{}}
 \newlabel{definition:transcendence_degree_of_a_field_extension@cref}{{[definition][3][1,2]1.2.3}{[1][6][]6}{}{}{}}
-\newlabel{definition:function_field_over_a_field}{{1.2.4}{6}{Function field}{definition.1.2.4}{}}
-\newlabel{definition:function_field_over_a_field@cref}{{[definition][4][1,2]1.2.4}{[1][6][]6}{}{}{}}
+\newlabel{definition:function_field_over_a_field}{{1.2.4}{7}{Function field}{definition.1.2.4}{}}
+\newlabel{definition:function_field_over_a_field@cref}{{[definition][4][1,2]1.2.4}{[1][7][]7}{}{}{}}
 \newlabel{definition:separating_transcendence_basis_of_a_field_extension}{{1.2.5}{7}{Separating transcendence basis}{definition.1.2.5}{}}
-\newlabel{definition:separating_transcendence_basis_of_a_field_extension@cref}{{[definition][5][1,2]1.2.5}{[1][6][]7}{}{}{}}
+\newlabel{definition:separating_transcendence_basis_of_a_field_extension@cref}{{[definition][5][1,2]1.2.5}{[1][7][]7}{}{}{}}
 \newlabel{definition:separable_field_extension_general}{{1.2.6}{7}{Separable field extension}{definition.1.2.6}{}}
 \newlabel{definition:separable_field_extension_general@cref}{{[definition][6][1,2]1.2.6}{[1][7][]7}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\tocsection {Appendix}{A}{Miscellaneous definitions}}{7}{appendix.A}\protected@file@percent }
-\newlabel{definition:function_of_sets}{{A.0.1}{7}{}{definition.A.0.1}{}}
-\newlabel{definition:function_of_sets@cref}{{[definition][1][1,0]A.0.1}{[1][7][]7}{}{}{}}
-\newlabel{definition:group}{{A.0.2}{7}{Groups}{definition.A.0.2}{}}
-\newlabel{definition:group@cref}{{[definition][2][1,0]A.0.2}{[1][7][]7}{}{}{}}
-\newlabel{definition:ring_homomorphism}{{A.0.3}{8}{}{definition.A.0.3}{}}
-\newlabel{definition:ring_homomorphism@cref}{{[definition][3][1,0]A.0.3}{[1][7][]8}{}{}{}}
-\newlabel{definition:polynomial_ring_over_a_commutative_ring}{{A.0.4}{8}{Polynomial ring over a commutative ring}{definition.A.0.4}{}}
-\newlabel{definition:polynomial_ring_over_a_commutative_ring@cref}{{[definition][4][1,0]A.0.4}{[1][8][]8}{}{}{}}
-\newlabel{definition:cardinal_number_and_cardinality_of_a_set}{{A.0.5}{8}{}{definition.A.0.5}{}}
-\newlabel{definition:cardinal_number_and_cardinality_of_a_set@cref}{{[definition][5][1,0]A.0.5}{[1][8][]8}{}{}{}}
-\newlabel{definition:field_of_fractions_of_an_integral_domain}{{A.0.6}{8}{}{definition.A.0.6}{}}
-\newlabel{definition:field_of_fractions_of_an_integral_domain@cref}{{[definition][6][1,0]A.0.6}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{1.3}{Finite fields}}{7}{subsection.1.3}\protected@file@percent }
+\newlabel{definition:power_of_an_element_of_a_ring_by_a_nonnegative_integer}{{1.3.1}{7}{}{definition.1.3.1}{}}
+\newlabel{definition:power_of_an_element_of_a_ring_by_a_nonnegative_integer@cref}{{[definition][1][1,3]1.3.1}{[1][7][]7}{}{}{}}
+\newlabel{definition:finite_field}{{1.3.2}{7}{}{definition.1.3.2}{}}
+\newlabel{definition:finite_field@cref}{{[definition][2][1,3]1.3.2}{[1][7][]7}{}{}{}}
+\newlabel{theorem:finite_fields_are_exactly_characterized_by_their_cardinality}{{1.3.3}{7}{}{theorem.1.3.3}{}}
+\newlabel{theorem:finite_fields_are_exactly_characterized_by_their_cardinality@cref}{{[theorem][3][1,3]1.3.3}{[1][7][]7}{}{}{}}
+\newlabel{definition:absolute_p_nth_power_frobenius_endomorphism_of_a_ring_of_prime_characteristic}{{1.3.4}{8}{}{definition.1.3.4}{}}
+\newlabel{definition:absolute_frobenius_endomorphism_of_a_ring@cref}{{[definition][4][1,3]1.3.4}{[1][7][]8}{}{}{}}
+\newlabel{proposition:absolute_frobenius_endomorphism_on_a_finite_field_is_a_field_automorphism}{{1.3.5}{8}{}{proposition.1.3.5}{}}
+\newlabel{proposition:absolute_frobenius_endomorphism_on_a_finite_field_is_a_field_automorphism@cref}{{[proposition][5][1,3]1.3.5}{[1][8][]8}{}{}{}}
+\newlabel{lemma:irreducible_poly_in_char_p_field_is_insep_iff_formal_derivative_is_zero}{{1.3.6}{8}{}{lemma.1.3.6}{}}
+\newlabel{lemma:irreducible_poly_in_char_p_field_is_insep_iff_formal_derivative_is_zero@cref}{{[lemma][6][1,3]1.3.6}{[1][8][]8}{}{}{}}
+\newlabel{theorem:finite_fields_are_perfect}{{1.3.7}{8}{}{theorem.1.3.7}{}}
+\newlabel{theorem:finite_fields_are_perfect@cref}{{[theorem][7][1,3]1.3.7}{[1][8][]8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\tocsubsection {}{.0}{Artin-Schreier theory}}{8}{subsection.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\tocsection {Appendix}{A}{Miscellaneous definitions}}{8}{appendix.A}\protected@file@percent }
+\newlabel{definition:function_of_sets}{{A.0.1}{8}{}{definition.A.0.1}{}}
+\newlabel{definition:function_of_sets@cref}{{[definition][1][1,0]A.0.1}{[1][8][]8}{}{}{}}
+\newlabel{definition:group}{{A.0.2}{8}{Groups}{definition.A.0.2}{}}
+\newlabel{definition:group@cref}{{[definition][2][1,0]A.0.2}{[1][8][]8}{}{}{}}
+\newlabel{definition:ring_homomorphism}{{A.0.3}{9}{}{definition.A.0.3}{}}
+\newlabel{definition:ring_homomorphism@cref}{{[definition][3][1,0]A.0.3}{[1][8][]9}{}{}{}}
+\newlabel{definition:polynomial_ring_over_a_commutative_ring}{{A.0.4}{9}{Polynomial ring over a commutative ring}{definition.A.0.4}{}}
+\newlabel{definition:polynomial_ring_over_a_commutative_ring@cref}{{[definition][4][1,0]A.0.4}{[1][9][]9}{}{}{}}
+\newlabel{definition:cardinal_number_and_cardinality_of_a_set}{{A.0.5}{9}{}{definition.A.0.5}{}}
+\newlabel{definition:cardinal_number_and_cardinality_of_a_set@cref}{{[definition][5][1,0]A.0.5}{[1][9][]9}{}{}{}}
+\newlabel{definition:field_of_fractions_of_an_integral_domain}{{A.0.6}{9}{}{definition.A.0.6}{}}
+\newlabel{definition:field_of_fractions_of_an_integral_domain@cref}{{[definition][6][1,0]A.0.6}{[1][9][]9}{}{}{}}
 \bibstyle{alpha}
 \bibdata{../_bib/references.bib}
 \bibcite{brumer_arecI}{Arm92}
-\newlabel{definition:ring_homomorphism}{{A.0.7}{9}{}{definition.A.0.7}{}}
-\newlabel{definition:ring_homomorphism@cref}{{[definition][7][1,0]A.0.7}{[1][9][]9}{}{}{}}
-\newlabel{definition:injective_surjective_bijective_map_of_sets}{{A.0.8}{9}{}{definition.A.0.8}{}}
-\newlabel{definition:injective_surjective_bijective_map_of_sets@cref}{{[definition][8][1,0]A.0.8}{[1][9][]9}{}{}{}}
-\newlabel{definition:identity_function_on_a_set}{{A.0.9}{9}{}{definition.A.0.9}{}}
-\newlabel{definition:identity_function_on_a_set@cref}{{[definition][9][1,0]A.0.9}{[1][9][]9}{}{}{}}
+\newlabel{definition:ring_homomorphism}{{A.0.7}{10}{}{definition.A.0.7}{}}
+\newlabel{definition:ring_homomorphism@cref}{{[definition][7][1,0]A.0.7}{[1][10][]10}{}{}{}}
+\newlabel{definition:injective_surjective_bijective_map_of_sets}{{A.0.8}{10}{}{definition.A.0.8}{}}
+\newlabel{definition:injective_surjective_bijective_map_of_sets@cref}{{[definition][8][1,0]A.0.8}{[1][10][]10}{}{}{}}
+\newlabel{definition:identity_function_on_a_set}{{A.0.9}{10}{}{definition.A.0.9}{}}
+\newlabel{definition:identity_function_on_a_set@cref}{{[definition][9][1,0]A.0.9}{[1][10][]10}{}{}{}}
 \bibcite{ayoub_cmcpiA1}{Ayo23}
 \bibcite{beilinson_berstein_deligne_atlesI}{BBD82}
 \bibcite{bauer_carlson_tpafag}{BC19}
@@ -120,7 +144,7 @@
 \bibcite{drinfeld_ccmvFsr2}{Dri89}
 \bibcite{dunn_zaharescu_skspap}{DZ19}
 \bibcite{ekedahl_af}{Eke07}
-\@writefile{toc}{\contentsline {section}{\tocsection {Appendix}{}{References}}{10}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\tocsection {Appendix}{}{References}}{11}{section*.2}\protected@file@percent }
 \bibcite{forey_fresan_kowalski_aftff}{FFK24}
 \bibcite{feng_landesman_rains_gdsgecff}{FLR23}
 \bibcite{fu_ect}{Fu15}
@@ -188,4 +212,4 @@
 \newlabel{tocindent1}{77.65321pt}
 \newlabel{tocindent2}{34.49158pt}
 \newlabel{tocindent3}{0pt}
-\gdef \@abspage@last{13}
+\gdef \@abspage@last{14}

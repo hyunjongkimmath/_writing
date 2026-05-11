@@ -1,4 +1,26 @@
-
 \begin{proposition} \label{proposition:dvrs_are_dedekind_domains}
     Every \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} is a \CrefAndHyperrefIfExist{definition:dedekind_domain}{Dedekind domain}. Conversely, every \CrefAndHyperrefIfExist{definition:local_ring}{local} Dedekind domain is a DVR. 
 \end{proposition}
+\begin{proof}
+    By definition, every DVR is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. All PID's are Noetherian\CrefIfExists{proposition:pids_are_noetherian}. All PID's are also \CrefAndHyperrefIfExist{definition:unique_factorization_domain}{UFD's}\CrefIfExists{proposition:pids_are_ufds} which \CrefAndHyperrefIfExist{proposition:ufds_are_integrally_closed}{are} in turn \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integrally closed} in their \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fields of fractions}.  
+
+    The ideals of a DVR $(R, \mathfrak{m})$ are of the form $\mathfrak{m}^n$ for some integer $n \geq 0$. The ideal $\mathfrak{m}^0$ is the \CrefAndHyperrefIfExist{definition:unit_ideal_of_a_ring}{unit ideal}. The ideal $\mathfrak{m}^1$ is the maximal ideal. For $n \geq 2$, the ideal $\mathfrak{m}^n$ is not a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideal} --- fixing a uniformizer $\pi$ of $R$, the element $\pi^n = \pi^{n-1} \cdot \pi$ is an element of $\mathfrak{m}^n$ and yet neither $\pi^{n-1}$ nor $\pi$ is an element of $\mathfrak{m}^n$. 
+    
+    We have thus shown that $R$ is Noetherian, integrally closed closed whose only prime ideal is the maximal ideal, i.e. $R$ is a Dedekind domain. 
+
+    Conversely, suppose that $R$ is a local Dedekind domain. Let $\mathfrak{m}$ be its maximal ideal. 
+    
+    % In particular, the only \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} of $R$ is $\mathfrak{m}$ 
+
+    \TODO{verify the following converse argument}
+    Since $R$ is Noetherian and every nonzero prime ideal is maximal, $R$ has Krull dimension at most 1. Because $R$ is local, $\mathfrak{m}$ is the unique nonzero prime ideal. We first show that $\mathfrak{m}$ is principal. Let $K$ be the field of fractions of $R$, and consider the fractional ideal
+    \[
+        I = \{ y \in K \mid y\mathfrak{m} \subseteq R \}.
+    \]
+    Clearly $R \subseteq I$. Since $\mathfrak{m}$ contains a nonzero element and $R$ is a domain, $I \neq (0)$. Moreover, for any $y \in I$, we have $y\mathfrak{m} \subseteq R$, which implies $y^2\mathfrak{m} = y(y\mathfrak{m}) \subseteq yR \subseteq I$ by induction; thus $I$ is actually a subring of $K$. Because $\mathfrak{m}$ is finitely generated (as $R$ is Noetherian), say $\mathfrak{m} = (a_1, \dots, a_n)$, and because $y a_i \in R$ for all $i$, we have $xI \subseteq R$ for any nonzero $x \in \mathfrak{m}$ (since $xy = yx \in y\mathfrak{m} \subseteq R$). Hence $I \subseteq x^{-1}R$. As $R$ is Noetherian, the submodule $I$ of the free module $x^{-1}R \cong R$ is finitely generated. For any $y \in I$, multiplication by $y$ maps the finitely generated faithful $R$-module $I$ into itself, so by the determinant trick (or Cayley-Hamilton), $y$ satisfies a monic polynomial over $R$. Thus every element of $I$ is integral over $R$. Since $R$ is integrally closed in $K$, we conclude $I = R$. This means $\mathfrak{m}^{-1}\mathfrak{m} = R$, so $\mathfrak{m}$ is an invertible ideal.
+    
+    In a local ring, every invertible ideal is principal (this follows immediately from Nakayama's Lemma: if $\mathfrak{m}/\mathfrak{m}^2$ required more than one generator over $R/\mathfrak{m}$, invertibility would fail). Hence $\mathfrak{m} = (\pi)$ for some uniformizer $\pi$. 
+    
+    Now let $J \neq (0)$ be any nonzero ideal of $R$. Since $\dim R \leq 1$, the only prime ideals are $(0)$ and $\mathfrak{m}$, so $\sqrt{(x)} = \mathfrak{m}$ for every $0 \neq x \in J$. Thus there exists a largest integer $n \geq 0$ such that $J \subseteq \mathfrak{m}^n = (\pi^n)$. Writing $J = \pi^n K$ for some ideal $K$, we have $K \not\subseteq \mathfrak{m}$, which forces $K = R$ (as $\mathfrak{m}$ is the unique maximal ideal). Therefore $J = (\pi^n)$, proving that every nonzero ideal of $R$ is principal. Consequently, $R$ is a local PID. A local PID with Krull dimension 1 is precisely a discrete valuation ring by definition. This completes the proof.
+
+\end{proof}

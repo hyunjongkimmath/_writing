@@ -1,0 +1,40 @@
+\begin{proof}
+    It suffices to prove this in the case that $R \cong R_1 \times R_2$. We show that claimed bijection has an inverse map that is the map sending a Hermitian form $H: V \times V \to R$ to the pair $(H|_{V_1}, H|_{V_2})$.
+
+    Write $e_i \in R_i$ for \CrefAndHyperrefIfExist{definition:complete_orthogonal_idempotents_of_a_ring}{complete orthogonal idempotents} of $R_1 \times R_2$
+    Given a $\varepsilon$-Hermitian form $H: V \times V \to R$, note that $H|_{V_1}: V_1 \times V_1 \to R$ are respectively valued in $R_1$ respectively because 
+        \begin{align*}
+        H|_{V_1}(v,w) &= H(e_1 v, e_1 w) \\
+        &= \overline{e_1 } \cdot e_1 H(v, w) \\
+        &= e_1 \cdot e_1 H(v,w)  \\
+        &= e_1 H|_{V_1} (v,w)
+        \end{align*}
+    where $e_1 \in R_1 \times R_2 \cong R$. In fact, $H|_{V_1}$ is a $\varepsilon_1$-Hermitian form over $R_1$ because
+        \begin{align*}
+            H|_{V_1}(v,w) &= H(e_1 v, e_1 w) \\
+            &= e_1 H(e_1 v,e_1 w)\\
+            &= e_1 \varepsilon \overline{H(e_1 w, e_1 v)} \\
+            &= \varepsilon_1 \overline{H|_{V_1}(w,v)}.
+        \end{align*}
+    Similarly, $H|_{V_2}: V_2 \times V_2 \to R$ is valued in $R_2$ and is a $\varepsilon_2$-Hermitian form over $R_2$. Moreover, $V \cong V_1 \oplus V_2$ as $R$-modules, and for any $v_1 \in V_1$ and $v_2 \in V_2$, 
+        \begin{align*}
+        H(v_1, v_2) &= H(e_1 v_1, e_2 v_2)   \\
+        &= \overline{e_1 } \cdot e_2 H(v_1, v_2) \\
+        &= e_1 \cdot e_2 H(v_1,v_2) \\
+        &= 0,
+        \end{align*}
+    so $H = H|_{V_1} \perp H|_{V_2}$.
+    
+    On the other hand, given $H_i: V_i \times V_i \to R_i$ we show that $H_i: V_i \times V_i \to R_i \hookrightarrow R_1 \times R_2 \cong R$ is a $\varepsilon$-Hermitian form over $R$. Given $a \in R$, let $a_i \in R_i$ be the $R_i$-component of $a$. For all $v,w \in V_i$, 
+        \begin{align*}
+            H(v,w) &= \varepsilon_i \overline{H(w,v)} \\
+                &= \varepsilon \overline{H(w,v)}.
+        \end{align*}
+    For any $v,w \in V_i$ and $a,b \in R$, we then have 
+        \begin{align*}
+        H_i(av, bw) &= H_i(a_i v, b_i w)  \\
+        &= \overline{a_i} H_i(v, w) b_i \\
+        &= \overline{a} H_i(v,w) b,
+        \end{align*}
+    so $H_i$ is indeed a Hermitian form over $R$. Note that $(H_1 \perp H_2)_{V_i} = H_i$, so the claimed inverse map is indeed the inverse map to the claimed bijection as desired. By \cref{lemma:knus_qhfr_lemma_3.6.2}, the $H_i$ are all nonsingular if and only if $\perp_i H_i$ is nonsingular.
+\end{proof}

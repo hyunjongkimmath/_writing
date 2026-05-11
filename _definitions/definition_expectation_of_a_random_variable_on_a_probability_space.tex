@@ -1,0 +1,17 @@
+\begin{definition}[Expectation of a random variable on a probability space] \label{definition:expectation_of_a_random_variable_on_a_probability_space}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}.
+
+\begin{enumerate}
+    \item If $X : \Omega \to [0, \infty)$ is a nonnegative random variable, its \hldef{expectation} (or \hldef{expected value}) \hl{$\mathbb{E}[X]$} is the average value of $X$ over all outcomes, weighted by their probabilities.
+
+    \item If $X : \Omega \to \mathbb{R}$ is a real-valued random variable, write $X = X^+ - X^-$ where $X^+ = \max(X, 0)$ and $X^- = \max(-X, 0)$. The expectation of $X$ is defined by
+    $$\hlin{\mathbb{E}[X] := \mathbb{E}[X^+] - \mathbb{E}[X^-]},$$
+    provided that at least one of $\mathbb{E}[X^+]$, $\mathbb{E}[X^-]$ is finite. If both are finite (i.e., $X$ is integrable), then $\mathbb{E}[X]$ is a well-defined real number.
+
+    \item A random variable $X$ is called \hldef{integrable} if $\mathbb{E}[|X|] < \infty$. The space of all integrable real-valued random variables on $(\Omega, \mathcal{F}, P)$ is denoted by \hl{$L^1(\Omega, \mathcal{F}, P)$}.
+\end{enumerate}
+
+If $X : \Omega \to S$ is an $(S, \mathcal{S})$-valued random variable with distribution $\mu_X$ on $(S, \mathcal{S})$, and if $g : S \to \mathbb{R}$ is a function such that $g(X)$ is integrable, then the \hldef{change of variables formula} holds:
+$$\hlin{\mathbb{E}[g(X)] = \int_\Omega g(X(\omega))\,dP(\omega) = \int_S g(x)\,d\mu_X(x)}.$$
+\end{definition}
+

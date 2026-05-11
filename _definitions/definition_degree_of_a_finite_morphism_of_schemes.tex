@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:degree_of_a_finite_morphism_of_schemes}
+    \TODO{notion of degree should be definable not just for integral $Y$ but for more general finite and locally free morphism as well}
+Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism} of schemes. 
+
+Suppose that $Y$ is an \CrefAndHyperrefIfExist{definition:integral_scheme}{integral scheme} with function field $K(Y)$ and that $X$ is \CrefAndHyperrefIfExist{definition:reduced_scheme}{reduced} with function field $K(X)$. The \hldef{degree of $f$} is the degree of the field extension
+$\hlin{\deg(f) = [K(X) : K(Y)]}$.
+Equivalently, $\deg(f)$ is the rank of the $K(Y)$-vector space $f_*\mathcal{O}_X \otimes_{\mathcal{O}_Y} K(Y)$, i.e.
+$\hlin{\deg(f) = \dim_{K(Y)} \left( f_*\mathcal{O}_X \otimes_{\mathcal{O}_Y} K(Y) \right)}$.
+For any point $y \in Y$, the \hldef{degree of $f$ at $y$} is
+$\hlin{\deg_y(f) = \dim_{\kappa(y)} \left( f_*\mathcal{O}_X \otimes_{\mathcal{O}_Y} \kappa(y) \right)}$
+where $\kappa(y)$ is the \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} at $y$. When $f$ is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat}, $\deg_y(f)$ is locally constant on $Y$ and equals $\deg(f)$ for all $y \in Y$.
+\end{definition}

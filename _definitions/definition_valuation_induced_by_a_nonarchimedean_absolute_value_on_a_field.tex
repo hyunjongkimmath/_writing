@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:valuation_induced_by_a_nonarchimedean_absolute_value_on_a_field}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field} and let $|\cdot| : K \to \mathbb{R}_{\geq 0}$ be a \CrefAndHyperrefIfExist{definition:nonarchimedean_absolute_value}{non-archimedean absolute value}. The \hldef{valuation induced by $|\cdot|$} is the function
+\[
+v : K \to \mathbb{R} \cup \{\infty\}
+\]
+defined by
+\[
+v(x) = 
+\begin{cases} 
+-\log |x| & \text{if } x \neq 0, \\
+\infty & \text{if } x = 0,
+\end{cases}
+\]
+where the logarithm is taken with respect to a fixed base $b > 1$. 
+
+The map $v$ satisfies the axioms of a \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{valuation} with value group $\Gamma \subseteq (\mathbb{R}, +)$. 
+
+Conversely, any such valuation $v$ \CrefAndHyperrefIfExist{definition:nonarchimedean_absolute_value_induced_by_a_rank_one_valuation}{induces} a non-archimedean absolute value via $|x| = b^{-v(x)}$.
+\end{definition}

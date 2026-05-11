@@ -1,0 +1,9 @@
+\begin{definition}[identity natural transformation of a functor between categories] \label{definition:identity_natural_transformation_of_a_functor_between_categories}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{categories}, let $F \colon \mathcal{C} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor}, and let $\id_{\mathcal{C}}$ and $\id_{\mathcal{D}}$ denote the \CrefAndHyperrefIfExist{definition:identity_functor_on_a_category}{identity functors} on $\mathcal{C}$ and $\mathcal{D}$ respectively. The \hldef{identity natural transformation of $F$}, denoted by \hl{$\id_F$}, is the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} from $F \circ \id_{\mathcal{C}}$ to $\id_{\mathcal{D}} \circ F$ whose component at each object $X$ of $\mathcal{C}$ is the \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{identity morphism}
+    $$\hlin{\id_{F(X)} \in \operatorname{Hom}_{\mathcal{D}}(F(X), F(X))}$$
+    in $\mathcal{D}$.
+
+    The naturality square for $\id_F$ along any morphism $f \colon X \to Y$ in $\mathcal{C}$ commutes trivially, since both paths around the square are equal to $F(f)$:
+    $$\hlin{F(f) \circ \id_{F(X)} = F(f) = \id_{F(Y)} \circ F(f).}$$
+
+\end{definition}

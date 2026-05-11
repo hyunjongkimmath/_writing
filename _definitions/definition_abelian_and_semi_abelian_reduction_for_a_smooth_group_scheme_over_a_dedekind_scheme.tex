@@ -1,0 +1,11 @@
+\begin{definition}[Abelian and semi-abelian reduction for a smooth group scheme over a Dedekind scheme] \label{definition:abelian_and_semi_abelian_reduction_for_a_smooth_group_scheme_over_a_dedekind_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:dedekind_scheme}{Dedekind scheme}, let $\eta$ be its generic point, and let $K = \mathcal{O}_{S, \eta}$ be the function field of $S$. Assume for simplicity that $S$ is connected.
+
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{group scheme of finite type} over $S$. For any closed point $s \in S$, the special fiber of $G$ at $s$ is the group scheme $G_s = G \times_S \Spec k(s)$ over the residue field $k(s) = \mathcal{O}_{S, s} / \mathfrak{m}_s$. Let $(G_s)^0$ denote the \CrefAndHyperrefIfExist{definition:identity_component_of_a_group_scheme_over_a_scheme}{identity component} of $G_s$.
+
+    We say that $G$ has \hldef{abelian reduction at $s$} if $(G_s)^0$ is an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety over $k(s)$}. We say that $G$ has \hldef{semi-abelian reduction at $s$} if $(G_s)^0$ fits into a short exact sequence of algebraic groups over $k(s)$:
+    $$\hlin{1 \to T \to (G_s)^0 \to B \to 0,}$$
+    where $T$ is an \CrefAndHyperrefIfExist{definition:algebraic_torus_over_a_field}{algebraic torus over $k(s)$} and $B$ is an abelian variety over $k(s)$.
+
+    In particular, if $G$ is a \CrefAndHyperref{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron model} of its generic fiber $G_K$, we say that $G_K$ has \hldef{abelian (resp. semi-abelian) reduction at $s$} if the corresponding fact holds for $G$. This is equivalent to saying that the base change $G \times_S \Spec \mathcal{O}_{S, s}$ of $G$ to $\Spec \mathcal{O}_{S, s}$ has abelian (resp. semi-abelian) reduction at the unique closed point of $\Spec \mathcal{O}_{S, s}$.
+\end{definition}

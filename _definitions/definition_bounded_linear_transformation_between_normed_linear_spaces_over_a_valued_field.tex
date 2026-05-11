@@ -1,0 +1,16 @@
+% BOUNDED LINEAR TRANSFORMATION BETWEEN NORMED LINEAR SPACES OVER A VALUED FIELD AND OPERATOR NORM
+\begin{definition}[Bounded linear transformation between normed linear spaces over a valued field and operator norm] \label{definition:bounded_linear_transformation_between_normed_linear_spaces_over_a_valued_field}
+Let $X, Y$ be \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector spaces} over the same \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{valued field} $(k, |\cdot|)$.
+
+\begin{enumerate}
+    \item A linear map $\Lambda : X \to Y$ is called \hldef{bounded} if there exists a constant $M \geq 0$ such that
+    $$\|\Lambda x\|_Y \leq M \|x\|_X$$
+    for all $x \in X$.
+
+    \item The \hldef{operator norm} of $\Lambda$ is defined by
+    $$\|\Lambda\| = \sup_{x \neq 0} \frac{\|\Lambda x\|_Y}{\|x\|_X} = \sup_{\|x\|_X = 1} \|\Lambda x\|_Y.$$
+    A linear map $\Lambda : X \to Y$ is bounded if and only if $\|\Lambda\| < \infty$.
+
+    \item The space of all bounded linear transformations from $X$ to $Y$, denoted $\mathcal{B}(X,Y)$, forms a vector space under pointwise addition and scalar multiplication. If $Y$ is a \CrefAndHyperrefIfExist{definition:banach_space_over_a_complete_valued_field}{Banach space} over a complete valued field, then $\mathcal{B}(X,Y)$ equipped with the operator norm is also a Banach space.
+\end{enumerate}
+\end{definition}

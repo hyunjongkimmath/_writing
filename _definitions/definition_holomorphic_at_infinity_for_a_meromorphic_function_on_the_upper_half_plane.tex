@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}
+    Let $\Gamma \subset \SL_2(\bbZ)$ be a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup of $\SL_2(\bbZ)$}.
+    Let $h \in \bbZ_{> 0}$ be minimal such that $\begin{pmatrix} 1 & h \\ 0 & 1 \end{pmatrix}$ by \Cref{lemma:every_congruence_subgroup_of_SL_2_Z_has_a_translation_matrix}. 
+
+    Let $f: \bbH \to \bbC$ be a meromorphic function of the form $f(z) = g(q_h)$ for some meromorphic function $g: D' \to \bbC$ on the punctured unit disk $D'$ where $q_h = e^{2 \pi i z/h}$ (e.g. \CrefAndHyperref{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular forms} satisfy this condition, see \Cref{lemma:weakly_modular_form_for_any_congruence_subgroup_of_SL_2_Z_is_periodic}). In particular, $g$ has a Laurent expansion near $q_h = 0$ (which corresponds to $\operatorname{Im}(z) \to \infty$) \TODO{cite this as a complex analytic fact} and hence $f$ has a Fourier expansion: 
+
+    $$f(z) = \sum_{n=-\infty}^\infty a_n q_h^n.$$
+    
+    The values $a_n \in \bbC$ are called the \hldef{Fourier coefficients of $f$}.
+
+    We say that $f$ is \hldef{meromorphic at $\infty$} if $g$ is meromorphic at $q_h = 0$, i.e. the Fourier expansion of $f$ has the form
+    $$f(z) = \sum_{n=n_0}^\infty a_n q_h^n.$$
+    for some $n_0 \in \bbZ$. We say that $f$ is \hldef{holomorphic at $\infty$} if $g$ is holomorphic at $q_h = 0$, i.e. the Fourier expansion of $f$ has the form
+    $$f(z) = \sum_{n=0}^\infty a_n q_h^n.$$
+    If $f$ is holomorphic at $\infty$ and we additionally have $a_0 = 0$, then we say that $f$ has a \hldef{cusp at $\infty$}.
+\end{definition}

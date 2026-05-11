@@ -1,0 +1,6 @@
+\begin{proposition}[Lyapunov's inequality] \label{proposition:lyapunov_inequality_for_L_p_norm_monotonicity}
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} with $\mu(X) = 1$ (i.e., $\mu$ is a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure}). Let $f : X \to \mathbb{C}$ be a measurable function. For any $0 < s < t$, if $f \in L^t(\mu)$, then $f \in L^s(\mu)$ and
+$$\|f\|_s \leq \|f\|_t,$$
+where $\|f\|_r = \left(\int_X |f|^r \, d\mu\right)^{1/r}$ for $r > 0$ is the \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^r$-norm}. The function $r \mapsto \log(\|f\|_r^r)$ is convex on $(0, \infty)$, and the map $r \mapsto \|f\|_r$ is non-decreasing on $(0, \infty]$.
+\end{proposition}
+

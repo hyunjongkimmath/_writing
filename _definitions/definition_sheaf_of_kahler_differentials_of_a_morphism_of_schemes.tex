@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:sheaf_of_kahler_differentials_of_a_morphism_of_schemes}
+    Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. Let $\Delta: X \to X \times_Y X$ be the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_a_morphism_of_schemes}{diagonal morphism} of $f$. The diagonal morphism is a locally closed immersion, and we identify $X$ with its image $\Delta(X) \subset X \times_Y X$. Let $\mathcal{I}$ be the \CrefAndHyperrefIfExist{definition:ideal_sheaf_of_a_ringed_space}{ideal sheaf} of $\Delta(X)$ in $X \times_Y X$, i.e., the kernel of the morphism of sheaves of rings $\mathcal{O}_{X \times_Y X} \to \Delta_*\mathcal{O}_X$.
+    \TODO{ideal sheaf of a subscheme in a scheme}
+
+    The \hldef{sheaf of Kähler differentials of $X$ over $Y$} or the \hldef{sheaf of relative differentials of $X$ over $Y$}, denoted by \hl{$\Omega_{X/Y}$}, is defined as
+    $$\Omega_{X/Y} := \Delta^*(\mathcal{I}/\mathcal{I}^2) = \Delta^{-1}(\mathcal{I}/\mathcal{I}^2) \otimes_{\Delta^{-1}\mathcal{O}_{X \times_Y X}} \mathcal{O}_X,$$
+    where $\Delta^*$ denotes the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_on_a_topological_space}{pullback (inverse image)} of sheaves, and $\mathcal{I}/\mathcal{I}^2$ is viewed as an $\mathcal{O}_X$-module via the canonical isomorphism $\Delta^{-1}(\mathcal{O}_{X \times_Y X}/\mathcal{I}) \cong \mathcal{O}_X$.
+
+    The sheaf $\Omega_{X/Y}$ comes equipped with a canonical derivation $d: \mathcal{O}_X \to \Omega_{X/Y}$ defined locally as follows: for any open affine subset $U = \mathrm{Spec}(A) \subseteq X$ and $V = \mathrm{Spec}(B) \subseteq Y$ such that $f(U) \subseteq V$, with $f|_U$ corresponding to a ring homomorphism $\varphi: B \to A$, the restriction $\Omega_{X/Y}|_U$ is isomorphic to the \CrefAndHyperrefIfExist{definition:module_of_kahler_differentials_of_a_ring_homomorphism}{module of Kähler differentials} $\Omega_{A/B}$, and $d|_U: A \to \Omega_{A/B}$ is the universal derivation.
+
+    This sheaf satisfies the following universal property: for any \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}{$\mathcal{O}_X$-module} $\mathcal{F}$ on $X$ and any derivation of sheaves of rings $D: \mathcal{O}_Y \to f_*\mathcal{F}$, there exists a unique morphism of $\mathcal{O}_X$-modules $\phi: \Omega_{X/Y} \to \mathcal{F}$ such that $D = f_*(\phi) \circ d$. In other words, the following diagram commutes:
+    \TODO{fix this diagram}
+    $$
+    \begin{array}{c}
+    \mathcal{O}_Y \\
+    \downarrow{\scriptstyle d_Y} \quad \searrow{\scriptstyle D} \\
+    f_*\mathcal{O}_X \xrightarrow{\exists! \, f_*(\phi)} f_*\mathcal{F}
+    \end{array}
+    $$
+
+    The pair $(\Omega_{X/Y}, d)$ is unique up to unique isomorphism. Thus, the sheaf of Kähler differentials $\Omega_{X/Y}$ together with the universal derivation $d$ provides a complete characterization of derivations on $\mathcal{O}_X$ relative to $\mathcal{O}_Y$.
+\end{definition}

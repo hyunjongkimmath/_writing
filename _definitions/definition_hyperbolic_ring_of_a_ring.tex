@@ -1,0 +1,17 @@
+\begin{definition}[Hyperbolic Ring] \label{definition:hyperbolic_ring_of_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}.
+
+    The \hldef{hyperbolic ring of $R$}, denoted by \hl{$H(R)$}, is defined as the product
+    $$ H(R) := R \times R^{\mathrm{op}}, $$
+    where $R^{\mathrm{op}}$ is the \CrefAndHyperrefIfExist{definition:opposite_ring_of_a_ring}{opposite ring} of $R$.
+
+    Explicitly, as a set $H(R) = R \times R$, with componentwise addition and additive inverses:
+    $$ (a,b) + (c,d) := (a+c,\; b+d), \qquad -(a,b) := (-a,\; -b), $$
+    for all $(a,b), (c,d) \in H(R)$, and with multiplication given by
+    $$ (a,b) \cdot (c,d) := (a \cdot c,\; d \cdot b), $$
+    for all $(a,b), (c,d) \in H(R)$, where the first component uses the multiplication of $R$ and the second component uses the reversed multiplication of $R^{\mathrm{op}}$.
+
+    The additive identity of $H(R)$ is $(0,0)$, and if $R$ is a \CrefAndHyperrefIfExist{definition:unital_ring}{unital ring} with multiplicative identity $1_R$, then $H(R)$ is a unital ring with multiplicative identity $(1_R, 1_R)$.
+
+    $H(R)$ naturally has an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring} structure, see \Cref{definition:standard_involution_on_the_hyperbolic_ring_of_a_ring}
+\end{definition}

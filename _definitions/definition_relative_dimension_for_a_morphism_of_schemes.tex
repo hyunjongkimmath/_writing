@@ -1,0 +1,16 @@
+\begin{definition}[relative dimension of a morphism of schemes] \label{definition:relative_dimension_for_a_morphism_of_schemes}
+    Let $f\colon X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} that is \CrefAndHyperrefIfExist{definition:locally_of_finite_type_for_a_morphism_of_schemes}{locally of finite type}. 
+    \begin{enumerate}
+        \item Let $x \in X$ with $y = f(x)$. 
+    
+        The fiber $X_y$ at $y$ is the scheme-theoretic \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} $X_y := X \times_Y \Spec(\kappa(y))$. The \hldef{relative dimension of $f$ at $x$} is $\dim_x(X_y)$ (\Cref{definition:dimension_of_a_scheme})
+
+        \item We say that $f$ has \hldef{relative dimension $\leq n$} (for an integer $n \geq 0$) if
+        $$\dim_x(X_{f(x)}) \leq n \quad \text{for all } x \in X.$$
+
+        \item We say that $f$ has \hldef{relative dimension $n$} if $f$ has relative dimension $\leq n$ but not $\leq n - 1$.
+
+        \item The morphism $f$ is \hldef{equidimensional of relative dimension $d$} (for an integer $d \geq 0$) if for every $y \in Y$, all irreducible components of the fiber $X_y$ have dimension $d$.
+    \end{enumerate}
+
+\end{definition}

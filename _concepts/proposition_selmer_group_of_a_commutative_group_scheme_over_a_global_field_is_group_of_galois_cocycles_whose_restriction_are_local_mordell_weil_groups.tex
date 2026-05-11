@@ -1,0 +1,19 @@
+\begin{proposition} \label{proposition:selmer_group_of_a_commutative_group_scheme_over_a_global_field_is_group_of_galois_cocycles_whose_restriction_are_local_mordell_weil_groups}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $A$ and $B$ be \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{abelian group schemes} defined over $K$. Let $\varphi: A \to B$ be an \CrefAndHyperrefIfExist{definition:isogeny_of_algebraic_group_schemes_over_a_scheme}{isogeny defined over $K$}.  
+    Denote by $G_K = \mathrm{Gal}(\overline{K}/K)$ the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} of $K$. For each \CrefAndHyperrefIfExist{definition:place_of_a_global_field}{place} $v$ of $K$, fix an extension $v$ to $\barK$, which yields an embedding $\barK \subset \barK_v$ and a \CrefAndHyperrefIfExist{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}{decomposition group} $G_v \subset G_K$. Write $\operatorname{res}_v: H^1(K, A[\varphi]) \to H^1(G_v, A[\varphi])$ for the \CrefAndHyperrefIfExist{definition:restriction_map_of_continuous_group_cohomology_of_a_topological_group_on_a_topological_module}{restriction maps} induced by the inclusions $G_v \subset G_K$.
+
+    The \CrefAndHyperrefIfExist{definition:selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field}{Selmer group} $\mathrm{Sel}(A/K)$ coincides with the following group:
+    $$\left\{c \in H^1(K, A[\varphi]): \text{ for all places } v \text{ of } K, \operatorname{res}_v(c) \in \operatorname{Image}\left( \frac{B(K_v)}{\varphi(A(K_v))} \xrightarrow{\delta_{\varphi_v}} H^1(G_v, A[\varphi]) \right)  \right \}$$
+    (\Cref{definition:galois_cohomology_of_a_galois_field_extension_with_coefficients_in_a_topological_galois_module_over_a_topological_ring}) (\Cref{definition:continuous_cohomology_groups_of_a_topological_module_over_a_topological_group_and_a_topological_ring}) 
+\end{proposition}
+\begin{proof}
+    By the exactness of 
+    \begin{center}
+    \begin{tikzcd}
+        0 \ar[r] & \prod_v B(K_v) / \varphi(A(K_v)) \ar[r, "\delta_{\varphi_v}"]  & \prod_v H^1(G_v,A[\varphi])  \ar[r, "\pi"] & \prod_v H^1(G_v,A(\barK_v))[\phi] \ar[r] & 0,
+    \end{tikzcd}
+    \end{center}
+    the image of $\delta_{\varphi_v}$ equals the kernel of $\pi$. By definition, the Selmer group is the kernel of the composition of $\pi$ with 
+    $$H^1(G_K, A[\varphi]) \to \prod_v H^1(G_v,A[\varphi])$$
+    and hence the Selmer group is contained in the kernel of $\pi$. Inversely, if the $c \in H^1(G_K, A[\varphi])$ is not an element of the Selmer group, then it is by definition sent to a nonzero element of $\prod_v H^1(G_v,A(\barK_v))[\phi]$, which implies that its image under $\prod_v \operatorname{res}_v$ cannot be an element of $\ker \pi = \operatorname{Im} \delta_{\varphi_v}$. 
+\end{proof}

@@ -1,0 +1,20 @@
+\begin{definition}[Dualizing complex of a proper finite type scheme over a locally Noetherian scheme] \label{definition:dualizing_complex_of_proper_finite_type_scheme_over_locally_noetherian_scheme}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} \CrefAndHyperrefIfExist{definition:scheme}{scheme} of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{locally Noetherian scheme} $S$. 
+    The \hldef{dualizing complex of $X$ over $S$}, denoted by \hl{$\omega_{X/S}^\bullet$}, is the object in the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{derived category} $D_{qc}(X)$ of \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_general_scheme}{quasi-coherent sheaves} on $X$ defined as
+    $$\omega_{X/S}^\bullet = f^!(\mathcal{O}_S),$$
+    \TODO{$f^!$}
+    where $f\colon X \to S$ is the structural morphism and $f^!\colon D_{qc}(S) \to D_{qc}(X)$ is the right adjoint to the derived pushforward functor $\mathbf{R}f_*\colon D_{qc}(X) \to D_{qc}(S)$, whose existence is guaranteed by Grothendieck duality. 
+
+    \TODO{extract the duality as a theorem}
+    The dualizing complex satisfies the duality isomorphism
+    $$\mathbf{R}\operatorname{Hom}_{\mathcal{O}_X}(\mathcal{F}, f^!\mathcal{G}) \cong \mathbf{R}\operatorname{Hom}_{\mathcal{O}_S}(\mathbf{R}f_*\mathcal{F}, \mathcal{G}),$$
+    natural in $\mathcal{F} \in D_{qc}(X)$ and $\mathcal{G} \in D_{qc}(S)$.
+    \TODO{cohen-macaulay morphism, scheme}
+
+    If $f$ is a Cohen-Macaulay morphism (i.e., every geometric fiber is a Cohen-Macaulay scheme), then $\omega_{X/S}^\bullet$ is \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphic} to a single coherent sheaf concentrated in degree zero, denoted by \hl{$\omega_{X/S}$} and called the \hldef{dualizing sheaf of $f$}. 
+
+    \TODO{exterior power}
+    When $X$ is \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} over a field $k$, $\omega_{X/k}$ coincides with the top exterior power of the \CrefAndHyperrefIfExist{definition:sheaf_of_kahler_differentials_of_a_morphism_of_schemes}{sheaf of relative differentials}:
+    $$\omega_{X/k} \cong \bigwedge^{\!\dim X}\Omega_{X/k}.$$
+    For a \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} $C$ over a \CrefAndHyperrefIfExist{definition:field}{field}, $\omega_C$ is referred to as the \hldef{canonical sheafof $C$}.
+\end{definition}

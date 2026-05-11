@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:curve_over_a_scheme}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. A \hldef{curve over $S$} is a pair $(C, \pi)$ where
+\begin{itemize}
+    \item $C$ is a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and
+    \item $\pi: C \to S$ is a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism} satisfying the following conditions:
+    \begin{enumerate}
+        \item $\pi$ is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat},
+        \item $\pi$ is of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, and
+        \item every fiber $C_s = C \times_S \operatorname{Spec} k(s)$, for $s \in S$, is of \CrefAndHyperrefIfExist{definition:pure_dimensional_scheme}{pure dimension 1}. 
+    \end{enumerate}
+\end{itemize}
+
+In some contexts, $\pi$ may be required to be separated. In some contexts, $C_s = C \times_S \operatorname{Spec} k(s)$ may be required to be \CrefAndHyperrefIfExist{definition:reduced_scheme}{reduced}. It is best practice to be explicit on which conditions are assumed.
+
+A curve $(C, \pi)$ over $S$ is called a \hldef{proper curve over $S$} (or simply a \hldef{complete curve}) if $\pi$ is also \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}.
+\end{definition}

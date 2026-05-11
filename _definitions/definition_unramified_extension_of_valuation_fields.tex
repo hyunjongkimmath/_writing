@@ -8,6 +8,12 @@
             \item The \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} \CrefAndHyperrefIfExist{definition:extension_of_a_field}{extension} $k_w/k_v$ is \CrefAndHyperrefIfExist{definition:separable_algebraic_field_extension}{separable}.
         \end{enumerate}
 
-        \item Removing the assumption that $L/K$ is finite, the extension $(L,w)/(K,v)$ of valuation fields is \hldef{unramified} if for every finite subextension $K \subseteq E \subseteq L$, $(E, w|_E) /(K,v)$ is unramified in the above sense.
+        \item Removing the assumption that $L/K$ is finite, the extension $(L,w)/(K,v)$ of valuation fields is \hldef{unramified} if for every finite subextension $K \subseteq E \subseteq L$, $(E, w|_E) /(K,v)$ is unramified in the above sense. Equivalently, $(L,w)/(K,v)$ is unramified if the following hold:
+        \begin{enumerate}
+            \item The natural inclusion of value groups is an isomorphism: $\Gamma_w = \Gamma_v$.
+            \item The \CrefAndHyperrefIfExist{definition:ideal_generated_by_a_set}{ideal generated} by $\mathfrak{m}_v$ in $\mathcal{O}_w$ is the maximal ideal of $\mathcal{O}_w$: $\mathfrak{m}_v \mathcal{O}_w = \mathfrak{m}_w$.
+            \item The residue field extension $k_L/k_K$ is a \CrefAndHyperrefIfExist{definition:separable_algebraic_field_extension}{separable algebraic extension}.
+        \end{enumerate}
     \end{enumerate}
+    In the case that the valuation is of \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{rank $1$}, the valuation field extension is unramified if and only if the extension of the \CrefAndHyperref{definition:nonarchimedean_absolute_value_induced_by_a_rank_one_valuation}{associated} absolute valued field is unramified.
 \end{definition}

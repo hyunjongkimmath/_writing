@@ -1,0 +1,10 @@
+\begin{lemma} \label{lemma:sahs_lemma_central_element_of_a_group_acts_trivially_on_first_cohomology_on_a_module}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $M$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$G$-module} over some \CrefAndHyperrefIfExist{definition:ring}{ring} $R$. Let \CrefAndHyperrefIfExist{definition:center_of_a_group}{$g \in Z(G)$} be a central element.
+    \TODO{action}
+    The map $x \mapsto (g-1) x$ is the zero map on $H^i(G,M)$ for all $i \geq 0$, where the action of $g$ on $H^i(G,M)$ is induced by the \CrefAndHyperrefIfExist{definition:conjugation_action_of_a_group_on_cochains_for_a_module}{conjugation action} on \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{$C^i(G,M)$}. 
+\end{lemma}
+\begin{proof}
+    Since $g \in Z(G)$, the action by $g$ on $C^i(G,M)$ is given by 
+    $$(g \circ \varphi)(g_1,\ldots,g_n) = g \cdot \varphi(g^{-1} g_1 g, g^{-1} g_2 g, \ldots, g^{-1} g_n g) = g \cdot \varphi(g_1,\ldots,g_n)$$
+    for all $g_1,\ldots,g_n \in G$. Thus, the action by $g$ is trivial on $C^i(G,M)$ and hence is trivial on $H^i(G,M)$.
+\end{proof}

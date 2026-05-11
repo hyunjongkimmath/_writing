@@ -1,0 +1,23 @@
+% P-ADIC NORM FOR A PRIME OF A NUMBER FIELD - Definition of the p-adic norm on a number field
+\begin{definition}\label{definition:p_adic_norm_for_a_prime_of_a_number_field}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:number_field}{number field} with \CrefAndHyperrefIfExist{definition:ring_of_integers_of_a_global_or_local_ring}{ring of integers} $\calO_K$. Let $\mathfrak{p}$ be a nonzero \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideal} of $\calO_K$, and let $v_\mathfrak{p}$ denote the \CrefAndHyperrefIfExist{definition:p_adic_valuation_and_absolute_value_on_a_number_field}{$\mathfrak{p}$-adic valuation on $K$}.
+
+    The \hldef{$\mathfrak{p}$-adic norm} (or \hldef{$\mathfrak{p}$-adic absolute value}) on $K$, denoted \hl{$|\cdot|_\mathfrak{p}$}, refers to the function
+    $$
+        |\cdot|_\mathfrak{p} : K \to [0, \infty)
+    $$
+    defined by
+    $$
+        |x|_\mathfrak{p} := N(\mathfrak{p})^{-v_\mathfrak{p}(x)}
+    $$
+    for $x \in K^\times$, where $N(\mathfrak{p}) = |\calO_K/\mathfrak{p}|$ is the \CrefAndHyperrefIfExist{definition:absolute_norm_of_an_ideal_of_the_ring_of_integers_of_a_global_or_local_field}{absolute norm of the ideal $\mathfrak{p}$}, and $|0|_\mathfrak{p} = 0$.
+
+    This function satisfies the following properties:
+    \begin{enumerate}
+        \item (Positivity) $|x|_\mathfrak{p} \geq 0$ for all $x \in K$, and $|x|_\mathfrak{p} = 0$ if and only if $x = 0$.
+        \item (Multiplicativity) $|xy|_\mathfrak{p} = |x|_\mathfrak{p} \cdot |y|_\mathfrak{p}$ for all $x, y \in K$.
+        \item (Non-archimedean property) $|x + y|_\mathfrak{p} \leq \max\{|x|_\mathfrak{p}, |y|_\mathfrak{p}\}$ for all $x, y \in K$, with equality if $|x|_\mathfrak{p} \neq |y|_\mathfrak{p}$.
+    \end{enumerate}
+
+    The \hldef{$\mathfrak{p}$-adic metric} on $K$ is the \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{metric} induced by this norm via $d_\mathfrak{p}(x, y) := |x - y|_\mathfrak{p}$.
+\end{definition}

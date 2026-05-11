@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:category_of_finite_etale_covers_of_a_scheme}
+    Let $X$ be a scheme. 
+    The \hldef{category of finite \'etale covers of $X$} is the category whose 
+    \begin{itemize}
+        \item objects are \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale covers} $Y \to X$
+        \item morphisms $(Y_1 \to X) \to (Y_2 \to X)$ are scheme morphisms $Y_1 \to Y_2$ such that 
+        \[
+        \begin{tikzcd}[column sep=small]
+        Y_1 \arrow[rr, "f"] \arrow[dr, "p_1"'] & & Y_2 \arrow[dl, "p_2"] \\
+        & X & 
+        \end{tikzcd}
+        \]
+        commutes.
+    \end{itemize}
+    In fact, the scheme morphisms $Y_1 \to Y_2$ are necessarily themselves \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale} \TODO{prove}.
+
+    The category of finite \'etale covers of $X$ is often denoted by notations such as \hl{$\mathrm{F\acute{E}t}(X)$}, \hl{$\mathrm{F\acute{E}t}_X$}, or \hl{$\mathrm{F\acute{E}t}/X$}.
+\end{definition}

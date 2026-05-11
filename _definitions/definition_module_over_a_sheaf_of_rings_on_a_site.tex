@@ -2,7 +2,7 @@
 
     \begin{enumerate}
         \item 
-        Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}, and let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of (not necessarily commutative) \CrefAndHyperrefIfExist{definition:ring}{rings} on $\mathcal{C}$. 
+        Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covring_sieve_topologically_generating_family}{site}, and let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of (not necessarily commutative) \CrefAndHyperrefIfExist{definition:ring}{rings} on $\mathcal{C}$. 
         
         \begin{enumerate}
             \item 
@@ -16,6 +16,11 @@
             $$ (a \cdot m) \cdot b = a \cdot (m \cdot b). $$
 
             In particular, for every object $U \in \calC$, the abelian group $\calM(U)$ has the structure of an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$\calA(U)-\calB(U)$-bimodule}.
+
+            \item Assume that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
+            $$\PreShv(\calC, \mathbf{Rings}) \to \Shv(\calC, \mathbf{Rings})$$ 
+            exists. For rings $A$ and $B$, a \hldef{$A$-$B$-bimodule} or \hldef{bimodule over $(A,B)$ on $\calC$} is a bimodule over $(\underline{A}, \underline{B})$ where $\underline{A}$ and $\underline{B}$ are the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaves} on $\calC$ with values $A$ and $B$ respectively.
+            
 
             \item Let $\mathcal{M}$ and $\mathcal{N}$ be $(\mathcal{A}, \mathcal{B})$-bimodules. A \hldef{homomorphism of $(\mathcal{A}, \mathcal{B})$-bimodules} (or an \hldef{$(\mathcal{A}, \mathcal{B})$-linear morphism}) is a morphism of sheaves of abelian groups $f: \mathcal{M} \to \mathcal{N}$ such that for every object $U$ of $\mathcal{C}$, every section $m \in \mathcal{M}(U)$, every $a \in \mathcal{A}(U)$, and every $b \in \mathcal{B}(U)$, the following compatibility conditions hold:
             $$ f_U(a \cdot m) = a \cdot f_U(m) \quad \text{and} \quad f_U(m \cdot b) = f_U(m) \cdot b. $$
@@ -61,8 +66,6 @@
         \noindent In case that a \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} 
         $$\PreShv(\calC, \mathbf{Rings}) \to \Shv(\calC, \mathbf{Rings})$$ 
         exists, a left, right, two-sided $\calO$-module (and morphisms thereof) is equivalent to a $(\calO,\bbZ)$-bimodule, $(\bbZ,\calO)$-bimodule, and $(\calO, \calO)$-bimodule (and morphisms thereof) respectively, where $\bbZ$ is the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} of the integer ring $\bbZ$. In particular, the category of $(\bbZ,\bbZ)$-bimodules is equivalent to the category of sheaves of abelian groups on $\calC$. 
-
-
 \end{enumerate}
 
 

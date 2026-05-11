@@ -37,7 +37,7 @@
 \input{../_definitions/definition_algebraically_closed_field.tex}
 
 % Definition of algebraic closure (depends on previous notations)
-\input{../_definitions/definition_algebraically_closure_of_a_field.tex}
+\input{../_definitions/definition_algebraic_closure_of_a_field.tex}
 
 
 \input{../_definitions/definition_field_generated_by_elements.tex}
@@ -53,6 +53,11 @@
 
 
 \input{../_definitions/definition_separable_algebraic_field_extension.tex}
+
+\begin{proposition} \label{proposition:finite_field_extension_is_separable_iff_there_are_degree_many_base_embeddings_of_extension_into_algebraic_closure}
+Let $L/K$ be a \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{finite extension} of \CrefAndHyperrefIfExist{definition:field}{fields} of \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{degree} $n$. Let $\bar{K}$ be an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic closure} of $K$. The \CrefAndHyperrefIfExist{definition:extension_of_a_field}{extension} $L/K$ is \CrefAndHyperrefIfExist{definition:separable_algebraic_field_extension}{separable} if and only if the number of distinct \CrefAndHyperrefIfExist{definition:field_homomorphism}{$K$-embeddings} of $L$ into $\bar{K}$ is equal to $n$.
+\end{proposition}
+
 
 
 % Definition: separably closed field
@@ -101,6 +106,36 @@ Let $L/K$ be a finite extension. Then $L/K$ is \CrefAndHyperrefIfExist{definitio
 \input{../_definitions/definition_separating_transcendence_basis_of_a_field_extension.tex}
 
 \input{../_definitions/definition_separable_field_extension_general.tex}
+
+\subsection{Finite fields}
+
+\input{../_definitions/definition_power_of_an_element_of_a_ring_by_a_nonnegative_integer.tex}
+\input{../_definitions/definition_finite_field.tex}
+\input{../_concepts/theorem_finite_fields_are_exactly_characterized_by_their_cardinality.tex}
+
+
+\input{../_definitions/definition_absolute_p_nth_power_frobenius_endomorphism_of_a_ring_of_prime_characteristic.tex}
+
+\begin{proposition} \label{proposition:absolute_frobenius_endomorphism_on_a_finite_field_is_a_field_automorphism}
+Let $\mathbb{F}_q$ be a \CrefAndHyperrefIfExist{definition:finite_field}{finite field} of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic $p$}.
+The \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}{Frobenius endomorphism} $\Phi: \mathbb{F}_q \to \mathbb{F}_q$ is a \CrefAndHyperrefIfExist{definition:field}{field} \CrefAndHyperrefIfExist{definition:field_automorphism}{automorphism}.
+\end{proposition}
+
+\begin{lemma} \label{lemma:irreducible_poly_in_char_p_field_is_insep_iff_formal_derivative_is_zero}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field} of \CrefAndHyperrefIfExist{definition:characteristic_a_prime_for_a_scheme}{characteristic $p$}.
+\TODO{irred poly, separable polynomial, formal derivative}
+An irreducible polynomial $f \in K[x]$ is inseparable if and only if its formal derivative $f'$ is the zero polynomial, which occurs if and only if there exists a polynomial $g \in K[x]$ such that $f(x) = g(x^p)$.
+\end{lemma}
+
+\begin{theorem} \label{theorem:finite_fields_are_perfect}
+Every \CrefAndHyperrefIfExist{definition:finite_field}{finite field} $\mathbb{F}_q$ is a \CrefAndHyperrefIfExist{definition:perfect_field}{perfect field}.
+
+In other words, every finite extension of $\bbF_q$ is a \CrefAndHyperrefIfExist{definition:separable_algebraic_field_extension}{separable extension}.
+\end{theorem}
+
+
+\subsection{Artin-Schreier theory}
+
 
 
 

@@ -1,0 +1,19 @@
+\begin{definition}[Compactified modular curve $X_0(N)$] \label{definition:X_0_N_compactified_modular_curve_parameterizing_cyclic_N_isogenies_on_generalized_elliptic_curves}
+Let $N \geq 1$ be an integer. The \hldef{affine modular curve $Y_0(N)$} is the affine scheme over $\mathbb{Z}[1/N]$ that represents the moduli stack $\mathcal{M}_0(N)$ (see \CrefAndHyperrefIfExist{definition:moduli_stack_of_cyclic_N_isogenies}{Moduli Stack $\mathcal{M}_0(N)$}) for $N \geq 5$.
+
+More precisely, $Y_0(N)$ is the fine moduli space representing the functor
+\[
+    Y_0(N): (\mathrm{Sch}/\mathbb{Z}[1/N])^{\mathrm{op}} \longrightarrow \mathrm{Sets}
+\]
+sending an $\mathbb{Z}[1/N]$-scheme $S$ to the set of isomorphism classes of pairs $(E, C)$ where
+\begin{itemize}
+    \item $E$ is an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} over $S$, and
+    \item $C \subset E[S]$ is a cyclic subgroup scheme of order $N$ (see \CrefAndHyperrefIfExist{definition:moduli_stack_of_cyclic_N_isogenies}{cyclic subgroup scheme of order $N$}).
+\end{itemize}
+
+For $N \geq 5$, every elliptic curve with a cyclic subgroup scheme of order $N$ has no non-trivial automorphisms preserving the subgroup, so the moduli stack $\mathcal{M}_0(N)$ is represented by a fine moduli space. This representing object is the affine scheme $Y_0(N)$ over $\mathbb{Z}[1/N]$.
+
+The \hldef{compactified modular curve $X_0(N)$} is the proper smooth algebraic curve containing $Y_0(N)$ as a dense open subscheme. The complement $X_0(N) \setminus Y_0(N)$ consists of finitely many \CrefAndHyperrefIfExist{definition:cusps_of_classical_modular_curves}{cusps}, each corresponding to a \CrefAndHyperrefIfExist{definition:tate_curve_over_a_complete_discrete_valuation_field}{Tate curve} $\mathbb{G}_m/q^{\mathbb{Z}}$ equipped with a cyclic subgroup scheme of order $N$ in its generic fiber.
+
+There is a natural \hldef{Atkin--Lehner involution} $w_N: X_0(N) \to X_0(N)$ sending $(E, C)$ to $(E/C, E[N]/C)$, which exchanges the two cusps $\infty$ and $0$ when $N$ is prime.
+\end{definition}

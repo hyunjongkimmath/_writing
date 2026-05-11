@@ -1,0 +1,25 @@
+% COMPLETE RING WITH RESPECT TO AN IDEAL - Definition of a complete ring with respect to an ideal
+\begin{definition}\label{definition:complete_ring_with_respect_to_an_ideal}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $I$ be a two-sided \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} of $R$.
+
+    \begin{enumerate}
+        \item The ring $R$ is said to be \hldef{complete with respect to $I$} if the canonical homomorphism
+        $$
+            R \to \varprojlim_{n} R/I^n
+        $$
+        is an isomorphism, where the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{inverse limit} is taken over the system of \CrefAndHyperrefIfExist{definition:quotient_ring_of_a_ring_by_a_two_sided_ideal}{quotient rings} $R/I^n$ with natural projection maps.
+
+        \item If $(R, I)$ is a pair consisting of a ring and an ideal such that $R$ is complete with respect to $I$, then the \hldef{$I$-adic completion} of $R$, denoted $\widehat{R}$ or $R^\wedge$, is defined as
+        $$
+            \widehat{R} := \varprojlim_{n} R/I^n.
+        $$
+
+        \item A \hldef{complete local ring} refers to a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} $(R, \mathfrak{m})$ that is complete with respect to its unique maximal ideal $\mathfrak{m}$. In this case, the \hldef{$\mathfrak{m}$-adic completion} of $R$, denoted $\widehat{R}$ or $R^\wedge$, is defined as
+        $$
+            \widehat{R} := \varprojlim_{n} R/\mathfrak{m}^n.
+        $$
+        The ring $\widehat{R}$ is always a complete local ring with maximal ideal $\widehat{\mathfrak{m}} = \mathfrak{m}\widehat{R}$.
+
+        \item A \hldef{complete discrete valuation ring (CDVR)} refers to a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring} that is also a complete local ring. Equivalently, it is a local ring $(R, \mathfrak{m})$ such that $\mathfrak{m} = (\pi)$ for some $\pi \in R$, $\bigcap_{n=1}^\infty \mathfrak{m}^n = \{0\}$, and $R$ is complete with respect to $\mathfrak{m}$.
+    \end{enumerate}
+\end{definition}

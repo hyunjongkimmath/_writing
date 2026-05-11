@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:maximal_unramified_extension_of_an_absolute_valued_field_or_a_vlauation_field}
+
+    Let $K$ be a field equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute value} (resp. with a \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{valuation}).
+    % Let $(K, |\cdot|_K)$ be an an \CrefAndHyperrefIfExist{definition:absolute_valued_field}{absolute valued field}.
+
+    A \hldef{maximal unramified extension of $(K,|\cdot|_K)$} referes to an absolute valued field (resp. valuation field) denoted by notations such as \hl{$K_{\text{ur}}$}, \hl{$K_{\text{unr}}$}, \hl{$K^{\text{ur}}$}, or \hl{$K^{\text{unr}}$}, such that 
+    \begin{enumerate}
+        \item $K_{\text{ur}}$ is \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic} over $K$,
+
+        \item $K_{\text{ur}}$ is unramified (\Cref{definition:unramified_extension_of_absolute_valued_fields_general}) (\Cref{definition:unramified_extension_of_valuation_fields}) over $K$.
+
+        \item any unramified algebraic extension $L/K$ admits a $K$-embedding $L \hookrightarrow K_{\text{ur}}$ that makes $K_{\text{ur}}$ an \CrefAndHyperrefIfExist{definition:extension_of_absolute_valued_fields}{absolute valued field extension} (resp. \CrefAndHyperrefIfExist{definition:extension_of_a_valuation_of_a_field_to_an_extension_field}{valuation field extension}) of $L$.
+    \end{enumerate}
+
+    In practice, one constructs an unramified extension by fixing an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic closure} $\overline{K}$ of $K$ and an absolute value on $\overline{K}$ extending that of $K$, and constructing $K_{\text{ur}}$ as the compositum of all subextensions $L$ of $K$ in $\overline{K}$ (as absolute valued fields or valuation fields) that are unramified over $K$.
+\end{definition}

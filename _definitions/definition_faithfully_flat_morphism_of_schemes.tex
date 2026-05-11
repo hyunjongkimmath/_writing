@@ -1,17 +1,17 @@
 \begin{definition}[Faithfully flat morphism of schemes] \label{definition:faithfully_flat_morphism_of_schemes}
-    Let $f : X \to Y$ be a morphism of schemes.
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
 
-    The morphism $f$ is \hldef{faithfully flat} if it is \hldef{flat} and \hldef{surjective} on the underlying topological spaces.
+    The morphism $f$ is \hldef{faithfully flat} if it is \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat} and \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} on the underlying topological spaces.
 
     More precisely:
     \begin{itemize}
-        \item $f$ is \hldef{flat}, meaning for every $x \in X$ with $y = f(x)$, the local ring homomorphism
+        \item $f$ is \hldef{flat}, meaning for every $x \in X$ with $y = f(x)$, the \CrefAndHyperrefIfExist{definition:local_morphism_of_local_rings}{local ring homomorphism}
         \[
         \mathcal{O}_{Y,y} \to \mathcal{O}_{X,x}
         \]
-        makes $\mathcal{O}_{X,x}$ a flat $\mathcal{O}_{Y,y}$-module.
+        makes $\mathcal{O}_{X,x}$ a \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} $\mathcal{O}_{Y,y}$-module.
         \item $f$ is \hldef{surjective} at the level of topological spaces, i.e., the continuous map $f: |X| \to |Y|$ is surjective.
     \end{itemize}
 
-    Equivalently, $f$ is faithfully flat if the functor $f^* : \mathrm{QCoh}(Y) \to \mathrm{QCoh}(X)$ on quasi-coherent sheaves is both exact and faithful.
+    Equivalently, $f$ is faithfully flat if the functor $f^* : \mathrm{QCoh}(Y) \to \mathrm{QCoh}(X)$ on \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_general_scheme}{quasi-coherent sheaves} is both \CrefAndHyperrefIfExist{definition:exact_functor_between_abelian_categories}{exact} and \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{faithful}.
 \end{definition}

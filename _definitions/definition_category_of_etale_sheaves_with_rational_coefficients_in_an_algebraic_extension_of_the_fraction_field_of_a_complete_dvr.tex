@@ -1,0 +1,25 @@
+\begin{definition} \label{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $K$ be an algebraic extension of $E$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site on $X$}. 
+
+    For each finite extension field $E'$ of $E$ in $K$, note that there is a category \CrefAndHyperrefIfExist{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}{$\Sh(X,E')$} and that these categories form a direct system --- given $E_1' \subseteq E_2'$, we have a functor $\Sh(X, E_1') \to \Sh(X, E_2')$.
+
+    The \hldef{category of sheaves with coefficients in $K$} is the category \hl{$\Sh(X,K)$} defined as the $2$-limit of this direct system:
+    $$\Sh(X,K) \coloneq \varinjlim_{E \subseteq E' \subseteq K, [E':E] < \infty} \Sh(X,E').$$
+
+    More concretely, an object $\calF$ of $\Sh(X,K)$ is represented by an object $\calF_{E'}$ of $\Sh(X,E')$ for some finite extension $E'$ of $E$ in $K$. Two objects $\calF, \calG \in \Sh(X,K)$ represented by $\calF_{E'_1}$ and $\calG_{E'_2}$ are considered the same if there exists some finite extension $E''$ of $E$ containing both $E'_1$ and $E'_2$ such that the pushforwards of $\calF_{E'_1}$ and $\calG_{E'_2}$ into $\Sh(X, E'')$ are isomorphic objects.
+    
+    Furthermore, for objects $\calF, \calG$ of $\Sh(X,K)$ represented by $\calF_{E'}, \calG_{E'} \in \Sh(X, E')$ for some finite extension $E'$ of $E$ in $K$, their Hom-set is given by 
+    $$\Hom_{\Sh(X,K)}(\calF, \calG) = \varinjlim_{E' \subseteq E'' \subseteq K, [E'':E] < \infty} \Hom_{\Sh(X,E'')}(\calF_{E''}, \calG_{E''})$$
+    where $\calF_{E''}$, $\calG_{E''}$ are respectively the pushforwards of $\calF_{E'}, \calG_{E'}$ in $\Sh(X,E'')$. Equivalently, 
+    $$\Hom_{\Sh(X,K)}(\calF, \calG) = \Hom_{\Sh(X,E')}(\calF, \calG) \otimes_{E'} K$$
+
+    One case of particular interest is the case that $R = \bbZ_\ell$, $E = \bbQ_\ell$, and $K = \Qellbar$.
+
+    As is the case with $\Sh(X,R)$ or $\Sh(X,E)$, note that the objects of $\Sh(X,K)$ are not literal sheaves but rather inverse systems of sheaves.
+
+    Note that the definition of $\Sh(X,K)$ simulatenously uses and generalizes the definition of $\Sh(X,E)$.
+
+    \TextIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{
+        $\Sh(X,K)$ is a full subcategory of \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$D_c^b(X,K)$}.
+    }
+\end{definition}

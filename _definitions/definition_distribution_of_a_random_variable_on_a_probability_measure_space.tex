@@ -1,0 +1,11 @@
+\begin{definition}[Distribution (law) of a random variable on a probability measure space] \label{definition:distribution_of_a_random_variable_on_a_probability_measure_space}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}, and let $X : \Omega \to S$ be a \CrefAndHyperrefIfExist{definition:random_variable_on_a_probability_measure_space}{$(S, \mathcal{S})$-valued random variable} where $(S, \mathcal{S})$ is a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measure_space}{measurable space}.
+
+The \hldef{distribution} (or \hldef{law}) of $X$, denoted \hl{$\mu_X$}, is the \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure} on $(S, \mathcal{S})$ defined by
+$$\hlin{\mu_X(A) = P(X^{-1}(A)) = P(\{\omega \in \Omega : X(\omega) \in A\})}$$
+for every $A \in \mathcal{S}$.
+
+In the special case where $S = \mathbb{R}$ and $\mathcal{S} = \mathcal{B}(\mathbb{R})$ is the \CrefAndHyperrefIfExist{definition:borel_sigma_algebra_of_a_topological_space}{Borel $\sigma$-algebra} on $\mathbb{R}$, the distribution of $X$ is uniquely determined by its cumulative distribution function $F_X : \mathbb{R} \to [0, 1]$ given by
+$$\hlin{F_X(t) = \mu_X((-\infty, t]) = P(X \leq t)}.$$
+\end{definition}
+

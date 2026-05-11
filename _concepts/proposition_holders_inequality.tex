@@ -1,0 +1,10 @@
+\begin{proposition}[Hölder's inequality] \label{proposition:holders_inequality}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}. Let $p, q \in (1,\infty)$ be conjugate exponents, i.e. $\frac{1}{p} + \frac{1}{q} = 1$.
+\TODO{conjugate exponents}
+
+Let $f : X \to \mathbb{R}$ (or $\mathbb{C}$) and $g : X \to \mathbb{R}$ (or $\mathbb{C}$) be two \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{measurable functions} such that $f^p$ and $g^q$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable}, i.e.
+$$\int_X |f|^p\,d\mu < \infty \quad \text{and} \quad \int_X |g|^q\,d\mu < \infty.$$
+
+Then $fg$ is integrable and
+$$\int_X |fg|\,d\mu \leq \left(\int_X |f|^p\,d\mu\right)^{\frac{1}{p}} \left(\int_X |g|^q\,d\mu\right)^{\frac{1}{q}}.$$
+\end{proposition}

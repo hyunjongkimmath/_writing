@@ -1,0 +1,13 @@
+\begin{definition}[Independence of $\sigma$-algebras] \label{definition:independence_of_sigma_algebras}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}.
+
+\TODO{sub-sigma algebra}
+A finite collection of sub-$\sigma$-algebras $\mathcal{G}_1, \mathcal{G}_2, \dots, \mathcal{G}_n$ of $\mathcal{F}$ is called \hldef{independent} if for every choice of events $A_i \in \mathcal{G}_i$ ($1 \leq i \leq n$),
+$$\hlin{P\left(\bigcap_{i=1}^n A_i\right) = \prod_{i=1}^n P(A_i)}.$$
+
+An arbitrary (possibly infinite) collection of sub-$\sigma$-algebras $\{\mathcal{G}_j\}_{j \in J}$ of $\mathcal{F}$ is called \hldef{independent} if every finite subcollection is independent in the sense above. That is, for any distinct indices $j_1, j_2, \dots, j_n \in J$ and any choice of events $A_k \in \mathcal{G}_{j_k}$ ($1 \leq k \leq n$),
+$$P\left(\bigcap_{k=1}^n A_k\right) = \prod_{k=1}^n P(A_k).$$
+
+A sequence $(\mathcal{G}_n)_{n=1}^\infty$ of sub-$\sigma$-algebras is called an \hldef{independent sequence} if the set $\{\mathcal{G}_1, \mathcal{G}_2, \dots\}$ is independent.
+\end{definition}
+

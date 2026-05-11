@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:SL_n_of_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and $n \geq 1$ an integer. The \hldef{special linear group} \hl{$\operatorname{SL}_n(R)$} is the group of $n \times n$ matrices with entries in $R$ and determinant equal to $1$:
+$\operatorname{SL}_n(R) := \left\{ (a_{ij})_{1 \leq i,j \leq n} \in M_n(R) : \det(a_{ij}) = 1 \right\}$.
+\TODO{matrix determinant}
+Matrix multiplication serves as the group operation. The identity element is $I_n$, the $n \times n$ identity matrix with $1$ on the diagonal and $0$ elsewhere.
+
+% For a prime power $q = p^k$, the order of $\operatorname{SL}_2(\mathbb{F}_q)$ is
+% $\hlin{|\operatorname{SL}_2(\mathbb{F}_q)| = q(q^2 - 1) = q^3(1 - p^{-2})}$.
+% More generally, for $N \geq 1$ with prime factorisation $N = p_1^{e_1} \cdots p_r^{e_r}$, the Chinese remainder theorem yields $\mathbb{Z}/N\mathbb{Z} \cong \prod_{i=1}^r \mathbb{Z}/p_i^{e_i}\mathbb{Z}$, and hence
+% $\hlin{\operatorname{SL}_2(\mathbb{Z}/N\mathbb{Z}) \cong \prod_{i=1}^r \operatorname{SL}_2(\mathbb{Z}/p_i^{e_i}\mathbb{Z})}$.
+% In particular, $|\operatorname{SL}_2(\mathbb{Z}/N\mathbb{Z})| = N^3 \prod_{p|N} (1 - p^{-2})$.
+
+% When $R = \mathbb{Z}$, the group $\operatorname{SL}_2(\mathbb{Z})$ acts on the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane} $\mathbb{H} = \{z \in \mathbb{C} : \operatorname{Im}(z) > 0\}$ via \hldef{Möbius transformations}:
+% $\hlin{\gamma \cdot z = \frac{az + b}{cz + d} \quad \text{for } \gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \operatorname{SL}_2(\mathbb{Z})}$.
+
+% For any positive integer $N$, the \hldef{reduction homomorphism} is the surjective group homomorphism
+% $\hlin{\pi_N : \operatorname{SL}_2(\mathbb{Z}) \to \operatorname{SL}_2(\mathbb{Z}/N\mathbb{Z})}$
+% induced by reducing each matrix entry modulo $N$. Its kernel is the \hldef{principal congruence subgroup} of level $N$,
+% $\hlin{\Gamma(N) := \ker(\pi_N) = \left\{ \gamma \in \operatorname{SL}_2(\mathbb{Z}) : \gamma \equiv I_2 \pmod{N} \right\}}$.
+% By the first isomorphism theorem, $\operatorname{SL}_2(\mathbb{Z})/\Gamma(N) \cong \operatorname{SL}_2(\mathbb{Z}/N\mathbb{Z})$.
+% The \hldef{congruence subgroups} $\Gamma_0(N)$ and $\Gamma_1(N)$ are defined as the preimages under $\pi_N$ of the subgroups of upper-triangular matrices and matrices of the form $\begin{pmatrix} 1 & * \\ 0 & 1 \end{pmatrix}$ in $\operatorname{SL}_2(\mathbb{Z}/N\mathbb{Z})$, respectively.
+\end{definition}

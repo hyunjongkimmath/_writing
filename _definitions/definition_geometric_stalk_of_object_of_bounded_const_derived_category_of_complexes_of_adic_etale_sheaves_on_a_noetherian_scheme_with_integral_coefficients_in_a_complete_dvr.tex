@@ -1,0 +1,10 @@
+\begin{definition} [Geometric stalk of object of $D_c^b(X,R)$ for integral $R$] \label{definition:geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_integral_coefficients_in_a_complete_dvr}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site on $X$}. Let $x \in X$ be a point. Let $\barx: \Spec \kappa(x)^s \to X$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} over $X$. 
+
+    Given an object $K = (K_n, u_n)_{n \geq 0}$ of $D_c^b(X,R)$ (\Cref{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}), one may speak of the \CrefAndHyperref{definition:geometric_stalk_of_object_of_bounded_derived_category_of_complexes_of_adic_etale_sheaves_on_a_scheme}{stalk} $(K_{n,\barx}, u_{n,\barx})$ of $K$ at $\barx$. However, by the \hldef{stalk of $K$ at $\barx$}, one more usually means the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit} 
+    $$K_{\barx} \coloneq \varprojlim_{n} K_{n,\barx}$$
+    which is a $R$-module with a continuous $\Gal(\kappa(x)^s, \kappa(x))$-action when equipped when $K_{\barx}$ is eqiupped with the \CrefAndHyperrefIfExist{definition:profinite_group}{profinite topology}. 
+
+    For every such $x$ and $\overline{x}$, we have a functor 
+    $$\Dbc(X,R) \to \Gal(\kappa(x)^s / \kappa(x))-R-\Mod$$
+\end{definition}

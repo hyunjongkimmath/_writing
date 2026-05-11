@@ -1,7 +1,48 @@
 \begin{definition} \label{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves} of rings on $X$.
-    \TODO{continue}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\mathcal{A}$ and $\mathcal{B}$ be \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaves} of (not necessarily commutative) rings on $X$.
+
+    \begin{enumerate}
+        \item
+        An \hldef{$(\mathcal{A}, \mathcal{B})$-bimodule} is a sheaf $\mathcal{M}$ of abelian groups on $X$ equipped with a left $\mathcal{A}$-module structure given by a morphism of sheaves of sets
+        $$ \lambda: \mathcal{A} \times \mathcal{M} \longrightarrow \mathcal{M}, $$
+        and a right $\mathcal{B}$-module structure given by a morphism of sheaves of sets
+        $$ \rho: \mathcal{M} \times \mathcal{B} \longrightarrow \mathcal{M}, $$
+        such that the actions are compatible. Specifically, for every open subset $U \subseteq X$, every section $m \in \mathcal{M}(U)$, every $a \in \mathcal{A}(U)$, and every $b \in \mathcal{B}(U)$, the equality
+        $$ (a \cdot m) \cdot b = a \cdot (m \cdot b) $$
+        holds in $\mathcal{M}(U)$.
+
+        In particular, for every open subset $U \subseteq X$, the abelian group $\mathcal{M}(U)$ has the structure of an $\mathcal{A}(U)-\mathcal{B}(U)$-bimodule.
+
+        \item Let $\mathcal{M}$ and $\mathcal{N}$ be $(\mathcal{A}, \mathcal{B})$-bimodules. A \hldef{homomorphism of $(\mathcal{A}, \mathcal{B})$-bimodules} is a morphism of sheaves of abelian groups $f: \mathcal{M} \to \mathcal{N}$ such that for every open subset $U \subseteq X$, every section $m \in \mathcal{M}(U)$, every $a \in \mathcal{A}(U)$, and every $b \in \mathcal{B}(U)$, the following compatibility conditions hold:
+        $$ f_U(a \cdot m) = a \cdot f_U(m) \quad \text{and} \quad f_U(m \cdot b) = f_U(m) \cdot b. $$
+
+        We denote the category of $(\mathcal{A}, \mathcal{B})$-bimodules by
+        \hl{$\mathcal{A}\text{-}\mathcal{B}\text{-}\mathsf{Mod}$}.
+
+        \item
+        Let $\mathcal{O}$ be a sheaf of (not necessarily commutative) rings on $X$, i.e., $(X, \mathcal{O})$ is a \CrefAndHyperrefIfExist{definition:ringed_space}{ringed space}.
+
+        \begin{enumerate}
+            \item An \hldef{(left/right/two-sided) $\mathcal{O}$-module} consists of the following data:
+            \begin{itemize}
+                \item A sheaf $\mathcal{F}$ of abelian groups on $X$,
+                \item for every open subset $U \subseteq X$, the structure of an (left/right/two-sided) $\mathcal{O}(U)$-module on $\mathcal{F}(U)$,
+            \end{itemize}
+            such that for every inclusion of open subsets $V \subseteq U$, the restriction map
+            $$\rho_{U,V}: \mathcal{F}(U) \to \mathcal{F}(V)$$
+            is $\mathcal{O}(U)$-linear when the $\mathcal{O}(U)$-action on $\mathcal{F}(V)$ is defined via the natural ring homomorphism
+            $$\mathcal{O}(U) \to \mathcal{O}(V)$$
+            induced by the inclusion.
+
+            \item Let $\mathcal{F}$ and $\mathcal{G}$ be $\mathcal{O}$-modules. A \hldef{morphism of $\mathcal{O}$-modules} is a morphism of sheaves of abelian groups $\varphi: \mathcal{F} \to \mathcal{G}$ such that, for every open subset $U \subseteq X$, the component map
+            $$\varphi_U : \mathcal{F}(U) \to \mathcal{G}(U)$$
+            is $\mathcal{O}(U)$-linear.
+
+            The collection of all $\mathcal{O}$-modules together with their morphisms forms the \hldef{category of $\mathcal{O}$-modules}, denoted by \hl{$\mathbf{Mod}(\mathcal{O})$}.
+        \end{enumerate}
+    \end{enumerate}
+
     \TextIfExists{definition:module_over_a_sheaf_of_rings_on_a_site}{
-        These notions are merely special cases of those of \Cref{definition:module_over_a_sheaf_of_rings_on_a_site}
+        These notions are special cases of those of \Cref{definition:module_over_a_sheaf_of_rings_on_a_site}, where the site is taken to be the category of open subsets of $X$ with the usual Grothendieck topology.
     }
 \end{definition}

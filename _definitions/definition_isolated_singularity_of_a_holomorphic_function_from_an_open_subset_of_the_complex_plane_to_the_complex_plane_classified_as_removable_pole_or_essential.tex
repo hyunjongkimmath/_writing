@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}
+Let $U \subset \mathbb{C}$ be an open set and let $f : U \setminus \{z_0\} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} defined on $U$ with a single point $z_0 \in U$ removed. The point $z_0$ is called an \hldef{isolated singularity of $f$}. The isolated singularity $z_0$ is classified as follows:
+\begin{enumerate}
+  \item $z_0$ is a \hldef{removable singularity} if $f$ can be extended to a function holomorphic on all of $U$. Equivalently, $\lim_{z \to z_0} (z - z_0)f(z) = 0$, or equivalently $\sup_{z \in U \setminus \{z_0\}} |f(z)| < \infty$ in a neighborhood of $z_0$.
+
+  \item $z_0$ is a \hldef{pole of order $m \in \mathbb{N}$} if there exists a holomorphic function $g$ on $U$ with $g(z_0) \neq 0$ such that $f(z) = \frac{g(z)}{(z - z_0)^m}$ for all $z \in U \setminus \{z_0\}$. Equivalently, $\lim_{z \to z_0} |f(z)| = \infty$ and the Laurent expansion of $f$ at $z_0$ has finitely many negative-degree terms.
+
+  \TODO{laurent expansion}
+  \item $z_0$ is an \hldef{essential singularity} if it is neither a removable singularity nor a pole. Equivalently, the Laurent expansion of $f$ at $z_0$ has infinitely many negative-degree terms, and by \CrefAndHyperrefIfExist{theorem:weierstrass_theorem_on_essential_singularities}{Weierstrass's theorem on essential singularities}, $f$ takes every complex value (with at most one exception) infinitely often in any neighborhood of $z_0$.
+\end{enumerate}
+\end{definition}

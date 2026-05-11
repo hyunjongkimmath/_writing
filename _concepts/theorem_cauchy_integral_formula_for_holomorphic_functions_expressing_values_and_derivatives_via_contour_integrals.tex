@@ -1,0 +1,7 @@
+\begin{theorem} \label{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_and_derivatives_via_contour_integrals}
+    \TODO{closed path}
+Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset (a simply connected domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. Let $\gamma$ be a closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} in $U$ whose image is a simple closed curve, and let $z_0$ be a point in the interior of $\gamma$ (i.e., $z_0$ lies in the bounded component of $\mathbb{C} \setminus \gamma([a,b])$). Then for every non-negative integer $n$,
+$f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^{n+1}}\,dz$,
+where $f^{(n)}$ denotes the \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{$n$-th derivative} of $f$. In particular, for $n = 0$:
+$f(z_0) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{z - z_0}\,dz$.
+\end{theorem}

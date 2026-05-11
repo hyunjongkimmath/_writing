@@ -1,0 +1,12 @@
+\begin{lemma}[see {\cite[0BN6]{stacks-project}}] \label{lemma:equivalent_conditions_for_a_map_of_fundamental_groups_of_galois_categories_to_be_surjective}
+    Let $(\calC, F)$ and $(\calC', F')$ be \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois categories}. Let $H: \calC \to \calC'$ be an \CrefAndHyperrefIfExist{definition:exact_functor_between_galois_categories}{exact functor}. Let $h: \pi(\calC', F') \to \pi(\calC, F)$ be the corresponding \CrefAndHyperrefIfExist{definition:group_homomorphism}{morphism} of \CrefAndHyperrefIfExist{definition:fundamental_group_of_a_galois_category}{fundamental groups}. Write $*$ and $*'$ for the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{final objects} of $\calC$ and $\calC'$ respectively.
+    \TODO{the corresponding morphism; need 0BN5}
+    The following are equivalent:
+    \begin{enumerate}
+        \item $h$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}
+        \item $H$ is \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}
+        \item whenever $X \in \calC$ is \CrefAndHyperrefIfExist{definition:connected_object_of_a_galois_category}{connected}, $H(X) \in \calC'$ is connected.
+        \item whenever $X \in \calC$ is connected and there is a moprhism $*' \to H(X)$ in $\calC'$, there is a morphism $* \to X$.
+        \item for any object $X$ of $\calC$, the set map $\Hom_{\calC}(*, X) \to \Hom_{\calC'}(*', H(X))$ is bijective.
+    \end{enumerate}
+\end{lemma}

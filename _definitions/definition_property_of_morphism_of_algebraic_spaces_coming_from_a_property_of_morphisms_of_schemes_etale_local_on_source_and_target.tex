@@ -1,0 +1,16 @@
+\begin{definition}[{\cite[Tags 04RD, 03MJ]{stacks-project}}] \label{definition:property_of_morphism_of_algebraic_spaces_coming_from_a_property_of_morphisms_of_schemes_etale_local_on_source_and_target}
+    \TODO{local on source}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\calP$ be a property of \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphisms of schemes} that is \CrefAndHyperrefIfExist{definition:big_etale_site_of_a_scheme}{\'etale} local both on the source and \CrefAndHyperrefIfExist{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}{target}.
+
+    We say that a morphism $f: X \to Y$ of \CrefAndHyperrefIfExist{definition:algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness}{algebraic spaces} over $S$ \hldef{has property $\calP$} if the following equivalent conditions hold:
+    \begin{enumerate}
+        \item For any commutative diagram
+        $$\xymatrix{ U \ar[d]_ a \ar[r]_ h &  V \ar[d]^ b \\  X \ar[r]^ f &  Y }$$
+        where $U$ and $V$ are schemes and the vertical arrows are \'etale the morphism $h$ has property $\calP$ 
+
+        \item For some diagram as above with $a: U \to X$ surjective the morphism $h$ has property $\calP$
+    \end{enumerate}
+    Moreover, if $X$ and $Y$ are \CrefAndHyperrefIfExist{definition:representable_functor_on_a_locally_small_category}{representable}, then this is also equivalent to $f$ having property $\calP$. 
+
+    If $\calP$ is also preserved under \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change} and is \CrefAndHyperrefIfExist{definition:big_fppf_site_of_a_scheme}{fppf} \CrefAndHyperrefIfExist{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}{local on the base}, then this is also equivalent to $f$ having property $\calP$ in the sense of \Cref{definition:property_for_a_representable_morphism_of_sheaves_coming_from_a_property_of_morphisms_of_schemes_preserved_by_base_change_and_base_local}
+\end{definition}

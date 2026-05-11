@@ -1,0 +1,30 @@
+% FROBENIUS ENDOMORPHISM ON TRUNCATED WITT VECTORS - Definition of the Frobenius operator
+\begin{definition}\label{definition:frobenius_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{prime characteristic} $p$, let $n \geq 1$ be an integer.
+
+The \hldef{Frobenius endomorphism on truncated Witt vectors of length $n$ over $R$} is the map
+\hlalign{
+    \begin{align*}
+    \sigma_n: W_n(R) &\to W_n(R) \\
+    (x_0, x_1, \dots, x_{n-2}, x_{n-1}) &\mapsto (x_0^p, x_1^p, \dots, x_{n-2}^p, x_{n-1}^p).
+    \end{align*}
+}
+
+The Frobenius endomorphism is a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}, i.e., for all $\mathbf{x}, \mathbf{y} \in W_n(R)$:
+\begin{align*}
+    \sigma_n(\mathbf{x} \oplus \mathbf{y}) &= \sigma_n(\mathbf{x}) \oplus \sigma_n(\mathbf{y}), \\
+    \sigma_n(\mathbf{x} \odot \mathbf{y}) &= \sigma_n(\mathbf{x}) \odot \sigma_n(\mathbf{y}).
+\end{align*}
+
+The Frobenius endomorphism satisfies the fundamental identity with the \CrefAndHyperrefIfExist{definition:verschiebung_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}{Verschiebung endomorphism}:
+$$
+    \sigma_n \circ V_n = V_n \circ \sigma_n = p \cdot \mathrm{id}_{W_n(R)},
+$$
+where $V_n$ is the \CrefAndHyperrefIfExist{definition:verschiebung_endomorphism_on_truncated_witt_vectors_of_length_n_over_a_commutative_ring}{Verschiebung endomorphism on truncated Witt vectors of length $n$ over $R$}.
+
+The Frobenius endomorphisms are compatible with the projection homomorphisms $W_{n+1}(R) \to W_n(R)$, and thus induce a Frobenius endomorphism $\sigma: W(R) \to W(R)$ on the full ring of Witt vectors.
+
+\begin{remark}
+In the literature dealing with $F$-crystals, it is customary to denote the Frobenius on $W(k)$ by $\sigma$ rather than $F$ to avoid confusion with other Frobenius operators that may appear in the theory.
+\end{remark}
+\end{definition}

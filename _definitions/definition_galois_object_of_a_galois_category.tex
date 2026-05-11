@@ -1,0 +1,11 @@
+\begin{definition}[Galois object of a Galois category] \label{definition:galois_object_of_a_galois_category}
+Let $(\mathcal{C}, F)$ be a \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois category}. A \hldef{Galois object} of $(\mathcal{C}, F)$ is an object $X \in \mathrm{Ob}(\mathcal{C})$ satisfying the following equivalent conditions:
+
+\begin{enumerate}
+    \item $X$ is a \CrefAndHyperrefIfExist{definition:connected_object_of_a_galois_category}{connected object} of $(\mathcal{C}, F)$ such that the natural group homomorphism $\Aut_{\mathcal{C}}(X) \to \operatorname{Perm}(F(X))$ is an isomorphism, i.e., $|\Aut_{\mathcal{C}}(X)| = |F(X)|$.
+
+    \item The group $\Aut_{\mathcal{C}}(X)$ of \CrefAndHyperrefIfExist{definition:automorphism_of_an_object_of_a_category_automorphism_group_of_an_object_of_a_locally_small_category}{automorphisms} of $X$ acts \CrefAndHyperrefIfExist{definition:simply_transitive_action_of_a_group_on_a_set}{simply transitively} on the finite set $F(X)$, i.e., for any two elements $s, t \in F(X)$ there exists a unique element $\sigma \in \Aut_{\mathcal{C}}(X)$ such that $\sigma(s) = t$.
+\end{enumerate}
+
+A Galois object is also called a \hldef{Galois object with simply transitive monodromy}. Every Galois object is connected, but not every connected object is Galois.
+\end{definition}

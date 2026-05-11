@@ -1,0 +1,10 @@
+\begin{definition}
+\label{definition:2_category_of_categories_fibered_over_a_category}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. 
+The \hldef{2-category of categories fibered over $\mathcal{C}$}, often denoted \hl{$\mathfrak{Fib}(\mathcal{C})$}, is the \CrefAndHyperrefIfExist{definition:strict_2_category}{strict 2-category} defined by the following data:
+\begin{enumerate}
+    \item The objects are \CrefAndHyperrefIfExist{definition:fibered_category_over_a_category}{fibered categories} $p: \mathcal{F} \to \mathcal{C}$ over $\mathcal{C}$.
+    \item For any two \CrefAndHyperrefIfExist{definition:fibered_category_over_a_category}{fibered categories} $\mathcal{F}$ and $\mathcal{G}$, the category of 1-morphisms is the category \CrefAndHyperrefIfExist{definition:category_of_1_morphisms_between_fibered_categories_over_a_category}{$\text{HOM}_{\mathcal{C}}(\mathcal{F}, \mathcal{G})$}; recall that this is the category whose objects are morphisms of fibered categories from $\calF$ to $\calG$
+    \item For any two 1-morphisms $g, g': \mathcal{F} \to \mathcal{G}$, the 2-morphisms are \CrefAndHyperrefIfExist{definition:base_preserving_natural_transformation_between_morphisms_of_fibered_categories}{base preserving natural transformations} $\alpha: g \to g'$.
+\end{enumerate}
+\end{definition}

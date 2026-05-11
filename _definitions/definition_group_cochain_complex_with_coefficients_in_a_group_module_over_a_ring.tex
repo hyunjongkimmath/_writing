@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $M$ a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$G$-module} over a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$. 
+
+The \hldef{$n$-th group cochain group} is
+$$\hlin{ C^n(G,M) = \{ f: G^n \to M \mid f \text{ is } R\text{-linear} \} }$$
+with pointwise $R$-module structure $(f_1 + f_2)(g_1,\dots,g_n) = f_1(g_1,\dots,g_n) + f_2(g_1,\dots,g_n)$.
+
+The \hldef{coboundary map} \hl{$\delta^n: C^n(G,M) \to C^{n+1}(G,M)$} is
+$$ (\delta^n f)(g_1,\dots,g_{n+1}) = \sum_{i=0}^{n+1} (-1)^i (g_1 \cdots g_i) \cdot f(g_{i+1},\dots,g_{n+1}), $$
+where $g_1 \cdots g_0 = e$ and $g_{n+1} \cdots g_{n+1} = g_{n+1}$. The groups $C^n(G,M)$ together with the maps $\delta^n$ form a \CrefAndHyperrefIfExist{definition:cochain_complex_of_objects_in_an_additive_category}{cochain complex} in the category of $R$-modules.
+\TODO{cocycle, coboundary}
+
+The \hldef{group of $n$-cocycles} is \hl{$Z^n(G,M) = \ker \delta^n$} and the \hldef{group of $n$-coboundaries} is \hl{$B^n(G,M) = \im \delta^{n-1}$}. 
+
+The cohomology groups $H^n(G,M) = Z^n(G,M) / B^n(G,M)$ for this cochain complex are naturally isomorphic to the \CrefAndHyperrefIfExist{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}{group cohomology groups} $H^n(G,M)$\CrefIfExists{theorem:group_cohomology_of_a_group_module_over_a_ring_is_naturally_isomorphic_to_cohomology_of_group_cochain_complex}. As such, we do not distinguish notation between these.
+
+We note that $C^n(G,M)$ is \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to $\Hom_{R[G]}(B_n(R[G]), M)$ where $B_\bullet(R[G])$ is the \CrefAndHyperrefIfExist{definition:unnormalized_bar_resolution_of_a_ring_over_a_group_algebra}{unnormalized bar resolution} of $R$ over $R[G]$. It is also worth mentioning that the cochain complex $\Hom_{R[G]}(\overline{B}_\bullet(R[G]), M)$, where $\overline{B}_\bullet(R[G])$ is the \CrefAndHyperrefIfExist{definition:normalized_bar_resolution_of_a_ring_over_a_group_algebra}{normalized bar resolution} of $R$ over $R[G]$, is \CrefAndHyperrefIfExist{definition:chain_homotopy_between_chain_maps_between_complexes}{chain homotopy equivalent} to the cochain complex $C^\bullet(G,M)$
+\end{definition}

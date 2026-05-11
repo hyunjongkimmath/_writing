@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:cartier_divisor_on_a_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\mathcal{K}_X$ denote the \hldef{sheaf of total quotient rings} on $X$, defined as the sheaf associated to the presheaf $U \mapsto S_U^{-1}\mathcal{O}_X(U)$, where $S_U \subseteq \mathcal{O}_X(U)$ is the multiplicative set of non-zero-divisors. Let $\mathcal{K}_X^\times$ denote the subsheaf of units in $\mathcal{K}_X$.
+
+A \hldef{Cartier divisor on $X$} is a global section of the quotient sheaf $\mathcal{K}_X^\times / \mathcal{O}_X^\times$. Equivalently, a Cartier divisor is represented by a collection $\mathcal{D} = \{(U_i, f_i)\}_{i \in I}$, where:
+\begin{enumerate}
+    \item $\{U_i\}_{i \in I}$ is an open covering of $X$, and
+    \item each $f_i \in \Gamma(U_i, \mathcal{K}_X^\times)$ is a rational function (a section of the sheaf of total quotient rings that is nowhere zero).
+\end{enumerate}
+
+These data must satisfy the compatibility condition that for all $i, j \in I$, there exists a unit $u_{ij} \in \Gamma(U_i \cap U_j, \mathcal{O}_X^\times)$ such that $f_i = u_{ij} f_j$ on $U_i \cap U_j$.
+
+Two collections $\{(U_i, f_i)\}$ and $\{(V_j, g_j)\}$ define the same Cartier divisor if they agree on a common refinement of their coverings in the sense described above. The set of all Cartier divisors on $X$ forms an abelian group under addition (induced by multiplication of rational functions), denoted by $\operatorname{Div}(X)$ or $\operatorname{CaDiv}(X)$.
+
+A Cartier divisor is said to be \hldef{effective} if each $f_i$ can be chosen to lie in $\Gamma(U_i, \mathcal{O}_X) \subseteq \Gamma(U_i, \mathcal{K}_X^\times)$, i.e., the rational functions defining the divisor are actually regular sections.
+
+A Cartier divisor is called a \hldef{principal Cartier divisor} if it can be represented by a single global rational function $f \in \Gamma(X, \mathcal{K}_X^\times)$, i.e., $\mathcal{D}$ is in the image of the natural map $\Gamma(X, \mathcal{K}_X^\times) \to \Gamma(X, \mathcal{K}_X^\times / \mathcal{O}_X^\times)$.
+
+The \hldef{Cartier divisor class group} (or \hldef{Picard group}) of $X$, denoted by $\operatorname{CaCl}(X)$ or $\operatorname{Pic}(X)$, is the quotient
+$$\hlin{\operatorname{Pic}(X) = \operatorname{Div}(X) / \operatorname{Prin}(X),}$$
+where $\operatorname{Prin}(X)$ denotes the subgroup of principal Cartier divisors.
+
+There is a canonical isomorphism between $\operatorname{Pic}(X)$ and the group of isomorphism classes of line bundles (invertible sheaves) on $X$, given by associating to a Cartier divisor the invertible subsheaf $\mathcal{O}_X(D) \subseteq \mathcal{K}_X$ generated locally by $1/f_i$.
+
+\TextIfExists{definition:weil_divisor_on_a_scheme}{
+When $X$ is a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{Noetherian}, \CrefAndHyperrefIfExist{definition:integral_scheme}{integral}, \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated}, and \CrefAndHyperrefIfExist{definition:locally_factorial_scheme}{locally factorial} scheme, there is a canonical isomorphism between the Cartier divisor class group $\operatorname{CaCl}(X)$ and the \CrefAndHyperrefIfExist{definition:principal_weil_divisor_on_and_divisor_class_group_of_a_locally_noetherian_scheme}{Weil divisor class group} $\operatorname{Cl}(X)$.
+}
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+    Let $(P, \leq )$ be an \CrefAndHyperrefIfExist{definition:partially_ordered_set}{ordered set}. Let $S \subseteq P$ be a subset. 
+    \begin{enumerate}
+        \item An element $u \in P$ is a \hldef{supremum of $S$} or a \hldef{least upper bound of $S$}, denoted \hl{$\sup S$}, if 
+        \begin{enumerate}
+            \item for every $s \in S$, we have $s \leq u$  and 
+            \item If $x \in P$ is any \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} of $S$ (i.e., $s \leq x$ for all $x \in S$), then $u \leq x$.
+        \end{enumerate}
+        \item An element $l \in P$ is an \hldef{infimum of $S$} or a \hldef{greatest lower bound of $S$}, denoted \hl{$\inf S$}, if 
+        \begin{enumerate}
+            \item for every $s \in S$, we have $l \leq s$  and 
+            \item If $x \in P$ is any \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{lower bound} of $S$ (i.e., $x \leq s$ for all $x \in S$), then $x \leq l$.
+        \end{enumerate}
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,18 @@
+\begin{lemma}[see {\cite[0BN5]{stacks-project}}] \label{lemma:exact_fucntor_of_galois_categories_corresponds_to_homomorhpism_of_fundamental_groups}
+    Let $(\mathcal{C}, F)$ and $(\mathcal{C}', F')$ be \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois categories}. 
+    \begin{enumerate}
+        \item 
+    Let $H : \mathcal{C} \to \mathcal{C}'$ be an \CrefAndHyperrefIfExist{definition:exact_functor_between_galois_categories}{exact functor}.
+    There exists an isomorphism $t : F' \circ H \to F$. The choice of $t$ determines a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism} $h : G' = \text{Aut}(F') \to \text{Aut}(F) = G$\CrefIfExists{definition:fundamental_group_of_a_galois_category} and a $2$-commutative diagram
+    \TODO{2-diagram}
+    \[
+    \begin{tikzcd}[column sep=large, row sep=large]
+    \mathcal{C} \arrow[r, "H"] \arrow[d] & \mathcal{C}' \arrow[d] \\
+    \text{Finite-}G\text{-Sets} \arrow[r, "h"] & \text{Finite-}G'\text{-Sets}
+    \end{tikzcd}
+    \]
+    The map $h$ is independent of $t$ up to an inner automorphism of $G$. 
+
+    \item  Conversely, given a continuous homomorphism $h : G' \to G$ there is an exact functor $H : \mathcal{C} \to \mathcal{C}'$ and an isomorphism $t$ recovering $h$ as above.
+    \end{enumerate}
+\end{lemma}

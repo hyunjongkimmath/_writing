@@ -1,0 +1,16 @@
+\begin{definition}[Principal congruence subgroup $\Gamma(N)$ of $\mathrm{SL}_2(\mathbb{Z})$] \label{definition:principal_congruence_subgroup_Gamma_N_of_SL_2_Z}
+    Let $N$ be a positive integer. The \hldef{principal congruence subgroup of level $N$}, denoted
+    $$\hlin{\Gamma(N),}$$
+    is the kernel of the reduction homomorphism $\mathrm{SL}_2(\mathbb{Z}) \to \mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z})$. Explicitly,
+    $$\Gamma(N) = \left\{ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) \;\middle|\; a \equiv d \equiv 1 \pmod{N},\; b \equiv c \equiv 0 \pmod{N} \right\}.$$
+    Equivalently, $\Gamma(N) = \left\{ \gamma \in \mathrm{SL}_2(\mathbb{Z}) \;\middle|\; \gamma \equiv I_2 \pmod{N} \right\}$, where $I_2$ is the identity matrix in $\mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z})$.
+
+    The subgroup $\Gamma(N)$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_and_characteristic_subgroup_of_an_algebraic_group_over_a_scheme}{normal subgroup} of $\mathrm{SL}_2(\mathbb{Z})$, and the natural reduction homomorphism
+    $$\mathrm{SL}_2(\mathbb{Z}) \longrightarrow \mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z})$$
+    is a surjective group homomorphism with kernel $\Gamma(N)$. Therefore, there is an isomorphism
+    $$\mathrm{SL}_2(\mathbb{Z}) / \Gamma(N) \cong \mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z}).$$
+    In particular, $\Gamma(N)$ has \CrefAndHyperrefIfExist{definition:index_of_a_subgroup_in_a_group}{finite index} in $\mathrm{SL}_2(\mathbb{Z})$, with index equal to $|\mathrm{SL}_2(\mathbb{Z}/N\mathbb{Z})|$.
+
+    \TODO{modular curve}
+    The principal congruence subgroup $\Gamma(N)$ is used in the construction of the modular curve $X(N)$.
+\end{definition}

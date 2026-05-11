@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:derived_category_of_bounded_above_complexes_of_adic_sheaves_on_a_scheme}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} equipped with its \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site}. Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{(commutative) ring} equipped with an \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} $\lambda$.
+
+    Define a category \hldef{$D^-(X,R)$} as follows: 
+    \begin{itemize}
+        \item Objects are families $K = (K_n, u_n)_{n \geq 0}$ where $K_n \in \Ob D^-(X, R/\lambda^{n+1})$\CrefIfExists{notation:notations_for_homotopy_and_derived_categories_of_sheaves_of_modules_on_a_ringed_site}\CrefIfExists{definition:derived_category_of_an_abelian_category}
+        \footnote{Note that \cite[I.I.2]{deligne_lcwii} uses slightly different numbering conventions, letting $K_n$ be an object of $D^-(X, R/\lambda^n)$ instead.} and $u_n$ are isomorphisms
+        $$u_n: K_{n+1} \Lotimes_{R / \lambda^{n+2}} R/\lambda^{n+1} \cong K_n$$
+        (\Cref{definition:derived_tensor_product_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology})
+        in $D^-(X, R/\lambda^{n+1})$.
+
+        \item Morphisms $f: K = (K_n, u_n)_{n \geq 0} \to K' = (K'_n, u'_n)_{n \geq 0}$ are families $(f_n)$ of morphisms $f_n: K_n \to K_n$ in $D(X, R/\lambda^{n+1})$ such that 
+        $$f_n u_n = u_n' (f_{n+1} \Lotimes_{R/\lambda^{n+2}} \id_{R/\lambda^{n+1}}) .$$
+    \end{itemize}
+    This category $D^-(X,R)$ should not in general not be mistaken for the category also denoted $D^-(X,R)$, which is a derived category of sheaves of $R$-modules on $X_{\mathrm{\acute{e}t}}$.
+
+    $K_n$ is also often denoted by \hl{$K \Lotimes R/\lambda^{n+1}$}.
+
+\end{definition}

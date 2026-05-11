@@ -1,0 +1,13 @@
+\begin{definition}[Arithmetic genus of a proper scheme over a field] \label{definition:arithmetic_genus_of_a_proper_scheme_over_a_field}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over} a \CrefAndHyperrefIfExist{definition:field}{field} $k$. 
+    The \hldef{arithmetic genus of $X$}, denoted by $\hlin{p_a(X)}$, is defined as
+    $$p_a(X) := \chi(\mathcal{O}_X) - 1 = \dim_k H^0(X, \mathcal{O}_X) - \dim_k H^1(X, \mathcal{O}_X) + \cdots + (-1)^{\dim X}\dim_k H^{\dim X}(X, \mathcal{O}_X) - 1,$$
+    \TODO{euler characteristic}
+    where $\chi(\mathcal{O}_X)$ is the Euler characteristic of the structure sheaf $\mathcal{O}_X$. If $X$ is \CrefAndHyperrefIfExist{definition:geometrically_connected_scheme_over_a_field}{geometrically connected} and \CrefAndHyperrefIfExist{definition:geometric_property_of_a_scheme_over_a_field}{geometrically reduced} , then $H^0(X, \mathcal{O}_X) \cong k$, and the formula simplifies to
+    $$p_a(X) = (-1)^{\dim X}\bigl(\dim_k H^{\dim X}(X, \mathcal{O}_X) - \cdots - \dim_k H^1(X, \mathcal{O}_X)\bigr).$$
+
+    \TextIfExists{theorem:geometric_and_arithmetic_genera_of_nice_curves_are_equal}{
+    When $X = C$ is a \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth} \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curve} of genus $g$, the arithmetic genus coincides with the \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}{geometric genus}: $p_a(C) = g$ (\Cref{theorem:geometric_and_arithmetic_genera_of_nice_curves_are_equal}).
+    }
+\end{definition}
+

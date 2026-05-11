@@ -1,10 +1,11 @@
 \begin{definition} \label{definition:place_of_a_field}
-    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}. A \hldef{place of $K$} is some function of the form $P: K \to L \cup \{\infty\}$ where $L$ is a field satisfying:
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}.
+    A \hldef{place of $K$} is some function of the form $P: K \to L \cup \{\infty\}$ where $L$ is a field satisfying:
     \begin{enumerate}
         \item $P(0) = 0$
         \item $P(1) = 1$.
-        \item $P(x+y) = P(x) + P(y)$
-        \item $P(x \cdot y) = P(x) \cdot P(y)$
+        \item $P(x+y) = P(x) + P(y)$ whenever $P(x) + P(y)$ is defined.
+        \item $P(x \cdot y) = P(x) \cdot P(y)$ whenever $P(x) \cdot P(y)$ is defined.
     \end{enumerate}
     where $\infty$ satisfies the following rules:
     \begin{enumerate}
@@ -14,4 +15,8 @@
         \item $0 \cdot \infty$ is undefined.  
     \end{enumerate}
     It should be noted that there are conventions that define $\infty + \infty$ as $\infty$. 
+
+    \TextIfExists{definition:place_of_a_global_field}{
+        The above notion of place of a field should not be mistaken for the notion of a \CrefAndHyperref{definition:place_of_a_global_field}{place of a global field}, which are described by absolute values
+    }
 \end{definition}

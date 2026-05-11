@@ -1,9 +1,20 @@
-\begin{definition} \label{definition:deligne_mumford_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}
-\TODO{TODO: read; in particular, what grothendieck topologies are admissible in general?}
-\TODO{TODO: define representability by algebraic spaces, along with properties of stacks with respect to a topology}
-Let $S$ be a scheme. A \hldef{Deligne--Mumford stack over $S$} is a stack $\mathcal{X}$ over $(\mathit{Sch}/S)_{\mathrm{\acute{e}t}}$ (the étale site) such that
+\begin{definition}[cf. {\cite[Tag 03YO]{stacks-project}}] \label{definition:deligne_mumford_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}
+\TODO{TODO: along with properties of stacks with respect to a topology}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\tau$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} on \CrefAndHyperrefIfExist{definition:representable_by_schemes_for_a_morphism_of_presheaves_on_Sch_S}{$\mathit{Sch}/S$} for which surjectivity and \'etaleness are preserved under base change and are \CrefAndHyperrefIfExist{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}{$\tau$-local on the base}. 
+\TextIfExists{proposition:list_of_properties_of_morphisms_of_schemes_over_a_base_preserved_under_base_change_and_fpqc_local_on_the_base}{\footnote{For example, $\tau$ can be any Grothendieck topology coarser than the fpqc topology thanks to \CrefIfExists{proposition:list_of_properties_of_morphisms_of_schemes_over_a_base_preserved_under_base_change_and_fpqc_local_on_the_base}.}}
+
+A \hldef{Deligne--Mumford (DM) stack over $S$ for $\tau$} or a \hldef{$\tau$-Deligne--Mumford (DM) stack} is a \CrefAndHyperrefIfExist{definition:stack_in_groupoids_over_a_site}{stack} $\mathcal{X}$ over the 
+site $(\mathit{Sch}/S, \tau)$ such that 
+% \CrefAndHyperrefIfExist{definition:big_etale_site_of_a_scheme}{big \'etale site} $(\mathit{Sch}/S)_{\mathrm{\acute{e}t}}$ such that
 \begin{enumerate}
-    \item The diagonal morphism $\Delta : \mathcal{X} \to \mathcal{X} \times_S \mathcal{X}$ is \CrefAndHyperrefIfExist{definition:representable_by_algebraic_spaces_for_a_1_morphism_of_stacks_in_groupoids_over_a_site_on_S_schemes}{representable by algebraic spaces}, quasi-compact, and separated. \TODO{in what sense is quasi-compactness and separatedness discussable here? Is it \ref{definition:property_of_a_morphism_of_schemes_over_a_scheme_preserved_under_base_change} or \ref{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}?}
-    \item There exists a scheme $U$ and a morphism $U \to \mathcal{X}$ that is surjective, representable \TODO{representable in what sense?}, and étale (i.e., an étale atlas). \TODO{in what sense are surjectivity and etaleness discussable here? Is it \ref{definition:property_of_a_morphism_of_schemes_over_a_scheme_preserved_under_base_change} or \ref{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}?}
+    \item The \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_an_object_over_an_object_in_a_category}{diagonal morphism} $\Delta : \mathcal{X} \to \mathcal{X} \times_S \mathcal{X}$ is \CrefAndHyperrefIfExist{definition:representable_by_algebraic_spaces_for_a_1_morphism_of_stacks_in_groupoids_over_a_site_on_S_schemes}{representable by algebraic spaces}.
+    \item There exists a scheme $U$ and a morphism $U \to \mathcal{X}$ that is \CrefAndHyperrefIfExist{definition:representable_by_algebraic_spaces_for_a_1_morphism_of_stacks_in_groupoids_over_a_site_on_S_schemes}{representable by algebraic spaces}, \CrefAndHyperrefIfExist{definition:property_of_representable_1_morphism_of_categories_fibered_in_groupoids_over_asite_on_the_category_of_schemes_over_a_scheme}{surjective}, and \CrefAndHyperrefIfExist{definition:property_of_representable_1_morphism_of_categories_fibered_in_groupoids_over_asite_on_the_category_of_schemes_over_a_scheme}{étale} (i.e., an étale atlas). 
 \end{enumerate}
+\TODO{etale atlas}
+
+In other words, a DM stack is an \CrefAndHyperrefIfExist{definition:artin_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}{algebraic stack} with an \'etale atlas.
+
+A \hldef{Deligne-Mumford stack} usually refers to one over the \CrefAndHyperrefIfExist{definition:big_etale_site_of_a_scheme}{big \'etale topology} on $\mathit{Sch}/S$.
+
+It should be noted that classical definitions of DM stacks further require the diagonal morphism $\Delta$ to be \CrefAndHyperrefIfExist{definition:property_of_representable_1_morphism_of_categories_fibered_in_groupoids_over_asite_on_the_category_of_schemes_over_a_scheme}{quasi-compact, and separated}. 
 \end{definition}

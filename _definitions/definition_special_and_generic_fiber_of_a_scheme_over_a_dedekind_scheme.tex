@@ -1,0 +1,15 @@
+\begin{definition}[Special fiber and generic fiber] \label{definition:special_and_generic_fiber_of_a_scheme_over_a_dedekind_scheme}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:integral_scheme}{integral} \CrefAndHyperrefIfExist{definition:scheme}{scheme}, let $\eta$ be its \CrefAndHyperrefIfExist{definition:generic_point_of_a_topological_space}{generic point}, and let $K = \mathcal{O}_{S, \eta}$ be the \CrefAndHyperrefIfExist{definition:function_field_of_a_scheme}{function field} of $S$. Let $s \in S$ be a closed point.
+
+    \begin{enumerate}
+        \item For any \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} $f: X \to S$, the \hldef{generic fiber of $X$ over $S$} (or simply the \hldef{generic fiber}) is the \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change}:
+        $$\hlin{X_\eta = X \times_S \Spec K}$$
+        of $f$ along $\Spec K \to S$.
+
+        \item For any morphism of schemes $f: X \to S$, the \hldef{special fiber of $X$ at $s$} is the \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change}:
+        $$\hlin{X_s = X \times_S \Spec k(s)}$$
+        of $f$ along $\Spec k(s) \to S$, where $k(s) = \mathcal{O}_{S, s} / \mathfrak{m}_s$ is the \CrefAndHyperrefIfExist{definition:residue_field_of_a_scheme_at_a_point}{residue field} at $s$.
+
+        In the case that $S$ has only closed point (e.g. $S$ is the \CrefAndHyperrefIfExist{definition:ring_of_integers_of_a_global_or_local_ring}{ring of integers} of a \CrefAndHyperrefIfExist{definition:local_field}{local field}), the \hldef{special fiber of $X$} refers to the special fiber of $X$ at this unique closed point.
+    \end{enumerate}
+\end{definition}

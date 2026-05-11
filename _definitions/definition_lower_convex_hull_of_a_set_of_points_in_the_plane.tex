@@ -1,0 +1,5 @@
+\begin{definition}[Lower convex hull of a finite set of points in the plane] \label{definition:lower_convex_hull_of_a_finite_set_of_points}
+    Let $S = \{(x_1, y_1), \dots, (x_n, y_n)\}$ be a finite subset of $\mathbb{R}^2$ with $0 \leq x_1 < x_2 < \cdots < x_n$. The \hldef{lower convex hull of $S$}, denoted by \hl{$\operatorname{LCH}(S)$}, is the boundary of the lower convex envelope of the set $S \cup \{(x, y) \in \mathbb{R}^2 : x_1 \leq x \leq x_n,\; y \geq 0\}$ in $\mathbb{R}^2$. Concretely, it is the piecewise-linear concave curve connecting $(x_1, y_{i_1})$ to $(x_n, y_{i_k})$ through a subset of points in $S$, such that all remaining points of $S$ lie on or above the curve.
+
+    The \hldef{Newton polygon of a collection of slopes $\{\lambda_1, \dots, \lambda_h\} \subset [0, 1]$ with multiplicities} is defined as the lower convex hull of the set $\{(i, s_i) : 0 \leq i \leq h,\; s_i = \sum_{j=1}^i \lambda_j\}$ (with $s_0 = 0$), where the slopes are arranged in non-decreasing order. The Newton polygon has exactly $h$ segments, and each segment's slope is a rational number appearing with multiplicity equal to its horizontal length.
+\end{definition}

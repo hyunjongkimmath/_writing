@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:completion_of_an_absolute_valued_field}
+A \hldef{completion} of an \CrefAndHyperrefIfExist{definition:absolute_valued_field}{absolute valued field} $(K, |\cdot|)$ is the \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space}{completion} of the metric space \CrefAndHyperrefIfExist{definition:metric_induced_by_an_absolute_value_on_a_field}{induced by the absolute value}. It is in itself a complete absolute valued field.
+\TODO{complete absolute valued field}
+
+Equivalently, it is a pair $(\widehat{K}, i)$ consisting of a \CrefAndHyperrefIfExist{definition:complete_absolute_valued_field}{complete absolute valued field} $\widehat{K}$ and an isometric \CrefAndHyperrefIfExist{definition:field_homomorphism}{homomorphism} $i: K \to \widehat{K}$ such that $i(K)$ is \CrefAndHyperrefIfExist{definition:dense_subset_of_a_topological_space}{dense} in $\widehat{K}$. 
+
+Specifically, $(\widehat{K}, i)$ satisfies:
+\begin{enumerate}
+    \item $|i(x)|_{\widehat{K}} = |x|$ for all $x \in K$.
+    \item Every \CrefAndHyperrefIfExist{definition:cauchy_sequence}{Cauchy sequence} in $\widehat{K}$ converges to an element in $\widehat{K}$.
+    \item For every $y \in \widehat{K}$ and $\epsilon > 0$, there exists $x \in K$ such that $|i(x) - y|_{\widehat{K}} < \epsilon$.
+\end{enumerate}
+The completion is unique up to a unique isomorphism preserving the absolute value and the mapping of $K$.
+\end{definition}

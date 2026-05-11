@@ -1,0 +1,7 @@
+\begin{proposition}[Markov's inequality] \label{proposition:markov_inequality_for_non_negative_measurable_functions}
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $f : X \to [0, +\infty]$ be a \CrefAndHyperrefIfExist{definition:measurable_function_from_a_measure_space_into_the_extended_real_line_or_complex_plane}{measurable function}. For every $t > 0$,
+$$\mu(\{x \in X : f(x) \geq t\}) \leq \frac{1}{t} \int_X f \, d\mu.$$
+In particular, if $\mu$ is a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure} and $X \geq 0$ is a non-negative random variable, then for every $t > 0$,
+$$P(X \geq t) \leq \frac{\mathbb{E}[X]}{t}.$$
+\end{proposition}
+

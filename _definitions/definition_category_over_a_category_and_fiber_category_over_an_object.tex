@@ -1,0 +1,6 @@
+\begin{definition} \label{definition:category_over_a_category_and_fiber_category_over_an_object}
+    Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+    A \hldef{fibered category over $\calC$} is a pair $(F, p)$ consisting of a category $F$ and a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $p: F \to \calC$.
+
+    In this case, for an object $U$ of $\calC$, one write \hl{$F(U)$} or \hl{$F_U$} for the \hldef{fiber category over $U$}, which is the category consisting of the object $u$ in $F$ such that $p(u) = U$ and consisting of the morphisms $f: u \to v$ in $F$ such that $p(f) = \id_U$. 
+\end{definition}

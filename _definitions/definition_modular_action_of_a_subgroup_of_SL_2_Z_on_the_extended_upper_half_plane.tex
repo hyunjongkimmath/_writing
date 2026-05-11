@@ -1,0 +1,10 @@
+\begin{definition}[Modular action of a subgroup of $\mathrm{SL}_2(\mathbb{Z})$ on the extended upper half-plane] \label{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_extended_upper_half_plane}
+    Let $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}. The \hldef{modular action of $\Gamma$ on the extended upper half-plane $\widehat{\bbH}$} extends the \CrefAndHyperrefIfExist{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_upper_half_plane}{modular action of $\Gamma$ on $\bbH$} to all of $\widehat{\bbH} = \bbH \cup \mathbb{R} \cup \{\infty\}$ (\Cref{definition:extended_upper_half_plane_in_the_complex_plane}) as follows. For $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Gamma$:
+    \begin{enumerate}
+      \item If $\tau \in \bbH$, then $\gamma \cdot \tau := \dfrac{a\tau + b}{c\tau + d}$ (the original modular action).
+      \item If $\tau \in \mathbb{R}$ and $c\tau + d \neq 0$, then $\gamma \cdot \tau := \dfrac{a\tau + b}{c\tau + d} \in \mathbb{R}$.
+      \item If $\tau \in \mathbb{R}$ and $c\tau + d = 0$, then $\gamma \cdot \tau := \infty$.
+      \item $\gamma \cdot \infty := \begin{cases} a/c & \text{if } c \neq 0, \\ \infty & \text{if } c = 0. \end{cases}$
+    \end{enumerate}
+    This action is well-defined and gives a group homomorphism $\Gamma \to \operatorname{Bij}(\widehat{\bbH})$. Since each $\gamma$ acts as a \CrefAndHyperrefIfExist{definition:mobius_transformation_linear_fractional_transformation}{Möbius transformation} on $\mathbb{P}^1(\mathbb{C})$, the restriction to $\widehat{\bbH}$ preserves $\bbH$, maps $\mathbb{R} \cup \{\infty\}$ to itself, and is continuous with respect to the natural topology on $\widehat{\bbH}$.
+\end{definition}

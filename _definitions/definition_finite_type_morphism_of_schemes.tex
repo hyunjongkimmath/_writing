@@ -1,6 +1,13 @@
-
 \begin{definition} \label{definition:finite_type_morphism_of_schemes}
-Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. We say that $f$ is a \hldef{finite type morphism} if for every \CrefAndHyperrefIfExist{definition:affine_open_subscheme_of_a_scheme}{affine open} $V = \operatorname{Spec} B \subseteq Y$ with $U = f^{-1}(V)$ affine, say $U = \operatorname{Spec} A$, the ring $A$ is a \CrefAndHyperrefIfExist{definition:finitely_generated_algebra_over_a_not_necessarily_commutative_ring}{finitely generated $B$-algebra}.
+Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. 
+\TODO{locally of finite type}
+We say that $f$ is a \hldef{finite type morphism} if the following equivalent conditions hold:
+\begin{enumerate}
+    \item for every \CrefAndHyperrefIfExist{definition:affine_open_subscheme_of_a_scheme}{affine open} $ \operatorname{Spec} B \subseteq Y$, the \CrefAndHyperrefIfExist{definition:preimage_of_an_open_subset_of_a_locally_ringed_spaces_under_a_morphism_of_locally_ringed_spaces}{inverse image} $f^{-1}(\Spec B)$ is \CrefAndHyperrefIfExist{definition:quasi_compact_scheme}{quasi-compact} and has a covering $f^{-1}(\Spec B) = \bigcup_j \Spec A_j$ by affine opens such that each $A_j$ is a \hldef{finitely generated $B$ algebra}.
 
+    \item there exists an affine open covering $Y = \bigcup_i \Spec B_i$ of $Y$ such that the inverse image $f^{-1}(\Spec B_i)$ has a finite cover $\{\Spec A_{ij}) \}_j$ by affine opens where each $A_{ij}$ is a finitely generated $B_i$ algebra. 
+
+    \item $f$ is \CrefAndHyperrefIfExist{definition:quasi_compact_morphism_of_schemes}{quasi-compact} and locally of finite type. 
+\end{enumerate}
 When $X$ is equipped with a finite type morphism $f: X \to Y$, we say that $X$ is a \hldef{finite type scheme over $Y$} or a \hldef{finite type $Y$-scheme} or a \hldef{$Y$-scheme of finite type} \CrefIfExists{definition:scheme_over_a_scheme}, etc.
 \end{definition}

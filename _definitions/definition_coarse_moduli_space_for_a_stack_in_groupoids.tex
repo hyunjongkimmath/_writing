@@ -1,0 +1,23 @@
+\begin{definition}[Moduli space] \label{definition:moduli_space_for_a_moduli_problem_on_schemes}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $\calM \to (\operatorname{Sch}/S)$ be a \CrefAndHyperrefIfExist{definition:moduli_problem_on_schemes}{moduli problem}. A \hldef{coarse moduli space for $\calM$} is a pair $(M, \phi)$ where
+    \begin{itemize}
+        \item $M$ is a \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over $S$}, and
+        \item $\phi: \calM \to M$ is a \CrefAndHyperrefIfExist{definition:morphism_of_fibered_categories_over_a_category}{morphism of} \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{categories fibered in groupoids} over $(\operatorname{Sch}/S)$, where the scheme $M$ is viewed as a discrete stack (i.e., for each $T/S$, the \CrefAndHyperrefIfExist{definition:category_over_a_category_and_fiber_category_over_an_object}{fiber category} $M_T$ has objects $M(T)$ and only identity morphisms).
+    \end{itemize}
+    satisfying the following two properties:
+
+    \begin{enumerate}
+        \item \textbf{Universality (initiality):} The pair $(M, \phi)$ is an \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} in the category of pairs $(N, \psi)$ where $N$ is a scheme over $S$ and $\psi: \calM \to N$ is a morphism of categories fibered in groupoids. Concretely, for any scheme $N$ over $S$, the induced map
+        $$\Hom_{S}(M, N) \to \Hom(\calM, N)$$
+        from morphisms of schemes over $S$ to 1-morphisms $\calM \to N$ (where $N$ is viewed as a discrete stack), is a bijection.
+
+        \item \textbf{Point correspondence:} For every algebraically closed field $\Omega$ and every $S$-morphism $\operatorname{Spec}\Omega \to S$, the induced map on isomorphism classes
+        $$\pi_0(\calM(\operatorname{Spec}\Omega)) \to M(\operatorname{Spec}\Omega)$$
+        is a bijection. That is, two objects $x, y$ in $\calM(\overline{k})$, where $\overline{k}$ is an algebraically closed field whose structural morphism to $S$ factors through $\operatorname{Spec}\overline{k} \to S$, map to the same point under $\phi$ if and only if they are isomorphic in $\calM(\overline{k})$.
+    \end{enumerate}
+
+    When a coarse moduli space exists for $\calM$, it is unique up to unique isomorphism over $S$. The scheme $M$ is then denoted by \hl{$|\calM|$} or \hl{$\pi_0(\calM)$} and called the \hldef{coarse moduli space of $\calM$}.
+
+    A coarse moduli space $(M, \phi)$ for $\calM$ is called a \hldef{compact moduli space} (or \hldef{proper compact moduli space}) if the structural morphism $M \to S$ is also \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}. The scheme $M$ in this case may be denoted by \hl{$\overline{\pi_0(\calM)}$} or \hl{$\overline{|\calM|}$}.
+\end{definition}
+

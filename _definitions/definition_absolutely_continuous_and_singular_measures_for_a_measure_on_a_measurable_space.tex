@@ -1,0 +1,19 @@
+\begin{definition}[Absolutely continuous and singular measures] \label{definition:absolutely_continuous_and_singular_measures_for_a_measure_on_a_measurable_space}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, and let $\nu : \mathcal{A} \to [0, \infty]$ be another function satisfying $\nu(\varnothing) = 0$ and countable additivity (i.e.\ $\nu$ is a measure, not necessarily finite).
+
+\begin{enumerate}
+    \item The measure $\nu$ is called \hldef{absolutely continuous with respect to $\mu$} (denoted \hl{$\nu \ll \mu$}) if for every $A \in \mathcal{A}$,
+    $$\mu(A) = 0 \implies \nu(A) = 0.$$
+    Equivalently, for every $\varepsilon > 0$ there exists $\delta > 0$ such that for all $A \in \mathcal{A}$,
+    $$\mu(A) < \delta \implies \nu(A) < \varepsilon$$
+    (this $\varepsilon$--$\delta$ characterization holds whenever $\nu$ is finite).
+
+    \item The measure $\nu$ is called \hldef{singular with respect to $\mu$} (denoted \hl{$\nu \perp \mu$}) if there exists a decomposition
+    $$X = E \cup F \quad \text{with } E, F \in \mathcal{A},\ E \cap F = \varnothing,\ \mu(E) = 0, \text{ and } \nu(F) = 0.$$
+    In this case, $E$ and $F$ are called a \hldef{singular decomposition for $(\nu, \mu)$}.
+\end{enumerate}
+
+\TODO{signed measure}
+
+If $\nu$ is a signed measure or complex measure, then \hl{$\nu \ll \mu$} means $|\nu| \ll \mu$, and \hl{$\nu \perp \mu$} means there exist disjoint $E, F \in \mathcal{A}$ with $X = E \cup F$, $\mu(E) = 0$, and $\nu(A) = \nu(A \cap F)$ for all $A \in \mathcal{A}$.
+\end{definition}

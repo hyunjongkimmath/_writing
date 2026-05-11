@@ -1,0 +1,12 @@
+% CONVEX SET ON A REAL VECTOR SPACE AND CONVEX FUNCTION ON A CONVEX SET
+\begin{definition}[Convex set on a real vector space and convex function on a convex set] \label{definition:convex_set_on_a_real_vector_space_and_convex_function_on_a_convex_set}
+Let $V$ be a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over the \CrefAndHyperrefIfExist{definition:real_numbers}{field of real numbers} $\mathbb{R}$, which carries a natural total order compatible with its field structure.
+
+\begin{enumerate}
+    \item A subset $C \subset V$ is called a \hldef{convex set} if for all $x,y \in C$ and all $t \in [0,1]$, the point $(1-t)x + ty$ lies in $C$. Equivalently, $C$ contains the line segment joining any two of its points.
+
+    \item A function $f : C \to \mathbb{R}$ defined on a convex set $C \subset V$ is called a \hldef{convex function} if for all $x,y \in C$ and all $t \in [0,1]$,
+    $$f((1-t)x + ty) \leq (1-t)f(x) + tf(y).$$
+    A function $f : C \to \mathbb{R}$ is \hldef{concave} if $-f$ is convex.
+\end{enumerate}
+\end{definition}

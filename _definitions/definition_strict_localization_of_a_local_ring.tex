@@ -1,0 +1,11 @@
+\begin{definition}[Strict localization of a local ring] \label{definition:strict_localization_of_a_local_ring}
+Let $(R, \mathfrak{m})$ be a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} with \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} $k = R/\mathfrak{m}$, and let $\bar{k}$ be an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic closure} of $k$. The \hldef{strict localization of $R$ at the geometric point corresponding to $\bar{k}$} is the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit}
+$$\hlin{R^{sl} = \varinjlim (A, \mathfrak{n}_A)}$$
+taken over all pairs $(A, \mathfrak{n}_A)$ where:
+\begin{itemize}
+    \item $A$ is an \CrefAndHyperrefIfExist{definition:etale_algebra_over_a_commutative_ring}{étale $R$-algebra}, and
+    \item $\mathfrak{n}_A$ is a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} of $A$ lying over $\mathfrak{m}$ such that the induced residue field extension $k(\mathfrak{n}_A) = A/\mathfrak{n}_A$ comes equipped with an embedding $k(\mathfrak{n}_A) \hookrightarrow \bar{k}$ extending the identity on $k$.
+\end{itemize}
+
+The ring $R^{sl}$ is a local ring that is \CrefAndHyperrefIfExist{definition:henselian_ring}{henselian} and has residue field $\bar{k}$. The canonical map $R \to R^{sl}$ is \CrefAndHyperrefIfExist{definition:flat_ring_homomorphism}{flat} and \CrefAndHyperrefIfExist{definition:local_morphism_of_local_rings}{local}.
+\end{definition}

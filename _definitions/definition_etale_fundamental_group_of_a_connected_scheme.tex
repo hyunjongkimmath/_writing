@@ -1,6 +1,20 @@
 \begin{definition} \label{definition:etale_fundamental_group_of_a_connected_scheme}
-    \TODO{TODO: define profinite topology}
-Let $S$ be a connected scheme. The \hldef{\'etale fundamental group of $S$ at a geometric point $\bars : \Spec(\Omega) \to S$} is the profinite group
+Let $S$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:scheme}{scheme}. The \hldef{\'etale fundamental group of $S$ at a geometric point $\bars : \Spec(\Omega) \to S$} is the \CrefAndHyperrefIfExist{definition:profinite_group}{profinite group}
 $$\hlin{\pioneet(S, \bars) := \varprojlim_{X \to S} \mathrm{Aut}_S(X),}$$
-\CrefIfExists{definition:automorphism_group_of_a_scheme_over_a_scheme} where the inverse limit is taken over all finite \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale} covers $X \to S$ pointed above $\bars$. Equivalently, one may take the limit over all finite \'etale \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois covers} $X \to S$ pointed above $\bars$. The \'etale fundamental group is equipped with the profinite topology.
+\CrefIfExists{definition:automorphism_group_of_a_scheme_over_a_scheme} where the inverse limit is taken over all finite \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale} covers $X \to S$ pointed above $\bars$.
+
+Equivalently, one may take the limit over all \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale} \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois covers} $X \to S$ pointed above $\bars$. The \'etale fundamental group is equipped with the \CrefAndHyperrefIfExist{definition:profinite_group}{profinite topology}.
+
+\TextIfExists{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{
+Also equivalently, the \'etale fundamental group of $X$ at $\bar{x}$ is defined as the \CrefAndHyperrefIfExist{definition:fundamental_group_of_a_galois_category}{fundamental group} of the \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois category} $(\FEt_X, F_{\bar{x}})$ where 
+$$ F_{\bar{x}}: \FEt_X \to \textbf{FSet} $$
+(\Cref{definition:category_of_finite_etale_covers_of_a_scheme}) is the fiber functor defined by $F_{\bar{x}}(Y \to X) = Y \times_X \text{Spec}(\Omega)$ (\Cref{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}), where $\text{Spec}(\Omega) \to X$ is the \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} $\bar{x}$.
+
+% as the \CrefAndHyperrefIfExist{definition:profinite_group}{profinite group} of \CrefAndHyperrefIfExist{definition:natural_automorphism_of_a_functor_between_categories}{natural automorphisms} $\text{Aut}(F_{\bar{x}})$ of the \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{fiber functor}
+% $$ F_{\bar{x}}: \text{FÉt}/X \to \textbf{FSet} $$
+% (\Cref{definition:category_of_finite_etale_covers_of_a_scheme})
+% defined by $F_{\bar{x}}(Y \to X) = Y \times_X \text{Spec}(\Omega)$ (\Cref{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}), where $\text{Spec}(\Omega) \to X$ is the \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} $\bar{x}$.
+}
+
+
 \end{definition}

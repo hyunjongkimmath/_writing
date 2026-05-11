@@ -1,0 +1,9 @@
+\begin{definition}[Isomorphism of categories] \label{definition:isomorphism_of_categories}
+Let $\mathcal{C}$ and $\mathcal{D}$ be two \CrefAndHyperrefIfExist{definition:category}{categories}. An \hldef{isomorphism of categories} from $\mathcal{C}$ to $\mathcal{D}$ is a \CrefAndHyperrefIfExist{definition:functor_between_categories}{functor} $F : \mathcal{C} \to \mathcal{D}$ for which there exists a functor $G : \mathcal{D} \to \mathcal{C}$ such that
+$$G \circ F = \mathrm{Id}_{\mathcal{C}} \quad \text{and} \quad F \circ G = \mathrm{Id}_{\mathcal{D}},$$
+where $\mathrm{Id}_{\mathcal{C}}$ and $\mathrm{Id}_{\mathcal{D}}$ are the \CrefAndHyperrefIfExist{definition:identity_functor_on_a_category}{identity functors} on $\mathcal{C}$ and $\mathcal{D}$, respectively. The equality is strict (not merely up to natural isomorphism).
+
+The functor $F$ is called an \hldef{isomorphism}, and the categories $\mathcal{C}$ and $\mathcal{D}$ are said to be \hldef{isomorphic}, denoted $\hlin{\mathcal{C} \cong \mathcal{D}}$. The functor $G$ is uniquely determined by $F$ and is called the \hldef{inverse} of $F$.
+
+An isomorphism of categories is necessarily an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}, but the converse does not hold in general.
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{definition}[Geometric stalk of literal derived category of \'etale sheaves of abelian groups] \label{definition:geometric_stalk_of_the_derived_category_of_the_category_of_etale_sheaves_of_abelian_groups_on_a_scheme}
+        Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $x \in X$ be a point. Let $\barx: \Spec \kappa(x)^s \to X$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} over $X$.
+        Let $K \in D(X_{\mathrm{\acute{e}t}}, \Ab)$ be an object in the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{derived category} of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X_{\mathrm{\acute{e}t}}$\CrefIfExists{definition:small_etale_site_of_a_scheme}. 
+ %Let $n \geq 1$ be an integer.
+
+        Recall that there is a stalk functor 
+        $$\calF \mapsto \calF_{\overline{x}}: \Sh(X_{\text{ét}}, \Ab) \to \operatorname{Gal}(\kappa(x)^s / \kappa(x))-\Ab$$
+        \TODO{category of sets with continuous group action}
+        and that it is exact. It thus \CrefAndHyperrefIfExist{proposition:exact_functor_between_abelian_categories_induces_functor_on_derived_categories}{induces} a \hldef{stalk functor}
+        $$K \mapsto K_{\overline{x}}: D(X_{\mathrm{\acute{e}t}}, \Ab) \to D(\operatorname{Gal}(\kappa(x)^s / \kappa(x))-\Ab)$$
+        \TODO{the exactness}
+        to the derived category of the abelian caetgory of discrete abelian groups with a continuous $\operatorname{Gal}(\kappa(x)^s / \kappa(x))$-action. In fact, for a ring $\Lambda$, this stalk functor restricts to a functor
+        $$K \mapsto K_{\overline{x}}: D(X_{\mathrm{\acute{e}t}}, \Lambda) \to D(\operatorname{Gal}(\kappa(x)^s / \kappa(x))-\Lambda-\Mod)$$
+        from the derived category $D(X_{\mathrm{\acute{e}t}}, \Lambda)$ of the abelian category of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\Lambda$-modules} on $X_{\mathrm{\acute{e}t}}$ to the derived category of the abelian category of $\operatorname{Gal}(\kappa(x)^s / \kappa(x))-\Lambda-\Mod$. 
+\end{definition}

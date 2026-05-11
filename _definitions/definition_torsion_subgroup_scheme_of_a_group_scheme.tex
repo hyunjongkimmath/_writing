@@ -1,0 +1,15 @@
+\begin{definition}[Torsion subgroup scheme of a group scheme] \label{definition:torsion_subgroup_scheme_of_a_group_scheme}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{commutative group scheme} over a base scheme $S$ and let $n$ be a positive integer.
+    The \hldef{$n$-torsion subgroup scheme of $G$}, denoted by \hl{$G[n]$}, is the kernel of the multiplication-by-$n$ morphism $[n]\colon G \to G$. Concretely, it is the fiber product
+    $$\hlin{G[n] = G \times_{G, [n]} S,}$$
+    where the map $S \to G$ is the identity section. Equivalently, for any $S$-scheme $T$, we have
+    $$G[n](T) = \ker(G(T) \xrightarrow{[n]} G(T)).$$
+
+    \TODO{relative dimension of a scheme}
+    \TODO{commutative group scheme}
+    The group scheme $G[n]$ is a closed subgroup scheme of $G$. If $G$ is an \CrefAndHyperrefIfExist{definition:abelian_scheme_over_a_scheme}{abelian scheme} of relative dimension $g$, then $G[n]$ is a finite \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat} commutative group scheme over $S$ of rank $n^{2g}$ (when $n$ is invertible on $S$). 
+
+    The $p$-torsion subgroup scheme $G[p]$ plays a special role when the base has characteristic $p > 0$.
+
+
+\end{definition}

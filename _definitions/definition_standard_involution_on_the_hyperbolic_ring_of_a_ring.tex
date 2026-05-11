@@ -1,0 +1,19 @@
+\begin{definition}[Standard Involution on Hyperbolic Ring] \label{definition:standard_involution_on_the_hyperbolic_ring_of_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}.
+
+    The \hldef{standard involution on the hyperbolic ring $H(R)$} is the map
+    $$ \tau: H(R) \to H(R), \qquad \tau(a,b) := (b,a), $$
+    (\Cref{definition:hyperbolic_ring_of_a_ring})
+    for all $(a,b) \in H(R)$.
+
+    The map $\tau$ satisfies the following properties:
+    \begin{enumerate}
+        \item $\tau$ is an anti-ring-homomorphism of $H(R)$: for all $(a,b), (c,d) \in H(R)$,
+        $$ \tau\big((a,b) + (c,d)\big) = \tau(a,b) + \tau(c,d), $$
+        $$ \tau\big((a,b) \cdot (c,d)\big) = \tau(c,d) \cdot \tau(a,b). $$
+        \item $\tau$ has order $2$: for all $(a,b) \in H(R)$,
+        $$ \tau(\tau(a,b)) = \tau(b,a) = (a,b). $$
+    \end{enumerate}
+
+    Thus $\tau$ is an involution on $H(R)$ in the sense of \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution on a ring}. In particular, if $R$ is commutative, then $R^{\mathrm{op}} = R$, and $H(R) = R \times R$ with componentwise multiplication; in this case $\tau(a,b) = (b,a)$ is both an automorphism and an anti-automorphism.
+\end{definition}

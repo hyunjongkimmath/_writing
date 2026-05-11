@@ -1,0 +1,21 @@
+\begin{theorem} \label{theorem:adjunction_of_invrse_image_and_direct_image_for_sheaves_of_abelian_groups_under_continuous_functor_of_sites_or_site_morphism}
+    Let $(C,J)$ and $(D,K)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} with \CrefAndHyperrefIfExist{definition:locally_small_category}{small} topologically generating families, and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. 
+ 
+    
+    % whose underlying categories are \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small} (or essentially $U$-small if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available), and let $u : C \to D$ be a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor of sites}. 
+
+        The \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image} and \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} functors 
+        $$u_s : \operatorname{Sh}(D,K;\Ab) \to \operatorname{Sh}(C,J;\Ab)$$
+        $$u^s : \operatorname{Sh}(C,J;\Ab) \to \operatorname{Sh}(D,K;\Ab)$$
+        are \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjoint}, i.e. for any \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves}, 
+        \[
+        \calF \in\operatorname{Sh}(C,J;\Ab), \quad \mathcal{G} \in \operatorname{Sh}(D,K;\Ab),
+        \]
+        there is a natural isomorphism
+        $$\Hom_{\operatorname{Sh}(C,J;\Ab)}(u_s\calG, \calF) \cong \Hom_{\operatorname{Sh}(D,K;\Ab)}(\calG, u^s \calF).$$
+
+        In particular, if $u$ is the functor underlying a \CrefAndHyperrefIfExist{definition:morphism_of_sites}{site morphism} $f: (\calD, K) \to (\calC, J)$, then there is a natural isomorphism 
+        $$\Hom_{\operatorname{Sh}(C,J;\Ab)}(f^* \calG, \calF) \cong \Hom_{\operatorname{Sh}(D,K;\Ab)}(\calG, f_* \calF).$$
+
+        See also \Cref{theorem:adjunction_of_inverse_image_and_direct_image_for_modules_on_ringed_sites_under_ringed_site_morphism}
+\end{theorem}

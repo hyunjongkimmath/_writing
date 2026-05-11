@@ -1,0 +1,12 @@
+\begin{definition}[Newton polygon of an abelian variety] \label{definition:newton_polygon_of_an_abelian_variety_over_a_field_of_prime_characteristic}
+    \TODO{rename this to have abelian variety over a field of prime characteristic}
+    \TODO{lower convex hull}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $g$ over a \CrefAndHyperrefIfExist{definition:field}{field} $k$ of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $p > 0$. 
+    The \hldef{Newton polygon of $A$}, denoted by \hl{$\mathrm{NP}(A)$}, is the lower convex hull in $\mathbb{R}^2$ of the points $(i, v_p(\det(F^i)))$ for $i = 0, 1, \dots, 2g$, where $F$ is the Frobenius operator acting on the crystalline cohomology $H^1_{\mathrm{cris}}(A/W(k))$.
+    \TODO{crystalline cohomology}
+
+    \TODO{diedonne module}
+    Equivalently, $\mathrm{NP}(A)$ is the polygon with endpoints $(0, 0)$ and $(2g, g)$ whose slopes are the $p$-adic valuations of the eigenvalues of Frobenius acting on the Dieudonne module of $A[p^\infty]$. The Newton polygon has $2g$ slopes (counted with multiplicity), all lying in the interval $[0, 1]$, and the sum of all slopes equals $g$.
+
+    An abelian variety is \CrefAndHyperrefIfExist{definition:ordinary_and_supersingular_abelian_varieties_over_a_field_of_characteristic_p}{ordinary} if and only if $\mathrm{NP}(A)$ consists of $g$ segments of slope $0$ and $g$ segments of slope $1$. It is \CrefAndHyperrefIfExist{definition:ordinary_and_supersingular_abelian_varieties_over_a_field_of_characteristic_p}{supersingular} if and only if all $2g$ slopes equal $1/2$.
+\end{definition}

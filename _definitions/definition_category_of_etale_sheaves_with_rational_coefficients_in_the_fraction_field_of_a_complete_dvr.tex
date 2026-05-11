@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}
+    \TODO{what are the minimal hypotheses needed for the following}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site on $X$}. 
+
+    The \hldef{category of sheaves with coefficients in $E$} is the category \hl{$\Sh(X, E)$} that is the \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{localization} of $\Sh(X,R)$ (\Cref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}) by the class 
+    $$\{\lambda^n \cdot \id_\calF: \calF \in \Sh(X,R), n \in \bbZ_{\geq 0} \}$$
+    of morphisms.
+
+    Equivalently, $\Sh(X, E)$ is the category with the same objects as $\Sh(X,R)$ and whose morphism sets are given by 
+    $$\Hom_{\Sh(X,E)}(\calF, \calG) = \Hom_{\Sh(X,R)}(\calF, \calG) \otimes_R E.$$
+
+    One case of particular interest is the case that $R = \bbZ_\ell$ and $E = \bbQ_\ell$.
+
+    As is the case with $\Sh(X,R)$, note that the objects of $\Sh(X,E)$ are not literal sheaves but rather inverse systems of sheaves.
+    
+    \TextIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{
+        $\Sh(X,E)$ is a full subcategory of \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$D_c^b(X,E)$}.
+    }
+
+\end{definition}

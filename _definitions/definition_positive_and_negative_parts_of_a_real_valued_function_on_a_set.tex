@@ -1,0 +1,12 @@
+% POSITIVE AND NEGATIVE PARTS OF A REAL-VALUED FUNCTION ON A SET
+\begin{definition}[Positive and negative parts of a real-valued function on a set] \label{definition:positive_and_negative_parts_of_a_real_valued_function_on_a_set}
+Let $f : X \to \mathbb{R}$ be a real-valued function defined on a set $X$, where $\mathbb{R}$ is the field of \CrefAndHyperrefIfExist{definition:real_numbers}{real numbers} equipped with its natural total order.
+
+\begin{enumerate}
+    \item The \hldef{positive part of $f$} is the function $f^+ : X \to \mathbb{R}_{\geq 0}$ defined by
+    $$f^+(x) = \max\{f(x), 0\} = \begin{cases} f(x) & \text{if } f(x) > 0, \\ 0 & \text{if } f(x) \leq 0. \end{cases}$$
+
+    \item The \hldef{negative part of $f$} is the function $f^- : X \to \mathbb{R}_{\geq 0}$ defined by
+    $$f^-(x) = \max\{-f(x), 0\} = \begin{cases} -f(x) & \text{if } f(x) < 0, \\ 0 & \text{if } f(x) \geq 0. \end{cases}$$
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,11 @@
+\begin{theorem}[Fubini's theorem (integrable case)] \label{theorem:fubini_theorem}
+Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be two \CrefAndHyperrefIfExist{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{$\sigma$-finite measure spaces}. Let $\mathcal{A} \otimes \mathcal{B}$ be the \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product $\sigma$-algebra} and $\mu \times \nu$ the corresponding \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product measure}.
+
+Let $f : X \times Y \to \overline{\mathbb{R}}$ be a \CrefAndHyperrefIfExist{definition:measurable_function_from_a_measure_space_into_the_extended_real_line_or_complex_plane}{measurable function} with respect to $\mathcal{A} \otimes \mathcal{B}$ such that $f$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue integrable}, i.e.
+$$\int_{X \times Y} |f|\,d(\mu \times \nu) < \infty.$$
+
+Then for \CrefAndHyperrefIfExist{definition:property_holds_almost_everywhere_for_a_measure_space}{$\mu$-almost every} $x \in X$, the function $y \mapsto f(x,y)$ is $\nu$-integrable on $Y$, and the function
+$$x \mapsto \int_Y f(x,y)\,d\nu(y)$$
+is $\mu$-integrable on $X$. Similarly, for $\nu$-almost every $y \in Y$, the function $x \mapsto f(x,y)$ is $\mu$-integrable on $X$, and
+$$\int_X \left(\int_Y f(x,y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} f\,d(\mu \times \nu) = \int_Y \left(\int_X f(x,y)\,d\mu(x)\right) d\nu(y).$$
+\end{theorem}

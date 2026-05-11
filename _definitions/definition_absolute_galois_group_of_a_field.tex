@@ -1,0 +1,10 @@
+\begin{definition}[Absolute Galois group of a field] \label{definition:absolute_galois_group_of_a_field}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $K^s$ be a \CrefAndHyperrefIfExist{definition:separable_closure_of_a_field}{separable closure} of $K$. Write $\overline{K}$ for an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic closure} of $K$ containing $K^s$.
+
+    The \hldef{absolute Galois group of $K$} is the \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group}:
+    $$\hlin{G_K = \Gal(K^s/K)}$$
+    equipped with the \CrefAndHyperrefIfExist{definition:profinite_set}{Krull topology}, making it a \CrefAndHyperrefIfExist{definition:profinite_group}{profinite group}. Equivalently, $G_K$ is the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit} of the finite Galois groups $\Gal(L/K)$ as $L$ ranges over all \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{finite} Galois subextensions of $K^s/K$:
+    $$G_K = \varprojlim_{L} \Gal(L/K)$$
+
+    We note that $\overline{Aut}(\overline{K}/K)$\CrefIfExists{definition:automorphism_group_of_a_field_extension} is naturally isomorphic as a profinite group to the absolute Galois group $\Gal(K^s/K)$. One often writes \hl{$\operatorname{Gal}(\overline{K}/K)$} for $\overline{Aut}(\overline{K}/K)$, even when $\overline{K}/K$ is not a Galois extension (which is the case when $K$ is not a \CrefAndHyperrefIfExist{definition:perfect_field}{perfect field}). On the other hand, if $K$ is a \CrefAndHyperrefIfExist{definition:perfect_field}{perfect field}, then the separable closure $K^s$ coincides with the algebraic closure $\overline{K}$, and $\overline{K}/K$ is a Galois extension, so the notation of $\Gal(\overline{K}/K)$ is no longer an abuse of notation. 
+\end{definition}

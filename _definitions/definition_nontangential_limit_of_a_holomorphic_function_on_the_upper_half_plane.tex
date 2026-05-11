@@ -1,0 +1,12 @@
+% NON-TANGENTIAL LIMIT OF A HOLOMORPHIC FUNCTION ON THE UPPER HALF-PLANE
+\begin{definition}[Nontangential limit of a holomorphic function on the upper half-plane] \label{definition:nontangential_limit_of_a_holomorphic_function_on_the_upper_half_plane}
+    \TODO{upper half plane}
+Let $\mathbb{C}$ denote the field of \CrefAndHyperrefIfExist{definition:complex_numbers}{complex numbers}, and let $\mathbb{H} = \{z \in \mathbb{C} : \operatorname{Im}(z) > 0\}$ be the upper half-plane. Let $f : \mathbb{H} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function}.
+
+For a point $x \in \mathbb{R}$ and $\alpha > 1$, the \hldef{nontangential approach region/Stolz angle  at $x$ with aperture $\alpha$} is the set
+$$\Gamma_\alpha(x) = \{z \in \mathbb{H} : |z - x| < \alpha \cdot \operatorname{Im}(z)\}.$$
+
+We say that $f$ has the \hldef{nontangential limit} $L \in \mathbb{C}$ at $x \in \mathbb{R}$ if for every $\epsilon > 0$, there exists $\delta > 0$ such that
+$$|f(z) - L| < \epsilon$$
+whenever $z \in \Gamma_\alpha(x)$ and $|z - x| < \delta$, for some (equivalently, any) fixed $\alpha > 1$.
+\end{definition}

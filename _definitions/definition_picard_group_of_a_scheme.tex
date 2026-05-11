@@ -1,0 +1,26 @@
+\begin{definition} \label{definition:picard_group_of_a_scheme}
+    \TODO{picard group of an algebraic space}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}.
+The \hldef{Picard group of $X$}, denoted by \hl{$\operatorname{Pic}(X)$}, is the \CrefAndHyperrefIfExist{definition:group}{group} of isomorphism classes of \CrefAndHyperrefIfExist{definition:free_and_locally_free_modules_on_a_ringed_site}{invertible sheaves} (line bundles) on $X$ (with respect to the \CrefAndHyperrefIfExist{definition:small_zariski_site_of_a_schem}{Zariski topology}), with the group operation induced by the \CrefAndHyperrefIfExist{definition:tensor_product_of_sheaves_of_bimodules_over_sheaves_of_rings_on_a_site}{tensor product of sheaves}.
+
+More precisely:
+\begin{enumerate}
+    \item Two invertible \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} $\mathcal{L}$ and $\mathcal{M}$ are \CrefAndHyperrefIfExist{definition:isomorphism_in_a_category}{isomorphic} if there exists an \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}{$\mathcal{O}_X$-module} isomorphism $\phi: \mathcal{L} \xrightarrow{\sim} \mathcal{M}$.
+    \item The \CrefAndHyperrefIfExist{definition:tensor_product_of_sheaves_of_bimodules_over_sheaves_of_rings_on_a_site}{tensor product} of invertible sheaves induces a well-defined group operation on the set of isomorphism classes.
+    \TODO{sheafy dual}
+    \item The inverse of an \CrefAndHyperrefIfExist{definition:algebraic_vector_bundle_over_a_scheme}{invertible sheaf} $\mathcal{L}$ is given by its \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} $\mathcal{L}^\vee = \mathscr{H}om_{\mathcal{O}_X}(\mathcal{L}, \mathcal{O}_X)$\CrefIfExists{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}.
+    \item The \CrefAndHyperrefIfExist{definition:left_right_identity_element_of_a_binary_operation}{identity element} is the class of the \CrefAndHyperrefIfExist{definition:ringed_space}{structure sheaf} \CrefAndHyperrefIfExist{definition:algebra_over_a_sheaf_of_rings_on_a_site}{$\mathcal{O}_X$}.
+\end{enumerate}
+
+\TextIfExists{definition:cartier_divisor_on_a_scheme}{
+    There is a canonical isomorphism between $\operatorname{Pic}(X)$ and the \CrefAndHyperrefIfExist{definition:cartier_divisor_on_a_scheme}{Cartier divisor class group} $\operatorname{CaCl}(X)$ (\CrefAndHyperrefIfExist{definition:cartier_divisor_on_a_scheme}{Cartier divisor on a scheme}), given by associating to a Cartier \CrefAndHyperrefIfExist{definition:prime_and_weil_divisor_on_a_scheme}{divisor} $D$ the invertible sheaf $\mathcal{O}_X(D)$.
+}
+
+\TODO{class group of ring}
+When $X = \operatorname{Spec}(A)$ is an \CrefAndHyperrefIfExist{definition:affine_scheme}{affine scheme}, there is a canonical isomorphism
+$$\operatorname{Pic}(\operatorname{Spec}(A)) \cong \operatorname{Cl}(A),$$
+where $\operatorname{Cl}(A)$ is the class group of the \CrefAndHyperrefIfExist{definition:ring}{ring} $A$ (the group of isomorphism classes of rank-1 \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} modules over $A$, also known as the \CrefAndHyperrefIfExist{definition:picard_group}{Picard group} of the ring).
+
+\TODO{extract this out}
+If $X$ is a \CrefAndHyperrefIfExist{definition:noetherian_scheme}{Noetherian}, \CrefAndHyperrefIfExist{definition:integral_scheme}{integral}, and \CrefAndHyperrefIfExist{definition:locally_factorial_scheme}{locally factorial} \CrefAndHyperrefIfExist{definition:scheme}{scheme}, then $\operatorname{Pic}(X)$ is isomorphic to the \CrefAndHyperrefIfExist{definition:weil_divisor_class_group}{Weil divisor class group} $\operatorname{Cl}(X)$.
+\end{definition}

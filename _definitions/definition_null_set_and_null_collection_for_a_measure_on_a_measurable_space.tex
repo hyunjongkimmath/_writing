@@ -1,0 +1,18 @@
+\begin{definition}[Null set and null collection] \label{definition:null_set_and_null_collection_for_a_measure_on_a_measurable_space}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
+
+\begin{enumerate}
+    \item A set $N \in \mathcal{A}$ is called a \hldef{$\mu$-null set} (or simply a \hldef{null set} when $\mu$ is clear from context) if
+    $$\mu(N) = 0.$$
+
+    \item A collection $\mathcal{N}$ of subsets of $X$ is called a \hldef{null collection (with respect to $\mu$)} if:
+    \begin{enumerate}
+        \item every $N \in \mathcal{N}$ is a $\mu$-null set,
+        \item if $A \subseteq N$ and $N \in \mathcal{N}$, then there exists $N' \in \mathcal{A}$ with $\mu(N') = 0$ and $A \subseteq N'$ (i.e.\ the collection is closed under subsets up to measurable supersets of measure zero),
+        \item if $(N_n)_{n\ge 1}$ is a sequence with each $N_n \in \mathcal{N}$, then $\bigcup_{n=1}^\infty N_n \in \mathcal{N}$ (i.e.\ the collection is closed under countable unions).
+    \end{enumerate}
+
+    The null collection determined by $\mu$ is the collection of all subsets of $X$ that are contained in some $\mu$-null measurable set:
+    $$\hlin{\mathcal{N}_\mu = \{ A \subseteq X : \exists N \in \mathcal{A} \text{ with } A \subseteq N \text{ and } \mu(N) = 0\}.}$$
+\end{enumerate}
+\end{definition}

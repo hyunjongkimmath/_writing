@@ -1,0 +1,9 @@
+\begin{definition}[Scheme-theoretic image of a morphism of schemes] \label{definition:scheme_theoretic_image_of_a_morphism_of_schemes}
+Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. The morphism $f$ induces a morphism of sheaves of rings $\mathcal{O}_Y \to f_*\mathcal{O}_X$. The \CrefAndHyperrefIfExist{definition:kernel_of_a_morphism_of_sheaves_of_groups_on_a_topological_space}{kernel} $\ker(\mathcal{O}_Y \to f_*\mathcal{O}_X)$ is an \CrefAndHyperrefIfExist{definition:ideal_sheaf_of_a_ringed_space}{ideal sheaf} of $\mathcal{O}_Y$.
+
+The \hldef{scheme-theoretic image of $}f$ is the \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{closed subscheme} of $Y$ defined by this ideal sheaf. Equivalently, it is the unique smallest closed subscheme $Z \subseteq Y$ such that $f$ factors through $Z$, i.e., there exists a morphism $X \to Z$ making the diagram
+$$X \to Z \hookrightarrow Y$$
+commute.
+
+If $Y$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{locally Noetherian} and $f$ has \CrefAndHyperrefIfExist{definition:quasi_compact_scheme}{quasi-compact} and \CrefAndHyperrefIfExist{definition:quasi_seperated_morphism_in_a_locally_small_site}{quasi-separated} domain, then the scheme-theoretic image always exists. In this case, it is defined by the kernel of $\mathcal{O}_Y \to f_*\mathcal{O}_X$, which is a \CrefAndHyperrefIfExist{definition:quasi_coherent_sheaf_on_a_ringed_space}{quasi-coherent} ideal sheaf on $Y$.
+\end{definition}

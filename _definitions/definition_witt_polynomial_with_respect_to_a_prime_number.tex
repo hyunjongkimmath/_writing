@@ -1,0 +1,23 @@
+% WITT POLYNOMIALS - Supporting definition for Witt rings
+\begin{definition}\label{definition:witt_polynomial_with_respect_to_a_prime_number}
+Let $p$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime number}. For each integer $n \geq 0$, the \hldef{$n$-th Witt polynomial with respect to $p$} is the polynomial $W_n \in \mathbb{Z}[x_0, x_1, \dots, x_n]$ defined by
+$$
+    W_n(x_0, x_1, \dots, x_n) := \sum_{i=0}^n p^i x_i^{p^{n-i}} = x_0^{p^n} + p x_1^{p^{n-1}} + \cdots + p^n x_n.
+$$
+
+Explicitly, the first few Witt polynomials are:
+\begin{align*}
+    W_0(x_0) &:= x_0, \\
+    W_1(x_0, x_1) &:= x_0^p + p x_1, \\
+    W_2(x_0, x_1, x_2) &:= x_0^{p^2} + p x_1^p + p^2 x_2.
+\end{align*}
+
+These polynomials satisfy the key property that there exist unique polynomials $S_n, P_n \in \mathbb{Z}[x_0, \dots, x_n, y_0, \dots, y_n]$ such that for all $n \geq 0$:
+\begin{align*}
+    W_n(\mathbf{x}) + W_n(\mathbf{y}) &= W_n(S_0(\mathbf{x}, \mathbf{y}), \dots, S_n(\mathbf{x}, \mathbf{y})), \\
+    W_n(\mathbf{x}) \cdot W_n(\mathbf{y}) &= W_n(P_0(\mathbf{x}, \mathbf{y}), \dots, P_n(\mathbf{x}, \mathbf{y})),
+\end{align*}
+where $\mathbf{x} = (x_0, \dots, x_n)$ and $\mathbf{y} = (y_0, \dots, y_n)$.
+
+The Witt polynomials are the fundamental building blocks for constructing the ring structure on Witt vectors.
+\end{definition}

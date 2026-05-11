@@ -1,0 +1,12 @@
+\begin{definition}[Connected object of a Galois category] \label{definition:connected_object_of_a_galois_category}
+Let $(\mathcal{C}, F)$ be a \CrefAndHyperrefIfExist{definition:fiber_functor_for_a_functor_from_a_galois_category_to_the_category_of_finite_sets}{Galois category}. An object $X \in \mathrm{Ob}(\mathcal{C})$ is called \hldef{connected} if it satisfies the following equivalent conditions:
+
+\TODO{define non-emptyness and indecomposability in general}
+\begin{enumerate}
+    \item $X$ is non-empty (i.e., $F(X) \neq \emptyset$) and indecomposable: if $X \cong Y \amalg Z$ for objects $Y, Z \in \mathcal{C}$, then either $Y$ or $Z$ is an \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} of $\mathcal{C}$.
+
+    \item The group $\Aut(X)$ of \CrefAndHyperrefIfExist{definition:automorphism_of_an_object_of_a_category_automorphism_group_of_an_object_of_a_locally_small_category}{automorphisms} of $X$ acts \CrefAndHyperrefIfExist{definition:transitive_group_action_of_a_group_acting_on_a_set}{transitively} on the finite set $F(X)$.
+\end{enumerate}
+
+Every object $X$ in a Galois category can be uniquely written as a finite \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} $X \cong \coprod_{i=1}^n X_i$ of connected objects $X_i$, unique up to isomorphism and reordering.
+\end{definition}

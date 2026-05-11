@@ -1,0 +1,14 @@
+\begin{definition}[$\alpha_p$ group scheme] \label{definition:alpha_p_group_scheme}
+    \TODO{commutative group scheme}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field} of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $p > 0$. The \hldef{$\alpha_p$ group scheme over $k$} is the commutative group scheme over $\Spec k$ defined by
+    $$\hlin{\alpha_p = \Spec k[x]/(x^p),}$$
+    \TODO{hopf algebra}
+    where the Hopf algebra structure maps are given by:
+    \begin{itemize}
+        \item \textbf{Comultiplication:} $x \mapsto x \otimes 1 + 1 \otimes x$,
+        \item \textbf{Counit:} $x \mapsto 0$,
+        \item \textbf{Coinverse:} $x \mapsto -x$.
+    \end{itemize}
+    Equivalently, $\alpha_p$ is the kernel of the \CrefAndHyperrefIfExist{definition:relative_frobenius_morphism_of_a_scheme_over_a_scheme_of_prime_characteristic}{relative Frobenius endomorphism} on the \CrefAndHyperrefIfExist{definition:additive_group_scheme_over_a_scheme}{additive group scheme} $\bbG_a$, i.e., for any commutative $k$-algebra $R$, we have
+    $$\alpha_p(R) = \{r \in R : r^p = 0\}.$$
+\end{definition}

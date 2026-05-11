@@ -1,9 +1,7 @@
 \begin{definition}[Profinite groups] \label{definition:profinite_group}
 A \hldef{profinite group} is a \CrefAndHyperrefIfExist{definition:topological_group}{topological group} that is \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact}, \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff}, and \CrefAndHyperrefIfExist{definition:totally_disconnected_topological_space}{totally disconnected}.
-\TODO{describe the topology}
 
-Equivalently, a profinite group is the inverse limit of an inverse system of finite groups equipped with the discrete topology. That is,
+Equivalently, a profinite group is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{inverse limit} of an \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system} of finite groups equipped with the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology}. That is,
 $$ G \cong \varprojlim_{i \in I} G_{i}, $$
-\TODO{define rougher topologies,}
-where each $G_{i}$ is a finite group and the connecting maps are group homomorphisms. The topology on $G$ is called the \hldef{profinite topology} and is the roughest topology making the projection maps $G \to G_{i}$ \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous}; equivalently, the preimages of singletons under the projection maps $G \to G_i$ form a \CrefAndHyperrefIfExist{definition:basis_for_a_topology}{basis} of open subsets (and in fact a basis of clopen subsets).
+where each $G_{i}$ is a finite group and the connecting maps are group homomorphisms. The topology on $G$ is called the \hldef{profinite topology} and is the roughest topology making the projection maps $G \to G_{i}$ \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous}; equivalently, the preimages of singletons under the projection maps $G \to G_i$ form a \CrefAndHyperrefIfExist{definition:basis_for_a_topology}{basis} of open subsets (and in fact a basis of clopen subsets). Also equivalently, the profinite topology of $G$ is equivalent to the \CrefAndHyperrefIfExist{definition:profinite_set}{profinite topology} of $G$ considered as a profinite set.
 \end{definition}

@@ -13,5 +13,11 @@ where $(\Gamma, +, \leq)$ is a totally ordered abelian group and $\infty$ is an 
 
 Alternatively (and essentially equivalently), a valuation on $K$ is also defined as a function $v: K^\times \to \Gamma$ with properties \eqref{part:valuation_on_a_field_turns_multiplication_into_addition} and \eqref{part:vlauation_on_a_field_satisfies_a_strict_triangle_inequality} and is extended into a function $v: K \to \Gamma \cup \{\infty\}$ by setting $v(0) = \infty$.
 
-The pair $(K, v)$ is called a \hldef{valued field}.
+The pair $(K, v)$ is called a \hldef{valued field} (or less often a \hldef{valuation field}).
+
+One usually calls the image $v(\Gamma)$ of $v$ the \hldef{value group of $v$}. The \hldef{(rational) rank of $v$} is the \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{dimension} of the $\mathbb{Q}$-vector space $v(\Gamma) \otimes_{\mathbb{Z}} \mathbb{Q}$.
+
+\TextIfExists{definition:nonarchimedean_absolute_value_induced_by_a_rank_one_valuation}{
+    If $\Gamma$ is embeddable into $(\mathbb{R},+, \leq)$, then the valuation $v$ \CrefAndHyperrefIfExist{definition:nonarchimedean_absolute_value_induced_by_a_rank_one_valuation}{induces} a \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{nonarchimedean absolute value}. 
+}
 \end{definition}

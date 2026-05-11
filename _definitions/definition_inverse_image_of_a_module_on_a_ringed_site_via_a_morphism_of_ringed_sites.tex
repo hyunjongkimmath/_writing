@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:inverse_image_of_a_module_on_a_ringed_site_via_a_morphism_of_ringed_sites}
+    Let $f: (\mathcal{C}, J, \mathcal{O}_{\mathcal{C}}) \to (\mathcal{D}, K), \mathcal{O}_{\mathcal{D}})$ be a \CrefAndHyperrefIfExist{definition:morphism_of_ringed_sites}{morphism of ringed sites} with \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topological generating families}.
+    Write $f^*_{\text{Ab}}$ for the \CrefAndHyperrefIfExist{definition:inverse_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{inverse image functor} 
+    $$f^*_{\text{Ab}}: \Sh(\calD, K, \Ab) \to \Sh(\calC, J, \Ab).$$
+
+    Given a (right) \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO_\calD$-module} $\calG$, its \hldef{inverse image}, notated \hl{$f^* \calG$} by abuse of notation and which should not be mistaken for $f^*_{\text{Ab}}$, is the $\calO_\calC$-module constructed as 
+    $$f^*_{\text{Ab}} \calG \otimes_{f^* \calO_D} \calO_\calC.$$
+    \CrefIfExists{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}
+    Note that there is a morphism $f^* \mathcal{O}_{\mathcal{D}} \to \mathcal{O}_{\mathcal{C}}$ corresponding under the adjunction of $f^*$ and $f_*$ (\Cref{direct_image}) (\Cref{theorem:adjunction_of_invrse_image_and_direct_image_for_sheaves_of_abelian_groups_under_continuous_functor_of_sites_or_site_morphism})
+\end{definition}

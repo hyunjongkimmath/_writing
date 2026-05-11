@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:congruence_subgroup_of_SL_2_Z}
+    \TODO{define congruence subgroups for more general arithmetic groups and describe how these are instances of those}
+Let $N$ be a positive integer.
+\begin{itemize}
+    \item The \hldef{principal congruence subgroup of $\mathrm{SL}_2(\bbZ)$ of level $N$} is the group \hl{$\Gamma(N)$} defined by
+    $$ \Gamma(N) := \left\{ \gamma \in \mathrm{SL}_2(\mathbb{Z}) : \gamma \equiv I_2 \pmod{N} \right\}.  $$
+    \item The subgroup \hl{$\Gamma_1(N)$} of $\SL_2(\bbZ)$ is defined by
+    $$ \Gamma_1(N) := \left\{ \gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) : a \equiv d \equiv 1 \pmod{N},\; c \equiv 0 \pmod{N} \right\}.  $$
+    \item The subgroup \hl{$\Gamma_0(N)$} of $\SL_2(\bbZ)$ is defined by
+    $$ \Gamma_0(N) := \left\{ \gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{SL}_2(\mathbb{Z}) : c \equiv 0 \pmod{N} \right\}.  $$
+    \item A \hldef{congruence subgroup of $\mathrm{SL}_2(\mathbb{Z})$} is any subgroup $\Gamma \leq \mathrm{SL}_2(\mathbb{Z})$ that contains $\Gamma(N)$ for some $N \geq 1$.
+\end{itemize}
+Note that
+$$\Gamma(N) \subset \Gamma_1(N) \subset \Gamma_0(N) \subset \SL_2(\bbZ).$$
+Moreover, the natural reduction homomorphism
+$$\SL_2(\bbZ) \to \SL_2(\bbZ/N \bbZ)$$
+is surjective with kernel $\Gamma(N)$. Therefore, we have an isomorphism 
+$$\SL_2(\bbZ) / \Gamma(N) \to \SL_2(\bbZ/N \bbZ).$$
+In particular, $\Gamma(N)$ and hence $\Gamma_1(N)$ and $\Gamma_0(N)$ are all of finite index in $\SL_2(\bbZ / N \bbZ)$.
+\end{definition}

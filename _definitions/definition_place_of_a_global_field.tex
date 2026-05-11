@@ -1,5 +1,17 @@
 \begin{definition}[Place of a global field] \label{definition:place_of_a_global_field}
-Let $F$ be a global field. A \hldef{place of $F$} is an \CrefAndHyperrefIfExist{definition:equivalent_absolute_values_on_a_field}{equivalence} class\CrefIfExists{definition:equivalent_absolute_values_on_a_field} of \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute values} on $F$. 
+Let $F$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}.
+A \hldef{place of $F$} is an \CrefAndHyperrefIfExist{definition:equivalent_absolute_values_on_a_field}{equivalence} class\CrefIfExists{definition:equivalent_absolute_values_on_a_field} of \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{absolute values} on $F$. 
 
-If any (equivalently all) representatives of a place $v$ of $F$ is an \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{archimedean absolute value} (resp. non-archimedean absolute value), then we say that $v$ is an \hldef{archimedean place} (resp. \hldef{non-archimedean place}). A representative of a place $v$ is often denoted by \hldef{$|\cdot|_v$}.
+If any (equivalently all) representatives of a place $v$ of $F$ is an \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{archimedean absolute value} (resp. non-archimedean absolute value), then we say that $v$ is an \hldef{archimedean place} (resp. \hldef{non-archimedean place}). A representative of a place $v$ is often denoted by \hldef{$|\cdot|_v$}. 
+
+In the case that $F$ is a \CrefAndHyperrefIfExist{definition:number_field}{number field}, and archimedean place is called an \hldef{infinite place} and a non-archimedean place is called a \hldef{finite place}. This number field terminology should not be confused with terminology for \CrefAndHyperrefIfExist{definition:global_function_field}{global function fields} --- in the case that $F$ is a global function field, all places of $F$ are non-archimedean and yet one may refer to some (finitely many) places of $F$ as \hldef{"infinite"} with respect to ``presentation/choice of a transcendental coordinate function'' of $F$. 
+
+\TextIfExists{}{
+    More specifically, global function fields correspond to smooth projective curves $C$ over finite fields $\Fq$, and if one fixes a scheme morphism $C \to \mathbb{P}^1_{\bbFq}$, then points in $C$ whose images are the designated point at infinity of $\mathbb{P}^1_{\bbFq}$ correspond to places of $F$ which are then called the \hldef{infinite places of $F$}. 
+}
+
+\TextIfExists{definition:place_of_a_field}{
+    The above notion of place of a global field should not be mistaken for the notion of a \CrefAndHyperref{definition:place_of_a_field}{place of a general field}, which are not described by absolute values.
+}
+
 \end{definition}

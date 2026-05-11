@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:conjugation_action_of_a_group_on_cochains_for_a_module}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}, let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $M$ be an \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[G]$-module}.
+
+    \TODO{$C^n(G,M)$}
+    The \hldef{conjugation action of $G$ on the $n$-cochain group} \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{$C^n(G,M)$} is the \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{action} making $C^n(G,M)$ into an $R[G]$-module given as follows: for all $g \in G$ and $\varphi \in C^n(G,M)$, we have 
+    $$(g \circ \varphi)(g_1,\ldots,g_n) = g \cdot \varphi(g^{-1} g_1 g, g^{-1} g_2 g, \ldots, g^{-1} g_n g).$$
+
+    The differential commutes with the action: $g \cdot (d\varphi) = d(g \cdot \varphi)$ and hence the action preserves cocycles and coboundaries. It thus induces a well defined action on the cohomology groups $H^n(G,M) \cong Z^n(G,M)/ B^n(G,M)$\CrefIfExists{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}\CrefIfExists{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}.
+\end{definition}

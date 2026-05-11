@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:ramification_and_branching_for_finite_morphisms_of_schemes}
+Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism} of schemes. A point $x \in X$ is a \hldef{ramification point of $f$} if the morphism is not \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{étale} at $x$. Equivalently, $x$ is a ramification point if the local ring map $\mathcal{O}_{f(x),Y} \to \mathcal{O}_{x,X}$ does not induce an isomorphism of completions $\widehat{\mathcal{O}}_{f(x),Y} \cong \widehat{\mathcal{O}}_{x,X}$. The point $y = f(x) \in Y$ is a \hldef{branch point of $f$} if it is the image of a ramification point.
+
+\TODO{regular}
+When $X$ and $Y$ are regular \CrefAndHyperrefIfExist{definition:integral_scheme}{integral} \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{curves} over a field and $f$ is surjective, for each $x \in X$ with $y = f(x)$, the \hldef{ramification index} \hl{$e_x$} is the unique integer $\geq 1$ such that
+$\hlin{\mathfrak{m}_y \mathcal{O}_{x,X} = (\mathfrak{m}_x)^{e_x}}$
+where $\mathfrak{m}_y$ and $\mathfrak{m}_x$ are the \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideals} of the \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation rings} $\mathcal{O}_{y,Y}$ and $\mathcal{O}_{x,X}$. The point $x$ is a ramification point if and only if $e_x > 1$. 
+
+The \hldef{ramification divisor of $f$} is the \CrefAndHyperrefIfExist{definition:effective_weil_divisor_on_a_scheme}{effective divisor} on $X$ given by
+$\hlin{R_f = \sum_{x \in X} (e_x - 1) [x]}$.
+The \hldef{branch divisor} is $f_*(R_f)$ on $Y$.
+\end{definition}

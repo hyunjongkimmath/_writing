@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:cartesian_morphism_in_a_category_over_a_category_and_pullback}
+Let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_over_a_category_and_fiber_category_over_an_object}{category over} a category $\mathcal{C}$.
+A morphism $\phi: u \to v$ in $\mathcal{F}$ is called \hldef{cartesian} if for every object $w \in \text{ob}(\mathcal{F})$ and every morphism $\psi: w \to v$ in $\mathcal{F}$ such that there exists a factorization $p(\psi) = p(\phi) \circ h$ for some morphism $h: p(w) \to p(u)$ in $\mathcal{C}$, there exists a unique morphism $\lambda: w \to u$ in $\mathcal{F}$ such that $\phi \circ \lambda = \psi$ and $p(\lambda) = h$.
+$$
+\begin{tikzcd}
+w \arrow[rr, "\psi", bend left] \arrow[d] \arrow[r, dashed, "\exists ! \lambda"] & u \arrow[r, "\phi"] \arrow[d] & v \arrow[d] \\
+p(w) \arrow[r, "h"] & p(u) \arrow[r, "p(\phi)"] & p(v)
+\end{tikzcd}
+$$
+If $\phi: u \to v$ is a cartesian morphism in $\mathcal{F}$, then the object $u$ is called a \hldef{pullback of $v$ along the morphism $p(\phi)$ in $\mathcal{C}$}.
+\end{definition}

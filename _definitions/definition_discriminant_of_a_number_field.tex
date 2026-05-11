@@ -1,0 +1,14 @@
+\begin{definition}[Discriminant of a Number Field] \label{definition:discriminant_of_a_number_field}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:number_field}{number field} of \CrefAndHyperrefIfExist{definition:degree_of_a_field_extension}{degree} $n = [K : \mathbb{Q}]$, and let $\sigma_1, \ldots, \sigma_n : K \hookrightarrow \mathbb{C}$ be the distinct \CrefAndHyperrefIfExist{definition:field_homomorphism}{embeddings} of $K$ into $\mathbb{C}$.
+
+\begin{enumerate}
+    \item For any basis $\{\alpha_1, \ldots, \alpha_n\}$ of $K$ as a vector space over $\mathbb{Q}$, the discriminant of this basis is defined by
+    $$\hlin{\operatorname{disc}(\alpha_1, \ldots, \alpha_n) = \det\bigl(\sigma_i(\alpha_j)\bigr)_{1 \leq i,j \leq n}^2.}$$
+
+    \item The \hldef{discriminant of $K$}, denoted by \hl{$d_K$} or \hl{$\operatorname{disc}(K)$}, is the discriminant of any $\mathbb{Q}$-basis of the ring of integers $\mathcal{O}_K$. Equivalently, if $\{\omega_1, \ldots, \omega_n\}$ is an integral basis for $\mathcal{O}_K$ over $\mathbb{Z}$, then
+    $$d_K = \det\bigl(\sigma_i(\omega_j)\bigr)_{1 \leq i,j \leq n}^2.$$
+
+    The discriminant $d_K$ is a nonzero integer and is independent of the choice of integral basis. It satisfies $d_K \equiv 0, 1 \pmod{4}$.
+
+\end{enumerate}
+\end{definition}

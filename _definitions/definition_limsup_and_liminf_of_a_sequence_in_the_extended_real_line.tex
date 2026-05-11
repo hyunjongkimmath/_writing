@@ -1,0 +1,15 @@
+% LIMSUP AND LIMINF OF A SEQUENCE IN THE EXTENDED REAL LINE
+\begin{definition}[Upper and lower limits (limsup, liminf) of a sequence in the extended real line] \label{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line}
+Let $\overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty, +\infty\}$ be the \CrefAndHyperrefIfExist{definition:extended_real_line}{extended real line}, equipped with the order extension $-\infty < x < +\infty$ for all $x \in \mathbb{R}$\CrefAndHyperrefIfExist{definition:real_numbers}{real numbers}, together with the arithmetic conventions $+\infty + (+\infty) = +\infty$, $(-\infty) + (-\infty) = -\infty$, and $a \cdot (\pm\infty) = \pm\infty$ for $a > 0$, $a \cdot (\pm\infty) = \mp\infty$ for $a < 0$.
+
+Let $(x_n)_{n=1}^\infty$ be a sequence in $\overline{\mathbb{R}}$ that does not take both values $+\infty$ and $-\infty$ infinitely often (so that the quantities below are well-defined). For each $n \in \mathbb{N}$, define
+$$s_n = \sup_{k \geq n} x_k \quad \text{and} \quad i_n = \inf_{k \geq n} x_k.$$
+The sequence $(s_n)_{n=1}^\infty$ is non-increasing and the sequence $(i_n)_{n=1}^\infty$ is non-decreasing, so both limits exist in $\overline{\mathbb{R}}$.
+
+The \hldef{limit superior} (or \hldef{upper limit}) of $(x_n)$ is
+$$\hlin{\limsup_{n \to \infty} x_n = \inf_{n \geq 1} \sup_{k \geq n} x_k = \lim_{n \to \infty} s_n.}$$
+(\Cref{definition:supremum_infimum_of_a_subset_of_an_ordered_set})
+The \hldef{limit inferior} (or \hldef{lower limit}) of $(x_n)$ is
+$$\hlin{\liminf_{n \to \infty} x_n = \sup_{n \geq 1} \inf_{k \geq n} x_k = \lim_{n \to \infty} i_n.}$$
+(\Cref{definition:supremum_infimum_of_a_subset_of_an_ordered_set})
+\end{definition}

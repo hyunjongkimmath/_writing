@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:decomposition_group_of_the_etale_fundamental_group_of_a_connected_scheme_at_a_geometric_point}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:scheme}{scheme}, let $x \in X$ be a point, and let $\overline{x}$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} of $X$ whose image is $x$. 
+The \hldef{decomposition subgroup} \hl{$D_{\overline{x}}$} of the \CrefAndHyperrefIfExist{definition:etale_fundamental_group_of_a_connected_scheme}{ \'etale fundamental group} $\pioneet(X, \overline{x})$ is the following equivalent groups:
+\begin{enumerate}
+    \item The inverse limit
+    $$D_{\overline{x}} \coloneq \varprojlim_{(Y, \overline{y})} D_{\overline{y}}$$
+    of finite \CrefAndHyperref{definition:decomposition_group_of_a_morphism_of_schemes_at_a_geometric_point}{decomposition groups} where the \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{projective} system is taken over the \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale} \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois covers} $Y$ of $X$ with geometric points $\overline{y}$ such that $\operatorname{Spec} \Omega \xrightarrow{\overline{y}} Y \to X$ is $\overline{x}$
+
+    \item the image of the topological group homomorphism
+    $$\pioneet(\operatorname{Spec} \mathcal{O}_{X,x}^h, \overline{x}) \to \pioneet(X, \overline{x})$$
+    induced by the scheme morphism 
+    $$\operatorname{Spec} \mathcal{O}_{X,x}^h \to X$$
+    where $\mathcal{O}_{X,x}^h$ is the \CrefAndHyperrefIfExist{definition:henselization_of_a_local_ring}{Henselization} of the local ring $\mathcal{O}_{X,x}$\CrefIfExists{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}
+Let $X$ be a set and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{extended metric space}. A sequence of functions $f_n : X \to Y$ is said to \hldef{converge uniformly to a function $f : X \to Y$} if
+$$\lim_{n \to \infty} \sup_{x \in X} d(f_n(x), f(x)) = 0.$$
+(\Cref{definition:convergence_and_limit_of_sequence_in_extended_metric_space})
+That is, for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $n \geq N$ and all $x \in X$, one has $d(f_n(x), f(x)) < \varepsilon$.
+
+If $(f_n)$ uniformly converges to $f$, then $(f_n)$ \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges pointwise} to $f$ as well and hence $f$ is the \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{limit} of $(f_n)$. 
+\end{definition}

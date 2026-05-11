@@ -1,0 +1,7 @@
+\begin{definition}[Minimal Polynomial of an Endomorphism] \label{definition:minimal_polynomial_of_an_endomorphism_of_a_vector_space_over_a_field}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $V$ be an \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$K$-vector space} of finite \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{dimension}, and let $\phi : V \to V$ be an \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$K$-linear endomorphism} of $V$.
+
+The \hldef{minimal polynomial of $\phi$} is the unique monic generator of the ideal
+$$\{p \in K[t] \mid p(\phi) = 0\} \subset K[t].$$
+This ideal is non-zero because $\dim_K \operatorname{End}_K(V) = (\dim_K V)^2 < \infty$, so the $n^2 + 1$ elements $\operatorname{id}_V, \phi, \phi^2, \dots, \phi^{n^2}$ are linearly dependent in $\operatorname{End}_K(V)$, yielding a non-zero polynomial annihilating $\phi$. The ideal is principal because $K[t]$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{principal ideal domain}.
+\end{definition}

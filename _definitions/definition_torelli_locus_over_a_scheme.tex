@@ -1,0 +1,12 @@
+\begin{definition}[Torelli locus; Open Torelli locus] \label{definition:torelli_locus_over_a_scheme}
+    Let $g$ be a positive integer.
+    \TODO{image for a stack morphism}
+    The \hldef{Torelli locus} is the image of the \CrefAndHyperrefIfExist{definition:torelli_morphism_over_a_scheme}{Torelli morphism} $\tau: \mathcal{M}_g \to \mathcal{A}_g$\CrefIfExists{definition:moduli_of_smooth_curves_of_genus_g}. It is the sublocus of $\mathcal{A}_g$ consisting of points representing Jacobians of \CrefAndHyperrefIfExist{definition:smooth_at_a_point_for_a_finite_type_scheme_over_a_field}{smooth} curves.
+
+    The \hldef{open Torelli locus}, denoted \hl{$\mathcal{T}_g^\circ$}, is the image $\tau(\mathcal{M}_g) \subset \mathcal{A}_g$. It consists of all principally polarized abelian varieties of dimension $g$ that are Jacobians of smooth curves.
+
+    \TODO{is this true over a general scheme or over general fields?}
+    For $g = 1, 2, 3$, the open Torelli locus $\mathcal{T}_g^\circ$ is open and dense in $\mathcal{A}_g$, meaning almost every PPAV of dimension $g \leq 3$ is a Jacobian. For $g \geq 4$, the situation is more interesting: not every PPAV is a Jacobian, and $\mathcal{T}_g^\circ$ has codimension
+    $$\dim(\mathcal{A}_g) - \dim(\mathcal{M}_g) = \frac{g(g+1)}{2} - (3g-3)$$
+    in $\mathcal{A}_g$, which increases with $g$.
+\end{definition}

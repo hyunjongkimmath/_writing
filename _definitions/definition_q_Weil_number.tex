@@ -1,0 +1,11 @@
+\begin{definition}[q-Weil number] \label{definition:q_Weil_number}
+Let $q = p^f$ be a prime power.
+
+A \CrefAndHyperrefIfExist{definition:algebraic_integer}{algebraic integer} $\alpha$ is called a \hldef{$q$-Weil number of weight $w$}, for $w \in \mathbb{Z}$, if for every \CrefAndHyperrefIfExist{definition:field_homomorphism}{field embedding} $\sigma: \mathbb{Q}(\alpha) \hookrightarrow \mathbb{C}$, one has
+$$|\sigma(\alpha)| = q^{w/2}.$$
+
+Equivalently, $\alpha$ is a $q$-Weil number of weight $w$ if and only if all its \CrefAndHyperrefIfExist{definition:galois_conjugate_of_element_of_field_extension_in_algebraic_closure}{Galois conjugates} over $\mathbb{Q}$ have the same complex absolute value $q^{w/2}$. The weight $w$ is uniquely determined by $\alpha$ unless $\alpha = 0$, in which case any integer $w > 0$ satisfies the condition.
+
+\TODO{eigenvalue}
+When $p \nmid \alpha$ (i.e.\ $\alpha$ is a unit at $p$), the $q$-Weil numbers of weight $1$ are precisely the eigenvalues of the \CrefAndHyperrefIfExist{definition:geometric_frobenius_action_of_a_derived_object_on_a_scheme_of_characteristic_p_at_a_stalk}{geometric Frobenius endomorphism} acting on the \CrefAndHyperrefIfExist{definition:ell_adic_cohomology_of_a_scheme}{$\ell$-adic cohomology} of a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective variety} over the \CrefAndHyperrefIfExist{definition:finite_field}{$\mathbb{F}_q$}, for any prime $\ell \neq p$.
+\end{definition}

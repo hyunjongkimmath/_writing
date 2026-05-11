@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:trace_of_an_endomorphism_of_a_vector_space_over_a_field}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $V$ be an \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space} of finite \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{dimension}, and let $\phi : V \to V$ be an \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$F$-linear endomorphism} of $V$.
+
+The \hldef{trace} of $\phi$ is the scalar
+$$\hlin{\operatorname{tr}(\phi) = \operatorname{tr}([\phi]_B)} \in F,$$
+where $\operatorname{tr}([\phi]_B)$ denotes the trace of the matrix $[\phi]_B$ with respect to any basis $B$ of $V$. This value is independent of the choice of basis $B$.
+
+Equivalently, $\phi$ induces a linear map on $V \otimes_F V^\vee$, where $V^\vee = \operatorname{Hom}_F(V, F)$ is the dual space; under the canonical identification $V \otimes_F V^\vee \cong \operatorname{End}_F(V)$, the trace of $\phi$ is the image of the identity under the evaluation pairing $V^\vee \otimes_F V \to F$.
+% NOTE: The equivalent characterization references dual space, tensor product of vector spaces, canonical identification, and evaluation pairing — none of which are yet vaulted. These can be cross-referenced once those concepts are added.
+\end{definition}

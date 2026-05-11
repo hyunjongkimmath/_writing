@@ -1,0 +1,14 @@
+% ANALYTIC FUNCTION OVER A VALUED FIELD
+\begin{definition}[Analytic function over a valued field] \label{definition:analytic_function_over_a_valued_field}
+Let $(k, |\cdot|)$ be a \CrefAndHyperrefIfExist{definition:absolute_value_on_a_field}{valued field}, and let $U \subset k$ be an open subset\CrefIfExists{definition:topology_on_a_field_induced_by_an_absolute_value}.
+
+\begin{enumerate}
+    \item A function $f : U \to k$ is called \hldef{analytic} (or \hldef{locally representable by a power series}) at a point $x_0 \in U$ if there exists $r > 0$ and coefficients $a_n \in k$ ($n = 0,1,2,\ldots$) such that the open disc $\{x \in k : |x - x_0| < r\}$ is contained in $U$, and
+    $$f(x) = \sum_{n=0}^\infty a_n (x - x_0)^n$$
+    for all $x$ with $|x - x_0| < r$. The function $f$ is \hldef{analytic on $U$} if it is analytic at every point of $U$.
+\end{enumerate}
+
+In the case that $k = \bbC$, this definition coincides with classical holomorphicity. Analytic functions on open subsets of $\mathbb{C}$ are infinitely differentiable, and the convergence is uniform on compact subsets.
+
+In the case that $k$ is non-Archimedean, the naive notion of analytic function defined above leads to pathologies: every power series defines a function that is locally constant on its domain of convergence (since any two points sufficiently close have their difference with small norm, making higher-order terms negligible). This makes the theory trivial unless one adopts an enriched framework such as rigid analytic geometry (\CrefAndHyperrefIfExist{}{Grothendieck}) or Berkovich analytic geometry, which replaces the underlying space with a richer topological structure to recover meaningful geometric and analytic properties.
+\end{definition}

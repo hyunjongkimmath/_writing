@@ -1,0 +1,21 @@
+\begin{proposition} \label{proposition:cokernel_of_isogeny_of_abelian_varieties_over_global_field_via_isogeny_is_subgroup_of_selmer_group}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}, and let $A$ and $B$ be \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian varieties} defined over $K$.  
+    Suppose $\varphi: A \to B$ is an \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_schemes_over_a_scheme}{isogeny defined over $K$}.  
+
+    The \CrefAndHyperrefIfExist{definition:quotient_group_of_a_group_by_a_normal_subgroup}{quotient group} $B(K) / \varphi(A(K))$\CrefIfExists{definition:rational_point_on_a_scheme_over_a_field} is a subgroup of the \CrefAndHyperrefIfExist{definition:selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field}{Selmer group} $\Sel^\varphi(A/K)$.
+
+    In particular, in the case that the isogeny $\varphi$ is a multiplication by $n$-map $n: A \to A$, the Mordell Weil group $A(K) / nA(K)$ is a subgroup of $\Sel^n(A/K)$.
+\end{proposition}
+
+\begin{proof}
+    The Selmer group by defintion is the kernel 
+    $$\ker \left( H^1(G_K, A[\varphi]) \to \prod_v H^1(G_v, A(\barK))[\varphi] \right)$$
+    of the map which is the dotted arrow in the following commutative diagram:
+    \begin{center}
+        \begin{tikzcd}
+        0 \ar[r] & B(K) / \varphi(A(K))  \ar[r, "\delta_{\varphi}"] \ar[d] & H^1(G_K, A[\varphi])\ar[r] \ar[d] \ar[rd, dotted] & H^1(G_K,A(\barK))[\phi] \ar[r] \ar[d] & 0 \\
+        0 \ar[r] & \prod_v B(K_v) / \varphi(A(K_v)) \ar[r, "\delta_{\varphi_v}"]  & \prod_v H^1(G_v,A[\varphi])  \ar[r] & \prod_v H^1(G_v,A(\barK_v))[\phi] \ar[r] & 0
+        \end{tikzcd}
+    \end{center}
+    Due to the commutativity of the diagram, the image of $B(K) / \varphi(A(K))$ in $\prod_v H^1(G_v, A(\barK))[\varphi] \right)$ is $0$. Hence, $B(K) / \varphi(A(K))$ is contained in the above kernel.
+\end{proof}

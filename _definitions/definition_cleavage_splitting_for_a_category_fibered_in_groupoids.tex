@@ -1,0 +1,20 @@
+\begin{definition}
+\label{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}
+Let $\mathcal{F}$ and $\mathcal{C}$ be \CrefAndHyperrefIfExist{definition:category}{categories}, and let $p: \mathcal{F} \to \mathcal{C}$ be a functor making $\mathcal{F}$ a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids} over $\mathcal{C}$.
+
+\begin{enumerate}
+    \item A \hldef{cleavage} (or \hldef{pseudo-functorial splitting}) for the fibration $p$ is a choice, for every morphism $f: U \to V$ in $\mathcal{C}$ and every object $y$ in the fiber $\mathcal{F}_V = p^{-1}(V)$, of a cartesian morphism \TODO{define cartesian morphism}
+    $$ \rho_{f,y}: f^*y \to y $$
+    lying over $f$ (i.e., $p(\rho_{f,y}) = f$), where $f^*y$ is an object in the fiber $\mathcal{F}_U$. The object $f^*y$ is often called the \hldef{pullback of $y$ along $f$}.
+
+    This choice induces a functor $f^*: \mathcal{F}_V \to \mathcal{F}_U$ for every morphism $f: U \to V$ in $\mathcal{C}$.
+
+
+    \item A \hldef{splitting} is a cleavage that is strictly functorial. That is, a cleavage such that:
+    \begin{enumerate}
+        \item For every identity morphism $\operatorname{id}_U: U \to U$ and every $x \in \mathcal{F}_U$, the chosen cartesian morphism is the identity: $\operatorname{id}_U^* x = x$ and $\rho_{\operatorname{id}_U, x} = \operatorname{id}_x$.
+        \item For every pair of composable morphisms $U \xrightarrow{f} V \xrightarrow{g} W$ and every $z \in \mathcal{F}_W$, we have an equality of objects $(g \circ f)^* z = f^*(g^* z)$ and an equality of morphisms $\rho_{g \circ f, z} = \rho_{g, z} \circ \rho_{f, g^*z}$.
+    \end{enumerate}
+    If a fibration admits a splitting, it is called a \hldef{split fibration}.
+\end{enumerate}
+\end{definition}

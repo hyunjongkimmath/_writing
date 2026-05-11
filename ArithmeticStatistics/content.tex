@@ -40,7 +40,7 @@ In 1979, Goldfeld \cite{goldfeld_cecqf} first conjectured that elliptic curves o
 
 \TODO{discuss function field case, etc.}
 
-Bhargava and Shankar proved that the average rank of elliptic curves over $\bbQ$ is bounded above, first by $\frac{3}{2}$ \cite{bhargava_shankar_bqfhbibarec} and later by $\frac{7}{6}$ \cite{bhargava_shankar_tcfhbieppecr0} by computing the average size of the \CrefAndHyperrefIfExist{definition:selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field}{$2$-Selmer and the $3$-Selmer groups} of elliptic curves $E/\bbQ$ respectively. Their results assume neither the Birch-Swinnerton-Dyer conjecture nor the Generalized Riemann hypothesis, both of which were assumed in previous works of A. Brumer \cite{brumer_arecI}, Heath-Brown \cite{heath-brown_aarec}, and Young \cite{young_llzfec}, which respectively obtained upper bounds of $2.3$, $2$, and $\frac{25}{14}$.
+Bhargava and Shankar proved that the average rank of elliptic curves over $\bbQ$ is bounded above, first by $\frac{3}{2}$ \cite{bhargava_shankar_bqfhbibarec} and later by $\frac{7}{6}$ \cite{bhargava_shankar_tcfhbieppecr0} by computing the average size of the \CrefAndHyperrefIfExist{definition:selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field}{$2$-Selmer and the $3$-Selmer groups} of elliptic curves $E/\bbQ$ respectively. Their results assume neither the Birch-Swinnerton-Dyer conjecture nor the Generalized Riemann hypothesis, both of which were assumed in previous works of A. Brumer \cite{brumer_arecI}, Heath-Brown \cite{heath-brown_aarec}, and Young \cite{young_llzfec}, which respectively obtained upper bounds of $2.3$, $2$, and $\frac{25}{14}$.
 
 Baig and Hall \cite{baig_hall_edgscff} computed empirical evidence to support the minimalist conjecture for elliptic curves over function fields, albeit the proportion of curves of rank $1$ and of rank $2$ seem to converge to the respective predicted values of $50\%$ and $0\%$ rather slowly.
 
@@ -149,6 +149,7 @@ Rosen and Silverman proved that Nagao's conjecture for elliptic surface $\calE$ 
 
 S.~Kim and M.~Ram Murty\cite{kim_murty_bsdcnsc} proved the following about the Nagao-Mestre sum. See \cite[Section 4]{kim_murty_bsdcnsc} for a discussion that relates their results to \CrefAndHyperref{conjecture:nagaos_conjecture_on_the_mordell_weil_rank_of_elliptic_curves_over_Q_T}{Nagao's conjecture}.
 \begin{theorem}[{\cite{kim_murty_bsdcnsc}}]
+    \TODO{trace of frobenius}
     Let $E/\bbQ$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} with discriminant $\Delta_E$. For each prime $p$ of good reduction, i.e. $p \nmid \Delta_E$, \TODO{define reduction} let $a_p$ be the trace of Frobenius. Let $a_p$ be $0$, $1$, or $-1$ if $E$ has additive, split multiplicative, and nonsplit multiplicative reductive at $p$ respectively.
 
     If the limit 
@@ -181,6 +182,29 @@ S.~Kim and M.~Ram Murty\cite{kim_murty_bsdcnsc} proved the following about the N
 \section{Conjectures on distributions/counts of number fields and function fields }
 
 \subsection{Malle's conjecture}
+
+\subsection{Batryev-Manin conjecture}
+
+\begin{conjecture}[Batyrev-Manin Conjecture] \label{conjecture:batyrev_manin_conjecture}
+    \TODO{verify these formulations}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:number_field}{number field} and let $X$ be a smooth \CrefAndHyperrefIfExist{definition:projective_variety}{projective variety} over $K$ such that the anticanonical bundle $\omega_X^{-1}$ is \CrefAndHyperrefIfExist{definition:ample_divisor_on_a_scheme}{ample} (i.e., $X$ is a \CrefAndHyperrefIfExist{definition:fano_variety_over_a_field}{Fano variety}). 
+
+\TODO{height function}
+Let $H$ be a height function on $X(K)$ associated to $\omega_X^{-1}$. Then there exists a non-empty open subvariety $U \subseteq X$ such that the counting function 
+$$N_U(B) = \#\{P \in U(K) : H(P) \leq B\}$$
+satisfies the following asymptotic growth as $B \to \infty$:
+$$N_U(B) \sim c \cdot B \cdot (\log B)^{\rho(X) - 1},$$
+where:
+\begin{enumerate}
+    \item $c$ is a positive constant (often called the \hldef{Peyre constant}).
+    \item $\rho(X)$ is the rank of the \CrefAndHyperrefIfExist{definition:picard_group}{Picard group} $\operatorname{Pic}(X)$.
+\end{enumerate}
+
+More generally, for an arbitrary ample line bundle $L$, the conjecture predicts:
+$$N_U(L, B) \sim c B^{a(X, L)} (\log B)^{b(X, L) - 1},$$
+where $a(X, L)$ is the \hldef{Fujita invariant} and $b(X, L)$ is related to the rank of the Picard group.
+\end{conjecture}
+
 
 \subsection{Cohen-Lenstra heuristics}
 
@@ -216,7 +240,7 @@ S.~Kim and M.~Ram Murty\cite{kim_murty_bsdcnsc} proved the following about the N
 
 \section{Selmer groups}
 
-\input{../_definitions/definition_selmer_group_for_an_isogeny_of_abelian_varieties_over_a_global_field.tex}
+\input{../_definitions/definition_selmer_group_for_an_isogeny_of_commutative_group_schemes_over_a_global_field.tex}
 
 \section{Heights}
 

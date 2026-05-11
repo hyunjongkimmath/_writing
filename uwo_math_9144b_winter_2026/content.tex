@@ -254,7 +254,7 @@ If we allow ourselves to use \CrefAndHyperrefIfExist{definition:grothendieck_uni
 \input{../_definitions/definition_submodule_of_a_module_generated_by_elements.tex}
 
 
-\input{../_definitions/definition_kernel_image_cokernel_of_a_module_homomorphism_over_a_ring.tex}
+\input{../_definitions/definition_kernel_image_cokernel_of_a_module_homomorphism_over_rings.tex}
 
 Two fundamental functors on categories of modules are given by \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{Hom's} and \CrefAndHyperrefIfExist{definition:tensor_product_of_bimodules_of_rings}{tensor products}
 
@@ -463,7 +463,7 @@ Another useful adjunction is a adjunction of limit and colimit functors:
 
 In fact, Grothendieck posed certain additional axioms that some abelian categories might enjoy.
 
-\input{../_definitions/definition_grothendiecks_axioms_for_abelian_categories.tex}
+\input{../_definitions/definition_grothendiecks_additional_axioms_for_abelian_categories.tex}
 \input{../_definitions/definition_generator_of_a_category.tex}
 
 \input{../_concepts/theorem_examples_of_grothendieck_categories.tex}
@@ -1332,7 +1332,7 @@ Additionally, flasque sheaves are acyclic for direct image functors and hence ri
 
 \subsubsection{Locally constant sheaves}
 
-\input{../_definitions/definition_locally_constant_sheaf_on_a_topological_space.tex}
+\input{../_definitions/definition_locally_constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification.tex}
 
 
 \TODO{talk about examples of locally constant sheaves, how they are equivalent to representations or to bundles, how they are locally isomorhpic to constant sheaves and yet are not isomorphic to constant sheaves}
@@ -1341,19 +1341,7 @@ Additionally, flasque sheaves are acyclic for direct image functors and hence ri
 
 The following is an essential idea; it has analogues for more sheaves of more general sites such as the \'etale site of a scheme.
 
-\begin{theorem}  \label{theorem:locally_constant_sheaves_of_R_modules_on_a_connected_locally_path_connected_semi_locally_simply_connected_are_equivalent_to_representation_of_fundamental_group}
-    Let $X$ Be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected}, \CrefAndHyperrefIfExist{definition:locally_path_connected_topological_space}{locally path connected}, and \CrefAndHyperrefIfExist{definition:semi_locally_simply_connected_space}{semi-locally simply connected}. Let $x \in X$. Let $R$ be a ring.
-    There is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence} 
-    $$\mathbf{LCS}(X,R) \simeq \mathbf{Rep}_R(\pi_1(X,x))$$
-    \TODO{$\mathbf{LCS}(X,R)$}
-    of categories where $\mathbf{LCS}(X,R)$ is the category of \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaves} of $R$-modules, and $\mathbf{Rep}_R(\pi_1(X,x))$ is the category of \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{$R$-linear representations} of the fundamental group $\pi_1(X,x)$. 
-
-    \TODO{fiber, }
-    \TODO{associated bundle}
-    \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{Natural inverse equivalences} are given as follows: given a locally constant sheaf $\calF$, the fiber at the basepoint $x$ is the module $M = \calF_x$\CrefIfExists{definition:stalk_of_a_presheaf_on_a_topological_space_at_a_point}, and for any \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{loop} $\gamma$ in $X$ based at $x$, ``lifting'' sections along the loop defines an automorphism of $M$, which in turn defines a representation $\rho: \pi_1(X,x) \to \Aut_R(M)$. Given a representation  $\rho: \pi_1(X,x) \to \Aut_R(M)$, and letting $\widetilde{X}$ be the \CrefAndHyperrefIfExist{definition:universal_cover_of_a_topological_space}{universal cover} of $X$, form the associated bundle of the locally constant sheaf as the quotient
-    $$\calF = (\widetilde{X} \times M) / \pi_1(X,x)$$
-    where $\pi_1$ acts on $\widetilde{X}$ via deck transformations and on $M$ via the representation $\rho$.
-\end{theorem}
+\input{../_concepts/theorem_loc_const_shvs_of_R_mods_on_a_conn_loc_path_conn_semi_loc_simp_conn_are_eq_to_rep_of_fund_grp.tex}
 
 \subsubsection{Vector bundles}
 
@@ -1424,27 +1412,18 @@ While the above notion of sheaf cohomology is for sheaves of abelian groups, the
 
 
 
-Leray's theorem \Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf} states that \v{C}ech cohomology $\check{H}(\calU, \calF)$ with respect to an acyclic cover naturally agrees with sheaf cohomology $H^p(X, \calF)$. Moroever, \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} states that \v{C}ech cohomology $\check{H}(X, \calF)$ agrees with sheaf cohomology $H^p(X,\calF)$ under nice enough circumstances. 
+Leray's theorem \Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf} states that \v{C}ech cohomology $\check{H}(\calU, \calF)$ with respect to an acyclic cover naturally agrees with sheaf cohomology $H^p(X, \calF)$. Moroever, \Cref{theorem:cech_cohom_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracomp_haus_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} states that \v{C}ech cohomology $\check{H}(X, \calF)$ agrees with sheaf cohomology $H^p(X,\calF)$ under nice enough circumstances. 
 
 
 \input{../_definitions/definition_acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space.tex}
 
 \input{../_definitions/definition_good_open_cover_of_a_topological_space.tex}
-\begin{definition} \label{definition:semi_good_open_cover_of_a_topological_space}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. 
-    We will say that an \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\{U_i\}_{i \in I}$ is a \hldef{semi-good open cover} if every finite intersection $\bigcap_{j=1}^n U_{i_j}$ is empty or is a disjoint union of \CrefAndHyperrefIfExist{definition:contractible_topological_space}{contractible} open subsets.
-\end{definition}
+\input{../_definitions/definition_semi_good_open_cover_of_a_topological_space.tex}
 \begin{remark}
     The terminology of ``semi-good cover'' is probably not standard. 
 \end{remark}
 
-\begin{theorem} \label{theorem:constant_sheaves_are_acyclic_on_contractible_and_loc_contr_spaces}
-    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} with \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough injectives} and such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
-    $$a: \PreShv(X, \calA) \to \Shv(X, \calA) $$
-    exists. In particular, the notion of \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology objects} is well defined. Moreover, these conditions are satisfied for $\calA = \Ab$\CrefIfExists{theorem:examples_of_abelian_categories_with_enough_injectives_or_projectives}\CrefIfExists{theorem:sheafification_for_sheaves_of_sets_on_a_topological_space_exist}.  Let $\calF$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf of} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $X$.
-    
-    Assuming that $X$ is a contractible and locally contractible topological space and $\calF$ is a \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}{constant sheaf} on $X$ valued in $\calA$, the \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology objects $H^p(X, \calF)$} all vanish for $p > 0$. 
-\end{theorem}
+\input{../_concepts/theorem_constant_sheaves_are_acyclic_on_contractible_and_loc_contr_spaces.tex}
 
 % \begin{corollary}
 %     Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $\calA$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} with \CrefAndHyperrefIfExist{definition:has_enough_injectives_or_projectives_for_an_abelian_category}{enough injectives} and such that a \CrefAndHyperrefIfExist{definition:sheafification_of_a_presheaf_on_a_topological_space}{sheafification functor}
@@ -1462,13 +1441,13 @@ Leray's theorem \Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gp
 
 \input{../_concepts/theorem_lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf.tex}
 
-\input{../_concepts/theorem_cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space.tex}
+\input{../_concepts/theorem_cech_cohom_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracomp_haus_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space.tex}
 
 
-Let us compute some examples of \v{C}ech cohomology groups (which may coincide with sheaf cohomology as per \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space}). 
+Let us compute some examples of \v{C}ech cohomology groups (which may coincide with sheaf cohomology as per \Cref{theorem:cech_cohom_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracomp_haus_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space}). 
 
 \begin{example}
-    Let us compute $\check{H}^p(S^1, \underline{\bbZ})$ \CrefIfExists{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}\CrefIfExists{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}. Take $\calU = \{U_0,U_1,U_2\}$ to consist of three arcs each covering about $120^\circ$ and overlapping slightly --- note that this open cover is \CrefAndHyperrefIfExist{definition:good_open_cover_of_a_topological_space}{good} and that $S^1$ is a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold}, so \Cref{proposition:nice_circumstances_for_an_open_cover_to_be_acyclic_for_a_sheaf_of_abelian_groups} states that $\calU$ is \CrefAndHyperrefIfExist{definition:acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space}{acyclic} for $\underline{\bbZ}$ and hence Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) and \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} together show that $\check{H}^p(\calU, \calF) \cong \check{H}^p(S^1, \calF)$ (and that these are isomorphic to \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology} $H^p(S^1, \calF)$). 
+    Let us compute $\check{H}^p(S^1, \underline{\bbZ})$ \CrefIfExists{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}\CrefIfExists{definition:constant_sheaf_on_a_topological_space_valued_in_category_admitting_sheafification}. Take $\calU = \{U_0,U_1,U_2\}$ to consist of three arcs each covering about $120^\circ$ and overlapping slightly --- note that this open cover is \CrefAndHyperrefIfExist{definition:good_open_cover_of_a_topological_space}{good} and that $S^1$ is a \CrefAndHyperrefIfExist{definition:C_k_manifold}{smooth manifold}, so \Cref{proposition:nice_circumstances_for_an_open_cover_to_be_acyclic_for_a_sheaf_of_abelian_groups} states that $\calU$ is \CrefAndHyperrefIfExist{definition:acyclic_for_a_sheaf_of_abelian_groups_for_an_open_cover_of_a_topological_space}{acyclic} for $\underline{\bbZ}$ and hence Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) and \Cref{theorem:cech_cohom_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracomp_haus_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} together show that $\check{H}^p(\calU, \calF) \cong \check{H}^p(S^1, \calF)$ (and that these are isomorphic to \CrefAndHyperrefIfExist{definition:sheaf_cohomology_objects_of_a_sheaf_on_a_top_space_in_an_ab_catwith_enough_injs_and_sheafification}{sheaf cohomology} $H^p(S^1, \calF)$). 
 
     The complex is given by 
     $$C^0(\calU, \underline{\bbZ}) = \Gamma(U_0, \underline{\bbZ}) \oplus \Gamma(U_1, \underline{\bbZ}) \oplus \Gamma(U_2, \underline{\bbZ}) = \bbZ \oplus \bbZ \oplus \bbZ$$
@@ -1485,7 +1464,7 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \end{example}
 
 \begin{example}
-    Let $r \in \bbQ^\times$ and let $\calF_r$ be the \CrefAndHyperrefIfExist{definition:locally_constant_sheaf}{locally constant sheaf} of $\bbQ$-vector spaces on $S^1$ with ``monodromy'' $r$ --- by this, we mean that $\calF_r$ is the (isomorphism class of) sheaf on $S^1$ corresponding to (\Cref{theorem:locally_constant_sheaves_of_R_modules_on_a_connected_locally_path_connected_semi_locally_simply_connected_are_equivalent_to_representation_of_fundamental_group}) the homomorphism $\pi_1(S^1,x) \to \Aut(\bbQ) \cong \bbQ^\times$ given by sending a generator of $\pi_1(S^1, x)$ to $r \in \bbQ^\times$. 
+    Let $r \in \bbQ^\times$ and let $\calF_r$ be the \CrefAndHyperrefIfExist{definition:locally_constant_sheaf}{locally constant sheaf} of $\bbQ$-vector spaces on $S^1$ with ``monodromy'' $r$ --- by this, we mean that $\calF_r$ is the (isomorphism class of) sheaf on $S^1$ corresponding to (\Cref{theorem:loc_const_shvs_of_R_mods_on_a_conn_loc_path_conn_semi_loc_simp_conn_are_eq_to_rep_of_fund_grp}) the homomorphism $\pi_1(S^1,x) \to \Aut(\bbQ) \cong \bbQ^\times$ given by sending a generator of $\pi_1(S^1, x)$ to $r \in \bbQ^\times$. 
     
     Consider the \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} $\calU = \{U_0, U_1\}$ consisting of two overlapping semicircles. The intersection $U_0 \cap U_1 = V_a \sqcup V_b$ is a disjoint union of two \CrefAndHyperrefIfExist{definition:contractible_topological_space}{contractible} arcs, making $\calU$ a \CrefAndHyperrefIfExist{definition:semi_good_open_cover_of_a_topological_space}{semi-good cover}. 
 
@@ -1508,49 +1487,6 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
     $$ \begin{cases} c_1 - c_0 = a \\ c_1 - r c_0 = b \end{cases} $$
     Subtracting the first equation from the second yields $(1-r)c_0 = b - a$. Since $r \neq 1$, we can solve for $c_0 = \frac{b-a}{1-r}$ and subsequently $c_1 = a + c_0$. Thus, $d^0$ is \CrefAndHyperrefIfExist{definition:surjective_function}{surjective}, and the quotient group $\check{H}^1(S^1, \calF_r)$ is zero.
     
-    % As our specification of $\calF_r$ by monodromy only specifies its isomorphism class, we shall pick out a more explicit description of a specific element of this isomorphism class. We take the perspective that $\calF_r$ should necessarily \CrefAndHyperrefIfExist{definition:restriction_of_a_presheaf_sheaf_on_a_topological_space}{restrict to a} constant sheaf with value $\bbQ$ on on $U_i$ for $i = 0,1$ \TODO{justify}. 
-
-    % Note that $\Gamma(U_0 \cap U_1, \calF_r) \cong \Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r)$. The above perspective demands that we identify each of $\Gamma(V_a, \calF_r) \oplus \Gamma(V_b, \calF_r)$ with $\Gamma(U_0, \calF_r)$ for each $i$, in which case the restriction maps  
-    % $$\Gamma(U_i, \calF_r) \to \Gamma(U_0 \cap U_1, \calF_r)$$
-    % are identified with the diagonal maps 
-    % $$\Gamma(U_i, \calF_r) \xrightarrow{\id, \id} \Gamma(U_i, \calF_r) \oplus \Gamma(U_i, \calF_r).$$
-    % Further note that $\Gamma(U_i, \calF_r)$ is isomorphic to $\bbQ$ and an isomorphism $\phi: \bbQ \xrightarrow{\sim} \Gamma(U_i, \calF_r)$ corresponds to a choice of \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{basis} of $\Gamma(U_i, \calF_r)$ by sending $\phi$ to $\phi(1)$. We construct $\calF_r$ in such a way that 
-    % \begin{enumerate}
-    %     \item we let $\bbQ_0$ and $\bbQ_1$ be two copies of $\bbQ$,
-    %     \item we choose bases $s_i \in \Gamma(U_i, \calF_r)$, and  
-    %     \item the composition 
-    %     $$\bbQ_0 \cong \Gamma(U_0, \calF_r) \xrightarrow{s_0 \mapsto s_1} \Gamma(U_1, \calF_r) \to \bbQ_1$$
-    %     sends $1$ to $r$.
-    % \end{enumerate}
-    
-     
-
-    % and we choose 
-    
-    % We choose bases $s_i \in \Gamma(U_i, \calF_r)$ such that 
-    
-    % in such a way that the composition 
-    % $$\bbQ \cong \Gamma(U_0, \calF_r) $$
-    
-
-    % To compute the \CrefAndHyperrefIfExist{definition:cech_cohomology_of_a_sheaf_of_abelian_groups_on_a_topological_space}{Čech cohomology}, we fix local isomorphisms (trivializations) $\psi_0: \calF_r|_{U_0} \xrightarrow{\cong} \underline{\bbQ}_{U_0}$ and $\psi_1: \calF_r|_{U_1} \xrightarrow{\cong} \underline{\bbQ}_{U_1}$. Under these maps, a section $s_i \in \Gamma(U_i, \calF_r)$ is represented by a constant $c_i \in \bbQ$. 
-
-    % The "twist" $r$ appears in the transition functions $\psi_1 \circ \psi_0^{-1}$ on the overlaps. By the definition of a sheaf with monodromy $r$, we can choose our trivializations such that:
-    % \begin{itemize}
-    %     \item On $V_a$, the sections match "normally": $\psi_1 \circ \psi_0^{-1} = \text{id}_{\bbQ}$. Thus, a global section must satisfy $c_1 = c_0$.
-    %     \item On $V_b$, we have completed a loop around $S^1$, so the sections match "via the monodromy": $\psi_1 \circ \psi_0^{-1} = r \cdot \text{id}_{\bbQ}$. Thus, a global section must satisfy $c_1 = r c_0$.
-    % \end{itemize}
-
-    % The Čech differential $d^0: C^0(\calU, \calF_r) \to C^1(\calU, \calF_r)$ measures the failure of these local constants $(c_0, c_1)$ to glue according to these transitions. Identifying $C^0 \cong \bbQ \oplus \bbQ$ and $C^1 \cong \bbQ \oplus \bbQ$, the map is:
-    % $$d^0(c_0, c_1) = (\text{restriction to } V_a, \text{restriction to } V_b) = (c_1 - c_0, c_1 - r c_0)$$
-
-    % \begin{enumerate}
-    %     \item $\check{H}^0(S^1, \calF_r) = \ker d^0$: This requires $c_1 = c_0$ and $c_1 = r c_0$, which implies $(r-1)c_0 = 0$. 
-    %     If $r \neq 1$, then $c_0 = 0$, so $\check{H}^0(S^1, \calF_r) = 0$.
-        
-    %     \item $\check{H}^1(S^1, \calF_r) = \text{coker } d^0$: For any $(a, b) \in C^1$, we check if there exist $(c_0, c_1)$ such that $c_1 - c_0 = a$ and $c_1 - r c_0 = b$. Subtracting the first from the second gives $(1-r)c_0 = b - a$. 
-    %     If $r \neq 1$, $1-r$ is invertible in $\bbQ$, so we can always solve for $c_0$ and $c_1$. Thus $d^0$ is surjective and $\check{H}^1(S^1, \calF_r) = 0$.
-    % \end{enumerate}
 \end{example}
 
 
@@ -1565,25 +1501,12 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
     \begin{equation}  \label{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence}
         0 \to \check{H}^0(X,\underline{\bbZ}) \to \check{H}^0(X, \calO_X)  \to \check{H}^0(X, \calO_X^*) \xrightarrow{\delta} \check{H}^1(X,\underline{\bbZ}) 
     \end{equation}
-    The degree $0$ cohomology terms are identifiable with the global sections $\Gamma(X, -)$. To show that $z$ is not in the image of $\exp: \Gamma(X, \calO_X) \to \Gamma(X, \calO_X^*)$ is equivalent to show that $\delta(z) \in \check{H}^1(X,\underline{\bbZ})$ is nonzero. It is the case that $\check{H}^0(\calU,-)$ is naturally isomorphic to $\Gamma(X,-)$ for any open cover $\calU$ of $X$, so $\check{H}^0(X,-)$ is also naturally isomorphic to $\Gamma(X,-)$. . Moreover, $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $H^1(X, \underline{\bbZ})$ by \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} since $X$ is a manifold and hence \CrefAndHyperrefIfExist{theorem:nice_enough_topological_spaces_are_paracompact}{is} a paracompact Hausdorff space. If $\calU$ is an open cover that is acyclic for $\bbZ$ then Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) implies that $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $\check{H}^1(\calU, \underline{\bbZ})$. Therefore, as long as $\calU$ is an acyclic open cover for $\bbZ$, the exact sequence \eqref{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence} is identifiable as
+    The degree $0$ cohomology terms are identifiable with the global sections $\Gamma(X, -)$. To show that $z$ is not in the image of $\exp: \Gamma(X, \calO_X) \to \Gamma(X, \calO_X^*)$ is equivalent to show that $\delta(z) \in \check{H}^1(X,\underline{\bbZ})$ is nonzero. It is the case that $\check{H}^0(\calU,-)$ is naturally isomorphic to $\Gamma(X,-)$ for any open cover $\calU$ of $X$, so $\check{H}^0(X,-)$ is also naturally isomorphic to $\Gamma(X,-)$. . Moreover, $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $H^1(X, \underline{\bbZ})$ by \Cref{theorem:cech_cohom_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracomp_haus_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space} since $X$ is a manifold and hence \CrefAndHyperrefIfExist{theorem:nice_enough_topological_spaces_are_paracompact}{is} a paracompact Hausdorff space. If $\calU$ is an open cover that is acyclic for $\bbZ$ then Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}) implies that $\check{H}^1(X, \underline{\bbZ})$ is naturally isomorphic to $\check{H}^1(\calU, \underline{\bbZ})$. Therefore, as long as $\calU$ is an acyclic open cover for $\bbZ$, the exact sequence \eqref{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence} is identifiable as
     \begin{equation} \label{equation:four_term_exact_sequence_in_cech_cohomology_for_holomorphic_exponential_short_exact_sequence_with_respect_to_nice_cover}
         0 \to \check{H}^0(\calU,\underline{\bbZ}) \to \check{H}^0(\calU, \calO_X)  \to \check{H}^0(\calU, \calO_X^*) \xrightarrow{\delta} \check{H}^1(\calU,\underline{\bbZ}) 
     \end{equation}
 .
 
-    % In fact, this long exact seqeunce may be computed via \v{C}ech cohomology with respect to any open cover $\calU$ of $X$ that is acyclic for $\bbZ$, $\calO_X$, and $\calO_X^*$, i.e. the above long exact sequence may be naturally identified with a long exact sequence
-    % \begin{align*}
-    %     0 &\to \check{H}^0(\calU,\underline{\bbZ}) \to \check{H}^0(\calU, \calO_X)  \to \check{H}^0(\calU, \calO_X^*) \\
-    %     &\xrightarrow{\delta} \check{H}^1(\calU,\underline{\bbZ}) \to \cdots .
-    % \end{align*}
-    % This is due to the following:
-    % \begin{enumerate}
-    %     \item The fact that $X$ is a topological manifold and hence \CrefAndHyperrefIfExist{theorem:nice_enough_topological_spaces_are_paracompact}{is} a paracompact Hausdorff space, 
-    %     \item \Cref{theorem:cech_cohomology_for_a_sheaf_of_ab_gps_agrees_with_sheaf_cohom_on_a_paracompact_hausdorff_space_qcqs_scheme_or_loc_contr_semi_loc_simp_conn_space}, which then concludes that $\check{H}^p(X, -) \cong H^p(X,-)$, and 
-    %     \item Leray's theorem (\Cref{theorem:lerays_theorem_that_cech_cohom_of_a_sheaf_of_ab_gps_on_top_space_wrt_an_open_cover_agrees_with_sheaf_cohom_if_cover_is_acyclic_for_the_sheaf}), which states that $\check{H}^p(\calU, -) \cong H^p(X,-)$ as long as $\calU$ is acyclic for the sheaves.
-    % \end{enumerate}
-
-    % Moreover, 
     We also choose $\calU$ to be nice enough so that 
     \begin{equation} \label{equation:short_exact_sequence_of_cech_complexes_for_exponentiation_of_holomorphic_functions_and_nice_cover}
     0 \to C^\bullet(\calU, \underline{\bbZ}) \to C^\bullet(\calU, \calO_X) \to C^\bullet(\calU, \calO_X^*),
@@ -1690,18 +1613,7 @@ Let us compute some examples of \v{C}ech cohomology groups (which may coincide w
 \input{../_definitions/definition_abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category.tex}
 
 \input{../_definitions/definition_first_quadrant_spectral_sequence.tex}
-\begin{lemma} \label{lemma:filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration}
-    Let $\mathcal{A}$ be an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category}.
-    \begin{enumerate}
-        \item 
-        Let $E = \{E^r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{homological spectral sequence}. Suppose that $E$ \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abuts} to a \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_a_category}{filtered graded object} $H$ in $\calA$ where the \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtration} is increasing. The filtration on $H_n$ is finite. More specfically, the filration can be expressed in the form
-        $$0 = F_{-1} H_n \subseteq F_0 H_n \subseteq F_1 H_n \subseteq \cdots F_n H_n = H_n.$$
-
-        \item 
-        Let $E = \{E_r\}_{r \ge r_0}$ be a \CrefAndHyperrefIfExist{definition:first_quadrant_spectral_sequence}{first quadrant} \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{cohomological spectral sequence}. Suppose that $E$ \CrefAndHyperrefIfExist{definition:abuts_to_approaches_a_filtration_for_a_spectral_sequence_in_an_abelian_category}{abuts} to a \CrefAndHyperrefIfExist{definition:filtered_graded_object_in_a_category}{filtered graded object} $H$ in $\calA$ where the \CrefAndHyperrefIfExist{definition:filtration_on_an_object_of_a_category}{filtration} is decreasing. The filtration on $H^n$ is finite. More specifically, the filtration can be expressed in the form
-        $$H^n = F^0 H^n \supseteq F^1 H^n \supseteq F^2 H^n \supseteq \cdots \supseteq F^n H^n \supseteq F^{n+1} H^n = 0.$$
-    \end{enumerate}
-\end{lemma}
+\input{../_concepts/lemma_filtered_graded_abutment_of_a_first_quadrant_spectral_sequence_in_an_abelian_category_has_finite_filtration.tex}
 \begin{proof}
     \begin{enumerate}
         \item By the \CrefAndHyperrefIfExist{definition:weak_convergence_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category}{weak convergence}, there are isomorphisms
@@ -1774,7 +1686,7 @@ One generality in which spectral sequences are useful would be Grothendieck spec
 \input{../_concepts/theorem_lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology.tex}
 
 
-\subsection{Example computations using specctral sequences}
+\subsection{Example computations using spectral sequences}
 
 \begin{example} \label{example:spectral_sequence_computation_of_singular_homology_of_complex_projective_space}
     Let $k \geq 1$ be an integer. Consider the \CrefAndHyperrefIfExist{definition:fiber_bundle_of_topological_spaces}{fiber bundle} $S^1 \to S^{2k+1} \to \mathbb{C}\bbP^k$\CrefIfExists{definition:n_dimensional_unit_sphere}\CrefIfExists{definition:real_or_complex_projective_space}, where 
@@ -2207,14 +2119,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     \begin{center}
         For an open subset $U \subseteq \bbR\bbP^2$, let $\Gamma(U, \Lambda)$ be the set of continuous functions $f: \pi^{-1}(U) \to \bbZ$ (where $\bbZ$ is equipped with the discrete topology) such that for all $x \in \pi^{-1}(U)$, we have $f(-x) = -f(x)$. 
     \end{center}
-    % Let $\calU = \{U_0, U_1,U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
-    % \begin{itemize}
-    %     \item $U_0$: the set of points $[x:y:z]$ such that $|x| > \sqrt{y^2+z^2}$.
-    %     \item $U_1$: the set of points $[x:y:z]$ such that $|y| > \sqrt{x^2+z^2}$.
-    %     \item $U_2$: the set of points $[x:y:z]$ such that $|z| > \sqrt{x^2+y^2}$.
-    % \end{itemize}
     Let $\calU = \{U_0, U_1, U_2\}$ be the open cover of $\bbR\bbP^2$ given by 
-    % standard open cover of $\bbR\bbP^2$ defined by the non-vanishing of the homogeneous coordinates:
     \begin{itemize}
         \item $U_0 = \{ [x:y:z] \in \bbR\bbP^2 \mid x \neq 0 \}$
         \item $U_1 = \{ [x:y:z] \in \bbR\bbP^2 \mid y \neq 0 \}$

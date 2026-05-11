@@ -1,0 +1,11 @@
+\begin{theorem} \label{theorem:group_cohomology_of_a_group_module_over_a_ring_is_naturally_isomorphic_to_cohomology_of_group_cochain_complex}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $M$ a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$G$-module} over a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$. 
+
+The \CrefAndHyperrefIfExist{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}{group cohomology groups} $H^n(G,M)$ are \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to the \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{cohomology groups} of the cochain complex \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{$C^n(G,M)$}. 
+\end{theorem}
+\begin{proof}
+    We have a natural isomorphism
+    $$H^*(G,M) \cong \Ext_{R[G]}^{*}(R, M)$$
+    (\Cref{corollary:group_homology_cohomology_are_just_tor_and_ext_functors_by_trivial_module_over_group_ring}) (\Cref{definition:ext_functors_of_bimodules_of_rings})
+    One can see that $C^n(G,M)$ is \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to $\Hom_{R[G]}(B_n(R[G]), M)$ where $B_\bullet(R[G])$ is the \CrefAndHyperrefIfExist{definition:unnormalized_bar_resolution_of_a_ring_over_a_group_algebra}{unnormalized bar resolution} of $R$ over $R[G]$. Since $B_\bullet(R[G])$ is a left resolution of $R$ by free $R[G]$-modules (\Cref{theorem:unnormalized_and_normalized_bar_resolutions_of_group_rings_are_resolutions}), and \CrefAndHyperrefIfExist{proposition:module_over_ring_is_projective_if_and_only_if_direct_summand_of_a_free_module}{hence} is a \CrefAndHyperrefIfExist{definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category}{projective resolution} of $R$ by $R[G]$-modules, $\Ext_{R[G]}^{*}(R, M)$ is naturally isomorphic to the cohomology of $C^\bullet(G,M)$.
+\end{proof}

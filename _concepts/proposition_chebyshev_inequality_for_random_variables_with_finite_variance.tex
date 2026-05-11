@@ -1,0 +1,6 @@
+\begin{proposition}[Chebyshev's inequality] \label{proposition:chebyshev_inequality_for_random_variables_with_finite_variance}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}, and let $X$ be a real-valued random variable on $(\Omega, \mathcal{F}, P)$ with finite variance $\mathrm{Var}(X)$. For every $t > 0$,
+$$P(|X - \mathbb{E}[X]| \geq t) \leq \frac{\mathrm{Var}(X)}{t^2}.$$
+
+This follows from the \CrefIfExists{proposition:markov_inequality_for_non_negative_measurable_functions}{Markov inequality} applied to the nonnegative random variable $(X - \mathbb{E}[X])^2$.
+\end{proposition}

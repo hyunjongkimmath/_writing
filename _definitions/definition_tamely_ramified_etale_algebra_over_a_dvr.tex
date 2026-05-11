@@ -1,0 +1,17 @@
+\begin{definition}[Tamely ramified étale algebra over a discrete valuation ring] \label{definition:tamely_ramified_etale_algebra_over_a_dvr}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring (DVR)} with field of fractions $K$, maximal ideal $\mathfrak{m}$, and residue field $k = R/\mathfrak{m}$ of characteristic $p > 0$. Let $L$ be an \CrefAndHyperrefIfExist{definition:etale_algebra_over_a_commutative_ring}{étale $K$-algebra}.
+
+\textbf{(Galois case.)} If $R$ is strictly local, then $L$ is a finite product of fields $L = \prod_i L_i$, where each $L_i$ is a finite field extension of $K$. We say that $L$ is \hldef{tamely ramified over $R$} if the degrees $[L_i : K]$ are all prime to $p$. In this case, each $L_i$ is a cyclic extension of $K$.
+
+\textbf{(General case.)} For arbitrary $R$, we say that $L$ is \hldef{tamely ramified over $R$} if the following condition holds: let $\bar{R}$ be a strict localization of $R$ (in the sense of \CrefAndHyperrefIfExist{definition:strict_localization_of_a_local_ring}{strict localization}), $\bar{K}$ its field of fractions, and $\bar{L} = L \otimes_K \bar{K}$. Then $\bar{L}$ is tamely ramified over $\bar{R}$ in the sense of the Galois case above.
+
+Equivalently (by reduction to the strictly local case), $L$ is tamely ramified over $R$ if and only if for every geometric point $\bar{s}$ of $\Spec(R)$, the base change of $L$ to the strict henselization $R^{sh}$ at $\bar{s}$ is a product of field extensions whose degrees are prime to $p$.
+
+\textbf{(Stability properties.)} The following operations preserve tame ramification:
+\begin{itemize}
+    \item A subalgebra of a tamely ramified algebra is tamely ramified.
+    \item The tensor product of two tamely ramified algebras is tamely ramified.
+    \item A tamely ramified algebra remains tamely ramified after any base change of $R$.
+    \item If $L'$ is a tamely ramified extension of $K$ and $L$ becomes tamely ramified over the strict henselization of $R$ via $L'$, then $L$ itself is tamely ramified over $R$.
+\end{itemize}
+\end{definition}

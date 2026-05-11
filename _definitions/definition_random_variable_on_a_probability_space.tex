@@ -1,0 +1,26 @@
+\begin{definition}[Random variable] \label{definition:random_variable_on_a_probability_space}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}.
+
+A function $X : \Omega \to S$ into a set $S$ equipped with a collection $\mathcal{S}$ of subsets of $S$ is called a \hldef{$(S, \mathcal{S})$-valued random variable} if for every $A \in \mathcal{S}$, the set
+$$X^{-1}(A) = \{\omega \in \Omega : X(\omega) \in A\}$$
+is an event in $\mathcal{F}$.
+
+When $S$ is a countable or finite set and $\mathcal{S}$ is the power set of $S$ (i.e., every subset of $S$ belongs to $\mathcal{S}$), then $X$ is a random variable precisely when $X^{-1}(\{s\}) \in \mathcal{F}$ for every $s \in S$. This is the case that arises in introductory probability theory, where one studies discrete random variables taking values in sets such as $\{0, 1\}$ (Bernoulli trials), $\{0, 1, 2, \dots\}$ (counting processes), or any other countable or finite sample space.
+
+Special cases:
+\begin{enumerate}
+    \item A function $X : \Omega \to \mathbb{R}$ is called a \hldef{real-valued random variable} if for every pair of real numbers $a < b$, the set
+    $$\{\omega \in \Omega : X(\omega) \in (a, b)\} = \{\omega \in \Omega : a < X(\omega) < b\}$$
+    is an event in $\mathcal{F}$.
+
+    \item A function $X : \Omega \to \mathbb{C}$ is called a \hldef{complex-valued random variable} if for every open disk $D \subseteq \mathbb{C}$, the set
+    $$\{\omega \in \Omega : X(\omega) \in D\}$$
+    is an event in $\mathcal{F}$.
+
+    \item A function $X : \Omega \to \overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty, \infty\}$ is called a \hldef{random variable taking values in the extended real line} if for every $a \in \mathbb{R}$, the set
+    $$\{\omega \in \Omega : X(\omega) > a\}$$
+    is an event in $\mathcal{F}$.
+\end{enumerate}
+
+A function $X$ as above ($(S, \mathcal{S})$-valued, real-valued, complex-valued, or extended real-valued) is called simply a \hldef{random variable} when the codomain and collection of subsets are clear from context.
+\end{definition}

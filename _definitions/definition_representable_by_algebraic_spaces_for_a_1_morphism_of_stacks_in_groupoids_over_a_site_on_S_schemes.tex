@@ -3,9 +3,15 @@
 \TODO{TODO: read }
 \TODO{TODO: state that a sheaf gives a stack}
 \TODO{TODO: find out if it is equivalent to have $U$ be an algebraic space instead.}
-Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\tau$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} on $\mathit{Sch}/S$. Let $f: \mathcal{X} \to \mathcal{Y}$ be a $1$-morphism of \CrefAndHyperrefIfExist{definition:stack_in_groupoids_over_a_site}{stacks in groupoids} over the site $(\mathit{Sch}/S)_{\tau}$. We say that $f$ is \hldef{representable by algebraic spaces} if for every scheme $U$ over $S$ and every $1$-morphism $y: U \to \mathcal{Y}$ (i.e., every object $y \in \mathcal{Y}(U)$), the \CrefAndHyperrefIfExist{definition:2_fiber_product_of_1_morphisms_in_a_2_category}{$2$-fiber product}
+% Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\tau$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} on $\mathit{Sch}/S$. Let $f: \mathcal{X} \to \mathcal{Y}$ be a $1$-morphism of \CrefAndHyperrefIfExist{definition:stack_in_groupoids_over_a_site}{stacks in groupoids} over the site $(\mathit{Sch}/S)_{\tau}$.
+
+\TODO{morphism of stacks}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\tau$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} on \CrefAndHyperrefIfExist{definition:representable_by_schemes_for_a_morphism_of_presheaves_on_Sch_S}{$\mathit{Sch}/S$} for which surjectivity and \'etaleness are preserved under base change and \CrefAndHyperrefIfExist{definition:tau_local_property_of_a_morphism_of_schemes_over_a_scheme}{$\tau$-local on the base}. 
+\TextIfExists{proposition:list_of_properties_of_morphisms_of_schemes_over_a_base_preserved_under_base_change_and_fpqc_local_on_the_base}{\footnote{For example, $\tau$ can be any Grothendieck topology coarser than the fpqc topology thanks to \CrefIfExists{proposition:list_of_properties_of_morphisms_of_schemes_over_a_base_preserved_under_base_change_and_fpqc_local_on_the_base}.}} Let $f: \mathcal{X} \to \mathcal{Y}$ be a morphism of stacks on $(\mathit{Sch}/S, \tau)$. 
+
+We say that $f$ is \hldef{representable by $\tau$-algebraic spaces} if for every scheme $U$ over $S$ and every \CrefAndHyperrefIfExist{definition:morphism_of_fibered_categories_over_a_category}{$1$-morphism} $y: U \to \mathcal{Y}$ (i.e., every object $y \in \mathcal{Y}(U)$ \TODO{discuss the $2$-Yoneda}), the \CrefAndHyperrefIfExist{definition:2_fiber_product_of_1_morphisms_in_a_2_category}{$2$-fiber product}
 \[
 \mathcal{X} \times_{\mathcal{Y}} U
 \]
-is equivalent (as a stack over $(\mathit{Sch}/U)_{\tau}$) to an \CrefAndHyperrefIfExist{definition:algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness}{algebraic space over $U$}.
+is equivalent (as a stack over $(\mathit{Sch}/U)_{\tau}$) to an \CrefAndHyperrefIfExist{definition:algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness}{algebraic space over $U$}. In particular, the morphism $\mathcal{X} \times_{\mathcal{Y}} U \to U$ is a \CrefAndHyperrefIfExist{definition:algebraic_space_on_a_site_on_Sch_S_that_preserves_under_base_change_and_has_tau_local_surjectivity_and_etaleness}{morphism of algebraic spaces}
 \end{definition}

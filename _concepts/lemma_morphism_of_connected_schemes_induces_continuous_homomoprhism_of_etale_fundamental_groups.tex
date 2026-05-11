@@ -1,0 +1,25 @@
+\begin{lemma}[see {\cite[0BND]{stacks-project}}] \label{lemma:morphism_of_connected_schemes_induces_continuous_homomoprhism_of_etale_fundamental_groups}
+    Let $f: X \to Y$ be a morphism of \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:scheme}{schemes}. Let $\overline{x}$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} of $X$ and let $\overline{y} = f(\overline{x})$. 
+    There is a canonical \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}
+    \[ f_* : \pi_1(X, \overline{x}) \to \pi_1(Y, \overline{y}) \]
+    such that the diagram
+    \begin{center}
+    \begin{tikzpicture}[node distance=3cm, auto]
+    \node (A) {$\FEt_Y$};
+    \node (B) [right of=A, node distance=5cm] {$\FEt_X$};
+    \node (C) [below of=A, node distance=2cm] {$Finite\text{-}\pi_1(Y, \overline{y})\text{-Sets}$};
+    \node (D) [below of=B, node distance=2cm] {$Finite\text{-}\pi_1(X, \overline{x})\text{-Sets}$};
+    
+    \draw[->] (A) to node {base change} (B);
+    \draw[->] (A) to node [left] {$F_{\overline{y}}$} (C);
+    \draw[->] (B) to node {$F_{\overline{x}}$} (D);
+    \draw[->] (C) to node [below] {$f_*$} (D);
+    \end{tikzpicture}
+    \end{center}
+    (\Cref{definition:category_of_finite_etale_covers_of_a_scheme}) (\Cref{definition:fiber_functor_of_category_of_finite_etale_covers_of_a_scheme_given_by_a_geometric_point}) \TODO{pushforward}
+    is commutative.
+\end{lemma}
+\begin{proof}
+    Apply \Cref{lemma:base_change_functor_for_cats_of_finite_etale_covers_for_morphism_of_connected_schemes_is_exact_functor_of_galois_categories} and obtain the continuous group homomorphism via \Cref{lemma:exact_fucntor_of_galois_categories_corresponds_to_homomorhpism_of_fundamental_groups}
+    % Obtain a commutative diagram via \Cref{lemma:morphism_of_connected_schemes_induces_continuous_homomoprhism_of_etale_fundamental_groups} and then conclude that the base change functor is an exact functor of Galois caetgories via \Cref{lemma:exact_fucntor_of_galois_categories_corresponds_to_homomorhpism_of_fundamental_groups}. 
+\end{proof}

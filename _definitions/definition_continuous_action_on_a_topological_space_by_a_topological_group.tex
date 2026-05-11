@@ -1,0 +1,15 @@
+\begin{definition}[Continuous action on a topological space by a topological group] \label{definition:continuous_action_on_a_topological_space_by_a_topological_group}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:topological_group}{topological group} and let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}.
+
+\begin{enumerate}
+    \item A \hldef{continuous left action of $G$ on $X$} is a \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{left group action} $\varphi : G \times X \to X$ of the underlying \CrefAndHyperrefIfExist{definition:group}{group} of $G$ on the underlying set $X$ such that the map $\varphi$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}, where $G \times X$ is equipped with the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}.
+
+    If $G$ acts continuously on $X$ on the left, we write \hl{$G \curvearrowright X$} or \hl{$(g,x) \mapsto g \cdot x$}.
+
+    \item A \hldef{continuous right action of $G$ on $X$} is a \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{right group action} $\psi : X \times G \to X$ of the underlying \CrefAndHyperrefIfExist{definition:group}{group} of $G$ on the underlying set $X$ such that the map $\psi$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map}, where $X \times G$ is equipped with the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}.
+
+    If $G$ acts continuously on $X$ on the right, we write \hl{$X \curvearrowleft G$} or \hl{$(x,g) \mapsto x \cdot g$}.
+\end{enumerate}
+
+When $X$ is merely a set (not equipped with a topology), one speaks of a continuous action by equipping $X$ with the \CrefAndHyperrefIfExist{definition:discrete_topological_space_of_a_set}{discrete topology}, in which case continuity of $\varphi : G \times X \to X$ is equivalent to requiring that for each $x \in X$, the map $G \to X$ given by $g \mapsto g \cdot x$ is continuous.
+\end{definition}

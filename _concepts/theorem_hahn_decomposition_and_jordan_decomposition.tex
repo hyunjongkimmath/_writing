@@ -1,0 +1,12 @@
+\begin{theorem}[Hahn decomposition and Jordan decomposition]
+\label{theorem:hahn_decomposition_and_jordan_decomposition}
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:signed_measure}{signed measure}.
+
+\begin{enumerate}
+    \item \textbf{(Hahn decomposition)} There exists a set $P \in \mathcal{M}$ and a set $N \in \mathcal{M}$ such that $X = P \cup N$, $P \cap N = \emptyset$, $\mu(E) \geq 0$ for all $E \in \mathcal{M}$ with $E \subset P$, and $\mu(E) \leq 0$ for all $E \in \mathcal{M}$ with $E \subset N$. A pair $(P, N)$ satisfying these conditions is called a \hldef{Hahn decomposition of $X$ for $\mu$}. Any two Hahn decompositions differ only by \CrefAndHyperrefIfExist{definition:null_set_and_null_collection_for_a_measure_on_a_measurable_space}{null sets}: if $(P', N')$ is another Hahn decomposition, then $\mu(P \triangle P') = 0$ and $\mu(N \triangle N') = 0$.
+
+    \item \textbf{(Jordan decomposition)} There exist unique finite positive measures $\mu^+$ and $\mu^-$ on $(X, \mathcal{M})$ given by
+    $$\mu^+(E) = \mu(E \cap P), \quad \mu^-(E) = -\mu(E \cap N)$$
+    such that $\mu = \mu^+ - \mu^-$ and $|\mu| = \mu^+ + \mu^-$. The pair $(\mu^+, \mu^-)$ is called the \hldef{Jordan decomposition of $\mu$}, and $\mu^+$, $\mu^-$ are called the \hldef{positive part of $\mu$} and \hldef{negative part of $\mu$}, respectively.
+\end{enumerate}
+\end{theorem}

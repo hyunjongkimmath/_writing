@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:henselian_field_with_respect_to_a_valuation}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Let $v$ be a \CrefAndHyperrefIfExist{definition:archimedean_absolute_value_on_a_field}{non-archimedean valuation} on $K$ with \CrefAndHyperrefIfExist{definition:valuation_ring_of_a_nonarchimedean_valued_field}{residue field} $\kappa$.
+    The field $K$ is said to be \hldef{henselian with respect to a valuation $v$} if it satisfies any of the following equivalent conditions:
+    \begin{enumerate}
+        \item For every \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension} $L/K$, there exists a unique \CrefAndHyperrefIfExist{definition:extension_of_a_valuation_of_a_field_to_an_extension_field}{extension} of $v$ to $L$.
+
+        \item For every polynomial $f \in \mathcal{O}_K[x]$ and every root $\alpha_0 \in \kappa$ of the reduction $\bar{f} \in \kappa[x]$ such that $\bar{f}'(\alpha_0) \neq 0$, there exists a unique root $\alpha \in \mathcal{O}_K$ of $f$ such that $\bar{\alpha} = \alpha_0$.  \item For every $f \in \mathcal{O}_K[x]$, if $\bar{f} = g_0 h_0$ for some coprime polynomials $g_0, h_0 \in \kappa[x]$, then there exist $g, h \in \mathcal{O}_K[x]$ such that $f = gh$ with $\bar{g} = g_0$, $\bar{h} = h_0$, and $\deg(g) = \deg(g_0)$.
+
+        \item Every \CrefAndHyperrefIfExist{definition:finite_algebra_over_a_ring}{finite $K$-algebra} is a product of \CrefAndHyperrefIfExist{definition:henselian_ring}{Henselian local rings}.
+    \end{enumerate}
+\end{definition}

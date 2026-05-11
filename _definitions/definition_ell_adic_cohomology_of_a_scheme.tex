@@ -1,0 +1,14 @@
+\begin{definition}[$\ell$-adic cohomology] \label{definition:ell_adic_cohomology_of_a_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, and let $\ell$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime}. Let $R = \mathbb{Z}_\ell$ be the ring of $\ell$-adic integers, and let $\lambda = (\ell) \subset R$ be its maximal ideal.
+
+The \hldef{$\ell$-adic cohomology groups of $X$} are the \CrefAndHyperrefIfExist{definition:lambda_adic_cohomology_of_a_derived_etale_adic_sheaf_with_integral_coefficients_on_a_noetherian_scheme}{$\lambda$-adic cohomology groups} with coefficients in $(R, \lambda) = (\mathbb{Z}_\ell, (\ell))$. That is, for a \CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf} $\mathcal{F}$ on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\text{\'et}}$}, one sets
+$$\hlin{H^q(X, \mathcal{F}) \coloneq \varprojlim_n H^q(X, \mathcal{F}_n)}$$
+where $H^q(X, \mathcal{F}_n)$ denotes the \CrefAndHyperrefIfExist{definition:etale_cohomology_group_of_a_scheme_with_coefficients_in_an_abelian_group}{\'etale cohomology groups} of $X$ with coefficients in the finite coefficient sheaf $\mathcal{F}_n$, and $\varprojlim_n$ is the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{inverse limit}.
+
+More generally, for any object $M \in D^-(X, \mathbb{Z}_\ell)$ of the derived category of \CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaves with integral coefficients}, the $\ell$-adic cohomology $H^q(X, M)$ is defined as in \Cref{definition:lambda_adic_cohomology_of_a_derived_etale_adic_sheaf_with_integral_coefficients_on_a_noetherian_scheme}.
+
+The \hldef{$\ell$-adic cohomology with rational coefficients} is obtained by tensoring with $\mathbb{Q}_\ell$:
+$$H^q(X, \mathbb{Q}_\ell) \coloneq H^q(X, \mathbb{Z}_\ell) \otimes_{\mathbb{Z}_\ell} \mathbb{Q}_\ell.$$
+
+When $X$ is a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective variety} over a \CrefAndHyperrefIfExist{definition:finite_field}{finite field $\mathbb{F}_q$} with $q = p^f$ and $p \neq \ell$, the $\ell$-adic cohomology groups $H^i(X, \mathbb{Q}_\ell)$ are finite-dimensional $\mathbb{Q}_\ell$-vector spaces, independent of the choice of $\ell$.
+\end{definition}

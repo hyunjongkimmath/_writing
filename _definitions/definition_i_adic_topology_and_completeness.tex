@@ -1,0 +1,42 @@
+% I-ADIC TOPOLOGY AND COMPLETENESS - Definition of the I-adic topology and its relationship to completeness
+\begin{definition}\label{definition:i_adic_topology_and_completeness}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $I$ be a two-sided \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} of $R$.
+
+    \begin{enumerate}
+        \item The \hldef{$I$-adic topology} on $R$ is the linear topology (i.e., a topology admitting a fundamental system of neighborhoods of $0$ consisting of ideals) defined by taking the descending chain of powers $\{I^n\}_{n \geq 1}$ as a fundamental system of neighborhoods of $0$. Explicitly, a subset $U \subseteq R$ is open if and only if for every $r \in U$, there exists $n \geq 1$ such that $r + I^n \subseteq U$.
+
+        \item The ring $R$ equipped with the $I$-adic topology is called a \hldef{topological ring}. The addition map $(x, y) \mapsto x + y$ and multiplication map $(x, y) \mapsto xy$ are continuous with respect to this topology.
+
+        \item If $\bigcap_{n=1}^\infty I^n = \{0\}$, then the $I$-adic topology is Hausdorff. In this case, one can define an \hldef{$I$-adic ultrametric} on $R$ as follows: for $x, y \in R$, set
+        $$
+            d_I(x, y) := 2^{-k},
+        $$
+        where $k = \max\{n \geq 0 : x - y \in I^n\}$ (with the convention that $2^{-\infty} = 0$). This is a non-Archimedean metric satisfying $d_I(x, z) \leq \max\{d_I(x, y), d_I(y, z)\}$ for all $x, y, z \in R$.
+
+        \item The ring $R$ is said to be \hldef{complete with respect to the $I$-adic topology} if every Cauchy sequence in $R$ (with respect to the $I$-adic topology) converges to an element of $R$. Equivalently, when $\bigcap_{n=1}^\infty I^n = \{0\}$, this is equivalent to saying that $(R, d_I)$ is a complete metric space.
+
+        \item More generally (without assuming $\bigcap_{n=1}^\infty I^n = \{0\}$), the ring $R$ is said to be \hldef{complete with respect to $I$} if the canonical homomorphism
+        $$
+            R \to \varprojlim_{n} R/I^n
+        $$
+        is an isomorphism, where the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{inverse limit} is taken over the system of quotient rings $R/I^n$ with natural projection maps.
+
+        \item If $(R, I)$ is a pair consisting of a ring and an ideal such that $R$ is complete with respect to $I$, then the \hldef{$I$-adic completion} of $R$, denoted $\widehat{R}$ or $R^\wedge$, is defined as
+        $$
+            \widehat{R} := \varprojlim_{n} R/I^n.
+        $$
+        The ring $\widehat{R}$ is always complete with respect to its ideal $\widehat{I} = I\widehat{R}$.
+
+        \item If $(R, \mathfrak{m})$ is a local ring (i.e., $R$ has a unique maximal ideal $\mathfrak{m}$), then the \hldef{$\mathfrak{m}$-adic completion} of $R$, denoted $\widehat{R}$ or $R^\wedge$, is defined as
+        $$
+            \widehat{R} := \varprojlim_{n} R/\mathfrak{m}^n.
+        $$
+        The ring $\widehat{R}$ is always a complete local ring with maximal ideal $\widehat{\mathfrak{m}} = \mathfrak{m}\widehat{R}$.
+
+        \item A \hldef{complete discrete valuation ring (CDVR)} refers to a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring} that is also a complete local ring. Equivalently, it is a local ring $(R, \mathfrak{m})$ such that $\mathfrak{m} = (\pi)$ for some $\pi \in R$, $\bigcap_{n=1}^\infty \mathfrak{m}^n = \{0\}$, and $R$ is complete with respect to $\mathfrak{m}$.
+    \end{enumerate}
+
+    \begin{remark}
+        The notion of completeness via inverse limits (item 5) is more general than metric completeness. When $\bigcap_{n=1}^\infty I^n = \{0\}$, the $I$-adic topology is Hausdorff and defines an ultrametric as in item 3; in this case, completeness with respect to the $I$-adic topology (as a topological space) is equivalent to being complete with respect to $I$ via inverse limits. However, when $\bigcap_{n=1}^\infty I^n \neq \{0\}$, the $I$-adic topology is not Hausdorff and does not define a metric in the usual sense; nevertheless, the notion of completeness via inverse limits remains well-defined and useful.
+    \end{remark}
+\end{definition}

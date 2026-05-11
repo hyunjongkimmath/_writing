@@ -1,0 +1,11 @@
+\begin{definition}[Fractional Ideal of an Integral Domain] \label{definition:fractional_ideal_of_an_integral_domain}
+Let $R$ be an \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain} and let $K = \operatorname{Frac}(R)$ be its \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{field of fractions}.
+
+A \hldef{fractional ideal of $R$} is a nonzero $R$-submodule $I \subseteq K$ such that there exists a nonzero element $d \in R$ with the property that $dI \subseteq R$. In other words, $I$ can be cleared of denominators by multiplying by some nonzero element of $R$.
+
+The set of all fractional ideals of $R$ is denoted by \hl{$\operatorname{FracId}(R)$}. Under multiplication defined by
+$$IJ = \left\{\, \sum_{k=1}^n x_k y_k \;\middle|\; x_k \in I,\; y_k \in J,\; n \geq 0 \,\right\},$$
+the set $\operatorname{FracId}(R)$ forms a commutative monoid. The identity element is $R$ itself, viewed as a fractional ideal.
+
+A fractional ideal $I$ is said to be \hldef{invertible} if there exists a fractional ideal $J$ such that $IJ = R$. The set of all invertible fractional ideals is denoted by \hl{$\operatorname{InvFracId}(R)$}.
+\end{definition}

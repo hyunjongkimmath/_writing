@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:profinite_completion_of_Z}
+Let $\mathbb{Z}$ denote the additive group of integers. The \hldef{profinite completion of $\mathbb{Z}$}, denoted by \hl{$\widehat{\mathbb{Z}}$}, is the inverse limit
+$$\hlin{\widehat{\mathbb{Z}} = \varprojlim_{N \geq 1} \mathbb{Z}/N\mathbb{Z}}$$
+where the limit is taken over all positive integers $N$ ordered by divisibility (i.e., $M \mid N$ induces the natural projection $\mathbb{Z}/N\mathbb{Z} \twoheadrightarrow \mathbb{Z}/M\mathbb{Z}$). 
+\TextIfExists{definition:profinite_completion_of_a_group}{
+In other words, $\widehat{\mathbb{Z}}$ is specific instance of the notion of \CrefAndHyperrefIfExist{definition:profinite_completion_of_a_group}{profinite completion} of a group. 
+}
+
+The ring structure on $\widehat{\mathbb{Z}}$ is induced componentwise from the \CrefAndHyperrefIfExist{definition:Z_over_NZ}{quotient rings $\mathbb{Z}/N\mathbb{Z}$}. By the Chinese remainder theorem, there is a canonical ring isomorphism
+$$\widehat{\mathbb{Z}} \xrightarrow{\sim} \prod_{p} \widehat{\mathbb{Z}}_p$$
+where the product runs over all prime numbers $p$ and $\widehat{\mathbb{Z}}_p = \varprojlim_k \mathbb{Z}/p^k\mathbb{Z}$ is the ring of \CrefAndHyperrefIfExist{definition:p_adic_integers_for_a_nonzero_prime_of_a_number_field}{$p$-adic integers}. Under this decomposition, an element $\hat{n} \in \widehat{\mathbb{Z}}$ corresponds to the tuple $(n_p)_p$ where $n_p \in \widehat{\mathbb{Z}}_p$ is the image of $\hat{n}$ in each factor.
+
+There is a canonical injective \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\iota: \mathbb{Z} \hookrightarrow \widehat{\mathbb{Z}}$ sending $n \mapsto (n \bmod N)_N$, whose image is dense in $\widehat{\mathbb{Z}}$ with respect to \CrefAndHyperrefIfExist{definition:profinite_topology_on_Z}{the profinite topology}.
+
+
+
+% NOTE: Depends on Chinese Remainder Theorem for ℤ which is not yet vaulted -- reference will be filled in after vaulting.
+% NOTE: Depends on Profinite Topology on ℤ which is not yet vaulted -- reference will be filled in after vaulting.
+\end{definition}

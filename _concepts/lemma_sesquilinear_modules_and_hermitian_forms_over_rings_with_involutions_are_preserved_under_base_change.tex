@@ -1,0 +1,28 @@
+\begin{lemma} \label{lemma:sesquilinear_modules_and_hermitian_forms_over_rings_with_involutions_are_preserved_under_base_change}
+    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module} and let $b: M \times M \to A$ be a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} on $M$.
+
+    \begin{enumerate}
+        \item If $(M,b)$ is a \CrefAndHyperrefIfExist{definition:sesquilinear_module_over_a_ring_with_involution}{sesquilinear module} over $A$, then $(M, b) \otimes_A A'$ is a sesquilinear module over $A'$.
+        \item Let $\varepsilon \in Z(A)$ satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$. If $b$ is a \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-hermitian form} over $A$, then $b \otimes_A A'$ is an $\eta(\varepsilon)$-\CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{hermitian form} over $A'$. Moroever, if $b$ is \CrefAndHyperrefIfExist{definition:even_varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{even}, then so is $b \otimes_A A'$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Since a sesquilinear module is simply a projective module equipped with a sesquilinear form, this follows from \Cref{lemma:base_change_of_projective_modules_along_ring_homomorphisms_are_projective}
+        \item To show that $b \otimes_A A'$ is an $\eta(\varepsilon)$-hermitian form, it suffices to verify
+        $$(b \otimes_A A') (m \otimes a', n \otimes a'') = \eta(\varepsilon) \overline{(b \otimes_A A')(n \otimes a'', m \otimes a')}$$
+        for all $m,n \in M$ and $a',a'' \in A'$. The left equals $\overline{a}' \eta(b(m,n)) a''$, whereas the right equals 
+        \begin{align*}
+        \eta(\varepsilon) \overline{ \overline{a''} \eta(b(n,m)) a'} &= \eta(\varepsilon) \overline{a'} \overline{\eta(b(n,m))} \overline{\overline{a''}} \\
+        &= \eta(\varepsilon) \overline{a'} \eta(\overline{b(n,m)}) a'' \\
+        &= \eta(\varepsilon) \overline{a'} \eta(\overline{\varepsilon \overline{b(m,n)}}) a'' \\
+        &= \eta(\varepsilon) \overline{a'} \eta(\overline{\overline{b(m,n)}} \cdot \overline{\varepsilon}) a'' \\
+        &= \eta(\varepsilon) \overline{a'} \eta(b(m,n) \overline{\varepsilon}) a'' \\
+        &= \overline{a'} \eta(\varepsilon \overline{\varepsilon} b(m,n)) a'' \\
+        &= \overline{a'} \eta(b(m,n)) a''
+        \end{align*}
+
+        \TODO{prove evenness}
+
+    \end{enumerate}
+\end{proof}

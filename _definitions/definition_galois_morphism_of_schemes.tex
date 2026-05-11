@@ -1,14 +1,31 @@
 \begin{definition} \label{definition:galois_morphism_of_schemes}
-Let $S$ be a scheme. Let $f: X \to Y$ over $S$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism}. It is called \hldef{Galois} (or synonymously a \hldef{Galois cover/Galois covering}) if there exists a finite group $G$ acting on $X$ over $Y$ such that
-\begin{itemize}
-  \item $f$ is identified with the quotient map $X \to X/G$. 
-  \item the group action realizes $Y$ as the categorical quotient under the group action.
-\end{itemize}
-If $f$ is Galois, then the finite group $G$ is isomorphic to the \CrefAndHyperrefIfExist{definition:automorphism_group_of_a_scheme_over_a_scheme}{automorphism group $\Aut_Y(X)$}. By a \hldef{Galois $G$-cover/morphism}, we mean a Galois morphism whose automorphism group is (isomorphic to) $G$, often equipped with a fixed isomorphism $\phi: G \to \Aut_Y(X)$. 
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. 
+Let $f: X \to Y$ over $S$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite} \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism}. 
+\TODO{define categorical quotient}
+\begin{enumerate}
+  \item $f$ is called \hldef{Galois} if there exists a finite group $G$ acting on $X$ over $Y$ such that $Y$ is the categorical quotient $X/G$ and $f$ is the natural quotient morphism.
+  
+  In this case, $G \cong \Aut_Y(X)$ if $X$ is connected. A \hldef{Galois $G$-morphism} is a Galois morphism equipped with a fixed isomorphism $\phi: G \xrightarrow{\sim} \Aut_Y(X)$.
+
+
+  \item A \hldef{Galois $G$-morphism} is a Galois morphism equipped with a fixed isomorphism $\phi: G \xrightarrow{\sim} \Aut_Y(X)$.
+
+  % \begin{itemize}
+  %   \item $f$ is identified with the quotient map $X \to X/G$. 
+  %   \item the group action realizes $Y$ as the categorical quotient under the group action.
+  % \end{itemize}
+  % If $f$ is Galois, then the finite group $G$ is isomorphic to the \CrefAndHyperrefIfExist{definition:automorphism_group_of_a_scheme_over_a_scheme}{automorphism group $\Aut_Y(X)$}. By a \hldef{Galois $G$-morphism}, we mean a Galois morphism whose automorphism group is (isomorphic to) $G$, often equipped with a fixed isomorphism $\phi: G \to \Aut_Y(X)$. 
+
+  \item $f$ is called a \hldef{Galois cover} if it is a Galois morphism and is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}.
+\end{enumerate}
+
+
+
+\TODO{describe Galois covers in terms of G-torsors}
 
 % If $f$ is Galois and \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale}, then we say that $f$ is a \hldef{finite Galois covering} or that $X$ is a \hldef{finite Galois cover of $Y$}.
 
-In case $f$ is an \'etale morphism, then $f$ is equivalently Galois if there exists a finite group $G$ acting on $X$ over $Y$ such that 
+In case $f$ is an \'etale morphism, then $f$ is equivalently a Galois morphism if there exists a finite group $G$ acting on $X$ over $Y$ such that 
 \begin{itemize}
     \item $f$ is identified with the quotient map $X \to X/G$. 
     \item $G$ acts simply transitively on geometric fibres.

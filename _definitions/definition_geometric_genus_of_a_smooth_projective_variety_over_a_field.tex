@@ -1,0 +1,12 @@
+\begin{definition}[Geometric genus of a smooth projective variety over a field] \label{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field} and let $X$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}, \CrefAndHyperrefIfExist{definition:projective_variety_over_a_field}{projective}, \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:variety_over_a_field}{variety} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $d$ over $k$. 
+    The \hldef{geometric genus of $X$}, denoted by \hl{$p_g(X)$}, is defined as the dimension of the space of global sections of the canonical sheaf:
+    $$p_g(X) = \dim_k H^0(X, \omega_X) = \dim_k H^d(X, \mathcal{O}_X),$$
+    where $\omega_X = \Omega_{X/k}^d$ is the canonical sheaf (the top exterior power of the sheaf of relative differentials). The equality follows from Serre duality.
+
+    More generally, for any proper integral scheme $X$ over a field $k$, one defines the \hldef{geometric genus of $X$} as
+    $$p_g(X) = \dim_k H^d(X, \mathcal{O}_X),$$
+    where $d = \dim X$. If $X$ is smooth, this coincides with $\dim_k H^0(X, \omega_X^{[m]})$ for any $m \geq 1$, where $\omega_X^{[m]} = (\omega_X^{\otimes m})^{\vee\vee}$ is the reflexive power of the canonical sheaf.
+
+    % For a smooth projective connected curve $C$ over $k$, this definition coincides with the geometric genus defined as $\dim_k H^1(C, \mathcal{O}_C) = \dim_k H^0(C, \Omega_{C/k})$.
+\end{definition}

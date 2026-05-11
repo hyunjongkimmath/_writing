@@ -1,0 +1,268 @@
+The purpose of these notes is to concisely define and discuss basic properties of $t$-structures and the perverse $t$-structure of complexes of constructible $\ell$-adic sheaves
+
+\section{Triangulated categories}
+
+\input{../_definitions/definition_triangulated_category.tex}
+
+\input{../_definitions/definition_cone_of_a_morphism_in_a_triangulated_category.tex}
+
+\input{../_definitions/definition_morphism_of_distinguished_triangles_in_a_triangulated_category.tex}
+
+\input{../_definitions/definition_exact_functor_between_triangulated_categories.tex}
+
+\input{../_concepts/proposition_equivalent_conditions_for_a_morphisms_of_middle_terms_of_two_distinguished_triangles_in_a_triangulated_category_to_extend_to_triangles.tex}
+
+\input{../_concepts/corollary_cone_of_a_morphism_in_a_triangulated_category_is_unique_if_no_nontrivial_backwards_morphism_exists.tex}
+
+% \begin{proposition}[{\cite[Proposition 1.1.9.]{beilinson_berstein_deligne_atlesI}}]
+% Let $\mathcal{T}$ be a \CrefAndHyperrefIfExist{definition:tensor_triangulated_category}{triangulated category}. Let $(X, Y, Z, u, v, d)$ and $(X', Y', Z', u', v', d')$ be two \CrefAndHyperrefIfExist{definition:triangulated_category}{distinguished triangles} in $\mathcal{T}$. Let $g: Y \to Y'$ be a morphism in $\mathcal{T}$. Consider the following diagram:
+% \[
+% \begin{tikzcd}
+% X \arrow[r, "u"] \arrow[d, "f", dashed] & Y \arrow[r, "v"] \arrow[d, "g"] & Z \arrow[r, "d"] \arrow[d, "h", dashed] & X[1] \arrow[d, "f[1]", dashed] \\
+% X' \arrow[r, "u'"] & Y' \arrow[r, "v'"] & Z' \arrow[r, "d'"] & X'[1]
+% \end{tikzcd}
+% \]
+% The following conditions are equivalent:
+% \begin{itemize}
+%     \item[(a)] The composition $v' \circ g \circ u = 0$.
+%     \item[(b)] There exists a morphism $f: X \to X'$ such that $g \circ u = u' \circ f$.
+%     \item[(b')] There exists a morphism $h: Z \to Z'$ such that $h \circ v = v' \circ g$.
+%     \item[(c)] There exists a morphism of triangles $(f, g, h)$ from $(X, Y, Z)$ to $(X', Y', Z')$.
+% \end{itemize}
+% Furthermore, if these conditions are satisfied and $\text{Hom}_{\mathcal{T}}(X, Z'[-1]) = 0$, then the morphism $f$ in (b) and the morphism $h$ in (b') are unique.
+% \end{proposition}
+
+\section{\texorpdfstring{$t$-structures}{t-structures}}
+
+See \cite[1.3]{beilinson_berstein_deligne_atlesI}, \cite[II.2-4, III.1]{kiehl_weissauer_wcps}.
+
+\hl{$D$}: A triangulated category.
+
+\hl{$T$}: The translation functor $T: D \to D$.
+
+\hl{$A[1]$}: $T(A)$ for $A \in D$. 
+
+\input{../_definitions/definition_strictly_full_subcategory_of_a_category.tex}
+\input{../_definitions/definition_t_structure_on_a_triangulated_category.tex}
+
+\TODO{}
+From now on, let \hl{$\Dleqzero, \Dgeqzero$} be a $t$-structure on $D$ unless otherwise specified.
+
+\input{../_concepts/lemma_shifts_of_t_structure_on_a_triangulated_category_are_contained_in_one_another.tex}
+
+\input{../_definitions/definition_bounded_object_bounded_triangulated_category_with_respect_to_a_t_structure.tex}
+
+\input{../_concepts/proposition_adjunction_of_inclusion_functors_of_t_structures_on_triangulated_categories.tex}
+
+\input{../_concepts/lemma_shifted_truncation_functors.tex}
+
+From here on out, given a $t$-structure, fix such functors $\tau_{\leq 0}$ and $\tau_{\geq 1}$. 
+
+\input{../_concepts/proposition_distinguished_triangles_for_t_structures_on_triangulated_categories_given_by_truncation_are_unique.tex}
+
+% \begin{definition} \TODO{}
+% Recursively define \hl{$\tauleqn, \taugeqn$} for $n \in \mathbb{Z}$ by 
+% \begin{align*}
+% \tauleqn[n+1](X) &= (\tauleqn(X[1]))[-1] \\
+% \taugeqn[n+1](X) &= (\taugeqn (X[1]))[-1].
+% \end{align*}
+% \end{definition}
+
+% \input{../_concepts/lemma_adjunctions_of_truncation_functors.tex}
+
+\input{../_concepts/lemma_composition_of_truncation_functors_for_t_structures_on_triangulated_categories.tex}
+
+
+\input{../_concepts/lemma_isomorphisms_in_distinguished_triangles_can_only_occur_if_and_only_if_zero_object.tex}
+
+\input{../_concepts/lemma_orthogonality_of_objects_in_triangulated_categories_with_t_structures.tex}
+
+\input{../_concepts/lemma_extension_of_objects_in_t_structures_for_triangulated_categories_are_in_t_structures.tex}
+
+\input{../_concepts/lemma_compatibility_of_t_structure_on_triangulated_category_with_truncation_functor.tex}
+
+\input{../_concepts/theorem_core_of_a_triangulated_category_with_a_t_structure_is_abelian_category.tex}
+
+
+
+\section{Cohomology functors for a \texorpdfstring{$t$}{t}-structure}
+
+\input{../_definitions/definition_cohomology_functors_for_a_triangulated_category_with_a_t_structure.tex}
+
+\input{../_concepts/lemma_indices_of_cohomology_for_t_structures.tex}
+
+\input{../_concepts/theorem_long_exact_cohomological_sequence_in_core_for_t_structure_on_triangulated_categories_from_distinguished_triangle.tex}
+
+\input{../_definitions/definition_non_degenerate_t_structure_on_a_triangulated_category.tex}
+
+\input{../_concepts/proposition_non_degenerate_t_structures_have_conservative_cohomology_functors.tex}
+
+
+\section{Recollement of $t$-structure}
+
+The following from \cite[Section 1.4]{beilinson_berstein_deligne_atlesI} describes a general framework for gluing $t$-structures on triangulated categories.
+
+\begin{context}[{\cite[1.4.3.]{beilinson_berstein_deligne_atlesI}}] \label{context:general_gluing_framework_for_t_structures_on_triangulated_categories}
+    Let $D$, $D_U$, and $D_F$ be \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}. Suppose that there exist \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functors}
+    $$\hlin{D_F \xrightarrow{i_*} D \xrightarrow{j^*} D_U}.$$
+    \cite{beilinson_berstein_deligne_atlesI} sets \hl{$i_! := i_*$} and \hl{$j^! := j^*$} for convenience. Assume that the following hold:
+    \begin{enumerate}
+        \item $i_*$ has exact left and right adjoints, denoted by \hl{$i^*$} and \hl{$i^!$} respectively. In other words, we have adjunctions
+        $$i^* \dashv i_* \dashv i^!$$
+        \item $j^*$ has exact left and right adjoints, denoted by \hl{$j_!$} and \hl{$j_*$} respectively. In other words, we have adjunctions
+        $$j_! \dashv j^* \dashv j_*$$
+        \item $j^* i_* = 0$. By adjunction, we consequently have $i^* j_! = 0$, $i^! j_* = 0$, and for all $A \in D_F$ and $B \in D_U$,
+        $$\Hom_D(j_! B, i_* A) = 0 \quad \text{and} \quad \Hom_D(i_*A, j_* B) = 0.$$
+        \item For all $K$ in $D$ there exists $d: i_* i^* K \to j_! j^* K[1]$ (resp. $d: j_* j^* K \to i_* i^! K[1]$), which necessarily must be unique by the above condition and \Cref{corollary:cone_of_a_morphism_in_a_triangulated_category_is_unique_if_no_nontrivial_backwards_morphism_exists}, such that the triangle
+        \begin{align*}
+            &j_! j^* K \to K \to i_* i^* K \xrightarrow{d} \\
+            (resp. \quad & i_* i^! K \to K \to j_* j^* K \xrightarrow{d})
+        \end{align*}
+        is distinguished.
+
+        \item $i_*$, $j_!$, and $j^*$ are \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}, i.e. the adjunction morphisms $i^* i_* \to \id \to i^! i_*$, and $j_! j^* \to \id \to j_* j^*$ are isomorphisms.
+
+    \end{enumerate}
+    This formalism is self-dual --- the duality exchanges $j_!$ and $j_*$ and $i^*$ and $i^!$.
+\end{context}
+
+\input{../_definitions/definition_t_structure_on_general_triangulated_category_by_gluing.tex}
+
+\input{../_concepts/theorem_gluing_t_structure_on_general_triangulated_category_is_indeed_a_t_structure.tex}
+
+\input{../_concepts/proposition_t_structure_on_a_tri_cat_is_obtained_by_gluing_iff_appropriate_self_functors_passing_through_the_open_tri_cat_are_right_left_t_exact.tex}
+
+
+
+\section{Bounded derived category of constructible complexes of \texorpdfstring{$\ell$}{ell}-adic sheaves}
+
+\TODO{}
+From here, let $X$ be a scheme over a field $k$ of characteristic $p \geq 0$ and let $\ell \neq p$ be a prime number. There is a derived category $\Dbc(X) = \Dbc(X,\Qellbar)$ of bounded complexes of constructible sheaves with $\Qellbar$-coefficients. There is an associated six-functor formalism:
+\begin{enumerate}
+    \item There are bifunctors $\Dbc(X) \to \Dbc(X) \to \Dbc(X)$ written
+    $$\hlin{(M,N) \mapsto \RHom(M,N), \quad (M,N) \mapsto M \otimes N.}$$
+    \item Given a $k$-morphism $f: X \to Y$, there are functors 
+    $$\hlin{f^*: \Dbc(Y) \to \Dbc(X)}$$
+    and 
+    $$\hlin{Rf_*: \Dbc(X) \to \Dbc(Y)}.$$
+    \item If $f$ is $k$-compactifiable (e.g. by virtue of $Y$ being quasi-compact and quasi-separated and $f$ being separated and of finite type), then there are functors \hl{$Rf_!: \Dbc(X) \to \Dbc(Y)$} and \hl{$f^!: \Dbc(Y) \to \Dbc(X)$}.
+\end{enumerate}
+
+These satisfy the following adjunctions (the last adjunction requires $f$ to be $k$-compactifiable for $Rf_!$ to be defined):
+\begin{align*}
+    \Hom(M \otimes N, P) &\cong \Hom(R, \RHom(N,P)) \\
+    \Hom(f^* M, N) &\cong \Hom(M, Rf_* N) \\
+    \Hom(Rf_! M, N) &\cong \Hom(M, f^! N). \\
+\end{align*}
+
+
+For any object $K \in \Dbc(X)$, there are the cohomology functors $K \mapsto \mathscr{H}^i(K)$. Note that each $\mathscr{H}^i(K)$ is a constructible sheaf with $\Qellbar$-coefficients.
+
+
+
+\section{Standard \texorpdfstring{$t$}{t}-structure}
+
+\begin{definition}[See {\cite[Definition II.6.3, Theorem II.6.4, and the discussion afterwards]{kiehl_weissauer_wcps}}]
+    \TODO{}
+    The \hldef{standard $t$-structure on $\Dbc(X, \Qellbar)$} is 
+
+    \hlalign{
+    \begin{align*}
+        \Dleqzero(X, \Qellbar) &= \{K \in \Dbc(X): \scrH^i(K) = 0 \text{ for all } i > 0 \} \\
+        \Dgeqzero(X, \Qellbar) &= \{K \in \Dbc(X): \scrH^i(K) = 0 \text{ for all } i < 0 \}.
+    \end{align*}
+    }
+
+Write \hl{$\sttauleqn$} and \hl{$\sttaugeqn$} for the truncation functors for this $t$-structure.  
+\end{definition}
+
+\begin{claim}
+    \TODO{}
+    There is a natural isomorphism
+    $$H^n(K) = \sttauleqn \sttaugeqn K \cong \scrH^n(K)$$
+    for $K \in \Dbc(X)$ where \hl{$\scrH^n(K)$} here denotes the $n$th cohomology object with respect to the standard $t$-structure on $\Dbc(X)$.
+\end{claim}
+
+\section{Perverse \texorpdfstring{$t$}{t}-structure}
+
+Now let $X$ be a finite type and separated scheme over $k$. 
+
+\begin{definition}
+    \TODO{}
+    Let $K_X$ denote the \hldef{dualizing complex of the $X$}, defined by
+    $$\hlin{K_X = \pi^!(\Qellbar) \in \Dbc(X)}$$
+    where $\pi: X \to \Spec k$ is the structure morphism and $\Qellbar$ here refers to the skyscraper sheaf with $\Qellbar$-coefficients of rank $1$ on $\Spec k$. One defines the \hldef{Verdier dual} \hl{$D = D_X$} by 
+    $$D_X(K) = \RHom(K, K_X).$$
+\end{definition}
+
+\begin{definition}[See {\cite[Section III.1]{kiehl_weissauer_wcps}}]
+    \TODO{}
+    Let $D = D(X)$ be the triangulated category $\Dbc(X, \Qellbar)$. The \hldef{selfdual (middle) perverse $t$-structure} is defined by
+
+    \hlalign{
+    \begin{align*}
+        B &\in \pDleqzero(X) \Leftrightarrow \dim \Supp(\scrH^{-i} B) \leq i \quad \text{for all } i \in \bbZ \\
+        B &\in \pDgeqzero(X) \Leftrightarrow \dim \Supp(\scrH^{-i} D B) \leq i \quad \text{for all } i \in \bbZ
+    \end{align*}
+    }
+
+We say that $B \in \Dbc(X)$ is \hldef{semiperverse} if $B \in \pDleqzero(X)$. 
+
+\end{definition}
+\begin{theorem}[See {\cite[Section III.3]{kiehl_weissauer_wcps}}]
+    The perverse $t$-structure is indeed a $t$-structure.
+\end{theorem}
+
+Write \hl{$\Perv(X)$} for the core of the perverse $t$-structure and write \hl{$\pscrH^i: \Dbc(X) \to \Perv(X)$} for the $i$th cohomology object with respect to this $t$-structure. Moreover, since the perverse $t$-structure is a genuine $t$-structure, we may write \hl{$\pDleqn, \pDgeqn, \ptaugeqn, \ptauleqn$}, etc. for the relevant subcategories of $\Dbc(X)$ and the truncation functors. 
+
+\input{../_concepts/lemma_shifted_semiperverse_definition.tex}
+
+\input{../_concepts/lemma_nonzero_objects_do_not_belong_to_shifted_perverse_t_structure_subcategories_for_sufficiently_large_indices.tex}
+
+\begin{corollary}
+    \TODO{}
+The perverse $t$-structure is non-degenerate. In particular, for $B \in \Dbc(X)$, $\pscrH^i(B) = 0$ for all $i \in \bbZ$ if and only if $B = 0$ and 
+\begin{align*}
+    \pDleqn(X) &= \{B \in \Dbc(X) : \pscrH^i(B) = 0 \text{ for all } i > n \} \\
+    \pDgeqn(X) &= \{B \in \Dbc(X) : \pscrH^i(B) = 0 \text{ for all } i < n \}.
+\end{align*}
+\end{corollary}
+\begin{proof}
+    This is immediate from Lemma \ref{lemma:nonzero_objects_do_not_belong_to_shifted_perverse_t_structure_subcategories_for_sufficiently_large_indices}, the definition of a non-degenerate $t$-structure, and Proposition \ref{proposition:non_degenerate_t_structures_have_conservative_cohomology_functors}.
+\end{proof}
+
+\begin{theorem}[See {\cite[Corollaries III.5.4, III.5.7]{kiehl_weissauer_wcps}}]
+    \TODO{}
+    $\Perv(X)$ is artinian and noetherian. Moreover, $B \in \Perv(X)$ is simple if and only if it is of the form $B = j_{!*} \mathscr{G}[d]$ for a locally closed embedding $j: U \to X$ from an irreducible smooth $d$-dimensional subscheme $U$ of dimension $d$ and a lisse $\Qellbar$-sheaf $\mathscr{G}$.
+\end{theorem}
+
+\begin{proposition}[See {\cite[Lemma III.5.13]{kiehl_weissauer_wcps}}]
+    If $\dim(X) \leq d$, then $\pDgeqzero(X, \Qellbar)$ is contained in $\stDgeqn[-d](X, \Qellbar)$.
+\end{proposition}
+
+\section{Exactness properties for the perverse \texorpdfstring{$t$}{t}-structure under direct images and inverse images}
+
+We discuss some conditions under which the derived functors $Rf_*, Rf_!, f^*, f^!$ (or variants thereof) preserve perversity.
+
+\input{../_definitions/definition_exact_functor_between_triangulated_categories.tex}
+
+\input{../_definitions/definition_t_left_exact_right_exact_functors_between_triangulated_categories_with_t_structures.tex}
+
+\input{../_concepts/lemma_derived_pushforward_of_affine_preserves_semiperversity_and_derived_proper_pushforward_of_quasi_finite_perverse_semiperversity.tex}
+
+\begin{proposition}
+    Let $f: X \to Y $ be a morphism of finite type schemes over a field $k$ of characteristic distinct  from $\ell$. 
+\begin{enumerate}
+    \item If $f$ is quasi-finite and affine, then $R f_* M, Rf_! M \in \Perv(Y)$ for all $M \in \Perv(X)$ {\cite[Corollary III.6.2]{kiehl_weissauer_wcps}}. 
+    \item If $f$ is equidimensional of relative dimension $d$ and smooth, then 
+    $$f^{*}[d](M) = f^{!}[-d](-d)(M) \in \Perv(X)$$
+    for all $M \in \Perv(Y)$ {\cite[Theorem III.7.2]{kiehl_weissauer_wcps}}. 
+\end{enumerate}
+\end{proposition}
+
+\appendix
+
+\section{Miscellaneous definitions}
+
+\input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
+\input{../_definitions/definition_full_and_faithful_functor_between_locally_small_categories.tex}

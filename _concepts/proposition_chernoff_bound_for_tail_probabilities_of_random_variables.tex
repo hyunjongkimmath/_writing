@@ -1,0 +1,7 @@
+\begin{proposition}[Chernoff bound] \label{proposition:chernoff_bound_for_tail_probabilities_of_random_variables}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}, and let $X : \Omega \to \mathbb{R}$ be a random variable. For every $t \in \mathbb{R}$,
+$$P(X \geq t) \leq \inf_{s > 0} e^{-st} \mathbb{E}[e^{sX}],$$
+provided the expectation on the right-hand side is finite for some $s > 0$.
+
+The bound is obtained by applying the \CrefIfExists{proposition:markov_inequality_for_non_negative_measurable_functions}{Markov inequality} to the nonnegative random variable $e^{sX}$ and then optimizing over $s > 0$.
+\end{proposition}

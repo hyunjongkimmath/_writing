@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:rationally_connected_variety_over_a_field}
+Let $k$ be an algebraically closed field. A variety $X$ over $k$ is said to be \hldef{rationally connected} if the set of pairs of points $(x, y) \in X(k) \times X(k)$ that can be joined by a rational curve is dense in $X \times X$.
+
+More precisely, let $\operatorname{Mor}_k(\mathbb{P}^1, X)$ denote the scheme of morphisms from $\mathbb{P}^1_k$ to $X$. The evaluation map
+$$\hlin{\operatorname{ev}: \operatorname{Mor}_k(\mathbb{P}^1, X) \times \mathbb{P}^1 \to X \times X}$$
+given by $(f, p) \mapsto (f(0), f(p))$ is dominant.
+
+A variety $X$ over $k$ is said to be \hldef{uniruled} if there exists a dominant rational map $\mathbb{P}^1_k \times Y \dashrightarrow X$ for some variety $Y$ of dimension $\dim(X) - 1$. Every rationally connected variety is uniruled, but the converse does not hold in general.
+
+A variety $X$ over $k$ is said to be \hldef{rationally chain connected} if for a dense set of pairs $(x, y) \in X(k) \times X(k)$, there exists a chain of rational curves connecting $x$ and $y$. That is, there exist morphisms $f_1, \dots, f_n: \mathbb{P}^1_k \to X$ such that the image of $x$ lies in $\operatorname{im}(f_1)$, the image of $y$ lies in $\operatorname{im}(f_n)$, and for each $i = 1, \dots, n-1$, there exist points $p_i, q_i \in \mathbb{P}^1(k)$ such that $f_i(p_i) = f_{i+1}(q_i)$.
+
+Over an algebraically closed field of characteristic $0$, a smooth projective variety is rationally connected if and only if it is rationally chain connected. In positive characteristic, these notions may differ.
+\end{definition}
