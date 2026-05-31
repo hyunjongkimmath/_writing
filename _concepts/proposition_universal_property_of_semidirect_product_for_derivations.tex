@@ -1,0 +1,23 @@
+\begin{proposition}[Universal property of the semidirect product for derivations {\cite[Chapter VI, Proposition 5.3]{hilton_stammbach_cha}}] \label{proposition:universal_property_of_semidirect_product_for_derivations}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}, let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, and let $A$ be an abelian \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[\Gamma]$-module}. Let $A \rtimes \Gamma$ be the associated \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} with projection $p: A \rtimes \Gamma \to \Gamma$, $p(a,x) = x$.
+
+    Let $B$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $\pi: B \to \Gamma$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}.
+    There is a bijection between
+    \begin{enumerate}
+        \item functions $d: B \to A$ satisfying $d(b_1 b_2) = d(b_1) + \pi(b_1) \cdot d(b_2)$ for all $b_1, b_2 \in B$, and
+        \item \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphisms} $\psi: B \to A \rtimes \Gamma$ such that $p \circ \psi = \pi$.
+    \end{enumerate}
+    The correspondence is given by $\psi(b) = (d(b), \pi(b))$ and $d(b)$ is the $A$-component of $\psi(b)$.
+\end{proposition}
+\begin{proof}
+    \TODO{}
+    % Given $d: B \to A$ satisfying $d(b_1 b_2) = d(b_1) + \pi(b_1) \cdot d(b_2)$, define $\psi(b) = (d(b), \pi(b))$. We verify $\psi$ is a homomorphism. For $b_1, b_2 \in B$,
+    % $$\psi(b_1 b_2) = (d(b_1 b_2), \pi(b_1 b_2)) = (d(b_1) + \pi(b_1) \cdot d(b_2), \pi(b_1)\pi(b_2)).$$
+    % On the other hand, in $A \rtimes \Gamma$,
+    % $$\psi(b_1)\psi(b_2) = (d(b_1), \pi(b_1))(d(b_2), \pi(b_2)) = (d(b_1) + \pi(b_1) \cdot d(b_2), \pi(b_1)\pi(b_2)).$$
+    % The two agree, so $\psi$ is a homomorphism. Clearly $p(\psi(b)) = \pi(b)$.
+    % Conversely, given $\psi: B \to A \rtimes \Gamma$ with $p \circ \psi = \pi$, write $\psi(b) = (d(b), \pi(b))$ where $d(b) \in A$ is the first component. Then for $b_1, b_2 \in B$,
+    % $$(d(b_1 b_2), \pi(b_1 b_2)) = \psi(b_1 b_2) = \psi(b_1)\psi(b_2) = (d(b_1), \pi(b_1))(d(b_2), \pi(b_2))$$
+    % $$= (d(b_1) + \pi(b_1) \cdot d(b_2), \pi(b_1)\pi(b_2)).$$
+    % Comparing first components gives $d(b_1 b_2) = d(b_1) + \pi(b_1) \cdot d(b_2)$. The two constructions are clearly inverse.
+\end{proof}

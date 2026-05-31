@@ -1,0 +1,11 @@
+\begin{corollary}[Surjection of acting groups induces surjection of semidirect products] \label{corollary:surjection_of_acting_group_induces_surjection_of_semidirect_products}
+    Let $p: H_1 \twoheadrightarrow H_2$ be a surjective \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. Let $H_2$ act on a group $N$ via $\phi_2: H_2 \to \operatorname{Aut}(N)$, and let $H_1$ act on $N$ via the pulled-back action $\phi_1 = \phi_2 \circ p$.
+
+    Then $(\operatorname{id}_N, p)$ is a morphism in the \CrefAndHyperrefIfExist{definition:category_of_group_actions}{category of group actions}, and the induced homomorphism
+    $$\operatorname{id}_N \rtimes p : N \rtimes_{\phi_1} H_1 \longrightarrow N \rtimes_{\phi_2} H_2$$
+    given by $(\operatorname{id}_N \rtimes p)(n, h_1) = (n, p(h_1))$ is a surjective \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. Its kernel is $\{e_N\} \times \ker(p)$.
+\end{corollary}
+\begin{proof}
+    \TODO{}
+    % The pair $(\operatorname{id}_N, p)$ satisfies the compatibility condition: $\operatorname{id}_N(\phi_1(h_1)(n)) = \phi_2(p(h_1))(n) = \phi_2(p(h_1))(\operatorname{id}_N(n))$. By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, $\operatorname{id}_N \rtimes p$ is a homomorphism. For surjectivity, let $(n, h_2) \in N \rtimes_{\phi_2} H_2$. Since $p$ is surjective, there exists $h_1 \in H_1$ with $p(h_1) = h_2$. Then $(\operatorname{id}_N \rtimes p)(n, h_1) = (n, h_2)$. The kernel is $\{(n, h_1) : n = e_N, p(h_1) = e_{H_2}\} = \{e_N\} \times \ker(p)$.
+\end{proof}

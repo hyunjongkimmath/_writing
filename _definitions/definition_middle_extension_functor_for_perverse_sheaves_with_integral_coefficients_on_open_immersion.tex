@@ -1,0 +1,19 @@
+\begin{definition}[Middle extension functor for perverse sheaves with integral coefficients] \label{definition:middle_extension_functor_for_perverse_sheaves_with_integral_coefficients_on_open_immersion}
+\TODO{AI generated, verify}
+The \CrefAndHyperref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_integral_adic_coefficients}{self-dual (middle) perverse $t$-structure on $\Dbc(X, R)$} provides the \CrefAndHyperref{definition:t_structure_on_a_triangulated_category}{$t$-structure} whose core is $\Perv(X, R)$.
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{scheme over} a \CrefAndHyperrefIfExist{definition:finite_field}{finite} or \CrefAndHyperrefIfExist{definition:separably_closed_field}{separably closed field}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$. Let $j: U \hookrightarrow X$ be an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion}.
+
+Let $\Perv(U, R)$\CrefIfExists{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_integral_adic_coefficients} and $\Perv(X, R)$ be the hearts of the perverse $t$-structures on $D_c^b(U, R)$ and $D_c^b(X, R)$ respectively. Let $\pscrH^0_R(-)$ denote the zeroth perverse cohomology functor with respect to these perverse $t$-structures.
+
+For $\mathcal{P} \in \Perv(U, R)$, there is a canonical forgets support morphism
+$$\alpha_j(\mathcal{P}): Rj_! \mathcal{P} \to Rj_* \mathcal{P}$$
+in $D_c^b(X, R)$, given by the \CrefAndHyperrefIfExist{definition:canonical_forgets_support_map_from_derived_direct_image_with_compact_support_to_derived_direct_image_for_bdd_constructible_complexes_with_integral_coefficients_on_compactifiable_morphisms}{canonical forgets support map for bounded constructible complexes with integral coefficients}.
+
+The \hldef{middle extension of $\mathcal{P}$ along $j$} is the object in $\Perv(X, R)$
+$$\hlin{j_{!*} \mathcal{P} := \Im\bigl(\pscrH^0_R(Rj_! \mathcal{P}) \xrightarrow{\pscrH^0_R(\alpha_j(\mathcal{P}))} \pscrH^0_R(Rj_* \mathcal{P})\bigr)}$$
+where $\Im(-)$ denotes the image in the abelian category $\Perv(X, R)$.
+
+The assignment $\mathcal{P} \mapsto j_{!*}\mathcal{P}$ extends to a functor
+$$\hlin{j_{!*}: \Perv(U, R) \to \Perv(X, R)}$$
+called the \hldef{middle extension functor with integral coefficients along $j$}. It is the composition of the fully faithful inclusion $\pscrH^0_R(Rj_!) : \Perv(U, R) \hookrightarrow \Perv(X, R)$, the natural transformation $\alpha_j$, and the projection to the image inside $\Perv(X, R)$.
+\end{definition}

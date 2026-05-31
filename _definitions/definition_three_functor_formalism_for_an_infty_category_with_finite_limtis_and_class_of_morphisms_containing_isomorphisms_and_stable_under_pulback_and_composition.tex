@@ -1,0 +1,16 @@
+\begin{definition}[{\cite[Definition 2.4.]{scholze_sff}}] \label{definition:three_functor_formalism_for_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}
+    Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+
+    \TODO{lax symmetric monoidal functor}
+    A \hldef{$3$-functor formalism} is a lax symmetric monoidal functor
+    $$D: \operatorname{Corr}(C,E) \to \operatorname{Cat}_\infty$$
+    (\Cref{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition})\CrefIfExists{definition:infty_category_of_infty_categories}
+
+    \TODO{give the actual definitions of these fucntors}
+    As the name suggests, $3$ classes of functors are of particular interest in a $3$-functor formalism:
+    \begin{enumerate}
+        \item For all objects $X \in C$, \hldef{internal tensor product functors} \hl{$\otimes: D(X) \times D(X) \to D(X)$}, defined as the composition of htel ax symmetric monoidal structure map $D(X) \times D(X) \to D(X \times X)$ followed by the pullback $\Delta^*$ along the diagonal $\Delta: X \to X \times X$.
+        \item For all morphisms $f: X \to Y$ in $C$, \hldef{inverse image}/\hldef{pullback functors} \hl{$f^*: D(Y) \to D(X)$}
+        \item For all morphisms $f: X \to Y$ in $E$, \hldef{``compactly supported'' direct image/pushforward functors} \hl{$f_!: D(X) \to D(Y)$}
+    \end{enumerate}
+\end{definition}

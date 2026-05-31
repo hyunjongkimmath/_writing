@@ -1,0 +1,46 @@
+\begin{definition}[cf. {\cite[Proposition 10.1.17]{fu_ect}}] \label{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let all schemes below be of \CrefAndHyperref{definition:finite_type_morphism_of_schemes}{finite type} over $S$. Let $A$ be a \CrefAndHyperref{definition:noetherian_ring}{noetherian} \CrefAndHyperref{definition:torsion_ring}{torsion ring}. Consider sheaves of $A$-modules on the \CrefAndHyperref{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of schemes over $S$. Let $f: X \to Y$ be an $S$-\CrefAndHyperref{definition:morphism_of_schemes}{morphism}.
+
+    The six functors on the derived categories $D(X_{\et}, A)$ and $D(Y_{\et}, A)$ are defined as follows.
+    \begin{enumerate}
+        \item \textbf{Inverse image $Lf^*$.} For any morphism $f$, define
+        $$\hlin{Lf^*: D(Y_{\et}, A) \to D(X_{\et}, A)}$$
+        as the \CrefAndHyperref{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{(total) derived inverse image} of the \CrefAndHyperref{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{inverse image functor} $f^*$.
+
+        \item \textbf{Direct image $Rf_*$.} For any morphism $f$, define
+        $$\hlin{Rf_*: D(X_{\et}, A) \to D(Y_{\et}, A)}$$
+        as the \CrefAndHyperref{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi}{(total) derived direct image} of the \CrefAndHyperref{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{direct image functor} $f_*$.
+
+        \item \textbf{Direct image with compact support $Rf_!$.} If $f$ is an $S$-\CrefAndHyperref{definition:compactification_of_a_morphism_of_schemes}{compactifiable morphism}, define
+        $$\hlin{Rf_!: D(X_{\et}, A) \to D(Y_{\et}, A)}$$
+        as the right derived functor of the \CrefAndHyperref{definition:direct_image_functor_with_compact_support_on_etale_sheaves_of_lambda_modules_for_a_compactifiable_morphism}{direct image with compact support} $f_!$.
+
+        \item \textbf{Exceptional inverse image $Rf^!$.} If $f$ is an $S$-compactifiable morphism, define
+        $$\hlin{Rf^!: D^+(Y_{\et}, A) \to D^+(X_{\et}, A)}$$
+        as the \CrefAndHyperref{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}{exceptional inverse image functor for torsion coefficients}.
+
+        \item \textbf{Derived tensor product $\otimes_A^L$.} On a single scheme $X$, define
+        $$\hlin{\otimes_A^L: D(X_{\et}, A) \times D(X_{\et}, A) \to D(X_{\et}, A)}$$
+        as the left derived functor of the \CrefAndHyperref{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}{sheafified tensor product} $\otimes_A$.
+
+        \item \textbf{Derived internal Hom $R\mathscr{H}om_A$.} On a single scheme $X$, define
+        $$\hlin{R\mathscr{H}om_A: D(X_{\et}, A)^{\mathrm{op}} \times D^+(X_{\et}, A) \to D^+(X_{\et}, A)}$$
+        as the right derived functor of the \CrefAndHyperref{definition:sheaf_hom_for_sheaves_of_modules_over_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family}{internal sheaf Hom} $\mathscr{H}om_A$.
+    \end{enumerate}
+
+    These functors satisfy the following adjunctions:
+    \begin{itemize}
+        \item $(Lf^*, Rf_*)$ is an adjoint pair (\CrefAndHyperref{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}{left derived inverse image}, \CrefAndHyperref{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi}{right derived direct image}):
+        $$\Hom_{D(X_{\et}, A)}(Lf^* L, K) \cong \Hom_{D(Y_{\et}, A)}(L, Rf_* K)$$
+        for all $K \in D(X_{\et}, A)$ and $L \in D(Y_{\et}, A)$.
+
+        \item $(Rf_!, Rf^!)$ is an adjoint pair (\CrefAndHyperrefIfExist{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}{exceptional inverse image for torsion coefficients}):
+        $$\Hom_{D(X_{\et}, A)}(K, Rf^! L) \cong \Hom_{D(Y_{\et}, A)}(Rf_! K, L)$$
+        for all $K \in D(X_{\et}, A)$ and $L \in D^+(Y_{\et}, A)$.
+
+        \item $(\otimes_A^L, R\mathscr{H}om_A)$ is an adjoint pair:
+        $$\Hom_{D(X_{\et}, A)}(K \otimes_A^L L, M) \cong \Hom_{D^+(X_{\et}, A)}(K, R\mathscr{H}om_A(L, M))$$
+        for all $K, L \in D(X_{\et}, A)$ and $M \in D^+(X_{\et}, A)$.
+    \end{itemize}
+\end{definition}

@@ -46,26 +46,11 @@
 
 
 
-\begin{theorem}
-    \begin{enumerate}
-        \item (First Isomorphism Theorem) Let $\phi: G \to H$ be a group homomorphism with kernel $K = \operatorname{ker}(\phi)$ and image $I = \operatorname{im}(\phi)$. Then $K$ is a normal subgroup of $G$, $I$ is a subgroup of $H$, and there is an isomorphism
-        $$ G/K \cong I $$
-        given by the map $gK \mapsto \phi(g)$. This theorem implies that any homomorphic image of a group is isomorphic to a quotient of that group.
+\input{../_concepts/lemma_unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel.tex}
 
-        \item (Second Isomorphism Theorem, or Diamond Isomorphism Theorem) Let $G$ be a group, $H$ a subgroup of $G$, and $N$ a normal subgroup of $G$. Then:
-        1. The product $HN = \{hn \mid h \in H, n \in N\}$ is a subgroup of $G$.
-        2. The intersection $H \cap N$ is a normal subgroup of $H$.
-        3. There is an isomorphism
-        $$ H / (H \cap N) \cong (HN) / N $$
-        given by the map $h(H \cap N) \mapsto hN$.
-
-        \item (Third Isomorphism Theorem) Let $G$ be a group and let $N$ and $K$ be normal subgroups of $G$ with $N \subseteq K$. Then $K/N$ is a normal subgroup of $G/N$, and there is an isomorphism
-        $$ (G/N) / (K/N) \cong G/K $$
-        given by the map $(gN)(K/N) \mapsto gK$.
-
-        \item (Correspondence Theorem, or Lattice Isomorphism Theorem) Let $G$ be a group and $N$ be a normal subgroup of $G$. There is a one-to-one correspondence between the set of subgroups $A$ of $G$ containing $N$ (i.e., $N \subseteq A \subseteq G$) and the set of subgroups of the quotient group $G/N$. This correspondence is given by $A \mapsto A/N$, and it preserves properties such as inclusion, indices, normality, and intersections.
-    \end{enumerate}
-\end{theorem}
+\input{../_concepts/theorem_first_isomorphism_theorem_for_groups.tex}
+\input{../_concepts/theorem_second_isomorphism_theorem_for_groups.tex}
+\input{../_concepts/theorem_third_isomorphism_theorem_for_groups.tex}
 
 
 
@@ -474,6 +459,70 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 
 
 \section{Field Theory}
+
+\subsection{Field extensions and degrees}
+
+\input{../_definitions/definition_field_homomorphism.tex}
+\input{../_concepts/proposition_field_homomorphism_is_injective.tex}
+
+\input{../_definitions/definition_extension_of_a_field.tex}
+\input{../_concepts/lemma_extension_of_a_field_is_a_vector_space.tex}
+\input{../_definitions/definition_degree_of_a_field_extension.tex}
+\input{../_definitions/definition_finite_field_extension.tex}
+\input{../_concepts/lemma_tower_law_for_degrees_of_field_extensions.tex}
+
+\input{../_definitions/definition_characteristic_of_a_ring.tex}
+\input{../_concepts/proposition_characteristic_of_a_field_is_zero_or_a_prime.tex}
+\input{../_definitions/definition_prime_subfield_of_a_field.tex}
+
+\input{../_definitions/definition_algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension.tex}
+\input{../_definitions/definition_algebraically_closed_field.tex}
+\input{../_definitions/definition_algebraic_closure_of_a_field.tex}
+
+\input{../_definitions/definition_field_generated_by_elements.tex}
+\input{../_definitions/definition_finitely_generated_field_extension.tex}
+
+\subsection{Splitting fields and normal extensions}
+
+\input{../_definitions/definition_splitting_field_of_polynomials_over_a_field_normal_field_extension.tex}
+\input{../_concepts/theorem_existence_and_uniqueness_of_splitting_fields.tex}
+\input{../_concepts/lemma_normal_field_extension_characterization_via_embeddings_into_algebraic_closure.tex}
+
+\subsection{Separable extensions}
+
+\input{../_definitions/definition_separable_algebraic_field_extension.tex}
+\input{../_concepts/proposition_finite_degree_field_extension_is_separable_iff_degree_many_K_embeddings_into_algebraic_closure.tex}
+
+\input{../_definitions/definition_separably_closed_field.tex}
+\input{../_definitions/definition_separably_closed_field_extension.tex}
+
+\input{../_definitions/definition_perfect_field.tex}
+\input{../_concepts/proposition_any_field_that_is_algebraically_closed_characteristic_zero_or_finite_is_perfect.tex}
+
+\subsection{Galois theory}
+
+\input{../_definitions/definition_field_automorphism.tex}
+\input{../_definitions/definition_automorphism_group_of_a_field_extension.tex}
+\input{../_definitions/definition_galois_extension_of_fields.tex}
+
+\input{../_concepts/proposition_equivalent_conditions_for_a_finite_degree_field_extension_to_be_galois.tex}
+\input{../_concepts/theorem_galois_correspondence_of_subextensions_of_finite_galois_field_extensions.tex}
+\input{../_concepts/corollary_fixed_field_of_a_galois_group_is_base_field.tex}
+
+\input{../_concepts/theorem_primitive_element_theorem_of_finite_separable_field_extensions.tex}
+
+\input{../_concepts/theorem_infinite_galois_theory.tex}
+\input{../_concepts/proposition_galois_group_of_a_galois_extension_of_fields_is_profinite.tex}
+
+\subsection{Transcendental extensions}
+
+\input{../_definitions/definition_algebraically_independent_elements_of_an_extension_field_over_a_base_field.tex}
+\input{../_definitions/definition_transcendence_basis_of_a_field_extension.tex}
+\input{../_definitions/definition_transcendence_degree_of_a_field_extension.tex}
+\input{../_definitions/definition_function_field_over_a_field.tex}
+
+\input{../_definitions/definition_separating_transcendence_basis_of_a_field_extension.tex}
+\input{../_definitions/definition_separable_field_extension_general.tex}
 
 \section{Basic Linear algebra}
 

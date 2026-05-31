@@ -1,0 +1,12 @@
+\begin{lemma} \label{lemma:short_exact_sequence_of_groups_yields_short_exact_sequences_of_images_under_a_group_homomorphism_whose_kernel_contains_the_normal_subgroup}
+    Let $G$ be a group, $H$ be a group, and $\rho: G \to H$ be a group homomorphism. Let $N$ be a normal subgroup of $G$ such that $\ker \rho \subseteq N$. Then there exists a surjective homomorphism $\bar{\rho}: G/N \to \rho(G)$ inducing a short exact sequence:
+    \begin{align*}
+        1 \to \rho(N) \to \rho(G) \to G/N \to 1.
+    \end{align*}
+    where the map $\rho(G) \to G/N$ is defined by $\rho(g) \mapsto gN$. 
+    % (Note: If $\rho$ is surjective, $\rho(G) = H$, and the sequence simplifies to $1 \to \rho(N) \to H \to G/N \to 1$.)
+\end{lemma}
+
+\begin{proof}
+    By \Cref{lemma:unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel}, there is a group homomorphism $\rho(G) \to G/N$ given by $\rho(g) \mapsto gN$. It is clearly surjective and its kernel consists exactly of the elements of the form $\rho(g)$ such that $gN = g$. In other words, the kernel consists exactly of the elements of the form $\rho(g)$ such that $g \in N$. Thus, this kernel is $\rho(N)$.
+\end{proof}

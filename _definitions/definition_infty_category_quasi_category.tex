@@ -1,5 +1,12 @@
 \begin{definition} \label{definition:infty_category_quasi_category}
     A \hldef{quasi-category} is a \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set} $K$ satisfying the \CrefAndHyperrefIfExist{definition:kan_extension_condition_for_a_horn_for_a_simplicial_set}{Kan extension condition} for the horns $\Lambda_i^n \subset \Delta^n$ for all $n$ and all $0 < i < n$. More explicitly, for any $0 < i < n$, any map $f_0: \Lambda_i^n \to K$ \CrefIfExists{definition:horn_of_the_nth_standard_simplex} admits an extension $f: \Delta^n \to K$ \CrefIfExists{definition:standard_n_simplex}.
 
-    In $\infty$-category theory, a quasi-category is synonymously referred to as an \hldef{$(\infty, 1)$-category}. Moreover, an \hldef{$\infty$-category}, without further qualifications, often refers to a quasi-category.
+    Equivalently, an quasi-category is a simplicial set $K$ such that
+    $$\Map(\Delta^2, K) \to \Map(\Lambda_1^2, K)$$
+    is a trivial \CrefAndHyperrefIfExist{}{Kan} \CrefAndHyperrefIfExist{}{fibration}\CrefIfExists{proposition:simplicial_set_is_quasi_category_iff_maps_from_Delta_2_to_maps_from_Lambda_1_2_is_a_trivial_kan_fibration}.
+
+    In $\infty$-category theory, a quasi-category is synonymously referred to as an \hldef{$(\infty, 1)$-category}. Moreover, an \hldef{$\infty$-category}, without further qualifications, often refers to a quasi-category. 
+    \TextIfExists{definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set}{
+    See \Cref{definition:categorical_terminology_for_simplices_in_a_simplicial_set_objects_morphisms_compositions_of_morphisms_in_a_simplicial_set}, which describes the framework to describe quasi-categories as $\infty$-categories. 
+    }
 \end{definition}

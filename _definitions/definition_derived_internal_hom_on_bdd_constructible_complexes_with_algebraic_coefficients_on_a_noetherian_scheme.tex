@@ -1,0 +1,15 @@
+\begin{definition}[Derived internal Hom on bounded constructible complexes with algebraic coefficients] \label{definition:derived_internal_hom_on_bdd_constructible_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    The \hldef{derived internal Hom functor on bounded constructible complexes with algebraic coefficients over $K$} is the bifunctor
+    $$\hlin{R\mathscr{H}om_K : \Dbc(X, K)^{\mathrm{op}} \times \Dbc(X, K) \to \Dbc(X, K)}$$
+    defined as follows. For each finite extension $E'$ of $E$ inside $K$, let $R'$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $R$ in $E'$. The \CrefAndHyperref{definition:derived_internal_hom_on_bdd_constructible_complexes_with_rational_coefficients_on_a_noetherian_scheme}{derived internal Hom functors} $R\mathscr{H}om_{E'}: \Dbc(X, E')^{\mathrm{op}} \times \Dbc(X, E') \to \Dbc(X, E')$ form a direct system as $E'$ varies, because the base change functors $\Dbc(\cdot, E') \to \Dbc(\cdot, E'')$ for $E' \subseteq E''$ commute with derived internal Homs. Define $R\mathscr{H}om_K$ as the colimit of this direct system.
+
+    Concretely, for objects $\mathcal{F}, \mathcal{G} \in \Dbc(X, K)$ represented by $\mathcal{F}_{E'_1} \in \Dbc(X, E'_1)$ and $\mathcal{G}_{E'_2} \in \Dbc(X, E'_2)$ for finite extensions $E'_1, E'_2$ of $E$ inside $K$, choose a common finite extension $E'' \supseteq E'_1, E'_2$ inside $K$. Set
+    $$R\mathscr{H}om_K(\mathcal{F}, \mathcal{G}) := \text{image of } R\mathscr{H}om_{E''}(\mathcal{F}_{E''}, \mathcal{G}_{E''}) \in \Dbc(X, E'') \text{ in } \Dbc(X, K).$$
+
+    This functor satisfies the adjunction
+    $$\Hom_{\Dbc(X,K)}(M \Lotimes_K N, P) \cong \Hom_{\Dbc(X,K)}(M, R\mathscr{H}om_K(N,P))$$
+    for all $M,N,P \in \Dbc(X, K)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}).
+\end{definition}

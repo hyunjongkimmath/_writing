@@ -1,0 +1,12 @@
+\begin{lemma} \label{lemma:subgroup_of_the_normal_abelian_subgroup_of_a_semidirect_product_group_is_an_invariant_subgroup_iff_it_is_a_normal_subgroup_of_semidirect_product}
+    Let $A$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups} with $A$ abelian, and let $\varphi: H \to \operatorname{Aut}(A)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}, where $\operatorname{Aut}(A)$ is the \CrefAndHyperrefIfExist{definition:automorphism_of_a_group_automorphism_group_of_a_group}{group of automorphisms} of $A$. Write the corresponding action of $H$ on $A$ by $H \times A \to A: (h,a) \mapsto h \cdot a$.
+
+    A subgroup $A' \leq A$ is invariant under the action of $H$, i.e. $h \cdot a' \in A'$ for all $h \in H$ and $a' \in A'$, if and only if $A'$, identified as $A' \rtimes \{1\}$, is a normal subgroup of $A \rtimes H$. 
+    % Let $N$ be a group. Let $H \to \operatorname{Aut}(H)
+\end{lemma}
+\begin{proof}
+    Let $A' \leq A$ be a subgroup. Given $a' \in A'$ and $(a,h) \in A \rtimes H$, 
+    Since $A$ is abelian, one can compute that 
+    $$(a,h) \cdot (a',1) \cdot (a,h)^{-1} = (ha', 1).$$
+    Note that $A'$ is invariant under the action of $H$ if and only if $ha' \in A'$ for all $a' \in A'$ and $h \in H$, which in turn holds if and only if the above conjugate is an element of $A' \rtimes \{1\}$ for all $(a,h) \in A \rtimes H$ and $(a',1) \in A' \rtimes \{1\}$, i.e.  $A' \rtimes \{1\}$ is a normal subgroup of $A \rtimes H$. 
+\end{proof}

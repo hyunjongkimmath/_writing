@@ -1,0 +1,16 @@
+\begin{theorem}[Gauss's Lemma for an Integrally Closed Domain] \label{theorem:gauss_lemma_for_integrally_closed_domain_primitive_poly_product_content_ideal_multiplicativity}
+\TODO{AI generated, verify}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain} and let $K$ be its fraction field. For a polynomial $f = \sum_{i=0}^n a_i x^i \in R[x]$, let
+$$\hlin{c(f) = (a_0, a_1, \dots, a_n) \subseteq R}$$
+denote the \hldef{content ideal of $f$}. A nonzero polynomial $f \in R[x]$ is called \hldef{primitive (polynomial over an integral domain)} if $c(f) = R$.
+
+The following are equivalent:
+\begin{enumerate}
+    \item[(i)] $R$ is \CrefAndHyperrefIfExist{definition:integrally_closed_domain}{integrally closed}.
+    \item[(ii)] For any two primitive polynomials $f, g \in R[x]$, the product $fg$ is primitive.
+    \item[(iii)] For all $f, g \in R[x]$, one has $c(fg) = c(f)c(g)$.
+    \item[(iv)] If $a \in R \setminus \{0\}$ and $f \in R[x]$ is monic of degree $\ge 1$ such that $a f(x)$ has a root in $K$, then $a f(x)$ has a root in $R$.
+    \item[(v)] $R[[x]] \cap K[x^\times] = (R[x])^\times$, where $K[x^\times]$ denotes the units of $K[x]$ and $(R[x])^\times$ denotes the units of $R[x]$.
+\end{enumerate}
+Moreover, if $R$ is a \CrefAndHyperrefIfExist{definition:unique_factorization_domain}{unique factorization domain}, then conditions (i)--(v) all hold.
+\end{theorem}

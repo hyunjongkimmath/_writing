@@ -1,0 +1,15 @@
+\begin{definition}[Fine moduli space] \label{definition:fine_moduli_space_for_a_moduli_problem_on_schemes}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $\calM \to (\operatorname{Sch}/S)$ be a \CrefAndHyperrefIfExist{definition:moduli_problem_on_schemes}{moduli problem}. A \hldef{fine moduli space for $\calM$} is a scheme $M$ over $S$ together with an isomorphism of categories fibered in groupoids
+    $$\phi: \calM \xrightarrow{\sim} M$$
+    over $(\operatorname{Sch}/S)$, where the scheme $M$ is viewed as a discrete stack (i.e., for each $T/S$, the \CrefAndHyperrefIfExist{definition:category_over_a_category_and_fiber_category_over_an_object}{fiber category} $M_T$ has objects $M(T)$ and only identity morphisms).
+
+    Equivalently, via the \CrefAndHyperrefIfExist{definition:yoneda_embedding}{Yoneda embedding}, a fine moduli space for $\calM$ is a scheme $M$ over $S$ such that the structural morphism $\calM \to M$ (viewed as a presheaf of groupoids) is a \CrefAndHyperrefIfExist{definition:natural_isomorphism_between_functors_between_categories}{natural isomorphism} from $\calM$ to the \CrefAndHyperrefIfExist{definition:functor_of_points}{functor of points} $h_M = \Hom_S(-, M)$ on $(\operatorname{Sch}/S)$.
+
+    When a fine moduli space exists for $\calM$, it is unique up to unique isomorphism over $S$ by the \CrefAndHyperrefIfExist{definition:yoneda_lemma}{Yoneda lemma}. The scheme $M$ is then called the \hldef{fine moduli space of $\calM$} and may be denoted by \hl{$M_{\mathrm{fin}}$} or simply \hl{$M$} when no ambiguity arises.
+
+    A fine moduli space is in particular a \Cref{definition:coarse_moduli_space_for_a_stack_in_groupoids}{coarse moduli space}, since the natural isomorphism $\calM \xrightarrow{\sim} h_M$ induces bijections on isomorphism classes of geometric points. The distinction is that a fine moduli space carries a \CrefAndHyperrefIfExist{definition:universal_family_for_a_moduli_problem_on_schemes}{universal family}: for every $T/S$, the map
+    $$\Hom_S(T, M) \xrightarrow{\sim} \pi_0(\calM(T))$$
+    is not merely a bijection on isomorphism classes but an isomorphism of groupoids (i.e., every family over $T$ arises by pullback from this universal object).
+
+    When no fine moduli space exists but a coarse one does, the obstruction typically lies in the existence of non-trivial automorphisms of objects in $\calM(T)$ for various test schemes $T$.
+\end{definition}

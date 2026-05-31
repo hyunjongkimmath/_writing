@@ -1,0 +1,12 @@
+\begin{theorem}[Bounded convergence theorem] \label{theorem:bounded_convergence_theorem}
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperref{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{finite measure space}, i.e., $\mu(X) < \infty$. Let $\{f_n\}_{n=1}^\infty$ be a sequence of \CrefAndHyperref{definition:lebesgue_integral_of_measurable_functions_into_the}{measurable functions} $f_n: X \to \mathbb{R}$, and let $f: X \to \mathbb{R}$ be measurable.
+
+Suppose that:
+\begin{enumerate}
+    \item $f_n \to f$ \CrefAndHyperref{definition:property_holds_almost_everywhere_for_a_measure_space}{almost everywhere} with respect to $\mu$, and
+    \item there exists a constant $M < \infty$ such that $|f_n(x)| \leq M$ for all $n \in \mathbb{N}$ and all $x \in X$.
+\end{enumerate}
+
+Then each $f_n$ and $f$ are \CrefAndHyperref{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable}, and
+$$\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.$$
+\end{theorem}

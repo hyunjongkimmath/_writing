@@ -1,0 +1,24 @@
+\begin{definition}[Standard $t$-structure on $\Dbc(X, \star)$] \label{definition:standard_t_structure_on_bounded_constructible_derived_category}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field of $R$}, and let $K/E$ be an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}.
+
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. For any coefficient $\star \in \{R, E, K\}$, the \hldef{standard $t$-structure on $\Dbc(X, \star)$}\CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme} is given by the pair of strictly full subcategories
+
+    \hlalign{
+    \begin{align*}
+        \stDleqzero(X, \star) &= \{ K^\bullet \in \Dbc(X, \star) : \scrH^i(K^\bullet) = 0 \text{ for all } i > 0 \}, \\
+        \stDgeqzero(X, \star) &= \{ K^\bullet \in \Dbc(X, \star) : \scrH^i(K^\bullet) = 0 \text{ for all } i < 0 \},
+    \end{align*}
+    }
+
+    where $\scrH^i(K^\bullet)$ denotes the $i$th \CrefAndHyperrefIfExist{definition:cohomology_sheaves_of_a_constructible_complex_with_integral_coefficients_on_a_noetherian_scheme}{cohomology sheaf} of the complex $K^\bullet$\CrefIfExists{definition:cohomology_sheaves_of_a_constructible_complex_with_rational_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:cohomology_sheaves_of_a_constructible_complex_with_algebraic_coefficients_on_a_noetherian_scheme}.
+
+    For integral coefficients, this is {\cite[Definition II.6.3]{kiehl_weissauer_wcps}} (written there with $\mathfrak{o}$ for $R$). Theorem {\cite[II.6.4]{kiehl_weissauer_wcps}} proves that $(\stDleqzero(X, R), \stDgeqzero(X, R))$ is a $t$-structure on $\Dbc(X, R)$ and that the core is equivalent to the abelian category of $\pi$-adic sheaves on $X$ via $K^\bullet \mapsto \scrH^0(K^\bullet)$.
+
+    \TODO{verify that this is really true}
+    For rational coefficients, the objects of $\Dbc(X, E)$\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme} are those of $\Dbc(X, R)$, so the vanishing conditions on cohomology sheaves are identical. Thus $(\stDleqzero(X, E), \stDgeqzero(X, E))$ is a $t$-structure because it restricts the integral $t$-structure to the same object class.
+
+    For algebraic coefficients, every object of $\Dbc(X, K)$\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme} descends to some finite extension $L/K$. The vanishing conditions on cohomology sheaves are preserved under base change along $L' / L$, so the subcategories $(\stDleqzero(X, K), \stDgeqzero(X, K))$ form a $t$-structure as the 2-direct limit of the $t$-structures on $\Dbc(X, L)$.
+
+    We write \hl{$\sttauleqn$} and \hl{$\sttaugeqn$} for the truncation functors of this $t$-structure. The lower truncation functor $\sttauleqn$ is the Deligne truncation functor (see Lemma {\cite[II.6.1]{kiehl_weissauer_wcps}}).
+\end{definition}

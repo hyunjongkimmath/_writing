@@ -1,0 +1,29 @@
+\begin{theorem} \label{lemma:first_cocycles_of_a_cyclic_group_with_values_in_a_module_are_kernels_of_the_norm_element}
+    Let $d \geq 1$ be an integer, let $C_d = \langle g \rangle$ be the \CrefAndHyperrefIfExist{definition:cyclic_group}{cyclic group} of order $d$, and let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$\mathbb{Z}[C_d]$-module}. Let
+    $$N = 1 + g + g^2 + \cdots + g^{d-1}$$
+    be the \CrefAndHyperrefIfExist{definition:norm_element_of_a_group_algebra_of_a_finite_group_over_a_ring}{norm element} of $\mathbb{Z}[C_d]$.
+
+    There is a canonical bijection between $Z^1(C_d, A)$ \CrefIfExists{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring} and $\ker(N) = \{x \in A : N \cdot x = 0\}$, given by
+    $$\alpha \mapsto \alpha(g).$$
+    The inverse sends $x \in \ker(N)$ to the \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{cocycle} $\alpha_x$ defined by
+    $$\alpha_x(g^k) = (1 + g + \cdots + g^{k-1}) \cdot x$$
+    for $k = 0, 1, \ldots, d-1$.
+\end{theorem}
+
+\begin{proof}
+    By the \CrefAndHyperrefIfExist{lemma:cocycle_condition_for_the_first_cocycle_group_of_a_group_acting_on_an_abelian_group}{cocycle condition}, $Z^1(C_d,A)$ consists exactly of the maps $\alpha: C_d \to A$ such that 
+    $$\alpha(g_1 \cdot g_1) = \alpha(g_1) + g_1 \cdot \alpha(g_2)$$
+    for all $g_1, g_2 \in C_d$.
+
+    By induction on $k$, any $\alpha \in Z^1(C_d,A)$ must thus satisfy
+    $$\alpha(g^k) = (1 + g + \cdots + g^{k-1}) \cdot \alpha(g)$$
+    for all $k \geq 1$. In particular, 
+    $$\alpha(1) = \alpha(g^d) = N \cdot \alpha(g).$$
+    On the other hand, $\alpha(1) = 0$\CrefIfExists{lemma:value_of_1_cocycle_of_a_group_module_at_the_identity_element_is_zero}, so $\alpha(g) \in \ker(N)$. 
+
+    Conversely, let $x \in A$ with $N \cdot x = 0$. Define $\alpha_x : C_d \to A$ by $\alpha_x(g^k) = (1 + g + \cdots + g^{k-1}) \cdot x$ for $k = 0, \ldots, d-1$. We verify the cocycle condition. For any $i,j$, write $i+j = qd + r$ with $0 \leq r < d$. Then
+    $$\alpha_x(g^i) + g^i \cdot \alpha_x(g^j) = (1 + g + \cdots + g^{i-1})x + g^i(1 + g + \cdots + g^{j-1})x = (1 + g + \cdots + g^{i+j-1})x.$$
+    Now $1 + g + \cdots + g^{i+j-1} = (1 + g + \cdots + g^{r-1}) + qN$ in $\mathbb{Z}[C_d]$, so acting on $x$ gives $(1 + g + \cdots + g^{r-1})x = \alpha_x(g^r) = \alpha_x(g^{i+j})$. Hence, $\alpha_x$ is a $1$-cocycle, i.e. is an element of $Z^1(C_d,M)$.
+
+    The two assignments are clearly inverse to each other ---  given $\alpha \in Z^1(C_d, A)$ and writing $x = \alpha(g)$, we have $\alpha_x(g^k) = (1 + g + \cdots + g^{k-1})\cdot \alpha(g) = \alpha(g^k)$ by the cocycle identity. On the other hand, given $x \in \ker(N)$, we have $\alpha_x(g) = 1 \cdot x = x$.
+\end{proof}

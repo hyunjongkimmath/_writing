@@ -1,0 +1,18 @@
+\begin{lemma} \label{lemma:cocycle_condition_for_the_first_cocycle_group_of_a_group_acting_on_an_abelian_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $M$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{(left) $G$-module} over a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$.
+
+    We have 
+    $$Z^1(G,M) = \{f: G \to M: f(g_1g_2) = f(g_1) + g_1 \cdot f(g_2) \text{ for all } g_1,g_2 \in G\}.$$
+    As such, one often refers to the equality 
+    $$f(g_1g_2) = f(g_1) + g_1 \cdot f(g_2)$$
+    as the \hldef{cocycle condition}.
+\end{lemma}
+\begin{proof}
+    Let $S$ be the set 
+    $$\{f: G \to M: f(g_1g_2) = f(g_1) + g_1 \cdot f(g_2) \text{ for all } g_1,g_2 \in G\}$$
+    above. We want to show that $S = Z^1(G,M)$, i.e. that $S$ is exactly the kernel of the \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{coboundary map} $\delta^1: C^1(G,M) \to C^2(G,M)$. For every $f \in C^1(G,M)$, we have  
+    $$(\delta^1 f)(g_1,g_2) = g_1 f(g_2) - f(g_1g_2) + f(g_1) $$
+    by the definition of $\delta^1$. This is $0$ for all $g_1,g_2 \in G$ exactly when
+    $$f(g_1g_2) = f(g_1) + g_1 \cdot f(g_2)$$
+    for all $g_1,g_2 \in G$. 
+\end{proof}

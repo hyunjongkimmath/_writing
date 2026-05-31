@@ -1,0 +1,25 @@
+\begin{definition}[Action of an endomorphism with F-structure on cohomological invariants] \label{definition:action_of_an_endomorphism_with_f_structure_on_cohomology_and_compactly_supported_cohomology_of_a_scheme}
+\TODO{AI generated, verify}
+    Let $S$ be a scheme. Let $\mathbb{D}: (\operatorname{Sch}/S)^{\op} \to \widehat{\mathbf{Cat}}$ be a contravariant \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctor}. Let $X$ be an $S$-scheme and $F: X \to X$ an endomorphism.
+
+    Suppose that for each $S$-scheme $Y$, there is a \hldef{cohomological invariant functor}
+    $$H^i(Y, -): \mathbb{D}(Y) \to \operatorname{Mod}_A$$
+    to the category of modules over some ring $A$, together with contravariantly functorial maps
+    $$f^*: H^i(Y, L) \to H^i(X, f^*L), \quad \text{for each } f: X \to Y \text{ in } \operatorname{Sch}/S, \; L \in \mathbb{D}(Y).$$
+
+    Let $(K, \alpha)$ be an \CrefAndHyperrefIfExist{definition:f_structure_on_an_object_of_a_pseudofunctorial_category_over_schemes_for_an_endomorphism}{object of $\mathbb{D}(X)$ with $F$-structure}, where $\alpha: F^*K \xrightarrow{\sim} K$. The \hldef{action of $F$ with $F$-structure $\alpha$ on the cohomological invariants of $K$} is the endomorphism
+    $$\hlin{\alpha_* \circ F^*: H^i(X, K) \to H^i(X, K)}$$
+    obtained by composing the pullback map $F^*: H^i(X, K) \to H^i(X, F^*K)$ with the isomorphism $\alpha_*: H^i(X, F^*K) \xrightarrow{\sim} H^i(X, K)$ induced by $\alpha$.
+
+    \paragraph{Covariant action via proper pushforward.} Suppose further that for each proper morphism $g: Y \to Z$ in $\operatorname{Sch}/S$, there is a covariantly functorial pushforward
+    $$g_*: H^i(Y, L) \to H^i(Z, g_*L), \quad L \in \mathbb{D}(Y),$$
+    satisfying the projection formula: for any $M \in \mathbb{D}(Z)$ and $L \in \mathbb{D}(Y)$, the map $g_*(g^*M \otimes L) \to M \otimes g_*L$ is an isomorphism in $\operatorname{Mod}_A$. If $F: X \to X$ is proper, the pushforward $F_*: H^i(X, K) \to H^i(X, F_*K)$ composed with the identification via $\alpha$ yields an endomorphism
+    $$\hlin{F_{*,\alpha}: H^i(X, K) \to H^i(X, K)}$$
+    called the \hldef{covariant action of $F$ with $F$-structure $\alpha$}.
+
+    \paragraph{Compactly supported cohomology as a special case.} When each $S$-scheme $X$ of finite type admits a structure morphism $f: X \to S$, one often defines compactly supported cohomological invariants by $H_c^i(X, -) := f_* H^i(X, -)$ using the proper pushforward above. In this setting, if $F: X \to X$ is an endomorphism of finite type $S$-schemes which is proper, the covariant action on $H^i$ descends to an endomorphism of $H_c^i(X, K)$ because $F$ commutes with the structure morphism to $S$.
+
+    \paragraph{The case of \'etale sheaves.} When $\mathbb{D}(X) = D(X_{\et}, A)$ is the derived category of \'etale sheaves of $A$-modules on $S$-schemes, and $H^i$ are the usual \CrefAndHyperrefIfExist{definition:cohomology_groups_of_a_site_with_coefficients_in_a_ring}{\'etale cohomology groups}, this recovers the standard Frobenius action on cohomology. When $\mathbb{D}(X) = \Dbc(X, R)$ is the derived category of bounded constructible complexes with integral adic coefficients, pullback and pushforward are defined level-wise on inverse systems, and the same construction applies.
+
+    \paragraph{The finite field case.} When $F$ is the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_a_scheme_over_a_scheme_with_invertible_finite_order_absolute_frobenius_morphism}{Frobenius endomorphism} on a scheme of finite type over a finite field $\mathbb{F}_q$, and $\alpha$ is the canonical Frobenius isomorphism $F^*K \xrightarrow{\sim} K$ (existing because absolute Frobenius is identity on points and \'etale morphisms are invariant under Frobenius pullback), the above endomorphisms recover the standard Frobenius actions used in the \CrefAndHyperrefIfExist{definition:frobenius_trace_of_a_cohomologically_bounded_complex_of_constructible_ell_adic_sheaves_on_a_finite_type_separated_scheme_over_a_finite_field}{Frobenius trace function} and the Grothendieck trace formula.
+\end{definition}

@@ -1,0 +1,23 @@
+\begin{proposition}[Functoriality of the semidirect product] \label{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}
+    The \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} defines a functor
+    $$\rtimes : \mathbf{ActGrp} \longrightarrow \mathbf{Grp}$$
+    from the \CrefAndHyperrefIfExist{definition:category_of_group_actions}{category of group actions} to the category of groups.
+
+    On objects, $\rtimes(N, H, \phi) = N \rtimes_\phi H$.
+    On morphisms, given $(f, g): (N, H, \phi) \to (M, K, \psi)$, the induced homomorphism
+    $$(f \rtimes g) : N \rtimes_\phi H \longrightarrow M \rtimes_\psi K$$
+    is defined by $(f \rtimes g)(n, h) = (f(n), g(h))$.
+\end{proposition}
+\begin{proof}
+    \TODO{}
+    % We verify that $f \rtimes g$ is a group homomorphism. For $(n_1, h_1), (n_2, h_2) \in N \rtimes_\phi H$,
+    % $$\begin{aligned}
+    % (f \rtimes g)((n_1, h_1)(n_2, h_2)) &= (f \rtimes g)(n_1 \phi(h_1)(n_2), h_1 h_2) \\
+    % &= (f(n_1 \phi(h_1)(n_2)), g(h_1 h_2)) \\
+    % &= (f(n_1) f(\phi(h_1)(n_2)), g(h_1)g(h_2)) \\
+    % &= (f(n_1) \psi(g(h_1))(f(n_2)), g(h_1)g(h_2)) \\
+    % &= (f(n_1), g(h_1))(f(n_2), g(h_2)) \\
+    % &= (f \rtimes g)(n_1, h_1) \cdot (f \rtimes g)(n_2, h_2).
+    % \end{aligned}$$
+    % The third equality uses that $f$ and $g$ are homomorphisms. The fourth equality uses the compatibility condition $f(\phi(h_1)(n_2)) = \psi(g(h_1))(f(n_2))$. Functor axioms (preservation of identities and composition) are immediate from the componentwise definition.
+\end{proof}

@@ -1,0 +1,9 @@
+\begin{definition}[{\cite[Definition 1.1.3.2]{lurie_htt}}] \label{definition:homotopy_category_of_a_topological_category}
+Let $\mathcal{C}$ be a \CrefAndHyperref{definition:topological_category}{topological category}. The \hldef{homotopy category of a topological category}, denoted by \hl{$\mathrm{h}\mathcal{C}$}, is defined as follows:
+\begin{itemize}
+  \item The objects of $\mathrm{h}\mathcal{C}$ are the objects of $\mathcal{C}$.
+  \item For $X, Y \in \mathcal{C}$, we define $\operatorname{Hom}_{\mathrm{h}\mathcal{C}}(X,Y) = \pi_0(\mathrm{Map}_{\mathcal{C}}(X,Y))$, where $\pi_0$ denotes the set of path-components \CrefAndHyperrefIfExist{definition:path_component_of_a_point_in_a_topological_space}{of a topological space} and $\mathrm{Map}_{\mathcal{C}}(X,Y)$ is equipped with the compactly generated topology \CrefAndHyperrefIfExist{definition:compactly_generated_topological_space}{on the function space}.
+  \item Composition of morphisms in $\mathrm{h}\mathcal{C}$ is induced from the composition of morphisms in $\mathcal{C}$ by applying the functor $\pi_0$.
+\end{itemize}
+
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{corollary} \label{corollary:bdd_constructible_derived_category_with_algebraic_coefficients_is_triangulated}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ be a scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:finite_field}{finite} or \CrefAndHyperrefIfExist{definition:algebraically_closed_field_or_separably_closed_field}{separably closed} \CrefAndHyperrefIfExist{definition:field}{field} $k$.
+
+    The category \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X, K)$} is a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category}.
+\end{corollary}
+
+\begin{proof}
+    \TODO{verify}
+    % The category $\Dbc(X, K)$ is the $2$-direct limit of the categories $\Dbc(X, L')$ as $L'$ ranges over finite extensions of $E$ inside $K$ (\Cref{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}). Each $\Dbc(X, L')$ is a triangulated category by the same argument as \Cref{corollary:bdd_constructible_derived_category_with_rational_coefficients_is_triangulated}, and the transition functors are exact. The $2$-direct limit of triangulated categories along exact functors inherits a canonical triangulated structure.
+\end{proof}

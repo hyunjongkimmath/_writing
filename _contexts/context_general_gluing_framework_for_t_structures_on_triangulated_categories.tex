@@ -1,0 +1,23 @@
+\begin{context}[{\cite[1.4.3.]{beilinson_berstein_deligne_atlesI}}] \label{context:general_gluing_framework_for_t_structures_on_triangulated_categories}
+    Let $D$, $D_U$, and $D_F$ be \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated categories}. Suppose that there exist \CrefAndHyperrefIfExist{definition:exact_functor_between_triangulated_categories}{exact functors}
+    $$\hlin{D_F \xrightarrow{i_*} D \xrightarrow{j^*} D_U}.$$
+    \cite{beilinson_berstein_deligne_atlesI} sets \hl{$i_! := i_*$} and \hl{$j^! := j^*$} for convenience. Assume that the following hold:
+    \begin{enumerate}
+        \item $i_*$ has exact left and right adjoints, denoted by \hl{$i^*$} and \hl{$i^!$} respectively. In other words, we have adjunctions
+        $$i^* \dashv i_* \dashv i^!$$
+        \item $j^*$ has exact left and right adjoints, denoted by \hl{$j_!$} and \hl{$j_*$} respectively. In other words, we have adjunctions
+        $$j_! \dashv j^* \dashv j_*$$
+        \item $j^* i_* = 0$. By adjunction, we consequently have $i^* j_! = 0$, $i^! j_* = 0$, and for all $A \in D_F$ and $B \in D_U$,
+        $$\Hom_D(j_! B, i_* A) = 0 \quad \text{and} \quad \Hom_D(i_*A, j_* B) = 0.$$
+        \item For all $K$ in $D$ there exists $d: i_* i^* K \to j_! j^* K[1]$ (resp. $d: j_* j^* K \to i_* i^! K[1]$), which necessarily must be unique by the above condition and \Cref{corollary:cone_of_a_morphism_in_a_triangulated_category_is_unique_if_no_nontrivial_backwards_morphism_exists}, such that the triangle
+        \begin{align*}
+            &j_! j^* K \to K \to i_* i^* K \xrightarrow{d} \\
+            (resp. \quad & i_* i^! K \to K \to j_* j^* K \xrightarrow{d})
+        \end{align*}
+        is distinguished.
+
+        \item $i_*$, $j_!$, and $j^*$ are \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}, i.e. the adjunction morphisms $i^* i_* \to \id \to i^! i_*$, and $j_! j^* \to \id \to j_* j^*$ are isomorphisms.
+
+    \end{enumerate}
+    This formalism is self-dual --- the duality exchanges $j_!$ and $j_*$ and $i^*$ and $i^!$.
+\end{context}

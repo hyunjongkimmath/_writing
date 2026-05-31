@@ -1,0 +1,20 @@
+\begin{definition}[Exceptional inverse image functor on bounded constructible complexes with rational coefficients] \label{definition:exceptional_inverse_image_functor_on_bdd_const_derived_category_of_adic_sheaves_with_rational_coefficients_on_schemes_of_finite_type_over_a_a_noetherian_scheme_via_a_compactifiable_morphism}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the fraction field of $R$. Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $X$ and $Y$ be $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+    % The category \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X, E)$} has the same objects as \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$\Dbc(X, R)$}. 
+    % The exceptional inverse image functor on $\Dbc(\cdot, R)$ is defined at the level of inverse systems $(K_n)_n$ and hence commutes with localization by multiplication by $\lambda^m$. Therefore it descends to a functor on $\Dbc(\cdot, E)$.
+
+    The \hldef{exceptional inverse image functor on bounded constructible complexes with rational coefficients along $f$} is the functor
+    $$\hlin{Rf^! : \Dbc(Y, E) \to \Dbc(X, E)}$$
+    \CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}
+    induced from the exceptional inverse image functor
+    $$Rf^! : \Dbc(Y, R) \to \Dbc(X, R)$$
+    \CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme} by localization.
+    % which acts on objects by the same level-wise formula as in \Cref{definition:exceptional_inverse_image_functor_on_bdd_const_derived_category_of_adic_sheaves_with_integral_coefficients_on_schemes_of_finite_type_over_a_a_noetherian_scheme_via_a_compactifiable_morphism}. The action on morphisms is obtained by tensoring with $E$ over $R$.
+
+    \TODO{}
+    This functor satisfies the adjunction
+    $$\Hom_{\Dbc(X,E)}(K, Rf^! M) \cong \Hom_{\Dbc(Y,E)}(Rf_! K, M)$$
+    for all $K \in \Dbc(X, E)$ and $M \in \Dbc(Y, E)$.
+    %  (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}).
+\end{definition}

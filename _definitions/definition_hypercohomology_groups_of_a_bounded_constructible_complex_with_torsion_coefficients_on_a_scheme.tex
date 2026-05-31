@@ -1,0 +1,10 @@
+\begin{definition}[Hypercohomology groups of a bounded constructible complex with torsion coefficients] \label{definition:hypercohomology_groups_of_a_bounded_constructible_complex_with_torsion_coefficients_on_a_scheme}
+\TODO{AI generated, verify}
+    Let $X$ be a scheme. Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    Let $K^\bullet \in D_c^b(X_{\et}, A)$ be an object of the \CrefAndHyperrefIfExist{definition:standard_t_structure_on_bdd_constructible_derived_category_with_torsion_coefficients}{bounded constructible derived category} with torsion coefficients. The \hldef{hypercohomology groups of $X$ with coefficients in $K^\bullet$} are the \CrefAndHyperrefIfExist{definition:cohomology_groups_of_a_triangulated_category_or_derived_category}{cohomology groups} of the complex of $A$-modules obtained by applying the \CrefAndHyperrefIfExist{definition:left_right_derived_functors_of_a_right_left_exact_functor_between_abelian_categories_where_source_has_enough_projectives_injectives}{derived global sections functor}:
+    $$\hlin{H^i(X, K^\bullet) \coloneq H^i(R\Gamma(X, K^\bullet)) = \Hom_{D(A)}(A, K^\bullet[i])}$$
+    for each $i \in \mathbb{Z}$, where the second equality views $R\Gamma(X, K^\bullet)$ as an object of $D(A)$ and $A$ as the constant complex in degree $0$.
+
+    When $K^\bullet = \mathcal{F}[0]$ for a single constructible sheaf $\mathcal{F}$ of $A$-modules placed in degree $0$, the hypercohomology groups $H^i(X, \mathcal{F})$ recover the usual \CrefAndHyperrefIfExist{definition:etale_cohomology_of_a_sheaf_of_abelian_groups_on_the_small_etale_site_of_a_schem}{\'etale cohomology groups} $R^i\Gamma(X, \mathcal{F})$.
+\end{definition}

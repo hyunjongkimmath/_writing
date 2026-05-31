@@ -1,0 +1,8 @@
+\begin{lemma} \label{lemma:subgroups_are_transtive}
+    Let $G_1 \leq G_2 \leq G_3$ be \CrefAndHyperrefIfExist{definition:group}{groups}, i.e. $G_1$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G_2$ and $G_2$ is a subgroup of $G_3$.
+
+    $G_1$ is a subgroup of $G_3$.
+\end{lemma}
+\begin{proof}
+    Since $G_1$ is a subgroup of $G_2$, it is a nonempty set. For all $g, h \in G_1$, we have that $g \cdot_{G_2} h \in G_1$ where $\cdot_{G_2}$ is the group operation on $G_2$. Since $G_2$ is a subgroup of $G_3$, we have that $g \cdot_{G_2} h = g \cdot_{G_3} h$. Similarly, for all $g \in G_1$, the inverse $g^{-1}$ of $g$ as an element of $G_1$ coincides with the inverse $g^{-1}$ of $g$ as an element of $G_2$, which in turn coincides with the inverse $g^{-1}$ of $g$ as an element of $G_3$. Thus, $G_1$ is a subgroup of $G_3$.
+\end{proof}

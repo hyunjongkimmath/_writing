@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:overcategory_and_undercategory_of_an_infty_category_with_respect_to_a_map_from_a_simplicial_set}
+\TODO{AI generated, verify}
+Let $p : K \to \mathcal{C}$ be a morphism of \CrefAndHyperref{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}, where $\mathcal{C}$ is a \CrefAndHyperref{definition:infty_category_quasi_category}{quasi-category}.
+
+\begin{enumerate}
+    \item The simplicial set \hl{$\mathcal{C}_{/p}$} from \Cref{proposition:existence_of_overcategory_simplicial_set_S_slash_p_with_universal_property} is again a quasi-category. It is called the \hldef{overcategory of $\mathcal{C}$ with respect to $p$}, or the \hldef{$\infty$-category of objects of $\mathcal{C}$ over $p$}.
+
+    \item Dually, replacing the join $Y \star K$ by $K \star Y$, one obtains a simplicial set \hl{$\mathcal{C}_{p/}$} characterized by the natural bijection
+    $$\operatorname{Hom}_{s\mathbf{Set}}(Y, \mathcal{C}_{p/}) \cong \operatorname{Hom}_{p}(K \star Y, \mathcal{C}),$$
+    where the subscript $p$ again indicates that only morphisms $f : K \star Y \to \mathcal{C}$ with $f|_{K} = p$ are considered. The simplicial set $\mathcal{C}_{p/}$ is called the \hldef{undercategory of $\mathcal{C}$ with respect to $p$}, or the \hldef{$\infty$-category of objects of $\mathcal{C}$ under $p$}.
+\end{enumerate}
+In the special case where $K = \Delta^n$ and $p$ classifies a simplex $\sigma \in \mathcal{C}_n$, we also write \hl{$\mathcal{C}_{\sigma/}$} for $\mathcal{C}_{p/}$. In particular, when $X$ is an object of $\mathcal{C}$ (a 0-simplex), we write \hl{$\mathcal{C}_{X/}$}.
+\end{definition}

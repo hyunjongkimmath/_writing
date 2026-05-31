@@ -1,0 +1,34 @@
+\begin{definition} \label{definition:local_monodromy_of_a_lisse_sheaf_on_dense_open_of_integral_normal_scheme_at_point_in_complement}
+    Let $X$, $\eta$, $\overline{\eta}$, $U$, $x$, and the conjugacy classes $D_x$ and $I_x$ be as in \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{decomposition and inertia subgroups}.
+
+    Let $\calF$ be one of the following:
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite} \CrefAndHyperrefIfExist{definition:locally_constant_sheaf}{locally constant sheaf} of \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{sets} on $U_{\et}$
+        \item A finite locally constant sheaf of \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite cardinality} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $U_{\et}$
+        \item A locally constant sheaf of \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{modules} over a finite \CrefAndHyperrefIfExist{definition:ring}{ring} on $U_{\et}$
+        \item In the case that $U$ is \CrefAndHyperrefIfExist{definition:irreducible_topological_space}{irreducible} and \CrefAndHyperrefIfExist{definition:unibranch_geometircally_unibranch_scheme}{geometrically unibranch}, a \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, locally constant sheaf of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\Lambda$-modules} on $U_{\et}$
+        \item Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$.
+        \begin{enumerate}
+            \item A lisse object of $\Sh(U,R)$ (\Cref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring})
+            \item A lisse object of $\Sh(U,E)$ (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr})
+            \item For an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension} $K$ of $E$, a lisse object of $\Sh(U,K)$ (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}).
+        \end{enumerate}
+    \end{enumerate}
+
+    In each of the above cases for $\calF$, there is a corresponding continuous action of $\pioneet(U, \overline{\eta})$ on the stalk $\calF_{\overline{\eta}}$ (\CrefIfExists{theorem:locally_constant_sheaves_on_X_etale_are_equivalent_to_representations_of_the_etale_fundamental_group}, \CrefIfExists{theorem:lisse_ell_adic_sheaves_on_connected_noetherian_schemes_are_equivalent_to_representations_of_etale_fundamental_group_over_adic_ring}):
+    $$\rho: \pioneet(U, \overline{\eta}) \to \Aut(\calF_{\overline{\eta}})$$
+    where $\Aut(\calF_{\overline{\eta}})$ is the automorphism group for the appropriate category that $\calF_{\overline{\eta}}$ belongs to.
+
+    \begin{enumerate}
+        \item The \hldef{local monodromy of $\calF$ at $x$} is the conjugacy class of restricted representations
+        $$\rho|_{D_v}: D_v \to \Aut(\calF_{\overline{\eta}})$$
+        as $v$ ranges over valuations centered at $x$. Since any two choices of $D_v$ are conjugate in $\pioneet(U, \overline{\eta})$, the resulting restrictions form a well-defined conjugacy class of representations.
+
+        \item The \hldef{inertia action of $\calF$ at $x$} is the conjugacy class of restricted representations
+        $$\rho|_{I_v}: I_v \to \Aut(\calF_{\overline{\eta}})$$
+        as $v$ ranges over valuations centered at $x$.
+
+        The inertia action, instead of hte action of the decomposition group, is very often referred to as the \hldef{local monodromy of $\calF$ at $x$} 
+    \end{enumerate}
+    Since $I_x \triangleleft D_x$, the inertia action is obtained from the local monodromy by further restriction to the inertia subgroup. One may similarly define the \hldef{tame inertia action of $\calF$ at $x$} as the image of the inertia action through the tame quotient $I_v / P_v$ (\CrefAndHyperrefIfExist{definition:tame_inertia_subgroup_of_etale_fundamental_group_of_connected_scheme_at_geometric_point}{tame inertia subgroup}), and the \hldef{wild inertia action of $\calF$ at $x$} as the restriction of the inertia action to the \CrefAndHyperrefIfExist{definition:wild_inertia_subgroup_of_etale_fundamental_group_of_connected_scheme_at_geometric_point}{wild inertia subgroup} $P_v$.
+\end{definition}

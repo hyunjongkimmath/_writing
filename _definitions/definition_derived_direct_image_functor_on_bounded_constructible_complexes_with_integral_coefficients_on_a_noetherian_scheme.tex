@@ -1,0 +1,13 @@
+\begin{definition}[Derived direct image functor on bounded constructible complexes with integral coefficients] \label{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+Let $D_c^b(X, R)$ denote the \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{bounded derived category of constructible complexes of $\lambda$-adic sheaves with integral coefficients} on $X$. For each $n \geq 1$, let $Rf_*^{(n)}: D_c^b(X_{\et}, R/\lambda^n) \to D_c^b(Y_{\et}, R/\lambda^n)$ be the \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_sites}{right derived direct image functor} on sheaves of $R/\lambda^n$-modules.
+
+The \hldef{derived direct image functor on bounded constructible complexes with integral coefficients along $f$} is the functor
+$$\hlin{Rf_* : D_c^b(X, R) \to D_c^b(Y, R)}$$
+defined level-wise as follows. For any object $\mathcal{F} = (\mathcal{F}_n, u_n)_{n \geq 1} \in D_c^b(X, R)$, set
+$$Rf_* \mathcal{F} := (Rf_*^{(n)} \mathcal{F}_n,\; Rf_*^{(n)}(u_n))_{n \geq 1},$$
+where each $Rf_*^{(n)} \mathcal{F}_n$ is the right derived direct image of $\mathcal{F}_n$ along $f$, and the transition maps are the images of $u_n$ under $Rf_*^{(n)}$.
+
+The system $(Rf_*^{(n)} \mathcal{F}_n,\; Rf_*^{(n)}(u_n))_{n \geq 1}$ satisfies the conditions of a bounded constructible complex with integral coefficients because $Rf_*^{(n)}$ is a triangulated functor that commutes with the quotient structures $\mathcal{F}_n \cong \mathcal{F}_{n+1}/\lambda^n \mathcal{F}_{n+1}$. Constructibility of $Rf_*^{(n)} \mathcal{F}_n$ for all $n$ requires additional hypotheses on $f$ (e.g., $f$ of finite type).
+\end{definition}

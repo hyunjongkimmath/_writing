@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:inner_fibration_between_infinity_categories}
+Let $F : \mathcal{D} \to \mathcal{C}$ be a functor between \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-categories}. The functor $F$ is an \hldef{inner fibration} if for every $n \geq 1$ and every $0 < i < n$, any commutative diagram
+\[
+\begin{tikzcd}
+\Lambda_i^n \arrow[r] \arrow[d, hook] & \mathcal{D} \arrow[d, "F"] \\
+\Delta^n \arrow[r, dashed, "\exists\;\text{lift}"'] & \mathcal{C}
+\end{tikzcd}
+\]
+admits a lift $\Delta^n \to \mathcal{D}$ (dashed arrow). Equivalently, any inner horn $\Lambda_i^n \to \mathcal{D}$ over a given map $\Delta^n \to \mathcal{C}$ can be extended to $\Delta^n \to \mathcal{D}$.
+\end{definition}

@@ -1,0 +1,13 @@
+\begin{lemma} \label{lemma:intersection_of_subgroups_of_a_group_is_a_subgroup}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $\{H_i\}_{i \in I}$ be a family of \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroups} of $G$. 
+    \begin{enumerate}
+        \item The intersection $\bigcap_{i \in I} H_i$ is a subgroup of $H_{i_0}$ for each $i_0 \in I$.
+        \item The intersection $\bigcap_{i \in I} H_i$ is a subgroup of $G$. 
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Since the identity element of $G$ is in every $H_i$, the intersection $\bigcap_{i \in I} H_i$ is non-empty. Moreover, to say that $g_1,g_2 \in \bigcap_{i \in I} H_i$ is equivalent to saying that $g_1$ and $g_2$ are elements of $H_i$ for every $i \in I$. In this case, $g_1 \cdot g_2$ is an element of $H_{i_0}$ for each $i_0 \in I$. Similarly, if $g \in \bigcap_{i \in I} H_i$, then $g^{-1} \in H_{i_0}$ for each $i_0 \in I$.
+        \item This follows from \Cref{lemma:subgroups_are_transtive} and the previous part. 
+    \end{enumerate}
+\end{proof}

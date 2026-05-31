@@ -1,0 +1,34 @@
+\begin{definition}[cf. {\cite[TODO]{fu_ect}}] \label{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $\ell$ be a prime number that is invertible on $X$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$, and let $\lambda$ be a uniformizer of $R$. Let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}.
+
+    The category \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X,K)$} is the $2$-direct limit of $\Dbc(X,L')$ as $L'$ ranges over finite extensions of $E$ inside $K$. For each such $L'$, let $R'$ be the integral closure of $R$ in $L'$. The six functors on $\Dbc(\cdot, L')$ are defined by \CrefAndHyperrefIfExist{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}{the same construction over $L'$} (piggy-backing on the integral-coefficient definition \Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}). These functors form a direct system as $L'$ varies, and their colimit defines the six functors on $\Dbc(\cdot, K)$:
+    \begin{enumerate}
+        \item $f^*: \Dbc(Y,K) \to \Dbc(X,K)$ (inverse image),
+
+        \item If $f$ is an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism},
+        $$Rf_!: \Dbc(X,K) \to \Dbc(Y,K)$$
+        (direct image with proper/compact support),
+
+        \item For any morphism $f$, define
+        $$Rf_*: \Dbc(X,K) \to \Dbc(Y,K)$$
+        (direct image),
+
+        \item On a single scheme $X$, define
+
+        \hlalign{
+        \begin{align*}
+            \Lotimes_K &: \Dbc(X,K) \times \Dbc(X,K) \to \Dbc(X,K), \\
+            R\mathscr{H}om_K &: \Dbc(X,K)^{\mathrm{op}} \times \Dbc(X,K) \to \Dbc(X,K).
+        \end{align*}
+        }
+
+        \item If $f$ is an $S$-compactifiable morphism where $X$ and $Y$ are $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, define
+        $$Rf^!: \Dbc(Y,K) \to \Dbc(X,K)$$
+        (exceptional inverse image),
+
+    \end{enumerate}
+    Concretely, for an object $\mathcal{F} \in \Dbc(X,K)$ represented by $F_{L'} \in \Dbc(X,L')$ for some finite $L'/E$ inside $K$, the functors are computed as
+    $$f^* \mathcal{F} = \text{image of } f^* F_{L'} \text{ in } \Dbc(X,K),$$
+    and similarly for $Rf_!, Rf_*, Rf^!$. For $\Lotimes_K$ and $R\mathscr{H}om_K$, if $\mathcal{F}$ is represented by $F_{L'_1}$ and $\mathcal{G}$ by $G_{L'_2}$, one first pushes both forward to a common finite extension $L'' \supseteq L'_1, L'_2$ and computes the tensor product or internal Hom over $L''$, then takes the image in $\Dbc(X,K)$.
+\end{definition}

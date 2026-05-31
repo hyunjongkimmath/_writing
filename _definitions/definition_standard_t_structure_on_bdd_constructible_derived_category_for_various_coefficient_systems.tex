@@ -1,0 +1,18 @@
+\begin{definition}[Standard $t$-structure for various coefficient systems] \label{definition:standard_t_structure_on_bounded_constructible_derived_category_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $X$ be a scheme. Let the coefficient system be one of the following:
+    \begin{enumerate}
+        \item $A$ a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring} (torsion coefficients). The \hldef{standard $t$-structure on $D_c^b(X_{\et}, A)$}\CrefIfExists{definition:derived_category_of_cohomologically_constructible_complexes_of_sheaves_of_modules_of_a_sheaf_of_rings_on_a_topological_space_or_scheme} is given by the subcategories
+        $$\stDleqzero(X, A) = \{ K^\bullet : \mathscr{H}^i(K^\bullet) = 0 \text{ for } i > 0 \}, \quad \stDgeqzero(X, A) = \{ K^\bullet : \mathscr{H}^i(K^\bullet) = 0 \text{ for } i < 0 \}.$$
+        \CrefIfExists{definition:cohomology_sheaves_of_a_constructible_complex_with_torsion_coefficients_on_a_scheme}.
+        \item Assuming that $X$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $R, E, K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}:
+
+        \begin{enumerate}
+            \item (Integral coefficients) The \hldef{standard $t$-structure on $\Dbc(X, R)$}\CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme} is given by the subcategories $(\stDleqzero(X, R), \stDgeqzero(X, R))$ defined by vanishing of cohomology sheaves $\mathscr{H}^i$\CrefIfExists{definition:cohomology_sheaves_of_a_constructible_complex_with_integral_coefficients_on_a_noetherian_scheme}.
+            \item (Rational coefficients) The \hldef{standard $t$-structure on $\Dbc(X, E)$}\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme} is given by the subcategories $(\stDleqzero(X, E), \stDgeqzero(X, E))$, descending from the integral case since $\Dbc(X, E)$ shares objects with $\Dbc(X, R)$.
+            \item (Algebraic coefficients) The \hldef{standard $t$-structure on $\Dbc(X, K)$}\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme} is given by the subcategories $(\stDleqzero(X, K), \stDgeqzero(X, K))$, defined as the 2-direct limit of the standard $t$-structures over finite subextensions.
+        \end{enumerate}
+    \end{enumerate}
+
+    See \Cref{definition:standard_t_structure_on_bdd_constructible_derived_category_with_torsion_coefficients} for torsion coefficients and \Cref{definition:standard_t_structure_on_bounded_constructible_derived_category} for integral/rational/algebraic adic coefficients.
+\end{definition}

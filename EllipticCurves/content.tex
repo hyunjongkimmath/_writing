@@ -241,19 +241,7 @@ induced by composition of isogenies, compatible with the connecting Kummer maps 
 
 \subsection{Heights of points in projective varieties over number fields}
 
-\begin{definition}[Absolute value and height on projective space] \label{definition:height_of_points_on_projective_space_over_a_global_field}
-    \TODO{define the product formula}
-    Let $K$ be a global field equipped with a set of normalized absolute values $M_K$ satisfying the product formula. For each $v \in M_K$, let $|\cdot|_v$ denote the corresponding absolute value on $K$.
-
-    Consider a point 
-    $$P = (x_0 : x_1 : \cdots : x_n) \in \mathbb{P}^n(K).$$
-
-    The \hldef{height} \hl{$H(P)$} of $P$ is defined as
-    $$H(P) = \prod_{v \in M_K} \max \{ |x_0|_v, |x_1|_v, \ldots, |x_n|_v \}.$$
-
-    The \hldef{logarithmic height} (or \hldef{log height}) of $P$ is defined as
-    $$\hlin{h(P) = \log H(P) = \sum_{v \in M_K} \log \max \{ |x_0|_v, |x_1|_v, \ldots, |x_n|_v \}.}$$
-\end{definition}
+\input{../_definitions/definition_height_of_points_on_projective_space_over_a_global_field.tex}
 
 
 \subsection{Heights of elliptic curves over number fields}
@@ -303,31 +291,10 @@ for some constant $C$ depending on $E$ and $K$.
 
 Serre's celebrated open image theorem was originally proved for elliptic curves over number fields without complex multiplication. 
 \TODO{complex multiplication}
-\begin{theorem}[Serre's open image theorem, {\cite[Th\'eor\`eme 2]{serre_pgpofce}}] \label{theorem:serres_original_open_image_theorem_for_elliptic_curves_over_number_fields_without_geometric_complex_multiplication}
-    Let $E/K$ be an \CrefAndHyperrefIfExist{definition:elliptic_curve_over_a_scheme}{elliptic curve} over a \CrefAndHyperrefIfExist{global_field}{number field} such that $E$ does not have complex multiplication over $\overline{K}$. \TODO{complex multiplication, algebraically closed field extension, algebraic closure}. For all but finitely many prime numbers $\ell$, the Galois representation
-    $$\Gal(\overline{K} / K) \to \Aut(T_\ell E)$$
-    on the $\ell$-adic Tate module $T_\ell E$ of $E$ is surjective.
-    \TODO{$\ell$-adic tate module}
-\end{theorem}
+\input{../_concepts/theorem_serres_original_open_image_theorem_for_elliptic_curves_over_number_fields_without_geometric_complex_multiplication.tex}
 
 Serre later proved a generalization for abelian varieties:
-\begin{theorem}[{\cite[Corollaire au Th\'eor\`eme 3]{serre_lettre_vigneras}}] \label{theorem:serres_generalized_open_image_theorem_for_abelian_varieties_over_number_fields_without_geometric_complex_multiplication}
-    Let $A/K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $n$ over a \CrefAndHyperrefIfExist{definition:number_field}{number field} such that $\End(A_{\overline{K}}) = \bbZ$. \TODO{complete}
-    \begin{enumerate}
-        \item For all but finitely many primes $\ell$, the ``mod-$\ell$'' Galois representation
-        $$\Gal(\overline{K} / K) \to \Aut(A[\ell](\overline{K})) \cong \mathrm{GSp}_{2n}(\bbF_\ell)$$
-        is surjective, where $\Aut(A[\ell](\overline{K}))$ is the group of automorphisms on the $\bbF_\ell$-vector space $A[\ell](\overline{K})$ preserving the Weil pairing \TODO{Weil pairing}
-
-        \item For all but finitely many primes $\ell$, the ``$\ell$-adic'' Galois representation
-        $$\Gal(\overline{K} / K) \to \Aut(T_\ell A) \cong \mathrm{GSp}_{2n}(\bbZ_\ell)$$
-        is surjective, where $\Aut(T_\ell A)$ is the group of automorphisms on the $\bbZ_\ell$-module $T_\ell A$ preserving the Weil pairing 
-        \TODO{Weil pairing, Tate module}
-
-        \item The image of the ``ad\'elic'' Galois representation
-        $$\Gal(\overline{K} / K) \to \prod_{\ell}' \Aut(V_\ell A) \cong \prod_{\ell}' \mathrm{GSp}_{2n}(\bbQ_\ell)$$
-        is open (with respect to the ad\'elic topology), where $\prod_{\ell}' \Aut(V_\ell A)$ is the \CrefAndHyperrefIfExist{definition:restricted_product_of_a_family_of_topological_spaces_with_respect_to_subspaces}{restricted product} of the groups $\Aut(V_\ell A)$ of automorphisms on the $\bbQ_\ell$-vectors spaces $V_\ell A = V_\ell A \otimes_{\bbZ_\ell} \bbQ_\ell$ preserving the Weil pairing.
-    \end{enumerate}
-\end{theorem}
+\input{../_concepts/theorem_serres_generalized_open_image_theorem_for_abelian_varieties_over_number_fields_without_geometric_complex_multiplication.tex}
 
 
 

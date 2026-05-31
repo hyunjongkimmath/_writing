@@ -1,0 +1,9 @@
+\begin{definition}[Mod $n$ Galois representation] \label{definition:mod_n_galois_representation_of_a_commutative_group_scheme_over_a_field}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $\overline{K}$ be a \CrefAndHyperrefIfExist{definition:separable_closure_of_a_field}{separable closure} of $K$, and let $G_K = \operatorname{Gal}(\overline{K}/K)$ be the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group}. Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{commutative group scheme} over $K$ of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}. For an integer $n \geq 1$, let $\mathcal{A}[n]$ denote the \CrefAndHyperrefIfExist{definition:kernel_of_a_homomorphism_of_group_schemes_over_a_scheme}{kernel} of the multiplication-by-$n$ morphism $[n]: \mathcal{A} \to \mathcal{A}$, and let $\mathcal{A}[n](\overline{K})$ be the group of $\overline{K}$-rational points. 
+
+The \hldef{mod $n$ Galois representation of $\mathcal{A}$}, denoted by \hl{$\rho_{\mathcal{A}, n}$}, is the continuous \CrefAndHyperrefIfExist{definition:galois_representation_over_a_topological_ring_of_a_field}{Galois representation}
+$$\hlin{\rho_{\mathcal{A}, n}: G_K \to \operatorname{Aut}(\mathcal{A}[n](\overline{K}))}$$
+given by the natural action of $G_K$ on $\mathcal{A}[n](\overline{K})$. 
+
+When $\mathcal{A}$ is an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $g$ and $n$ is not divisible by the \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} of $K$, one has $\mathcal{A}[n](\overline{K}) \cong (\mathbb{Z}/n\mathbb{Z})^{2g}$, so $\rho_{\mathcal{A}, n}$ factors through $\operatorname{GL}_{2g}(\mathbb{Z}/n\mathbb{Z})$.
+\end{definition}

@@ -1,0 +1,21 @@
+\begin{definition}[Exceptional inverse image functor on bounded constructible complexes with integral coefficients] \label{definition:exceptional_inverse_image_functor_on_bdd_const_derived_category_of_adic_sheaves_with_integral_coefficients_on_schemes_of_finite_type_over_a_a_noetherian_scheme_via_a_compactifiable_morphism}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $X$ and $Y$ be $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+    For each $n \geq 1$, the ring $R/\lambda^n$ is a finite (hence noetherian torsion) ring. The \CrefAndHyperref{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}{exceptional inverse image functor for torsion coefficients} applied to $A = R/\lambda^n$ yields functors
+    $$Rf^{!(n)}: D^+(Y_{\et}, R/\lambda^n) \to D^+(X_{\et}, R/\lambda^n).$$
+    \TODO{justify the restirction of functors to constructible categories}
+    These restrict to functors 
+    $$D_c^b(Y_{\et}, R/\lambda^n) \to D_c^b(X_{\et}, R/\lambda^n)$$
+
+    % because $Rf^{!(n)}$ is exact (\Cref{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}).
+
+    The \hldef{exceptional inverse image functor on bounded constructible complexes with integral coefficients along $f$} is the functor
+    $$\hlin{Rf^! : D_c^b(Y, R) \to D_c^b(X, R)}$$
+    defined level-wise as follows. For any object $M = (M_n, u_n)_{n \geq 1} \in D_c^b(Y, R)$, set
+    $$Rf^! M := (Rf^{!(n)} M_n,\; Rf^{!(n)}(u_n))_{n \geq 1},$$
+    where each $Rf^{!(n)} M_n$ is the \CrefAndHyperrefIfExist{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}{exceptional inverse image} of $M_n$ along $f$, and the transition maps are the images of $u_n$ under $Rf^{!(n)}$.
+
+    This functor satisfies the adjunction
+    $$\Hom_{D_c^b(X,R)}(K, Rf^! M) \cong \Hom_{D_c^b(Y,R)}(Rf_! K, M)$$
+    for all $K \in D_c^b(X, R)$ and $M \in D_c^b(Y, R)$. The adjunction holds level-wise from the torsion-coefficient case (\Cref{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}) and passes to inverse systems.
+\end{definition}

@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:intersection_of_normal_subgroup_and_subgroup_is_normal_subgroup_of_subgroup}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $N$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$. Let $H$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G$. 
+    The intersection $N \cap H$ is a normal subgroup of $H$.
+\end{proposition}
+\begin{proof}
+    To start, $N \cap H$ is a subgroup of $H$\CrefIfExists{lemma:intersection_of_subgroups_of_a_group_is_a_subgroup}. For all $n \in N \cap H$ and $h \in H$, we have that $h n h^{-1}$ is an element of $N$ due to the normality of $N$ as a subgroup of $G$ and is an element of $H$ due to the closure properties of $H$. Thus, $N \cap H$ is a normal subgroup of $H$.
+\end{proof}

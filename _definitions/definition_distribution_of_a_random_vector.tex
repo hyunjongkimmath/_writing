@@ -1,0 +1,9 @@
+\begin{definition}[Distribution of a random vector] \label{definition:distribution_of_a_random_vector}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperref{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $n \in \mathbb{N}$ and let $X_1, \dots, X_n$ be real-valued \CrefAndHyperref{definition:random_variable_on_a_probability_measure_space}{random variables} on $(\Omega, \mathcal{F}, P)$.
+
+The map $\mathbf{X}: \Omega \to \mathbb{R}^n$ defined by $\mathbf{X}(\omega) = (X_1(\omega), \dots, X_n(\omega))$ is a \CrefAndHyperref{definition:random_variable_on_a_probability_measure_space}{random variable} with values in $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$, where $\mathcal{B}(\mathbb{R}^n)$ is the \CrefAndHyperref{definition:borel_sigma_algebra_of_a_topological_space}{Borel $\sigma$-algebra} on $\mathbb{R}^n$. The random variable $\mathbf{X}$ is called a \hldef{random vector}.
+
+The \hldef{distribution of the random vector $\mathbf{X}$}, denoted \hl{$\mu_{\mathbf{X}}$}, is the pushforward measure on $(\mathbb{R}^n, \mathcal{B}(\mathbb{R}^n))$ defined by
+$$\mu_{\mathbf{X}}(A) = P(\{\omega \in \Omega : (X_1(\omega), \dots, X_n(\omega)) \in A\})$$
+for every $A \in \mathcal{B}(\mathbb{R}^n)$. When $n = 1$, this recovers the \CrefAndHyperref{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution of a random variable}.
+\end{definition}

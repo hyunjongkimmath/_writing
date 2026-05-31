@@ -1,0 +1,22 @@
+\begin{definition}[Canonical forgets support map for $\lambda$-adic sheaves with integral coefficients] \label{definition:canonical_forgets_support_map_from_direct_image_with_compact_support_to_direct_image_for_lambda_adic_sheaves_with_integral_coefficients_on_compactifiable_morphisms}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}. Fix a \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactification} of $f$:
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & Y \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+$$
+so that $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to Y$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}.
+
+For each $n \geq 1$, let $\nu^{(n)}: j_! \Rightarrow j_*$ be the canonical natural transformation on sheaves of $R/\lambda^n$-modules as in \CrefAndHyperrefIfExist{definition:canonical_forgets_support_map_from_direct_image_with_compact_support_to_direct_image_for_etale_sheaves_of_lambda_modules_on_compactifiable_morphisms}{the torsion coefficient case}.
+
+The \hldef{canonical forgets support map from direct image with compact support to direct image for $\lambda$-adic sheaves with integral coefficients on compactifiable morphisms} is the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}
+$$\hlin{\alpha_f := (\bar{f}_*(\nu^{(n)}))_{n \geq 1}: f_! \Rightarrow f_*}$$
+where $f_!: \Sh(X, R) \to \Sh(Y, R)$ is the \CrefAndHyperrefIfExist{definition:direct_image_functor_with_compact_support_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{direct image functor with compact support on $\lambda$-adic sheaves with integral coefficients} and $f_*: \Sh(X, R) \to \Sh(Y, R)$ is the \CrefAndHyperrefIfExist{definition:direct_image_functor_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{direct image functor on $\lambda$-adic sheaves with integral coefficients}.
+
+For each $\mathcal{F} = (\mathcal{F}_n, u_n)_{n \geq 1} \in \Sh(X, R)$, the component $\alpha_f(\mathcal{F}): f_! \mathcal{F} \to f_* \mathcal{F}$ is given level-wise by
+$$\bar{f}_*(\nu^{(n)}_{\mathcal{F}_n}): \bar{f}_* j_! \mathcal{F}_n \longrightarrow \bar{f}_* j_* \mathcal{F}_n, \quad n \geq 1.$$
+
+This natural transformation is independent of the choice of compactification up to canonical isomorphism.
+\end{definition}

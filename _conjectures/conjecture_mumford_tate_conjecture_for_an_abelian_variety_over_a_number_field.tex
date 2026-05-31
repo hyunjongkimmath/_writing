@@ -1,0 +1,26 @@
+\begin{conjecture}[Mumford-Tate conjecture] \label{conjecture:mumford_tate_conjecture_for_an_abelian_variety_over_a_number_field}
+Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:number_field}{number field} $K$, and let $\ell$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime number}. Let $V_\ell(A)$ be the \CrefAndHyperrefIfExist{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}{rational $\ell$-adic Tate group} of $A$, and let $\mathrm{MT}(A) / \bbQ$ be the \CrefAndHyperrefIfExist{definition:mumford_tate_group_of_an_abelian_variety_over_the_complex_numbers}{Mumford-Tate group} of $A$. Let
+$$\rho_{A,\ell^\infty}: G_K \to \mathrm{GL}(V_\ell(A))$$
+be the \CrefAndHyperrefIfExist{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}{rational $\ell$-adic Galois representation}. 
+Write 
+$$G_{\ell^\infty} \coloneq \overline{\operatorname{Im}(\rho_{A,\ell^\infty})}^{\text{Zar}},$$
+for the Zariski closure of the image of $\rho_{A,\ell^\infty}$
+
+\begin{enumerate}
+    \item Let $\mathrm{Hg}(A)$ be the \CrefAndHyperref{definition:hodge_group_of_a_complex_torus}{Hodge-group} of the complex abelian variety $A/\bbC$, which is a $\bbQ$-linear algebraic subgroup of $\GL(H_1(A(\bbC), \bbQ))$. The Lie algebra $\operatorname{Lie}(\mathrm{Hg})(A)$ is a sub-Lie-algebra of $\SL(H_1(A(\bbC), \bbQ))$. 
+    Further assume that $K$ is sufficiently large so that $G_{\ell^\infty}$ is connected \TODO{this should be possible only due to an independence of $\ell$ theorem on the group of components}.  
+    \TODO{general linear group as a scheme of a vector space}
+    The original formulation (\cite[Section 4]{mumford_fav}) of the Mumford-Tate conjecture asserts that 
+    \TODO{lie algebra of a linear algebraic group}
+    $$\operatorname{Lie}(G_{\ell^\infty}) \cap \SL(H_1(A(\bbC), \bbQ)) = \operatorname{Lie}(\mathrm{Hg})(A) \otimes_\bbQ \bbQ_\ell.$$
+    The intersection is taken in the Lie algebra of $\operatorname{GL}(V_\ell(A)) \cong \operatorname{GL}(H_1(A(\bbC), \bbQ) \otimes_\bbQ \bbQ_\ell)$. 
+
+    \item The modern formulation of the Mumford-Tate conjecture asserts that the \CrefAndHyperrefIfExist{definition:identity_component_of_a_group_scheme_over_a_scheme}{identity component} of the Zariski closure of the image of $\rho_{A,\ell^\infty}$ equals the base change of the Mumford-Tate group to $\mathbb{Q}_\ell$. 
+    In other words, writing 
+    $$G_{\ell^\infty} \coloneq \overline{\operatorname{Im}(\rho_{A,\ell})}^{\text{Zar}},$$
+    we have 
+    $$G_{\ell^\infty}^\circ = \mathrm{MT}(A) \otimes_\mathbb{Q} \mathbb{Q}_\ell.$$
+    Equivalently, the $\ell$-adic Galois representation is as large as allowed by Hodge-theoretic constraints. The conjecture does not depend on the choice of $\ell$.
+\end{enumerate}
+
+\end{conjecture}

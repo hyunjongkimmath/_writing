@@ -1,0 +1,20 @@
+\begin{definition}[Self-dual (middle) perverse $t$-structure with algebraic coefficients, cf. {\cite[Section III.3]{kiehl_weissauer_wcps}}] \label{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_algebraic_coefficients}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ be a scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:field}{field} $k$ that is \CrefAndHyperrefIfExist{definition:separably_closed_field}{separably closed} or \CrefAndHyperrefIfExist{definition:finite_field}{finite}. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    The category $\Dbc(X, K)$ is a \CrefAndHyperrefIfExist{definition:triangulated_category}{triangulated category} (\Cref{corollary:bdd_constructible_derived_category_with_algebraic_coefficients_is_triangulated}). Let $\mathbb{D}_X(-): \Dbc(X, K) \to \Dbc(X, K)$ denote the \CrefAndHyperrefIfExist{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}{Verdier dual functor} on $X$ relative to $\Spec k$.
+
+    The \hldef{self-dual (middle) perverse $t$-structure on $\Dbc(X, K)$} is the pair of strictly full subcategories $(\pDleqzero(X, K), \pDgeqzero(X, K))$ of $\Dbc(X, K)$ defined by
+
+    \hlalign{
+    \begin{align*}
+        \pDleqzero(X, K) &:= \left\{ K' \in \Dbc(X, K) : \dim \Supp\bigl(\mathscr{H}^{-i}(K')\bigr) \leq i \text{ for all } i \in \bbZ \right\}, \\
+        \pDgeqzero(X, K) &:= \left\{ K' \in \Dbc(X, K) : \dim \Supp\bigl(\mathscr{H}^{-i}(\mathbb{D}_X(K'))\bigr) \leq i \text{ for all } i \in \bbZ \right\},
+    \end{align*}
+    }
+    \CrefIfExists{definition:support_of_a_constructible_complex_with_algebraic_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}
+
+    This is a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $\Dbc(X, K)$ \CrefIfExists{theorem:perverse_t_structure_on_bdd_constructible_derived_category_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_separably_closed_or_finite_field_is_a_t_structure}. Its \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{core}, denoted by \hl{$\Perv(X, K)$}, is called the \hldef{category of perverse sheaves with algebraic coefficients on $X$}.
+
+    We say that $B \in \Dbc(X, K)$ is \hldef{semiperverse} if $B \in \pDleqzero(X)$. 
+\end{definition}

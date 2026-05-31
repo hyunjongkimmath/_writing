@@ -1,5 +1,4 @@
 \begin{lemma} \label{lemma:shifted_semiperverse_definition}
-    \TODO{}
     For $B \in \Dbc(X)$, 
     \begin{align*}
         B &\in \pDleqn(X) \Leftrightarrow \dim \Supp(\scrH^{-i} B) \leq i+n \quad \text{for all } i \in \bbZ \\
@@ -11,7 +10,31 @@
     $$\dim \Supp(\scrH^{-i} (B[n])) \leq i \quad \text{for all } i \in \bbZ$$
     or to 
     $$\dim \Supp(\scrH^{-i+n} B) \leq i \quad \text{for all } i \in \bbZ$$
-    by Lemma \ref{lemma:indices_of_cohomology_for_t_structures}. Changing indices, this is equivalent to 
-    $$\dim \Supp(\scrH^{-i} B) \leq i+n \quad \text{for all } i \in \bbZ$$
-    as desired. The second equivalence can be demonstrated similarly, taking into account that $D(B[n]) \cong (DB)[-n]$. 
+    by Lemma \ref{lemma:indices_of_cohomology_for_t_structures}. Changing indices ($j = i - n$), this is equivalent to 
+    $$\dim \Supp(\scrH^{-j} B) \leq j+n \quad \text{for all } j \in \bbZ$$
+    as desired. 
+
+    Similarly, $B \in \pDgeqn(X) = \pDgeqzero(X)[-n]$ if and only if $B[n] \in \pDgeqzero(X)$, which is equivalent to $D(B[n]) \in \pDleqzero(X)$. Because $D(B[n]) \cong (DB)[-n]$, this means $(DB)[-n] \in \pDleqzero(X)$, which translates to
+    $$\dim \Supp(\scrH^{-i} ((DB)[-n])) \leq i \quad \text{for all } i \in \bbZ$$
+    Using the shift property $\scrH^{-i}((DB)[-n]) \cong \scrH^{-i-n}(DB)$, we obtain
+    $$\dim \Supp(\scrH^{-i-n} DB) \leq i \quad \text{for all } i \in \bbZ$$
+    Setting $j = i + n$ yields $\dim \Supp(\scrH^{-j} DB) \leq j-n$, completing the proof.
 \end{proof}
+
+% \begin{lemma} \label{lemma:shifted_semiperverse_definition}
+%     \TODO{}
+%     For $B \in \Dbc(X)$, 
+%     \begin{align*}
+%         B &\in \pDleqn(X) \Leftrightarrow \dim \Supp(\scrH^{-i} B) \leq i+n \quad \text{for all } i \in \bbZ \\
+%         B &\in \pDgeqn(X) \Leftrightarrow \dim \Supp(\scrH^{-i} D B) \leq i-n \quad \text{for all } i \in \bbZ
+%     \end{align*}
+% \end{lemma}
+% \begin{proof}
+%     By definition, $\pDleqn(X) = \pDleqzero(X)[-n]$, so $B \in \pDleqn(X)$ if and only if $B[n] \in \pDleqzero(X)$. In turn, this is equivalent to 
+%     $$\dim \Supp(\scrH^{-i} (B[n])) \leq i \quad \text{for all } i \in \bbZ$$
+%     or to 
+%     $$\dim \Supp(\scrH^{-i+n} B) \leq i \quad \text{for all } i \in \bbZ$$
+%     by Lemma \ref{lemma:indices_of_cohomology_for_t_structures}. Changing indices, this is equivalent to 
+%     $$\dim \Supp(\scrH^{-i} B) \leq i+n \quad \text{for all } i \in \bbZ$$
+%     as desired. The second equivalence can be demonstrated similarly, taking into account that $D(B[n]) \cong (DB)[-n]$. 
+% \end{proof}

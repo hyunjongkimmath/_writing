@@ -1,0 +1,8 @@
+\begin{lemma}[Goursat's Lemma] \label{lemma:goursats_lemma_for_subgroups_of_product_group_surjecting_onto_both_factors}
+Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}. Let $S \leq G \times H$ be a subgroup such that the projections $\pi_G(S) = G$ and $\pi_H(S) = H$. Define
+$$N = \{g \in G : (g, 1_H) \in S\} \quad \text{and} \quad M = \{h \in H : (1_G, h) \in S\}.$$
+\CrefIfExists{definition:product_of_groups}
+Then $N$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$, $M$ is a normal subgroup of $H$, and there exists an isomorphism $\varphi: G/N \to H/M$ such that
+$$S = \{(g, h) \in G \times H : \varphi(gN) = hM\}.$$
+Conversely, given normal subgroups $N \trianglelefteq G$, $M \trianglelefteq H$ and an isomorphism $\varphi: G/N \to H/M$, the set $\{(g, h) \in G \times H : \varphi(gN) = hM\}$ is a subgroup of $G \times H$ projecting surjectively onto both factors.
+\end{lemma}

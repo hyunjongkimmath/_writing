@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:reflex_norm_for_a_cm_field}
+\TODO{AI generated, verify}
+    Let $E$ be a \CrefAndHyperrefIfExist{definition:cm_field}{CM field} with maximal \CrefAndHyperrefIfExist{definition:totally_real_and_totally_imaginary_number_fields}{totally real} subfield $F$. Let $\mathbb{G}_m = \mathbb{G}_{m,\mathbb{Q}}$ be the \CrefAndHyperrefIfExist{definition:multiplicative_group_scheme_over_a_scheme}{multiplicative group scheme} over $\mathbb{Q}$, and let $\mathrm{Res}_{L/K}$ denote the Weil restriction of scalars from a number field $K$ to another whenever $K \subseteq L$.
+    \TODO{weil restriction} 
+    For any number field $L$ containing $E$, write $X(L) = \operatorname{Hom}(L, \overline{\mathbb{Q}})$ for the set of \CrefAndHyperrefIfExist{definition:field_homomorphism}{embeddings} of $L$ into $\overline{\mathbb{Q}}$, and let $T_L := \mathrm{Res}_{L/\mathbb{Q}}(\mathbb{G}_m)$ be the associated algebraic torus over $\mathbb{Q}$. The character group of $T_L$ is canonically isomorphic to the permutation module $\mathbb{Z}[X(L)]$.
+
+    Let $(E, \Phi)$ be a \CrefAndHyperrefIfExist{definition:cm_type_and_reflex_field_of_a_cm_type}{CM type} for $E$, and let $E^*$ be the associated \CrefAndHyperrefIfExist{definition:cm_type_and_reflex_field_of_a_cm_type}{reflex field}. For each embedding $\rho \in X(E^*)$, define
+    $$n_\rho := |\{\tau \in \Phi : \tau|_{E^*} = \rho\}|$$
+    to be the number of embeddings in $\Phi$ whose restriction to $E^*$ equals $\rho$. Note that $n_\rho \geq 0$ and $\sum_{\rho \in X(E^*)} n_\rho = |\Phi| = [E:F]$.
+
+    The \hldef{reflex norm associated to $(E, \Phi)$}, denoted \hl{$N_{(E,\Phi)}: T_{E^*} \to T_E$}, is the unique morphism of \CrefAndHyperrefIfExist{definition:algebraic_torus_over_a_field}{algebraic tori} over $\mathbb{Q}$ whose dual map on character groups
+    \TODO{dual map on characters groups of map of algebraic tori}
+    $$N_{(E,\Phi)}^*: \mathbb{Z}[X(E)] \to \mathbb{Z}[X(E^*)]$$
+    sends each basis element $\tau \in X(E)$ to
+    $$N_{(E,\Phi)}^*(\tau) = n_{\tau|_{E^*}} \cdot (\tau|_{E^*}),$$
+    where $n_{\tau|_{E^*}} = |\{\sigma \in \Phi : \sigma|_{E^*} = \tau|_{E^*}\}|$ is the number of embeddings in $\Phi$ that have the same restriction to $E^*$ as $\tau$.
+
+    Equivalently, for each $\rho \in X(E^*)$, one has
+    $$N_{(E,\Phi)}^*\left(\sum_{\tau \in X(E),\; \tau|_{E^*} = \rho} \tau\right) = n_\rho \cdot \rho.$$
+
+    The kernel of the reflex norm $N_{(E,\Phi)}: T_{E^*} \to T_E$ is an algebraic subgroup of $T_{E^*}$ whose group of connected components is a finite abelian group that appears in bounds on Galois images associated to CM abelian varieties with CM type $(E, \Phi)$.
+
+    \textbf{Relation to the field norm.} When $(E, \Phi)$ is the unique CM type for a quadratic imaginary extension (i.e., $[E:F] = 1$), we have $E^* = F$ and $n_\rho = 1$ for all $\rho$, so the reflex norm coincides with the morphism of tori induced by the field norm $\mathrm{N}_{E/F}: E^\times \to F^\times$.
+\end{definition}

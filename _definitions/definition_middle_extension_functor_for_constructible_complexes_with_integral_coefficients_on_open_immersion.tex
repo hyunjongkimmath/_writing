@@ -1,0 +1,14 @@
+\begin{definition}[Middle extension functor for constructible complexes with integral coefficients] \label{definition:middle_extension_functor_for_constructible_complexes_with_integral_coefficients_on_open_immersion}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$. Let $j: U \hookrightarrow X$ be an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion}.
+
+Let $\pscrH^i_R(-)$ denote the $i$th perverse cohomology functor with respect to the perverse $t$-structures on $D_c^b(U, R)$ and $D_c^b(X, R)$. Let $j_{!*}: \Perv(U, R) \to \Perv(X, R)$ be the \CrefAndHyperrefIfExist{definition:middle_extension_functor_for_perverse_sheaves_with_integral_coefficients_on_open_immersion}{middle extension functor with integral coefficients}.
+
+For a complex $\mathcal{K} \in D_c^b(U, R)$, the \hldef{middle extension of $\mathcal{K}$ along $j$} is the object in $D_c^b(X, R)$
+$$\hlin{j_{!*} \mathcal{K} := \bigoplus_{i \in \bbZ} j_{!*} \pscrH^i_R(\mathcal{K})[-i]}$$
+where each $\pscrH^i_R(\mathcal{K}) \in \Perv(U, R)$ is extended via the perverse middle extension functor and then shifted by $-i$.
+
+The assignment $\mathcal{K} \mapsto j_{!*}\mathcal{K}$ defines a functor
+$$\hlin{j_{!*}: D_c^b(U, R) \to D_c^b(X, R)}$$
+called the \hldef{middle extension functor for constructible complexes with integral coefficients along $j$}. It is exact with respect to the perverse $t$-structures and restricts to the perverse middle extension on $\Perv(U, R)$.
+\end{definition}

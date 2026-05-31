@@ -1,0 +1,21 @@
+\begin{theorem}[Isomorphism between derivations and homs from the augmentation ideal, see {\cite[Chapter VI, Theorem 5.1]{hilton_stammbach_cha}}] \label{theorem:isomorphism_between_derivations_and_homs_from_augmentation_ideal}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, and let $A$ be an abelian \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[\Gamma]$-module}. Let $I_\Gamma$ be the \CrefAndHyperrefIfExist{definition:augmentation_map_of_a_group_ring_to_its_base_ring}{augmentation ideal} of $R[\Gamma]$.
+
+    There is a natural isomorphism of $R$-modules
+    $$\Phi: \Der_R(\Gamma, A) \xrightarrow{\cong} \Hom_{R[\Gamma]}(I_\Gamma, A),$$
+    given by the assignment
+    $$(\Phi(d))(y - 1) = d(y), \quad y \in \Gamma.$$
+    The inverse sends $\varphi \in \Hom_{R[\Gamma]}(I_\Gamma, A)$ to the derivation $d_\varphi: \Gamma \to A$ defined by $d_\varphi(y) = \varphi(y - 1)$.
+\end{theorem}
+\begin{proof}
+    \TODO{}
+    % We follow the source. Let $d \in \Der_R(\Gamma, A)$ and define $\Phi(d) = \varphi_d: I_\Gamma \to A$ by $\varphi_d(y - 1) = d(y)$ for $y \in \Gamma$, extended $R$-linearly. Since the elements $\{y - 1 : y \in \Gamma\}$ generate $I_\Gamma$ as an $R$-module, this is well-defined on $I_\Gamma$. We verify that $\varphi_d$ is an $R[\Gamma]$-module homomorphism. For $x,y \in \Gamma$,
+    % $$\varphi_d(x \cdot (y - 1)) = \varphi_d((xy - 1) - (x - 1)) = d(xy) - d(x).$$
+    % Using the derivation property, $d(xy) = d(x) + x \cdot d(y)$, so this equals $x \cdot d(y) = x \cdot \varphi_d(y - 1)$. Hence $\varphi_d$ is an $R[\Gamma]$-module homomorphism.
+
+    % Conversely, given $\varphi \in \Hom_{R[\Gamma]}(I_\Gamma, A)$, define $d_\varphi: \Gamma \to A$ by $d_\varphi(y) = \varphi(y - 1)$. We verify the derivation property. For $x,y \in \Gamma$,
+    % $$d_\varphi(xy) = \varphi(xy - 1) = \varphi(x(y - 1) + (x - 1)) = x \cdot \varphi(y - 1) + \varphi(x - 1) = x \cdot d_\varphi(y) + d_\varphi(x).$$
+    % Thus $d_\varphi$ is a derivation.
+
+    % The maps $\Phi$ and $d \mapsto d_\varphi$ are clearly inverse to each other on the generators $y - 1$, hence inverse everywhere. Naturality in $A$ is immediate from the pointwise definitions.
+\end{proof}

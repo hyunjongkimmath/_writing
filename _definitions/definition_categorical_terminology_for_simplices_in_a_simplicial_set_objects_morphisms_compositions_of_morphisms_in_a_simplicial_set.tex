@@ -3,7 +3,7 @@
     \begin{enumerate}
         \item An \hldef{object of $X$} refers to a \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{vertex of $X$}, i.e. a \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{$0$-simplex of $X$}. We may write \hl{$x \in X$} or \hl{$x \in \Ob X$} to denote that $x$ is an object of $X$. 
 
-        \item A \hldef{morphism} $x \to y$ where $x,y: \Delta^0 \to X$\CrefIfExists{definition:standard_n_simplex} (\Cref{lemma:n_simplicies_on_a_simplicial_set_are_naturally_isomorphic_to_morphisms_from_standard_n_simplex}) are objects of $X$ is an \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{edge} $f:\Delta^1 \to S$ such that $d_1(f) = x$ and $d_0(f) = y$, or equivalently $f(0) = x$ and $f(1) = y$. We may write such a morphism by \hl{$f: x \to y$}.
+        \item A \hldef{($1$-)morphism} $x \to y$ where $x,y: \Delta^0 \to X$\CrefIfExists{definition:standard_n_simplex} (\Cref{lemma:n_simplicies_on_a_simplicial_set_are_naturally_isomorphic_to_morphisms_from_standard_n_simplex}) are objects of $X_0$ is an \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{edge} $f:\Delta^1 \to S$ such that $d_1(f) = x$ and $d_0(f) = y$, or equivalently $f(0) = x$ and $f(1) = y$. We may write such a morphism by \hl{$f: x \to y$}.
 
         \item Given an object $x$ of $X$, the \hldef{identity morphism of $x$} is the edge \hl{$\operatorname{id}_X = s_0(X): \Delta^1 \to X$}. 
 
@@ -11,8 +11,40 @@
         $$d_2(F) = f, \quad \text{and} \quad d_0(F) = g.$$
         \CrefIfExists{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}. The \hl{composite of $f$ and $g$ with respect to the composition $F$} is then the morphism $d_1(F): x \to z$. 
 
+        % In particular, compositions of morphisms exist whenever $X$ is a \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{quasi-category} and are unique whenever $X$ satisfies the conditions of \Cref{proposition:simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely}, i.e. when $X$ is isomorphic to the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerve} of a small category.
+        % \TODO{comment on how different composites of $f$ and $g$ become equivalent in the homotopy category of $X$ in case that $X$ is a quasi-category.}
+
+        % \item More generally, an \hldef{$n$-morphism of $X$} is an element of $X_n$.
+
+        % \item Given $f,g \in X_n$, their \hldef{composition} is
+
         In particular, compositions of morphisms exist whenever $X$ is a \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{quasi-category} and are unique whenever $X$ satisfies the conditions of \Cref{proposition:simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely}, i.e. when $X$ is isomorphic to the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerve} of a small category.
-        \TODO{comment on how different composites of $f$ and $g$ become equivalent in the homotopy category of $X$ in case that $X$ is a quasi-category.}
+        Furthermore, if $X$ is a quasi-category, any two compositions $F, F': \Delta^2 \to X$ of the same morphisms $f$ and $g$ yield composites $d_1(F)$ and $d_1(F')$ that are homotopic in the sense of \CrefAndHyperrefIfExist{definition:homotopic_morphisms_in_a_quasi_category}{homotopic edges}, meaning they define the same unique morphism in the \CrefAndHyperrefIfExist{definition:homotopy_category_of_a_simplicial_set}{homotopy category} $\mathrm{h}X$.
+
+        \item More generally, an \hldef{$n$-morphism of $X$} is an element of $X_n$. Geometrically, an $n$-morphism $\sigma: \Delta^n \to X$ acts as a directed higher cell whose source and target faces are determined by the face maps $d_i(\sigma)$. 
+
+        \item Let $n \ge 1$. There are two primary geometric configurations for composing $n$-morphisms, depending on whether they are composed within a fixed mapping space or along an intermediate boundary.
+        \TODO{verify}
+
+        \begin{subenumerate}
+            \item Two $n$-morphisms $f, g \in X_n$ are \hldef{vertically composable} if they share identical source and target boundaries up to a shift in dimension; precisely, if there exists an index $0 < i < n+1$ such that $d_j(f) = d_j(g)$ for all $j \neq i-1, i$, and $d_i(f) = d_{i-1}(g)$. 
+            
+            A \hldef{vertical composition of $f$ and $g$} is an $(n+1)$-simplex $F: \Delta^{n+1} \to X$ satisfying the boundary conditions:
+            $$d_{i+1}(F) = f, \quad d_{i-1}(F) = g, \quad \text{and} \quad d_j(F) = s_{i-1}d_j(f) \text{ for all } j \neq i-1, i, i+1.$$
+            The \hl{vertical composite of $f$ and $g$ with respect to $F$} is the $n$-morphism $d_i(F) \in X_n$.
+
+            \item Two $n$-morphisms $f, g \in X_n$ are \hldef{horizontally composable} if the primary target face of the first matches the primary source face of the second; precisely, if $d_0(f) = d_n(g) \in X_{n-1}$. 
+            
+            A \hldef{horizontal composition of $f$ and $g$} is an $(n+1)$-simplex $H: \Delta^{n+1} \to X$ satisfying the boundary conditions:
+            $$d_{n+1}(H) = f \quad \text{and} \quad d_0(H) = g.$$
+            The \hl{horizontal composite of $f$ and $g$ with respect to $H$} is the $n$-morphism $d_n(H) \in X_n$ (or dually $d_1(H)$).
+        \end{subenumerate}
+
+        The notions of vertical and horizontal composition are structurally compatible and equivalent in the following sense. Let $\operatorname{Map}_X(x,y)$ denote the mapping Kan complex between two objects $x,y \in X_0$. 
+        
+        Vertically, an $n$-morphism defines an $(n-1)$-simplex in $\operatorname{Map}_X(x,y)$, and the vertical composition $F$ corresponds exactly to the strict combinatorial concatenation of cells inside this mapping space. Horizontally, composition defines the structural map of simplicial sets:
+        $$\circ: \operatorname{Map}_X(y,z) \times \operatorname{Map}_X(x,y) \to \operatorname{Map}_X(x,z)$$
+        When $X$ is a quasi-category, both operations are governed by the same inner horn filling condition $\Lambda^{n+1}_i \to X$. The equivalence of these notions is expressed by the \CrefAndHyperrefIfExist{theorem:eckmann_hilton_for_quasi_categories}{Eckmann--Hilton argument for quasi-categories}: the vertical composition of higher cells within a fixed mapping space corresponds up to coherent $(n+1)$-morphism homotopy to the horizontal composition of those cells with the identity morphisms of their respective boundaries. Consequently, both operations induce the exact same associative and commutative graded ring structure on the higher homotopy groups $\pi_n(\operatorname{Map}_X(x,y))$.
 
     \end{enumerate}
 \end{definition}

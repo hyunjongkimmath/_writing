@@ -1,0 +1,13 @@
+\begin{definition}[{\cite[Definition 3.8.]{scholze_sff}}] \label{definition:lax_symmetric_monoidal_functor_of_symmetric_monoidal_infinity_categories}
+Let $(\mathcal{C}, \otimes)$ and $(\mathcal{D}, \otimes)$ be \CrefAndHyperrefIfExist{definition:symmetric_monoidal_infinity_category_via_coCartesian_fibration}{symmetric monoidal $\infty$-categories}, with corresponding coCartesian fibrations $\mathcal{C}_\otimes, \mathcal{D}_\otimes \to \mathbf{Fin}_{\mathrm{part}}$.
+
+A \hldef{lax symmetric monoidal functor} $(\mathcal{C}, \otimes) \to (\mathcal{D}, \otimes)$ is a functor $F_\otimes : \mathcal{C}_\otimes \to \mathcal{D}_\otimes$ over $\mathbf{Fin}_{\mathrm{part}}$ such that $F_\otimes$ preserves locally coCartesian lifts of the morphisms $I \dashrightarrow \{i\}$ sending $i \in I$ to $i$ and the rest nowhere.
+
+The functor $F_\otimes$ is \hldef{symmetric monoidal} if it preserves all locally coCartesian lifts.
+
+Intuitively, a lax symmetric monoidal functor consists of a functor $F : \mathcal{C} \to \mathcal{D}$ together with natural maps
+\[ \bigotimes_{i \in I} F(X_i) \to F\left(\bigotimes_{i \in I} X_i\right) \]
+for any finite set $I$ and objects $X_i \in \mathcal{C}$ ($i \in I$). A symmetric monoidal functor is a lax symmetric monoidal functor for which these maps are all isomorphisms.
+
+The condition on locally coCartesian lifts of the morphisms $I \dashrightarrow \{i\}$ ensures that $(F_\otimes)_I : (\mathcal{C}_\otimes)_I \to (\mathcal{D}_\otimes)_I$ is given by $F^I : \mathcal{C}^I \to \mathcal{D}^I$ under the equivalences $(\mathcal{C}_\otimes)_I \cong \mathcal{C}^I$ and $(\mathcal{D}_\otimes)_I \cong \mathcal{D}^I$. The preservation of remaining locally coCartesian lifts then precisely encodes the maps $\bigotimes_{i \in I} F(X_i) \to F(\bigotimes_{i \in I} X_i)$ above.
+\end{definition}

@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:descent_datum_associated_to_an_object_in_a_category_fibered_in_groupoids_over_a_category_with_respect_to_a_sieve}
+Let $\mathcal{C}$ be a category and let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}. We fix a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$, denoting the chosen pullback functor along a morphism $f: V \to U$ by $f^*: \mathcal{F}_U \to \mathcal{F}_V$, and the structural natural isomorphisms for composition by $\alpha_{g,h}: (g \circ h)^* \xrightarrow{\sim} h^* \circ g^*$ for morphisms $W \xrightarrow{h} V \xrightarrow{g} U$.
+
+Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$. 
+
+Given an object $y$ of the \CrefAndHyperrefIfExist{definition:category_over_a_category_and_fiber_category_over_an_object}{fiber category} $\calF_U$, there is a \hldef{canonical descent datum} $(x_f, \phi_g)$ defined by
+\begin{enumerate}
+    \item $x_f = f^*(y)$ for every $(f: V \to U) \in S$
+    \item $\phi_g = \alpha_{f,g} (y)^{-1}$ for any $g: W \to V$ and $(f: V \to U) \in S$, where $\phi_g: g^*(f^*(y)) \to (f \circ g)^*(y)$ is the inverse of the structural isomorphism $(f \circ g)^* \cong g^* \circ f^*$.
+\end{enumerate}
+
+We note that the canonical descent datum of an object $y$ is always \CrefAndHyperrefIfExist{definition:effective_descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}{effective}. 
+
+This yields a canonical functor 
+$$\Psi:\calF_U \to \operatorname{Des}(\calF, S), \quad y \mapsto (x_f, \phi_g);$$
+more specificlaly, given a morphism $\sigma: y \to z$ in $\calF_U$ the image morphism $\Psi(\sigma)$ is the collection of pullbacks $\{f^*(\sigma)\}_{(f:V \to U) \in S}$.
+\end{definition}

@@ -1,0 +1,12 @@
+\begin{definition}[Lie algebra of a group scheme over a base scheme] \label{definition:lie_algebra_of_a_group_scheme_over_a_base_scheme}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $\pi: G \to S$ be a \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{group scheme} over $S$. Let $e: S \to G$ denote the identity section of $\pi$, and let $\mathcal{I} \subset \mathcal{O}_G$ be the kernel of the restriction map $e^\#: \mathcal{O}_G \to e_*\mathcal{O}_S$ (the ideal sheaf defining the image of $e$). The \hldef{conormal sheaf of the identity section} is the $\mathcal{O}_S$-module
+$$\hlin{\mathcal{C} = e^*(\mathcal{I}/\mathcal{I}^2)}.$$
+
+The \hldef{Lie algebra of $G$ over $S$} is the \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_ringed_space}{$\mathcal{O}_S$-module}
+$$\hlin{\operatorname{Lie}(G/S) = \operatorname{Hom}_{\mathcal{O}_S}(\mathcal{C}, \mathcal{O}_S).}$$
+
+Let $D = \bbZ[\varepsilon]/(\varepsilon^2)$ be the ring of dual numbers over $\bbZ$, and let $D_S = D \otimes_\bbZ \mathcal{O}_S \cong \mathcal{O}_S[\varepsilon]/(\varepsilon^2)$ be the sheaf of dual numbers on $S$. The canonical surjection $\bbZ \to D$ induces a morphism $\epsilon: S_D \to S$, where $S_D = \operatorname{Spec}(D_S) \to S$ is the associated thickening of $S$. For any $S$-scheme $T$, let $T_D = T \times_S S_D$ be the first-order infinitesimal neighbourhood of $T$ in $S_D$. The \hldef{Lie algebra functor} of $G$ is the sheaf of (non-abelian) groups on the big fppf site of $S$ given by
+$$\hlin{\underline{\operatorname{Lie}}(G)(T) = \ker\left(G(T_D) \to G(T)\right)}.$$
+
+When $G$ is \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine over} $S$, the Lie algebra functor $\underline{\operatorname{Lie}}(G)$ is representable by the $\mathcal{O}_S$-module $\operatorname{Lie}(G/S)$. When $G$ is additionally \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth over} $S$, the module $\operatorname{Lie}(G/S)$ is locally free of finite rank, and its rank equals the relative dimension of $G$ over $S$.
+\end{definition}

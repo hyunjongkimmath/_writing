@@ -1,0 +1,24 @@
+\begin{definition}[Canonical forgets support map for \'etale sheaves of $\Lambda$-modules] \label{definition:canonical_forgets_support_map_from_direct_image_with_compact_support_to_direct_image_for_etale_sheaves_of_lambda_modules_on_compactifiable_morphisms}
+\TODO{AI generated, verify}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}. Fix a \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactification} of $f$:
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & Y \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+$$
+so that $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to Y$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}. Let $\Lambda$ be a commutative ring.
+
+Let $j_!: \Sh(X_{\et}, \Lambda) \to \Sh(\bar{X}_{\et}, \Lambda)$ denote the \CrefAndHyperrefIfExist{definition:extension_by_zero_of_a_sheaf_on_the_small_etale_site_on_a_scheme_under_open_immersion}{extension by zero} functor along $j$, and let $j_*: \Sh(X_{\et}, \Lambda) \to \Sh(\bar{X}_{\et}, \Lambda)$ denote the \CrefAndHyperrefIfExist{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{direct image} functor along $j$. The \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $j_! \dashv j^*$ (\Cref{proposition:adjunction_of_extension_by_zero_and_inverse_image_via_open_immersion_for_etale_sheaves_of_abelian_groups_on_scheme}) provides a unit natural transformation $\eta: \id \Rightarrow j^* j_*$. Applying $j_*$ to the counit of the adjunction $j^* \dashv j_*$ (which is an isomorphism for open immersions), we obtain a canonical natural transformation
+$$\hlin{\nu: j_! \Rightarrow j_*}$$
+called the canonical map from extension by zero to direct image.
+
+The \hldef{canonical forgets support map from direct image with compact support to direct image for \'etale sheaves of $\Lambda$-modules on compactifiable morphisms} is the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}
+$$\hlin{\alpha_f := \bar{f}_*(\nu): f_! \Rightarrow f_*}$$
+where $f_! = \bar{f}_* j_!: \Sh(X_{\et}, \Lambda) \to \Sh(Y_{\et}, \Lambda)$ is the \CrefAndHyperref{definition:direct_image_functor_with_compact_support_on_etale_sheaves_of_lambda_modules_for_a_compactifiable_morphism}{direct image functor with compact support} and $f_* = \bar{f}_* j_*: \Sh(X_{\et}, \Lambda) \to \Sh(Y_{\et}, \Lambda)$ is the direct image functor.
+
+For each $\mathcal{F} \in \Sh(X_{\et}, \Lambda)$, the component $\alpha_f(\mathcal{F}): f_! \mathcal{F} \to f_* \mathcal{F}$ is the morphism
+$$\bar{f}_*(\nu_\mathcal{F}): \bar{f}_* j_! \mathcal{F} \longrightarrow \bar{f}_* j_* \mathcal{F}.$$
+
+This natural transformation is independent of the choice of compactification up to canonical isomorphism.
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{definition}[Frobenius action on compactly supported $\lambda$-adic cohomology with integral coefficients] \label{definition:frobenius_action_on_compactly_supported_lambda_adic_cohomology_with_integral_coefficients}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $\mathbb{F}_q$ be a finite field with $q = p^f$ elements. Let $X$ be a scheme of finite type and separated over $\mathbb{F}_q$, with structure morphism $f_X \colon X \to \Spec(\mathbb{F}_q)$. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    Let $\Frob_X \colon X \to X$ be the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_a_scheme_over_a_scheme_with_invertible_finite_order_absolute_frobenius_morphism}{Frobenius endomorphism} of $X$ over $\mathbb{F}_q$. For each $n \geq 1$, write $\Lambda_n \coloneqq R/\lambda^n$.
+
+    Let $M = (M_n, u_n)_{n \geq 1} \in D_c^b(X, R)$ be an object of the bounded derived category with integral adic coefficients. For each $n$, the canonical Frobenius isomorphism $\alpha_n \colon \Frob_X^* M_n \xrightarrow{\sim} M_n$ in $D_c^b(X_{\et}, \Lambda_n)$ yields a \CrefAndHyperrefIfExist{definition:frobenius_action_on_compactly_supported_cohomology_with_torsion_coefficients}{Frobenius action}
+    $$\Frob_*^{(n)} \colon H_c^q(X, M_n) \to H_c^q(X, M_n).$$
+
+    The \hldef{Frobenius action on the compactly supported $\lambda$-adic cohomology of $M$ with integral coefficients} is the endomorphism of $\lambda$-adic modules
+    $$\hlin{\Frob_* \colon H_c^q(X, M) \to H_c^q(X, M)}$$
+    defined as the inverse limit of the level-$n$ Frobenius actions:
+    $$\Frob_* = \varprojlim_n \Frob_*^{(n)},$$
+    where $H_c^q(X, M) = \varprojlim_n H_c^q(X, M_n)$ is the \CrefAndHyperrefIfExist{definition:compactly_supported_lambda_adic_cohomology_groups_with_integral_coefficients_on_a_noetherian_scheme}{compactly supported $\lambda$-adic cohomology with integral coefficients}. The compatibility of the transition maps $u_n$ with Frobenius pullback ensures that this inverse limit is well-defined.
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:ell_adic_representation_map_from_base_change_of_isogenies_of_abelian_varieties_to_hom_set_of_tate_modules}
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field} and let $A, B$ be \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian varieties} over $k$. Let $\ell \neq \Char k$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime number}.
+    There is a canonical homomorphism
+    $$\mathbb{Z}_\ell \otimes_{\mathbb{Z}} \Hom(A, B) \to \Hom_{\bbZ_\ell}(T_\ell A, T_\ell B)$$
+    where $\Hom(A, B)$ is the \CrefAndHyperrefIfExist{definition:group}{group} of \CrefAndHyperrefIfExist{definition:homomorphism_of_algebraic_groups_over_a_scheme}{homomorphisms} from $A$ to $B$ as \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{commutative group schemes} over $k$ and where $\Hom_{\bbZ_\ell}(T_\ell A, T_\ell B)$ is the $\bbZ_\ell$-module homomorphisms betwee the \CrefAndHyperrefIfExist{definition:ell_adic_tate_module_of_an_abelian_variety_over_a_field}{Tate modules} $T_\ell A$ and $T_\ell B$. This may be called the \hldef{$\ell$-adic representation map} or the \hldef{canonical map into the Tate module Hom space}. It is generally an injection.
+    \TODO{statement of injection}
+
+    An \CrefAndHyperrefIfExist{definition:isogeny_of_abelian_varieties_over_a_field}{isogeny} $\phi: A \to B$ of abelian varieties over a field $k$ naturally induces maps $A[\ell^n] \to B[\ell^n]$ for all $n \geq 0$ because multiplication-by-$\ell^n$ commutes with any \CrefAndHyperrefIfExist{definition:field_homomorphism}{homomorphism} of group \CrefAndHyperrefIfExist{definition:scheme}{schemes}. Taking the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{inverse limit} along these restrictions gives a map $\phi_{\ell^\infty} T_\ell(A) \to T_\ell(B)$ on the Tate modules. The above canonical homomorphism is then the $\bbZ_\ell$-module homomorphsim given by 
+    $$1 \otimes \phi \mapsto \phi_{\ell^\infty}.$$
+\end{definition}

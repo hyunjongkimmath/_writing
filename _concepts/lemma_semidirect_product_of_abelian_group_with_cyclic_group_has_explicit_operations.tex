@@ -1,0 +1,62 @@
+\begin{lemma} \label{lemma:semidirect_product_of_abelian_group_with_cyclic_group_has_explicit_operations}
+    Let $d \geq 2$ be an integer. Let $C_d$ be a \CrefAndHyperrefIfExist{definition:cyclic_group}{cyclic group} of order $d$, and let $\sigma$ be a generator of $C_d$. Let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$\mathbb{Z}[C_d]$-module}, and write the action of $\sigma^k \in C_d$ on $a \in A$ as $\sigma^k(a)$. Let $G = A \rtimes C_d$ be the \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} with respect to the action of $C_d$ on $A$.
+
+    Then for all $a_1, a_2 \in A$ and $k, k_1, k_2 \in \mathbb{Z}$:
+    \begin{enumerate}
+        \item \label{item:semidirect_product_group_law_Cd} $(a_1, \sigma^{k_1}) \cdot (a_2, \sigma^{k_2}) = (a_1 + \sigma^{k_1}(a_2), \sigma^{k_1+k_2})$
+        \item \label{item:semidirect_product_inverse_Cd} $(a, \sigma^k)^{-1} = (-\sigma^{-k}(a), \sigma^{-k})$
+        \item \label{item:semidirect_product_conjugation_general_Cd} $(a_1, \sigma^{k_1}) \cdot (a_2, \sigma^{k_2}) \cdot (a_1, \sigma^{k_1})^{-1} = (a_1 + \sigma^{k_1}(a_2) - \sigma^{k_2}(a_1), \sigma^{k_2})$
+        \item \label{item:semidirect_product_same_rotation_difference_Cd} $(a_1, \sigma^k) \cdot (a_2, \sigma^k)^{-1} = (a_1 - a_2, 1)$
+        \item \label{item:semidirect_product_conjugation_pure_translation_Cd} $(a_1, \sigma^k) \cdot (a_2, 1) \cdot (a_1, \sigma^k)^{-1} = (\sigma^k(a_2), 1)$
+        \item \label{item:semidirect_product_conjugation_pure_rotation_Cd} $(a_1, 1) \cdot (a_2, \sigma^k) \cdot (a_1, 1)^{-1} = ((1 - \sigma^k)(a_1) + a_2, \sigma^k)$
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    Throughout, the group operation on $G = A \rtimes C_d$ is given by the semidirect product formula: for $n_1, n_2 \in A$ and $h_1, h_2 \in C_d$,
+    $$ (n_1, h_1)(n_2, h_2) = (n_1 + h_1(n_2), h_1 h_2). $$
+
+    \begin{enumerate}
+        \item Directly apply the semidirect product group law with $h_1 = \sigma^{k_1}$ and $h_2 = \sigma^{k_2}$:
+            $$ (a_1, \sigma^{k_1})(a_2, \sigma^{k_2}) = (a_1 + \sigma^{k_1}(a_2), \sigma^{k_1} \sigma^{k_2}) = (a_1 + \sigma^{k_1}(a_2), \sigma^{k_1+k_2}). $$
+
+        \item We verify that $(a, \sigma^k) \cdot (-\sigma^{-k}(a), \sigma^{-k})$ is the identity element $(0, 1)$ of $G$:
+            $$ (a, \sigma^k)(-\sigma^{-k}(a), \sigma^{-k}) = (a + \sigma^k(-\sigma^{-k}(a)), \sigma^k \sigma^{-k}) = (a - \sigma^k(\sigma^{-k}(a)), 1) = (a - a, 1) = (0, 1). $$
+            Similarly, we verify $(-\sigma^{-k}(a), \sigma^{-k}) \cdot (a, \sigma^k) = (0, 1)$:
+            $$ (-\sigma^{-k}(a), \sigma^{-k})(a, \sigma^k) = (-\sigma^{-k}(a) + \sigma^{-k}(a), \sigma^{-k} \sigma^k) = (0, 1). $$
+
+        \item Using items~\ref{item:semidirect_product_group_law_Cd} and~\ref{item:semidirect_product_inverse_Cd}:
+            \begin{align*}
+                (a_1, \sigma^{k_1}) \cdot (a_2, \sigma^{k_2}) \cdot (a_1, \sigma^{k_1})^{-1}
+                &= (a_1, \sigma^{k_1}) \cdot (a_2, \sigma^{k_2}) \cdot (-\sigma^{-k_1}(a_1), \sigma^{-k_1}) \\
+                &= (a_1 + \sigma^{k_1}(a_2), \sigma^{k_1+k_2}) \cdot (-\sigma^{-k_1}(a_1), \sigma^{-k_1}) \\
+                &= (a_1 + \sigma^{k_1}(a_2) + \sigma^{k_1+k_2}(-\sigma^{-k_1}(a_1)), \sigma^{k_1+k_2} \sigma^{-k_1}) \\
+                &= (a_1 + \sigma^{k_1}(a_2) - \sigma^{k_2}(a_1), \sigma^{k_2}).
+            \end{align*}
+
+        \item Using item~\ref{item:semidirect_product_inverse_Cd}:
+            \begin{align*}
+                (a_1, \sigma^k) \cdot (a_2, \sigma^k)^{-1}
+                &= (a_1, \sigma^k) \cdot (-\sigma^{-k}(a_2), \sigma^{-k}) \\
+                &= (a_1 + \sigma^k(-\sigma^{-k}(a_2)), \sigma^k \sigma^{-k}) \\
+                &= (a_1 - a_2, 1).
+            \end{align*}
+
+        \item Using items~\ref{item:semidirect_product_group_law_Cd} and~\ref{item:semidirect_product_inverse_Cd}:
+            \begin{align*}
+                (a_1, \sigma^k) \cdot (a_2, 1) \cdot (a_1, \sigma^k)^{-1}
+                &= (a_1 + \sigma^k(a_2), \sigma^k) \cdot (-\sigma^{-k}(a_1), \sigma^{-k}) \\
+                &= (a_1 + \sigma^k(a_2) + \sigma^k(-\sigma^{-k}(a_1)), \sigma^k \sigma^{-k}) \\
+                &= (a_1 + \sigma^k(a_2) - a_1, 1) \\
+                &= (\sigma^k(a_2), 1).
+            \end{align*}
+
+        \item Using item~\ref{item:semidirect_product_group_law_Cd}:
+            \begin{align*}
+                (a_1, 1) \cdot (a_2, \sigma^k) \cdot (a_1, 1)^{-1}
+                &= (a_1 + a_2, \sigma^k) \cdot (-a_1, 1) \\
+                &= (a_1 + a_2 + \sigma^k(-a_1), \sigma^k) \\
+                &= ((1 - \sigma^k)(a_1) + a_2, \sigma^k).
+            \end{align*}
+    \end{enumerate}
+\end{proof}

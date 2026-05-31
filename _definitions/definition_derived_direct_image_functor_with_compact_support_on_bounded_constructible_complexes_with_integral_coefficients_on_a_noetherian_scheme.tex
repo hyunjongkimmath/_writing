@@ -1,0 +1,14 @@
+\begin{definition}[Derived direct image functor with compact support on bounded constructible complexes with integral coefficients] \label{definition:derived_direct_image_functor_with_compact_support_on_bounded_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+Let $D_c^b(X, R)$ denote the \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{bounded derived category of constructible complexes of $\lambda$-adic sheaves with integral coefficients} on $X$. For each $n \geq 1$, the ring $\Lambda_n := R/\lambda^n$ is a \CrefAndHyperref{definition:torsion_ring}{torsion ring}. Applying the \CrefAndHyperref{definition:derived_direct_image_functor_with_proper_or_compact_support_for_compactifiable_morphisms_of_schemes_over_a_scheme}{derived direct image functor with compact support on \'etale sheaves of $\Lambda_n$-modules} to $f$, we obtain functors
+$$Rf_!^{(n)} : D_c^b(X_{\et}, R/\lambda^n) \longrightarrow D_c^b(Y_{\et}, R/\lambda^n).$$
+
+The \hldef{derived direct image functor with compact support on bounded constructible complexes with integral coefficients along $f$} is the functor
+$$\hlin{Rf_! : D_c^b(X, R) \to D_c^b(Y, R)}$$
+defined level-wise as follows. For any object $\mathcal{F} = (\mathcal{F}_n, u_n)_{n \geq 1} \in D_c^b(X, R)$, set
+$$Rf_! \mathcal{F} := \bigl(Rf_!^{(n)} \mathcal{F}_n,\; Rf_!^{(n)}(u_n)\bigr)_{n \geq 1}.$$
+
+This construction is independent of the choice of compactification up to canonical isomorphism, since each $Rf_!^{(n)}$ is (by \Cref{definition:derived_direct_image_functor_with_proper_or_compact_support_for_compactifiable_morphisms_of_schemes_over_a_scheme}).
+\end{definition}

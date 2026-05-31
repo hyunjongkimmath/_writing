@@ -1,0 +1,11 @@
+\begin{definition}[Direct image functor with compact support on \'etale sheaves with rational adic coefficients] \label{definition:direct_image_functor_with_compact_support_on_etale_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+The \hldef{direct image functor with compact support on \'etale sheaves with rational adic coefficients along $f$} is the functor
+$$\hlin{f_! : \Sh(X, E) \to \Sh(Y, E)}$$
+defined as follows. On objects, for $\calF \in \Sh(X, R) \subseteq \Ob \Sh(X, E)$, set $f_! \calF$ to be the image of the \CrefAndHyperrefIfExist{definition:direct_image_functor_with_compact_support_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{direct image with compact support} $f_! \calF \in \Sh(X, R)$ under the localization functor $\Sh(X, R) \to \Sh(X, E)$. On morphisms, for $\phi \in \Hom_{\Sh(X, E)}(\calF, \calG)$ written as $\psi / \lambda^m$ with $\psi \in \Hom_{\Sh(X, R)}(\calF, \calG)$, set
+$$f_! (\phi) := f_!(\psi) / \lambda^m \in \Hom_{\Sh(Y, E)}(f_! \calF, f_! \calG),$$
+where $f_!(\psi): f_! \calF \to f_! \calG$ is the morphism in $\Sh(Y, R)$ obtained by applying the direct image functor with compact support on $\lambda$-adic sheaves with integral coefficients to each component of $\psi$.
+
+This is well-defined because the direct image functor with compact support on $\lambda$-adic sheaves with integral coefficients commutes with multiplication by $\lambda^m$: $f_!(\lambda^m \cdot \id_\calF) = \lambda^m \cdot \id_{f_! \calF}$.
+\end{definition}

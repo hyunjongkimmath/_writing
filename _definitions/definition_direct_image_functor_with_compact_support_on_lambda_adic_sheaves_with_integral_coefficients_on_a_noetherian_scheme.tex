@@ -1,0 +1,13 @@
+\begin{definition}[Direct image functor with compact support on $\lambda$-adic sheaves with integral coefficients] \label{definition:direct_image_functor_with_compact_support_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+For each $n \geq 1$, the ring $\Lambda_n := R/\lambda^n$ is a commutative ring. Applying the \CrefAndHyperref{definition:direct_image_functor_with_compact_support_on_etale_sheaves_of_lambda_modules_for_a_compactifiable_morphism}{direct image functor with compact support on \'etale sheaves of $\Lambda_n$-modules} to $f$, we obtain functors
+$$f_!^{(n)} : \Sh(X_{\et}, R/\lambda^n) \longrightarrow \Sh(Y_{\et}, R/\lambda^n).$$
+
+The \hldef{direct image functor with compact support on $\lambda$-adic sheaves with integral coefficients along $f$} is the functor
+$$\hlin{f_! : \Sh(X, R) \to \Sh(Y, R)}$$
+defined level-wise as follows. For any \CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf} $\calF = (\calF_n, u_n)_{n \geq 1}$ on $X$, set
+$$f_! \calF := \bigl(f_!^{(n)} \calF_n,\; f_!^{(n)}(u_n)\bigr)_{n \geq 1}.$$
+
+This construction is independent of the choice of compactification up to canonical isomorphism, since each $f_!^{(n)}$ is (by \Cref{definition:direct_image_functor_with_compact_support_on_etale_sheaves_of_lambda_modules_for_a_compactifiable_morphism}).
+\end{definition}

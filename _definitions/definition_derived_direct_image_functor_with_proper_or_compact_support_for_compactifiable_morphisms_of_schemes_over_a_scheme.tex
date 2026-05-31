@@ -1,0 +1,27 @@
+\begin{definition}[Derived functor with proper/compact support $Rf_!$, cf. {\cite[TODO]{SGA4_III}}, {\cite[TODO]{freitag_kiehl_ecwc}}, {\cite[TODO]{stacks_project}}] \label{definition:derived_direct_image_functor_with_proper_or_compact_support_for_compactifiable_morphisms_of_schemes_over_a_scheme}
+% \begin{definition}[Derived functor with proper/compact support $Rf_!$, cf. {\cite[Expos\'e XVII 5]{SGA4_III}}, {\cite[I.8]{freitag_kiehl_ecwc}}, {\cite[Tag 0F7H]{stacks_project}}] \label{definition:derived_direct_image_functor_with_proper_or_compact_support_for_compactifiable_morphisms_of_schemes_over_a_scheme}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $f: X \to S$ be an \CrefAndHyperrefIfExist{definition:compactifiable_over_S}{S-compactifiable} morphism. Fix a compactification
+
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & S \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+$$
+
+of $f$, so that $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to S$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}. The functor $Rf_!$ is defined as follows, depending on the coefficient ring.
+
+\paragraph*{Case 1: $\Lambda$ is a torsion ring.}
+Let $\Lambda$ be a \CrefAndHyperref{definition:torsion_ring}{torsion ring}. Let $D(X_{\acute{\text{e}}\text{t}}, \Lambda)$ denote the \CrefAndHyperrefIfExist{definition:derived_category_of_an_abelian_category}{unbounded derived category} of \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} of $\Lambda$-modules on the small \'etale site of $X$. The functor
+$$\hlin{ Rf_! : D(X_{\acute{\text{e}}\text{t}}, \Lambda) \longrightarrow D(S_{\acute{\text{e}}\text{t}}, \Lambda) }$$
+is defined by
+$$ Rf_!(K) := R\bar{f}_*(Rj_! K), $$
+where $Rj_!$ is the \CrefAndHyperrefIfExist{definition:derived_functor_of_extension_by_zero}{derived functor of extension by zero} along $j$, and $R\bar{f}_*$ is the \CrefAndHyperrefIfExist{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_sites}{right derived direct image functor} along $\bar{f}$. In this case, $Rf_!$ is defined on the full unbounded derived category.
+
+\paragraph*{Case 2: General torsion coefficient ring.}
+Let $\Lambda$ be a commutative ring (not necessarily a torsion ring). Let $D^+_{\text{tors}}(X, \Lambda)$ denote the full subcategory of $D^+(X_{\acute{\text{e}}\text{t}}, \Lambda)$ consisting of complexes whose cohomology sheaves $\mathcal{H}^i(K)$ are \CrefAndHyperrefIfExist{definition:torsion_module_over_a_ring}{torsion $\Lambda$-modules} for all $i$. Then
+$$\hlin{ Rf_! : D^+_{\text{tors}}(X, \Lambda) \longrightarrow D^+(S_{\acute{\text{e}}\text{t}}, \Lambda) }$$
+is defined by the same formula $Rf_!(K) = R\bar{f}_*(Rj_! K)$.
+
+The functor $Rf_!$ is independent of the choice of compactification up to canonical isomorphism (\CrefAndHyperrefIfExist{theorem:independence_of_Rf_on_choice_of_compactification}{independence theorem}).
+\end{definition}

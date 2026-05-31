@@ -1,0 +1,32 @@
+\begin{definition}[cf. {\cite[TODO]{fu_ect}}] \label{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $\ell$ be a prime number that is invertible on $X$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$, and let $\lambda$ be a uniformizer of $R$.
+
+    The category \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X,E)$} has the same objects as \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$\Dbc(X,R)$}. The six functors defined on $\Dbc(\cdot, R)$ in \Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme} are defined at the level of inverse systems $(K_n)_n$ and hence commute with localization by multiplication by $\lambda^m$. Therefore they descend to functors on $\Dbc(\cdot, E)$:
+    \begin{enumerate}
+        \item $f^*: \Dbc(Y,E) \to \Dbc(X,E)$ (inverse image),
+
+        \item If $f$ is an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism},
+        $$Rf_!: \Dbc(X,E) \to \Dbc(Y,E)$$
+        (direct image with proper/compact support),
+
+        \item For any morphism $f$, define
+        $$Rf_*: \Dbc(X,E) \to \Dbc(Y,E)$$
+        (direct image),
+
+        \item On a single scheme $X$, define
+
+        \hlalign{
+        \begin{align*}
+            \Lotimes_E &: \Dbc(X,E) \times \Dbc(X,E) \to \Dbc(X,E), \\
+            R\mathscr{H}om_E &: \Dbc(X,E)^{\mathrm{op}} \times \Dbc(X,E) \to \Dbc(X,E).
+        \end{align*}
+        }
+
+        \item If $f$ is an $S$-compactifiable morphism where $X$ and $Y$ are $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, define
+        $$Rf^!: \Dbc(Y,E) \to \Dbc(X,E)$$
+        (exceptional inverse image),
+
+    \end{enumerate}
+    On objects, these functors act by the same formulas as in \Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}. The action on morphisms is obtained by tensoring with $E$ over $R$.
+\end{definition}

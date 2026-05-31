@@ -1,0 +1,15 @@
+\begin{definition}[Frobenius action on compactly supported $\lambda$-adic cohomology with algebraic coefficients] \label{definition:frobenius_action_on_compactly_supported_lambda_adic_cohomology_with_algebraic_coefficients}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E = \Frac(R)$, and let $K/E$ be an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $\mathbb{F}_q$ be a finite field with $q = p^f$ elements. Let $X$ be a scheme of finite type and separated over $\mathbb{F}_q$, with structure morphism $f_X \colon X \to \Spec(\mathbb{F}_q)$. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    Let $\Frob_X \colon X \to X$ be the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_a_scheme_over_a_scheme_with_invertible_finite_order_absolute_frobenius_morphism}{Frobenius endomorphism} of $X$ over $\mathbb{F}_q$.
+
+    Let $P \in \Dbc(X, K)$ be an object represented by some $N_{E'} \in \Dbc(X, E')$ for a finite subextension $E'/E$ inside $K$. The Frobenius action on compactly supported cohomology with rational coefficients for each finite subextension $E'$ yields endomorphisms
+    $$\Frob_*^{(E')} \colon H_c^q(X, N_{E'}) \to H_c^q(X, N_{E'}).$$
+
+    The \hldef{Frobenius action on the compactly supported $\lambda$-adic cohomology of $P$ with algebraic coefficients} is the endomorphism of $K$-vector spaces
+    $$\hlin{\Frob_* \colon H_c^q(X, P) \to H_c^q(X, P)}$$
+    defined as the direct limit of the Frobenius actions $\Frob_*^{(E')}$ as $E'$ ranges over finite subextensions of $K/E$. Concretely, since $H_c^q(X, P) = H_c^q(X, N_{E'}) \otimes_{E'} K$, the action is
+    $$\Frob_* = \Frob_*^{(E')} \otimes \id_K.$$
+    This is independent of the choice of representative $N_{E'}$ and finite subextension $E'$.
+\end{definition}

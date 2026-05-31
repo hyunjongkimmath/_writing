@@ -1,0 +1,9 @@
+\begin{corollary} \label{corollary:bdd_constructible_derived_category_with_rational_coefficients_is_triangulated}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $X$ be a scheme of \CrefAndHyperref{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:field}{field} $k$.
+
+    The category \CrefAndHyperref{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X, E)$} is a \CrefAndHyperref{definition:triangulated_category}{triangulated category}.
+\end{corollary}
+
+\begin{proof}
+    The category $\Dbc(X, E)$ is obtained from \CrefAndHyperref{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$\Dbc(X, R)$} by inverting the morphisms given by multiplication by $\lambda^m$ for $m \geq 0$ (\Cref{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}). Since $\Dbc(X, R)$ is a triangulated category (\Cref{proposition:bdd_constructible_derived_category_with_integral_adic_coefficients_is_triangulated}) and the morphisms to be inverted form a \CrefAndHyperrefIfExist{definition:multiplicative_system_of_morphisms_in_a_category}{multiplicative system} compatible with the triangulation, the \CrefAndHyperrefIfExist{definition:localization_of_a_category_by_a_multiplicative_system}{localization} $\Dbc(X, E)$ inherits a unique triangulated structure making the localization functor exact.
+\end{proof}

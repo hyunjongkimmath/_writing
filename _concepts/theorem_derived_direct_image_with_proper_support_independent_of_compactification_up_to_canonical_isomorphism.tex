@@ -1,0 +1,20 @@
+\begin{theorem}[Independence of $Rf_!$ on choice of compactification] \label{theorem:derived_direct_image_with_proper_support_independent_of_compactification_up_to_canonical_isomorphism}
+\TODO{verify source}
+Let $S$ be a scheme. Let $f: X \to S$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{S-compactifiable} morphism. Let $\Lambda$ be a \CrefAndHyperref{definition:torsion_ring}{torsion ring} and let $D(X_{\acute{\text{e}}\text{t}}, \Lambda)$ denote the unbounded derived category of $\Lambda$-modules on the small \'etale site of $X$.
+
+Let
+$$
+j: X \hookrightarrow \bar{X}, \quad \bar{f}: \bar{X} \to S
+\qquad\text{and}\qquad
+k: X \hookrightarrow \bar{Y}, \quad \bar{g}: \bar{Y} \to S
+$$
+be two \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactifications} of $f$. Then there is a canonical isomorphism of functors
+$$
+R\bar{f}_* \circ Rj_! \xrightarrow{\,\sim\,} R\bar{g}_* \circ Rk_!
+$$
+from $D(X_{\acute{\text{e}}\text{t}}, \Lambda)$ to $D(S_{\acute{\text{e}}\text{t}}, \Lambda)$.
+
+The isomorphism is constructed by choosing a third compactification $m: X \hookrightarrow \bar{Z}$ with $\bar{h}: \bar{Z} \to S$ that dominates both (see \CrefAndHyperrefIfExist{definition:compactification_of_a_relative_scheme_that_dominates_another_compactification}{dominating compactifications}), and applying the base change isomorphism for the cartesian squares arising from the domination morphisms.
+
+The same statement holds verbatim for $\ell$-adic coefficients, replacing $D(X_{\acute{\text{e}}\text{t}}, \Lambda)$ with $D_c^b(X, R)$.
+\end{theorem}

@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:compactification_of_a_morphism_of_schemes}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $f: X \to S$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. A \hldef{compactification of $f$} is a commutative diagram
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & S \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+$$
+in which $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to S$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}.
+
+A morphism $f: X \to S$ is said to be \hldef{compactifiable over $S$} if it admits a compactification. For example, if $S$ is quasi-compact and quasi-separated and $f$ is separated and of finite type, then $f$ is compactifiable by \CrefAndHyperrefIfExist{theorem:nagata_compactification_theorem_for_separated_finite_type_morphisms_over_qcqs_schemes}{Nagata's compactification theorem}.
+% Every quasiprojective morphism, and in particular every quasifinite morphism, is compactifiable.
+\end{definition}

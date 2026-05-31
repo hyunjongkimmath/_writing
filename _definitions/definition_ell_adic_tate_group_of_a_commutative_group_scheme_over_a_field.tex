@@ -1,0 +1,14 @@
+\begin{definition}[$\ell$-adic Tate group] \label{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $\overline{K}$ be a \CrefAndHyperrefIfExist{definition:separable_closure_of_a_field}{separable closure} of $K$, and let $G_K = \operatorname{Gal}(\overline{K}/K)$ be the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group}. Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{commutative group scheme} over $K$ of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, and let $\ell$ be a prime number. For each integer $\nu \geq 1$, let $\mathcal{A}[\ell^\nu](\overline{K})$ denote the group of $\overline{K}$-rational points of the \CrefAndHyperrefIfExist{definition:kernel_of_a_homomorphism_of_group_schemes_over_a_scheme}{kernel} of $[\ell^\nu]: \mathcal{A} \to \mathcal{A}$. 
+
+The \hldef{$\ell$-adic Tate group of $\mathcal{A}$}, denoted by \hl{$T_\ell(\mathcal{A})$}, is the inverse limit
+$$\hlin{T_\ell(\mathcal{A}) = \varprojlim_{\nu} \mathcal{A}[\ell^\nu](\overline{K})}$$
+where the inverse limit is taken with respect to the multiplication-by-$\ell$ transition maps $\mathcal{A}[\ell^{\nu+1}] \to \mathcal{A}[\ell^\nu]$. The Tate group $T_\ell(\mathcal{A})$ is a module over $\mathbb{Z}_\ell$ equipped with a continuous action of $G_K$. As such, its corresponding \CrefAndHyperrefIfExist{definition:galois_representation_over_a_topological_ring_of_a_field}{Galois representation} 
+$$\hlin{\rho_{\calA,\ell^\infty} : G_K \to \operatorname{Aut}_{\bbZ_\ell} T_\ell(\calA)}$$
+is called the \hldef{$\ell$-adic Galois representation of $\calA$}.
+
+The \hldef{rational $\ell$-adic Tate group}, denoted by \hl{$V_\ell(\mathcal{A})$}, is
+$$\hlin{V_\ell(\mathcal{A}) = T_\ell(\mathcal{A}) \otimes_{\mathbb{Z}_\ell} \mathbb{Q}_\ell.}$$
+The corresponding Galois representation of $V_\ell(\calA)$ can be called the \hldef{rational $\ell$-adic Galois rperesentation of $\calA$}.
+When $\mathcal{A}$ is an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $g$ and $\ell$ is not divisible by the \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} of $K$, one has $T_\ell(\mathcal{A}) \cong \mathbb{Z}_\ell^{2g}$ and $V_\ell(\mathcal{A}) \cong \mathbb{Q}_\ell^{2g}$.
+\end{definition}

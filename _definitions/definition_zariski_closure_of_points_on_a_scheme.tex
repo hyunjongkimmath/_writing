@@ -1,0 +1,9 @@
+\begin{definition}[Zariski closure] \label{definition:zariski_closure_of_points_on_a_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. The underlying topological space of $X$ carries the \hldef{Zariski topology}, whose closed sets are the subsets supported on \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{closed subschemes} of $X$. For a subset $S \subseteq |X|$, the \hldef{Zariski closure of $S$ in $X$}, denoted by \hl{$\overline{S}^{\mathrm{Zar}}$}, is defined as the \CrefAndHyperrefIfExist{definition:closure_of_a_subspace_of_a_topological_space}{closure of $S$ in the topological space $|X|$}, i.e.,
+\[
+\overline{S}^{\mathrm{Zar}} \;:=\; \bigcap \, \{ \, |Z| \subseteq |X| : Z \text{ is a closed subscheme of } X \text{ and } S \subseteq |Z| \, \}.
+\]
+Equivalently, $\overline{S}^{\mathrm{Zar}}$ is the unique smallest closed subset of $|X|$ (in the sense of inclusion) containing $S$, equipped with the reduced induced closed subscheme structure — this uniquely determines a closed subscheme \hl{$\overline{S}$} of $X$, called the \hldef{Zariski closure of $S$ as a subscheme}.
+
+When $X = V$ is an \CrefAndHyperrefIfExist{definition:algebraic_variety_over_a_field}{algebraic variety over a field $k$}, the Zariski closure of $S \subseteq V$ may also be described as the smallest \hldef{algebraic subvariety} of $V$ containing $S$, i.e., the smallest closed subset of $V$ that is itself an algebraic variety (in the Zariski topology).
+\end{definition}

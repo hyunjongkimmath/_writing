@@ -1,0 +1,25 @@
+\begin{definition}[Compactly supported cohomology for various coefficient systems] \label{definition:compactly_supported_cohomology_groups_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $k$ be a field. Let $X$ be a scheme over $k$, with structure morphism $f \coloneq f_X \colon X \to \Spec(k)$, such that $f$ is \CrefAndHyperrefIfExist{definition:compactifiable_over_S}{$\Spec(k)$-compactifiable}. The \hldef{compactly supported cohomology groups} with various coefficient systems are defined as follows:
+    \begin{enumerate}
+        \item ($A$ a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}, torsion coefficients) For $K^\bullet \in D_c^b(X_{\et}, A)$,
+        $$H_c^i(X, K^\bullet) = H^i(Rf_! K^\bullet), \quad i \in \mathbb{Z}$$
+        (\CrefAndHyperrefIfExist{definition:compactly_supported_cohomology_groups_of_a_bounded_constructible_complex_with_torsion_coefficients}{compactly supported cohomology with torsion coefficients}).
+
+        \item Assuming that $X$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $(R, \lambda)$, $E$, $K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}:
+
+        \begin{enumerate}
+            \item (Integral coefficients) For $M \in D_c^b(X, R)$,
+            $$H_c^q(X, M) = \varprojlim_n H_c^q(X, M_n), \quad q \in \mathbb{Z}.$$
+            \CrefIfExists{definition:compactly_supported_lambda_adic_cohomology_groups_with_integral_coefficients_on_a_noetherian_scheme}
+
+            \item (Rational coefficients) For $N \in \Dbc(X, E)$,
+            $$H_c^q(X, N) = H_c^q(X, M) \otimes_R E, \quad q \in \mathbb{Z}.$$
+            \CrefIfExists{definition:compactly_supported_lambda_adic_cohomology_groups_with_rational_coefficients_on_a_noetherian_scheme}
+
+            \item (Algebraic coefficients) For $P \in \Dbc(X, K)$,
+            $$H_c^q(X, P) = H_c^q(X, N_{E'}) \otimes_{E'} K, \quad q \in \mathbb{Z}.$$
+            \CrefIfExists{definition:compactly_supported_lambda_adic_cohomology_groups_with_algebraic_coefficients_on_a_noetherian_scheme}
+        \end{enumerate}
+    \end{enumerate}
+\end{definition}

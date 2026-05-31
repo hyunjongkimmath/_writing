@@ -1,0 +1,9 @@
+\begin{proposition}[{\cite[Proposition~1.2.9.2]{lurie_htt}}] \label{proposition:existence_of_overcategory_simplicial_set_S_slash_p_with_universal_property}
+\TODO{AI generated, verify}
+Let $S$ and $K$ be \CrefAndHyperref{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}, and let $p : K \to S$ be a morphism. There exists a simplicial set \hl{$S_{/p}$} with the following universal property: for every simplicial set $Y$, there is a natural bijection
+$$\operatorname{Hom}_{s\mathbf{Set}}(Y, S_{/p}) \cong \operatorname{Hom}_{p}(Y \star K, S),$$
+where $\star$ denotes the \CrefAndHyperref{definition:join_of_simplicial_sets}{join of simplicial sets}, and the subscript $p$ on the right-hand side indicates that we consider only those morphisms $f : Y \star K \to S$ such that $f|_{K} = p$.
+
+The simplicial set $S_{/p}$ is explicitly given by
+$$(S_{/p})_n = \operatorname{Hom}_{p}(\Delta^n \star K, S).$$
+\end{proposition}

@@ -1,0 +1,11 @@
+\begin{definition}[Inverse image functor on $\lambda$-adic sheaves with integral coefficients] \label{definition:inverse_image_functor_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+The \hldef{inverse image functor on $\lambda$-adic sheaves with integral coefficients along $f$} is the functor
+$$\hlin{f^* : \Sh(Y, R) \to \Sh(X, R)}$$
+defined as follows. For any \CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf} $\calG = (\calG_n, u_n)_{n \geq 1}$ on $Y$, set
+$$f^* \calG := (f^* \calG_n, f^*(u_n))_{n \geq 1},$$
+where each $f^* \calG_n$ is the \CrefAndHyperrefIfExist{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{inverse image} of the sheaf $\calG_n$ on $Y_{\text{\'et}}$ along $f$, taken on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$. The transition maps $f^*(u_n): f^* \calG_n \to f^* \calG_{n-1}$ are the images of the original transition maps $u_n$ under the functor $f^*$.
+
+The system $(f^* \calG_n, f^*(u_n))_{n \geq 1}$ satisfies the conditions of a $\lambda$-adic sheaf because $f^*$ preserves constructibility, commutes with quotients by $\lambda^n$, and is exact on torsion sheaves whose exponent is invertible on $X$.
+\end{definition}

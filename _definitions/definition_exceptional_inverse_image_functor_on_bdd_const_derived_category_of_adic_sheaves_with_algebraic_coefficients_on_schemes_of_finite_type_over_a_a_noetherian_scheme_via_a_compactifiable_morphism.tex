@@ -1,0 +1,16 @@
+\begin{definition}[Exceptional inverse image functor on bounded constructible complexes with algebraic coefficients] \label{definition:exceptional_inverse_image_functor_on_bdd_const_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_schemes_of_finite_type_over_a_a_noetherian_scheme_via_a_compactifiable_morphism}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $X$ and $Y$ be $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+    The \hldef{exceptional inverse image functor on bounded constructible complexes with algebraic coefficients along $f$} is the functor
+    $$\hlin{Rf^! : \Dbc(Y, K) \to \Dbc(X, K)}$$
+    defined as follows. For each finite extension $E'$ of $E$ inside $K$, let $R'$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $R$ in $E'$. The \CrefAndHyperref{definition:exceptional_inverse_image_functor_on_bdd_const_derived_category_of_adic_sheaves_with_rational_coefficients_on_schemes_of_finite_type_over_a_a_noetherian_scheme_via_a_compactifiable_morphism}{exceptional inverse image functors} $Rf^!: \Dbc(Y, E') \to \Dbc(X, E')$ commute with base change functors $\Dbc(\cdot, E') \to \Dbc(\cdot, E'')$ for $E' \subseteq E''$. Define $Rf^!: \Dbc(Y, K) \to \Dbc(X, K)$ as canonically induced functor.
+
+    Concretely, for an object $\mathcal{F} \in \Dbc(Y, K)$ represented by $\mathcal{F}_{E'} \in \Dbc(Y, E')$ for some finite $E'/E$ inside $K$, set
+    $$Rf^! \mathcal{F} := \text{image of } Rf^! \mathcal{F}_{E'} \in \Dbc(X, E') \text{ in } \Dbc(X, K).$$
+    For $\mathcal{F}, \mathcal{G} \in \Dbc(Y, K)$ represented by $\mathcal{F}_{E'_1}, \mathcal{G}_{E'_2}$, choose a common finite extension $E'' \supseteq E'_1, E'_2$ inside $K$. For $\phi \in \Hom_{\Dbc(Y, K)}(\mathcal{F}, \mathcal{G})$ represented by $\phi_{E''} \in \Hom_{\Dbc(Y, E'')}(\mathcal{F}_{E''}, \mathcal{G}_{E''})$, set
+    $$Rf^! (\phi) := \text{image of } Rf^!(\phi_{E''}) \in \Hom_{\Dbc(X, E'')}(Rf^! \mathcal{F}_{E''}, Rf^! \mathcal{G}_{E''}) \text{ in } \Hom_{\Dbc(X, K)}(Rf^! \mathcal{F}, Rf^! \mathcal{G}).$$
+
+    This functor satisfies the adjunction
+    $$\Hom_{\Dbc(X,K)}(K, Rf^! M) \cong \Hom_{\Dbc(Y,K)}(Rf_! K, M)$$
+    for all $K \in \Dbc(X, K)$ and $M \in \Dbc(Y, K)$.
+\end{definition}

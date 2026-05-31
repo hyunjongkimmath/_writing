@@ -1,0 +1,11 @@
+\begin{corollary}[Inclusion of $H$-invariant subgroups induces inclusion of semidirect products] \label{corollary:inclusion_of_H_invariant_subgroup_induces_inclusion_of_semidirect_products}
+    Let $H$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Suppose $H$ acts on a group $N_2$ via $\phi_2: H \to \operatorname{Aut}(N_2)$, and let $N_1 \leq N_2$ be a subgroup such that $\phi_2(h)(N_1) \subseteq N_1$ for all $h \in H$. Let $\phi_1: H \to \operatorname{Aut}(N_1)$ be the restricted action.
+
+    Then the inclusion $\iota: N_1 \hookrightarrow N_2$ is an $H$-equivariant homomorphism, and the induced homomorphism
+    $$\iota \rtimes \operatorname{id}_H : N_1 \rtimes_{\phi_1} H \longrightarrow N_2 \rtimes_{\phi_2} H$$
+    given by $(\iota \rtimes \operatorname{id}_H)(n, h) = (\iota(n), h)$ is an injective \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}.
+\end{corollary}
+\begin{proof}
+    \TODO{}
+    % The map $\iota$ is $H$-equivariant by definition of the restricted action: $\iota(\phi_1(h)(n)) = \phi_2(h)(\iota(n))$. By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, $\iota \rtimes \operatorname{id}_H$ is a homomorphism. For injectivity, suppose $(\iota(n), h) = (e_{N_2}, e_H)$. Then $h = e_H$ and $\iota(n) = e_{N_2}$. Since $\iota$ is an inclusion, $n = e_{N_1}$. Hence the kernel is trivial.
+\end{proof}

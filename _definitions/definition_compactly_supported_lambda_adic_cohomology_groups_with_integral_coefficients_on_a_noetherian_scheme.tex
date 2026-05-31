@@ -1,0 +1,11 @@
+\begin{definition}[Compactly supported $\lambda$-adic cohomology with integral coefficients] \label{definition:compactly_supported_lambda_adic_cohomology_groups_with_integral_coefficients_on_a_noetherian_scheme}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $k$ be a field. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} scheme over $k$, with structure morphism $f \coloneq f_X \colon X \to \Spec(k)$, such that $f$ is \CrefAndHyperrefIfExist{definition:compactifiable_over_S}{$\Spec(k)$-compactifiable}. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    For each $n \geq 1$, write $\Lambda_n \coloneqq R/\lambda^n$. The \CrefAndHyperrefIfExist{definition:derived_direct_image_functor_with_compact_support_on_bounded_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}{derived direct image functor with compact support} for $f$ defines functors
+    $$Rf_!^{(n)} \colon D_c^b(X_{\et}, \Lambda_n) \to D(\Spec(k)_{\et}, \Lambda_n) \simeq D(\Lambda_n).$$
+
+    Let $M = (M_n, u_n)_{n \geq 1} \in D_c^b(X, R)$ be an object of the \CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{bounded derived category of constructible complexes with integral adic coefficients}. The \hldef{compactly supported $\lambda$-adic cohomology groups of $X$ with coefficients in $M$} are the inverse limit systems of $\Lambda_n$-modules:
+    $$\hlin{H_c^q(X, M) \coloneq \varprojlim_n H_c^q(X, M_n)}$$
+    \CrefIfExists{definition:compactly_supported_cohomology_groups_of_a_bounded_constructible_complex_with_torsion_coefficients}
+    These are \CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic modules} over $R$.
+\end{definition}

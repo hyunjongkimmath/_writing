@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:solvable_group_via_derived_series}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. For each integer $i \geq 0$, define the \hldef{$i$-th derived subgroup of~$G$}, denoted by \hl{$D^i(G)$}, recursively by
+$$\hlin{D^0(G) = G,\quad D^{i+1}(G) = [D^i(G), D^i(G)],}$$
+where \hl{$[H,H]$} denotes the \CrefAndHyperrefIfExist{definition:commutator_subgroup_of_a_group}{commutator subgroup} of a group $H$. The sequence $(D^i(G))_{i \geq 0}$ is called the \hldef{derived series of~$G$}.
+
+The group $G$ is called a \hldef{solvable group} if there exists an integer $k \geq 0$ such that $D^k(G) = \{1_G\}$.
+\end{definition}

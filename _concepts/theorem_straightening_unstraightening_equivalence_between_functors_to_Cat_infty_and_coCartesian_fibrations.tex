@@ -1,0 +1,12 @@
+\begin{theorem}[{\cite[Theorem 3.6 (Straightening/Unstraightening).]{scholze_sff}}] \label{theorem:straightening_unstraightening_equivalence_between_functors_to_Cat_infty_and_coCartesian_fibrations}
+Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category}. There is a natural equivalence between the $\infty$-category of functors $\mathcal{C} \to \mathbf{Cat}_\infty$ and the $\infty$-category of \CrefAndHyperrefIfExist{definition:coCartesian_fibration_between_infinity_categories}{coCartesian fibrations} over $\mathcal{C}$.
+
+Functors $\mathcal{C} \to \mathbf{Cat}_\infty$ form most naturally an $(\infty, 2)$-category. The above theorem restricts to the underlying $(\infty, 1)$-category (allowing only invertible natural transformations). However, coCartesian fibrations retain information about non-invertible transformations: for two coCartesian fibrations $F : \mathcal{D} \to \mathcal{C}$ and $F' : \mathcal{D}' \to \mathcal{C}$ over $\mathcal{C}$, and a functor $G : \mathcal{D} \to \mathcal{D}'$ over $\mathcal{C}$, the induced diagram on fibres
+\[
+\begin{tikzcd}
+\mathcal{D}_X \arrow[r, "G_X"] \arrow[d, "\mathcal{D}_f"'] & \mathcal{D}'_X \arrow[d, "\mathcal{D}'_f"] \\
+\mathcal{D}_{X'} \arrow[r, "G_{X'}"' ] & \mathcal{D}'_{X'}
+\end{tikzcd}
+\]
+admits a natural transformation $\mathcal{D}'_f \circ G_X \to G_{X'} \circ \mathcal{D}_f$ for each $f : X \to X'$ in $\mathcal{C}$, which is an isomorphism if and only if $G$ preserves locally coCartesian lifts.
+\end{theorem}

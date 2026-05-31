@@ -1,4 +1,5 @@
 \begin{definition}[cf. {\cite[Proposition 10.1.17.]{fu_ect}}] \label{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
     \TODO{cite these things}
     Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} scheme. Let $\ell$ be a prime number that is invertible on $X$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$.
 
@@ -10,24 +11,21 @@
         \CrefIfExists{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}\CrefIfExists{definition:inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism}
         \CrefIfExists{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}
 
-        \TODO{compactifiable morphism}
-        \item If $f$ is an $S$-compactifiable morphism over some base scheme $S$, 
-        $$\hlin{Rf_! K = (Rf_! K_n)}$$
-        \TODO{}
-        \item If $f$ is an $S$-compactifiable morphism where $S$ is a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} \CrefAndHyperrefIfExist{definition:regular_at_a_point_for_a_scheme_regular_scheme_nonsingular_scheme}{regular scheme} of \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} $\leq 1$ and $X$ and $Y$ are $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type},
+        \item If $f$ is an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism} over some base scheme $S$, define
+        $$\hlin{Rf_! K = (Rf_! K_n)_n}.$$
+        (\Cref{definition:compactification_of_a_morphism_of_schemes}) This construction is independent of the choice of compactification due to \Cref{independence theorem}.
 
-        \hlalign{
-        \begin{align*}
-            Rf_* K &= (Rf_* K_n)_n \\
-            % Rf_! K &= (Rf_! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-            Rf^! K &= (Rf^! K_n)_n \quad (\text{assuming that } f \text{ is compactifiable over } S)\\
-            K \Lotimes_R L &= (K_n \Lotimes_{R/\lambda^{n+1}} L_n) \\
-            R\mathscr{H}om(K,L) &= (R\mathscr{H}om)(K_n,L_n).
-        \end{align*}
-        }
+        \item For any morphism $f$, define
+        $$\hlin{Rf_* K = (Rf_* K_n)_n}.$$
         \CrefIfExists{definition:total_right_derived_direct_image_functor_for_morphism_of_ringed_topoi}
-        \TODO{exceptional inverse image}
+
+        \item On a single scheme $X$, for $K, L \in D_c^b(X,R)$, define
+        $$\hlin{K \Lotimes_R L = (K_n \Lotimes_{R/\lambda^{n+1}} L_n)}, \quad \hlin{R\mathscr{H}om(K,L) = (R\mathscr{H}om)(K_n,L_n)}.$$
         \CrefIfExists{definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor} \CrefIfExists{definition:derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}
+
+        \item If $f$ is an $S$-compactifiable morphism where $X$ and $Y$ are $S$-schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, define
+        $$\hlin{Rf^! K = (Rf^! K_n)_n}.$$
+        \TODO{exceptional inverse image}
     \end{enumerate}
     % \CrefIfExists{}
 

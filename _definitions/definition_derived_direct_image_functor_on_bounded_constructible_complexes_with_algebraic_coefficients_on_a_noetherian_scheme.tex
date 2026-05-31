@@ -1,0 +1,15 @@
+\begin{definition}[Derived direct image functor on bounded constructible complexes with algebraic coefficients] \label{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+Let $\Dbc(X, K)$ denote the bounded derived category of constructible complexes with algebraic adic coefficients on $X$.
+
+The \hldef{derived direct image functor on bounded constructible complexes with algebraic coefficients along $f$} is the functor
+$$\hlin{Rf_* : \Dbc(X, K) \to \Dbc(Y, K)}$$
+defined as follows. For each finite extension $E'$ of $E$ inside $K$, let $R'$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $R$ in $E'$. The \CrefAndHyperref{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_rational_coefficients_on_a_noetherian_scheme}{derived direct image functors} $Rf_*: \Dbc(X, E') \to \Dbc(Y, E')$ form a direct system as $E'$ varies, because the base change functors $\Dbc(\cdot, E') \to \Dbc(\cdot, E'')$ for $E' \subseteq E''$ commute with derived direct images. Define $Rf_*: \Dbc(X, K) \to \Dbc(Y, K)$ as the colimit of this direct system.
+
+Concretely, for an object $\mathcal{F} \in \Dbc(X, K)$ represented by $\mathcal{F}_{E'} \in \Dbc(X, E')$ for some finite $E'/E$ inside $K$, set
+$$Rf_* \mathcal{F} := \text{image of } Rf_* \mathcal{F}_{E'} \in \Dbc(Y, E') \text{ in } \Dbc(Y, K).$$
+For $\mathcal{F}, \mathcal{G} \in \Dbc(X, K)$ represented by $\mathcal{F}_{E'_1}, \mathcal{G}_{E'_2}$, choose a common finite extension $E'' \supseteq E'_1, E'_2$ inside $K$. For $\phi \in \Hom_{\Dbc(X, K)}(\mathcal{F}, \mathcal{G})$ represented by $\phi_{E''} \in \Hom_{\Dbc(X, E'')}(\mathcal{F}_{E''}, \mathcal{G}_{E''})$, set
+$$Rf_* (\phi) := \text{image of } Rf_*(\phi_{E''}) \in \Hom_{\Dbc(Y, E'')}(Rf_* \mathcal{F}_{E''}, Rf_* \mathcal{G}_{E''}) \text{ in } \Hom_{\Dbc(Y, K)}(Rf_* \mathcal{F}, Rf_* \mathcal{G}).$$
+\end{definition}

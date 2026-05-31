@@ -1,0 +1,12 @@
+\begin{definition}[Inverse image functor on \'etale sheaves with algebraic adic coefficients] \label{definition:inverse_image_functor_on_etale_sheaves_with_algebraic_adic_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+The \hldef{inverse image functor on \'etale sheaves with algebraic adic coefficients along $f$} is the functor
+$$\hlin{f^* : \Sh(Y, K) \to \Sh(X, K)}$$
+defined as follows. For each finite extension $E'$ of $E$ inside $K$, let $R'$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $R$ in $E'$. The \CrefAndHyperrefIfExist{definition:inverse_image_functor_on_etale_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{inverse image functors} $f^*: \Sh(Y, E') \to \Sh(X, E')$ form a direct system as $E'$ varies, because the base change functors $\Sh(\cdot, E') \to \Sh(\cdot, E'')$ for $E' \subseteq E''$ commute with inverse images. Define $f^*: \Sh(Y, K) \to \Sh(X, K)$ as the colimit of this direct system.
+
+Concretely, for an object $\calG \in \Sh(Y, K)$ represented by $\calG_{E'} \in \Sh(Y, E')$ for some finite $E'/E$ inside $K$, set
+$$f^* \calG := \text{image of } f^* \calG_{E'} \in \Sh(X, E') \text{ in } \Sh(X, K).$$
+For $\calF, \calG \in \Sh(Y, K)$ represented by $\calF_{E'_1}, \calG_{E'_2}$, choose a common finite extension $E'' \supseteq E'_1, E'_2$ inside $K$. For $\phi \in \Hom_{\Sh(Y, K)}(\calF, \calG)$ represented by $\phi_{E''} \in \Hom_{\Sh(Y, E'')}(\calF_{E''}, \calG_{E''})$, set
+$$f^* (\phi) := \text{image of } f^*(\phi_{E''}) \in \Hom_{\Sh(X, E'')}(f^* \calF_{E''}, f^* \calG_{E''}) \text{ in } \Hom_{\Sh(X, K)}(f^* \calF, f^* \calG).$$
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{definition}[Derived internal Hom on bounded constructible complexes with integral coefficients] \label{definition:derived_internal_hom_on_bdd_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    The \hldef{derived internal Hom functor on bounded constructible complexes with integral coefficients over $R$} is the bifunctor
+    $$\hlin{R\mathscr{H}om_R : D_c^b(X, R)^{\mathrm{op}} \times D_c^b(X, R) \to D_c^b(X, R)}$$
+    \CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}
+    defined level-wise as follows. For any objects $K = (K_n, u_n)_{n \geq 0}$ and $L = (L_n, v_n)_{n \geq 0}$ in $D_c^b(X, R)$, set
+    $$R\mathscr{H}om_R(K,L) := (R\mathscr{H}om^{(n)}(K_n, L_n))_n.$$
+    \CrefIfExists{definition:derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}
+
+    \TODO{}
+    This functor satisfies the adjunction
+    $$\Hom_{D_c^b(X,R)}(M \Lotimes_R N, P) \cong \Hom_{D_c^b(X,R)}(M, R\mathscr{H}om_R(N,P))$$
+    for all $M,N,P \in D_c^b(X, R)$
+\end{definition}

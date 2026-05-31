@@ -1,0 +1,23 @@
+\begin{definition}[Direct image functor with compact support on \'etale sheaves of $\Lambda$-modules] \label{definition:direct_image_functor_with_compact_support_on_etale_sheaves_of_lambda_modules_for_a_compactifiable_morphism}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}. Fix a \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactification} of $f$:
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & Y \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+$$
+so that $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to Y$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}. Let $\Lambda$ be a commutative ring.
+
+The \hldef{direct image functor with compact support on \'etale sheaves of $\Lambda$-modules along $f$} is the functor
+$$\hlin{f_! : \Sh(X_{\et}, \Lambda) \to \Sh(Y_{\et}, \Lambda)}$$
+defined as follows. For any sheaf $\mathcal{F}$ of $\Lambda$-modules on $X_{\et}$, set
+$$f_! \mathcal{F} := \bar{f}_* j_! \mathcal{F},$$
+where:
+\begin{itemize}
+    \item $j_! \mathcal{F}$ is the \CrefAndHyperrefIfExist{definition:extension_by_zero_of_a_sheaf_on_the_small_etale_site_on_a_scheme_under_open_immersion}{extension by zero} of $\mathcal{F}$ along the open immersion $j$, a sheaf of $\Lambda$-modules on $\bar{X}_{\et}$;
+    \item $\bar{f}_* j_! \mathcal{F}$ is the \CrefAndHyperrefIfExist{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{direct image} of $j_! \mathcal{F}$ along $\bar{f}$, a sheaf of $\Lambda$-modules on $Y_{\et}$.
+\end{itemize}
+
+This construction is independent of the choice of compactification up to canonical isomorphism.
+\TODO{indpendence of choice of compactifiaction}
+\end{definition}

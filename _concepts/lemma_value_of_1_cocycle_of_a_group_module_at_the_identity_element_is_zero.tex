@@ -1,0 +1,18 @@
+\begin{lemma} \label{lemma:value_of_1_cocycle_of_a_group_module_at_the_identity_element_is_zero}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $M$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{(left) $G$-module} over a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$.
+
+    For all $\alpha \in Z^1(G,M)$, we have 
+    $$\alpha(1) = 0$$
+    where $1 \in G$ and $0 \in M$ are the respective identity elements.
+\end{lemma}
+\begin{proof}
+    For all $\alpha \in Z^1(G,M)$, the the \CrefAndHyperrefIfExist{lemma:cocycle_condition_for_the_first_cocycle_group_of_a_group_acting_on_an_abelian_group}{cocycle condition} yields
+    $$\alpha(gh) = \alpha(g) + g \cdot \alpha(h)$$
+    for all $g,h \in G$.
+    Letting $g,h = 1$, we get 
+    $$\alpha(1 \cdot 1) = \alpha(1) + 1 \cdot \alpha(1)$$
+    so 
+    $$\alpha(1) = \alpha(1) + \alpha(1)$$
+    and hence
+    $$\alpha(1) = 0.$$
+\end{proof}

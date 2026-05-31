@@ -1,0 +1,12 @@
+\begin{definition}[Characteristic polynomial of an endomorphism of a finitely generated projective module over a commutative ring] \label{definition:characteristic_polynomial_of_an_endomorphism_of_a_finitely_generated_projective_module_over_a_commutative_ring}
+\TODO{AI generated, verify}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, let $M$ be a finitely generated projective $R$-module of constant rank $n$, and let $\phi : M \to M$ be an $R$-linear endomorphism.
+
+The \hldef{characteristic polynomial of $\phi$} is the monic polynomial
+$$\hlin{p_\phi(t) = \sum_{k=0}^n (-1)^{n-k} \operatorname{tr}\!\big(\Lambda^{n-k}(\phi)\big) \cdot t^k} \in R[t],$$
+where $\Lambda^j(\phi) : \Lambda^j(M) \to \Lambda^j(M)$ denotes the induced endomorphism on the $j$-th exterior power of $M$, and $\operatorname{tr}$ is the trace of an endomorphism (defined via localization to free modules).
+
+Equivalently, for each prime ideal $\mathfrak{p} \subset R$, there exists $f \in R \setminus \mathfrak{p}$ such that $M_f$ is a free $R_f$-module of rank $n$. Choosing any basis of $M_f$, let $[\phi]_f$ be the matrix of $\phi|_{M_f}$. Then
+$$p_\phi(t) = \det\big(tI_n - [\phi]_f\big) \in R_f[t],$$
+and these local polynomials glue to a unique global polynomial in $R[t]$ independent of all choices.
+\end{definition}

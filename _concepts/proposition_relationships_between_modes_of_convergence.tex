@@ -1,0 +1,14 @@
+\begin{proposition}[Relationships between modes of convergence] \label{proposition:relationships_between_modes_of_convergence}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, and let $(f_n)_{n=1}^\infty$ and $f$ be measurable functions from $X$ to a \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{metric space} $(S, d)$.
+
+\begin{enumerate}
+    \item If $\mu(X) < \infty$ and $f_n \to f$ almost surely (i.e., \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space}{almost everywhere}), then $f_n \to f$ \CrefAndHyperrefIfExist{definition:almost_uniform_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space}{almost uniformly}.
+
+    \item If $f_n \to f$ almost uniformly, then $f_n \to f$ \CrefAndHyperrefIfExist{definition:convergence_in_measure}{in measure}.
+
+    \item If $f_n, f$ are measurable functions from $X$ to $\mathbb{R}$ and there exists $M > 0$ such that $|f_n(x)| \le M$ for all $n$ and all $x \in X$, then almost uniform convergence implies \CrefAndHyperrefIfExist{definition:sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm}{convergence in the} \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^p$ norm} for every $1 \le p < \infty$.
+
+    \item If $f_n, f \in L^p(X, \mathcal{A}, \mu)$ for some $1 \le p < \infty$ and $\|f_n - f\|_p \to 0$, then there exists a subsequence $(f_{n_k})_{k=1}^\infty$ such that $f_{n_k} \to f$ \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space}{almost everywhere} as $k \to \infty$.
+\end{enumerate}
+\end{proposition}
+

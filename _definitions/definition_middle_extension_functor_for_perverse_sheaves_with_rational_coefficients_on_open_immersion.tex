@@ -1,0 +1,19 @@
+\begin{definition}[Middle extension functor for perverse sheaves with rational coefficients] \label{definition:middle_extension_functor_for_perverse_sheaves_with_rational_coefficients_on_open_immersion}
+\TODO{AI generated, verify}
+The \CrefAndHyperref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_rational_coefficients}{self-dual (middle) perverse $t$-structure on $\Dbc(X, E)$} provides the \CrefAndHyperref{definition:t_structure_on_a_triangulated_category}{$t$-structure} whose core is $\Perv(X, E)$.
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$. Let $j: U \hookrightarrow X$ be an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion}.
+
+Let $\Perv(U, E)$ and $\Perv(X, E)$ denote the hearts of the perverse $t$-structures on $\Dbc(U, E)$ and $\Dbc(X, E)$ respectively. Let $\pscrH^0_E(-)$ denote the zeroth perverse cohomology functor with respect to these perverse $t$-structures.
+
+For $\mathcal{P} \in \Perv(U, E)$, there is a canonical forgets support morphism
+$$\alpha_j(\mathcal{P}): Rj_! \mathcal{P} \to Rj_* \mathcal{P}$$
+in $\Dbc(X, E)$, given by the \CrefAndHyperrefIfExist{definition:canonical_forgets_support_map_from_derived_direct_image_with_compact_support_to_derived_direct_image_for_bdd_constructible_complexes_with_rational_coefficients_on_compactifiable_morphisms}{canonical forgets support map for bounded constructible complexes with rational coefficients}.
+
+The \hldef{middle extension of $\mathcal{P}$ along $j$} is the object in $\Perv(X, E)$
+$$\hlin{j_{!*} \mathcal{P} := \Im\bigl(\pscrH^0_E(Rj_! \mathcal{P}) \xrightarrow{\pscrH^0_E(\alpha_j(\mathcal{P}))} \pscrH^0_E(Rj_* \mathcal{P})\bigr)}$$
+where $\Im(-)$ denotes the image in the abelian category $\Perv(X, E)$.
+
+The assignment $\mathcal{P} \mapsto j_{!*}\mathcal{P}$ extends to a functor
+$$\hlin{j_{!*}: \Perv(U, E) \to \Perv(X, E)}$$
+called the \hldef{middle extension functor with rational coefficients along $j$}. It is obtained from the integral coefficient case by tensoring $E$ over $R$.
+\end{definition}

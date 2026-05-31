@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:characteristic_polynomial_of_an_endomorphism_of_a_vector_space_over_a_field}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $V$ be an \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space} of finite \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{dimension} $n = \dim_F V$, and let $\phi : V \to V$ be an \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$F$-linear endomorphism} of $V$.
+
+The \hldef{characteristic polynomial of $\phi$} is the monic polynomial
+$$\hlin{p_\phi(t) = \det(tI - [\phi]_B)} \in F[t],$$
+where $[\phi]_B$ denotes the matrix of $\phi$ with respect to any basis $B$ of $V$, and $I$ is the $n \times n$ identity matrix. This polynomial is independent of the choice of basis $B$.
+
+Equivalently, $p_\phi(t) = \det([\phi]_B - tI)$ up to a sign of $(-1)^n$; the convention $tI - [\phi]_B$ ensures that $p_\phi(t)$ is monic.
+\end{definition}

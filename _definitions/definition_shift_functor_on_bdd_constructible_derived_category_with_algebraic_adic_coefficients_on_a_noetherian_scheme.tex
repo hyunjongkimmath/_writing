@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:shift_functor_on_bdd_constructible_derived_category_with_algebraic_adic_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$, and let $K/E$ be a \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension}. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site on $X$}.
+
+The category \CrefAndHyperref{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{$\Dbc(X, K)$} is the 2-direct limit of the categories $\Dbc(X, L)$ as $L$ ranges over finite extensions of $E$ inside $K$. Each object of $\Dbc(X, K)$ is represented by some object of $\Dbc(X, L)$ for a finite extension $L/E$.
+
+The \hldef{shift functor on $\Dbc(X, K)$}, denoted \hl{$[1]: \Dbc(X, K) \to \Dbc(X, K)$}, is defined as follows. For an object $M \in \Ob \Dbc(X, K)$ represented by $M_L \in \Ob \Dbc(X, L)$ for some finite extension $L/E$, set
+$$\hlin{M[1] = (M_L[1])}$$
+where $M_L[1]$ is the shift in $\Dbc(X, L)$ (\CrefAndHyperref{definition:shift_functor_on_bdd_constructible_derived_category_with_rational_adic_coefficients_on_a_noetherian_scheme}{shift functor on rational adic coefficients}). This is well-defined because the transition functors $\Dbc(X, L_1) \to \Dbc(X, L_2)$ commute with the shift.
+
+For any integer $k \in \mathbb{Z}$, the notation \hl{$M[k]$} denotes the $k$-fold iterate of this shift.
+
+% The shift functor $[1]$ is the shift in the \CrefAndHyperref{corollary:bdd_constructible_derived_category_with_algebraic_coefficients_is_triangulated}{triangulated structure} on $\Dbc(X, K)$.
+\end{definition}

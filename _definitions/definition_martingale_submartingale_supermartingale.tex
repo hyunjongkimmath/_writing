@@ -1,0 +1,14 @@
+\begin{definition}[Martingale/submartingale/supermartingale with respect to a filtration] \label{definition:martingale_submartingale_supermartingale}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_n)_{n \in \mathbb{N}}, P)$ be a \CrefAndHyperrefIfExist{definition:filtration_on_a_measurable_space}{filtered measurable space}, and let $\{X_n\}_{n \in \mathbb{N}}$ be an \CrefAndHyperrefIfExist{definition:adapted_process_with_respect_to_a_filtration_on_a_measurable_space}{adapted process} on $(\Omega, \mathcal{F}, P)$ such that $\mathbb{E}[|X_n|] < \infty$ for all $n$.
+
+\begin{enumerate}
+    \item The process $\{X_n\}_{n \in \mathbb{N}}$ is called a \hldef{martingale} with respect to $(\mathcal{F}_n)_{n \in \mathbb{N}}$ if for all $n \in \mathbb{N}$,
+    $$\mathbb{E}[X_{n+1} \mid \mathcal{F}_n] = X_n \quad \text{almost surely.}$$
+
+    \item The process $\{X_n\}_{n \in \mathbb{N}}$ is called a \hldef{submartingale} with respect to $(\mathcal{F}_n)_{n \in \mathbb{N}}$ if for all $n \in \mathbb{N}$,
+    $$\mathbb{E}[X_{n+1} \mid \mathcal{F}_n] \geq X_n \quad \text{almost surely.}$$
+
+    \item The process $\{X_n\}_{n \in \mathbb{N}}$ is called a \hldef{supermartingale} with respect to $(\mathcal{F}_n)_{n \in \mathbb{N}}$ if for all $n \in \mathbb{N}$,
+    $$\mathbb{E}[X_{n+1} \mid \mathcal{F}_n] \leq X_n \quad \text{almost surely.}$$
+\end{enumerate}
+\end{definition}

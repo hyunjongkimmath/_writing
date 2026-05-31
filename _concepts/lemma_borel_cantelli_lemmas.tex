@@ -1,0 +1,12 @@
+\begin{lemma}[Borel--Cantelli lemmas] \label{lemma:borel_cantelli_lemmas}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperref{definition:probability_space}{probability space}, and let $\{A_n\}_{n=1}^\infty$ be a sequence of events in $\mathcal{F}$. Define the event
+$$\limsup_{n \to \infty} A_n := \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k = \{\omega \in \Omega : \omega \in A_n \text{ for infinitely many } n\}.$$
+
+\begin{enumerate}
+    \item [First Borel--Cantelli lemma.] If $\sum_{n=1}^\infty P(A_n) < \infty$, then
+    $$P(\limsup_{n \to \infty} A_n) = 0.$$
+
+    \item [Second Borel--Cantelli lemma.] If the events $A_n$ are \CrefAndHyperref{definition:independence_of_events}{independent} and $\sum_{n=1}^\infty P(A_n) = \infty$, then
+    $$P(\limsup_{n \to \infty} A_n) = 1.$$
+\end{enumerate}
+\end{lemma}

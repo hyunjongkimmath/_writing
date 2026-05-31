@@ -1,0 +1,18 @@
+\begin{definition}[Standard $t$-structure with torsion coefficients] \label{definition:standard_t_structure_on_bdd_constructible_derived_category_with_torsion_coefficients}
+\TODO{AI generated, verify}
+    Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. Let $X$ be a scheme, and consider sheaves of $A$-modules on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$. The \hldef{standard $t$-structure on $D_c^b(X_{\et}, A)$}\CrefIfExists{definition:derived_category_of_cohomologically_constructible_complexes_of_sheaves_of_modules_of_a_sheaf_of_rings_on_a_topological_space_or_scheme} is given by the pair of strictly full subcategories
+
+    \hlalign{
+    \begin{align*}
+        \stDleqzero(X, A) &= \left\{ K^\bullet \in D_c^b(X_{\et}, A) : \mathscr{H}^i(K^\bullet) = 0 \text{ for all } i > 0 \right\}, \\
+        \stDgeqzero(X, A) &= \left\{ K^\bullet \in D_c^b(X_{\et}, A) : \mathscr{H}^i(K^\bullet) = 0 \text{ for all } i < 0 \right\},
+    \end{align*}
+    }
+
+    where $\mathscr{H}^i(K^\bullet)$ denotes the $i$-th \CrefAndHyperrefIfExist{definition:cohomology_sheaves_of_a_constructible_complex_with_torsion_coefficients_on_a_scheme}{cohomology sheaf} of $K^\bullet$.
+
+    This is a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $D_c^b(X_{\et}, A)$. Its \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{core} is equivalent to the abelian category of constructible sheaves of $A$-modules on $X_{\et}$ via $K^\bullet \mapsto \mathscr{H}^0(K^\bullet)$.
+
+    \TODO{truncation functors}
+    We write \hl{$\sttauleqzero$} and \hl{$\sttaugeqzero$} for the truncation functors of this $t$-structure.
+\end{definition}

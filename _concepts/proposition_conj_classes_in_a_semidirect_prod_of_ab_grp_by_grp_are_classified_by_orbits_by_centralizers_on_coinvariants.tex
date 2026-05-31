@@ -1,0 +1,33 @@
+\begin{proposition} \label{proposition:conj_classes_in_a_semidirect_prod_of_ab_grp_by_grp_are_classified_by_orbits_by_centralizers_on_coinvariants}
+    Let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{group acting on} an \CrefAndHyperrefIfExist{definition:group}{abelian group} $A$. Let $G = A \rtimes \Gamma$. Fix $\gamma \in \Gamma$. 
+    
+    The set of conjugacy classes of $G$ whose images under the canonical projection $G \twoheadrightarrow \Gamma$ contain $\gamma$ is in natural \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection} with the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbit} space
+    $$(A/(1-\gamma) A) / C_\Gamma(\gamma)$$
+    \CrefIfExists{definition:group_cohomology_homology_of_a_module_over_a_group_ring_over_a_ring}
+    where $C_\Gamma(\gamma) \leq \Gamma$ is the \CrefAndHyperrefIfExist{definition:centralizer_of_a_subgroup_of_a_group}{centralizer} of $\gamma$ in $\Gamma$ and the action of $C_\Gamma(\gamma)$ on $(A/(1-\gamma) A)$ is induced by the action of $C_\Gamma(\gamma)$ on $A$.
+\end{proposition}
+
+\begin{proof}
+    Given $(a,\gamma) \in G$, its conjugacy class consists of all elements of the form
+    $$(b, \tau) \cdot (a, \gamma) \cdot (b,\tau)^{-1} = (b + \tau \cdot a - \tau \gamma \tau^{-1} \cdot b, \, \tau \gamma \tau^{-1}).$$
+    \CrefIfExists{lemma:conjugation_in_semidirect_product_of_an_abelian_group_by_a_group}
+
+    Let $S$ be the set of conjugacy classes of $G$ whose images under the canonical projection $G \twoheadrightarrow \Gamma$ contain $\gamma$. We construct a bijection
+    $$\Phi: S \longrightarrow (A/(1-\gamma) A) / C_\Gamma(\gamma)$$
+    as follows: given a $C \in S$, choose an element of $C$ of the form $(a,\gamma)$. Define $\Phi(C)$ to be the orbit of the class $[a] \in A / (1 - \gamma) A$. 
+
+    To prove that $\Phi$ is well-defined, suppose that $(a, \gamma)$ and $(a', \gamma)$ are both elements of $C$. In particular, there exists some $(b, \tau) \in G$ such that
+    $$(b, \tau) \cdot (a, \gamma) \cdot (b, \tau)^{-1} = (a', \gamma),$$
+    i.e. such that 
+    $$a' = (1 - \gamma)\cdot b + \tau \cdot a \quad \text{and} \quad \tau \gamma \tau^{-1} = \gamma  .$$
+    \CrefIfExists{lemma:conjugation_in_semidirect_product_of_an_abelian_group_by_a_group}
+    The second equality implies that $\tau \in C_\Gamma(\gamma)$. The first implies that the elements $a'$ and $\tau \cdot a$ are equivalent in the quotient space $A / (1-\gamma)A$. Thus, $\Phi$ is well-defined.
+    
+    We construct the inverse map $\Psi: (A/(1-\gamma)A) / C_\Gamma(\gamma) \to S$ by sending the orbit of a class $[a] \in A / (1-\gamma)A$ to the conjugacy class of $(a, \gamma)$. To show that this is well defined, we must show well-definedness with respect to both a choice of another representative of the class $[a] \in A/(1-\gamma)A$ and the $C_\Gamma(\gamma)$-action. Any representative of the class $[a] \in A/(1-\gamma)A$ is of the form $a + (1-\gamma) b$ for $b \in A$; the elements $(a,\gamma)$ and $(a + (1-\gamma) b,\gamma)$ are conjugates, so $\Psi$ is well defined with respect to representatives of $[a]$. 
+    
+    The action of $C_\Gamma(\gamma)$ on $A/(1-\gamma)A$ is given by 
+    $$\tau \cdot [a] = [\tau \cdot a].$$
+    By definition, $\Psi$ sends the orbits of $[a]$ and $[\tau \cdot a]$ to the conjugacy classes of $(a, \gamma)$ and $( \tau \cdot a, \gamma)$ respectively; these conjugacy classes coincide. Therefore, $\Psi$ is well defined with respect to the $C_\Gamma(\gamma)$-action.
+
+    By construction, $\Phi \circ \Psi$ and $\Psi \circ \Phi$ are the identity maps on their respective sets, establishing the explicit natural bijection.
+\end{proof}

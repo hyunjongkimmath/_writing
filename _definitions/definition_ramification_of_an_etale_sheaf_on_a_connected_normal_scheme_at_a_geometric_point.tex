@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:ramification_of_an_etale_sheaf_on_a_connected_normal_scheme_at_a_geometric_point}
+    Let $X$ be an \CrefAndHyperrefIfExist{definition:connected_object_of_a_galois_category}{connected} \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal scheme} with \CrefAndHyperrefIfExist{definition:generic_point_of_a_topological_space}{generic point} $\eta$ and \CrefAndHyperrefIfExist{definition:function_field_over_a_field}{function field} $K$. Let $\overline{\eta}$ be a geometric point of $X$ whose image is $\eta$. Let $U \subseteq X$ be a non-empty \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{open subscheme}. Let $x \in X \setminus U$ be a point. 
+
+    Let $\calF$ be one of the following:
+    \begin{enumerate}
+        \item A \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite} \CrefAndHyperrefIfExist{definition:locally_constant_sheaf}{locally constant sheaf} of \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{sets} on $U_{\et}$ 
+        \item A finite locally constant sheaf of \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite cardinality} \CrefAndHyperrefIfExist{definition:group}{abelian groups} on $U_{\et}$ 
+        \item A locally constant sheaf of \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{modules} over a finite \CrefAndHyperrefIfExist{definition:ring}{ring} on $U_{\et}$ 
+        \item In the case that $U$ is \CrefAndHyperrefIfExist{definition:irreducible_topological_space}{irreducible} and \CrefAndHyperrefIfExist{definition:unibranch_geometircally_unibranch_scheme}{geometrically unibranch}, a \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, locally constant sheaf of \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\Lambda$-modules} on $U_{\et}$
+        \item Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. 
+        \begin{enumerate}
+            \item A lisse object of $\Sh(U,R)$ (\Cref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring})
+            \item A lisse object of $\Sh(U,E)$ (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr})
+            \item For an \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension} $K$ of $E$, a lisse object of $\Sh(U,K)$ (\Cref{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}).
+        \end{enumerate}
+    \end{enumerate}
+
+    In each of the above cases for $\calF$, there is a corresponding action of $\pioneet(U, \overline{\eta})$ on the stalk $\calF_{\eta}$ 
+    (\Cref{theorem:locally_constant_sheaves_on_X_etale_are_equivalent_to_representations_of_the_etale_fundamental_group})
+     (\Cref{theorem:lisse_ell_adic_sheaves_on_connected_noetherian_schemes_are_equivalent_to_representations_of_etale_fundamental_group_over_adic_ring}):
+    $$\pioneet(U, \overline{\eta}) \to \Aut(\calF_{\eta})$$
+    where $\Aut(\calF_{\eta})$ is the automorphism group for the appropriate category that $\calF_{\eta}$ belongs to. Further recall that there is an \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{inertia subgroup} $I_x$ of $\pioneet(U, \overline{\eta})$, well defined up to conjugation. 
+
+    We say that $\calF$ is \hldef{unramified at $x$} if the action of $I_x$ on $\calF_{\overline{\eta}}$ is trivial, i.e. the composed homomorphism
+    $$I_x \hookrightarrow \pioneet(U, \overline{\eta}) \to \Aut(\calF_{\eta})$$
+    is trivial. Otherwise, we say that $\calF$ is \hldef{ramified at $x$}.
+\end{definition}

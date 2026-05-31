@@ -1,0 +1,27 @@
+\begin{definition}[Self-dual (middle) perverse $t$-structure for various coefficient systems] \label{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $X$ be a scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over a \CrefAndHyperrefIfExist{definition:field}{field} $k$. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    Let the coefficient system be one of the following:
+    \begin{enumerate}
+        \item $A$ a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring} (torsion coefficients)
+        \item Assuming that $X$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $R,E,K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}
+    \end{enumerate}
+
+    Let $\mathcal{T}$ denote the corresponding bounded constructible derived category \CrefIfExists{definition:derived_category_of_etale_sheaves_of_modules_over_a_noetherian_torsion_ring_on_a_scheme}\CrefIfExists{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}. Let $\mathbb{D}_X(-): \mathcal{T} \to \mathcal{T}$ denote the Verdier dual functor on $X$ relative to $\Spec k$ \CrefIfExists{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}\CrefIfExists{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}\CrefIfExists{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_rational_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}\CrefIfExists{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme}.
+
+    The \hldef{self-dual (middle) perverse $t$-structure on $\mathcal{T}$} is the pair of strictly full subcategories $(\pDleqzero(X), \pDgeqzero(X))$ of $\mathcal{T}$ defined by
+
+    \hlalign{
+    \begin{align*}
+        \pDleqzero(X) &:= \left\{ \mathcal{K} \in \mathcal{T} : \dim \Supp\bigl(\mathscr{H}^{-i}(\mathcal{K})\bigr) \leq i \text{ for all } i \in \bbZ \right\}, \\
+        \pDgeqzero(X) &:= \left\{ \mathcal{K} \in \mathcal{T} : \dim \Supp\bigl(\mathscr{H}^{-i}(\mathbb{D}_X(\mathcal{K}))\bigr) \leq i \text{ for all } i \in \bbZ \right\},
+    \end{align*}
+    }
+
+    where $\dim$ denotes the \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{Krull dimension} of closed subsets of $X$, and $\Supp(-)$ is the support (\Cref{definition:support_of_etale_sheaves_and_constructible_complexes_for_various_coefficient_systems}).
+
+    This is a \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{$t$-structure} on $\mathcal{T}$. Its \CrefAndHyperrefIfExist{definition:t_structure_on_a_triangulated_category}{core}, denoted by \hl{$\Perv(X)$}, is called the \hldef{category of perverse sheaves on $X$}.
+
+    See \Cref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_torsion_coefficients} for torsion coefficients, \Cref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_integral_adic_coefficients} for integral adic coefficients, \Cref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_rational_coefficients} for rational coefficients, and \Cref{definition:self_dual_middle_perverse_t_structure_on_bdd_constructible_derived_category_with_algebraic_coefficients} for algebraic coefficients.
+\end{definition}

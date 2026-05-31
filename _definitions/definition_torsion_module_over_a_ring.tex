@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:torsion_module_over_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring_with_identity}{commutative ring with identity}, and let $M$ be a \CrefAndHyperrefIfExist{definition:module_over_a_ring}{module over $R$}.
+
+An element $m \in M$ is called a \hldef{torsion element of $M$} if there exists a \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{regular element} $r \in R$ (i.e.,~a non-zero-divisor) such that $r \cdot m = 0$.
+
+The module $M$ is called a \hldef{torsion module over $R$} if every element of $M$ is a torsion element.
+
+The set
+$$\hlin{T(M) = \{m \in M : \exists r \in R \text{ regular}, \; r \cdot m = 0\}}$$
+is called the \hldef{torsion submodule of $M$}. It is a submodule of $M$, equal to the kernel of the localization map $M \to S^{-1}M$ where $S \subseteq R$ denotes the set of regular elements.
+\end{definition}

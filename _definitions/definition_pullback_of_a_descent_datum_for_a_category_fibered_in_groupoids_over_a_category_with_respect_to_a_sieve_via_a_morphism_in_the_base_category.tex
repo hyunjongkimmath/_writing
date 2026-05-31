@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:pullback_of_a_descent_datum_for_a_category_fibered_in_groupoids_over_a_category_with_respect_to_a_sieve_via_a_morphism_in_the_base_category}
+    \TODO{verify that the following is true; if it was, why is there a need to define the notion of "an open subscheme that is stable under a descent datum"}  %see {poonen_rpv_4.3.1 Definition}
+Let $\mathcal{C}$ be a category and let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}. We fix a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$, denoting the chosen pullback functor along a morphism $f: V \to U$ by $f^*: \mathcal{F}_U \to \mathcal{F}_V$, and the structural natural isomorphisms for composition by $\alpha_{g,h}: (g \circ h)^* \xrightarrow{\sim} h^* \circ g^*$ for morphisms $W \xrightarrow{h} V \xrightarrow{g} U$.
+
+Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$. Let $j: U' \to U$ be a morphism in $\calC$.
+
+Given a \CrefAndHyperrefIfExist{definition:descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}{descent datum} $\calD = (x_f, \phi_g)$ for $\calF$ with respect to $S$, the \hldef{pullback} \hl{$j^*(\calD)$} is the descent datum $(x'_{f'}, \phi'_{g'})$ for $\calF$ with respect to $j^*(S)$\CrefIfExists{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object} where
+\begin{itemize}
+    \item $x'_{f'} = x_{j \circ f'}$ for $f': V \to U'$ in $j^*(S)$
+    \item $\phi'_{g'}$ is defined as the composite isomorphism
+    $$\phi'_{g'} : {g'}^* (x_{j \circ f'}) \xrightarrow{\phi_{g'}} x_{j \circ (f' \circ g')} \xrightarrow{\alpha_{j, f' \circ g'}}^{-1} x_{j \circ (f' \circ g')}$$
+    provided by the original descent datum due to the equality $(j \circ f') \circ g' = j \circ (f' \circ g')$; note that $j \circ f' \in S$. 
+\end{itemize}
+
+This yields a functor 
+$$j^*:\operatorname{Des}(\calF, S) \to \operatorname{Des}(\calF, j^*(S)).$$
+\end{definition}

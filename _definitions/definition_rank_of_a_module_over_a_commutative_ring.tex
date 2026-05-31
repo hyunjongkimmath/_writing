@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:rank_of_a_module_over_a_commutative_ring}
+Let $R$ be a \CrefAndHyperref{definition:commutative_ring}{commutative ring}, and let $M$ be an $R$-module.
+
+\hldef{Rank of a module over a commutative ring}:
+\begin{enumerate}[label=(\alph*)]
+    \item For each \CrefAndHyperrefIfExist{definition:prime_ideal_of_a_commutative_ring}{prime ideal} $\mathfrak{p} \subset R$, the \hldef{rank of $M$ at $\mathfrak{p}$}, denoted by \hl{$\operatorname{rank}_{R,\mathfrak{p}}(M)$}, is the \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{dimension} of the vector space
+    $$M \otimes_R \kappa(\mathfrak{p})$$
+    over the \CrefAndHyperrefIfExist{definition:residue_field_of_a_commutative_ring_at_a_prime_ideal}{$\mathfrak{p}$-residue field}, denoted by \hl{$\kappa(\mathfrak{p}) = R_\mathfrak{p}/\mathfrak{p}R_\mathfrak{p}$}.
+
+    \item Let $n \in \mathbb{Z}_{\geq 0}$. The module $M$ has \hldef{constant rank $n$ over $R$} if $\operatorname{rank}_{R,\mathfrak{p}}(M) = n$ for every prime ideal $\mathfrak{p} \subset R$.
+
+    \item If $M$ is a \CrefAndHyperrefIfExist{definition:free_module_over_a_commutative_ring}{free $R$-module} with basis $B$, then the cardinality of $B$ is called the \hldef{rank of $M$ over $R$}, denoted by \hl{$\operatorname{rank}_R(M)$}. In this case, $M$ has constant rank $\operatorname{rank}_R(M)$.
+\end{enumerate}
+\end{definition}

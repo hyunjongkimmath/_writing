@@ -1,0 +1,22 @@
+\begin{proposition}[K\"unneth isomorphisms] \label{proposition:kunneth_isomorphisms_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}
+    Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+
+    Let 
+    $$D \colon \operatorname{Corr}(C,E) \to \operatorname{Cat}_\infty$$
+    (\Cref{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition})\CrefIfExists{definition:infty_category_of_infty_categories}
+    be a \CrefAndHyperrefIfExist{definition:three_functor_formalism_for_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}{$3$-functor formalism}.
+
+    \TODO{do the Kunneth isomorphisms hold for 3-fucntor formalisms, or must they be for 6-fucntor formalsims? }
+    Let $X_1,X_2,Y_1,Y_2 \in C$. Let $f_i: X_i \to Y_i$ be morphsims in $E$. Write $f = (f_1,f_2): X_1 \times X_2 \to Y_1 \times Y_2$. 
+
+    \begin{enumerate}
+        \item Let $M_1 \in D(X_1)$, and $M_2 \in D(X_2)$. There are natural isomorphisms
+        $$Rf_{1!} M_1 \boxtimes Rf_{2!} M_2 \xrightarrow{\sim} Rf_!(M_1 \boxtimes M_2)$$
+        in $D(Y_1 \times Y_2)$.
+
+        \item Let $D$ be a \CrefAndHyperrefIfExist{definition:six_functor_formalism_for_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}{six-functor formalism}. Let $N_1 \in D(Y_1)$, and $N_2 \in D(Y_2)$. There are natural isomorphisms
+        $$Rf_{1}^! N_1 \boxtimes Rf_{2}^! N_2 \xrightarrow{\sim} Rf^!(N_1 \boxtimes N_2)$$
+        in $D(X_1 \times X_2)$.
+    \end{enumerate}
+    \TODO{prove --- i'm less sure about how to prove these --- apparently, the first may be  a direct consequence of the fact that $D$ isa lax symmetric monoidal functor mapping out of correspondences and the second may follow by taking right adjoints of the $f_!$ monoidal structures}
+\end{proposition}

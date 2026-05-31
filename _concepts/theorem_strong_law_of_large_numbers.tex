@@ -1,0 +1,6 @@
+\begin{theorem}[Strong law of large numbers (Kolmogorov)] \label{theorem:strong_law_of_large_numbers}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_space}{probability space}, and let $\{X_n\}_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:independence_of_random_variables_on_a_probability_measure_space}{independent} and identically distributed real-valued \CrefAndHyperrefIfExist{definition:random_variable_on_a_probability_measure_space}{random variables} on $(\Omega, \mathcal{F}, P)$ such that $\mathbb{E}[|X_1|] < \infty$.
+
+Let $S_n = \sum_{i=1}^n X_i$ for each $n \geq 1$. Then
+$$\frac{S_n}{n} \to \mathbb{E}[X_1] \quad \text{almost surely as } n \to \infty.$$
+\end{theorem}

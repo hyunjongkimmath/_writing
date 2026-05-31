@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:symmetric_monoidal_structure_on_Cat_infinity_via_disjoint_union}
+\TODO{AI generated, verify}
+\CrefAndHyperrefIfExist{definition:infty_category_of_infty_categories}{$\mathbf{Cat}_\infty$} carries a canonical \CrefAndHyperrefIfExist{definition:symmetric_monoidal_infinity_category}{symmetric monoidal $\infty$-category structure}, denoted by $(\mathbf{Cat}_\infty, \sqcup)$, defined as follows.
+
+The corresponding coCartesian fibration $(\mathbf{Cat}_\infty)_\otimes \to \mathbf{Fin}_{\mathrm{part}}$ sends each finite set $I$ to the $\infty$-category of $I$-indexed families of small $\infty$-categories,
+\[ (\mathbf{Cat}_\infty)_I = \mathbf{Cat}_\infty^I. \]
+For a partially defined map $f : I \dashrightarrow J$, the induced functor $(\mathbf{Cat}_\infty)^I \to (\mathbf{Cat}_\infty)^J$ sends an $I$-indexed family $(X_i)_{i \in I}$ to the $J$-indexed family $\left(\bigsqcup_{i \in f^{-1}(j)} X_i\right)_{j \in J}$, where $\bigsqcup$ denotes the coproduct (disjoint union) of $\infty$-categories.
+
+Under this symmetric monoidal structure:
+\begin{itemize}
+    \item The tensor product of two small $\infty$-categories $\mathcal{C}, \mathcal{D}$ is their disjoint union $\mathcal{C} \sqcup \mathcal{D}$.
+    \item The unit object is the empty $\infty$-category $\emptyset = (\mathbf{Cat}_\infty)_\emptyset$.
+\end{itemize}
+\end{definition}

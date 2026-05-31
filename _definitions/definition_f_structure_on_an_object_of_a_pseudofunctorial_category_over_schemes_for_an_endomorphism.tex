@@ -1,0 +1,21 @@
+\begin{definition}[F-structure on an object of a pseudofunctorial category over schemes] \label{definition:f_structure_on_an_object_of_a_pseudofunctorial_category_over_schemes_for_an_endomorphism}
+\TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Consider a contravariant \CrefAndHyperrefIfExist{definition:pseudofunctor_between_weak_2_categories}{pseudofunctor}
+    $$\hlin{\mathbb{D}: (\operatorname{Sch}/S)^{\op} \to \widehat{\mathbf{Cat}}}$$
+    from the (strict 2-)category of $S$-schemes to a 2-category $\widehat{\mathbf{Cat}}$ of categories. For each $S$-scheme $X$, write \hl{$\mathbb{D}(X)$} for the category assigned by $\mathbb{D}$, and for each morphism $f: X \to Y$ of $S$-schemes, write
+    $$\hlin{f^*: \mathbb{D}(Y) \to \mathbb{D}(X)}$$
+    for the pullback functor. Let $X$ be an $S$-scheme and let $F: X \to X$ be an \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{endomorphism} of $X$.
+
+    Let $K \in \mathbb{D}(X)$ be an object. An \hldef{$F$-structure on $K$ (relative to $\mathbb{D}$)} is an isomorphism
+    $$\hlin{\alpha: F^*K \xrightarrow{\sim} K}$$
+    in $\mathbb{D}(X)$. The pair $(K, \alpha)$ is called an \hldef{object of $\mathbb{D}(X)$ with $F$-structure}.
+
+    \paragraph{Relation to categories fibered over schemes.} A \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids} $p: \mathcal{E} \to \operatorname{Sch}/S$ determines such a pseudofunctor via the following equivalence: choosing a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$ yields pullback functors $f^*$ and composition constraints $\phi_{g,f}: g^* f^* \xrightarrow{\sim} (f \circ g)^*$, making the fiber categories into a contravariant pseudofunctor. Conversely, the Grothendieck construction on such a pseudofunctor recovers a category fibered in groupoids over $\operatorname{Sch}/S$. The notion of $F$-structure is thus equally well formulated either at the level of pseudofunctors or at the level of fibered categories with cleavage.
+
+    \paragraph{Examples of pseudofunctorial categories.}
+    \begin{enumerate}
+        \item (Derived category of \'etale sheaves) For a fixed commutative ring $A$, the assignment $X \mapsto D(X_{\et}, A)$, with pullback given by the derived inverse image functor, forms such a pseudofunctor on $\operatorname{Sch}/S$. An $F$-structure on $K \in D(X_{\et}, A)$ is an isomorphism $\alpha: F^*K \xrightarrow{\sim} K$.
+        \item (Derived category of adic sheaves) For a complete DVR $(R, \lambda)$ with finite residue field powers, the assignment $X \mapsto \Dbc(X, R)$ of bounded constructible complexes with integral adic coefficients forms such a pseudofunctor on $\operatorname{Sch}/S$, where pullback is defined level-wise on inverse systems. An $F$-structure on $\mathcal{K} \in \Dbc(X, R)$ is an isomorphism $\alpha: F^*\mathcal{K} \xrightarrow{\sim} \mathcal{K}$ in $\Dbc(X, R)$.
+        \item (Coherent sheaves with crystalline $F$-structure) On a scheme $X_0$ over a finite field $\mathbb{F}_q$, the assignment to the derived category of coherent sheaves on a lifting $X$ to Witt vectors, together with pullback by a lift of Frobenius, gives such a pseudofunctor. An $F$-structure in this context is an \hldef{$F$-crystal} (or $F$-isocrystal after tensoring with $\mathbb{Q}$).
+    \end{enumerate}
+\end{definition}

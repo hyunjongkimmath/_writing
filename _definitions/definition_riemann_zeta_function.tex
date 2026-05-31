@@ -1,8 +1,12 @@
 \begin{definition} \label{definition:riemann_zeta_function}
 Let $s \in \mathbb{C}$. The \hldef{Riemann zeta function} $\zeta(s)$ is defined as
 $$\hlin{\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.}$$
-which converges absolute when $\Re(s) > 1$ and in this case, $\zeta(s)$ can be expressed as an Euler product:
+which \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_a_normed_vector_space}{converges absolute} when $\Re(s) > 1$ and in this case, $\zeta(s)$ can be expressed as an Euler product:
 $$\zeta(s) = \prod_{n=1}^\infty \frac{1}{(1-p^{-s})}.$$
+
+\TextIfExists{definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{
+It \CrefAndHyperrefIfExist{definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{extends meromorphically} to the entire complex plane. 
+}
 
 \TODO{TODO: discuss that it extends meromorphically, its trivial zeroes, functional equation}
 

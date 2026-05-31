@@ -1,0 +1,9 @@
+\begin{proposition}[Semisimple representation implies each element acts semisimply] \label{proposition:semisimple_representation_implies_each_group_element_acts_semisimply}
+\TODO{AI generated, verify}
+Let $G$ be a group, $R$ a \CrefAndHyperrefIfExist{definition:ring}{ring with unity}, and let $\rho : G \to \operatorname{Aut}_R(M)$ be a \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{representation of $G$ on an $R$-module} $M$.
+
+If $(\rho, M)$ is a \CrefAndHyperref{definition:semisimple_representation_of_a_group_on_a_left_module_over_a_ring}{semisimple representation}, then for every $g \in G$, the endomorphism $\rho(g) : M \to M$ acts \CrefAndHyperref{definition:semisimple_endomorphism_of_a_module_over_a_commutative_ring}{semisimply}.
+
+\TODO{state converse conditions: abelian group over alg closed field char 0, Maschke's theorem context}
+The converse does not hold in general. It holds when $G$ is abelian and $k$ is an algebraically closed field of characteristic~0 (simultaneous diagonalizability). More generally, if $\operatorname{char}(k) \nmid |G|$ for a finite group $G$, then by \CrefAndHyperrefIfExist{theorem:maschkes_theorem_equiv_conditions_on_semisimplicity_of_group_algebra_of_finite_group_over_field}{Maschke's Theorem} every representation is semisimple, so in particular each $\rho(g)$ acts semisimply.
+\end{proposition}

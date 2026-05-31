@@ -1,0 +1,17 @@
+\begin{definition}[Middle extension via forgets-support map for constructible complexes with integral coefficients] \label{definition:middle_extension_via_forgets_support_map_for_constructible_complexes_with_integral_coefficients_on_compactifiable_morphism}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} $S$-schemes, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}.
+
+\TODO{write definition of perverse t-structure on $D_c^b(X, R)$ and heart $\Perv(X, R)$}
+Let $\pscrH^0_R(-)$ denote the zeroth perverse cohomology functor with respect to the perverse $t$-structures on $D_c^b(X, R)$ and $D_c^b(Y, R)$. Let $\alpha_f: Rf_! \Rightarrow Rf_*$ be the \CrefAndHyperrefIfExist{definition:canonical_forgets_support_map_from_derived_direct_image_with_compact_support_to_derived_direct_image_for_bdd_constructible_complexes_with_integral_coefficients_on_compactifiable_morphisms}{canonical forgets support map for bounded constructible complexes with integral coefficients}.
+
+For a complex $\mathcal{K} \in D_c^b(X, R)$, the \hldef{middle extension of $\mathcal{K}$ along $f$ via the forgets-support map} is the object in $\Perv(Y, R)$
+$$\hlin{j_{!*} \mathcal{K} := \Im\bigl(\pscrH^0_R(Rf_! \mathcal{K}) \xrightarrow{\pscrH^0_R(\alpha_f(\mathcal{K}))} \pscrH^0_R(Rf_* \mathcal{K})\bigr)}$$
+where $\Im(-)$ denotes the image in the abelian category $\Perv(Y, R)$.
+
+The assignment $\mathcal{K} \mapsto j_{!*}\mathcal{K}$ defines a functor
+$$\hlin{j_{!*}: D_c^b(X, R) \to \Perv(Y, R)}$$
+called the \hldef{middle extension functor via forgets-support map with integral coefficients along $f$}. It factors through perverse cohomology and takes values in the heart of the perverse $t$-structure on $Y$.
+
+When $f = j: U \hookrightarrow X$ is an open immersion, this coincides with the \CrefAndHyperrefIfExist{definition:middle_extension_functor_for_perverse_sheaves_with_integral_coefficients_on_open_immersion}{middle extension functor for perverse sheaves with integral coefficients}.
+\end{definition}

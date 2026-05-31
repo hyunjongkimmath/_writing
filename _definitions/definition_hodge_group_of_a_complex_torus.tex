@@ -1,0 +1,18 @@
+\begin{definition}[Hodge group, {\cite[Section 1]{mumford_fav}}] \label{definition:hodge_group_of_a_complex_torus}
+    \TODO{complex torus}
+Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $g$ over $\mathbb{C}$. Let $V = H_1(A(\mathbb{C}), \mathbb{Q})$ be the first rational \CrefAndHyperrefIfExist{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}{singular homology group} and let $V_\bbR = V \otimes_\bbQ \bbR \cong H_1(A(\mathbb{C}), \bbR)$. The complex structure on $A$ induces a \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{pure Hodge structure of weight $-1$} on $V$, determined by a representation of the \CrefAndHyperrefIfExist{definition:deligne_torus}{Deligne torus} $h: \mathbb{S} \to \mathrm{GL}(V_\mathbb{R})$.
+
+Let $\mathbb{U} \subset \mathbb{S}$ be the unit circle subgroup
+$$\mathbb{U} = \{z \in \bbC^\times: |z| = 1\}.$$
+The restriction of $h$ to $\mathbb{U}$ defines a homomorphism:
+$$\phi: \mathbb{U} \to \mathrm{GL}(V_\mathbb{R}).$$
+The \hldef{Hodge group of $A$} (also called the \hldef{special Mumford-Tate group}), denoted by \hl{$\mathrm{Hg}(A)$}, is the smallest \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{$\mathbb{Q}$-algebraic subgroup} of $\mathrm{GL}_V$ such that its real points $\mathrm{Hg}(A)(\mathbb{R})$ contain the image $\phi(\mathbb{U})$. 
+
+The Hodge group $\mathrm{Hg}(A)$ is a connected reductive group and is related to the full Mumford-Tate group by the equality $\mathrm{MT}(A) = \mathbb{G}_m \cdot \mathrm{Hg}(A)$ where $\mathbb{G}_m$ denotes the group of homotheties.
+
+The \CrefAndHyperrefIfExist{conjecture:mumford_tate_conjecture_for_an_abelian_variety_over_a_number_field}{Mumford-Tate conjecture} (in Mumford's original 1966 phrasing) asserts that if $A$ is defined over a number field $K$, then for any prime $\ell$, the $\ell$-adic Lie algebra $\mathfrak{g}_\ell$ of the image of the \CrefAndHyperrefIfExist{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}{Galois representation} $\rho_{A,\ell}: G_K \to \mathrm{GL}(V_\ell(A))$ satisfies:
+$$\hlin{\mathfrak{g}_\ell = \operatorname{Lie}(\mathrm{Hg}(A)) \otimes_\mathbb{Q} \mathbb{Q}_\ell \oplus \mathbb{Q}_\ell \cdot I,}$$
+where $I$ is the identity matrix. Equivalently, the intersection of $\mathfrak{g}_\ell$ with the special linear Lie algebra $\mathfrak{sl}(V_\ell)$ is exactly the base change of the Lie algebra of the Hodge group:
+$$\hlin{\mathfrak{g}_\ell \cap \mathfrak{sl}(V_\ell) = \operatorname{Lie}(\mathrm{Hg}(A)) \otimes_\mathbb{Q} \mathbb{Q}_\ell.}$$
+    
+\end{definition}

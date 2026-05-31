@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:shift_functor_on_bdd_constructible_derived_category_with_integral_adic_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaves} on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site on $X$}.
+
+For each $n \geq 0$, let $[1]_n$ denote the \CrefAndHyperrefIfExist{definition:translation_of_chain_cochain_complex_in_preadditive_category}{shift functor} on the derived category $D^-(X, R/\lambda^{n+1})$.
+
+Let $K = (K_n, u_n)_{n \geq 0}$ be an object of \CrefAndHyperref{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{$\Dbc(X, R)$}. The \hldef{shift (or translation) of $K$ by $1$}, denoted \hl{$K[1]$}, is the object of $\Dbc(X, R)$ defined level-wise by
+$$\hlin{K[1] = (K_n[1]_n, u[n]_n)_{n \geq 0}}$$
+where $u[n]_n$ is the composition
+$$\hlin{u[n]_n: K_{n+1}[1]_{n+1} \xrightarrow{u_n[1]} (K_n \Lotimes_{R/\lambda^{n+2}} R/\lambda^{n+1})[1] \xrightarrow{\sim} K_n[1]_n \Lotimes_{R/\lambda^{n+1}} R/\lambda^{n+1}}$$
+using the canonical isomorphism $(-\Lotimes_{R/\lambda^{n+1}} R/\lambda^{n+1})[1] \cong (-)[1] \Lotimes_{R/\lambda^{n+1}} R/\lambda^{n+1}$ induced by the additivity of the shift.
+
+For any morphism $f = (f_n)_n: K \to L$ in $\Dbc(X, R)$, the \hldef{shifted morphism} \hl{$f[1]: K[1] \to L[1]$} is defined by
+$$\hlin{f[1] = (f_n[1]_n)_n.}$$
+
+This assignment defines an additive auto-equivalence of $\Dbc(X, R)$, also denoted \hl{$[1]: \Dbc(X, R) \to \Dbc(X, R)$}, called the \hldef{shift functor on $\Dbc(X, R)$}. For any integer $k \in \mathbb{Z}$, we write \hl{$K[k]$} for the $k$-fold iterate: $K[k] = K[1]^{\otimes k}$ if $k > 0$, $K[-1] = [1]^{-1}(K)$ if $k < 0$, and $K[0] = K$.
+
+The shift functor $[1]$ is the shift in the triangulated structure on $\Dbc(X, R)$ (\CrefAndHyperrefIfExist{definition:triangulated_category}{shift functor}).
+\end{definition}

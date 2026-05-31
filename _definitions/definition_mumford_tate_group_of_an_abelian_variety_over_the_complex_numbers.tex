@@ -1,0 +1,50 @@
+\begin{definition}[Mumford-Tate group] \label{definition:mumford_tate_group_of_an_abelian_variety_over_the_complex_numbers}
+Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} of dimension $g$ over $\mathbb{C}$, and let $\ell$ be a prime number. Let $V_\ell(A)$ be the \CrefAndHyperrefIfExist{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}{rational $\ell$-adic Tate group} of $A$, a vector space over $\mathbb{Q}_\ell$ of dimension $2g$. 
+Let 
+$$V = H_1(A(\bbC), \bbQ).$$
+The complex structure on $V$ induces a Hodge decomposition on $V_\bbC = V \otimes_\bbQ \bbC \cong H_1(A(\bbC), \bbC)$:
+$$V \cong V^{1,0} \oplus V^{0,1}.$$
+This pure Hodge structure of weight $-1$ is equivalent to a representation 
+$$h: \bbS \to \GL(V_\bbR)$$
+of the Deligne torus $\bbS = \operatorname{Res}_{\bbC/\bbR} (\bbG_m)$ over $R$ where $z \in \bbS(\bbR) \cong \bbC^\times$ acts as $z$ on $V^{1,0}$ and as $\overline{z}$ on $V^{0,1}$. The \hldef{Mumford-Tate group} \hl{$\mathrm{MT}(A)$} is the smallest algebraic subgroup of $\GL(V)$ defined over $\bbQ$ such that $\mathrm{MT}(A)_\bbR$ contains $h(\bbS)$.
+
+
+
+% \TODO{state the comparison isomorhpisms; they shoudl be true both integrally and rationally}
+% \TODO{the pure hodge structure}
+% The singular homology comparison isomorphism
+% $$H_1(A(\mathbb{C}), \mathbb{Q}) \otimes_\mathbb{Q} \mathbb{Q}_\ell \xrightarrow{\sim} V_\ell(A)$$
+% \CrefIfExists{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}
+% transfers the natural \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{pure Hodge structure of weight $-1$} on $H_1(A(\mathbb{C}), \mathbb{Q})$ to a decomposition of $(V_\ell(A))_\mathbb{C} = V_\ell(A) \otimes_{\mathbb{Q}_\ell} \mathbb{C}$ into subspaces
+% $$\hlin{(V_\ell(A))_\mathbb{C} = (V_\ell(A)^{1,0}) \oplus (V_\ell(A)^{0,1}),}$$
+% with $\dim (V_\ell(A)^{1,0}) = \dim (V_\ell(A)^{0,1}) = g$ and $\overline{(V_\ell(A))^{p,q}} = (V_\ell(A))^{q,p}$. This determines a homomorphism of real algebraic groups
+% $$\hlin{h: \mathbb{S} \to \mathrm{GL}(V_\ell(A)_\mathbb{R})}$$
+% from the \CrefAndHyperrefIfExist{definition:deligne_torus}{Deligne torus}, where $z \in \mathbb{S}(\mathbb{R}) \cong \mathbb{C}^\times$ acts on $(V_\ell(A))^{p,q}$ by $z^p \bar{z}^q$. 
+
+% \TODO{zariski closure of points}
+% The \hldef{Mumford-Tate group of $A$}, denoted by \hl{$\mathrm{MT}(A)$}, is the Zariski closure in of $h(\bbS)$. 
+
+% smallest \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{$\mathbb{Q}$-algebraic subgroup} of $\mathrm{GL}_{V_\ell(A)}$ whose real points contain $h(\mathbb{S})$. Equivalently, it is the $\mathbb{Q}$-Zariski closure of the image of $h$. The Mumford-Tate group does not depend on the choice of $\ell$.
+
+% The \CrefAndHyperrefIfExist{conjecture:mumford_tate_conjecture_for_an_abelian_variety_over_a_number_field}{Mumford-Tate conjecture} asserts that for an abelian variety over a number field $K$, the Mumford-Tate group coincides with the Zariski closure of the image of the \CrefAndHyperrefIfExist{definition:mod_n_galois_representation_of_a_commutative_group_scheme_over_a_field}{$\ell$-adic Galois representation} $\rho_{A,\ell}: G_K \to \mathrm{GL}(V_\ell(A))$, i.e.,
+% $$\overline{\operatorname{Im}(\rho_{A,\ell})}^{\text{Zar}} = \mathrm{MT}(A) \otimes_\mathbb{Q} \mathbb{Q}_\ell.$$
+
+% % \TODO{state the comparison isomorhpisms; they shoudl be true both integrally and rationally}
+% % \TODO{the pure hodge structure}
+% % The singular homology comparison isomorphism
+% % $$H_1(A(\mathbb{C}), \mathbb{Q}) \otimes_\mathbb{Q} \mathbb{Q}_\ell \xrightarrow{\sim} V_\ell(A)$$
+% % \CrefIfExists{definition:singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group}
+% % transfers the natural \CrefAndHyperrefIfExist{definition:pure_hodge_structure_of_weight_k_on_a_free_abelian_group}{pure Hodge structure of weight $-1$} on $H_1(A(\mathbb{C}), \mathbb{Q})$ to a decomposition of $(V_\ell(A))_\mathbb{C} = V_\ell(A) \otimes_{\mathbb{Q}_\ell} \mathbb{C}$ into subspaces
+% % $$\hlin{(V_\ell(A))_\mathbb{C} = (V_\ell(A)^{1,0}) \oplus (V_\ell(A)^{0,1}),}$$
+% % with $\dim (V_\ell(A)^{1,0}) = \dim (V_\ell(A)^{0,1}) = g$ and $\overline{(V_\ell(A))^{p,q}} = (V_\ell(A))^{q,p}$. This determines a homomorphism of real algebraic groups
+% % $$\hlin{h: \mathbb{S} \to \mathrm{GL}(V_\ell(A)_\mathbb{R})}$$
+% % from the \CrefAndHyperrefIfExist{definition:deligne_torus}{Deligne torus}, where $z \in \mathbb{S}(\mathbb{R}) \cong \mathbb{C}^\times$ acts on $(V_\ell(A))^{p,q}$ by $z^p \bar{z}^q$. 
+
+% % \TODO{zariski closure of points}
+% % The \hldef{Mumford-Tate group of $A$}, denoted by \hl{$\mathrm{MT}(A)$}, is the Zariski closure in of $h(\bbS)$. 
+
+% % smallest \CrefAndHyperrefIfExist{definition:linear_algebraic_group_over_a_scheme}{$\mathbb{Q}$-algebraic subgroup} of $\mathrm{GL}_{V_\ell(A)}$ whose real points contain $h(\mathbb{S})$. Equivalently, it is the $\mathbb{Q}$-Zariski closure of the image of $h$. The Mumford-Tate group does not depend on the choice of $\ell$.
+
+% % The \CrefAndHyperrefIfExist{conjecture:mumford_tate_conjecture_for_an_abelian_variety_over_a_number_field}{Mumford-Tate conjecture} asserts that for an abelian variety over a number field $K$, the Mumford-Tate group coincides with the Zariski closure of the image of the \CrefAndHyperrefIfExist{definition:mod_n_galois_representation_of_a_commutative_group_scheme_over_a_field}{$\ell$-adic Galois representation} $\rho_{A,\ell}: G_K \to \mathrm{GL}(V_\ell(A))$, i.e.,
+% % $$\overline{\operatorname{Im}(\rho_{A,\ell})}^{\text{Zar}} = \mathrm{MT}(A) \otimes_\mathbb{Q} \mathbb{Q}_\ell.$$
+\end{definition}

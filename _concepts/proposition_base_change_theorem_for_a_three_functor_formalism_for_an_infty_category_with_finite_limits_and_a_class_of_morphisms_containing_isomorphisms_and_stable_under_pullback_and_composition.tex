@@ -1,0 +1,59 @@
+\begin{proposition}[Base change theorem for a 3-functor formalism] \label{proposition:base_change_theorem_for_a_three_functor_formalism_for_an_infty_category_with_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}
+    Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+
+    Let 
+    $$D \colon \operatorname{Corr}(C,E) \to \operatorname{Cat}_\infty$$
+    (\Cref{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limits_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition})\CrefIfExists{definition:infty_category_of_infty_categories}
+    be a \CrefAndHyperrefIfExist{definition:three_functor_formalism_for_an_infty_category_with_finite_limits_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}{$3$-functor formalism}.
+
+    For every Cartesian square in $C$
+    \begin{equation}\label{eq:base_change_cartesian_square}
+    \begin{tikzcd}
+        {X'} & X \\
+        {Y'} & Y
+        \arrow["{g'}", from=1-1, to=1-2]
+        \arrow["{f'}"', from=1-1, to=2-1]
+        \arrow["f", from=1-2, to=2-2]
+        \arrow["g"', from=2-1, to=2-2]
+        \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=180}, draw=none, from=1-1, to=2-2]
+    \end{tikzcd}
+    \end{equation}
+    such that the morphism $f$ belongs to the class $E$ (which implies $f' \in E$), there is a canonical equivalence of functors from $D(X)$ to $D(Y')$ in $\operatorname{Cat}_\infty$:
+    $$g^* \circ f_! \xrightarrow{\,\simeq\,} f'_! \circ g'^*,$$
+    where the structural functors $f_!, f'_!, g^*$, and $g'^*$ are defined via the canonical actions of $D$ on the respective forward and backward correspondences in $\operatorname{Corr}(C,E)$.
+    \TODO{prove, cf. \cite[before Definition 2.5]{scholze_sff}}
+\end{proposition}
+% \begin{proposition}[Base change theorem for a 3-functor formalism] \label{proposition:base_change_theorem_for_a_three_functor_formalism_for_an_infty_category_with_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}
+%     Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+
+%     Let 
+%     $$D \colon \operatorname{Corr}(C,E) \to \operatorname{Cat}_\infty$$
+%     (\Cref{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition})\CrefIfExists{definition:infty_category_of_infty_categories}
+%     be a \CrefAndHyperrefIfExist{definition:three_functor_formalism_for_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}{$3$-functor formalism}.
+
+%     For every Cartesian square in $C$
+%     \begin{equation}\label{eq:base_change_cartesian_square}
+%     \begin{tikzcd}
+%         {X'} & X \\
+%         {Y'} & Y
+%         \arrow["{g'}", from=1-1, to=1-2]
+%         \arrow["{f'}"', from=1-1, to=2-1]
+%         \arrow["f", from=1-2, to=2-2]
+%         \arrow["g"', from=2-1, to=2-2]
+%         \arrow["\lrcorner"{anchor=center, pos=0.125, rotate=180}, draw=none, from=1-1, to=2-2]
+%     \end{tikzcd}
+%     \end{equation}
+%     such that the morphism $f$ belongs to the class $E$ (which implies $f' \in E$), there is a canonical equivalence of functors from $D(Y)$ to $D(X')$ in $\operatorname{Cat}_\infty$:
+%     $$g^* \circ f_! \xrightarrow{\,\simeq\,} f'_! \circ g'^*,$$
+%     where the structural functors $f_!, f'_!, g^*$, and $g'^*$ are defined via the canonical actions of $D$ on the respective forward and backward correspondences in $\operatorname{Corr}(C,E)$.
+%     \TODO{prove, cf. \cite[before Definition 2.5]{scholze_sff}}
+% \end{proposition}   
+% \begin{proposition} \label{proposition:base_change_theorem_for_a_three_functor_formalism_for_an_infty_category_with_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}
+%     Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+
+%     Let 
+%     $$D: \operatorname{Corr}(C,E) \to \operatorname{Cat}_\infty$$
+%     (\Cref{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition})\CrefIfExists{definition:infty_category_of_infty_categories}
+%     be a \CrefAndHyperrefIfExist{definition:three_functor_formalism_for_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}{$3$-functor formalisma}.
+
+% \end{proposition}

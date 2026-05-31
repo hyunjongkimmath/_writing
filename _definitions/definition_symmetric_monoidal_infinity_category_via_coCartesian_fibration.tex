@@ -1,0 +1,13 @@
+\begin{definition}[{\cite[Definition 2.0.0.7.]{lurie_ha}, {\cite[Definition 3.7.]{scholze_sff}}}] \label{definition:symmetric_monoidal_infinity_category_via_coCartesian_fibration}
+A \hldef{symmetric monoidal $\infty$-category} is a \CrefAndHyperrefIfExist{definition:coCartesian_fibration_between_infinity_categories}{coCartesian fibration}
+\[ \mathcal{C}_\otimes \to \mathbf{Fin}_{\mathrm{part}} \]
+such that, denoting $\mathcal{C} = (\mathcal{C}_\otimes)_*$ the fibre over the one-element set $\ast \in \mathbf{Fin}_{\mathrm{part}}$, for all finite sets $I$ the functor
+\[ (\mathcal{C}_\otimes)_I \to \prod_{i \in I} \mathcal{C}, \]
+induced by the partially defined maps $I \dashrightarrow \{i\}$ sending $i$ to $i$ (and the rest nowhere), is an equivalence.
+
+Starting with a symmetric monoidal $\infty$-category $(\mathcal{C}, \otimes)$ in the classical sense, $\mathcal{C}_\otimes$ is constructed as follows:
+\begin{itemize}
+    \item Objects of $\mathcal{C}_\otimes$ are pairs $(I, (X_i)_{i \in I})$ where $I$ is a finite set and $X_i \in \mathcal{C}$ for each $i \in I$.
+    \item A map $(I, (X_i)_{i \in I}) \to (J, (Y_j)_{j \in J})$ in $\mathcal{C}_\otimes$ is given by a partially defined map $f : I \dashrightarrow J$ together with maps $\bigotimes_{i \in f^{-1}(j)} X_i \to Y_j$ for all $j \in J$.
+\end{itemize}
+\end{definition}

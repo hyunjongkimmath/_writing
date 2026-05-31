@@ -1,0 +1,16 @@
+\begin{definition}[Frobenius action on compactly supported cohomology with torsion coefficients] \label{definition:frobenius_action_on_compactly_supported_cohomology_with_torsion_coefficients}
+\TODO{AI generated, verify}
+    Let $\mathbb{F}_q$ be a finite field with $q = p^f$ elements, where $p$ is prime. Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. Let $X$ be a scheme of finite type and separated over $\mathbb{F}_q$, with structure morphism $f_X \colon X \to \Spec(\mathbb{F}_q)$. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    Let $\Frob_X \colon X \to X$ be the \CrefAndHyperrefIfExist{definition:frobenius_endomorphism_on_a_scheme_over_a_scheme_with_invertible_finite_order_absolute_frobenius_morphism}{Frobenius endomorphism} of $X$ over $\mathbb{F}_q$. The morphism $\Frob_X$ is finite and hence \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}. Furthermore, the absolute Frobenius is the identity on points and \'etale morphisms are invariant under Frobenius pullback; thus for any $K^\bullet \in D_c^b(X_{\et}, A)$, there exists a canonical isomorphism
+    $$\alpha \colon \Frob_X^* K^\bullet \xrightarrow{\sim} K^\bullet$$
+    in $D_c^b(X_{\et}, A)$, i.e., $(K^\bullet, \alpha)$ is an object with \CrefAndHyperrefIfExist{definition:f_structure_on_an_object_of_a_pseudofunctorial_category_over_schemes_for_an_endomorphism}{$F$-structure} for $F = \Frob_X$.
+
+    The \hldef{Frobenius action on the compactly supported cohomology of $K^\bullet$} is the endomorphism of $A$-modules
+    $$\hlin{\Frob_* \colon H_c^i(X, K^\bullet) \to H_c^i(X, K^\bullet)}$$
+    given by the \CrefAndHyperrefIfExist{definition:action_of_an_endomorphism_with_f_structure_on_cohomology_and_compactly_supported_cohomology_of_a_scheme}{covariant action of $\Frob_X$ with $F$-structure $\alpha$}. Concretely, it is obtained by composing the pushforward map
+    $$\Frob_{X,*} \colon H_c^i(X, K^\bullet) \to H_c^i(X, \Frob_{X,*} K^\bullet)$$
+    with the identification $H_c^i(X, \Frob_{X,*} K^\bullet) \xrightarrow{\alpha_*} H_c^i(X, K^\bullet)$ induced by $\alpha$. Since $\Frob_X$ is proper, this covariant action descends to compactly supported cohomology.
+
+    When $K^\bullet = \mathcal{F}[0]$ for a single constructible sheaf $\mathcal{F}$ of $A$-modules placed in degree $0$, the map $\Frob_* \colon H_c^i(X, \mathcal{F}) \to H_c^i(X, \mathcal{F})$ is called the \hldef{Frobenius action on compactly supported \'etale cohomology with coefficients in $\mathcal{F}$}.
+\end{definition}

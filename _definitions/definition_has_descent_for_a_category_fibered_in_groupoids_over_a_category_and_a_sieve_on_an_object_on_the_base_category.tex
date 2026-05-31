@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:has_descent_for_a_category_fibered_in_groupoids_over_a_category_and_a_sieve_on_an_object_on_the_base_category}
+Let $\mathcal{C}$ be a category and let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}. We fix a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$, denoting the chosen pullback functor along a morphism $f: V \to U$ by $f^*: \mathcal{F}_U \to \mathcal{F}_V$, and the structural natural isomorphisms for composition by $\alpha_{g,h}: (g \circ h)^* \xrightarrow{\sim} h^* \circ g^*$ for morphisms $W \xrightarrow{h} V \xrightarrow{g} U$.
+
+Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$.
+
+We say that \hldef{$\calF$ satisfies (effective) descent for $S$} if the canonical functor
+$$\Psi: \calF_U \to \operatorname{Des}(\calF, S)$$
+(\Cref{definition:descent_datum_associated_to_an_object_in_a_category_fibered_in_groupoids_over_a_category_with_respect_to_a_sieve})\CrefIfExists{definition:fibered_category_over_a_category}
+is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}.
+
+Equivalently, $\calF$ satisfies descent for $S$ if the following hold:
+\begin{enumerate}
+    \item Every descent datum for $\calF$ relative to $S$ is \CrefAndHyperrefIfExist{definition:effective_descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}{effective}, and 
+    \item For any two objects $y_1,y_2 \in \calF_U$, the sheaf condition holds for the functor of moprhisms $\underline{\Hom}(y_1,y_2)$ \TODO{functor of morphisms and also go into more detail on what this precisely means}
+\end{enumerate}
+\end{definition}

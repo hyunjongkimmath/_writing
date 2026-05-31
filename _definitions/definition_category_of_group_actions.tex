@@ -1,0 +1,10 @@
+\begin{definition}[Category of group actions] \label{definition:category_of_group_actions}
+\TODO{AI generated, verify}
+    The \hldef{category of group actions}, denoted $\mathbf{ActGrp}$, is defined as follows:
+    \begin{enumerate}
+        \item An object is a triple $(N, H, \phi)$ where $N$ and $H$ are \CrefAndHyperrefIfExist{definition:group}{groups} and $\phi: H \to \operatorname{Aut}(N)$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}.
+        \item A morphism from $(N, H, \phi)$ to $(M, K, \psi)$ is a pair $(f, g)$ where $f: N \to M$ and $g: H \to K$ are \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphisms} satisfying the compatibility condition
+        $$f(\phi(h)(n)) = \psi(g(h))(f(n))$$
+        for all $h \in H$ and $n \in N$.
+    \end{enumerate}
+\end{definition}

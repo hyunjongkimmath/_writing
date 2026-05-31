@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:nonabelian_group_1_cocycles_and_first_cohomology_set_of_a_group_acting_on_a_group}
+\TODO{AI generated, verify}
+    Let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, let $A$ be a (not necessarily abelian) \CrefAndHyperrefIfExist{definition:group}{group}, and let $\varphi: \Gamma \to \operatorname{Aut}(A)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. Write $h \cdot a$ for $\varphi(h)(a)$.
+
+    A map $\alpha: \Gamma \to A$ is called a \hldef{crossed homomorphism from $\Gamma$ to $A$ with respect to $\varphi$} (or a \hldef{non-abelian 1-cocycle}) if
+    $$\alpha(gh) = \alpha(g) \cdot g \cdot \alpha(h)$$
+    for all $g,h \in \Gamma$. The set of crossed homomorphisms is denoted by \hl{$Z^1(\Gamma, A)$}.
+
+    For each $a \in A$, the map $\partial a: \Gamma \to A$ defined by $(\partial a)(h) = a^{-1} \cdot h \cdot a$ is a crossed homomorphism. Such a crossed homomorphism is called a \hldef{principal crossed homomorphism} (or a \hldef{non-abelian 1-coboundary}). The set of principal crossed homomorphisms is denoted by \hl{$B^1(\Gamma, A)$}.
+
+    The group $A$ acts on the set $Z^1(\Gamma, A)$ by
+    $$(a * \alpha)(h) = a^{-1} \cdot \alpha(h) \cdot h \cdot a$$
+    for $a \in A$, $\alpha \in Z^1(\Gamma, A)$, and $h \in \Gamma$. The orbit of the trivial crossed homomorphism $h \mapsto 1_A$ is exactly $B^1(\Gamma, A)$.
+
+    The \hldef{first non-abelian group cohomology set of $\Gamma$ with coefficients in $A$} is the quotient set
+    $$\hlin{H^1(\Gamma, A) = A \backslash Z^1(\Gamma, A)}$$
+    of orbits under this action. The distinguished element of $H^1(\Gamma, A)$ represented by the trivial crossed homomorphism is denoted by $\bar{1}$.
+
+    When $A$ is abelian, $Z^1(\Gamma, A)$ and $B^1(\Gamma, A)$ are submodules of the \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{group cochain complex}, and this definition agrees with the abelian group cohomology $H^1(\Gamma, A)$.
+\end{definition}

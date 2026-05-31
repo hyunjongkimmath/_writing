@@ -1,0 +1,11 @@
+\begin{definition}[Compactly supported cohomology with torsion coefficients] \label{definition:compactly_supported_cohomology_groups_of_a_bounded_constructible_complex_with_torsion_coefficients}
+    Let $k$ be a field. Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. Let $X$ be a scheme over $k$, with structure morphism $f \coloneq f_X \colon X \to \Spec(k)$, such that $f$ is \CrefAndHyperrefIfExist{definition:compactifiable_over_S}{$\Spec(k)$-compactifiable}. Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site $X_{\et}$}.
+
+    The \CrefAndHyperrefIfExist{definition:derived_direct_image_functor_with_proper_or_compact_support_for_compactifiable_morphisms_of_schemes_over_a_scheme}{derived direct image functor with compact support}
+    $$Rf_! \colon D_c^b(X_{\et}, A) \to D(\Spec(k)_{\et}, A) \simeq D(A)$$
+    is defined. For $K^\bullet \in D_c^b(X_{\et}, A)$, the \hldef{compactly supported cohomology groups of $X$ with coefficients in $K^\bullet$} are the \CrefAndHyperrefIfExist{definition:hypercohomology_groups_of_a_bounded_constructible_complex_with_torsion_coefficients_on_a_scheme}{hypercohomology groups} of the complex $Rf_! K^\bullet$ on $\Spec(k)$:
+    $$\hlin{H_c^i(X, K^\bullet) \coloneq H^i(Rf_! K^\bullet)}$$
+    for each $i \in \mathbb{Z}$, where $H^i(\cdot)$ denotes the \CrefAndHyperrefIfExist{definition:cohomology_sheaves_of_a_constructible_complex_with_integral_coefficients_on_a_noetherian_scheme}{$i$-th cohomology} of a complex of $A$-modules. These are \CrefAndHyperrefIfExist{definition:module_over_a_ring}{modules over $A$}.
+
+    When $K^\bullet = \mathcal{F}[0]$ for a single constructible sheaf $\mathcal{F}$ of $A$-modules placed in degree $0$, the groups $H_c^i(X, \mathcal{F})$ are called the \hldef{compactly supported \'etale cohomology groups of $X$ with coefficients in $\mathcal{F}$}.
+\end{definition}

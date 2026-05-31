@@ -1,0 +1,12 @@
+\begin{definition}[Rational Hodge Type of a Complex Abelian Variety] \label{definition:rational_hodge_type_of_a_complex_abelian_variety}
+\TODO{AI generated, verify}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over $\mathbb{C}$ of dimension $g$, and let $D = \End^0(A)$ be its \CrefAndHyperrefIfExist{definition:endomorphism_algebra_up_to_isogeny_of_an_abelian_variety_over_a_field}{rational endomorphism algebra}. The first rational homology $V := H_1(A(\mathbb{C}), \mathbb{Q})$ carries a pure weight-1 Hodge structure $(V, V^{1,0} \oplus V^{0,1})$, with $V_\mathbb{R} = V^{1,0} \oplus V^{0,1}$ and $\dim_\mathbb{C} V^{1,0} = \dim_\mathbb{C} V^{0,1} = g$.
+
+    The action of $D$ on $V$ extends to $D_\mathbb{R} := D \otimes_\mathbb{Q} \mathbb{R}$, and the Hodge decomposition determines a cocharacter
+    $$\hlin{\xi: \mathbb{G}_{m,\mathbb{R}} \to \operatorname{GL}(V_\mathbb{R}) \subset D_\mathbb{R}}$$
+    such that $z \in \mathbb{C}^\times = \mathbb{G}_m(\mathbb{C})$ acts on $V^{p,q}$ via the character $z^{-p}\bar{z}^{-q}$. The $\operatorname{GL}(V)$-conjugacy class of $\xi$ is defined over $\mathbb{Q}$; its image in $D_\mathbb{R}$ determines a $D(\mathbb{Q})$-conjugacy class of cocharacters
+    $$\hlin{\xi: \mathbb{G}_{m,\mathbb{R}} \to D_\mathbb{R}.}$$
+    This conjugacy class is called the \hldef{rational Hodge type of $A$}.
+
+    Equivalently, for each real embedding $\sigma: D \hookrightarrow D_\mathbb{R}$, the rational Hodge type specifies a subset $\Phi_\sigma \subset \operatorname{Hom}_\mathbb{R}(D_\mathbb{R}, \mathbb{R})$ describing which linear functionals on $D_\mathbb{R}$ appear as weight-$(1,0)$ components. The collection of these subsets across all real embeddings encodes the same data as $\xi$.
+\end{definition}

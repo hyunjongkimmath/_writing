@@ -1,0 +1,21 @@
+\begin{definition}[Verdier dual of a constructible complex for various coefficient systems] \label{definition:verdier_dual_of_a_constructible_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $X$ be an $S$-scheme of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}.  Consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $S$.
+
+    Let the coefficient system be one of the following:
+    \begin{enumerate}
+        \item $A$ a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring} (torsion coefficients)
+        \item Assuming that $S$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $R,E,K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}
+        \begin{enumerate}
+            \item $(R, \lambda)$ (integral adic coefficients)
+            \item $E = \Frac(R)$ (rational coefficients)
+            \item $K$ (algebraic coefficients)
+        \end{enumerate}
+    \end{enumerate}
+
+    For any complex $\mathcal{K}$ in the corresponding category on $X$, the \hldef{Verdier dual of $\mathcal{K}$ on $X$ relative to $S$} is
+    $$\hlin{\mathbb{D}_X(\mathcal{K}) := R\mathscr{H}om(\mathcal{K}, \mathbb{D}_{X/S}^\bullet)}$$
+    where $\mathbb{D}_{X/S}^\bullet$ is the dualizing complex on $X$ relative to $S$ for the given coefficient system \CrefIfExists{definition:dualizing_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_with_torsion_coefficients}\CrefIfExists{definition:dualizing_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_with_integral_coefficients}\CrefIfExists{definition:dualizing_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_with_rational_coefficients}\CrefIfExists{definition:dualizing_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_with_algebraic_coefficients}, and $R\mathscr{H}om$ is the derived internal Hom functor appropriate to the coefficient system \CrefIfExists{definition:derived_sheaf_internal_hom_functor_of_complexes_of_modules_on_an_essentially_small_ringed_site_with_a_pretopology}\CrefIfExists{definition:derived_internal_hom_on_bdd_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:derived_internal_hom_on_bdd_constructible_complexes_with_rational_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:derived_internal_hom_on_bdd_constructible_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}.
+
+    See \Cref{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme} for torsion coefficients, \Cref{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme} for integral adic coefficients, \Cref{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_rational_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme} for rational coefficients, and \Cref{definition:verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme} for algebraic coefficients.
+\end{definition}

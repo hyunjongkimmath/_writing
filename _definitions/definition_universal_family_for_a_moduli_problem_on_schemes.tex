@@ -1,0 +1,12 @@
+\begin{definition}[Universal family] \label{definition:universal_family_for_a_moduli_problem_on_schemes}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $\calM \to (\operatorname{Sch}/S)$ be a \CrefAndHyperrefIfExist{definition:moduli_problem_on_schemes}{moduli problem}. Suppose that $\calM$ is represented by a scheme $M$ over $S$, i.e., there is an isomorphism of categories fibered in groupoids $\phi: \calM \xrightarrow{\sim} h_M$. The \hldef{universal family for $\calM$ on $M$} is the unique object
+    $$\eta_{\mathrm{univ}} \in \calM(M)$$
+    corresponding under $\phi$ to the identity morphism $\operatorname{id}_M \in h_M(M) = \Hom_S(M, M)$ via the bijection
+    $$\phi_M: \calM(M) \xrightarrow{\sim} \Hom_S(M, M).$$
+
+    Equivalently, $\eta_{\mathrm{univ}}$ is characterized by the following universal property: for every $T/S$ and every object $x \in \calM(T)$, there exists a unique morphism $f: T \to M$ over $S$ and a unique isomorphism $x \xrightarrow{\sim} f^*(\eta_{\mathrm{univ}})$ in $\calM(T)$, where $f^*: \calM(M) \to \calM(T)$ denotes the pullback functor induced by the cartesian morphism associated to $f$.
+
+    The existence of such an object $\eta_{\mathrm{univ}} \in \calM(M)$ characterizing all families via pullback is equivalent to $\calM$ being \hldef{representable} by the scheme $M$: the functor $\calM: (\operatorname{Sch}/S)^{\op} \to \Sets$ (viewed as a set-valued presheaf on isomorphism classes) is representable, and more strongly, $\calM$ is equivalent to the \CrefAndHyperrefIfExist{definition:functor_of_points}{functor of points} $h_M$.
+
+    In practice, a universal family fails to exist when objects in $\calM(T)$ admit non-trivial automorphisms. A standard remedy is to \hldef{rigidify} $\calM$ by adding level structures (e.g., full level $N$ structure for $N \geq 3$) that eliminate automorphisms, thereby producing a new moduli problem $\calM'$ with a universal family on its coarse space.
+\end{definition}

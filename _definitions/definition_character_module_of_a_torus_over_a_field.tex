@@ -1,0 +1,16 @@
+\begin{definition}[Character module of a torus] \label{definition:character_module_of_a_torus_over_a_field}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:algebraic_torus_over_a_field}{torus over a field $k$}, and let $K/k$ be a \CrefAndHyperrefIfExist{definition:algebraic_torus_over_a_field}{splitting field} for $T$.
+
+    The \hldef{character module of $T$ (over $K$)} is the free abelian group
+    $$\hlin{\widehat{T} := \Hom_{K\text{-alg. gr.}}(T_K, \mathbf{G}_{\mathrm{m},K})}$$
+    of algebraic group homomorphisms from $T_K = T \times_k K$ to the multiplicative group $\mathbf{G}_{\mathrm{m},K}$ over $K$. The rank of $\widehat{T}$ as a free abelian group equals the \CrefAndHyperrefIfExist{definition:dimension_of_a_scheme}{dimension} (rank) of $T$.
+
+    If $K/k$ is a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension} with Galois group $\Gamma = \Gal(K/k)$, then $\Gamma$ acts on $\widehat{T}$ via
+    $$(\sigma \cdot \chi)(t) = \sigma\bigl(\chi({}^\sigma t)\bigr) \quad (\sigma \in \Gamma,\; \chi \in \widehat{T},\; t \in T_L),$$
+    for any $K$-algebra $L$, where ${}^\sigma t$ denotes the action of $\sigma$ on the $K$-structure of $T_K$. With this action, $\widehat{T}$ is a \hldef{Galois module of characters for $T$}.
+
+    The duality functor $X \mapsto \Hom(X, \mathbf{G}_\mathrm{m})$ induces a canonical isomorphism of algebraic groups over $K$:
+    $$\varphi: T_K \xrightarrow{\sim} \Hom_{\mathrm{ab. gr.}}(\widehat{T}, \mathbf{G}_{\mathrm{m},K})$$
+    which identifies $T(K)$ with $\Hom_{\mathrm{ab. gr.}}(\widehat{T}, K^\times)$. Under this identification, the $k$-rational points correspond to the $\Gamma$-equivariant homomorphisms:
+    $$T(k) = \Hom_\Gamma(\widehat{T}, K^\times).$$
+\end{definition}

@@ -1,0 +1,14 @@
+\begin{corollary}[Derivations correspond to sections of the semidirect product projection {\cite[Chapter VI, Corollary 5.4]{hilton_stammbach_cha}}] \label{corollary:derivations_of_a_group_into_a_group_module_correspond_to_sections_of_semidirect_product_projection}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}, let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, and let $A$ be an abelian \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[\Gamma]$-module}. Let $A \rtimes \Gamma$ be the associated \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} with projection $p: A \rtimes \Gamma \to \Gamma$, $p(a,x) = x$.
+
+    There is a bijection between
+    \begin{enumerate}
+        \item derivations $d: \Gamma \to A$ (i.e., functions satisfying $d(xy) = d(x) + x \cdot d(y)$ for all $x,y \in \Gamma$), and
+        \item \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphisms} $s: \Gamma \to A \rtimes_\varphi \Gamma$ such that $p \circ s = \operatorname{id}_\Gamma$.
+    \end{enumerate}
+    The correspondence is given by $s(x) = (d(x), x)$ and $d(x)$ is the $A$-component of $s(x)$.
+\end{corollary}
+\begin{proof}
+    \TODO{}
+    % This is the special case of \Cref{proposition:universal_property_of_semidirect_product_for_derivations} with $B = \Gamma$ and $\pi = \operatorname{id}_\Gamma$. A function $d: \Gamma \to A$ satisfies $d(xy) = d(x) + x \cdot d(y)$ if and only if $s: \Gamma \to A \rtimes_\varphi \Gamma$, $s(x) = (d(x), x)$ is a homomorphism with $p \circ s = \operatorname{id}_\Gamma$.
+\end{proof}

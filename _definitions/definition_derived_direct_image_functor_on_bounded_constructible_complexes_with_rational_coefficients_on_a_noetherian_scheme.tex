@@ -1,0 +1,14 @@
+\begin{definition}[Derived direct image functor on bounded constructible complexes with rational coefficients] \label{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_rational_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+Let $\Dbc(X, E)$ denote the \CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{bounded derived category of constructible complexes with rational adic coefficients} on $X$.
+
+The \hldef{derived direct image functor on bounded constructible complexes with rational coefficients along $f$} is the functor
+$$\hlin{Rf_* : \Dbc(X, E) \to \Dbc(Y, E)}$$
+defined as follows. On objects, for $\mathcal{F} \in D_c^b(X, R) \subseteq \Ob \Dbc(X, E)$, set $Rf_* \mathcal{F}$ to be the image of the \CrefAndHyperref{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}{derived direct image} $Rf_* \mathcal{F} \in D_c^b(Y, R)$ under the localization functor $D_c^b(Y, R) \to \Dbc(Y, E)$. On morphisms, for $\phi \in \Hom_{\Dbc(X, E)}(\mathcal{F}, \mathcal{G})$ written as $\psi / \lambda^m$ with $\psi \in \Hom_{D_c^b(X, R)}(\mathcal{F}, \mathcal{G})$, set
+$$Rf_* (\phi) := Rf_*(\psi) / \lambda^m \in \Hom_{\Dbc(Y, E)}(Rf_* \mathcal{F}, Rf_* \mathcal{G}),$$
+where $Rf_*(\psi): Rf_* \mathcal{F} \to Rf_* \mathcal{G}$ is the morphism in $D_c^b(Y, R)$ obtained by applying the derived direct image functor on bounded constructible complexes with integral coefficients.
+
+This is well-defined because the derived direct image functor on bounded constructible complexes with integral coefficients commutes with multiplication by $\lambda^m$: $Rf_*(\lambda^m \cdot \id_\mathcal{F}) = \lambda^m \cdot \id_{Rf_* \mathcal{F}}$.
+\end{definition}

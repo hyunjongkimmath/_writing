@@ -1,0 +1,10 @@
+\begin{definition}[Tate module of an abelian variety] \label{definition:ell_adic_tate_module_of_an_abelian_variety_over_a_field}
+    \TODO{separable closure}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $\bar{K}$ be a separable closure of $K$, and let $G_K = \Gal(\bar{K}/K)$ be the absolute \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois group} of $K$. Let $A_K$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over $K$, and let $\ell$ be a \CrefAndHyperrefIfExist{definition:prime_number}{prime number} that is distinct from the \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} of $K$.
+
+    For any integer $\nu \geq 1$, let $A_K[\ell^\nu]$ be \CrefAndHyperrefIfExist{definition:torsion_subgroup_scheme_of_a_group_scheme}{$\ell^\nu$-torsion subgroup} of $A_K$, which is a finite étale group scheme over $K$ (or equivalently, as a discrete $G_K$-module via its $\bar{K}$-rational points). The \hldef{$\ell$-adic Tate module of $A_K$} is the $G_K$-module:
+    $$\hlin{T_\ell(A_K) = \varprojlim_{\nu} A_K[\ell^\nu](\bar{K})}$$
+    where the inverse limit is taken with respect to the multiplication-by-$\ell$ transition maps. One may also consider the rational Tate module:
+    $$\hlin{V_\ell(A_K) = T_\ell(A_K) \otimes_{\mathbb{Z}_\ell} \mathbb{Q}_\ell}$$
+    which is a vector space over $\mathbb{Q}_\ell$ of dimension equal to the relative dimension of $A_K$, equipped with a continuous linear action of $G_K$.
+\end{definition}

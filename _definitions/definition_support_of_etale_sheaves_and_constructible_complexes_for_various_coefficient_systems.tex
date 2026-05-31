@@ -1,0 +1,29 @@
+\begin{definition}[Support of \'etale sheaves and constructible complexes for various coefficient systems] \label{definition:support_of_etale_sheaves_and_constructible_complexes_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}.
+
+    Let $C$ be one of the following categories:
+    \begin{enumerate}
+
+        \item $\Sh(X_{\et}, \Ab)$ (\CrefIfExists{definition:category_of_etale_sheaves_of_abelian_groups_on_a_scheme})
+        \item $D(\Sh(X_{\et}, \Ab))$ (\CrefIfExists{definition:derived_category_of_etale_sheaves_of_abelian_groups_on_a_scheme})
+        \item $\Sh(X_{\et}, A)$ where $A$ is a noetherian torsion ring (\CrefIfExists{definition:category_of_etale_sheaves_of_modules_over_a_noetherian_torsion_ring_on_a_scheme})
+        \item $D(\Sh(X_{\et}, A))$ (\CrefIfExists{definition:derived_category_of_etale_sheaves_of_modules_over_a_noetherian_torsion_ring_on_a_scheme})
+        \item Assuming that $X$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $R,E,K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}.
+        \begin{enumerate}
+            \item $\Sh(X, R)$ (\CrefAndHyperrefIfExist{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaves})
+            \item $\Sh(X, E)$ (\CrefAndHyperrefIfExist{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}{rational coefficient sheaves})
+            \item $\Sh(X, K)$ (\CrefAndHyperrefIfExist{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}{algebraic coefficient sheaves})
+            \item $\D^-(X, R)$ (\CrefAndHyperrefIfExist{definition:derived_category_of_bounded_above_complexes_of_adic_sheaves_on_a_scheme}{bounded above adic complexes})
+            \item $\Dbc(X, R)$ (\CrefAndHyperrefIfExist{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{bounded constructible integral complexes})
+            \item $\Dbc(X, E)$ (\CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{bounded constructible rational complexes})
+            \item $\Dbc(X, K)$ (\CrefAndHyperrefIfExist{definition:derived_category_of_cohomologically_bounded_constructible_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}{bounded constructible algebraic complexes})
+        \end{enumerate}
+    \end{enumerate}
+
+    In each case, for an object $\mathcal{F}$ in $C$, the \hldef{support of $\mathcal{F}$} is the closed subset of $X$:
+    $$\hlin{\Supp(\mathcal{F}) := \overline{\bigl\{\overline{x} \in X : \mathcal{F}_{\overline{x}} \neq 0\bigr\}}}$$
+    where $\mathcal{F}_{\overline{x}}$ denotes the geometric stalk at $\overline{x}$ (\CrefIfExists{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}\CrefIfExists{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme}\CrefIfExists{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme_with_rational_coefficients}\CrefIfExists{definition:geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_integral_coefficients_in_a_complete_dvr}\CrefIfExists{definition:geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_rational_coefficients}\CrefIfExists{definition:geometric_stalk_of_object_of_bounded_const_derived_category_of_complexes_of_adic_etale_sheaves_on_a_noetherian_scheme_with_algebraic_rational_coefficients}\CrefIfExists{definition:geometric_stalk_of_the_derived_category_of_the_category_of_etale_sheaves_of_abelian_groups_on_a_scheme}).
+
+    See \Cref{definition:support_of_an_etale_sheaf_of_abelian_groups_on_a_scheme} for sheaves of abelian groups, \Cref{definition:support_of_a_lambda_adic_sheaf_with_integral_coefficients_on_a_noetherian_scheme} for integral adic sheaves, \Cref{definition:support_of_a_constructible_complex_with_rational_coefficients_on_a_noetherian_scheme} for rational coefficients, and \Cref{definition:support_of_a_constructible_complex_with_algebraic_coefficients_on_a_noetherian_scheme} for algebraic coefficients.
+\end{definition}

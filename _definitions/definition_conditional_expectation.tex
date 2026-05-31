@@ -1,0 +1,8 @@
+\begin{definition}[Conditional expectation] \label{definition:conditional_expectation}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperref{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}, and let $\mathcal{G} \subseteq \mathcal{F}$ be a sub-$\sigma$-algebra of $\mathcal{F}$. Let $X: \Omega \to \mathbb{R}$ be an integrable random variable, i.e., \CrefAndHyperref{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{$\mathbb{E}[|X|] < \infty$}.
+
+A \CrefAndHyperref{definition:measurable_function_from_a_measure_space_into_the_extended_real_line_or_complex_plane}{$\mathcal{G}$-measurable} random variable $Y: \Omega \to \mathbb{R}$ is called the \hldef{conditional expectation of $X$ given $\mathcal{G}$}, denoted \hl{$\mathbb{E}[X \mid \mathcal{G}]$}, if for every $A \in \mathcal{G}$,
+$$\hlin{\int_A Y \, dP = \int_A X \, dP}.$$
+
+By the \CrefAndHyperref{theorem:radon_nikodym_theorem}{Radon--Nikodym theorem}, such a $Y$ exists and is unique up to almost sure equality. The measure $\nu(A) = \int_A X \, dP$ for $A \in \mathcal{G}$ is absolutely continuous with respect to $P|_{\mathcal{G}}$, so $Y = d\nu / d(P|_{\mathcal{G}})$ is the Radon--Nikodym derivative.
+\end{definition}

@@ -1,0 +1,24 @@
+\begin{definition}[Weil restriction on schemes] \label{definition:weil_restriction_on_schemes}
+    Let $f : S' \to S$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} and let $X'$ be an $S'$-scheme with structure morphism $\varphi' : X' \to S'$.
+
+    The \hldef{Weil restriction} (or \hldef{restriction of scalars}) of $X'$ along $f$, if it exists, is defined as an $S$-scheme denoted by \hl{$\mathrm{Res}_{X'/S'}$}, \hl{$\mathrm{Res}_{X'/S}$}, \hl{$\mathrm{R}_{S'/S}(X')$}, or \hl{$\mathrm{R}_{f}(X')$} satisfying the following universal property:
+
+    There is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of functors} from the category of $S$-schemes over a fixed base to the category of sets, given by
+    $$\mathrm{Hom}_{S}(Y, \mathrm{Res}_{X'/S'}) \;\cong\; \mathrm{Hom}_{S'}(Y \times_{S} S', X')$$
+    naturally in every $S$-scheme $Y$. Here the right-hand side denotes the set of morphisms of $S'$-schemes from the base change $Y \times_{S} S' \to S'$ to $X' \xrightarrow{\varphi'} S'$.
+
+    Equivalently, the functor $F_{X'/f} : (\mathsf{Sch}/S)^{\mathrm{op}} \to \mathsf{Set}$ defined by
+    $$F_{X'/f}(Y) = \mathrm{Hom}_{S'}(Y \times_{S} S', X')$$
+    is \hldef{representable} by the $S$-scheme $\mathrm{Res}_{X'/S'}$.
+
+    When the Weil restriction exists, there is a canonical \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} $\pi : X' \to \mathrm{Res}_{X'/S'}$, called the \hldef{universal morphism}, characterized by the property that for any $S$-scheme $Y$ and any morphism $g : Y \times_{S} S' \to X'$ of $S'$-schemes, there exists a unique morphism $\tilde{g} : Y \to \mathrm{Res}_{X'/S'}$ of $S$-schemes such that the diagram
+    $$\begin{equation*}
+        \begin{tikzcd}
+            Y \times_{S} S' \arrow[r, "g"] \arrow[d] & X' \arrow[d, "\pi"] \\
+            Y \arrow[r, "\tilde{g}"'] & \mathrm{Res}_{X'/S'}
+        \end{tikzcd}
+    \end{equation*}$$
+    commutes, where the left vertical arrow is the canonical projection $Y \times_{S} S' \to Y$.
+
+    The Weil restriction does not exist for arbitrary morphisms $f$ and schemes $X'$. See \CrefAndHyperrefIfExist{theorem:existence_of_weil_restriction}{the existence theorem}.
+\end{definition}

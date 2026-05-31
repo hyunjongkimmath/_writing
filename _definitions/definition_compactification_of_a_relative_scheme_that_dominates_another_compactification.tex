@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:compactification_of_a_relative_scheme_that_dominates_another_compactification}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $f: X \to S$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}. Let two \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactifications}
+
+$$
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "j"'] & & S \\
+& \bar{X} \ar[ur, "\bar{f}"'] &
+\end{tikzcd}
+\qquad\text{and}\qquad
+\begin{tikzcd}
+X \ar[rr, "f"] \ar[dr, "k"'] & & S \\
+& \bar{Y} \ar[ur, "\bar{g}"'] &
+\end{tikzcd}
+$$
+
+of $f$ be given. We say that the second compactification \hldef{dominates the first} if there exists a morphism $\phi: \bar{Y} \to \bar{X}$ of schemes over $S$ such that $\phi \circ k = j$.
+
+For any two compactification of a mapping $f$, there is always a third that dominates them both \TODO{justify}
+\end{definition}

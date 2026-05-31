@@ -1,0 +1,15 @@
+\begin{corollary}[First cohomology as derivations modulo inner derivations {\cite[Chapter VI, Corollary 5.2]{hilton_stammbach_cha}}] \label{corollary:first_cohomology_of_a_group_module_over_a_ring_is_quotient_of_derivations_by_inner_derivations}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}, let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, and let $A$ be an abelian \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$R[\Gamma]$-module}.
+
+    A derivation $d: \Gamma \to A$ is called an \hldef{inner derivation} (or a \hldef{principal crossed homomorphism}) if there exists $a \in A$ such that
+    $$d(x) = x \cdot a - a$$
+    for all $x \in \Gamma$. The set of inner derivations forms an $R$-submodule of $\Der_R(\Gamma, A)$, denoted by \hl{$\Ider_R(\Gamma, A)$}.
+
+    There is a natural isomorphism of $R$-modules
+    $$H^1(\Gamma, A) \cong \Der_R(\Gamma, A) / \Ider_R(\Gamma, A).$$
+    (\CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{Group cohomology})
+\end{corollary}
+\begin{proof}
+    \TODO{}
+    % By the augmentation ideal isomorphism, Der_R(Gamma, A) ≅ Hom_{R[Gamma]}(I_Gamma, A). Inner derivations correspond to those homomorphisms of the form phi(x-1) = x·a - a, which are exactly the images of delta^0: C^0 → C^1. Hence Ider corresponds to B^1, and the quotient is H^1.
+\end{proof}

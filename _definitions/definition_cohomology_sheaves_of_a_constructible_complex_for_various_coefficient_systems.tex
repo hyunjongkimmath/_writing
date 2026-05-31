@@ -1,0 +1,15 @@
+\begin{definition}[Cohomology sheaves of a constructible complex for various coefficient systems] \label{definition:cohomology_sheaves_of_a_constructible_complex_for_various_coefficient_systems}
+\TODO{AI generated, verify}
+    Let $X$ be a scheme. Let the coefficient system be one of the following:
+    \begin{enumerate}
+        \item $A$ a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring} (torsion coefficients). Let $K^\bullet \in D_c^b(X_{\et}, A)$ be a bounded constructible complex. The \hldef{$i$-th cohomology sheaf of $K^\bullet$} is denoted by \hl{$\mathscr{H}^i(K^\bullet)$} and is the $i$-th \CrefAndHyperrefIfExist{definition:homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category}{cohomology object} in $D(X_{\et}, A)$.
+        \item Assuming that $X$ is \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian} and with $R, E, K$ as in \Cref{context:setup_for_coefficients_for_adic_sheaves_on_etale_sites_of_schemes}:
+        \begin{enumerate}
+            \item (Integral coefficients) Let $\mathcal{K} \in \Dbc(X, R)$ be a bounded constructible complex. The \hldef{$i$-th cohomology sheaf of $\mathcal{K}$} is denoted by \hl{$\mathscr{H}^i(\mathcal{K})$} and is the level-wise $i$-th cohomology sheaf of the inverse system representing $\mathcal{K}$.
+            \item (Rational coefficients) Let $\mathcal{K} \in \Dbc(X, E)$ be a bounded constructible complex. The \hldef{$i$-th cohomology sheaf of $\mathcal{K}$} is denoted by \hl{$\mathscr{H}^i(\mathcal{K})$} and is obtained from the integral cohomology sheaf by extending scalars: $\mathscr{H}^i(\mathcal{K}) = \mathscr{H}^i(\mathcal{K}_R) \otimes_R E$.
+            \item (Algebraic coefficients) Let $\mathcal{K} \in \Dbc(X, K)$ be a bounded constructible complex. The \hldef{$i$-th cohomology sheaf of $\mathcal{K}$} is denoted by \hl{$\mathscr{H}^i(\mathcal{K})$} and is obtained from the rational cohomology sheaf of a representing object by extending scalars to $K$.
+        \end{enumerate}
+    \end{enumerate}
+
+    See \Cref{definition:cohomology_sheaves_of_a_constructible_complex_with_torsion_coefficients_on_a_scheme} for torsion coefficients, \Cref{definition:cohomology_sheaves_of_a_constructible_complex_with_integral_coefficients_on_a_noetherian_scheme} for integral adic coefficients, \Cref{definition:cohomology_sheaves_of_a_constructible_complex_with_rational_coefficients_on_a_noetherian_scheme} for rational coefficients, and \Cref{definition:cohomology_sheaves_of_a_constructible_complex_with_algebraic_coefficients_on_a_noetherian_scheme} for algebraic coefficients.
+\end{definition}

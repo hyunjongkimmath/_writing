@@ -1,0 +1,11 @@
+\begin{definition}[Inverse image functor on \'etale sheaves with rational adic coefficients] \label{definition:inverse_image_functor_on_etale_sheaves_with_rational_adic_coefficients_on_a_noetherian_scheme}
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of $R$. Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes}.
+
+The \hldef{inverse image functor on \'etale sheaves with rational adic coefficients along $f$} is the functor
+$$\hlin{f^* : \Sh(Y, E) \to \Sh(X, E)}$$
+defined as follows. On objects, for $\calG \in \Sh(Y, R) \subseteq \Ob \Sh(Y, E)$, set $f^* \calG$ to be the image of the \CrefAndHyperrefIfExist{definition:inverse_image_functor_on_lambda_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}{inverse image} $f^* \calG \in \Sh(X, R)$ under the localization functor $\Sh(X, R) \to \Sh(X, E)$. On morphisms, for $\phi \in \Hom_{\Sh(Y, E)}(\calG, \calH)$ written as $\psi / \lambda^m$ with $\psi \in \Hom_{\Sh(Y, R)}(\calG, \calH)$, set
+$$f^* (\phi) := f^*(\psi) / \lambda^m \in \Hom_{\Sh(X, E)}(f^* \calG, f^* \calH),$$
+where $f^*(\psi): f^* \calG \to f^* \calH$ is the morphism in $\Sh(X, R)$ obtained by applying the inverse image functor on $\lambda$-adic sheaves with integral coefficients to each component of $\psi$.
+
+This is well-defined because the inverse image functor on $\lambda$-adic sheaves with integral coefficients commutes with multiplication by $\lambda^m$: $f^*(\lambda^m \cdot \id_\calG) = \lambda^m \cdot \id_{f^* \calG}$.
+\end{definition}

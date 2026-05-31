@@ -1,0 +1,46 @@
+\begin{definition}[Exceptional inverse image functor for torsion coefficients, see {\cite[Lemma 8.4.3, Theorem 8.4.4]{fu_ect}}] \label{definition:exceptional_inverse_image_functor_on_the_bounded_below_derived_categories_of_etale_sheaves_with_torsion_coefficients_on_schemes_of_finite_type_over_a_noetherian_scheme_via_a_compactifiable_morphism}
+
+\TODO{AI generated, verify}
+    \TODO{verify}
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let all schemes below be of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $S$. Let $f: X \to Y$ be an $S$-\CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactifiable morphism} and let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. Consider sheaves of $A$-modules on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale sites} of $X$ and $Y$.
+
+    Fix a \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactification} of $f$:
+    $$
+    \begin{tikzcd}
+    X \ar[rr, "f"] \ar[dr, "j"' description] & & Y \\
+    & \bar{X} \ar[ur, "\bar{f}"' description] &
+    \end{tikzcd}
+    $$
+    so that $j: X \hookrightarrow \bar{X}$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\bar{f}: \bar{X} \to Y$ is a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper morphism}. Let $d = \dim(\bar{X})$.
+
+    The construction proceeds in five steps.
+
+    \textbf{(1) Extended Godement resolution $\mathscr{C}_l(\mathscr{F})$.} For any sheaf $\mathscr{F}$ of $A$-modules on a scheme, write $\mathscr{F} = \varinjlim_{i \in I} \mathscr{F}_i$ as a direct limit of constructible sheaves of $A$-modules. Let $\mathscr{C}^\bullet(-)$ denote the functorial \CrefAndHyperref{theorem:godement_resolution_of_a_sheaf_of_modules_on_a_ringed_space}{Godement resolution}. Define
+    $$\hlin{\mathscr{C}_l(\mathscr{F}) := \varinjlim_{i \in I} \mathscr{C}^\bullet(\mathscr{F}_i)}.$$
+    This complex of sheaves is independent of the choice of direct system $(\mathscr{F}_i)_{i \in I}$ up to canonical quasi-isomorphism and is an acyclic resolution of $\mathscr{F}$. The assignment $\mathscr{F} \mapsto \mathscr{C}_l(\mathscr{F})$ is functorial, exact, and commutes with direct limits.
+
+    \textbf{(2) The complex functor $f_i$ and the functors $f_!^q$.} For a complex of sheaves $K$ of $A$-modules on $X$, define
+    $$\hlin{f_i(K) := \bar{f}_* \tau_{\leq 2d} \mathscr{C}_l(j_! K)}$$
+    where $j_! K$ is the extension by zero of $K$ to $\bar{X}$, $\mathscr{C}_l(j_! K)$ is computed termwise, and $\tau_{\leq 2d}$ is the \CrefAndHyperrefIfExist{definition:stupid_truncation_of_a_chain_complex_in_an_additive_category}{stupid truncation}. For a sheaf $\mathscr{F}$ on $X$ (viewed as a complex concentrated in degree $0$), set
+    $$\hlin{f_!^q(\mathscr{F}) := f_i(\mathscr{F})^q}$$
+    the $q$-th term of the complex $f_i(\mathscr{F})$. Each functor $f_!^q: \Sh(X_{\et}, A) \to \Sh(Y_{\et}, A)$ is exact, commutes with direct limits, and satisfies $f_!^q(\mathscr{F}) = 0$ for $q \notin [0, 2d]$. The functor $f_i$ maps acyclic complexes to acyclic complexes and hence induces a functor $Rf_i: D(X_{\et}, A) \to D(Y_{\et}, A)$ canonically isomorphic to $Rf_!$.
+
+    \textbf{(3) The sheaf-level right adjoints $f_{-q}^!$.} For each integer $q$, the functor $f_{-q}^!: \Sh(Y_{\et}, A) \to \Sh(X_{\et}, A)$ is defined as follows. For a sheaf $\mathscr{G}$ of $A$-modules on $Y$ and any \'etale $X$-scheme $\phi: U \to X$, set
+    $$\hlin{(f_{-q}^! \mathscr{G})(U) := \Hom(f_!^q A_U, \mathscr{G})}$$
+    where $A_U = \phi_! A$. For an \'etale morphism $\psi: V \to U$, the restriction map is induced by the canonical morphism $A_V \to A_U$ and the exactness of $f_!^q$. Each $f_{-q}^!$ is left exact, transforms injective objects to injective objects, and vanishes if $-q \notin [-2d, 0]$. It is right adjoint to $f_!^q$:
+    $$\Hom_{\Sh(X_{\et}, A)}(\mathscr{F}, f_{-q}^! \mathscr{G}) \cong \Hom_{\Sh(Y_{\et}, A)}(f_!^q \mathscr{F}, \mathscr{G}).$$
+
+    \textbf{(4) The complex of functors $f^!$.} Let $d^{q*}: f_{-q-1}^! \to f_{-q}^!$ be the natural transformation induced by the differential $d^q: f_!^q \to f_!^{q+1}$ via adjunction. The complex of functors $f^!$ has differentials
+    $$\hlin{(-1)^q d^{q*}: f_{-q-1}^! \to f_{-q}^!}.$$
+    For a complex of sheaves $L$ on $Y$, $f^! L$ is the total complex associated to the bicomplex $(f_{-q}^! L^p)_{p,q}$. The functor $f^!: K(Y, A) \to K(X, A)$ is exact and maps injective complexes to injective complexes.
+
+    \textbf{(5) The exceptional inverse image functor $Rf^!$.} The \hldef{exceptional inverse image functor on the derived category for torsion coefficients along $f$} is the functor
+    $$\hlin{Rf^!: D^+(Y_{\et}, A) \to D^+(X_{\et}, A)}$$
+    \CrefIfExists{notation:derived_category_of_category_of_modules_of_a_ringed_site} defined as the right derived functor of $f^!$. For a complex $L \in D^+(Y_{\et}, A)$ represented by a bounded below complex of injective sheaves $\mathcal{I}^\bullet$, set $Rf^! L := f^! \mathcal{I}^\bullet$ in $D^+(X_{\et}, A)$.
+
+    This functor is exact on the derived category and right adjoint to $Rf_!$:
+    $$\Hom_{D^+(X_{\et}, A)}(K, Rf^! L) \cong \Hom_{D^+(Y_{\et}, A)}(Rf_! K, L)$$
+    for all $K \in D(X_{\et}, A)$ and $L \in D^+(Y_{\et}, A)$. It commutes with shifts.
+
+    This construction is independent of the choice of compactification up to canonical isomorphism.
+\end{definition}

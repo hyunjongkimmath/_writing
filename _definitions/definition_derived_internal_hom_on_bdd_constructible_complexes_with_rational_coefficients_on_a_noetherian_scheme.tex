@@ -1,0 +1,14 @@
+\begin{definition}[Derived internal Hom on bounded constructible complexes with rational coefficients] \label{definition:derived_internal_hom_on_bdd_constructible_complexes_with_rational_coefficients_on_a_noetherian_scheme}
+\TODO{AI generated, verify}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $E$ be the fraction field of $R$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    The category $\Dbc(X, E)$ has the same objects as $\Dbc(X, R)$. The derived internal Hom functor on $\Dbc(\cdot, R)$ is defined at the level of inverse systems $(K_n)_n$ and hence commutes with localization by multiplication by $\lambda^m$. Therefore it descends to a bifunctor on $\Dbc(\cdot, E)$.
+
+    The \hldef{derived internal Hom functor on bounded constructible complexes with rational coefficients over $E$} is the bifunctor
+    $$\hlin{R\mathscr{H}om_E : \Dbc(X, E)^{\mathrm{op}} \times \Dbc(X, E) \to \Dbc(X, E)}$$
+    which acts on objects by the same level-wise formula as in \Cref{definition:derived_internal_hom_on_bdd_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}. The action on morphisms is obtained by tensoring with $E$ over $R$.
+
+    This functor satisfies the adjunction
+    $$\Hom_{\Dbc(X,E)}(M \Lotimes_E N, P) \cong \Hom_{\Dbc(X,E)}(M, R\mathscr{H}om_E(N,P))$$
+    for all $M,N,P \in \Dbc(X, E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}).
+\end{definition}

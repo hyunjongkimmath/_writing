@@ -1,0 +1,10 @@
+\begin{definition}[Derived tensor product on bounded constructible complexes with integral coefficients] \label{definition:derived_tensor_product_on_bdd_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}
+    Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}, and consider sheaves on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{(small) \'etale site} of $X$.
+
+    For each $n \geq 1$, let $\Lotimes_{R/\lambda^{n+1}}$ denote the derived tensor product on $D_c^b(X, R/\lambda^{n+1})$ (\Cref{definition:derived_tensor_product_on_bounded_above_derived_categories_of_abelian_categories_for_a_biadditive_right_exact_functor}).
+
+    The \hldef{derived tensor product on bounded constructible complexes with integral coefficients over $R$} is the bifunctor
+    $$\hlin{\Lotimes_R : D_c^b(X, R) \times D_c^b(X, R) \to D_c^b(X, R)}$$
+    defined level-wise as follows. For any objects $K = (K_n, u_n)_{n \geq 0}$ and $L = (L_n, v_n)_{n \geq 0}$ in $D_c^b(X, R)$, set
+    $$K \Lotimes_R L := (K_n \Lotimes_{R/\lambda^{n+1}} L_n)_n.$$
+\end{definition}

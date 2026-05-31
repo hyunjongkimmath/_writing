@@ -1,0 +1,22 @@
+\begin{definition}
+\label{definition:effective_descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}
+Let $\mathcal{C}$ be a category and let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}. We fix a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$, with pullback functors $f^*: \mathcal{F}_U \to \mathcal{F}_V$ and structural natural isomorphisms $\alpha_{g,h}: (g \circ h)^* \xrightarrow{\sim} h^* \circ g^*$ as in \Cref{definition:descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}.
+
+Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$. A \CrefAndHyperrefIfExist{definition:descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}{descent datum for $\mathcal{F}$ relative to the sieve $S$}, $(x_f, \phi_g)_{(f:V\to U)\in S}$, is called \hldef{effective} (with respect to $S$) if there exists an object $y \in \operatorname{Ob}(\mathcal{F}_U)$ and a family of isomorphisms
+$$
+\theta_f: f^*(y) \xrightarrow{\sim} x_f \quad \text{for each } (f: V \to U) \in S,
+$$
+such that for every morphism $g: W \to V$ in $\mathcal{C}$ and every $(f: V \to U) \in S$, the following diagram in $\mathcal{F}_W$ commutes:
+
+$$
+\begin{tikzcd}[row sep=large, column sep=large]
+(g \circ f)^*(y) \arrow[rr, "\alpha_{g,f}(y)"] \arrow[dr, "\theta_{f \circ g}"'] 
+& & g^*(f^*(y)) \arrow[dl, "g^*(\theta_f)"] \\
+& x_{f \circ g} & 
+\end{tikzcd}
+$$
+
+In equational form: $\phi_g \circ g^*(\theta_f) \circ \alpha_{g,f}(y) = \theta_{f \circ g}$.
+
+The object $y$ is called the \hldef{descent of the datum $(x_f, \phi_g)$ along $S$}. If such a $y$ exists, it is unique up to unique isomorphism.
+\end{definition}

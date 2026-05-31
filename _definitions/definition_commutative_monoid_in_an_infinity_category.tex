@@ -1,0 +1,19 @@
+\begin{definition}[{\cite[Definition 3.3.]{scholze_sff}}] \label{definition:commutative_monoid_in_an_infinity_category}
+Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infinity_category}{$\infty$-category}. A \hldef{commutative monoid in $\mathcal{C}$} is a functor
+\[ X : \mathbf{Fin}_{\mathrm{part}} \to \mathcal{C} \]
+from the \CrefAndHyperrefIfExist{definition:category_of_finite_sets_with_partially_defined_maps}{category of finite sets with partially defined maps} such that for every finite set $I$, the map
+\[ X(I) \to \prod_{i \in I} X(\{i\}) = X(\ast)^I \]
+is an isomorphism, where the map is induced by the family of partially defined maps $\{\pi_i : I \dashrightarrow \{i\}\}_{i \in I}$ with $\pi_i(j)$ defined if and only if $j=i$, in which case $\pi_i(i) = i$.
+
+On objects, $X$ is determined up to isomorphism by the value $X(\ast)$; indeed, $X(I) \cong X(\ast)^I$ by the condition above. Thus a commutative monoid $X$ amounts to extra structure on the object $X(\ast)$, and we will abuse notation and write $X = X(\ast)$.
+
+The partially defined map $\emptyset \to \ast$ (with empty domain) defines a \hldef{unit map}
+\[ \ast = X(\emptyset) \to X(\ast). \]
+For any finite set $I$, the projection map $I \to \ast$ (everywhere defined, sending all elements to $\ast$) defines a map
+\[ X(\ast)^I \cong X(I) \to X(\ast) \]
+called the \hldef{sum map}, which ``sums all elements.''
+
+For a general partially defined map $f : I \dashrightarrow J$, the induced map $X^I = X(I) \to X(J) = X^J$ is such that its $j$-th coordinate is given by
+\[ \prod_{i \in f^{-1}(j)} X_i \to X(\ast) \]
+summing over those $i \in \mathrm{dom}(f)$ with $f(i) = j$.
+\end{definition}

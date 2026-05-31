@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:Kan_fibration_between_simplicial_sets}
+\TODO{AI generated, verify}
+Let $p : X \to Y$ be a morphism of \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}. The map $p$ is called a \hldef{Kan fibration between simplicial sets} if for every integer $n \ge 0$ and every $0 \le i \le n$, the map $p$ has the right lifting property with respect to the horn inclusion $\Lambda_i^n \hookrightarrow \Delta^n$. That is, for any commutative diagram of simplicial sets
+$$
+\begin{tikzcd}
+\Lambda_i^n \ar[r] \ar[d, hook] & X \ar[d, "p"] \\
+\Delta^n \ar[r] \ar[ur, dashed, "\exists" description] & Y
+\end{tikzcd}
+$$
+there exists a lift $\Delta^n \to X$ making both triangles commute.
+\end{definition}

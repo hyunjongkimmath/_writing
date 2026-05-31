@@ -1,0 +1,10 @@
+\begin{definition}[CM Type and Reflex Field of a CM Type] \label{definition:cm_type_and_reflex_field_of_a_cm_type}
+\TODO{AI generated, verify}
+    Let $E$ be a \CrefAndHyperrefIfExist{definition:cm_field}{CM field} with maximal \CrefAndHyperrefIfExist{definition:totally_real_and_totally_imaginary_number_fields}{totally real} subfield $F$, and let $\operatorname{Hom}(E, \overline{\mathbb{Q}})$ denote the set of \CrefAndHyperrefIfExist{definition:field_homomorphism}{embeddings} of $E$ into a fixed algebraic closure $\overline{\mathbb{Q}}$ of $\mathbb{Q}$. Complex conjugation on $\mathbb{C}$ induces an involution on $\operatorname{Hom}(E, \overline{\mathbb{Q}})$: for $\tau \in \operatorname{Hom}(E, \overline{\mathbb{Q}})$, write $\bar{\tau} := c \circ \tau$, where $c$ is the \CrefAndHyperrefIfExist{definition:cm_field}{complex conjugation} automorphism of $E$.
+
+    A \hldef{CM type for $E$} is a subset $\Phi \subset \operatorname{Hom}(E, \overline{\mathbb{Q}})$ such that $|\Phi| = [E:F]$ and $\Phi$ contains exactly one element from each conjugate pair $\{\tau, \bar{\tau}\}$ in $\operatorname{Hom}(E, \overline{\mathbb{Q}})$. Equivalently,
+    $$\operatorname{Hom}(E, \overline{\mathbb{Q}}) = \Phi \sqcup \bar{\Phi}.$$
+
+    Let $(E, \Phi)$ be a CM type. The \hldef{reflex field of the CM type $(E, \Phi)$}, denoted by \hl{$E^*(\Phi)$}, is the subfield of $\overline{\mathbb{Q}}$ generated over $\mathbb{Q}$ by the traces
+    $$\hlin{\left\{ \sum_{\tau \in \Phi} \tau(\alpha) \;\middle|\; \alpha \in E \right\}.}$$
+\end{definition}

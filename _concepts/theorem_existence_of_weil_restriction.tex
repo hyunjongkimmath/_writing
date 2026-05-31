@@ -1,0 +1,18 @@
+\begin{theorem}[Existence of Weil restriction] \label{theorem:existence_of_weil_restriction}
+    Let $f : S' \to S$ be a \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphism of schemes} and let $X'$ be an $S'$-scheme. If the following conditions hold:
+        \TODO{finite locally free morphism of schemes}
+    \begin{enumerate}
+        \item $f : S' \to S$ is finite locally free (i.e., $f_*(\mathcal{O}_{S'})$ is a locally free $\mathcal{O}_S$-module of finite rank), and
+        \item $X'$ is \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated} and of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $S'$,
+    \end{enumerate}
+    then the \CrefAndHyperref{definition:weil_restriction_on_schemes}{Weil restriction} $\mathrm{Res}_{X'/S'}$ exists as an $S$-scheme.
+
+    Moreover:
+    \begin{enumerate}[resume]
+        \item If in addition $X' \to S'$ is \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine}, then $\mathrm{Res}_{X'/S'}$ is affine. Concretely, if $S = \mathrm{Spec}(R)$, $S' = \mathrm{Spec}(R')$, and $X' = \mathrm{Spec}(A')$ with $A'$ a finite locally free $R'$-algebra, then
+        $$\mathrm{Res}_{X'/S'} \;=\; \mathrm{Spec}\bigl(\mathrm{Sym}_{R}((A')^\vee)\bigr),$$
+        where $(A')^\vee = \mathrm{Hom}_{R'}(A', R')$ is the $R'$-dual of $A'$ viewed as an $R'$-module, and $\mathrm{Sym}_{R}$ denotes the symmetric algebra over $R$.
+
+        \item If in addition $X' \to S'$ is \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} (resp.\ \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{étale}), then $\mathrm{Res}_{X'/S'} \to S$ is smooth (resp.\ étale).
+    \end{enumerate}
+\end{theorem}

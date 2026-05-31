@@ -1,0 +1,68 @@
+\begin{theorem} \label{theorem:subgroups_of_semidirect_product_of_module_and_group_surject_onto_group_via_cocycle}
+    Let $\Gamma$ be a \CrefAndHyperrefIfExist{definition:group}{group}, let $A$ be a \CrefAndHyperrefIfExist{definition:left_right_module_over_a_group_ring_of_a_group_over_a_ring}{$\mathbb{Z}[\Gamma]$-module}, and write $G = A \rtimes \Gamma$\CrefIfExists{definition:semidirect_product_of_groups_external_and_internal} --- note that the group operation in $G$ is $(a, h_1)(b, h_2) = (a + h_1 \cdot b, h_1h_2)$ for $a,b \in A$ and $h_1,h_2 \in \Gamma$.
+
+    There is a bijective correspondence between
+    \begin{enumerate}
+        \item The subgroups of $G$ that surject onto $\Gamma$ under the natural projection $A \rtimes \Gamma \twoheadrightarrow \Gamma$.
+        \item Pairs $(M, \alpha)$ where $M$ is a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $A$ (as a $\mathbb{Z}[\Gamma]$-module) and $\alpha \in Z^1(\Gamma, A/M)$ is a \CrefAndHyperrefIfExist{definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring}{$1$-cocycle}.
+    \end{enumerate}
+    The bijection sends a subgroup $H$ to $(M_H, \alpha_H)$ where $M_H = H \cap (A \rtimes \{1_\Gamma\})$ (identified with its image in $A$ under projection), and $\alpha_H(h) = \{a \in A : (a,h) \in H\} + M_H \in A/M_H$ is the unique coset of $M_H$ containing all first coordinates of elements of $H$ projecting to $h$.
+
+    The inverse sends $(M, \alpha)$ to the subgroup
+    $$H_{(M,\alpha)} = \{ (\tilde{\alpha}(h) + m, h) : h \in \Gamma,\; m \in M \}$$
+    where for each $h \in \Gamma$, $\tilde{\alpha}(h) \in A$ is any lift of $\alpha(h) \in A/M$.
+
+\end{theorem}
+
+
+% \begin{proof}
+%     We verify that the two assignments are well-defined and mutually inverse.
+
+%     \textbf{From subgroups to cocycles.} Let $H \leq G$ surject onto $\Gamma$. For each $h \in \Gamma$, let $C_h = \{a \in A : (a,h) \in H\}$. Since $H$ surjects, $C_h$ is nonempty. If $a,a' \in C_h$, then $(a,h)(a',h)^{-1} = (a - a', 1_\Gamma) \in H \cap (A \rtimes \{1_\Gamma\})$, so $a - a' \in M_H$. Thus $C_h$ is contained in a single coset of $M_H$; we set $\alpha_H(h)$ to be this coset. Define $M_H = H \cap (A \rtimes \{1_\Gamma\})$, identified with its image in $A$. Since $(a,h)(m,1_\Gamma)(a,h)^{-1} = (h \cdot m, 1_\Gamma)$ for any $m \in M_H$, the set $M_H$ is stable under the $\Gamma$-action, hence a $\mathbb{Z}[\Gamma]$-submodule.
+
+%     The map $\alpha_H : \Gamma \to A/M_H$ is a $1$-cocycle. For $h_1,h_2 \in \Gamma$, choose $a_{h_1} \in C_{h_1}$ and $a_{h_2} \in C_{h_2}$. Then $(a_{h_1}, h_1)(a_{h_2}, h_2) = (a_{h_1} + h_1 \cdot a_{h_2}, h_1h_2) \in H$, so $a_{h_1} + h_1 \cdot a_{h_2} \in C_{h_1h_2}$. Reducing modulo $M_H$ gives $\alpha_H(h_1h_2) = \alpha_H(h_1) + h_1 \cdot \alpha_H(h_2)$.
+
+%     \textbf{From cocycles to subgroups.} Let $(M, \alpha)$ be a pair as above. For each $h$, choose a lift $\tilde{\alpha}(h) \in A$ of $\alpha(h) \in A/M$. We claim $H_{(M,\alpha)}$ is a subgroup of $G$. Closure: for $h_1,h_2 \in \Gamma$ and $m,m' \in M$,
+%     $$ (\tilde{\alpha}(h_1) + m, h_1)(\tilde{\alpha}(h_2) + m', h_2) = (\tilde{\alpha}(h_1) + m + h_1 \cdot \tilde{\alpha}(h_2) + h_1 \cdot m', h_1h_2). $$
+%     The first coordinate reduces modulo $M$ to $\alpha(h_1) + h_1 \cdot \alpha(h_2) = \alpha(h_1h_2)$, so it equals $\tilde{\alpha}(h_1h_2) + m''$ for some $m'' \in M$. Hence the product lies in $H_{(M,\alpha)}$. Inverses: $(\tilde{\alpha}(h) + m, h)^{-1} = (-h^{-1} \cdot (\tilde{\alpha}(h) + m), h^{-1})$, and $-h^{-1} \cdot \tilde{\alpha}(h)$ lifts $-h^{-1} \cdot \alpha(h) = \alpha(h^{-1})$ modulo $M$. Thus the inverse lies in $H_{(M,\alpha)}$.
+
+%     The choice of lift $\tilde{\alpha}(h)$ does not affect the set $H_{(M,\alpha)}$, since changing $\tilde{\alpha}(h)$ by an element of $M$ is absorbed into the $m$ parameter.
+
+%     \textbf{Inverse property.} Start with $H$. We have $M_H = H \cap (A \rtimes \{1_\Gamma\})$ and $\alpha_H(h) = C_h + M_H$. The subgroup reconstructed from $(M_H, \alpha_H)$ is $\{(a_h + m, h) : h \in \Gamma,\; m \in M_H\}$ where $a_h \in C_h$. Every element of $H$ projects to some $h \in \Gamma$, and has the form $(a, h)$ with $a \in C_h = a_h + M_H$, hence equals $(a_h + m, h)$ for some $m \in M_H$. Thus $H = H_{(M_H, \alpha_H)}$.
+
+%     Conversely, start with $(M, \alpha)$. The subgroup $H_{(M,\alpha)}$ intersects $A \rtimes \{1_\Gamma\}$ exactly in $M \times \{1_\Gamma\}$, so the recovered module is $M$. For each $h$, the set of first coordinates of elements projecting to $h$ is $\tilde{\alpha}(h) + M$, whose class modulo $M$ is $\alpha(h)$. Hence the recovered cocycle is $\alpha$.
+% \end{proof}
+
+\begin{proof}[Proof via the correspondence between derivations and sections]
+    \TODO{verify the following}
+    Let $\mathcal{S}$ be the set of subgroups of $G = A \rtimes \Gamma$ that surject onto $\Gamma$ under the natural projection. Let $\mathcal{P}$ be the set of pairs $(M, \alpha)$ where $M \subseteq A$ is a $\mathbb{Z}[\Gamma]$-submodule and $\alpha \in Z^1(\Gamma, A/M)$.
+
+    We construct two maps $\Phi: \mathcal{S} \to \mathcal{P}$ and $\Psi: \mathcal{P} \to \mathcal{S}$.
+
+    \textbf{The forward map $\Phi$.} Given $H \in \mathcal{S}$, define $M := H \cap (A \rtimes \{1_\Gamma\})$, identified with its image in $A$ under the projection $A \rtimes \Gamma \to A$. Since $H$ surjects onto $\Gamma$, for any $(a,h) \in H$ and $(m,1_\Gamma) \in H \cap (A \rtimes \{1_\Gamma\})$, we have
+    $$(a,h)(m,1_\Gamma)(a,h)^{-1} = (h \cdot m, 1_\Gamma) \in H,$$
+    so $M$ is stable under the $\Gamma$-action and hence a $\mathbb{Z}[\Gamma]$-submodule.
+
+    Let $\pi_M: A \rtimes \Gamma \twoheadrightarrow (A/M) \rtimes \Gamma$ be the canonical quotient map, $\pi_M(a,h) = (a + M, h)$. The image $\overline{H} = \pi_M(H)$ is a subgroup of $(A/M) \rtimes \Gamma$ that surjects onto $\Gamma$ and intersects $A/M$ trivially, since
+    $$\pi_M(H) \cap ((A/M) \rtimes \{1_\Gamma\}) = \pi_M(H \cap (A \rtimes \{1_\Gamma\})) = \pi_M(M \times \{1_\Gamma\}) = \{(0,M), 1_\Gamma\}.$$
+    By \Cref{corollary:derivations_of_a_group_into_a_group_module_correspond_to_sections_of_semidirect_product_projection}, $\overline{H}$ corresponds uniquely to a derivation $\alpha: \Gamma \to A/M$, i.e., a $1$-cocycle. We set $\Phi(H) = (M, \alpha)$.
+
+    \textbf{The backward map $\Psi$.} Given $(M, \alpha) \in \mathcal{P}$, consider the same quotient map $\pi_M: A \rtimes \Gamma \twoheadrightarrow (A/M) \rtimes \Gamma$. By \Cref{corollary:derivations_of_a_group_into_a_group_module_correspond_to_sections_of_semidirect_product_projection}, the cocycle $\alpha$ defines a unique subgroup
+    $$\overline{H}_\alpha = \{ (\alpha(h), h) \in (A/M) \rtimes \Gamma : h \in \Gamma \}.$$
+    Define $H_{(M,\alpha)} := \pi_M^{-1}(\overline{H}_\alpha)$, i.e.,
+    $$H_{(M,\alpha)} = \{ (a,h) \in A \rtimes \Gamma : a + M = \alpha(h) \}.$$
+    By the Lattice Isomorphism Theorem, $H_{(M,\alpha)}$ is a subgroup of $G$, and since $\pi_M(H_{(M,\alpha)}) = \overline{H}_\alpha$ surjects onto $\Gamma$, so does $H_{(M,\alpha)}$. We set $\Psi(M, \alpha) = H_{(M,\alpha)}$.
+
+    \textbf{Verification that $\Psi \circ \Phi = \operatorname{id}_\mathcal{S}$.} Starting with $H$, we obtain $M$ and $\overline{H} = \pi_M(H)$. Since $\overline{H} \cap ((A/M) \rtimes \{1_\Gamma\}) = \{(0,M), 1_\Gamma\}$, the Lattice Isomorphism Theorem guarantees that the pullback of the image recovers the original subgroup:
+    $$\pi_M^{-1}(\pi_M(H)) = H \cdot \ker(\pi_M) = H \cdot (M \times \{1_\Gamma\}) = H,$$
+    where the last equality holds because $M \times \{1_\Gamma\} \subseteq H$. Thus $\Psi(\Phi(H)) = H$.
+
+    \textbf{Verification that $\Phi \circ \Psi = \operatorname{id}_\mathcal{P}$.} Starting with $(M, \alpha)$, let $H = \pi_M^{-1}(\overline{H}_\alpha)$.
+    \begin{enumerate}
+        \item The recovered submodule is
+        $$H \cap (A \rtimes \{1_\Gamma\}) = \pi_M^{-1}(\overline{H}_\alpha) \cap \pi_M^{-1}((A/M) \rtimes \{1_\Gamma\}) = \pi_M^{-1}(\overline{H}_\alpha \cap ((A/M) \rtimes \{1_\Gamma\})) = \pi_M^{-1}(\{(0,M), 1_\Gamma\}) = M \times \{1_\Gamma\},$$
+        which is $M$ in $A$.
+        \item Projecting $H$ forward via $\pi_M$ yields exactly $\overline{H}_\alpha$, which \Cref{corollary:derivations_of_a_group_into_a_group_module_correspond_to_sections_of_semidirect_product_projection} maps back to the original cocycle $\alpha$.
+    \end{enumerate}
+    Thus $\Phi(\Psi(M, \alpha)) = (M, \alpha)$.
+\end{proof}

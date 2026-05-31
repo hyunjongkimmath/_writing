@@ -2,28 +2,47 @@
 \label{definition:descent_datum_for_a_category_fibered_in_groupoids_over_a_category_relative_to_a_sieve_on_an_object_of_the_base_category}
 Let $\mathcal{C}$ be a category and let $p: \mathcal{F} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category_fibered_in_groupoids_over_a_category}{category fibered in groupoids}. We fix a \CrefAndHyperrefIfExist{definition:cleavage_splitting_for_a_category_fibered_in_groupoids}{cleavage} for $p$, denoting the chosen pullback functor along a morphism $f: V \to U$ by $f^*: \mathcal{F}_U \to \mathcal{F}_V$, and the structural natural isomorphisms for composition by $\alpha_{g,h}: (g \circ h)^* \xrightarrow{\sim} h^* \circ g^*$ for morphisms $W \xrightarrow{h} V \xrightarrow{g} U$.
 
-Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$. A \hldef{descent datum for $\mathcal{F}$ relative to the sieve $S$} consists of:
+Let $U$ be an object of $\mathcal{C}$ and let $S$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve} on $U$. 
+
 \begin{enumerate}
-    \item For every morphism $(f: V \to U) \in S$, an object $x_f \in \operatorname{Ob}(\mathcal{F}_V)$.
-    \item For every morphism $g: W \to V$ in $\mathcal{C}$ and every $(f: V \to U) \in S$ (which implies $f \circ g \in S$ by the definition of a sieve), an isomorphism
-    $$
-    \phi_g: g^*(x_f) \xrightarrow{\sim} x_{f \circ g}
-    $$
-    in the fiber category $\mathcal{F}_W$.
+    \item 
+    A \hldef{descent datum for $\mathcal{F}$ (or, more precisely, for $p$) relative to the sieve $S$} consists of:
+    \begin{enumerate}
+        \item for every morphism $(f: V \to U) \in S$, an object $x_f \in \operatorname{Ob}(\mathcal{F}_V)$,
+        \item for every morphism $g: W \to V$ in $\mathcal{C}$ and every $(f: V \to U) \in S$ (which implies $f \circ g \in S$ by the definition of a sieve), an isomorphism
+        $$
+        \phi_g: g^*(x_f) \xrightarrow{\sim} x_{f \circ g}
+        $$
+        in the fiber category $\mathcal{F}_W$,
+    \end{enumerate}
+    satisfying the \hldef{cocycle condition}: 
+    \begin{enumerate}
+        \item 
+        for any sequence of morphisms $Z \xrightarrow{h} W \xrightarrow{g} V \xrightarrow{f} U$ such that $f \in S$, the following diagram in $\mathcal{F}_Z$ commutes:
+        $$
+        \begin{tikzcd}[row sep=large, column sep=large]
+        (g \circ h)^*(x_f) \arrow[r, "\alpha_{g,h}(x_f)"] \arrow[dr, "\phi_{g \circ h}"'] 
+        & h^*(g^*(x_f)) \arrow[r, "h^*(\phi_g)"] 
+        & h^*(x_{f \circ g}) \arrow[d, "\phi_h"] \\
+        & x_{f \circ g \circ h} 
+        & x_{(f \circ g) \circ h} \arrow[l, equal]
+        \end{tikzcd}
+        $$
+        In equational form:
+        $$
+        \phi_h \circ h^*(\phi_g) \circ \alpha_{g,h}(x_f) = \phi_{g \circ h}
+        $$
+        (identifying the domain of $\phi_{g \circ h}$ with the domain of the composition via $\alpha$).
+    \end{enumerate}
+
+    \item Let $(x_f, \phi_g)$ and $(x_f', \phi_g')$ two descent data for $\calF$ relative to $S$. A \hldef{morphism $(x_f, \phi_g) \to (x_f', \phi_g')$} is a collection $\{\psi_f: x_f \to x_f' \}_{(f: V \to U) \in S}$ of morphisms (in $\calF_V$) such that for every $g: W \to V$ with $f \in S$, the following diagram commutes in $\calF_W$:
+
+    $$\begin{tikzcd}[row sep=large, column sep=large]
+    g^*(x_f) \arrow[r, "\phi_g"] \arrow[d, "g^*(\psi_f)"'] & x_{f \circ g} \arrow[d, "\psi_{f \circ g}"] \\
+    g^*(x'_f) \arrow[r, "\phi'_g"] & x'_{f \circ g}
+    \end{tikzcd}$$
+    In equational form: $\psi_{f \circ g} \circ \phi_g = \phi'_g \circ g^*(\psi_f)$.
+
+    \item The \hldef{category of descent data for $\calF$ relative to $S$} is the category denoted by notations such as \hl{$\operatorname{Des}(\calF, S)$}, \hl{$\operatorname{Des}(p, S)$}, \hl{$\operatorname{DescentData}(\calF, S)$}, etc. whose objects are descent data for $\calF$ relative to $S$ and whose morphisms are the morphisms between such descent data. 
 \end{enumerate}
-These data are required to satisfy the \hldef{cocycle condition}: for any sequence of morphisms $Z \xrightarrow{h} W \xrightarrow{g} V \xrightarrow{f} U$ such that $f \in S$, the following diagram in $\mathcal{F}_Z$ commutes:
-$$
-\begin{tikzcd}[row sep=large, column sep=large]
-(g \circ h)^*(x_f) \arrow[r, "\alpha_{g,h}(x_f)"] \arrow[dr, "\phi_{g \circ h}"'] 
-& h^*(g^*(x_f)) \arrow[r, "h^*(\phi_g)"] 
-& h^*(x_{f \circ g}) \arrow[d, "\phi_h"] \\
-& x_{f \circ g \circ h} 
-& x_{(f \circ g) \circ h} \arrow[l, equal]
-\end{tikzcd}
-$$
-In equational form:
-$$
-\phi_h \circ h^*(\phi_g) \circ \alpha_{g,h}(x_f) = \phi_{g \circ h}
-$$
-(identifying the domain of $\phi_{g \circ h}$ with the domain of the composition via $\alpha$).
 \end{definition}

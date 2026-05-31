@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:category_of_finite_sets_with_partially_defined_maps}
+The \hldef{category of finite sets with partially defined maps}, denoted by \hl{$\mathbf{Fin}_{\mathrm{part}}$}, is the category defined by the following data:
+\begin{itemize}
+    \item The objects are all finite sets.
+    \item A morphism $f : I \dashrightarrow J$ from a finite set $I$ to a finite set $J$ is a \hldef{partially defined map}, consisting of a subset $\mathrm{dom}(f) \subseteq I$ (the domain of definition) and a function $f|_{\mathrm{dom}(f)} : \mathrm{dom}(f) \to J$.
+    \item Composition of partially defined maps $f : I \dashrightarrow J$ and $g : J \dashrightarrow K$ is the partially defined map $g \circ f : I \dashrightarrow K$ with domain $\mathrm{dom}(g \circ f) = \{i \in \mathrm{dom}(f) \mid f(i) \in \mathrm{dom}(g)\}$ and $(g \circ f)(i) = g(f(i))$ for $i \in \mathrm{dom}(g \circ f)$.
+    \item The identity morphism on a finite set $I$ is the partially defined map with domain $I$ given by the identity function.
+\end{itemize}
+\end{definition}

@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:join_of_simplicial_sets}
+\TODO{AI generated, verify}
+Let $X$ and $Y$ be \CrefAndHyperref{definition:simplicial_cosimplicial_object_in_a_category}{simplicial sets}. Their \hldef{join}, denoted by \hl{$X \star Y$}, is the simplicial set determined by the following universal property on representables: for each pair of nonnegative integers $m, n$, there is a canonical identification
+$$\Delta[m] \star \Delta[n] = \Delta[m+n+1],$$
+and $X \star Y$ is obtained by extending this assignment bi-simply. Concretely, for each $k \ge 0$, the set of $k$-simplices is
+$$(X \star Y)_k = X_k \sqcup Y_k \sqcup \bigsqcup_{\substack{0 \le i,j \\ i+j = k-1}} X_i \times Y_j,$$
+where the face and degeneracy maps are induced by those on $X$ and $Y$ together with the standard simplex identifications above.
+\end{definition}
