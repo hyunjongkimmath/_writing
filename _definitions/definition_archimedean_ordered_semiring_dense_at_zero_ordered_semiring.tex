@@ -1,0 +1,13 @@
+\begin{definition}[Archimedean ordered semiring and dense at zero] \label{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}.
+
+    \begin{enumerate}
+        \item $T$ is called \hldef{archimedean} if for every $a > 0_T$ and $b \in T$, there exists $n \in \mathbb{N}$ such that $n \cdot a \not\le b$. Equivalently, the set $\{n \cdot a : n \in \mathbb{N}\}$ is unbounded above in $T$ for every $a > 0_T$.
+
+        \item $T$ is called \hldef{dense at zero} if for every $\varepsilon > 0_T$ in $T$, there exists $\delta \in T$ such that $0_T < \delta < \varepsilon$. Equivalently, the set $T_{>0}$ of strictly positive elements has no \CrefAndHyperrefIfExist{definition:minimal_element_in_a_subset_of_a_partially_ordered_set}{minimal elements}.
+    \end{enumerate}
+
+    The two properties are independent: $\bbR_{\geq 0}$ satisfies both, while $\mathbb{Z}_{\geq 0}$ is archimedean but not dense at zero (minimum positive element $1$).
+
+    In the context of \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric spaces valued in} an \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} $T^\infty$, it is the dense-at-zero property that ensures Cauchy sequences are not forced to be eventually constant (see \Cref{definition:cauchy_sequence_in_an_extended_metric_space}).
+\end{definition}

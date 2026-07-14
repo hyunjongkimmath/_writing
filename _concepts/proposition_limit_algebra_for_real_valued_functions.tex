@@ -1,0 +1,18 @@
+\begin{proposition}[Limit algebra for real valued functions] \label{proposition:limit_algebra_for_real_valued_functions}
+    Let $S \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}, let $p$ be a \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space}{accumulation point} of $S$, and let $f, g : S \to \mathbb{R}$ be functions such that $\lim_{x \to p, x \in S} f(x) = L$\CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point} and $\lim_{x \to p, x \in S} g(x) = M$ exist in $\mathbb{R}$. Let $c \in \mathbb{R}$.
+
+    Then:
+    \begin{enumerate}
+        \item[$($sum$)$] $\lim_{x \to p, x \in S} (f(x) + g(x)) = L + M$.
+        \item[$($scalar$)$] $\lim_{x \to p, x \in S} c \cdot f(x) = c \cdot L$.
+        \item[$($product$)$] $\lim_{x \to p, x \in S} f(x) \cdot g(x) = L \cdot M$.
+        \item[$($quotient$)$] If $M \neq 0$, then $\lim_{x \to p, x \in S} \frac{f(x)}{g(x)} = \frac{L}{M}$.
+        \item[$($composition$)$] Let $h : \mathbb{R} \to \mathbb{R}$ be continuous at $L$. 
+        % satisfy $\lim_{y \to L} h(y) = N$. 
+        Then $\lim_{x \to p, x \in S} h(f(x)) = h(L)$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    These are all consequences of \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit} and \Cref{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits}
+\end{proof}

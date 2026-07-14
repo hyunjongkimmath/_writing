@@ -1,0 +1,10 @@
+\begin{theorem}[Gram--Schmidt Orthogonalization] \label{theorem:gram_schmidt_orthogonalization_process}
+    Let $V$ be a finite-dimensional inner product space over $\mathbb{R}$ or $\mathbb{C}$, and let $(v_1, \dots, v_n)$ be a linearly independent ordered set of vectors in $V$.
+
+    There exists an \CrefAndHyperrefIfExist{definition:orthogonal_and_orthonormal_sets_in_an_inner_product_space}{orthonormal} ordered set $(e_1, \dots, e_n)$ such that for each $k = 1, \dots, n$,
+    $$\operatorname{span}\{e_1, \dots, e_k\} = \operatorname{span}\{v_1, \dots, v_k\}.$$
+    The vectors are constructed by the recurrence: set $u_1 = v_1$, $e_1 = u_1 / \|u_1\|$, and for $k \geq 2$,
+    $$u_k = v_k - \sum_{j=1}^{k-1} \langle v_k, e_j \rangle e_j, \quad e_k = \frac{u_k}{\|u_k\|}.$$
+\TextIfExists{definition:involution_on_a_ring}{The Gram--Schmidt process generalizes to orthogonalization of bases for free modules over a ring with \Cref{definition:involution_on_a_ring}, provided the necessary norms are invertible.}
+\TODO{AI generated, verify}
+\end{theorem}

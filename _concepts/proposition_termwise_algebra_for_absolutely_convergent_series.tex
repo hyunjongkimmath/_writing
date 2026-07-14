@@ -1,0 +1,34 @@
+\begin{proposition}[Termwise algebra for absolutely convergent series] \label{proposition:termwise_algebra_for_absolutely_convergent_series}
+    \TODO{AI generated, verify}
+    Let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} or $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}, with norm $\|\cdot\|$. Let $(a_n)_{n=1}^\infty$ and $(b_n)_{n=1}^\infty$ be two sequences in $V$, both of which \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely}, with
+    $$\sum_{n=1}^\infty a_n = A, \quad \sum_{n=1}^\infty b_n = B.$$
+
+    \begin{enumerate}
+        \item For any scalar $c \in \mathbb{R}$ or $\mathbb{C}$, the series $\sum_{n=1}^\infty c a_n$ converges absolutely to $cA$.
+        \item The series $\sum_{n=1}^\infty (a_n + b_n)$ converges absolutely to $A + B$.
+        \item (Regrouping) Let $(N_k)_{k=1}^\infty$ be a strictly increasing sequence of positive integers with $N_0 = 0$, and define block sums $B_k = \sum_{n=N_{k-1}+1}^{N_k} a_n$ for each $k \geq 1$. Then the series $\sum_{k=1}^\infty B_k$ converges absolutely to $A$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove each part in turn.
+
+    \begin{enumerate}
+        \item Let $c \in \mathbb{R}$ or $\mathbb{C}$. By the homogeneity property of the norm\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}, for all $n$:
+            $$\|c a_n\| = |c| \|a_n\|.$$
+
+            Summing over $n$, the partial sums satisfy $\sum_{n=1}^N \|c a_n\| = |c| \sum_{n=1}^N \|a_n\|$. Since $\sum_{n=1}^\infty \|a_n\|$ converges, multiplying by the constant $|c| \geq 0$ preserves convergence. Hence $\sum_{n=1}^\infty \|c a_n\|$ converges, so $\sum c a_n$ converges absolutely.
+
+            For the limit: let $(S_N)$ be partial sums of $(a_n)$ and $(U_N)$ be partial sums of $(c a_n)$. Then $U_N = \sum_{n=1}^N c a_n = c S_N$ by linearity of scalar multiplication in $V$. Since $S_N \to A$, we have $U_N \to cA$ by continuity of scalar multiplication. Hence $\sum c a_n = cA$.
+
+        \item Let $(S_N)$ and $(T_N)$ be the partial sums of $(a_n)$ and $(b_n)$ respectively, so $S_N \to A$ and $T_N \to B$. The partial sums of $(a_n + b_n)$ are $R_N = S_N + T_N$, which converge to $A + B$ by continuity of addition in $V$\CrefIfExists{definition:infinite_series_and_convergence_in_a_topological_abelian_group}.
+
+            For absolute convergence, the triangle inequality gives $\|a_n + b_n\| \leq \|a_n\| + \|b_n\|$ for all $n$. Summing over $n$, the partial sums of norms satisfy:
+            $$\sum_{n=1}^N \|a_n + b_n\| \leq \sum_{n=1}^N (\|a_n\| + \|b_n\|) = \sum_{n=1}^N \|a_n\| + \sum_{n=1}^N \|b_n\|.$$
+
+            Both $\sum \|a_n\|$ and $\sum \|b_n\|$ converge, so their sum converges. The nonnegative sequence of partial sums $\sum_{n=1}^N \|a_n + b_n\|$ is therefore bounded above by a convergent sequence, hence it converges by the comparison test$\CrefIfExists{theorem:comparison_test_for_series_of_nonnegative_real_numbers}$. This establishes that $\sum (a_n + b_n)$ converges absolutely.
+
+        \item This follows directly from \Cref{lemma:regrouping_preserves_absolute_convergence}.
+    \end{enumerate}
+\end{proof}

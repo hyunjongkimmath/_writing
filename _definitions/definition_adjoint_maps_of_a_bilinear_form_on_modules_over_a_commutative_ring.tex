@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:adjoint_maps_of_a_bilinear_form_on_modules_over_a_commutative_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a commutative \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $\beta: M \times N \to R$ be a \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{bilinear form} on \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} $M$ and $N$.
+
+    The bilinear form $\beta$ induces two $R$-linear maps, called the \hldef{adjoint maps of $\beta$}:
+    $$\hlin{\hat{\beta}_L: M \to N^\vee, \quad m \mapsto \beta(m, -)}$$
+    $$\hlin{\hat{\beta}_R: N \to M^\vee, \quad n \mapsto \beta(-, n)},$$
+    where $N^\vee = \operatorname{Hom}_R(N, R)$ and $M^\vee = \operatorname{Hom}_R(M, R)$ denote the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual modules}.
+
+    When $M = N$, we speak of a bilinear form on $M$, and both maps land in $M^\vee$. If $\beta$ is symmetric, then $\hat{\beta}_L = \hat{\beta}_R$; if $\beta$ is skew-symmetric, then $\hat{\beta}_L = -\hat{\beta}_R$.
+\end{definition}

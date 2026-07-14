@@ -1,0 +1,13 @@
+\begin{proposition}  \label{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit}
+    Let $X,Y,Z$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $S \subseteq X$ and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Let $f: S \to Y$ and $h: Y \to Z$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions} such that
+    \begin{enumerate}
+        \item $\lim_{x \to p, x \in S} f(x) = L$\CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+        \item $h$ is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at} $L$.
+    \end{enumerate}
+    Then $\lim_{x \to p, x \in S} (h \circ f)(x) = h(L)$.
+\end{proposition}
+\begin{proof}
+    Let $V$ be an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} of $h(L)$ in $Z$. Since $h$ is continuous at $L$, there is an open neighborhood $U$ of $L$ in $Y$ such that $h(U) \subseteq V$. Since $\lim_{x \to p, x \in S} f(x) = L$, there exists an open neighborhood $W$ of $p$ in $S$ such that $f(W \setminus \{p\}) \subseteq U$. These together imply that
+    $$h(f(W \setminus \{p\})) \subseteq h(U) \subseteq V$$
+    so $(h \circ f)(W \setminus \{p\}) \subseteq V$. Since $V$ was arbitrary amongst open neighborhoods of $h(L)$, we have $\lim_{x \to p, x \in S} (h \circ f)(x) = h(L)$ as desired.
+\end{proof}

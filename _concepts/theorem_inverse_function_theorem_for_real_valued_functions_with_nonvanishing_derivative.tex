@@ -1,0 +1,51 @@
+\begin{theorem}[Inverse function theorem for real-valued functions] \label{theorem:inverse_function_theorem_for_real_valued_functions_with_nonvanishing_derivative}
+    Let $I \subseteq \mathbb{R}$ be an open interval and let $f : I \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Fix a point $a \in I$.
+
+    Suppose that:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point of $I$, and the derivative $f'$ is continuous on $I$;
+        \item $f'(a) \neq 0$.
+    \end{enumerate}
+    Then there exist open intervals $J \subseteq I$ containing $a$ and $K \subseteq \mathbb{R}$ containing $f(a)$ such that:
+    \begin{enumerate}
+        \item The restriction $f|_J : J \to K$ is a bijection;
+        \item The inverse map $(f|_J)^{-1} : K \to J$ is differentiable at every point of $K$, and for each $y = f(x) \in K$,
+        $$\left((f|_J)^{-1}\right)'(y) = \frac{1}{f'(x)}.$$
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We proceed in three phases: establish strict monotonicity on a neighborhood, show the image is an open interval, and compute the derivative of the inverse.
+
+    \begin{enumerate}
+        \item Since $f'$ is continuous at $a$ (by hypothesis) and $f'(a) \neq 0$, there exists $\delta > 0$ such that $(a-\delta, a+\delta) \subseteq I$ and $f'(t)$ has the same sign as $f'(a)$ for all $t \in (a-\delta, a+\delta)$. Let $J = (a-\delta, a+\delta)$. Without loss of generality assume $f'(a) > 0$, so that $f'(t) > 0$ for all $t \in J$. If $f'(a) < 0$, the argument is identical with inequalities reversed.
+
+        We claim $f|_J$ is strictly increasing on $J$. Let $x_1 < x_2$ be points in $J$. On $[x_1, x_2] \subseteq J$, the function $f$ is continuous and differentiable with $f'(t) > 0$. By the \CrefAndHyperrefIfExist{theorem:mean_value_theorem_for_differentiable_functions_on_intervals}{Mean Value Theorem}, there exists $\xi \in (x_1, x_2)$ such that
+        $$\frac{f(x_2) - f(x_1)}{x_2 - x_1} = f'(\xi) > 0.$$
+        Since $x_2 - x_1 > 0$, we obtain $f(x_2) > f(x_1)$, establishing strict monotonicity.
+
+        \item Let $K = f(J)$. We show that $K$ is an open interval containing $f(a)$. Because $f|_J : J \to K$ is strictly increasing and continuous (by \CrefAndHyperrefIfExist{proposition:differentiability_implies_continuity_at_a_point}{differentiability implies continuity}), it follows from the \CrefAndHyperrefIfExist{theorem:intermediate_value_theorem_for_continuous_functions_on_intervals}{Intermediate Value Theorem} that $K$ is an interval with endpoints
+        $$\inf K = \lim_{x \to a-\delta^+} f(x) \quad \text{and} \quad \sup K = \lim_{x \to (a+\delta)^-} f(x).$$
+        Since $f$ is strictly increasing on $J$, we have $\inf K < f(a) < \sup K$, so $K$ contains $f(a)$ as an interior point. The endpoints of $K$ are not attained because they correspond to limits at the boundary points $a-\delta$ and $a+\delta$ which lie outside $J$. Therefore $K = (\inf K, \sup K)$ is an open interval.
+
+        Since $f|_J$ is strictly increasing (hence injective) and its image is $K$, it follows that $f|_J : J \to K$ is a bijection. Let $g : K \to J$ denote the inverse map $(f|_J)^{-1}$.
+
+        \item We show $g$ is differentiable at each point of $K$. Let $y \in K$ and let $x = g(y) \in J$, so that $f(x) = y$. For any $\Delta y \neq 0$ with $y + \Delta y \in K$, set $\Delta x = g(y + \Delta y) - g(y)$. Because $g$ is a bijection, we have
+        $$f(g(y + \Delta y)) = y + \Delta y,$$
+        which gives $f(x + \Delta x) = f(x) + \Delta y$, so $\Delta y = f(x + \Delta x) - f(x)$. Since $g$ is strictly increasing (as the inverse of a strictly increasing function), we have $\Delta x \neq 0$ whenever $\Delta y \neq 0$.
+
+        We compute the difference quotient for $g$:
+        $$\frac{g(y + \Delta y) - g(y)}{\Delta y} = \frac{\Delta x}{f(x + \Delta x) - f(x)}.$$
+
+        As $\Delta y \to 0$, we have $\Delta x \to 0$ because $g$ is continuous (the inverse of a strictly monotone continuous function on an interval is continuous). Therefore,
+        $$\lim_{\Delta y \to 0} \frac{g(y + \Delta y) - g(y)}{\Delta y} = \lim_{\Delta x \to 0} \frac{\Delta x}{f(x + \Delta x) - f(x)}.$$
+
+        By the definition of the derivative (see \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}),
+        $$\lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} = f'(x).$$
+
+        Since $f'(x) > 0$ (as $x \in J$), the reciprocal of this limit exists and equals:
+        $$\lim_{\Delta x \to 0} \frac{\Delta x}{f(x + \Delta x) - f(x)} = \frac{1}{f'(x)}.$$
+
+        Thus $(f|_J)^{-1}$ is differentiable at $y$ with derivative $\left((f|_J)^{-1}\right)'(y) = 1/f'(g(y))$.
+    \end{enumerate}
+\end{proof}

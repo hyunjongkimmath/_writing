@@ -1,0 +1,6 @@
+\begin{proposition} \label{proposition:cancellativity_of_multiplication_in_the_natural_numbers}
+    \CrefAndHyperrefIfExist{proposition:natural_numbers_multiplication_existence}{Multiplication in $\bbN$} is cancellative, i.e. for all $a,b,c \in \bbN$, if $ab = ac$, then $b = c$ (equivalently, by the \CrefAndHyperrefIfExist{proposition:natural_numbers_multiplication_associative_commutative_distributive}{commutativity of $\times$}, if $ba = ca$, then $b = c$).
+\end{proposition}
+\begin{proof}
+    Suppose that $a,b,c \in \bbN$ satisfy $ab = ac$. By \CrefAndHyperrefIfExist{proposition:natural_numbers_order_compatibility}{trichotomy}, exactly one of the following hold: $b = c$, $b < c$, and $c < b$. If $b < c$, then $ab < ac$ and if $c < b$, then $ac < ab$ both by \Cref{proposition:natural_numbers_order_compatibility}. In either of these two cases, $ab \neq ac$ by trichotomy. Thus, $b$ and $c$ must equal. 
+\end{proof}

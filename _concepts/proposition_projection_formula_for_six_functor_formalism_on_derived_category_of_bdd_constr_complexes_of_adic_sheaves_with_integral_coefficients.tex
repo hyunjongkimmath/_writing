@@ -1,0 +1,14 @@
+\begin{proposition}[Projection formula for six functor formalism with integral adic coefficients] \label{proposition:projection_formula_for_six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:compactification_of_a_morphism_of_schemes}{compactifiable $S$-morphism} between $S$-schemes where $Y$ is \CrefAndHyperrefIfExist{definition:quasi_compact_morphism_of_schemes}{quasi-compact} and \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{quasi-separated} over $S$ and where $X$ and $Y$ are \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian schemes}.
+
+Let $(R, \lambda)$ be a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$. 
+
+% Let $S$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}. Let $\ell$ be a prime invertible on $S$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. Let $f: X \to Y$ be an \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$S$-morphism} between \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type schemes} over $S$.
+
+For $K \in \Dbc(X,R)$ and $L \in \Dbc(Y,R)$ (\Cref{definition:derived_category_of_bounded_constructible_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}), there is a canonical isomorphism in $\Dbc(Y,R)$:
+$$Rf_!(K \otimes_R^L Lf^* L) \cong Rf_! K \otimes_R^L L$$
+\CrefIfExists{definition:derived_direct_image_functor_on_bounded_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}\CrefIfExists{definition:derived_tensor_product_on_bdd_constructible_complexes_with_integral_coefficients_on_a_noetherian_scheme}\TODO{actual derived inverse image functor for integral coefficients}\CrefIfExists{definition:total_left_derived_inverse_image_functor_for_morphism_of_ringed_sites}
+
+In particular, if $f$ is \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}, then $Rf_! = Rf_*$ and hence the projection formula takes the form
+$$Rf_*(K \otimes_R^L Lf^* L) \cong Rf_* K \otimes_R^L L.$$
+\end{proposition}

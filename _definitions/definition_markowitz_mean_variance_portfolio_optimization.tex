@@ -1,0 +1,18 @@
+\begin{definition}[Markowitz mean-variance portfolio optimization] \label{definition:markowitz_mean_variance_portfolio_optimization}
+\TODO{AI generated, verify}
+Let $R = (R_1, \dots, R_d)^\top$ be the vector of excess returns on $d$ risky assets, with expected return $\mu = \mathbb{E}[R]$ and covariance matrix $\Sigma$. Let $w \in \mathbb{R}^d$ be the portfolio weight vector.
+
+The portfolio return is $R_p = w^\top R$, with
+$$\mathbb{E}[R_p] = w^\top \mu, \quad \operatorname{Var}(R_p) = w^\top \Sigma w.$$
+
+The \hldef{Markowitz mean-variance optimization problem} minimizes portfolio variance for a given target return $\mu^*$:
+$$\hlin{\min_{w \in \mathbb{R}^d} w^\top \Sigma w \quad \text{subject to } w^\top \mu = \mu^*, \; \sum_{i=1}^d w_i = 1}.$$
+
+The set of solutions forms the \hldef{efficient frontier} in $(\sigma_p, \mathbb{E}[R_p])$-space. The \hldef{minimum variance portfolio} has weights
+$$w_{\text{mv}} = \frac{\Sigma^{-1}\mathbf{1}}{\mathbf{1}^\top \Sigma^{-1}\mathbf{1}},$$
+where $\mathbf{1}$ is the vector of ones.
+
+When a risk-free asset with rate $r_f$ exists, the \hldef{tangency portfolio} (market portfolio) has weights
+$$w_{\text{tan}} = \frac{\Sigma^{-1}(\mu - r_f\mathbf{1})}{\mathbf{1}^\top \Sigma^{-1}(\mu - r_f\mathbf{1})},$$
+and the capital market line gives the optimal risk-return tradeoff.
+\end{definition}

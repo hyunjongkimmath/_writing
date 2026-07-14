@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+    Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. Let $S \subseteq X$. Let $f: S \to Y$ be a function. Let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$.
+
+    We say that the \hldef{limit of $f$ as $x$ approaches $p$ is $L$}, written
+    $$\hlin{\lim_{x \to p} f(x) = L}$$
+    or
+    $$\hlin{f(x) \to L \text{ as } x \to p}$$
+    if the following equivalent conditions hold:
+    \begin{enumerate}
+        \item for every neighborhood $V$ of $L$ in $Y$, there exists an open neighborhood $U$ of $p$ in $S$ such that $f( U \setminus \{p\}) \subseteq V$.
+        \item for every open neighborhood $V$ of $L$ in $Y$, there exists a neighborhood $U$ of $p$ in $S$ such that $f( U \setminus \{p\}) \subseteq V$.
+    \end{enumerate}
+    If such an $L$ exists, then we say that \hldef{$f$ has a limit at $p$}. Although the limit $L$ may not generally be unique, we still may write \hl{$\lim_{x \to p} f(x)$} for a limit.
+\end{definition}

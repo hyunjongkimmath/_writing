@@ -1,0 +1,12 @@
+\begin{definition}[Wildly ramified étale algebra over a discrete valuation ring] \label{definition:wildly_ramified_etale_algebra_over_a_dvr}
+\TODO{AI generated, verify}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{discrete valuation ring (DVR)} with field of fractions $K$, maximal ideal $\mathfrak{m}$, and residue field $k = R/\mathfrak{m}$ of characteristic $p > 0$. Let $L$ be an \CrefAndHyperrefIfExist{definition:etale_algebra_over_a_commutative_ring}{étale $K$-algebra}.
+
+\textbf{(Galois case.)} If $R$ is strictly local, then $L$ is a finite product of fields $L = \prod_i L_i$, where each $L_i$ is a finite field extension of $K$. We say that $L$ is \hldef{wildly ramified over $R$} if there exists some $i$ such that $p \mid [L_i : K]$. Equivalently, $L$ is not \CrefAndHyperref{definition:tamely_ramified_etale_algebra_over_a_dvr}{tamely ramified over $R$}.
+
+\textbf{(General case.)} For arbitrary $R$, we say that $L$ is \hldef{wildly ramified over $R$} if the following condition holds: let $\bar{R}$ be a strict localization of $R$ (in the sense of \CrefAndHyperrefIfExist{definition:strict_localization_of_a_local_ring}{strict localization}), $\bar{K}$ its field of fractions, and $\bar{L} = L \otimes_K \bar{K}$. Then $\bar{L}$ is wildly ramified over $\bar{R}$ in the sense of the Galois case above.
+
+Equivalently (by reduction to the strictly local case), $L$ is wildly ramified over $R$ if and only if there exists a geometric point $\bar{s}$ of $\Spec(R)$ such that the base change of $L$ to the strict henselization $R^{sh}$ at $\bar{s}$ contains a field factor whose degree over the fraction field of $R^{sh}$ is divisible by $p$.
+
+\textbf{(Relation to wild inertia.)} In the strictly local Galois case, $L$ is wildly ramified over $R$ if and only if the \CrefAndHyperref{definition:wild_inertia_group_of_a_finite_galois_extension_of_valuation_fields}{wild inertia group} $P_w$ of the Galois closure of $L/K$ is non-trivial.
+\end{definition}

@@ -1,0 +1,10 @@
+\begin{theorem}[Rank--Nullity Theorem] \label{theorem:rank_nullity_theorem_for_finite_dimensional_vector_spaces}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Let $V$ and $W$ be \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector spaces}, with $\dim_F(V) < \infty$. Let $T: V \to W$ be an \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{linear map}.
+
+    Then
+    $$\hlin{\dim_F(\ker(T)) + \dim_F(\operatorname{im}(T)) = \dim_F(V)},$$
+    or equivalently, $\operatorname{nullity}(T) + \operatorname{rank}(T) = \dim_F(V)$.
+
+\TextIfExists{definition:short_exact_sequence_in_an_additive_category}{This is the vector-space special case of the additivity of dimension in short exact sequences: if $0 \to \ker(T) \to V \to \operatorname{im}(T) \to 0$ is a \Cref{definition:short_exact_sequence_in_an_additive_category}, then $\dim(V) = \dim(\ker(T)) + \dim(\operatorname{im}(T))$.}
+\TODO{AI generated, verify}
+\end{theorem}

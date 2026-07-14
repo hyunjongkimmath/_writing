@@ -1,0 +1,8 @@
+\begin{definition}[Multivariate normal (Gaussian) distribution on Euclidean space] \label{definition:multivariate_normal_gaussian_distribution_on_euclidean_space}
+\TODO{AI generated, verify}
+Let $n \in \mathbb{N}_{\geq 1}$, let $\mu \in \mathbb{R}^n$, and let $\Sigma$ be an $n \times n$ symmetric positive-semidefinite matrix. A random vector $X: \Omega \to \mathbb{R}^n$ on a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space} has the \hldef{multivariate normal (Gaussian) distribution with mean $\mu$ and covariance matrix $\Sigma$} (denoted \hl{$\mathcal{N}_n(\mu, \Sigma)$}) if for every Borel set $A \subseteq \mathbb{R}^n$, its \CrefAndHyperrefIfExist{definition:distribution_of_a_random_vector}{distribution} is the measure
+$$\hlin{\mu_X(A) = \int_A \frac{1}{(2\pi)^{n/2} \det(\Sigma)^{1/2}} e^{-\frac{1}{2}(x - \mu)^\top \Sigma^{-1} (x - \mu)} \, dx}$$
+when $\Sigma$ is positive-definite. When $\Sigma$ is singular, the distribution is defined as the weak limit of distributions with nonsingular covariance matrices converging to $\Sigma$.
+
+The \CrefAndHyperrefIfExist{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expectation} is $\mathbb{E}[X] = \mu$, and the \CrefAndHyperrefIfExist{definition:variance_and_covariance}{covariance matrix} is $\operatorname{Cov}(X) = \Sigma$.
+\end{definition}

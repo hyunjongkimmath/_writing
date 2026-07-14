@@ -1,37 +1,85 @@
-\begin{theorem}[Fubini Theorem for Colimits and Limtis] \label{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits}
+% \begin{theorem}[Fubini Theorem for Colimits and Limtis] \label{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits}
+%     Let $\mathcal{C}$ be a category and let $I$ and $J$ be small categories. Let $D: I \times J \to \mathcal{C}$ be a bifunctor. 
+    
+%     \begin{enumerate}
+%         \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist in $\calC$:
+%         \begin{itemize}
+%             \item for every object $i \in I$, $\varinjlim_{j \in J} D(i, j)$
+%             \item $\varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right)$
+%             \item for every object $j \in J$, $\varinjlim_{i \in I} D(i, j)$
+%             \item $\varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right)$.
+%         \end{itemize}
+%         Then $\varinjlim_{(i, j) \in I \times J} D(i, j)$ exists and there are canonical isomorphisms:
+%         $$
+%         \varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right) 
+%         \cong \varinjlim_{(i, j) \in I \times J} D(i, j) 
+%         \cong \varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right).
+%         $$
+
+%                 \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} exist in $\calC$:
+%         \begin{itemize}
+%             \item for every object $i \in I$, $\varprojlim_{j \in J} D(i, j)$
+%             \item $\varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right)$
+%             \item for every object $j \in J$, $\varprojlim_{i \in I} D(i, j)$
+%             \item $\varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right)$.
+%         \end{itemize}
+%         Then $\varprojlim_{(i, j) \in I \times J} D(i, j)$ exists and there are canonical isomorphisms:
+%         $$
+%         \varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right) 
+%         \cong \varprojlim_{(i, j) \in I \times J} D(i, j) 
+%         \cong \varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right).
+%         $$
+
+%     \end{enumerate}
+% \end{theorem}
+\begin{theorem}[Fubini Theorem for Colimits and Limits] \label{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits}
     Let $\mathcal{C}$ be a category and let $I$ and $J$ be small categories. Let $D: I \times J \to \mathcal{C}$ be a bifunctor. 
     
     \begin{enumerate}
-        \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist in $\calC$:
+        \item Assume the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimits} exist in $\calC$:
         \begin{itemize}
             \item for every object $i \in I$, $\varinjlim_{j \in J} D(i, j)$
-            \item $\varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right)$
-            \item for every object $j \in J$, $\varinjlim_{i \in I} D(i, j)$
-            \item $\varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right)$.
+            \item $\varinjlim_{(i, j) \in I \times J} D(i, j)$
+            \item $\varinjlim_{i \in I} (\varinjlim_{j \in J} D(i, j))$
         \end{itemize}
-        Then there is a canonical isomorphism:
+        There is a canonical isomorphism:
         $$
-        \varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right) 
-        \cong \varinjlim_{(i, j) \in I \times J} D(i, j) 
-        \cong \varinjlim_{j \in J} \left( \varinjlim_{i \in I} D(i, j) \right).
+        \varinjlim_{i \in I} \left( \varinjlim_{j \in J} D(i, j) \right) \cong \varinjlim_{(i, j) \in I \times J} D(i, j).
         $$
 
-                \item Assume that the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} exist in $\calC$:
+        \item Assume the following \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limits} exist in $\calC$:
         \begin{itemize}
             \item for every object $i \in I$, $\varprojlim_{j \in J} D(i, j)$
-            \item $\varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right)$
-            \item for every object $j \in J$, $\varprojlim_{i \in I} D(i, j)$
-            \item $\varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right)$.
+            \item $\varprojlim_{(i, j) \in I \times J} D(i, j)$
+            \item $\varprojlim_{i \in I} (\varprojlim_{j \in J} D(i, j))$
         \end{itemize}
-        Then there is a canonical isomorphism:
+        There is a canonical isomorphism:
         $$
-        \varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right) 
-        \cong \varprojlim_{(i, j) \in I \times J} D(i, j) 
-        \cong \varprojlim_{j \in J} \left( \varprojlim_{i \in I} D(i, j) \right).
+        \varprojlim_{i \in I} \left( \varprojlim_{j \in J} D(i, j) \right) \cong \varprojlim_{(i, j) \in I \times J} D(i, j).
         $$
-
     \end{enumerate}
 \end{theorem}
 \begin{remark}
-    These results assert that the colimit functor $\operatorname{colim}: \mathcal{C}^{I \times J} \to \mathcal{C}$ (assuming $\mathcal{C}$ is cocomplete) is isomorphic to the composition of partial colimit functors $\operatorname{colim}_I \circ \operatorname{colim}_J$ and $\operatorname{colim}_J \circ \operatorname{colim}_I$.
+    These results assert that the \CrefAndHyperrefIfExist{theorem:limits_and_colimits_as_functors_from_functor_category_to_value_category}{colimit functor} $\operatorname{colim}: \mathcal{C}^{I \times J} \to \mathcal{C}$ (assuming $\mathcal{C}$ is cocomplete) is isomorphic to the composition of partial colimit functors $\operatorname{colim}_I \circ \operatorname{colim}_J$ and $\operatorname{colim}_J \circ \operatorname{colim}_I$.
 \end{remark}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the colimit version. The limit version follows dually.
+
+    Let $L = \varprojlim_{(i, j) \in I \times J} D(i, j)$ denote the limit over the product category. We want to show that $L' = \varprojlim_{i \in I} (\varprojlim_{j \in J} D(i, j))$ is isomorphic to $L$.
+
+    The limit $L$ comes with canonical projections $\pi_{i,j} : L \to D(i, j)$ for every pair $(i, j)$.
+    
+    \begin{enumerate}
+        \item \textbf{Constructing a map $\phi: L \to L'$:}
+        For a fixed $i \in I$, the collection of projections $\{\pi_{i,j} : L \to D(i, j)\}_{j \in J}$ forms a cone over the diagram $D(i, -)$. By the universal property of $L_i = \varprojlim_{j \in J} D(i, j)$, there exists a unique morphism $\alpha_i : L \to L_i$ such that for all $j \in J$, the composition $L \xrightarrow{\alpha_i} L_i \to D(i, j)$ is $\pi_{i,j}$.
+        
+        The collection $\{\alpha_i : L \to L_i\}_{i \in I}$ now forms a cone over the diagram $i \mapsto L_i$. By the universal property of $L' = \varprojlim_{i \in I} L_i$, there exists a unique morphism $\phi: L \to L'$ such that for all $i \in I$, the composition $L \xrightarrow{\phi} L' \to L_i$ is $\alpha_i$.
+
+        \item \textbf{Constructing a map $\psi: L' \to L$:}
+        Let $p_i : L' \to L_i$ be the projection from the limit $L'$, and $q_{i,j} : L_i \to D(i, j)$ be the projection from the limit $L_i$. The composition $q_{i,j} \circ p_i : L' \to D(i, j)$ constitutes a cone over the diagram $D$ indexed by $I \times J$ (i.e., for any morphism $(u, v) : (i, j) \to (i', j')$, the corresponding diagrams commute). By the universal property of $L = \varprojlim_{I \times J} D$, there exists a unique morphism $\psi: L' \to L$ such that $\pi_{i,j} \circ \psi = q_{i,j} \circ p_i$.
+
+        \item \textbf{Verification:}
+        One verifies that $\psi \circ \phi = \text{id}_L$ and $\phi \circ \psi = \text{id}_{L'}$ by checking that these compositions induce the identity on the projections $\pi_{i,j}$ and $p_i$ respectively, invoking the uniqueness part of the universal properties.
+    \end{enumerate}
+\end{proof}

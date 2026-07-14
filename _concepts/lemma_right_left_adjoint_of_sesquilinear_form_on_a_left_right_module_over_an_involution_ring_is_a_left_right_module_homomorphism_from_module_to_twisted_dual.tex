@@ -1,0 +1,27 @@
+\begin{lemma} \label{lemma:right_left_adjoint_of_sesquilinear_form_on_a_left_right_module_over_an_involution_ring_is_a_left_right_module_homomorphism_from_module_to_twisted_dual}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring}, and let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left/right $A$-module}. Let $b: M \times M \to A$ be a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form}
+    \begin{enumerate}
+        \item Suppose that $M$ is a left $A$-module. The \CrefAndHyperrefIfExist{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{right adjoint map} $\widehat{b}_r$ is indeed a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $A$-module homomorphism}
+        $$M \to M^* = \Hom_{{}_{A}\Mod}(M,A)_\sigma.$$
+        \CrefIfExists{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}
+
+        \item Suppose that $M$ is a right $A$-module. The \CrefAndHyperrefIfExist{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{left adjoint map} $\widehat{b}_l$ is indeed a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $A$-module homomorphism}
+        $$M \to M^* = \Hom_{\Mod_{A}}(M,A)_\sigma.$$
+        \CrefIfExists{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+    \item Suppose that $M$ is a left $A$-module. For all $v \in M$, the map 
+    $$\widehat{b}_r(v) = b(-,v): u \mapsto b(u,v).$$
+    is a left $A$-linear map because $b$ is assumed to be left $A$-linear in the first argument. For all $v \in M$ and $a \in A$, and regarding $\widehat{b}_r(v)$ as an element of $M^*$ with its left $A$-module structure, we have 
+    $$\widehat{b}_r(av)(u) = b(u,av) = b(u, v)\cdot \overline{a} = (a \cdot \widehat{b}_r(v))(u).$$
+    Therefore, $\widehat{b}_r$ is indeed a left $A$-module homomorphism.
+
+    \item We proceed symmetrically. Suppose that $M$ is a right $A$-module. For all $u \in M$, the map 
+    $$\widehat{b}_l(u) = b(u,-): v \mapsto b(u,v).$$
+    is a right $A$-linear map because $b$ is assumed to be right $A$-linear in the second argument. For all $u \in M$ and $a \in A$, and regarding $\widehat{b}_l(u)$ as an element of $M^*$ with its right $A$-module structure, we have 
+    $$\widehat{b}_l(ua)(v) = b(ua,v) = \overline{a} \cdot b(u, v) = (\widehat{b}_l(u) \cdot a)(v).$$
+    Therefore, $\widehat{b}_l$ is indeed a right $A$-module homomorphism.
+\end{enumerate}
+\end{proof}

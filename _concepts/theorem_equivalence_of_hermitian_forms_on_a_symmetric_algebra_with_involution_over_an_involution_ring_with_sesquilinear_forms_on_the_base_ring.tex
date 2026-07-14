@@ -1,0 +1,99 @@
+\begin{theorem} \label{theorem:equivalence_of_hermitian_forms_on_a_symmetric_algebra_with_involution_over_an_involution_ring_with_sesquilinear_forms_on_the_base_ring}
+    \TODO{I don't think symplectic form is the right thing --- should be some type of Hermitian form over $A$ that is "compatible" with $A'$ or which "admits" $A'$}
+
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring}. Let $A'$ be a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring_with_involution}{symmetric $A$-algebra with involution}. Write $\tau \in A^\vee = \Hom_R(A,R)$ for \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_rnig}{symmetric trace} with respect to the chosen symmetrical duality $\psi: A \to A^\vee$; it is an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} by definition. Let $\varepsilon \in Z(A')$\CrefIfExists{definition:center_of_a_ring} such that $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+
+
+%    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. 
+   
+%    Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} of $\eta$ such that $(A',\tau)$ is a \CrefAndHyperrefIfExist{definition:perfect_trace_duality_for_a_morphism_of_involution_rings}{perfect trace duality}. Let $\varepsilon \in Z(A')$\CrefIfExists{definition:center_of_a_ring} such that $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+
+   Write $\calH_{A'}^\varepsilon$ for the \CrefAndHyperrefIfExist{definition:category_of_modules_with_varepsilon_hermitian_forms_over_a_ring_with_involution}{category of modules over $A'$ with $\varepsilon$-Hermitian forms}. 
+   \begin{enumerate}
+    \item Suppose that there exists $u \in A$ such that $\tau(\varepsilon \cdot \overline{x}) = u \cdot \tau(x)$ for all $x \in A'$. 
+
+    Write $\calS_{A}^{\text{comp}}(\eta)$ for the category of modules over $A'$ with sesquilinear forms $\omega: M \times M \to A$ over $A$
+    \begin{itemize}
+        \item such that 
+        $$\omega(m,n) = u \cdot \omega(n,m)$$ for all $m,n \in M$
+        and 
+        \item that are compatible with $A'$ in the sense that
+        $$\omega(m \cdot a', n) = \omega(m, n \cdot \overline{a'})$$
+        for all $a' \in A'$ and $m,n \in M$.
+    \end{itemize}
+    There is an equivalence
+    $$\calH_{A'}^\varepsilon \xrightarrow{\sim} \calS_{A}^{\text{comp}}(\eta), \quad H \mapsto \tau \circ H.$$
+
+    \TODO{comment on nondegeneracy, fintely generated projectiveness}
+    This equivalence restricts to the subcategory of $\calH_{A'}^\varepsilon(\tau)$ of \CrefAndHyperrefIfExist{definition:nondegenerate_nonsingular_tau_varepsilon_hermitian_form_for_an_involution_trace_for_a_morphism_of_involution_rings}{nondegenerate} $\varepsilon-\tau$-Hermitian forms. 
+
+
+    \item Suppose that there exists $u \in A$ such that $\tau(\varepsilon \cdot x) = u \cdot \tau(x)$ for all $x \in A'$. 
+    Write $\calS_{A}^{\text{comp}}(\eta)$ for the category of modules over $A'$ with \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear forms} $\omega: M \times M \to A$ over $A$
+    \begin{itemize}
+        \item such that 
+        $$\omega(m,n) = u \cdot \overline{\omega(n,m)}$$ for all $m,n \in M$ (note that $u \cdot \overline{u} = 1$ by \Cref{lemma:basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution}, so if $u \in Z(A)$, then $\omega$ is \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$u$-Hermitian} over $A$)
+        and 
+        \item that are compatible with $A'$ in the sense that
+        $$\omega(m \cdot a', n) = \omega(m, n \cdot \overline{a'})$$
+        for all $a' \in A'$ and $m,n \in M$.
+    \end{itemize}
+
+    There is an equivalence
+    $$\calH_{A'}^\varepsilon \xrightarrow{\sim} \calS_{A}^{\text{comp}}(\eta), \quad \tau \circ H.$$
+    This equivalence restricts to the subcategory of $\calH_{A'}^\varepsilon(\tau)$ of \CrefAndHyperrefIfExist{definition:nondegenerate_nonsingular_tau_varepsilon_hermitian_form_for_an_involution_trace_for_a_morphism_of_involution_rings}{nondegenerate} $\varepsilon$-$\tau$-Hermitian forms. 
+   \end{enumerate}
+
+   \TODO{factor out the notion of "compatible" as its own definition}
+
+   \TODO{prove}
+\end{theorem}
+\begin{proof}
+    Given $(M,H) \in \calH_{A'}^{\varepsilon}(\tau)$, let $\omega_H$ be the form $\tau \circ H: M \times M \to A$. By \Cref{lemma:symmetric_self_duality_on_a_ring_sends_center_elements_to_trace_functionals}, the symmetric  trace $\tau = \psi(1)$ has the \CrefAndHyperrefIfExist{definition:trace_property_for_a_function_on_a_ring}{trace property}. Therefore, $\omega_H$ satisfies 
+    $$\omega_H(ma,n) = \omega_H(m, n\overline{a})$$
+    for all $a \in A'$ and $m,n \in M$ by \Cref{lemma:sesquilinear_form_passes_scalars_for_algebra_with_involution}. Moreover, $\omega_H(n,m) = u \cdot \omega_H(m,n)$ for all $n,m \in M$ by \Cref{lemma:composition_of_involution_trace_and_hermitian_form_for_a_homomorphism_of_rings_with_involution_is_symmetric_symplectic_or_hermitian_like}. Therefore, we indeed have a functor in the forward direction. 
+
+    Given $(M,\omega) \in \calS_A^{\text{comp}}(\eta)$, and for all $m,n \in M$, define $\phi(m,n) \in \Hom_A(A', A) = (A')^\vee$ by $\phi(m,n)(a) = \omega(ma, n)$\CrefIfExists{definition:dual_of_a_left_right_two_sided_module}. Writing 
+    $$\widehat{t}_{A'/A}: A' \to (A')^* \cong \overline{(A')^\vee}$$
+    \CrefIfExists{definition:opposite_module_of_a_module_over_a_ring_with_involution}
+    \CrefIfExists{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}
+    for the (left) \CrefAndHyperrefIfExist{definition:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{adjoint map} of the $1$-Hermitian form $t_{A'/A}: A' \times A' \to A$ given by the involution trace $\tau$, define  
+    $$H_\omega(m,n) = \widehat{t}_{A'/A}^{-1}(\phi(m,n)).$$
+    We show that it is \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian}. 
+
+    For all $m_1,m_2,n \in M$ and $a \in M$, we have 
+    \begin{align*}
+    \widehat{t}_{A'/A} (H_\omega(m_1+m_2,n))(a) &= \phi(m_1+m_2,n)(a) =\omega((m_1+m_2)a, n) = \omega(m_1a, n) + \omega(m_2 a, n) \\
+    &= \widehat{t}_{A'/A} (H_\omega(m_1, n)) (a) + \widehat{t}_{A'/A} (H_\omega(m_2, n)) (a), 
+    \end{align*}
+    so 
+    $$H_\omega(m_1+m_2,n) = H_\omega(m_1, n) + H_\omega(m_2, n),$$
+    i.e. $H$ is additive in the first argument. Similarly, $H$ is additive in the second argument, so it is bi-additive. For all $m,n \in M$ and $a_1,a_2,b \in A'$, we have 
+    \begin{align*}
+        \widehat{t}_{A'/A}(H_\omega(m a_1, n a_2))(b)  &= \phi(m a_1, na_2)(b) = \omega(ma_1 b, na_2) = \omega(m (a_1 b \overline{a}_2), n) \\
+        &= \phi(m,n)(a_1 b \overline{a}_2) \\
+        &= (\overline{a}_1 \phi(m,n)a_2)(b) \\
+        &= \widehat{t}_{A'/A}(\overline{a}_1 H_\omega(m, n) a_2)(b),
+    \end{align*}
+    so $H_\omega$ is sesquilinear. For all $m,n \in M$, we also have 
+    \begin{align*}
+    \widehat{t}_{A'/A} (H_\omega(n,m))(b) &= \omega(nb,m) = u \cdot \omega(m,nb) = u \cdot \omega(m \cdot \overline{b}, n) = u \cdot \phi(m,n)(\overline{b}) \\
+    &= u \cdot \tau(H_\omega(m,n) \cdot \overline{\overline{b}}) = u \cdot \tau(H_\omega(m,n) \cdot b) \\
+    \end{align*}
+    note that we used above that $\widehat{t}_{A'/A}(H_\omega(m,n))(b) = \phi(m,n)(b) = \tau(H_\omega(m,n) \cdot \overline{b})$. using the assumption $\tau(\varepsilon \cdot \overline{x}) = u \cdot \tau(x)$, we obtain
+    \begin{align*}
+    u \cdot \tau(H_\omega(m,n) \cdot b) = \tau(\varepsilon \cdot \overline{H_\omega(n,m) \cdot b}) = \tau(\varepsilon \cdot \overline{b} \cdot \overline{H_\omega(m,n)}). 
+    \end{align*}
+    By the trace property $\tau(xy) = \tau(yx)$, this equals 
+    $$\tau(\overline{H_\omega(m,n)} \cdot \varepsilon \cdot \overline{b}) = \widehat{t}_{A'/A}(\varepsilon \cdot \overline{H_\omega(m,n)})(b).$$
+    Therefore, $H_\omega$ is $\varepsilon$-Hermitian. We thus have a functor in the backward direction.
+
+    To see that these functors are natural inverses, note that for $(M,H) \in \calH_{A'}^\varepsilon$, the adjoint definition $\phi(m,n)(a) = \omega_H(m,n) = \tau(H(ma,n))$ implies that $H_{\omega_H}(m,n) = H(m,n)$ by the uniqueness of the adjoint map $\overline{t}_{A'/A}$. Conversely, for $(M,\omega) \in \calS_A^{\text{comp}}$, evaluation of the adjoint at the identity $a = 1$ yields $\omega(m,n) = \tau(H_\omega(m,n))$. 
+    \TODO{prove that nondegenerate things are taken to nondegenerate things}
+
+    % Since the map
+    % $$\Phi: A' \to (A')^\vee = \Hom_{\Mod_A}(A',A), \quad b \mapsto (\lambda \mapsto \tau(b \cdot \overline{\lambda}))$$
+    % is a \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetric self-dual map}
+    
+    % $\tau$ is \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetrically self dual}, it has the \CrefAndHyperrefIfExist{definition:trace_property_for_a_function_on_a_ring}{trace property} by \Cref{lemma:symmetric_self_duality_on_a_ring_sends_center_elements_to_trace_functionals}.
+\end{proof}

@@ -1,0 +1,9 @@
+\begin{definition}[Discrete-time Markov chain on a countable state space] \label{definition:discrete_time_markov_chain_on_a_countable_state_space}
+\TODO{AI generated, verify}
+Let $(\Omega, (\mathcal{F}_n)_{n \geq 0}, P)$ be a \CrefAndHyperrefIfExist{definition:filtration_of_sigma_algebras_on_a_probability_space}{filtered probability space}. Let $S$ be a countable set.
+
+A sequence of $S$-valued random variables $\{X_n\}_{n \geq 0}$ adapted to $(\mathcal{F}_n)_{n \geq 0}$ is called a \hldef{discrete-time Markov chain on the state space $S$} if for all $n \geq 0$ and all states $i, j \in S$,
+$$P(X_{n+1} = j \mid X_0, X_1, \dots, X_n = i) = P(X_{n+1} = j \mid X_n = i) \quad \text{a.s.}$$
+
+The function $p_{ij}^{(n)} = P(X_{n+m} = j \mid X_m = i)$ is called the \hldef{$n$-step transition probability from $i$ to $j$}. When $p_{ij}^{(1)}$ does not depend on $m$, the chain has \hldef{time-homogeneous transitions}, and $P = (p_{ij})_{i,j \in S}$ is called the \hldef{transition matrix of the Markov chain}.
+\end{definition}

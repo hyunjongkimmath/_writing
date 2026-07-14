@@ -1,0 +1,15 @@
+\begin{definition}[Moment generating function of a random variable] \label{definition:moment_generating_function_of_a_random_variable}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X: \Omega \to \mathbb{R}$ be a real-valued random variable.
+
+The \hldef{moment generating function of $X$}, denoted \hl{$M_X$}, is the function $M_X: \mathbb{R} \to [0, \infty]$ defined by
+$$\hlin{M_X(t) = \mathbb{E}\left[e^{tX}\right]}$$
+for each $t \in \mathbb{R}$, whenever the expectation exists.
+
+If $M_X(t)$ is finite for all $t$ in an open neighborhood of $0$, then $X$ has moments of all orders and for each $n \geq 1$,
+$$\mathbb{E}[X^n] = M_X^{(n)}(0).$$
+
+The \hldef{cumulant generating function of $X$}, denoted \hl{$K_X$}, is defined as
+$$\hlin{K_X(t) = \log M_X(t)}$$
+on the domain where $M_X(t)$ is finite. The $n$-th derivative $K_X^{(n)}(0)$ gives the $n$-th cumulant of $X$.
+\end{definition}

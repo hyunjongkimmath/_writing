@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:standard_order_on_ring_of_integers}
+Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:ring_of_integers}{ring of integers}, constructed as equivalence classes $[(a,b)]$ of pairs $(a,b) \in \bbN \times \bbN$ under the relation $(a,b) \sim (c,d) \iff a + d = b + c$.
+
+Define a binary relation \hl{$\le$} on $\bbZ$ by
+$$\hlin{[(a,b)] \le [(c,d)] \iff b + c \geq a + d,}$$
+where the inequality $b + c \geq a + d$ is with respect to the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$}.
+
+This relation is well-defined: if $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$, then $a + b' = a' + b$ and $c + d' = c' + d$. Adding these equations gives
+$$(b + c) + (b' + d') = (a + d) + (a' + d'),$$
+so $b + c \geq a + d \iff b' + c' \geq a' + d'$ by cancellativity of addition on $\bbN$. Hence the truth value of $[(a,b)] \le [(c,d)]$ is independent of the chosen representatives.
+
+The \hldef{standard order on $\bbZ$} is the pair $(\bbZ, \le)$. We write \hl{$x < y$} if $x \le y$ and $x \neq y$, and \hl{$y > x$} (resp. \hl{$y \ge x$}) if $x < y$ (resp. $x \le y$). The ring of integers becomes a \CrefAndHyperrefIfExist{definition:ordered_ring}{totally ordered ring} under this standard order\CrefIfExists{proposition:integers_form_totally_ordered_ring}.
+\end{definition}

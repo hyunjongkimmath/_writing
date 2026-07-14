@@ -1,0 +1,11 @@
+\begin{proposition} \label{proposition:continuity_of_pointwise_scalar_multiple_of_continuous_real_valued_function}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers} equipped with its \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard topology}. Let $f : X \to \bbR$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} function and let $c \in \bbR$. The pointwise scalar multiple $c f : X \to \bbR$, defined by $(c f)(x) = c \cdot f(x)$, is continuous.
+    \TODO{define the pointwise scalar multiple of a general function valued in a semiring}
+\end{proposition}
+\begin{proof}
+    Let $a \in X$. Since $f$ is continuous at $a$, we have
+    $$\lim_{x \to a} f(x) = f(a)$$
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_equivalent_to_topological_definition_and_limit_at_accumulation_point}. By \Cref{proposition:limit_algebra_for_real_valued_functions}, the limit of a scalar multiple is the scalar multiple of the limit, so
+    $$\lim_{x \to a} (c f)(x) = c \cdot \lim_{x \to a} f(x) = c \cdot f(a) = (c f)(a).$$
+    Thus $c f$ is continuous at $a$ \CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_equivalent_to_topological_definition_and_limit_at_accumulation_point}. Since $a$ was arbitrary, $c f$ is continuous \CrefIfExists{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}.
+\end{proof}

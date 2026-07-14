@@ -1,0 +1,20 @@
+\begin{definition}[Heston stochastic volatility model for asset prices] \label{definition:heston_stochastic_volatility_model_for_asset_prices}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, \mathbb{Q})$ be a filtered probability space under the risk-neutral measure supporting two correlated Brownian motions $W^S$ and $W^v$ with $d\langle W^S, W^v \rangle_t = \rho \, dt$, where $\rho \in [-1, 1]$.
+
+The Heston model specifies the stock price process $S$ and variance process $v$ by the coupled SDEs:
+$$\hlin{dS_t = r S_t \, dt + \sqrt{v_t} S_t \, dW^S_t},$$
+$$\hlin{dv_t = \kappa(\theta - v_t) \, dt + \xi\sqrt{v_t} \, dW^v_t},$$
+where:
+
+\begin{enumerate}
+    \item $\kappa > 0$ is the mean reversion speed of variance;
+    \item $\theta > 0$ is the long-run mean level of variance;
+    \item $\xi > 0$ is the volatility of variance (vol-of-vol);
+    \item $v_0 > 0$ is the initial variance.
+\end{enumerate}
+
+The Feller condition $2\kappa\theta \geq \xi^2$ ensures that $v_t$ remains strictly positive. When this condition fails, $v_t$ may hit zero, in which case the behavior at zero (reflecting or absorbing) must be specified.
+
+The model admits a semi-closed-form characteristic function for $\log S_T$, enabling option prices to be computed via Fourier inversion (Carr--Madan formula).
+\end{definition}

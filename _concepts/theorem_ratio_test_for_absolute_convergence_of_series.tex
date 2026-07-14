@@ -1,0 +1,29 @@
+\begin{theorem}[Ratio test for absolute convergence of series] \label{theorem:ratio_test_for_absolute_convergence_of_series}
+    \TODO{AI generated, verify}
+    Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} with $a_n \neq 0$ for all sufficiently large $n$. Suppose that the limit
+    $$L = \lim_{n \to \infty} \left| \frac{a_{n+1}}{a_n} \right|$$
+    exists in $\mathbb{R}_{\geq 0}$.
+
+    \begin{enumerate}
+        \item If $L < 1$, then the series $\sum_{n=1}^\infty a_n$ converges absolutely.
+        \item If $L > 1$, then the series $\sum_{n=1}^\infty a_n$ diverges (and in particular $a_n \not\to 0$).
+    \end{enumerate}
+    The case $L = 1$ is inconclusive.
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item Suppose $L < 1$. Choose a real number $r$ such that $L < r < 1$. By the definition of limit, there exists $N \in \mathbb{N}$ such that for all $n \geq N$,
+        $$\left| \frac{a_{n+1}}{a_n} \right| \leq r.$$
+
+        Iterating this inequality for any $k \geq 0$:
+        $$|a_{N+k}| \leq |a_N| \cdot r^k.$$
+
+        The series $\sum_{k=0}^\infty |a_N| r^k$ is a geometric series with common ratio $r < 1$, which converges to $\frac{|a_N|}{1-r}$. By the comparison test (\CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}), the tail $\sum_{n=N+1}^\infty |a_n|$ also converges. Adding finitely many terms does not affect convergence, so $\sum_{n=1}^\infty |a_n|$ converges. Hence the series converges absolutely.
+
+        \item Suppose $L > 1$. By the definition of limit, there exists $N$ such that for all $n \geq N$,
+        $$\left| \frac{a_{n+1}}{a_n} \right| > 1.$$
+
+        This implies $|a_{n+1}| > |a_n|$ for all $n \geq N$. Iterating, we obtain $|a_{N+k}| > |a_N| > 0$ for all $k \geq 0$. In particular, the sequence $(a_n)$ does not converge to zero. Since a necessary condition for series convergence is that its terms approach zero (the term test), the series $\sum_{n=1}^\infty a_n$ diverges.
+    \end{enumerate}
+\end{proof}

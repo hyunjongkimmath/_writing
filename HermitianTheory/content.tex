@@ -1,4 +1,4 @@
-%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
 \nocite{*}
 
 \begin{lemma} \label{lemma:hermitian_modules_over_product_of_involution_rings_split_along_involution_ring_factors}
@@ -53,8 +53,47 @@
 \subsubsection{Sesquilinear forms $M \times M \to A$ are equivalent to maps $M \to M^*$}
 
 \input{../_definitions/definition_adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
+\input{../_concepts/lemma_right_left_adjoint_of_sesquilinear_form_on_a_left_right_module_over_an_involution_ring_is_a_left_right_module_homomorphism_from_module_to_twisted_dual.tex}
 \input{../_definitions/definition_sesquilinear_form_associated_to_a_homomorphism_from_a_module_to_its_twisted_dual.tex}
+\begin{lemma} \label{lemma:sesquilinear_form_associated_to_a_homomorphsim_from_a_module_to_its_twisted_dual_is_indeeed_sesquilinear}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring}, and let $M$ be a \CrefAndHyperref{definition:module_of_a_ring}{left/right $A$-module}. 
+    Let $h: M \to M^*$ be a left/right $A$-module homomorphism where $M^*$ is the \CrefAndHyperref{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}{twisted dual module of $M$}. The \CrefAndHyperrefIfExist{definition:sesquilinear_form_associated_to_a_homomorphism_from_a_module_to_its_twisted_dual}{sesquilinear form $b_h$ associated to $h$} is indeed a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} over $A$.
+\end{lemma}
+\begin{proof}
+    Suppose that $M$ is a left $A$-module. Since $h$ is a left $A$-module homomorphism, $h(av) = a \cdot h(v)$ for all $a \in A$ and $v \in M$. Thus, 
+    $$b_h(u,av) = h(av)(u) = (ah(v))(u) = h(v)(u) \cdot \overline{a}$$
+    for all $u \in M$.
+    Moreover, for all $a \in A$ and $u \in M$, since $h(v) \in M^* = \Hom_{A}(M, A)_\sigma$ is a left $A$-module homomorphism, 
+    $$b_h(au,v) = h(v)(au) = a \cdot (h(v)(u)) = a \cdot b_h(u,v).$$
+    Therefore, $b_h$ is $A$-linear in the first argument and conjugate linear in the second.
+
+    Suppose that $M$ is a right $A$-module. Since $h$ is a right $A$-module homomorphism, $h(ua) = h(u) \cdot a$ for all $a \in A$ and $u \in M$. Thus, 
+    $$b_h(ua,v) = h(ua)(v) = (h(u)a)(v) = \overline{a} \cdot h(u)(v)$$
+    for all $u \in M$.
+    Moreover, for all $a \in A$ and $u \in M$, since $h(u) \in M^* = \Hom_{A}(M, A)_\sigma$ is a right $A$-module homomorphism, 
+    $$b_h(u,va) = h(u)(va) = (h(u)(v)) \cdot a =  b_h(u,v) \cdot a.$$
+    Therefore, $b_h$ is $A$-linear in the second argument and conjugate linear in the first.
+\end{proof}
 \input{../_concepts/lemma_sesquilinear_forms_on_modules_over_rings_with_involutions_correspond_to_morphisms_to_twisted_dual_module.tex}
+\begin{corollary} \label{corollary:seqsquilinear_forms_on_a_module_over_a_ring_with_involution_correspond_to_bimodule_maps_from_modules_tensored_by_opposites_to_ring}
+    Let $(A,\sigma)$ be a \CrefAndHyperref{definition:involution_on_a_ring}{ring with involution}. 
+    \begin{enumerate}
+        \item Let $M$ be a right $A$-module. There is a natural abelian group isomorphism
+        $$\Sesq_A(M) \cong \Hom_{A-A}(\overline{M} \otimes_{\bbZ} M, A)$$
+        \CrefIfExists{definition:opposite_module_of_a_module_over_a_ring_with_involution}\CrefIfExists{definition:tensor_product_of_bimodules_of_rings}\CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
+
+        \item Let $M$ be a left $A$-module. There is a natural abelian group isomorphism
+        $$\Sesq_A(M) \cong \Hom_{A-A}(M \otimes_{\bbZ} \overline{M}, A)$$
+        \CrefIfExists{definition:opposite_module_of_a_module_over_a_ring_with_involution}\CrefIfExists{definition:tensor_product_of_bimodules_of_rings}\CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}
+    \end{enumerate}
+\end{corollary}
+\begin{proof}
+    \begin{enumerate}
+        \item We use the isomorphism of \Cref{lemma:sesquilinear_forms_on_modules_over_rings_with_involutions_correspond_to_morphisms_to_twisted_dual_module} --- $\Sesq_A(M)$ is naturally isomorphic as a $Z(A)$-bimodule to $\Hom_{\bbZ-A}(M,M^*)$. Since $\overline{\cdot}$\CrefIfExists{definition:opposite_module_of_a_module_over_a_ring_with_involution} is an involutive functor, this abelian group is naturally isomorphic to $\Hom_{A-\bbZ}(\overline{M}, M^\vee) = \Hom_{A-\bbZ}(\overline{M}, \Hom_{\bbZ-A}(M,A))$. By the \CrefAndHyperrefIfExist{theorem:tensor_hom_adjunction_for_bimodules_of_rings}{tensor-hom adjunction}, this is naturally isomorphic to $\Hom_{A-A}(\overline{M} \otimes_{\bbZ} M, A)$ as desired.
+
+        \item This holds similarly.
+    \end{enumerate}
+\end{proof}
 \input{../_definitions/definition_conjugate_transpose_sesquilinear_form_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution.tex}
 \input{../_concepts/lemma_ad_of_conj_trans_of_sesq_form_over_module_on_a_involution_ring_is_composition_of_canonical_map_and_twisted_dual_of_adjoint.tex}
 
@@ -66,7 +105,90 @@
 \input{../_definitions/definition_form_and_operator_symmetrizer_maps_for_sesquilinear_forms_on_modules_over_rings_with_involutions.tex}
 \input{../_notations/notation_spaces_of_varepsilon_hermitian_forms_and_even_varepsilon_hermitian_forms_on_module_over_a_ring_with_involution.tex}
 
+\subsection{Matrix representations of Hermitian forms on free modules}
+
+\input{../_definitions/definition_similar_matrices_over_a_ring.tex}
+\input{../_definitions/definition_change_of_basis_matrix_for_a_free_module_over_a_ring.tex}
+
+\input{../_definitions/definition_conjugate_transpose_of_a_matrix_over_a_ring_with_involution.tex}
+\input{../_concepts/lemma_conjugate_transpose_of_product_of_matrices_over_ring_with_involution_is_anti_product_of_conjugate_transposes.tex}
+\input{../_definitions/definition_epsilon_hermitian_matrix_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution.tex}
+\input{../_concepts/lemma_matrix_of_a_varepsilon_hermitian_form_over_a_ring_with_involution_is_a_varepsilon_hermitian_matrix.tex}
+\input{../_concepts/lemma_hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector.tex}
+\input{../_concepts/lemma_hermitian_form_evaluates_by_coordinate_row_vectors.tex}
+\input{../_definitions/definition_epsilon_hermitian_form_induced_by_an_epsilon_hermitian_matrix.tex}
+\begin{lemma} \label{lemma:varepsilon_hermitian_form_induced_by_a_hermitian_matrix_over_a_ring_with_involution_is_a_hermitian_form}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, and let $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$.
+    Let $H \in M_n(A)$\CrefIfExists{definition:matrix_over_a_ring} be an \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian matrix} in the sense that
+    $$H = \overline{\varepsilon} \cdot H^*.$$
+    Let $M = A^n$ be the free (left/right) $A$-module of \CrefAndHyperrefIfExist{definition:row_vector_and_column_vector_over_a_ring}{column vectors} with standard basis $\mathcal{E} = (e_1,\ldots,e_n)$.
+
+    The \CrefAndHyperrefIfExist{definition:epsilon_hermitian_form_induced_by_an_epsilon_hermitian_matrix}{$\varepsilon$-Hermitian form $h_H$ induced by $H$} is indeed a \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} on $M$; in particular, 
+        $$h_H(u,v) = \varepsilon \cdot \overline{h_H(v,u)}$$
+    for all $u,v \in M$. 
+
+    % in the following sense:
+    % \begin{enumerate}
+    %     \item if we regard $M$ as a right $A$-module so that 
+    %     $$h_H(u,v) = u^* H v$$
+    %     and if $H$ is a $\varepsilon$-Hermitian matrix in the sense that
+    %     $$H^* = \overline{\varepsilon} \cdot H,$$
+    %     then 
+    %     $$h_H(u,v) = \varepsilon \cdot \overline{h_H(v,u)}$$
+    %     for all $u,v \in M$. 
+    %     \item if we regard $M$ as a left $A$-module so that 
+    %     $$h_H(u,v) = u^\top H \overline{v}$$
+    %     and if $H$ is a $\varepsilon$-Hermitian matrix in the sense that
+    %     $$H^* = \varepsilon \cdot H,$$
+    %     then 
+    %     $$h_H(u,v) = \varepsilon \cdot \overline{h_H(v,u)}$$
+    %     for all $u,v \in M$. 
+    % \end{enumerate}
+
+\end{lemma}
+\begin{proof}
+    Suppose that $M$ is a right $A$-module and hence $h_H$ is defined as 
+    $$h_H: M \times M \to A, \quad h_H(u,v) = u^* H v.$$
+    We show that $h_H$ is conjugate linear in the first variable and linear in the second --- given $a,b \in A$, we have 
+    \begin{align*}
+        h_H(ua, vb) = (ua)^* H (vb) = \overline{a} \cdot u^* H v \cdot b = \overline{a} \cdot h_H(u,v) \cdot b.
+    \end{align*}
+    Moreover, assuming that $H$ is $\varepsilon$-Hermitian in the sense that 
+    $$H^* = \overline{\varepsilon} H,$$
+    we have 
+    $$h_H(v,u) = v^* H u = (u^* H^* v)^*.$$
+    By \Cref{lemma:conjugate_transpose_of_product_of_matrices_over_ring_with_involution_is_anti_product_of_conjugate_transposes}, $(u^* H^* v)^* = v^* H u$, and since this is a $1 \times 1$ matrix, it equals its own transpose, so
+    $$\overline{u^* H^* v} = \overline{u^* \cdot (\overline{\varepsilon} H) \cdot v}  = \varepsilon \cdot \overline{u^*  H v} = \varepsilon \cdot \overline{h_H(u,v)}$$
+
+    Similarly, if $M$ is a left $A$-module, then $h_H$ is linear in the first variable and conjugate linear in the second. Moreover, assuming that $H$ is $\varepsilon$-Hermitian in the sense that 
+    $$H^* = \varepsilon H,$$
+    we have 
+    $$h_H(v,u) = v^\top H \overline{u} = (u^\top H^* \overline{v})^*.$$
+    As this is a $1 \times 1$ matrix, it equals its own transpose 
+    $$\overline{u^\top H^* \overline{v}} = \overline{u^\top \cdot (\overline{\varepsilon} H) \cdot \overline{v}}  = \varepsilon \cdot \overline{u^*  H v} = \varepsilon \cdot \overline{h_H(u,v)}$$
+\end{proof}
+
+\input{../_definitions/definition_star_congruence_of_matrices_over_a_ring_with_involution.tex}
+\begin{lemma} \label{lemma:star_conjugate_transpose_congruent_square_matrices_over_a_ring_with_involution_are_varepsilon_hermitian_if_and_only_if_the_other_is}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}.
+
+    Let $H,K \in M_n(A)$ be \CrefAndHyperrefIfExist{definition:star_congruence_of_matrices_over_a_ring_with_involution}{conjugate-transpose congruent}. If $H$ is \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian}, then so is $K$.
+\end{lemma}
+\begin{proof}
+    Say that $P \in \GL_n(A)$ satisfies $K = P^* H P$. We have that $H^* = \overline{\varepsilon} H$, so 
+    $$K^* = (P^* H P)^* = P^* H^* P = P^* (\overline{\varepsilon} H) P = \overline{\varepsilon} (P^* H P) = \overline{\varepsilon} K.$$
+\end{proof}
+
+\input{../_concepts/lemma_change_of_basis_for_matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution.tex}
+
+\input{../_definitions/definition_unitary_group_of_a_matrix_form_over_a_ring_with_involution.tex}
+
+\subsection{Sesquilinear and Hermitian modules and spaces}
+
 \input{../_definitions/definition_even_varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution.tex}
+
+\subsubsection{Sesquilinear and Hermitian modules}
 
 \subsection{Sesquilinear and Hermitian modules and spaces}
 
@@ -77,6 +199,18 @@
 \input{../_definitions/definition_varepsilon_hermitian_module_over_a_ring_with_involution.tex}
 
 \input{../_definitions/definition_category_of_varepsilon_hermitian_modules_over_a_ring_with_involution.tex}
+
+\subsubsection{Orthogonality in sesquilinear and Hermitian modules}
+
+\input{../_definitions/definition_isotropic_element_of_a_module_with_a_sesquliinear_form_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_isotropic_module_with_a_sesquilinear_form_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_anisotropic_module_with_a_sesquilinear_form_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_orthogonal_subset_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution.tex}
+\input{../_definitions/definition_totally_isotropic_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution.tex}
+
+\input{../_definitions/definition_orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution.tex}
+\input{../_concepts/lemma_left_right_orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_is_a_submodule.tex}
+\input{../_concepts/lemma_orthogonal_complement_of_a_submodule_of_a_module_with_a_varepsilon_hermitian_form_over_a_ring_with_involution_can_be_defined_either_using_the_left_or_right_side_of_the_form.tex}
 
 \subsubsection{Sesquilinear and Hermitian spaces}
 
@@ -123,10 +257,25 @@ If $M$ is a \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{p
 \subsection{Transfer of sesquilinear forms via a morphism of involution rings}
 
 \input{../_definitions/definition_scharlau_transfer_of_sesquilinear_forms_on_modules_under_involution_ring_homomorphism.tex}
+\begin{lemma} \label{lemma:scharlau_transfer_of_sesquilinear_forms_on_modules_under_involution_ring_homomorphism_is_indeed_an_additive_map_between_groups_of_sesquilinear_forms}
+    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. 
+    Given a (right) $A'$-module $M'$, write $M'_{(A)}$ for the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction} of $M'$ as a right $A$-module (via $\eta$). Let $\tau: A' \to A$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism of $A$-bimodules}.
+
+    The Scharlau transfer 
+    $$b' \mapsto (\tau(b'): (x,y) \mapsto \tau(b'(x,y)))$$
+    is indeed an additive map 
+    $$\tau: \Sesq_{A'}(M') \to \Sesq_A(M'_{(A)}).$$
+    (\Cref{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution})
+\end{lemma}
+\begin{proof}
+    For all $a_1,a_2 \in A$ and $m,n \in M'$, we have 
+    $$\tau(b')(m a_1,n a_2) = \tau(b'(m a_1,n a_2)) = \tau( \overline{a}_1 b'(m, n) a_2) = \overline{a}_1 \tau(b'(m,n)) a_2 = \overline{a}_1 \cdot \tau(b')(m,n) \cdot a_2,$$
+    Therefore, $\tau(b')$ is conjugate linear in the first argument and linear in the second. 
+\end{proof}
 
 \begin{lemma}[see {\cite[Chapter I, 7.2]{knus_qhfr}}]
     Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. 
-    Given a right $A'$-module $M'$, write $M'_{(A)}$ for the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction} of $M'$ as a right $A$-module (via $\eta$).Let $\tau: A' \to A$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism of $A$-bimodules} and assume that 
+    Given a right $A'$-module $M'$, write $M'_{(A)}$ for the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction} of $M'$ as a right $A$-module (via $\eta$). Let $\tau: A' \to A$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{morphism of $A$-bimodules} and assume that 
     $$\tau(\overline{a}) = \overline{\tau(a)}$$
     for all $a \in A'$
 
@@ -145,25 +294,92 @@ If $M$ is a \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{p
 
 
 \input{../_definitions/definition_involution_trace_map_for_a_morphism_of_involution_rings.tex}
-
 \input{../_concepts/proposition_involution_trace_for_a_fin_gen_proj_morphism_of_involution_rings_induces_scharlau_trace_on_nonsingular_hermitian_spaces.tex}
+
+\input{../_definitions/definition_perfect_trace_duality_for_a_morphism_of_involution_rings.tex}
+
+% \begin{lemma}
+%     \TODO{I don't think this is correct.}
+%    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} of $\eta$ such that $(A',\tau)$ is a \CrefAndHyperrefIfExist{definition:perfect_trace_duality_for_a_morphism_of_involution_rings}{perfect trace duality}.
+
+%    The map 
+%    $$\psi: A' \to \Hom_{{}_A \Mod_A}(A',A), \quad b \mapsto (\lambda \mapsto \tau(b \cdot \overline{\lambda})).$$
+%    is an isomorphism of $(A',A')$-bimodules if and only if $A'$ is \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetrically self-dual} over $A$ with respect to $\eta$. In other words, $\psi$ is an explicit symmetric self-dual map for $\eta$ constructed via $\tau$ in this case, and $\tau = \psi(1)$ is its symmetric trace.
+% \end{lemma}
+% \begin{proof}
+%     Clearly, if $\psi$ is an isomorphism of $(A',A')$-bimodules, then it is a symmetric self-dual map, then $A'$ is symmetrically self-dual over $A$. Conversely, suppose that some symmetric self-dual map 
+%     $$\psi_0: A' \to \Hom_{{}_A \Mod_A}(A',A)$$
+%     exists. We show that $\psi$ is an $(A',A')$-bimodule homomorphism, i.e. that $\psi(u \cdot b \cdot v) = u \cdot \psi(b) \cdot v$ for all $u,v,b \in A'$. We have  
+%     $$(\psi(ubv))(\lambda) = \tau(ubv\overline{\lambda})$$
+%     $$(u \cdot \psi(b) \cdot v)(\lambda) = \psi(b)(v \cdot \lambda \cdot u) = \tau(b \cdot \overline{v \cdot \lambda \cdot u}) = \tau(b \cdot \overline{u} \cdot \overline{\lambda} \cdot \overline{v})$$
+%     \Cref{lemma:symmetric_self_duality_on_a_ring_sends_center_elements_to_trace_functionals}
+% \end{proof}
+
+\input{../_concepts/lemma_sesquilinear_form_passes_scalars_for_algebra_with_involution.tex}
+\input{../_concepts/lemma_basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution.tex}
+\input{../_concepts/lemma_composition_of_involution_trace_and_hermitian_form_for_a_homomorphism_of_rings_with_involution_is_symmetric_symplectic_or_hermitian_like.tex}
+\input{../_concepts/lemma_composition_of_sesquilinear_form_over_ring_with_involution_by_function_to_base_ring_with_trace_property_is_compatible_with_scalars.tex}
 
 
 \subsection{Symmetric algebras with involution rings}
 
+\input{../_definitions/definition_left_right_frobenius_self_dual_ring_homomorphism.tex}
+
+\input{../_concepts/lemma_ring_homomorphism_is_left_right_frobenius_ring_homomorphism_iff_there_exists_a_homomorphism_from_the_target_to_the_source_ring_as_modules_such_that_biadditive_map_is_non_singular.tex}
 
 \input{../_definitions/definition_frobenius_algebra_over_a_ring.tex}
-\input{../_definitions/definition_symmetric_algebra_over_a_rnig.tex}
+\input{../_concepts/theorem_nakayama_automorphism_exists_for_a_frobenius_algebra_over_a_ring.tex}
+
+\input{../_concepts/theorem_finitely_generated_projective_algebra_over_a_ring_is_left_frobenius_if_and_only_if_right_frobenius.tex}
+
+\input{../_definitions/definition_symmetrically_self_dual_ring_over_a_ring.tex}
+\input{../_definitions/definition_trace_property_for_a_function_on_a_ring.tex}
+\input{../_concepts/lemma_symmetric_self_duality_on_a_ring_sends_center_elements_to_trace_functionals.tex}
+
+\input{../_definitions/definition_symmetric_algebra_over_a_ring.tex}
 
 \input{../_definitions/definition_symmetric_algebra_over_a_ring_with_involution.tex}
+
+\input{../_concepts/theorem_equivalence_of_hermitian_forms_on_a_symmetric_algebra_with_involution_over_an_involution_ring_with_sesquilinear_forms_on_the_base_ring.tex}
+
+
 
 \input{../_definitions/definition_group_ring_of_a_group_over_a_ring.tex}
 \input{../_definitions/definition_canonical_involution_on_a_group_ring_over_a_ring_with_involution.tex}
 
 \input{../_definitions/definition_augmentation_trace_on_a_group_ring_over_an_involution_ring.tex}
+\begin{proposition} \label{proposition:finite_etale_algebras_over_commutative_rings_are_symmetric_algebras}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. 
+    Any \CrefAndHyperrefIfExist{definition:finite_algebra_over_a_ring}{finite} \CrefAndHyperrefIfExist{definition:etale_algebra_over_a_commutative_ring}{\'etale} \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra} $A$ is a  \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring}{symmetric $R$-algebra} that is \CrefAndHyperrefIfExist{definition:finitely_generated_algebra_over_a_not_necessarily_commutative_ring}{finitely generated} and \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as an $R$-module. In particular, the relative trace map $\Tr_{A/R}: A \to R$ is a symmetric trace.
+\end{proposition}
+\begin{proof}
+    Since $A$ is a \CrefAndHyperrefIfExist{definition:finite_algebra_over_a_ring}{finite $R$-algebra}, $A$ is a finitely generated $R$-module by definition. Since $A$ is \'etale over $R$, it is flat over $R$. Since $A$ is also finitely generated over $R$, it is projective over $R$\CrefIfExists{proposition:finitely_generated_flat_module_over_commutative_ring_is_projective}. The \'etaleness of $A$ also implies that it is \CrefAndHyperrefIfExist{definition:separable_algebra_over_a_commutative_ring}{separable}\CrefIfExists{proposition:etale_algebra_over_commutative_ring_is_separable} and hence the bilinear form $A \times A \to R, (x,y) \mapsto \Tr_{A/T}(xy)$ is nonsingular. The map 
+    $$A \to A^\vee = \Hom_{R}(A,R), \quad x \mapsto (y \mapsto \Tr_{A/T}(xy))$$
+    is thus a \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetric self-dual map}, i.e. is an $A$-$A$-bimodule isomorphism \TODO{why}, so $A$ is a symmetric $R$-algebra as desired.
+    \TODO{relative trace map}
+    \TODO{nonsingular}
+\end{proof}
+
+\begin{proposition} \label{proposition:group_algebra_of_a_finite_group_over_a_commutative_ring_is_a_symmetric_algebra_with_symmetric_trace_given_by_the_augmentation_trace}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $G$ be a \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite} \CrefAndHyperrefIfExist{definition:group}{group}. 
+    The \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group algebra} $R[G]$ is a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring}{symmetric $R$-algebra}; the \CrefAndHyperrefIfExist{definition:augmentation_trace_on_a_group_ring_over_an_involution_ring}{augmentation trace} $\tau: R[G] \to R$ is a symmetric trace.
+\end{proposition}
+\begin{proof}
+    The map $R[G] \times R[G] \to R, \quad (x,y) \mapsto \tau(xy)$ is symmetric \TODO{}, and non-degenerate \TODO{make a lemma for this nonsingularity}. Thus, $R[G]$ is a symmetric $R$-algebra with symmetric trace $\tau$. 
+\end{proof}
+
+\begin{proposition} \label{proposition:group_algebra_of_a_finite_group_over_a_commutative_ring_is_a_symmetric_algebra_with_involution}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} (regarded as an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution ring} with the \CrefAndHyperrefIfExist{definition:trivial_involution_on_a_ring}{trivial involution}). Let $G$ be a \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite} \CrefAndHyperrefIfExist{definition:group}{group}. 
+    The \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group algebra} $R[G]$ is a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring_with_involution}{symmetric involution algebra} over $R$ with the \CrefAndHyperrefIfExist{definition:canonical_involution_on_a_group_ring_over_a_ring_with_involution}{canonical involution}; the \CrefAndHyperrefIfExist{definition:augmentation_trace_on_a_group_ring_over_an_involution_ring}{augmentation trace} $\tau: R[G] \to R$ is an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace}.
+\end{proposition}
+\begin{proof}
+    By \Cref{proposition:group_algebra_of_a_finite_group_over_a_commutative_ring_is_a_symmetric_algebra_with_symmetric_trace_given_by_the_augmentation_trace}, $R[G]$ is a symmetric $R$-algebra with $\tau$ as a \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetric trace}. It remains to show that $\tau$ is an involution trace. It is clearly an $R$-bimodule homomorphism, we have 
+    $$\tau\left(\overline{\sum_{g \in G} a_g g}\right) = \tau\left(\sum_{g \in G} a_g g^{-1}\right) = a_1 = \tau\left( \sum_{g \in G} a_g g \right),$$
+    (recall that $R$ is equipped with the trivial involution) and that $R[G] \times R[G] \to R, \quad (x,y) \mapsto \tau(xy)$ is nonsingular \TODO{}. Thus, $\tau$ is indeed an involution trace.
+\end{proof}
 
 \begin{example} \label{example:examples_of_symmetric_algebras_over_rings}
-   The following are examples of \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_rnig}{symmetric algebras}: 
+   The following are examples of \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring}{symmetric algebras}: 
    \begin{enumerate}
     \item Finite field extensions \TODO{}
     \item Finite \'etale $R$-algebras \TODO{}

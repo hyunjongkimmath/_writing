@@ -1,0 +1,32 @@
+\begin{proposition} \label{proposition:natural_numbers_multiplication_existence}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers} and let $+: \bbN \times \bbN \to \bbN$ be \CrefAndHyperref{proposition:natural_numbers_addition_existence}{addition}. For each $m \in \bbN$, let $g_m: \bbN \to \bbN$ be the unique recursive \CrefAndHyperrefIfExist{definition:function_of_sets}{function} on the initial value $m$ and the recursive relation $(\cdot) + m : \bbN \to \bbN, x \mapsto x + m$, whose existence and uniqueness is guaranteed by \Cref{proposition:recursive_function_existence_uniqueness}. In other words,
+\begin{align*}
+	g_m(1) &= m \\
+	g_m(s(n)) &= g_m(n) + m \text{ for } n \in \bbN.
+\end{align*}
+
+Define
+\hl{$n \times m := g_m(n)$.}
+Then $\times: \bbN \times \bbN \to \bbN$, also denoted \hl{$\cdot$}, is a \CrefAndHyperrefIfExist{definition:n_ary_operation_on_a_set}{binary operation} satisfying for all $n, m \in \bbN$:
+\begin{enumerate}
+    \item $n \times 1 = n$,
+    \item $n \times s(m) = n \times m + n$.
+\end{enumerate}
+\CrefIfExists{proposition:recursive_function_existence_uniqueness}
+This binary operation is called \hldef{multiplication in $\bbN$}. 
+
+Multiplication is universally notated to take precedent over addition, unless parentheses are written, e.g. $n \times m + k$ is universally understood as $(n \times m) + k$ and not as $n \times (m+k)$.
+\end{proposition}
+
+\begin{proof}
+To show that $n \times 1 = n$ for all $n \in \bbN$ is to show that $g_1(n) = n$ for all $n \in \bbN$. We do so by induction. For $n = 1$, $g_1(1) = 1$ by the defining property of $g_1$. Now suppose inductively that $g_1(k) = k$ for some $k \in \bbN$. It follows that $g_1(s(k)) = g_1(k) + 1 = k + 1 = s(k)$, where the last equality holds by \Cref{proposition:natural_numbers_addition_existence}. Therefore, $n \times 1 = n$ for all $n \in \bbN$ by induction.
+
+To show that $n \times s(m) = n \times m + n$ for all $n, m \in \bbN$, fix $m \in \bbN$.
+
+Consider the function $h: \bbN \to \bbN$ defined by $h(n) = n \times s(m) = g_{s(m)}(n)$. By the definition of $g_{s(m)}$, we have $h(1) = g_{s(m)}(1) = s(m)$ and $h(s(k)) = h(k) + s(m)$ for all $k$. On the other hand, consider the function $\bbN \to \bbN, \quad k \mapsto k \times m + k = g_m(k) + k$. This function
+\begin{enumerate}
+    \item sends $k = 1$ to $g_m(1) + 1 = m + 1 = s(m)$, and
+    \item sends $k = s(j)$ to $g_m(s(j)) + s(j) = (g_m(j) + m) + s(j)$. By \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{associativity of addition}, this equals $g_m(j) + (m + s(j))$. By \Cref{proposition:natural_numbers_addition_existence}, $m + s(j) = s(m + j)$; by \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{commutativity of addition}, $s(m + j) = s(j + m)$; by \Cref{proposition:natural_numbers_addition_existence} again, $s(j + m) = j + s(m)$. Hence the expression equals $g_m(j) + (j + s(m)) = (g_m(j) + j) + s(m)$.
+\end{enumerate}
+Thus both functions $n \mapsto n \times s(m)$ and $n \mapsto n \times m + n$ are recursive functions on the same pair $(s(m), (\cdot) + s(m))$. Recursive functions are unique by \CrefAndHyperrefIfExist{proposition:recursive_function_existence_uniqueness}{the recursive function theorem}, so they coincide, i.e. $n \times s(m) = n \times m + n$ for all $n$.
+\end{proof}

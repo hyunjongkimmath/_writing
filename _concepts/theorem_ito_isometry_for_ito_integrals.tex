@@ -1,0 +1,9 @@
+\begin{theorem}[Itô isometry for Itô integrals] \label{theorem:ito_isometry_for_ito_integrals}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$. Let $X = \{X_t\}_{t \geq 0}$ be an adapted process with $\int_0^T \mathbb{E}[X_s^2] \, ds < \infty$ for all $T > 0$.
+
+Then the Itô integral $M_T = \int_0^T X_s \, dB_s$ satisfies
+$$\mathbb{E}\left[\left(\int_0^T X_s \, dB_s\right)^2\right] = \mathbb{E}\left[\int_0^T X_s^2 \, ds\right].$$
+
+More generally, for each $t \geq 0$, the process $M_t^2 - \int_0^t X_s^2 \, ds$ is a martingale.
+\end{theorem}

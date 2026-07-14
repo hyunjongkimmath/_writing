@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:function_of_bounded_variation_on_an_interval}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}.
+
+    The \hldef{total variation of $f$ on $I$} is defined by
+    $$V(f, I) := \sup\left\{ \sum_{k=1}^n |f(x_k) - f(x_{k-1})| : n \in \mathbb{N},\; x_0 < x_1 < \dots < x_n \in I \right\},$$
+    where the supremum is taken over all finite partitions of $I$. The function $f$ is said to be of \hldef{bounded variation on $I$} if $V(f, I) < \infty$.
+
+    Every \CrefAndHyperrefIfExist{definition:lipschitz_continuous_function_between_metric_spaces}{Lipschitz continuous} function on a closed bounded interval is of bounded variation. Every function of bounded variation can be written as the difference of two \hldef{increasing functions} on $I$.
+\end{definition}

@@ -1,0 +1,11 @@
+\begin{theorem}[Primary Decomposition Theorem] \label{theorem:primary_decomposition_theorem_for_linear_operators}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $V$ be a finite-dimensional \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}. Let $T: V \to V$ be a linear endomorphism whose \CrefAndHyperrefIfExist{definition:characteristic_polynomial_of_an_endomorphism_of_a_vector_space_over_a_field}{characteristic polynomial} factors as
+    $$\chi_T(t) = p_1(t)^{e_1} \cdots p_r(t)^{e_r},$$
+    where $p_1, \dots, p_r$ are distinct monic irreducible polynomials in $F[t]$.
+
+    Then
+    $$\hlin{V = V_{p_1} \oplus \cdots \oplus V_{p_r}},$$
+    where $V_{p_i} = \ker(p_i(T)^{e_i})$ are \CrefAndHyperrefIfExist{definition:invariant_subspace_of_a_linear_endomorphism}{$T$-invariant subspaces}. Each restriction $T|_{V_{p_i}}$ has characteristic polynomial $p_i(t)^{\dim_F(V_{p_i})}$.
+\TextIfExists{definition:submodule_of_a_module_over_a_ring}{This is the vector-space special case of the primary decomposition theorem for finitely generated modules over a principal ideal domain, applied to the $F[t]$-module structure on $V$ induced by $T$. The subspaces $V_{p_i}$ are precisely the primary submodules of this module.}
+\TODO{AI generated, verify}
+\end{theorem}

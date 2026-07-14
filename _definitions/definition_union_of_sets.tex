@@ -2,6 +2,10 @@
 Let $I$ be a (possibly \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{infinite} but \CrefAndHyperrefIfExist{definition:small_set}{small}) index set and let $\{A_i\}_{i \in I}$ be a family of sets indexed by $I$.  
 The \hldef{union of the family $\{A_i\}_{i \in I}$}, denoted by \hl{$\bigcup_{i \in I} A_i$}, is defined as
 $$ \bigcup_{i \in I} A_i := \{ x \mid \exists i \in I \text{ such that } x \in A_i \}.  $$
+\TextIfExists{definition:zermelo_fraenkel_set_theory}{
+\CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Construction from ZF axioms}: If the family $\{A_i\}_{i \in I}$ is given by a formula $\varphi(i, y)$ that for each $i \in I$ uniquely determines $y = A_i$, then the Axiom Schema of Replacement applied to $I$ ensures that the collection $\mathcal{A} = \{A_i : i \in I\}$ is a set. The Axiom of Union then produces $\bigcup \mathcal{A} = \{x : \exists A \in \mathcal{A},\, x \in A\}$, which is precisely $\bigcup_{i \in I} A_i$.
+}
+
 Under the \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{axiom of union}, note that $\bigcup_{i \in I} A_i$ exists.
 For finitely many sets $A_1, A_2, \dots, A_n$, their union is denoted by \hl{$A_1 \cup A_2 \cup \cdots \cup A_n$}.
 \end{definition}

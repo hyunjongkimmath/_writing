@@ -1,0 +1,18 @@
+\begin{proposition} \label{proposition:integral_of_reciprocal_is_natural_logarithm}
+\TODO{AI generated, verify}
+For $0 < a \leq b$,
+$$\hlin{\int_a^b \frac{1}{x} \, dx = \ln(b) - \ln(a)}$$
+In particular, $\ln(x) = \int_1^x \frac{1}{t} \, dt$ for all $x > 0$, where the integral is the \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integral}.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    The function $x \mapsto 1/x$ is continuous on $(0, \infty)$ (as the reciprocal of a nonzero continuous function). On any closed interval $[a, b] \subset (0, \infty)$ with $0 < a$, continuity implies Riemann integrability by \CrefAndHyperrefIfExist{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}.
+
+    The natural logarithm $\ln : (0, \infty) \to \mathbb{R}$ is differentiable with derivative
+    $$\frac{d}{dx} \ln(x) = \frac{1}{x},$$
+    as shown in \CrefAndHyperrefIfExist{proposition:derivative_of_natural_logarithm_is_reciprocal}. Since $\ln$ is an antiderivative of $1/x$, we apply the Fundamental Theorem of Calculus, Part II (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}):
+    $$\int_a^b \frac{1}{x}\,dx = \ln(b) - \ln(a).$$
+
+    Setting $a = 1$ and using $\ln(1) = 0$, we obtain the particular case:
+    $$\ln(x) = \int_1^x \frac{1}{t}\,dt.$$
+\end{proof}

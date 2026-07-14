@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:positive_cone_in_an_ordered_monoid}
+    \TODO{AI generated, verify}
+    Let $(\Gamma,\cdot,e,\le)$ be an \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoid}.
+    The \hldef{positive cone (or the set of non-negative elements) of $\Gamma$} is the subset
+    $$\hlin{\Gamma_{\ge e} = \{\gamma \in \Gamma : \gamma \ge e\}.}$$
+    If $\Gamma$ is written \CrefAndHyperrefIfExist{definition:monoid}{additively} (so that $e = 0$), the positive cone is often denoted by $\Gamma_{\ge 0}$, or simply by \hl{$\Gamma_+$}.
+
+    The positive cone $\Gamma_{\ge e}$ is itself a \CrefAndHyperrefIfExist{definition:monoid}{monoid} under the restriction of $\cdot$: it contains $e$ because $e \ge e$, and for any $\gamma,\delta \in \Gamma_{\ge e}$ we have
+    $$\gamma\delta \ge \gamma e = \gamma \ge e \quad\text{and}\quad \gamma\delta \ge e\delta = \delta \ge e$$
+    by the compatibility of $\le$ with $\cdot$\CrefIfExists{definition:ordered_monoid}.
+
+    The set of \hldef{strictly positive elements} is the complement of the identity in the positive cone:
+    $$\hlin{\Gamma_{> e} = \Gamma_{\ge e} \setminus \{e\}.}$$
+    The strictly positive subset $\Gamma_{> e}$ is not a \CrefAndHyperrefIfExist{definition:monoid}{submonoid} of $\Gamma$ (it does not contain the identity $e$).
+\end{definition}

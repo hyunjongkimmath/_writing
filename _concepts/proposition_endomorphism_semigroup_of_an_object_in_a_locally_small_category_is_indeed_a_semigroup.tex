@@ -1,0 +1,8 @@
+\begin{proposition} \label{proposition:endomorphism_semigroup_of_an_object_in_a_locally_small_category_is_indeed_a_semigroup}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category} and let $X$ be an object of $\mathcal{C}$.
+
+    The \CrefAndHyperrefIfExist{definition:endomorphism_monoid_of_an_object_in_a_locally_small_category}{endomorphism monoid} $\operatorname{End}_{\mathcal{C}}(X)$ is indeed a \CrefAndHyperrefIfExist{definition:monoid}{semigroup} under composition of morphisms.
+\end{proposition}
+\begin{proof}
+    Since $\calC$ is locally small, the collection of endomorphisms $X \to X$ in $\calC$ is a set. Composition of morphisms in $\mathcal{C}$ restricts to a binary operation $\circ: \operatorname{End}_{\mathcal{C}}(X) \times \operatorname{End}_{\mathcal{C}}(X) \to \operatorname{End}_{\mathcal{C}}(X)$ because the composition of two endomorphisms $f,g: X \to X$ is again a morphism $f \circ g: X \to X$. Composition of morphisms in any category is associative, so $\operatorname{End}_{\mathcal{C}}(X)$ is a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup}. Moreover, the identity morphism $\id_X$ is the identity element for the binary operation $\circ$, so $\End_\calC(X)$ is indeed a monoid.
+\end{proof}

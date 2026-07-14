@@ -1,7 +1,16 @@
 \begin{definition}[{\cite[Definition/Proposition 3.2, Definition 2.3.]{scholze_sff}}] \label{definition:correspondence_symmetric_monoidal_infty_category_of_an_infty_category_with_finite_limtis_and_class_of_morphisms_containing_isomorphisms_and_stable_under_pulback_and_composition}
     Let $(C,E)$ be as in \Cref{context:infty_category_with_finite_limits_and_a_class_of_morphisms_stable_under_pullback_and_composition_for_correspondences}. 
+    Write $\Delta^n$ for the \CrefAndHyperrefIfExist{definition:standard_n_simplex}{standard $n$-simplex}, regarded as a poset category. \CrefAndHyperref{description_of_the_twisted_arrow_category_of_the_standard_n_simplex}{Recall that} the \CrefAndHyperref{definition:twisted_arrow_category_of_a_category}{twisted arrow category} $\operatorname{Tw}(\Delta^n)$ is isomorphic to the subcategory
+    $$(\Delta^n)_+^2 \subset (\Delta^n)^{\operatorname{op}} \times \Delta^n$$
+    spanned by the objects $(i,j) \in \{0,1,\ldots,n\}^2$ with $i \geq j$.
 
     \TODO{symmetric monoidal $\infty$ category}
-    The \hldef{category of correspondences} \hl{$\operatorname{Corr}(C,E)$} is the symmetric monoidal $\infty$-category given as follows:
-    \TODO{}
+    The \hldef{category of correspondences} \hl{$\operatorname{Corr}(C,E)$} is the symmetric monoidal $\infty$-category given as follows: as a simplicial set, its \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{$n$-simplices} are maps $(\Delta^n)^2_+ \to C$ such that 
+
+    \begin{enumerate}
+        \item all arrows going down-right are in $E$ \TODO{what does this mean}
+        \item all small squares are Cartesian \TODO{what does this mean}
+    \end{enumerate}
+
+    It is in fact a symmetric monoidal $\infty$-category.
 \end{definition}

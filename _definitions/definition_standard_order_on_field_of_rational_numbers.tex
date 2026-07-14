@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:standard_order_on_field_of_rational_numbers}
+    Let $\bbQ$ be the \CrefAndHyperrefIfExist{definition:field_of_rational_numbers}{field of rational numbers}, considered as the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{fraction field} of the \CrefAndHyperrefIfExist{definition:ring_of_integers}{ring of integers} $\bbZ$. For each $q \in \bbQ$, write $q = \frac{a}{b}$ with $a \in \bbZ$ and $b \in \bbZ \setminus \{0\}$; by multiplying numerator and denominator by $-1$ if necessary, we may and shall assume $b > 0$ with respect to the \CrefAndHyperrefIfExist{definition:standard_order_on_ring_of_integers}{standard order on $\bbZ$}.
+
+    The set of \hldef{non-negative rational numbers} is the subset
+    $$\hlin{\bbQ_{\ge 0} = \left\{ \tfrac{a}{b} \in \bbQ : a \ge 0 \text{ in } \bbZ,\; b > 0 \right\}.}$$
+    This subset is well-defined: if $\frac{a}{b} = \frac{a'}{b'}$ with $b,b' > 0$, then $ab' = a'b$ in $\bbZ$. Since $b,b' > 0$ and $\bbZ$ is an \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain} with no zero divisors, the signs of $a$ and $a'$ coincide; in particular, $a \ge 0$ if and only if $a' \ge 0$ in $\bbZ$\CrefIfExists{proposition:integers_form_totally_ordered_ring}.
+
+    The \hldef{standard order on $\bbQ$} is the binary relation $\le$ defined by
+    $$q_1 \le q_2 \quad\iff\quad q_2 - q_1 \in \bbQ_{\ge 0},$$
+    for $q_1,q_2 \in \bbQ$. As usual, we write $q_1 < q_2$ when $q_1 \le q_2$ and $q_1 \neq q_2$, and denote by \hl{$\bbQ_{> 0}$} (resp.~\hl{$\bbQ_{< 0}$}) the set of positive (resp.~negative) rational numbers.
+
+    Equipped with this order, $(\bbQ, +, \cdot, \le)$ is a \CrefAndHyperrefIfExist{definition:ordered_ring}{totally ordered ring}\CrefIfExists{proposition:rational_numbers_form_ordered_field}.
+\end{definition}

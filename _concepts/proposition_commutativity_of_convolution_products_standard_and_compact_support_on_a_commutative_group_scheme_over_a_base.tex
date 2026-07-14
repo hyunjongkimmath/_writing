@@ -1,0 +1,38 @@
+\begin{proposition}[Commutativity of convolution products] \label{proposition:commutativity_of_convolution_products_standard_and_compact_support_on_a_commutative_group_scheme_over_a_base}
+    \TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:scheme}{scheme}. Let \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{$G$ be a commutative algebraic group scheme over $S$} with multiplication morphism $m: G \times_S G \to G$.
+
+    The convolution products \CrefAndHyperref{definition:convolution_product_compact_support_and_standard_on_group_scheme_over_a_base_scheme}{$*_*$ and $*_!$} are commutative in the following cases.
+    \begin{enumerate}
+        \item[\textbf{(a) Torsion coefficients.}] Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. For $M, N \in D(G_{\et}, A)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}),
+        $$ M *_* N \cong N *_* M, \quad M *_! N \cong N *_! M. $$
+
+        \item[\textbf{(b) Integral adic coefficients.}] Let $\ell$ be a prime invertible on $G$ and $S$, let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. For $M, N \in D_c^b(G,R)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}),
+        $$ M *_* N \cong N *_* M, \quad M *_! N \cong N *_! M. $$
+
+        \item[\textbf{(c) Rational adic coefficients.}] With $R$ and $E$ as above, for $M, N \in \Dbc(G,E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}),
+        $$ M *_* N \cong N *_* M, \quad M *_! N \cong N *_! M. $$
+
+        \item[\textbf{(d) Algebraic adic coefficients.}] Let $F/E$ be an algebraic extension. For $M, N \in \Dbc(G,F)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}),
+        $$ M *_* N \cong N *_* M, \quad M *_! N \cong N *_! M. $$
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    Let $\sigma: G \times_S G \to G \times_S G$ be the morphism given by permuting the components. In particular, $m = m \circ \sigma$, so
+    \begin{align*}
+        M *_* N &\cong Rm_* (\pr_1^* M \otimes \pr_2^* N) \\
+        &\cong Rm_* R\sigma_* (\pr_1^* M \otimes \pr_2^* N).
+    \end{align*}
+    Since $\sigma$ is an involution, we have natural isomorphisms
+    $$\Hom(\sigma^* A, B) \cong \Hom(\sigma^* \sigma^* A, \sigma^* B) \cong \Hom(A, \sigma^* B)$$
+    for $A, B$ in the derived category on $G \times_S G$, and hence $\sigma^*$ is left and right adjoint to itself. In particular, $R\sigma_*$ is naturally isomorphic to $\sigma^*$, so
+    $$Rm_* R\sigma_* (\pr_1^* M \otimes \pr_2^* N) \cong Rm_* \sigma^* (\pr_1^* M \otimes \pr_2^* N).$$
+    By \Cref{lemma:pullbacks_respect_tensor_product_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}, this is naturally isomorphic to
+    \begin{align*}
+        Rm_* (\sigma^* \pr_1^* M \otimes \sigma^* \pr_2^* N) &\cong Rm_*(\pr_2^* M \otimes \pr_1^* N) \\
+        &\cong Rm_*(\pr_1^* N \otimes \pr_2^* M) \\
+        &\cong N *_* M,
+    \end{align*}
+    and thus $M *_* N \cong N *_* M$ as desired. One can similarly argue that $*_!$ is commutative.
+\end{proof}

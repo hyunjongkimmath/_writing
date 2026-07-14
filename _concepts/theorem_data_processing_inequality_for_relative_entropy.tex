@@ -1,0 +1,12 @@
+\begin{theorem}[Data processing inequality for relative entropy] \label{theorem:data_processing_inequality_for_relative_entropy}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X$ and $Y$ be random variables on $\Omega$ taking values in finite or countable sets $\mathcal{X}$ and $\mathcal{Y}$, respectively.
+
+Let $P_X$ and $Q_X$ be two probability distributions on $\mathcal{X}$. Suppose that given $X = x$, the conditional distribution of $Y$ is $W(\cdot \mid x)$ for each $x \in \mathcal{X}$, independent of whether $X$ follows $P_X$ or $Q_X$. Let $P_Y$ and $Q_Y$ denote the induced marginal distributions on $\mathcal{Y}$:
+$$P_Y(y) = \sum_{x \in \mathcal{X}} P_X(x) W(y \mid x), \quad Q_Y(y) = \sum_{x \in \mathcal{X}} Q_X(x) W(y \mid x).$$
+
+Then the \CrefAndHyperrefIfExist{definition:kullback_leibler_divergence_between_two_probability_distributions}{Kullback--Leibler divergence} satisfies
+$$D_{\mathrm{KL}}(P_Y \| Q_Y) \leq D_{\mathrm{KL}}(P_X \| Q_X).$$
+
+That is, the KL divergence cannot increase under a stochastic mapping (channel).
+\end{theorem}

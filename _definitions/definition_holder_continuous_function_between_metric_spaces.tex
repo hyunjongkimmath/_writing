@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:holder_continuous_function_between_metric_spaces}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} that supports real exponentiation (e.g., $T = \mathbb{R}_{\ge 0}$), let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, d_X)$ and $(Y, d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric spaces valued in $T^\infty$}. Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}, and let $\alpha \in T_{>0}$.
+
+    The function $f$ is called \hldef{Hölder continuous of exponent $\alpha$} (or \hldef{$\alpha$-Hölder continuous}) if there exists a constant $C \in T_{\ge 0}$ such that
+    $$d_Y(f(x), f(y)) \le C \cdot d_X(x, y)^\alpha \qquad \forall x, y \in X.$$
+    Any such $C$ is called a \hldef{Hölder constant for $f$ of exponent $\alpha$}.
+
+    Hölder continuity of exponent $1_T$ coincides with \CrefAndHyperrefIfExist{definition:lipschitz_continuous_function_between_metric_spaces}{Lipschitz continuity}. Hölder continuity of exponent $\alpha \in T_{>0}$ with $\alpha < 1_T$ is sometimes called \hldef{$\alpha$-Hölder continuity} and is strictly weaker than Lipschitz continuity in general.
+\end{definition}

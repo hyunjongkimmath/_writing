@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:upper_and_lower_semicontinuous_function_on_a_topological_space}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $f : X \to \overline{\mathbb{R}}$ be a function valued in the \CrefAndHyperrefIfExist{definition:extended_real_line}{extended real line}.
+
+    \begin{itemize}
+        \item The function $f$ is called \hldef{upper semicontinuous at $x_0 \in X$} if for every $c > f(x_0)$ there exists a \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{neighborhood} $U$ of $x_0$ such that $f(x) < c$ for all $x \in U$.
+
+        \item The function $f$ is called \hldef{lower semicontinuous at $x_0 \in X$} if for every $c < f(x_0)$ there exists a neighborhood $U$ of $x_0$ such that $f(x) > c$ for all $x \in U$.
+
+        \item The function $f$ is called \hldef{upper semicontinuous} if it is upper semicontinuous at every $x \in X$.
+
+        \item The function $f$ is called \hldef{lower semicontinuous} if it is lower semicontinuous at every $x \in X$.
+    \end{itemize}
+
+    Equivalently, $f$ is upper semicontinuous if and only if for every $c \in \mathbb{R}$ the set $\{x \in X : f(x) < c\}$ is open in $X$, and $f$ is lower semicontinuous if and only if for every $c \in \mathbb{R}$ the set $\{x \in X : f(x) > c\}$ is open in $X$.
+\end{definition}

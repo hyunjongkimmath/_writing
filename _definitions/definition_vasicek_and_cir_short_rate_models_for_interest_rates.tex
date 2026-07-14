@@ -1,0 +1,14 @@
+\begin{definition}[Vasicek and CIR short-rate models for interest rates] \label{definition:vasicek_and_cir_short_rate_models_for_interest_rates}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, \mathbb{Q})$ be a filtered probability space under the risk-neutral measure supporting a Brownian motion $W$.
+
+The \hldef{Vasicek model} (also called the Ornstein--Uhlenbeck short-rate model) specifies the short rate by
+$$\hlin{dr_t = a(b - r_t) \, dt + \sigma \, dW_t},$$
+where $a > 0$ is the speed of mean reversion, $b \in \mathbb{R}$ is the long-run mean, and $\sigma > 0$ is the volatility. The short rate can become negative under this model.
+
+The \hldef{CIR model} (Cox--Ingersoll--Ross) specifies
+$$\hlin{dr_t = a(b - r_t) \, dt + \sigma \sqrt{r_t} \, dW_t},$$
+where the square-root volatility ensures $r_t \geq 0$ when the Feller condition $2ab \geq \sigma^2$ holds.
+
+In both models, zero-coupon bond prices have the affine form $P(t, T) = A(t, T)e^{-B(t, T)r_t}$ with explicit functions $A$ and $B$.
+\end{definition}

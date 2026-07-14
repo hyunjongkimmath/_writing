@@ -1,0 +1,51 @@
+\begin{lemma}\label{lemma:pushforward_of_sheaf_along_finite_etale_G_cover_is_group_object}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $f: X \to Y$ be a a \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois $G$-morphism of schemes} where $Y$ is a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:scheme}{scheme}. Let $\mathscr{F}$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf on} \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$X_{\et}$} valued in a (large) category $\calA$ that has all \CrefAndHyperrefIfExist{definition:locally_small_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} (or \CrefAndHyperrefIfExist{definition:locally_small_category}{$U$-small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} if a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe} $U$ is available). The \CrefAndHyperrefIfExist{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{direct image} $f_* \mathscr{F}$ is a sheaf on $Y_{\et}$ equipped with an \CrefAndHyperrefIfExist{definition:action_of_a_group_G_on_an_object_in_a_category_C}{action by} $G$. In fact, the direct image functor is a functor
+    $$f_*: \Sh(X_{\et}, \calA) \to G-\Sh(Y_{\et}, \calA)$$
+    where $G-\Sh(Y_{\et}, \calA)$\CrefIfExists{definition:category_of_objects_with_group_action_by_G_in_category_C} is the category of objects of $\Sh(Y_{\et}, \calA)$ equipped with a $G$-action.
+\end{lemma}
+\begin{proof}
+    For any \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale morphism} $U \to Y$, we have 
+    $$\Gamma(U, f_* \mathscr{F}) = \Gamma(U \times_Y X, \mathscr{F})$$
+    \CrefIfExists{definition:sections_of_a_presheaf_on_a_category_valued_in_a_category}. Due to identification of $\Aut_Y(X)$\CrefIfExists{definition:automorphism_group_of_a_scheme_over_a_scheme} with $G$ the action of $G$ on $X$ induces an action of $G$ on $U \times_Y X$ --- for all $g \in G$, there is an automorphism $g: X \to X$ over $Y$, which in turn yields an automorphism $U \times_Y X \xrightarrow{(\id, g)} U \times_Y X$. In turn, each such automorphism (contravariantly) induces an automorphism $g: \Gamma(U \times_Y X, \mathscr{F}) \to \Gamma(U \times_Y X, \mathscr{F})$. That $G$ acts on $X$ implies that these automorphisms on $\Gamma(U \times_Y X, \mathscr{F})$ together form a group action by $G$ --- for all $g, h \in G$, the automorphism $(g \cdot h)$ on $\Gamma(U \times_Y X, \mathscr{F})$ coincides with the composition of the automorphisms $g$ and $h$, and $1 \in G$ induces the identity automorphsm.
+
+    Moreover, for any morphism $p: (U \to Y) \to (V \to Y)$ in $Y_{\et}$ and for any $g \in G$, we have a commuting diagram
+    \begin{center}
+    \begin{tikzcd}
+        U \times_Y X \ar[r, "{(\id, g)}"] \ar[d, "{(p, \id)}"] & U \times_Y X \ar[d, "{(p, \id)}"] \\
+        V \times_Y X \ar[r, "{(\id, g)}"] & V \times_Y X
+    \end{tikzcd}
+    \end{center}
+    which contravariantly induces a commuting diagram
+    \begin{center}
+    \begin{tikzcd}
+        \Gamma(V \times_Y X, \mathscr{F}) \ar[r, "g"] \ar[d] & \Gamma(V \times_Y X, \mathscr{F}) \ar[d] \\ 
+        \Gamma(U \times_Y X, \mathscr{F}) \ar[r, "g"] & \Gamma(U \times_Y X, \mathscr{F}).
+    \end{tikzcd}
+    \end{center}
+    Therefore, for each $g \in G$, there is an automorphism $g: f_* \mathscr{F} \to f_* \mathscr{F}$, and in fact that the automorphisms on $\Gamma(U \times_Y X, \mathscr{F})$ together form an action by $G$ naturally in $U$ implies that the automorphisms on $f_* \mathscr{F}$ together form an action by $G$ as well.
+
+    To see that $f_*$ is a functor
+    $$f_*: \Sh(X_{\et}, \calA) \to G-\Sh(Y_{\et}, \calA),$$
+    let $\varphi: \calF \to \calG$ be any morphism in $\Sh(X_{\et}, \calA)$. We want to show that the induced morphism $f_* \varphi: f_* \calF \to f_* \calG$ is $G$-equivariant, i.e. the following diagram commutes for all $g \in G$:
+    \begin{center}
+        \begin{tikzcd}
+            f_* \calF \ar[r, "g"] \ar[d, "f_* \varphi"] & f_* \calF \ar[d, "f_* \varphi"] \\
+            f_* \calG \ar[r, "g"] & f_* \calG.
+        \end{tikzcd}
+    \end{center}
+    Equivalently, we are to show that
+    \begin{center}
+        \begin{tikzcd}
+            \Gamma(U, f_* \calF) \ar[r, "g"] \ar[d, "f_* \varphi"] & \Gamma(U, f_* \calF) \ar[d, "f_* \varphi"] \\
+            \Gamma(U, f_* \calG) \ar[r, "g"] & \Gamma(U, f_* \calG).
+        \end{tikzcd}
+    \end{center}
+    commutes for all $U \to Y$ in $Y_{\et}$. This diagram is identifiable with
+    \begin{center}
+        \begin{tikzcd}
+            \Gamma(U \times_Y X, \calF) \ar[r, "g"] \ar[d, "\varphi"] & \Gamma(U \times_Y X, \calF) \ar[d, "\varphi"] \\
+            \Gamma(U \times_Y X, \calG) \ar[r, "g"] & \Gamma(U \times_Y X, \calG).
+        \end{tikzcd}
+    \end{center}
+    That $\varphi$ is a morphism of (pre)sheaves implies that the above commutes, because $g: U \times_Y X \to U \times_Y X$ is a (auto)morphism in $X_{\et}$. Thus, $f_*$ is indeed a functor into $G-\Sh(Y_{\et}, \calA)$.
+\end{proof}

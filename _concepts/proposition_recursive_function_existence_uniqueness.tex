@@ -1,0 +1,21 @@
+\begin{proposition} \label{proposition:recursive_function_existence_uniqueness}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. Let $A$ be a \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{set}, let $a \in A$, and let $g: A \to A$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. There exists a unique \CrefAndHyperrefIfExist{definition:recursive_function_on_naturals}{recursive function} on $(a, g)$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{verify, AI generated}
+Uniqueness: Suppose $f_1, f_2: \bbN \to A$ are both recursive functions on $(a, g)$. Let $S = \{n \in \bbN : f_1(n) = f_2(n)\}$. Since $f_1(1) = a = f_2(1)$, we have $1 \in S$. If $n \in S$, then $f_1(s(n)) = g(f_1(n)) = g(f_2(n)) = f_2(s(n))$, so $s(n) \in S$. By the principle of mathematical induction, $S = \bbN$, hence $f_1 = f_2$.
+
+Existence: By the Axiom of Power Set and the Axiom of Pairing, the Cartesian product $\bbN \times A$ is a set. Consider the collection $\Sigma$ of all subsets $\Gamma' \subseteq \bbN \times A$ such that $\Gamma'$ is the graph of a function $h$ defined on some domain $D \subseteq \bbN$, satisfying:
+\begin{enumerate}
+    \item $1 \in D$ and $(1, a) \in \Gamma'$,
+    \item for all $n \in D$, if $s(n) \in D$, then $(s(n), g(h(n))) \in \Gamma'$.
+\end{enumerate}
+This collection exists by the Axiom Schema of Separation applied to $\mathcal{P}(\bbN \times A)$. The empty set belongs to $\Sigma$, so $\Sigma$ is nonempty. Define $\Gamma = \bigcup_{\Gamma' \in \Sigma} \Gamma'$, which exists by the Axiom of Union applied to an appropriate collection obtained via Replacement.
+
+We claim $\Gamma$ is the graph of a function $f: \bbN \to A$. Suppose $(n, y_1), (n, y_2) \in \Gamma$. Then there exist $\Gamma_1, \Gamma_2 \in \Sigma$ with $(n, y_1) \in \Gamma_1$ and $(n, y_2) \in \Gamma_2$. Let $h_1, h_2$ be the corresponding functions. Consider $\Gamma_1 \cap \Gamma_2$: this is the graph of a function defined on $\operatorname{dom}(h_1) \cap \operatorname{dom}(h_2)$, and it satisfies conditions (i)--(ii), so $\Gamma_1 \cap \Gamma_2 \in \Sigma$. Now let $n_0$ be the least element of $(\operatorname{dom}(h_1) \cap \operatorname{dom}(h_2)) \setminus \{(n', y') : h_1(n') = h_2(n')\}$, if this set is nonempty. Such $n_0$ cannot be $1$, since both functions map $1$ to $a$. If $n_0 = s(k)$, then by minimality $h_1(k) = h_2(k)$, so $h_1(s(k)) = g(h_1(k)) = g(h_2(k)) = h_2(s(k))$, a contradiction. Hence $y_1 = y_2$, and $\Gamma$ is single-valued.
+
+Let $f: \operatorname{dom}(f) \to A$ be the function with graph $\Gamma$. We show $\operatorname{dom}(f) = \bbN$ by induction. Clearly $1 \in \operatorname{dom}(f)$ because $\{(1, a)\} \in \Sigma$. If $n \in \operatorname{dom}(f)$, suppose $s(n) \notin \operatorname{dom}(f)$. Then $\Gamma \cup \{(s(n), g(f(n)))\}$ satisfies conditions (i)--(ii) on domain $\operatorname{dom}(f) \cup \{s(n)\}$, contradicting the maximality of $\Gamma$ as a union over all such sets. Hence $s(n) \in \operatorname{dom}(f)$ and $f(s(n)) = g(f(n))$. By induction, $\operatorname{dom}(f) = \bbN$.
+
+By construction $f(1) = a$ and $f(s(n)) = g(f(n))$ for all $n \in \bbN$, so $f$ is a recursive function on $(a, g)$.
+\end{proof}

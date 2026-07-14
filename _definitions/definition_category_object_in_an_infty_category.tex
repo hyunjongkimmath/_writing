@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:category_object_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting \CrefAndHyperrefIfExist{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}{finite pullbacks}.
+
+    A \hldef{category object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:simplicial_object_in_an_infty_category}{simplicial object} $X : \Delta^{\mathrm{op}} \to \mathcal{C}$ such that for every integer $n \ge 2$, the \hldef{Segal map}
+    $$X_n \to X_1 \times_{X_0}^h X_1 \times_{X_0}^h \cdots \times_{X_0}^h X_1$$
+    ($n$ factors on the right) is an equivalence in $\mathcal{C}$. 
+    Here the fiber products are taken in the $\infty$-category $\mathcal{C}$, and the Segal map is induced by the $n$ injective order-preserving maps $\delta^i : [1] \to [n]$ defined by $\delta^i(0) = i$ and $\delta^i(1) = i + 1$ for $i = 0, \dots, n-1$.
+
+    For a category object $X$, we interpret
+    \begin{itemize}
+        \item $X_0$ as the \hldef{object of objects};
+        \item $X_1$ as the \hldef{object of morphisms};
+        \item the face maps $d_0, d_1 : X_1 \to X_0$ as the \hldef{target} and \hldef{source} maps;
+        \item the Segal equivalence for $n = 2$, $X_2 \simeq X_1 \times_{X_0}^h X_1$, as encoding \hldef{composition of morphisms};
+        \item the degeneracy map $s_0 : X_0 \to X_1$ as encoding \hldef{identity morphisms}.
+    \end{itemize}
+    The Segal conditions for $n \ge 3$ encode associativity of composition up to coherent homotopy.
+\end{definition}

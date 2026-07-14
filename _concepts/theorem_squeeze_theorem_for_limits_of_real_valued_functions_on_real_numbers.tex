@@ -1,0 +1,14 @@
+\begin{theorem}[Squeeze theorem for limits of functions] \label{theorem:squeeze_theorem_for_limits_of_real_valued_functions_on_real_numbers}
+    Let $S \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}, let $p$ be a \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space}{accumulation point} of $S$, and let $f, g, h : S \to \mathbb{R}$ be functions. Suppose there exists $\delta_0 > 0$ such that for all $x \in S$ with $0 < |x - p| < \delta_0$, we have
+    $$g(x) \leq f(x) \leq h(x).$$
+    If $\lim_{x \to p, x \in S} g(x) = L$\CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point} and $\lim_{x \to p, x \in S} h(x) = L$ for some $L \in \mathbb{R}$, then
+    $$\lim_{x \to p, x \in S} f(x) = L.$$
+\end{theorem}
+
+\begin{proof}
+    Let $\varepsilon > 0$. Since $\lim_{x \to p, x \in S} g(x) = L$, there exists $\delta_1 > 0$ such that for all $x \in S$ with $0 < |x - p| < \delta_1$, we have $|g(x) - L| < \varepsilon$, i.e., $L - \varepsilon < g(x) < L + \varepsilon$. Similarly, since $\lim_{x \to p, x \in S} h(x) = L$, there exists $\delta_2 > 0$ such that for all $x \in S$ with $0 < |x - p| < \delta_2$, we have $|h(x) - L| < \varepsilon$, i.e., $L - \varepsilon < h(x) < L + \varepsilon$.
+
+    Let $\delta = \min(\delta_0, \delta_1, \delta_2)$. For any $x \in S$ with $0 < |x - p| < \delta$, we have simultaneously
+    $$L - \varepsilon < g(x) \leq f(x) \leq h(x) < L + \varepsilon.$$
+    Therefore, $L - \varepsilon < f(x) < L + \varepsilon$, which means $|f(x) - L| < \varepsilon$. Since $\varepsilon > 0$ was arbitrary, we conclude $\lim_{x \to p, x \in S} f(x) = L$.
+\end{proof}

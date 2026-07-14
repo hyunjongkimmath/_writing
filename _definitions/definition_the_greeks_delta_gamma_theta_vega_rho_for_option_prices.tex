@@ -1,0 +1,20 @@
+\begin{definition}[The Greeks: delta, gamma, theta, vega, rho for option prices] \label{definition:the_greeks_delta_gamma_theta_vega_rho_for_option_prices}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, let $V(t, S; r, \sigma)$ denote the price of a derivative at time $t$ with underlying stock price $S$, risk-free rate $r$, and volatility $\sigma$.
+
+The sensitivity measures (called the \hldef{Greeks}) are defined as:
+
+\begin{enumerate}
+    \item \hldef{Delta}: $\Delta = \frac{\partial V}{\partial S}$ — sensitivity to the underlying price.
+    \item \hldef{Gamma}: $\Gamma = \frac{\partial^2 V}{\partial S^2}$ — curvature with respect to the underlying price.
+    \item \hldef{Theta}: $\Theta = \frac{\partial V}{\partial t}$ — sensitivity to the passage of time.
+    \item \hldef{Vega}: $\nu = \frac{\partial V}{\partial \sigma}$ — sensitivity to volatility.
+    \item \hldef{Rho}: $\rho = \frac{\partial V}{\partial r}$ — sensitivity to the risk-free rate.
+\end{enumerate}
+
+For a European call option in the Black--Scholes model:
+$$\Delta_{\text{call}} = \Phi(d_1), \quad \Gamma_{\text{call}} = \frac{\phi(d_1)}{S\sigma\sqrt{T-t}}, \quad \nu_{\text{call}} = S\sqrt{T-t} \, \phi(d_1),$$
+where $\phi(x) = \tfrac{1}{\sqrt{2\pi}} e^{-x^2/2}$ is the standard normal density.
+
+A portfolio is \hldef{delta-neutral} if its total delta is zero; it is \hldef{gamma-neutral} (resp. \hldef{vega-neutral}) if its total gamma (resp. vega) is zero.
+\end{definition}

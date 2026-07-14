@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:character_of_a_topological_group_valued_in_a_topological_field}
+    \TODO{AI generated, verify}
+
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}, and $G$ a \CrefAndHyperrefIfExist{definition:topological_group}{topological group}. The multiplicative group $k^\times = k \setminus \{0\}$ carries the subspace topology.
+
+    A \hldef{character of $G$ valued in $k$} is a continuous group homomorphism
+    $$\hlin{\chi : G \to k^\times.}$$
+
+    The set of characters
+    $$\hlin{\mathrm{X}^*_k(G) := \Hom_{\mathrm{cts.\ gr.}}(G, k^\times)}$$
+    forms an abelian group under pointwise multiplication, called the \hldef{character group of $G$ valued in $k$}. It carries the topology of pointwise convergence (the subspace topology from $(k^\times)^G$ with the product topology).
+
+    Since $k^\times$ is abelian, every character factors uniquely through the abelianization \hl{$G^{\mathrm{ab}} := G/[G,G]$}, equipped with the quotient topology. Thus $\mathrm{X}^*_k(G) \cong \Hom_{\mathrm{cts.\ gr.}}(G^{\mathrm{ab}}, k^\times)$.
+
+    When $k = \mathbb{C}$ with the usual topology and $G$ is locally compact Hausdorff, this recovers the notion of a \CrefAndHyperrefIfExist{definition:quasi_character_of_a_locally_compact_hausdorff_group}{quasicharacter}. A character in that setting is unitary precisely when its image lies in $S^1 \subset \mathbb{C}^\times$.
+\end{definition}

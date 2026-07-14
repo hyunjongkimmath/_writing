@@ -1,0 +1,32 @@
+\begin{proposition} \label{proposition:rational_numbers_form_ordered_field}
+    Let $\bbQ$ be the \CrefAndHyperrefIfExist{definition:field_of_rational_numbers}{field of rational numbers} equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_field_of_rational_numbers}{standard order on $\bbQ$}. Then:
+    \begin{enumerate}
+        \item $(\bbQ, \le)$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set}.
+        \item The order is compatible with addition: for all $q_1,q_2,r \in \bbQ$, if $q_1 \le q_2$, then $q_1 + r \le q_2 + r$.
+        \item The order is compatible with multiplication by non-negative elements: for all $q_1,q_2 \in \bbQ$, if $q_1 \ge 0$ and $q_2 \ge 0$, then $q_1 q_2 \ge 0$.
+    \end{enumerate}
+    Equivalently, $(\bbQ, +, \cdot, \le)$ is a (\CrefAndHyperrefIfExist{definition:ordered_ring}{totally}) \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered field}.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We verify each claim in turn.
+
+    \begin{enumerate}
+        \item We show that the relation $\le$ is a total order on $\bbQ$. Recall from \Cref{definition:standard_order_on_field_of_rational_numbers} that for $q_1, q_2 \in \bbQ$, we have $q_1 \le q_2$ if and only if $q_2 - q_1 \in \bbQ_{\ge 0}$, where $\bbQ_{\ge 0}$ consists of fractions $\frac{a}{b}$ with $a \ge 0$ in $\bbZ$ and $b > 0$ in $\bbZ$.
+
+        The relation $\le$ is reflexive because $q - q = 0 = \frac{0}{1} \in \bbQ_{\ge 0}$. For antisymmetry, suppose $q_1 \le q_2$ and $q_2 \le q_1$. Then $q_2 - q_1 \in \bbQ_{\ge 0}$ and $q_1 - q_2 \in \bbQ_{\ge 0}$. Write $q_2 - q_1 = \frac{a}{b}$ with $a \ge 0$, $b > 0$ and $q_1 - q_2 = \frac{c}{d}$ with $c \ge 0$, $d > 0$. Since $q_2 - q_1 = -(q_1 - q_2)$, we have $\frac{a}{b} = -\frac{c}{d}$, so $ad = -bc$ in $\bbZ$. Since $b, d > 0$ and $a, c \ge 0$, the only possibility is $a = c = 0$, whence $q_2 - q_1 = 0$ and thus $q_1 = q_2$. For transitivity, suppose $q_1 \le q_2$ and $q_2 \le q_3$. Then $q_2 - q_1 \in \bbQ_{\ge 0}$ and $q_3 - q_2 \in \bbQ_{\ge 0}$, so their sum $(q_3 - q_2) + (q_2 - q_1) = q_3 - q_1$ lies in $\bbQ_{\ge 0}$ because $\bbQ_{\ge 0}$ is closed under addition (the sum of two fractions with non-negative numerators and positive denominators has non-negative numerator). Hence $q_1 \le q_3$.
+
+        To prove totality, let $q_1, q_2 \in \bbQ$ and write $q_2 - q_1 = \frac{a}{b}$ with $b > 0$. By trichotomy of the \CrefAndHyperrefIfExist{definition:standard_order_on_ring_of_integers}{order on $\bbZ$}\CrefIfExists{proposition:integers_form_totally_ordered_ring}, either $a \ge 0$ or $a < 0$. If $a \ge 0$, then $q_2 - q_1 \in \bbQ_{\ge 0}$, so $q_1 \le q_2$. If $a < 0$, then $-a > 0$, so $-(q_2 - q_1) = \frac{-a}{b} \in \bbQ_{\ge 0}$, i.e.\ $q_1 - q_2 \in \bbQ_{\ge 0}$, which gives $q_2 \le q_1$. Thus every pair of elements is comparable, so $(\bbQ, \le)$ is a totally ordered set by \Cref{definition:total_order_linear_order_on_a_set}.
+
+        \item Suppose $q_1 \le q_2$ in $\bbQ$ and let $r \in \bbQ$. Then $q_2 - q_1 \in \bbQ_{\ge 0}$, and
+        $$(q_2 + r) - (q_1 + r) = q_2 - q_1 \in \bbQ_{\ge 0},$$
+        so $q_1 + r \le q_2 + r$ by the definition of the order.
+
+        \item Suppose $q_1, q_2 \in \bbQ$ satisfy $q_1 \ge 0$ and $q_2 \ge 0$, i.e.\ $q_1, q_2 \in \bbQ_{\ge 0}$. Write $q_1 = \frac{a}{b}$ and $q_2 = \frac{c}{d}$ with $a, c \ge 0$ in $\bbZ$ and $b, d > 0$ in $\bbZ$. Then
+        $$q_1 q_2 = \frac{ac}{bd}.$$
+        Since $a, c \ge 0$, the product $ac$ is non-negative in $\bbZ$ by the compatibility of the order on $\bbZ$ with multiplication (\Cref{proposition:integers_form_totally_ordered_ring}). Moreover $bd > 0$ in $\bbZ$. Hence $q_1 q_2 \in \bbQ_{\ge 0}$, i.e.\ $q_1 q_2 \ge 0$.
+    \end{enumerate}
+
+    The three parts together show that $(\bbQ, +, \cdot, \le)$ satisfies the axioms of an \Cref{definition:ordered_field_complete_ordered_field}{ordered field} (and in particular an \Cref{definition:ordered_ring}{ordered ring}), as required.
+\end{proof}

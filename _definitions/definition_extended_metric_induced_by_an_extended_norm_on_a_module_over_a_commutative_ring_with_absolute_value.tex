@@ -1,0 +1,23 @@
+\begin{definition}[Extended metric induced by an extended norm on a module over a commutative ring with absolute value] \label{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}:
+    $$|\cdot| : R \to T,$$
+    and let $M$ be a module over $R$\CrefIfExists{definition:module_over_a_ring}. Let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let
+    $$\|\cdot\| : M \to T^\infty$$
+    be an \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended norm on $M$ valued in $T^\infty$}.
+
+    The \hldef{extended metric induced by the extended norm} is the function
+    $$\hlin{d : M \times M \to T^\infty, \quad (x,y) \mapsto \|x - y\|}$$
+    defined by
+    $$d(x,y) := \|x - y\|.$$
+
+    The map $d$ satisfies the axioms of an extended metric valued in $T^\infty$: for all $x,y,z \in M$,
+    \begin{enumerate}
+        \item Positive definiteness: $d(x,y) = 0_T$ if and only if $\|x - y\| = 0_T$ if and only if $x - y = 0_M$ if and only if $x = y$.
+        \item Symmetry: $d(x,y) = \|x - y\| = \|(-1_R)(y - x)\| = |-1_R| \cdot \|y - x\| = \|y - x\| = d(y,x)$, where $|-1_R| = 1_T$ follows from multiplicativity of the absolute value on the ring $R$.
+        \item Triangle inequality: $d(x,z) = \|x - z\| = \|(x - y) + (y - z)\| \leq \|x - y\| + \|y - z\| = d(x,y) + d(y,z)$, by the triangle inequality for $\|\cdot\|$ with addition in $T^\infty$.
+    \end{enumerate}
+
+    If the range of $\|\cdot\|$ is contained in $T$ (so that $\|\cdot\|$ is a norm rather than an extended norm), then $d$ takes values in $T$ and is a metric.
+
+    In the case that $R = F$ is a \CrefAndHyperrefIfExist{definition:field}{field} and $M = V$ is a vector space over $F$, we recover the standard definition of an extended metric on $V$ induced by a norm valued in $T^\infty$. In particular, when $T = \bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, we recover the standard definition of a metric/extended metric on $V$ taking values in $\bbR_{\geq 0}$ or $[0,\infty]$.
+\end{definition}

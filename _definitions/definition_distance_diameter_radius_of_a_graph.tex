@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:distance_diameter_radius_of_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}, and let $u, v \in V(G)$.
+
+The \hldef{distance between $u$ and $v$ in $G$}, denoted by \hl{$d_G(u,v)$}, is the length of a shortest \CrefAndHyperrefIfExist{definition:walk_path_trail_cycle_in_a_graph}{path} from $u$ to $v$. If no path exists between $u$ and $v$, then
+$$d_G(u,v) = \infty.$$
+
+The \hldef{eccentricity of a vertex $v$ in $G$}, denoted by \hl{$\operatorname{ecc}_G(v)$}, is the maximum distance from $v$ to any other vertex:
+$$\operatorname{ecc}_G(v) = \max_{u \in V(G)} d_G(u,v).$$
+
+The \hldef{diameter of $G$}, denoted by \hl{$\operatorname{diam}(G)$}, is the maximum eccentricity among all vertices:
+$$\operatorname{diam}(G) = \max_{v \in V(G)} \operatorname{ecc}_G(v).$$
+
+The \hldef{radius of $G$}, denoted by \hl{$\operatorname{rad}(G)$}, is the minimum eccentricity among all vertices:
+$$\operatorname{rad}(G) = \min_{v \in V(G)} \operatorname{ecc}_G(v).$$
+\end{definition}

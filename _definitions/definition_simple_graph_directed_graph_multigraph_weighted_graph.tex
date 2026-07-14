@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:simple_graph_directed_graph_multigraph_weighted_graph}
+\TODO{AI generated, verify}
+Let $V$ be a set. A \hldef{simple graph} is an ordered pair $G = (V, E)$, where $E$ is a set of 2-element subsets of $V$, that is,
+$$\hlin{E \subseteq \{\{u,v\} : u,v \in V, u \neq v\}.}$$
+The elements of $V$ are called \hldef{vertices} (plural of \hldef{vertex}), and the elements of $E$ are called \hldef{edges}. The set $V$ is denoted by \hl{$V(G)$}, and the set $E$ is denoted by \hl{$E(G)$}. The number of vertices $|V(G)|$ is called the \hldef{order of $G$} and is denoted by \hl{$|G|$}. The number of edges $|E(G)|$ is called the \hldef{size of $G$} and is denoted by \hl{$\|G\|$}.
+
+A \hldef{directed graph}, or \hldef{digraph}, is an ordered pair $D = (V, E)$, where
+$$\hlin{E \subseteq V \times V.}$$
+The elements of $V$ are called vertices and the elements of $E$ are called \hldef{directed edges}, or \hldef{arcs}. For a directed edge $(u,v) \in E$, we say that $u$ is the source and $v$ is the target.
+
+A \hldef{multigraph} is a triple $M = (V, S, i)$, where $V$ is a set of vertices, $S$ is a set of edges, and $i: S \to \{\{u,v\} : u,v \in V\}$ is an incidence function. If $i(e) = \{u,u\}$ for some $e \in S$, then $e$ is called a \hldef{loop}. Two distinct edges $e_1, e_2 \in S$ with $i(e_1) = i(e_2)$ are called \hldef{parallel edges}.
+
+Let $G$ be a simple graph and let $W$ be a set. A \hldef{weighted graph} with weight set $W$ is a triple $\mathcal{G} = (G, W, w)$, where
+$$\hlin{w: E(G) \to W}$$
+is a function assigning to each edge a weight in $W$. If $W = \mathbb{R}$, the graph is called a \hldef{real-weighted graph}. If $W = \mathbb{R}_{\geq 0}$, the graph is called a \hldef{non-negative weighted graph}.
+\end{definition}

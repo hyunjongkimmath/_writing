@@ -1,0 +1,16 @@
+\begin{lemma} \label{lemma:inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists}
+    % EDITOR APPROVED
+    Let $(S,\cdot)$ be a \CrefAndHyperrefIfExist{definition:monoid}{monoid} with \CrefAndHyperrefIfExist{definition:left_right_identity_element_of_a_binary_operation}{identity element} $e$. Let $s \in S$ be an element. 
+
+    If an \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{inverse} of $s$ exists, then it is unique. More precisely, if $a_1$ and $a_2$ are inverses of $s$, then $a_1 = a_2$.
+\end{lemma}
+\begin{proof}
+    % EDITOR APPROVED
+    Suppose that $a_1$ and $a_2$ are inverses of $s$. By the associativity of $\cdot$, we have 
+    $$(a_1 \cdot s) \cdot a_2 = a_1 \cdot (s \cdot a_2).$$
+    Since $s$ is an inverse of $a_1$ and since $e$ is the identity element, the left hand side expression above equals
+    $$e \cdot a_2 = a_2.$$
+    Similarly, the right hand side expression equals
+    $$a_1 \cdot e = a_1.$$
+    Therefore, $a_1 = a_2$ as desired.
+\end{proof}

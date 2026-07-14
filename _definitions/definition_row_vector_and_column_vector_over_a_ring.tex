@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:row_vector_and_column_vector_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} (not necessarily commutative).
+    Let $n \in \mathbb{N}$.
+    \begin{enumerate}
+        \item A \hldef{row vector of length $n$ over $R$} is an element of $M_{1,n}(R)$\CrefIfExists{definition:matrix_over_a_ring}, i.e., a $1 \times n$ matrix over $R$. We denote the set of row vectors of length $n$ over $R$ by \hl{$R^{1 \times n}$} or \hl{$M_{1,n}(R)$}.
+
+        \item A \hldef{column vector of length $n$ over $R$} is an element of $M_{n,1}(R)$, i.e., an $n \times 1$ matrix over $R$. We denote the set of column vectors of length $n$ over $R$ by \hl{$R^{n \times 1}$} or \hl{$M_{n,1}(R)$}.
+
+        \item When $R$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, the set of column vectors $R^{n \times 1}$ carries a natural structure of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module} (and also a right $R$-module) via componentwise addition and scalar multiplication. Similarly, the set of row vectors $R^{1 \times n}$ carries a natural structure of a right $R$-module (and also a left $R$-module) via componentwise addition and scalar multiplication.
+
+        \item The \CrefAndHyperrefIfExist{definition:transpose_of_a_matrix_over_a_ring}{transpose} operation gives a bijection between row vectors and column vectors:
+        $$ (\cdot)^\top: R^{1 \times n} \to R^{n \times 1}, \quad (a_1, \ldots, a_n) \mapsto \begin{pmatrix} a_1 \\ \vdots \\ a_n \end{pmatrix}. $$
+        Its inverse is the transpose map $(\cdot)^\top: R^{n \times 1} \to R^{1 \times n}$.
+    \end{enumerate}
+\end{definition}

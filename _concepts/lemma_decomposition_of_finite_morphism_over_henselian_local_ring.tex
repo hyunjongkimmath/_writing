@@ -1,0 +1,28 @@
+\begin{lemma}[Decomposition of a finite morphism over a Henselian local ring] \label{lemma:decomposition_of_finite_morphism_over_henselian_local_ring}
+    \TODO{AI generated, verify}
+    Let $(R, \mathfrak{m})$ be a \CrefAndHyperrefIfExist{definition:henselian_ring}{Henselian local ring} with \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field} $k = R/\mathfrak{m}$. Let $A$ be a \CrefAndHyperrefIfExist{definition:finite_algebra_over_a_ring}{finite $R$-algebra}. Then the canonical map 
+    \TODO{what is this canonical map? Are you saying that there is a map $A \to A_{\mathfrak{n}}$ for every $\mathfrak{n}$ and then we have a map $A \to \prod$ by the universal property of products?} 
+    induces an isomorphism of rings
+    $$ A \cong \prod_{\mathfrak{n} \in \Spec(A),\, \mathfrak{n} \cap R = \mathfrak{m}} A_{\mathfrak{n}}, $$
+    \CrefIfExists{definition:localization_of_a_commutative_ring_by_a_multiplicative_subset}
+    \TODO{write the definition of lying over for primes in rings and schemes}
+    where the product runs over all \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{prime ideals} of $A$ lying over $\mathfrak{m}$. Since $A$ is finite over $R$, there are finitely many such primes.
+
+    Equivalently, for any \CrefAndHyperrefIfExist{definition:scheme}{scheme} $Y$ and any \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism} $f : X \to Y$, let $\bar{y} : \Spec(\Omega) \to Y$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} of $Y$. There exists an \CrefAndHyperrefIfExist{definition:etale_neighborhood_of_a_geometric_point_on_a_scheme}{étale neighborhood} $(V, \bar{v})$ of $\bar{y}$ such that the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} decomposes as a finite \CrefAndHyperrefIfExist{definition:disjoint_union_of_schemes}{disjoint union} of \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{open-and-closed subschemes}
+    $$ X \times_Y V = \coprod_{\bar{x} \in f^{-1}(\bar{y})} Z_{\bar{x}}, $$
+    where $f^{-1}(\bar{y})$ denotes the set of geometric points $\Spec(\Omega) \to X$ lying over $\bar{y}$ (which is finite since $f$ is finite), and each $Z_{\bar{x}}$ is an affine scheme containing exactly one geometric point $\bar{x}$ mapping to $\bar{v}$. Each $Z_{\bar{x}} \to V$ is \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite} and \CrefAndHyperrefIfExist{definition:flat_morphism_of_schemes}{flat} over a possibly smaller étale neighborhood of $\bar{y}$.
+    \TODO{define what it means for an etale neighborhoo to be "smaller" than another and define what it means to for a condition to hold for all sufficiently small etale neighborhoods}
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    \textbf{Algebraic form.} Since $A$ is a finite $R$-algebra, the fiber $A \otimes_R k = A/\mathfrak{m}A$ is a finite-dimensional $k$-algebra and hence Artinian. An Artinian ring decomposes uniquely as a finite product of local Artinian rings:
+    $$ A/\mathfrak{m}A \cong \prod_{i=1}^n (A/\mathfrak{m}A)_{\mathfrak{n}_i}, $$
+    where $\mathfrak{n}_1, \dots, \mathfrak{n}_n$ are the prime ideals of $A$ lying over $\mathfrak{m}$ (these are precisely the maximal ideals of $A/\mathfrak{m}A$). The idempotents of this product lift uniquely to orthogonal idempotents of $A$ because $R$ is Henselian: a factorization of $1$ into orthogonal idempotents modulo $\mathfrak{m}$ lifts to $A$\CrefIfExists{definition:henselian_ring}. These lifted idempotents yield the decomposition $A \cong \prod_{i=1}^n A e_i$, where each $A e_i$ is a local finite $R$-algebra with maximal ideal corresponding to $\mathfrak{n}_i$.
+
+    \textbf{Geometric form.} Since $f$ is finite, it is affine. After replacing $Y$ and $X$ by affine open neighborhoods of $\bar{y}$ and $f^{-1}(\bar{y})$, we may assume $Y = \Spec(R)$ and $X = \Spec(A)$ for some finite $R$-algebra $A$. Let $(R^{sh}, \mathfrak{m}^{sh})$ be the strict henselization of $R$ at $\bar{y}$; this is a \CrefAndHyperrefIfExist{definition:strictly_henselian_ring}{strictly henselian local ring}\CrefIfExists{definition:strict_henselization_of_a_local_ring}, hence Henselian. By the algebraic form, we have $A \otimes_R R^{sh} \cong \prod_{\bar{x} \in f^{-1}(\bar{y})} (A \otimes_R R^{sh})_{\mathfrak{n}_{\bar{x}}}$ where each factor is local.
+
+    Since the decomposition is given by a finite set of orthogonal idempotents in $A \otimes_R R^{sh}$, and $R^{sh}$ is a filtered colimit of étale $R$-algebras, these idempotents descend to some étale $R$-algebra $S$. That is, there exists an étale morphism $V = \Spec(S) \to Y$ and a point $\bar{v} : \Spec(\Omega) \to V$ lifting $\bar{y}$ such that the idempotents defining the decomposition exist in $A \otimes_R S$. Shrinking $V$ to an affine étale neighborhood if necessary, we obtain
+    $$ X \times_Y V = \Spec(A \otimes_R S) \cong \coprod_{\bar{x} \in f^{-1}(\bar{y})} Z_{\bar{x}} $$
+    as a disjoint union of open-and-closed subschemes. Each $Z_{\bar{x}}$ is affine, finite over $V$, and contains exactly one geometric point $\bar{x}$ lying over $\bar{v}$.
+\end{proof}

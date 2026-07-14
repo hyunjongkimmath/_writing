@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:proper_vertex_coloring_chromatic_number_of_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}, and let $k$ be a positive integer.
+
+A function $c: V(G) \to \{1, 2, \dots, k\}$ is called a \hldef{proper vertex coloring of $G$ with $k$ colors} if for every edge $\{u,v\} \in E(G)$, we have $c(u) \neq c(v)$. The set $\{1, 2, \dots, k\}$ is called the \hldef{set of colors}. For each color $i$, the set $c^{-1}(i)$ is called a \hldef{color class}; each color class is an \CrefAndHyperrefIfExist{definition:clique_independent_set_of_a_graph}{independent set}.
+
+The \hldef{chromatic number of $G$}, denoted by \hl{$\chi(G)$}, is the smallest integer $k$ for which a proper vertex coloring with $k$ colors exists:
+$$\chi(G) = \min\{k \in \mathbb{N} : G \text{ admits a proper } k\text{-coloring}\}.$$
+\end{definition}

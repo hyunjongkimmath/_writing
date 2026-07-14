@@ -1,0 +1,13 @@
+\begin{proposition}[Stalk of direct image under Galois morphism for étale sheaves] \label{proposition:stalk_of_direct_image_under_Galois_morphism_etale_sheaf}
+\TODO{AI generated, verify}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois morphism of schemes} with Galois group $G$, and let $\mathcal{F}$ be a sheaf on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $X_{\text{ét}}$}. Let $\bar{y} : \Spec(\Omega) \to Y$ be a geometric point of $Y$, and fix a geometric point $\bar{x}$ in the fiber $f^{-1}(\bar{y})$.
+
+    The group $G$ acts on the stalk $\mathcal{F}_{\bar{x}}$ (up to conjugacy, depending on the choice of $\bar{x}$). The stalk of the direct image is the invariant part:
+    $$(f_*\mathcal{F})_{\bar{y}} = \mathcal{F}_{\bar{x}}^{G}$$
+
+    More precisely, if $f$ is also finite (so that $X \times_Y \Spec(\Omega) \cong \coprod_{g \in G} \Spec(\Omega)$), then the decomposition of \Cref{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf} identifies $(f_*\mathcal{F})_{\bar{y}}$ with $\prod_{g \in G} \mathcal{F}_{g \cdot \bar{x}}$, and the $G$-action permutes the factors transitively, yielding the identification with $\mathcal{F}_{\bar{x}}^G$.
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+    Since $f$ is Galois with group $G$, the fiber over $\bar{y}$ consists of $|G|$ geometric points permuted simply transitively by $G$. By \Cref{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf}, the stalk decomposes as a product over these points. The $G$-action on $X/Y$ induces an action on each factor, and taking invariants under this permutation recovers the fixed-point subobject of a single stalk.
+\end{proof}

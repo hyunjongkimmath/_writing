@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:integer_equivalence_relation}
+Let $\bbN$ be the \CrefAndHyperrefIfExist{definition:natural_numbers}{set of natural numbers}. The relation $\sim$ on $\bbN \times \bbN$ defined by $(a, b) \sim (c, d) \iff a + d = b + c$ is an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation}.
+\end{proposition}
+
+\begin{proof}
+For any $a,b \in \bbN$, $(a, b) \sim (a, b)$ because $a + b = b + a$ by \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{commutativity of addition on $\bbN$}. If $(a, b) \sim (c, d)$ for $a,b,c,d \in \bbN$, then $a + d = b + c$, so $c + b = d + a$, hence $(c, d) \sim (a, b)$. If $(a, b) \sim (c, d)$ and $(c, d) \sim (e, f)$ for $a,b,c,d,e,f \in \bbN$, then $a + d = b + c$ and $c + f = d + e$. Adding these equations gives $(a + d) + (c + f) = (b + c) + (d + e)$. By \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{associativity and commutative of addition}, one eventually shows that $(a+f)+(c+d) = (b+e)+(c+d)$, so $(a, b) \sim (e, f)$.
+\end{proof}

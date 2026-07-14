@@ -1,0 +1,11 @@
+\begin{definition}[Finite difference methods for the Black--Scholes PDE] \label{definition:finite_difference_methods_for_the_black_scholes_pde}
+\TODO{AI generated, verify}
+The \CrefAndHyperrefIfExist{theorem:black_scholes_merton_pde_for_option_prices}{Black--Scholes PDE} is a parabolic PDE. On a truncated domain $S \in [0, S_{\max}]$ and time grid $t_i = i\Delta t$, the PDE can be discretized using finite differences:
+
+Let $V_j^i \approx V(t_i, S_j)$ where $S_j = j\Delta S$. The \hldef{explicit Euler method} gives
+$$\frac{V_j^{i+1} - V_j^i}{\Delta t} + rS_j \frac{V_{j+1}^i - V_{j-1}^i}{2\Delta S} + \frac{1}{2}\sigma^2 S_j^2 \frac{V_{j+1}^i - 2V_j^i + V_{j-1}^i}{(\Delta S)^2} - rV_j^i = 0.$$
+
+The method is conditionally stable. The \hldef{implicit Euler method} evaluates spatial derivatives at time $t_{i+1}$, yielding an unconditionally stable tridiagonal system solved by the Thomas algorithm (TDMA). The \hldef{Crank--Nicolson scheme} averages explicit and implicit steps for second-order accuracy in both space and time, but may produce spurious oscillations near discontinuous payoffs.
+
+Boundary conditions: $V(t, 0) = 0$ for calls ($K e^{-rt}$ for puts); $V(t, S_{\max}) = S_{\max} - K e^{-r(T-t)}$ for calls ($0$ for deep-in-the-money puts).
+\end{definition}

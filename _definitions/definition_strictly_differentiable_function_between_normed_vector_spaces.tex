@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:strictly_differentiable_function_between_normed_vector_spaces}
+    \TODO{AI generated, verify}
+    Let $V$ and $W$ be \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector spaces} over the same \CrefAndHyperrefIfExist{definition:field}{field} $k$ equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value}, and let $U \subseteq V$ be an open subset. A function $f : U \to W$ is called \hldef{strictly differentiable at $a \in U$} if there exists a bounded linear map $L : V \to W$ such that
+    $$\lim_{\substack{x \to a \\ y \to a \\ x \neq y}} \frac{\|f(x) - f(y) - L(x - y)\|_W}{\|x - y\|_V} = 0.$$
+    The map $L$ is called the \hldef{strict derivative of $f$ at $a$}, often denoted by \hl{$D_s f(a)$}.
+
+    Strict differentiability at $a$ implies ordinary \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiability at $a$}, and the two derivatives coincide when both exist. A function that is continuously differentiable in a neighborhood of $a$ is strictly differentiable at $a$, but the converse need not hold.
+\end{definition}

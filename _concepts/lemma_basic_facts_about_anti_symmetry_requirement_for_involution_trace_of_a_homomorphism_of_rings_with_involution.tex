@@ -1,0 +1,46 @@
+\begin{lemma} \label{lemma:basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution}
+   Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} of $\eta$. Let $\varepsilon \in Z(A')$\CrefIfExists{definition:center_of_a_ring} such that $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+
+   \begin{enumerate}
+    \item Suppose that there is some $u \in A$ such that $\tau(\varepsilon \cdot \overline{x}) = u \cdot \tau(x)$ for all $x \in A'$. We have
+    \TODO{prove basic facts for the purpose of tryng to figure out what properties $\omega = \tau \circ H$ must satisfy in the defintiion of $\tau$-$\varepsilon$-Hermitian forms assuming this condition}
+    \begin{enumerate}
+        \item $\tau(\overline{\varepsilon} \cdot \overline{x}) = \overline{u} \cdot \tau(x)$ for all $x \in A'$. 
+        \item $u^2 = 1$.
+    \end{enumerate}
+
+    \item Suppose that there is some $u \in A$ such that $\tau(\varepsilon \cdot x) = u \cdot \tau(x)$ for all $x \in A'$. We have
+    \begin{enumerate}
+        \item $\tau(\overline{\varepsilon} \cdot x) = \overline{u} \cdot \tau(x)$ for all $x \in A'$
+        \item $u \cdot \overline{u} = 1$.  
+    \end{enumerate}
+   \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item 
+        \begin{enumerate}
+            \item By the fact that $\tau(\overline{a}) = \overline{\tau(a)}$ for any $a \in A'$ and the fact that $\varepsilon$ is in the center of $A'$, we have 
+            $$\tau(\overline{\varepsilon} \cdot \overline{x}) = \tau(\overline{\varepsilon \cdot x}) = \overline{\tau(\varepsilon \cdot x)} = \overline{u \cdot \tau(\overline{x})} = \overline{u} \cdot \overline{\tau(\overline{x})} = \overline{u} \cdot \tau(x).$$
+
+            \item For any $x \in A'$, we have 
+            $$\tau(x) = \tau(\varepsilon \cdot \overline{\varepsilon} \cdot x) = u \cdot \tau(\varepsilon \overline{x}) = u^2 \cdot \tau(x).$$
+            Since $\tau$ is an involution trace, the $1$-Hermitian form 
+            $$t_{A'/A}: A' \times A' \to A, \quad (x,y) \mapsto \tau(\overline{x} y)$$
+            is nonsingular, i.e. that the \CrefAndHyperrefIfExist{defintiion:adjoint_map_of_a_sesquilinear_form_on_a_module_over_a_ring_with_involution}{adjoint map}
+            $$\widehat{t}_{A'/A}: A' \to (A')^*$$
+            is an isomorphism of $A$-modules. That $\tau(x) = u^2 \cdot \tau(x)$ holds for every $X \in A'$ implies that $(1-u^2) \cdot t_{A'/A}$ is identically $0$ and hence that the composition
+            $$A' \xrightarrow{t_{A'/A}} (A')^* \xrightarrow{ \times (1-u^2)} (A')^*$$
+            is $0$. This can only happen if $1 = u^2$.
+        \end{enumerate}
+
+        \item 
+        \begin{enumerate}
+            \item We have 
+            $$\tau(\overline{\varepsilon} \cdot x) = \overline{\tau(\varepsilon \cdot \overline{x})} = \overline{u \cdot \tau(\overline{x})} = \overline{u} \cdot \overline{\tau(\overline{x})} = \overline{u} \cdot \tau(x).$$
+            \item For any $x \in A'$, we have 
+            $$\tau(x) = \tau(\varepsilon \cdot \overline{\varepsilon} \cdot x) = u \cdot \tau(\overline{\varepsilon} \cdot x) = u \cdot \overline{u} \cdot \tau(x).$$
+            Similarly as the argument of an above part, the nonsingularity of $t_{A'/A}$ implies that $u \cdot \overline{u} = 1$.
+        \end{enumerate}
+    \end{enumerate}
+\end{proof}

@@ -1,0 +1,20 @@
+\begin{proposition} \label{proposition:general_linear_group_over_a_ring_is_indeed_a_group}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $n$ be a positive integer. The set $\GL_n(R)$ of \CrefAndHyperrefIfExist{definition:invertible_matrix_over_a_ring}{invertible $n \times n$ matrices} over $R$, equipped with matrix multiplication, forms a \CrefAndHyperrefIfExist{definition:group}{group}.
+\end{proposition}
+\begin{proof}
+    We verify the group axioms.
+
+    \begin{enumerate}
+        \item We first verify closure under matrix multiplication. If $A, B \in \GL_n(R)$, then $AB$ is invertible with inverse $B^{-1} A^{-1}$, since
+        $$(AB)(B^{-1} A^{-1}) = A (B B^{-1}) A^{-1} = A I_n A^{-1} = A A^{-1} = I_n$$
+        and similarly $(B^{-1} A^{-1})(AB) = I_n$. Hence $AB \in \GL_n(R)$.
+
+        \item Next, we verify associativity. Matrix multiplication is associative: for any $A, B, C \in M_n(R)$, one has $(AB)C = A(BC)$. This holds in particular for elements of $\GL_n(R)$.
+
+        \item We now verify the existence of an identity element. The identity matrix $I_n$ is invertible (since $I_n I_n = I_n$), so $I_n \in \GL_n(R)$. Moreover, $I_n A = A I_n = A$ for all $A \in \GL_n(R)$.
+
+        \item Finally, we verify the existence of inverses. By definition, every $A \in \GL_n(R)$ has an inverse $A^{-1} \in M_n(R)$ satisfying $A A^{-1} = A^{-1} A = I_n$. This inverse $A^{-1}$ is itself invertible (with inverse $A$), so $A^{-1} \in \GL_n(R)$.
+    \end{enumerate}
+
+    Thus $\GL_n(R)$ satisfies all group axioms.
+\end{proof}

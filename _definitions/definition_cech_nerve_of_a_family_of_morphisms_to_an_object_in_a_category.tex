@@ -1,0 +1,22 @@
+\begin{definition}[\v{C}ech nerve of a family of morphisms to an object] \label{definition:cech_nerve_of_a_family_of_morphisms_to_an_object_in_a_category}
+    \TODO{AI generated, verify}
+
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+
+    For every object $U$ of $\mathcal{C}$ and every family of morphisms $\{U_i \to U\}_{i \in I}$ in $\mathcal{C}$ such that all \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber products} $U_{i_0} \times_U U_{i_1} \times_U \cdots \times_U U_{i_n}$ exist for all $n \ge 0$ and all $(i_0,\ldots,i_n) \in I^{n+1}$, one defines the \hldef{\v{C}ech nerve of $\{U_i \to U\}_{i \in I}$}, denoted by \hl{$\check{C}(\{U_i \to U\}_{i \in I})$}, as a \CrefAndHyperrefIfExist{definition:simplicial_object_in_an_infty_category}{simplicial object} in the \CrefAndHyperrefIfExist{definition:category_of_objects_over_under_a_fixed_object_in_a_category}{slice category} $\mathcal{C}/U$\CrefIfExists{definition:category_of_objects_over_under_a_fixed_object_in_a_category}.
+
+    Concretely, for each $[n] \in \Delta$\CrefIfExists{definition:simplex_category}, the value of the \v{C}ech nerve at $[n]$ is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproduct} in $\mathcal{C}/U$
+    $$\check{C}(\{U_i \to U\})_n := \coprod_{(i_0,\ldots,i_n) \in I^{n+1}} \big(U_{i_0} \times_U U_{i_1} \times_U \cdots \times_U U_{i_n} \longrightarrow U\big),$$
+    where the morphism to $U$ is the canonical projection, assuming that this coproduct and the relevant fiber products exist.
+
+    For each order-preserving map $\theta: [m] \to [n]$ in $\Delta$, the induced morphism
+    $$\check{C}(\{U_i \to U\})_\theta : \check{C}(\{U_i \to U\})_n \longrightarrow \check{C}(\{U_i \to U\})_m$$
+    in $\mathcal{C}/U$ is the coproduct of the canonical projections between fiber products induced by $\theta$: for each $(i_0,\ldots,i_n) \in I^{n+1}$, the component at index $(i_{\theta(0)},\ldots,i_{\theta(m)}) \in I^{m+1}$ is the morphism
+    $$U_{i_0} \times_U \cdots \times_U U_{i_n} \longrightarrow U_{i_{\theta(0)}} \times_U \cdots \times_U U_{i_{\theta(m)}}$$
+    induced by the projections among the factors.
+
+    The \CrefAndHyperrefIfExist{definition:simplex_of_a_simplicial_object_in_a_category_and_face_and_degeneracy_maps}{face maps} $d^k: \check{C}(\{U_i \to U\})_1 \rightrightarrows \check{C}(\{U_i \to U\})_0$ correspond to the two projections from each pairwise fiber product $U_{i_0} \times_U U_{i_1}$, and the degeneracy maps $s^k: \check{C}(\{U_i \to U\})_n \to \check{C}(\{U_i \to U\})_{n+1}$ correspond to the diagonal morphisms.
+
+    When $\mathcal{A}$ is a \CrefAndHyperrefIfExist{definition:category}{category} and $F: \mathcal{C}^{\op} \to \mathcal{A}$ is a functor, applying $F$ levelwise yields a cosimplicial object in $\mathcal{A}$, denoted by \hl{$F(\check{C}(\{U_i \to U\})_\bullet)$}, whose value at $[n]$ is
+    $$F(\check{C}(\{U_i \to U\})_n) = \prod_{(i_0,\ldots,i_n) \in I^{n+1}} F(U_{i_0} \times_U U_{i_1} \times_U \cdots \times_U U_{i_n}).$$
+\end{definition}

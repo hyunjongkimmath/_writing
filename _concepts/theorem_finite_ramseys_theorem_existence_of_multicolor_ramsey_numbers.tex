@@ -1,0 +1,11 @@
+\begin{theorem} \label{theorem:finite_ramseys_theorem_existence_of_multicolor_ramsey_numbers}
+\TODO{AI generated, verify}
+For all positive integers $m$ and $k_1, k_2, \dots, k_m$, the multicolor Ramsey number $R(k_1, k_2, \dots, k_m)$ exists and is finite.
+
+The proof proceeds by induction on $\sum_{i=1}^m k_i$. The base case follows from \CrefAndHyperrefIfExist{theorem:finite_ramseys_theorem_existence_of_two_color_ramsey_numbers}{the two-color Ramsey theorem}. For the inductive step, one reduces an $m$-coloring to a 2-coloring by grouping colors $2,\dots,m$ into a single color, and applying the recursive bound
+$$R(k_1, \dots, k_m) \leq R(k_1, K') \cdot R(K', k_2, \dots, k_m),$$
+where $K'$ is an appropriate intermediate Ramsey number.
+
+An explicit upper bound is given by
+$$R(k_1, \dots, k_m) \leq (k_1 + \cdots + k_m - m + 1)!.$$
+\end{theorem}

@@ -1,0 +1,12 @@
+\begin{definition}[Itô integral with respect to Brownian motion] \label{definition:ito_integral_with_respect_to_brownian_motion}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$.
+
+For an adapted process $X = \{X_t\}_{t \geq 0}$ such that $\int_0^T \mathbb{E}[X_t^2] \, dt < \infty$ for all $T > 0$, the \hldef{Itô integral of $X$ with respect to $B$} over $[0, T]$ is denoted
+$$\hlin{\int_0^T X_s \, dB_s},$$
+and is defined as the $L^2$-limit of Riemann--Itô sums:
+$$\sum_{i=0}^{n-1} X_{t_i} (B_{t_{i+1}} - B_{t_i}),$$
+where $0 = t_0 < t_1 < \dots < t_n = T$ and the mesh $\max_i |t_{i+1} - t_i| \to 0$. The evaluation at the left endpoint $X_{t_i}$ is essential for Itô calculus.
+
+The Itô integral process $M_t = \int_0^t X_s \, dB_s$ is a continuous martingale with quadratic variation $\langle M \rangle_t = \int_0^t X_s^2 \, ds$.
+\end{definition}

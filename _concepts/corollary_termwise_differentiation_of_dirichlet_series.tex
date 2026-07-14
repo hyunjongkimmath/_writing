@@ -1,0 +1,22 @@
+\begin{corollary}[Termwise differentiation of Dirichlet series under uniform convergence of derivative series]
+\label{corollary:termwise_differentiation_of_dirichlet_series}
+\TODO{AI generated, verify}
+Let $D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}$ be a \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{Dirichlet series} with abscissa of absolute convergence $\sigma_a \in [-\infty, \infty]$.
+For any $s_0 \in \mathbb{C}$ with $\Re(s_0) > \sigma_a$, the series $\sum_{n=1}^\infty \frac{a_n}{n^{s_0}}$ converges.
+For any $k \in \mathbb{N}$, the series of $k$-th termwise derivatives
+$$\sum_{n=1}^\infty \frac{d^k}{ds^k} \left( \frac{a_n}{n^s} \right) = \sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$$
+converges uniformly on compact subsets of $\{ s \in \mathbb{C} : \Re(s) > \sigma_a \}$ by \Cref{proposition:uniform_convergence_of_termwise_derivatives_of_dirichlet_series}.
+By the theorem on termwise differentiation of series under uniform convergence of derivative series (\CrefAndHyperrefIfExist{theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series}), the function $D(s)$ is $k$-times differentiable on the half-plane $\{ s \in \mathbb{C} : \Re(s) > \sigma_a \}$ (when restricted to real $s$, or holomorphic on the complex half-plane), and
+$$D^{(k)}(s) = \sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$$
+for all $s$ with $\Re(s) > \sigma_a$.
+In particular, $D(s)$ is infinitely differentiable on $( \sigma_a, \infty ) \subseteq \mathbb{R}$ and holomorphic on $\{ s \in \mathbb{C} : \Re(s) > \sigma_a \}$.
+\end{corollary}
+\begin{proof}
+\TODO{AI generated, verify}
+Fix $k \in \mathbb{N}_0$. Let $[a,b] \subseteq (\sigma_a, \infty)$ be an arbitrary compact interval.
+By \Cref{proposition:uniform_convergence_of_termwise_derivatives_of_dirichlet_series}, the series $\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$ converges uniformly on $[a,b]$.
+The series $\sum_{n=1}^\infty \frac{a_n}{n^s}$ converges at $s = a$ (since $a > \sigma_a$).
+Applying \Cref{theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series} to the sequence of functions $f_n(s) = \frac{a_n}{n^s}$ on $[a,b]$, we conclude that $D(s)$ is $k$-times differentiable on $(a,b)$ with $D^{(k)}(s) = \sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$.
+Since $[a,b]$ was arbitrary, $D \in C^k(\sigma_a, \infty)$ with the stated derivative.
+As $k$ was arbitrary, $D \in C^\infty(\sigma_a, \infty)$.
+\end{proof}

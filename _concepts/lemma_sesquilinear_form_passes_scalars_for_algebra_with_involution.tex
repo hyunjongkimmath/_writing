@@ -1,0 +1,9 @@
+\begin{lemma} \label{lemma:sesquilinear_form_passes_scalars_for_algebra_with_involution}
+   Let $A$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $\eta: A \to A'$ be an \CrefAndHyperrefIfExist{definition:algebra_with_involution_over_a_ring_with_involution}{$A'$-algebra with involution}. For any \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $b: M \times M \to A'$ on a (right) $A'$-module $M$, we have
+   $$b(ma, n) = b(m, n\overline{a})$$
+   for all $m,n \in M$ and $a \in A$.
+\end{lemma}
+\begin{proof}
+    By the sesquilinearity of $b$ and the fact that $\eta$ maps $A$ into the center of $A'$, we have 
+    $$b(ma,n) = \overline{a} \cdot b(m,n) = b(m,n) \cdot \overline{a} = b(m, n \cdot \overline{a}).$$
+\end{proof}

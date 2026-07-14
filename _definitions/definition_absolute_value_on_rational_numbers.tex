@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:absolute_value_on_rational_numbers}
+    Let $\bbQ$ be the \CrefAndHyperrefIfExist{definition:field_of_rational_numbers}{field of rational numbers} equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_field_of_rational_numbers}{standard order} making it a \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{totally ordered field}\CrefIfExists{proposition:rational_numbers_form_ordered_field}.
+
+    The \hldef{absolute value on $\bbQ$} is the function $|\,\cdot\,|_\bbQ : \bbQ \to \bbQ_{\ge 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} given by
+    $$\hlin{|q|_\bbQ = \begin{cases} q & \text{if } q \ge 0, \\ -q & \text{if } q < 0. \end{cases}}$$
+    When no confusion is possible, we write simply \hl{$|\,\cdot\,|$} for $|\,\cdot\,|_\bbQ$.
+
+    The absolute value satisfies the following properties for all $q, r \in \bbQ$:
+    \begin{enumerate}
+        \item Positive-definiteness: $|q| = 0$ if and only if $q = 0$.
+        \item Multiplicativity: $|q r| = |q|\,|r|$.
+        \item Triangle inequality: $|q + r| \le |q| + |r|$.
+    \end{enumerate}
+    In particular, $|\,\cdot\,|_\bbQ$ is an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value on $\bbQ$} valued in the ordered semiring $\bbQ_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, and it extends the restriction of the standard absolute value on $\bbQ$ to the integers $\bbZ$ (identified with their images under the canonical inclusion $\bbZ \hookrightarrow \bbQ$).
+\end{definition}

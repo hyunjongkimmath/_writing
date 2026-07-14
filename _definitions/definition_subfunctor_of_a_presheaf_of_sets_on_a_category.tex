@@ -1,0 +1,7 @@
+\begin{definition} \label{definition:subfunctor_of_a_presheaf_of_sets_on_a_category}
+Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $F: \calC^{\operatorname{op}} \to \mathbf{Set}$ be a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} on $\calC$.
+
+A \hldef{subfunctor of $F$} is a presheaf $G$ together with a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation} $\iota: G \hookrightarrow F$ such that for every object $U$ of $\calC$, the component map $\iota_U: G(U) \to F(U)$ is \hldef{injective}. Equivalently, a subfunctor of $F$ is a \CrefAndHyperrefIfExist{definition:subcategory_of_a_category}{subobject} of $F$ as an object of $\operatorname{PSh}(\calC, \Sets)$\CrefIfExists{proposition:subobjects_of_presheaf_category_are_pointwise_injective}.
+
+Equivalently, a subfunctor of $F$ can be described as a collection of subsets $S(U) \subseteq F(U)$ for each object $U$ of $\calC$, such that for every morphism $f: V \to U$ in $\calC$, the restriction map $F(f): F(U) \to F(V)$ satisfies $F(f)(S(U)) \subseteq S(V)$. The two descriptions are equivalent: given a collection $\{S(U)\}_U$, one defines $G(U) = S(U)$ and $\iota_U$ as the inclusion map; conversely, given an injective natural transformation $\iota: G \hookrightarrow F$, one sets $S(U) = \operatorname{im}(\iota_U) \subseteq F(U)$.
+\end{definition}

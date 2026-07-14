@@ -1,0 +1,54 @@
+% \begin{definition} \label{definition:group_object_in_an_infty_category}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting a \CrefAndHyperrefIfExist{definition:terminal_object_in_an_infty_category}{terminal object} $*$ and \CrefAndHyperrefIfExist{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}{finite limits}.
+
+%     A \hldef{group object in $\mathcal{C}$} is a simplicial object $X_{\bullet} : \Delta^{\op} \to \mathcal{C}$ such that for every $n \ge 0$ and every partition $[n] = S \cup T$ with $S \cap T = \{i\}$, the Segal maps induce an equivalence:
+%     \[
+%     X_n \xrightarrow{\,\sim\,} X_S \times_{X_{\{i\}}} X_T
+%     \]
+%     and furthermore, the map $X_2 \to X_1 \times X_1$ given by the faces $d_0$ and $d_2$ is an equivalence (the groupoid condition). We typically identify the group object with its underlying object $G := X_1$.
+
+%     Equivalently, a group object is a \CrefAndHyperrefIfExist{definition:monoid_object_in_an_infty_category}{monoid object} $M$ in $\mathcal{C}$ such that for every object $Y \in \mathcal{C}$, the monoid of connected components $\pi_0(\Map_{\mathcal{C}}(Y, M))$ is a \CrefAndHyperrefIfExist{definition:group}{group}.
+
+%     A group object $G$ is called \hldef{abelian} (or commutative) if its underlying monoid structure extends to a symmetric monoidal (or $E_{\infty}$) monoid object in $\mathcal{C}$. Crucially, this implies that for every $Y \in \mathcal{C}$, the group $\pi_0(\Map_{\mathcal{C}}(Y, G))$ is abelian.
+
+%     Alternatively, if $G$ is a monoid object presented by a simplicial object $X_{\bullet}$ (its bar construction $BG$), then $G$ is a group object if and only if the canonical map from $G = X_1$ to the loop space of $BG$
+%     \[
+%     G \to \Omega(BG) := * \times_{BG} *
+%     \]
+%     is an equivalence in $\mathcal{C}$.
+% \end{definition}
+
+\begin{definition} \label{definition:group_object_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting a \CrefAndHyperrefIfExist{definition:terminal_object_in_an_infty_category}{terminal object} $*$ and \CrefAndHyperrefIfExist{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}{finite pullbacks}.
+
+    A \hldef{group object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:monoid_object_in_an_infty_category}{monoid object} $M$ in $\mathcal{C}$ (presented by a simplicial object $X : \Delta^{\mathrm{op}} \to \mathcal{C}$ with $X_0 \simeq *$) satisfying either of the following equivalent conditions:
+    \begin{enumerate}
+        \item For every object $Y \in \mathcal{C}$, the monoid of connected components $\pi_0(\Map_{\mathcal{C}}(Y, M))$ is a \CrefAndHyperrefIfExist{definition:group}{group}.
+        \item The shear map $X_2 \to X_1 \times X_1$ induced by the face maps $(d_0, d_2)$ is an equivalence in $\mathcal{C}$.
+    \end{enumerate}
+
+    A group object $G$ is called \hldef{abelian} if its underlying monoid structure extends to a commutative monoid object (an algebra over the commutative $\infty$-operad $\mathcal{C}om$). This implies that for every $Y \in \mathcal{C}$, the group $\pi_0(\Map_{\mathcal{C}}(Y, G))$ is abelian.
+
+    \TODO{bar construction}
+    The condition that $M$ is a group object can also be expressed in terms of the simplicial object $X$ presenting $M$: letting $B M := X$ denote the \hldef{bar construction} on $M$, $M$ is a group object if and only if the canonical map to the loop space
+    $$M \to \Omega B M := * \times_{BM} *$$
+    \TODO{need loop space definition for pointed simplicial set}
+    is an equivalence, where the fiber product is the pullback along the basepoint $* \to B M$ in the $\infty$-category of simplicial objects in $\mathcal{C}$.
+\end{definition}
+
+% \begin{definition} \label{definition:group_object_in_an_infty_category}
+%     \TODO{AI generated, verify}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting a \CrefAndHyperrefIfExist{definition:terminal_object_in_an_infty_category}{terminal object} $*$ and \CrefAndHyperrefIfExist{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}{finite pullbacks}.
+
+%     A \hldef{group object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:monoid_object_in_an_infty_category}{monoid object} $M$ in $\mathcal{C}$ such that for every object $Y \in \mathcal{C}$, the set of connected components
+%     $$\pi_0(\Map_{\mathcal{C}}(Y, M))$$
+%     is a \CrefAndHyperrefIfExist{definition:group}{group} under the multiplication induced by $M$. Equivalently, for each $Y$, every element of $\pi_0(\Map_{\mathcal{C}}(Y, M))$ admits a two-sided inverse.
+
+%     A group object $G$ is called \hldef{abelian} if for every $Y \in \mathcal{C}$, the group $\pi_0(\Map_{\mathcal{C}}(Y, G))$ is abelian. Equivalently, the multiplication morphism $\mu : G \times G \to G$ satisfies $\mu \simeq \mu \circ \tau_{G,G}$ where $\tau_{G,G}$ is the symmetry.
+
+%     The condition that $M$ is a group object can also be expressed in terms of the simplicial object $X$ presenting $M$: letting $B M := X_*$ denote the \hldef{bar construction} on $M$, $M$ is a group object if and only if the canonical map
+%     $$M \to \Omega B M := * \times_{BM}^h BM$$
+%     \TODO{need loop space definition for pointed simplicial set}
+%     is an equivalence, where $\Omega$ denotes the \CrefAndHyperrefIfExist{definition:loop_space_of_a_pointed_simplicial_set}{loop space} functor and the fiber product is taken along the basepoint $* \to B M$.
+% \end{definition}

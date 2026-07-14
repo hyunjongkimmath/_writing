@@ -1,9 +1,23 @@
-\begin{definition} \label{definition:ordered_ring}
-    An \hldef{ordered ring} is a \CrefAndHyperrefIfExist{definition:ring}{ring} $(R, +, \cdot)$ together with a subset $P \subset R$ of \hldef{positive elements} satisfying the following three axioms:
+\begin{definition}[Ordered ring] \label{definition:ordered_ring}
     \begin{enumerate}
-        \item $P$ is closed under addition: if $a, b \in P$, then $a + b \in P$.
-        \item $P$ is closed under multiplication: if $a, b \in P$, then $ab \in P$.
-        \item \hldef{Trichotomy}: for every $a \in R$, exactly one of $a \in P$, $-a \in P$, or $a = 0$ holds.
+        \item An \hldef{ordered ring} is a \CrefAndHyperrefIfExist{definition:ring}{ring} $(R,+,\cdot)$ equipped with a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partial order} $\leq$ such that
+        \begin{enumerate}
+            \item the additive group $(R,+)$ is an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group}, i.e.\ for all $a,b,c \in R$, if $a \leq b$, then $a + c \leq b + c$;
+            \item the order is compatible with multiplication: if $a \geq 0$ and $b \geq 0$, then $ab \geq 0$.
+        \end{enumerate}
+        The set of \hldef{non-negative elements} of $R$ is denoted by \hl{$R_{\ge 0} = \{a \in R : a \ge 0\}$}.
+
+        If the partial order $\leq$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}, then $R$ is called a \hldef{totally ordered ring}. 
+        Equivalently, an ordered ring is totally ordered if and only if it satisfies \hldef{trichotomy}: for every $a \in R$, exactly one of $a > 0$, $a = 0$, or $a < 0$ holds.
+
+        \item Equivalently, an ordered ring may be defined as a ring $(R,+,\cdot)$ equipped with a \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partial order} $<$ such that
+        \begin{enumerate}
+            \item the additive group $(R,+)$ is an ordered abelian group under $<$ (i.e.\ for all $a,b,c \in R$, if $a < b$, then $a + c < b + c$);
+            \item the order is compatible with multiplication in the following sense: for all $a,b \in R$, if $a > 0$ and $b > 0$, then $ab > 0$.
+        \end{enumerate}
     \end{enumerate}
-    We define a \CrefAndHyperref{definition:total_order_linear_order_on_a_set}{total order} on $R$ by setting \hl{$a < b$} if and only if $b - a \in P$.
+
+    These two definitions are identified via the natural correspondence between a partial order $\leq$ and its associated strict partial order $<$ given by $a < b \iff a \leq b \text{ and } a \neq b$\CrefIfExists{proposition:correspondence_between_partial_orders_and_strict_partial_orders_on_a_set}. When using the strict formulation, we adopt the notations that $a \leq b$ means $a < b$ or $a = b$, and \hl{$b > a$} (resp.\ \hl{$b \geq a$}) means $a < b$ (resp.\ $a \leq b$). The set of \hldef{positive elements} is denoted by \hl{$R_{> 0} = \{a \in R : a > 0\}$}. For any $a,b \in R$, we have
+    $$a - b \in R_{> 0} \iff a > b.$$
+    \CrefIfExists{definition:subtraction_of_an_element_of_a_set_by_a_uniquely_invertible_element_for_a_commutative_binary_operation_written_additively}
 \end{definition}

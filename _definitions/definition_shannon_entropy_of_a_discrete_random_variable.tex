@@ -1,0 +1,8 @@
+\begin{definition}[Shannon entropy of a discrete random variable] \label{definition:shannon_entropy_of_a_discrete_random_variable}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X: \Omega \to \mathcal{X}$ be a random variable taking values in a finite or countable set $\mathcal{X}$. Let $p_x = P(X = x)$ for each $x \in \mathcal{X}$.
+
+The \hldef{Shannon entropy of $X$} (base $e$, measured in nats) is defined as
+$$\hlin{H(X) = -\sum_{x \in \mathcal{X}} p_x \log p_x},$$
+with the convention $0 \log 0 = 0$. The entropy takes values in $[0, \infty]$. When $\mathcal{X}$ is finite with $|\mathcal{X}| = n$, we have $0 \leq H(X) \leq \log n$, with equality if and only if $p_x = 1/n$ for all $x$.
+\end{definition}

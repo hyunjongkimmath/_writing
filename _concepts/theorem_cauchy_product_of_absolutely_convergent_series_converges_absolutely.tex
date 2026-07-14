@@ -1,0 +1,32 @@
+\begin{theorem}[Cauchy product of absolutely convergent series converges absolutely in a commutative ring with submultiplicative absolute value] \label{theorem:cauchy_product_of_absolutely_convergent_series_converges_absolutely}
+    \TODO{AI generated, verify. Generalized from $\bbR$/$\bbC$ to any commutative ring with submultiplicative absolute value.}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} such that $T^\infty$\CrefIfExists{definition:ordered_semiring_with_adjoined_infinity} has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$} that is submultiplicative: $|xy| \leq |x||y|$ for all $x, y \in R$. Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be two sequences in $R$. Suppose that both series $\sum_{n=0}^\infty a_n$ and $\sum_{n=0}^\infty b_n$ converge absolutely, with sums $A$ and $B$ respectively. Let $(c_n)_{n=0}^\infty$ be their \CrefAndHyperrefIfExist{definition:cauchy_product_of_two_sequences_in_a_commutative_ring}{Cauchy product}, defined by
+    $$c_n = \sum_{k=0}^n a_k b_{n-k}.$$
+
+    Then the series $\sum_{n=0}^\infty c_n$ converges absolutely, and by \Cref{theorem:mertens_theorem_on_cauchy_product_of_series} it converges to $AB$, i.e.,
+    $$\hlin{\sum_{n=0}^\infty |c_n| < \infty \quad \text{and} \quad \sum_{n=0}^\infty c_n = AB.}$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $C_N^* = \sum_{n=0}^N |c_n|$ denote the partial sums of absolute values, taking values in $T^\infty$. We first show that $(C_N^*)$ converges in $T^\infty$ by proving it is bounded above.
+
+    For each $n$, the submultiplicativity of the absolute value and the triangle inequality give:
+    $$|c_n| = \left|\sum_{k=0}^n a_k b_{n-k}\right| \leq \sum_{k=0}^n |a_k b_{n-k}| \leq \sum_{k=0}^n |a_k| |b_{n-k}|.$$
+
+    Summing over $n$ from $0$ to $N$:
+    $$C_N^* = \sum_{n=0}^N |c_n| \leq \sum_{n=0}^N \sum_{k=0}^n |a_k| |b_{n-k}|.$$
+
+    The right-hand side is a sum over all pairs $(k, n)$ with $0 \leq k \leq n \leq N$. Collecting terms by $j = n - k$, we have for each pair $(k, j)$ with $k + j \leq N$ exactly one term $|a_k| |b_j|$:
+    $$\sum_{n=0}^N \sum_{k=0}^n |a_k| |b_{n-k}| = \sum_{\substack{k, j \geq 0 \\ k + j \leq N}} |a_k| |b_j|.$$
+
+    Since all terms are nonnegative, this sum is bounded above by the unrestricted product of the partial sums:
+    $$\sum_{\substack{k, j \geq 0 \\ k + j \leq N}} |a_k| |b_j| \leq \left(\sum_{k=0}^N |a_k|\right) \left(\sum_{j=0}^N |b_j|\right).$$
+
+    Let $A^* = \sum_{k=0}^\infty |a_k|$ and $B^* = \sum_{j=0}^\infty |b_j|$ be the sums of the absolute series in $T^\infty$, which exist by absolute convergence. Since the partial sums of nonnegative terms are nondecreasing and converge to their suprema, we have $\sum_{k=0}^N |a_k| \leq A^*$ and $\sum_{j=0}^N |b_j| \leq B^*$ for all $N$. Therefore:
+    $$C_N^* \leq A^* B^*.$$
+
+    The sequence $(C_N^*)$ is nondecreasing (since $|c_n| \geq 0_T$) and bounded above by $A^* B^* < \infty$ in $T^\infty$. Since $T^\infty$ has the least upper bound property, the \CrefAndHyperrefIfExist{theorem:monotone_convergence_theorem_for_sequences_of_real_numbers}{monotone convergence theorem} implies that $(C_N^*)$ converges to its supremum in $T^\infty$. Hence $\sum_{n=0}^\infty |c_n|$ converges, so the Cauchy product series converges absolutely.
+
+    Since both $\sum a_n$ and $\sum b_n$ converge absolutely, we may apply \Cref{theorem:mertens_theorem_on_cauchy_product_of_series} (which requires only that one series converge absolutely) to conclude that $\sum c_n = AB$.
+\end{proof}

@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:canonical_evaluation_map_for_a_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}. Let $M^\vee = \Hom_R(M,R)$ be the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} of $M$. 
+    \begin{enumerate}
+        \item In the case that $M$ is a left $R$-module, there is a \hldef{canonical evaluation map} or a \hldef{canonical map}
+        $$\Phi: M^\vee \otimes_R M \to \End_R(M)$$
+        \CrefIfExists{definition:endomorphism_ring_of_a_module_over_a_ring}\CrefIfExists{definition:tensor_product_of_bimodules_of_rings}
+        which maps a pure tensor $f \otimes m$ to the endomorphism $x \mapsto f(x) m$ of $M$. In fact, these canonical evaluation maps form a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}
+        $$(M \mapsto M^\vee \otimes_R M) \Rightarrow (M \mapsto \End_R(M)): {}_R \Mod \to \Ab,$$
+        \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}\CrefIfExists{definition:category_of_groups_of_abelian_groups} which may be called the \hldef{evaluation natural transformation}.
+
+        If $M$ is an $(R,S)$-bimodule for a ring $S$, then the canonical map in fact has a right $S$-module structure.
+
+        \item In the case that $M$ is a right $R$-module, there is a \hldef{canonical evaluation map} or a \hldef{canonical map}
+        $$\Phi: M \otimes_R M^\vee \to \End_R(M)$$
+        which maps a pure tensor $m \otimes f$ to the endomorphism $x \mapsto m f(x) $ of $M$.
+        In fact, these canonical evaluation maps form a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}
+        $$(M \mapsto M \otimes_R M^\vee) \Rightarrow (M \mapsto \End_R(M)): {} \Mod_R \to \Ab,$$
+        which may be called the \hldef{evaluation natural transformation}.
+
+        If $M$ is an $(S,R)$-bimodule for a ring $S$, then the canonical map in fact has a left $S$-module structure.
+    \end{enumerate}
+\end{definition}

@@ -1,0 +1,14 @@
+\begin{proposition}[Derivative of a real constant function on a real interval is zero] \label{proposition:derivative_of_a_real_constant_function_on_a_real_interval_is_zero}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an interval and let $c \in \mathbb{R}$ be a constant. Consider the \CrefAndHyperrefIfExist{definition:function_of_sets}{constant function} $f : I \to \mathbb{R}$ defined by $f(x) = c$ for all $x \in I$. Then $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $a \in I$, and
+    $$f'(a) = 0.$$
+    Equivalently, the \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} of $f$ is the zero function on $I$, i.e., $f' \equiv 0$ on $I$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $a \in I$ be arbitrary. By \Cref{definition:derivative_of_a_real_valued_function_on_a_real_interval}, the derivative of $f$ at $a$ is defined as the limit
+    $$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h},$$
+    provided this limit exists in $\mathbb{R}$. Since $f$ is the constant function with value $c$, we have $f(a+h) = c$ and $f(a) = c$ for all $h$ such that $a+h \in I$. Thus the difference quotient becomes
+    $$\frac{f(a+h) - f(a)}{h} = \frac{c - c}{h} = \frac{0}{h} = 0$$
+    for all $h \neq 0$ with $a+h \in I$. The constant zero function has limit $0$ as $h \to 0$. Therefore, the limit exists and equals $0$, so $f$ is differentiable at $a$ with $f'(a) = 0$. Since $a \in I$ was arbitrary, $f$ is differentiable on all of $I$ and $f' \equiv 0$ on $I$.
+\end{proof}

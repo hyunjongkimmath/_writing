@@ -115,6 +115,11 @@
 \newtheorem{conjecture}[conjecture]{Conjecture}
 \aliascntresetthe{conjecture}
 
+% Solution
+\newaliascnt{solution}{theorem}
+\newtheorem{solution}[solution]{Solution}
+\aliascntresetthe{solution}
+
 % ----- Tell cleveref how to reference these environments -----
 
 \crefname{theorem}{theorem}{theorems}
@@ -240,6 +245,7 @@
 \DeclareMathOperator\codim{codim}
 \DeclareMathOperator\Sym{Sym}
 \DeclareMathOperator\Aut{Aut}
+\DeclareMathOperator\Lie{Lie}
 \DeclareMathOperator\Gal{Gal}
 \DeclareMathOperator\GL{GL}
 \DeclareMathOperator\PGL{PGL}
@@ -289,6 +295,10 @@
 \DeclareMathOperator\Der{Der}
 \DeclareMathOperator\Ider{Ider}
 \DeclareMathOperator\Frac{Frac}
+\DeclareMathOperator\Tr{Tr}
+\DeclareMathOperator\ev{ev}
+\DeclareMathOperator\Conf{Conf}
+\DeclareMathOperator\Hur{Hur}
 
 \DeclareMathOperator\Map{Map}
 \DeclareMathOperator\colim{colim}
@@ -517,10 +527,10 @@
 \newcommand{\LAoneab}{L_{\bbA^1}^{\text{ab}}}
 \newcommand{\CstarAone}{C_*^{\bbA^1}}
 
-\newcommand{\Fq}{\bbF_q}
-\newcommand{\Fqn}{\bbF_{q^n}}
-\newcommand{\Fp}{\bbF_p}
-\newcommand{\Fqbar}{\overline{\bbF}_q}
+\newcommand{\Fq}{{\bbF_q}}
+\newcommand{\Fqn}{{\bbF_{q^n}}}
+\newcommand{\Fp}{{\bbF_p}}
+\newcommand{\Fqbar}{{\overline{\bbF}_q}}
 \newcommand{\Lotimes}{\stackrel{\mathrm{L}}{\otimes}}
 \newcommand{\pr}{\operatorname{pr}}
 \newcommand{\Fr}{\operatorname{Fr}}

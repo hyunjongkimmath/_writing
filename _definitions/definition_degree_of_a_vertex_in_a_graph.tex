@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:degree_of_a_vertex_in_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}, and let $v \in V(G)$. The \hldef{degree of $v$ in $G$}, denoted by \hl{$\deg_G(v)$} or simply \hl{$\deg(v)$}, is the number of edges incident to $v$:
+$$\deg_G(v) = |\{e \in E(G) : v \in e\}|.$$
+
+The minimum degree of $G$ is denoted by \hl{$\delta(G)$}, and the maximum degree of $G$ is denoted by \hl{$\Delta(G)$}:
+$$\delta(G) = \min_{v \in V(G)} \deg_G(v), \quad \Delta(G) = \max_{v \in V(G)} \deg_G(v).$$
+
+Let $D$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{directed graph}, and let $v \in V(D)$. The \hldef{in-degree of $v$ in $D$}, denoted by \hl{$d_{\operatorname{in}}(v)$}, is the number of edges $(u,v) \in E(D)$. The \hldef{out-degree of $v$ in $D$}, denoted by \hl{$d_{\operatorname{out}}(v)$}, is the number of edges $(v,u) \in E(D)$.
+\end{definition}

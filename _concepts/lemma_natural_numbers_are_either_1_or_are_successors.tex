@@ -1,0 +1,6 @@
+\begin{lemma} \label{lemma:natural_numbers_are_either_1_or_are_successors}
+    Let $n \in \bbN$\CrefIfExists{definition:natural_numbers} such that $n \neq 1$. There exists some $j \in \bbN$ such that $n = s(j)$. 
+\end{lemma}
+\begin{proof}
+    For $n \in \bbN$, let $P(n)$ be the statement ``if $n \neq 1$, then there exists some $j \in \bbN$ such that $n = s(j)$''. The bsae case $n = 1$ holds true vacuously. Suppose inductively that $n = k \in \bbN$ satisfies $P(k)$. We want to show that $P(s(k))$ is true. This is tautologically true --- after all $s(k) = s(k)$. Thus, $P(n)$ is true for all $n \in \bbN$ by induction.
+\end{proof}

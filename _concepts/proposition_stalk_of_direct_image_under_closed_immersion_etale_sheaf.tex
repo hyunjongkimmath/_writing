@@ -1,0 +1,21 @@
+\begin{proposition}[Stalk of direct image under closed immersion for étale sheaves] \label{proposition:stalk_of_direct_image_under_closed_immersion_etale_sheaf}
+\TODO{AI generated, verify}
+    Let $i : Z \hookrightarrow X$ be a \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{closed immersion} of schemes, and let $\mathcal{F}$ be a sheaf on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $Z_{\text{ét}}$}. Let $\bar{x}$ be a geometric point.
+    \TODO{the statement needs to specify the value of the sheaf; in praticular, the notion of $0$ does not make sense unless the sheaf is valued in abelian groups.}
+
+    \begin{enumerate}
+        \item If the image of $\bar{x}$ lies in $Z$, then
+        $$(i_*\mathcal{F})_{\bar{x}} = \mathcal{F}_{\bar{x}}$$
+
+        \item If the image of $\bar{x}$ lies in $X \setminus Z$, then
+        $$(i_*\mathcal{F})_{\bar{x}} = 0$$
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    This is a consequence of \Cref{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf}, as closed immersions are finite morphisms.
+% \TODO{AI generated, verify}
+%     If $\bar{x}$ lands in $Z$, the étale neighborhoods of $\bar{x}$ in $X$ pull back to étale neighborhoods of $\bar{x}$ in $Z$: for any $(V, \bar{v})$ étale over $X$ with $\bar{v}$ mapping to $\bar{x} \in Z$, the fiber product $V \times_X Z$ is an étale neighborhood of $\bar{x}$ in $Z$. The directed systems are cofinal.
+
+
+%     If $\bar{x}$ lands outside $Z$, there exists an étale neighborhood $(V, \bar{v})$ of $\bar{x}$ disjoint from $Z$ (since $X \setminus Z$ is open and contains the image). For any smaller neighborhood, $V' \times_X Z = \emptyset$, so the colimit vanishes.
+\end{proof}

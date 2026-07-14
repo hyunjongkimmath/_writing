@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:character_of_a_finite_dimensional_unitary_representation_of_a_group}
+    \TODO{AI generated, verify}
+
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $(\pi, \mathcal{H})$ a finite-dimensional \CrefAndHyperrefIfExist{definition:unitary_representation_of_a_group_on_a_hilbert_space}{unitary representation of $G$} on a complex Hilbert space $\mathcal{H}$.
+
+    The \hldef{character of $\pi$} is the function
+    $$\hlin{\chi_\pi : G \to \mathbb{C}, \quad g \mapsto \mathrm{tr}(\pi(g)).}$$
+
+    Since each $\pi(g)$ is unitary, its eigenvalues lie on the unit circle in $\mathbb{C}$, and $|\chi_\pi(g)| \leq \dim \mathcal{H}$ for all $g \in G$, with equality if and only if $\pi(g)$ is a scalar multiple of the identity. The character satisfies $\chi_\pi(g^{-1}) = \overline{\chi_\pi(g)}$ for all $g \in G$.
+
+    If $G$ is finite, then $\chi_\pi$ is a \hldef{class function on $G$} and the inner product
+    $$\hlin{\langle \chi_\pi, \chi_\pi \rangle = \frac{1}{|G|} \sum_{g \in G} |\chi_\pi(g)|^2}$$
+    equals the multiplicity of the trivial representation in $\pi \otimes \pi^\vee$.
+\end{definition}

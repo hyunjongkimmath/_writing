@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:connected_graph_connectivity_of_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}.
+
+The graph $G$ is called \hldef{connected} if for every pair of vertices $u, v \in V(G)$, there exists a \CrefAndHyperrefIfExist{definition:walk_path_trail_cycle_in_a_graph}{path} from $u$ to $v$. If $G$ is not connected, it is called \hldef{disconnected}.
+
+A \hldef{connected component of $G$} is a maximal connected subgraph of $G$, that is, a connected subgraph that is not properly contained in any larger connected subgraph. The vertices of $G$ are partitioned by the connected components.
+
+Let $D$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{directed graph}. The graph $D$ is called \hldef{weakly connected} if the underlying simple graph (obtained by replacing each directed edge $(u,v)$ with an undirected edge $\{u,v\}$) is connected. The graph $D$ is called \hldef{strongly connected} if for every pair of vertices $u, v \in V(D)$, there exists a directed path from $u$ to $v$.
+\end{definition}

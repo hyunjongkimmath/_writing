@@ -1,0 +1,15 @@
+\begin{proposition}[Derivatives of $n^{-s}$ for fixed positive integer $n$]
+\label{proposition:derivatives_of_n_to_the_minus_s}
+\TODO{AI generated, verify}
+Let $n \in \mathbb{Z}_{> 0}$ be a positive integer. Consider the function
+$f_n : \mathbb{R} \to \mathbb{R}$ defined by $f_n(s) = n^{-s}$ for all $s \in \mathbb{R}$,
+where $n^{-s}$ is the \CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}{real exponentiation via exponential and logarithm}, i.e. $n^{-s} = \exp(-s \ln n)$.
+Then $f_n$ is \CrefAndHyperrefIfExist{definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions}{infinitely differentiable} on $\mathbb{R}$, and for every $k \in \mathbb{N}_0$,
+$$f_n^{(k)}(s) = (-1)^k (\ln n)^k n^{-s} \quad \text{for all } s \in \mathbb{R}.$$
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+Apply \Cref{proposition:derivative_of_real_exponential_function_with_constant_base} with the constant base $a = n^{-1} = \frac{1}{n}$ (which is positive since $n > 0$). Then $a^s = (n^{-1})^s = n^{-s}$. By that proposition, for every $k \in \mathbb{N}_0$,
+$$f_n^{(k)}(s) = (\ln a)^k a^s = \bigl(\ln(n^{-1})\bigr)^k n^{-s} = (-\ln n)^k n^{-s} = (-1)^k (\ln n)^k n^{-s}.$$
+This is exactly the claimed formula.
+\end{proof}

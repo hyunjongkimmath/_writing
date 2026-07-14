@@ -131,10 +131,10 @@ This universal property generally fails for the \CrefAndHyperrefIfExist{definiti
 \subsection{Metrics, absolute values, and norms}
 
 \subsubsection{Extended metric spaces}
-\input{../_definitions/definition_extended_metric_on_a_set.tex}
+\input{../_definitions/definition_extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity.tex}
 \input{../_definitions/definition_isometry_between_extended_metric_spaces.tex}
 
-\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value.tex}
 \input{../_definitions/definition_topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric.tex}
 
 
@@ -147,7 +147,7 @@ This universal property generally fails for the \CrefAndHyperrefIfExist{definiti
 \input{../_definitions/definition_completion_of_an_extended_metric_space.tex}
 
 \begin{proposition}
-Let $(X,d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{extended metric space}. A \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space}{completion} $(\widehat{X}, \widehat{d})$ of $(X,d)$ exists and is unique up to unique isometry. Moreover, if $(X,d)$ is a metric space, then so is $(\widehat{X}, \widehat{d})$.
+Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X,d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}. A \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space}{completion} $(\widehat{X}, \widehat{d})$ of $(X,d)$ exists and is unique up to unique isometry. Moreover, if $(X,d)$ is a metric space, then so is $(\widehat{X}, \widehat{d})$.
 \end{proposition}
 \begin{proof}
     \TODO: actually complete this proof
@@ -192,11 +192,11 @@ Therefore, \(\Phi\) is a unique isometry between the completions, and the comple
 \end{proof}
 
 \subsubsection{Absolute values on fields}
-\input{../_definitions/definition_absolute_value_on_a_ring.tex}
+\input{../_definitions/definition_absolute_value_on_a_ring_valued_in_an_ordered_semiring.tex}
 
 \subsubsection{Norms on vector spaces over fields with absolute values}
 \input{../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
-\input{../_definitions/definition_topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring.tex}
 
 \subsubsection{Inner product on a vector space over the reals or complex numbers}
 \input{../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex}

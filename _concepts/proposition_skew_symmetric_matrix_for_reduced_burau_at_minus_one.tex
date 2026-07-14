@@ -1,0 +1,19 @@
+\begin{proposition}[Skew-symmetric matrix for the reduced Burau representation at $t = -1$] \label{proposition:skew_symmetric_matrix_for_reduced_burau_at_minus_one}
+\TODO{AI generated, verify}
+    Equip $\bbZ[t,t^{-1}]$ with the involution determined by $t \mapsto t^{-1}$. Let $(R,\sigma)$ be an \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{involution algebra} over $\bbZ[t,t^{-1}]$.
+    For integers $n \geq 2$, let $\tilde{H}_n^r \in M_{n-1}(R)$ be the matrix obtained by dividing all entries of $H_n^r$ (from \Cref{proposition:hermitian_form_preserved_by_reduced_burau_representation}) by $t+1$ and then evaluating at $t = -1$:
+    \begin{equation} \label{eq:skew_symmetric_matrix_for_reduced_burau_at_minus_one}
+    \tilde{H}_n^r = \begin{pmatrix}
+        0 & 1 & 0 & 0 & \cdots & 0 \\
+        -1 & 0 & 1 & 0 & \cdots & 0 \\
+        0 & -1 & 0 & 1 & \cdots & 0 \\
+        0 & 0 &  -1 & 0 & \cdots & 0 \\
+        \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & 0 & \cdots & 0
+    \end{pmatrix}.
+    \end{equation}
+    The involution on $\bbZ[t,t^{-1}]|_{t = -1}$ is trivial, so $\tilde{H}_n^r$ is \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{skew-Hermitian} (i.e., $(-1)$-Hermitian) over $(R,\sigma)$. The \CrefAndHyperrefIfExist{definition:epsilon_hermitian_form_induced_by_an_epsilon_hermitian_matrix}{Hermitian form arising from} $\tilde{H}_n^r$ is a \CrefAndHyperrefIfExist{definition:symmetric_skew_symmetric_alternating_bilinear_form_on_a_module_over_a_ring}{skew-symmetric bilinear form} (and hence a symplectic form when nondegenerate). The image of $\psi_n^r$ evaluated at $t = -1$ lies in a symplectic group, and norms of any vector with respect to this Hermitian form are all zero. The determinant is
+    \begin{equation} \label{eq:determinant_of_tilde_H_n_r}
+        \det \tilde{H}_n^r = \frac{1}{t^{n-1}} \sum_{i=0}^{n-1} t^i = \begin{cases} 0 &\text{if } 2 \mid n \\ 1 &\text{otherwise}. \end{cases}
+    \end{equation}
+\end{proposition}

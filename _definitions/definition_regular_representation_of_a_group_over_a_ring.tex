@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:regular_representation_of_a_group_over_a_ring}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $R$ a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $R[G]$ be the \CrefAndHyperrefIfExist{definition:group_ring_of_a_group_over_a_ring}{group ring of $G$ over $R$}.
+
+\begin{enumerate}
+    \item 
+    The \hldef{(left) regular representation of $G$ over $R$} is the \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring}{representation of $G$ on the $R[G]$-module $R[G]$} given by left multiplication:
+    $$
+    \hlin{\lambda : G \to \mathrm{Aut}_{R\text{-}\mathrm{Mod}}(R[G])}
+    $$
+    defined by $\lambda(g)(\sum_{h \in G} r_h h) = \sum_{h \in G} r_h (gh)$ for all $g \in G$ and $\sum_{h \in G} r_h h \in R[G]$.
+
+    Equivalently, on the standard basis $\{\delta_h : h \in G\}$ of $R[G]$ as a free $R$-module, $\lambda(g)(\delta_h) = \delta_{gh}$ for all $g, h \in G$.
+
+    \item The \hldef{(right) regular representation of $G$ over $R$} is the representation
+    $$
+    \hlin{\rho : G \to \mathrm{Aut}_{R\text{-}\mathrm{Mod}}(R[G])}
+    $$
+    defined by right multiplication: $\rho(g)(\sum_{h \in G} r_h h) = \sum_{h \in G} r_h (hg^{-1})$ for all $g \in G$, or on the standard basis $\rho(g)(\delta_h) = \delta_{hg^{-1}}$.
+
+\end{enumerate}
+The underlying $R$-module of the regular representation is the is the \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free $R$-module} with \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{basis} $G$. In particular, its rank is $|G|$ if $G$ is finite.
+\end{definition}

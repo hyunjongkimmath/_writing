@@ -1,0 +1,29 @@
+\begin{proposition} \label{proposition:integrals_of_tangent_and_secant}
+\TODO{AI generated, verify}
+For any $a, b$ in the domain of $\tan$ such that $\cos(x) \neq 0$ on $[a,b]$,
+$$\hlin{\int_a^b \tan(x) \, dx = \ln|\cos(a)| - \ln|\cos(b)|}$$
+For any $a, b$ such that $\cos(x) > 0$ on $[a,b]$,
+$$\hlin{\int_a^b \sec^2(x) \, dx = \tan(b) - \tan(a)}$$
+where the integrals are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrals}.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We compute the two integrals separately.
+
+    \begin{enumerate}
+        \item For $\int_a^b \tan(x)\,dx$: Since $\cos(x) \neq 0$ on $[a, b]$, the function $\tan(x) = \sin(x)/\cos(x)$ is continuous on $[a, b]$ (as a quotient of continuous functions with nonzero denominator), hence Riemann integrable by \CrefAndHyperrefIfExist{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}.
+
+        Consider the function $H(x) = -\ln|\cos(x)|$. On any subinterval where $\cos(x)$ does not change sign, this is differentiable. By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}):
+        $$\frac{d}{dx} \left[-\ln|\cos(x)|\right] = -\frac{1}{\cos(x)} \cdot (-\sin(x)) = \tan(x),$$
+        where we used $\frac{d}{dx}\cos(x) = -\sin(x)$ from \CrefAndHyperrefIfExist{proposition:derivatives_of_sine_and_cosine} and the derivative of $\ln$ from \CrefAndHyperrefIfExist{proposition:derivative_of_natural_logarithm_is_reciprocal}.
+
+        Since $H'(x) = \tan(x)$ on $(a, b)$, we apply the Fundamental Theorem of Calculus, Part II (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}):
+        $$\int_a^b \tan(x)\,dx = H(b) - H(a) = -\ln|\cos(b)| + \ln|\cos(a)| = \ln|\cos(a)| - \ln|\cos(b)|.$$
+
+        \item For $\int_a^b \sec^2(x)\,dx$: On the interval $[a, b]$ where $\cos(x) > 0$, the function $\tan(x)$ is differentiable with derivative (see \CrefAndHyperrefIfExist{proposition:derivative_of_tangent_is_secant_squared}):
+        $$\frac{d}{dx} \tan(x) = \sec^2(x).$$
+
+        Thus $\tan$ is an antiderivative of $\sec^2$. Applying FTC Part II:
+        $$\int_a^b \sec^2(x)\,dx = \Bigl[\tan(x)\Bigr]_{x=a}^{x=b} = \tan(b) - \tan(a).$$
+    \end{enumerate}
+\end{proof}

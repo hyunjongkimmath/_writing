@@ -1,0 +1,17 @@
+\begin{definition}[Binomial option pricing tree (Cox--Ross--Rubinstein)] \label{definition:binomial_option_pricing_tree_cox_ross_rubinstein}
+\TODO{AI generated, verify}
+Let $S_0 > 0$, $r \in \mathbb{R}$, $\sigma > 0$, and $T > 0$. Divide $[0, T]$ into $n$ equal time steps of length $\Delta t = T/n$. The Cox--Ross--Rubinstein (CRR) binomial tree models the stock price as follows:
+
+At each node $(i, j)$ where $i \in \{0, \dots, n\}$ is the time step and $j \in \{0, \dots, i\}$ is the number of up moves, the stock price is
+$$S_{i,j} = S_0 u^j d^{i-j},$$
+where
+$$u = e^{\sigma\sqrt{\Delta t}}, \quad d = e^{-\sigma\sqrt{\Delta t}} = \frac{1}{u}.$$
+
+The risk-neutral up probability is
+$$p = \frac{e^{r\Delta t} - d}{u - d}.$$
+
+The arbitrage-free price of a European option with payoff $\Phi(S_T)$ at maturity is computed by backward induction:
+$$V_{i,j} = e^{-r\Delta t}\left(p V_{i+1, j+1} + (1-p) V_{i+1, j}\right), \quad V_{n,j} = \Phi(S_{n,j}).$$
+
+As $n \to \infty$, the binomial price converges to the Black--Scholes price.
+\end{definition}

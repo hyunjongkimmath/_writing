@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$ with an ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$.
+
+    \begin{enumerate}
+        \item Suppose $M$ is a right $R$-module. For any $x \in M$, there exist unique scalars $a_1,\ldots,a_n \in R$ such that
+        $$x = \sum_{i=1}^n e_i a_i.$$
+        The \hldef{coordinate row vector of $x$ with respect to $\mathcal{E}$} is the row vector
+        $$\hlin{[x]_\mathcal{E}^{\mathsf{r}} = \begin{pmatrix} a_1 & \cdots & a_n \end{pmatrix} \in R^{1 \times n}}.$$
+
+        \item Suppose $M$ is a left $R$-module. For any $x \in M$, there exist unique scalars $a_1,\ldots,a_n \in R$ such that
+        $$x = \sum_{i=1}^n a_i e_i.$$
+        The \hldef{coordinate row vector of $x$ with respect to $\mathcal{E}$} is the row vector
+        $$\hlin{[x]_\mathcal{E}^{\mathsf{r}} = \begin{pmatrix} a_1 & \cdots & a_n \end{pmatrix} \in R^{1 \times n}}.$$
+    \end{enumerate}
+
+    In both cases, the map $x \mapsto [x]_\mathcal{E}^{\mathsf{r}}$ is an isomorphism of (left/right) $R$-modules $M \cong R^{1 \times n}$\CrefIfExists{definition:row_vector_and_column_vector_over_a_ring}. The coordinate row vector is related to the \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate column vector} by transposition:
+    $$[x]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{T}}$$
+    \CrefIfExists{definition:transpose_of_a_matrix_over_a_ring}.
+\end{definition}

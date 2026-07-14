@@ -1,0 +1,68 @@
+\begin{theorem}[Linearity of the Riemann integral] \label{theorem:linearity_of_riemann_integral}
+    \TODO{AI generated, verify}
+    Let $[a,b] \subset \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{closed} and bounded interval with $a < b$. If $f,g : [a,b] \to \mathbb{R}$ are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable} on $[a,b]$ and $\alpha,\beta \in \mathbb{R}$, then the function $\alpha f + \beta g : [a,b] \to \mathbb{R}$ is also Riemann integrable on $[a,b]$, and
+    $$\int_a^b \bigl(\alpha f(x) + \beta g(x)\bigr)\,dx = \alpha \int_a^b f(x)\,dx + \beta \int_a^b g(x)\,dx.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    \TODO{define refinement of partition of interval}
+We equip the set of partitions of $[a,b]$ with the refinement order: a partition $Q$ is a refinement of $P$ if every point of $P$ belongs to $Q$. For bounded functions on $[a,b]$, refining a partition decreases (or preserves) upper sums and increases (or preserves) lower sums. We write this property as a consequence of the definitions in \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}.
+
+We prove the result in two steps: first for scalar multiplication, then for addition. Together these yield linearity for arbitrary linear combinations.
+
+\begin{enumerate}
+    \item We begin with scalar multiplication. Let $\alpha \in \mathbb{R}$ and $f : [a,b] \to \mathbb{R}$ be Riemann integrable. We must show that the function $\alpha f$ is Riemann integrable and $\int_a^b \alpha f = \alpha \int_a^b f$.
+
+    If $\alpha = 0$, then $\alpha f$ is identically zero, so $m_k(\alpha f) = 0$ and $M_k(\alpha f) = 0$ for every subinterval of every partition. Hence both the lower and upper Riemann integrals are zero, which equals $\alpha \int_a^b f$. This establishes the result for $\alpha = 0$.
+
+    Now suppose $\alpha > 0$. For any partition $P = \{x_0,\dots,x_n\}$ of $[a,b]$ and any subinterval $I_k = [x_{k-1}, x_k]$, we have
+    $$m_k(\alpha f) = \inf\{\alpha f(x) : x \in I_k\} = \alpha \cdot \inf\{f(x) : x \in I_k\} = \alpha \cdot m_k(f),$$
+    since multiplying by a positive scalar preserves infima. Similarly, $M_k(\alpha f) = \alpha \cdot M_k(f)$. Therefore, for every partition $P$, the lower and upper Riemann sums satisfy $$L(\alpha f,P) = \sum_{k=1}^n m_k(\alpha f)(x_k - x_{k-1}) = \alpha \sum_{k=1}^n m_k(f)(x_k - x_{k-1}) = \alpha L(f,P),$$ and similarly $U(\alpha f,P) = \alpha U(f,P)$.
+
+    Taking the supremum over all partitions on the left side of the lower sum identity gives $$\sup_P L(\alpha f,P) = \sup_P \bigl(\alpha L(f,P)\bigr) = \alpha \cdot \sup_P L(f,P),$$ since $\alpha > 0$ and multiplication by a positive scalar commutes with taking suprema. Similarly, taking the infimum gives $$\inf_P U(\alpha f,P) = \alpha \cdot \inf_P U(f,P).$$ Since $f$ is Riemann integrable, its lower and upper integrals are equal; hence the corresponding quantities for $\alpha f$ are also equal, so $\alpha f$ is Riemann integrable. Moreover,
+    $$\int_a^b \alpha f(x)\,dx = \sup_P L(\alpha f,P) = \alpha \cdot \sup_P L(f,P) = \alpha \int_a^b f(x)\,dx.$$
+
+    Finally, suppose $\alpha < 0$. Write $\alpha = -|\alpha|$. For any partition $P$ and subinterval $I_k$, we use the relation between infima under negation: $$\inf\{-h(x) : x \in I_k\} = -\sup\{h(x) : x \in I_k\},$$ so that $m_k(\alpha f) = m_k(-|\alpha|f) = -M_k(|\alpha|f) = -|\alpha| \cdot M_k(f)$. Similarly, $M_k(\alpha f) = -|\alpha| \cdot m_k(f)$. Therefore
+    $$L(\alpha f,P) = \sum_{k=1}^n m_k(\alpha f)(x_k-x_{k-1}) = \sum_{k=1}^n \bigl(-|\alpha| M_k(f)\bigr)(x_k-x_{k-1}) = -|\alpha| U(f,P) = \alpha U(f,P),$$ and similarly $U(\alpha f,P) = \alpha L(f,P)$. Taking suprema of lower sums:
+    $$\sup_P L(\alpha f,P) = \sup_P \bigl(\alpha U(f,P)\bigr).$$ Since $\alpha < 0$, we have $\alpha U(f,P) = -|\alpha| U(f,P)$, and $\sup_P(-|\alpha| U(f,P)) = -|\alpha| \cdot \inf_P U(f,P) = \alpha \cdot \inf_P U(f,P)$. Because $f$ is integrable, $\inf_P U(f,P) = \int_a^b f(x)\,dx$, so
+    $$\int_a^b \alpha f(x)\,dx = \sup_P L(\alpha f,P) = \alpha \cdot \inf_P U(f,P) = \alpha \int_a^b f(x)\,dx.$$
+
+    \item Now we prove additivity. Let $f,g : [a,b] \to \mathbb{R}$ be Riemann integrable and let $\alpha,\beta \in \mathbb{R}$. We first handle addition with positive scalars: fix $\alpha > 0$ and consider the function $\alpha f + g$. By the triangle inequality for infima and suprema on bounded functions, for any partition $P$ and subinterval $I_k$, we have
+    $$m_k(\alpha f) + m_k(g) \leq m_k(\alpha f + g) \quad\text{and}\quad M_k(\alpha f + g) \leq M_k(\alpha f) + M_k(g).$$
+
+    For the left inequality, note that for any $x,y \in I_k$ we have $\alpha f(x) + g(x) \geq m_k(\alpha f) + m_k(g)$ since both terms on the right are lower bounds. Hence $m_k(\alpha f) + m_k(g)$ is a lower bound for $\{\alpha f(x) + g(x) : x \in I_k\}$, so it cannot exceed the greatest such lower bound $m_k(\alpha f + g)$. For the right inequality, similarly $M_k(\alpha f) + M_k(g)$ is an upper bound for the same set, hence it dominates the least upper bound.
+
+    Using these inequalities and the scalar multiplication result from Step 1 (for $\alpha > 0$), we obtain
+    $$L(\alpha f,P) + L(g,P) \leq L(\alpha f + g,P) \leq U(\alpha f + g,P) \leq U(\alpha f,P) + U(g,P).$$
+
+    Now fix an arbitrary $\varepsilon > 0$. Since $f$ and $g$ are Riemann integrable, there exist partitions $P_f$ and $P_g$ of $[a,b]$ such that
+    $$U(f,P_f) - L(f,P_f) < \frac{\varepsilon}{2(\alpha + 1)} \quad\text{and}\quad U(g,P_g) - L(g,P_g) < \frac{\varepsilon}{2},$$
+    where we use $\alpha+1 > 0$ to avoid division by zero. Let $P = P_f \cup P_g$ be the common refinement (the union of the two sets of partition points). Refining a partition decreases upper sums and increases lower sums, so
+    $$U(f,P) - L(f,P) \leq U(f,P_f) - L(f,P_f) < \frac{\varepsilon}{2(\alpha + 1)}$$ and similarly $U(g,P) - L(g,P) < \frac{\varepsilon}{2}$.
+
+    From the chain of inequalities above, we have
+    $$0 \leq U(\alpha f + g,P) - L(\alpha f + g,P) \leq \bigl(U(\alpha f,P) - L(\alpha f,P)\bigr) + \bigl(U(g,P) - L(g,P)\bigr).$$
+
+    Using the scalar multiplication identities $U(\alpha f,P) = \alpha U(f,P)$ and $L(\alpha f,P) = \alpha L(f,P)$, this becomes
+    $$0 \leq U(\alpha f + g,P) - L(\alpha f + g,P) \leq \alpha\bigl(U(f,P) - L(f,P)\bigr) + \bigl(U(g,P) - L(g,P)\bigr).$$
+
+    Substituting our bounds:
+    $$U(\alpha f + g,P) - L(\alpha f + g,P) < \alpha \cdot \frac{\varepsilon}{2(\alpha+1)} + \frac{\varepsilon}{2} < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.$$
+    Since $\varepsilon$ was arbitrary, the Riemann integrability criterion (a bounded function is integrable if and only if for every $\varepsilon > 0$ there exists a partition with $U - L < \varepsilon$, which follows from \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}) shows that $\alpha f + g$ is Riemann integrable.
+
+    To establish the integral identity, we use the fact that for any two partitions $P,Q$,
+    $$L(\alpha f + g,P) \leq \sup_{P'} L(\alpha f + g,P') \leq \inf_{Q'} U(\alpha f + g,Q') \leq U(\alpha f + g,Q).$$
+    Taking the supremum over $P$ on the left and infimum over $Q$ on the right, we get that $\int_a^b (\alpha f + g)$ lies between $\sup_P L(\alpha f + g,P)$ and $\inf_Q U(\alpha f + g,Q)$. Since $\alpha f + g$ is integrable, these are equal. From the inequalities $L(\alpha f,P) + L(g,P) \leq L(\alpha f+g,P)$ we get
+    $$\sup_P L(\alpha f,P) + \sup_P L(g,P) \leq \sup_P L(\alpha f + g,P).$$
+    Similarly, from $U(\alpha f + g,Q) \leq U(\alpha f,Q) + U(g,Q)$ we get
+    $$\inf_Q U(\alpha f + g,Q) \leq \inf_Q U(\alpha f,Q) + \inf_Q U(g,Q).$$
+
+    Since $f$ and $g$ are integrable, $\sup_P L(f,P) = \int_a^b f$ and $\inf_Q U(f,Q) = \int_a^b f$, so the left side becomes $\alpha \int_a^b f + \beta \int_a^b g$. Since $\alpha f+g$ is integrable, its lower and upper integrals coincide. Therefore both inequalities force equality:
+    $$\sup_P L(\alpha f + g,P) = \inf_Q U(\alpha f + g,Q) = \alpha \int_a^b f(x)\,dx + \int_a^b g(x)\,dx.$$
+
+    Combining scalar multiplication and addition, for arbitrary $\alpha,\beta \in \mathbb{R}$ we have $\alpha f + \beta g = (\alpha f) + (\beta g)$, where both terms are Riemann integrable by Step 1. By the additivity just proved, their sum is Riemann integrable and
+    $$\int_a^b \bigl(\alpha f(x) + \beta g(x)\bigr)\,dx = \alpha \int_a^b f(x)\,dx + \beta \int_a^b g(x)\,dx.$$
+\end{enumerate}
+This completes the proof of linearity for the Riemann integral.
+\end{proof}

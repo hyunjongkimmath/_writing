@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:separable_algebra_over_a_commutative_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a commutative \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
+
+    The multiplication map $\mu: A \otimes_R A \to A$, defined by $\mu(a \otimes b) = ab$, is a homomorphism of $A$-$A$-bimodules. The algebra $A$ is called a \hldef{separable $R$-algebra} if $\mu$ splits as a map of $A$-$A$-bimodules; that is, there exists an $A$-$A$-bimodule homomorphism $s: A \to A \otimes_R A$ such that
+    $$\hlin{\mu \circ s = \operatorname{id}_A}.$$
+
+    Equivalently, $A$ is separable over $R$ if and only if $A$ is projective as an $A$-$A$-bimodule.
+
+    If $s: A \to A \otimes_R A$ is a bimodule splitting of $\mu$, then the element
+    $$\hlin{e = s(1_A) \in A \otimes_R A}$$
+    is called an \hldef{idempotent of separability}. It satisfies $\mu(e) = 1_A$ and $a e = e a$ for all $a \in A$, where the bimodule action on $A \otimes_R A$ is given by $a \cdot (x \otimes y) \cdot b = ax \otimes yb$.
+
+    If $A$ is finitely generated as an $R$-module, then $A$ is separable over $R$ if and only if there exist elements $x_1, \ldots, x_n, y_1, \ldots, y_n \in A$ such that
+    $$\sum_{i=1}^n x_i y_i = 1_A \quad \text{and} \quad a \left(\sum_{i=1}^n x_i \otimes y_i\right) = \left(\sum_{i=1}^n x_i \otimes y_i\right) a \quad \text{for all } a \in A.$$
+    The element $\sum_{i=1}^n x_i \otimes y_i$ is the idempotent of separability.
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{proposition} \label{proposition:derivative_of_natural_logarithm_is_reciprocal}
+The \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm} $\ln : (0, \infty) \to \mathbb{R}$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $x > 0$, and
+$$\frac{d}{dx} \ln(x) = \frac{1}{x}$$
+\end{proposition}
+\begin{proof}
+    Since $\ln(x)$ is the \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{inverse} of \CrefAndHyperrefIfExist{definition:real_exponential_function}{$\exp$}, we have 
+    $$x = \exp(\ln(x))$$
+    for all $x \in (0,\infty)$. By the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule}, this yields
+    $$1 = \frac{d}{dx} x = \frac{d}{dx} (\exp(\ln(x))) = \frac{d}{d y} \exp(y) \cdot \frac{d}{dx} \ln(x)$$
+    where $y = \ln(x)$. Therefore, 
+    $$1 = \exp(y) \cdot \frac{d}{dx} \ln(x),$$
+    \CrefIfExists{proposition:derivative_of_exponential_function_is_itself}
+    so 
+    $$\frac{d}{dx} \ln(x) = \frac{1}{\exp(y)} = \frac{1}{\exp(ln(x))} = \frac{1}{x}$$
+    as desired.
+\end{proof}

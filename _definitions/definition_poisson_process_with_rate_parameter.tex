@@ -1,0 +1,13 @@
+\begin{definition}[Poisson process with rate parameter] \label{definition:poisson_process_with_rate_parameter}
+\TODO{AI generated, verify}
+Let $\lambda > 0$. A sequence of counting random variables $\{N_t\}_{t \geq 0}$ on a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space} $(\Omega, \mathcal{F}, P)$ is called a \hldef{Poisson process with rate $\lambda$} if it satisfies:
+
+\begin{enumerate}
+    \item $N_0 = 0$ almost surely;
+    \item (Independent increments) For all $0 \leq t_0 < t_1 < \dots < t_n$, the random variables $N_{t_1} - N_{t_0}, N_{t_2} - N_{t_1}, \dots, N_{t_n} - N_{t_{n-1}}$ are independent;
+    \item (Stationary increments) For all $s < t$, the increment $N_t - N_s$ has a \CrefAndHyperrefIfExist{definition:poisson_distribution}{Poisson distribution with parameter $\lambda(t - s)$}, i.e., for each $k \in \mathbb{N}_{\geq 0}$,
+    $$P(N_t - N_s = k) = e^{-\lambda(t - s)} \frac{(\lambda(t - s))^k}{k!}.$$
+\end{enumerate}
+
+For each $t \geq 0$, $\mathbb{E}[N_t] = \lambda t$ and $\operatorname{Var}(N_t) = \lambda t$.
+\end{definition}

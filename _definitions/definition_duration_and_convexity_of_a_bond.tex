@@ -1,0 +1,20 @@
+\begin{definition}[Duration and convexity of a bond] \label{definition:duration_and_convexity_of_a_bond}
+\TODO{AI generated, verify}
+Let $P(y)$ denote the price of a bond as a function of its yield to maturity $y$.
+
+The \hldef{Macaulay duration} of the bond is
+$$\hlin{D_{\text{Mac}} = -\frac{1}{P} \sum_{i=1}^n t_i \cdot \text{PV}(CF_i)},$$
+where $\text{PV}(CF_i)$ is the present value of the $i$-th cash flow occurring at time $t_i$.
+
+The \hldef{modified duration} is
+$$\hlin{D_{\text{mod}} = -\frac{1}{P} \frac{dP}{dy} = \frac{D_{\text{Mac}}}{1 + y/k}},$$
+where $k$ is the compounding frequency. Modified duration measures the first-order percentage price change per unit change in yield:
+$$\frac{\Delta P}{P} \approx -D_{\text{mod}} \cdot \Delta y.$$
+
+The \hldef{convexity} of the bond is
+$$\hlin{C = \frac{1}{P} \frac{d^2P}{dy^2}}.$$
+The second-order approximation to the price change is
+$$\frac{\Delta P}{P} \approx -D_{\text{mod}} \cdot \Delta y + \frac{1}{2} C \cdot (\Delta y)^2.$$
+
+For a zero-coupon bond maturing at time $T$, Macaulay duration equals $T$.
+\end{definition}

@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:frobenius_element_of_a_galois_extension_of_valuation_fields}
+    Assume \Cref{context:extension_of_valuation_fields} and further assume that $L/K$ is a \CrefAndHyperrefIfExist{definition:galois_extension_of_fields}{Galois extension}. Assume moreover that the \CrefAndHyperrefIfExist{definition:residue_field_of_a_ring_at_a_point}{residue field extension} $k_w / k_v$ is \CrefAndHyperrefIfExist{definition:finite_field_extension}{finite} (equivalently, the extension $L/K$ is \CrefAndHyperrefIfExist{definition:unramified_extension_of_valuation_fields}{unramified} at $w$).
+
+    Let $D_w \subset \Gal(L/K)$ be the \CrefAndHyperrefIfExist{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}{decomposition group} and let $I_w \subset D_w$ be the \CrefAndHyperrefIfExist{definition:inertia_group_of_a_general_galois_extension_of_valuation_fields}{inertia group}. There is a canonical isomorphism
+    $$D_w / I_w \xrightarrow{\sim} \Gal(k_w / k_v).$$
+    The \hldef{arithmetic Frobenius element of $L/K$ at $w$} is any element $\Frob_{w} \in D_w$ whose image in $\Gal(k_w / k_v)$ under this isomorphism is the \hldef{arithmetic Frobenius automorphism of $k_w / k_v$}, i.e., the automorphism $x \mapsto x^{|k_v|}$.
+
+    The \hldef{geometric Frobenius element of $L/K$ at $w$} is the inverse $\Frob_{w}^{-1} \in D_w$; its image in $\Gal(k_w / k_v)$ is the \hldef{geometric Frobenius automorphism of $k_w / k_v$}, i.e., the automorphism $x \mapsto x^{|k_v|^{-1}}$ (equivalently, the inverse of the arithmetic Frobenius automorphism).
+
+    When $L/K$ is finite, the Frobenius element is well-defined up to multiplication by an element of $I_w$; when $L/K$ is infinite, it is well-defined up to multiplication by an element of the closure of $I_w$ in $D_w$.
+
+    \CrefIfExists{definition:galois_extension_of_fields}
+    \CrefIfExists{definition:unramified_extension_of_valuation_fields}
+    \CrefIfExists{definition:decomposition_group_of_a_general_galois_extension_of_valuation_fields}
+    \CrefIfExists{definition:inertia_group_of_a_general_galois_extension_of_valuation_fields}
+\end{definition}

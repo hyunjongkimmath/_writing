@@ -1,0 +1,13 @@
+\begin{lemma} \label{lemma:orthogonal_complement_of_a_submodule_of_a_module_with_a_varepsilon_hermitian_form_over_a_ring_with_involution_can_be_defined_either_using_the_left_or_right_side_of_the_form}
+    Let \CrefAndHyperrefIfExist{definition:ring}{$R$} be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $\varepsilon \in Z(R)$\CrefIfExists{definition:center_of_a_ring} be an element such that $\varepsilon \cdot \overline{\varepsilon} = 1$. Let $(M,b)$ be a \CrefAndHyperrefIfExist{definition:module_over_a_ring}{(left/right) module over $R$} with a \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{Hermitian form} $b: M \times M \to R$.
+
+    Let $U \subset M$ be a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule}. 
+    The \CrefAndHyperref{definition:orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution}{left and right orthogonal complements} of $U$, i.e. the sets 
+    $$U^{\perp_L} = \{x \in M : b(x,u) = 0 \text{ for all } u \in U \}$$
+    and 
+    $$U^{\perp_R} = \{y \in M : b(u,y) = 0 \text{ for all } u \in U\},$$
+    coincide. Thus, the \CrefAndHyperref{definition:orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution}{orthogonal complement} $U^\perp$ is well defined.
+\end{lemma}
+\begin{proof}
+    Suppose that $x \in M$ satisfies $b(x,u) = 0$ for all $u \in U$. Note that $b(x,u) = \varepsilon \cdot \overline{b(u,x)}$, so $b(u,x) = 0$ for all $u \in U$. Thus, $U^{\perp L} \subseteq U^{\perp R}$. Similarly, the other inclusion holds, so the two sets are equal.
+\end{proof}

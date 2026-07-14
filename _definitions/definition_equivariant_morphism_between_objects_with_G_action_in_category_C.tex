@@ -1,0 +1,10 @@
+\begin{definition}[equivariant morphism between objects with $G$-action in $\mathcal{C}$]
+\label{definition:equivariant_morphism_between_objects_with_G_action_in_category_C}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}, let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $(c, \alpha)$ and $(d, \beta)$ be objects of $\mathcal{C}$ equipped with an \CrefAndHyperrefIfExist{definition:action_of_a_group_G_on_an_object_in_a_category_C}{action of $G$}. An \hldef{equivariant morphism from $(c, \alpha)$ to $(d, \beta)$ in $\mathcal{C}$} is a morphism $f: c \to d$ in $\mathcal{C}$ such that the following diagram commutes for every $g \in G$:
+$$\begin{CD}
+c @>\alpha(g)>> c \\
+@VfVV @VVfV \\
+d @>>\beta(g)> d
+\end{CD}$$
+Equivalently, $f \circ \alpha(g) = \beta(g) \circ f$ for all $g \in G$.
+\end{definition}

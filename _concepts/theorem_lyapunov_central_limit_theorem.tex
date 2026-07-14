@@ -1,0 +1,10 @@
+\begin{theorem}[Lyapunov Central Limit Theorem] \label{theorem:lyapunov_central_limit_theorem}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. For each $n \geq 1$, let $\{X_{n,k}\}_{k=1}^{m_n}$ be a triangular array of independent real-valued random variables on $(\Omega, \mathcal{F}, P)$ with $\mathbb{E}[X_{n,k}] = 0$ and $\operatorname{Var}(X_{n,k}) < \infty$.
+
+Let $s_n^2 = \sum_{k=1}^{m_n} \operatorname{Var}(X_{n,k})$ and assume $s_n > 0$ for all $n$. Suppose there exists $\delta > 0$ such that the Lyapunov condition holds:
+$$\lim_{n \to \infty} \frac{1}{s_n^{2 + \delta}} \sum_{k=1}^{m_n} \mathbb{E}\left[|X_{n,k}|^{2 + \delta}\right] = 0.$$
+
+Then
+$$\frac{1}{s_n} \sum_{k=1}^{m_n} X_{n,k} \xrightarrow{d} \mathcal{N}(0, 1) \quad \text{as } n \to \infty.$$
+\end{theorem}

@@ -1,0 +1,14 @@
+\begin{definition}[Total variation distance between two probability measures] \label{definition:total_variation_distance_between_two_probability_measures}
+\TODO{AI generated, verify}
+Let $(S, \mathcal{A})$ be a measurable space. Let $\mu$ and $\nu$ be two probability measures on $(S, \mathcal{A})$.
+
+The \hldef{total variation distance between $\mu$ and $\nu$}, denoted \hl{$\|\mu - \nu\|_{\mathrm{TV}}$}, is defined as
+$$\hlin{\|\mu - \nu\|_{\mathrm{TV}} = \sup_{A \in \mathcal{A}} |\mu(A) - \nu(A)|}.$$
+
+When $\mu$ and $\nu$ are absolutely continuous with respect to a common measure $\lambda$, with densities $f = d\mu/d\lambda$ and $g = d\nu/d\lambda$, the total variation distance satisfies
+$$\|\mu - \nu\|_{\mathrm{TV}} = \frac{1}{2} \int_S |f(x) - g(x)| \, d\lambda(x).$$
+
+A \hldef{coupling of $\mu$ and $\nu$} is a probability measure $\pi$ on $(S \times S, \mathcal{A} \otimes \mathcal{A})$ whose first marginal is $\mu$ and second marginal is $\nu$. The coupling inequality states that for any coupling $\pi$,
+$$\|\mu - \nu\|_{\mathrm{TV}} \leq \pi(\{(x, y) : x \neq y\}),$$
+and there exists an optimal coupling achieving equality.
+\end{definition}

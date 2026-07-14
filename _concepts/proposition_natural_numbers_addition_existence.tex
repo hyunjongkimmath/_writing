@@ -1,0 +1,29 @@
+\begin{proposition} \label{proposition:natural_numbers_addition_existence}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. For each $m \in \bbN$, let $f_m: \bbN \to \bbN$ be the unique recursive \CrefAndHyperrefIfExist{definition:function_of_sets}{function} on the initial value $s(m)$ and the recursive relation $s: \bbN \to \bbN$ whose existence and uniqueness is guaranteed by \Cref{proposition:recursive_function_existence_uniqueness}. In other words,
+\begin{align*}
+f_m(1) &= s(m) \\
+f_m(s(n)) &= s(f_m(n)) \text{ for } n \in \bbN.
+\end{align*}
+
+Define
+\hl{$n + m := f_m(n)$.}
+Then $+: \bbN \times \bbN \to \bbN$ is a \CrefAndHyperrefIfExist{definition:n_ary_operation_on_a_set}{binary operation} satisfying for all $n, m \in \bbN$:
+\begin{enumerate}
+    \item $n + 1 = s(n)$,
+    \item $n + s(m) = s(n + m)$.
+\end{enumerate}
+This binary operation is called \hldef{addition in $\bbN$}.
+\end{proposition}
+
+\begin{proof}
+To show that $n+1 = s(n)$ for all $n \in \bbN$ is to show that $f_1(n) = s(n)$ for all $n \in \bbN$. We do so by induction. For $n = 1$, $f_1(1) = s(1)$ by the defining property of $f_1$. Now suppose inductively that $f_1(k) = s(k)$ for some $k \in \bbN$. It follows that $s(f_1(k)) = s(s(k))$. The left hand side equals $f_1(s(k))$, so $f_1(s(k)) = s(s(k))$. Therefore, $n+1 = s(n)$ for all $n \in \bbN$ by induction.
+
+To show that $n+s(m) = s(n+m)$ for all $n,m \in \bbN$, fix $m \in \bbN$. 
+
+Consider the function $h: \bbN \to \bbN$ defined by $h(n) = n + s(m) = f_{s(m)}(n)$. By definition of $f_{s(m)}$, we have $h(1) = f_{s(m)}(1) = s(s(m))$ and $h(s(k)) = s(h(k))$ for all $k$. On the other hand, consider the function $\bbN \to \bbN, \quad k \mapsto s(k + m) = s(f_m(k))$. This function 
+\begin{enumerate}
+    \item sends $k = 1$ to $s(f_m(1)) = s(s(m))$, and 
+    \item sends $k = s(j)$ to $s(f_{m}(s(j))) = s(s(f_m(j)))$.
+\end{enumerate}
+ Thus both functions $n \mapsto n + s(m)$ and $n \mapsto s(n + m)$ are recursive functions on the same pair $(s(s(m)), s)$. Recurisve functions are unique by \CrefAndHyperrefIfExist{proposition:recursive_function_existence_uniqueness}{the recursive function theorem}, so they coincide, i.e. $n + s(m) = s(n + m)$ for all $n$.
+\end{proof}

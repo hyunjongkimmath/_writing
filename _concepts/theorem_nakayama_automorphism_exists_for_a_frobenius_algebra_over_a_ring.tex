@@ -1,0 +1,37 @@
+\begin{theorem} \label{theorem:nakayama_automorphism_exists_for_a_frobenius_algebra_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $\varphi: R \to A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}. Suppose that $A$ is a \CrefAndHyperrefIfExist{definition:frobenius_algebra_over_a_ring}{left Frobenius $R$-algebra}, i.e., there exists an isomorphism of left $A$-modules $\psi: A \to \Hom_{{}_R\Mod}(A,R)$. Let $\lambda = \psi(1) \in \Hom_{{}_R\Mod}(A,R)$. There exists a unique ring automorphism $\sigma: A \to A$, called the \hldef{Nakayama automorphism}, such that for all $x,y \in A$,
+    $$\lambda(xy) = \lambda(y\sigma(x)).$$
+
+    Moreover, $\sigma$ is an $R$-algebra automorphism (i.e., $\sigma(\varphi(r)) = \varphi(r)$ for all $r \in R$). There exists a similar ring automorphism if $A$ is a right Frobenius $R$-algebra.
+\end{theorem}
+\begin{proof}
+    \TODO{need to prove uniqueness of $\sigma$}
+    Choose a left $A$-module isomorphism $\psi: A \to \Hom_{{}_R\Mod}(A,R)$. Let $\lambda = \psi(1) \in \Hom_{{}_R \Mod}(A,R)$. For any $x \in A$, define a map $f_x: A \to R$ by $f_x(y) = \lambda(xy)$. Note that $f_x$ is a left $R$-module homomorphism --- since $R$ is central in $A$,
+    $$f_x(ry) = \lambda(xry) = \lambda(rxy) = r \lambda(xy) = rf_x(y).$$
+    Define $\sigma: A \to A$ by $\sigma(x) = \psi^{-1}(f_x)$, i.e. $\psi(\sigma(x)) = f_x$. For all $y \in A$, since $\psi$ is an $A$-module homomorphism, we have
+    $$\psi(\sigma(x))(y) = (\sigma(x) \psi(1))(y) = \psi(1)(y \cdot \sigma(x)) = \lambda(y \sigma(x)).$$
+    On the other hand, 
+    $$\psi(\sigma(x))(y) = f_x(y) = \lambda(xy)$$ 
+    by definition, so $\lambda(xy) = \lambda(y \sigma(x))$.
+
+    We show that $\sigma$ is an $R$-algebra endomorphism. It is additive because
+    \begin{align*}
+    \psi(\sigma(x_1+x_2))(y) &= f_{x_1+x_2}(y) = \lambda((x_1+x_2)(y)) = \lambda(x_1y+x_2y) = \lambda(x_1y)+\lambda(x_2y)  \\
+    &= f_{x_1}(y) + f_{x_2}(y) = \psi(\sigma(x_1))(y) + \psi(\sigma(x_2))(y).
+    \end{align*}
+    It is multiplicative because, that $\psi$ is a left $A$-module isomorphism and the algebraic property of $\sigma$ yield
+    \begin{align*}
+        \psi(\sigma(x_1x_2))(y) &= f_{x_1x_2}(y) = \lambda(x_1x_2 y) \\
+    \psi(\sigma(x_1)\sigma(x_2))(y) &= (\sigma(x_1) \cdot \psi(\sigma(x_2))(y) = (\sigma(x_1) \cdot f_{x_2}) (y) = f_{x_2} (y \sigma(x_1)) = \lambda(x_2 y \sigma(x_1)) \\
+    &= \lambda((x_1 y) \sigma(x_1)) = \lambda(x_1 (x_2y)) = \lambda(x_1 x_2y).
+    \end{align*}
+    To see that $\sigma$ is $R$-linear, i.e. $\sigma(r) = r$ for all $r \in R$, note that the centrality of $\varphi$ yields
+    $$\lambda(y\sigma(r)) = \lambda(ry) = \lambda(yr),$$
+    for all $y \in A$, so 
+    $$\lambda(y(\sigma(r)-r)) = 0.$$
+    Since this holds for all $y \in A$ and $\lambda$ is image of $1$ under the isomorphism $\psi$, the value $\sigma(r)-r$ must in fact be $0$.
+
+    By construction, $\sigma$ is the composition 
+    $$A \xrightarrow{x \mapsto f_x} \Hom_{{}_R \Mod} (A,R) \xrightarrow{\psi^{-1}} A.$$
+    Note that $x \mapsto f_x$ is a bijection by \Cref{lemma:ring_homomorphism_is_left_right_frobenius_ring_homomorphism_iff_there_exists_a_homomorphism_from_the_target_to_the_source_ring_as_modules_such_that_biadditive_map_is_non_singular}. Therefore, $\sigma$ is the composition of bijections and hence is itself a bijection. We have thus shown that $\sigma$ is an $R$-algebra endomorphism. 
+\end{proof}

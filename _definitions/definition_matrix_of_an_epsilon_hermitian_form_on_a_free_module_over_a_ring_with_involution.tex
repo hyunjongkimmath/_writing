@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}
+    \TODO{incorporate the choice of basis into the label}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free} (left/right) $A$-module of finite rank $n$ with ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$, and let $h: M \times M \to A$ be an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} for some $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} with $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+
+    The \hldef{matrix of $h$ with respect to $\mathcal{E}$} is the $n \times n$ matrix
+    $$\hlin{H_{\mathcal{E}} = \bigl( h(e_i, e_j) \bigr)_{1 \leq i,j \leq n} \in M_n(A)}.$$
+
+    For any column vectors $u,v \in A^n$ representing elements of $M$ in the basis $\mathcal{E}$, the form evaluates in one of the following inequivalent ways:
+    $$h(x,y) = \begin{cases} u^* H_{\mathcal{E}} v &\text{if } M \text{ is a right } A \text{-module} \\  u^\top H_{\mathcal{E}} v &\text{if } M \text{ is a left } A \text{-module} \end{cases},$$
+    \CrefIfExists{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}
+
+    The matrix $H_{\mathcal{E}}$ is an \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian matrix}\CrefIfExists{lemma:matrix_of_a_varepsilon_hermitian_form_over_a_ring_with_involution_is_a_varepsilon_hermitian_matrix}.
+\end{definition}

@@ -1,0 +1,18 @@
+\begin{theorem}[Smooth base change for algebraic adic coefficients, cf. {\cite[Theorem 7.7.2]{fu_ect}}] \label{theorem:smooth_base_change_theorem_for_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_schemes}
+    Let
+    \begin{center}
+        \begin{tikzcd}
+            X' \ar[r, "f'"] \ar[d,"g'"] & Y' \ar[d, "g"] \\
+            X \ar[r, "f"] & Y
+        \end{tikzcd}
+    \end{center}
+    be a Cartesian diagram of schemes such that $f$ is \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth} and $g$ is \CrefAndHyperrefIfExist{definition:quasi_compact_morphism_of_schemes}{quasi-compact} and \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{quasi-separated}.
+
+    Let $\ell$ be a prime invertible on $Y$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$, and let $F/E$ be an algebraic extension.
+
+    For any $\mathcal{L} \in \Dbc(Y', F)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}), there is a natural isomorphism
+    $$f^* Rg_* \mathcal{L} \cong Rg_*' {f'}^* \mathcal{L}$$
+    in $\Dbc(X, F)$.
+
+    The isomorphism follows from \Cref{theorem:smooth_base_change_theorem_for_derived_category_of_adic_sheaves_with_rational_coefficients_on_schemes}: any object of $\Dbc(Y', F)$ is represented by an object of $\Dbc(Y', L')$ for some finite subextension $L'/E$ inside $F$, and the result descends to that level.
+\end{theorem}

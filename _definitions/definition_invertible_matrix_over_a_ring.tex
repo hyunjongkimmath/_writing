@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:invertible_matrix_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $n$ be a positive integer.
+
+    A matrix $A \in M_n(R)$\CrefIfExists{definition:matrix_over_a_ring} is called \hldef{invertible} (or \hldef{nonsingular}) if there exists a matrix $B \in M_n(R)$ such that
+    $$AB = BA = I_n,$$
+    where $I_n$ is the \CrefAndHyperrefIfExist{definition:identity_matrix}{identity matrix}. Such a matrix $B$ is necessarily unique\CrefIfExists{lemma:inverse_of_an_invertible_matrix_over_a_ring_is_unique} and is called the \hldef{inverse of $A$}, denoted \hl{$A^{-1}$}.
+
+    The set of all invertible $n \times n$ matrices over $R$ forms a \CrefAndHyperrefIfExist{definition:group}{group} under matrix multiplication\CrefIfExists{proposition:general_linear_group_over_a_ring_is_indeed_a_group}, called the \CrefAndHyperrefIfExist{definition:general_linear_group_over_a_ring}{general linear group} $\GL_n(R)$; the inverse of an invertible matrix $A$ in the above sense is thus the \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{inverse} of $A$ in the group $\GL_n(R)$.
+\end{definition}

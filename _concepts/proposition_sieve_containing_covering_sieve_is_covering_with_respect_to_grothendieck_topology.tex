@@ -1,0 +1,10 @@
+\begin{proposition}[Sieve containing a covering sieve is covering] \label{proposition:sieve_containing_covering_sieve_is_covering_with_respect_to_grothendieck_topology}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, and let $J$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} on $\mathcal{C}$.
+    Let $U$ be an object of $\mathcal{C}$, let $S$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{covering sieve} of $U$, and let $R$ be a \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieve on $U$} such that $S \subseteq R$.
+
+    Then $R$ is also a covering sieve of $U$.
+\end{proposition}
+
+\begin{proof}
+    By the local character condition of \Cref{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}, it suffices to show that for all $g : V \to U$ in $S$ that $g^* R \in J(V)$. Since $g \in S$, note that $g \in R$. By the definition of a \CrefAndHyperrefIfExist{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object}{pullback sieve}, $g^* R = \{h: W \to V : g \circ h \in R\}$. In particular, $\id_V: V \to V$ is in $g^* R$ because $g \circ \id_V = g \in R$. Any sieve on $V$ that contains the identity morphism is the maximal sieve on $V$\CrefIfExists{lemma:sieve_containing_identity_morphism_is_maximal_sieve_on_the_object}. Therefore, $g^* R$ is the maximal sieve, which is a covering sieve by the axioms of a Grothendieck topology. Therefor,e $g^* R \in J(V)$ as desired. 
+\end{proof}

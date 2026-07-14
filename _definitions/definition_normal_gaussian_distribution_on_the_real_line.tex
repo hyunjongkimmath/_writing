@@ -1,0 +1,8 @@
+\begin{definition}[Normal (Gaussian) distribution on the real line] \label{definition:normal_gaussian_distribution_on_the_real_line}
+\TODO{AI generated, verify}
+Let $\mu \in \mathbb{R}$ and $\sigma > 0$. A real-valued random variable $X$ on a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space} has the \hldef{normal (Gaussian) distribution with mean $\mu$ and standard deviation $\sigma$} (denoted \hl{$\mathcal{N}(\mu, \sigma^2)$}) if its \CrefAndHyperrefIfExist{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} is the measure on $\mathbb{R}$ given by
+$$\hlin{\mu_X(A) = \int_A \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \, dx}$$
+for every Borel set $A \subseteq \mathbb{R}$.
+
+The probability density function is $$f(x) = \frac{1}{\sqrt{2\pi}\sigma} e^{-\frac{(x - \mu)^2}{2\sigma^2}}.$$ The \CrefAndHyperrefIfExist{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expectation} is $\mathbb{E}[X] = \mu$, and the \CrefAndHyperrefIfExist{definition:variance_and_covariance}{variance} is $\operatorname{Var}(X) = \sigma^2$.
+\end{definition}

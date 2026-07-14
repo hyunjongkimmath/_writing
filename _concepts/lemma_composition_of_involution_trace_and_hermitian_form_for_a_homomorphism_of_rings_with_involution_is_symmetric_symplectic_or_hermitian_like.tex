@@ -1,0 +1,28 @@
+\begin{lemma}  \label{lemma:composition_of_involution_trace_and_hermitian_form_for_a_homomorphism_of_rings_with_involution_is_symmetric_symplectic_or_hermitian_like}
+   Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} of $\eta$. Let $\varepsilon \in Z(A')$\CrefIfExists{definition:center_of_a_ring} such that $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+   For a $\varepsilon$-Hermitian form $H: M \times M \to A'$ on a (right) $A'$-module $M$, write $\omega = \tau \circ H: M \times M \to A$ for the image of $H$ under the \CrefAndHyperrefIfExist{definition:scharlau_transfer_of_sesquilinear_forms_on_modules_under_involution_ring_homomorphism}{Scharlau transfer} of $\tau$; note that $\omega$ is \CrefAndHyperrefIfExist{definition:sesquilinear_module_over_a_ring_with_involution}{sesquilinear} over $A$ (\Cref{lemma:scharlau_transfer_of_sesquilinear_forms_on_modules_under_involution_ring_homomorphism_is_indeed_an_additive_map_between_groups_of_sesquilinear_forms}). 
+   \begin{enumerate}
+        \item Suppose that $u \in A$ satisfies $\tau(\varepsilon \overline{x}) = u \cdot \tau(x)$ for all $x \in A'$; by \Cref{lemma:basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution}, $u^2 = 1$. 
+        We have 
+        $$\omega(n,m) = u \cdot \omega(m,n)$$
+        for all $n, m \in M$.
+        \item Suppose that $u \in A$ satisfies $\tau(\varepsilon x)= u \cdot \tau(x)$ for all $x \in A'$; by \Cref{lemma:basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution}, $u \cdot \overline{u} = 1$. 
+        We have 
+        $$\omega(n,m) = u \cdot \overline{\omega(m,n)}$$
+        for all $n,m \in M$.
+        Assuming that $u \in Z(A)$, the form $\omega$ is a $u$-Hermitian form over $A$.
+   \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item For all $n,m \in M$,
+            $$\omega(n,m) = \tau(H(n,m)) = \tau(\varepsilon \overline{H(m,n)}) = u \cdot \tau(H(m,n)) = u \cdot \omega(m,n).$$
+        \item 
+        For all $n,m \in M$, use \Cref{lemma:basic_facts_about_anti_symmetry_requirement_for_involution_trace_of_a_homomorphism_of_rings_with_involution} to see that 
+        \begin{align*}
+        \omega(n,m) &= \tau(H(n,m)) = \tau(\varepsilon \cdot \overline{H(m,n)}) = \overline{\tau(\overline{\varepsilon} \cdot H(m,n))} = \overline{(\overline{u} \cdot \tau(H(m,n)))} = u \cdot \overline{\tau(H(m,n))} \\
+        &= u \cdot \overline{\omega(m,n)}.
+        \end{align*}
+        In particular, if $u \in Z(A)$, then $\omega$ is a $u$-Hermitian form over $A$.
+    \end{enumerate}
+\end{proof}

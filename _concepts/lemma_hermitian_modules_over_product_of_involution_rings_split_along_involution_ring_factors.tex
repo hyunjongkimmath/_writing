@@ -1,0 +1,12 @@
+\begin{lemma} \label{lemma:hermitian_modules_over_product_of_involution_rings_split_along_involution_ring_factors}
+    Let $R$ be a ring with involution, and let $\varepsilon \in Z(R)$ satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$. Decompose $R$ as a finite product $\prod_{i=1}^n R_i$ of involution rings, letting $\varepsilon \in R$ correspond to $\varepsilon_i \in R_i$. In particular, $\varepsilon_i \in Z(R_i)$ and $\varepsilon_i \cdot \overline{\varepsilon}_i = 1$. 
+    
+    Modules with $\varepsilon$-Hermitian forms over $R$ correspond to tuples of modules with $\varepsilon_i$-Hermitian forms over $R_i$. More precisely, letting $V$ be any $R$-module, and writing $V_i = R_i V$, there is a bijection
+        \begin{align*}
+        \left\{ \begin{array}{l} \text{Tuples } (H_i)_i \text{ where } \\ H_i: V_i \times V_i \to R_i \\ \text{are } \varepsilon_i\text{-Hermitian forms} \end{array} \right\} &\to \left\{ \begin{array}{l} \varepsilon\text{-Hermitian forms } \\ H: V \times V \to R \end{array}\right\}  \\
+        (H_i)_i &\mapsto \perp_i H_i,
+        \end{align*}
+    where we regard $H_i: V_i \times V_i \to R_i$ as a $\varepsilon$-Hermitian form over $R$ via the injection $R_i \hookrightarrow \prod_i R_i \cong R$ sending an element $d_i \in R_i$ to the element of $\prod_i R_i$ whose $i$th component is $d_i$ and whose other components are $0$. 
+    
+    Furthermore, given that each $V_i$ is a finitely generated, projective $R_i$-module (equivalently $V$ is a finitely generated, projective $R$-module), the $H_i$ are all nonsingular if and only if $\perp_i H_i$ is nonsingular.
+\end{lemma}

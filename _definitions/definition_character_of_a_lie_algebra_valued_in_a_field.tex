@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:character_of_a_lie_algebra_valued_in_a_field}
+    \TODO{AI generated, verify}
+
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and $\mathfrak{g}$ a \CrefAndHyperrefIfExist{definition:lie_algebra_over_a_field}{Lie algebra over $k$}.
+
+    A \hldef{character of $\mathfrak{g}$ valued in $k$} is a Lie algebra homomorphism
+    $$\hlin{\chi : \mathfrak{g} \to k,}$$
+    where $k$ is equipped with the trivial bracket $[a,b] = 0$. Equivalently, $\chi \in \mathfrak{g}^*$ is a linear functional such that
+    $$\hlin{\chi([x,y]) = 0 \quad \text{for all } x,y \in \mathfrak{g}.}$$
+
+    Equivalently still, a character is a \CrefAndHyperrefIfExist{definition:representation_of_a_lie_algebra_on_a_vector_space_over_a_field}{representation of $\mathfrak{g}$ on a vector space over $k$} of dimension 1. The equivalence sends $\chi$ to the action $x \cdot v = \chi(x)v$ on $k$.
+
+    Every character vanishes on the derived subalgebra $[\mathfrak{g},\mathfrak{g}]$, and hence factors uniquely through the abelianization \hl{$\mathfrak{g}^{\mathrm{ab}} := \mathfrak{g}/[\mathfrak{g},\mathfrak{g}]$}. Thus characters are in bijection with $\mathfrak{g}^{\mathrm{ab}*}$.
+
+    The set of characters forms a vector space over $k$, isomorphic to $(\mathfrak{g}^{\mathrm{ab}})^*$.
+\end{definition}

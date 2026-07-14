@@ -1,7 +1,10 @@
 \begin{definition}  \label{definition:matrix_over_a_ring}
     Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}, and let $m,n \in \mathbb{N}$. The set of all $m \times n$ arrays with entries in $R$ is denoted by
     $$ \hlin{M_{m,n}(R) = \{ (a_{ij}) \mid a_{ij} \in R \text{ for all } i,j \}.}$$
-    Elements of $M_{m,n}(R)$ are called \hldef{matrices over $R$} of size $m \times n$.
+    Elements of $M_{m,n}(R)$ are called \hldef{matrices over $R$} of size $m \times n$. Given a matrix $A \in M_{m,n}(R)$ and $1 \leq i \leq m, 1 \leq j \leq n$, the value $a_{ij}$ is called the \hldef{$(i,j)$th-entry of $A$} and may be denoted by \hl{$A_{i,j}$}.
+
+    In the case that $m = n$, the set of $n \times n$ matrices over $R$ is often denoted by \hl{$M_n(R)$}. The elements of $M_n(R)$ are called \hldef{square matrices over $R$}.
+
     Matrix addition \hl{$A+B$} and multiplication \hl{$AB$} are defined by the usual componentwise and summation formulas. More precisely, if $A,B \in M_{m,n}(R)$, then 
     $$ (A+B)_{ij} = a_{ij} + b_{ij},$$ 
     and if $A \in M_{m,n}(R)$ and $B \in M_{n,p}(R)$, then

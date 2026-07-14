@@ -1,20 +1,49 @@
 %% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
 \nocite{*}
 
+\section{Monoids}
+
+\input{../_definitions/definition_n_ary_operation_on_a_set.tex}
+\input{../_definitions/definition_left_right_identity_element_of_a_binary_operation_on_a_set.tex}
+\input{../_concepts/lemma_identity_element_of_a_binary_operation_on_a_set_is_unique_if_exists.tex}
+\input{../_definitions/definition_associative_binary_operation_on_a_set.tex}
+\input{../_definitions/definition_left_right_inverse_of_an_element_for_a_binary_operation_on_a_set.tex}
+\input{../_concepts/lemma_inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists.tex}
+\input{../_definitions/definition_commutative_binary_operation_on_a_set.tex}
+\input{../_definitions/definition_semigroup.tex}
+\input{../_definitions/definition_power_of_a_semigroup_element_by_a_positive_integer.tex}
+\input{../_concepts/lemma_additivity_of_powers_in_a_semigroup.tex}
+\input{../_definitions/definition_monoid.tex}
+\input{../_definitions/definition_power_of_a_monoid_element_by_a_nonnegative_integer.tex}
+\input{../_concepts/lemma_additivity_of_powers_in_a_monoid.tex}
+
 \section{Basic Group theory}
 
 \subsection{Definitions}
 
 \input{../_definitions/definition_group.tex}
 
+\input{../_definitions/definition_trivial_group_zero_group.tex}
+
 \begin{remark}
-    Given a set $G$ and a binary operator $\cdot$ on it, the notation of $\cdot$ may often be omitted, especially when the binary operation is thought of as a ``multiplication'' (as opposed to, for example, ``addition''); more precisely, one may write \hl{$gh$} in place of $g \cdot h$ for $g,h \in G$. 
+    Given a set $G$ and a binary operator $\cdot$ on it, the notation of $\cdot$ may often be omitted, especially when the binary operation is thought of as a ``multiplication'' (as opposed to, for example, ``addition''); more precisely, one may write \hl{$gh$} in place of $g \cdot h$ for $g,h \in G$.
 \end{remark}
+
+\input{../_definitions/definition_power_of_a_group_element_by_an_integer.tex}
+\input{../_concepts/lemma_additivity_of_powers_in_a_group.tex}
+\input{../_concepts/lemma_inverse_of_power_equals_power_of_inverse_in_a_group.tex}
+
+\input{../_concepts/lemma_cancellation_law_for_group_operations.tex}
+\input{../_concepts/corollary_cancellation_law_for_identity_element_of_group_operation.tex}
+\input{../_concepts/corollary_elements_of_group_that_multiply_to_identity_are_inverses.tex}
+\input{../_concepts/corollary_inverse_of_inverse_in_group_is_element.tex}
 
 \input{../_definitions/definition_group_homomorphism.tex}
 \input{../_definitions/definition_category_of_groups_of_abelian_groups.tex}
 
 \input{../_definitions/definition_subgroup_of_a_group.tex}
+\input{../_concepts/proposition_subgroup_criterion_for_a_subset_of_a_group.tex}
+\input{../_concepts/proposition_subgroup_criterion_for_a_subset_of_a_finite_group.tex}
 \input{../_definitions/definition_subgroup_of_a_group_generated_by_elements.tex}
 
 \input{../_definitions/definition_finitely_generated_group.tex}
@@ -25,7 +54,11 @@
 
 \input{../_definitions/definition_index_of_a_subgroup_in_a_group.tex}
 
+\input{../_definitions/definition_order_of_a_group.tex}
+\input{../_concepts/theorem_lagranges_theorem_for_finite_groups.tex}
+\input{../_concepts/corollary_order_of_element_divides_order_of_finite_group.tex}
 
+\input{../_concepts/proposition_order_of_cyclic_subgroup_generated_by_element_equals_order_of_element.tex}
 
 \input{../_definitions/definition_normal_subgroup_of_a_group.tex}
 \input{../_concepts/lemma_every_subgroup_of_an_abelian_group_is_a_normal_subgroup.tex}
@@ -69,6 +102,7 @@
 \input{../_concepts/proposition_subgroup_of_a_group_is_normal_subgroup_of_normalizer.tex}
 
 \input{../_definitions/definition_centralizer_of_a_subgroup_of_a_group.tex}
+\input{../_definitions/definition_center_of_a_group.tex}
 
 \subsubsection{Group actions}
 
@@ -140,19 +174,39 @@
 
 \subsection{Semidirect products}
 
-
+% Prerequisites: automorphisms
 \input{../_definitions/definition_automorphism_of_a_group_automorphism_group_of_a_group.tex}
 \input{../_concepts/proposition_automorphism_group_of_an_object_of_a_locally_small_category_is_indeed_a_group.tex}
 
+% Core definition and characterization theorems
 \input{../_definitions/definition_semidirect_product_of_groups_external_and_internal.tex}
 \input{../_concepts/theorem_internal_and_external_semidirect_products_are_isomorphic.tex}
 \input{../_concepts/theorem_group_is_semidirect_product_of_groups_if_and_only_if_there_is_a_split_short_exact_sequence.tex}
 
+% Standard structural facts
+\input{../_concepts/proposition_direct_product_is_semidirect_product_with_trivial_action.tex}
+\input{../_concepts/proposition_order_of_semidirect_product_of_finite_groups.tex}
+\input{../_concepts/proposition_center_of_semidirect_product.tex}
+\input{../_concepts/proposition_semidirect_product_of_abelian_groups_is_abelian_iff_trivial_action.tex}
+
+\subsubsection{Holomorph of a group}
+% Holomorph
+\input{../_definitions/definition_holomorph_of_a_group.tex}
+
+\subsubsection{}
+% Functoriality and consequences
+\input{../_definitions/definition_category_of_group_actions.tex}
+\input{../_concepts/proposition_functoriality_of_semidirect_product_via_category_of_group_actions.tex}
+\input{../_concepts/corollary_surjection_of_acting_group_induces_surjection_of_semidirect_products.tex}
+\input{../_concepts/corollary_inclusion_of_H_invariant_subgroup_induces_inclusion_of_semidirect_products.tex}
+
+% Normal subgroups within semidirect products
+\input{../_concepts/lemma_subgroup_of_the_normal_abelian_subgroup_of_a_semidirect_product_group_is_an_invariant_subgroup_iff_it_is_a_normal_subgroup_of_semidirect_product.tex}
 
 
+\subsubsection{}
 
-
-
+\input{../_concepts/theorem_semidirect_product_of_an_abelian_group_by_a_group_is_center_free_wheneever_fixed_point_subgroup_by_some_non_identity_elements_is_trivial_and_1_minus_non_identity_elements_are_non_zero_endomorphisms.tex}
 
 
 
@@ -163,6 +217,11 @@
 
 \subsubsection{Rings, division rings, and fields}
 \input{../_definitions/definition_ring.tex}
+
+\input{../_concepts/lemma_multiplication_by_zero_in_a_ring_is_zero.tex}
+\input{../_concepts/lemma_multiplication_by_minus_one_in_a_ring_is_additive_inverse.tex}
+\input{../_concepts/corollary_minus_one_times_minus_one_is_one_in_a_ring.tex}
+
 \input{../_definitions/definition_opposite_ring_of_a_ring.tex}
 \input{../_definitions/definition_commutative_ring.tex}
 \input{../_definitions/definition_center_of_a_ring.tex}
@@ -183,6 +242,9 @@
 \input{../_definitions/definition_field.tex}
 
 \input{../_concepts/lemma_unit_group_of_a_field_just_excludes_zero.tex}
+
+\input{../_definitions/definition_exponentiation_in_a_semiring.tex}
+\input{../_definitions/definition_exponentiation_in_a_ring.tex}
 
 A prominent example of a field would be the field of fractions of an integral domain.
 
@@ -248,6 +310,10 @@ A prominent example of a field would be the field of fractions of an integral do
 \input{../_definitions/definition_field_of_rational_numbers.tex}
 \input{../_definitions/definition_prime_number.tex}
 
+\input{../_definitions/definition_factorial_of_a_nonnegative_integer.tex}
+\input{../_definitions/definition_combinatorial_choose_function.tex}
+\input{../_concepts/theorem_binomial_theorem_for_a_commutative_ring.tex}
+
 
 \subsection{Finite field}
 
@@ -259,9 +325,15 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_definitions/definition_module_of_a_ring.tex}
 \input{../_definitions/definition_submodule_of_a_module_over_a_ring.tex}
+\input{../_concepts/proposition_submodule_criterion_for_a_subset_of_a_module_over_a_ring.tex}
 \input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
 
+\input{../_definitions/definition_multilinear_map_of_abelian_groups.tex}
+
 \input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
+\input{../_concepts/proposition_category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules.tex}
+\input{../_concepts/proposition_category_of_left_R_modules_is_equivalent_to_R_Z_bimodules.tex}
+\input{../_concepts/proposition_category_of_right_R_modules_is_equivalent_to_Z_R_bimodules.tex}
 
 
 \subsubsection{Linear combinations, spanning, and linear indepencence for modules over rings}
@@ -321,7 +393,27 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_definitions/definition_jacobson_radical_of_a_ring.tex}
 
+\subsubsection{Nakayama's lemma and consequences}
 
+\input{../_concepts/lemma_determinant_lemma_for_modules_over_a_ring.tex}
+
+\input{../_concepts/lemma_nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical.tex}
+
+\input{../_concepts/lemma_nakayamas_submodule_lemma_for_finitely_generated_modules_over_a_ring.tex}
+
+\input{../_concepts/proposition_nakayamas_generator_criterion_for_finitely_generated_modules_over_a_ring.tex}
+
+\input{../_concepts/corollary_nakayamas_lemma_for_finitely_generated_modules_over_a_local_ring_is_vanishing_iff_quotient_by_maximal_ideal.tex}
+
+\input{../_concepts/proposition_nakayamas_lemma_for_finitely_generated_modules_over_a_local_ring_minimal_generating_set_size_equals_vector_space_dimension.tex}
+
+\input{../_concepts/lemma_nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_nilpotent_ideal.tex}
+
+\input{../_concepts/proposition_nakayamas_surjection_criterion_for_homomorphisms_to_finitely_generated_modules_over_a_ring.tex}
+
+\input{../_concepts/proposition_nakayamas_lemma_for_finitely_generated_graded_modules_over_a_non_negatively_graded_ring.tex}
+
+\input{../_concepts/proposition_surjective_endomorphism_of_a_noetherian_module_is_an_isomorphism.tex}
 
 \input{../_definitions/definition_nilpotent_ideal_of_a_ring.tex}
 
@@ -529,11 +621,110 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 \subsection{Definitions}
 
 \input{../_definitions/definition_vector_space_over_a_field.tex}
-
-\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+\input{../_definitions/definition_basis_and_dimension_of_a_vector_space_over_a_field.tex}
 \input{../_definitions/definition_morphism_of_vector_spaces.tex}
 \input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
 \input{../_definitions/definition_matrix_over_a_ring.tex}
+
+\subsection{Dimension theory and rank}
+
+\input{../_definitions/definition_kernel_and_image_of_a_linear_map_between_vector_spaces.tex}
+\input{../_concepts/proposition_kernel_is_subspace_image_is_subspace_of_linear_maps.tex}
+\input{../_definitions/definition_rank_of_a_linear_map_and_of_a_matrix_over_a_field.tex}
+\input{../_concepts/theorem_rank_nullity_theorem_for_finite_dimensional_vector_spaces.tex}
+
+\subsection{Direct sums and quotient spaces}
+
+\input{../_definitions/definition_direct_sum_of_vector_spaces_internal_and_external.tex}
+\input{../_concepts/theorem_internal_and_external_direct_sums_of_vector_spaces_are_isomorphic.tex}
+\input{../_definitions/definition_quotient_vector_space_and_canonical_projection.tex}
+\input{../_concepts/proposition_dimension_formula_for_direct_sum_and_quotient_spaces.tex}
+
+\subsection{Matrix representations}
+
+\input{../_definitions/definition_matrix_representation_of_a_linear_map_with_respect_to_bases.tex}
+\input{../_definitions/definition_similar_matrices_over_a_ring.tex}
+\input{../_definitions/definition_change_of_basis_matrix_for_a_free_module_over_a_ring.tex}
+\input{../_definitions/definition_similar_matrices_and_change_of_basis.tex}
+\input{../_concepts/proposition_similar_matrices_share_determinant_trace_characteristic_polynomial_and_rank.tex}
+\input{../_definitions/definition_transpose_of_a_matrix_over_a_ring.tex}
+\input{../_definitions/definition_dual_map_of_a_linear_transformation.tex}
+\input{../_concepts/proposition_dual_map_is_transpose_of_matrix_representation.tex}
+
+\subsubsection{Row/column vectors and coordinate representations}
+
+\input{../_definitions/definition_row_vector_and_column_vector_over_a_ring.tex}
+\input{../_definitions/definition_coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis.tex}
+\input{../_concepts/lemma_coordinate_vector_transforms_by_change_of_basis_matrix_for_a_free_module_over_a_ring.tex}
+
+\subsubsection{Endomorphisms and matrix representations}
+
+\input{../_definitions/definition_endomorphism_of_an_object_in_a_category.tex}
+\input{../_definitions/definition_endomorphism_monoid_of_an_object_in_a_locally_small_category.tex}
+\input{../_concepts/proposition_endomorphism_semigroup_of_an_object_in_a_locally_small_category_is_indeed_a_semigroup.tex}
+
+\subsubsection{Invertible matrices and the general linear group}
+
+\input{../_definitions/definition_invertible_matrix_over_a_ring.tex}
+\input{../_concepts/proposition_general_linear_group_over_a_ring_is_indeed_a_group.tex}
+
+\subsubsection{Matrix of an endomorphism}
+
+\input{../_definitions/definition_matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis.tex}
+\input{../_concepts/lemma_matrix_of_an_endomorphism_acts_on_coordinate_column_vectors.tex}
+
+\subsubsection{Coordinate row vectors}
+
+\input{../_definitions/definition_coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis.tex}
+\input{../_concepts/lemma_coordinate_row_vector_transforms_by_change_of_basis_matrix_for_a_free_module_over_a_ring.tex}
+\input{../_concepts/lemma_matrix_of_an_endomorphism_acts_on_coordinate_row_vectors.tex}
+
+\subsubsection{Hermitian forms and change of basis}
+
+\input{../_concepts/lemma_change_of_basis_for_matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution.tex}
+
+\subsubsection{Matrix algebra as an involution algebra}
+
+\input{../_concepts/proposition_matrix_algebra_over_involution_ring_is_involution_algebra_over_a_ring_with_involution.tex}
+
+\subsection{Special endomorphisms}
+
+\input{../_definitions/definition_nilpotent_endomorphism_and_nilpotent_matrix.tex}
+\input{../_concepts/proposition_only_eigenvalue_of_a_nilpotent_endomorphism_is_zero.tex}
+\input{../_definitions/definition_idempotent_linear_map_and_projection_operator.tex}
+\input{../_concepts/proposition_vector_space_decomposes_as_direct_sum_along_idempotent.tex}
+
+\subsection{Invariant subspaces and operator decompositions}
+
+\input{../_definitions/definition_invariant_subspace_of_a_linear_endomorphism.tex}
+\input{../_concepts/theorem_every_endomorphism_on_a_finite_dimensional_complex_vector_space_has_an_invariant_line.tex}
+\input{../_definitions/definition_generalized_eigenspace_and_generalized_eigenvector.tex}
+\input{../_concepts/theorem_primary_decomposition_theorem_for_linear_operators.tex}
+
+\subsection{Cayley-Hamilton and Jordan form}
+
+\input{../_concepts/theorem_cayley_hamilton_for_linear_operators_on_finite_dimensional_vector_spaces.tex}
+\input{../_concepts/proposition_minimal_polynomial_divides_characteristic_polynomial_and_shares_same_roots.tex}
+\input{../_definitions/definition_jordan_block_and_jordan_normal_form_of_a_matrix.tex}
+\input{../_concepts/theorem_existence_and_uniqueness_of_jordan_canonical_form_over_an_algebraically_closed_field.tex}
+\input{../_concepts/proposition_operator_is_diagonalizable_iff_minimal_polynomial_splits_into_distinct_linear_factors.tex}
+
+\subsection{Inner product spaces and the spectral theorem}
+
+\input{../_definitions/definition_orthogonal_and_orthonormal_sets_in_an_inner_product_space.tex}
+\input{../_concepts/theorem_gram_schmidt_orthogonalization_process.tex}
+\input{../_definitions/definition_orthogonal_complement_of_a_subspace_in_an_inner_product_space.tex}
+\input{../_concepts/proposition_v_decomposes_as_direct_sum_of_subspace_and_its_orthogonal_complement.tex}
+\input{../_definitions/definition_adjoint_of_a_linear_operator_on_an_inner_product_space.tex}
+\input{../_definitions/definition_self_adjoint_hermitian_skew_symmetric_unitary_normal_operators.tex}
+\input{../_concepts/theorem_spectral_theorem_for_normal_operators_on_a_finite_dimensional_inner_product_space.tex}
+\input{../_concepts/proposition_equivalent_conditions_for_positive_semidefinite_and_positive_definite_matrices.tex}
+
+\subsection{Bilinear forms}
+
+\input{../_definitions/definition_bilinear_form_on_a_vector_space.tex}
+\input{../_definitions/definition_symmetric_and_skew_symmetric_bilinear_forms.tex}
+\input{../_concepts/proposition_matrix_representation_of_bilinear_forms_and_change_of_basis_transformation.tex}
 
 \subsection{Multilinear maps}
 \input{../_definitions/definition_multilinear_map_of_modules_over_rings.tex}
@@ -634,7 +825,7 @@ Let $G$ be a group and $\iota: G \to \widehat{G}$ be the canonical map to its pr
 
 \input{../_definitions/definition_semigroup.tex}
 \input{../_definitions/definition_monoid.tex}
-\input{../_definitions/definition_commutative_binary_operation.tex}
+\input{../_definitions/definition_commutative_binary_operation_on_a_set.tex}
 
 \subsection{Topological definitions}
 

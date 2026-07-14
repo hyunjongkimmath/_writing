@@ -1,0 +1,85 @@
+\begin{theorem}[Limits of sheaf diagrams are computed sectionwise]
+\label{theorem:limits_of_sheaf_diagrams_on_a_site_valued_in_a_category_are_computed_sectionwise}
+\TODO{AI generated, verify}
+Let $(\mathcal{C}, J)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}. Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. Let $I$ be a category. Let $D: I \to \Shv(\mathcal{C}, J, \mathcal{A})$\CrefIfExists{definition:sheaf_on_a_site} be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_category}{diagram} of sheaves on $(\mathcal{C}, J)$ valued in $\mathcal{A}$, written $i \mapsto D(i)$.
+
+Suppose that for every object $U$ of $\mathcal{C}$, the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} $\lim_{i \in I} D(i)(U)$ exists in $\mathcal{A}$. Then the limit of the diagram $D$ exists in $\Shv(\mathcal{C}, J, \mathcal{A})$, and it is computed sectionwise: for every object $U$ of $\mathcal{C}$, there is a canonical isomorphism in $\mathcal{A}$:
+\[
+\left( \lim_{i \in I} D(i) \right)(U) \cong \lim_{i \in I} (D(i)(U)).
+\]
+
+No smallness assumptions are required on $I$, $\mathcal{C}$, or $\mathcal{A}$. In particular, the index category $I$ need not be small, the site $(\mathcal{C}, J)$ need not have a small topologically generating family, and the value category $\mathcal{A}$ need not be locally small or possess all limits of any size.
+\end{theorem}
+
+\begin{proof}
+For each object $U$ of $\mathcal{C}$, let
+\[
+P(U) := \lim_{i \in I} D(i)(U),
+\]
+with limit projections $\pi_{i,U}: P(U) \to D(i)(U)$ for each $i \in I$. The cone from $P(U)$ to the diagram $(j \mapsto D(j)(U))$ is illustrated by:
+\[
+\begin{tikzcd}
+    & P(U) \arrow[ld, "\pi_{j,U}"'] \arrow[rd, "\pi_{i,U}"] \arrow[dd, "\pi_{k,U}"'] & \\
+    D(j)(U) \arrow[rr, "D(\alpha)_U"'] & & D(i)(U) \arrow[ld, "D(\beta)_U"] \\
+    & D(k)(U) &
+\end{tikzcd}
+\]
+
+By \Cref{theorem:limits_of_presheaf_diagrams_valued_in_a_category_are_computed_sectionwise}, the assignment $U \mapsto P(U)$ defines a presheaf on $\mathcal{C}$ valued in $\mathcal{A}$, and it is the limit of the diagram $D$ viewed as a diagram in $\PreShv(\mathcal{C}, \mathcal{A})$.
+
+Next we show that $P$ is a sheaf. Let $U$ be an object of $\mathcal{C}$ and let $S \in J(U)$ be a covering sieve. The sheaf condition requires that $P(U) \cong \varprojlim_{(V\to U) \in (\mathcal{D}_S)^{\op}} P(V)$, where $\mathcal{D}_S \hookrightarrow \mathcal{C}/U$ is the full subcategory such that $\Ob(\mathcal{D}_S) = \{(f: V \to U): f \in S(V)\}$. We have not yet established that this limit exists; its existence will follow from the joint limit argument below.
+
+Since each $D(i)$ is a sheaf on $(\mathcal{C}, J)$ valued in $\mathcal{A}$ (\Cref{definition:sheaf_on_a_site}), we have canonical isomorphisms for all $i \in I$:
+\[
+D(i)(U) \xrightarrow{\cong} \varprojlim_{(V \to U) \in (\mathcal{D}_S)^{\op}} D(i)(V).
+\]
+
+Consider the bifunctor $F: I \times (\mathcal{D}_S)^{\op} \to \mathcal{A}$ given by $F(i, (V \to U)) = D(i)(V)$. There are two ways to form iterated limits over this bifunctor. Taking the limit first over $(\mathcal{D}_S)^{\op}$ and then over $I$ yields $\lim_{i \in I} D(i)(U) = P(U)$, since each $D(i)$ is a sheaf. Taking the limit first over $I$ gives $P(V)$ for each $(V\to U)$, and then taking the limit over $(\mathcal{D}_S)^{\op}$ yields $\varprojlim_{(V\to U)} P(V)$. The relationship between these two iterated limits is:
+% \[
+% \begin{tikzcd}[row sep=large, column sep=large]
+%     & P(U) \arrow[dd, "\cong"'] & \\
+%     D(i)(U) \arrow[r, "\cong"] \arrow[d, "\pi_{i,U}"'] & \varprojlim_{(V\to U)} D(i)(V) \arrow[r, "\varprojlim"] & \varprojlim_{(V\to U)} P(V) \\
+%     & P(U) &
+% \end{tikzcd}
+% \]
+
+We first verify that $P(U)$ satisfies the universal property of the joint limit $\lim_{(i, (V\to U)) \in I \times (\mathcal{D}_S)^{\op}} F(i, (V\to U))$.
+
+For each pair $(i, (V \to U))$, define the projection
+\[
+\rho_{i,(V\to U)}: P(U) \xrightarrow{\pi_{i,U}} D(i)(U) \xrightarrow{\cong} \varprojlim_{(W \to U) \in (\mathcal{D}_S)^{\op}} D(i)(W) \longrightarrow D(i)(V),
+\]
+where the last map is the limit projection. These morphisms form a cone from $P(U)$ to the diagram $F$ over $I \times (\mathcal{D}_S)^{\op}$.
+
+To verify the universal property, let $N$ be any object of $\mathcal{A}$ equipped with a cone $(\sigma_{i,(V\to U)}: N \to D(i)(V))_{i \in I,\ (V\to U) \in (\mathcal{D}_S)^{\op}}$. For each fixed $i \in I$, the family $(\sigma_{i,(V\to U)})_{(V\to U) \in (\mathcal{D}_S)^{\op}}$ forms a cone from $N$ to the diagram $((W\to U) \mapsto D(i)(W))$ over $(\mathcal{D}_S)^{\op}$. By the universal property of the limit $\varprojlim_{(W\to U) \in (\mathcal{D}_S)^{\op}} D(i)(W) \cong D(i)(U)$, there exists a unique morphism $\tau_i: N \to D(i)(U)$ such that for all $(V\to U) \in (\mathcal{D}_S)^{\op}$:
+\[
+\rho_{i,(V\to U)}^{\text{lim}} \circ \tau_i = \sigma_{i,(V\to U)},
+\]
+where $\rho_{i,(V\to U)}^{\text{lim}}$ denotes the limit projection $D(i)(U) \cong \varprojlim_W D(i)(W) \to D(i)(V)$.
+
+The family $(\tau_i: N \to D(i)(U))_{i \in I}$ forms a cone from $N$ to the diagram $(j \mapsto D(j)(U))$ over $I$, because for any morphism $\alpha: i \to j$ in $I$ and any $(V\to U) \in (\mathcal{D}_S)^{\op}$, naturality of the cone gives:
+\[
+D(\alpha)_V \circ \sigma_{i,(V\to U)} = \sigma_{j,(V\to U)}.
+\]
+Since the limit projections $(\rho_{j,(V\to U)}^{\text{lim}})_{(V\to U)}$ are jointly monic, we obtain $D(\alpha)_U \circ \tau_i = \tau_j$. By the universal property of $P(U) = \lim_{i \in I} D(i)(U)$, there exists a unique morphism $\theta: N \to P(U)$ such that for all $i \in I$:
+\[
+\pi_{i,U} \circ \theta = \tau_i.
+\]
+
+By construction, for all $(i, (V\to U))$:
+\[
+\rho_{i,(V\to U)} \circ \theta = \sigma_{i,(V\to U)},
+\]
+and $\theta$ is unique with this property because the morphisms $(\rho_{i,(V\to U)})$ are jointly monic (they factor through the limit projections of $P(U)$, which are jointly monic).
+
+This establishes that $P(U)$ is the joint limit over $I \times (\mathcal{D}_S)^{\op}$. By \Cref{theorem:limits_commute_with_limits_and_colimits_commute_with_colimits}, since the joint limit exists and for each $(V\to U) \in (\mathcal{D}_S)^{\op}$ the partial limit $\lim_{i \in I} D(i)(V) = P(V)$ exists (by hypothesis), the iterated limit in the other order also exists and is canonically isomorphic to the joint limit:
+\[
+P(U) \xrightarrow{\cong} \varprojlim_{(V \to U) \in (\mathcal{D}_S)^{\op}} \left( \lim_{i \in I} D(i)(V) \right) = \varprojlim_{(V \to U) \in (\mathcal{D}_S)^{\op}} P(V).
+\]
+
+This is exactly the sheaf condition for $P$ at $U$ with respect to the covering sieve $S$. Since $U$ and $S$ were arbitrary, $P$ is a sheaf on $(\mathcal{C}, J)$ valued in $\mathcal{A}$.
+
+Finally we establish that $P$ is the sheaf limit. We have shown that $P$ is both a sheaf and the presheaf limit of $D$. It remains to verify that $P$ satisfies the universal property of the limit within the sheaf category $\Shv(\mathcal{C}, J, \mathcal{A})$. Let $Q$ be a sheaf on $(\mathcal{C}, J)$ valued in $\mathcal{A}$, and let $(\alpha_i: Q \to D(i))_{i \in I}$ be a cone from $Q$ to $D$ in $\Shv(\mathcal{C}, J, \mathcal{A})$. Viewing this as a cone in $\PreShv(\mathcal{C}, \mathcal{A})$, the universal property of $P$ as the presheaf limit yields a unique morphism of presheaves $\beta: Q \to P$ such that for all $i \in I$, $\pi_i \circ \beta = \alpha_i$. Since $Q$ and $P$ are both sheaves, $\beta$ is automatically a morphism in $\Shv(\mathcal{C}, J, \mathcal{A})$. Uniqueness follows from the uniqueness of $\beta$ as a presheaf morphism.
+
+Therefore $P$ is the limit of $D$ in $\Shv(\mathcal{C}, J, \mathcal{A})$, computed sectionwise.
+\end{proof}

@@ -1,0 +1,16 @@
+\begin{proposition} \label{proposition:existence_of_natural_numbers_from_zf}
+    \TODO{discuss uniqueness up to equivalence}
+Assuming \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Zermelo--Fraenkel set theory}, a set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers} along with a successor function $s: \bbN \to \bbN$ exists.
+\end{proposition}
+
+\begin{proof}
+By the Axiom of Infinity, there exists an inductive set $I$, i.e., $\varnothing \in I$ and for all $x \in I$, $x \cup \{x\} \in I$. By the Axiom Schema of Separation, define
+$$\bbN_0 = \{x \in I : \forall S \subseteq I \quad (\varnothing \in S \wedge \forall y \in S \, (y \cup \{y\} \in S) \rightarrow x \in S)\}.$$
+In other words, $\bbN_0$ is the intersection of all inductive subsets of $I$. In this construction, we choose the distinguished element to be $\varnothing \in \bbN_0$. One verifies that $\bbN_0$ itself is inductive: $\varnothing \in \bbN_0$ because every inductive subset contains $\varnothing$, and if $x \in \bbN_0$, then $x \cup \{x\}$ belongs to every inductive subset $S$ of $I$, so $x \cup \{x\} \in \bbN_0$.
+
+Define the successor function $s_0: \bbN_0 \to \bbN_0$ by $s_0(x) = x \cup \{x\}$. Suppose that $x,y \in \bbN_0$ satisfy $s_0(x) = s_0(y)$, i.e. $x \cup \{x\} = y \cup \{y\}$. By the axiom of extensionality, $x = y$. Thus, $s_0$ is an \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective function}. The element $\varnothing$ of $\bbN_0$ is not in the image of $s_0$ because $x \cup \{x\}$ always contains $x$ as an element, while $\varnothing$ contains nothing by the Axiom of the Empty Set.
+
+The induction principle holds by construction: if $S \subseteq \bbN_0$ contains $\varnothing$ and is closed under $s_0$, then $S$ is an inductive subset of $I$ and hence $S = \bbN_0$ because $\bbN_0$ is the intersection of all inductive subsets of $I$.
+
+Thus $(\bbN_0, \varnothing, s_0)$ satisfies the \CrefAndHyperrefIfExist{definition:natural_numbers}{Peano axioms} with $0 = \varnothing$. To obtain the convention where the first element is $1$, set $\bbN = \bbN_0 \setminus \{\varnothing\}$, define $1 = s_0(\varnothing) = \{\varnothing\}$, and restrict the successor to $s = s_0|_{\bbN}$. Since $s_0(x) \neq \varnothing$ for all $x$, the function $s$ \CrefAndHyperrefIfExist{definition:function_of_sets}{maps into} $\bbN$. The element $1$ is not in the image of $s$; otherwise, there would exist some $x \in \bbN$ such that $s_0(x) = s(x) = s_0(\varnothing)$, but the injectivity of $s_0$ would imply that that $x = \varnothing$, which contradicts that $x \in \bbN$. Induction on $\bbN$ follows from induction on $\bbN_0$: if $S \subseteq \bbN$ contains $1$ and is closed under $s$, then $S \cup \{\varnothing\}$ is inductive in $\bbN_0$, so $S \cup \{\varnothing\} = \bbN_0$, hence $S = \bbN$.
+\end{proof}

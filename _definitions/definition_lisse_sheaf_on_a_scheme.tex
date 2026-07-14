@@ -1,13 +1,15 @@
 \begin{definition} \label{definition:lisse_sheaf_on_a_scheme}
     Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} equipped with its \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small \'etale site}.  
     \begin{enumerate}
-        \item Given a ring $\Lambda$, a \hldef{lisse $\Lambda$-sheaf (on $X_{\'et}$)} refers to a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant $\Lambda$-module} on $X_{\'et}$ 
+        \item Given a ring $\Lambda$, a \hldef{lisse $\Lambda$-sheaf (on $X_{\'et}$)} refers to a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant $\Lambda$-module} on $X_{\'et}$. 
 
-        \item Given a commutative ring $R$ and ideal $\lambda$ (in practice $(R, \lambda)$ is a DVR such that $R/\lambda^n$ is finite for all $n \geq 1$), a \hldef{($\lambda$-adic) lisse $R$-sheaf (on $X_{\'et}$)} refers to a \CrefAndHyperref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf}  
+        However, it should be noted this this terminology of lisse $\Lambda$-sheaf is almost always used only when $\Lambda$ is a \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. 
+
+        \item Given a commutative ring $R$ and ideal $\lambda$ (in practice $(R, \lambda)$ is a \CrefAndHyperrefIfExist{definition:discrete_valuation_ring}{DVR} such that $R/\lambda^n$ is finite for all $n \geq 1$), a \hldef{($\lambda$-adic) lisse $R$-sheaf (on $X_{\'et}$)} refers to a \CrefAndHyperref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf}  
         $$\calF = (\calF_n, u_n)_{n \in \bbZ_{\geq 1}}, \quad u_n: \calF_n \to \calF_{n-1}$$
         such that $\calF_n$ is a locally constant $R/\lambda^n$-module for all $n \geq 1$. 
 
-        \item Given a commutative ring $R$ and ideal $\lambda$ (in practice $(R, \lambda)$ is a DVR such that $R/\lambda^n$ is finite for all $n \geq 1$), a \hldef{($\lambda$-adic) lisse $R$-sheaf (on $X_{\'et}$)} refers to a \CrefAndHyperref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf}  
+        \item Given a commutative ring $R$ and ideal $\lambda$ (in practice $(R, \lambda)$ is a DVR such that $R/\lambda^n$ is finite for all $n \geq 1$), a \hldef{($\lambda$-adic) lisse $R$-sheaf (on $X_{\'et}$)}, a \hldef{(adic) lisse sheaf with coeffcients in $R$}, etc. refers to a \CrefAndHyperref{definition:lambda_adic_sheaf_on_the_small_etale_site_of_a_scheme_for_an_ideal_of_a_commutative_ring}{$\lambda$-adic sheaf}  
         $$\calF = (\calF_n, u_n)_{n \in \bbZ_{\geq 1}}, \quad u_n: \calF_n \to \calF_{n-1}$$
         such that $\calF_n$ is a locally constant $R/\lambda^n$-module for all $n \geq 1$. 
 
@@ -15,10 +17,9 @@
         \TODO{what are the minimal hypotheses needed for the following}
         Let $X$ be a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}.
         \begin{enumerate}
-            \item An object of \CrefAndHyperref{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}{$\Sh(X,E)$} is called \hldef{lisse} if its underlying object, which is an object in $\Sh(X,R)$ is a lisse $R$-sheaf in the above sense.
+            \item An object of \CrefAndHyperref{definition:category_of_etale_sheaves_with_rational_coefficients_in_the_fraction_field_of_a_complete_dvr}{$\Sh(X,E)$} is called \hldef{lisse} or a \hldef{lisse sheaf on $X$ with coefficients in $E$} if its underlying object, which is an object in $\Sh(X,R)$ is a lisse $R$-sheaf in the above sense.
 
-            \item Let $K$ be an algebraic extension of $E$. An object of \CrefAndHyperref{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}{$\Sh(X,K)$} is called \hldef{lisse} if it is representable by a lisse object of $\Sh(X,E')$ in the above sense for some finite extension field $E'$ of $E$ in $K$.
+            \item Let $K$ be an algebraic extension of $E$. An object of \CrefAndHyperref{definition:category_of_etale_sheaves_with_rational_coefficients_in_an_algebraic_extension_of_the_fraction_field_of_a_complete_dvr}{$\Sh(X,K)$} is called \hldef{lisse} or a \hldef{lisse sheaf on $X$ with coefficients in $K$} if it is representable by a lisse object of $\Sh(X,E')$ in the above sense for some finite extension field $E'$ of $E$ in $K$.
         \end{enumerate}
-
     \end{enumerate}
 \end{definition}

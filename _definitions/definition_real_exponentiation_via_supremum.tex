@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:real_exponentiation_via_supremum}
+    Let $a \in \mathbb{R}$ with $a > 0$, and let $x \in \mathbb{R}$. The \hldef{$x$th power of $a$}, denoted by \hl{$a^x$}, is the real number defined using the \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{least upper bound and greatest lower bound properties} of $\mathbb{R}$ as follows:
+    \begin{itemize}
+        \item If $a > 1$, then
+            $$a^x := \sup\left\{ a^q : q \in \mathbb{Q},\; q \leq x \right\}.$$
+        \item If $a = 1$, then $1^x := 1$ for all $x \in \mathbb{R}$.
+        \item If $0 < a < 1$, then
+            $$a^x := \inf\left\{ a^q : q \in \mathbb{Q},\; q \leq x \right\}.$$
+    \end{itemize}
+    Here $a^q$ for $q \in \mathbb{Q}$ is the \CrefAndHyperrefIfExist{definition:rational_exponentiation_of_positive_reals}{rational exponentiation} of $a$. The supremum and infimum exist by the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}\CrefIfExists{theorem:real_numbers_has_the_least_upper_bound_and_greatest_lower_bound_properties} of $\mathbb{R}$, since the sets are nonempty and bounded.
+\end{definition}

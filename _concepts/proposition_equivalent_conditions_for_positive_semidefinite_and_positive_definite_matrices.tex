@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:equivalent_conditions_for_positive_semidefinite_and_positive_definite_matrices}
+    Let $V$ be a finite-dimensional nonzero inner product space over $\mathbb{C}$, and let $T: V \to V$ be a \CrefAndHyperrefIfExist{definition:self_adjoint_hermitian_skew_symmetric_unitary_normal_operators}{self-adjoint} linear endomorphism.
+
+    The following are equivalent:
+    \begin{enumerate}
+        \item $\langle T(v), v \rangle > 0$ for all nonzero $v \in V$ ($T$ is \hldef{positive definite}).
+        \item All eigenvalues of $T$ are strictly positive.
+        \item There exists an invertible linear map $S: V \to V$ such that $T = S^* S$.
+    \end{enumerate}
+
+    If one replaces "$> 0$" with "$\geq 0$" and "strictly positive" with "nonnegative", the same equivalences hold for \hldef{positive semidefinite} operators.
+\TextIfExists{definition:involution_on_a_ring}{Positive definiteness of self-adjoint operators is the vector-space special case of positive elements in a ring with \Cref{definition:involution_on_a_ring}. The factorization $T = S^*S$ generalizes to the Cholesky decomposition for matrices over such rings.}
+\TODO{AI generated, verify}
+\end{proposition}

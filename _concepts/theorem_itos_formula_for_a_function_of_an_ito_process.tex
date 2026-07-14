@@ -1,0 +1,14 @@
+\begin{theorem}[Itô's formula for a function of an Itô process] \label{theorem:itos_formula_for_a_function_of_an_ito_process}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$. Let $X = \{X_t\}_{t \geq 0}$ be an Itô process satisfying the stochastic differential equation
+$$dX_t = \mu_t \, dt + \sigma_t \, dB_t,$$
+where $\mu_t$ and $\sigma_t$ are adapted processes with $\int_0^T (|\mu_s| + \sigma_s^2) \, ds < \infty$ a.s.
+
+Let $f: [0, \infty) \times \mathbb{R} \to \mathbb{R}$ be of class $C^{1,2}$ (once continuously differentiable in time and twice in space). Then
+$$\begin{aligned}
+df(t, X_t) &= \frac{\partial f}{\partial t}(t, X_t) \, dt + \frac{\partial f}{\partial x}(t, X_t) \, dX_t + \frac{1}{2} \frac{\partial^2 f}{\partial x^2}(t, X_t) \, (dX_t)^2 \\
+&= \left(\frac{\partial f}{\partial t} + \mu_t \frac{\partial f}{\partial x} + \frac{1}{2}\sigma_t^2 \frac{\partial^2 f}{\partial x^2}\right) dt + \sigma_t \frac{\partial f}{\partial x} \, dB_t.
+\end{aligned}$$
+
+In particular, $(dX_t)^2 = \sigma_t^2 \, dt$, $dt \cdot dB_t = 0$, and $(dB_t)^2 = dt$.
+\end{theorem}

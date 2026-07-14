@@ -1,0 +1,49 @@
+\begin{proposition} \label{proposition:uniform_convergence_implies_bounded_and_uniformly_Cauchy_for_sequences_of_functions}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, let $X$ be a set, and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
+    Let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : X \to Y$, and let $f : X \to Y$.
+
+    If $(f_n)$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges uniformly} to $f$ on $X$, then:
+    \begin{enumerate}
+        \item[(a)] The sequence of supremum distances is eventually finite and tends to zero. That is, for every $\varepsilon \in T_{>0}$, there exists $N \in \mathbb{N}$ such that for all $n \geq N$, one has $\sup_{x \in X} d(f_n(x), f(x)) < \varepsilon$.
+        \item[(b)] The sequence $(f_n)$ is \CrefAndHyperrefIfExist{definition:uniformly_Cauchy_sequence_of_functions_from_a_set_to_an_extended_metric_space}{uniformly Cauchy} on $X$. That is, for every $\varepsilon \in T_{>0}$, there exists $N' \in \mathbb{N}$ such that for all $n, m \geq N'$ and all $x \in X$, one has $d(f_n(x), f_m(x)) < \varepsilon$.
+    \end{enumerate}
+
+    Conversely, if $(Y, d)$ is a \CrefAndHyperrefIfExist{definition:complete_extended_metric_space}{complete extended metric space}, then any uniformly Cauchy sequence of functions $f_n : X \to Y$ converges uniformly to some function $f : X \to Y$.
+\end{proposition}
+
+\begin{proof}
+    We first prove part (a), then use it for part (b), and finally establish the converse.
+
+    Part (a) follows directly from the definition of uniform convergence. By \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{definition}, $(f_n)$ converging uniformly to $f$ means that
+    $$\lim_{n \to \infty} \sup_{x \in X} d(f_n(x), f(x)) = 0_T.$$
+    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}
+    Unwinding the definition of convergence in $T^\infty$, for every $\varepsilon \in T_{>0}$ there exists $N \in \mathbb{N}$ such that for all $n \geq N$, one has $\sup_{x \in X} d(f_n(x), f(x)) < \varepsilon$. 
+    % Because $\varepsilon$ is finite (it lies in $T_{>0} \subseteq T$), the supremum itself must be finite for all sufficiently large $n$.
+
+    For part (b), we distinguish two cases depending on whether $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}{dense at zero}. Suppose first that $T$ is dense at zero. Let $\eta \in T_{>0}$ be arbitrary. By \Cref{proposition:small_scalar_multiples_in_dense_at_zero_semiring}, there exists $\delta \in T_{>0}$ such that $2\delta < \eta$. By the uniform convergence of $f_n$ to $f$, there exists $N_0 \in \mathbb{N}$ such that for all $n \geq N_0$ and all $x \in X$, one has
+    $$d(f_n(x), f(x)) < \delta.$$
+    For any $n,m \geq N_0$ and any $x \in X$, the \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{triangle inequality} for the extended metric $d$ yields
+    $$d(f_n(x), f_m(x)) \leq d(f_n(x), f(x)) + d(f(x), f_m(x)) < \delta + \delta = 2\delta < \eta.$$
+    Therefore, for all $n, m \geq N_0$ and all $x \in X$, one has $d(f_n(x), f_m(x)) < \eta$.
+
+    Now suppose instead that $T$ is not dense at zero. In particular, there exists a \CrefAndHyperrefIfExist{definition:minimal_element_in_a_subset_of_a_partially_ordered_set}{minimal positive element} $\varepsilon_0 \in T_{>0}$, i.e. an element such that no element of $T$ lies strictly between $0_T$ and $\varepsilon_0$. By the uniform convergence of $f_n$ to $f$, there exists $N_0 \in \mathbb{N}$ such that for all $n \geq N_0$ and all $x \in X$, one has
+    $$d(f_n(x), f(x)) < \varepsilon_0.$$
+    Because no positive element is strictly less than $\varepsilon_0$, we must have $d(f_n(x), f(x)) = 0_T$ for all $n \geq N_0$ and all $x$. By the \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{identity of indiscernibles}, this means $f_n(x) = f(x)$ for all $n \geq N_0$ and all $x$. In particular, for any $\eta \in T_{>0}$, taking the same $N_0$ gives $d(f_n(x), f_m(x)) = 0_T < \eta$ for all $n, m \geq N_0$ and all $x$. Hence $(f_n)$ is uniformly Cauchy\CrefIfExists{definition:uniformly_Cauchy_sequence_of_functions_from_a_set_to_an_extended_metric_space}.
+
+    For the converse, suppose that $(Y, d)$ is a \CrefAndHyperrefIfExist{definition:complete_extended_metric_space}{complete extended metric space} and that $(f_n)$ is uniformly Cauchy on $X$. We first define the candidate limit function $f : X \to Y$. Fix an arbitrary $x \in X$. Because $(f_n)$ is uniformly Cauchy, for every $\varepsilon \in T_{>0}$ there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$, one has $d(f_n(x), f_m(x)) < \varepsilon$. In particular, the sequence $(f_n(x))_{n=1}^\infty$ in $Y$ is a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space}{Cauchy sequence in $Y$}. Since $(Y, d)$ is assumed to be complete, this Cauchy sequence converges to some point in $Y$. Define
+    $$f(x) := \lim_{n \to \infty} f_n(x).$$
+    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}
+    This assignment defines a function $f : X \to Y$.
+
+    We now show that $(f_n)$ converges uniformly to $f$ on $X$, again distinguishing the two cases. First suppose that $T$ is dense at zero. Let $\varepsilon \in T_{>0}$ be arbitrary. By \Cref{proposition:small_scalar_multiples_in_dense_at_zero_semiring}, there exists $\delta \in T_{>0}$ such that $2\delta < \varepsilon$. By the uniformly Cauchy hypothesis, there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$ and all $x \in X$, one has
+    $$d(f_n(x), f_m(x)) < \delta.$$
+    For $n \geq N$ and $x \in X$, and for any $m \geq N$, the triangle inequality yields
+    $$d(f_n(x), f(x)) \leq d(f_n(x), f_m(x)) + d(f_m(x), f(x)).$$
+    Since $f_m(x) \to f(x)$ by construction as $m \to \infty$, we have $d(f_m(x), f(x)) \to 0_T$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space} in $T^\infty$ as $m \to \infty$. Because $T$ is dense at zero, there exists $M \geq N$ such that $d(f_M(x), f(x)) < \delta$. Substituting $m = M$ gives
+    $$d(f_n(x), f(x)) \leq d(f_n(x), f_M(x)) + d(f_M(x), f(x)) < 2\delta < \varepsilon.$$
+    Since this holds for all $n \geq N$ and all $x \in X$, with $N$ independent of $x$, the sequence $(f_n)$ converges uniformly to $f$ on $X$\CrefIfExists{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}.
+
+    Now suppose instead that $T$ is not dense at zero. There exists a minimal positive element $\varepsilon_0 \in T_{>0}$. Apply the uniformly Cauchy hypothesis to $\varepsilon_0$: there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$ and all $x \in X$, one has
+    $$d(f_n(x), f_m(x)) < \varepsilon_0.$$
+    Because no positive element is strictly less than $\varepsilon_0$, we must have $d(f_n(x), f_m(x)) = 0_T$ for all $n, m \geq N$ and all $x$. By the \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{identity of indiscernibles}, this means that $f_n(x) = f_m(x)$ for all $n, m \geq N$ and all $x$, so $(f_n)$ eventually stabilizes. In particular, the pointwise limit satisfies $f(x) = f_N(x)$ for all $x$, hence $d(f_n(x), f(x)) = 0_T < \varepsilon_0$ for all $n \geq N$ and all $x$. Therefore $(f_n)$ converges uniformly to $f$ on $X$\CrefIfExists{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}.
+\end{proof}

@@ -1,0 +1,12 @@
+\begin{proposition}[Derivative of the identity function on a real interval is one] \label{proposition:derivative_of_the_identity_function_on_a_real_interval_is_one}
+    Let $I \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be an interval. Consider the \CrefAndHyperrefIfExist{definition:function_of_sets}{identity function} $f : I \to \mathbb{R}$ defined by $f(x) = x$ for all $x \in I$. Then $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $a \in I$, and
+    $$f'(a) = 1.$$
+    Equivalently, the \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} of $f$ is the constant function $1$ on $I$, i.e., $f' \equiv 1$ on $I$.
+\end{proposition}
+\begin{proof}
+    Let $a \in I$ be arbitrary. The \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} of $f$ at $a$ is
+    $$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}.$$
+    For all $h$ sufficiently small so that $a+h \in I$, we have 
+    $$\frac{f(a+h) - f(a)}{h} = \frac{(a+h) - a}{h} = \frac{h}{h} = 1.$$
+    Thus, $f'(a)$ exists and equals $1$, so $f$ is differentiable at $a$ with $f'(a) = 1$. Since $a \in I$ was arbitrary, $f$ is differentiable on $I$ and $f' \equiv 1$ on $I$.
+\end{proof}

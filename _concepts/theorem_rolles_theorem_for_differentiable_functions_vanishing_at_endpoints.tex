@@ -1,0 +1,25 @@
+\begin{theorem}[Rolle's theorem] \label{theorem:rolles_theorem_for_differentiable_functions_vanishing_at_endpoints}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the standard topology and $[a, b]$ with the subspace topology.
+
+    Suppose that:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} on $[a, b]$;
+        \item $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at each point of the open interval $(a, b)$;
+        \item $f(a) = f(b)$.
+    \end{enumerate}
+    Then there exists $c \in (a, b)$ such that $f'(c) = 0$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{theorem:extreme_value_theorem_for_continuous_functions_on_closed_bounded_intervals}, the continuous function $f$ attains both its maximum and minimum on $[a, b]$. Let $c_{\max}, c_{\min} \in [a, b]$ be points such that
+    $$f(c_{\max}) = \max_{x \in [a,b]} f(x) \quad \text{and} \quad f(c_{\min}) = \min_{x \in [a,b]} f(x).$$
+
+    If $f(c_{\max}) = f(c_{\min})$, then $f$ is constant on $[a, b]$. In that case\CrefIfExists{proposition:derivative_of_a_constant_real_valued_function_on_a_real_interval}, $f'(c) = 0$ for every $c \in (a, b)$, and we are done. Otherwise, at least one of the extrema differs from $f(a) = f(b)$. If $f(c_{\max}) > f(a)$, then $c_{\max} \in (a, b)$; if $f(c_{\min}) < f(a)$, then $c_{\min} \in (a, b)$. In either case, there exists some $c \in (a, b)$ at which $f$ attains a local extremum.
+
+    Suppose without loss of generality that $f$ attains its maximum at $c \in (a, b)$. For any $h > 0$ sufficiently small so that $c + h \in (a, b)$, we have
+    $$\frac{f(c+h) - f(c)}{h} \leq 0$$
+    because $f(c+h) \leq f(c)$. Taking the limit as $h \to 0^+$ gives $f'(c) \leq 0$ (the derivative exists by hypothesis). For any $h < 0$ sufficiently small so that $c + h \in (a, b)$, we have
+    $$\frac{f(c+h) - f(c)}{h} \geq 0$$
+    because the numerator is $\leq 0$ and the denominator is negative. Taking the limit as $h \to 0^-$ gives $f'(c) \geq 0$. Therefore, $f'(c) = 0$. The argument if $f$ attains its minimum at $c \in (a, b)$ is analogous with inequalities reversed.
+\end{proof}

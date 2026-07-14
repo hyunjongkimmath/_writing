@@ -1,0 +1,7 @@
+\begin{theorem}[Doob's maximal inequality] \label{theorem:doobs_inequality}
+Let $\{X_n\}_{n=0}^N$ be a martingale (or non-negative submartingale) with respect to a filtration $(\mathcal{F}_n)_{n=0}^N$. Then for any $\lambda > 0$,
+$$P\left(\max_{0 \leq k \leq N} |X_k| \geq \lambda\right) \leq \frac{\mathbb{E}[|X_N|]}{\lambda}.$$
+
+More precisely, if $\{X_n\}$ is a submartingale, then for any $\lambda > 0$,
+$$\lambda \cdot P\left(\max_{0 \leq k \leq N} X_k \geq \lambda\right) \leq \mathbb{E}[X_N^+] - \mathbb{E}[X_0 \cdot \mathbf{1}_{\{\max_{0 \leq k \leq N} X_k \geq \lambda\}}].$$
+\end{theorem}

@@ -1,0 +1,8 @@
+\begin{theorem}[Martingale convergence theorem (Doob)] \label{theorem:martingale_convergence_theorem}
+Let $(\Omega, \mathcal{F}, P)$ be a probability space and let $\{X_n\}_{n \in \mathbb{N}}$ be a submartingale with respect to a filtration $(\mathcal{F}_n)_{n \in \mathbb{N}}$. If the submartingale is bounded in $L^1$, i.e.,
+$$\sup_{n \in \mathbb{N}} \mathbb{E}[X_n^+] < \infty,$$
+then there exists an integrable random variable $X_\infty$ such that
+$$X_n \to X_\infty \quad \text{almost surely as } n \to \infty.$$
+
+In particular, every martingale $\{X_n\}$ bounded in $L^1$ (i.e., $\sup_{n} \mathbb{E}[|X_n|] < \infty$) converges almost surely to an integrable random variable.
+\end{theorem}

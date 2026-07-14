@@ -1,0 +1,27 @@
+\begin{lemma} \label{lemma:hermitian_form_evaluates_by_coordinate_row_vectors}
+    \TODO{AI generated, verify}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $A$-module} of finite rank $n$ with ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$, and let $h: M \times M \to A$ be an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} for some $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} with $\varepsilon \cdot \overline{\varepsilon} = 1$. Let $H_\mathcal{E}$\CrefIfExists{definition:matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution} denote the matrix of $h$ with respect to $\mathcal{E}$.
+
+    \begin{enumerate}
+        \item Suppose that $M$ is a right $A$-module (so that Hermitian forms are conjugate linear in the first variable and linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}). For any $x,y \in M$,
+        $$h(x,y) = [x]_\mathcal{E}^{\mathsf{r}} \, H_\mathcal{E} \, ([y]_\mathcal{E}^{\mathsf{r}})^*,$$
+        where $[x]_\mathcal{E}^{\mathsf{r}}, [y]_\mathcal{E}^{\mathsf{r}} \in A^{1 \times n}$\CrefIfExists{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis} are the coordinate row vectors and $*$ denotes the \CrefAndHyperrefIfExist{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}{conjugate transpose}\CrefIfExists{definition:transpose_of_a_matrix_over_a_ring}.
+
+        \item Suppose that $M$ is a left $A$-module (so that Hermitian forms are linear in the first variable and conjugate linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}). For any $x,y \in M$,
+        $$h(x,y) = [x]_\mathcal{E}^{\mathsf{r}} \, H_\mathcal{E} \, (\overline{[y]_\mathcal{E}^{\mathsf{r}}})^\top,$$
+        where $\overline{[y]_\mathcal{E}^{\mathsf{r}}} \in A^{1 \times n}$\CrefIfExists{definition:conjugate_of_a_matrix_over_a_ring_with_involution} denotes the entrywise conjugate and $\top$ denotes the transpose.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Let $u = [x]_\mathcal{E}$ and $v = [y]_\mathcal{E}$ be the coordinate column vectors of $x,y$ with respect to $\mathcal{E}$, so that $[x]_\mathcal{E}^{\mathsf{r}} = u^\top$ and $[y]_\mathcal{E}^{\mathsf{r}} = v^\top$\CrefIfExists{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}.
+
+    \begin{enumerate}
+        \item Suppose $M$ is a right $A$-module. By \Cref{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}, we have $h(x,y) = u^* H_\mathcal{E} v$. The conjugate transpose $u^*$ of the column vector $u$ is the row vector $(\overline{u}_1,\ldots,\overline{u}_n)$, which equals $([x]_\mathcal{E}^{\mathsf{r}})^*$ where $*$ on a row vector denotes entrywise conjugation. The column vector $v$ has entries $v_j$, so its conjugate transpose is the column vector with entries $\overline{v}_j$, which equals $([y]_\mathcal{E}^{\mathsf{r}})^*$. Therefore
+        $$h(x,y) = u^* H_\mathcal{E} v = [x]_\mathcal{E}^{\mathsf{r}} \, H_\mathcal{E} \, ([y]_\mathcal{E}^{\mathsf{r}})^*.$$
+
+        \item Suppose $M$ is a left $A$-module. By \Cref{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}, we have $h(x,y) = u^\top H_\mathcal{E} \overline{v}$. Since $u^\top = [x]_\mathcal{E}^{\mathsf{r}}$ and $\overline{v}$ is the column vector with entries $\overline{v}_j$, which equals $(\overline{[y]_\mathcal{E}^{\mathsf{r}}})^\top$, we obtain
+        $$h(x,y) = [x]_\mathcal{E}^{\mathsf{r}} \, H_\mathcal{E} \, (\overline{[y]_\mathcal{E}^{\mathsf{r}}})^\top.$$
+    \end{enumerate}
+
+    In both cases the claimed formula follows.
+\end{proof}

@@ -1,0 +1,35 @@
+\begin{proposition} \label{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}
+    \TODO{AI generated, verify}
+    The following categories are pairwise \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent}:
+    the \CrefAndHyperrefIfExist{definition:category_of_groups_of_abelian_groups}{category of abelian groups}, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of left $\bbZ$-modules}, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of right $\bbZ$-modules} $\mathsf{Mod}_\bbZ$, and the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of two-sided $\bbZ$-modules} ${}_\bbZ\mathsf{Mod}_\bbZ$. More precisely, the equivalences can be constructed as follows:
+    \begin{enumerate}
+        \item 
+        Equivalence with left $\bbZ$-modules.
+        Let $F_\ell \colon \mathbf{Ab} \to {}_\bbZ\mathsf{Mod}$ be the functor that equips an abelian group $(A,+)$ with the canonical left $\bbZ$-action
+        $$\hlin{n \cdot m = \underbrace{m + \cdots + m}_{n \text{ times}} \quad (n > 0), \qquad 0 \cdot m = 0_A, \qquad (-n) \cdot m = -(n \cdot m) \quad (n > 0),}$$
+        and acts as the identity on morphisms. Let $G_\ell \colon {}_\bbZ\mathsf{Mod} \to \mathbf{Ab}$ be the forgetful functor that sends a left $\bbZ$-module to its underlying abelian group. Then:
+
+        \begin{enumerate}
+            \item $F_\ell \circ G_\ell = \operatorname{id}_{{}_\bbZ\mathsf{Mod}}$, since for any left $\bbZ$-module $M$ the scalar multiplication is uniquely determined by $n \cdot m = (n \cdot 1_R)m$ where $1_R$ is the generator of $\bbZ$.
+
+            \item $G_\ell \circ F_\ell = \operatorname{id}_\mathbf{Ab}$, since the canonical left $\bbZ$-action on an abelian group uses only the addition and inverse operations already present.
+        \end{enumerate}
+
+        Any group homomorphism between left $\bbZ$-modules is automatically $\bbZ$-linear because $f(nm) = nf(m)$ for all $n \in \bbZ$. Hence $F_\ell$ is fully faithful and essentially surjective, so it is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}.
+
+        \item Equivalence with right $\bbZ$-modules.
+        Similarly, let $F_r \colon \mathbf{Ab} \to \mathsf{Mod}_\bbZ$ equip an abelian group $(A,+)$ with the canonical right $\bbZ$-action
+        $$\hlin{m \cdot n = \underbrace{m + \cdots + m}_{n \text{ times}} \quad (n > 0), \qquad m \cdot 0 = 0_A, \qquad m \cdot (-n) = -(m \cdot n) \quad (n > 0),}$$
+        and let $G_r \colon \mathsf{Mod}_\bbZ \to \mathbf{Ab}$ be the forgetful functor. The same argument shows that $F_r$ is an equivalence of categories with inverse $G_r$.
+
+        \item Equivalence with two-sided $\bbZ$-modules.
+        Let $F_{\ell r} \colon \mathbf{Ab} \to {}_\bbZ\mathsf{Mod}_\bbZ$ equip an abelian group $(A,+)$ with the left and right $\bbZ$-actions defined above (which coincide since $\bbZ$ is commutative), making $n \cdot m = m \cdot n$. Let $G_{\ell r} \colon {}_\bbZ\mathsf{Mod}_\bbZ \to \mathbf{Ab}$ be the forgetful functor. Then:
+        \begin{enumerate}
+            \item $F_{\ell r} \circ G_{\ell r} = \operatorname{id}_{{}_\bbZ\mathsf{Mod}_\bbZ}$, since any two-sided $\bbZ$-module has scalar multiplication determined by the additive structure.
+            \item $G_{\ell r} \circ F_{\ell r} = \operatorname{id}_\mathbf{Ab}$.
+        \end{enumerate}
+        Any group homomorphism between two-sided $\bbZ$-modules is automatically a bimodule map, so $F_{\ell r}$ is fully faithful and essentially surjective.
+
+    \end{enumerate}
+
+\end{proposition}

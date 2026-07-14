@@ -1,0 +1,30 @@
+\begin{proposition} \label{proposition:real_exponentiation_via_exp_and_ln}
+    \TODO{AI generated, verify}
+    For every $a > 0$ and every $x \in \mathbb{R}$, the real exponentiation $a^x$ satisfies
+    $$\hlin{a^x = \exp(x \ln(a))},$$
+    where $\exp$ is the \CrefAndHyperrefIfExist{definition:real_exponential_function}{exponential function} and $\ln$ is the \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm}. In particular, for $a = e$, we have $e^x = \exp(x)$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We treat the cases $a > 1$, $a = 1$, and $0 < a < 1$ separately.
+
+    \begin{enumerate}
+        \item \textbf{Case $a = 1$:} By definition of real exponentiation (see \CrefAndHyperrefIfExist{definition:real_exponentiation_via_supremum}), $1^x = 1$ for all $x \in \mathbb{R}$. On the other hand, $\ln(1) = 0$ because $\exp(0) = 1 = e^0$, so
+        $$\exp(x \ln(1)) = \exp(x \cdot 0) = \exp(0) = 1.$$
+        The two sides agree.
+
+        \item \textbf{Case $a > 1$:} By definition, $a^x = \sup\{ a^q : q \in \mathbb{Q},\; q \leq x \}$. We first show that for rational exponents the identity holds: if $q \in \mathbb{Q}$, then
+        $$a^q = \exp(q \ln(a)).$$
+        Indeed, for positive integers $n$, we have $a^n = a \cdot a \cdots a$ ($n$ times), and by additivity of real exponentiation (see \CrefAndHyperrefIfExist{lemma:properties_of_real_exponentiation}{additivity of real exponentiation}), $\exp(n \ln(a)) = \exp(\ln(a) + \cdots + \ln(a))$. Since $\exp(\ln(a)) = a$ and $\exp(u+v) = \exp(u)\exp(v)$ (from \CrefAndHyperrefIfExist{lemma:properties_of_real_exponentiation}{additivity}), we have $\exp(n \ln(a)) = (\exp(\ln(a)))^n = a^n$. For negative integers, $a^{-n} = 1/a^n$, and $\exp(-n \ln(a)) = 1/\exp(n \ln(a))$ by the property of exponentials. For general rationals $q = m/n$ with $m \in \mathbb{Z}$, $n \in \mathbb{N}_{>0}$, we have
+        $$\exp(q \ln(a))^n = \exp(n \cdot q \ln(a)) = \exp(m \ln(a)) = a^m,$$
+        so $\exp(q \ln(a))$ is the unique positive $n$-th root of $a^m$, which is $a^{m/n} = a^q$.
+
+        Now, for irrational $x > 0$, since $a > 1$, the function $t \mapsto a^t$ on $\mathbb{Q}$ is strictly increasing (by \CrefAndHyperrefIfExist{lemma:properties_of_rational_exponentiation}{monotonicity of rational exponentiation}). The map $s \mapsto \exp(s)$ is also strictly increasing because its derivative $\exp(s) > 0$ everywhere. Since $a^q = \exp(q \ln(a))$ for all $q \in \\mathbb{Q}$, and both sides are continuous in the exponent (the supremum definition gives continuity of $a^x$, and $\exp(x \ln(a))$ is a composition of continuous functions), we have
+        $$a^x = \sup_{q \leq x, q \in \mathbb{Q}} a^q = \sup_{q \leq x, q \in \mathbb{Q}} \exp(q \ln(a)) = \exp(x \ln(a)).$$
+
+        \item \textbf{Case $0 < a < 1$:} By definition, $a^x = \inf\{ a^q : q \in \mathbb{Q},\; q \leq x \}$. The same rational case argument as above shows $a^q = \exp(q \ln(a))$ for all $q \in \mathbb{Q}$. Since now $\ln(a) < 0$, the map $s \mapsto s \ln(a)$ reverses inequalities, and $\exp(s)$ is strictly increasing. The infimum over $q \leq x$ of $\exp(q \ln(a))$ equals $\exp(x \ln(a))$ by continuity:
+        $$a^x = \inf_{q \leq x, q \in \mathbb{Q}} a^q = \inf_{q \leq x, q \in \mathbb{Q}} \exp(q \ln(a)) = \exp(x \ln(a)).$$
+    \end{enumerate}
+
+    The special case $a = e$ gives $e^x = \exp(x \ln(e))$. Since $\ln(e) = 1$ (because $\exp(1) = e$), we have $e^x = \exp(x)$.
+\end{proof}

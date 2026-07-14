@@ -1,0 +1,28 @@
+\begin{theorem}
+\label{theorem:semidirect_product_of_an_abelian_group_by_a_group_is_center_free_wheneever_fixed_point_subgroup_by_some_non_identity_elements_is_trivial_and_1_minus_non_identity_elements_are_non_zero_endomorphisms}
+Let $A$ be a nontrivial abelian group and let $G$ be a group acting on $A$ via a homomorphism $\phi: G \to \text{Aut}(A)$. For each $g \in G$, denote the action of $g$ on $a \in A$ by $g \cdot a$. Suppose that the following hold:
+\begin{enumerate}
+    \item \label{cond:fixed_points_exist} There exists a non-identity element $g_0 \in G \setminus \{1\}$ such that the fixed-point subgroup is trivial, i.e., $A^{g_0} = \{a \in A \mid g_0 \cdot a = a\} = \{0\}$.
+    % \item \label{cond:fixed_points} For every non-identity element $g \in G \setminus \{1\}$, the fixed-point subgroup is trivial, i.e., $A^g = \{a \in A \mid g \cdot a = a\} = \{0\}$.
+    \item \label{cond:image} For every non-identity element $g \in G \setminus \{1\}$, the map $(1 - g): A \to A$ defined by $a \mapsto a - g \cdot a$ is not the zero map.
+\end{enumerate}
+The semidirect product $A \rtimes G$ is \CrefAndHyperrefIfExist{definition:center_of_a_group}{center-free}.
+\end{theorem}
+
+\begin{proof}
+Let $(a_1, g_1) \in Z(A \rtimes G)$. By definition, $(a_1, g_1)$ must commute with all elements $(a_2, g_2) \in A \rtimes G$. The equality $(a_1, g_1)(a_2, g_2) = (a_2, g_2)(a_1, g_1)$ is equivalent to
+$$(a_1 + g_1 \cdot a_2, \, g_1 g_2) = (a_2 + g_2 \cdot a_1, \, g_2 g_1).$$
+In particular, we must have 
+\begin{equation}
+\label{eq:commutation_relation}
+(1 - g_2) \cdot a_1 = (1 - g_1) \cdot a_2 \quad \text{for all } a_2 \in A, \, g_2 \in G.
+\end{equation}
+We must show that $(a_1, g_1) = (0, 1)$. 
+
+Suppose for contradiction that $g_1 \neq 1$. Letting $g_2 = 1$ in \eqref{eq:commutation_relation}, the left-hand side becomes $0$, reducing the relation to:
+$$0 = (1 - g_1) \cdot a_2 \quad \text{for all } a_2 \in A.$$
+This implies that the map $(1 - g_1): A \to A$ is identically the zero map, which contradicts directly contradicts Condition~\eqref{cond:image}. Hence, $g_1 = 1$.
+
+With $g_1 = 1$, the right-hand side of \eqref{eq:commutation_relation} becomes $0$, so the relation simplifies to $(1 - g_2) \cdot a_1 = 0$ for all $g_2 \in G$. Letting $g_2$ be the element $g_0$ of Condition~\eqref{cond:fixed_points_exist}, the assumption that $A^{g_0} = \{0\}$ implies that $a_1 = 0$. Thus, $(a_1,g_1) = (0,1)$ as desired.
+% With $g_1 = 1$ The right-hand side of \eqref{eq:commutation_relation} becomes $0$, so the relation simplifies to $(1 - g_2) \cdot a_1 = 0$ for all $g_2 \in G$. Since $A$ is nontrivial, we can choose a non-identity element $g_2 \in G \setminus \{1\}$. By Condition~\eqref{cond:fixed_points}, we have that $A^{g_2} = \{0\}$, or equivalently that $(1-g_2) \cdot a_1 = 0$ implies that $a_1 = 0$. Thus, $(a_1,g_1) = (0,1)$ as desired.
+\end{proof}

@@ -1,0 +1,24 @@
+\begin{lemma}[Logarithmic growth is slower than any positive power]
+\label{lemma:logarithmic_growth_slower_than_any_positive_power}
+\TODO{AI generated, verify}
+For every $k \in \mathbb{N}_0$ and every $\epsilon > 0$,
+$$\lim_{x \to \infty} \frac{(\ln x)^k}{x^\epsilon} = 0.$$
+In particular, there exists $N \in \mathbb{N}$ such that for all $x \ge N$,
+$$(\ln x)^k \le x^\epsilon.$$
+\end{lemma}
+\begin{proof}
+\TODO{AI generated, verify}
+It suffices to prove the limit statement. We proceed by induction on $k$.
+
+\paragraph{Base case $k = 0$.} $\frac{(\ln x)^0}{x^\epsilon} = \frac{1}{x^\epsilon} \to 0$ as $x \to \infty$.
+
+\paragraph{Inductive step.} Assume the claim holds for some $k \ge 0$. Consider
+$$\lim_{x \to \infty} \frac{(\ln x)^{k+1}}{x^\epsilon}.$$
+Apply L'Hôpital's rule (or use the fact that $\ln x = o(x^{\epsilon/(k+1)})$). Alternatively, set $y = x^{\epsilon/(k+1)}$, so $x = y^{(k+1)/\epsilon}$ and $\ln x = \frac{k+1}{\epsilon} \ln y$. Then
+$$\frac{(\ln x)^{k+1}}{x^\epsilon} = \left( \frac{k+1}{\epsilon} \right)^{k+1} \frac{(\ln y)^{k+1}}{y^{k+1}} = \left( \frac{k+1}{\epsilon} \right)^{k+1} \left( \frac{\ln y}{y} \right)^{k+1}.$$
+Since $\frac{\ln y}{y} \to 0$ as $y \to \infty$ (which follows from the $k=0$ case with $\epsilon=1$), the whole expression tends to $0$.
+
+More directly, for any $\delta > 0$, the function $f(x) = x^{-\delta} \ln x$ has derivative $f'(x) = x^{-\delta-1}(1 - \delta \ln x)$, which is negative for $x > e^{1/\delta}$. Hence $f$ is eventually decreasing and bounded above, so $\ln x = O(x^\delta)$ for any $\delta > 0$. Then $(\ln x)^k = O(x^{k\delta})$. Choosing $\delta = \epsilon/(2k)$ (for $k \ge 1$) gives $(\ln x)^k = O(x^{\epsilon/2})$, and $(\ln x)^k / x^\epsilon = O(x^{-\epsilon/2}) \to 0$.
+
+This completes the proof.
+\end{proof}

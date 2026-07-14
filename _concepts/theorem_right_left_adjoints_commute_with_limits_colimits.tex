@@ -1,19 +1,114 @@
-\begin{theorem}[Continuity of Adjoint Functors] \label{theorem:right_left_adjoints_commute_with_limits_colimits}
-    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories}, and let $F: \mathcal{C} \to \mathcal{D}$ and $G: \mathcal{D} \to \mathcal{C}$ be functors forming an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $F \dashv G$, i.e. $F$ is the left adjoint and $G$ is the right adjoint. Let $\mathcal{J}$ be a small index category.
+\begin{theorem}[Left adjoints preserve colimits; right adjoints preserve limits]
+    \label{theorem:right_left_adjoints_commute_with_limits_colimits}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ and $\mathcal{D}$ be \CrefAndHyperrefIfExist{definition:category}{categories}. Let $F : \mathcal{C} \to \mathcal{D}$ and $G : \mathcal{D} \to \mathcal{C}$ form an \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{adjunction} $F \dashv G$, with \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{unit} $\eta : \mathrm{Id}_{\mathcal{C}} \implies GF$ and \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{counit} $\varepsilon : FG \implies \mathrm{Id}_{\mathcal{D}}$. Let $\mathcal{J}$ be a category.
 
     \begin{enumerate}
-        \item \textbf{Right Adjoints Preserve Limits:}
-        Let $D: \mathcal{J} \to \mathcal{D}$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} $\lim_{\mathcal{J}} D$ exists in $\mathcal{D}$. Then the limit of the composite diagram $G \circ D: \mathcal{J} \to \mathcal{C}$ exists in $\mathcal{C}$, and $G$ \CrefAndHyperrefIfExist{definition:functor_preserving_limit_colimit_of_a_diagram}{preserves the limit}, i.e. the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{comparison morphism} induced by the universal property of the limit,
+        \item \label{item:left_adjoint_preserves_colimits} Let $D : \mathcal{J} \to \mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_category}{diagram} such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit} $\colim_{\mathcal{J}} D$ exists in $\mathcal{C}$, with universal cocone $(\lambda_j : D(j) \to \colim_{\mathcal{J}} D)_{j \in \Ob(\mathcal{J})}$. Then the family
         $$
-        \vartheta: G\left(\lim_{j \in \mathcal{J}} D(j)\right) \xrightarrow{\cong} \lim_{j \in \mathcal{J}} G(D(j)),
+        (F(\lambda_j) : F(D(j)) \to F(\colim_{\mathcal{J}} D))_{j \in \Ob(\mathcal{J})}
         $$
-        is an isomorphism.
+        is a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{colimit cocone} for the diagram $F \circ D : \mathcal{J} \to \mathcal{D}$. In other words, for every object $Y \in \mathcal{D}$ and every family of morphisms $(\nu_j : F(D(j)) \to Y)_{j \in \Ob(\mathcal{J})}$ satisfying $\nu_k \circ F(D(\alpha)) = \nu_j$ for all morphisms $\alpha : j \to k$ in $\mathcal{J}$, there exists a unique morphism $f : F(\colim_{\mathcal{J}} D) \to Y$ such that $f \circ F(\lambda_j) = \nu_j$ for all $j \in \Ob(\mathcal{J})$.
 
-        \item \textbf{Left Adjoints Preserve Colimits:}
-        Let $D: \mathcal{J} \to \mathcal{C}$ be a diagram such that the colimit $\operatorname{colim}_{\mathcal{J}} D$ exists in $\mathcal{C}$. Then the colimit of the composite diagram $F \circ D: \mathcal{J} \to \mathcal{D}$ exists in $\mathcal{D}$, and $F$ \CrefAndHyperrefIfExist{definition:functor_preserving_limit_colimit_of_a_diagram}{preserves the colimits}, i.e. the \CrefAndHyperrefIfExist{definition:comparison_morphism_of_limits_and_colimits_under_functors}{comparison morphism} induced by the universal property of the colimit,
+        \item \label{item:right_adjoint_preserves_limits} Let $E : \mathcal{J} \to \mathcal{D}$ be a diagram such that the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} $\lim_{\mathcal{J}} E$ exists in $\mathcal{D}$, with universal cone $(\rho_j : \lim_{\mathcal{J}} E \to E(j))_{j \in \Ob(\mathcal{J})}$. Then the family
         $$
-        \varphi: \operatorname{colim}_{j \in \mathcal{J}} F(D(j)) \xrightarrow{\cong} F\left(\operatorname{colim}_{j \in \mathcal{J}} D(j)\right),
+        (G(\rho_j) : G(\lim_{\mathcal{J}} E) \to G(E(j)))_{j \in \Ob(\mathcal{J})}
         $$
-        is an isomorphism.
+        is a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit cone} for the diagram $G \circ E : \mathcal{J} \to \mathcal{C}$. In other words, for every object $X \in \mathcal{C}$ and every family of morphisms $(\sigma_j : X \to G(E(j)))_{j \in \Ob(\mathcal{J})}$ satisfying $G(E(\alpha)) \circ \sigma_j = \sigma_k$ for all morphisms $\alpha : j \to k$ in $\mathcal{J}$, there exists a unique morphism $g : X \to G(\lim_{\mathcal{J}} E)$ such that $G(\rho_j) \circ g = \sigma_j$ for all $j \in \Ob(\mathcal{J})$.
     \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+
+    We prove part~\ref{item:left_adjoint_preserves_colimits}; part~\ref{item:right_adjoint_preserves_limits} follows by duality in the opposite categories $\mathcal{C}^{\op}$ and $\mathcal{D}^{\op}$, where $F$ and $G$ are swapped and all arrows reversed.
+
+    Fix a diagram $D : \mathcal{J} \to \mathcal{C}$, its colimit $\colim_{\mathcal{J}} D$, and the universal cocone $(\lambda_j)_{j \in \Ob(\mathcal{J})}$. Let $Y \in \mathcal{D}$ and let $(\nu_j : F(D(j)) \to Y)_{j \in \Ob(\mathcal{J})}$ be a cocone under $F \circ D$. We must construct a unique morphism $f : F(\colim_{\mathcal{J}} D) \to Y$ with $f \circ F(\lambda_j) = \nu_j$ for all $j$:
+    \[
+    \begin{tikzcd}[row sep=large, column sep=large]
+        F(D(j)) \arrow[rd, "F(\lambda_j)"'] \arrow[ddr, "\nu_j"', bend right=15] & \\
+        & F(\colim_{\mathcal{J}} D) \arrow[d, dashed, "\exists ! f"] \\
+        & Y
+    \end{tikzcd}
+    \]
+
+    We first pull the cocone $(\nu_j)$ from $\mathcal{D}$ back to $\mathcal{C}$ using $G$ and the unit $\eta$. For each $j \in \Ob(\mathcal{J})$, define
+    $$
+    \mu'_j := G(\nu_j) \circ \eta_{D(j)} : D(j) \longrightarrow G(Y).
+    $$
+    We verify that $(\mu'_j)_j$ is a cocone from $D$ to $G(Y)$. Let $\alpha : j \to k$ be any morphism in $\mathcal{J}$. Since $(\nu_j)_j$ is a cocone under $F \circ D$, we have $\nu_k \circ F(D(\alpha)) = \nu_j$. We compute:
+    $$
+    \mu'_k \circ D(\alpha) = G(\nu_k) \circ \eta_{D(k)} \circ D(\alpha).
+    $$
+    By the naturality of $\eta$ applied to the morphism $D(\alpha) : D(j) \to D(k)$, we have $\eta_{D(k)} \circ D(\alpha) = GF(D(\alpha)) \circ \eta_{D(j)}$. Substituting:
+    $$
+    G(\nu_k) \circ GF(D(\alpha)) \circ \eta_{D(j)} = G(\nu_k \circ F(D(\alpha))) \circ \eta_{D(j)}.
+    $$
+    Using the cocone condition $\nu_k \circ F(D(\alpha)) = \nu_j$, this becomes $G(\nu_j) \circ \eta_{D(j)} = \mu'_j$. Thus $(\mu'_j)_j$ is a cocone.
+
+    Next we invoke the universal property of $\colim_{\mathcal{J}} D$. Since $(\lambda_j)_j$ is a colimit cocone for $D$ and $(\mu'_j)_j$ is a cocone from $D$ to $G(Y)$, there exists a unique morphism
+    $$
+    u : \colim_{\mathcal{J}} D \longrightarrow G(Y)
+    $$
+    such that $u \circ \lambda_j = \mu'_j$ for all $j \in \Ob(\mathcal{J})$.
+
+    We then push the morphism $u$ forward to $\mathcal{D}$ using the counit $\varepsilon$. Define
+    $$
+    f := \varepsilon_Y \circ F(u) : F(\colim_{\mathcal{J}} D) \longrightarrow Y,
+    $$
+    where $\varepsilon_Y : FG(Y) \to Y$ is the component of the counit at $Y$.
+
+    We verify that $f$ mediates the cocone $(\nu_j)$. For each $j \in \Ob(\mathcal{J})$, we compute:
+    $$
+    f \circ F(\lambda_j) = \varepsilon_Y \circ F(u) \circ F(\lambda_j) = \varepsilon_Y \circ F(u \circ \lambda_j).
+    $$
+    Substituting $u \circ \lambda_j = \mu'_j = G(\nu_j) \circ \eta_{D(j)}$:
+    $$
+    \varepsilon_Y \circ F(G(\nu_j) \circ \eta_{D(j)}) = \varepsilon_Y \circ FG(\nu_j) \circ F(\eta_{D(j)}).
+    $$
+    By the naturality of $\varepsilon$ applied to the morphism $\nu_j : F(D(j)) \to Y$, we have the commutative square
+    \[
+    \begin{tikzcd}[row sep=large, column sep=large]
+        FG(F(D(j))) \arrow[r, "FG(\nu_j)"] \arrow[d, "\varepsilon_{F(D(j))}"'] & FG(Y) \arrow[d, "\varepsilon_Y"] \\
+        F(D(j)) \arrow[r, "\nu_j"'] & Y
+    \end{tikzcd}
+    \]
+    That is, $\varepsilon_Y \circ FG(\nu_j) = \nu_j \circ \varepsilon_{F(D(j))}$. Substituting:
+    $$
+    f \circ F(\lambda_j) = \nu_j \circ \varepsilon_{F(D(j))} \circ F(\eta_{D(j)}).
+    $$
+    By the first triangle identity for the adjunction $F \dashv G$, applied to the object $D(j) \in \mathcal{C}$, we have $\varepsilon_{F(D(j))} \circ F(\eta_{D(j)}) = \mathrm{id}_{F(D(j))}$. Therefore:
+    $$
+    f \circ F(\lambda_j) = \nu_j \circ \mathrm{id}_{F(D(j))} = \nu_j.
+    $$
+
+    Finally we establish uniqueness. Suppose $f' : F(\colim_{\mathcal{J}} D) \to Y$ is another morphism satisfying $f' \circ F(\lambda_j) = \nu_j$ for all $j$. Define
+    $$
+    u' := G(f') \circ \eta_{\colim_{\mathcal{J}} D} : \colim_{\mathcal{J}} D \longrightarrow G(Y).
+    $$
+    For each $j$, we compute:
+    $$
+    u' \circ \lambda_j = G(f') \circ \eta_{\colim_{\mathcal{J}} D} \circ \lambda_j.
+    $$
+    By the naturality of $\eta$ applied to $\lambda_j : D(j) \to \colim_{\mathcal{J}} D$, we have $\eta_{\colim_{\mathcal{J}} D} \circ \lambda_j = GF(\lambda_j) \circ \eta_{D(j)}$. Hence:
+    $$
+    u' \circ \lambda_j = G(f') \circ GF(\lambda_j) \circ \eta_{D(j)} = G(f' \circ F(\lambda_j)) \circ \eta_{D(j)}.
+    $$
+    Since $f' \circ F(\lambda_j) = \nu_j$, this equals $G(\nu_j) \circ \eta_{D(j)} = \mu'_j$. Thus $u'$ is also a mediating morphism for the cocone $(\mu'_j)_j$ through $(\lambda_j)_j$. By the uniqueness of $u$, we have $u' = u$.
+
+    It remains to show that $f' = f$. We compute:
+    $$
+    \varepsilon_Y \circ F(u') = \varepsilon_Y \circ F(G(f') \circ \eta_{\colim_{\mathcal{J}} D}) = \varepsilon_Y \circ FG(f') \circ F(\eta_{\colim_{\mathcal{J}} D}).
+    $$
+    By the naturality of $\varepsilon$ applied to $f' : F(\colim_{\mathcal{J}} D) \to Y$, we have $\varepsilon_Y \circ FG(f') = f' \circ \varepsilon_{F(\colim_{\mathcal{J}} D)}$. Hence:
+    $$
+    \varepsilon_Y \circ F(u') = f' \circ \varepsilon_{F(\colim_{\mathcal{J}} D)} \circ F(\eta_{\colim_{\mathcal{J}} D}).
+    $$
+    By the first triangle identity applied to $\colim_{\mathcal{J}} D$, we have $\varepsilon_{F(\colim_{\mathcal{J}} D)} \circ F(\eta_{\colim_{\mathcal{J}} D}) = \mathrm{id}_{F(\colim_{\mathcal{J}} D)}$. Therefore:
+    $$
+    \varepsilon_Y \circ F(u') = f' \circ \mathrm{id}_{F(\colim_{\mathcal{J}} D)} = f'.
+    $$
+    Since $u' = u$, we obtain $f' = \varepsilon_Y \circ F(u) = f$. This establishes uniqueness.
+
+    The cocone $(F(\lambda_j))_j$ therefore satisfies the universal property of a colimit cocone for $F \circ D$, completing the proof of part~\ref{item:left_adjoint_preserves_colimits}.
+\end{proof}

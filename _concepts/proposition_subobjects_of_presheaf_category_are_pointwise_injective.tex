@@ -1,0 +1,8 @@
+\begin{proposition} \label{proposition:subobjects_of_presheaf_category_are_pointwise_injective}
+Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}. The category of presheaves on $\calC$, denoted by $\operatorname{PSh}(\calC) = [\calC^{\operatorname{op}}, \mathbf{Set}]$, is a \CrefAndHyperrefIfExist{definition:topos}{topos}, and limits and colimits in this functor category are computed pointwise.
+
+A morphism $\alpha: F \to G$ between presheaves on $\calC$ is a \hldef{monomorphism} in the functor category $\operatorname{PSh}(\calC)$ if and only if for every object $U$ of $\calC$, the component map $\alpha_U: F(U) \to G(U)$ is an \hldef{injective function}.
+
+Equivalently, a subobject of a presheaf $F$ in $\operatorname{PSh}(\calC)$ is represented by a \CrefAndHyperrefIfExist{definition:subfunctor_of_a_presheaf_of_sets_on_a_category}{subfunctor} of $F$, i.e., an equivalence class of monomorphisms $\iota: G \hookrightarrow F$ such that each component $\iota_U: G(U) \to F(U)$ is injective.
+
+\end{proposition}

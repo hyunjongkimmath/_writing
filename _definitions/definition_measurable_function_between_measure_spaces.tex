@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:measurable_function_between_measure_spaces}
+Let $(X, \mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measurable space}.
+
+\begin{enumerate}
+  \item Let $(Y,\calB)$ be a measurable space. A function $f: X \to Y$ is said to be \hldef{$(\calA, \calB)$-measurable}, \hldef{measurable with respect to the $\sigma$-algebras $\calA$ and $\calB$}, or simply \hldef{measurable} if $f^{-1}(B) \in \calA$ for all $B \in \calB$.
+
+  \item A function $f : X \to \overline{\mathbb{R}} = \mathbb{R} \cup \{-\infty, \infty\}$\CrefIfExists{definition:extended_real_line} is called a \hldef{measurable function into the extended real line} if it is a measurable function with respect to $\calA$ and the \CrefAndHyperrefIfExist{definition:borel_sigma_algebra_of_a_topological_space}{Borel $\sigma$-algebra} of $\overline{\bbR}$.
+  Explicitly, $f$ is measurable if and only if $f^{-1}((a, \infty]) \in \mathcal{A}$ for every $a \in \mathbb{R}$.
+
+  \item A function $f : X \to \mathbb{C}$ is called a \hldef{measurable function into the complex plane} if it is a measurable function with respect to $\calA$ and the Borel $\sigma$-algebra of $\bbC$. Equivalently, $f$ is measurable if both $\operatorname{Re}(f)$ and $\operatorname{Im}(f)$ are measurable real-valued functions.
+\end{enumerate}
+\end{definition}

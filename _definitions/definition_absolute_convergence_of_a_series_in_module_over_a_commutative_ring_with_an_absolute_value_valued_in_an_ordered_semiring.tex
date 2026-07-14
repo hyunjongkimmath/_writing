@@ -1,0 +1,12 @@
+\begin{definition}[Absolute convergence] \label{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} valued in an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} $T$. Let $M$ be a (left/right) module over $R$\CrefIfExists{definition:module_over_a_ring} equipped with a function $\|\cdot\| : M \to T^\infty$ valued in the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} $T^\infty$. Let $(v_n)_{n=1}^\infty$ be a sequence in $M$, and let
+    $$s_N = \sum_{n=1}^N \|v_n\|$$
+    denote the \CrefAndHyperrefIfExist{definition:partial_sum_of_a_sequence_in_an_abelian_group}{partial sums} of the norms in $T^\infty$.
+
+    The series $\sum_{n=1}^\infty v_n$ is said to \hldef{converge absolutely in $M$} (or to be \hldef{absolutely convergent}) if the nondecreasing sequence $(s_N)_{N=1}^\infty$ converges in $T^\infty$\CrefIfExists{definition:convergence_of_a_monotone_sequence_in_an_ordered_semiring_with_adjoined_infinity}.
+
+    The definition applies verbatim when $\|\cdot\|$ is an \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended norm}, an \CrefAndHyperrefIfExist{definition:extended_seminorm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended seminorm}, or an \CrefAndHyperrefIfExist{definition:extended_quasinorm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended quasi-norm} on $M$ valued in $T^\infty$.
+
+    In the case that $R = \bbR$ or $\bbC$, $M = V$ is a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space}, and $T = \bbR_{\geq 0}$, absolute convergence means that the series of real numbers $\sum_{n=1}^\infty \|v_n\|$ converges in $[0,\infty]$.
+\end{definition}

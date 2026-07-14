@@ -1,0 +1,11 @@
+\begin{lemma} \label{lemma:matrix_of_a_varepsilon_hermitian_form_over_a_ring_with_involution_is_a_varepsilon_hermitian_matrix}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $A$-module} of finite rank $n$ with ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$, and let $h: M \times M \to A$ be an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} for some $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} with $\varepsilon \cdot \overline{\varepsilon} = 1$.
+
+    \TODO{conjugate linear}
+    The matrix $H_\calE \in M_n(A)$\CrefIfExists{definition:matrix_over_a_ring} of $h$ with respect to $\calE$ is indeed a \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian matrix}, i.e. $H^* = \varepsilon H$\CrefIfExists{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}; this is true whether $M$ is a considered as left or a right module and hence whether $H$ is conjugate linear in the first or the second variable.
+\end{lemma}
+\begin{proof}
+    We are to show that $H_\calE^* = \varepsilon H_\calE$. This is eqiuvalent to say that that 
+    $$\overline{h(e_j,e_i)} = \varepsilon \cdot h(e_i,e_j)$$
+    for all $1 \leq i,j \leq n$, which in turn is true because $h$ is Hermitian. 
+\end{proof}

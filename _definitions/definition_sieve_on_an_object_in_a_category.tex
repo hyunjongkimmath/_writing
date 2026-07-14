@@ -1,10 +1,12 @@
 \begin{definition}[{\cite[Expos\'e I D\'efinition 4.1]{SGA4_I}}] \label{definition:sieve_on_an_object_in_a_category}
-Let $C$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
+Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. 
 
 \begin{enumerate}
-    \item A \hldef{sieve $S$ on the category $C$} is a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} $D$ of $C$ such that for any object $U$ of $C$ there exists an object $V$ of \TODO{correctly parse the definiton}
-    \item A \hldef{sieve $S$ on an object $U \in \operatorname{Ob}(C)$} is a collection of morphisms in $C$ with codomain $U$ that is closed under precomposition by any compatible morphism in $C$. In other words, $S$ is a sieve if for every $f : V \to U$ in $S$ and morphism $g : W \to V$ in $C$, the composition $f \circ g : W \to U$ is also in $S$. 
+    \item A \hldef{sieve $S$ on the category $\calC$} is a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{full subcategory} $\calD$ that is \CrefAndHyperrefIfExist{definition:downward_upward_closed_subcategory_of_a_category}{downward closed}. In other words, for any morphism $f: V \to U$ in $\calC$ where $U$ is an object of $\calD$, the object $V$ must also be an object of $\calD$ (and hence $f$ is in $\calD$ as well as $\calD$ is a full subcategory of $\calC$). 
+    
+    \item A \hldef{sieve $S$ on an object $U \in \operatorname{Ob}(\calC)$} is a sieve of the category $\calC/U$\CrefIfExists{definition:category_of_objects_over_under_a_fixed_object_in_a_category}. Equivalently, a sieve $S$ on $U$ is a collection of morphisms in $\calC$ with codomain $U$ that is closed under precomposition by any compatible morphism in $\calC$. In other words, $S$ is a sieve if for every $f : V \to U$ in $S$ and morphism $g : W \to V$ in $\calC$, the composition $f \circ g : W \to U$ is also in $S$. 
 
     Given a morphism $f: V \to U$ in a sieve $S$, we also say that \hldef{$f$ factors through $U$}.
 \end{enumerate}
+If $\calC$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}, then sieves on objects $X$ of $\calC$ bijectively correspond to \CrefAndHyperrefIfExist{definition:subfunctor_of_a_presheaf_of_sets_on_a_category}{subfunctors} of $h_X$ in the category $\operatorname{PSh}(\calC) = [\calC^{\operatorname{op}}, \mathbf{Set}]$\CrefIfExists{definition:presheaf_on_a_category}
 \end{definition}

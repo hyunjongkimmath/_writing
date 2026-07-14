@@ -1,0 +1,19 @@
+\begin{proposition}[Stalk of direct image under open immersion for étale sheaves] \label{proposition:stalk_of_direct_image_under_open_immersion_etale_sheaf}
+\TODO{AI generated, verify}
+    Let $j : U \hookrightarrow X$ be an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} of schemes, and let $\mathcal{F}$ be a sheaf on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $U_{\text{ét}}$}. Let $\bar{x}$ be a geometric point.
+
+    \begin{enumerate}
+        \item If the image of $\bar{x}$ lies in $U$, then
+        $$(j_*\mathcal{F})_{\bar{x}} = \mathcal{F}_{\bar{x}}$$
+
+        \item If the image of $\bar{x}$ lies in $X \setminus U$, then
+        $$(j_*\mathcal{F})_{\bar{x}} = \varinjlim_{(V, \bar{v})} \mathcal{F}(V \times_X U),$$
+        where the colimit runs over étale neighborhoods $(V, \bar{v})$ of $\bar{x}$ in $X$. The fiber product $V \times_X U$ is an open subscheme of $V$, and may be empty for small enough $V$ if $\bar{x}$ maps to the boundary.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+    If $\bar{x}$ lands in $U$, then every étale neighborhood $(V, \bar{v})$ of $\bar{x}$ has $V \times_X U$ as an open-neighborhood of the geometric point induced by $\bar{x}$ in $U$. The two directed systems are cofinal.
+
+    If $\bar{x}$ lands outside $U$, the formula follows directly from $(j_*\mathcal{F})(V) = \mathcal{F}(V \times_X U)$ and taking the colimit over étale neighborhoods.
+\end{proof}

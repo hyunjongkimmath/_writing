@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:successor_left_addition}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers} and let $+$ be addition defined in \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_existence}{addition existence}. For all $k, m \in \bbN$,
+$$s(k) + m = s(k + m).$$
+\end{lemma}
+
+\begin{proof}
+Fix $k \in \bbN$ and induct on $m$.
+
+For the base case $m=1$, we have $s(k) + 1 = s(s(k))$ by \Cref{proposition:natural_numbers_addition_existence}. On the other hand, $k+1 = s(k)$ also by \Cref{proposition:natural_numbers_addition_existence}, so $s(k+1) = s(s(k))$. Hence, $s(k)+1 = s(k+1)$. 
+
+Inductively assume that $m \in \bbN$ satisfies $s(k) + m = s(k+m)$. Then
+$$s(k) + s(m) = s(s(k) + m) = s(s(k+m)) = s(k + s(m)),$$
+by \CrefIfExists{proposition:natural_numbers_addition_existence} and by the inductive hypothesis. This completes the induction.
+\end{proof}

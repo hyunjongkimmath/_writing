@@ -1,0 +1,29 @@
+\begin{definition}[Absolute value on a ring] \label{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}.
+
+    An \hldef{absolute value on $R$ valued in $T$} (or a \hldef{norm on $R$ valued in $T$}) is a function
+    $$
+    | \cdot | : R \to T
+    $$
+    that satisfies the following properties for all $a, b \in R$:
+    \begin{enumerate}
+        \item Positive definiteness: $|a| = 0_T$ if and only if $a = 0_R$. 
+        \item Multiplicativity: $|ab| = |a| \cdot |b|$,
+        \item Subadditivity/triangle inequality: $|a + b| \leq |a| + |b|$,
+    \end{enumerate}
+
+    \TextIfExists{definition:quasi_norm_on_a_commutative_ring_valued_in_an_ordered_semiring}{
+    Equivalently, an absolute value on $R$ valued in $T$ is a \CrefAndHyperrefIfExist{definition:quasi_norm_on_a_commutative_ring_valued_in_an_ordered_semiring}{quasi-norm} $|\cdot|: R \to T$ on $R$ that additionally satisfies
+    \begin{enumerate}
+        \item Triangle inequality (subadditivity): $|a + b| \leq |a| + |b|$ for all $a,b \in R$.
+    \end{enumerate}
+    }
+
+    \TextIfExists{definition:seminorm_on_a_commutative_ring_valued_in_an_ordered_semiring}{
+    Equivalently, an absolute value on $R$ valued in $T$ is a \CrefAndHyperrefIfExist{definition:seminorm_on_a_commutative_ring_valued_in_an_ordered_semiring}{semi-norm} on $R$ valued in $T$ that additionally satisfies positive definiteness
+    }
+
+    A ring equipped with an absolute value may be called a \hldef{normed ring} or an \hldef{absolute valued ring}. A \CrefAndHyperrefIfExist{definition:field}{field} equipped with an absolute value may be called a \hldef{normed field}. It may also be called a \hldef{valued field}, but this should not be confused with the more algebraic notion of a field equipped with a \CrefAndHyperrefIfExist{definition:valuation_on_a_field}{valuation} with values in a more general ordered group.
+
+    In the case that $T$ is not explicit, the absolute value $|\cdot|$ is almost always taken to be valued in $\bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}.
+\end{definition}

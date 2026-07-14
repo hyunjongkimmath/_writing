@@ -1,0 +1,42 @@
+\begin{theorem}[Rearrangement theorem for absolutely convergent series in $\mathbb{R}$ or $\mathbb{C}$] \label{theorem:rearrangement_theorem_for_absolutely_convergent_series_in_R_or_C}
+    \TODO{AI generated, verify}
+    Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} or $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}. Suppose that the series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} to $S$, i.e.,
+    $$\sum_{n=1}^\infty a_n = S \quad \text{and} \quad \sum_{n=1}^\infty |a_n| < \infty.$$
+
+    Let $\sigma : \mathbb{N} \to \mathbb{N}$ be any \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection}. Then the rearranged series $\sum_{n=1}^\infty a_{\sigma(n)}$ also converges absolutely to $S$, i.e.,
+    $$\sum_{n=1}^\infty a_{\sigma(n)} = S \quad \text{and} \quad \sum_{n=1}^\infty |a_{\sigma(n)}| = \sum_{n=1}^\infty |a_n|.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first establish that the rearranged series converges absolutely. Since $|a_n| \geq 0$ for all $n$, we may apply \Cref{lemma:absolute_convergence_preserved_by_rearrangement_of_nonnegative_terms} to the nonnegative sequence $(|a_n|)$. This gives:
+    $$\sum_{n=1}^\infty |a_{\sigma(n)}| = \sum_{n=1}^\infty |a_n| < \infty,$$
+    so $\sum a_{\sigma(n)}$ converges absolutely.
+
+    Next we show that the rearranged series converges to the same sum $S$. Let $\varepsilon > 0$ be given. Since $\sum_{n=1}^\infty |a_n|$ converges, by the Cauchy criterion for convergence of series of real numbers$\CrefIfExists{proposition:cauchy_criterion_for_convergence_of_series_of_real_numbers}$ there exists $M \geq 1$ such that for all $K \geq M$:
+    $$\sum_{n=M+1}^K |a_n| < \varepsilon.$$
+
+    In particular, the tail satisfies $\sum_{n=M+1}^\infty |a_n| < \varepsilon$. Let $S_K = \sum_{n=1}^K a_n$ and $T_L = \sum_{m=1}^L a_{\sigma(m)}$ denote partial sums of the original and rearranged series respectively.
+
+    Because $\sigma$ is surjective, for each $n \in \{1, 2, \dots, M\}$ there exists some $m_n$ such that $\sigma(m_n) = n$. Let $L_0 = \max\{m_1, m_2, \dots, m_M\}$. Then the set $\{\sigma(1), \sigma(2), \dots, \sigma(L_0)\}$ contains $\{1, 2, \dots, M\}$.
+
+    For any $L \geq L_0$, we can write:
+    $$T_L - S = (T_L - S_M) + (S_M - S).$$
+
+    The first difference splits as:
+    $$T_L - S_M = \sum_{m=1}^L a_{\sigma(m)} - \sum_{n=1}^M a_n.$$
+
+    Let $I_L = \{\sigma(1), \dots, \sigma(L)\}$. Since $I_L \supseteq \{1, \dots, M\}$ for $L \geq L_0$, we can decompose:
+    $$T_L - S_M = \sum_{n \in I_L \setminus \{1,\dots,M\}} a_n - \sum_{n \in \{1,\dots,M\} \setminus I_L} a_n.$$
+
+    The second sum is empty (since $I_L$ contains $\{1, \dots, M\}$), so:
+    $$T_L - S_M = \sum_{n \in I_L \setminus \{1,\dots,M\}} a_n.$$
+
+    Every index in $I_L \setminus \{1, \dots, M\}$ exceeds $M$, so:
+    $$|T_L - S_M| \leq \sum_{n \in I_L \setminus \{1,\dots,M\}} |a_n| \leq \sum_{n=M+1}^\infty |a_n| < \varepsilon.$$
+
+    For the second difference, since $S_K \to S$, we can choose $M$ large enough that $|S_M - S| < \varepsilon$. Therefore for all $L \geq L_0$:
+    $$|T_L - S| \leq |T_L - S_M| + |S_M - S| < \varepsilon + \varepsilon = 2\varepsilon.$$
+
+    Since $\varepsilon > 0$ was arbitrary, $T_L \to S$, which means $\sum_{n=1}^\infty a_{\sigma(n)} = S$.
+\end{proof}

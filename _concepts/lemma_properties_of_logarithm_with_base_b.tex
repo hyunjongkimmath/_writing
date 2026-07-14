@@ -1,0 +1,34 @@
+\begin{proposition} \label{proposition:properties_of_logarithm_with_base_b}
+    \TODO{AI generated, verify}
+    Let $b \in \mathbb{R}$ with $b > 0$ and $b \neq 1$. The logarithm with base $b$, $\log_b : (0, \infty) \to \mathbb{R}$, satisfies the following properties for all $x, y > 0$ and all $r \in \mathbb{R}$:
+    \begin{enumerate}
+        \item \textbf{(Product rule)} $\log_b(xy) = \log_b(x) + \log_b(y)$.
+        \item \textbf{(Quotient rule)} $\log_b(x/y) = \log_b(x) - \log_b(y)$.
+        \item \textbf{(Power rule)} $\log_b(x^r) = r \cdot \log_b(x)$.
+        \item \textbf{(Special values)} $\log_b(1) = 0$ and $\log_b(b) = 1$.
+    \end{enumerate}
+    Moreover, the function $x \mapsto \log_b(x)$ is strictly increasing if $b > 1$, and strictly decreasing if $0 < b < 1$. It is continuous on $(0, \infty)$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove each property using the definition $\log_b(x) = \frac{\ln(x)}{\ln(b)}$ and properties of the natural logarithm.
+
+    \begin{enumerate}
+        \item For the product rule, we use the additivity of the natural logarithm (from \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm}): $\ln(xy) = \ln(x) + \ln(y)$. Then
+        $$\log_b(xy) = \frac{\ln(xy)}{\ln(b)} = \frac{\ln(x) + \ln(y)}{\ln(b)} = \frac{\ln(x)}{\ln(b)} + \frac{\ln(y)}{\ln(b)} = \log_b(x) + \log_b(y).$$
+
+        \item For the quotient rule, we use $\ln(x/y) = \ln(x) - \ln(y)$:
+        $$\log_b(x/y) = \frac{\ln(x/y)}{\ln(b)} = \frac{\ln(x) - \ln(y)}{\ln(b)} = \log_b(x) - \log_b(y).$$
+
+        \item For the power rule, from \CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}{real exponentiation via exp and ln} we have $x^r = \exp(r \ln(x))$. Applying $\ln$:
+        $$\log_b(x^r) = \frac{\ln(\exp(r \ln(x)))}{\ln(b)} = \frac{r \ln(x)}{\ln(b)} = r \cdot \frac{\ln(x)}{\ln(b)} = r \cdot \log_b(x).$$
+
+        \item For the special values: $\log_b(1) = \frac{\ln(1)}{\ln(b)} = \frac{0}{\ln(b)} = 0$, and $\log_b(b) = \frac{\ln(b)}{\ln(b)} = 1$.
+
+        \item For monotonicity, note that by the chain rule applied to $\log_b(x) = \frac{1}{\ln(b)} \cdot \ln(x)$:
+        $$\frac{d}{dx} \log_b(x) = \frac{1}{\ln(b)} \cdot \frac{1}{x}$$
+        by \CrefAndHyperrefIfExist{proposition:derivative_of_natural_logarithm_is_reciprocal}{derivative of natural logarithm}. Since $x > 0$, the sign of the derivative is determined entirely by $\ln(b)$. If $b > 1$, then $\ln(b) > 0$ (by \CrefAndHyperrefIfExist{lemma:monotonicity_of_integer_powers_of_positive_reals}{monotonicity of powers}), so $\frac{d}{dx} \log_b(x) > 0$. If $0 < b < 1$, then $\ln(b) < 0$, so $\frac{d}{dx} \log_b(x) < 0$.
+
+        \item Continuity follows from the fact that $\ln(x)$ is continuous on $(0, \infty)$ and $\log_b$ is a constant multiple of $\ln$.
+    \end{enumerate}
+\end{proof}

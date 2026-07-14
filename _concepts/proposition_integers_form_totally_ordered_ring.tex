@@ -1,0 +1,57 @@
+\begin{proposition} \label{proposition:integers_form_totally_ordered_ring}
+Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers}\CrefIfExists{proposition:integers_form_ring}. Equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_ring_of_integers}{standard order on $\bbZ$}, $(\bbZ, +, \cdot, \le)$ is a \CrefAndHyperrefIfExist{definition:ordered_ring}{totally ordered ring}. Moreover, $\bbZ_{>0}$ is a \CrefAndHyperrefIfExist{definition:well_ordered_set}{well ordered set}, i.e. every nonempty subset of the positive cone $\bbZ_{> 0}$ has a least element.
+\CrefIfExists{proposition:positive_integers_correspond_to_natural_numbers}
+\end{proposition}
+
+\begin{proof}
+We verify each condition in the \CrefIfExists{definition:ordered_ring} step by step. Recall that for $x = [(a,b)]$ and $y = [(c,d)]$, we have $x \leq y \iff b + c \geq a + d$.
+
+We first show that $\leq$ is a partial order on $\bbZ$. Let $x = [(a,b)], y = [(c,d)], z = [(e,f)] \in \bbZ$.
+\begin{enumerate}
+    \item The relation $\leq$ is reflexive because for any $x \in \bbZ$, we have $b + a = a + b$ by \Cref{proposition:natural_numbers_addition_associative_commutative}, so $b + a \geq a + b$ in $\bbN$, hence $x \leq x$.
+
+    \item The relation $\leq$ is antisymmetric because if $x \leq y$ and $y \leq x$, then $b + c \geq a + d$ and $a + d \geq b + c$ in $\bbN$, so $b + c = a + d$. Thus $(a,b) \sim (c,d)$, meaning $x = y$.
+
+    \item The relation $\leq$ is transitive because if $x \leq y$ and $y \leq z$, then $b + c \geq a + d$ and $d + e \geq c + f$ in $\bbN$. Adding these inequalities gives $(b + c) + (d + e) \geq (a + d) + (c + f)$, which rearranges to $(b + e) + (c + d) \geq (a + f) + (c + d)$ by \Cref{proposition:natural_numbers_addition_associative_commutative}. By cancellativity of addition on $\bbN$ (\Cref{proposition:natural_numbers_addition_associative_commutative}), $b + e \geq a + f$, hence $x \leq z$.
+\end{enumerate}
+
+Next we check translation invariance, i.e. that if $x \leq y$, then $x + z \leq y + z$ for all $z \in \bbZ$. Let $x = [(a,b)], y = [(c,d)], z = [(e,f)] \in \bbZ$. If $x \leq y$, then $b + c \geq a + d$. Now $x + z = [(a+e, b+f)]$ and $y + z = [(c+e, d+f)]$. We check:
+$$(b+f) + (c+e) = (b+c) + (e+f) \geq (a+d) + (e+f) = (a+e) + (d+f),$$
+where the inequality follows from $b + c \geq a + d$ and \Cref{proposition:natural_numbers_order_compatibility} (compatibility of order with addition on $\bbN$). Hence $x + z \leq y + z$.
+
+We now establish compatibility with multiplication, i.e. that if $x \geq 0_\bbZ$ and $y \geq 0_\bbZ$, then $xy \geq 0_\bbZ$. First, we identify the non-negative elements. For $x = [(a,b)] \in \bbZ$, we have $x \geq 0_\bbZ = [(1,1)]$ iff $1 + a \geq b + 1$, i.e., $a \geq b$ in $\bbN$. Thus
+$$\bbZ_{\geq 0} = \{[(a,b)] : a \geq b\}.$$
+
+Now let $x, y \in \bbZ_{\geq 0}$ with $x = [(a,b)]$ and $y = [(c,d)]$, so $a \geq b$ and $c \geq d$. We must show $xy = [(ac+bd, ad+bc)] \geq 0_\bbZ$, i.e., $(ac+bd) + 1 \geq (ad+bc) + 1$, equivalently $ac + bd \geq ad + bc$.
+
+If $a = b$ or $c = d$, then $x = 0_\bbZ$ or $y = 0_\bbZ$, so $xy = 0_\bbZ \geq 0_\bbZ$\CrefIfExists{lemma:multiplication_by_zero_in_a_ring_is_zero}.
+Assume $a > b$ and $c > d$. By \Cref{definition:standard_order_on_natural_numbers}, there exist $r, s \in \bbN$ such that $a = b + r$ and $c = d + s$.
+Expanding by distributivity on $\bbN$ (\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}):
+\begin{align*}
+ac + bd &= (b+r)(d+s) + bd = bd + bs + rd + rs + bd, \\
+ad + bc &= b(d+s) + (b+r)d = bd + bs + bd + rd.
+\end{align*}
+Thus $ac + bd = ad + bc + rs$. Since $r, s \in \bbN$, we have $rs \in \bbN$, so $ac + bd \geq ad + bc$ in $\bbN$ by \Cref{definition:standard_order_on_natural_numbers}. Hence $xy \geq 0_\bbZ$.
+
+We verify trichotomy, i.e. that for every $x \in \bbZ$, exactly one of $x > 0_\bbZ$, $x = 0_\bbZ$, or $x < 0_\bbZ$ holds. For any $x = [(a,b)] \in \bbZ$, by \Cref{proposition:natural_numbers_order_compatibility} (trichotomy of order on $\bbN$), exactly one of $a > b$, $a = b$, or $a < b$ holds.
+\begin{enumerate}
+    \item If $a > b$, then $1 + a > 1 + b$, so $x > 0_\bbZ$.
+    \item If $a = b$, then $(a,b) \sim (1,1)$ because $a + 1 = b + 1$, so $x = 0_\bbZ$.
+    \item If $a < b$, then $[-x] = [(b,a)] > 0_\bbZ$ by case (i), meaning $x < 0_\bbZ$.
+\end{enumerate}
+Thus, we have now proven that $\bbZ$ is a totally ordered ring under the standard order.
+
+Finally, we show that $\bbZ_{> 0}$ is well-ordered. Let $S \subseteq \bbZ_{> 0}$ be nonempty. For each $x = [(a,b)] \in S$, we have $x > 0_\bbZ$, so $a > b$ in $\bbN$. Define the difference of $x$ as $\operatorname{diff}(x) = r$, where $r \in \bbN$ is the unique element such that $a = b + r$. This is well-defined because if $(a,b) \sim (a',b')$ with both representing positive elements, then $a + b' = a' + b$, and since $a = b + r$ and $a' = b' + r'$, we get $(b+r) + b' = (b'+r') + b$, so $r = r'$ by \Cref{proposition:natural_numbers_addition_associative_commutative} (cancellativity).
+
+Let $D = \{\operatorname{diff}(x) : x \in S\} \subseteq \bbN$. Since $S$ is nonempty, so is $D$. By \Cref{proposition:natural_numbers_well_ordered}, $D$ has a least element $d_0$. Pick any $x_0 \in S$ with $\operatorname{diff}(x_0) = d_0$.
+
+For any $y \in S$, let $d_y = \operatorname{diff}(y) \in D$. Since $d_0 \leq d_y$ in $\bbN$, we have two cases:
+\begin{enumerate}
+    \item If $d_0 = d_y$, write $x_0 = [(a_0, b_0)]$ and $y = [(c, d)]$ with $a_0 = b_0 + d_0$ and $c = d + d_0$. Then $(a_0, b_0) \sim (c, d)$ because $a_0 + d = (b_0 + d_0) + d = b_0 + (d + d_0) = b_0 + c$ by \Cref{proposition:natural_numbers_addition_associative_commutative}. Hence $x_0 = y$.
+    \item If $d_0 < d_y$, then $d_y = d_0 + s$ for some $s \in \bbN$. Write $x_0 = [(b_0 + d_0, b_0)]$ and $y = [(d + d_0 + s, d)]$. Then
+    $$y - x_0 = [(d + d_0 + s + b_0, d + b_0 + d_0)].$$
+    The first component exceeds the second by $s \in \bbN$, so $y - x_0 > 0_\bbZ$, meaning $x_0 < y$.
+\end{enumerate}
+
+Thus $x_0 \leq y$ for all $y \in S$, making $x_0$ the least element.
+\end{proof}

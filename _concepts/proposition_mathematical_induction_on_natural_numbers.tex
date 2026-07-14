@@ -1,0 +1,11 @@
+\begin{proposition}[Principle of mathematical induction] \label{proposition:mathematical_induction_on_natural_numbers}
+Let $P(n)$ be a property depending on a natural number $n \in \mathbb{N}$. If the following two conditions hold:
+\begin{enumerate}
+    \item[\textbf{(Base case)}] $P(1)$ is true, and
+    \item[\textbf{(Inductive step)}] For every $n \in \mathbb{N}$, $P(n) \implies P(n+1)$,
+\end{enumerate}
+then $P(n)$ holds for all $n \in \mathbb{N}$.
+\end{proposition}
+\begin{proof}
+This is a direct reformulation of the \CrefAndHyperrefIfExist{definition:natural_numbers}{Principle of mathematical induction}, which is axiom 5 in the Peano axioms. Let $S = \{n \in \mathbb{N} : P(n) \text{ is true}\}$. The base case gives $1 \in S$, and the inductive step says that for every $n \in S$, we have $s(n) = n+1 \in S$. By axiom 5, $S = \mathbb{N}$, so $P(n)$ holds for all $n \in \mathbb{N}$.
+\end{proof}

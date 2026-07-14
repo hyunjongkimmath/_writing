@@ -1,0 +1,10 @@
+\begin{definition}[Conditional probability and Bayes' theorem] \label{definition:conditional_probability_and_bayes_theorem}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $A, B \in \mathcal{F}$ with $P(B) > 0$.
+
+The \hldef{conditional probability of $A$ given $B$} is defined as
+$$\hlin{P(A \mid B) = \frac{P(A \cap B)}{P(B)}}.$$
+
+If $\{B_1, \dots, B_n\}$ forms a partition of $\Omega$ with $P(B_i) > 0$ for each $i$, then Bayes' theorem states that for any event $A$ with $P(A) > 0$,
+$$P(B_j \mid A) = \frac{P(A \mid B_j) P(B_j)}{\sum_{i=1}^n P(A \mid B_i) P(B_i)}.$$
+\end{definition}

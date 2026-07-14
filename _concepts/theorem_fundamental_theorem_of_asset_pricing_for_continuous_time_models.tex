@@ -1,0 +1,11 @@
+\begin{theorem}[Fundamental theorem of asset pricing for continuous-time models] \label{theorem:fundamental_theorem_of_asset_pricing_for_continuous_time_models}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{0 \leq t \leq T}, P)$ be a filtered probability space. Let $\{S_t^i\}_{0 \leq t \leq T}$ for $i = 1, \dots, d$ be the price processes of risky assets and let $B_t$ be the risk-free asset with constant rate $r$.
+
+The market is arbitrage-free if and only if there exists an equivalent probability measure $\mathbb{Q} \sim P$ (called an \hldef{equivalent martingale measure} or \hldef{risk-neutral measure}) such that for each $i = 1, \dots, d$, the discounted asset price process
+$$\tilde{S}_t^i = e^{-rt} S_t^i$$
+is a $\mathbb{Q}$-martingale with respect to $(\mathcal{F}_t)_{0 \leq t \leq T}$.
+
+If, in addition, such a measure is unique, the market is called \hldef{complete}, and every European contingent claim has a unique arbitrage-free price given by
+$$V_0 = \mathbb{E}^{\mathbb{Q}}\left[e^{-rT} \text{payoff}(S_T)\right].$$
+\end{theorem}

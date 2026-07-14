@@ -1,0 +1,67 @@
+\begin{theorem}[Limits of presheaf diagrams are computed sectionwise]
+\label{theorem:limits_of_presheaf_diagrams_valued_in_a_category_are_computed_sectionwise}
+Let $\mathcal{C}$ and $\mathcal{A}$ be \CrefAndHyperrefIfExist{definition:category}{categories}. Let $I$ be a category. Let $D: I \to \PreShv(\mathcal{C}, \mathcal{A})$\CrefIfExists{definition:presheaf_on_a_category} be a \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_category}{diagram} of presheaves on $\mathcal{C}$ valued in $\mathcal{A}$, written $i \mapsto D(i)$.
+
+Suppose that for every object $U$ of $\mathcal{C}$, the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit} $\lim_{i \in I} D(i)(U)$ exists in $\mathcal{A}$. Then the limit of the diagram $D$ exists in $\PreShv(\mathcal{C}, \mathcal{A})$, and it is computed sectionwise: for every object $U$ of $\mathcal{C}$, there is a canonical isomorphism in $\mathcal{A}$:
+\[
+\left( \lim_{i \in I} D(i) \right)(U) \cong \lim_{i \in I} (D(i)(U)).
+\]
+\end{theorem}
+
+\begin{proof}
+For each object $U$ of $\mathcal{C}$, let
+\[
+P(U) := \lim_{i \in I} D(i)(U),
+\]
+with limit projections $\pi_{i,U}: P(U) \to D(i)(U)$ for each $i \in I$. 
+
+% The cone from $P(U)$ to the diagram $(j \mapsto D(j)(U))$ is illustrated by:
+% \[
+% \begin{tikzcd}
+%     & P(U) \arrow[ld, "\pi_{j,U}"'] \arrow[rd, "\pi_{i,U}"] \arrow[dd, "\pi_{k,U}"'] & \\
+%     D(j)(U) \arrow[rr, "D(\alpha)_U"'] & & D(i)(U) \arrow[ld, "D(\beta)_U"] \\
+%     & D(k)(U) &
+% \end{tikzcd}
+% \]
+
+We first show that the assignment on objects
+\[
+P: \Ob(\mathcal{C}) \longrightarrow \Ob(\mathcal{A}), \quad U \longmapsto P(U),
+\]
+extends to a functor $\mathcal{C}^{\op} \to \mathcal{A}$. For each morphism $f: V \to U$ in $\mathcal{C}$, each presheaf $D(i)$ provides a restriction morphism $D(i)(f): D(i)(U) \to D(i)(V)$. The family of compositions
+\[
+D(i)(f) \circ \pi_{i,U}: P(U) \to D(i)(V), \quad i \in I,
+\]
+forms a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cone} from $P(U)$ to the diagram $(j \mapsto D(j)(V))$ in $\mathcal{A}$. By the universal property of the limit $P(V) = \lim_{j \in I} D(j)(V)$, there exists a unique morphism $P(f): P(U) \to P(V)$ such that for all $i \in I$:
+\[
+\pi_{i,V} \circ P(f) = D(i)(f) \circ \pi_{i,U}.
+\]
+In other words, the following diagram commutes for every $i \in I$:
+\[
+\begin{tikzcd}[row sep=large, column sep=large]
+    P(U) \arrow[r, "P(f)"'] \arrow[d, "\pi_{i,U}"'] & P(V) \arrow[d, "\pi_{i,V}"] \\
+    D(i)(U) \arrow[r, "D(i)(f)"'] & D(i)(V)
+\end{tikzcd}
+\]
+
+Next we verify functoriality. For any object $U$, the identity morphism $\id_{P(U)}$ satisfies $\pi_{i,U} \circ \id_{P(U)} = D(i)(\id_U) \circ \pi_{i,U}$ for all $i$, since each $D(i)$ is a functor. By uniqueness of $P(\id_U)$, we have $P(\id_U) = \id_{P(U)}$. For composable morphisms $W \xrightarrow{g} V \xrightarrow{f} U$, both $P(f \circ g)$ and $P(g) \circ P(f)$ satisfy the same universal property: for all $i$:
+\[
+\pi_{i,W} \circ P(f \circ g) = D(i)(f \circ g) \circ \pi_{i,U} = D(i)(g) \circ D(i)(f) \circ \pi_{i,U} = D(i)(g) \circ \pi_{i,V} \circ P(f) = \pi_{i,W} \circ P(g) \circ P(f).
+\]
+By uniqueness, $P(f \circ g) = P(g) \circ P(f)$; thus $P: \mathcal{C}^{\op} \to \mathcal{A}$ is a presheaf.
+
+Finally we establish the universal property in the presheaf category. Let $Q$ be a presheaf on $\mathcal{C}$ valued in $\mathcal{A}$, and let $(\alpha_i: Q \to D(i))_{i \in I}$ be a cone from $Q$ to the diagram $D$ in $\PreShv(\mathcal{C}, \mathcal{A})$. For each object $U$ of $\mathcal{C}$, the family $(\alpha_{i,U}: Q(U) \to D(i)(U))_{i \in I}$ forms a cone from $Q(U)$ to the diagram $(i \mapsto D(i)(U))$ in $\mathcal{A}$. By the universal property of $P(U) = \lim_{i \in I} D(i)(U)$, there exists a unique morphism $\beta_U: Q(U) \to P(U)$ such that for all $i \in I$:
+\TODO{this part could use a diagram}
+\[
+\pi_{i,U} \circ \beta_U = \alpha_{i,U}.
+\]
+
+We verify that $(\beta_U)_{U \in \Ob(\mathcal{C})}$ is a morphism of presheaves $\beta: Q \to P$. For any morphism $f: V \to U$ in $\mathcal{C}$ and any $i \in I$:
+\TODO{this part could use a diagram}
+\[
+\pi_{i,V} \circ \beta_V \circ Q(f) = \alpha_{i,V} \circ Q(f) = D(i)(f) \circ \alpha_{i,U} = D(i)(f) \circ \pi_{i,U} \circ \beta_U = \pi_{i,V} \circ P(f) \circ \beta_U.
+\]
+Since the limit projections $(\pi_{i,V})_{i \in I}$ are jointly monic, we obtain $\beta_V \circ Q(f) = P(f) \circ \beta_U$. Hence $\beta$ is a natural transformation, i.e., a morphism of presheaves. If $\beta', \beta'': Q \to P$ are two morphisms of presheaves satisfying $\pi_{i,U} \circ \beta'_U = \alpha_{i,U} = \pi_{i,U} \circ \beta''_U$ for all $i$ and $U$, then $\beta'_U = \beta''_U$ by the uniqueness clause in the universal property of each limit $P(U)$; hence $\beta' = \beta''$.
+
+Therefore, $P$ is the limit of $D$ in $\PreShv(\mathcal{C}, \mathcal{A})$, computed sectionwise.
+\end{proof}

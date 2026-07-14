@@ -1,0 +1,24 @@
+\begin{proposition}[Equivalence of definitions of continuity at a point and relation to limits] \label{proposition:continuity_at_a_point_in_extended_metric_space_equivalent_to_topological_definition_and_limit_at_accumulation_point}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X,d_X)$, $(Y,d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric spaces valued in $T^\infty$}. Endow $X$ and $Y$ with the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{induced topological space structures}. Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function} and let $a \in X$.
+
+    The following hold:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_in_an_extended_metric_space}{continuous at $a$ in the $\varepsilon$-$\delta$ sense} if and only if it is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at $a$ in the topological sense}.
+        \item If $a$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space}{accumulation point} of $X$, then $f$ is continuous at $a$ (in either sense) if and only if
+              $$\lim_{x \to a} f(x) = f(a)$$
+        \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \begin{enumerate}
+        \item Suppose $f$ is continuous at $a$ in the $\varepsilon$-$\delta$ sense as in \Cref{definition:continuity_at_a_point_in_an_extended_metric_space}. Let $V$ be an open neighborhood of $f(a)$ in $Y$. By \Cref{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}, there exists $\varepsilon \in T_{>0}$ such that $B(f(a), \varepsilon) \subseteq V$. Choose $\delta \in T_{>0}$ from the $\varepsilon$-$\delta$ definition such that $d_X(x,a) < \delta$ for $x \in X$ implies $d_Y(f(x), f(a)) < \varepsilon$. Then $U = B(a, \delta)$ is an open neighborhood of $a$ in $X$ satisfying $f(U) \subseteq B(f(a), \varepsilon) \subseteq V$. Hence $f$ is continuous at $a$ in the topological sense as in \Cref{definition:continuity_at_a_point_for_a_function_between_topological_spaces}.
+
+        Conversely, suppose that $f$ is continuous at $a$ in the topological sense as in \Cref{definition:continuity_at_a_point_for_a_function_between_topological_spaces}. Let $\varepsilon \in T_{>0}$. The open ball $B(f(a), \varepsilon)$ is an open neighborhood of $f(a)$ in $Y$ by \Cref{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}. By topological continuity, there exists an open neighborhood $U$ of $a$ in $X$ such that $f(U) \subseteq B(f(a), \varepsilon)$. Because $U$ is open and contains $a$, \Cref{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric} provides $\delta \in T_{>0}$ such that $B(a, \delta) \subseteq U$. Then $d_X(x,a) < \delta$ implies $x \in U$, hence $f(x) \in B(f(a), \varepsilon)$, i.e., $d_Y(f(x), f(a)) < \varepsilon$. Thus $f$ is continuous at $a$ in the $\varepsilon$-$\delta$ sense as in \Cref{definition:continuity_at_a_point_in_an_extended_metric_space}.
+
+        \item By part~(1), it suffices to prove the equivalence using the $\varepsilon$-$\delta$ definitions.
+
+        Suppose $f$ is continuous at $a$ in the $\varepsilon$-$\delta$ sense as in \Cref{definition:continuity_at_a_point_in_an_extended_metric_space}. In other words, for any $\varepsilon \in T_{>0}$, there exists $\delta \in T_{>0}$ such that for any $x \in X$ with $d_X(x,a) < \delta$, we have $d_Y(f(x), f(a)) < \varepsilon$. In particular, $0 < d_X(x,a) < \delta$ implies $d_Y(f(x), f(a)) < \varepsilon$. Hence, $\lim_{x \to a} f(x) = f(a)$ in the sense of \Cref{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}.
+
+        Conversely, suppose $\lim_{x \to a} f(x) = f(a)$ in the sense of \Cref{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}. Let $\varepsilon \in T_{>0}$ and choose $\delta \in T_{>0}$ such that for any $x \in X$ with $0 < d_X(x,a) < \delta$, we have $d_Y(f(x), f(a)) < \varepsilon$. Now for any $x \in X$ with $d_X(x,a) < \delta$, either $x = a$, in which case $d_Y(f(a), f(a)) = 0_T < \varepsilon$, or $0 < d_X(x,a) < \delta$, in which case the limit condition gives $d_Y(f(x), f(a)) < \varepsilon$. Thus $f$ is continuous at $a$ in the $\varepsilon$-$\delta$ sense as in \Cref{definition:continuity_at_a_point_in_an_extended_metric_space}.
+    \end{enumerate}
+\end{proof}

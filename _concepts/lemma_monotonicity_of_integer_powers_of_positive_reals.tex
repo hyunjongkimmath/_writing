@@ -1,0 +1,29 @@
+\begin{lemma}[Monotonicity of integer powers of positive reals] \label{lemma:monotonicity_of_integer_powers_of_positive_reals}
+    \TODO{AI generated, verify}
+    Let $a,b \in \mathbb{R}$ and let $n \in \mathbb{Z}_{\geq 0}$.
+
+    \begin{enumerate}
+        \item If $0 \leq a \leq b$, then $a^n \leq b^n$.
+        \item If $a > 1$ and $m,n \in \mathbb{Z}$ with $m < n$, then $a^m < a^n$.
+        \item If $0 < a < 1$ and $m,n \in \mathbb{Z}$ with $m < n$, then $a^m > a^n$.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+\begin{enumerate}
+    \item We prove this by induction on $n$ for nonnegative integers. For $n = 0$, we have $a^0 = b^0 = 1$, so the inequality holds trivially. Assuming $a^n \leq b^n$ for some $n \geq 0$, and using that $0 \leq a \leq b$, we multiply both sides of $a^n \leq b^n$ by $a$ to get $a^{n+1} = a \cdot a^n \leq a \cdot b^n$. Since $a \leq b$ and $b^n \geq 0$, we have $a \cdot b^n \leq b \cdot b^n = b^{n+1}$, so by transitivity of $\leq$ on $\mathbb{R}$ (\CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}), $a^{n+1} \leq b^{n+1}$.
+
+    \item Since $m < n$, we have $n - m > 0$, so $k = n - m \in \mathbb{Z}_{\geq 1}$. We compute
+    $$a^n = a^{m+k} = a^m \cdot a^k$$
+    by \CrefAndHyperrefIfExist{lemma:multiplicativity_of_powers_in_a_field}. Since $a > 1$ and $k \geq 1$, we have $a^k > 1$ (this follows from part 1, since $a^0 = 1 < a^k$ when $a > 1$). Multiplying both sides of $a^k > 1$ by $a^m$ preserves the inequality if $a^m > 0$, which it is for all integer powers of positive reals. Hence
+    $$a^n = a^m \cdot a^k > a^m \cdot 1 = a^m,$$
+    so $a^m < a^n$.
+
+    \item Since $0 < a < 1$, we have $a^{-1} > 1$. Write
+    $$a^m = (a^{-1})^{-m} \quad\text{and}\quad a^n = (a^{-1})^{-n}$$
+    by \CrefAndHyperrefIfExist{lemma:inverse_of_power_equals_power_of_inverse_in_a_group}. Since $m < n$, we have $-m > -n$, so by part 2 applied to the base $a^{-1} > 1$ with exponents $-n < -m$,
+    $$\left(a^{-1}\right)^{-n} < \left(a^{-1}\right)^{-m},$$
+    which means $a^n < a^m$, or equivalently $a^m > a^n$.
+\end{enumerate}
+\end{proof}

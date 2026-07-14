@@ -1,0 +1,10 @@
+\begin{definition}[Expected Shortfall (Conditional VaR) for a portfolio loss] \label{definition:expected_shortfall_conditional_VaR_for_a_portfolio_loss}
+\TODO{AI generated, verify}
+Let $L$ be the random variable representing the loss in portfolio value over a fixed time horizon. Let $\alpha \in (0, 1)$ be a confidence level.
+
+The \hldef{Expected Shortfall at level $\alpha$}, denoted \hl{$\operatorname{ES}_\alpha(L)$} (also called \hldef{Conditional Value at Risk}), is defined as
+$$\hlin{\operatorname{ES}_\alpha(L) = \mathbb{E}\left[L \;\big|\; L > \operatorname{VaR}_\alpha(L)\right] = \frac{1}{1 - \alpha} \int_\alpha^1 \operatorname{VaR}_u(L) \, du},$$
+where $\operatorname{VaR}_u(L)$ is the \CrefAndHyperrefIfExist{definition:value_at_risk_VaR_for_a_portfolio_loss_distribution}{Value at Risk}.
+
+Expected Shortfall measures the average loss in the worst $1 - \alpha$ fraction of cases. Unlike VaR, ES satisfies all four axioms of a coherent risk measure: monotonicity, subadditivity, positive homogeneity, and translation invariance.
+\end{definition}

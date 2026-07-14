@@ -1,5 +1,26 @@
 \begin{theorem} \label{theorem:uniform_convergence_of_a_sequence_of_continuous_functions_implies_the_limit_function_is_continuous}
-Let $S$ be a set and let $(X, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{extended metric space}.
+Let $T$ be a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} that is \CrefAndHyperrefIfExist{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}{dense at zero}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, \mathcal{T}_X)$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and $(Y, d_Y)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
 
-Suppose $(f_n)_{n=1}^{\infty}$ is a sequence of functions $f_n : S \to X$ such that each $f_n$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at a point $x_0 \in S$ (with respect to the subspace topology on $S$ if $S$ is a metric space). If $f_n$ converges to $f$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{uniformly} on $S$, then the \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space}{limit function} $f : S \to X$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at $x_0$.
+Suppose $(f_n)_{n=1}^{\infty}$ is a sequence of functions $f_n : X \to Y$ such that each $f_n$ is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at a point} $x_0 \in X$. If $(f_n)$ converges to $f$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{uniformly} on $X$, then the \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space}{limit function} $f : X \to Y$ is also continuous at $x_0$.
 \end{theorem}
+
+\begin{proof}
+Let $\varepsilon \in T_{>0}$ be given. Choose $\varepsilon' \in T_{>0}$ such that $3\varepsilon' \leq \varepsilon$\CrefIfExists{proposition:small_scalar_multiples_in_dense_at_zero_semiring}. Let
+$$V = B(f(x_0), \varepsilon) = \{ y \in Y : d_Y(y, f(x_0)) < \varepsilon \}$$
+be the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{open ball} of radius $\varepsilon$ centered at $f(x_0)$ in $(Y, d_Y)$. We will show that $f^{-1}(V)$ contains an open neighborhood of $x_0$.
+
+By \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{uniform convergence} of $(f_n)$ to $f$ on $X$, there exists $N \in \mathbb{N}$ such that for all $z \in X$,
+$$d_Y(f_N(z), f(z)) < \varepsilon'.$$
+
+Consider the open ball
+$$W = B(f(x_0), \varepsilon') = \{ y \in Y : d_Y(y, f(x_0)) < \varepsilon' \}.$$
+Since $f_N$ is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at $x_0$}, the preimage $f_N^{-1}(W)$ is an open neighborhood of $x_0$ in $X$\CrefIfExists{definition:continuity_at_a_point_for_a_function_between_topological_spaces}. Set $U = f_N^{-1}(W)$.
+
+We claim that for all $x \in U$, we have $f(x) \in V$. Indeed, if $x \in U$, then $d_Y(f_N(x), f(x_0)) < \varepsilon'$. By the triangle inequality\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity},
+$$d_Y(f(x), f(x_0)) \leq d_Y(f(x), f_N(x)) + d_Y(f_N(x), f(x_0)) + d_Y(f_N(x_0), f(x_0)).$$
+The first term satisfies $d_Y(f(x), f_N(x)) < \varepsilon'$ by uniform convergence. The second term satisfies $d_Y(f_N(x), f(x_0)) < \varepsilon'$ because $x \in U$. The third term satisfies $d_Y(f_N(x_0), f(x_0)) < \varepsilon'$ also by uniform convergence at the point $x_0$. Therefore
+$$d_Y(f(x), f(x_0)) < 3\varepsilon' \leq \varepsilon,$$
+so $f(x) \in V$.
+
+This shows that $U \subseteq f^{-1}(V)$, where $U$ is an open neighborhood of $x_0$. Hence $f^{-1}(V)$ contains an open neighborhood of $x_0$, which proves that $f$ is continuous at $x_0$\CrefIfExists{definition:continuity_at_a_point_for_a_function_between_topological_spaces}.
+\end{proof}

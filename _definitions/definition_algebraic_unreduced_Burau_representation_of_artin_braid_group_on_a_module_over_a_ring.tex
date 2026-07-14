@@ -1,0 +1,17 @@
+\begin{definition}[Algebraic unreduced Burau representation] \label{definition:algebraic_unreduced_Burau_representation_of_artin_braid_group_on_a_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, let $t$ be an indeterminate, and let $K = R[t, t^{-1}]$ be the \CrefAndHyperrefIfExist{definition:laurent_polynomial_ring_over_a_commutative_ring}{Laurent polynomial ring} in one variable over $R$. Let $M_n$ be the free $K$-module of rank $n$ with standard basis $e_1, \dots, e_n$.
+
+    The \hldef{algebraic unreduced Burau representation of $B_n$ on $M_n$} is the group homomorphism
+    $$\hlin{\beta^{\mathrm{ur}}: B_n \to \operatorname{GL}(M_n)}$$
+    \CrefIfExists{definition:artin_braid_group}
+    defined by its action on the standard basis. For each Artin generator $\sigma_i$ ($1 \leq i < n$), the image $\beta^{\mathrm{ur}}(\sigma_i)$ acts as the $K$-linear endomorphism given by
+    \begin{align*}
+        e_i &\mapsto (1 - t)e_i + e_{i+1}, \\
+        e_{i+1} &\mapsto t e_i, \\
+        e_j &\mapsto e_j \quad (j \neq i, i+1).
+    \end{align*}
+
+    Equivalently, the matrix of $\beta^{\mathrm{ur}}(\sigma_i)$ in the basis $e_1, \dots, e_n$ is the identity except for the $2 \times 2$ block at rows and columns $(i, i+1)$, which equals
+    $$\begin{pmatrix} 1 - t & t \\ 1 & 0 \end{pmatrix}.$$
+\TODO{AI generated, verify}
+\end{definition}

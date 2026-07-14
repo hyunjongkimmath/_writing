@@ -1,0 +1,69 @@
+\begin{proposition} \label{proposition:grothendieck_ring_is_a_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring} and let $K(R)$ be its \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring}. Then $K(R)$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative unital ring}.
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+Let $\alpha = [(a,b)]$, $\beta = [(c,d)]$, $\gamma = [(e,f)]$ denote arbitrary elements of $K(R)$. We verify each axiom.
+
+\begin{enumerate}
+    \item Addition is associative because
+    $$(\alpha + \beta) + \gamma = [(a+c+e,\; b+d+f)] = \alpha + (\beta + \gamma),$$
+    where the equality uses associativity of addition in $R$\CrefIfExists{definition:semiring}.
+
+    \item Addition is commutative because
+    $$\alpha + \beta = [(a+c,\; b+d)] = [(c+a,\; d+b)] = \beta + \alpha,$$
+    where the middle equality uses commutativity of addition in $R$\CrefIfExists{definition:semiring}.
+
+    \item The element $0_{K(R)} = [(0_R, 0_R)]$ is the additive identity because for any $\alpha$,
+    $$\alpha + 0_{K(R)} = [(a+0_R,\; b+0_R)] = [(a,b)] = \alpha,$$
+    where we use that $0_R$ is the additive identity in $R$\CrefIfExists{definition:semiring}. Commutativity of addition then gives $0_{K(R)} + \alpha = \alpha$.
+
+    \item Every element $\alpha$ has an additive inverse $-\alpha := [(b,a)]$ because
+    $$\alpha + (-\alpha) = [(a+b,\; b+a)].$$
+    Since $a+b = b+a$ by commutativity of addition in $R$, we have $(a+b,\; b+a) \sim (0_R, 0_R)$ with witness $t = 0_R$:
+    $$(a+b) + 0_R + 0_R = (b+a) + 0_R + 0_R.$$
+    Hence $\alpha + (-\alpha) = 0_{K(R)}$. By commutativity of addition, $(-\alpha) + \alpha = 0_{K(R)}$.
+
+    \item Multiplication is associative. Compute
+    \begin{align*}
+    (\alpha \beta) \gamma &= [(ac+bd,\; ad+bc)] \cdot [(e,f)] \\
+    &= [((ac+bd)e + (ad+bc)f,\; (ac+bd)f + (ad+bc)e)].
+    \end{align*}
+    Using distributivity, associativity, and commutativity of multiplication in $R$\CrefIfExists{definition:semiring}, this equals
+    $$[(ace + adf + bcf + bde,\; acf + ade + bce + bdf)].$$
+    On the other hand,
+    \begin{align*}
+    \alpha (\beta \gamma) &= [(a,b)] \cdot [(ce + df,\; cf + de)] \\
+    &= [(a(ce+df) + b(cf+de),\; a(cf+de) + b(ce+df))] \\
+    &= [(ace + adf + bcf + bde,\; acf + ade + bce + bdf)],
+    \end{align*}
+    where the expansion again uses distributivity and the properties of $R$. Since both expressions are represented by the same pair, they are equal in $K(R)$.
+
+    \item Multiplication is commutative because
+    \begin{align*}
+    \alpha \beta &= [(ac+bd,\; ad+bc)] \\
+    &= [(ca+db,\; da+cb)] \quad\text{(commutativity of $\cdot$ in $R$)}\\
+    &= [(ca+db,\; cb+da)] \quad\text{(commutativity of $+$ in $R$)}\\
+    &= \beta \alpha.
+    \end{align*}
+
+    \item The element $1_{K(R)} = [(1_R, 0_R)]$ is the multiplicative identity because
+    $$\alpha \cdot 1_{K(R)} = [(a \cdot 1_R + b \cdot 0_R,\; a \cdot 0_R + b \cdot 1_R)] = [(a,\; b)] = \alpha,$$
+    where we use that $1_R$ is the multiplicative identity in $R$ and that $0_R$ annihilates under multiplication\CrefIfExists{definition:semiring}. Commutativity of multiplication then gives $1_{K(R)} \cdot \alpha = \alpha$.
+
+    \item Multiplication distributes over addition. We verify left distributivity; right distributivity follows from commutativity.
+    \begin{align*}
+    \alpha (\beta + \gamma) &= [(a,b)] \cdot [(c+e,\; d+f)] \\
+    &= [(a(c+e) + b(d+f),\; a(d+f) + b(c+e))] \\
+    &= [(ac+ae+bd+bf,\; ad+af+bc+be)].
+    \end{align*}
+    On the other hand,
+    \begin{align*}
+    \alpha\beta + \alpha\gamma &= [(ac+bd,\; ad+bc)] + [(ae+bf,\; af+be)] \\
+    &= [(ac+bd+ae+bf,\; ad+bc+af+be)].
+    \end{align*}
+    The two expressions are represented by the same pair (by commutativity of addition in $R$), so $\alpha(\beta+\gamma) = \alpha\beta + \alpha\gamma$.
+\end{enumerate}
+Thus $K(R)$ satisfies all axioms of a commutative unital ring.
+\end{proof}

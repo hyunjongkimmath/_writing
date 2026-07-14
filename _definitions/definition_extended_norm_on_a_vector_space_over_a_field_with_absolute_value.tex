@@ -1,17 +1,23 @@
-\begin{definition}[Extended Norm] \label{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}
-    Let \( V \) be a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over a \CrefAndHyperrefIfExist{definition:field}{field} \( F \) equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring}{absolute value}
-    \[
-    |\cdot| : F \to [0, \infty).
-    \]
-    An \hldef{extended norm on $V$} is a function
-    \[ \|\cdot\| : V \to [0, \infty] \]
-    satisfying for all \( x,y \in V \) and all scalars \( \alpha \in F \):
-    \begin{enumerate}
-        \item \textbf{Positive definiteness:} \quad \(\|x\| = 0\) if and only if \(x = 0\).
-        \item \textbf{Homogeneity:} \quad \(\|\alpha x\| = |\alpha| \cdot \|x\|\).
-        \item \textbf{Triangle inequality:} \quad \(\|x + y\| \leq \|x\| + \|y\|\),
-    \end{enumerate}
-    where arithmetic is extended to allow sums involving \(\infty\) with the convention that \(a + \infty = \infty\) for any \(a \in [0, \infty]\). A vector space with an extended norm over a field with an absolute value is called an \hldef{extended normed (vector) space}.
+\begin{definition}[Extended norm on a vector space over a field with absolute value] \label{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}:
+    $$|\cdot| : F \to T,$$
+    and let $V$ be a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over $F$. Let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$.
 
-    If the range of the extended norm is contained in $[0,\infty)$, then the extended norm is a \hldef{norm} in the usual sense and $V$ may be called a \hldef{normed vector space} or a \hldef{normed space}.
+    An \hldef{extended norm on $V$ valued in $T^\infty$} is a function
+    $$\|\cdot\| : V \to T^\infty$$
+    satisfying for all $x,y \in V$ and all scalars $\alpha \in F$:
+    \begin{enumerate}
+        \item Positive definiteness: $\|x\| = 0_T$ if and only if $x = 0$.
+        \item Homogeneity: $\|\alpha x\| = |\alpha| \cdot \|x\|$, where the multiplication on the right is in $T^\infty$.
+        \item Triangle inequality: $\|x + y\| \leq \|x\| + \|y\|$, where addition and order are those of $T^\infty$.
+    \end{enumerate}
+    A vector space with an extended norm valued in $T^\infty$ over a field with absolute value is called an \hldef{extended normed (vector) space}.
+
+    If the range of the extended norm is contained in $T$, then the extended norm is a \hldef{norm} in the usual sense and $V$ may be called a \hldef{normed vector space} or a \hldef{normed space}.
+
+    In the case that $T = \bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, we recover the standard definition of an extended norm taking values in $\bbR_{\geq 0}$ or $[0,\infty]$.
+
+    \TextIfExists{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{
+        An extended norm on $V$ valued in $T^\infty$ as above is a special case of an \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended norm on a module over a commutative ring with absolute value}, in which the ring is the field $F$, the module is the vector space $V$.
+    }
 \end{definition}

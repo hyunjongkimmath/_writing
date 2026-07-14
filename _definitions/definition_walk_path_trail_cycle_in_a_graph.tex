@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:walk_path_trail_cycle_in_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}.
+
+A \hldef{walk in $G$ of length $k$} is an alternating sequence
+$$v_0, e_1, v_1, e_2, \dots, e_k, v_k$$
+where $v_i \in V(G)$, $e_j \in E(G)$, and each $e_j = \{v_{j-1}, v_j\}$ for $j = 1, \dots, k$. The integer $k$ is called the \hldef{length of the walk}. The vertex $v_0$ is the \hldef{initial vertex} and $v_k$ is the \hldef{terminal vertex}.
+
+A walk is called a \hldef{trail} if all edges $e_1, \dots, e_k$ are distinct. A walk is called a \hldef{path} if all vertices $v_0, \dots, v_k$ are distinct. A path of length $k$ from $u$ to $v$ is sometimes denoted by \hl{$P_{u,v}$} or simply as the sequence \hl{$v_0, v_1, \dots, v_k$}.
+
+A walk (trail, path) is called a \hldef{closed walk} (respectively, \hldef{closed trail}, \hldef{closed path}) if $v_0 = v_k$. A closed path of length at least 3 is called a \hldef{cycle}. The \hldef{length of a cycle} is the number of edges in it.
+\end{definition}

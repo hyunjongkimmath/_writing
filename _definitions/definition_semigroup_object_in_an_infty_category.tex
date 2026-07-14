@@ -1,0 +1,52 @@
+% \begin{definition} \label{definition:semigroup_object_in_an_infty_category}
+%     \TODO{AI generated, verify}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting \CrefAndHyperrefIfExist{definition:product_of_finitely_many_objects_in_a_category}{finite products}.
+
+%     A \hldef{semigroup object in $\mathcal{C}$} is an object $A \in \mathcal{C}$ equipped with a \hldef{multiplication morphism}
+%     $$\mu : A \times A \to A$$
+%     together with coherent homotopy data witnessing associativity. Concretely, this consists of:
+%     \begin{enumerate}
+%         \item an equivalence (associator) $\alpha : \mu \circ (\mu \times \mathrm{id}_A) \simeq \mu \circ (\mathrm{id}_A \times \mu)$ as morphisms $A \times A \times A \to A$;
+%         \item a coherence 3-simplex witnessing the pentagon identity for $\alpha$ on $A^4 \to A$;
+%         \item all higher coherence data at every level.
+%     \end{enumerate}
+%     This structure is equivalent to giving an algebra over the non-unital associative $\infty$-operad in $\mathcal{C}$ with respect to the cartesian monoidal structure.
+
+%     A semigroup object $(A,\mu)$ is called \hldef{commutative} or \hldef{abelian} if there exists an equivalence
+%     $$\gamma : \mu \simeq \mu \circ \tau_{A,A}$$
+%     where $\tau_{A,A} : A \times A \to A \times A$ is the symmetry morphism, compatible with the associativity coherence data.
+
+%     Unlike in ordinary category theory, the notion of a semigroup object in an $\infty$-category cannot be captured by a single commutative diagram. The equivalences and higher coherences encode that associativity holds up to homotopy, with those homotopies themselves satisfying coherence conditions at all levels.
+% \end{definition}
+
+\begin{definition} \label{definition:semigroup_object_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting \CrefAndHyperrefIfExist{definition:product_of_finitely_many_objects_in_a_category}{finite products}, viewed as a cartesian monoidal $\infty$-category.
+
+    A \hldef{semigroup object in $\mathcal{C}$} can be defined in two equivalent ways:
+    
+    \begin{enumerate}
+        \item \textbf{(Via Segal Conditions)} A functor $X : \mathrm{N}(\Delta_{\mathrm{semi}}^{\mathrm{op}}) \to \mathcal{C}$ from the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerve} of the opposite of the semi-simplex category $\Delta_{\mathrm{semi}}$ (the category of non-empty finite linear orders and injective order-preserving maps) such that for every integer $n \ge 2$, the \CrefAndHyperrefIfExist{definition:category_object_in_an_infty_category}{Segal map}
+        $$X_n \to \prod_{i=0}^{n-1} X_1 = \underbrace{X_1 \times X_1 \times \cdots \times X_1}_{n \text{ factors}}$$
+        is an equivalence in $\mathcal{C}$. Here, the map is induced by the $n$ inert morphisms $\rho_i : [1] \to [n]$ in $\Delta_{\mathrm{semi}}$ given by $\rho_i(0) = i$ and $\rho_i(1) = i+1$. The underlying object of the semigroup is identified as $A := X_1$.
+
+        \item \textbf{(Via $\infty$-Operads)} An algebra object in $\mathcal{C}$ over the non-unital associative $\infty$-operad $\mathcal{A}ss^{\mathrm{nu}}$. That is, an object of the $\infty$-category $\mathrm{Alg}_{\mathcal{A}ss^{\mathrm{nu}}}(\mathcal{C})$.
+        \TODO{algebra object, non-unital associative $\infty$-operad}
+    \end{enumerate}
+
+    These two characterizations are equivalent via the \hldef{monoidal Rezk completion}. Specifically, the nerve $\mathrm{N}(\Delta_{\mathrm{semi}}^{\mathrm{op}})$ serves as a simplicial model for the non-unital associative operad, and the $\infty$-category of functors satisfying the Segal condition in (1) is equivalent to $\mathrm{Alg}_{\mathcal{A}ss^{\mathrm{nu}}}(\mathcal{C})$ under the cartesian symmetric monoidal structure.
+
+    A semigroup object is called \hldef{commutative} (or \hldef{abelian}) if it satisfies either of the following equivalent conditions:
+    \begin{itemize}
+        \item Under definition (1), the functor $X$ extends from $\mathrm{N}(\Delta_{\mathrm{semi}}^{\mathrm{op}})$ to the nerve of the opposite of the category of finite non-empty sets and surjective maps.
+        \item Under definition (2), the algebra object extends to an algebra over the non-unital commutative $\infty$-operad $\mathcal{C}om^{\mathrm{nu}}$.
+    \end{itemize}
+\end{definition}
+
+% \begin{definition} \label{definition:semigroup_object_in_an_infty_category}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting \CrefAndHyperrefIfExist{definition:product_of_finitely_many_objects_in_a_category}{finite products}, viewed as a cartesian monoidal $\infty$-category.
+
+%     A \hldef{semigroup object in $\mathcal{C}$} is an algebra object $\mathrm{Alg}_{\mathcal{A}ss^{\mathrm{nu}}}(\mathcal{C})$, where $\mathcal{A}ss^{\mathrm{nu}}$ denotes the non-unital associative $\infty$-operad. 
+
+%     A semigroup object is \hldef{commutative} (or \hldef{abelian}) if it is an algebra object $\mathrm{Alg}_{\mathcal{C}om^{\mathrm{nu}}}(\mathcal{C})$, where $\mathcal{C}om^{\mathrm{nu}}$ denotes the non-unital commutative $\infty$-operad.
+% \end{definition}

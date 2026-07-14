@@ -1,16 +1,10 @@
-\begin{theorem}[Essential smallness of small sites] \label{theorem:common_small_sites_of_a_scheme_are_essentially_small}
-Let $X$ be a scheme. Consider the following sites associated to $X$:
+\begin{theorem}[Essential smallness of common small sites] \label{theorem:common_small_sites_of_a_scheme_are_essentially_small}
+Let $X$ be a scheme. The underlying categories of the following sites are \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small}:
 \begin{itemize}
-    \item \CrefAndHyperrefIfExist{definition:small_zariski_site_of_a_schem}{small Zariski site $X_{\mathrm{Zar}}$}, 
-    \item \CrefAndHyperrefIfExist{definition:small_nisnevich_site_of_a_schem}{small Nisnevich site $X_{\mathrm{Nis}}$},
-    \item \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small étale site $X_{\mathrm{\acute{E}t}}$}, 
-    \item \CrefAndHyperrefIfExist{definition:small_fppf_site_of_a_scheme}{small fppf site $X_{\mathrm{fppf}}$}.
-    \item \CrefAndHyperrefIfExist{definition:small_fpqc_site_of_a_schem}{small fpqc site $X_{\mathrm{fpqc}}$}.
+    \item The \CrefAndHyperrefIfExist{definition:small_zariski_site_of_a_schem}{small Zariski site $X_{\mathrm{Zar}}$} (\CrefAndHyperrefIfExist{lemma:small_zariski_site_of_a_scheme_is_essentially_small}{lemma:small\_zariski\_site\_of\_a\_scheme\_is\_essentially\_small}).
+    \item The \CrefAndHyperrefIfExist{definition:small_nisnevich_site_of_a_schem}{small Nisnevich site $X_{\mathrm{Nis}}$} (\CrefAndHyperrefIfExist{lemma:small_nisnevich_site_of_a_scheme_is_essentially_small}{lemma:small\_nisnevich\_site\_of\_a\_scheme\_is\_essentially\_small}).
+    \item The \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{small étale site $X_{\et}$} (\CrefAndHyperrefIfExist{lemma:small_etale_site_of_a_scheme_is_essentially_small}{lemma:small\_etale\_site\_of\_a\_scheme\_is\_essentially\_small}).
+    \item The \CrefAndHyperrefIfExist{definition:small_fppf_site_of_a_scheme}{small fppf site $X_{\mathrm{fppf}}$} (\CrefAndHyperrefIfExist{lemma:small_fppf_site_of_a_scheme_is_essentially_small}{lemma:small\_fppf\_site\_of\_a\_scheme\_is\_essentially\_small}).
 \end{itemize}
-These sites are \CrefAndHyperrefIfExist{definition:essentially_small_category}{essentially small}.
-% Then the underlying category forming each of these small sites of $X$ is \hldef{essentially small}; that is, it is equivalent to a category whose objects form a set (rather than a proper class).
-
-% In particular, this essential smallness follows from imposing suitable universe or size conditions by restricting to affine schemes of finite presentation over $X$ or by other standard set-theoretic techniques.
-
-% Hence, these small sites can be used as Grothendieck sites in the usual sense without foundational size issues.
+The \CrefAndHyperrefIfExist{definition:small_fpqc_site_of_a_schem}{small fpqc site $X_{\mathrm{fpqc}}$} is not essentially small in general, as faithfully flat quasi-compact morphisms lack the finiteness constraints that bound the number of isomorphism classes.
 \end{theorem}

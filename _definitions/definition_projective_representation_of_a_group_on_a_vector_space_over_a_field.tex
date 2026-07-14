@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:projective_representation_of_a_group_on_a_vector_space_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $V$ a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over a field $k$. Let $\mathrm{PGL}(V) = \mathrm{GL}(V)/k^\times$ denote the projective general linear group of $V$, where $k^\times$ is identified with the center of $\mathrm{GL}(V)$ via scalar multiplication.
+
+    A \hldef{projective representation of $G$ on $V$} is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}
+    $$\bar{\rho} : G \to \mathrm{PGL}(V).$$
+
+    Equivalently, a projective representation of $G$ on $V$ is given by a map
+    $$\rho : G \to \mathrm{GL}(V)$$
+    such that for all $g, h \in G$, there exists a scalar $\omega(g, h) \in k^\times$ satisfying
+    $$\rho(g)\,\rho(h) = \omega(g, h)\,\rho(gh).$$
+    The function $\hlin{\omega : G \times G \to k^\times}$ is called the \hldef{factor set (or cocycle) of $\rho$}. Different choices of lifts $\rho$ of the same $\bar{\rho}$ yield cohomologous factor sets in $H^2(G, k^\times)$.
+\end{definition}

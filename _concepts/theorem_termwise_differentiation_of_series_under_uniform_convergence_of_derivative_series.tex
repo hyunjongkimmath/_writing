@@ -1,0 +1,54 @@
+\begin{theorem}[Termwise differentiation of series under uniform convergence] \label{theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{interval} and let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : I \to \mathbb{R}$.
+
+    Suppose that:
+    \begin{enumerate}
+        \item Each $f_n$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} on $I$ and \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point in the interior of $I$, and the derivative $f_n'$ exists on $I$;
+        \item There exists a point $x_0 \in I$ such that the series $\sum_{n=1}^\infty f_n(x_0)$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_in_a_topological_abelian_group}{converges};
+        \item The \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_in_a_topological_abelian_group}{series} of derivatives $\sum_{n=1}^\infty f_n'$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges uniformly} on $I$.
+    \end{enumerate}
+    Then the series $\sum_{n=1}^\infty f_n$ \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges pointwise} on $I$ to a function $f$, and $f$ is differentiable at every point of $I$ with
+    $$f'(x) = \sum_{n=1}^\infty f_n'(x) \quad \text{for all } x \in I.$$
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S_N(x) = \sum_{n=1}^N f_n(x)$ be the \CrefAndHyperrefIfExist{definition:partial_sum_of_a_sequence_in_an_abelian_group}{partial sums} and let $D_N(x) = \sum_{n=1}^N f_n'(x)$ be the partial sums of derivatives. By hypothesis, $(D_N)$ converges uniformly on $I$ to some function $g : I \to \mathbb{R}$. By \CrefAndHyperrefIfExist{proposition:uniform_convergence_implies_bounded_and_uniformly_Cauchy_for_sequences_of_functions}{uniform convergence implies uniformly Cauchy}, the sequence $(D_N)$ is \CrefAndHyperrefIfExist{definition:uniformly_Cauchy_sequence_of_functions_from_a_set_to_an_extended_metric_space}{uniformly Cauchy} on $I$.
+
+    \medskip
+    \noindent\textit{Step 1: Pointwise convergence of $(S_N)$.} We show that $(S_N(x))$ converges for each $x \in I$. At $x_0$, convergence is given by hypothesis. For any other $x \in I$, we show $(S_N(x))$ is Cauchy in $\mathbb{R}$. Let $\varepsilon > 0$. Since $(D_N)$ is uniformly Cauchy on $I$, there exists $N_0$ such that for all $N, M \geq N_0$ and all $y \in I$,
+    $$|D_N(y) - D_M(y)| < \varepsilon.$$
+    For $N, M \geq N_0$ with $M > N$, the function $S_M - S_N$ is differentiable on $I$ as a finite sum of differentiable functions, with derivative $D_M - D_N$. By the \CrefAndHyperrefIfExist{theorem:mean_value_theorem_for_differentiable_functions_on_intervals}{Mean Value Theorem}, there exists $\xi$ between $x$ and $x_0$ such that
+    $$S_M(x) - S_N(x) = (S_M(x_0) - S_N(x_0)) + (D_M(\xi) - D_N(\xi))(x - x_0).$$
+    Hence
+    $$|S_M(x) - S_N(x)| \leq |S_M(x_0) - S_N(x_0)| + \varepsilon \cdot |x - x_0|.$$
+    Since $(S_N(x_0))$ is Cauchy, the first term on the right is less than $\varepsilon$ for $N, M$ sufficiently large. Thus $(S_N(x))$ is Cauchy and therefore convergent in $\mathbb{R}$. Let $f(x) = \lim_{N \to \infty} S_N(x)$.
+
+    \medskip
+    \noindent\textit{Step 2: Error bound for the approximation $S_N \approx f$.} Fix $x \in I$ and $\varepsilon > 0$, and choose $N_0$ as above so that $|D_N(y) - D_M(y)| < \varepsilon$ for all $N, M \geq N_0$ and all $y \in I$. For any $y \in I$ and $M > N \geq N_0$, the Mean Value Theorem applied to $S_M - S_N$ on the interval between $x$ and $y$ yields $\xi_{NM}$ between $x$ and $y$ such that
+    $$S_M(y) - S_N(y) = (S_M(x) - S_N(x)) + (D_M(\xi_{NM}) - D_N(\xi_{NM}))(y - x).$$
+    Since $|D_M(\xi_{NM}) - D_N(\xi_{NM})| < \varepsilon$, we have
+    $$|S_M(y) - S_N(y)| \leq |S_M(x) - S_N(x)| + \varepsilon \cdot |y - x|.$$
+    Taking the limit as $M \to \infty$ gives, for all $N \geq N_0$ and all $y \in I$,
+    $$|f(y) - S_N(y)| \leq \varepsilon \cdot |y - x|. (*)$$
+
+    \medskip
+    \noindent\textit{Step 3: Differentiability of $f$ and identification of $f'$.} We show that $f'(x) = g(x)$ for all $x \in I$. Fix $x \in I$ and $\varepsilon > 0$, and let $N_0$ be such that $|D_N(y) - D_M(y)| < \varepsilon$ for all $N, M \geq N_0$ and all $y \in I$, so that $(*)$ holds. For any $h$ such that $x + h \in I$ and $h \neq 0$, we decompose:
+    $$\left|\frac{f(x+h) - f(x)}{h} - g(x)\right| \leq \underbrace{\left|\frac{f(x+h) - f(x)}{h} - \frac{S_N(x+h) - S_N(x)}{h}\right|}_{A} + \underbrace{\left|\frac{S_N(x+h) - S_N(x)}{h} - D_N(x)\right|}_{B} + \underbrace{|D_N(x) - g(x)|}_{C}.$$
+    For $N \geq N_0$, bound (A) using $(*)$:
+    $$A \leq \frac{|f(x+h) - S_N(x+h)|}{|h|} + \frac{|f(x) - S_N(x)|}{|h|} \leq \varepsilon + 0 = \varepsilon,$$
+    since $(*)$ gives $|f(x+h) - S_N(x+h)| \leq \varepsilon |h|$ and $|f(x) - S_N(x)| = 0$.
+
+    For bound (B), the function $S_N$ is differentiable at $x$ with derivative $D_N(x)$; hence $\lim_{h \to 0} B = 0$.
+
+    For bound (C), since $(D_N)$ converges uniformly to $g$, we have $|D_N(x) - g(x)| < \varepsilon$ for all $N \geq N_0$.
+
+    Combining these estimates, for any fixed $N \geq N_0$:
+    $$\limsup_{h \to 0} \left|\frac{f(x+h) - f(x)}{h} - g(x)\right| \leq \varepsilon + 0 + \varepsilon = 2\varepsilon.$$
+    Since $\varepsilon > 0$ was arbitrary, we conclude
+    $$\lim_{h \to 0} \frac{f(x+h) - f(x)}{h} = g(x),$$
+    which means $f'(x) = g(x)$.
+
+    \medskip
+    \noindent Thus $f$ is differentiable at every point of $I$, and $f'(x) = \sum_{n=1}^\infty f_n'(x)$ for all $x \in I$.
+\end{proof}

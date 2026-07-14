@@ -1,0 +1,27 @@
+\begin{definition} \label{definition:endomorphism_ring_of_a_module_over_a_ring}
+    \TODO{AI generated, verify}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}.
+    \begin{enumerate}
+        \item Let $M$ be a left $R$-module. The \hldef{endomorphism ring of $M$ (as a left $R$-module)}, denoted by \hl{$\operatorname{End}_R(M)$}, is the set of all \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $R$-module homomorphisms} $\varphi: M \to M$. It is a \CrefAndHyperrefIfExist{definition:ring}{ring} under pointwise addition
+        $$ (\varphi + \psi)(m) = \varphi(m) + \psi(m) $$
+        and composition of maps as multiplication, with multiplicative identity $\operatorname{id}_M$.
+
+        If $R$ is a commutative ring, then $\operatorname{End}_R(M)$ carries a natural left $R$-module structure given by
+        $$ (r \cdot \varphi)(m) = r \cdot \varphi(m) $$
+        for $r \in R$, $\varphi \in \operatorname{End}_R(M)$, $m \in M$. Composition is $R$-bilinear, so $\operatorname{End}_R(M)$ is an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
+
+        \item Let $M$ be a right $R$-module. The \hldef{endomorphism ring of $M$ (as a right $R$-module)}, denoted by \hl{$\operatorname{End}_{R^{\mathrm{op}}}(M)$} or simply \hl{$\operatorname{End}_R(M)$}, is defined analogously as the set of all right $R$-module homomorphisms $\varphi: M \to M$, equipped with pointwise addition and composition. It is a \CrefAndHyperrefIfExist{definition:ring}{ring}.
+
+        If $R$ is commutative, then $\operatorname{End}_R(M)$ carries a natural right $R$-module structure given by
+        $$ (\varphi \cdot r)(m) = \varphi(m) \cdot r $$
+        for $r \in R$, $\varphi \in \operatorname{End}_R(M)$, $m \in M$. Composition is $R$-bilinear, so $\operatorname{End}_R(M)$ is an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
+
+        \item Let $M$ be an $R$-$S$-bimodule. Then $\operatorname{End}_R(M)$ (left $R$-module endomorphisms) carries a natural right $S$-module structure given by
+        $$ (\varphi \cdot s)(m) = \varphi(m) \cdot s $$
+        for $\varphi \in \operatorname{End}_R(M)$, $s \in S$, $m \in M$. Composition is $S$-linear in the first variable: $(\varphi \cdot s) \circ \psi = (\varphi \circ \psi) \cdot s$.
+
+        Dually, $\operatorname{End}_S(M)$ (right $S$-module endomorphisms) carries a natural left $R$-module structure given by
+        $$ (r \cdot \psi)(m) = r \cdot \psi(m) $$
+        for $r \in R$, $\psi \in \operatorname{End}_S(M)$, $m \in M$. Composition is $R$-linear in the first variable: $(r \cdot \varphi) \circ \psi = r \cdot (\varphi \circ \psi)$.
+    \end{enumerate}
+\end{definition}

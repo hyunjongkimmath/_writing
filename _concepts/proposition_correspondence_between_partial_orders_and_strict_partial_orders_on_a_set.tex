@@ -1,0 +1,82 @@
+\begin{proposition}[Correspondence between partial orders and strict partial orders on a set] \label{proposition:correspondence_between_partial_orders_and_strict_partial_orders_on_a_set}
+    \TODO{AI generated, verify}
+    Let $P$ be a set.
+    \begin{enumerate}
+        \item If $\leq$ is a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partial order} on $P$, then the binary relation $<$ on $P$ defined for all $a, b \in P$ by
+        \[
+        a < b \quad \Longleftrightarrow \quad a \leq b \text{ and } a \neq b
+        \]
+        is a \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partial order} on $P$.
+
+        \item If $<$ is a strict partial order on $P$, then the binary relation $\leq$ on $P$ defined for all $a, b \in P$ by
+        \[
+        a \leq b \quad \Longleftrightarrow \quad a < b \text{ or } a = b
+        \]
+        is a partial order on $P$.
+
+        \item The two constructions are inverse to each other: starting from a partial order $\leq$, constructing $<$ as in (1), and then constructing $\leq'$ as in (2) recovers $\leq' = \leq$; similarly, starting from a strict partial order $<$, constructing $\leq$ as in (2), and then constructing $<'$ as in (1) recovers $<' = <$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the three parts in order.
+
+    \begin{enumerate}
+        \item Let $\leq$ be a partial order on $P$, and define $<$ as in the statement.
+            We verify the two axioms of a strict partial order.
+
+            Irreflexivity holds because for any $a \in P$, the condition $a < a$ would require
+            $a \leq a$ and $a \neq a$, but $a = a$ always. Hence $a \not< a$ for all $a \in P$.
+
+            For transitivity, suppose $a, b, c \in P$ satisfy $a < b$ and $b < c$.
+            Then $a \leq b$, $a \neq b$, $b \leq c$, and $b \neq c$.
+            By transitivity of $\leq$ (see \Cref{definition:partially_ordered_set}), we have $a \leq c$.
+            We claim $a \neq c$. If, to the contrary, $a = c$, then $a \leq b$ and $b \leq a$
+            (since $b \leq c = a$). Antisymmetry of $\leq$ then forces $a = b$, contradicting
+            $a \neq b$. Therefore $a \neq c$, and together with $a \leq c$ this gives $a < c$.
+            Thus $<$ is transitive, and hence a strict partial order on $P$.
+
+        \item Let $<$ be a strict partial order on $P$, and define $\leq$ as in the statement.
+            We verify the three axioms of a partial order.
+
+            Reflexivity follows immediately from the definition: for any $a \in P$,
+            $a = a$ implies $a \leq a$.
+
+            For antisymmetry, suppose $a, b \in P$ satisfy $a \leq b$ and $b \leq a$.
+            By definition of $\leq$, we have four cases to consider:
+            \begin{enumerate}
+                \item $a < b$ and $b < a$: this is impossible by
+                    \Cref{lemma:strict_partial_order_is_asymmetric}, which asserts that $<$ is asymmetric.
+                \item $a < b$ and $b = a$: then $a < a$, contradicting irreflexivity of $<$.
+                \item $a = b$ and $b < a$: then $a < a$, again contradicting irreflexivity.
+                \item $a = b$ and $b = a$: then $a = b$.
+            \end{enumerate}
+            The only realizable case is $a = b$, so $\leq$ is antisymmetric.
+
+            For transitivity, suppose $a, b, c \in P$ satisfy $a \leq b$ and $b \leq c$.
+            If $a = b$, then $a \leq c$ follows from $b \leq c$.
+            If $b = c$, then $a \leq c$ follows from $a \leq b$.
+            Otherwise $a < b$ and $b < c$, and transitivity of $<$ (see
+            \Cref{definition:strict_partially_ordered_set}) gives $a < c$, whence $a \leq c$.
+            Thus $\leq$ is transitive, and hence a partial order on $P$.
+
+        \item We show the two constructions are inverse.
+
+            \begin{enumerate}
+                \item From a partial order $\leq$ on $P$, construct $<$ from $\leq$ by part (1),
+                    and then $\leq'$ from $<$ by part (2). For any $a, b \in P$, we have
+                    $a \leq' b$ iff $a < b$ or $a = b$ iff $(a \leq b$ and $a \neq b)$ or $a = b$
+                    iff $a \leq b$. Hence $\leq' = \leq$.
+
+                \item From a strict partial order $<$ on $P$, construct $\leq$ from $<$ by part (2),
+                    and then $<'$ from $\leq$ by part (1). For any $a, b \in P$, we have
+                    $a <' b$ iff $a \leq b$ and $a \neq b$. Since $\leq$ is defined as
+                    $a \leq b$ iff $a < b$ or $a = b$, the condition $a \leq b$ and $a \neq b$
+                    is equivalent to $a < b$. Hence $<' = <$.
+            \end{enumerate}
+    \end{enumerate}
+
+    This establishes a bijective correspondence between partial orders and strict partial orders
+    on a given set $P$.
+\end{proof}

@@ -1,0 +1,15 @@
+\begin{definition}[GARCH models for conditional heteroskedasticity in returns] \label{definition:garch_models_for_conditional_heteroskedasticity_in_returns}
+\TODO{AI generated, verify}
+Let $\{r_t\}_{t \in \mathbb{Z}}$ be a sequence of financial returns. Let $(\mathcal{F}_t)_{t \in \mathbb{Z}}$ be the natural filtration.
+
+A \hldef{GARCH$(p, q)$ model} (generalized autoregressive conditional heteroskedasticity) specifies
+$$r_t = \mu_t + \sigma_t \varepsilon_t,$$
+where $\varepsilon_t \sim \mathcal{N}(0, 1)$ i.i.d., and the conditional variance evolves as
+$$\hlin{\sigma_t^2 = \omega + \sum_{i=1}^q \alpha_i r_{t-i}^2 + \sum_{j=1}^p \beta_j \sigma_{t-j}^2},$$
+with $\omega > 0$, $\alpha_i \geq 0$, $\beta_j \geq 0$, and $\sum_{i=1}^q \alpha_i + \sum_{j=1}^p \beta_j < 1$ for stationarity.
+
+The most widely used specification is GARCH(1, 1):
+$$\sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta \sigma_{t-1}^2.$$
+
+GARCH models capture volatility clustering: large (small) returns tend to be followed by large (small) returns. The unconditional variance is $\mathbb{E}[\sigma_t^2] = \omega / (1 - \alpha - \beta)$ in the GARCH(1, 1) case.
+\end{definition}

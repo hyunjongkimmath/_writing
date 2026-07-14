@@ -1,0 +1,16 @@
+\begin{proposition} \label{proposition:course_of_values_recursion_existence_uniqueness}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. Let $A$ be a set and let $(\rho_n)_{n \geq 0}$ be a course-of-values recursion rule on $A$. There exists a unique course-of-values recursive function for $(\rho_n)_{n \geq 0}$.
+\end{proposition}
+
+\begin{proof}
+Uniqueness: Suppose $f_1, f_2: \bbN \to A$ are both course-of-values recursive functions for $(\rho_n)_{n \geq 0}$. Let $S = \{n \in \bbN : f_1(k) = f_2(k) \text{ for all } k \leq n\}$. Since $f_1(1) = \rho_0(\emptyset) = f_2(1)$, we have $1 \in S$. If $n \in S$, then $f_1|_{\{k : k \leq n\}} = f_2|_{\{k : k \leq n\}}$, so $f_1(s(n)) = \rho_n(f_1|_{\{k : k \leq n\}}) = \rho_n(f_2|_{\{k : k \leq n\}}) = f_2(s(n))$. Hence $s(n) \in S$. By induction, $S = \bbN$, so $f_1 = f_2$.
+
+Existence: The argument is identical in structure to \CrefAndHyperrefIfExist{proposition:recursive_function_existence_uniqueness}{the recursive function theorem}. Consider $\Sigma$, the collection of all subsets $\Gamma' \subseteq \bbN \times A$ such that $\Gamma'$ is the graph of a function $h$ defined on some domain $D \subseteq \bbN$, satisfying:
+\begin{enumerate}
+    \item if $1 \in D$, then $(1, \rho_0(\emptyset)) \in \Gamma'$,
+    \item for all $n \in D$, if $s(n) \in D$ and $\{k \in D : k \leq n\} = \{k \in \bbN : k \leq n\}$, then $(s(n), \rho_n(h|_{\{k : k \leq n\}})) \in \Gamma'$.
+\end{enumerate}
+Define $\Gamma = \bigcup_{\Gamma' \in \Sigma} \Gamma'$. The same argument as in \CrefAndHyperrefIfExist{proposition:recursive_function_existence_uniqueness}{the recursive function theorem} shows that $\Gamma$ is single-valued: if $(n, y_1), (n, y_2) \in \Gamma$, let $n_0$ be the least element where the two partial functions disagree; it cannot be $1$ (both map to $\rho_0(\emptyset)$), and if $n_0 = s(k)$, both values are determined by the same restriction to $\{j : j \leq k\}$ on which they agree by minimality. Hence $\Gamma$ is the graph of a function $f$.
+
+Let $D = \operatorname{dom}(f)$. We show $D = \bbN$ by induction. Clearly $1 \in D$. If $n \in D$, suppose $s(n) \notin D$. Then $\Gamma \cup \{(s(n), \rho_n(f|_{\{k : k \leq n\}}))\}$ satisfies conditions (i)--(ii), contradicting the maximality of $\Gamma$. Hence $s(n) \in D$ and $f(s(n)) = \rho_n(f|_{\{k : k \leq n\}})$. By induction, $D = \bbN$, so $f$ is a course-of-values recursive function for $(\rho_n)_{n \geq 0}$.
+\end{proof}

@@ -1,0 +1,31 @@
+\begin{lemma} \label{lemma:natural_number_successor_left_multiplication_recursion}
+Let $\bbN$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. For all $k, m \in \bbN$,
+$$s(k) \times m = k \times m + m.$$
+\end{lemma}
+
+\begin{proof}
+    This equality holds for $m = 1$ because 
+    $$s(k) \times 1 = s(k) = k+1 = k \times 1 + 1$$
+    by \Cref{proposition:natural_numbers_multiplication_existence} and \Cref{proposition:natural_numbers_addition_existence}.
+    Suppose inductively that this equality holds for $m = n \in \bbN$. We want to show that 
+    \begin{equation} \label{eq:induction_product_of_successors_of_natural_numbers_distributes_by_left}
+    s(k) \times s(n) = k \times s(n) + s(n).
+    \end{equation}
+    We have 
+    $$s(k) \times s(n) = s(k) \times n + s(k) = (k \times n + n) + s(k)$$
+    by \Cref{proposition:natural_numbers_multiplication_existence}. On the other hand,
+    \begin{equation} \label{eq:multiplication_successor_distributing_thing}
+    k \times s(n) + s(n) = (k \times n + k) + (n+1)
+    \end{equation}
+    by \Cref{proposition:natural_numbers_multiplication_existence} and \Cref{proposition:natural_numbers_addition_existence}. By associativity and commutativity of addition (\Cref{proposition:natural_numbers_addition_associative_commutative}), the right hand side of \eqref{eq:multiplication_successor_distributing_thing} equals
+    \begin{align*}
+    k \times n + (k + (n+1)) &= 
+    k \times n + ((k + n)+1) =  
+    k \times n + ((n + k)+1) =  
+    k \times n + (n + (k+1)) \\
+    &=  
+    k \times n + (n + s(k)) =  
+    (k \times n + n) + s(k)  
+    \end{align*}
+    and thus \eqref{eq:induction_product_of_successors_of_natural_numbers_distributes_by_left} holds. This concludes the proof by induction.
+\end{proof}

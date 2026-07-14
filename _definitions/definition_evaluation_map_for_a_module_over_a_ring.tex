@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:evaluation_map_for_a_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}. Let $M^\vee = \Hom_R(M,R)$ be the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} of $M$. 
+    \begin{enumerate}
+        \item In the case that $M$ is a left $R$-module, the \hldef{evaluation map} is the abelian group homomorphism
+        $$\ev: M^\vee \otimes_R M \to R$$
+        given on pure tensors by 
+        $$\ev(f \otimes m) = f(m).$$
+
+        \item In the case that $M$ is a right $R$-module, the \hldef{evaluation map} is the abelian group homomorphism
+        $$\ev: M \otimes_R M^\vee \to R$$
+        given on pure tensors by 
+        $$\ev(m \otimes f) = f(m).$$
+    \end{enumerate}
+\end{definition}

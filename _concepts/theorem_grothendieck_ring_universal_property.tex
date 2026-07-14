@@ -1,0 +1,43 @@
+\begin{theorem} \label{theorem:grothendieck_ring_universal_property}
+\TODO{AI generated, verify}
+\TODO{semiring homomorphism}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring} with \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring} $K(R)$ and canonical map $\iota_R: R \to K(R)$. For every \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative unital ring} $S$ and every semiring homomorphism $\phi: R \to S$, there exists a unique \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\widetilde{\phi}: K(R) \to S$ such that $\widetilde{\phi} \circ \iota_R = \phi$.
+\end{theorem}
+
+\begin{proof}
+\TODO{AI generated, verify}
+We define $\widetilde{\phi}: K(R) \to S$ by $\widetilde{\phi}([(a,b)]) = \phi(a) - \phi(b)$, where the subtraction on the right is taken in the ring $S$.
+
+We first check that $\widetilde{\phi}$ is well-defined. Suppose $(a,b) \sim (c,d)$, so there exists $t \in R$ such that $a + d + t = b + c + t$. Applying $\phi$ to both sides and using that $\phi$ respects addition, we obtain
+$$\phi(a) + \phi(d) + \phi(t) = \phi(b) + \phi(c) + \phi(t)$$
+in $S$. Subtracting $\phi(b) + \phi(d) + \phi(t)$ from both sides gives $\phi(a) - \phi(b) = \phi(c) - \phi(d)$. Hence $\widetilde{\phi}([(a,b)]) = \widetilde{\phi}([(c,d)])$.
+
+We now verify that $\widetilde{\phi}$ is a ring homomorphism. Let $\alpha = [(a,b)], \beta = [(c,d)] \in K(R)$.
+
+\begin{enumerate}
+    \item The map $\widetilde{\phi}$ preserves addition. We have $\alpha + \beta = [(a+c,\, b+d)]$, so
+    $$\widetilde{\phi}(\alpha + \beta) = \phi(a+c) - \phi(b+d).$$
+    Since $\phi$ respects addition, this equals $(\phi(a) + \phi(c)) - (\phi(b) + \phi(d))$. In the ring $S$, rearranging yields $(\phi(a) - \phi(b)) + (\phi(c) - \phi(d)) = \widetilde{\phi}(\alpha) + \widetilde{\phi}(\beta)$.
+
+    \item The map $\widetilde{\phi}$ preserves multiplication. We have $\alpha \beta = [(ac + bd,\, ad + bc)]$, so
+    $$\widetilde{\phi}(\alpha \beta) = \phi(ac + bd) - \phi(ad + bc).$$
+    Since $\phi$ respects addition and multiplication, this equals $(\phi(a)\phi(c) + \phi(b)\phi(d)) - (\phi(a)\phi(d) + \phi(b)\phi(c))$. Factoring in the ring $S$, we compute
+    \begin{align*}
+    \widetilde{\phi}(\alpha)\widetilde{\phi}(\beta) &= (\phi(a) - \phi(b))(\phi(c) - \phi(d)) \\
+    &= \phi(a)\phi(c) - \phi(a)\phi(d) - \phi(b)\phi(c) + \phi(b)\phi(d) \\
+    &= (\phi(a)\phi(c) + \phi(b)\phi(d)) - (\phi(a)\phi(d) + \phi(b)\phi(c)) \\
+    &= \widetilde{\phi}(\alpha \beta).
+    \end{align*}
+    Here the minus signs distribute using the ring axioms of $S$\CrefIfExists{definition:commutative_ring}.
+
+    \item The map $\widetilde{\phi}$ preserves unity. We have $\widetilde{\phi}(1_{K(R)}) = \widetilde{\phi}([(1_R, 0_R)]) = \phi(1_R) - \phi(0_R)$. Since $\phi(0_R) = 0_S$ and $\phi(1_R) = 1_S$ for a semiring homomorphism, we obtain $\widetilde{\phi}(1_{K(R)}) = 1_S - 0_S = 1_S$.
+\end{enumerate}
+
+Thus $\widetilde{\phi}$ is a ring homomorphism. Moreover, for any $r \in R$,
+$$\widetilde{\phi}(\iota_R(r)) = \widetilde{\phi}([(r, 0_R)]) = \phi(r) - \phi(0_R) = \phi(r) - 0_S = \phi(r),$$
+so $\widetilde{\phi} \circ \iota_R = \phi$.
+
+For uniqueness, suppose $\psi: K(R) \to S$ is any ring homomorphism with $\psi \circ \iota_R = \phi$. For any $[(a,b)] \in K(R)$, write $[(a,b)] = [(a,0_R)] + [(0_R,b)] = \iota_R(a) + (-\iota_R(b))$. Since $\psi$ respects addition and additive inverses,
+$$\psi([(a,b)]) = \psi(\iota_R(a)) + \psi(-\iota_R(b)) = \phi(a) - \phi(b) = \widetilde{\phi}([(a,b)]).$$
+Hence $\psi = \widetilde{\phi}$, establishing uniqueness.
+\end{proof}

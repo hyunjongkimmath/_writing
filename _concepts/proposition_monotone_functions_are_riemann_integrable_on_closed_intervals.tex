@@ -1,0 +1,33 @@
+\begin{proposition}[Monotone functions are Riemann integrable on closed intervals] \label{proposition:monotone_functions_are_riemann_integrable_on_closed_intervals}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}.
+
+    If $f$ is either monotonically nondecreasing on $[a, b]$ or monotonically nonincreasing on $[a, b]$, then $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We assume $f$ is monotonically nondecreasing; the nonincreasing case follows by applying the same argument to $-f$.
+
+    Since $f$ is monotone on a closed interval, it is bounded (by its values at the endpoints). Given $\varepsilon > 0$, we construct a partition $P$ such that $U(f,P) - L(f,P) < \varepsilon$.
+
+    Let $n$ be any positive integer satisfying
+    $$\frac{f(b) - f(a)}{n} \cdot (b-a) < \varepsilon.$$
+    If $f(b) = f(a)$, then $f$ is constant and trivially integrable; so assume $f(b) > f(a)$ and choose $n > \frac{(f(b)-f(a))(b-a)}{\varepsilon}$.
+
+    Divide $[a, b]$ into $n$ equal subintervals of length $\Delta x = \frac{b-a}{n}$. Let the partition be
+    $$P = \left\{x_0, x_1, \dots, x_n\right\}, \quad \text{where } x_k = a + k\Delta x.$$
+
+    On each subinterval $I_k = [x_{k-1}, x_k]$, the function $f$ is nondecreasing. Therefore:
+    $$m_k = \inf\{f(x) : x \in I_k\} = f(x_{k-1}),$$
+    $$M_k = \sup\{f(x) : x \in I_k\} = f(x_k).$$
+
+    The difference between upper and lower sums is:
+    $$U(f,P) - L(f,P) = \sum_{k=1}^n (f(x_k) - f(x_{k-1})) \cdot \Delta x.$$
+
+    The sum telescopes:
+    $$\sum_{k=1}^n (f(x_k) - f(x_{k-1})) = f(b) - f(a).$$
+
+    Therefore:
+    $$U(f,P) - L(f,P) = (f(b) - f(a)) \cdot \frac{b-a}{n} < \varepsilon.$$
+
+    Since $U(f,P) - L(f,P)$ can be made arbitrarily small, the upper and lower Riemann integrals coincide. Hence $f$ is Riemann integrable on $[a, b]$.
+\end{proof}

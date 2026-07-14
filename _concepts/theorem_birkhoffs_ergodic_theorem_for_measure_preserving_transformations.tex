@@ -1,0 +1,16 @@
+\begin{theorem}[Birkhoff's ergodic theorem for measure-preserving transformations] \label{theorem:birkhoffs_ergodic_theorem_for_measure_preserving_transformations}
+\TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $T: X \to X$ be a \CrefAndHyperrefIfExist{definition:measure_preserving_transformation_on_a_probability_space}{measure-preserving transformation}. Let $f \in L^1(X, \mathcal{A}, \mu)$.
+
+Define the Birkhoff averages
+$$\frac{1}{n} \sum_{k=0}^{n-1} f(T^k x).$$
+
+Then there exists a function $f^* \in L^1(X, \mathcal{A}, \mu)$ such that:
+
+\begin{enumerate}
+    \item The limit $\lim_{n \to \infty} \tfrac{1}{n} \sum_{k=0}^{n-1} f(T^k x) = f^*(x)$ exists for $\mu$-almost every $x \in X$.
+    \item $f^* \circ T = f^*$ almost everywhere.
+    \item If $T$ is \CrefAndHyperrefIfExist{definition:measure_preserving_transformation_on_a_probability_space}{ergodic}, then $f^*$ is constant almost everywhere and
+    $$\lim_{n \to \infty} \frac{1}{n} \sum_{k=0}^{n-1} f(T^k x) = \int_X f \, d\mu \quad \text{for } \mu\text{-a.e. } x.$$
+\end{enumerate}
+\end{theorem}

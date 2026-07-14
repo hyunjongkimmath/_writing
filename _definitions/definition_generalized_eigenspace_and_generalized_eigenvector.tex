@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:generalized_eigenspace_and_generalized_eigenvector}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $V$ be a finite-dimensional \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}, and let $T: V \to V$ be a linear endomorphism. Let $\lambda \in F$.
+
+    A nonzero vector $v \in V$ is called a \hldef{generalized eigenvector of $T$ corresponding to $\lambda$} if $(T - \lambda I)^k v = 0$ for some positive integer $k$.
+
+    The \hldef{generalized eigenspace of $T$ corresponding to $\lambda$} is the subspace
+    $$\hlin{V_{\lambda} = \ker\bigl((T - \lambda I)^{\dim_F(V)}\bigr) = \{ v \in V : (T - \lambda I)^k v = 0 \text{ for some } k \geq 1 \}}.$$
+\TextIfExists{definition:submodule_of_a_module_over_a_ring}{The generalized eigenspace $V_\lambda$ is the primary component of the $F[t]$-module structure on $V$ induced by $T$, corresponding to the irreducible factor $(t - \lambda)$. This is the special case for vector spaces of the primary decomposition of a finitely generated module over a principal ideal domain.}
+\TODO{AI generated, verify}
+\end{definition}

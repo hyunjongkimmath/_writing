@@ -1,0 +1,12 @@
+\begin{proposition} \label{proposition:operator_is_diagonalizable_iff_minimal_polynomial_splits_into_distinct_linear_factors}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $V$ be a finite-dimensional nonzero \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}. Let $T: V \to V$ be a linear endomorphism.
+
+    The following are equivalent:
+    \begin{enumerate}
+        \item $T$ is \CrefAndHyperrefIfExist{definition:diagonalizable_endomorphism_of_a_vector_space_over_a_field}{diagonalizable}.
+        \item The \CrefAndHyperrefIfExist{definition:minimal_polynomial_of_an_endomorphism_of_a_vector_space_over_a_field}{minimal polynomial} $m_T(t)$ splits into distinct linear factors over $F$; that is, $m_T(t) = (t - \lambda_1)\cdots(t - \lambda_r)$ with $\lambda_i$ pairwise distinct.
+        \item The vector space $V$ decomposes as the direct sum of the \CrefAndHyperrefIfExist{definition:eigenspace_of_an_endomorphism_of_a_vector_space_over_a_field}{eigenspaces} of $T$.
+    \end{enumerate}
+\TextIfExists{definition:module_of_a_ring}{Diagonalizability is equivalent to the $F[t]$-\Cref{definition:module_of_a_ring} structure on $V$ being a direct sum of cyclic modules $F[t]/(t-\lambda_i)$, i.e., the annihilator ideal is square-free. This is the special case of the structure theorem for finitely generated modules over a principal ideal domain when all invariant factors are linear and distinct.}
+\TODO{AI generated, verify}
+\end{proposition}

@@ -1,0 +1,16 @@
+\begin{definition}[Ordered semiring with adjoined infinity] \label{definition:ordered_semiring_with_adjoined_infinity}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}. Define the set
+    $$\hlin{T^\infty = T \cup \{\infty\},}$$
+    where $\infty$ is a formal element not in $T$.
+
+    We extend the addition and multiplication on $T$ to $T^\infty$ by the following conventions for all $t \in T$:
+    \begin{enumerate}
+        \item Addition: $t + \infty = \infty + t = \infty$ and $\infty + \infty = \infty$.
+        \item Multiplication: $0_T \cdot \infty = \infty \cdot 0_T = 0_T$, while $t \cdot \infty = \infty \cdot t = \infty$ for all $t \neq 0_T$, and $\infty \cdot \infty = \infty$.
+    \end{enumerate}
+
+    We extend the order on $T$ to $T^\infty$ by setting $t \leq \infty$ for all $t \in T$, so that $\infty$ is the largest element of $T^\infty$. With these operations and order, $T^\infty$ is an \hldef{ordered semiring with adjoined infinity}.
+
+    The convention $0_T \cdot \infty = 0_T$ ensures that distributivity holds: for instance, $0_T \cdot (t + \infty) = 0_T \cdot \infty = 0_T$ on one hand and $0_T \cdot t + 0_T \cdot \infty = 0_T + 0_T = 0_T$ on the other.
+\end{definition}

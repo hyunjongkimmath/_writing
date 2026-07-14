@@ -1,0 +1,23 @@
+\begin{theorem} \label{theorem:eulers_formula_for_complex_exponential}
+\TODO{AI generated, verify}
+[Euler's Formula] For every $x \in \mathbb{R}$, the complex exponential satisfies
+$$\hlin{\exp(ix) = \cos(x) + i\sin(x)}$$
+where $\exp$ is the complex extension of the \CrefAndHyperrefIfExist{definition:real_exponential_function}{exponential function}, and $\sin$, $\cos$ are the \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions}.
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We compare the power series expansions of both sides. The complex exponential is defined by (see \CrefAndHyperrefIfExist{definition:complex_exponential_function}):
+    $$\exp(z) = \sum_{n=0}^\infty \frac{z^n}{n!},$$
+    which converges absolutely for every $z \in \mathbb{C}$. Substituting $z = ix$:
+    $$\exp(ix) = \sum_{n=0}^\infty \frac{(ix)^n}{n!}.$$
+
+    We separate the terms of this series into even and odd indices. For each nonnegative integer $k$, we have:
+    $$i^{2k} = (i^2)^k = (-1)^k, \qquad i^{2k+1} = i^{2k} \cdot i = (-1)^k i.$$
+
+    Splitting the sum accordingly:
+    $$\exp(ix) = \sum_{k=0}^\infty \frac{i^{2k} x^{2k}}{(2k)!} + \sum_{k=0}^\infty \frac{i^{2k+1} x^{2k+1}}{(2k+1)!}$$
+    $$= \sum_{k=0}^\infty (-1)^k \frac{x^{2k}}{(2k)!} + i \sum_{k=0}^\infty (-1)^k \frac{x^{2k+1}}{(2k+1)!}.$$
+
+    The first series is the power series for $\cos(x)$ and the second is the power series for $\sin(x)$ (see \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}):
+    $$\exp(ix) = \cos(x) + i\sin(x).$$
+\end{proof}

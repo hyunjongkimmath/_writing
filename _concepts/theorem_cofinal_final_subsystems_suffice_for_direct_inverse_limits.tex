@@ -1,0 +1,74 @@
+\begin{theorem}[Cofinal and final subsystems suffice for limits] \label{theorem:cofinal_final_subsystems_suffice_for_direct_inverse_limits}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+\begin{enumerate}
+    \item Let $(I, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{directed partially ordered set}, and let $J \subseteq I$ be a sub-poset. Let $(A_i)_{i \in I}$ be a \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{direct system} in $\mathcal{C}$ indexed by $I$. Suppose that $J$ is \CrefAndHyperrefIfExist{definition:cofinal_and_final_sub_posets}{cofinal in $I$}. Let $(A_j)_{j \in J}$ denote the restriction of the direct system to $J$. Suppose that $\varinjlim_{i \in I} A_i$ exists in $\calC$. Then $\varinjlim_{j \in J} A_j$ also exists in $\calC$ and the canonical morphism
+    \begin{align} \label{eq:canonical_morphism_from_direct_limit_for_subposet_to_direct_limit_for_parent_poset}
+    \varinjlim_{j \in J} A_j \to \varinjlim_{i \in I} A_i
+    \end{align}
+    \CrefIfExists{definition:projective_and_inductive_limits_in_categories}
+    induced by the inclusions $J \hookrightarrow I$ and the transition morphisms of the direct system is an isomorphism.
+
+    \item Let $(K, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{codirected partially ordered set}, and let $L \subseteq K$ be a sub-poset. Let $(B_k)_{k \in K}$ be an \CrefAndHyperrefIfExist{definition:system_in_a_category_indexed_by_a_directed_poset}{inverse system} in $\mathcal{C}$ indexed by $K$. Suppose that $L$ is \CrefAndHyperrefIfExist{definition:cofinal_and_final_sub_posets}{final in $K$}. Let $(B_\ell)_{\ell \in L}$ denote the restriction of the inverse system to $L$. Suppose that $\varprojlim_{k \in K} B_k$ exists in $\calC$. Then $\varprojlim_{\ell \in L} B_\ell$ also exists in $\calC$ and the canonical morphism
+    \begin{align} \label{eq:canonical_morphism_from_inverse_limit_for_subposet_to_inverse_limit_for_parent_poset}
+    \varprojlim_{k \in K} B_k \to \varprojlim_{\ell \in L} B_\ell
+    \end{align}
+    \CrefIfExists{definition:projective_and_inductive_limits_in_categories}
+    induced by the inclusions $L \hookrightarrow K$ and the transition morphisms of the inverse system is an isomorphism.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+    \begin{enumerate}
+        \item Suppose that $\varinjlim_{i \in I} A_i$ exists in $\calC$. We show that it satisfies the universal property of $\varinjlim_{j \in J} A_j$, i.e. that $\varinjlim_{i \in I} A_i$ is a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone} of $(A_j)_{j \in J}$ and that for any cocone $D$ of $(A_j)_{j \in J}$ there is a unique morphism $\varinjlim_{j \in J} A_j \to D$ compatible with the structures of these objects as cocones of $(A_j)_{j \in J}$. For every $j \in J$, there is a canonical map $A_j$ to $\varinjlim_{i \in I} A_i$. Moreover, these canonical maps over $j \in J$ admit $\varinjlim_{i \in I} A_i$ as a \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{cocone} of $(A_j)_{j \in J}$ because $\varinjlim_{i \in I} A_i$ is a cocone of $(A_i)_{i \in I}$. 
+        
+        Suppose that $D \in \calC$ is a cocone of $(A_j)_{j \in J}$, so equivalently it is equipped with morphisms $\pi_j: A_j \to D$ for all $j \in J$ such that for every morphism $f: j_1 \to j_2$ in $J$, we have that 
+        \begin{center}
+        \begin{tikzcd}
+            A_{j_1} \ar[rd, "\pi_{j_1}"] \ar[dd, "A_{f}"] & \\
+            & D \\
+            A_{j_2} \ar[ru, "\pi_{j_2}", swap]
+        \end{tikzcd}
+        \end{center}
+        commutes. 
+        To first show the existence of the desired map $\varinjlim_{i \in I} A_i \to D$, we extend this cocone $D$ of $(A_j)_{j \in J}$ to a cocone of $(A_i)_{i \in I}$. Given $i \in I$, define $\pi_i: A_i \to D$ as follows: by the cofinality of $J$ in $I$, there exists some $j \in J$ such that $i \leq j$. Writing $A_{i \to j}$ for morphism in $\calC$ assigned to $i \to j$ by the diagram $A$, let 
+        \begin{equation} \label{eq:consturction_of_extension_of_cocone_on_cofinal_subposet_to_directed_parent_poset}
+        \pi_i = \pi_j \circ A_{i \to j}.
+        \end{equation}
+        We show that this is well defined, i.e. is independent of the choice of $j \in J$. To this end, suppose that $j_1,j_2$ are objects of $J$ such that $i \leq j_1,j_2$. Since $I$ is a directed poset, there exists some $j_3 \in J$ such that $j_1,j_2 \leq j_3$. The following diagram commutes: 
+        \begin{center}
+            \begin{tikzcd}
+                & A_{j_1} \arrow[dr] \arrow[drr, bend left=15, "\pi_{j_1}"] & & \\
+                A_i \arrow[ur] \arrow[dr] & & A_{j_3} \arrow[r, "\pi_{j_3}"] & D \\
+                & A_{j_2} \arrow[ur] \arrow[urr, bend right=15, "\pi_{j_2}"'] & & 
+            \end{tikzcd}.
+        \end{center}
+        Therefore, $\pi_j \circ A_{i \to j_1}$ and $\pi_j \circ A_{i \to j_2}$ both equal any of the maps from $A_i$ to $D$ above, so $\pi_i$ is indeed well defined. 
+
+        We show that $D$ equipped with the maps $\pi_i: A_i \to D$ is indeed a cocone of $(A_i)_{i \in I}$. Suppose that $i_1 \to i_2$ is an arrow in $I$. We show that 
+        \begin{center}
+        \begin{tikzcd}
+            A_{i_1} \ar[rd, "\pi_{i_1}"] \ar[dd, "A_{i_1 \to i_2}", swap] & \\
+            & D \\
+            A_{i_2} \ar[ru, "\pi_{i_2}", swap]
+        \end{tikzcd}
+        \end{center}
+        commutes. Let $j_1,j_2 \in J$ satisfy $i_1 \leq j_1$ and $i_2 \leq j_2$. By the directedness of $I$, choose $i \in I$ such that $j_1,j_2 \leq i$ and by the cofinality of $J$ in $I$, choose $j \in I$ such that $i \leq j$. In partiular, we have that $i_1, i_2 \leq j$. By construct, $\pi_{i_1} = \pi_j \circ A_{i_1 \to j}$ and $\pi_{i_2} = \pi_j \circ A_{i_2 \to j}$. Therefore, 
+        $$\pi_{i_2} \circ A_{i_1 \to i_2} = \pi_j \circ A_{i_2 \to j} \circ A_{i_1 \to i_2} = \pi_j \circ A_{i_1 \to j} = \pi_{i_1}$$
+        as desired. 
+
+        As $D$ equipped with the $\pi_i$ is a cocone of $(A_i)_{i \in I}$, the universal property of $\varinjlim_{i \in I} A_i$ means that there is a canonical morphism 
+        $$\varinjlim_{i \in I} A_i \to D.$$
+        We have so far thus shown that $\varinjlim_{i \in I} A_i$ is a cocone of $(A_j)_{j \in J}$ and that for every cocone $D$ of $(A_j)_{j \in J}$, there is a canonical morphism $\varinjlim_{i \in I} A_i \to D$ such that, for every morphism $j \to j'$ in $J$,
+        \begin{center}
+            \begin{tikzcd}
+                A_j \ar[rrd, bend left = 15] \ar[rd] \ar[dd] & & \\
+                & \varinjlim_{i \in I} A_i \ar[r, dotted] & D \\
+                A_{j'} \ar[ur] \ar[rru, bend right = 15] & & 
+            \end{tikzcd}
+        \end{center}
+        commutes. 
+        
+        We show that the morphism is unique, i.e. that the desired map $\varinjlim_{i \in I} A_i \to D$ is unique. To this end, suppose that $\varinjlim_{i \in I} A_i \to D$ is a morphism making the above diagram commute for all $j \to j'$ in $J$. To give a morphism $\varinjlim_{i \in I} A_i \to D$ is equivalent to giving $D$ as a cocone of $A_i$ \TODO{write the notion that a morphism from an injective limit to an object is equivalent to giving the object as a cocone of the system, assuming that the injective limit exists}. Write $\pi_i: A_i \to D$ for the morphisms of this cocone. For any $j_0 \in J$ such that $i \leq j_0$ in $I$, we must have that $\pi_{i} = \pi_{j_0} \circ A_{i \to j_0}$ where $\pi_{j_0}: A_{j_0} \to D$ here is written as a morphism for $D$ as a cocone of $(A_i)_{i \in I}$. On the other hand, $\pi_{j_0}$ as a morphism for $D$ as a cocone of $(A_i)_{i \in I}$ coincides with $\pi_{j_0}$ as a morphism for $D$ as a cocone of $(A_j)_{j \in J}$ because the above diagram has to commute and because the map $A_{j_0} \to A_{j_0}$ where the first copy is from $(A_j)_{j \in J}$ and the second copy is from $(A_i)_{i \in I}$ is the identity map. Therefore, $\pi_i$ must be constructed as in \eqref{eq:consturction_of_extension_of_cocone_on_cofinal_subposet_to_directed_parent_poset}, so the morphism is indeed unique as desired. We have thus shown that the desired morphism both exists and is unique as desired.
+
+        \item This is dual to the previous part.
+    \end{enumerate}
+\end{proof}

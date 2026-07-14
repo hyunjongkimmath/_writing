@@ -1,0 +1,15 @@
+\begin{definition}[Barrier options and lookback options] \label{definition:barrier_options_and_lookback_options}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, let $S = \{S_t\}_{0 \leq t \leq T}$ be the stock price process.
+
+A \hldef{barrier option} is a path-dependent derivative whose payoff depends on whether the underlying asset price crosses a predetermined barrier level $H > 0$ during $[0, T]$. The main types are:
+
+\begin{enumerate}
+    \item \hldef{Up-and-out call}: pays $(S_T - K)^+$ if $\max_{0 \leq t \leq T} S_t < H$ and $H > S_0$; zero otherwise.
+    \item \hldef{Down-and-out put}: pays $(K - S_T)^+$ if $\min_{0 \leq t \leq T} S_t > H$ and $H < S_0$; zero otherwise.
+    \item \hldef{Up-and-in call}: pays $(S_T - K)^+$ if $\max_{0 \leq t \leq T} S_t \geq H$ and $H > S_0$; zero otherwise.
+    \item \hldef{Down-and-in put}: pays $(K - S_T)^+$ if $\min_{0 \leq t \leq T} S_t \leq H$ and $H < S_0$; zero otherwise.
+\end{enumerate}
+
+A \hldef{floating lookback call option} has payoff $\max_{0 \leq t \leq T} S_t - S_T$. A \hldef{floating lookback put option} has payoff $S_T - \min_{0 \leq t \leq T} S_t$.
+\end{definition}

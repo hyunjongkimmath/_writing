@@ -1,0 +1,30 @@
+\begin{proposition} \label{proposition:short_exact_sequence_of_galois_groups_for_extension_of_base_field_of_abelian_variety_that_gains_all_geometric_endomorphisms_yields_short_exact_sequence_of_mod_ell_torsion_if_ell_does_not_divide_order_of_galois_group}
+
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:field}{field} $K$. 
+    Assume that the canonical map
+    \begin{equation} \label{eq:injection_of_mod_ell_canonical_map_from_endomorphisms_of_abelian_variety_to_mod_ell_torsion_endomorphisms}
+    \mathbb{F}_\ell \otimes_{\mathbb{Z}} \End_{\overline{K}}(A) \to \End_{\bbF_\ell}(A[\ell])
+    \end{equation}
+    is an injection.
+    Let $L$ be the minimal \CrefAndHyperrefIfExist{definition:extension_of_a_field}{extension} of $K$ such that $\End_{\overline{K}}(A) = \End_{L}(A)$. \TODO{discuss how $L$ is finite extension and also Galois.} Let $\ell \nmid |\Gal(L/K)|$ be a prime number. Let 
+    $$\rho_{A,K,\ell}: \Gal(\overline{K}/K) \to \Aut(A[\ell])$$ 
+    be the \CrefAndHyperrefIfExist{definition:mod_n_galois_representation_of_a_commutative_group_scheme_over_a_field}{mod-$\ell$ Galois representation} of $A/K$. Likewise, let $\rho_{A,L,\ell}$ be the mod-$\ell$ Galois representation of $A/L$, which is identifiable as the restriction of $\rho_{A,K,\ell}$ to the normal subgroup $\Gal(\overline{K}/L)$ of $\Gal(\overline{K}/K)$. 
+
+    There is a short exact sequence
+    $$1 \to \operatorname{im} \rho_{A,L,\ell} \to \operatorname{im} \rho_{A,K,\ell} \to \Gal(L/K) \to 1.$$
+\end{proposition}
+\begin{proof}
+    The action of $\Gal(\overline{K}/K)$ on $\End_{\overline{K}}(A)$ corresponds to a group homomorphism 
+    $$\theta: \Gal(\overline{K}/K) \to \Aut_\bbZ(\End_{\overline{K}}(A)).$$
+    By the construction of $L$, the kernel of $\theta$ is $\Gal(\overline{K}/L)$ and the image of $\theta$ is isomorphic to $\Gal(L/K)$. In particular, we have an injective group homomorphism 
+    $$\operatorname{im} \theta \cong \Gal(L/K) \to \Aut_\bbZ(\End_{\overline{K}}(A))$$ 
+
+    We show that the surjection $\Gal(\overline{K}/K) \twoheadrightarrow \Gal(L/K)$ \CrefAndHyperrefIfExist{definition:morphism_in_a_category_factoring_through_a_morphism}{factors through} $\Gal(\overline{K}/K) \twoheadrightarrow \operatorname{im} \rho_{A,K,\ell}$, i.e. we have a canonical group homomorphism $\operatorname{im} \rho_{A,K,\ell} \to \Gal(L/K)$ sending $\rho_{A,K,\ell}(\sigma)$ to $\sigma|_L$. By \Cref{lemma:unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel}, this is to show that 
+    \begin{equation} \label{eq:inclusion_of_kernel_of_mod_ell_galois_representation_to_galois_group_of_field_admitting_endomorphisms_of_abelian_variety}
+    \ker \rho_{A,K,\ell} \subseteq \ker(\Gal(\overline{K}/K) \twoheadrightarrow \Gal(L/K)) = \Gal(\overline{K}/L).
+    \end{equation}
+
+    The elements of $\ker \rho_{A,K,\ell}$ act trivially on $A[\ell]$. By the injection \eqref{eq:injection_of_mod_ell_canonical_map_from_endomorphisms_of_abelian_variety_to_mod_ell_torsion_endomorphisms}, the elements of $\ker \rho_{A,K,\ell}$ act trivially on $\End_{\overline{K}}(A)/(\ell)$. In other words, the composition 
+    $$\ker \rho_{A,K,\ell} \subseteq \Gal(\overline{K}/K) \xrightarrow{\theta} \operatorname{im} \theta \cong \Gal(L/K) \to \Aut_{\bbZ}(\End_{\overline{K}}(A)) \to \Aut_{\bbF_\ell}(\End_{\overline{K}}(A)/(\ell))$$
+    is the trivial group homomorphism. Since $\ell$ is assumed to not divide $\Gal(L/K)$, \Cref{lemma:reduction_of_a_finite_group_acting_linearly_on_a_free_module_of_finite_rank_over_an_integral_domain_at_a_prime_not_containing_order_is_faithful} shows that in fact elements of $\ker \rho_{A,K,\ell}$ act trivially on $\End_{\overline{K}}(A)$. By the construction of $L$, the desired inclusion \eqref{eq:inclusion_of_kernel_of_mod_ell_galois_representation_to_galois_group_of_field_admitting_endomorphisms_of_abelian_variety} holds. 
+\end{proof}

@@ -1,0 +1,19 @@
+\begin{proposition}[Stalk of direct image under open embedding on topological space] \label{proposition:stalk_of_direct_image_under_open_embedding_on_topological_space}
+\TODO{AI generated, verify}
+    Let $j : U \hookrightarrow X$ be an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open embedding} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, and let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf on $U$ valued in an abelian category}.
+
+    \begin{enumerate}
+        \item For any point $x \in U$, the stalk of the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} satisfies
+        $$(j_*\mathcal{F})_x = \mathcal{F}_x$$
+
+        \item For any point $x \in X \setminus U$, the stalk is given by
+        $$(j_*\mathcal{F})_x = \varinjlim_{V \ni x} \mathcal{F}(V \cap U),$$
+        where the colimit runs over open neighborhoods $V$ of $x$ in $X$. In particular, if $\mathcal{F}$ is a sheaf of abelian groups and $U$ is dense in $X$, this stalk need not vanish.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+    For $x \in U$, every open neighborhood of $x$ in $X$ has an intersection with $U$ that contains an open neighborhood of $x$ in $U$. Since $j^{-1}(V) = V \cap U$, the directed systems defining $(j_*\mathcal{F})_x$ and $\mathcal{F}_x$ are cofinal.
+
+    For $x \notin U$, the stalk is by definition the colimit of $\mathcal{F}(j^{-1}(V)) = \mathcal{F}(V \cap U)$ over neighborhoods $V$ of $x$.
+\end{proof}

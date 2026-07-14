@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:matrix_representation_of_a_linear_map_with_respect_to_bases}
+    \TODO{is this for column vectors? There should be also a thing for row vectors}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Let $V$ and $W$ be finite-dimensional \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector spaces}, with ordered bases $\mathcal{B} = (v_1, \dots, v_n)$ and $\mathcal{C} = (w_1, \dots, w_m)$, respectively.
+
+    For any \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{linear map} $T: V \to W$, the \hldef{matrix representation of $T$ with respect to $\mathcal{B}$ and $\mathcal{C}$} is the unique $m \times n$ \CrefAndHyperrefIfExist{definition:matrix_over_a_ring}{matrix} over $F$, denoted
+    $$\hlin{[T]_{\mathcal{B}}^{\mathcal{C}}},$$
+    whose $(i,j)$-entry is the coefficient of $w_i$ in the expansion of $T(v_j)$ in the basis $\mathcal{C}$. That is,
+    $$T(v_j) = \sum_{i=1}^m [T]_{\mathcal{B}}^{\mathcal{C}}(i,j) \, w_i.$$
+
+\TextIfExists{definition:homomorphism_of_modules_over_a_ring}{The matrix representation of a linear map with respect to bases is the special case for free $F$-modules of the matrix of a \Cref{definition:homomorphism_of_modules_over_a_ring} between free modules of finite rank with chosen bases.}
+\TODO{AI generated, verify}
+\end{definition}

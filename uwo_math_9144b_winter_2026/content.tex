@@ -48,7 +48,7 @@ The contents of these notes may change constantly.
 
         \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
 
-        \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of finite dimensional vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{finite dimensional} \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
+        \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of finite dimensional vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{finite dimensional} \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
 
         \item Given a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of (either left or right) $R$-modules} whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-module homomorphisms}.
 
@@ -145,7 +145,7 @@ One overarching philosophy in various categories is that we only really care abo
 
     For general vector spaces $V$, there is an injective \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear map}
     $$\alpha_V: V \to (V^{\vee})^\vee, \quad v \mapsto v^*, $$
-    where $v^*: V^\vee \to k$ is the $k$-linear map given by $\phi \mapsto \phi(v)$. We note that if $V$ is \CrefAndHyperrefIfExist{definition:basis_of_a_vector_space_over_a_field}{finite dimensional}, then $\alpha_V$ is an isomorphism. In fact, $\alpha$ is a natural transformation $\id_{\VectorSpaces_k} \Rightarrow \left( (-)^\vee \right)^\vee$ --- one should verify that, for every $k$-linear map $f: V_1 \to V_2$, the following diagram commutes:
+    where $v^*: V^\vee \to k$ is the $k$-linear map given by $\phi \mapsto \phi(v)$. We note that if $V$ is \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{finite dimensional}, then $\alpha_V$ is an isomorphism. In fact, $\alpha$ is a natural transformation $\id_{\VectorSpaces_k} \Rightarrow \left( (-)^\vee \right)^\vee$ --- one should verify that, for every $k$-linear map $f: V_1 \to V_2$, the following diagram commutes:
     \begin{center}
     \begin{tikzcd}
         V_1 \arrow[r, "f"] \arrow[d, "\alpha_{V_1}"']
@@ -297,7 +297,7 @@ For \CrefAndHyperrefIfExist{definition:concrete_category_over_a_category}{concre
 
 It is probably best to keep in mind that the definitions listed in this subsubsection are intended as precise definitions, rather than intuitively helpful ones.
 
-\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex}
+\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_category.tex}
 
 \input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
 
@@ -1920,7 +1920,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     $$\calO(U) = \{f \in \bbR(x): f \text{ is defined at all points } x \in U\}.$$
     Note that it is a commutative ring under pointwise addition and multiplication: for $f,g \in \bbR(U)$, we have $(f+g)(x) = f(x) + g(x)$ and $(f \cdot g)(x) = f(x) \cdot g(x)$. 
 
-    Given an inclusion $U \subseteq V$ of open subsets, note that there is an injective ring homomorphism $\calO(V) \hookrightarrow \calO(U)$ and note that this describes a functor/\CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_small_category}{diagram} $\calO: \mathbf{Open}(\bbR)^{\op} \to \mathbf{CommRings}$\CrefIfExists{definition:category_of_opens_of_a_topological_space}\CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{category_of_rings} (you do not need to prove this). 
+    Given an inclusion $U \subseteq V$ of open subsets, note that there is an injective ring homomorphism $\calO(V) \hookrightarrow \calO(U)$ and note that this describes a functor/\CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_category}{diagram} $\calO: \mathbf{Open}(\bbR)^{\op} \to \mathbf{CommRings}$\CrefIfExists{definition:category_of_opens_of_a_topological_space}\CrefIfExists{definition:opposite_category_of_a_category}\CrefIfExists{category_of_rings} (you do not need to prove this). 
     
     Fix a point $x \in \bbR$. There is a \CrefAndHyperrefIfExist{definition:full_subcategory_of_a_category}{(full) subcategory} $N_x$ of $\mathbf{Open}(\bbR)$ whose objects are open neighborhoods of $x$, so there is an induced diagram $N_x^{\op} \to \mathbf{CommRings}$. Show that the \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{direct limit}
     $$\varinjlim_{U \in N_x^{\op}} \calO(U)$$
@@ -2219,7 +2219,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 
 \input{../_definitions/definition_vector_space_over_a_field.tex}
 \input{../_definitions/definition_morphism_of_vector_spaces.tex}
-\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+\input{../_definitions/definition_basis_and_dimension_of_a_vector_space_over_a_field.tex}
 
 \input{../_definitions/definition_partially_ordered_set.tex}
 \input{../_concepts/lemma_posets_correspond_to_small_filtered_thin_categories.tex}

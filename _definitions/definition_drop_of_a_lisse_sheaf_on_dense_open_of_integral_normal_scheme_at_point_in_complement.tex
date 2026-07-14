@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:drop_of_a_lisse_sheaf_on_dense_open_of_integral_normal_scheme_at_point_in_complement}
+\TODO{AI generated, verify}
+Let $X$ be an \CrefAndHyperrefIfExist{definition:integral_scheme}{integral} \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal scheme} with \CrefAndHyperrefIfExist{definition:generic_point_of_a_topological_space}{generic point} $\eta$. Let $\overline{\eta}$ be a geometric point of $X$ whose image is $\eta$. Let $U \subseteq X$ be a non-empty \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{open subscheme}. Let $x \in X \setminus U$ be a point. Let $I_x$ be the \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{inertia subgroup} of $\pioneet(U, \overline{\eta})$ associated to $x$, well defined up to conjugation.
+
+Let $\Lambda$ be a finite ring and let $\calF$ be a locally constant sheaf of finitely generated $\Lambda$-modules on $U_{\et}$. The inertia subgroup $I_x$ acts continuously on the stalk $\calF_{\overline{\eta}}$, which is a finitely generated $\Lambda$-module. For any field $k$, let $V = \calF_{\overline{\eta}} \otimes_\Lambda k$ be the resulting finite-dimensional $k$-vector space with induced $I_x$-action.
+
+The \hldef{drop of $\calF$ at $x$} is the \CrefAndHyperrefIfExist{definition:drop_of_a_representation_of_a_group_on_a_vector_space}{drop of the representation} $V$ under the action of $I_x$:
+$$\hlin{\operatorname{drop}_x(\calF) = \dim_k(V) - \dim_k(V^{I_x})}.$$
+When $\Lambda$ is a field, this simplifies to $\dim_\Lambda(\calF_{\overline{\eta}}) - \dim_\Lambda(\calF_{\overline{\eta}}^{I_x})$.
+
+For a \CrefAndHyperrefIfExist{definition:lisse_sheaf_on_a_scheme}{lisse $R$-sheaf} $\calF = (\calF_n, u_n)_{n \geq 1}$ on $U_{\et}$ where $(R, \lambda)$ is a complete DVR with fraction field $E$, the \hldef{drop of $\calF$ at $x$} is defined as the drop of the $E$-vector space $\calF_{\overline{\eta}} \otimes_R E$ under the induced $I_x$-action.
+
+The drop is independent of the choice of valuation centered at $x$ because different choices yield conjugate inertia subgroups, and conjugation does not change the dimension of the invariant subspace. The drop vanishes if and only if $\calF$ is \CrefAndHyperrefIfExist{definition:ramification_of_an_etale_sheaf_on_a_connected_normal_scheme_at_a_geometric_point}{unramified at $x$}.
+\end{definition}

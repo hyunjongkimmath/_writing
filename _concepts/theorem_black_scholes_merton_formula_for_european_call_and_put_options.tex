@@ -1,0 +1,12 @@
+\begin{theorem}[Black--Scholes--Merton formula for European call and put options] \label{theorem:black_scholes_merton_formula_for_european_call_and_put_options}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, let $K > 0$ be a strike price and $T > 0$ a maturity. Define
+$$d_1 = \frac{\log(S_0/K) + (r + \tfrac{1}{2}\sigma^2)T}{\sigma\sqrt{T}}, \quad d_2 = d_1 - \sigma\sqrt{T}.$$
+
+The arbitrage-free prices of a European call and put option are:
+$$\hlin{C_0 = S_0 \Phi(d_1) - K e^{-rT} \Phi(d_2)},$$
+$$\hlin{P_0 = K e^{-rT} \Phi(-d_2) - S_0 \Phi(-d_1)},$$
+where $\Phi$ is the cumulative distribution function of the standard normal distribution.
+
+The call--put parity relation holds: $C_0 - P_0 = S_0 - K e^{-rT}$.
+\end{theorem}

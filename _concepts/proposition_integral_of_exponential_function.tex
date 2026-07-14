@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:integral_of_exponential_function}
+For any $a, b \in \mathbb{R}$ and $c \neq 0$,
+$$\hlin{\int_a^b e^{cx} \, dx = \frac{1}{c}\left(e^{cb} - e^{ca}\right)}$$
+In particular, $\int_0^x e^t \, dt = e^x - 1$ for all $x \in \mathbb{R}$, where the integral is the \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integral}.
+\end{proposition}
+\begin{proof}
+    Recall that $\exp(x) = e^x$ is differentiable on $\bbR$\CrefIfExists{proposition:derivative_of_exponential_function_is_itself} and has derivative $\exp(x)$. By the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule}, we have 
+    $$\frac{d}{dx} e^{cx} = \frac{d}{dy} e^{y} \cdot \frac{d}{dx} (cx) = e^y \cdot c = c \cdot e^{cx}.$$
+    Therefore, 
+    $$\frac{d}{dx} \frac{1}{c} e^{cx} = e^{cx}.$$
+    \TODO{linearity of derivatives, linearity of integrals} In particular, $e^{cx}$ is differentiable on $\bbR$ as well. Moreover, $e^{cx}$ is continuous on $\bbR$, and hence is Riemann integrable on $[a,b]$\CrefIfExists{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}. Therefore, by the \CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{fundamental theorem of calculus}, 
+    $$\int_a^b e^{cx} dx = \frac{1}{c} e^{cx} \biggr \vert_a^b = \frac{e^{cb} - e^{ca}}{c}$$
+    as desired. 
+\end{proof}

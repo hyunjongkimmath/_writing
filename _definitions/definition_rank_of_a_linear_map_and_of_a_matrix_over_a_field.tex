@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:rank_of_a_linear_map_and_of_a_matrix_over_a_field}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Let $V$ and $W$ be \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector spaces}, and let $T: V \to W$ be an \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{linear map}.
+
+    The \hldef{rank of $T$} is the \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{dimension} of its \CrefAndHyperrefIfExist{definition:kernel_and_image_of_a_linear_map_between_vector_spaces}{image}:
+    $$\hlin{\operatorname{rank}(T) = \dim_F(\operatorname{im}(T))}.$$
+
+    The \hldef{nullity of $T$} is the dimension of its \CrefAndHyperrefIfExist{definition:kernel_and_image_of_a_linear_map_between_vector_spaces}{kernel}:
+    $$\hlin{\operatorname{nullity}(T) = \dim_F(\ker(T))}.$$
+
+    Let $A$ be an $m \times n$ \CrefAndHyperrefIfExist{definition:matrix_over_a_ring}{matrix over $F$}. Identifying $A$ with the linear map $L_A: F^n \to F^m$ given by left multiplication, the \hldef{rank of $A$} is defined as $\operatorname{rank}(L_A)$.
+
+\TextIfExists{definition:homomorphism_of_modules_over_a_ring}{The rank and nullity of a linear map are the vector-space special case of the dimension of the image and kernel of a \Cref{definition:homomorphism_of_modules_over_a_ring}, where $\operatorname{im}(T)$ and $\ker(T)$ carry natural module structures.}
+\TODO{AI generated, verify}
+\end{definition}

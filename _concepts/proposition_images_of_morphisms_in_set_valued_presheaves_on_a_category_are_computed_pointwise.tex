@@ -1,0 +1,14 @@
+\begin{proposition}[Images of Morphisms in Set-Valued Presheaves are Computed Pointwise] \label{proposition:images_of_morphisms_in_set_valued_presheaves_on_a_category_are_computed_pointwise}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}. Let $F, G: \mathcal{C}^{\operatorname{op}} \to \mathbf{Set}$ be \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaves} on $\mathcal{C}$, and let $\alpha: F \to G$ be a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformation}.
+
+    Define a presheaf $\operatorname{Im}(\alpha)$ by setting, for each object $U$ of $\mathcal{C}$:
+    $$\hlin{\operatorname{Im}(\alpha)(U) = \operatorname{im}(\alpha_U: F(U) \to G(U)) \subseteq G(U)}$$
+    and for each morphism $f: V \to U$ in $\mathcal{C}$, letting $\operatorname{Im}(\alpha)(f)$ be the restriction of $G(f): G(U) \to G(V)$ to the subset $\operatorname{Im}(\alpha)(U) \subseteq G(U)$, which lands in $\operatorname{Im}(\alpha)(V)$ by naturality of $\alpha$.
+
+    Let $\iota: \operatorname{Im}(\alpha) \hookrightarrow G$ be the inclusion natural transformation (componentwise subset inclusion), and let $\pi: F \twoheadrightarrow \operatorname{Im}(\alpha)$ be the factorization of $\alpha$ through the pointwise images, so that $\alpha = \iota \circ \pi$. Then:
+    \begin{enumerate}
+        \item $\pi: F \twoheadrightarrow \operatorname{Im}(\alpha)$ is an \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{epimorphism} in the functor category $\operatorname{PSh}(\mathcal{C}) = [\mathcal{C}^{\operatorname{op}}, \mathbf{Set}]$.
+        \item $\iota: \operatorname{Im}(\alpha) \hookrightarrow G$ is a \CrefAndHyperrefIfExist{definition:monomorphism_and_epimorphism_in_categories}{monomorphism} in $\operatorname{PSh}(\mathcal{C})$, equivalently a \CrefAndHyperref{definition:subfunctor_of_a_presheaf_of_sets_on_a_category}{subfunctor} inclusion\Cref{proposition:subobjects_of_presheaf_category_are_pointwise_injective}.
+        \item The factorization $F \xrightarrow{\pi} \operatorname{Im}(\alpha) \xrightarrow{\iota} G$ is the \hldef{image of $\alpha$ in $\operatorname{PSh}(\mathcal{C})$}\CrefIfExists{definition:image_coimage_of_a_morphism_in_a_category}. In other words, the image of a morphism of set-valued presheaves is \hldef{computed pointwise}.
+    \end{enumerate}
+\end{proposition}

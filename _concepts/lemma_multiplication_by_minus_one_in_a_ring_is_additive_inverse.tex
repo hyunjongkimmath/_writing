@@ -1,0 +1,19 @@
+\begin{lemma} \label{lemma:multiplication_by_minus_one_in_a_ring_is_additive_inverse}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. For any $r \in R$, we have $(-1) \cdot r = -r = r \cdot (-1)$.
+\end{lemma}
+\begin{proof}
+    For any $r \in R$, distributivity of $\cdot$ over $+$ yields
+    $$(1 + (-1)) \cdot r = 1 \cdot r + (-1) \cdot r.$$
+    On the one hand,
+    $$(1 + (-1)) \cdot r = 0 \cdot r = 0$$
+    by \Cref{lemma:multiplication_by_zero_in_a_ring_is_zero}. 
+    On the other hand,
+    $$1 \cdot r + (-1) \cdot r = r + (-1) \cdot r,$$
+    so 
+    $$ 0 = r+ (-1) \cdot r.$$
+    By \Cref{corollary:elements_of_group_that_multiply_to_identity_are_inverses}, 
+    $$(-1) \cdot r = -r.$$
+    Similarly, recognizing that 
+    $$((-1) + 1) \cdot r = (-1) \cdot r + 1 \cdot r,$$
+    one can formulate a similar argument to show that $r \cdot (-1) = -r$. 
+\end{proof}

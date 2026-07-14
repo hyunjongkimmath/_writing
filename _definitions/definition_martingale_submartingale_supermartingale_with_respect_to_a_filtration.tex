@@ -1,0 +1,22 @@
+\begin{definition}[Martingale, submartingale, supermartingale with respect to a filtration] \label{definition:martingale_submartingale_supermartingale_with_respect_to_a_filtration}
+\TODO{AI generated, verify}
+Let $(\Omega, (\mathcal{F}_t)_{t \in I}, P)$ be a \CrefAndHyperrefIfExist{definition:filtration_of_sigma_algebras_on_a_probability_space}{filtered probability space}, where $I$ is a linearly ordered index set. Let $\{X_t\}_{t \in I}$ be a family of real-valued random variables such that for each $t \in I$:
+
+1. $X_t$ is $\mathcal{F}_t$-measurable (i.e., $X_t$ is \hldef{adapted to the filtration} $(\mathcal{F}_t)_{t \in I}$).
+2. $\mathbb{E}[|X_t|] < \infty$.
+
+The family $\{X_t\}_{t \in I}$ is called:
+
+\begin{enumerate}
+    \item A \hldef{martingale with respect to $(\mathcal{F}_t)_{t \in I}$} if for all $s \leq t$ in $I$,
+    $$\mathbb{E}[X_t \mid \mathcal{F}_s] = X_s \quad \text{a.s.}$$
+
+    \item A \hldef{submartingale with respect to $(\mathcal{F}_t)_{t \in I}$} if for all $s \leq t$ in $I$,
+    $$\mathbb{E}[X_t \mid \mathcal{F}_s] \geq X_s \quad \text{a.s.}$$
+
+    \item A \hldef{supermartingale with respect to $(\mathcal{F}_t)_{t \in I}$} if for all $s \leq t$ in $I$,
+    $$\mathbb{E}[X_t \mid \mathcal{F}_s] \leq X_s \quad \text{a.s.}$$
+\end{enumerate}
+
+Here $\mathbb{E}[\cdot \mid \mathcal{F}_s]$ denotes the \CrefAndHyperrefIfExist{definition:conditional_expectation}{conditional expectation}.
+\end{definition}

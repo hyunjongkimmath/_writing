@@ -1,0 +1,32 @@
+% \begin{definition} \label{definition:monoid_object_in_an_infty_category}
+%     \TODO{AI generated, verify}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting a \CrefAndHyperrefIfExist{definition:terminal_object_in_an_infty_category}{terminal object} $*$ and \CrefAndHyperrefIfExist{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}{finite pullbacks}.
+
+%     A \hldef{monoid object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:category_object_in_an_infty_category}{category object} $X : \Delta^{\mathrm{op}} \to \mathcal{C}$ such that the \hldef{object of objects} $X_0$ is equivalent to the terminal object $*$. By the \CrefAndHyperrefIfExist{definition:category_object_in_an_infty_category}{Segal equivalences}, we have $X_n \simeq X_1^n$ for all $n \ge 1$, so a monoid object is determined up to equivalence by the object $A := X_1$ together with the simplicial structure encoding multiplication and unit.
+
+%     Writing $A = X_1$, the simplicial structure induces
+%     \begin{itemize}
+%         \item a \hldef{multiplication morphism} $\mu : A \times A \to A$, induced by the unique map $[1] \to [2]$ in $\Delta$;
+%         \item a \hldef{unit morphism} $\eta : * \to A$, given by the degeneracy $s_0 : X_0 \to X_1$;
+%     \end{itemize}
+%     together with coherent homotopies expressing associativity of $\mu$, the unit axioms for $\eta$, and all higher coherence data.
+
+%     Equivalently, a monoid object in $\mathcal{C}$ is an algebra over the associative $\infty$-operad $\mathrm{Ass}^\vee$ in $\mathcal{C}$. A \hldef{commutative monoid object in $\mathcal{C}$} is an algebra over the commutative $\infty$-operad $\mathrm{Comm}^\vee$; see also \CrefAndHyperrefIfExist{definition:commutative_monoid_in_an_infinity_category}{the definition via $\mathbf{Fin}_{\mathrm{part}}$}.
+% \end{definition}
+
+
+\begin{definition} \label{definition:monoid_object_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category} admitting \CrefAndHyperrefIfExist{definition:product_of_finitely_many_objects_in_a_category}{finite products} and a \CrefAndHyperrefIfExist{definition:terminal_object_in_an_infty_category}{terminal object} $*$.
+
+    Let $(A, \mu)$ be a \CrefAndHyperrefIfExist{definition:semigroup_object_in_an_infty_category}{semigroup object} in $\mathcal{C}$. A \hldef{unital structure} on $(A, \mu)$ consists of a morphism $\eta : * \to A$ from the terminal object, together with a choice of homotopies rendering the diagrams
+    $$A \simeq * \times A \xrightarrow{\eta \times \mathrm{id}_A} A \times A \xrightarrow{\mu} A$$
+    $$A \simeq A \times * \xrightarrow{\mathrm{id}_A \times \eta} A \times A \xrightarrow{\mu} A$$
+    equivalent to the identity $\mathrm{id}_A$, compatible with the infinite hierarchy of higher associativity coherences of the underlying semigroup.
+
+    Formally, a \hldef{monoid object in $\mathcal{C}$} is a semigroup object $X : \mathrm{N}(\Delta_{\mathrm{semi}}^{\mathrm{op}}) \to \mathcal{C}$ that extends to a functor $\tilde{X} : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C}$ out of the full simplex category, satisfying the Segal conditions. 
+
+    Equivalently, under the operadic description, the forgetful functor from the associative $\infty$-operad to the non-unital associative $\infty$-operad induces a conservative, fully faithful functor on the subcategory of unit-admitting algebras:
+    $$\mathrm{Alg}_{\mathcal{A}ss}(\mathcal{C}) \to \mathrm{Alg}_{\mathcal{A}ss^{\mathrm{nu}}}(\mathcal{C})$$
+    A monoid object is precisely a semigroup object that lies in the essential image of this forgetful functor.
+\end{definition}

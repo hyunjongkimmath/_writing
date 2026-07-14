@@ -1,0 +1,8 @@
+\begin{lemma}[Sieve containing the identity is maximal] \label{lemma:sieve_containing_identity_morphism_is_maximal_sieve_on_the_object}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}, let $U$ be an object of $\mathcal{C}$, and let $R$ be a \CrefAndHyperref{definition:sieve_on_an_object_in_a_category}{sieve on $U$}.
+    If the identity morphism $\operatorname{id}_U$ belongs to $R$, then $R$ is the \CrefAndHyperref{definition:maximal_sieve_on_an_object_in_a_category}{maximal sieve} on $U$.
+\end{lemma}
+
+\begin{proof}
+    Let $f: V \to U$ be any morphism in $\mathcal{C}$ with codomain $U$. Since $R$ is a sieve, it is closed under precomposition. As $\operatorname{id}_U \in R$ and $f = f \circ \operatorname{id}_U$, we have $f \in R(V)$. Thus, $R$ contains every morphism with codomain $U$, so $R$ is the maximal sieve on $U$.
+\end{proof}

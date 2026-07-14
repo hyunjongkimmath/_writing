@@ -1,0 +1,25 @@
+\begin{lemma}[Regrouping preserves absolute convergence in a Banach space over a valued ring] \label{lemma:regrouping_preserves_absolute_convergence}
+    \TODO{AI generated, verify. Generalized from $\bbR$/$\bbC$ to any Banach space over a valued ring.}
+    Let $T$ be a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} such that $T^\infty$\CrefIfExists{definition:ordered_semiring_with_adjoined_infinity} has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}. Let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space over $R$ valued in $T$}, with norm $\|\cdot\| : V \to T$. Let $(a_n)_{n=1}^\infty$ be a sequence in $V$ that \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} to $A$.
+
+    Let $(N_k)_{k=0}^\infty$ be a strictly increasing sequence of nonnegative integers with $N_0 = 0$, and define block sums $B_k = \sum_{n=N_{k-1}+1}^{N_k} a_n$ for each $k \geq 1$. Then the series $\sum_{k=1}^\infty B_k$ converges absolutely to $A$.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S_M = \sum_{n=1}^M a_n$ denote the partial sums of $(a_n)$ and let $R_K = \sum_{k=1}^K B_k$ denote the partial sums of $(B_k)$. We first observe that for each $K \geq 1$:
+    $$R_K = \sum_{k=1}^K \sum_{n=N_{k-1}+1}^{N_k} a_n = \sum_{n=1}^{N_K} a_n = S_{N_K},$$
+    because the blocks partition $\{1, 2, \dots, N_K\}$ into consecutive intervals.
+
+    We first show that $R_K \to A$ as $K \to \infty$. Since $S_M \to A$ in the metric induced by the norm, for every $\varepsilon > 0_T$ in $T$ there exists $M_0$ such that $\|S_M - A\| < \varepsilon$ for all $M \geq M_0$. Because $(N_K)$ is strictly increasing with $N_0 = 0$, we have $N_K \to \infty$ as $K \to \infty$. Therefore there exists $K_0$ such that $N_K \geq M_0$ for all $K \geq K_0$. For such $K$:
+    $$\|R_K - A\| = \|S_{N_K} - A\| < \varepsilon.$$
+    This shows $\sum_{k=1}^\infty B_k = A$.
+
+    Next we show absolute convergence. By the triangle inequality\CrefIfExists{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}:
+    $$\|B_k\| = \left\|\sum_{n=N_{k-1}+1}^{N_k} a_n\right\| \leq \sum_{n=N_{k-1}+1}^{N_k} \|a_n\|.$$
+
+    Let $R_K^* = \sum_{k=1}^K \|B_k\|$ and $S_M^* = \sum_{n=1}^M \|a_n\|$ be the partial sums of the norms, taking values in $T^\infty$. From the inequality above:
+    $$R_K^* = \sum_{k=1}^K \|B_k\| \leq \sum_{k=1}^K \sum_{n=N_{k-1}+1}^{N_k} \|a_n\| = \sum_{n=1}^{N_K} \|a_n\| = S_{N_K}^*.$$
+
+    Since $\sum_{n=1}^\infty a_n$ converges absolutely, the sequence $(S_M^*)$ converges in $T^\infty$, so it is bounded above by its supremum $S := \sup_M S_M^*$. Therefore $R_K^* \leq S_{N_K}^* \leq S$ for all $K$. The sequence $(R_K^*)$ is nondecreasing because $\|B_k\| \geq 0_T$ and addition in $T^\infty$ preserves order. Hence $(R_K^*)$ is a nondecreasing sequence in $T^\infty$ bounded above. Since $T^\infty$ has the least upper bound property, the \CrefAndHyperrefIfExist{theorem:monotone_convergence_theorem_for_sequences_of_real_numbers}{monotone convergence theorem} implies that $(R_K^*)$ converges to its supremum in $T^\infty$. Thus $\sum_{k=1}^\infty B_k$ converges absolutely.
+\end{proof}

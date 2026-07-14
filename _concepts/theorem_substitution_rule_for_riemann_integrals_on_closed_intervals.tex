@@ -1,0 +1,33 @@
+\begin{theorem}[Substitution rule for Riemann integrals] \label{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals}
+    Let $[\alpha, \beta]$ and $[a, b]$ be closed bounded intervals in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} with $\alpha < \beta$ and $a < b$. Let $\varphi : [\alpha, \beta] \to [a, b]$ and $f : [a, b] \to \mathbb{R}$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions}.
+
+    Suppose that:
+    \begin{enumerate}
+        \item $\varphi$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at each point of $(\alpha, \beta)$;
+        \item The derivative $\varphi'$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[\alpha, \beta]$};
+        \item $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+    \end{enumerate}
+    Then the composition $f \circ \varphi$ is Riemann integrable on $[\alpha, \beta]$ and
+    $$\int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\,dx = \int_\alpha^\beta f(\varphi(t))\,\varphi'(t)\,dt.$$
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $F$ be an antiderivative of $f$ on $[a, b]$, meaning that $F : [a, b] \to \mathbb{R}$ is differentiable at each point of $(a, b)$ with $F'(x) = f(x)$ for all $x \in (a, b)$. The existence of such an antiderivative follows from the Fundamental Theorem of Calculus, Part I (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_one_antiderivative_from_integral}): since $f$ is Riemann integrable and continuous almost everywhere, we may define
+    $$F(y) = \int_a^y f(x)\,dx$$
+    for each $y \in [a, b]$. By Part I of the Fundamental Theorem of Calculus, $F'(y) = f(y)$ at every point where $f$ is continuous.
+
+    Consider the composition $G(t) = F(\varphi(t))$ for $t \in [\alpha, \beta]$. Since $\varphi : [\alpha, \beta] \to [a, b]$ and $F : [a, b] \to \mathbb{R}$, the domain of $G$ is $[\alpha, \beta]$. Both $F$ and $\varphi$ are differentiable on their respective domains. By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}), the composition $G$ is differentiable at each point of $(\alpha, \beta)$ with
+    $$G'(t) = F'(\varphi(t)) \cdot \varphi'(t) = f(\varphi(t)) \cdot \varphi'(t).$$
+
+    We now apply the Fundamental Theorem of Calculus, Part II (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}) to $G$ on $[\alpha, \beta]$. Since $G' = (f \circ \varphi) \cdot \varphi'$ is Riemann integrable (as the product of an integrable function and a bounded continuous function), we have:
+    $$\int_\alpha^\beta G'(t)\,dt = G(\beta) - G(\alpha).$$
+
+    Substituting $G(t) = F(\varphi(t))$ and $G'(t) = f(\varphi(t))\varphi'(t)$:
+    $$\int_\alpha^\beta f(\varphi(t))\,\varphi'(t)\,dt = F(\varphi(\beta)) - F(\varphi(\alpha)).$$
+
+    On the other hand, by FTC Part II applied to $F$ on the interval between $\varphi(\alpha)$ and $\varphi(\beta)$:
+    $$F(\varphi(\beta)) - F(\varphi(\alpha)) = \int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\,dx.$$
+
+    Combining these two equalities yields the substitution rule:
+    $$\int_{\varphi(\alpha)}^{\varphi(\beta)} f(x)\,dx = \int_\alpha^\beta f(\varphi(t))\,\varphi'(t)\,dt.$$
+\end{proof}

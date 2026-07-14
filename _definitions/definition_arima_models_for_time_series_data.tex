@@ -1,0 +1,15 @@
+\begin{definition}[ARIMA models for time series data] \label{definition:arima_models_for_time_series_data}
+\TODO{AI generated, verify}
+Let $\{X_t\}_{t \in \mathbb{Z}}$ be a discrete-time stochastic process.
+
+An \hldef{autoregressive process of order $p$}, denoted \hl{$\operatorname{AR}(p)$}, satisfies
+$$X_t = c + \sum_{i=1}^p \phi_i X_{t-i} + \varepsilon_t,$$
+where $\{\varepsilon_t\}$ is white noise with mean zero and variance $\sigma_\varepsilon^2$. The process is stationary when the roots of $1 - \sum_{i=1}^p \phi_i z^i = 0$ lie outside the unit circle.
+
+A \hldef{moving average process of order $q$}, denoted \hl{$\operatorname{MA}(q)$}, satisfies
+$$X_t = \mu + \varepsilon_t + \sum_{i=1}^q \theta_i \varepsilon_{t-i}.$$
+
+An \hldef{ARIMA$(p, d, q)$ process} is a process whose $d$-th differences $\nabla^d X_t = (1 - L)^d X_t$ follow an ARMA$(p, q)$ model, where $L$ is the lag operator ($L X_t = X_{t-1}$). An ARIMA$(p, 1, q)$ model is commonly used for non-stationary financial time series such as log prices.
+
+Two assets $X_t$ and $Y_t$ are \hldef{cointegrated} if each is integrated of order 1 (i.e., $\operatorname{ARIMA}(\cdot, 1, \cdot)$) but a linear combination $\beta X_t - Y_t$ is stationary ($\operatorname{ARIMA}(\cdot, 0, \cdot)$).
+\end{definition}

@@ -1,0 +1,19 @@
+\begin{lemma} \label{lemma:cancellation_law_for_group_operations}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group}. For any $a,b,c \in G$, 
+    \begin{enumerate}
+        \item $ab = ac$ if and only if $b = c$.
+        \item $ba = bc$ if and only if $b = e$.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item The ``if'' direction is trivial. To prove the ``only if'' direction, suppose thta $a,b,c \in G$ satisfy $ab = ac$. Applying $a^{-1}$ to both sides, we have 
+        $$a^{-1} \cdot (ab) = a^{-1} \cdot (ac).$$
+        By the associativity of $\cdot$, this equality becomes
+        $$(a^{-1} a) b = (a^{-1} \cdot a)c,$$
+        which in turn becomes
+        $$e b = ec.$$
+        Since $e$ is the identity element, we have $b = c$ as desired.
+        \item One obtains this through a symmetric argument. 
+    \end{enumerate}
+\end{proof}

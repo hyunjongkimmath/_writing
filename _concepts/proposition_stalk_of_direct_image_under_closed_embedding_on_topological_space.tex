@@ -1,0 +1,18 @@
+\begin{proposition}[Stalk of direct image under closed embedding on topological space] \label{proposition:stalk_of_direct_image_under_closed_embedding_on_topological_space}
+\TODO{AI generated, verify}
+    Let $i : Z \hookrightarrow X$ be a \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{closed embedding} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, and let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object}{sheaf on $Z$ valued in an abelian category}.
+
+    \begin{enumerate}
+        \item For any point $z \in Z$, the stalk of the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_topological_space}{direct image} satisfies
+        $$(i_*\mathcal{F})_z = \mathcal{F}_z$$
+
+        \item For any point $x \in X \setminus Z$, the stalk vanishes:
+        $$(i_*\mathcal{F})_x = 0$$
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+    For $z \in Z$, the sets $V \cap Z$ for open neighborhoods $V$ of $z$ in $X$ form a basis of neighborhoods of $z$ in $Z$. Hence the directed systems are cofinal.
+
+    For $x \notin Z$, there exists an open neighborhood $V_0 = X \setminus Z$ of $x$ disjoint from $Z$. For any smaller neighborhood $V \subseteq V_0$, we have $i^{-1}(V) = \emptyset$, so $\mathcal{F}(i^{-1}(V))$ is the terminal object. The colimit over such neighborhoods therefore vanishes.
+\end{proof}

@@ -1,0 +1,16 @@
+\begin{theorem}[Feynman--Kac formula for parabolic PDEs and Itô processes] \label{theorem:feynman_kac_formula_for_parabolic_pdes_and_ito_processes}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{0 \leq t \leq T}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$. Let $X = \{X_s\}_{s \in [t, T]}$ satisfy the SDE
+$$dX_s = \mu(s, X_s) \, ds + \sigma(s, X_s) \, dB_s, \quad X_t = x.$$
+
+Let $f: [0, T] \times \mathbb{R} \to \mathbb{R}$ and $g: \mathbb{R} \to \mathbb{R}$ be bounded measurable functions. Consider the parabolic PDE
+$$\frac{\partial u}{\partial t} + \mu(t, x) \frac{\partial u}{\partial x} + \frac{1}{2}\sigma^2(t, x) \frac{\partial^2 u}{\partial x^2} - f(t, x)u + g(t, x) = 0$$
+with terminal condition $u(T, x) = 0$.
+
+Then the unique bounded solution is given by
+$$u(t, x) = \mathbb{E}\left[\int_t^T e^{-\int_t^s f(\tau, X_\tau) \, d\tau} g(s, X_s) \, ds \;\bigg|\; X_t = x\right].$$
+
+In the special case $f \equiv 0$ and terminal condition $u(T, x) = \Phi(x)$,
+$$u(t, x) = \mathbb{E}\left[\Phi(X_T) \;\big|\; X_t = x\right]$$
+solves $\tfrac{\partial u}{\partial t} + \mu \tfrac{\partial u}{\partial x} + \tfrac{1}{2}\sigma^2 \tfrac{\partial^2 u}{\partial x^2} = 0$.
+\end{theorem}

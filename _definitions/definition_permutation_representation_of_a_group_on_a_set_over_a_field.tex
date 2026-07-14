@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:permutation_representation_of_a_group_on_a_set_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group}, $X$ a set equipped with a left action of $G$, i.e., a map $G \times X \to X$, written $(g, x) \mapsto g \cdot x$, satisfying $1_G \cdot x = x$ and $g \cdot (h \cdot x) = (gh) \cdot x$ for all $g, h \in G$, $x \in X$. Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}.
+
+    Let \hl{$k[X]$} denote the vector space over $k$ with basis indexed by $X$. The \hldef{permutation representation of $G$ on $X$ over $k$} is the \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representation}
+    $$\hlin{\rho_X : G \to \mathrm{GL}(k[X])}$$
+    defined by linearly extending the action on basis vectors: $\rho_X(g)(x) = g \cdot x$ for each $x \in X$. The space $k[X]$ is called the \hldef{permutation module of $G$ on $X$ over $k$}.
+
+    If $X$ is finite, then $k[X]$ is finite-dimensional with $\dim k[X] = |X|$.
+\end{definition}

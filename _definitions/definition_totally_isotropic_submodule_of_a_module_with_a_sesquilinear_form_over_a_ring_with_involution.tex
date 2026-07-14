@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:totally_isotropic_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution}
+    Let \CrefAndHyperrefIfExist{definition:ring}{$R$} be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $(M,b)$ be a \CrefAndHyperrefIfExist{definition:module_over_a_ring}{(left/right) module over $R$} with a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $b: M \times M \to R$.
+
+    We say that a submodule $U$ of $M$ is \hldef{totally isotropic (for $(M,b)$)} if $b|_U = 0$. 
+    \begin{enumerate}
+        \item We say that $U$ is \hldef{totally left isotropic (for $(M,b)$)} if $b(u, m) = 0$ for all $u \in U$ and $m \in M$.
+        \item We say that $U$ is \hldef{totally right isotropic (for $(M,b)$)} if $b(m, u) = 0$ for all $u \in U$ and $m \in M$.
+        \item We say that $U$ is \hldef{totally isotropic (for $(M,b)$)} if $b(u, m) = 0$ and $b(m,u) = 0$ for all $u \in U$ and $m \in M$.
+    \end{enumerate}
+    Letting $\varepsilon \in Z(R)$\CrefIfExists{definition:center_of_a_ring} be an element such that $\varepsilon \cdot \overline{\varepsilon} = 1$ and assuming that $b$ is a \textsl{$\varepsilon$-Hermitian form}, to say that $U$ is totally isotropic is $(M,b)$ is equivalent to saying that $U \subseteq U^\perp$\CrefIfExists{definition:orthogonal_complement_of_a_subspace_in_an_inner_product_space}.
+\end{definition}

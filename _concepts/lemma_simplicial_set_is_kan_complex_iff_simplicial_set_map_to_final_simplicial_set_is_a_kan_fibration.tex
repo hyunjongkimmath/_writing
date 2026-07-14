@@ -1,0 +1,6 @@
+\begin{lemma} \label{lemma:simplicial_set_is_kan_complex_iff_simplicial_set_map_to_final_simplicial_set_is_a_kan_fibration}
+    A \CrefAndHyperrefIfExist{definition:simplicial_cosimplicial_object_in_a_category}{simplicial set} $K$ is a \CrefAndHyperrefIfExist{definition:kan_complex}{Kan complex} if and only if the simplicial set map $K \to \Delta^0$\CrefIfExists{definition:standard_n_simplex}\CrefIfExists{lemma:0_simplex_is_terminal_object_in_category_of_simplicial_sets} is a \CrefAndHyperrefIfExist{definition:Kan_fibration_between_simplicial_sets}{Kan fibration}.
+\end{lemma}
+\begin{proof}
+    Since $\Delta^0$ is the final object in the category of simplicial sets, that $K \to \Delta^0$ has the right lifting property with respect to a \CrefAndHyperrefIfExist{definition:horn_of_the_nth_standard_simplex}{horn} inclusion $\Lambda_i^n \hookrightarrow \Delta^n$ for any $n \geq 0$ and $0 \leq i \leq n$ is equivalent simply to any morphism $\Lambda_i^n \to K$ extending to $\Delta^n \to K$, i.e. that $K$ is a Kan complex.
+\end{proof}

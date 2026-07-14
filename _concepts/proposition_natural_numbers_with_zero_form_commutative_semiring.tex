@@ -1,0 +1,46 @@
+\begin{proposition} \label{proposition:natural_numbers_with_zero_form_commutative_semiring}
+    Let $\bbN_0$ be the \CrefAndHyperrefIfExist{definition:natural_numbers_with_zero}{set of natural numbers including zero} equipped with addition, multiplication, and the standard order. Then:
+    \begin{enumerate}
+        \item $(\bbN_0, +, \cdot)$ is a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring};
+        \item $(\bbN_0, +)$ is a \CrefAndHyperrefIfExist{definition:cancellative_monoid}{cancellative monoid};
+        \item $(\bbN_0, +, \cdot, \leq)$ is a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring}.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+    We prove each part in turn, using the established properties of \CrefAndHyperrefIfExist{definition:natural_numbers}{$\bbN$}.
+
+    \begin{enumerate}
+        \item We verify the semiring axioms.
+        \begin{enumerate}
+            \item $(\bbN_0, +)$ is a commutative monoid with identity $0$. Associativity and commutativity on $\bbN$ follow from \Cref{proposition:natural_numbers_addition_associative_commutative}, and the cases involving $0$ are immediate from $0 + n = n + 0 = n$. The element $0$ is the additive identity by definition.
+
+            \item $(\bbN_0, \cdot)$ is a monoid with identity $1$. Associativity and commutativity on $\bbN$ follow from \Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}, and the cases involving $0$ are immediate from $0 \cdot n = n \cdot 0 = 0$. The element $1$ is the multiplicative identity by definition.
+
+            \item Distributivity holds on $\bbN$ by \Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}, and the cases where any of the three arguments is $0$ are immediate from $0 \cdot x = x \cdot 0 = 0$.
+
+            \item The additive identity annihilates $\bbN_0$ under multiplication: this holds by definition, since $0 \cdot n = n \cdot 0 = 0$ for all $n \in \bbN_0$.
+        \end{enumerate}
+        Hence $(\bbN_0, +, \cdot)$ is a commutative semiring.
+
+        \item We show that $(\bbN_0, +)$ is cancellative. Let $n, m, k \in \bbN_0$ satisfy $n + k = m + k$.
+        \begin{enumerate}
+            \item If $k = 0$, then $n = n + 0 = m + 0 = m$.
+            \item Suppose $k \in \bbN$. Consider the three possibilities for $n$ and $m$.
+            \begin{enumerate}
+                \item If $n, m \in \bbN$, then $n + k = m + k$ is an equality in $\bbN$, and \Cref{proposition:natural_numbers_addition_associative_commutative} (cancellativity) gives $n = m$.
+                \item If $n = 0$, then $k = m + k$. If $m \in \bbN$, then by the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$} we have $k < m + k$ because $k + m = m + k$\CrefIfExists{proposition:natural_numbers_addition_associative_commutative}. This contradicts $k = m + k$. Hence $m = 0 = n$.
+                \item If $m = 0$, the symmetric argument gives $n = 0 = m$.
+            \end{enumerate}
+        \end{enumerate}
+        Thus $n = m$ in all cases, so $(\bbN_0, +)$ is cancellative.
+
+        \item We verify the axioms of a totally ordered semiring.
+        \begin{enumerate}
+            \item The relation $\leq$ is a total order. Reflexivity, transitivity, antisymmetry, and totality follow from \Cref{proposition:natural_numbers_order_compatibility} for elements of $\bbN$, and the cases involving $0$ are immediate from the definition that $0 \leq n$ for all $n \in \bbN_0$.
+            \item Compatibility with addition: if $a \leq b$, then $a + c \leq b + c$ for all $a, b, c \in \bbN_0$. If $a, b, c \in \bbN$, this follows from \Cref{proposition:natural_numbers_order_compatibility}. The remaining cases are straightforward from the definition of $\leq$ on $\bbN_0$.
+            \item Compatibility with multiplication: if $a, b \in \bbN_0$ satisfy $a \geq 0$ and $b \geq 0$ (which is true of all elements of $\bbN_0$), then $a b \geq 0$ because the product of any two elements of $\bbN_0$ lies in $\bbN_0$.
+        \end{enumerate}
+    \end{enumerate}
+\end{proof}

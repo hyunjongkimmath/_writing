@@ -1,0 +1,19 @@
+\begin{definition} \label{definition:universal_trace_map_on_an_algebra_over_a_ring}
+% Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $M$ be an (left or right) \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}. 
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}. Let $A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}.
+\begin{enumerate}
+    \item The \hldef{(universal) trace map on $A$} is the canonical projection map 
+        $$\hlin{\Tr_A: A \to A / [A, A].}$$
+        It is universal amongst the trace maps on $A$ in the sense of \Cref{definition:trace_map_on_an_algebra_over_a_ring}, i.e. any trace map 
+        $$\tau: A \to T,$$
+        uniquely factors through an $R$-module homomorphism $A / [A, A] \to T$: 
+        \begin{center}
+            \begin{tikzcd}
+                A \arrow[r, "\Tr_M"] \arrow[rd, "\tau"'] & A / [A, A] \arrow[d, dotted, "\exists ! \bar{\tau}"] \\
+                & T
+            \end{tikzcd}
+        \end{center}
+
+    \item Given an $R$-module $M$, the universal trace map on $\End_R(M)$ may be denoted by \hl{$\Tr_M$}.
+\end{enumerate}
+\end{definition}

@@ -1,0 +1,27 @@
+\begin{theorem} \label{theorem:finitely_generated_projective_algebra_over_a_ring_is_left_frobenius_if_and_only_if_right_frobenius}
+    \TODO{verify; AI generated}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $\varphi: R \to A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra} that is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} and \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}.
+
+    Then $\varphi$ is a \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{left Frobenius ring homomorphism} if and only if it is a right Frobenius ring homomorphism.
+\end{theorem}
+\begin{proof}
+    Suppose that $\varphi$ is a left Frobenius ring homomorphism. By \Cref{lemma:ring_homomorphism_is_left_right_frobenius_ring_homomorphism_iff_there_exists_a_homomorphism_from_the_target_to_the_source_ring_as_modules_such_that_biadditive_map_is_non_singular}, there exists a left $R$-linear map $\lambda: A \to R$ such that the map
+    $$\Phi_L: A \to \Hom_{{}_R\Mod}(A,R), \quad y \mapsto (x \mapsto \lambda(xy))$$
+    is an isomorphism of left $A$-modules, where the left $A$-action on $\Hom_{{}_R\Mod}(A,R)$ is given by $(a \cdot f)(x) = f(xa)$.
+
+    Since $\varphi(R) \subseteq Z(A)$, for any $x \in A$ and $r \in R$, we have
+    $$\lambda(xr) = \lambda(\varphi(r)x) = r\lambda(x) = \lambda(x)r,$$
+    so $\lambda$ is also right $R$-linear. Define a bi-additive form $B: A \times A \to R$ by $B(x,y) = \lambda(xy)$. Both variables are $R$-linear (left and right), since for all $r \in R$:
+    $$B(rx,y) = \lambda((rx)y) = r\lambda(xy) = rB(x,y),$$
+    $$B(x,ry) = \lambda(x(ry)) = \lambda(\varphi(r)xy) = r\lambda(xy) = rB(x,y).$$
+
+    Define $\Phi_R: A \to \Hom_{\Mod_R}(A,R)$ by $\Phi_R(y)(x) = B(y,x) = \lambda(yx)$. For $r \in R$:
+    $$\Phi_R(y)(xr) = \lambda(yxr) = \lambda(\varphi(r)y x) = r\lambda(yx) = \Phi_R(y)(x)r,$$
+    so $\Phi_R(y)$ is right $R$-linear. With the right $A$-action on $\Hom_{\Mod_R}(A,R)$ given by $(f \cdot a)(x) = f(ax)$, we have
+    $$\Phi_R(ya)(x) = \lambda(yax) = \Phi_R(y)(ax) = (\Phi_R(y) \cdot a)(x),$$
+    so $\Phi_R$ is right $A$-linear.
+
+    Since $A$ is finitely generated projective over $R$, the evaluation map $A \to A^{**} = \Hom_{{}_R\Mod}(\Hom_{\Mod_R}(A,R), R)$ is an isomorphism, and non-degeneracy of $B$ on the left (given by $\Phi_L$ being an isomorphism) implies non-degeneracy on the right. Hence $\Phi_R$ is bijective. Thus $\varphi$ is a right Frobenius ring homomorphism.
+
+    The converse direction is symmetric.
+\end{proof}

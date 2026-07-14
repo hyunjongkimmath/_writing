@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:equivalence_of_functor_categories_under_equivalent_source_categories}
+    \TODO{AI generated, verify}
+Let $\mathcal{A}_1$ and $\mathcal{A}_2$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories} and let $\mathcal{B}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. If $\mathcal{A}_1$ and $\mathcal{A}_2$ are \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} as categories, then the \CrefAndHyperrefIfExist{definition:diagram_in_a_category_indexed_by_a_category}{functor categories} $[\mathcal{A}_1, \mathcal{B}]$ and $[\mathcal{A}_2, \mathcal{B}]$ are equivalent.
+
+More precisely, let $F: \mathcal{A}_1 \to \mathcal{A}_2$ and $G: \mathcal{A}_2 \to \mathcal{A}_1$ be \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors} together with \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphisms}
+$$\eta: \mathrm{Id}_{\mathcal{A}_1} \xrightarrow{\sim} G \circ F \quad \text{and} \quad \epsilon: F \circ G \xrightarrow{\sim} \mathrm{Id}_{\mathcal{A}_2}$$
+witnessing an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}. Then \CrefAndHyperrefIfExist{definition:functor_between_categories}{precomposition} with $F$ and $G$ induces an equivalence of categories
+$$F^*: [\mathcal{A}_2, \mathcal{B}] \to [\mathcal{A}_1, \mathcal{B}], \quad F^*(H) = H \circ F$$
+and
+$$G^*: [\mathcal{A}_1, \mathcal{B}] \to [\mathcal{A}_2, \mathcal{B}], \quad G^*(K) = K \circ G,$$
+with natural isomorphisms
+$$\eta^*: \mathrm{Id}_{[\mathcal{A}_1, \mathcal{B}]} \xrightarrow{\sim} G^* \circ F^* \quad \text{and} \quad \epsilon^*: F^* \circ G^* \xrightarrow{\sim} \mathrm{Id}_{[\mathcal{A}_2, \mathcal{B}]}$$
+induced by $\eta$ and $\epsilon$ respectively.
+\end{lemma}

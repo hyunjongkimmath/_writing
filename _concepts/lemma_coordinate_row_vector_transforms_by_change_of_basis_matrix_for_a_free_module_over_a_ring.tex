@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:coordinate_row_vector_transforms_by_change_of_basis_matrix_for_a_free_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$.
+
+    Let $\mathcal{E} = (e_1,\ldots,e_n)$ and $\mathcal{F} = (f_1,\ldots,f_n)$ be two ordered bases of $M$, and let $P \in \GL_n(R)$\CrefIfExists{definition:general_linear_group_over_a_ring} be the \CrefAndHyperrefIfExist{definition:change_of_basis_matrix_for_a_free_module_over_a_ring}{change-of-basis matrix from $\mathcal{F}$ to $\mathcal{E}$}. For any $x \in M$, denote by $[x]_\mathcal{E}^{\mathsf{r}}, [x]_\mathcal{F}^{\mathsf{r}} \in R^{1 \times n}$ its \CrefAndHyperrefIfExist{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate row vectors} with respect to $\mathcal{E}$ and $\mathcal{F}$, respectively.
+
+    Then for all $x \in M$,
+    $$\hlin{[x]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{F}^{\mathsf{r}} \, P^{\mathsf{T}}},$$
+    where $P^{\mathsf{T}}$ denotes the \CrefAndHyperrefIfExist{definition:transpose_of_a_matrix_over_a_ring}{transpose} of $P$.
+\end{lemma}
+\begin{proof}
+    By \Cref{lemma:coordinate_vector_transforms_by_change_of_basis_matrix_for_a_free_module_over_a_ring}, the coordinate column vectors satisfy $[x]_\mathcal{E} = P [x]_\mathcal{F}$ for both left and right modules. Transposing both sides gives
+    $$[x]_\mathcal{E}^{\mathsf{T}} = ([x]_\mathcal{F})^{\mathsf{T}} P^{\mathsf{T}}.$$
+    Since $[x]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{T}}$ and $[x]_\mathcal{F}^{\mathsf{r}} = [x]_\mathcal{F}^{\mathsf{T}}$\CrefIfExists{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}, we obtain $[x]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{F}^{\mathsf{r}} P^{\mathsf{T}}$ as claimed.
+\end{proof}

@@ -1,0 +1,27 @@
+\begin{lemma} \label{lemma:left_right_orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_is_a_submodule}
+    Let \CrefAndHyperrefIfExist{definition:ring}{$R$} be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $(M,b)$ be a \CrefAndHyperrefIfExist{definition:module_over_a_ring}{(left/right) module over $R$} with a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form} $b: M \times M \to R$. Let $U \subset M$ be a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule}.
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution}{left orthogonal complement} $U^{\perp_L}$ is a submodule of $M$.
+        \item The \CrefAndHyperrefIfExist{definition:orthogonal_complement_of_a_submodule_of_a_module_with_a_sesquilinear_form_over_a_ring_with_involution}{right orthogonal complement} $U^{\perp_L}$ is a submodule of $M$.
+    \end{enumerate}
+    Consequently, letting $\varepsilon \in Z(R)$\CrefIfExists{definition:center_of_a_ring} be an element such that $\varepsilon \cdot \overline{\varepsilon} = 1$ and assuming that $b$ is a \textsl{$\varepsilon$-Hermitian form}, the orthogonal complement $U^{\perp}$ is a submodule of $M$.
+% Let $\varepsilon \in Z(R)$\CrefIfExists{definition:center_of_a_ring} be an element such that $\varepsilon \cdot \overline{\varepsilon} = 1$. 
+\TODO{Do a thing that says that it suffices to show nonemptiness, closure under addition and scalar multiplication to show that a subset is a submodule}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Clearly, $U^{\perp_L}$ contains $0$. Moreover, for all $x_1,x_2 \in U^{\perp_L}$, we have 
+        $$b(x_1+x_2,u) = 0$$
+        for all $u \in U$, so $U^{\perp_L}$ is closed under addition. Moroever, for all $x \in M$ and $r \in R$, 
+        \begin{itemize}
+            \item Either $M$ is a right $R$-module in which case 
+            $$b(xr, u) = \overline{r} \cdot b(x,u) = 0,$$
+            or
+            \item $M$ is a left $R$-module in which case 
+            $$b(rx, u) = r \cdot b(x,u) = 0.$$
+        \end{itemize}
+        Thus, $U$ is an $R$-submodule of $M$.
+
+        \item This holds similarly.
+    \end{enumerate}
+\end{proof}

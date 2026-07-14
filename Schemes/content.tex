@@ -94,9 +94,11 @@
 \input{../_definitions/definition_absorbing_zero_of_a_monoid.tex}
 
 
-\input{../_definitions/definition_absorbing_zero_positive_cone_in_a_monoid.tex}
+\input{../_definitions/definition_non_identity_degrees_of_a_monoid.tex}
 
 \input{../_definitions/definition_ordered_monoid.tex}
+
+\input{../_definitions/definition_positive_cone_in_an_ordered_monoid.tex}
 
 
 \input{../_definitions/definition_irrelevant_ideal_of_a_graded_ring_by_a_monoid_with_an_absorbing_zero_or_ordered_monoid_with_zero_degre_the_identity.tex}
@@ -124,6 +126,7 @@
 
 \input{../_definitions/definition_irreducible_topological_space.tex}
 \input{../_definitions/definition_integral_scheme.tex}
+\input{../_definitions/definition_function_field_of_an_integral_scheme.tex}
 \input{../_definitions/definition_normal_and_factorial_scheme.tex}
 
 \input{../_definitions/definition_noetherian_ring.tex}
@@ -181,6 +184,7 @@
 \input{../_definitions/definition_injective_surjective_morphisms_of_sheaves_of_sets_on_a_site.tex}
 \input{../_definitions/definition_locally_closed_subset_of_a_topological_space.tex}
 \input{../_definitions/definition_locally_closed_imersion_of_schemes.tex}
+\input{../_definitions/definition_quasi_compact_immersion_of_schemes.tex}
 \input{../_definitions/definition_open_and_closed_subscheme_of_a_scheme.tex}
 
 
@@ -188,6 +192,10 @@
 
 
 \input{../_definitions/definition_universally_closed_morphism_of_schemes.tex}
+\input{../_definitions/definition_universally_injective_morphism_of_schemes.tex}
+\input{../_definitions/definition_universally_open_morphism_of_schemes.tex}
+\input{../_definitions/definition_universally_submersive_morphism_of_schemes.tex}
+\input{../_definitions/definition_universal_homeomorphism_of_schemes.tex}
 \input{../_definitions/definition_proper_morphism_of_schemes.tex}
 
 
@@ -210,12 +218,17 @@
 
 \input{../_definitions/definition_weakly_unramified_morphism_of_schemes.tex}
 \input{../_definitions/definition_unramified_morphism_of_schemes.tex}
+\input{../_definitions/definition_G_unramified_morphism_of_schemes.tex}
+\input{../_definitions/definition_syntomic_morphism_of_schemes.tex}
 
 
 \input{../_definitions/definition_affine_morphism_of_schemes.tex}
+\input{../_definitions/definition_quasi_affine_morphism_of_schemes.tex}
 \input{../_definitions/definition_finite_algebra_over_a_ring.tex}
 \input{../_definitions/definition_finite_morphism_of_schemes.tex}
+\input{../_definitions/definition_finite_locally_free_morphism_of_schemes.tex}
 \input{../_definitions/definition_quasifinite_morphism_of_schemes.tex}
+\input{../_definitions/definition_locally_quasifinite_morphism_of_schemes.tex}
 \input{../_concepts/theorem_morphism_of_schemes_is_finite_if_and_only_if_affine_and_proper_if_and_only_if_quasifinite_and_proper.tex}
 
 
@@ -238,9 +251,79 @@
 
 \input{../_definitions/definition_weakly_etale_morphism_of_schemes.tex}
 
+\subsubsection{Cancellation theorem for a property of morphisms of schemes}
 
+\begin{theorem}[see [{\cite[10.1.19.]{foag}}]] \label{theorem:cancellation_theorem_for_a_property_of_morphisms_of_schemes}
+    \TODO{list of properties that fit in here}
+    Let $P$ be a class of \CrefAndHyperrefIfExist{definition:morphism_of_schemes}{morphisms of schemes} that is preserved by \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change} and composition. Suppose that 
+    \begin{center}
+        \begin{tikzcd}
+            X \ar[rr, "\pi"] \ar[rd, "\tau"] & & Y \ar[dl, "\rho"] \\
+            & Z & 
+        \end{tikzcd}
+    \end{center}
+    is a commuting diagram of \CrefAndHyperrefIfExist{definition:scheme}{schemes}. Suppose that the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_a_morphism_of_schemes}{diagonal morphism} $\delta_\rho: Y \to Y \times_Z Y$ is in $P$ and that $\tau: X \to Z$ is in $P$. Then $\pi: X \to Y$ is in $P$.
 
+    In particular, 
+    \begin{enumerate}
+        \item Suppose that \CrefAndHyperrefIfExist{definition:locally_closed_imersion_of_schemes}{locally closed embeddings} are in $P$. If $\tau$ is in $P$, then $\pi$ is in $P$. 
+        \item Suppose that \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{closed embeddings} are in $P$ (e.g. $P$ could be the class of \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphisms}, morphisms of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type}, \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{closed embeddings}, \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine morphisms}, etc.) If $\tau$ is in $P$ and $\rho$ is \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated}, then $\pi$ is in $P$.
 
+        \item Suppose that \CrefAndHyperrefIfExist{definition:quasi_compact_scheme}{quasi-compact} morphisms are in $P$. If $\tau$ is in $P$ and $\rho$ is \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{quasi-separated}, then $\pi$ is in $P$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proposition}[see e.g. {\cite[10.3.4. Proposition.]{foag}}] \label{proposition:proper_morphisms_of_schemes_cancel_by_sepearated_morphisms_to_proper_morphisms}
+    Let 
+    \begin{center}
+        \begin{tikzcd}
+            X \ar[rr, "\pi"] \ar[rd, "\tau"] & & Y \ar[dl, "\rho"] \\
+            & Z & 
+        \end{tikzcd}
+    \end{center}
+    be a commuting diagram of \CrefAndHyperrefIfExist{definition:scheme}{schemes}. Suppose that $\tau$ is \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} and $\rho$ is \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated}. Then $\pi$ is proper. 
+\end{proposition}
+\begin{proof}
+    \TODO{closed immersions are proper}
+    All \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{closed embeddings} of \CrefAndHyperrefIfExist{definition:scheme}{schemes} are \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper}. Thus, \Cref{theorem:cancellation_theorem_for_a_property_of_morphisms_of_schemes} shows that $\pi$ is proper.
+\end{proof}
+
+\subsubsection{Stability under base change and composition}
+
+\input{../_concepts/proposition_list_of_properties_of_morphisms_of_schemes_over_a_base_preserved_under_base_change_and_fpqc_local_on_the_base.tex}
+
+\input{../_concepts/proposition_closed_immersion_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_open_immersion_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_quasi_compact_immersion_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_quasi_compact_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_universally_closed_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_quasi_separated_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_separated_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_monomorphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_surjective_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_universally_injective_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_affine_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_quasi_affine_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_locally_finite_type_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_finite_type_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_locally_quasifinite_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_quasifinite_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_locally_finite_presentation_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_finite_presentation_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_relative_dimension_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_universally_open_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_flat_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_syntomic_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_smooth_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_unramified_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_G_unramified_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_etale_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_proper_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_finite_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_integral_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_finite_locally_free_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_universally_submersive_morphism_of_schemes_stable_under_base_change_and_composition.tex}
+\input{../_concepts/proposition_universal_homeomorphism_of_schemes_stable_under_base_change_and_composition.tex}
 
 \subsection{Inverse limits of schemes by affine morphisms}
 
@@ -350,10 +433,14 @@
 \input{../_definitions/definition_algebraic_curve_over_a_field.tex}
 \input{../_definitions/definition_nice_curve_over_a_field.tex}
 
+\input{../_definitions/definition_euler_characteristic_of_a_coherent_sheaf_on_a_proper_scheme_over_a_field.tex}
 \input{../_definitions/definition_arithmetic_genus_of_a_proper_scheme_over_a_field.tex}
 \input{../_definitions/definition_geometric_genus_of_a_smooth_projective_variety_over_a_field.tex}
 
 \input{../_concepts/theorem_geometric_and_arithmetic_genera_of_nice_curves_are_equal.tex}
+
+\input{../_concepts/theorem_classical_riemann_roch_for_a_curve_over_a_field.tex}
+\input{../_concepts/theorem_relative_riemann_roch_for_a_family_of_curves.tex}
 
 \section{Descent}
 
@@ -602,7 +689,7 @@ Two Hirzebruch surfaces $\mathbb{F}_n$ and $\mathbb{F}_m$ are isomorphic as abst
 \input{../_definitions/definition_total_order_linear_order_on_a_set.tex}
 \input{../_definitions/definition_basis_for_a_topology.tex}
 
-\input{../_definitions/definition_left_right_identity_element_of_a_binary_operation.tex}
+\input{../_definitions/definition_left_right_identity_element_of_a_binary_operation_on_a_set.tex}
 \input{../_definitions/definition_semigroup_object_in_a_category.tex}
 \input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
 
@@ -621,7 +708,7 @@ Two Hirzebruch surfaces $\mathbb{F}_n$ and $\mathbb{F}_m$ are isomorphic as abst
 
 
 \input{../_definitions/definition_disconnected_and_connected_topological_spaces.tex}
-\input{../_definitions/definition_basis_of_a_vector_space_over_a_field.tex}
+\input{../_definitions/definition_basis_and_dimension_of_a_vector_space_over_a_field.tex}
 \input{../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex}
 \input{../_definitions/definition_algebraically_closed_field.tex}
 \input{../_definitions/definition_algebraic_closure_of_a_field.tex}

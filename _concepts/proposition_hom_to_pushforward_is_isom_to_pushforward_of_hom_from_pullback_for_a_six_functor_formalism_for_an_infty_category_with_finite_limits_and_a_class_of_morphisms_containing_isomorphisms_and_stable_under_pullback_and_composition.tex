@@ -10,3 +10,14 @@
     For all morphisms $f: X \to Y$ in $C$ and object $M \in D(Y)$ and $N \in D(X)$, there are natural isomorphisms
     $$\underline{\Hom}(M, f_* N) \cong f_* \underline{\Hom}(f^*M, N).$$
 \end{proposition}
+\begin{proof}
+    For all objects $K \in D(Y)$, we have the following isomorphisms due to the various natural adjunctions within a six functor formalism and \Cref{lemma:pullbacks_respect_tensor_product_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}:
+    \begin{align*}
+        \Hom_{D(Y)}(K, \underline{\Hom}(M, f_* N)) &\cong \Hom_{D(Y)}(K \otimes M,  f_* N)  \\
+        &\cong \Hom_{D(X)}(f^*(K \otimes M),  N)  \\
+        &\cong \Hom_{D(X)}(f^* K \otimes f^* M,  N)  \\
+        &\cong \Hom_{D(X)}(f^* K , \underline{\Hom}(f^* M, N))  \\
+        &\cong \Hom_{D(Y)}(K , f_* \underline{\Hom}(f^* M, N))  \\
+    \end{align*}
+    By Yoneda's lemma, the desired natural isomorphism holds.
+\end{proof}

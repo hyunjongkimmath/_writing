@@ -1,0 +1,10 @@
+\begin{theorem}[Central limit theorem (Lindeberg--Lévy)] \label{theorem:central_limit_theorem}
+    Let $(\Omega, \mathcal{F}, P)$ be a probability space. Let $X_1, X_2, \dots$ be independent and identically distributed random variables on $(\Omega, \mathcal{F}, P)$ with values in $\mathbb{R}$, such that
+    $$\mathbb{E}[X_1] = \mu \quad \text{and} \quad \mathbb{E}\bigl[(X_1 - \mu)^2\bigr] = \sigma^2 < \infty.$$
+
+    Define the standardized sum $S_n$ by
+    $$S_n = \frac{\sum_{i=1}^n X_i - n\mu}{\sigma\sqrt{n}}.$$
+    Then for every $t \in \mathbb{R}$, the characteristic function of $S_n$ satisfies
+    $$\lim_{n \to \infty} \mathbb{E}\bigl[e^{it S_n}\bigr] = e^{-t^2/2},$$
+    which is the characteristic function of the standard normal distribution $\mathcal{N}(0, 1)$. Consequently, $S_n$ converges in distribution to $\mathcal{N}(0, 1)$.
+\end{theorem}

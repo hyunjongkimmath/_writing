@@ -1,0 +1,13 @@
+\begin{definition}[Standard Brownian motion on a probability space] \label{definition:standard_brownian_motion_on_a_probability_space}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. A family of real-valued random variables $\{B_t\}_{t \geq 0}$ on $(\Omega, \mathcal{F}, P)$ is called a \hldef{standard Brownian motion (Wiener process)} if it satisfies:
+
+\begin{enumerate}
+    \item $B_0 = 0$ almost surely;
+    \item (Independent increments) For all $0 \leq t_0 < t_1 < \dots < t_n$, the random variables $B_{t_1} - B_{t_0}, B_{t_2} - B_{t_1}, \dots, B_{t_n} - B_{t_{n-1}}$ are independent;
+    \item (Gaussian increments) For all $s < t$, the increment $B_t - B_s$ has a \CrefAndHyperrefIfExist{definition:normal_gaussian_distribution_on_the_real_line}{normal distribution} $\mathcal{N}(0, t - s)$;
+    \item (Continuous paths) Almost surely, the map $t \mapsto B_t(\omega)$ is continuous on $[0, \infty)$.
+\end{enumerate}
+
+For each $t \geq 0$, $\mathbb{E}[B_t] = 0$ and $\operatorname{Var}(B_t) = t$. The process has stationary increments.
+\end{definition}

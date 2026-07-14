@@ -1,0 +1,41 @@
+\begin{theorem}[Riemann rearrangement theorem for conditionally convergent series] \label{theorem:riemann_rearrangement_theorem_for_conditionally_convergent_series}
+    \TODO{AI generated, verify}
+    Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}. Suppose that the series $\sum_{n=1}^\infty a_n$ converges but does not \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely}.
+
+    Then for every $L \in \mathbb{R} \cup \{+\infty, -\infty\}$ there exists a bijection $\sigma : \mathbb{N} \to \mathbb{N}$ such that the rearranged series
+    $$\sum_{n=1}^\infty a_{\sigma(n)} = L.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first handle the case $L = +\infty$. Let $(p_n)_{n=1}^\infty$ be the subsequence of positive terms of $(a_n)$ and let $(q_n)_{n=1}^\infty$ be the subsequence of (absolute values of) negative terms, so that each $q_n > 0$. By \Cref{lemma:positive_and_negative_parts_of_conditionally_convergent_series_diverge}, both $\sum p_n = +\infty$ and $\sum q_n = +\infty$. Moreover, by \Cref{lemma:nth_term_test_for_divergence_of_series} applied to the convergent series $\sum a_n$, we have $a_n \to 0$, so in particular $p_n \to 0$ and $q_n \to 0$.
+
+    To construct a rearrangement diverging to $+\infty$, proceed as follows. Start with an empty list of terms. First, add positive terms $p_1, p_2, \dots$ until the partial sum exceeds $1$. Then add one negative term (i.e., subtract $q_1$). Next, continue adding more positive terms until the partial sum exceeds $2$. Add another negative term ($q_2$). Continue inductively: at stage $k$, after having added $k-1$ negative terms, add enough additional positive terms to make the partial sum exceed $k$, then add one negative term.
+
+    Formally, we construct $\sigma$ by induction on blocks. Let $n_0 = 0$. For each $k \geq 1$:
+    \begin{enumerate}
+        \item Choose the smallest integer $m_k > n_{k-1}$ such that if we take the next unused positive terms and add them to the current partial sum, the result exceeds $k$. This is possible because $\sum p_n = +\infty$ while only finitely many positive terms have been used so far.
+        \item Append these new positive terms to our sequence.
+        \item Append the next unused negative term (i.e., include $-q_k$).
+    \end{enumerate}
+
+    The resulting partial sums exceed $k$ at stage $k$, and since each stage adds only finitely many terms, every index appears exactly once in $\sigma$. Therefore $\sigma$ is a bijection. At the end of stage $k$, the partial sum exceeds $k$, so the rearranged series diverges to $+\infty$.
+
+    The case $L = -\infty$ is symmetric: alternate negative terms (to go below $-k$) with single positive terms, using that $\sum q_n = +\infty$.
+
+    For finite $L \in \mathbb{R}$, we construct a rearrangement converging to $L$. The idea is to oscillate above and below $L$, with the amplitude of oscillation tending to zero because $p_n \to 0$ and $q_n \to 0$.
+
+    We construct $\sigma$ inductively. Start with partial sum $S = 0$. At each odd stage, add positive terms until the partial sum first exceeds or equals $L$. At each even stage, subtract negative terms (i.e., add negative terms) until the partial sum first falls below or equals $L$. Formally:
+
+    Let all unused positive and negative terms form two pools. Initially both pools contain all respective terms. For $k \geq 1$:
+    \begin{enumerate}
+        \item If $k$ is odd, add positive terms from the pool one at a time until the partial sum first satisfies $S \geq L$. Let this require adding $r_k$ new positive terms. This is possible because $\sum p_n = +\infty$ and only finitely many have been used.
+        \item If $k$ is even, add negative terms from the pool one at a time until the partial sum first satisfies $S \leq L$. Let this require adding $s_k$ new negative terms. This is possible because $\sum q_n = +\infty$ and only finitely many have been used.
+    \end{enumerate}
+
+    After stage $k$, let $T_k$ denote the partial sum. We claim that $|T_k - L| \to 0$. At each stage, the last term added is either a positive term or a negative term whose absolute value tends to zero because we exhaust both $(p_n)$ and $(q_n)$ in order, and both converge to zero.
+
+    More precisely: after an odd stage $k$, the partial sum first exceeds $L$. If we remove just the last term added (which is some positive $p_{j}$), the sum was below $L$ before adding it. Therefore $T_k - L \in [0, p_j]$. Similarly, after an even stage, $T_k - L \in [-q_\ell, 0]$ for some $\ell$. Since both $p_n \to 0$ and $q_n \to 0$, the overshoot at each stage tends to zero. Therefore $|T_k - L| \to 0$, meaning the rearranged series converges to $L$.
+
+    Every term appears in the construction because we exhaust both pools: if only finitely many positive terms were used, then $\sum p_n$ would not diverge, contradicting \Cref{lemma:positive_and_negative_parts_of_conditionally_convergent_series_diverge}. Similarly for negative terms. Hence $\sigma$ is a bijection.
+\end{proof}

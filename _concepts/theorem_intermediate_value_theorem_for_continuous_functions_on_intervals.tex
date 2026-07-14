@@ -1,0 +1,22 @@
+\begin{theorem}[Intermediate value theorem for continuous functions on intervals] \label{theorem:intermediate_value_theorem_for_continuous_functions_on_intervals}
+    \TODO{AI generated, verify}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the standard topology induced by the Euclidean metric, making it a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, and equip $[a, b]$ with the subspace topology.
+
+    If $f$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous function}, then for every $y \in \mathbb{R}$ satisfying either $f(a) < y < f(b)$ or $f(b) < y < f(a)$, there exists $c \in (a, b)$ such that $f(c) = y$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Without loss of generality, assume $f(a) < y < f(b)$; the case $f(b) < y < f(a)$ is analogous by applying the argument to $-f$ and target value $-y$. \TODO{make this analogousness more precise}
+    Define the set
+    $$S = \{ x \in [a, b] : f(x) < y \}.$$
+    The set $S$ is nonempty because $a \in S$, and it is bounded above by $b$. Let $c = \sup S \in [a, b]$\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}.
+
+    We show that $f(c) = y$ by ruling out both possibilities $f(c) < y$ and $f(c) > y$. Since $f$ is continuous at $c$, for any $\varepsilon > 0$ there exists $\delta > 0$ such that $|x - c| < \delta$ with $x \in [a, b]$ implies $|f(x) - f(c)| < \varepsilon$.
+
+    Suppose first for contradiction that $f(c) < y$. Take $\varepsilon = y - f(c) > 0$. There exists $\delta > 0$ such that for all $x \in [a, b]$ with $|x - c| < \delta$, we have $|f(x)-f(c)| < \varepsilon$. $f(x) < f(c) + \varepsilon = y$. In particular, choosing any $x \in (c, \min(c + \delta, b)] \subseteq [a, b]$, we get $f(x) < y$, so $x \in S$. But then $x > c$ is an element of $S$, contradicting that $c = \sup S$.
+
+    Suppose now that $f(c) > y$. Take $\varepsilon = f(c) - y > 0$. There exists $\delta > 0$ such that for all $x \in [a, b]$ with $|x - c| < \delta$, we have $f(x) > f(c) - \varepsilon = y$. In particular, choosing any $x \in (\max(a, c - \delta), c] \subseteq [a, b]$, we get $f(x) > y$, so $x \notin S$. But this means no element of $S$ lies in $(c - \delta, c]$, contradicting that $c = \sup S$ (since every neighborhood of the supremum must contain an element of $S$).
+
+    Both cases lead to contradictions, so we must have $f(c) = y$. Moreover, $c \in (a, b)$ because $f(a) < y$ and $f(b) > y$, so neither endpoint can equal $c$.
+\end{proof}

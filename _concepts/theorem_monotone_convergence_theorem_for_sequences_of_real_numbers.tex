@@ -1,0 +1,27 @@
+\begin{theorem}[Monotone convergence theorem in a partially ordered set with the least upper bound property] \label{theorem:monotone_convergence_theorem_for_sequences_of_real_numbers}
+    \TODO{AI generated, verify. Generalized from $\bbR$ to any partially ordered set with the least upper bound property.}
+    Let $(X, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $(a_n)_{n=1}^\infty$ be a sequence in $X$\CrefIfExists{definition:monotone_sequence_of_real_numbers}.
+
+    \begin{enumerate}
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_real_numbers}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then its \hldef{$\sup\{a_n : n \in \mathbb{N}\}$} exists in $X$ and the sequence converges to it, in the sense that
+        $$\hlin{\lim_{n \to \infty} a_n = \sup \{a_n : n \in \mathbb{N}\}.}$$
+        Here we say that a nondecreasing sequence \hldef{converges to $L \in X$} if $L = \sup\{a_n : n \in \mathbb{N}\}$.
+
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_real_numbers}{nonincreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded below}, then its \hldef{$\inf\{a_n : n \in \mathbb{N}\}$} exists in $X$ and the sequence converges to it, in the sense that
+        $$\hlin{\lim_{n \to \infty} a_n = \inf \{a_n : n \in \mathbb{N}\}.}$$
+        Here we say that a nonincreasing sequence \hldef{converges to $L \in X$} if $L = \inf\{a_n : n \in \mathbb{N}\}$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the nondecreasing case first. Let $(a_n)$ be a nondecreasing sequence in $X$ that is bounded above. The set $S = \{a_n : n \in \mathbb{N}\}$ is nonempty and has an upper bound, so by the least upper bound property of $X$ it has a supremum $L := \sup S$ in $X$.
+
+    By the definition of supremum, $a_n \leq L$ for all $n$. Moreover, if $t \in X$ is any upper bound of $S$, then $L \leq t$. Hence $L$ satisfies the conditions that define convergence of a nondecreasing sequence: $\sup\{a_n : n \in \mathbb{N}\} = L$, so $\lim_{n \to \infty} a_n = L$ in the sense of the definition above.
+
+    For the nonincreasing case, we first note that the least upper bound property implies the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{greatest lower bound property}. Indeed, let $T \subseteq X$ be nonempty and bounded below, and let $L = \{x \in X : x \text{ is a lower bound of } T\}$. Then $L$ is nonempty and bounded above (by any element of $T$), so by the least upper bound property, $\sup L$ exists in $X$. One checks that $\sup L$ is the greatest lower bound of $T$: it is a lower bound of $T$ because every element of $T$ is an upper bound of $L$ and $\sup L$ is the least such, so $\sup L \leq t$ for all $t \in T$; and it is the greatest lower bound because any lower bound of $T$ belongs to $L$ and is therefore $\leq \sup L$.
+
+    Now let $(b_n)$ be a nonincreasing sequence in $X$ that is bounded below. The set $T = \{b_n : n \in \mathbb{N}\}$ is nonempty and bounded below, so by the greatest lower bound property its infimum $L := \inf T$ exists in $X$.
+
+    By the definition of infimum, $b_n \geq L$ for all $n$. Moreover, if $y \in X$ is any lower bound of $T$, then $y \leq L$. Hence $L$ satisfies the conditions that define convergence of a nonincreasing sequence: $\inf\{b_n : n \in \mathbb{N}\} = L$, so $\lim_{n \to \infty} b_n = L$ in the sense of the definition above.
+\end{proof}

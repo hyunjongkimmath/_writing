@@ -1,0 +1,13 @@
+\begin{proposition}[Compactly supported direct image under closed immersion and finite morphism for étale sheaves] \label{proposition:compactly_supported_direct_image_under_closed_and_finite_morphisms_etale}
+\TODO{AI generated, verify}
+    Let $i : Z \hookrightarrow X$ be a \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{closed immersion} of schemes, and let $\mathcal{F}$ be a sheaf on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $Z_{\text{ét}}$}. Since closed immersions are proper, the direct image with compact support coincides with the ordinary direct image:
+    $$i_! = i_*$$
+    In particular, $(i_!\mathcal{F})_{\bar{x}} = \mathcal{F}_{\bar{x}}$ if $\bar{x}$ lands in $Z$, and $(i_!\mathcal{F})_{\bar{x}} = 0$ otherwise.
+
+    Similarly, let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism} (hence proper). For any sheaf $\mathcal{F}$ on $X_{\text{ét}}$ and geometric point $\bar{y}$ of $Y$:
+    $$(f_!\mathcal{F})_{\bar{y}} = \prod_{\bar{x} \in f^{-1}(\bar{y})} \mathcal{F}_{\bar{x}}$$
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+    Closed immersions and finite morphisms are proper. For proper morphisms, the forget-support map $f_! \to f_*$ is an isomorphism, as compactness of support is automatic for sections over proper preimages. The stalk formulas then follow from the corresponding propositions for $f_*$.
+\end{proof}

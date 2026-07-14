@@ -1,0 +1,8 @@
+\begin{lemma}  \label{lemma:limits_of_functions_at_accumulation_points_mapping_to_hausdorff_spaces_are_unique_if_they_exist}
+    Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} with $Y$ \CrefAndHyperrefIfExist{definition:separation_axioms_of_topology}{Hausdorff}. Let $S \subseteq X$. Let $f: S \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Assuming that a \CrefAndHyperrefIfExist{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}{limit} of $f$ at $x$ approaches $p$ exists, it is unique.
+\end{lemma}
+\begin{proof}
+    Suppose that $f$ has two limits $L_1$ and $L_2$ at $p$ in $Y$. Suppose for contradiction that $L_1 \neq L_2$. Since $Y$ is Hausdorff, there exist disjoint open neighborhoods $V_1$ of $L_1$ and $V_2$ of $L_2$ respectively. As $L_1$ and $L_2$ are limits of $f$ at $p$, there exist open neighborhoods $U_1$ and $U_2$ of $p$ in $S$ such that
+    $$f(U_1 \setminus \{p\}) \subseteq V_1 \text{ and } f(U_2 \setminus \{p\}) \subseteq V_2.$$
+    Let $U = U_1 \cap U_2$, which is an open neighborhood of $p$ in $S$. Since $p$ is an accumulation point of $S$, there exists some $x \in U \setminus \{p\}$. In particular, we have $f(x) \in f(U_i \setminus \{p\}) \subseteq V_i$ for $i \in \{1,2\}$. Thus, $f(x) \in V_1 \cap V_2$, but this contradicts that $V_1$ and $V_2$ are disjoint. Thus, $L_1 = L_2$.
+\end{proof}

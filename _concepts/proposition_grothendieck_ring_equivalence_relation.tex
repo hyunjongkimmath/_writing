@@ -1,0 +1,22 @@
+\begin{proposition} \label{proposition:grothendieck_ring_equivalence_relation}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring}. The relation $\sim$ on $R \times R$ defined by $(a,b) \sim (c,d) \iff \exists t \in R \text{ such that } a + d + t = b + c + t$ is an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation}.
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+We verify each axiom of an equivalence relation.
+
+\begin{enumerate}
+    \item The relation $\sim$ is reflexive because for any $(a,b) \in R \times R$, we have $a + b + 0_R = b + a + 0_R$ by commutativity of addition in $R$\CrefIfExists{definition:semiring}. Thus $(a,b) \sim (a,b)$.
+
+    \item The relation $\sim$ is symmetric because if $(a,b) \sim (c,d)$, then there exists $t \in R$ such that $a + d + t = b + c + t$. Commutativity of addition then gives $c + b + t = d + a + t$, so $(c,d) \sim (a,b)$.
+
+    \item The relation $\sim$ is transitive because if $(a,b) \sim (c,d)$ and $(c,d) \sim (e,f)$, then there exist $s, t \in R$ such that
+    $$a + d + s = b + c + s \quad\text{and}\quad c + f + t = d + e + t.$$
+    Adding these two equations gives
+    $$a + d + c + f + s + t = b + c + d + e + s + t.$$
+    By associativity and commutativity of addition in $R$, this rearranges to
+    $$(a + f) + (c + d + s + t) = (b + e) + (c + d + s + t).$$
+    Setting $u = c + d + s + t \in R$, we obtain $a + f + u = b + e + u$, so $(a,b) \sim (e,f)$.
+\end{enumerate}
+\end{proof}

@@ -1,0 +1,12 @@
+\begin{theorem}[Martingale convergence theorem for $L^1$-bounded supermartingales] \label{theorem:martingale_convergence_theorem_for_l1_bounded_supermartingales}
+\TODO{AI generated, verify}
+Let $(\Omega, (\mathcal{F}_n)_{n \geq 0}, P)$ be a \CrefAndHyperrefIfExist{definition:filtration_of_sigma_algebras_on_a_probability_space}{filtered probability space}. Let $\{X_n\}_{n \geq 0}$ be a \CrefAndHyperrefIfExist{definition:martingale_submartingale_supermartingale_with_respect_to_a_filtration}{supermartingale} with respect to $(\mathcal{F}_n)_{n \geq 0}$ such that
+$$\sup_{n \geq 0} \mathbb{E}[|X_n|] < \infty.$$
+
+Then there exists an integrable random variable $X_\infty$ such that
+$$X_n \to X_\infty \quad \text{almost surely as } n \to \infty.$$
+
+If $\{X_n\}_{n \geq 0}$ is a \CrefAndHyperrefIfExist{definition:martingale_submartingale_supermartingale_with_respect_to_a_filtration}{martingale}, then $X_\infty$ satisfies $\mathbb{E}[|X_\infty|] < \infty$, and for each $n \geq 0$,
+$$\mathbb{E}[X_\infty \mid \mathcal{F}_n] = X_n \quad \text{a.s.}$$
+when the martingale is uniformly integrable.
+\end{theorem}

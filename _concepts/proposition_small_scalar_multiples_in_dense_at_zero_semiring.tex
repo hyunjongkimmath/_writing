@@ -1,0 +1,18 @@
+\begin{proposition}[Small scalar multiples in a totally ordered semiring dense at zero] \label{proposition:small_scalar_multiples_in_dense_at_zero_semiring}
+    \TODO{AI generated, verify}
+Let $T$ be a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} that is \CrefAndHyperrefIfExist{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}{dense at zero}. For every $\varepsilon \in T_{>0}$ and every $n \in \mathbb{Z}_{\geq 1}$, there exists $\delta \in T_{>0}$ such that
+$$n \cdot \delta < \varepsilon.$$
+% In particular, taking $n = 3$, we can choose $\varepsilon' \in T_{>0}$ with $3\varepsilon' \leq \varepsilon$.
+
+More generally, for any finite collection $\varepsilon_1, \dots, \varepsilon_k \in T_{>0}$ and any $\delta_0 \in T_{>0}$, there exists $\eta \in T_{>0}$ such that $k \cdot \eta < \min(\varepsilon_1, \dots, \varepsilon_k, \delta_0)$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We prove the first statement by induction on $n$. For $n = 1$, density at zero\CrefIfExists{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring} gives $\delta \in T_{>0}$ with $\delta < \varepsilon$.
+
+Suppose the claim holds for some $n \geq 1$: there exists $\delta_n > 0_T$ such that $n\delta_n < \varepsilon$. By density at zero, choose $\gamma > 0_T$ such that $\gamma < \varepsilon - n\delta_n$, which is positive because $n\delta_n < \varepsilon$. Set $\delta_{n+1} = \min(\delta_n, \gamma)$. Then
+$$(n+1)\delta_{n+1} = n\delta_{n+1} + \delta_{n+1} \leq n\delta_n + \gamma < n\delta_n + (\varepsilon - n\delta_n) = \varepsilon.$$
+
+For the general statement, set $\varepsilon_0 = \min(\varepsilon_1, \dots, \varepsilon_k, \delta_0)$. The minimum exists in $T$ because the set $\{\varepsilon_1, \dots, \varepsilon_k, \delta_0\}$ is finite and nonempty. Since $\delta_0 > 0_T$ and all $\varepsilon_i> 0_T$, the minimum is strictly positive: $\varepsilon_0 > 0_T$. Apply the first part with $n = k$ and $\varepsilon_0$ to obtain $\eta > 0_T$ such that $k\eta < \varepsilon_0 \leq \min(\varepsilon_1, \dots, \varepsilon_k, \delta_0)$.
+\end{proof}

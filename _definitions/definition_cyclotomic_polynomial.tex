@@ -1,0 +1,9 @@
+\begin{definition} \label{definition:cyclotomic_polynomial}
+    Given an integer $n \geq 1$, the \hldef{$n$th cyclotomic polynomial} \hl{$\Phi_n(X)$} is the element of $\bbZ[X]$\CrefIfExists{definition:polynomial_ring_over_a_commutative_ring} defined inductively as follows:
+    \begin{enumerate}
+        \item $\Phi_1(X) = X-1$
+        \item 
+        $$\Phi_n(X) = \frac{X^n-1}{\prod_{\substack{d \mid n \\ d < n}} \Phi_d(X)}.$$
+    \end{enumerate}
+
+\end{definition}

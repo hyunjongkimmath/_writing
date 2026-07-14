@@ -1,0 +1,12 @@
+\begin{lemma} \label{lemma:composition_of_sesquilinear_form_over_ring_with_involution_by_function_to_base_ring_with_trace_property_is_compatible_with_scalars}
+    Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $b: M \times M \to A'$ be a \CrefAndHyperrefIfExist{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}{sesquilinear form}. Let $\tau: A' \to A$ be any \CrefAndHyperrefIfExist{definition:function_of_sets}{function} with the \CrefAndHyperrefIfExist{definition:trace_property_for_a_function_on_a_ring}{trace property}.
+    The composition $\omega = \tau \circ b$ is 
+    \TODO{balanced}
+    \CrefAndHyperrefIfExist{definition:r_balanced_map_between_right_and_left_modules}{balanced} with respect to $A'$ in the sense of satisfying
+    $$\omega(ma, n) = \omega(m, n \overline{a})$$
+    for any $m,n \in M$ and $a \in A'$. 
+\end{lemma}
+\begin{proof}
+    By the sesquilinearity of $b$  and  the trace property of $\tau$, we have 
+    $$\omega(ma, n) = \tau(b(ma, n)) = \tau(\overline{a} \cdot b(m,n)) = \tau(b(m,n) \cdot \overline{a}) = \tau(b(m, n \overline{a})) = \omega(m, n \overline{a}).$$
+\end{proof}

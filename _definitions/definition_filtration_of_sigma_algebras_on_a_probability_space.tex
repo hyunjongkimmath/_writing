@@ -1,0 +1,9 @@
+\begin{definition}[Filtration of $\sigma$-algebras on a probability space] \label{definition:filtration_of_sigma_algebras_on_a_probability_space}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $I$ be a linearly ordered index set (typically $I = \mathbb{N}_{\geq 0}$ or $I = [0, \infty)$).
+
+A \hldef{filtration of $\sigma$-algebras on $(\Omega, \mathcal{F}, P)$ indexed by $I$} is a family $(\mathcal{F}_t)_{t \in I}$ of sub-$\sigma$-algebras of $\mathcal{F}$ such that for all $s, t \in I$ with $s \leq t$,
+$$\mathcal{F}_s \subseteq \mathcal{F}_t.$$
+
+The pair $(\Omega, (\mathcal{F}_t)_{t \in I}, P)$ is called a \hldef{filtered probability space}. The $\sigma$-algebra $\mathcal{F}_t$ represents the information available up to time $t$.
+\end{definition}

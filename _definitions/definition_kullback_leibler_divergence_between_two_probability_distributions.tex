@@ -1,0 +1,10 @@
+\begin{definition}[Kullback--Leibler divergence between two probability distributions] \label{definition:kullback_leibler_divergence_between_two_probability_distributions}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X$ and $Y$ be random variables on $\Omega$ taking values in a finite or countable set $\mathcal{X}$, with probability mass functions $p_x = P(X = x)$ and $q_x = P(Y = x)$ for each $x \in \mathcal{X}$.
+
+The \hldef{Kullback--Leibler divergence of $Q$ from $P$} (also called the \hldef{relative entropy of $P$ with respect to $Q$}), denoted \hl{$D_{\mathrm{KL}}(P \| Q)$}, is defined as
+$$\hlin{D_{\mathrm{KL}}(P \| Q) = \sum_{x \in \mathcal{X}} p_x \log \frac{p_x}{q_x}},$$
+with the conventions $0 \log 0 = 0$, $p_x \log(p_x / 0) = +\infty$ for $p_x > 0$, and $D_{\mathrm{KL}}(P \| Q) = +\infty$ if there exists $x$ with $p_x > 0$ and $q_x = 0$.
+
+By Gibbs' inequality, $D_{\mathrm{KL}}(P \| Q) \geq 0$, with equality if and only if $p_x = q_x$ for all $x \in \mathcal{X}$. The KL divergence is not symmetric.
+\end{definition}

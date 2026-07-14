@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:clique_independent_set_of_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}, and let $S \subseteq V(G)$.
+
+The subset $S$ is called a \hldef{clique in $G$} if the \CrefAndHyperrefIfExist{definition:subgraph_induced_subgraph_spanning_subgraph_of_a_graph}{induced subgraph} $G[S]$ is a \CrefAndHyperrefIfExist{definition:complete_graph_empty_graph}{complete graph}. That is, every pair of distinct vertices in $S$ is adjacent.
+
+The subset $S$ is called an \hldef{independent set in $G$}, or a \hldef{stable set in $G$}, if the induced subgraph $G[S]$ is an \CrefAndHyperrefIfExist{definition:complete_graph_empty_graph}{empty graph}. That is, no pair of distinct vertices in $S$ is adjacent.
+
+The \hldef{clique number of $G$}, denoted by \hl{$\omega(G)$}, is the maximum size of a clique in $G$:
+$$\omega(G) = \max\{|S| : S \subseteq V(G), S \text{ is a clique}\}.$$
+
+The \hldef{independence number of $G$}, denoted by \hl{$\alpha(G)$}, is the maximum size of an independent set in $G$:
+$$\alpha(G) = \max\{|S| : S \subseteq V(G), S \text{ is an independent set}\}.$$
+\end{definition}

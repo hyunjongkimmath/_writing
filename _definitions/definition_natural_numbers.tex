@@ -1,0 +1,24 @@
+\begin{definition} \label{definition:natural_numbers}
+Let $\bbN$ be a set. The \hldef{set of natural numbers}, $\bbN$, is equipped with:
+\begin{enumerate}
+    \item a distinguished element \hl{$1 \in \bbN$}, called the \hldef{first natural number}; and
+    \item a function \hl{$s: \bbN \to \bbN$}, called the \hldef{successor function},
+\end{enumerate}
+such that the following axioms, called the \hldef{Peano axioms}, hold:
+\begin{enumerate}[resume]
+    \item $s$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}.
+    \item $1$ is not in the image of $s$.
+    \item (\hldef{Principle of mathematical induction}) If $S \subseteq \bbN$ is a subset such that
+    \begin{enumerate}
+        \item $1 \in S$, and
+        \item for every $n \in S$, we have $s(n) \in S$,
+    \end{enumerate}
+    then $S = \bbN$.
+\end{enumerate}
+
+The successor of $n$ is written \hl{$s(n)$} or \hl{$n+1$}\TextIfExists{proposition:natural_numbers_addition_existence}{ (see also \Cref{proposition:natural_numbers_addition_existence})}.
+\end{definition}
+
+\begin{remark} \label{remark:natural_numbers_zero_inclusive}
+Some texts include $0$ in the natural numbers. In this project, when $0$ is included we explicitly write $\bbN_0 = \bbN \cup \{0\}$.
+\end{remark}

@@ -1,0 +1,30 @@
+\begin{lemma} \label{lemma:matrix_of_an_endomorphism_acts_on_coordinate_column_vectors}
+    \TODO{do a version of this for row vectors}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$ with an ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$. Let $T: M \to M$ be an $R$-linear endomorphism and let $[T]_\mathcal{E}$ be its \CrefAndHyperrefIfExist{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}{matrix with respect to $\mathcal{E}$ (column convention)}. Given $x \in M$, let $[x]_\calE$ be the \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate column vector} of $x$ with respect to $\calE$.
+
+    For any $x \in M$, the coordinate column vectors satisfy
+    $$[T(x)]_\mathcal{E} = [T]_\mathcal{E} \, [x]_\mathcal{E}.$$
+\end{lemma}
+\begin{proof}
+    Write $x = \sum_{j=1}^n e_j a_j$ if $M$ is a right $R$-module, or $x = \sum_{j=1}^n a_j e_j$ if $M$ is a left $R$-module, so that $[x]_\mathcal{E} = (a_1,\ldots,a_n)^\top$.
+
+    \begin{enumerate}
+        \item Suppose $M$ is a right $R$-module. By $R$-linearity,
+        \begin{align*}
+            T(x) &= T\!\left( \sum_{j=1}^n e_j a_j \right)
+                  = \sum_{j=1}^n T(e_j) a_j
+                  = \sum_{j=1}^n \left( \sum_{i=1}^n e_i \, [T]_\mathcal{E}(i,j) \right) a_j \\
+                &= \sum_{i=1}^n e_i \left( \sum_{j=1}^n [T]_\mathcal{E}(i,j) \, a_j \right).
+        \end{align*}
+        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n [T]_\mathcal{E}(i,j) a_j$, which is precisely the $i$-th entry of $[T]_\mathcal{E} [x]_\mathcal{E}$. Hence $[T(x)]_\mathcal{E} = [T]_\mathcal{E} [x]_\mathcal{E}$.
+
+        \item Suppose $M$ is a left $R$-module. By $R$-linearity,
+        \begin{align*}
+            T(x) &= T\!\left( \sum_{j=1}^n a_j e_j \right)
+                  = \sum_{j=1}^n a_j \, T(e_j)
+                  = \sum_{j=1}^n a_j \left( \sum_{i=1}^n [T]_\mathcal{E}(i,j) \, e_i \right) \\
+                &= \sum_{i=1}^n \left( \sum_{j=1}^n a_j \, [T]_\mathcal{E}(i,j) \right) e_i.
+        \end{align*}
+        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n a_j [T]_\mathcal{E}(i,j)$, which is the $i$-th entry of $[T]_\mathcal{E} [x]_\mathcal{E}$ (since $[T]_\mathcal{E}(i,j)$ is the $(i,j)$-entry and $a_j$ is the $j$-th entry of $[x]_\mathcal{E}$). Hence $[T(x)]_\mathcal{E} = [T]_\mathcal{E} [x]_\mathcal{E}$.
+    \end{enumerate}
+\end{proof}

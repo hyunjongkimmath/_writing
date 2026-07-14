@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:subgraph_induced_subgraph_spanning_subgraph_of_a_graph}
+\TODO{AI generated, verify}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:simple_graph_directed_graph_multigraph_weighted_graph}{simple graph}.
+
+A graph $H$ is called a \hldef{subgraph of $G$}, denoted by \hl{$H \subseteq G$}, if $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$, with the incidence in $H$ inherited from $G$. A subgraph $H$ is called a \hldef{spanning subgraph of $G$} if $V(H) = V(G)$.
+
+Let $S \subseteq V(G)$. The \hldef{induced subgraph of $G$ on $S$}, denoted by \hl{$G[S]$}, is the subgraph with vertex set $S$ and edge set
+$$E(G[S]) = \{\{u,v\} \in E(G) : u, v \in S\}.$$
+That is, $G[S]$ contains exactly those edges of $G$ whose endpoints both lie in $S$.
+\end{definition}

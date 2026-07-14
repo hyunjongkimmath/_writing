@@ -1,0 +1,28 @@
+\begin{proposition} \label{proposition:derivatives_of_sine_and_cosine}
+\TODO{AI generated, verify}
+The \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions} are \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $x \in \mathbb{R}$, and
+$$\frac{d}{dx} \sin(x) = \cos(x)$$
+$$\frac{d}{dx} \cos(x) = -\sin(x)$$
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    The sine and cosine functions are defined by the power series (see \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}):
+    $$\sin(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}, \qquad \cos(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!}.$$
+    Both series converge absolutely for every $x \in \mathbb{R}$.
+
+    \TODO{have a statement that shows that absolute convergence implies that derivatives work nicely}
+
+    For $\sin(x)$, let $f_n(x) = (-1)^n \frac{x^{2n+1}}{(2n+1)!}$. Each $f_n$ is differentiable with
+    $$f_n'(x) = (-1)^n \frac{(2n+1)x^{2n}}{(2n+1)!} = (-1)^n \frac{x^{2n}}{(2n)!}.$$
+    The series of derivatives is $\sum_{n=0}^\infty f_n'(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!}$, which is exactly the power series for $\cos(x)$. On any bounded interval $[-R, R]$, we have
+    $$|f_n'(x)| \leq \frac{R^{2n}}{(2n)!}.$$
+    The series $\sum_{n=0}^\infty \frac{R^{2n}}{(2n)!}$ converges (it is bounded by the exponential series), so by the Weierstrass M-test, $\sum f_n'$ converges uniformly on $[-R, R]$. By \CrefAndHyperrefIfExist{theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series}{the termwise differentiation theorem},
+    $$\frac{d}{dx} \sin(x) = \sum_{n=0}^\infty f_n'(x) = \cos(x).$$
+
+    For $\cos(x)$, let $g_n(x) = (-1)^n \frac{x^{2n}}{(2n)!}$. Each $g_n$ is differentiable with
+    $$g_n'(x) = \begin{cases} 0 & \text{if } n = 0, \\ (-1)^n \frac{2n \cdot x^{2n-1}}{(2n)!} = (-1)^n \frac{x^{2n-1}}{(2n-1)!} & \text{if } n \geq 1. \end{cases}$$
+    The series of derivatives is $\sum_{n=1}^\infty g_n'(x)$. Setting $k = n-1$, we get
+    $$\sum_{k=0}^\infty (-1)^{k+1} \frac{x^{2k+1}}{(2k+1)!} = -\sum_{k=0}^\infty (-1)^k \frac{x^{2k+1}}{(2k+1)!} = -\sin(x).$$
+    On any bounded interval $[-R, R]$, we have $|g_n'(x)| \leq \frac{R^{2n-1}}{(2n-1)!}$ for $n \geq 1$. The series $\sum_{k=0}^\infty \frac{R^{2k+1}}{(2k+1)!}$ converges, so again by the Weierstrass M-test and termwise differentiation theorem,
+    $$\frac{d}{dx} \cos(x) = -\sin(x).$$
+\end{proof}

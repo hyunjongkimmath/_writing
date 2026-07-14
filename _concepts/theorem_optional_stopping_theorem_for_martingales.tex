@@ -1,0 +1,15 @@
+\begin{theorem}[Optional stopping theorem for martingales] \label{theorem:optional_stopping_theorem_for_martingales}
+\TODO{AI generated, verify}
+Let $(\Omega, (\mathcal{F}_n)_{n \geq 0}, P)$ be a \CrefAndHyperrefIfExist{definition:filtration_of_sigma_algebras_on_a_probability_space}{filtered probability space}. Let $\{X_n\}_{n \geq 0}$ be a \CrefAndHyperrefIfExist{definition:martingale_submartingale_supermartingale_with_respect_to_a_filtration}{martingale} with respect to $(\mathcal{F}_n)_{n \geq 0}$.
+
+Let $T: \Omega \to \mathbb{N}_{\geq 0} \cup \{\infty\}$ be a stopping time with respect to $(\mathcal{F}_n)_{n \geq 0}$, i.e., $\{T = n\} \in \mathcal{F}_n$ for all $n \geq 0$. If one of the following conditions holds:
+
+\begin{enumerate}
+    \item $T$ is bounded almost surely (i.e., there exists $N < \infty$ such that $T \leq N$ a.s.);
+    \item $\mathbb{E}[T] < \infty$ and $|X_{n+1} - X_n| \leq M$ a.s. for some constant $M > 0$ and all $n$;
+    \item $\mathbb{E}[|X_T|] < \infty$ and $\lim_{N \to \infty} \mathbb{E}[|X_N| \mathbf{1}_{\{T > N\}}] = 0$,
+\end{enumerate}
+
+then the stopped random variable $X_T$ is integrable and
+$$\mathbb{E}[X_T] = \mathbb{E}[X_0].$$
+\end{theorem}

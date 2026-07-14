@@ -1,0 +1,42 @@
+\begin{proposition} \label{proposition:natural_numbers_order_compatibility}
+Let $\bbN$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers} with \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order} $<$. 
+\begin{enumerate}
+    \item $n < s(n)$ for all $n \in \bbN$
+    \item For all $n, m, k \in \bbN$, if $n < m$, then $n + k < m + k$ (equivalently $k + n < k + m$).
+    \item For all $n, m, k \in \bbN$, if $n < m$, then $n \times k < m \times k$ (equivalently $k \times n < k \times m$).
+    \item the order satisfies trichotomy: for any $n, m \in \bbN$, either $n < m$, $m < n$, or $n = m$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item By \Cref{proposition:natural_numbers_addition_existence}, $n + 1 = s(n)$. Since $1 \in \bbN$, the definition of order gives $n < s(n)$.
+
+        \item If $n < m$, then there exists some $a \in \bbN$ such that 
+        $$n + a = m$$
+        and hence 
+        $$(n+a)+k = m+k.$$
+        The \CrefAndHyperref{proposition:natural_numbers_addition_associative_commutative}{associativity and commutativity of addition} imply that the left hand side equals
+        $$n+(a+k) = n+(k+a) = (n+k)+a$$
+        and hence $n+k < m+k$.
+
+        \item 
+        If $n < m$, then there exists some $a \in \bbN$ such that 
+        $$n + a = m$$
+        and hence 
+        $$(n+a) \times k = m \times k.$$
+        The \CrefAndHyperref{proposition:natural_numbers_multiplication_associative_commutative_distributive}{distributivity of multiplication} imply that the left hand side equals
+        $$n \times k + a \times k$$
+        and hence $n \times k < m \times k$.
+
+        \item Since $<$ is irreflexive and asymmetric by \Cref{lemma:standard_order_on_natural_numbers_is_irreflexive} and \Cref{lemma:standard_order_on_natural_numbers_is_asymmetric}, at most one of $n < m$, $m < n$, and $n = m$ can hold for any $n,m \in \bbN$. It thus suffices to show that at least one of these holds.
+
+        Fix $n \in \bbN$. Let $P(m)$ be the statement ``$n = m$, $n < m$, or $m < n$'' for $m \in \bbN$. To show trichotomy is to show that $P(m)$ is true for all $m \in \bbN$. We do so by induction on $m$. In the base case of $m = 1$, either $n = 1$, in which case $n = m$ holds, or $n \neq 1$. We prove the following statement: 
+        \begin{center}
+            If $n \in \bbN$ is not $1$, then $1 < n$
+        \end{center}
+        by induction. For $n = 1$, this is vacuously true. Suppose inductively that $1 < k$ holds for some $k \in \bbN$ (and that $1 \neq k$). We show that $1 < s(k)$. We have that $s(k) = k+1$ by \Cref{proposition:natural_numbers_addition_existence}, and the \CrefAndHyperref{proposition:natural_numbers_addition_associative_commutative}{commutativity of addition} equates this with $1+k$, and therefore $1 < s(k)$. Therefore, $P(1)$ holds. If $n = k$, then $n < k+1$. If $n < k$, then there exists some $a \in \bbN$ such that $n + a = k$, so $n +(a+1) = (n+a)+1 = k+1$ and hence $n < k+1$. If 
+
+        Now suppose inductively that $k \in \bbN$ satisfies $P(k)$, i.e. that either $n = k$, $n < k$, or $k < n$. We show that $P(s(k))$ is true, i.e. that $n = s(k)$, $n < s(k)$, or $s(k) < n$. Recall that $s(k) = k+1$ by \Cref{proposition:natural_numbers_addition_existence}. If $n = k$, then $n+1 = k+1$, so $n < k+1$. If $n < k$, then since $k < k+1$ by what we just showed, we have that $n < k+1$ by the \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{transitivity} of $<$ (\Cref{lemma:standard_order_on_natural_numbers_is_transitive}). If $k < n$, then $k+d = n$ for some $d \in \bbN$. If $d = 1$, then $k+1 = n$, otherwise, $d = s(j)$ for some $j$ by \Cref{lemma:natural_numbers_are_either_1_or_are_successors}. Thus, $k+s(j) = k+(j+1)$. By the \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{associativity and commutativity of addition}, this equals $(k+1)+j$, which in turn equals $s(k)+j$ by \Cref{proposition:natural_numbers_addition_existence}. Thus, we have $s(k) + j = n$, so $s(k) < n$. Therefore, $P(m)$ holds by induction and hence $<$ satisfies trichotomy as desired.
+    \end{enumerate}
+\end{proof}

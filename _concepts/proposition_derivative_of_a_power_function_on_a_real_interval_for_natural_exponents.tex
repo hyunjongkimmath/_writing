@@ -1,0 +1,21 @@
+\begin{proposition}[Derivative of a power function on a real interval for natural exponents] \label{proposition:derivative_of_a_power_function_on_a_real_interval_for_natural_exponents}
+    Let $I \subseteq \mathbb{R}$ be an interval and let $n \in \mathbb{Z}_{\ge 0}$ be a non-negative integer. Consider the \CrefAndHyperrefIfExist{definition:function_of_sets}{power function} $f : I \to \mathbb{R}$ defined by $f(x) = x^n$ for all $x \in I$. Then $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $a \in I$, and
+    $$f'(a) = n a^{n-1},$$
+    with the convention that $a^{-1} = 1/a$ when $n=0$ (so $f'(a) = 0$ for $n=0$, consistent with the derivative of the constant function $1$).
+    Equivalently, $f'(x) = n x^{n-1}$ for all $x \in I$ where the expression is defined.
+\end{proposition}
+\begin{proof}
+    We prove this by induction on $n \in \mathbb{Z}_{\ge 0}$.
+
+    For $n = 0$, the function is $f(x) = x^0 = 1$, which is the constant function $1$. By \Cref{proposition:derivative_of_a_constant_real_valued_function_on_a_real_interval}, $f'(a) = 0 = 0 \cdot a^{-1}$ for all $a \in I$, with the understanding that $0 \cdot a^{-1} = 0$ by convention. The formula holds.
+
+    For $n = 1$, the function is $f(x) = x$, the identity function. By \Cref{proposition:derivative_of_the_identity_function_on_a_real_interval_is_one}, $f'(a) = 1 = 1 \cdot a^0$ for all $a \in I$. The formula holds.
+
+    Assume the statement holds for some $n \ge 1$, i.e., the function $g(x) = x^n$ is differentiable on $I$ with $g'(a) = n a^{n-1}$ for all $a \in I$. Consider the function $f(x) = x^{n+1}$. We can write $f(x) = x \cdot x^n = x \cdot g(x)$. By the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{product rule}, $f$ is differentiable at each $a \in I$ and
+    \begin{align*}
+        f'(a) &= (1) \cdot g(a) + a \cdot g'(a) \\
+        &= x^n \big|_{x=a} + a \cdot (n a^{n-1}) \\
+        &= a^n + n a^n = (n+1) a^n.
+    \end{align*}
+    This is exactly the formula for exponent $n+1$. By induction, the formula holds for all $n \in \mathbb{Z}_{\ge 0}$.
+\end{proof}

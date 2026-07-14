@@ -1,0 +1,59 @@
+\begin{theorem}[Cofinal functors reduce colimits, final functors reduce limits] \label{theorem:cofinal_functors_reduce_colimits_final_functors_reduce_limits}
+\TODO{AI generated, verify}
+Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+\begin{enumerate}
+    \item \label{item:cofinal_functor_colimit_exists_implies_composed_colimit_exists} (Cofinal functors and colimits) Let $u : \mathcal{I} \to \mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:cofinal_and_final_functors}{cofinal functor}. Let $F : \mathcal{J} \to \mathcal{C}$ be a diagram.
+    \begin{enumerate}
+        \item If $\varinjlim_{j \in \mathcal{J}} F(j)$ exists in $\mathcal{C}$, then $\varinjlim_{i \in \mathcal{I}} F(u(i))$ also exists in $\mathcal{C}$ and the canonical morphism
+        \begin{equation} \label{eq:canonical_morphism_composed_colimit_to_original_colimit_cofinal_functor}
+        \varinjlim_{i \in \mathcal{I}} F(u(i)) \to \varinjlim_{j \in \mathcal{J}} F(j)
+        \end{equation}
+        induced by $u$ and the colimit cocone of $F$ is an isomorphism.
+
+        \item Conversely, if $\varinjlim_{i \in \mathcal{I}} F(u(i))$ exists in $\mathcal{C}$, then $\varinjlim_{j \in \mathcal{J}} F(j)$ also exists in $\mathcal{C}$ and the canonical morphism \eqref{eq:canonical_morphism_composed_colimit_to_original_colimit_cofinal_functor} is an isomorphism.
+    \end{enumerate}
+
+    \item \label{item:final_functor_limit_exists_implies_composed_limit_exists} (Final functors and limits) Let $u : \mathcal{I} \to \mathcal{J}$ be a \CrefAndHyperrefIfExist{definition:cofinal_and_final_functors}{final functor}. Let $G : \mathcal{J} \to \mathcal{C}$ be a diagram.
+    \begin{enumerate}
+        \item If $\varprojlim_{j \in \mathcal{J}} G(j)$ exists in $\mathcal{C}$, then $\varprojlim_{i \in \mathcal{I}} G(u(i))$ also exists in $\mathcal{C}$ and the canonical morphism
+        \begin{equation} \label{eq:canonical_morphism_original_limit_to_composed_limit_final_functor}
+        \varprojlim_{j \in \mathcal{J}} G(j) \to \varprojlim_{i \in \mathcal{I}} G(u(i))
+        \end{equation}
+        induced by $u$ and the limit cone of $G$ is an isomorphism.
+
+        \item Conversely, if $\varprojlim_{i \in \mathcal{I}} G(u(i))$ exists in $\mathcal{C}$, then $\varprojlim_{j \in \mathcal{J}} G(j)$ also exists in $\mathcal{C}$ and the canonical morphism \eqref{eq:canonical_morphism_original_limit_to_composed_limit_final_functor} is an isomorphism.
+    \end{enumerate}
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+We prove part (1); part (2) is dual.
+
+\textbf{(1a)} Assume $\varinjlim_{j \in \mathcal{J}} F(j)$ exists. Write $L = \varinjlim_{j \in \mathcal{J}} F(j)$ and let $\lambda_j : F(j) \to L$ be the colimit cocone. We show that $(L, \{\lambda_{u(i)}\}_{i \in \mathcal{I}})$ is a colimit cocone of $F \circ u$.
+
+Clearly, for every morphism $\alpha : i \to i'$ in $\mathcal{I}$, the diagram
+$$F(u(i)) \xrightarrow{F(u(\alpha))} F(u(i')) \xrightarrow{\lambda_{u(i')}} L$$
+equals $F(u(i)) \xrightarrow{\lambda_{u(i)}} L$ because $(L, \{\lambda_j\})$ is a cocone of $F$. Thus $(L, \{\lambda_{u(i)}\})$ is a cocone of $F \circ u$.
+
+Let $(D, \{\mu_i : F(u(i)) \to D\}_{i \in \mathcal{I}})$ be another cocone of $F \circ u$. We must produce a unique morphism $\varphi : L \to D$ such that $\varphi \circ \lambda_{u(i)} = \mu_i$ for all $i \in \mathcal{I}$.
+
+\textit{Existence.} For each object $j \in \mathcal{J}$, consider the comma category $j \downarrow u$. Since $u$ is cofinal, $j \downarrow u$ is non-empty and connected. The objects of $j \downarrow u$ are pairs $(i, \beta : j \to u(i))$ with $i \in \mathcal{I}$ and $\beta$ a morphism in $\mathcal{J}$. For each such object, define
+$$\nu_{(i,\beta)} = \mu_i \circ F(u(\beta))^{\op}$$
+where $F(u(\beta)) : F(j) \to F(u(i))$ and we compose $F(j) \xrightarrow{F(u(\beta))} F(u(i)) \xrightarrow{\mu_i} D$. We claim this assignment is independent of the choice of $(i,\beta) \in \operatorname{Ob}(j \downarrow u)$. Because $j \downarrow u$ is connected, it suffices to show that for every morphism $\gamma : (i,\beta) \to (i',\beta')$ in $j \downarrow u$ (i.e., $\gamma : i \to i'$ in $\mathcal{I}$ with $u(\gamma) \circ \beta = \beta'$), we have $\nu_{(i,\beta)} = \nu_{(i',\beta')}$. Indeed,
+$$\nu_{(i',\beta')} = \mu_{i'} \circ F(u(\gamma)) \circ F(u(\beta)) = \mu_i \circ F(u(\beta)) = \nu_{(i,\beta)},$$
+where we used that $(D, \{\mu_i\})$ is a cocone of $F \circ u$, so $\mu_{i'} \circ F(u(\gamma)) = \mu_i$.
+
+Thus we obtain a well-defined morphism $\mu_j : F(j) \to D$ for each $j \in \mathcal{J}$. These morphisms form a cocone of $F$: if $f : j \to j'$ is a morphism in $\mathcal{J}$, pick any $(i,\beta : j' \to u(i)) \in \operatorname{Ob}(j' \downarrow u)$; then $(i, \beta \circ f : j \to u(i)) \in \operatorname{Ob}(j \downarrow u)$, and
+$$\mu_{j'} \circ F(f) = \mu_i \circ F(u(\beta)) \circ F(f) = \mu_i \circ F(u(\beta \circ f)) = \mu_j.$$
+By the universal property of $L = \varinjlim F$, there exists a unique morphism $\varphi : L \to D$ such that $\varphi \circ \lambda_j = \mu_j$ for all $j \in \mathcal{J}$. In particular, $\varphi \circ \lambda_{u(i)} = \mu_i$ for all $i \in \mathcal{I}$.
+
+\textit{Uniqueness.} Suppose $\psi : L \to D$ is another morphism satisfying $\psi \circ \lambda_{u(i)} = \mu_i$ for all $i \in \mathcal{I}$. For any $j \in \mathcal{J}$, pick $(i,\beta : j \to u(i)) \in \operatorname{Ob}(j \downarrow u)$. Then
+$$\psi \circ \lambda_j = \psi \circ \lambda_{u(i)} \circ F(u(\beta)) = \mu_i \circ F(u(\beta)) = \mu_j = \varphi \circ \lambda_j.$$
+Since the morphisms $\lambda_j$ are jointly epimorphic (as a colimit cocone), $\psi = \varphi$.
+
+We have shown that $(L, \{\lambda_{u(i)}\})$ satisfies the universal property of $\varinjlim_{i \in \mathcal{I}} F(u(i))$. The canonical morphism \eqref{eq:canonical_morphism_composed_colimit_to_original_colimit_cofinal_functor} is the identity on $L$, hence an isomorphism.
+
+\textbf{(1b)} Assume $\varinjlim_{i \in \mathcal{I}} F(u(i))$ exists. Write $L' = \varinjlim_{i \in \mathcal{I}} F(u(i))$ with cocone $\rho_i : F(u(i)) \to L'$. We show that $L'$ satisfies the universal property of $\varinjlim_{j \in \mathcal{J}} F(j)$.
+
+The argument is identical to (1a), replacing the role of the given colimit. For each $j \in \mathcal{J}$, the comma category $j \downarrow u$ is non-empty and connected, so we define $\lambda'_j : F(j) \to L'$ by choosing $(i,\beta : j \to u(i)) \in \operatorname{Ob}(j \downarrow u)$ and setting $\lambda'_j = \rho_i \circ F(u(\beta))$. Connectedness of $j \downarrow u$ ensures this is well-defined, and the same computation as above shows $(L', \{\lambda'_j\})$ is a cocone of $F$. The universal property follows by the same extension-and-uniqueness argument.
+\TODO{AI generated, verify}
+\end{proof}

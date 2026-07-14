@@ -1,0 +1,6 @@
+\begin{lemma} \label{lemma:standard_order_on_natural_numbers_is_asymmetric}
+    The \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order} $<$ on \CrefAndHyperrefIfExist{definition:natural_numbers}{$\bbN$} is asymmetric, i.e. for all $n,m \in \bbN$, if $n < m$, then $m \not< n$. \TODO{asymmetric relation}
+\end{lemma}
+\begin{proof}
+    Suppose for contradiction that there exist $n,m \in \bbN$ such that $n < m$ and $m < n$. By \Cref{lemma:standard_order_on_natural_numbers_is_transitive}, $n < n$. This contradicts that\CrefIfExists{lemma:standard_order_on_natural_numbers_is_irreflexive} $<$ is irreflexive. Hence, no such $n$ and $m$ exist.
+\end{proof}

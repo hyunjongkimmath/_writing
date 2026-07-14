@@ -1,0 +1,19 @@
+\begin{proposition}[Uniform convergence of Dirichlet series on compact subsets of the half-plane of absolute convergence]
+\label{proposition:uniform_convergence_of_dirichlet_series_on_compact_subsets}
+\TODO{AI generated, verify}
+Let $D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}$ be a \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{Dirichlet series} with abscissa of absolute convergence $\sigma_a \in [-\infty, \infty]$.
+For any $\sigma > \sigma_a$, the series converges absolutely and uniformly on every compact subset $K \subseteq \{ s \in \mathbb{C} : \Re(s) \ge \sigma \}$.
+In particular, the sum $D(s)$ is a continuous function on the half-plane $\{ s \in \mathbb{C} : \Re(s) > \sigma_a \}$.
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+Let $\sigma > \sigma_a$ be given, and let $K \subseteq \{ s \in \mathbb{C} : \Re(s) \ge \sigma \}$ be compact.
+Since $K$ is compact, there exists $\sigma_0 \in (\sigma_a, \sigma)$ such that $\Re(s) \ge \sigma_0$ for all $s \in K$.
+For each $n \ge 1$ and $s \in K$, we have
+$$\left| \frac{a_n}{n^s} \right| = \frac{|a_n|}{n^{\Re(s)}} \le \frac{|a_n|}{n^{\sigma_0}} =: M_n.$$
+By definition of $\sigma_a$, the series $\sum_{n=1}^\infty M_n = \sum_{n=1}^\infty \frac{|a_n|}{n^{\sigma_0}}$ converges (since $\sigma_0 > \sigma_a$).
+By the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_function_series}{Weierstrass M-test}, the Dirichlet series $\sum_{n=1}^\infty \frac{a_n}{n^s}$ converges uniformly on $K$.
+
+Since each term $\frac{a_n}{n^s}$ is a continuous function of $s$ on $K$ (by continuity of the exponential and logarithm), the uniform limit $D(s)$ is continuous on $K$.
+As $\sigma > \sigma_a$ was arbitrary, $D(s)$ is continuous on the entire half-plane $\{ s \in \mathbb{C} : \Re(s) > \sigma_a \}$.
+\end{proof}

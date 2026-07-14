@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:quasi_norm_on_a_commutative_ring_valued_in_an_ordered_semiring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} and let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}.
+
+A \hldef{quasi-norm on $R$ valued in $T$} is a function
+$$
+| \cdot | : R \to T
+$$
+that satisfies the following properties for all $a, b \in R$:
+\begin{enumerate}
+    \item Multiplicativity: $|ab| = |a| \cdot |b|$,
+    \item Positive definiteness: $|a| = 0_T$ if and only if $a = 0_R$.
+\end{enumerate}
+A commutative ring equipped with a quasi-norm valued in $T$ may be called a \hldef{quasi-normed ring over $T$}.
+
+In the case that $T$ is not explicit, the quasi-norm $|\cdot|$ is almost always taken to be valued in $\bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}.
+\end{definition}

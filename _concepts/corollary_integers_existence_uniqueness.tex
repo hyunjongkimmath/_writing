@@ -1,0 +1,31 @@
+\begin{corollary} \label{corollary:integers_existence_uniqueness}
+\TODO{AI generated, verify}
+    The ring of integers $\bbZ$ exists and is unique up to isomorphism among ordered rings whose positive cone is well-ordered. Specifically:
+    \begin{enumerate}
+        \item (Existence) The construction in \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{integers from natural numbers} yields an ordered ring satisfying the properties of \CrefAndHyperrefIfExist{definition:ring_of_integers}{ring of integers}. Equivalently, $\bbZ$ is (up to isomorphism) the \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring} of \CrefAndHyperrefIfExist{definition:natural_numbers_with_zero}{$\bbN_0$}\CrefIfExists{proposition:grothendieck_ring_of_natural_numbers_with_zero}.
+        \item (Uniqueness) If $R$ is another ordered ring with well-ordered positive cone, then $R \cong \bbZ$ via the unique injective homomorphism of \CrefAndHyperrefIfExist{theorem:integers_uniqueness}{integers uniqueness theorem}. Moreover, the homomorphism is also surjective, hence an isomorphism.
+    \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+\TODO{AI generated, verify}
+    Existence. This follows from \Cref{proposition:integers_form_ring} and \Cref{proposition:integers_form_totally_ordered_ring}, which establish that the constructed $\bbZ$ is a totally ordered integral domain whose positive cone $\bbZ_{> 0} = \{[(a,b)] : a > b\}$ is well-ordered. The equivalence with the Grothendieck ring follows from \Cref{proposition:grothendieck_ring_of_natural_numbers_with_zero}.
+
+    Uniqueness. Let $R$ be an ordered ring with positive cone $P$, where $P$ is well-ordered. By \Cref{theorem:integers_uniqueness}, there exists a unique injective homomorphism $\phi: \bbZ \to R$ mapping $\bbZ_{> 0}$ into $P$. We show that $\phi$ is surjective.
+
+    We first prove that $1_R$ is the least element of $P$. Since $P$ is well-ordered, it has a least element; denote it by $\mu$. Because $1_R \in P$, we have $\mu \leq 1_R$. We claim $\mu = 1_R$.
+
+    Since $\mu^2 \in P$ (because $P \cdot P \subseteq P$ in an ordered ring\CrefIfExists{definition:ordered_ring}), minimality of $\mu$ gives $\mu \leq \mu^2$, i.e.\ $\mu^2 - \mu \geq 0_R$. If $\mu < 1_R$, then $1_R - \mu \in P$ by trichotomy\CrefIfExists{definition:ordered_ring}. The product
+    $$\mu(1_R - \mu) = \mu - \mu^2$$
+    lies in $P$ because both factors are in $P$. But $\mu \leq \mu^2$ means $\mu - \mu^2 \leq 0_R$, so the only possibility is $\mu - \mu^2 = 0_R$, i.e.\ $\mu(1_R - \mu) = 0_R$.
+
+    We claim that $R$ has no zero divisors. If $ab = 0_R$ with $a, b \neq 0_R$, then by trichotomy in the ordered ring\CrefIfExists{definition:ordered_ring} we may assume without loss of generality that $a, b \in P$ (replacing each element by its negation as needed). But then $ab \in P$ by compatibility of multiplication with the order, contradicting $0_R \notin P$. Hence $\mu(1_R - \mu) = 0_R$ with $\mu \in P$ and $\mu \neq 0_R$ implies $1_R - \mu = 0_R$, i.e.\ $\mu = 1_R$. This contradicts the assumption $\mu < 1_R$. Therefore $\mu = 1_R$.
+
+    We now show that every element of $P$ is of the form $n \cdot 1_R$ for some $n \in \bbN$. Let $x \in P$. Consider the set
+    $$T_x = \{x - n \cdot 1_R : n \in \bbN,\; x - n \cdot 1_R \geq 0_R\}.$$
+    If $T_x \subseteq \{0_R\}$, then $x = n \cdot 1_R$ for some $n$, and we are done. Otherwise, $T_x \cap P$ is a nonempty subset of $P$, so it has a least element by well-ordering; denote this least element by $\rho$. We claim $\rho = 0_R$. If $\rho > 0_R$, then $\rho \in P$ and $\rho < 1_R$: for if $\rho \geq 1_R$, then $x - n \cdot 1_R \geq 1_R$ for some $n$, so $x - (n+1) \cdot 1_R = \rho - 1_R \geq 0_R$, meaning $\rho - 1_R \in T_x$. Since $\rho - 1_R < \rho$ and $\rho - 1_R \geq 0_R$, if $\rho - 1_R > 0_R$ it contradicts the minimality of $\rho$, and if $\rho - 1_R = 0_R$ then $\rho = 1_R$. But we just showed that $1_R$ is the least element of $P$, so no such $\rho \in P$ with $\rho < 1_R$ exists. Hence $\rho = 0_R$, meaning $x = n \cdot 1_R$ for some $n \in \bbN$.
+
+    We finally establish the surjectivity of $\phi$. For any $r \in R$, by trichotomy in the ordered ring $R$\CrefIfExists{definition:ordered_ring}, exactly one of $r > 0_R$, $r = 0_R$, or $r < 0_R$ holds. If $r = 0_R$, then $r = \phi(0_\bbZ)$. If $r > 0_R$, then $r \in P$, so $r = n \cdot 1_R = \phi(n \cdot 1_\bbZ)$ for some $n \in \bbN$. If $r < 0_R$, then $-r \in P$, so $-r = n \cdot 1_R$ for some $n \in \bbN$, meaning $r = -(n \cdot 1_R) = \phi(-n \cdot 1_\bbZ)$. Hence $\phi$ is surjective.
+
+    Since $\phi$ is bijective and a ring homomorphism, it is an isomorphism.
+\end{proof}

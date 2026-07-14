@@ -6,3 +6,53 @@ Let $\calA, \calB$ be \CrefAndHyperrefIfExist{definition:additive_category_pread
     \item If $\calB$ is an abelian category with property \CrefAndHyperrefIfExist{definition:grothendiecks_additional_axioms_for_abelian_categories}{$ABn$ for $n = 3,4,5,6$ or $ABn^*$ for $n = 3,4,5$}, then $\text{Add}(\calA, \calB)$ possesses the same property.
 \end{enumerate}
 \end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Let $F, G$ be objects of $\text{Add}(\calA, \calB)$. We show that $\Hom_{\text{Add}(\calA, \calB)}(F,G)$ is an abelian group. 
+        By definition, $\Hom_{\text{Add}(\calA, \calB)}(F,G)$ consists of the \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural transformations} $F \Rightarrow G$ such that for all objects $X,Y$ of $\calA$. Note that the collection of natural transformations $F \Rightarrow G$ forms a set\CrefIfExists{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}, so $\Hom_{\text{Add}(\calA, \calB)}(F,G)$, which is a subcollection of this collection, is itself a set. Say that $\eta_1,\eta_2: F \Rightarrow G$ are two such natural transformations. Define $\eta_1+\eta_2: F \Rightarrow G$ as follows --- for an object $X$ of $\calA$, let 
+        $$(\eta_1+\eta_2)_X: F(X) \to G(X)$$
+        be the morphism $(\eta_1)_X + (\eta_2)_X$ from $F(X)$ to $G(X)$ in $\calB$. Since $\calB$ is itself a pre-additive category and hence $\Hom_\calB(F(X), G(X))$ is an abelian group, this is well defined. We show that this is indeed a natural transformation $F \to G$, i.e. the diagram 
+        \begin{center}
+        \begin{tikzcd}
+            F(X) \arrow[r, "F(f)"] \arrow[d, "(\eta_1+\eta_2)_X"']
+            & F(Y) \arrow[d, "(\eta_1+\eta_2)_Y"] \\
+            G(X) \arrow[r, "G(f)"']
+            & G(Y)
+        \end{tikzcd}
+        \end{center}
+        commutes. For all morphisms $f: X \to Y$ in $\calA$, we have 
+        $$(\eta_1+\eta_2)_Y \circ F(f) = ((\eta_1)_Y + (\eta_2)_Y ) \circ F(f),$$
+        which is in turn equal to
+        \begin{equation} \label{eq:addition_of_composition_for_showing_that_morphisms_in_additive_functor_category_between_preadditive_categories_is_abelian_group}
+        (\eta_1)_Y \circ F(f) + (\eta_2)_Y \circ F(f)
+        \end{equation}
+        because the composition map
+        $$\Hom_{\calB}(F(Y), G(Y)) \times \Hom_{\calB}(F(X), F(Y)) \to \Hom_{\calB}(F(X), G(Y))$$
+        is \CrefAndHyperrefIfExist{definition:multilinear_map_of_abelian_groups}{bilinear}. \eqref{eq:addition_of_composition_for_showing_that_morphisms_in_additive_functor_category_between_preadditive_categories_is_abelian_group} thus equals
+        $$ G(f) \circ (\eta_1)_X \circ F(f) + G(f) \circ (\eta_2)_X = G(f) \circ ((\eta_1)_X + (\eta_2)_X) = G(f) \circ (\eta_1+\eta_2)_X$$
+        as desired. 
+
+        Moreover, the addition that we defined on $\Hom_{\text{Add}(\calA,\calB)}(F,G)$ is associative and commutative because addition in  $\Hom_\calB(F(X), G(X))$ is. There is also a natural transformation $0: F \Rightarrow G$ given on each object $X$ of $\calA$ by letting $0_X: F(X) \to G(X)$ be the element $0$ in the abelian group $\Hom_{\calB}(F(X),G(X))$. Lastly, for all $\eta \in \Hom_{\text{Add}(\calA,\calB)}(F,G)$
+        
+
+        We show that composition of morphisms in $\text{Add}(\calA, \calB)$ is bilinear, i.e. that the composition maps
+        $$\Hom_{\text{Add}(\calA, \calB)}(G,H) \times \Hom_{\text{Add}(\calA, \calB)}(F,G) \to \Hom_{\text{Add}(\calA, \calB)}(F,H)$$
+        are bilinear for any objects $F,G,H: \calA \to \calB$ of $\text{Add}(\calA, \calB)$. Given $\eta_1,\eta_2 \in \Hom_{\text{Add}(\calA, \calB)}(F,G)$ and $\mu \in \Hom_{\text{Add}(\calA, \calB)}(G,H)$, we have that $(\mu \circ (\eta_1+\eta_2))_X$ is given by assigning $X \in \calA$ to the morphism
+        $$\mu_X \circ (\eta_1+\eta_2)_X: F(X) \to G(X) \to H(X)$$
+        By the construction of the group structure on $\Hom_{\text{Add}(\calA, \calB)}(F,G)$, 
+        $$\mu_X \circ (\eta_1+\eta_2)_X = \mu_X \circ ((\eta_1)_X + (\eta_2)_X).$$
+        Since the composition map
+        $$\Hom_{\calB}(G(X),H(X)) \times \Hom_{\calB}(F(X),G(X)) \to \Hom_{\calB}(F(X),H(X))$$
+        is bilinear, this equals 
+        $$\mu_X \circ (\eta_1)_X + \mu_X \circ (\eta_2)_X,$$
+        which is the morphism that the natural transformation $(\mu \circ \eta_1 + \mu \circ \eta_2)$ assigns $X$ to. Thus, $\mu \circ (\eta_1 + \eta_2) = \mu \circ \eta_1 + \mu \circ \eta_2$, so the composition maps are indeed bilinear as desired. 
+
+        We show that there is a zero object of $\text{Add}(\calA, \calB)$ and it is the zero functor $0: \calA \to \calB$ sending all objects of $\calA$ to the zero object $0_\calB$ of $\calB$ and hence all morphisms of $\calB$ to the unique (zero) morphism $0_\calB \to 0_\calB$. It is indeed an object of $\text{Add}(\calA, \calB)$ because for any objects $X$ and $Y$ of $\calA$, the map $0: \Hom_\calA(X,Y) \to \Hom_\calB(0(X), 0(Y)) = \Hom_{\calB}(0_\calB, 0_\calB) = 0$\CrefIfExists{lemma:hom_to_from_zero_object_in_preadditive_category_is_zero_group} is the zero group homomorphism. We now show that it is indeed the zero object, i.e. is \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial and final}. Given any object $F$ of $\text{Add}(\calA, \calB)$, there are natural transformations $0 \Rightarrow F$ and $F \Rightarrow 0$ respectively by assigning an object $X$ of $\calA$ to the unique morphisms $0_\calB \to F(X)$ and $F(X) \to 0_\calB$. In fact, such natural transformations are unique because morphisms to and from $0_\calB$ in $\calB$ are unique. Therefore, $0: \calB \to \calB$ is indeed the zero object of $\text{Add}(\calA, \calB)$.
+
+        We show that $\Add(\calA, \calB)$ is additive whenever $\calB$ is additive. \TODO{}
+
+        We show that $\Add(\calA, \calB)$ is abelian whenever $\calB$ is abelian. \TODO{}
+
+        \item 
+    \end{enumerate}
+\end{proof}

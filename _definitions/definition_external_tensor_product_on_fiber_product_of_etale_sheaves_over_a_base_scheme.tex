@@ -1,0 +1,25 @@
+\begin{definition} \label{definition:external_tensor_product_on_fiber_product_of_etale_sheaves_over_a_base_scheme}
+    \TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:scheme}{scheme}. Let $X$ and $Y$ be schemes of \CrefAndHyperrefIfExist{definition:finite_type_morphism_of_schemes}{finite type} over $S$, and let
+    $$pr_X: X \times_S Y \to X, \quad pr_Y: X \times_S Y \to Y$$
+    denote the projections (\Cref{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}).
+
+    The \hldef{external tensor product on $X \times_S Y$} is defined for each six functor formalism as follows.
+    \begin{enumerate}
+        \item Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. For $K \in D(X_{\et}, A)$ and $L \in D(Y_{\et}, A)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}), define
+        $$\hlin{K \boxtimes_A^L L := pr_X^* K \otimes_A^L pr_Y^* L \in D((X \times_S Y)_{\et}, A)}$$
+
+        \item Let $\ell$ be a prime invertible on $X$, $Y$, and $S$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. For $K = (K_n) \in D_c^b(X,R)$ and $L = (L_n) \in D_c^b(Y,R)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}), define
+        $$\hlin{K \boxtimes_R L := (pr_X^* K_n \otimes_R^L pr_Y^* L_n)_n \in D_c^b((X \times_S Y),R)}$$
+
+        \item With $R$ and $E$ as above, for $K \in \Dbc(X,E)$ and $L \in \Dbc(Y,E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}), define
+        $$\hlin{K \boxtimes_E L := pr_X^* K \otimes_E^L pr_Y^* L \in \Dbc(X \times_S Y, E)}$$
+
+        \item Let $K/E$ be an algebraic extension. For $\mathcal{F} \in \Dbc(X,K)$ and $\mathcal{G} \in \Dbc(Y,K)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}), represented by $F_{L'} \in \Dbc(X,L')$ and $G_{L''} \in \Dbc(Y,L'')$ for finite subextensions, push both forward to a common finite extension $L''' \supseteq L', L''$, and define
+        $$\hlin{\mathcal{F} \boxtimes_K \mathcal{G} := pr_X^* F_{L'''} \otimes_{L'''}^L pr_Y^* G_{L'''} \in \Dbc(X \times_S Y, K)}$$
+    \end{enumerate}
+
+    \TextIfExists{definition:external_tensor_product_of_objects_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}{
+    This specializes from the abstract \CrefAndHyperrefIfExist{definition:external_tensor_product_of_objects_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}{external tensor product functor} for a three-functor formalism.
+    }
+\end{definition}

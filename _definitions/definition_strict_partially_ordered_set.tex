@@ -1,0 +1,20 @@
+\begin{definition}[Strict partially ordered set, strict partial order] \label{definition:strict_partially_ordered_set}
+    A \hldef{strict partially ordered set} (or \hldef{strict poset}) is a pair $(P, <)$ where $P$ is a set and
+    \[
+    < : P \times P \to \{\text{true}, \text{false}\}
+    \]
+    is a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} on $P$ satisfying the following axioms for all $a, b, c \in P$:
+    \begin{itemize}
+        \item \hldef{Irreflexivity:} not $a < a$,
+        \item \hldef{Transitivity:} if $a < b$ and $b < c$, then $a < c$.
+    \end{itemize}
+    The relation $<$ is called a \hldef{strict partial order}.
+    \end{enumerate}
+
+    One writes \hl{$a > b$} synonymously for $b < a$. One might also synonymously write \hl{$a \leq b$} and \hl{$a \geq b$} respectively for 
+    \begin{itemize}
+        \item $a < b$ or $a = b$,
+        \item $a > b$ or $a = b$.
+    \end{itemize}
+    This binary relation $\leq$ is then a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partial order} on $P$\CrefIfExists{proposition:correspondence_between_partial_orders_and_strict_partial_orders_on_a_set}.
+\end{definition}

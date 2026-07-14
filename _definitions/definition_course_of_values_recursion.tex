@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:course_of_values_recursion}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. Let $A$ be a set. For each $n \in \bbN$, let $\mathcal{F}_n$ denote the collection of all functions whose domain is $\{k \in \bbN : k \leq n\}$ and whose codomain is $A$. Let $\mathcal{F}_0$ denote the singleton set containing the empty function.
+
+A \hldef{course-of-values recursion rule} on $A$ is a family of functions $\{\rho_n : \mathcal{F}_n \to A\}_{n \geq 0}$, where $\rho_0: \mathcal{F}_0 \to A$ and for each $n \in \bbN$, $\rho_n: \mathcal{F}_n \to A$.
+
+A function $f: \bbN \to A$ is called a \hldef{course-of-values recursive function} for $(\rho_n)_{n \geq 0}$ if it satisfies:
+\begin{enumerate}
+    \item $f(1) = \rho_0(\emptyset)$, and
+    \item for all $n \in \bbN$, $f(s(n)) = \rho_n(f|_{\{k \in \bbN : k \leq n\}})$.
+\end{enumerate}
+\CrefIfExists{proposition:course_of_values_recursion_existence_uniqueness}
+\end{definition}

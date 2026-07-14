@@ -1,0 +1,53 @@
+\begin{proposition}[Stalk of direct image under finite morphism for étale sheaves] \label{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism of schemes}, and let $\mathcal{F}$ be a sheaf on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site $X_{\text{ét}}$} of 
+    \TODO{try to change this to a more general category with direct limits}
+    \begin{itemize}
+        \item \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{sets},
+        \item \CrefAndHyperrefIfExist{definition:group}{abelian groups}, or 
+        \item \CrefAndHyperrefIfExist{definition:module_over_a_sheaf_of_rings_on_a_site}{$\calO$-modules} for a \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf} $\calO$ of \CrefAndHyperrefIfExist{definition:ring}{rings} on $X_{\text{ét}}$.
+    \end{itemize}
+    Let $\bar{y} : \Spec(\Omega) \to Y$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} of $Y$.
+
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}{stalk} of the \CrefAndHyperrefIfExist{definition:inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies}{direct image} at $\bar{y}$ decomposes as a product over the geometric fiber:
+        $$(f_*\mathcal{F})_{\bar{y}} = \prod_{\bar{x} \in f^{-1}(\bar{y})} \mathcal{F}_{\bar{x}},$$
+        where $f^{-1}(\bar{y})$ is the set of geometric points $\Spec(\Omega) \to X$ lying over $\bar{y}$, which is finite since $f$ is finite. The product runs over the (finite) set of such points.
+
+        \item Suppose that $\mathcal{F} = \underline{\Lambda}$ is a constant sheaf on $X$ where $\Lambda$ is a set, an abelian group, or a module over a ring. For any sufficiently small étale neighborhood $V \to Y$ of $\bar{y}$ such that $X \times_Y V$ decomposes into a disjoint union of connected components $X \times_Y V = \coprod_{i=1}^n Z_i$\CrefIfExists{lemma:decomposition_of_finite_morphism_over_henselian_local_ring}, the fiber $f^{-1}(\bar{y})$ consists of one geometric point $\bar{x}_i$ for each component $Z_i$. Note that we have isomorphsims
+        $$\Gamma(X \times_Y V, \underline{\Lambda}) \cong \prod_{i=1}^n \Gamma(Z_i, \underline{\Lambda}|_{Z_i}) \cong \prod_{i=1}^n \Lambda.$$
+        We then have natural isomorphism 
+        $$\Gamma(X \times_Y V, \underline{\Lambda}) \cong \prod_{i=1}^n \Lambda \xrightarrow{\sim} \prod_{\bar{x} \in f^{-1}(\bar{y})} \Lambda \cong \prod_{\bar{x} \in f^{-1}(\bar{y})} \mathcal{F}_{\bar{x}} \cong (f_* \calF)_{\bar{y}},$$
+        where the $i$-th factor of the first product maps as the identity to the factor corresponding to the point $\bar{x}_i$ contained in the component $Z_i$, and maps as zero to the other factors.
+    \end{enumerate}
+
+
+\end{proposition}
+
+
+\begin{proof}
+    Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism}. Since $f$ is finite, it is \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine}\CrefIfExists{theorem:morphism_of_schemes_is_finite_if_and_only_if_affine_and_proper_if_and_only_if_quasifinite_and_proper}, and thus for any \CrefAndHyperrefIfExist{definition:etale_neighborhood_of_a_geometric_point_on_a_scheme}{étale neighborhood} $(V, \bar{v}) \to (Y, \bar{y})$, the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{fiber product} $X_V := X \times_Y V$ is an \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine $V$-scheme}\CrefIfExists{proposition:affine_morphism_of_schemes_stable_under_base_change_and_composition}, and the projection $f_V: X_V \to V$ is finite.
+
+    By \Cref{lemma:decomposition_of_finite_morphism_over_henselian_local_ring}, there exists a \CrefAndHyperrefIfExist{definition:cofinal_and_final_subsystems_of_direct_inverse_systems}{cofinal system} of étale neighborhoods $(V, \bar{v})$ such that the fiber product decomposes into a finite disjoint union of connected components:
+    $$X \times_Y V = \coprod_{i=1}^n Z_i$$
+    where each $Z_i$ is an affine scheme containing exactly one geometric point $\bar{x}_i$ mapping to $\bar{v}$ (which sits over $\bar{y}$).
+
+    The stalk $(f_*\mathcal{F})_{\bar{y}}$ is defined as the filtered colimit over the category of étale neighborhoods of $\bar{y}$:
+    $$(f_*\mathcal{F})_{\bar{y}} = \varinjlim_{(V, \bar{v})} \Gamma(X \times_Y V, \mathcal{F}).$$
+    Restricting to the cofinal subcategory of neighborhoods where $X \times_Y V$ decomposes as above, and using the fact that the section functor $\Gamma$ converts disjoint unions into products, we have:
+    \TODO{this fact}
+    $$(f_*\mathcal{F})_{\bar{y}} \cong \varinjlim_{(V, \bar{v})} \prod_{i=1}^n \Gamma(Z_i, \mathcal{F}|_{Z_i}).$$
+    \TODO{filtered colimit commutes with finite products}
+    Since the filtered colimit commutes with finite products, we obtain:
+    $$(f_*\mathcal{F})_{\bar{y}} \cong \prod_{i=1}^n \left( \varinjlim_{(V, \bar{v})} \Gamma(Z_i, \mathcal{F}|_{Z_i}) \right).$$
+    For each $i$, as $(V, \bar{v})$ varies over the cofinal system, $Z_i$ runs through a cofinal system of étale neighborhoods of $\bar{x}_i$. By the definition of the stalk at a geometric point, the term in the parentheses is precisely $\mathcal{F}_{\bar{x}_i}$. Thus:
+    $$(f_*\mathcal{F})_{\bar{y}} \cong \prod_{\bar{x} \in f^{-1}(\bar{y})} \mathcal{F}_{\bar{x}}.$$
+    Finally, in the case of a constant sheaf $\mathcal{F} = \underline{\Lambda}$, we have $\mathcal{F}_{\bar{x}} \cong \Lambda$ for each point. The isomorphism $\Gamma(X \times_Y V, \underline{\Lambda}) \cong \prod_{i=1}^n \Lambda$ arises because $\underline{\Lambda}(Z_i) \cong \Lambda$ for each connected component $Z_i$, and the natural map to the product is given by restricting the constant section to each connected component.
+\end{proof}
+
+% \begin{proof}
+% \TODO{AI generated, verify}
+%     Since $f$ is finite, it is in particular \CrefAndHyperrefIfExist{definition:affine_morphism_of_schemes}{affine}\CrefIfExists{theorem:morphism_of_schemes_is_finite_if_and_only_if_affine_and_proper_if_and_only_if_quasifinite_and_proper}. Since $f$ is affine, for any étale neighborhood $(V, \bar{v})$ of $\bar{y}$, the fiber product $X \times_Y V$ is affine over $V$\CrefIfExists{proposition:affine_morphism_of_schemes_stable_under_base_change_and_composition}. By definition, the \CrefAndHyperrefIfExist{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}{geometric stalk} is the colimit of $\mathcal{F}(X \times_Y V)$ over étale neighborhoods $(V, \bar{v})$.
+
+%     \TODO{what exactly is meant by sufficiently small $V$ here? What is meant by "decomposes as a finite disjoint union of open-and-close-subschemes mapping to $V$"? What is meant by the colimit recovers the stalk at the corresponding geometric point?}
+%     For sufficiently small $V$, the scheme $X \times_Y V$ decomposes as a finite disjoint union of open-and-closed subschemes mapping to $V$, one for each point in the fiber $f^{-1}(\bar{y})$. On each component, the colimit recovers the stalk at the corresponding geometric point.
+% \end{proof}

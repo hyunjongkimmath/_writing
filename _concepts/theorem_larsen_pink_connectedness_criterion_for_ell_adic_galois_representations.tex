@@ -1,0 +1,26 @@
+\begin{theorem}[Larsen--Pink; {\cite[Theorem~0.1]{larsen_pink_ccellgr}}] \label{theorem:larsen_pink_connectedness_criterion_for_ell_adic_galois_representations}
+    \TODO{AI generated, verify}
+    \TODO{I don't think that this is strictly a statement about any compatible system, rather it seems to be stated just for $H^k(X, \Qell)$}
+    \TODO{write the definition of non-singular variety, regular}
+    \TODO{think more about what hypotheses are placed on the notion of varieties. In particular, somehow we need the independence of $\ell$}
+    \TODO{the natural action}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}. Let $X$ be a \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{complete} non-singular \CrefAndHyperrefIfExist{definition:variety_over_a_field}{variety} over $K$. Choose a separable closure $\overline{K}$ of $K$. Write $X = X \times_K \overline{K}$. For each $k$, the dimension $N$ of the $\ell$-adic \'etale cohomology groups $H^k(\overline{X}, \Qell)$ is independent of the rational prime $\ell$. After choosing a basis, the natural action of $\Gal(\overline{K}/K)$ corresponds to a continuous representation $\rho_\ell: \Gal(\overline{K}/K) \to \GL_N(\Qell)$. The family $\rho = \{\rho_\ell\}_{\ell \in L}$ is a compatible system. Write $G_\ell$ for the \CrefAndHyperref{definition:algebraic_monodromy_group_at_a_prime_for_a_compatible_system_of_reps_on_a_prof_group_with_dense_frob_elements}{algebraic monodromy group} of $\rho$ at $\ell$ and $G_\ell^\circ$ for its \CrefAndHyperrefIfExist{definition:identity_component_of_a_group_scheme_over_a_scheme}{identity component}. By Serre \TODO{cite; technically Serre proved this for Tate modules of abelian varieties, but there is another source that might have done this for other thigns} the open normal subgroup $\rho_\ell^{-1}(G_\ell^\circ)$ of $\Gal(\overline{K}/K)$ is independent of $\ell$. Let $K^{\text{conn}}$ be the finite extension of $K$ corresponding to this open subgroup. For each rational prime $\ell$, write $K_\ell$ for the extension of $K$ corresponding to the kernel of $\rho_\ell$. 
+    \TODO{correspondence of finite extensions of field and open subgroups of algebraic closrue}
+    \TODO{frobenius elements in galois group}
+    \TODO{dirichlet density}
+    \TODO{completely split prime}
+    Let $E$ be any \CrefAndHyperrefIfExist{definition:number_field}{number field}. For any set $\calL$ of \CrefAndHyperrefIfExist{definition:prime_number}{rational primes} including all those that split completely in $E$ except a set of Dirichlet density zero.  
+
+    We have an equality
+    $$K^{\text{conn}} = \bigcap_{\ell \in \calL} K_\ell.$$
+    \TODO{the below isn't stated in the text, so prove it}
+    In particular, the image of $\Gal(\overline{K} / K^{\text{conn}})$ under $\rho_\ell$ is contained in $G_\ell^\circ$, and the algebraic monodromy group of $\rho|_{\Gal(\overline{K}/K^{\text{conn}})}$ is $G_\ell^\circ$.
+
+    
+
+    % Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field} and let $\{ \rho_\ell : \Gal(\overline{K}/K) \to \mathrm{GL}_n(\mathbb{Q}_\ell) \}_{\ell \in L}$ be a \CrefAndHyperref{definition:compatible_system_of_representations_on_a_profinite_group_equipped_with_dense_frobenius_elements}{compatible system} of representations indexed by a set of rational primes $L$. For each $\ell$, let $G_\ell$ be the \CrefAndHyperref{definition:algebraic_monodromy_group_at_a_prime_for_a_compatible_system_of_reps_on_a_prof_group_with_dense_frob_elements}{algebraic monodromy group} at $\ell$.
+
+    % There exists a finite extension $K_{\mathrm{conn}}/K$, constructed purely from the characteristic polynomials of Frobenius elements, such that for every $\ell \in L$, the algebraic monodromy group $G_\ell|_{\Gal(\overline{K}/K_{\mathrm{conn}})}$ is connected. Moreover, the group of connected components $G_\ell / G_\ell^\circ$ \CrefIfExists{definition:identity_component_of_a_group_scheme_over_a_scheme} is independent of $\ell$, and its order equals $[K_{\mathrm{conn}} : K]$.
+
+    % In particular, $K_{\mathrm{conn}}$ is the smallest finite extension of $K$ over which all algebraic monodromy groups become connected.
+\end{theorem}

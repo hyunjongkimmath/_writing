@@ -1,0 +1,8 @@
+\begin{definition}[Cauchy distribution] \label{definition:cauchy_distribution}
+\TODO{AI generated, verify}
+Let $x_0 \in \mathbb{R}$ and $\gamma > 0$. A real-valued random variable $X$ on a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space} has the \hldef{Cauchy distribution with location parameter $x_0$ and scale parameter $\gamma$} (denoted \hl{$\operatorname{Cauchy}(x_0, \gamma)$}) if its \CrefAndHyperrefIfExist{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} is the measure on $\mathbb{R}$ given by
+$$\hlin{\mu_X(A) = \int_A \frac{1}{\pi\gamma \left[1 + \left(\tfrac{x - x_0}{\gamma}\right)^2\right]} \, dx}$$
+for every Borel set $A \subseteq \mathbb{R}$.
+
+The probability density function is $$f(x) = \frac{1}{\pi\gamma \left[1 + \left(\tfrac{x - x_0}{\gamma}\right)^2\right]}.$$ The Cauchy distribution has no finite \CrefAndHyperrefIfExist{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expectation} or \CrefAndHyperrefIfExist{definition:variance_and_covariance}{variance}, since $\int_{-\infty}^\infty |x| f(x) \, dx = \infty$.
+\end{definition}

@@ -1,28 +1,38 @@
 \begin{definition}[Frobenius $R$-algebra] \label{definition:frobenius_algebra_over_a_ring}
     Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and $A$ be an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra}. 
+    % that is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} and \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-module}. 
 
-    We say that $A$ is a \hldef{Frobenius $R$-algebra} if either of the a posteriori equivalent conditions hold:
+    % We say that $A$ is a \hldef{Frobenius $R$-algebra} if either of the a posteriori equivalent conditions\CrefIfExists{theorem:finitely_generated_projective_algebra_over_a_ring_is_left_frobenius_if_and_only_if_right_frobenius} hold:
 
     \begin{itemize}
-        \item $A$ is a \hldef{left Frobenius $R$-algebra} if 
-        \begin{itemize}
-            \item $A$ is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}, and 
-            \item there exists an isomorphism of left \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$A$-modules}:
-            $$ \psi_L: {}_A A \xrightarrow{\cong} {}_A A^* \quad \text{where } A^* = \operatorname{Hom}_{R}(A, R) $$
-            with the action $(u \cdot f)(a) = f(au)$. This is equivalent to the existence of a left $R$-linear form $\varphi: A \times A \to R$ such that $b(x, y) = \varphi(xy)$ is non-degenerate (the map $x \mapsto \varphi(x \cdot)$ is an isomorphism).
-            \TODO{non-degnerate bilinear form}
-        \end{itemize}
+        \item $A$ is a \hldef{left Frobenius $R$-algebra} if the ring homomorphism $R \to A$ is a \CrefAndHyperref{definition:left_right_frobenius_self_dual_ring_homomorphism}{left Frobenius ring homomorphism}.
+        % \begin{itemize}
+        %     % \item $A$ is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} as a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module}, and 
+        %     \item The ring homomorphism $R \to A$ is a \CrefAndHyperref{definition:left_right_frobenius_self_dual_ring_homomorphism}{left Frobenius ring homomorphism}
+        %     % \item there exists an isomorphism of left \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$A$-modules}:
+        %     % $$ \psi_L: {}_A A \xrightarrow{\cong} {}_A A^* \quad \text{where } A^* = \operatorname{Hom}_{R}(A, R) $$
+        %     % with the action $(u \cdot f)(a) = f(au)$. This is equivalent to the existence of a left $R$-linear form $\varphi: A \times A \to R$ such that $b(x, y) = \varphi(xy)$ is non-degenerate (the map $x \mapsto \varphi(x \cdot)$ is an isomorphism).
+        %     % \TODO{non-degnerate bilinear form}
+        % \end{itemize}
 
-        \item $A$ is a \hldef{right Frobenius $R$-algebra} if 
-        \begin{itemize}
-            \item $A$ is finitely generated projective as a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}, and 
-            \item there exists an isomorphism of right $A$-modules:
-            $$ \psi_R: A_A \xrightarrow{\cong} A^*_A \quad \text{where } A^* = \operatorname{Hom}_{R}(A, R) $$
-            with the action $(f \cdot v)(a) = f(va)$. This is equivalent to the existence of a linear form $\varphi$ such that $b(x, y) = \varphi(yx)$ is non-degenerate (the map $y \mapsto \varphi(\cdot y)$ is an isomorphism).
-        \end{itemize}
+
+        \item $A$ is a \hldef{right Frobenius $R$-algebra} if the ring homomorphism $R \to A$ is a \CrefAndHyperref{definition:left_right_frobenius_self_dual_ring_homomorphism}{right Frobenius ring homomorphism}.
+
+        % \item $A$ is a \hldef{right Frobenius $R$-algebra} if 
+        % \begin{itemize}
+        %     \item $A$ is finitely generated projective as a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}, and 
+
+        %     \item The ring homomorphism $R \to A$ is a \CrefAndHyperref{definition:left_right_frobenius_self_dual_ring_homomorphism}{right Frobenius ring homomorphism}
+        %     % \item there exists an isomorphism of right $A$-modules:
+        %     % $$ \psi_R: A_A \xrightarrow{\cong} A^*_A \quad \text{where } A^* = \operatorname{Hom}_{R}(A, R) $$
+        %     % with the action $(f \cdot v)(a) = f(va)$. This is equivalent to the existence of a linear form $\varphi$ such that $b(x, y) = \varphi(yx)$ is non-degenerate (the map $y \mapsto \varphi(\cdot y)$ is an isomorphism).
+        % \end{itemize}
     \end{itemize}
 
-    For an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra $A$} that is finitely generated and projective over $R$, these two definitions are equivalent. If a "left" isomorphism $\psi_L$ exists, the \CrefAndHyperrefIfExist{theorem:fans_of_a_real_fin_dim_vector_space_correspond_to_normal_separated_toric_varieties_over_an_algebraicaly_closed_field}{corresponding} trace $\varphi = \psi_L(1)$ can always be used to construct a "right" isomorphism $\psi_R$. 
+    Some writers will additionally require $A$ to be a finitely generated and projective module over $R$.
 
-    The difference between the two structures is encapsulated by the \hldef{Nakayama automorphism} $\alpha \in \operatorname{Aut}(A)$. While a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_rnig}{Symmetric Algebra} satisfies $\varphi(xy) = \varphi(yx)$ (implying $\psi_L = \psi_R$ as bimodules), a general Frobenius algebra only satisfies $\varphi(xy) = \varphi(y\alpha(x))$.
+    For an \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra $A$} that is finitely generated and projective over $R$, left Frobenius $R$-algebras are equivalent to right Frobenius $R$-algebras. If a "left" isomorphism $\psi_L$ exists, the corresponding trace $\varphi = \psi_L(1)$ can always be used to construct a "right" isomorphism $\psi_R$. 
+
+
+    % The difference between the two structures is encapsulated by the \hldef{Nakayama automorphism} $\alpha \in \operatorname{Aut}(A)$\CrefIfExists{theorem:nakayama_automorphism_exists_for_a_frobenius_algebra_over_a_ring}. While a \CrefAndHyperrefIfExist{definition:symmetric_algebra_over_a_ring}{Symmetric Algebra} satisfies $\varphi(xy) = \varphi(yx)$ (implying $\psi_L = \psi_R$ as bimodules), a general Frobenius algebra only satisfies $\varphi(xy) = \varphi(y\alpha(x))$.
 \end{definition}

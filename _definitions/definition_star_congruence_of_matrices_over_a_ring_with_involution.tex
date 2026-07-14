@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:star_congruence_of_matrices_over_a_ring_with_involution}
+    \TODO{AI generated, verify}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}.
+
+    Two matrices $H,K \in M_n(A)$\CrefIfExists{definition:matrix_over_a_ring} are called \hldef{$*$-congruent} (or \hldef{conjugate-transpose congruent}) if there exists an invertible matrix $P \in \operatorname{GL}_n(A)$\CrefIfExists{definition:general_linear_group_over_a_ring} such that
+    $$K = P^* H P,$$
+    where $P^*$ denotes the \CrefAndHyperrefIfExist{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}{conjugate transpose of $P$}.
+
+    If $H$ is an \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian matrix} and $K$ is $*$-congruent to $H$, then $K$ is also $\varepsilon$-Hermitian\CrefIfExists{lemma:star_conjugate_transpose_congruent_square_matrices_over_a_ring_with_involution_are_varepsilon_hermitian_if_and_only_if_the_other_is}.
+
+    Let $M$ be a free (right) $A$-module of rank $n$ with an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} $h$. If $\mathcal{E}$ and $\mathcal{F}$ are two ordered bases of $M$ with change-of-basis matrix $P \in \operatorname{GL}_n(A)$ (so $f_j = \sum_i e_i P(i,j)$), then
+    $$H_{\mathcal{F}} = P^* H_{\mathcal{E}} P,$$
+    where $H_{\mathcal{E}}$ and $H_{\mathcal{F}}$ are the \CrefAndHyperrefIfExist{definition:matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}{matrices of $h$ with respect to $\mathcal{E}$ and $\mathcal{F}$}, respectively\CrefIfExists{lemma:change_of_basis_for_matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}. Thus the two matrices are $*$-congruent.
+\end{definition}

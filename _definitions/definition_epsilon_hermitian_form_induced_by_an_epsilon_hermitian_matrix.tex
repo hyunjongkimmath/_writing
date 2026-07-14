@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:epsilon_hermitian_form_induced_by_an_epsilon_hermitian_matrix}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, and let $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} satisfy $\varepsilon \cdot \overline{\varepsilon} = 1$.
+
+    Let $H \in M_n(A)$ be an \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{$\varepsilon$-Hermitian matrix}. Let $M = A^n$ be the free (left/right) $A$-module of column vectors with standard basis $\mathcal{E} = (e_1,\ldots,e_n)$.
+    \begin{enumerate}
+        \item If $M$ is a right $A$-module, then the \hldef{$\varepsilon$-Hermitian form induced by $H$} is the map
+        $$\hlin{h_H: M \times M \to A, \quad h_H(u,v) = u^* H v},$$
+        where $u,v \in A^n$ are \CrefAndHyperrefIfExist{definition:row_vector_and_column_vector_over_a_ring}{column vectors}. We note that $h_H$ is conjugate linear in the first variable and linear in the second.
+
+        \item If $M$ is a left $A$-module, then the \hldef{$\varepsilon$-Hermitian form induced by $H$} is the map
+        $$\hlin{h_H: M \times M \to A, \quad h_H(u,v) = u^\top H \overline{v}},$$
+        where $u,v \in A^n$ are column vectors. We note that $h_H$ is linear in the first variable and conjugate linear in the second.
+
+    \end{enumerate}
+
+
+    The matrix of $h_H$ with respect to $\mathcal{E}$ is exactly $H$\TODO{}. The form $h_H$ is indeed an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} on $M$\CrefIfExists{lemma:varepsilon_hermitian_form_induced_by_a_hermitian_matrix_over_a_ring_with_involution_is_a_hermitian_form}.
+\end{definition}

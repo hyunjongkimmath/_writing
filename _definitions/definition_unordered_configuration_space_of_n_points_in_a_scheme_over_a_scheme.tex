@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:unordered_configuration_space_of_n_points_in_a_scheme_over_a_scheme}
+\TODO{AI generated, verify}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, let $X$ be an \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$S$-scheme}, and let $n \geq 1$ be an integer. The \hldef{unordered configuration space of $n$ points in $X$ over $S$}, denoted \hl{$\operatorname{UConf}_n(X/S)$}, is the quotient
+$$\hlin{\operatorname{UConf}_n(X/S) = \operatorname{Conf}_n(X/S) / S_n}$$
+of the \CrefAndHyperrefIfExist{definition:ordered_configuration_space_of_n_points_in_a_scheme_over_a_scheme}{ordered configuration space of $n$ points in $X$ over $S$} by the \CrefAndHyperrefIfExist{definition:symmetric_group_on_a_set}{symmetric group} $S_n$, which acts on $\operatorname{Conf}_n(X/S)$ by permuting coordinates:
+$$\sigma \cdot (x_1, \dots, x_n) = (x_{\sigma(1)}, \dots, x_{\sigma(n)})$$
+for $\sigma \in S_n$.
+
+When the quotient exists as a scheme (e.g.\ when $X$ is affine and $S_n$ acts freely), $\operatorname{UConf}_n(X/S)$ is an $S$-scheme. In general it may only exist as an algebraic space or stack, since quotients by finite groups in the category of schemes require additional hypotheses (e.g.\ existence of geometric invariant theory quotients).
+\end{definition}

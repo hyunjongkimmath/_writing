@@ -1,0 +1,45 @@
+\begin{proposition}[Pushforward of constant sheaf along finite étale G-cover has group ring structure] \label{proposition:pushforward_of_constant_sheaf_along_finite_etale_G_cover_has_group_ring_structure}
+    \TODO{AI generated, verify}
+Let $\Lambda$ be a ring. Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{finite étale Galois cover} with group $G$. Let $\underline{\Lambda}$ be the \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$X_{\text{ét}}$} with value $\Lambda$.
+
+\TODO{write about how pushing forward a locally constant sheaf under a finite etale morphism yields a locally constant sheaf}
+
+\begin{enumerate}
+    \item The action of $G$ on $X$ over $Y$ induces an action of $G$ on the direct image sheaf $f_*\underline{\Lambda}$, making it a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaf} of $\Lambda$-algebras on the \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{étale site} $Y_{\text{ét}}$, equipped with a $G$-action by $\Lambda$-algebra automorphisms. 
+
+    \item Let $\bar{y}: \Spec(\Omega) \to Y$ be a geometric point. The geometric stalk of the direct image is canonically isomorphic to \CrefAndHyperrefIfExist{definition:regular_representation_of_a_group_over_a_ring}{regular representation} of $G$ over $\Lambda$:
+    $$ (f_*\underline{\Lambda})_{\bar{y}} \cong \Lambda[G] $$
+    where $G$ acts on $\Lambda[G]$ by left translation. This isomorphism is induced by taking the isomorphism 
+    $$ (f_*\underline{\Lambda})_{\bar{y}} \cong \prod_{\bar{x} \in f^{-1}(\bar{y})} \underline{\Lambda}_{\bar{x}} \cong \prod_{\bar{x} \in f^{-1}(\bar{y})} \Lambda$$
+    \CrefIfExists{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf}, picking any $\bar{x}_0 \in f^{-1}(y)$, and defining the map $\Phi_{x_0}:\prod_{\bar{x} \in f^{-1}(\bar{y})} \Lambda \to \Lambda[G]$ via the identification of the copy of $\Lambda$ corresponding to the point $g \cdot \bar{x}_0$ with basis element $g \in \Lambda[G]$. \footnote{While this identification depends on the choice of $\bar{x}_0$, any two choices differ by an element of $G$ and the resulting map remains the same up to the $G$-action, rendering the isomorphism of $G$-modules canonical; $f^{-1}(y)$ is a $G$-torsor and the structure of $G$ as a $G$-torsor determines the structure of $\Lambda[G]$ as a $G$-module.}
+
+
+    % identifying the fiber $f^{-1}(\bar{y}) = X_{\bar{y}} = X \times_Y \Spec(\Omega)$ with $G$ as a right $G$-set via the choice of a geometric point $\bar{x}$ in the fiber over $\bar{y}$.
+
+    \item The invariant subsheaf recovers the constant sheaf on the base:
+    $$ (f_*\underline{\Lambda})^G = \underline{\Lambda}_Y $$
+    where $\underline{\Lambda}_Y$ is the constant sheaf on $Y_{\text{ét}}$ with value $\Lambda$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item 
+        \item By \Cref{proposition:stalk_of_direct_image_under_finite_morphism_etale_sheaf}, for any sufficiently small étale neighborhood $V \to Y$ of $\bar{y}$ such that $X \times_Y V$ decomposes into a disjoint union of connected components $X \times_Y V = \coprod_{i=1}^n Z_i$\CrefIfExists{lemma:decomposition_of_finite_morphism_over_henselian_local_ring}, the fiber $f^{-1}(\bar{y})$ consists of one geometric point $\bar{x}_i$ for each component $Z_i$ and we have the natural isomorphism
+        $$\Gamma(X \times_Y V, \underline{\Lambda}) \cong \prod_{i=1}^n \Lambda \xrightarrow{\sim} \prod_{\bar{x} \in f^{-1}(\bar{y})} \Lambda \cong (f_* \calF)_{\bar{y}},$$
+        where the $i$-th factor of the first product maps as the identity to the factor corresponding to the point $\bar{x}_i$ contained in the component $Z_i$, and maps as zero to the other factors. Letting $V = X$, we have that $X \times_Y X \cong \coprod_{g \in G} X$, and the components of this decomposition correspond to the geometric points in $f^{-1}(\bar{y})$\TODO{reference}. The action of $G$ on the components of $\coprod_{g \in G} X$ then corresponds to the action of $G$ on $f^{-1}(\bar{y})$. Since the factors of $\prod_{i=1}^n \Lambda$ correspond to the components of $\coprod_{g \in G} X$, it has a natural action by $G$ tantamount to the regular representation. In particular, we have isomorphisms the composition
+        $$(f_* \calF)_{\bar{y}} \to \prod_{\bar{x} \in f^{-1}(y)} \Lambda \to \prod_{i=1}^n \Lambda \to \Lambda[G]$$
+        and the composition of the latter two is tantamount to the described map $\Phi_{x_0}$.
+
+        \item
+    \end{enumerate}
+
+    \TODO{AI generated, verify}
+\textbf{(a)} Since $G$ acts on $X$ over $Y$, for each $g \in G$ the automorphism $g: X \to X$ induces a pullback $(g^{-1})^*$ on sheaves on $X_{\text{ét}}$. Because $\underline{\Lambda}$ is constant, $(g^{-1})^*\underline{\Lambda} = \underline{\Lambda}$, so there are natural maps
+$$ f_*\underline{\Lambda} \xrightarrow{(f \circ g)_* \underline{\Lambda}} f_*\underline{\Lambda} $$
+for each $g \in G$, giving a well-defined action of $G$ on $f_*\underline{\Lambda}$ by sheaf automorphisms. Since $\underline{\Lambda}$ is a sheaf of $\Lambda$-algebras and the maps are induced by pullbacks along automorphisms, each $g$ acts by $\Lambda$-algebra automorphisms. The sheaf $f_*\underline{\Lambda}$ is locally constant because after pulling back to $Y$ via $f$, it becomes trivial: $f^* f_* \underline{\Lambda} \cong \underline{\Lambda}[G]$ as a trivial local system.
+
+\textbf{(b)} By the proper base change theorem for finite morphisms, the geometric fiber $(f_*\underline{\Lambda})_{\bar{y}}$ is canonically isomorphic to the global sections of $\underline{\Lambda}$ on the fiber $X_{\bar{y}} = X \times_Y \Spec(\Omega)$. Since $f$ is a finite étale Galois cover with group $G$, the fiber $X_{\bar{y}}$ consists of $|G|$ points permuted simply transitively by $G$. Fixing a geometric point $\bar{x}$ in the fiber identifies $X_{\bar{y}}$ with $G$ as a right $G$-set. The sections of the constant sheaf $\underline{\Lambda}$ on this finite discrete scheme are the functions $G \to \Lambda$, which is canonically $\Lambda[G]$. The left $G$-action on the direct image corresponds to left translation on $G$, hence on $\Lambda[G]$.
+
+\textbf{(c)} For any étale $V \to Y$, the sections $(f_*\underline{\Lambda})(V) = \underline{\Lambda}(X \times_Y V)$ are the locally constant functions $X \times_Y V \to \Lambda$. The $G$-invariant sections are precisely those functions constant on $G$-orbits, which descend to functions on $(X \times_Y V)/G = V$ (since $f$ is the quotient map $X \to X/G = Y$). Hence $(f_*\underline{\Lambda})^G(V) = \underline{\Lambda}_Y(V)$ naturally in $V$.
+\end{proof}

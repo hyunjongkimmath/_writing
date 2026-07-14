@@ -1,0 +1,40 @@
+\begin{lemma} \label{lemma:matrix_of_an_endomorphism_acts_on_coordinate_row_vectors}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$ with an ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$. Let $T: M \to M$ be an $R$-linear endomorphism and let $[T]_\mathcal{E}^{\mathsf{r}}$\CrefIfExists{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis} be its matrix with respect to $\mathcal{E}$ under the \hldef{row convention}\CrefIfExists{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}. Given $x \in M$, let $[x]_\mathcal{E}^{\mathsf{r}}$\CrefIfExists{definition:coordinate_row_vector_of_an_element_of_a_free_module_with_respect_to_a_basis} be the coordinate row vector of $x$ with respect to $\mathcal{E}$.
+
+    For any $x \in M$, the coordinate row vectors satisfy
+    $$[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}.$$
+\end{lemma}
+\begin{proof}
+    Write $x = \sum_{j=1}^n e_j a_j$ if $M$ is a right $R$-module, or $x = \sum_{j=1}^n a_j e_j$ if $M$ is a left $R$-module, so that $[x]_\mathcal{E}^{\mathsf{r}} = (a_1,\ldots,a_n)$.
+
+    \begin{enumerate}
+        \item Suppose $M$ is a right $R$-module. By $R$-linearity of $T$,
+        \begin{align*}
+            T(x) &= T\!\left( \sum_{j=1}^n e_j a_j \right)
+                  = \sum_{j=1}^n T(e_j) a_j.
+        \end{align*}
+        By definition of the matrix under the row convention\CrefIfExists{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}, we have $T(e_i) = \sum_{j=1}^n e_j \, [T]_\mathcal{E}^{\mathsf{r}}(i,j)$ for each $i$. Substituting (renaming indices so that the outer sum runs over $i$),
+        \begin{align*}
+            T(x) &= \sum_{i=1}^n T(e_i) a_i
+                  = \sum_{i=1}^n \left( \sum_{j=1}^n e_j \, [T]_\mathcal{E}^{\mathsf{r}}(i,j) \right) a_i \\
+                &= \sum_{j=1}^n e_j \left( \sum_{i=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, a_i \right).
+        \end{align*}
+        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, a_i$, which is precisely the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
+
+        \item Suppose $M$ is a left $R$-module. By $R$-linearity of $T$,
+        \begin{align*}
+            T(x) &= T\!\left( \sum_{j=1}^n a_j e_j \right)
+                  = \sum_{j=1}^n a_j \, T(e_j).
+        \end{align*}
+        By definition of the matrix under the row convention\CrefIfExists{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}, we have $T(e_i) = \sum_{j=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, e_j$ for each $i$. Substituting (renaming indices so that the outer sum runs over $i$),
+        \begin{align*}
+            T(x) &= \sum_{i=1}^n a_i \, T(e_i)
+                  = \sum_{i=1}^n a_i \left( \sum_{j=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, e_j \right) \\
+                &= \sum_{j=1}^n \left( \sum_{i=1}^n a_i \, [T]_\mathcal{E}^{\mathsf{r}}(i,j) \right) e_j.
+        \end{align*}
+        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n a_i \, [T]_\mathcal{E}^{\mathsf{r}}(i,j)$, which is the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
+    \end{enumerate}
+
+    In both cases, the formula $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$ holds.
+\end{proof}

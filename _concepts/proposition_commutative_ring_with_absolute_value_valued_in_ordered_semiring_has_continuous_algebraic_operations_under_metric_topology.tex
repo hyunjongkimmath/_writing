@@ -1,0 +1,48 @@
+\begin{proposition} \label{proposition:commutative_ring_with_absolute_value_valued_in_ordered_semiring_has_continuous_algebraic_operations_under_metric_topology}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in an ordered semiring} $|\cdot| : R \to T$, and equip $R$ with the topology induced by the \CrefAndHyperrefIfExist{definition:metric_induced_by_an_absolute_value_on_a_commutative_ring}{metric} $d(a,b) = |a - b|$ \CrefIfExists{definition:topology_on_a_field_induced_by_an_absolute_value}.
+
+    Then the following maps are continuous with respect to this topology:
+    \begin{enumerate}
+        \item The negation map $\nu : R \to R$, defined by $\nu(a) = -a$.
+        \item The addition map $\alpha : R \times R \to R$, defined by $\alpha(a,b) = a + b$ (where $R \times R$ carries the product topology).
+        \item The multiplication map $\mu : R \times R \to R$, defined by $\mu(a,b) = ab$.
+    \end{enumerate}
+
+    Consequently, the subtraction map $\sigma : R \times R \to R$, defined by $\sigma(a,b) = a - b$, is also continuous because it equals $\alpha \circ (\id_R, \nu)$ where $(\id_R, \nu)(a,b) = (a, -b)$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We verify continuity using the topological definition: a map is continuous if the preimage of every open set is open. It suffices to check this on basis elements of the codomain topology, which are the open balls $B(c, \varepsilon) = \{x \in R : |x - c| < \varepsilon\}$ for $c \in R$ and $\varepsilon \in T_{>0}$.
+
+    First we show that the negation map $\nu(a) = -a$ is an isometry. For any $a, b \in R$,
+    $$d(\nu(a), \nu(b)) = |-a - (-b)| = |-(a - b)| = |-1_R| \cdot |a - b|.$$
+    Since $|-1_R|^2 = |(-1_R)^2| = |1_R| = 1_T$ by multiplicativity, and the only element $t \in T_{\geq 0}$ with $t^2 = 1_T$ is $t = 1_T$\TODO{AI generated, reference needed: proposition that in an ordered semiring, the only nonnegative square root of 1 is 1 itself}, we have $|-1_R| = 1_T$. Thus $d(\nu(a), \nu(b)) = d(a,b)$, so $\nu$ is an isometry. In particular, for any open ball $B(c, \varepsilon)$, the preimage $\nu^{-1}(B(c, \varepsilon)) = B(-c, \varepsilon)$ is also an open ball, hence open. Therefore $\nu$ is continuous.
+
+    Next we show that the addition map $\alpha(a,b) = a + b$ is continuous on $R \times R$. We distinguish two cases based on the structure of $T_{>0}$.
+
+    If $T_{>0}$ has no minimal element (i.e.\ $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}{dense at zero}), then for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that $\delta + \delta < \varepsilon$. Fix $(a,b) \in R \times R$ and let $\varepsilon \in T_{>0}$. Choose $\delta \in T_{>0}$ with $\delta + \delta < \varepsilon$. Then for any $(x,y) \in B(a, \delta) \times B(b, \delta)$, we have by subadditivity of $|\cdot|$:
+    $$d(\alpha(x,y), \alpha(a,b)) = |(x+y) - (a+b)| = |(x-a) + (y-b)| \leq |x-a| + |y-b| < \delta + \delta < \varepsilon.$$
+    Thus $\alpha(B(a, \delta) \times B(b, \delta)) \subseteq B(a+b, \varepsilon)$, so the preimage of $B(a+b, \varepsilon)$ is a neighborhood of $(a,b)$ in the product topology. Since $(a,b)$ was arbitrary, $\alpha$ is continuous.
+
+    If $T_{>0}$ has a minimal element $m$, then for any distinct $x, y \in R$ we have $d(x,y) = |x-y| \geq m$. This means the open ball $B(x, m)$ contains only $x$ itself, so every singleton $\{x\}$ is open and the topology on $R$ is discrete. In the discrete topology every map is continuous, so $\alpha$ is trivially continuous.
+
+    Finally we show that the multiplication map $\mu(a,b) = ab$ is continuous. We use the identity
+    $$xy - ab = x(y-b) + (x-a)b,$$
+    which gives by subadditivity and multiplicativity:
+    $$|xy - ab| \leq |x| \cdot |y-b| + |x-a| \cdot |b|.$$
+
+    In the case that $T_{>0}$ has a minimal element, the topology is discrete and $\mu$ is trivially continuous. Assume therefore that $T$ is dense at zero. Fix $(a,b) \in R \times R$ and let $\varepsilon \in T_{>0}$. We need to find a neighborhood of $(a,b)$ on which $|xy - ab| < \varepsilon$.
+
+    For any $x$ with $|x-a| < 1_T$, we have by subadditivity $|x| = |(x-a)+a| \leq |x-a| + |a| < 1_T + |a|$. Set $M_a := |a| + 1_T \in T_{\geq 0}$. Thus on the open ball $B(a, 1_T)$, the absolute value is bounded above by $M_a$.
+
+    Now choose $\delta_2, \delta_3 \in T_{>0}$ such that
+    $$M_a \cdot \delta_2 + |b| \cdot \delta_3 < \varepsilon.$$
+    Such elements exist because $T$ is dense at zero: for any fixed $c \in T_{\geq 0}$ and $\eta \in T_{>0}$, we can find $\delta \in T_{>0}$ with $c \cdot \delta < \eta$. To see this briefly: if $c = 0_T$ then any $\delta$ works; if $c > 0_T$, since $T$ is dense at zero the set of positive elements has no minimum, so we can choose $\delta$ as small as needed to make $c \cdot \delta < \eta$\TODO{AI generated, reference needed: proposition that in a dense at zero ordered semiring, for any c >= 0 and eta > 0 there exists delta > 0 with c*delta < eta}.
+
+    Set $\delta = \min(1_T, \delta_2, \delta_3)$. Then for any $(x,y) \in B(a, \delta) \times B(b, \delta)$, we have $|x-a| < \delta$, $|y-b| < \delta$, and $|x| < M_a$ (since $\delta \leq 1_T$), so
+    $$|xy - ab| \leq |x| \cdot |y-b| + |x-a| \cdot |b| < M_a \cdot \delta + |b| \cdot \delta \leq M_a \cdot \delta_2 + |b| \cdot \delta_3 < \varepsilon.$$
+    Hence $\mu(B(a, \delta) \times B(b, \delta)) \subseteq B(ab, \varepsilon)$, proving continuity at $(a,b)$.
+
+    The subtraction map $\sigma(a,b) = a - b$ is the composition of the continuous maps $(\id_R, \nu) : R \times R \to R \times R$ and $\alpha : R \times R \to R$, so it is continuous by \Cref{proposition:continuity_of_composition_of_continuous_functions}.
+\end{proof}

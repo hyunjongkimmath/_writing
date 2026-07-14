@@ -1,0 +1,68 @@
+\begin{proposition} \label{proposition:natural_numbers_multiplication_associative_commutative_distributive}
+Let $\bbN$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. For all $n, m, k \in \bbN$:
+\begin{enumerate}
+    \item $(n \times m) \times k = n \times (m \times k)$ (associativity),
+    \item $n \times m = m \times n$ (commutativity),
+    \item $n \times (m + k) = n \times m + n \times k$ (distributivity).
+\end{enumerate}
+\CrefIfExists{proposition:natural_numbers_addition_existence}\CrefIfExists{proposition:natural_numbers_multiplication_existence}
+Moreover, $1$ is the multiplicative identity: $n \times 1 = n$ for all $n \in \bbN$.
+\end{proposition}
+
+\begin{proof}
+
+        We first show the distributivity property by fixing $n,m \in \bbN$ and inducting on $k$.  
+        \begin{itemize}
+            \item For the base case, i.e. $k = 1$, we have 
+            $$n \times (m+1) = n \times s(m) = n \times m + n = n \times m + n \times 1$$
+            by \Cref{proposition:natural_numbers_addition_existence} and \Cref{proposition:natural_numbers_multiplication_existence}.
+
+            \item Suppose inductively that $l \in \bbN$ satisfies
+            $$n \times (m+l) = n \times m + n \times l.$$
+            We need to show that 
+            $$n \times (m+s(l)) = n \times m + n \times s(l).$$
+            The left hand side equals
+            $$n \times s(m+l) = n \times (m+l) + n = (n \times m + n \times l) + n$$
+            by \Cref{proposition:natural_numbers_addition_existence} and the inductive hypothesis. By the associtiativy property in \Cref{proposition:natural_numbers_addition_associative_commutative}, this equals 
+            $$(n \times m) + (n \times l + n)$$
+            which equals
+            $$(n \times m) + (n \times s(l))$$
+            as desired.
+        \end{itemize}
+
+
+        We show that $\times$ is associative by fixing $n, m$ and inducting on $k$.
+        \begin{itemize}
+            \item For the base case, i.e. $k = 1$, by \Cref{proposition:natural_numbers_multiplication_existence}, we have
+            $$(n \times m) \times 1 = n \times m$$
+            and
+            $$n \times (m \times 1) = m \times m$$
+            Therefore, 
+            $$(n \times m) \times 1 = n \times (m \times 1).$$
+
+            \item Suppose inductively that $l \in \bbN$ is an integer such that 
+            $$(n \times m) \times l = n \times (m \times l);$$
+            we aim to show that 
+            $$(n \times m) \times s(l) = n \times (m \times s(l)).$$
+            \CrefIfExists{definition:natural_numbers}
+            By \Cref{proposition:natural_numbers_multiplication_existence}, 
+            $$(n \times m) \times s(l) = (n \times m) \times l + (n \times m),$$
+            which by the inductive hypothesis equals 
+            $$n \times (m \times l) + n \times m.$$
+            In turn, by distributivity, this equals 
+            $$n \times (m \times l + m)$$
+            and once again, by \Cref{proposition:natural_numbers_multiplication_existence}, this equals 
+            $$n \times (m \times s(l)).$$
+            We have thus shown the desired equality.
+        \end{itemize}
+
+        We show that $\times$ is commutative by inducting on $n$ for fixed $m$.
+
+        \begin{itemize}
+            \item For the base case, i.e. $n = 1$, $1 \times m = m$ by \Cref{lemma:natural_number_one_left_identity_for_multiplication}, and $m \times 1 = m$ by \CrefIfExists{proposition:natural_numbers_multiplication_existence}. Hence $1 \times m = m \times 1$.
+
+            \item Suppose that $k \in \bbN$ satisfies $k \times m = m \times k$. By \Cref{lemma:natural_number_successor_left_multiplication_recursion}, the inductive hypothesis, and \CrefIfExists{proposition:natural_numbers_multiplication_existence}, we have
+            $$s(k) \times m = k \times m + m = m \times k + m = m \times s(k).$$
+        \end{itemize}
+
+\end{proof}

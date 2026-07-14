@@ -1,0 +1,13 @@
+\begin{definition}[Bounded above, bounded below, and bounded function] \label{definition:bounded_above_below_and_bounded_function_on_a_subset_of_an_ordered_set}
+    Let $(P,\leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}, let $S$ be a set, and let $f : S \to P$ be a function.
+
+    \begin{enumerate}
+        \item The function $f$ is said to be \hldef{bounded above} if there exists an element $M \in P$ such that $f(s) \leq M$ for all $s \in S$. Such an element $M$ is called an \hldef{upper bound of $f$}.
+
+        \item The function $f$ is said to be \hldef{bounded below} if there exists an element $m \in P$ such that $m \leq f(s)$ for all $s \in S$. Such an element $m$ is called a \hldef{lower bound of $f$}.
+
+        \item The function $f$ is said to be \hldef{bounded} if it is both bounded above and bounded below.
+    \end{enumerate}
+
+    In the special case where $P = (S,\leq)$, we say that a subset $A \subseteq S$ is \hldef{bounded above}, \hldef{bounded below}, or \hldef{bounded} if the inclusion map $A \hookrightarrow S$ has the corresponding property.
+\end{definition}

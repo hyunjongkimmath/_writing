@@ -1,0 +1,22 @@
+\begin{proposition} \label{proposition:category_of_left_R_modules_is_equivalent_to_R_Z_bimodules}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. The \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of left $R$-modules} ${}_R\mathsf{Mod}$ is \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$\bbZ$-bimodules} ${}_R\mathsf{Mod}_\bbZ$.
+
+    \paragraph{Functor from left $R$-modules to $R$-$\bbZ$-bimodules.}
+    Let $F \colon {}_R\mathsf{Mod} \to {}_R\mathsf{Mod}_\bbZ$ be the functor that equips a left $R$-module $M$ with a right $\bbZ$-action via
+    $$\hlin{m \cdot n = \underbrace{m + \cdots + m}_{n \text{ times}} \quad (n > 0), \qquad m \cdot 0 = 0_M, \qquad m \cdot (-n) = -(m \cdot n) \quad (n > 0),}$$
+    for $m \in M$ and $n \in \bbZ$. The left $R$-action and this right $\bbZ$-action commute because the left action is additive:
+    $$r \cdot (m \cdot n) = r \cdot (\underbrace{m + \cdots + m}_{n}) = \underbrace{rm + \cdots + rm}_{n} = (rm) \cdot n.$$
+    Hence $M$ becomes an $R$-$\bbZ$-bimodule. On morphisms, $F$ acts as the identity: a left $R$-linear map is automatically $\bbZ$-linear since it preserves addition and hence integer multiples.
+
+    \paragraph{Functor from $R$-$\bbZ$-bimodules to left $R$-modules.}
+    Let $G \colon {}_R\mathsf{Mod}_\bbZ \to {}_R\mathsf{Mod}$ be the forgetful functor that sends an $R$-$\bbZ$-bimodule to its underlying left $R$-module (forgetting the right $\bbZ$-action).
+
+    \paragraph{Natural isomorphisms.}
+    We have:
+    \begin{enumerate}
+        \item $F \circ G = \operatorname{id}_{{}_R\mathsf{Mod}_\bbZ}$, because for any $R$-$\bbZ$-bimodule $M$, the right $\bbZ$-action is uniquely determined by the additive structure of $M$: in any abelian group (and hence in any left $R$-module), there is at most one way to make the actions commute, and the canonical action always works.
+        \item $G \circ F = \operatorname{id}_{{}_R\mathsf{Mod}}$, because the underlying left $R$-module of $F(M)$ is exactly $M$.
+    \end{enumerate}
+    Any left $R$-linear map between bimodules is automatically a bimodule map: if $f \colon M \to N$ satisfies $f(rm) = rf(m)$, then it also satisfies $f(mn) = f(\sum m) = \sum f(m) = f(m)n$. Hence $F$ is fully faithful and essentially surjective.
+\end{proposition}

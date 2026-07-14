@@ -1,0 +1,36 @@
+\begin{proposition} \label{proposition:matrix_algebra_over_involution_ring_is_involution_algebra_over_a_ring_with_involution}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$.
+    Let $M_n(A)$ be the \CrefAndHyperrefIfExist{definition:matrix_over_a_ring}{matrix ring} over $A$.
+    The map $X \mapsto X^* = \overline{X^\top}$ is an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution} on $M_n(A)$.
+    Moreover, this involution along with the embedding $A \mapsto aI_n$ makes $M_n(A)$ into an \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{involution algebra} over $A$.
+\end{proposition}
+\begin{proof}
+    We verify the four involution axioms for the map $\cdot^*: M_n(A) \to M_n(A)$.
+
+    \begin{enumerate}
+        \item We show that $\cdot^*$ is additive. For $X,Y \in M_n(A)$,
+        $$(X+Y)^* = \overline{(X+Y)^\top} = \overline{X^\top + Y^\top} = \overline{X^\top} + \overline{Y^\top} = X^* + Y^*.$$
+
+        \item 
+        We show that $\cdot^*$ is anti-multiplicative. For $X,Y \in M_n(A)$,
+        $$(XY)^* = \overline{(XY)^\top} = \overline{Y^\top X^\top} = \overline{Y^\top}\,\overline{X^\top} = Y^* X^*,$$
+        where the second equality uses the fact that the transpose reverses the order of multiplication and the third uses that $\sigma$ is a ring homomorphism applied entrywise.
+
+        \item 
+        We show that $\cdot^*$ preserves the identity.
+        The identity matrix $I_n$ has entries $\delta_{ij}$. Its conjugate transpose is
+        $$(I_n)^* = \overline{I_n^\top} = \overline{I_n} = I_n,$$
+        since $\overline{1_A} = 1_A$ and $\overline{0_A} = 0_A$.
+
+        \item  
+        We show that $\cdot^*$ is an involution.
+        For $X \in M_n(A)$,
+        $$(X^*)^* = \bigl( \overline{X^\top} \bigr)^* = \overline{\bigl( \overline{X^\top} \bigr)^\top} = \overline{\overline{X}} = X,$$
+        where the last equality uses $\overline{\overline{a}} = a$ for all $a \in A$.
+    \end{enumerate}
+    Thus $*$ is an involution on $M_n(A)$.
+
+    It remains to show that the embedding $\iota: A \to M_n(A)$, $a \mapsto a I_n$, is a homomorphism of involution rings whose image lies in the center of $M_n(A)$. The map $\iota$ is a ring homomorphism because $(a+b)I_n = aI_n + bI_n$, $(ab)I_n = (aI_n)(bI_n)$, and $1_A I_n = I_n$. Its image lies in the center since $a I_n$ commutes with every matrix: $(a I_n) X = a X = X (a I_n)$ for all $X \in M_n(A)$. Finally, $\iota$ respects the involutions:
+    $$\iota(\overline{a}) = \overline{a} I_n = \overline{a I_n} = \overline{\iota(a)^\top} = \iota(a)^*,$$
+    where $\overline{a I_n}$ denotes the entrywise conjugate of the scalar matrix $a I_n$, which coincides with its conjugate transpose because $a I_n$ is symmetric. Hence $\iota$ is a homomorphism of involution rings, and $M_n(A)$ is an involution $A$-algebra.
+\end{proof}

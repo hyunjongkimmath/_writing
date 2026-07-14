@@ -1,13 +1,6 @@
 \begin{definition}[Grothendieck topology] \label{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}
     Let $\mathscr{U}$ be a \CrefAndHyperrefIfExist{definition:grothendieck_universe}{universe}.
     \begin{enumerate}
-        % \item Let $C$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}. A \hldef{Grothendieck topology on $C$} assigns to each object $U$ of $C$ a collection of families of morphisms $\{U_i \to U\}_{i \in I}$, called \hldef{coverings of $U$}, satisfying:
-        % \begin{itemize}
-        %     \item (Isomorphism) If $f: V \to U$ is an isomorphism in $C$, then $\{f: V \to U\}$ is a covering of $U$.
-        %     \item (Stability under base change) If $\{U_i \to U\}_{i \in I}$ is a covering of $U$ and $V \to U$ is any morphism, then the family $\{ U_i \times_U V \to V \}_{i \in I}$ is a covering of $V$.
-        %     \item (Transitivity) If $\{U_i \to U\}_{i \in I}$ is a covering of $U$ and for each $i$, $\{V_{ij} \to U_i\}_{j \in J_i}$ is a covering of $U_i$, then the family $\{ V_{ij} \to U \}_{i \in I,\, j \in J_i}$ is a covering of $U$.
-        % \end{itemize}
-
         \item (See \cite[Expos\'e II, D\'efinition 1.1]{SGA4_I}) Let $\calC$ be a \CrefAndHyperrefIfExist{definition:category}{category}. A \hldef{Grothendieck topology on $\calC$} assigns to each object $U$ of $\calC$ a collection \hl{$J(U)$} of \CrefAndHyperrefIfExist{definition:sieve_on_an_object_in_a_category}{sieves} $\{U_i \to U\}_{i \in I}$, each called a \hldef{covering sieve of $U$}, satisfying:
         \begin{enumerate}
             \item (Stability under ``base change''): If $S \in J(U)$ is a covering sieve of an object $U$, and $f: V \to U$ is any morphism in $\calC$, then the \CrefAndHyperrefIfExist{definition:pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object}{pullback sieve} $f^* S$ is a covering sieve of $U$.

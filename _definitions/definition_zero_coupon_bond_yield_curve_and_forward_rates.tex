@@ -1,0 +1,15 @@
+\begin{definition}[Zero-coupon bond, yield curve and forward rates] \label{definition:zero_coupon_bond_yield_curve_and_forward_rates}
+\TODO{AI generated, verify}
+A \hldef{zero-coupon bond maturing at time $T$} has price $P(t, T)$ at time $t \leq T$, paying 1 unit of currency at maturity. The price satisfies $P(T, T) = 1$ and $0 < P(t, T) \leq 1$.
+
+The \hldef{continuously compounded spot rate} (or yield) for maturity $T$ is
+$$\hlin{y(t, T) = -\frac{\log P(t, T)}{T - t}}.$$
+The map $T \mapsto y(t, T)$ is called the \hldef{yield curve}.
+
+The \hldef{instantaneous forward rate} for maturity $T$ observed at time $t$ is
+$$\hlin{f(t, T) = -\frac{\partial}{\partial T} \log P(t, T)}.$$
+The spot rate and forward rate are related by
+$$y(t, T) = \frac{1}{T - t} \int_t^T f(t, u) \, du.$$
+
+The \hldef{instantaneous short rate} is $r_t = f(t, t) = -\left.\frac{\partial}{\partial T}\log P(t, T)\right|_{T=t}$.
+\end{definition}

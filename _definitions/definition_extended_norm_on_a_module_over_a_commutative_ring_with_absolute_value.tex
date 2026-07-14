@@ -1,0 +1,25 @@
+\begin{definition}[Extended norm on a module over a ring with absolute value] \label{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} valued in an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} $T$:
+    $$|\cdot| : R \to T.$$
+    Let $M$ be a (left/right) module over $R$\CrefIfExists{definition:module_over_a_ring}, and let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$.
+
+    An \hldef{extended norm on $M$ valued in $T^\infty$} is a function
+    $$\|\cdot\| : M \to T^\infty$$
+    satisfying for all $x, y \in M$ and all scalars $\alpha \in R$:
+    \begin{enumerate}
+        \item Positive definiteness: $\|x\| = 0_T$ if and only if $x = 0_M$.
+        \item Homogeneity: $\|\alpha x\| = |\alpha| \cdot \|x\|$, where the multiplication on the right is in $T^\infty$.
+        \item Triangle inequality: $\|x + y\| \leq \|x\| + \|y\|$, where addition and order are those of $T^\infty$.
+    \end{enumerate}
+    A module equipped with an extended norm valued in $T^\infty$ is called an \hldef{extended normed module over $R$}.
+
+    If the range of $\|\cdot\|$ is contained in $T$, then we call it a \hldef{norm on $M$ valued in $T$}, with $M$ called a \hldef{normed module over $R$}.
+
+    \TextIfExists{definition:extended_seminorm_on_a_module_over_a_commutative_ring_with_absolute_value}{
+        An extended norm on $M$ valued in $T^\infty$ is an \CrefAndHyperrefIfExist{definition:extended_seminorm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended seminorm} that additionally satisfies positive definiteness.
+    }
+    \TextIfExists{definition:extended_quasinorm_on_a_module_over_a_commutative_ring_with_absolute_value}{
+        An extended norm on $M$ valued in $T^\infty$ is an \CrefAndHyperrefIfExist{definition:extended_quasinorm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended quasi-norm} that additionally satisfies the triangle inequality.
+    }
+\end{definition}

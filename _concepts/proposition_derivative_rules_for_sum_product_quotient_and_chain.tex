@@ -1,0 +1,57 @@
+\begin{proposition}[Derivative rules for sum, product, quotient and chain] \label{proposition:derivative_rules_for_sum_product_quotient_and_chain}
+    Let $I, J \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be intervals and let $f, g : I \to \mathbb{R}$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions}. Let $a \in I$ be a point at which both $f$ and $g$ are \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable at $a$}.
+
+    \begin{enumerate}
+        \item[\textbf{(Sum rule)}] The function $f + g$ is differentiable at $a$ and
+        $$\bigl(f + g\bigr)'(a) = f'(a) + g'(a).$$
+
+        \item[\textbf{(Product rule)}] The function $f \cdot g$ is differentiable at $a$ and
+        $$\bigl(f \cdot g\bigr)'(a) = f'(a)\,g(a) + f(a)\,g'(a).$$
+
+        \item[\textbf{(Quotient rule)}] If in addition $g(a) \neq 0$, then the function $f/g$ is differentiable at $a$ and
+        $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)\,g(a) - f(a)\,g'(a)}{g(a)^2}.$$
+
+        \item[\textbf{(Chain rule)}] Let $h : J \to \mathbb{R}$ be a function such that $f(I) \subseteq J$ and $h$ is differentiable at $f(a)$. Then the composition $h \circ f$ is differentiable at $a$ and
+        $$(h \circ f)'(a) = h'(f(a))\,f'(a).$$
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    \begin{enumerate}
+        \item We have
+            \begin{align*}
+                (f+g)'(a) &= \lim_{h \to 0} \frac{(f+g)(a+h) - (f+g)(a)}{h} \\
+                &= \lim_{h \to 0} \left( \frac{f(a+h) - f(a)}{h} + \frac{g(a+h) - g(a)}{h} \right).
+            \end{align*}
+            By \Cref{proposition:limit_algebra_for_real_valued_functions}, since both limits on the right-hand side exist (as $f$ and $g$ are differentiable at $a$), the limit of the sum equals the sum of the limits:
+            $$(f+g)'(a) = f'(a) + g'(a).$$
+
+        \item Add and subtract $f(a+h)\,g(a)$ in the numerator:
+            \begin{align*}
+                (f\cdot g)'(a) &= \lim_{h \to 0} \frac{f(a+h)\,g(a+h) - f(a)\,g(a)}{h} \\
+                &= \lim_{h \to 0} \left( \frac{f(a+h) - f(a)}{h}\,g(a+h) + f(a)\,\frac{g(a+h) - g(a)}{h} \right).
+            \end{align*}
+            The first term on the right-hand side is a product of two factors. By \Cref{proposition:limit_algebra_for_real_valued_functions}, since $\lim_{h \to 0} \frac{f(a+h) - f(a)}{h} = f'(a)$ and $\lim_{h \to 0} g(a+h) = g(a)$ (the latter by \Cref{proposition:differentiability_implies_continuity_at_a_point}), the limit of their product is $f'(a)\,g(a)$. The second term has limit $f(a)\,g'(a)$. Summing gives
+            $$(f\cdot g)'(a) = f'(a)\,g(a) + f(a)\,g'(a).$$
+
+        \item Write $\frac{1}{g}$ as the reciprocal. Since $g$ is continuous at $a$\CrefIfExists{proposition:differentiability_implies_continuity_at_a_point} and $g(a) \neq 0$, there exists a neighborhood of $a$ on which $g(x) \neq 0$. For small $h$,
+            \begin{align*}
+                \frac{\frac{f(a+h)}{g(a+h)} - \frac{f(a)}{g(a)}}{h} &= \frac{f(a+h)\,g(a) - f(a)\,g(a+h)}{h\,g(a+h)\,g(a)} \\
+                &= \frac{\frac{f(a+h) - f(a)}{h}\,g(a) - f(a)\,\frac{g(a+h) - g(a)}{h}}{g(a+h)\,g(a)}.
+            \end{align*}
+            The numerator converges to $f'(a)\,g(a) - f(a)\,g'(a)$ by the sum and scalar multiple rules. The denominator converges to $g(a)^2$ because $\lim_{h \to 0} g(a+h) = g(a)$. By the quotient rule for limits\CrefIfExists{proposition:limit_algebra_for_real_valued_functions},
+            $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)\,g(a) - f(a)\,g'(a)}{g(a)^2}.$$
+
+        \item For each $h$ such that $a+h \in I$, define the difference quotient
+            $$\Delta_h := \frac{(h \circ f)(a+h) - (h \circ f)(a)}{h}.$$
+            We can rewrite this as
+            $$\Delta_h = \frac{h(f(a+h)) - h(f(a))}{f(a+h) - f(a)} \cdot \frac{f(a+h) - f(a)}{h},$$
+            provided $f(a+h) \neq f(a)$. Let $\varepsilon > 0$. Since $h$ is differentiable at $f(a)$, there exists $\delta_1 > 0$ such that whenever $0 < |y - f(a)| < \delta_1$, we have
+            $$\left| \frac{h(y) - h(f(a))}{y - f(a)} - h'(f(a)) \right| < \varepsilon.$$
+            Since $f$ is continuous at $a$\CrefIfExists{proposition:differentiability_implies_continuity_at_a_point}, there exists $\delta_2 > 0$ such that $|x - a| < \delta_2$ implies $|f(x) - f(a)| < \delta_1$. For $0 < |h| < \delta_2$, if $f(a+h) \neq f(a)$, then
+            $$\left| \frac{h(f(a+h)) - h(f(a))}{f(a+h) - f(a)} - h'(f(a)) \right| < \varepsilon.$$
+            If $f(a+h) = f(a)$, the difference quotient $\Delta_h$ equals $0$, and since $\frac{f(a+h)-f(a)}{h} = 0$, the product formula still holds trivially. In either case, writing
+            $$\Delta_h = \left( h'(f(a)) + r(h) \right) \cdot \frac{f(a+h) - f(a)}{h},$$
+            where $r(h) \to 0$ as $h \to 0$, we obtain in the limit:
+            $$\lim_{h \to 0} \Delta_h = h'(f(a)) \cdot f'(a).$$
+    \end{enumerate}
+\end{proof}

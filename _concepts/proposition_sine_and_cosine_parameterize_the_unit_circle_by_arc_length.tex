@@ -1,0 +1,18 @@
+\begin{proposition} \label{proposition:sine_and_cosine_parameterize_the_unit_circle_by_arc_length}
+\TODO{AI generated, verify}
+Let $\gamma : \mathbb{R} \to \mathbb{R}^2$ be the curve defined by $\gamma(t) = (\cos(t), \sin(t))$, where $\cos$ and $\sin$ are the \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions}.
+
+\begin{enumerate}
+    \item[\textbf{(Unit circle trajectory)}] For every $t \in \mathbb{R}$, $\|\gamma(t)\| = 1$. Thus $\gamma$ maps into the \CrefAndHyperrefIfExist{definition:n_dimensional_unit_sphere}{unit circle $S^1$}. Moreover, $\gamma(0) = (1, 0)$ and $\gamma'(0) = (0, 1)$.
+
+    \item[\textbf{(Unit speed)}] The curve $\gamma$ is everywhere \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable}, and for every $t \in \mathbb{R}$,
+    $$\hlin{\|\gamma'(t)\| = 1}$$
+    where $\gamma'(t) = (-\sin(t), \cos(t))$ by the \CrefAndHyperrefIfExist{proposition:derivatives_of_sine_and_cosine}{derivatives of sine and cosine}. Consequently, the \CrefAndHyperrefIfExist{definition:speed_of_a_parametrized_curve}{speed} of $\gamma$ is identically $1$.
+
+    \item[\textbf{(Arc length parameterization)}] For any $a < b$, the \CrefAndHyperrefIfExist{definition:arc_length_of_a_piecewise_smooth_curve}{arc length} of $\gamma$ restricted to $[a, b]$ equals
+    $$\hlin{\int_a^b \|\gamma'(t)\| \, dt = b - a}$$
+    where the integral is the \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integral}. The curve $\gamma$ parameterizes $S^1$ by arc length, starting from $(1, 0)$ and traversing counterclockwise.
+
+    \item[\textbf{(Periodicity and surjectivity)}] The map $\gamma$ is $2\pi$-periodic, where $\pi$ is the \CrefAndHyperrefIfExist{definition:archimedes_constant_pi_via_cosine_root}{Archimedes' constant}. The restriction $\gamma : [0, 2\pi) \to S^1$ is a bijection. The value $2\pi$ equals the circumference of the unit circle.
+\end{enumerate}
+\end{proposition}

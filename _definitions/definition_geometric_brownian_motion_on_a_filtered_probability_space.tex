@@ -1,0 +1,12 @@
+\begin{definition}[Geometric Brownian motion on a filtered probability space] \label{definition:geometric_brownian_motion_on_a_filtered_probability_space}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$. Let $S_0 > 0$, $\mu \in \mathbb{R}$, and $\sigma > 0$.
+
+The process $\{S_t\}_{t \geq 0}$ defined by the stochastic differential equation
+$$\hlin{dS_t = \mu S_t \, dt + \sigma S_t \, dB_t}$$
+is called a \hldef{geometric Brownian motion with drift $\mu$ and volatility $\sigma$}. By Itô's formula applied to $f(t, x) = \log x$, the explicit solution is
+$$S_t = S_0 \exp\left(\left(\mu - \frac{1}{2}\sigma^2\right)t + \sigma B_t\right).$$
+
+For each $t > 0$, $\log(S_t/S_0) \sim \mathcal{N}((\mu - \tfrac{1}{2}\sigma^2)t, \sigma^2 t)$ and
+$$\mathbb{E}[S_t] = S_0 e^{\mu t}, \quad \operatorname{Var}(S_t) = S_0^2 e^{2\mu t}(e^{\sigma^2 t} - 1).$$
+\end{definition}

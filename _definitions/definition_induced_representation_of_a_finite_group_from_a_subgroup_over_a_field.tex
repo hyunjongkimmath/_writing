@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:induced_representation_of_a_finite_group_from_a_subgroup_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a finite \CrefAndHyperrefIfExist{definition:group}{group}, $H \leq G$ a subgroup, $k$ a \CrefAndHyperrefIfExist{definition:field}{field}, and $(\sigma, W)$ a \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representation} of $H$ over $k$. Let \hl{$k[G]$} denote the \CrefAndHyperrefIfExist{definition:regular_representation_of_a_finite_group_over_a_field}{group algebra of $G$ over $k$}.
+
+    The \hldef{induced representation of $\sigma$ from $H$ to $G$} is the representation
+    $$\hlin{\mathrm{Ind}_H^G(\sigma) = k[G] \otimes_{k[H]} W}$$
+    of $G$ over $k$, where $k[G]$ is viewed as a $(k[G], k[H])$-bimodule and $W$ as a left $k[H]$-module. The action of $G$ on $\mathrm{Ind}_H^G(\sigma)$ is given by left multiplication on the first factor:
+    $$\hlin{g' \cdot (g \otimes w) = (g'g) \otimes w, \quad g', g \in G, \; w \in W.}$$
+
+    The dimension of the induced representation is $\dim \mathrm{Ind}_H^G(\sigma) = [G\!:\!H] \cdot \dim W$.
+\end{definition}

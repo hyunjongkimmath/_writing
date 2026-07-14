@@ -1,0 +1,25 @@
+\begin{definition} \label{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$ with an ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$. Let $T: M \to M$ be an \CrefAndHyperrefIfExist{definition:endomorphism_of_an_object_in_a_category}{endomorphism} of $M$ (i.e.\ an $R$-linear map).
+
+    \begin{enumerate}
+        \item \textbf{Column vector convention.} The \hldef{matrix of $T$ with respect to $\mathcal{E}$ (column convention)} is the matrix $[T]_\mathcal{E} \in M_n(R)$\CrefIfExists{definition:matrix_over_a_ring} whose $j$-th column is the \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate column vector} of $T(e_j)$:
+        $$\hlin{[T]_\mathcal{E} = \bigl( [T(e_1)]_\mathcal{E} \;\; \cdots \;\; [T(e_n)]_\mathcal{E} \bigr)}.$$
+        Equivalently, the entries $[T]_\mathcal{E}(i,j)$ are determined by
+        $$T(e_j) = \sum_{i=1}^n e_i \, [T]_\mathcal{E}(i,j)$$
+        if $M$ is a right $R$-module, and by
+        $$T(e_j) = \sum_{i=1}^n [T]_\mathcal{E}(i,j) \, e_i$$
+        if $M$ is a left $R$-module. For any $x \in M$, the coordinate column vectors transform as
+        $$\hlin{[T(x)]_\mathcal{E} = [T]_\mathcal{E} \, [x]_\mathcal{E}}$$
+        \CrefIfExists{lemma:matrix_of_an_endomorphism_acts_on_coordinate_column_vectors}.
+
+        \item \textbf{Row vector convention.} The \hldef{matrix of $T$ with respect to $\mathcal{E}$ (row convention)} is the matrix $[T]_\mathcal{E}^{\mathsf{r}} \in M_n(R)$ whose $i$-th row is the \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate row vector} of $T(e_i)$:
+        $$\hlin{[T]_\mathcal{E}^{\mathsf{r}} = \begin{pmatrix} [T(e_1)]_\mathcal{E}^{\mathsf{r}} \\ \vdots \\ [T(e_n)]_\mathcal{E}^{\mathsf{r}} \end{pmatrix}}.$$
+        For any $x \in M$, the coordinate row vectors transform as
+        $$\hlin{[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}}.$$
+
+        The two conventions are related by transposition:
+        $$[T]_\mathcal{E}^{\mathsf{r}} = [T]_\mathcal{E}^{\mathsf{T}}$$
+        \CrefIfExists{definition:transpose_of_a_matrix_over_a_ring}.
+    \end{enumerate}
+\end{definition}

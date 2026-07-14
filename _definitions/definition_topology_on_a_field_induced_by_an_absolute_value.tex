@@ -1,12 +1,14 @@
-\begin{definition}[Topology on a field induced by an absolute value] \label{definition:topology_on_a_field_induced_by_an_absolute_value}
+\begin{definition}[Topology on a commutative ring induced by an absolute value] \label{definition:topology_on_a_field_induced_by_an_absolute_value}
 
-Let $K$ be a field equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring}{absolute value} $|\cdot| : K \to \mathbb{R}_{\geq 0}$. The \hldef{topology induced by $|\cdot|$ on $K$} is defined by declaring a subset $U \subseteq K$ to be \CrefAndHyperrefIfExist{definition:topological_space}{open} if for every $x \in U$, there exists $\varepsilon > 0$ such that
-$$\hlin{B(x, \varepsilon) := \{ y \in K : |y - x| < \varepsilon \} \subseteq U.}$$
-The collection of all such open sets forms a \CrefAndHyperrefIfExist{definition:topological_space}{topology} on $K$, making $(K, \mathcal{T}_{|\cdot|})$ a topological field.
-The set $B(x, \varepsilon)$ is called the \hldef{open ball of radius $\varepsilon$ around $x$}.
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, and let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}:
+    $$|\cdot| : R \to T.$$
+    The \hldef{topology induced by $|\cdot|$ on $R$} is defined by declaring a subset $U \subseteq R$ to be \CrefAndHyperrefIfExist{definition:topological_space}{open} if for every $x \in U$, there exists $\varepsilon \in T_{>0}$ such that
+    $$\hlin{B(x, \varepsilon) := \{ y \in R : |y - x| < \varepsilon \} \subseteq U.}$$
+    The set $B(x, \varepsilon)$ is called the \hldef{open ball of radius $\varepsilon$ around $x$}.
 
-Equivalently, the topology induced by $|\cdot|$ on $K$ is the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topology induced by} the \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{metric induced by $|\cdot|$} as a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm} on the $1$-dimensional $K$-vector space $K$. 
-% \TextIfExists{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{
-% Equivalenty, the topology induced by $|\cdot|$ on $K$ is the \CrefAndHyperrefIfExist{definition:topology_induced_by_a_norm_on_a_vector_space_over_a_field_with_absolute_value}{topology induced by $|\cdot|$} as a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{norm} on the $1$-dimensional $K$-vector space $K$.
-% }
+    In the case that $T = \bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, we recover the standard definition of the topology induced by an absolute value with real-valued radii.
+
+    Equivalently, the topology induced by $|\cdot|$ on $R$ is the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topology induced by} the \CrefAndHyperrefIfExist{definition:metric_induced_by_an_absolute_value_on_a_commutative_ring}{metric induced by $|\cdot|$}.
+
+    If $R$ is also a \CrefAndHyperrefIfExist{definition:field}{field}, this topology makes $(R, \mathcal{T}_{|\cdot|})$ a topological field.
 \end{definition}

@@ -1,13 +1,26 @@
 \begin{definition}[Derivative of a real valued function on a real interval] \label{definition:derivative_of_a_real_valued_function_on_a_real_interval}
-    \TODO{topology on $\bbR$}
-    \TODO{metric space structure on $\bbR$}
-    Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a function.  Let $a \in I$ be a point such that there is an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} of $a$ contained in $I$.
+    Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a function. Let $a \in I$ be a point such that there is an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} of $a$ contained in $I$.
 
     The function $f$ is said to be \hldef{differentiable at $a$} if the \CrefAndHyperrefIfExist{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}{limit}
     \[
     \lim_{h\to 0} \frac{f(a+h) - f(a)}{h}
     \]
     exists in $\mathbb{R}$.
-    In that case the limit is called the \hldef{derivative of $f$ at $a$} and is denoted \hl{$f'(a)$}.
-    If $f : \Omega \to \mathbb{C}$ is a function defined on an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{open interval} $\Omega \subseteq \mathbb{R}$ with values in $\mathbb{C}$, the same formula (with values in $\mathbb{C}$) defines differentiability and the derivative $f'(a) \in \mathbb{C}$.
+    In that case the limit is called the \hldef{derivative of $f$ at $a$} and is denoted by \hl{$f'(a)$}. We also write \hl{$\frac{df}{dx}(a)$} or \hl{$\left(\frac{d}{dx} f\right)(a)$}, calling $\frac{d}{dx}$ the \hldef{Leibniz derivative operator}. 
+
+    We say that $f$ is \hldef{differentiable on $I$} if $f$ is differentiable at $a$ for all $a \in I$. The notion of $n$ times differentiability and the notion of the $n$th-derivative of $f$ is recursively defined as follows:
+    \begin{itemize}
+        \item We say that $f$ is \hldef{first order differentiable at $a \in I$} or \hldef{$1$-time differentiable at $a \in I$} if $f$ is differentiable at $a$. In this case, the \hldef{first derivative of $f$ at $x = a$} is simply defined to be \hl{$f^{(1)}(a) = f'(a)$}.
+
+        We say that $f$ is \hldef{first order differentiable on $I$} or \hldef{$1$ time differentiable on $I$} if $f$ is differentiable on $I$.
+
+        \item We say that $f$ is \hldef{$(n+1)$-st order differentiable at $a \in I$} or \hldef{$(n+1)$-times differentiable at $a \in I$} if $f$ is $n$-times differentiable on an interval $(\alpha, \beta)$ containing $a$ and contained in $I$ and $f^{(n)}(x)$, which is in particular defined on $(\alpha, \beta)$,  is differentiable at $a$. In this case, the \hldef{$(n+1)$-st derivative of $f$ at $x=a$} is defined to be $f^{(n+1)}(a) = \left( \frac{d}{dx} f^{(n)} \right)(a)$. It is also denoted as \hl{$\left( \frac{d^n}{dx^n} f \right)$}. Note that this definition does not depend on the choice of interval $(\alpha, \beta)$. 
+
+        We say that $f$ is \hldef{$(n+1)$-st order differentiable on $I$} or \hldef{$(n+1)$-times differentiable on $I$} if $f$ is $(n+1)$-st order differentiable at all $a \in I$.
+    \end{itemize}
+
+    Moreover, we say that $f$ is \hldef{infinitely differentiable at $a \in I$} or \hldef{smooth at $a \in I$} if it is $n$th order differentiable at $a \in I$ for all $n \in \bbZ_+$, and that $f$ is \hldef{infinitely differentiable on $I$} or \hldef{smooth on $I$} if it is $n$th order differentiable on $I$ for all $n \in \bbZ_+$.
+
+
+    % If $f : \Omega \to \mathbb{C}$ is a function defined on an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{open interval} $\Omega \subseteq \mathbb{R}$ with values in $\mathbb{C}$, the same formula (with values in $\mathbb{C}$) defines differentiability and the derivative $f'(a) \in \mathbb{C}$.
 \end{definition}

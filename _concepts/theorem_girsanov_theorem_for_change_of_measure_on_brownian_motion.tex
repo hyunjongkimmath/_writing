@@ -1,0 +1,15 @@
+\begin{theorem}[Girsanov's theorem for change of measure on Brownian motion] \label{theorem:girsanov_theorem_for_change_of_measure_on_brownian_motion}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{0 \leq t \leq T}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{0 \leq t \leq T}$. Let $\theta = \{\theta_t\}_{0 \leq t \leq T}$ be an adapted process satisfying the Novikov condition:
+$$\mathbb{E}\left[\exp\left(\frac{1}{2} \int_0^T \theta_s^2 \, ds\right)\right] < \infty.$$
+
+Define the stochastic exponential (Doléans-Dade exponential)
+$$Z_t = \exp\left(-\int_0^t \theta_s \, dB_s - \frac{1}{2} \int_0^t \theta_s^2 \, ds\right), \quad 0 \leq t \leq T.$$
+
+Then $Z$ is a true martingale. Define the measure $\mathbb{Q}$ on $(\Omega, \mathcal{F}_T)$ by
+$$\frac{d\mathbb{Q}}{dP}\bigg|_{\mathcal{F}_t} = Z_t.$$
+
+Under $\mathbb{Q}$, the process
+$$W_t = B_t + \int_0^t \theta_s \, ds$$
+is a standard Brownian motion (called a \hldef{$\mathbb{Q}$-Brownian motion}). The drift of any Itô process is shifted by $\sigma \theta$ under this change of measure.
+\end{theorem}

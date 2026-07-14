@@ -1,0 +1,13 @@
+\begin{definition}[Differential entropy of a continuous random variable] \label{definition:differential_entropy_of_a_continuous_random_variable}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X: \Omega \to \mathbb{R}$ be a real-valued random variable with probability density function $f$ with respect to Lebesgue measure on $\mathbb{R}$.
+
+The \hldef{differential entropy of $X$} (base $e$, measured in nats) is defined as
+$$\hlin{h(X) = -\int_{-\infty}^\infty f(x) \log f(x) \, dx},$$
+with the convention $0 \log 0 = 0$. Unlike discrete entropy, differential entropy can be negative and is not invariant under change of variables.
+
+For a random vector $X: \Omega \to \mathbb{R}^n$ with joint density $f$, the differential entropy is defined analogously as
+$$h(X) = -\int_{\mathbb{R}^n} f(x) \log f(x) \, dx.$$
+
+Among all random variables on $\mathbb{R}$ with a fixed variance $\sigma^2$, the \CrefAndHyperrefIfExist{definition:normal_gaussian_distribution_on_the_real_line}{normal distribution} $\mathcal{N}(0, \sigma^2)$ maximizes differential entropy, achieving $h(X) = \tfrac{1}{2}\log(2\pi e \sigma^2)$.
+\end{definition}

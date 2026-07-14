@@ -1,0 +1,22 @@
+\begin{definition}[Monte Carlo simulation for option pricing with variance reduction] \label{definition:monte_carlo_simulation_for_option_pricing_with_variance_reduction}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, the price of a European option with payoff $\Phi(S_T)$ is
+$$V_0 = e^{-rT} \mathbb{E}^{\mathbb{Q}}\left[\Phi(S_T)\right].$$
+
+The \hldef{Monte Carlo estimator} using $N$ independent simulated paths is
+$$\hlin{\hat{V}_N = \frac{e^{-rT}}{N} \sum_{i=1}^N \Phi(S_T^{(i)})},$$
+where each path is generated from the explicit solution under $\mathbb{Q}$:
+$$S_T^{(i)} = S_0 \exp\left(\left(r - \frac{1}{2}\sigma^2\right)T + \sigma\sqrt{T} Z_i\right), \quad Z_i \sim \mathcal{N}(0, 1).$$
+
+By the central limit theorem, $\hat{V}_N$ is asymptotically normal with standard error $\operatorname{StdDev}(\Phi(S_T)) e^{-rT}/\sqrt{N}$.
+
+Common \hldef{variance reduction techniques}:
+
+\begin{enumerate}
+    \item \hldef{Antithetic variates}: pair each $Z_i$ with $-Z_i$ to reduce variance via negative correlation.
+    \item \hldef{Control variates}: use a correlated variable $Y$ with known expectation: $\hat{V}_{\text{CV}} = \hat{V}_N - \beta(\bar{Y} - \mathbb{E}[Y])$.
+    \item \hldef{Importance sampling}: sample from a tilted distribution to reduce the variance of rare events.
+\end{enumerate}
+
+Monte Carlo is particularly effective for high-dimensional path-dependent options where finite difference methods suffer from the curse of dimensionality.
+\end{definition}

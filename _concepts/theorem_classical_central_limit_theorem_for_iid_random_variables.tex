@@ -1,0 +1,9 @@
+\begin{theorem}[Classical Central Limit Theorem] \label{theorem:classical_central_limit_theorem_for_iid_random_variables}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $\{X_n\}_{n=1}^\infty$ be a sequence of independent and identically distributed real-valued random variables on $(\Omega, \mathcal{F}, P)$ such that $\mathbb{E}[X_1] = \mu$ and $\operatorname{Var}(X_1) = \sigma^2 \in (0, \infty)$.
+
+Let $S_n = \sum_{i=1}^n X_i$ for each $n \geq 1$. Then the normalized sum
+$$\frac{S_n - n\mu}{\sigma\sqrt{n}}$$
+\CrefAndHyperrefIfExist{definition:convergence_in_distribution_of_real_valued_random_variables}{converges in distribution} to a \CrefAndHyperrefIfExist{definition:normal_gaussian_distribution_on_the_real_line}{standard normal random variable} $\mathcal{N}(0, 1)$ as $n \to \infty$. That is, for every $t \in \mathbb{R}$,
+$$\lim_{n \to \infty} P\left(\frac{S_n - n\mu}{\sigma\sqrt{n}} \leq t\right) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^t e^{-x^2/2} \, dx.$$
+\end{theorem}

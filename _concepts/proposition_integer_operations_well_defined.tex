@@ -1,0 +1,54 @@
+\begin{proposition} \label{proposition:integer_operations_well_defined}
+Let $\bbZ$ be the set of integers as constructed in \Cref{definition:integers_from_natural_numbers}. The addition and multiplication operations on $\bbZ$ are well-defined with respect to the \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} $\sim$. That is, if $(a, b) \sim (a', b')$ and $(c, d) \sim (c', d')$, then:
+\begin{enumerate}
+    \item $[(a + c, b + d)] = [(a' + c', b' + d')]$,
+    \item $[(a \times c + b \times d, b \times c + a \times d)] = [(a' \times c' + b' \times d', b' \times c' + a' \times d')]$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+From $(a, b) \sim (a', b')$ we have $a + b' = b + a'$ in $\bbN$, and from $(c, d) \sim (c', d')$ we have $c + d' = d + c'$ in $\bbN$. We write these as:
+\begin{align*}
+\text{(E1)}:\quad a + b' = b + a' \\
+\text{(E2)}:\quad c + d' = d + c'
+\end{align*}
+
+We first show that addition on $\bbZ$ is well-defined. We need to show that $(a+c) + (b'+d') = (b+d) + (a'+c')$ in $\bbN$. Adding the equalities (E1) and (E2) gives
+$$(a + b') + (c + d') = (b + a') + (d + c').$$
+By \Cref{proposition:natural_numbers_addition_associative_commutative}, addition on $\bbN$ is associative and commutative, so the left side rearranges to $(a+c) + (b'+d')$ and the right side to $(b+d) + (a'+c')$. Hence $[(a+c, b+d)] = [(a'+c', b'+d')]$.
+
+Next we show that multiplication on $\bbZ$ is well-defined. We need to show that 
+$$(a \times c + b \times d) + (b' \times c' + a' \times d') = (b \times c + a \times d) + (a' \times c' + b' \times d')$$
+in $\bbN$. Let $X = a \times d' + b \times c' + a' \times c + b' \times d$. We add $X$ to both sides and verify equality.
+
+We compute the left side plus $X$:
+\begin{align*}
+&\quad (a \times c + b \times d + b' \times c' + a' \times d') + X \\
+&= a \times c + b \times d + b' \times c' + a' \times d' + a \times d' + b \times c' + a' \times c + b' \times d \\
+&= (a \times c + a \times d') + (b \times d + b \times c') + (b' \times c' + b' \times d) + (a' \times d' + a' \times c) && \text{[\Cref{proposition:natural_numbers_addition_associative_commutative}]} \\
+&= a \times (c + d') + b \times (d + c') + b' \times (c' + d) + a' \times (d' + c) && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]} \\
+&= a \times (d + c') + b \times (d + c') + b' \times (d + c') + a' \times (d + c') && \text{[E2, comm of $+$]} \\
+&= (a + b + b' + a') \times (d + c') && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]} \\
+&= ((a + b') + (b + a')) \times (d + c') && \text{[\Cref{proposition:natural_numbers_addition_associative_commutative}]} \\
+&= ((b + a') + (b + a')) \times (d + c') && \text{[E1: $a+b'=b+a'$]} \\
+&= (2 \times (b + a')) \times (d + c'). && \text{[$2 \times x = x + x$ for $x \in \bbN$]}
+\end{align*}
+
+We compute the right side plus $X$:
+\begin{align*}
+&\quad (b \times c + a \times d + a' \times c' + b' \times d') + X \\
+&= b \times c + a \times d + a' \times c' + b' \times d' + a \times d' + b \times c' + a' \times c + b' \times d \\
+&= (b \times c + b \times c') + (a \times d + a \times d') + (a' \times c' + a' \times c) + (b' \times d' + b' \times d) && \text{[\Cref{proposition:natural_numbers_addition_associative_commutative}]} \\
+&= b \times (c + c') + a \times (d + d') + a' \times (c' + c) + b' \times (d' + d) && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]} \\
+&= b \times (c + c') + (b + a') \times (d + d') + a' \times (c + c') + b' \times (d + d') && \text{[E1, comm of $+$]} \\
+&= (b + a') \times (c + c') + (b + a') \times (d + d') && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]} \\
+&= (b + a') \times (c + c' + d + d') && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]} \\
+&= (b + a') \times ((c + d') + (c' + d)) && \text{[\Cref{proposition:natural_numbers_addition_associative_commutative}]} \\
+&= (b + a') \times ((d + c') + (d + c')) && \text{[E2, comm of $+$]} \\
+&= (b + a') \times (2 \times (d + c')) \\
+&= (2 \times (b + a')) \times (d + c'). && \text{[\Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}]}
+\end{align*}
+
+Both sides plus $X$ equal $(2 \times (b + a')) \times (d + c')$. By \Cref{proposition:natural_numbers_addition_associative_commutative}, addition on $\bbN$ is cancellative (if $u + X = v + X$, then $u = v$), so the target equality holds. Hence multiplication is well-defined.
+\end{proof}

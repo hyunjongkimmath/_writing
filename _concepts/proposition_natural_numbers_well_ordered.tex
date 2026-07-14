@@ -1,0 +1,19 @@
+\begin{proposition} \label{proposition:natural_numbers_well_ordered}
+Let $\bbN$ be the set of natural numbers equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order} $<$. Then $(\bbN, <)$ is a \CrefAndHyperrefIfExist{definition:well_ordered_set}{well-ordered set}: every nonempty subset of $\bbN$ has a least element.
+\TODO{defien least element}
+\end{proposition}
+
+\begin{proof}
+Let $S \subseteq \bbN$ be a nonempty subset. Suppose for contradiction that $S$ has no least element. Define
+$$L = \{n \in \bbN : \forall m \in S, \ n < m\}.$$
+In words, $L$ is the set of natural numbers strictly less than every element of $S$. For $n \in \bbN$, Let $P(n)$ be the statement that $n \in L$. We show that $L = \bbN$ by showing that $P(n)$ holds for all $n \in \bbN$ by induction.
+
+By \Cref{lemma:1_is_least_element_of_natural_numbers}, 
+In the case that $n = 1$, suppose for contradiction that $1 \not\in L$. This means that there exists $m \in S$ with $1 \not< m$. By trichotomy on $\bbN$ (\CrefAndHyperrefIfExist{proposition:natural_numbers_order_compatibility}{order compatibility}), either $m = 1$ or $m < 1$. If $m = 1$, then $1 \in S$. Since $1 \leq x$ for all $x \in \bbN$ by \Cref{lemma:1_is_least_element_of_natural_numbers}, this implies that $1$ is the least element of $S$, which is a contradiction. If $m \neq 1$, then $m < 1$ is also impossible by \Cref{lemma:1_is_least_element_of_natural_numbers}. Hence, $1 \in L$, i.e. $P(1)$ holds. 
+
+Suppose inductively that $k \in \bbN$ satisfies $P(k)$. We show that $P(s(k))$ holds, i.e. that $s(k) \in L$. Suppose otherwise for contradiction. In other words, there exists $m \in S$ with $s(k) \not< m$, i.e. $m \leq s(k)$. Suppose for contradiction that $m < s(k)$. Since $k \in L$ by the inductive hypothesis and since $m \in S$, we have $k < m$, so there exists some $a \in \bbN$ such that $m = k+a$. If $a = 1$, then $m = k+1$, contradicting the supposition that $m < s(k) = k+1$ by \Cref{proposition:natural_numbers_addition_existence} and the trichotomy of $<$ (\Cref{proposition:natural_numbers_order_compatibility}). If $a \neq 1$, then $1 < a$ by \Cref{lemma:1_is_least_element_of_natural_numbers} and hence $m < s(k) = k+1 < k+a = m$ by \Cref{proposition:natural_numbers_order_compatibility} and the \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{commutativity of addition}, which also violates the trichotomy of $<$. Hence, $m \not< s(k)$ and hence $m = s(k)$. In particular, $s(k) \in S$.
+
+We show that $s(k)$ would have to be the least element of $S$, contradicting the assumption that $S$ has no least element. For any $m' \in S$, since $k \in L$, we have $k < m'$. Let $a \in \bbN$ satisfy $k+a = m'$. If $a = 1$, then $m' = s(k)$ by \Cref{proposition:natural_numbers_addition_existence}. If $a \neq 1$, then $s(k) = k+1 < k+a = m'$ again by \Cref{proposition:natural_numbers_order_compatibility} and the \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{commutativity of addition}. In any case, $s(k) \leq m'$, so $s(k)$ is the least element of $S$, yielding the desired contradiction. Hence, $s(k) \in L$, i.e. $P(s(k))$ holds, so $P(n)$ holds for all $n \in \bbN$ by induction. 
+
+In other words, we have shown that $L = \bbN$. Since $S$ is assumed to be nonempty, there exists some $m_0 \in S$. Since $L = \bbN$, we have $m_0 \in L$, meaning $m_0 < m_0$, which contradicts the irreflexivity of $<$\CrefIfExists{lemma:standard_order_on_natural_numbers_is_irreflexive}. Hence, $S$ must in fact have a least element.
+\end{proof}

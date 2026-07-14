@@ -1,0 +1,18 @@
+\begin{definition}[Market model with risk-free asset and risky assets] \label{definition:market_model_with_risk_free_asset_and_risky_assets}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{0 \leq t \leq T}, P)$ be a filtered probability space. A \hldef{market model on $[0, T]$} consists of:
+
+\begin{enumerate}
+    \item A risk-free asset (bank account) with price process $\{B_t\}_{0 \leq t \leq T}$ satisfying
+    $$dB_t = r_t B_t \, dt, \quad B_0 = 1,$$
+    where $r_t$ is the short rate process. In the constant-rate case, $B_t = e^{rt}$.
+
+    \item $d$ risky assets (stocks) with price processes $\{S_t^i\}_{0 \leq t \leq T}$ for $i = 1, \dots, d$, each adapted to $(\mathcal{F}_t)_{t \geq 0}$.
+\end{enumerate}
+
+A \hldef{trading strategy} is a predictable process $\theta_t = (\theta_t^1, \dots, \theta_t^d)$ specifying the number of shares held in each asset. The associated \hldef{self-financing portfolio value} is
+$$V_t = \theta_0^B(t) B_t + \sum_{i=1}^d \theta_t^i S_t^i,$$
+where $\theta_0^B(t)$ is the number of units in the risk-free asset.
+
+The market is said to be \hldef{arbitrage-free} if there exists no self-financing strategy with $V_0 = 0$, $P(V_T \geq 0) = 1$, and $P(V_T > 0) > 0$.
+\end{definition}

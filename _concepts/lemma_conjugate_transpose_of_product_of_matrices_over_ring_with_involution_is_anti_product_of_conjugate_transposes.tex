@@ -1,0 +1,19 @@
+\begin{lemma} \label{lemma:conjugate_transpose_of_product_of_matrices_over_ring_with_involution_is_anti_product_of_conjugate_transposes}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$.
+
+    For any $X \in M_{m \times n}(A)$ and $Y \in M_{n \times p}(A)$\CrefIfExists{definition:matrix_over_a_ring}, we have
+    $$(XY)^* = Y^* X^*.$$
+    \CrefIfExists{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}
+\end{lemma}
+
+\begin{proof}
+    Write $X = (x_{ij})$ and $Y = (y_{jk})$ so that $X$ is an $m \times n$ matrix and $Y$ is an $n \times p$ matrix. The $(i,k)$-entry of $XY$ is
+    $$(XY)_{ik} = \sum_{j=1}^n x_{ij} y_{jk}.$$
+    By \Cref{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}, the $(k,i)$-entry of $(XY)^*$ is the conjugate of the $(i,k)$-entry of $XY$:
+    $$(XY)^*_{ki} = \overline{(XY)_{ik}} = \overline{\sum_{j=1}^n x_{ij} y_{jk}}.$$
+    Since $\sigma$ is a ring involution, conjugation distributes over addition and reverses the order of multiplication:
+    $$\overline{\sum_{j=1}^n x_{ij} y_{jk}} = \sum_{j=1}^n \overline{x_{ij} y_{jk}} = \sum_{j=1}^n \overline{y_{jk}} \cdot \overline{x_{ij}}.$$
+    On the other hand, $Y^*$ is a $p \times n$ matrix with $(k,j)$-entry $\overline{y_{jk}}$, and $X^*$ is an $n \times m$ matrix with $(j,i)$-entry $\overline{x_{ij}}$. The $(k,i)$-entry of $Y^* X^*$ is therefore
+    $$(Y^* X^*)_{ki} = \sum_{j=1}^n (Y^*)_{kj} (X^*)_{ji} = \sum_{j=1}^n \overline{y_{jk}} \cdot \overline{x_{ij}}.$$
+    The two expressions coincide entrywise, so $(XY)^* = Y^* X^*$ as desired.
+\end{proof}

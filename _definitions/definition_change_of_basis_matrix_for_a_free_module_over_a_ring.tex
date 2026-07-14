@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:change_of_basis_matrix_for_a_free_module_over_a_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring} and let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $R$-module} of finite rank $n$.
+
+    \TODO{make a version of this applicable for row vectors}
+
+    Let $\mathcal{E} = (e_1,\ldots,e_n)$ and $\mathcal{F} = (f_1,\ldots,f_n)$ be two ordered bases of $M$. The \hldef{change-of-basis matrix from $\mathcal{F}$ to $\mathcal{E}$} (or the \hldef{transition matrix from $\mathcal{F}$ to $\mathcal{E}$}) is the matrix $P \in M_n(R)$\CrefIfExists{definition:matrix_over_a_ring} whose $j$-th column consists of the coordinates of $f_j$ in the basis $\mathcal{E}$:
+    $$\hlin{P = \bigl( P(i,j) \bigr)_{1 \leq i,j \leq n} \quad \text{where} \quad f_j = \sum_{i=1}^n e_i \, P(i,j)}$$
+    if $M$ is a right $R$-module, and
+    $$\hlin{P = \bigl( P(i,j) \bigr)_{1 \leq i,j \leq n} \quad \text{where} \quad f_j = \sum_{i=1}^n P(i,j) \, e_i}$$
+    if $M$ is a left $R$-module.
+
+    In either case, $P$ is \CrefAndHyperrefIfExist{definition:invertible_matrix_over_a_ring}{invertible} and its inverse $P^{-1}$ is the change-of-basis matrix from $\mathcal{E}$ to $\mathcal{F}$.
+
+    \TODO{coordinate column/row vector with respect to a basis}
+    For any element $x \in M$, write $[x]_\mathcal{E}$ and $[x]_\mathcal{F}$ for its \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{coordinate column vectors} with respect to $\mathcal{E}$ and $\mathcal{F}$, respectively. The change-of-basis matrix relates these coordinate vectors by
+    $$[x]_\mathcal{E} = P \, [x]_\mathcal{F}$$
+    for all $x \in M$\CrefIfExists{lemma:coordinate_vector_transforms_by_change_of_basis_matrix_for_a_free_module_over_a_ring}. Consequently, for any $R$-linear map $T: M \to M$, the \CrefAndHyperrefIfExist{definition:matrix_representation_of_an_endomorphism_of_a_free_module_with_respect_to_a_basis}{matrix representations} of $T$ with respect to $\mathcal{E}$ and $\mathcal{F}$ are related by
+    $$[T]_\mathcal{E}^\mathcal{E} = P \, [T]_\mathcal{F}^\mathcal{F} \, P^{-1}.$$
+\end{definition}

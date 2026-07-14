@@ -1,0 +1,36 @@
+\begin{lemma} \label{lemma:change_of_basis_for_matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free (left/right) $A$-module} of finite rank $n$ with an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} $h: M \times M \to A$ for some $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} with $\varepsilon \cdot \overline{\varepsilon} = 1$.
+
+    Let $\mathcal{E} = (e_1,\ldots,e_n)$ and $\mathcal{F} = (f_1,\ldots,f_n)$ be two ordered bases of $M$, and let $P \in \GL_n(A)$\CrefIfExists{definition:general_linear_group_over_a_ring} be the \CrefAndHyperrefIfExist{definition:change_of_basis_matrix_for_a_free_module_over_a_ring}{change-of-basis matrix from $\mathcal{F}$ to $\mathcal{E}$}. Denote by $H_\mathcal{E}$ and $H_\mathcal{F}$ the \CrefAndHyperrefIfExist{definition:matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}{matrices of $h$ with respect to $\mathcal{E}$ and $\mathcal{F}$}, respectively.
+
+    \begin{enumerate}
+        \item If $M$ is a right $A$-module (so that $h$ is conjugate linear in the first variable and linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}), then
+        $$H_\mathcal{F} = P^* \, H_\mathcal{E} \, P,$$
+        where $P^*$ denotes the \CrefAndHyperrefIfExist{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}{conjugate transpose of $P$}.
+
+        \item If $M$ is a left $A$-module (so that $h$ is linear in the first variable and conjugate linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}), then
+        $$H_\mathcal{F} = P^\top \, H_\mathcal{E} \, \overline{P},$$
+        where $P^\top$ denotes the \CrefAndHyperrefIfExist{definition:transpose_of_a_matrix_over_a_ring}{transpose of $P$} and $\overline{P}$ denotes the entrywise conjugate of $P$.
+    \end{enumerate}
+
+    In particular, $H_\mathcal{E}$ and $H_\mathcal{F}$ are \CrefAndHyperrefIfExist{definition:star_congruence_of_matrices_over_a_ring_with_involution}{$*$-congruent} when $M$ is a right $A$-module. For left $A$-modules, the relation $H_\mathcal{F} = P^\top H_\mathcal{E} \overline{P}$ is not $*$-congruence in general, but reduces to $*$-congruence when the involution is trivial (e.g.\ when $A$ is a commutative ring with the identity involution).
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Suppose $M$ is a right $A$-module. For any $x,y \in M$, write $[x]_\mathcal{E} = P[x]_\mathcal{F}$ and $[y]_\mathcal{E} = P[y]_\mathcal{F}$. By \Cref{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}, we have
+        \begin{align*}
+            h(x,y) &= [x]_\mathcal{E}^* \, H_\mathcal{E} \, [y]_\mathcal{E} \\
+            &= (P[x]_\mathcal{F})^* \, H_\mathcal{E} \, (P[y]_\mathcal{F}) \\
+            &= [x]_\mathcal{F}^* \, (P^* H_\mathcal{E} P) \, [y]_\mathcal{F}.
+        \end{align*}
+        Since $h(x,y) = [x]_\mathcal{F}^* \, H_\mathcal{F} \, [y]_\mathcal{F}$ by the same lemma, and this holds for all $x,y \in M$, we conclude $H_\mathcal{F} = P^* H_\mathcal{E} P$.
+
+        \item Suppose $M$ is a left $A$-module. For any $x,y \in M$, write $[x]_\mathcal{E} = P[x]_\mathcal{F}$ and $[y]_\mathcal{E} = P[y]_\mathcal{F}$. By \Cref{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}, we have
+        \begin{align*}
+            h(x,y) &= [x]_\mathcal{E}^\top \, H_\mathcal{E} \, \overline{[y]_\mathcal{E}} \\
+            &= (P[x]_\mathcal{F})^\top \, H_\mathcal{E} \, \overline{(P[y]_\mathcal{F})} \\
+            &= [x]_\mathcal{F}^\top \, (P^\top H_\mathcal{E} \overline{P}) \, \overline{[y]_\mathcal{F}}.
+        \end{align*}
+        Since $h(x,y) = [x]_\mathcal{F}^\top \, H_\mathcal{F} \, \overline{[y]_\mathcal{F}}$ by the same lemma, and this holds for all $x,y \in M$, we conclude $H_\mathcal{F} = P^\top H_\mathcal{E} \overline{P}$.
+    \end{enumerate}
+\end{proof}

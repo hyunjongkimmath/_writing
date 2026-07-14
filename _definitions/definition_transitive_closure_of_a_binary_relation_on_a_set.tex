@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:transitive_closure_of_a_binary_relation_on_a_set}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} on a set $X$. The \hldef{transitive closure of $R$} is the binary relation $R^{\mathrm{trans}}$ on $X$ defined by
+$$
+R^{\mathrm{trans}} = \bigcup_{n=1}^{\infty} R^n,
+$$
+where $R^1 = R$ and $R^{n+1} = R^n \circ R$ is the \CrefAndHyperrefIfExist{definition:composition_of_binary_relations_on_sets}{composition of binary relations}. Equivalently, $R^{\mathrm{trans}}$ is the smallest transitive binary relation on $X$ containing $R$. For $x, y \in X$, $x R^{\mathrm{trans}} y$ if and only if there exists a finite sequence $x = x_0, x_1, \dots, x_n = y$ in $X$ such that $x_i R x_{i+1}$ for all $0 \le i < n$.
+\TODO{AI generated, verify}
+\end{definition}

@@ -234,12 +234,15 @@ As with Zariski (pre)sheaves (or more generally locally ringed spaces), one can 
 \input{../_concepts/theorem_locally_constant_sheaves_on_X_etale_are_equivalent_to_representations_of_the_etale_fundamental_group.tex}
 \input{../_concepts/proposition_locally_constant_sheaf_over_a_dense_open_in_an_integral_normal_scheme_is_unramified_at_a_point_iff_fund_gp_action_is_unramified.tex}
 
+\input{../_concepts/proposition_pushforward_of_locally_constant_sheaf_under_finite_etale_morphism_is_locally_constant.tex}
+
 \section{Six functors}
 
 \subsection{The functors on sheaves}
 
 \subsubsection{Inverse and direct images of sheaves via continuous functors of general sites}
 \input{../_definitions/definition_continuous_functor_of_sites.tex}
+\input{../_concepts/proposition_equivalent_conditions_for_continuous_functor_of_sites.tex}
 \input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
 \input{../_definitions/definition_continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism.tex}
 
@@ -247,7 +250,6 @@ As with Zariski (pre)sheaves (or more generally locally ringed spaces), one can 
 \input{../_definitions/definition_morphism_of_ringed_sites.tex}
 
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
-
 
 
 \input{../_definitions/definition_direct_image_of_a_sheaf_of_abelian_groups_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
@@ -275,6 +277,7 @@ As with Zariski (pre)sheaves (or more generally locally ringed spaces), one can 
 
 \input{../_definitions/definition_inverse_image_and_direct_image_of_sheaves_on_schemes_for_various_topologies.tex}
 
+\input{../_concepts/proposition_counit_map_of_adjunction_of_inverse_image_and_direct_image_of_etale_sheaves_of_abelian_groups_for_an_open_embedding_of_schemes_is_an_isomorphism.tex}
 
 
 
@@ -285,9 +288,28 @@ As with Zariski (pre)sheaves (or more generally locally ringed spaces), one can 
 
 \input{../_definitions/definition_extension_by_zero_of_a_sheaf_on_the_small_etale_site_on_a_scheme_under_open_immersion.tex}
 
+\input{../_concepts/proposition_compactly_supported_direct_image_under_closed_and_finite_morphisms.tex}
+
 \subsubsection{Hom and tensor product functors of sheaves}
 
+
 \TODO{}
+
+\subsubsection{Stalks of sheaves under the functors}
+
+\input{../_concepts/lemma_decomposition_of_finite_morphism_over_henselian_local_ring.tex}
+\input{../_concepts/theorem_zariski_main_theorem_grothendieck_form.tex}
+
+\input{../_concepts/lemma_pushforward_of_sheaf_along_finite_etale_G_cover_is_group_object.tex}
+\input{../_concepts/proposition_stalk_of_direct_image_under_finite_morphism_etale_sheaf.tex}
+\input{../_concepts/proposition_pushforward_of_constant_sheaf_along_finite_etale_G_cover_has_group_ring_structure.tex}
+
+\input{../_concepts/proposition_stalk_of_direct_image_under_Galois_morphism_etale_sheaf.tex}
+\input{../_concepts/proposition_stalk_of_direct_image_under_closed_immersion_etale_sheaf.tex}
+\input{../_concepts/proposition_stalk_of_direct_image_under_open_immersion_etale_sheaf.tex}
+
+
+
 
 \subsubsection{Exactness properties on sheaves of abelian groups}
 
@@ -357,6 +379,37 @@ Moreover, if $f$ is an étale morphism, or more generally if $f$ is a morphism s
 \end{definition}
 
 \TODO{state adjunction}
+
+\subsection{Verdier duality for bounded constructible complexes}
+
+The Verdier dual functor provides the duality needed to define self-dual (middle) perverse $t$-structures. We record the dualizing complex and Verdier dual for each coefficient system.
+
+\subsection{Torsion coefficients}
+
+\input{../_definitions/definition_dualizing_complex_for_verdier_duality_in_the_bounded_below_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+\input{../_definitions/definition_verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+
+\subsection{Integral adic coefficients}
+
+\input{../_definitions/definition_dualizing_complex_for_verdier_duality_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+\input{../_definitions/definition_verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_integral_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+
+\subsection{Rational coefficients}
+
+\input{../_definitions/definition_dualizing_complex_for_verdier_duality_in_the_bdd_constr_derived_category_of_adic_sheaves_with_rational_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+\input{../_definitions/definition_verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_rational_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+
+\subsection{Algebraic coefficients}
+
+\input{../_definitions/definition_dualizing_complex_for_verdier_duality_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+\input{../_definitions/definition_verdier_dual_of_an_object_in_the_bdd_constr_derived_category_of_adic_sheaves_with_algebraic_coefficients_on_a_finite_type_scheme_over_a_noetherian_scheme.tex}
+
+\subsection{Various coefficient systems}
+
+\input{../_definitions/definition_dualizing_complex_for_verdier_duality_on_a_noetherian_scheme_for_various_coefficient_systems.tex}
+\input{../_definitions/definition_verdier_dual_of_a_constructible_complex_on_a_finite_type_scheme_relative_to_a_noetherian_base_for_various_coefficient_systems.tex}
+
+
 
 \section{Cohomology of literal sheaves for the small \'etale site on a scheme}
 
@@ -856,6 +909,7 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 \input{../_definitions/definition_adjoint_functors_between_categories_unit_counit_of_adjoint_functors.tex}
 \input{../_definitions/definition_site_of_opens_on_a_topological_space.tex}
 \input{../_definitions/definition_initial_final_zero_objects_of_a_category.tex}
+\input{../_definitions/definition_connected_category.tex}
 
 \input{../_definitions/definition_filtered_cofiltered_category.tex}
 \input{../_definitions/definition_limit_and_colimit_of_a_diagram_in_a_category.tex}
@@ -866,6 +920,18 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 \input{../_definitions/definition_product_and_coproduct_of_objects_in_a_category.tex}
 \input{../_definitions/definition_equalizer_and_coequalizer_of_morphisms_in_a_category.tex}
 \input{../_definitions/definition_system_in_a_category_indexed_by_a_directed_poset.tex}
+
+\input{../_definitions/definition_cofinal_and_final_sub_posets.tex}
+\input{../_definitions/definition_cofinal_and_final_subsystems_of_direct_inverse_systems.tex}
+\input{../_concepts/theorem_cofinal_final_subsystems_suffice_for_direct_inverse_limits.tex}
+
+\input{../_definitions/definition_cofinal_and_final_functors.tex}
+\TODO{cofinal and final functors induce isomorphisms of direct/inverse limits and guarantee existence of direct/inverse limits}
+
+\input{../_definitions/definition_action_of_a_group_G_on_an_object_in_a_category_C.tex}
+\input{../_definitions/definition_equivariant_morphism_between_objects_with_G_action_in_category_C.tex}
+\input{../_definitions/definition_category_of_objects_with_group_action_by_G_in_category_C.tex}
+
 \input{../_definitions/definition_essentially_small_category.tex}
 \input{../_definitions/definition_monomorphism_and_epimorphism_in_categories.tex}
 
@@ -874,7 +940,7 @@ Deligne \cite{deligne_lcwii} defined the $\ell$-adic category $D_c^b(X, \bbZ_\el
 \input{../_definitions/definition_generator_of_a_category.tex}
 \input{../_definitions/definition_topos.tex}
 \input{../_concepts/theorem_functor_category_of_a_grothendieck_topos_indexed_by_a_small_category_is_a_grothendieck_topos.tex}
-\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_small_category.tex}
+\input{../_definitions/definition_diagram_in_a_category_indexed_by_a_category.tex}
 
 
 \subsubsection{Abelian categories}

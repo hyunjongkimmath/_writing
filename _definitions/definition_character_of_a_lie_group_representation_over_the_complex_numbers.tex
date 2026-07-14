@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:character_of_a_lie_group_representation_over_the_complex_numbers}
+    \TODO{AI generated, verify}
+
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:lie_group_over_a_field}{Lie group} and $(\rho, V)$ a finite-dimensional \CrefAndHyperrefIfExist{definition:representation_of_a_lie_group_on_a_topological_vector_space}{representation of $G$} over $\mathbb{C}$.
+
+    The \hldef{character of $\rho$} is the function
+    $$\hlin{\chi_\rho : G \to \mathbb{C}, \quad g \mapsto \mathrm{tr}(\rho(g)).}$$
+
+    Since $\mathrm{tr}(AB) = \mathrm{tr}(BA)$, the character satisfies $\chi_\rho(hgh^{-1}) = \chi_\rho(g)$ for all $g, h \in G$. Thus every character is a \hldef{class function on $G$}. As $\rho$ is smooth, $\chi_\rho$ is a smooth class function.
+
+    The \hldef{derived character of $\rho$} is the character $\mathrm{d}\chi_\rho : \mathfrak{g} \to \mathbb{C}$ of the associated Lie algebra representation $\mathrm{d}\rho$, given by $\mathrm{d}\chi_\rho(x) = \mathrm{tr}(\mathrm{d}\rho(x))$. One has $\chi_\rho(\exp x) = \mathrm{tr}(e^{\mathrm{d}\rho(x)})$ for $x \in \mathfrak{g}$ near $0$.
+\end{definition}

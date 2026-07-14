@@ -1,0 +1,74 @@
+\begin{proposition} \label{proposition:grothendieck_ring_of_natural_numbers_with_zero}
+\TODO{AI generated, verify}
+    Let $\bbN_0$ be the \CrefAndHyperrefIfExist{definition:natural_numbers_with_zero}{set of natural numbers including zero}, regarded as a \CrefAndHyperrefIfExist{definition:semiring}{semiring}\CrefIfExists{proposition:natural_numbers_with_zero_form_commutative_semiring}. Let $K(\bbN_0)$ be the \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring} of $\bbN_0$, and let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers} as constructed from $\bbN$. Then there is an isomorphism of rings
+    $$\Phi: K(\bbN_0) \xrightarrow{\cong} \bbZ.$$
+    Consequently, $\bbZ$ is (up to isomorphism) the Grothendieck ring of $\bbN_0$.
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+    We construct an explicit pair of inverse ring homomorphisms.
+
+    \textbf{Construction of $\Phi$.} Define a map $F: \bbN_0 \times \bbN_0 \to \bbZ$ by
+    $$F(a,b) = [(a+1,\, b+1)],$$
+    where $a+1, b+1 \in \bbN$ are the successors of $a$ and $b$ respectively (so $0+1 = 1$, and for $n \in \bbN$, $n+1$ is the usual successor).
+
+    We first verify that $F$ respects the Grothendieck equivalence relation on $\bbN_0 \times \bbN_0$. Suppose $(a,b) \sim (c,d)$ in $\bbN_0 \times \bbN_0$, i.e. there exists $t \in \bbN_0$ such that $a + d + t = b + c + t$. Adding $2$ to both sides gives
+    $$(a+1) + (d+1) + t = (b+1) + (c+1) + t.$$
+    Since $(\bbN_0,+)$ is \CrefAndHyperrefIfExist{definition:cancellative_monoid}{cancellative}\CrefIfExists{proposition:natural_numbers_with_zero_form_commutative_semiring}, the witness $t$ can be cancelled, yielding
+    $$(a+1) + (d+1) = (b+1) + (c+1).$$
+    Thus $(a+1,b+1) \sim (c+1,d+1)$ in $\bbN \times \bbN$, so $F(a,b) = F(c,d)$. Hence $F$ descends to a well-defined map $\Phi: K(\bbN_0) \to \bbZ$.
+
+    \textbf{$\Phi$ is a ring homomorphism.} Let $[(a,b)], [(c,d)] \in K(\bbN_0)$.
+    \begin{enumerate}
+        \item Addition. By definition of addition in $K(\bbN_0)$,
+        $$\Phi([(a,b)] + [(c,d)]) = \Phi([(a+c, b+d)]) = [(a+c+1,\, b+d+1)].$$
+        On the other hand,
+        $$\Phi([(a,b)]) + \Phi([(c,d)]) = [(a+1,b+1)] + [(c+1,d+1)] = [(a+c+2,\, b+d+2)].$$
+        These two classes are equal in $\bbZ$ because
+        $$(a+c+2) + (b+d+1) = a+b+c+d+3 = (a+c+1) + (b+d+2)$$
+        by associativity and commutativity of addition in $\bbN$\CrefIfExists{proposition:natural_numbers_addition_associative_commutative}. Hence $\Phi$ preserves addition.
+
+        \item Multiplication. By definition of multiplication in $K(\bbN_0)$,
+        $$\Phi([(a,b)] \cdot [(c,d)]) = \Phi([(ac+bd,\, ad+bc)]) = [(ac+bd+1,\, ad+bc+1)].$$
+        On the other hand,
+        \begin{align*}
+        \Phi([(a,b)]) \cdot \Phi([(c,d)]) &= [(a+1,b+1)] \cdot [(c+1,d+1)] \\
+        &= [((a+1)(c+1)+(b+1)(d+1),\; (a+1)(d+1)+(b+1)(c+1))].
+        \end{align*}
+        Expanding by distributivity in $\bbN$\CrefIfExists{proposition:natural_numbers_multiplication_associative_commutative_distributive}:
+        \begin{align*}
+        (a+1)(c+1)+(b+1)(d+1) &= ac+a+c+1+bd+b+d+1 = ac+bd + a+b+c+d+2, \\
+        (a+1)(d+1)+(b+1)(c+1) &= ad+a+d+1+bc+b+c+1 = ad+bc + a+b+c+d+2.
+        \end{align*}
+        Now compare $(ac+bd+1,\, ad+bc+1)$ with $(ac+bd+a+b+c+d+2,\; ad+bc+a+b+c+d+2)$. We have
+        $$(ac+bd+1) + (ad+bc+a+b+c+d+2) = ac+bd+ad+bc + a+b+c+d+3$$
+        and
+        $$(ad+bc+1) + (ac+bd+a+b+c+d+2) = ad+bc+ac+bd + a+b+c+d+3,$$
+        which are equal by commutativity of addition in $\bbN$. Hence the two classes coincide, so $\Phi$ preserves multiplication.
+
+        \item Unity. The multiplicative identity of $K(\bbN_0)$ is $[(1,0)]$. We have $\Phi([(1,0)]) = [(2,1)] = 1_\bbZ$.
+    \end{enumerate}
+    Thus $\Phi$ is a ring homomorphism.
+
+    \textbf{Construction of the inverse $\Psi$.} Define $\Psi: \bbZ \to K(\bbN_0)$ by
+    $$\Psi([(a,b)]) = [(a,b)],$$
+    where $(a,b) \in \bbN \times \bbN$ is regarded as a pair in $\bbN_0 \times \bbN_0$ via the inclusion $\bbN \subset \bbN_0$. This is well-defined because if $(a,b) \sim (c,d)$ in $\bbN \times \bbN$ (i.e. $a+d = b+c$), then the same equality holds in $\bbN_0$, so $(a,b) \sim (c,d)$ in $\bbN_0 \times \bbN_0$. Moreover, $\Psi$ is a ring homomorphism because the ring operations in $\bbZ$ and $K(\bbN_0)$ are defined by the same formulas on representatives.
+
+    \textbf{$\Phi$ and $\Psi$ are inverses.}
+    \begin{enumerate}
+        \item $\Phi \circ \Psi = \id_\bbZ$. For $[(a,b)] \in \bbZ$,
+        $$\Phi(\Psi([(a,b)])) = \Phi([(a,b)]) = [(a+1,b+1)].$$
+        In $\bbZ$, we have $(a+1,b+1) \sim (a,b)$ because
+        $$(a+1) + b = a + b + 1 = (b+1) + a$$
+        by commutativity of addition in $\bbN$. Thus $[(a+1,b+1)] = [(a,b)]$, so $\Phi \circ \Psi = \id_\bbZ$.
+
+        \item $\Psi \circ \Phi = \id_{K(\bbN_0)}$. For $[(a,b)] \in K(\bbN_0)$,
+        $$\Psi(\Phi([(a,b)])) = \Psi([(a+1,b+1)]) = [(a+1,b+1)].$$
+        We claim that $(a+1,b+1) \sim (a,b)$ in $K(\bbN_0)$. Indeed, by commutativity of addition in $\bbN_0$,
+        $$(a+1) + b = a + 1 + b = a + (b+1),$$
+        so with $t = 0$ we have $(a+1)+b+0 = a+(b+1)+0$. Hence $[(a+1,b+1)] = [(a,b)]$, and $\Psi \circ \Phi = \id_{K(\bbN_0)}$.
+    \end{enumerate}
+
+    Therefore $\Phi$ is an isomorphism of rings with inverse $\Psi$.
+\end{proof}

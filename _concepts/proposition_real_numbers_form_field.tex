@@ -1,0 +1,20 @@
+\begin{proposition} \label{proposition:real_numbers_form_field}
+    Let $\bbR = \mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{real numbers} constructed as the quotient of the \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_rational_numbers}{ring of Cauchy sequences in $\bbQ$} by the \CrefAndHyperrefIfExist{definition:null_sequence_in_rational_numbers}{null sequences}\CrefIfExists{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}. Then:
+    \begin{enumerate}
+        \item $\bbR$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity} under the induced addition and multiplication:
+        $$[a_n] + [b_n] = [a_n + b_n], \qquad [a_n] \cdot [b_n] = [a_n b_n].$$
+        \item The zero element is $[0]$ (the class of the constant sequence $(0)$) and the unity is $[1]$ (the class of $(1)$).
+        \item Every nonzero element of $\bbR$ has a multiplicative inverse. In particular, $\bbR$ is a \CrefAndHyperrefIfExist{definition:field}{field}.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    The quotient ring $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ is a commutative ring with unity by \Cref{definition:quotient_ring_of_a_ring_by_a_two_sided_ideal}, because $\mathcal{C}_\bbQ$ is a commutative ring with unity (\Cref{proposition:cauchy_sequences_of_rational_numbers_form_commutative_ring}) and $\mathcal{N}_\bbQ$ is an ideal (\Cref{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}). The induced operations are precisely
+    $$[a_n] + [b_n] = [a_n + b_n], \qquad [a_n] \cdot [b_n] = [a_n b_n],$$
+    and the zero and unity are $[0]$ and $[1]$, respectively. This establishes parts (1) and (2).
+
+    For part (3), let $[a_n] \in \bbR$ be nonzero, i.e.\ $[a_n] \neq [0]$. This means $(a_n) \notin \mathcal{N}_\bbQ$, so $(a_n) \in \mathcal{C}_\bbQ \setminus \mathcal{N}_\bbQ$. By the proof of \Cref{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}, there exists a Cauchy sequence $(b_n) \in \mathcal{C}_\bbQ$ such that $(a_n)(b_n) \equiv (1) \pmod{\mathcal{N}_\bbQ}$, i.e.\ $[a_n] \cdot [b_n] = [1]$. Hence $[b_n]$ is the multiplicative inverse of $[a_n]$.
+
+    Thus every nonzero element of $\bbR$ has a multiplicative inverse, so $\bbR$ is a \Cref{definition:field}{field}.
+\end{proof}

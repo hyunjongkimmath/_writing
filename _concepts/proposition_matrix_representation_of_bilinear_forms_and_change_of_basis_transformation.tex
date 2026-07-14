@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:matrix_representation_of_bilinear_forms_and_change_of_basis_transformation}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $V$ be an $n$-dimensional \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{$F$-vector space}. Let $B$ be a \CrefAndHyperrefIfExist{definition:bilinear_form_on_a_vector_space}{bilinear form} on $V$, and let $\mathcal{B} = (v_1, \dots, v_n)$ be an ordered basis.
+
+    There exists a unique $n \times n$ \CrefAndHyperrefIfExist{definition:matrix_over_a_ring}{matrix} $M$ over $F$, with entries $M(i,j) = B(v_i, v_j)$, such that for all $x, y \in V$,
+    $$\hlin{B(x, y) = [x]_{\mathcal{B}}^{\mathsf{T}} M [y]_{\mathcal{B}}},$$
+    where $[x]_{\mathcal{B}}$ denotes the coordinate column vector of $x$ in basis $\mathcal{B}$.
+
+    If $\mathcal{B}'$ is another ordered basis with change-of-basis matrix $P = [I]_{\mathcal{B}'}^{\mathcal{B}}$, then the matrix of $B$ in $\mathcal{B}'$ is
+    $$\hlin{M' = P^{\mathsf{T}} M P}.$$
+
+    Moreover, $B$ is \CrefAndHyperrefIfExist{definition:symmetric_and_skew_symmetric_bilinear_forms}{symmetric} (resp. skew-symmetric) if and only if its matrix $M$ is symmetric (resp. skew-symmetric) in every basis.
+\TextIfExists{definition:homomorphism_of_modules_over_a_ring}{The matrix representation of a bilinear form and its change-of-basis transformation $M' = P^{\mathsf{T}} M P$ is the special case for free $F$-modules of the matrix representation of a bilinear form on \Cref{definition:homomorphism_of_modules_over_a_ring}s with chosen bases.}
+\TODO{AI generated, verify}
+\end{proposition}

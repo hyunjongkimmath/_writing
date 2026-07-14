@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:integers_from_natural_numbers}
+Let $\bbN$ be the set of natural numbers from \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. Define an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} $\sim$ on $\bbN \times \bbN$ by:
+$$(a, b) \sim (c, d) \iff a + d = b + c.$$
+\CrefIfExists{proposition:integer_equivalence_relation}
+The \hldef{set of integers} is the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{quotient set} \hl{$\bbZ := (\bbN \times \bbN) / \sim$}. The \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence class} of $(a, b)$ is denoted \hl{$[(a, b)]$} and intuitively represents the integer $a - b$.
+
+There are binary operators on $\bbZ$, called \hldef{addition and multiplication on $\bbZ$} defined by:
+$$\hlin{[(a, b)] + [(c, d)] := [(a + c, b + d)],}$$
+$$\hlin{[(a, b)] \times [(c, d)] := [(a \times c + b \times d, b \times c + a \times d)].}$$
+\TODO{define $2$}
+There is also a unary operator on $\bbZ$, called \hldef{additive inverse on $\bbZ$} defined by:
+$$\hlin{-[(a, b)] := [(b, a)].}$$
+Equipped with these operators and the elements \hl{$0_\bbZ := [(1, 1)]$} and \hl{$1_\bbZ := [(2, 1)]$}, $\bbZ$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative unital ring}\CrefIfExists{proposition:integers_form_ring} and in fact forms an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}\CrefIfExists{proposition:integers_form_ordered_ring}.
+\end{definition}

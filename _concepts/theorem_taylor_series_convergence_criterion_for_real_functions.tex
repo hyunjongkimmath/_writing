@@ -1,0 +1,20 @@
+\begin{theorem}[Sufficient condition for Taylor series convergence] \label{theorem:taylor_series_convergence_criterion_for_real_functions}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an open interval, let $a \in I$, and let $f : I \to \mathbb{R}$ be a function that is infinitely \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} on $I$.
+
+    Suppose there exist constants $\delta > 0$ such that $(a - \delta, a + \delta) \subseteq I$, and constants $M_k < \infty$ for each integer $k \geq 0$, satisfying
+    $$\sup_{x : |x - a| < \delta} |f^{(k)}(x)| \leq M_k.$$
+
+    Let $R$ be the \CrefAndHyperrefIfExist{definition:real_power_series_and_radius_of_convergence}{radius of convergence} of the power series $\sum_{k=0}^\infty (M_k / k!) z^k$. If $R > 0$, then for all $x$ with $|x - a| < R$:
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Taylor series} of $f$ centered at $a$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely}.
+        \item The sum of the Taylor series equals $f(x)$. That is,
+            $$f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x - a)^k.$$
+    \end{enumerate}
+
+    In particular, if there exist constants $M < \infty$ and $\rho > 0$ such that for all $k \geq 0$,
+    $$\sup_{x : |x - a| < \delta} |f^{(k)}(x)| \leq M \cdot k! / \rho^k,$$
+    then the Taylor series of $f$ centered at $a$ converges to $f(x)$ for all $x$ with $|x - a| < \rho$.
+
+    More generally, if $f$ is infinitely differentiable and its Lagrange remainder $R_n(x)$ of order $n$ from \Cref{theorem:taylor_formula_with_lagrange_remainder_for_real_functions} satisfies $\lim_{n \to \infty} R_n(x) = 0$, then the Taylor series converges to $f(x)$.
+\end{theorem}

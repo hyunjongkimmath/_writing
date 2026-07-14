@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:perfect_trace_duality_for_a_morphism_of_involution_rings}
+   \TODO{I don't think I genuinely use this for anything yet}
+   Let $\eta: A \to A'$ be a \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{homomorphism of rings with involution}. Let $\tau: A' \to A$ be an \CrefAndHyperrefIfExist{definition:involution_trace_map_for_a_morphism_of_involution_rings}{involution trace} of $\eta$. 
+
+   \begin{enumerate}
+    \item We say that $(A',\tau)$ is a \hldef{left perfect trace duality for $A$ (with respect to $\eta$)} if the map 
+    $$\Phi: A' \to (A')^\vee = \Hom_{\Mod_A}(A',A), \quad b \mapsto (\lambda \mapsto \tau(b \cdot \overline{\lambda}))$$
+    is an isomorphism of $(A',A)$-bimodules. In particular, such a $\Phi$ is a \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{left Frobenius ring homomorphism}.
+    \item We say that $(A',\tau)$ is a \hldef{right perfect trace duality for $A$ (with respect to $\eta$)} if the map 
+    $$\Phi: A' \to (A')^\vee = \Hom_{_{A} \Mod}(A',A), \quad b \mapsto (\lambda \mapsto \tau(\overline{\lambda} \cdot b))$$
+    is an isomorphism of $(A,A')$-bimodules. In particular, such a $\Phi$ is a \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{right Frobenius ring homomorphism}.
+    \item $(A',\tau)$ is a \hldef{perfect trace duality} if it is both left and right perfect.
+    % \item $(A', \tau)$ is a \hldef{(strongly) bimodular perfect trace duality} if the map 
+   \end{enumerate}
+   \TextIfExists{definition:left_right_frobenius_self_dual_ring_homomorphism}{Note that the maps $\Phi$ are \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{left/right Frobenius ring homomorphisms}.}
+\end{definition}

@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$.
+
+    For any matrix $X \in M_{m \times n}(A)$\CrefIfExists{definition:matrix_over_a_ring}, the \hldef{conjugate transpose of $X$} (or \hldef{$*$-adjoint of $X$}) is the $n \times m$ matrix
+    $$\hlin{X^* = \overline{X^\top} = \bigl( \overline{X(j,i)} \bigr)_{i=1,\ldots,n \atop j=1,\ldots,m} \in M_{n \times m}(A)}.$$
+
+    The map $X \mapsto X^*$ satisfies $(X^*)^* = X$ and, when the dimensions are compatible, $(XY)^* = Y^* X^*$\CrefIfExists{lemma:conjugate_transpose_of_product_of_matrices_over_ring_with_involution_is_anti_product_of_conjugate_transposes}. In the special case of square matrices, $X \mapsto X^*$ is an \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{involution} on the matrix ring $M_n(A)$, and this involution along with the embedding $A \mapsto aI_n$ makes $M_n(A)$ into an \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{involution algebra} over $A$.
+\end{definition}

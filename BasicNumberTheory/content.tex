@@ -1,0 +1,188 @@
+%% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+
+% ============================================================
+% Section 1: Algebraic Preliminaries
+% ============================================================
+\section{Algebraic Preliminaries}
+
+\subsection{Groups}
+
+\input{../_concepts/lemma_cancellation_law_for_group_operations.tex}
+\input{../_concepts/corollary_cancellation_law_for_identity_element_of_group_operation.tex}
+\input{../_concepts/corollary_elements_of_group_that_multiply_to_identity_are_inverses.tex}
+\input{../_concepts/corollary_inverse_of_inverse_in_group_is_element.tex}
+
+\subsection{Rings}
+
+\input{../_definitions/definition_ring.tex}
+\input{../_concepts/lemma_multiplication_by_zero_in_a_ring_is_zero.tex}
+\input{../_concepts/lemma_multiplication_by_minus_one_in_a_ring_is_additive_inverse.tex}
+\input{../_concepts/corollary_minus_one_times_minus_one_is_one_in_a_ring.tex}
+
+
+% ============================================================
+% Section 2: Natural Numbers
+% ============================================================
+\section{Natural Numbers}
+
+\subsection{Definition and Basic Properties}
+
+\input{../_definitions/definition_natural_numbers.tex}
+\input{../_concepts/proposition_natural_numbers_addition_existence.tex}
+\input{../_concepts/proposition_natural_numbers_multiplication_existence.tex}
+\input{../_concepts/proposition_natural_numbers_addition_properties.tex}
+\input{../_concepts/proposition_natural_numbers_multiplication_properties.tex}
+\input{../_definitions/definition_standard_order_on_natural_numbers.tex}
+\input{../_concepts/proposition_natural_numbers_order_compatibility.tex}
+\input{../_concepts/proposition_natural_numbers_well_ordered.tex}
+
+\subsection{Semirings}
+
+\input{../_definitions/definition_semiring.tex}
+\input{../_definitions/definition_totally_ordered_semiring.tex}
+
+\subsection{Natural Numbers with Zero}
+
+\input{../_definitions/definition_natural_numbers_with_zero.tex}
+\input{../_concepts/proposition_natural_numbers_with_zero_form_commutative_semiring.tex}
+
+
+% ============================================================
+% Section 3: The Integers
+% ============================================================
+\section{The Integers}
+
+\subsection{The Grothendieck Construction}
+
+\input{../_definitions/definition_grothendieck_ring_of_a_commutative_semiring.tex}
+\input{../_concepts/proposition_grothendieck_ring_equivalence_relation.tex}
+\input{../_concepts/proposition_grothendieck_ring_operations_well_defined.tex}
+\input{../_concepts/proposition_grothendieck_ring_is_a_ring.tex}
+\input{../_concepts/theorem_grothendieck_ring_universal_property.tex}
+
+\subsection{The Ring of Integers}
+
+\input{../_definitions/definition_integers_from_natural_numbers.tex}
+\input{../_concepts/proposition_integer_equivalence_relation.tex}
+\input{../_concepts/proposition_integer_operations_well_defined.tex}
+\input{../_concepts/proposition_integers_form_ring.tex}
+
+\subsection{Universal Properties of \texorpdfstring{$\mathbb Z$}{Z}}
+
+\input{../_concepts/proposition_grothendieck_ring_of_natural_numbers_with_zero.tex}
+\input{../_concepts/proposition_positive_integers_correspond_to_natural_numbers.tex}
+\input{../_concepts/theorem_integers_universal_property.tex}
+\input{../_concepts/theorem_integers_uniqueness.tex}
+\input{../_concepts/corollary_integers_existence_uniqueness.tex}
+
+\subsection{Ordered Ring Structure on \texorpdfstring{$\mathbb Z$}{Z}}
+
+\input{../_definitions/definition_standard_order_on_ring_of_integers.tex}
+\input{../_concepts/proposition_integers_form_totally_ordered_ring.tex}
+\input{../_definitions/definition_ring_of_integers.tex}
+\input{../_definitions/definition_partially_ordered_set.tex}
+\input{../_definitions/definition_total_order_linear_order_on_a_set.tex}
+\input{../_definitions/definition_ordered_monoid.tex}
+\input{../_definitions/definition_ordered_abelian_group.tex}
+\input{../_definitions/definition_subtraction_of_an_element_of_a_set_by_a_uniquely_invertible_element_for_a_commutative_binary_operation_written_additively.tex}
+\input{../_definitions/definition_ordered_ring.tex}
+\input{../_definitions/definition_absolute_value_of_an_ordered_ring.tex}
+\begin{lemma} \label{lemma:absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} $R_{\geq 0}$.
+    The \CrefAndHyperrefIfExist{definition:absolute_value_of_an_ordered_ring}{absolute value function} 
+    $$|\cdot|: R \to R_{\geq 0}$$
+    is indeed an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} on $R$ valued in $R_{\geq 0}$.
+\end{lemma}
+\begin{lemma}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}.
+    For $a,b,c,d \in R$, if $a < b$ and $c < d$, then $a + c < b+d$.
+\end{lemma}
+\begin{proof}
+    \TODO{conitnue}
+    Let $a,b,c,d \in R$ satisfy $a < b$ and $c < d$. Equivalently, $b-a \in P$ and $d-c \in P$. Since $P$ is closed under addition, we have
+    $$(b-a) + (d-c) \in P.$$
+    \CrefIfExists{definition:subtraction_of_an_element_of_a_set_by_a_uniquely_invertible_element_for_a_commutative_binary_operation_written_additively}
+\end{proof}
+
+
+% ============================================================
+% Section 4: Divisibility
+% ============================================================
+\section{Divisibility}
+
+\input{../_definitions/definition_gcd_and_lcm_of_integers.tex}
+\input{../_concepts/proposition_bezout_identity_for_gcd_of_integers.tex}
+
+
+% ============================================================
+% Section 5: Congruences
+% ============================================================
+\section{Congruences}
+
+\input{../_definitions/definition_congruence_modulo_n.tex}
+\input{../_definitions/definition_residue_class_modulo_n.tex}
+\input{../_concepts/theorem_chinese_remainder_theorem_for_pairwise_coprime_moduli.tex}
+
+
+% ============================================================
+% Section 6: Primes and Factorization
+% ============================================================
+\section{Primes and Factorization}
+
+\input{../_definitions/definition_prime_number.tex}
+\input{../_concepts/theorem_fundamental_theorem_of_arithmetic.tex}
+
+
+% ============================================================
+% Section 7: Euler's Totient Function
+% ============================================================
+\section{Euler's Totient Function}
+
+\input{../_definitions/definition_euler_totient_function.tex}
+\input{../_concepts/proposition_formula_for_euler_totient_function.tex}
+
+
+% ============================================================
+% Section 8: Multiplicative Order and Primitive Roots
+% ============================================================
+\section{Multiplicative Order and Primitive Roots}
+
+\input{../_definitions/definition_multiplicative_order_modulo_n.tex}
+\input{../_definitions/definition_primitive_root_modulo_n.tex}
+\input{../_concepts/theorem_fermats_little_theorem.tex}
+\input{../_concepts/theorem_eulers_theorem.tex}
+
+
+% ============================================================
+% Section 9: Quadratic Residues
+% ============================================================
+\section{Quadratic Residues}
+
+\input{../_definitions/definition_legendre_symbol.tex}
+\input{../_definitions/definition_jacobi_symbol.tex}
+\input{../_concepts/proposition_properties_of_legendre_symbol.tex}
+\input{../_concepts/theorem_law_of_quadratic_reciprocity.tex}
+\input{../_concepts/theorem_wilsons_theorem.tex}
+
+
+% ============================================================
+% Section 10: Arithmetic Functions
+% ============================================================
+\section{Arithmetic Functions}
+
+\input{../_definitions/definition_arithmetic_function_on_positive_integers_with_values_in_a_ring.tex}
+\input{../_definitions/definition_multiplicative_function_on_positive_integers_with_values_in_a_ring.tex}
+\input{../_definitions/definition_completely_multiplicative_function_on_positive_integers_with_values_in_a_ring.tex}
+\input{../_definitions/definition_dirichlet_convolution_of_arithmetic_functions.tex}
+\input{../_definitions/definition_mobius_function_on_positive_integers.tex}
+\input{../_concepts/proposition_mobius_inversion_formula.tex}
+
+
+% ============================================================
+% Section 11: Cyclotomic Polynomials
+% ============================================================
+\section{Cyclotomic Polynomials}
+
+\input{../_definitions/definition_cyclotomic_polynomial.tex}

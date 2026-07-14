@@ -1,0 +1,34 @@
+\begin{theorem}[Leibniz rule for differentiation under the integral] \label{theorem:leibniz_rule_for_differentiation_under_the_integral}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, let $U \subseteq \mathbb{R}$ be open, and let $f : U \times X \to \mathbb{R}$ be a function satisfying:
+
+    \begin{enumerate}
+        \item For every $t \in U$, the function $x \mapsto f(t, x)$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable} with respect to $\mu$.
+        \item For $\mu$-almost every $x \in X$, the function $t \mapsto f(t, x)$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} on $U$.
+        \item There exists an integrable function $g : X \to \mathbb{R}$ such that for all $t \in U$ and $\mu$-almost every $x \in X$,
+        $$\left| \frac{\partial f}{\partial t}(t, x) \right| \le g(x).$$
+    \end{enumerate}
+
+    Then for every $t \in U$, the function $x \mapsto \frac{\partial f}{\partial t}(t, x)$ is integrable, and
+    $$\frac{d}{dt} \int_X f(t, x) \, d\mu(x) = \int_X \frac{\partial f}{\partial t}(t, x) \, d\mu(x).$$
+\end{theorem}
+
+\begin{proof}
+Fix $t_0 \in U$. We must show that the derivative of the function $$F(t) = \int_X f(t,x) \, d\mu(x)$$ exists at $t_0$ and equals $\int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x)$.
+
+Since $U$ is open in $\mathbb{R}$, there exists some $\delta > 0$ such that $(t_0 - \delta, t_0 + \delta) \subseteq U$. For any sequence $(h_n)$ of nonzero real numbers with $|h_n| < \delta$ for all $n$ and $h_n \to 0$, consider the difference quotient $$Q_n(x) = \frac{f(t_0 + h_n, x) - f(t_0, x)}{h_n}.$$ Our goal is to show that $\lim_{n \to \infty} \int_X Q_n(x) \, d\mu(x)$ exists and equals $\int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x)$; this will prove the result by the sequential characterization of derivatives.
+
+We apply the \CrefAndHyperrefIfExist{definition:dominated_convergence_theorem_for_lebesgue_integration}{Dominated Convergence Theorem} to the sequence $(Q_n)$. To do so, we verify its hypotheses:
+
+\begin{enumerate}
+    \item First we establish pointwise convergence. For $\mu$-almost every $x \in X$, the function $t \mapsto f(t,x)$ is differentiable at $t_0$ by hypothesis (2). By definition of the derivative, for such $x$ we have $$\lim_{n \to \infty} Q_n(x) = \frac{\partial f}{\partial t}(t_0, x).$$ Thus $Q_n(x)$ converges pointwise $\mu$-almost everywhere to the function $x \mapsto \frac{\partial f}{\partial t}(t_0, x)$.
+
+    \item Next we construct an integrable dominating function. By hypothesis (3), there exists an integrable function $g : X \to \mathbb{R}$ such that $$\left|\frac{\partial f}{\partial t}(t,x)\right| \leq g(x)$$ for all $t \in U$ and $\mu$-almost every $x \in X$. For any fixed $x$ where the map $t \mapsto f(t,x)$ is differentiable on $(t_0 - \delta, t_0 + \delta)$, the Mean Value Theorem (applied to the real-valued function $t \mapsto f(t,x)$) guarantees that for each $n$, there exists some $\xi_n(x)$ between $t_0$ and $t_0 + h_n$ such that $$Q_n(x) = \frac{f(t_0 + h_n, x) - f(t_0, x)}{h_n} = \frac{\partial f}{\partial t}(\xi_n(x), x).$$ Since $\xi_n(x) \in (t_0 - \delta, t_0 + \delta) \subseteq U$, hypothesis (3) gives $$|Q_n(x)| = \left|\frac{\partial f}{\partial t}(\xi_n(x), x)\right| \leq g(x).$$ This holds for $\mu$-almost every $x \in X$. Therefore the integrable function $g$ dominates every term $Q_n$ in the sequence.
+
+    \item We verify that each $Q_n$ is measurable. For each fixed $n$, the functions $(t_0 + h_n, x) \mapsto f(t_0 + h_n, x)$ and $(t_0, x) \mapsto f(t_0, x)$ are measurable on $X$ by hypothesis (1), since for any fixed $t \in U$, the function $x \mapsto f(t,x)$ is integrable and hence measurable. Their difference divided by the nonzero constant $h_n$ is therefore measurable.
+
+    \item Finally we check that $\frac{\partial f}{\partial t}(t_0, x)$ itself is integrable. By hypothesis (3), $$\left|\frac{\partial f}{\partial t}(t_0, x)\right| \leq g(x)$$ for all $x$, and since $g$ is integrable by hypothesis, it follows that $\frac{\partial f}{\partial t}(t_0, -)$ is dominated by an integrable function. A measurable function dominated by an integrable function is itself integrable (by the comparison property of \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{the Lebesgue integral}). Thus $x \mapsto \frac{\partial f}{\partial t}(t_0, x)$ is integrable.
+\end{enumerate}
+
+Having verified all hypotheses of the Dominated Convergence Theorem, we may pass the limit inside the integral: $$\lim_{n \to \infty} \int_X Q_n(x) \, d\mu(x) = \int_X \lim_{n \to \infty} Q_n(x) \, d\mu(x) = \int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x).$$ By definition of the derivative, this means $$F'(t_0) = \lim_{h \to 0} \frac{F(t_0 + h) - F(t_0)}{h} = \int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x),$$ which is the desired conclusion. Since $t_0$ was arbitrary in $U$, this holds for every $t \in U$.
+\end{proof}

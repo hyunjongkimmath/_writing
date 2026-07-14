@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:real_exponential_function_taylor_series}
+    For all $a \in \bbR$\CrefIfExists{definition:field_of_real_numbers}, the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Taylor series expansion} of the \CrefAndHyperrefIfExist{definition:real_exponential_function}{real exponential function} $\exp(x)$ centered at $a$ is 
+    $$\exp(x) = \sum_{n=0}^\infty \frac{e^a}{n!} (x-a)^n$$
+    and this converges absolute ly for all $x \in \bbR$. In particular, letting $a = 0$, we have the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Maclaurin series}
+    $$\exp(x) = \sum_{n=0}^\infty \frac{1}{n!} x^n.$$
+\end{proposition}
+\begin{proof}
+    Recall that 
+    $$\frac{d}{dx} e^x = e^x.$$
+    \CrefIfExists{proposition:derivative_of_exponential_function_is_itself} Therefore, 
+    $$\left(\frac{d^n}{dx^n} e^x\right)(a) = e^a$$
+    for all $n \in \bbZ_{+}$ and $a \in \bbR$. 
+    Apply \Cref{theorem:taylor_series_convergence_criterion_for_real_functions}.
+\end{proof}

@@ -1,0 +1,28 @@
+\begin{proposition}[Derivative of the real exponential function with constant base]
+\label{proposition:derivative_of_real_exponential_function_with_constant_base}
+\TODO{AI generated, verify}
+Let $a \in \mathbb{R}$ with $a > 0$. Consider the function
+$f : \mathbb{R} \to \mathbb{R}$ defined by $f(s) = a^s$ for all $s \in \mathbb{R}$,
+where $a^s$ is the \CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}{real exponentiation via exponential and logarithm}, i.e. $a^s = \exp(s \ln a)$.
+Then $f$ is \CrefAndHyperrefIfExist{definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions}{infinitely differentiable} on $\mathbb{R}$, and for every $k \in \mathbb{N}_0$,
+$$f^{(k)}(s) = (\ln a)^k a^s \quad \text{for all } s \in \mathbb{R}.$$
+In particular, the first derivative is $f'(s) = (\ln a) a^s$.
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+We proceed by induction on $k \in \mathbb{N}_0$.
+
+\paragraph{Base case $k = 0$.} $f^{(0)}(s) = f(s) = a^s = (\ln a)^0 a^s$, which holds since $(\ln a)^0 = 1$.
+
+\paragraph{Base case $k = 1$.} By definition, $f(s) = \exp(s \ln a)$. Since $\ln a \in \mathbb{R}$ is a constant, the function $g(s) = s \ln a$ is differentiable on $\mathbb{R}$ with $g'(s) = \ln a$. The exponential function $\exp$ is differentiable on $\mathbb{R}$ with derivative $\exp$ itself (\CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}). By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule}), the composition $f = \exp \circ g$ is differentiable on $\mathbb{R}$ and
+$$f'(s) = \exp(g(s)) \cdot g'(s) = \exp(s \ln a) \cdot \ln a = a^s \ln a = (\ln a)^1 a^s.$$
+
+\paragraph{Inductive step.} Assume the formula holds for some $k \ge 1$, i.e. $f^{(k)}(s) = (\ln a)^k a^s$ for all $s \in \mathbb{R}$. Since $(\ln a)^k$ is a constant and $a^s = f(s)$ is differentiable by the $k=1$ case, the product rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{product rule}) gives
+\begin{align*}
+f^{(k+1)}(s) &= \frac{d}{ds} \bigl( (\ln a)^k a^s \bigr) \\
+&= (\ln a)^k \frac{d}{ds} a^s \\
+&= (\ln a)^k \cdot (\ln a) a^s \quad \text{(by the $k=1$ case)} \\
+&= (\ln a)^{k+1} a^s.
+\end{align*}
+This completes the induction. Therefore $f$ is infinitely differentiable on $\mathbb{R}$ with the claimed derivatives.
+\end{proof}

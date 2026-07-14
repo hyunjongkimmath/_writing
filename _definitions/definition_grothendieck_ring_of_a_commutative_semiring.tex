@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:grothendieck_ring_of_a_commutative_semiring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring}. Define a \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{relation} $\sim$ on $R \times R$ by
+$$(a,b) \sim (c,d) \iff \exists t \in R \text{ such that } a + d + t = b + c + t.$$
+\CrefIfExists{proposition:grothendieck_ring_equivalence_relation}
+
+The \hldef{Grothendieck ring of $R$} is the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{quotient set}
+$$\hlin{K(R) := (R \times R) / \sim},$$
+whose elements are \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence classes} denoted \hl{$[(a,b)]$}. We define binary operations on $K(R)$, called \hldef{addition and multiplication on $K(R)$}, by
+\begin{align*}
+    \hlin{[(a,b)] + [(c,d)]} &\hlin{:= [(a + c,\, b + d)]}, \\
+    \hlin{[(a,b)] \cdot [(c,d)]} &\hlin{:= [(ac + bd,\, ad + bc)]},
+\end{align*}
+and distinguished elements
+$$\hlin{0_{K(R)} := [(0_R, 0_R)]}, \qquad \hlin{1_{K(R)} := [(1_R, 0_R)]}.$$
+These operations are well-defined\CrefIfExists{proposition:grothendieck_ring_operations_well_defined} and make $K(R)$ into a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative unital ring}\CrefIfExists{proposition:grothendieck_ring_is_a_ring}. The additive inverse of $[(a,b)]$ is given by \hl{$-[(a,b)] = [(b,a)]$}.
+
+There is a natural \hldef{canonical map} \hl{$\iota_R: R \to K(R)$} defined by $\iota_R(r) = [(r, 0_R)]$, which is a homomorphism of semirings. If $R$ is \CrefAndHyperrefIfExist{definition:cancellative_monoid}{cancellative} as an additive monoid, then $\iota_R$ is injective and the defining condition simplifies to $(a,b) \sim (c,d) \iff a + d = b + c$.
+\end{definition}

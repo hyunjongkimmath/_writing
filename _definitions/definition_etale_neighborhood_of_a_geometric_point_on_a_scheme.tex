@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:etale_neighborhood_of_a_geometric_point_on_a_scheme}
+Let $X$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme} and let $\bar{x} : \Spec(\Omega) \to X$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point of $X$} (with $\Omega$ a separably closed field).
+An \hldef{\'etale neighborhood of $\bar{x}$} is a pair $(U, \bar{u})$ consisting of:
+\begin{itemize}
+    \item an \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale morphism} $f : U \to X$,
+    \item a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} $\bar{u} : \Spec(\Omega) \to U$ of $U$,
+\end{itemize}
+such that $f \circ \bar{u} = \bar{x}$.
+Equivalently, an \'etale neighborhood of $\bar{x}$ is a commutative diagram
+
+$$
+\begin{tikzcd}
+\Spec(\Omega) \arrow[r, "\bar{u}"] \arrow[dr, "\bar{x}"'] & U \arrow[d, "f"] \\
+& X
+\end{tikzcd}
+$$
+with $f$ \'etale.
+\end{definition}

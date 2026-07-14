@@ -1,0 +1,19 @@
+\begin{lemma} \label{lemma:sequence_one_plus_one_over_n_to_the_n_is_strictly_increasing}
+    For each positive integer $n \in \mathbb{Z}_{> 0}$, let $a_n := (1 + 1/n)^n$. Then the sequence $(a_n)_{n=1}^\infty$ is strictly increasing, i.e.\ for all $n \geq 1$,
+    $$\left(1 + \frac{1}{n}\right)^n < \left(1 + \frac{1}{n+1}\right)^{n+1}.$$
+\end{lemma}
+
+\begin{proof}
+    Fix $n \geq 1$. By the \CrefAndHyperrefIfExist{theorem:binomial_theorem_for_a_commutative_ring}{binomial theorem}, applied to the commutative ring $\mathbb{Q}$, we have:
+    $$\left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}.$$
+    \TODO{factor this fact out as a lemma}
+    Expanding the binomial coefficient $\binom{n}{k} = \frac{n!}{k!(n-k)!}$, we can rewrite each term as:
+    $$\binom{n}{k} \frac{1}{n^k} = \frac{n(n-1)\cdots(n-k+1)}{k! \cdot n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
+    Similarly, for $a_{n+1}$:
+    $$\binom{n+1}{k} \frac{1}{(n+1)^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n+1}\right) \left(1 - \frac{2}{n+1}\right) \cdots \left(1 - \frac{k-1}{n+1}\right).$$
+    Since $n < n+1$, we have $\frac{j}{n} > \frac{j}{n+1}$ for each positive integer $j$, and hence $1 - \frac{j}{n} < 1 - \frac{j}{n+1}$. Therefore, for each fixed $k$ with $0 \leq k \leq n$:
+    $$\binom{n}{k} \frac{1}{n^k} < \binom{n+1}{k} \frac{1}{(n+1)^k}.$$
+    Moreover, the sum for $a_{n+1}$ contains one additional positive term corresponding to $k = n+1$, which is $\binom{n+1}{n+1}/(n+1)^{n+1} > 0$. Therefore:
+    $$\sum_{k=0}^n \binom{n}{k} \frac{1}{n^k} < \sum_{k=0}^{n+1} \binom{n+1}{k} \frac{1}{(n+1)^k},$$
+    which is exactly $a_n < a_{n+1}$. This establishes that $(a_n)$ is strictly increasing.
+\end{proof}

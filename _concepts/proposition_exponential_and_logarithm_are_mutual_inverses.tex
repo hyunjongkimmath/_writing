@@ -1,0 +1,27 @@
+\begin{proposition} \label{proposition:exponential_and_logarithm_are_mutual_inverses}
+\TODO{AI generated, verify}
+The \CrefAndHyperrefIfExist{definition:real_exponential_function}{exponential function} $\exp : \mathbb{R} \to (0, \infty)$ and the \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm} $\ln : (0, \infty) \to \mathbb{R}$ are mutual inverses:
+$$\hlin{\exp(\ln(x)) = x \quad \text{for all } x > 0}$$
+$$\hlin{\ln(\exp(x)) = x \quad \text{for all } x \in \mathbb{R}}$$
+Moreover, $\exp$ is the unique differentiable function $f : \mathbb{R} \to \mathbb{R}$ satisfying $f' = f$ and $f(0) = 1$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We establish the mutual inverse property and uniqueness separately.
+
+    \begin{enumerate}
+        \item The natural logarithm is defined as the inverse of the exponential function (see \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}). By definition of an inverse function, for all $x > 0$:
+        $$\exp(\ln(x)) = x,$$
+        and for all $y \in \mathbb{R}$:
+        $$\ln(\exp(y)) = y.$$
+        The bijectivity of $\exp : \mathbb{R} \to (0, \infty)$ follows from the fact that $\exp$ is strictly increasing (since its derivative $\exp(x) > 0$ everywhere by \CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}) and surjective onto $(0, \infty)$ (by its limits at $\pm\infty$).
+
+        \item For uniqueness, suppose $f : \mathbb{R} \to \mathbb{R}$ is differentiable with $f' = f$ and $f(0) = 1$. Consider the function $g(x) = \frac{f(x)}{\exp(x)}$. By the quotient rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}):
+        $$g'(x) = \frac{f'(x)\exp(x) - f(x)\exp'(x)}{\exp(x)^2}.$$
+        Using $f' = f$ and $\exp'(x) = \exp(x)$ (from \CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}):
+        $$g'(x) = \frac{f(x)\exp(x) - f(x)\exp(x)}{\exp(x)^2} = 0.$$
+        Since $g' = 0$ everywhere on $\mathbb{R}$, the function $g$ is constant (by the Mean Value Theorem: if a differentiable function has zero derivative on an interval, it is constant). Evaluating at $x = 0$:
+        $$g(0) = \frac{f(0)}{\exp(0)} = \frac{1}{1} = 1.$$
+        Therefore $g(x) = 1$ for all $x$, which gives $f(x) = \exp(x)$ for all $x \in \mathbb{R}$.
+    \end{enumerate}
+\end{proof}

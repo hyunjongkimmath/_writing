@@ -1,0 +1,73 @@
+\begin{theorem}[Mertens' theorem on the Cauchy product of series] \label{theorem:mertens_theorem_on_cauchy_product_of_series}
+    \TODO{AI generated, verify}
+    Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be two sequences in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} or $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}. Suppose that the series $\sum_{n=0}^\infty a_n$ converges absolutely to $A$, the series $\sum_{n=0}^\infty b_n$ converges to $B$, and their \CrefAndHyperrefIfExist{definition:cauchy_product_of_two_sequences_in_a_commutative_ring}{Cauchy product} is the sequence $(c_n)_{n=0}^\infty$ with
+    $$c_n = \sum_{k=0}^n a_k b_{n-k}.$$
+
+    Then the series $\sum_{n=0}^\infty c_n$ converges to $AB$, i.e.,
+    $$\sum_{n=0}^\infty \left( \sum_{k=0}^n a_k b_{n-k} \right) = AB.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $A_N = \sum_{n=0}^N a_n$ and $B_N = \sum_{n=0}^N b_n$ denote the partial sums of $(a_n)$ and $(b_n)$ respectively. By hypothesis, $A_N \to A$ and $B_N \to B$. Let $C_N = \sum_{n=0}^N c_n$ denote the partial sums of the Cauchy product series.
+
+    We first establish a key identity relating the partial sums. For any $N \geq 0$:
+    $$C_N = \sum_{n=0}^N \sum_{k=0}^n a_k b_{n-k}.$$
+
+    Let us rewrite this double sum by collecting terms according to powers of $a_k$. For each fixed $k \in \{0, 1, \dots, N\}$, the term $a_k$ appears in the inner sums for all $n$ with $k \leq n \leq N$, and when it does, it is multiplied by $b_{n-k}$. Therefore:
+    $$C_N = \sum_{k=0}^N a_k \left( \sum_{j=0}^{N-k} b_j \right) = \sum_{k=0}^N a_k B_{N-k},$$
+    where we substituted $j = n - k$ in the inner sum.
+
+    We now use summation by parts$\CrefIfExists{lemma:summation_by_parts_for_sequences}$ to analyze this expression. Apply summation by parts with sequences $(a_n)$ and $(B_n)$, using partial sums $A_N$:
+    $$\sum_{k=0}^N a_k B_{N-k} = A_N B_0 + \sum_{k=0}^{N-1} A_k (B_{N-k} - B_{N-k+1}).$$
+
+    Wait, this is not quite the standard summation by parts formula because $B$ has reversed indices. Let us instead proceed directly with a different decomposition. Write:
+    $$C_N = \sum_{k=0}^N a_k B_{N-k}.$$
+
+    We want to show that $C_N \to AB$. Consider the difference:
+    $$C_N - AB = \sum_{k=0}^N a_k B_{N-k} - AB.$$
+
+    Let us rewrite this as:
+    $$C_N - AB = \sum_{k=0}^N a_k (B_{N-k} - B) + \left( \sum_{k=0}^N a_k \right) B - AB = \sum_{k=0}^N a_k (B_{N-k} - B) + (A_N - A)B.$$
+
+    We analyze each term separately. For the second term, since $A_N \to A$ and $B$ is constant:
+    $$|(A_N - A)B| = |A_N - A| \cdot |B|.$$
+
+    Given $\varepsilon > 0$, there exists $N_1$ such that for all $N \geq N_1$:
+    $$|A_N - A| < \frac{\varepsilon}{2(|B| + 1)}.$$
+
+    For the first term, let $T_m = B_m - B$ denote the tail of the series $\sum b_n$. By \Cref{lemma:tail_of_convergent_series_tends_to_zero}, we have $T_m \to 0$ as $m \to \infty$. Therefore there exists $N_2$ such that for all $m \geq N_2$:
+    $$|T_m| = |B_m - B| < \frac{\varepsilon}{2(\sum_{k=0}^\infty |a_k| + 1)}.$$
+
+    Now split the sum $\sum_{k=0}^N a_k (B_{N-k} - B)$ into two parts. For $N$ large enough, say $N \geq N_2$, we separate indices where $N - k \geq N_2$ from those where $N - k < N_2$:
+    $$\sum_{k=0}^N a_k T_{N-k} = \sum_{k=0}^{N-N_2} a_k T_{N-k} + \sum_{k=N-N_2+1}^N a_k T_{N-k}.$$
+
+    In the first sum, each term has $N - k \geq N_2$, so $|T_{N-k}| < \frac{\varepsilon}{2(\sum |a_k| + 1)}$. Therefore:
+    $$\left|\sum_{k=0}^{N-N_2} a_k T_{N-k}\right| \leq \sum_{k=0}^{N-N_2} |a_k| \cdot |T_{N-k}| < \frac{\varepsilon}{2(\sum |a_k| + 1)} \sum_{k=0}^{N-N_2} |a_k| < \frac{\varepsilon}{2}.$$
+
+    For the second sum, note that $N - k$ ranges from $0$ to $N_2 - 1$, so there are at most $N_2$ terms. Let $M = \max_{0 \leq m \leq N_2-1} |T_m|$. Since $\sum a_n$ converges absolutely, the tail sum $\sum_{k=N-N_2+1}^N |a_k|$ tends to zero as $N \to \infty$ (because the infinite series of absolute values has vanishing tails). Therefore there exists $N_3$ such that for all $N \geq N_3$:
+    $$\sum_{k=N-N_2+1}^N |a_k| < \frac{\varepsilon}{2(M + 1)}.$$
+
+    Hence:
+    $$\left|\sum_{k=N-N_2+1}^N a_k T_{N-k}\right| \leq M \sum_{k=N-N_2+1}^N |a_k| < \frac{M\varepsilon}{2(M + 1)} < \frac{\varepsilon}{2}.$$
+
+    Taking $N \geq \max(N_1, N_2, N_3)$, we combine all three estimates:
+    $$|C_N - AB| \leq \left|\sum_{k=0}^N a_k T_{N-k}\right| + |(A_N - A)B| < \varepsilon + \frac{\varepsilon}{2}.$$
+
+    Let me refine the constants. Given $\varepsilon > 0$, choose $N_1$ so that for $N \geq N_1$:
+    $$|A_N - A| < \frac{\varepsilon}{3(|B| + 1)}.$$
+
+    Choose $N_2$ so that for $m \geq N_2$:
+    $$|T_m| < \frac{\varepsilon}{3(\sum_{k=0}^\infty |a_k| + 1)}.$$
+
+    Let $M = \max_{0 \leq m \leq N_2-1} |T_m|$. Choose $N_3$ so that for $N \geq N_3$:
+    $$\sum_{k=N-N_2+1}^N |a_k| < \frac{\varepsilon}{3(M + 1)}.$$
+
+    For $N \geq \max(N_1, N_2, N_3)$:
+    $$|C_N - AB| \leq \left|\sum_{k=0}^{N-N_2} a_k T_{N-k}\right| + \left|\sum_{k=N-N_2+1}^N a_k T_{N-k}\right| + |(A_N - A)B|.$$
+
+    The first term is bounded by $\frac{\varepsilon}{3}$, the second by $\frac{M\varepsilon}{3(M+1)} < \frac{\varepsilon}{3}$, and the third by $\frac{|B|\varepsilon}{3(|B|+1)} < \frac{\varepsilon}{3}$. Therefore:
+    $$|C_N - AB| < \varepsilon.$$
+
+    This shows that $C_N \to AB$, completing the proof.
+\end{proof}

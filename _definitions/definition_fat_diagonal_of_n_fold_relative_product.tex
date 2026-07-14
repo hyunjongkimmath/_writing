@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:fat_diagonal_of_n_fold_relative_product}
+\TODO{AI generated, verify}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, let $X$ be an \CrefAndHyperrefIfExist{definition:scheme_over_a_scheme}{$S$-scheme} with structure morphism $f \colon X \to S$, and let $n \geq 1$ be an integer. Let $X^n_S = X \times_S X \times_S \cdots \times_S X$ denote the \CrefAndHyperrefIfExist{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}{$n$-fold fiber product of $X$ over $S$}. For each pair $(i,j)$ with $1 \leq i \neq j \leq n$, let $\Delta_{ij} \subseteq X^n_S$ denote the closed subscheme corresponding to the equality of the $i$-th and $j$-th coordinates, i.e.\ the image of the morphism
+$$X \xrightarrow{\Delta_f} X \times_S X \hookrightarrow X^n_S$$
+where $\Delta_f \colon X \to X \times_S X$ is the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_a_morphism_of_schemes}{diagonal morphism} of $f$, and the second arrow embeds $X \times_S X$ into $X^n_S$ as factors $i$ and $j$.
+
+The \hldef{fat diagonal of $X^n_S$ over $S$}, denoted \hl{$\Delta_{\mathrm{fat}}(X^n_S/S)$} or simply \hl{$\Delta_{\mathrm{fat}}$}, is the closed subscheme
+$$\hlin{\Delta_{\mathrm{fat}} = \bigcup_{1 \leq i \neq j \leq n} \Delta_{ij} \subseteq X^n_S.}$$
+
+If $f$ is a \CrefAndHyperrefIfExist{definition:separated_morphism_of_schemes}{separated morphism}, then each $\Delta_{ij}$ is a closed subscheme, so the fat diagonal is a closed subscheme of $X^n_S$.
+\end{definition}

@@ -1,0 +1,22 @@
+\begin{theorem}[Fundamental theorem of calculus, Part II] \label{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}.
+
+    Suppose that $F : [a, b] \to \mathbb{R}$ satisfies:
+    \begin{enumerate}
+        \item $F$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at each point of $(a, b)$ with $F'(x) = f(x)$ for all $x \in (a, b)$;
+        \item $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+    \end{enumerate}
+    Then
+    $$\int_a^b f(x)\,dx = F(b) - F(a).$$
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $P = \{x_0, x_1, \dots, x_n\}$ be any partition of $[a, b]$ with $a = x_0 < x_1 < \dots < x_n = b$. On each subinterval $[x_{k-1}, x_k]$, the function $F$ is differentiable (hence continuous) and therefore satisfies the hypotheses of the Mean Value Theorem (\CrefAndHyperrefIfExist{theorem:mean_value_theorem_for_differentiable_functions_on_intervals}). Thus there exists a point $\xi_k \in (x_{k-1}, x_k)$ such that
+    $$F(x_k) - F(x_{k-1}) = F'(\xi_k)(x_k - x_{k-1}) = f(\xi_k)(x_k - x_{k-1}).$$
+
+    Summing over all subintervals gives a telescoping sum:
+    $$\sum_{k=1}^n f(\xi_k)(x_k - x_{k-1}) = \sum_{k=1}^n (F(x_k) - F(x_{k-1})) = F(b) - F(a).$$
+
+    The left-hand side is a Riemann sum for $f$ with respect to the partition $P$, using sample points $\xi_k$. Since $f$ is Riemann integrable on $[a, b]$, any such Riemann sum converges to the integral as the mesh of the partition goes to zero. Therefore:
+    $$\int_a^b f(x)\,dx = \lim_{\|P\| \to 0} \sum_{k=1}^n f(\xi_k)(x_k - x_{k-1}) = F(b) - F(a).$$
+\end{proof}

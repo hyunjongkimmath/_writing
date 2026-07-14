@@ -1,0 +1,14 @@
+\begin{definition}[Topology induced by a norm on a module over a commutative ring with absolute value] \label{definition:topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}:
+    $$|\cdot| : R \to T,$$
+    and let $M$ be a module over $R$\CrefIfExists{definition:module_over_a_ring}. Let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $\|\cdot\|$ be an \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended norm on $M$ valued in $T^\infty$}.
+    The \hldef{topology induced by the extended norm $\|\cdot\|$ on $M$} is defined by declaring a subset $U \subseteq M$ to be open if for every $x \in U$, there exists $\varepsilon \in T_{>0}$ such that
+    $$\hlin{B(x, \varepsilon) := \{ y \in M : \|y - x\| < \varepsilon \}}$$
+    is contained in $U$. The set $B(x, \varepsilon)$ is called the \hldef{open ball of radius $\varepsilon$ around $x$}.
+
+    In the case that $R = F$ is a field and $M = V$ is a vector space over $F$, we recover the standard definition of the topology induced by a norm on a vector space.
+
+    \TextIfExists{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{
+        Equivalently, the topology on $M$ induced by the extended norm $\|\cdot\|$ is the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_and_open_ball_for_an_extended_metric}{topology on $M$ induced by} the extended metric $d : M \times M \to T^\infty$ valued in $T^\infty$ \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{induced by $\|\cdot\|$}.
+    }
+\end{definition}

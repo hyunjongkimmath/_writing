@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category}.
+
+    A \hldef{pullback in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:limit_and_colimit_for_a_map_from_a_simplicial_set_to_an_infty_category}{limit} of a diagram $p : K \to \mathcal{C}$ where $K$ is the simplicial set corresponding to the span $\{1 \to 0 \leftarrow 2\}$ (the nerve of the category $\bullet \to \bullet \leftarrow \bullet$). Concretely, given morphisms $f : X \to Z$ and $g : Y \to Z$, the \hldef{pullback of $f$ along $g$} (or \hldef{fiber product of $X$ and $Y$ over $Z$}), denoted by \hl{$X \times_Z^h Y$}, is an object equipped with morphisms $p_X : X \times_Z^h Y \to X$ and $p_Y : X \times_Z^h Y \to Y$ and an equivalence $f \circ p_X \simeq g \circ p_Y$, universal among such data.
+
+    The superscript $h$ on $\times_Z^h$ emphasizes that this is a homotopy pullback, though in the context of $\infty$-categories all limits are inherently homotopy limits, so the notation is sometimes omitted.
+
+    Dually, a \hldef{pushout in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:limit_and_colimit_for_a_map_from_a_simplicial_set_to_an_infty_category}{colimit} of a cospan diagram $X \to Z \leftarrow Y$, denoted by \hl{$X \amalg_Z^h Y$}.
+\end{definition}

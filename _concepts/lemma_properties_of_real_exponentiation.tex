@@ -1,0 +1,46 @@
+\begin{theorem}[Properties of real exponentiation] \label{theorem:properties_of_real_exponentiation}
+    \TODO{AI generated, verify}
+    Let $a,b > 0$ and let $x,y \in \mathbb{R}$.
+
+    \begin{enumerate}
+        \item (Additivity of exponents) $a^x \cdot a^y = a^{x+y}$ in the sense of \CrefAndHyperrefIfExist{definition:real_exponentiation_via_supremum}.
+        \item (Monotonicity in the base) If $0 < a \leq b$, then $a^x \leq b^x$ for all $x \geq 0$.
+        \item (Monotonicity in the exponent) If $a > 1$ and $x < y$, then $a^x < a^y$. If $0 < a < 1$ and $x < y$, then $a^x > a^y$.
+        \item (Bounds) If $a > 1$ and $q \in \mathbb{Q}$ with $q \leq x$, then $a^q \leq a^x$. If $0 < a < 1$ and $q \in \mathbb{Q}$ with $q \leq x$, then $a^q \geq a^x$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We use the definition of real exponentiation via supremum and infimum (\CrefAndHyperrefIfExist{definition:real_exponentiation_via_supremum}) together with properties of rational exponentiation (\CrefAndHyperrefIfExist{theorem:properties_of_rational_exponentiation}).
+
+\begin{enumerate}
+    \item First assume $a > 1$. By definition,
+    $$a^x = \sup\{a^q : q \in \mathbb{Q},\; q \leq x\}, \qquad a^y = \sup\{a^r : r \in \mathbb{Q},\; r \leq y\}.$$
+    For any $q \leq x$ and $r \leq y$ with $q,r \in \mathbb{Q}$, we have $q+r \leq x+y$, so by rational exponent laws (\CrefAndHyperrefIfExist{theorem:properties_of_rational_exponentiation}),
+    $$a^q \cdot a^r = a^{q+r} \leq \sup\{a^s : s \in \mathbb{Q},\; s \leq x+y\} = a^{x+y}.$$
+    Taking the supremum over all $q \leq x$ gives $(a^x)(a^y) \leq a^{x+y}$.
+
+    For the reverse inequality, let $s \in \mathbb{Q}$ with $s \leq x+y$. We can write $s = q+r$ for some $q,r \in \mathbb{Q}$ with $q \leq x$ and $r \leq y$ (for instance, fix any rational $q' < s-y$, then set $q = \max(q',x-\varepsilon)$ for sufficiently small $\varepsilon > 0$ so that $q < x$ and $r = s-q < y$). Then
+    $$a^s = a^{q+r} = a^q \cdot a^r \leq a^x \cdot a^y.$$
+    Taking the supremum over all such $s$ gives $a^{x+y} \leq a^x \cdot a^y$. Hence equality holds.
+
+    For $0 < a < 1$, we use that $a = (a^{-1})^{-1}$ with $a^{-1} > 1$:
+    $$a^x \cdot a^y = (a^{-1})^{-x} \cdot (a^{-1})^{-y} = (a^{-1})^{-(x+y)} = a^{x+y},$$
+    where the middle equality uses the case $a^{-1} > 1$.
+
+    For $a = 1$, both sides are trivially equal to $1$.
+
+    \item If $0 < a \leq b$ and $x \geq 0$, then for any rational $q \in [0,x]$, we have $a^q \leq b^q$ by \CrefAndHyperrefIfExist{theorem:properties_of_rational_exponentiation}. Taking suprema (for bases $>1$) or infima (for bases $<1$) preserves the inequality, so $a^x \leq b^x$.
+
+    \item This follows directly from part 1 and the bounds in part 4. If $a > 1$ and $x < y$, then
+    $$a^y = a^{(y-x)+x} = a^{y-x} \cdot a^x.$$
+    Since $y-x > 0$, we have $a^{y-x} > 1$ (because for any rational $q$ with $0 < q \leq y-x$, we get $a^q > 1$ by rational exponent properties). Hence $a^y > a^x$.
+
+    For $0 < a < 1$, write $a = (a^{-1})^{-1}$ and apply the previous case to base $a^{-1} > 1$:
+    $$a^x = (a^{-1})^{-x} > (a^{-1})^{-y} = a^y$$
+    since $-x > -y$ and base $a^{-1} > 1$.
+
+    \item This is immediate from the definitions. If $a > 1$, then by definition $a^x = \sup\{a^q : q \in \mathbb{Q},\; q \leq x\}$, so for any rational $q \leq x$ we have $a^q \leq a^x$. If $0 < a < 1$, then $a^x = \inf\{a^q : q \in \mathbb{Q},\; q \leq x\}$, so for any rational $q \leq x$ we have $a^q \geq a^x$.
+\end{enumerate}
+\end{proof}

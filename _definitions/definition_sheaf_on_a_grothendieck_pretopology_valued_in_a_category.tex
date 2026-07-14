@@ -1,0 +1,20 @@
+\begin{definition}[Sheaf on a Grothendieck pretopology] \label{definition:sheaf_on_a_grothendieck_pretopology_valued_in_a_category}
+    \TODO{AI generated, verify}
+
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{category} equipped with a \CrefAndHyperrefIfExist{definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category}{Grothendieck pretopology} $K$.
+    Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:category}{category}.
+
+    For every object $U$ of $\mathcal{C}$ and every \CrefAndHyperrefIfExist{definition:basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category}{covering family} $\{U_i \to U\}_{i \in I} \in K(U)$, one forms the \CrefAndHyperrefIfExist{definition:cech_nerve_of_a_family_of_morphisms_to_an_object_in_a_category}{\v{C}ech nerve} of the covering family: this is a simplicial object in the slice category $\mathcal{C}/U$ whose value at $[n] \in \Delta$ is the disjoint union (or equivalently, the family indexed by $I^{n+1}$) of $(n+1)$-fold fiber products
+    $$\check{C}(\{U_i \to U\})_n = \coprod_{(i_0,\ldots,i_n) \in I^{n+1}} U_{i_0} \times_U U_{i_1} \times_U \cdots \times_U U_{i_n},$$
+    with face maps induced by the projections between fiber products of different lengths and degeneracy maps induced by the diagonal morphisms.
+
+    Applying a \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf} $F: \mathcal{C}^{\op} \to \mathcal{A}$\CrefIfExists{definition:opposite_category_of_a_category} to the \v{C}ech nerve yields a cosimplicial object in $\mathcal{A}$, hence a diagram indexed by $\Delta$. The \hldef{matching object of $F$ with respect to the covering family $\{U_i \to U\}_{i \in I}$} is defined as the \CrefAndHyperrefIfExist{definition:limit_and_colimit_of_a_diagram_in_a_category}{limit}
+    $$M(\{U_i \to U\}_{i \in I}, F) := \varprojlim_{[n] \in \Delta} F(\check{C}(\{U_i \to U\})_n),$$
+    provided this limit exists in $\mathcal{A}$.
+
+    A presheaf $F: \mathcal{C}^{\op} \to \mathcal{A}$ is called a \hldef{sheaf on $(\mathcal{C}, K)$ valued in $\mathcal{A}$} if, for every object $U$ of $\mathcal{C}$ and every covering family $\{U_i \to U\}_{i \in I} \in K(U)$, the limit defining $M(\{U_i \to U\}_{i \in I}, F)$ exists and the canonical morphism
+    $$F(U) \longrightarrow M(\{U_i \to U\}_{i \in I}, F)$$
+    is an isomorphism in $\mathcal{A}$.
+
+    When $\mathcal{A}$ is the category of \CrefAndHyperrefIfExist{definition:category_of_sets}{sets}, we simply say that $F$ is a \hldef{sheaf on $(\mathcal{C}, K)$}.
+\end{definition}

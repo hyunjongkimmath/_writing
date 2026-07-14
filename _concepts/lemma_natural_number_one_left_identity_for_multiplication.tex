@@ -1,0 +1,9 @@
+\begin{lemma} \label{lemma:natural_number_one_left_identity_for_multiplication}
+Let $\bbN$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. For all $m \in \bbN$,
+$$1 \times m = m.$$
+\end{lemma}
+
+\begin{proof}
+We induct on $m$. For $m = 1$, we have $1 \times 1 = 1$ by \Cref{proposition:natural_numbers_multiplication_existence}. Suppose inductively that $k \in \bbN$ is an element satisfying $1 \times k = k$. We want to show that $1 \times (k+1) = k+1$. This is true by \Cref{proposition:natural_numbers_multiplication_existence} and \Cref{proposition:natural_numbers_addition_existence} because 
+$$1 \times (k+1) = 1 \times (s(k)) = 1 \times k + 1 = k + 1.$$
+\end{proof}

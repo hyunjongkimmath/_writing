@@ -1,7 +1,7 @@
 \begin{definition}[Characteristic function of a random variable] \label{definition:characteristic_function_of_a_random_variable}
-Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperref{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}, and let $X: \Omega \to \mathbb{R}$ be a real-valued \CrefAndHyperref{definition:random_variable_on_a_probability_measure_space}{random variable} with \CrefAndHyperref{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} $\mu_X$.
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperref{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}, and let $X: \Omega \to \mathbb{R}$ be a real-valued \CrefAndHyperrefIfExist{definition:random_variable_on_a_probability_measure_space}{random variable} with \CrefAndHyperrefIfExist{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} $\mu_X$.
 
 The \hldef{characteristic function of $X$}, denoted \hl{$\varphi_X$}, is the function \hl{$\varphi_X: \mathbb{R} \to \mathbb{C}$} defined by
 $$\varphi_X(t) = \mathbb{E}\left[e^{itX}\right] = \int_{\mathbb{R}} e^{itx} \, d\mu_X(x)$$
-for each $t \in \mathbb{R}$, where $\mathbb{E}$ denotes the \CrefAndHyperref{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expected value}. The integral is well-defined because $|e^{itx}| = 1$ for all $t, x \in \mathbb{R}$.
+for each $t \in \mathbb{R}$, where $\mathbb{E}$ denotes the \CrefAndHyperrefIfExist{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expected value}. The integral is well-defined because $|e^{itx}| = 1$ for all $t, x \in \mathbb{R}$.
 \end{definition}

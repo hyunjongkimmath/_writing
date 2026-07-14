@@ -1,0 +1,6 @@
+\begin{theorem}[Smooth function with vanishing Taylor series] \label{theorem:smooth_function_with_vanishing_taylor_series_not_equal_to_zero}
+    \TODO{AI generated, verify}
+    There exist infinitely differentiable functions $f : \mathbb{R} \to \mathbb{R}$ whose Taylor series at a point converges but does not equal the function. Specifically, define
+    $$f(x) := \begin{cases} e^{-1/x^2} & \text{if } x \neq 0, \\ 0 & \text{if } x = 0. \end{cases}$$
+    Then $f$ is infinitely differentiable on $\mathbb{R}$, and for every integer $k \geq 0$, the $k$th derivative at zero satisfies $f^{(k)}(0) = 0$. Consequently, the Taylor series of $f$ centered at $0$ is the identically zero power series, which converges everywhere to $0$, but $f(x) > 0$ for all $x \neq 0$. In particular, $f$ is not \CrefAndHyperrefIfExist{definition:real_analytic_function_on_an_open_interval}{real analytic at $0$}.
+\end{theorem}

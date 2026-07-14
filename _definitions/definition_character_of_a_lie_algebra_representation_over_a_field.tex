@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:character_of_a_lie_algebra_representation_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}, $\mathfrak{g}$ a \CrefAndHyperrefIfExist{definition:lie_algebra_over_a_field}{Lie algebra over $k$}, and $(\rho, V)$ a finite-dimensional \CrefAndHyperrefIfExist{definition:representation_of_a_lie_algebra_on_a_vector_space_over_a_field}{representation of $\mathfrak{g}$} over $k$.
+
+    The \hldef{character of $\rho$} is the function
+    $$\hlin{\chi_\rho : \mathfrak{g} \to k, \quad x \mapsto \mathrm{tr}(\rho(x)).}$$
+
+    If $x \in \mathfrak{g}$ acts via a \CrefAndHyperrefIfExist{definition:semisimple_endomorphism_of_a_vector_space_over_a_field}{semisimple endomorphism} $\rho(x)$, then $\chi_\rho(x)$ is the sum of eigenvalues of $\rho(x)$ counted with multiplicity. If $\rho(x)$ is nilpotent, then $\chi_\rho(x) = 0$.
+
+    The character is \hldef{infinitesimally a class function} in the sense that for any Lie algebra automorphism $\varphi \in \mathrm{Aut}_{\Lie}(\mathfrak{g})$, one has $\chi_\rho(\varphi(x)) = \chi_{\rho \circ \varphi^{-1}}(x)$. In particular, if $\rho$ is faithful and $\varphi$ preserves the representation, then $\chi_\rho \circ \varphi = \chi_\rho$.
+\end{definition}

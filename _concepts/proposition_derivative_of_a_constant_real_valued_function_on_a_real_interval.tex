@@ -1,0 +1,12 @@
+\begin{proposition}[Derivative of a constant real valued function on a real interval] \label{proposition:derivative_of_a_constant_real_valued_function_on_a_real_interval}
+    Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:constant_function_on_a_set}{constant function}, i.e., there exists $c \in \mathbb{R}$ such that $f(x) = c$ for all $x \in I$. Then $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every $a \in I$ and
+    $$f'(a) = 0.$$
+\end{proposition}
+\begin{proof}
+    Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a constant function with value $c \in \mathbb{R}$. Let $a \in I$. The \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} of $f$ at $a$ is given by the limit
+    $$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h},$$
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point} provided the limit exists in $\mathbb{R}$. Since $f$ is constant, we have $f(a+h) = c$ and $f(a) = c$ for all $h$ such that $a+h \in I$. Therefore, for all such $h$ with $h \neq 0$,
+    $$\frac{f(a+h) - f(a)}{h} = \frac{c - c}{h} = \frac{0}{h} = 0.$$
+    The constant function $h \mapsto 0$ has limit $0$ as $h \to 0$\CrefIfExists{corollary:limit_of_constant_real_valued_function_at_accumulation_point}. 
+    Hence $f'(a) = 0$. Since $a \in I$ was arbitrary, $f$ is differentiable at every point of $I$ with derivative $0$. Thus $f' \equiv 0$ on $I$.
+\end{proof}

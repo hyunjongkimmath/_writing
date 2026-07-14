@@ -1,0 +1,11 @@
+\begin{definition}[Implied volatility of a traded option] \label{definition:implied_volatility_of_a_traded_option}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, let $V_{\text{BS}}(t, S; K, T, r, \sigma)$ denote the Black--Scholes price of a European option with strike $K$ and maturity $T$.
+
+Given an observed market price $V_{\text{mkt}}$ for an option with parameters $(S, K, T, r)$, the \hldef{implied volatility} is the unique value $\sigma_{\text{imp}} > 0$ such that
+$$\hlin{V_{\text{BS}}(t, S; K, T, r, \sigma_{\text{imp}}) = V_{\text{mkt}}}.$$
+
+The mapping $\sigma \mapsto V_{\text{BS}}(\sigma)$ is strictly increasing (vega $> 0$ for non-expired, non-degenerate options), so the implied volatility exists and is unique.
+
+The \hldef{volatility smile} refers to the empirical observation that $\sigma_{\text{imp}}$ plotted against strike $K$ typically exhibits a U-shaped curve, contradicting the constant-volatility assumption of Black--Scholes. The \hldef{volatility surface} is the function $(K, T) \mapsto \sigma_{\text{imp}}(K, T)$.
+\end{definition}

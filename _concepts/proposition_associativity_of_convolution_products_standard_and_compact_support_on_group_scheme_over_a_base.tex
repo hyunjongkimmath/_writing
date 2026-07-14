@@ -1,0 +1,66 @@
+\begin{proposition}[Associativity of convolution products] \label{proposition:associativity_of_convolution_products_standard_and_compact_support_on_group_scheme_over_a_base}
+    \TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:scheme}{scheme}. Let \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{$G$ be an algebraic group scheme over $S$} with multiplication morphism $m: G \times_S G \to G$.
+
+    The convolution products \CrefAndHyperref{definition:convolution_product_compact_support_and_standard_on_group_scheme_over_a_base_scheme}{$*_*$ and $*_!$} are associative in the following cases.
+    \begin{enumerate}
+        \item[\textbf{(a) Torsion coefficients, $*_*$.}] Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}, and assume $m$ is \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}. For $M, N, P \in D(G_{\et}, A)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            (M *_* N) *_* P &\cong M *_* (N *_* P), \\
+            (M *_! N) *_! P &\cong M *_! (N *_! P).
+        \end{align*}
+
+        \item[\textbf{(b) Integral adic coefficients, $*_*$.}] Let $\ell$ be a prime invertible on $G$ and $S$, let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$, and assume $m$ is smooth. For $M, N, P \in D_c^b(G,R)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            (M *_* N) *_* P &\cong M *_* (N *_* P), \\
+            (M *_! N) *_! P &\cong M *_! (N *_! P).
+        \end{align*}
+
+        \item[\textbf{(c) Rational adic coefficients, $*_*$.}] With $R$ and $E$ as above, assume $m$ is smooth. For $M, N, P \in \Dbc(G,E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}),
+        $$ (M *_* N) *_* P \cong M *_* (N *_* P), \quad (M *_! N) *_! P \cong M *_! (N *_! P).$$
+
+        \item[\textbf{(d) Algebraic adic coefficients, $*_*$.}] Let $F/E$ be an algebraic extension, assume $m$ is smooth. For $M, N, P \in \Dbc(G,F)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}),
+        $$ (M *_* N) *_* P \cong M *_* (N *_* P), \quad (M *_! N) *_! P \cong M *_! (N *_! P).$$
+
+        \item[\textbf{(e) Proper case, $*_*$.}] Assume $G \to S$ is \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} (hence $m$ is proper). For any of the above coefficient systems,
+        $$ (M *_* N) *_* P \cong M *_* (N *_* P).$$
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    By definition,
+    \begin{align}
+        (M *_* N) *_* P  \nonumber
+        &\cong Rm_* ( \pr_1^* (M *_* N) \otimes \pr_2^* P) \nonumber \\
+        &\cong Rm_* ( \pr_1^* (Rm_* (\pr_1^* M \otimes \pr_2^* N)) \otimes \pr_2^* P).
+    \end{align}
+    Let $G_i = G$ for $i = 1,2,3$ to distinguish the components of $G_1 \times_S G_2 \times_S G_3 = G \times_S G \times_S G$. Applying the smooth base change theorem (\Cref{theorem:smooth_base_change_theorem_for_derived_category_of_Z_nZ_sheaves_on_schemes}) to the Cartesian diagram
+    \begin{center}
+    \begin{tikzcd}
+        G_1 \times_S G_2 \times_S G_3 \ar[r, "\pr_{1,2}"] \ar[d, "m \times \id"] & G_1 \times_S G_2 \ar[d, "m"] \\
+        G \times_S G_3 \ar[r, "\pr_1"] & G
+    \end{tikzcd}
+    \end{center}
+    yields a natural isomorphism
+    $$\pr_1^* Rm_* \cong R(m \times \id)_* \pr_{1,2}^*$$
+    and therefore the above expression is isomorphic to
+    $$Rm_* (  R(m \times \id)_* (\pr_{1,2}^* (\pr_1^* M \otimes \pr_2^* N)) \otimes \pr_2^* P),$$
+    which \Cref{lemma:pullbacks_respect_tensor_product_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition} shows is isomorphic to
+    \begin{align*}
+        & Rm_* (  R(m \times \id)_* ((\pr_{1,2}^* \circ \pr_1^* M) \otimes (\pr_{1,2}^* \circ \pr_2^* N)) \otimes \pr_2^* P) \\
+        \cong & Rm_* (  R(m \times \id)_* ( \pr_{G_1 \times_S G_2 \times_S G_3 \to G_1}^* M \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_2}^* N ) \otimes \pr_2^* P),
+    \end{align*}
+    where $\pr_{G_1 \times_S G_2 \times_S G_3 \to G_i}$ denotes the projection map $G_1 \times_S G_2 \times_S G_3 \to G_i$. By the projection formula (\Cref{proposition:projection_formula_for_a_three_functor_formalism_for_an_infty_category_finite_limits_and_a_class_of_morphisms_containing_isomorphisms_and_stable_under_pullback_and_composition}), this is isomorphic to
+    \begin{align*}
+        & Rm_* (  R(m \times \id)_* ( \pr_{G_1 \times_S G_2 \times_S G_3 \to G_1}^* M \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_2}^* N  \otimes (m \times \id)^* \pr_2^* P)) \\
+        \cong & Rm_* (  R(m \times \id)_* ( \pr_{G_1 \times_S G_2 \times_S G_3 \to G_1}^* M \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_2}^* N  \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_3}^* P)) \\
+        \cong & Rm_{3,*} ( \pr_{G_1 \times_S G_2 \times_S G_3 \to G_1}^* M \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_2}^* N  \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_3}^* P)
+    \end{align*}
+    where $m_3 = m \circ (m \times \id) \cong (m \times \id) \circ m: G_1 \times_S G_2 \times_S G_3 \to G$ is the multiplication map of all three components. We have thus far shown that
+    $$(M *_* N) *_* P \cong Rm_{3,*} ( \pr_{G_1 \times_S G_2 \times_S G_3 \to G_1}^* M \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_2}^* N  \otimes \pr_{G_1 \times_S G_2 \times_S G_3 \to G_3}^* P).$$
+    In fact, one can symmetrically show that $M *_* (N *_* P)$ is naturally isomorphic to the righthand expression above and hence $(M *_* N) *_* P \cong M *_* (N *_* P)$ as desired.
+
+    One can further similarly show the associativity of $*_!$, using \Cref{theorem:base_change_theorem_for_comp_supp_direct_images_for_coh_bdd_below_etale_torsion_sheaves_under_comp_supp_direct_images_of_compactifiable_morphisms_over_schemes} instead of the smooth base change theorem.
+
+    In case (e), the properness of $m$ allows one to use \Cref{theorem:proper_base_change_theorem_for_derived_category_of_bounded_constructible_sheaves_over_a_scheme_over_a_field} in place of the smooth base change theorem.
+\end{proof}

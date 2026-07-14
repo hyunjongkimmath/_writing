@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:uniformly_Cauchy_sequence_of_functions_from_a_set_to_an_extended_metric_space}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, let $X$ be a set, and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
+    A sequence of functions $f_n : X \to Y$ is said to be \hldef{uniformly Cauchy} if for every $\varepsilon \in T_{>0}$, there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$ and all $x \in X$, one has
+    $$d(f_n(x), f_m(x)) < \varepsilon.$$
+    Equivalently, the sequence $(f_n)$ is uniformly Cauchy if
+    $$\lim_{n,m \to \infty} \sup_{x \in X} d(f_n(x), f_m(x)) = 0_T.$$
+    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+
+    If $X$ is a singleton, then a sequence of functions from $X$ to $Y$ is uniformly Cauchy if and only if the corresponding sequence in $Y$ is \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space}{Cauchy}.
+\end{definition}

@@ -1,0 +1,45 @@
+\begin{definition} \label{definition:convolution_product_compact_support_and_standard_on_group_scheme_over_a_base_scheme}
+    \TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:scheme}{scheme}. Let \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{$G$ be an algebraic group scheme over $S$} with structure morphism $\pi: G \to S$. Let
+    $$m: G \times_S G \to G$$
+    denote the \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{multiplication morphism}, and let
+    $$pr_1, pr_2: G \times_S G \to G$$
+    be the two projections (\Cref{definition:cartesian_product_of_two_objects_in_a_category_over_an_object}).
+
+    The convolution products are defined for each six functor formalism as follows.
+    \begin{enumerate}
+        \item For $K, L$ in the respective derived category on $G$, define the \hldef{convolution product $*_*$ on $G/S$} by $K *_* L := Rm_*(K \boxtimes_S L)$ where $\boxtimes_S$ is the \CrefAndHyperref{definition:external_tensor_product_on_fiber_product_of_etale_sheaves_over_a_base_scheme}{external tensor product}. Concretely:
+        \begin{enumerate}
+            \item Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. For $K, L \in D(G_{\et}, A)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}),
+            $$\hlin{K *_* L := Rm_*(pr_1^* K \otimes_A^L pr_2^* L) \in D(G_{\et}, A).}$$
+
+            \item Let $\ell$ be a prime invertible on $G$ and $S$. Let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. For $K = (K_n), L = (L_n) \in D_c^b(G,R)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}),
+            $$\hlin{K *_* L := (Rm_*(pr_1^* K_n \otimes_R^L pr_2^* L_n))_n \in D_c^b(G,R).}$$
+
+            \item With $R$ and $E$ as above, for $K, L \in \Dbc(G,E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}),
+            $$\hlin{K *_* L := Rm_*(pr_1^* K \otimes_E^L pr_2^* L) \in \Dbc(G,E).}$$
+
+            \item Let $F/E$ be an algebraic extension. For $\mathcal{K}, \mathcal{L} \in \Dbc(G,F)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}), represented by $K_{L'}, L_{L''}$ for finite subextensions, push both to a common finite extension and define
+            $$\hlin{\mathcal{K} *_* \mathcal{L} := Rm_*(pr_1^* K_{L'''} \otimes_{L'''}^L pr_2^* L_{L'''}) \in \Dbc(G,F).}$$
+        \end{enumerate}
+
+        \item Assume that $m: G \times_S G \to G$ is an \CrefAndHyperref{definition:compactification_of_a_morphism_of_schemes}{$S$-compactifiable morphism}, so that the direct image with compact support
+        $$Rm_!: \mathcal{D}((G \times_S G)/S) \to \mathcal{D}(G/S)$$
+        is defined for each of the formalisms below. For $K, L$ in the respective derived category on $G$, define the \hldef{convolution product $*_!$ on $G/S$} by $K *_! L := Rm_!(K \boxtimes_S L)$. Concretely:
+        \begin{enumerate}
+            \item Let $A$ be a noetherian torsion ring. For $K, L \in D(G_{\et}, A)$,
+            $$\hlin{K *_! L := Rm_!(pr_1^* K \otimes_A^L pr_2^* L) \in D(G_{\et}, A).}$$
+
+            \item Let $\ell$ be a prime invertible on $G$ and $S$, let $R$ be the integral closure of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. For $K = (K_n), L = (L_n) \in D_c^b(G,R)$,
+            $$\hlin{K *_! L := (Rm_!(pr_1^* K_n \otimes_R^L pr_2^* L_n))_n \in D_c^b(G,R).}$$
+
+            \item With $R$ and $E$ as above, for $K, L \in \Dbc(G,E)$,
+            $$\hlin{K *_! L := Rm_!(pr_1^* K \otimes_E^L pr_2^* L) \in \Dbc(G,E).}$$
+
+            \item Let $F/E$ be an algebraic extension. For $\mathcal{K}, \mathcal{L} \in \Dbc(G,F)$, represented and pushed to a common finite extension as above,
+            $$\hlin{\mathcal{K} *_! \mathcal{L} := Rm_!(pr_1^* K_{L'''} \otimes_{L'''}^L pr_2^* L_{L'''}) \in \Dbc(G,F).}$$
+        \end{enumerate}
+    \end{enumerate}
+
+    Since $m$ is an affine morphism, $Rm_! = Rm_*$ whenever $G \to S$ is separated; in particular $*_!$ coincides with $*_*$.
+\end{definition}

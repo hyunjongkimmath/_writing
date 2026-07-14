@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:discriminant_of_a_polynomial_over_a_commutative_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $f \in R[x]$ be a polynomial of degree $m \geq 1$ with leading coefficient $a_m$. Let $f'$ denote the formal derivative of $f$ with respect to $x$.
+
+    The \hldef{discriminant of $f$ over $R$}, denoted by \hl{$\operatorname{Disc}(f)$}, is defined in terms of the \CrefAndHyperref{definition:resultant_of_two_polynomials_over_a_commutative_ring}{resultant} as
+    $$ \hlin{\operatorname{Disc}(f) = (-1)^{m(m-1)/2} \cdot \frac{1}{a_m} \cdot \operatorname{Res}(f, f').} $$
+
+    Equivalently, if $f$ factors over an algebraic closure as $f = a_m \prod_{i=1}^m (x - \alpha_i)$, then
+    $$ \operatorname{Disc}(f) = a_m^{2m-2} \prod_{1 \leq i < j \leq m} (\alpha_i - \alpha_j)^2. $$
+\end{definition}

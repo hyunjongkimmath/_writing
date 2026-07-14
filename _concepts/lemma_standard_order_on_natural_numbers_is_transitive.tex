@@ -1,0 +1,6 @@
+\begin{lemma} \label{lemma:standard_order_on_natural_numbers_is_transitive}
+    The \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order} $<$ on \CrefAndHyperrefIfExist{definition:natural_numbers}{$\bbN$} is \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{transitive}, i.e. for all $n,m,k \in \bbN$, if $n < m$ and $m < k$, then $n < k$. 
+\end{lemma}
+\begin{proof}
+    Suppose that $n,m,k \in \bbN$ satisfy $n < m$ and $m < k$. In other words, there exist $d_1,d_2 \in \bbN$ such that $n + d_1 = m$ and $m + d_2 = k$. We have $(n+d_1)+d_2 = k$. By \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{associativity of addition}, $n+(d_1+d_2) = k$. Thus, $n < k$.
+\end{proof}

@@ -1,0 +1,20 @@
+\begin{proposition} \label{proposition:short_exact_sequence_of_galois_groups_for_extension_of_base_field_of_abelian_variety_that_gains_all_geometric_endomorphisms_yields_short_exact_sequence_of_ell_adic_tate_module}
+    Let $A$ be an \CrefAndHyperrefIfExist{definition:abelian_variety_over_a_field}{abelian variety} over a \CrefAndHyperrefIfExist{definition:field}{field} $K$. Let $L$ be the minimal \CrefAndHyperrefIfExist{definition:extension_of_a_field}{extension} of $K$ such that $\End_{\overline{K}}(A) = \End_{L}(A)$. \TODO{discuss how $L$ is finite extension} Let $\ell$ be a prime number. Let
+    $$\rho_{A,K,\ell^\infty}: \Gal(\overline{K}/K) \to \Aut(T_\ell A)$$ 
+    be the \CrefAndHyperrefIfExist{definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field}{$\ell$-adic Galois representation} of $A/K$. Likewise, let $\rho_{A,L,\ell^\infty}$ be the $\ell$-adic Galois representation of $A/L$, which is identifiable as the restriction of $\rho_{A,K,\ell^\infty}$ to the normal subgroup $\Gal(\overline{K}/L)$ of $\Gal(\overline{K}/K)$. 
+
+    There is a short exact sequence
+    $$1 \to \operatorname{im} \rho_{A,L,\ell^\infty} \to \operatorname{im} \rho_{A,K,\ell^\infty} \to \Gal(L/K) \to 1.$$
+\end{proposition}
+\begin{proof}
+    We show that the surjection $\Gal(\overline{K}/K) \twoheadrightarrow \Gal(L/K)$ \CrefAndHyperrefIfExist{definition:morphism_in_a_category_factoring_through_a_morphism}{factors through} $\Gal(\overline{K}/K) \twoheadrightarrow \operatorname{im} \rho_{A,K,\ell^\infty}$, i.e. we have a canonical group homomorphism $\operatorname{im} \rho_{A,K,\ell^\infty} \to \Gal(L/K)$ sending $\rho_{A,K,\ell^\infty}(\sigma)$ to $\sigma|_L$. By \Cref{lemma:unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel}, this is to show that 
+    $$\ker \rho_{A,K,\ell^\infty} \subseteq \ker(\Gal(\overline{K}/K) \twoheadrightarrow \Gal(L/K)) = \Gal(\overline{K}/L).$$
+    \TODO{describe action}
+    Given an element $\sigma$ of $\ker \rho_{A,K,\ell^\infty}$, since $\sigma$ acts trivially on $T_\ell A$, it acts trivially on $\End_{\overline{K}}(A)$ because the \CrefAndHyperrefIfExist{definition:ell_adic_representation_map_from_base_change_of_isogenies_of_abelian_varieties_to_hom_set_of_tate_modules}{canonical map} 
+    $$\mathbb{Z}_\ell \otimes_{\mathbb{Z}} \End_{\overline{K}}(A) \to \End_{\bbZ_\ell}(T_\ell A)$$
+    \TODO{staetment of injection}
+    is an injection. By the construction of $L$, $\Gal(\overline{K}/L)$ consists exactly of the elements of $\Gal(\overline{K}/K)$ that act trivially on the endomorphisms of $A \times_K L$. Therefore, the desired containment holds and hence there is a surjection $\operatorname{im} \rho_{A,K,\ell^\infty} \twoheadrightarrow \Gal(L/K)$.
+    
+
+    Note that the kernel of the homomorphism $\operatorname{im} \rho_{A,K,\ell^\infty} \to \Gal(L/K)$ consists exactly of the $\rho_{A,K,\ell^\infty}(\sigma)$ such that $\sigma|_L$ is the identity element of $\Gal(L/K)$. In other words, the kernel is exactly $\operatorname{im} \rho_{A,L,\ell^\infty}$. We thus have the claimed short exact sequence.
+\end{proof}

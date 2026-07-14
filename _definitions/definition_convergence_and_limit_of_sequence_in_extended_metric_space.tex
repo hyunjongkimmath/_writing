@@ -1,9 +1,13 @@
-\begin{definition}[Convergence and Limits in an Extended Metric Space] \label{definition:convergence_and_limit_of_sequence_in_extended_metric_space}
-    Let \((X, d)\) be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set}{extended metric space}.
-    A sequence \((x_n)_{n=1}^\infty\) in \(X\) \hldef{converges to a point $x \in X$} if for every \(\varepsilon > 0\), there exists an integer \(N \in \mathbb{N}\) such that for all \(n \geq N\),
-    \[
-    d(x_n, x) < \varepsilon.
-    \]
-    In that case, \(x\) is called the \hldef{limit of the sequence $(x_n)$}, and we write
+\begin{definition}[Convergence and limits in an extended metric space valued in a semiring with adjoined infinity] \label{definition:convergence_and_limit_of_sequence_in_extended_metric_space}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
+    A sequence $(x_n)_{n=1}^\infty$ in $X$ \hldef{converges to a point $x \in X$} if for every $\varepsilon \in T_{>0}$, there exists an integer $N \in \mathbb{N}$ such that for all $n \geq N$,
+    $$d(x_n, x) < \varepsilon.$$
+    In that case, $x$ is called the \hldef{limit of the sequence $(x_n)$}, and we write
     $$\hlin{\lim_{n \to \infty} x_n = x \quad \text{or} \quad x_n \to x}$$
+
+    When $T = \bbR_{\geq 0}$, this recovers the standard definition of convergence in an extended metric space. In general, if $T$ has no minimum positive element (e.g., $T = \bbR_{\geq 0}$ or any dense ordered semiring), then the condition "$d(x_n,x) < \varepsilon$ for all $\varepsilon \in T_{>0}$" is strictly weaker than $d(x_n,x) = 0_T$, allowing sequences to approach $x$ without eventually equaling it. If $T$ has a minimum positive element, then convergence forces eventual equality: $(x_n)$ converges to $x$ if and only if $x_n = x$ for all sufficiently large $n$.
+
+    \TextIfExists{definition:convergence_and_limit_of_sequence_in_a_topological_space}{
+        The sequence $(x_n)_{n=1}^\infty$ converges to $x \in X$ if and only if it converges to $x$ in the sense of \Cref{definition:convergence_and_limit_of_sequence_in_a_topological_space}\CrefIfExists{proposition:epsilon_delta_convergence_of_sequence_in_extended_metric_space_equivalent_to_topological_convergence}.
+    }
 \end{definition}

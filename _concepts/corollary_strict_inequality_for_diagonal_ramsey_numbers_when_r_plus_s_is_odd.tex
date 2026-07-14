@@ -1,0 +1,7 @@
+\begin{corollary} \label{corollary:strict_inequality_for_diagonal_ramsey_numbers_when_r_plus_s_is_odd}
+\TODO{AI generated, verify}
+For integers $r, s \geq 3$ with $r+s$ odd, the recursive bound is strict:
+$$R(r,s) < R(r-1,s) + R(r,s-1).$$
+
+This follows because when $r+s$ is odd, one of $r-1$ and $s$ has even sum, and by \CrefAndHyperrefIfExist{proposition:symmetry_of_two_color_ramsey_numbers_R_r_s_equals_R_s_r}{symmetry}, both terms on the right-hand side are even integers. Thus their sum is even, while $R(r,s)$ must be strictly less than this sum (since equality would require both subgraphs in the proof of \CrefAndHyperrefIfExist{lemma:recursive_upper_bound_for_two_color_ramsey_numbers}{the recursive bound} to simultaneously achieve their Ramsey numbers, which is impossible when the total vertex count is odd).
+\end{corollary}

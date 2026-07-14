@@ -1,0 +1,19 @@
+\begin{definition}[Extended quasi-norm on a module over a ring with absolute value] \label{definition:extended_quasinorm_on_a_module_over_a_commutative_ring_with_absolute_value}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} valued in an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} $T$:
+    $$|\cdot| : R \to T.$$
+    Let $M$ be a (left/right) module over $R$\CrefIfExists{definition:module_over_a_ring}, and let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$.
+
+    An \hldef{extended quasi-norm on $M$ valued in $T^\infty$} is a function
+    $$\|\cdot\| : M \to T^\infty$$
+    satisfying for all $x \in M$ and all scalars $\alpha \in R$:
+    \begin{enumerate}
+        \item Positive definiteness: $\|x\| = 0_T$ if and only if $x = 0_M$.
+        \item Homogeneity: $\|\alpha x\| = |\alpha| \cdot \|x\|$, where the multiplication on the right is in $T^\infty$.
+    \end{enumerate}
+    A module equipped with an extended quasi-norm valued in $T^\infty$ is called an \hldef{extended quasi-normed module over $R$}.
+
+    If, in addition, the quasi-norm satisfies the triangle inequality ($\|x + y\| \leq \|x\| + \|y\|$ for all $x, y \in M$), it is an \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended norm on $M$ valued in $T^\infty$}.
+
+    If the range of $\|\cdot\|$ is contained in $T$, then we call it a \hldef{quasi-norm on $M$ valued in $T$}, with $M$ called a \hldef{quasi-normed module over $R$}.
+\end{definition}

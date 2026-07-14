@@ -1,0 +1,41 @@
+\begin{theorem}[Fundamental theorem of calculus, Part I] \label{theorem:fundamental_theorem_of_calculus_part_one_antiderivative_from_integral}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function} that is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+
+    Define $F : [a, b] \to \mathbb{R}$ by
+    $$F(x) = \int_a^x f(t)\,dt.$$
+    If $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at a point $c \in [a, b)$, then $F$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable at $c$} and
+    $$F'(c) = f(c).$$
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We compute the difference quotient of $F$ at $c$. Let $h > 0$ be sufficiently small so that $c+h \in [a, b]$. By additivity of the integral over adjacent intervals:
+    $$F(c+h) - F(c) = \int_a^{c+h} f(t)\,dt - \int_a^c f(t)\,dt = \int_c^{c+h} f(t)\,dt.$$
+
+    We wish to show that $\frac{1}{h}\int_c^{c+h} f(t)\,dt$ converges to $f(c)$ as $h \to 0$. Equivalently, we must bound the difference
+    $$\left|\frac{F(c+h) - F(c)}{h} - f(c)\right| = \frac{1}{h}\left|\int_c^{c+h} (f(t) - f(c))\,dt\right|.$$
+
+    Since $f$ is continuous at $c$, for any $\varepsilon > 0$ there exists $\delta > 0$ such that
+    $$|t - c| < \delta \implies |f(t) - f(c)| < \varepsilon.$$
+
+    For $0 < h < \delta$, we have $|t - c| < h < \delta$ for all $t \in [c, c+h]$. Therefore:
+    $$\left|\int_c^{c+h} (f(t) - f(c))\,dt\right| \leq \int_c^{c+h} |f(t) - f(c)|\,dt < \varepsilon h.$$
+
+    Dividing by $h$:
+    $$\frac{1}{h}\left|\int_c^{c+h} (f(t) - f(c))\,dt\right| < \varepsilon.$$
+
+    This shows that $\lim_{h \to 0^+} \frac{F(c+h) - F(c)}{h} = f(c)$.
+
+    For $h < 0$ with $c+h \in [a, b]$, we write similarly:
+    $$F(c+h) - F(c) = \int_a^{c+h} f(t)\,dt - \int_a^c f(t)\,dt = -\int_{c+h}^c f(t)\,dt.$$
+
+    The difference quotient becomes:
+    $$\frac{F(c+h) - F(c)}{h} = \frac{-1}{h}\int_{c+h}^c f(t)\,dt.$$
+
+    Setting $k = -h > 0$, we have $\frac{-1}{h} = \frac{1}{k}$ and the interval is $[c-k, c]$:
+    $$\left|\frac{F(c-h) - F(c)}{-h} - f(c)\right| = \frac{1}{h}\left|\int_{c-h}^c (f(t) - f(c))\,dt\right|.$$
+
+    For $0 < h < \delta$, we have $t \in [c-h, c] \subseteq (c-\delta, c)$, so again $|f(t) - f(c)| < \varepsilon$. Thus:
+    $$\frac{1}{h}\left|\int_{c-h}^c (f(t) - f(c))\,dt\right| \leq \frac{1}{h} \cdot \varepsilon h = \varepsilon.$$
+
+    This shows $\lim_{h \to 0^-} \frac{F(c+h) - F(c)}{h} = f(c)$. Since both one-sided limits equal $f(c)$, we conclude that $F'(c) = f(c)$.
+\end{proof}

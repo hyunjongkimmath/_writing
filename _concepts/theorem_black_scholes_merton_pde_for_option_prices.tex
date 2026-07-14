@@ -1,0 +1,12 @@
+\begin{theorem}[Black--Scholes--Merton PDE for option prices] \label{theorem:black_scholes_merton_pde_for_option_prices}
+\TODO{AI generated, verify}
+In the \CrefAndHyperrefIfExist{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}{Black--Scholes--Merton model}, let $V(t, S)$ denote the price at time $t$ of a derivative with payoff $\Phi(S_T)$ at maturity $T$, where the underlying stock price is $S$.
+
+Then $V: [0, T] \times (0, \infty) \to \mathbb{R}$ satisfies the Black--Scholes--Merton partial differential equation
+$$\hlin{\frac{\partial V}{\partial t} + rS \frac{\partial V}{\partial S} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} - rV = 0},$$
+with terminal condition $V(T, S) = \Phi(S)$.
+
+The unique bounded solution is given by the risk-neutral pricing formula:
+$$V(t, S) = e^{-r(T-t)} \mathbb{E}^{\mathbb{Q}}\left[\Phi(S_T) \;\big|\; S_t = S\right],$$
+where under $\mathbb{Q}$, $dS_u = r S_u \, du + \sigma S_u \, dW_u$ and $W$ is a $\mathbb{Q}$-Brownian motion.
+\end{theorem}

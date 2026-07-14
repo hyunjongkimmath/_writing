@@ -1,0 +1,11 @@
+\begin{definition}[Ordered semiring] \label{definition:ordered_semiring}
+    \TODO{AI generated, verify}
+    An \hldef{ordered semiring} is a \CrefAndHyperrefIfExist{definition:semiring}{semiring} $R$ equipped with a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partial order} $\leq$ such that
+    \begin{enumerate}
+        \item the order is compatible with addition, i.e.\ that for all $a,b,c \in R$, if $a \leq b$, then $a + c \leq b + c$;
+        \item the order is compatible with multiplication by non-negative elements, i.e.\ that for all $a,b \in R$, if $a \ge 0_R$ and $b \ge 0_R$, then $ab \ge 0_R$.
+    \end{enumerate}
+    If the partial order $\leq$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}, then $R$ is called a \hldef{totally ordered semiring}.
+
+    The additive monoid $(R,+,\leq)$ is an \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoid}, and we denote its \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} by \hl{$R_{\ge 0_R}$}.
+\end{definition}

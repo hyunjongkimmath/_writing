@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:rational_exponentiation_of_positive_reals}
+    \TODO{AI generated, verify}
+    Let $a \in \mathbb{R}$ with $a > 0$, and let $r = p/q \in \mathbb{Q}$ where $p \in \mathbb{Z}$, $q \in \mathbb{Z}_{> 0}$, and $\gcd(p,q) = 1$. The \hldef{$r$th power of $a$}, denoted by \hl{$a^r$} or \hl{$a^{p/q}$}, is the unique positive real number defined as follows:
+    \begin{itemize}
+        \item If $p \geq 0$, then $a^{p/q}$ is the unique positive real number $x > 0$ such that $x^q = a^p$, where $a^p$ is the \CrefAndHyperrefIfExist{definition:exponentiation_in_a_field}{$p$th power} of $a$ in the underlying field $\mathbb{R}$, and existence and uniqueness follow from the \CrefAndHyperrefIfExist{theorem:intermediate_value_theorem_for_continuous_functions_on_intervals}{intermediate value theorem} applied to the polynomial $t \mapsto t^q - a^p$.
+        \item If $p < 0$, then $a^{p/q} := (a^{-1})^{-p/q}$, where $(a^{-1})^{-p/q}$ is defined as in the first case since $-p > 0$ and $a^{-1} > 0$.
+    \end{itemize}
+\end{definition}

@@ -1,0 +1,26 @@
+\begin{definition} \label{definition:simplicial_object_in_an_infty_category}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category}.
+
+    A \hldef{simplicial object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:functor_between_infty_categories}{functor}
+    \[
+    X : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C},
+    \]
+    where $\mathrm{N}(\Delta^{\mathrm{op}})$ is the \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerve} of the \CrefAndHyperrefIfExist{definition:opposite_category_of_a_category}{opposite} of the \CrefAndHyperrefIfExist{definition:simplex_category}{simplex category} $\Delta$.
+
+    By abuse of notation, we often write $X : \Delta^{\mathrm{op}} \to \mathcal{C}$ rather than $X : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C}$. For each $n \ge 0$, we write \hl{$X_n$} for the value of $X$ on the object $[n] \in \Delta$. For each order-preserving map $\theta : [m] \to [n]$ in $\Delta$, we write \hl{$X(\theta)$} for the induced morphism $X_n \to X_m$ in $\mathcal{C}$. In particular, the images of the coface and codegeneracy maps give \hldef{face maps} $d_i : X_n \to X_{n-1}$ and \hldef{degeneracy maps} $s_j : X_n \to X_{n+1}$ satisfying the simplicial identities up to coherent homotopy.
+
+    The $\infty$-category of simplicial objects in $\mathcal{C}$ is denoted by \hl{$\mathbf{s}\mathcal{C}$} (or \hl{$\mathcal{C}^{\Delta^{\mathrm{op}}}$}).
+\end{definition}
+% \begin{definition} \label{definition:simplicial_object_in_an_infty_category}
+%     \TODO{AI generated, verify}
+%     Let $\mathcal{C}$ be an \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{$\infty$-category}.
+
+%     A \hldef{simplicial object in $\mathcal{C}$} is a \CrefAndHyperrefIfExist{definition:functor_between_infty_categories}{functor}
+%     $$X : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C},$$
+%     where $\mathrm{N}(\Delta^{\mathrm{op}})$ is the nerve of the opposite of the \CrefAndHyperrefIfExist{definition:simplex_category}{simplex category} $\Delta$. Since $\Delta$ is an ordinary (1-)category, its nerve is a quasi-category in which every morphism is an equivalence only for isomorphisms.
+
+%     By abuse of notation, we often write $X : \Delta^{\mathrm{op}} \to \mathcal{C}$ rather than $X : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C}$. For each $n \ge 0$, we write \hl{$X_n$} for the value of $X$ on the object $[n] \in \Delta$. For each order-preserving map $\theta : [m] \to [n]$ in $\Delta$, we write \hl{$X(\theta)$} for the induced morphism $X_n \to X_m$ in $\mathcal{C}$. In particular, the images of the coface and codegeneracy maps give \hldef{face maps} $d_i : X_n \to X_{n-1}$ and \hldef{degeneracy maps} $s_j : X_n \to X_{n+1}$ satisfying the simplicial identities up to coherent homotopy.
+
+%     The $\infty$-category of simplicial objects in $\mathcal{C}$ is denoted by \hl{$\mathbf{s}\mathcal{C}$}.
+% \end{definition}

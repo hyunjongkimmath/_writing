@@ -1,0 +1,12 @@
+\begin{definition}[Value at Risk (VaR) for a portfolio loss distribution] \label{definition:value_at_risk_VaR_for_a_portfolio_loss_distribution}
+\TODO{AI generated, verify}
+Let $L$ be the random variable representing the loss in portfolio value over a fixed time horizon. Let $\alpha \in (0, 1)$ be a confidence level.
+
+The \hldef{Value at Risk at level $\alpha$}, denoted \hl{$\operatorname{VaR}_\alpha(L)$}, is the $\alpha$-quantile of the loss distribution:
+$$\hlin{\operatorname{VaR}_\alpha(L) = \inf\{x \in \mathbb{R} : P(L \leq x) \geq \alpha\}}.$$
+
+Equivalently, $P(L > \operatorname{VaR}_\alpha(L)) \leq 1 - \alpha$. VaR measures the maximum loss that will not be exceeded with probability $\alpha$ over the given horizon.
+
+VaR does not satisfy the axiom of subadditivity and hence is not a coherent risk measure. Specifically, there exist portfolios $L_1, L_2$ such that
+$$\operatorname{VaR}_\alpha(L_1 + L_2) > \operatorname{VaR}_\alpha(L_1) + \operatorname{VaR}_\alpha(L_2).$$
+\end{definition}

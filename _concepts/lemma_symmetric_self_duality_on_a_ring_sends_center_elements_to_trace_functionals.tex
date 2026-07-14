@@ -1,0 +1,20 @@
+\begin{lemma} \label{lemma:symmetric_self_duality_on_a_ring_sends_center_elements_to_trace_functionals}
+    Let $\varphi: R \to A$ be a ring homomorphism with respect to which $A$ is \CrefAndHyperrefIfExist{definition:symmetrically_self_dual_ring_over_a_ring}{symmetrically self-dual}, i.e. there exists an $(A,A)$-bimodule isomorphism $\psi: A \to A^\vee = \Hom_R(A,R)$\CrefIfExists{definition:dual_of_a_left_right_two_sided_module}. For any $x \in Z(A)$\CrefIfExists{definition:center_of_a_ring}, the functional $\psi(x)$ is a trace function, i.e. satisfies $\psi(x)(ab) = \psi(x)(ba)$ for all $a,b \in A$.
+\end{lemma}
+\begin{proof}
+    Note that the $(A, A)$-bimodule structure on $A^\vee$ is defined for $f \in A^\vee$ and $u, v, a \in A$ by:
+    \begin{align*}
+        (u \cdot f)(a) &= f(au) \\
+        (f \cdot v)(a) &= f(va).
+    \end{align*}
+    Since $\psi$ is an $(A,A)$-bimodule homomorphism, we have
+    \begin{align*}
+        \psi(ax) &=  a \cdot \psi(x)\\
+        \psi(xa) &=  \psi(x) \cdot a
+    \end{align*}
+    for all $a \in A$ and $x \in Z(A)$. Therefore, for all $a,b \in A$ and $x \in Z(A)$, we have
+    \begin{align*}
+        \psi(x)(ab) = (\psi(x) \cdot a)(b) = (a \cdot \psi(x))(b) = \psi(x)(ba)
+    \end{align*}
+    as desired.
+\end{proof}

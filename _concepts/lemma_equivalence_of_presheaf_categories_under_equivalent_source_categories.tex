@@ -1,0 +1,16 @@
+\begin{lemma} \label{lemma:equivalence_of_presheaf_categories_under_equivalent_source_categories}
+    \TODO{AI generated, verify}
+Let $\mathcal{A}_1$ and $\mathcal{A}_2$ be \CrefAndHyperrefIfExist{definition:category}{(large) categories} and let $\mathcal{B}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. If $\mathcal{A}_1$ and $\mathcal{A}_2$ are \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} as categories, then the \CrefAndHyperrefIfExist{definition:presheaf_on_a_category}{presheaf categories} $\PreShv(\mathcal{A}_1, \mathcal{B})$ and $\PreShv(\mathcal{A}_2, \mathcal{B})$ are equivalent.
+
+More precisely, let $F: \mathcal{A}_1 \to \mathcal{A}_2$ and $G: \mathcal{A}_2 \to \mathcal{A}_1$ be \CrefAndHyperrefIfExist{definition:functor_between_categories}{functors} together with \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphisms}
+$$\eta: \mathrm{Id}_{\mathcal{A}_1} \xrightarrow{\sim} G \circ F \quad \text{and} \quad \epsilon: F \circ G \xrightarrow{\sim} \mathrm{Id}_{\mathcal{A}_2}$$
+witnessing an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}. Then precomposition with $F^{\mathrm{op}}: \mathcal{A}_1^{\mathrm{op}} \to \mathcal{A}_2^{\mathrm{op}}$\CrefIfExists{definition:opposite_category_of_a_category} and $G^{\mathrm{op}}: \mathcal{A}_2^{\mathrm{op}} \to \mathcal{A}_1^{\mathrm{op}}$ induces an equivalence of categories
+$$(F^{\mathrm{op}})^*: \PreShv(\mathcal{A}_2, \mathcal{B}) \to \PreShv(\mathcal{A}_1, \mathcal{B}), \quad (F^{\mathrm{op}})^*(\mathcal{H}) = \mathcal{H} \circ F^{\mathrm{op}}$$
+and
+$$(G^{\mathrm{op}})^*: \PreShv(\mathcal{A}_1, \mathcal{B}) \to \PreShv(\mathcal{A}_2, \mathcal{B}), \quad (G^{\mathrm{op}})^*(\mathcal{K}) = \mathcal{K} \circ G^{\mathrm{op}},$$
+with natural isomorphisms
+$$(\eta^{\mathrm{op}})^*: \mathrm{Id}_{\PreShv(\mathcal{A}_1, \mathcal{B})} \xrightarrow{\sim} (G^{\mathrm{op}})^* \circ (F^{\mathrm{op}})^* \quad \text{and} \quad (\epsilon^{\mathrm{op}})^*: (F^{\mathrm{op}})^* \circ (G^{\mathrm{op}})^* \xrightarrow{\sim} \mathrm{Id}_{\PreShv(\mathcal{A}_2, \mathcal{B})}$$
+induced by $\eta$ and $\epsilon$ respectively.
+
+Equivalently, this follows from \Cref{lemma:equivalence_of_functor_categories_under_equivalent_source_categories} applied to $\mathcal{A}_1^{\mathrm{op}}$ and $\mathcal{A}_2^{\mathrm{op}}$, together with the fact that $\mathcal{A}_1^{\mathrm{op}}$ and $\mathcal{A}_2^{\mathrm{op}}$ are equivalent whenever $\mathcal{A}_1$ and $\mathcal{A}_2$ are.
+\end{lemma}

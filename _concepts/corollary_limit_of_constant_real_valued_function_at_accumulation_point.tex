@@ -1,0 +1,10 @@
+\begin{corollary} \label{corollary:limit_of_constant_real_valued_function_at_accumulation_point}
+    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers} equipped with its \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard absolute value} and let $c \in \bbR$. For every $a \in \bbR$,
+    $$\lim_{x \to a} c = c.$$
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}
+\end{corollary}
+\begin{proof}
+    The constant function $f \equiv c : \bbR \to \bbR$ is continuous by \Cref{proposition:constant_function_is_continuous_between_topological_spaces}. Hence $f$ is continuous at every point of $\bbR$ by \Cref{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}. Every $a \in \bbR$ is an accumulation point of $\bbR$ by \Cref{lemma:accumulation_point_criteria_for_subsets_of_real_numbers} part~(3) (since $\bbR$ itself is an interval that is not a singleton). Since $\bbR$ together with its standard absolute value is an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space}, \Cref{proposition:continuity_at_a_point_in_extended_metric_space_equivalent_to_topological_definition_and_limit_at_accumulation_point} implies
+    $$\lim_{x \to a} f(x) = f(a) = c.$$
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}
+\end{proof}

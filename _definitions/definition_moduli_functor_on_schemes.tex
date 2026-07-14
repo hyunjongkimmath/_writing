@@ -1,0 +1,15 @@
+\begin{definition}[Moduli functor] \label{definition:moduli_functor_on_schemes}
+    \TODO{AI generated, verify}
+Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}. A \hldef{set-valued moduli problem over $S$} consists of the following data:
+\begin{enumerate}
+    \item For each scheme $B/S$, a set $S(B)$ whose elements are called \hldef{families over $B$}. The assignment is functorial in the sense that for every morphism $\varphi: B' \to B$ over $S$, there is a \hldef{pullback map} \hl{$\varphi^*: S(B) \to S(B')$} satisfying $(\psi \circ \varphi)^* = \varphi^* \circ \psi^*$ and $\operatorname{id}_B^* = \operatorname{id}_{S(B)}$.
+
+    \item An \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} $\sim_B$ on $S(B)$ for each $B/S$, compatible with \CrefAndHyperrefIfExist{definition:base_change_of_a_morphism_in_a_category_by_a_morphism}{base change}: if $\mathcal{D}_1, \mathcal{D}_2 \in S(B)$ satisfy $\mathcal{D}_1 \sim_B \mathcal{D}_2$, then for every morphism $\varphi: B' \to B$ over $S$, their pullbacks satisfy $\varphi^*\mathcal{D}_1 \sim_{B'} \varphi^*\mathcal{D}_2$.
+\end{enumerate}
+
+The \hldef{moduli functor of the moduli problem} is the set-valued presheaf on $(\operatorname{Sch}/S)$
+$$ F: (\operatorname{Sch}/S)^{\op} \to \Sets $$
+given by $F(B) = S(B)/\sim_B$, sending a morphism $\varphi: B' \to B$ to the induced map $F(\varphi): F(B) \to F(B')$ defined by pullback of families.
+
+Elements of $F(\operatorname{Spec}(k))$ for an \CrefAndHyperrefIfExist{definition:algebraically_closed_field}{algebraically closed field} $k$ are called the \hldef{objects of the moduli problem over $k$}. Elements of $F(B)$ for a general base $B$ are called \hldef{families parameterized by $B$}.
+\end{definition}

@@ -1,0 +1,23 @@
+\begin{lemma} \label{lemma:ring_homomorphism_is_left_right_frobenius_ring_homomorphism_iff_there_exists_a_homomorphism_from_the_target_to_the_source_ring_as_modules_such_that_biadditive_map_is_non_singular}
+    Let $\varphi: R \to A$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. 
+
+    $\varphi$ is a \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{left (resp. right) Frobenius ring homomorphism} if and only if there exists a homomorphism $\lambda: A \to R$ of left (resp. right) $R$-modules such that the map $B: A \times A \to R$ defined by $B(x,y) = \lambda(xy)$
+    \begin{enumerate}
+        \item is \CrefAndHyperrefIfExist{definition:multi_additive_map_of_abelian_groups}{bi-additive},
+        \item satisfies $B(xy,z) = B(x,yz)$ for all $x,y,z \in A$
+        \item is non-singular, i.e. the mapping 
+        $$A \to \Hom_{{}_R \Mod}(A,R), \quad y \mapsto B(\cdot, y)$$
+        (resp.
+        $$A \to \Hom_{\Mod_R}(A,R), \quad x \mapsto B(x,\cdot)$$
+        )
+        is a left (resp. right) $A$-module isomorphism.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    Suppose that $\varphi$ is a left Frobenius ring homomorphism. 
+    Given a left $A$-module isomorphism $\psi: A \to A^\vee = \Hom_{{}_R \Mod}(A,R)$, define $\lambda: A \to R$ by $\lambda(a) = \psi(1)(a)$. It is an element of $\Hom_{{}_R \Mod}(A,R)$, i.e. is a left $R$-module homomorphism. Clearly, the induced map $B$ is bi-additive and satisfies $B(xy,z) = B(x,yz)$. Moreover, the map $y \mapsto B(\cdot, y)$ is exactly the map $\psi$, so it is a left $A$-module isomorphism.
+
+    Conversely, given a left $R$-module homomorphism $\lambda: A \to R$ satisfying the properties, let $\psi: A \to \Hom_{{}_R \Mod}(A,R)$ be given by $y \mapsto (x \mapsto B(x,y) = \lambda(x \cdot y))$. By assumption, this is a left $A$-module isomorphism.
+
+    The equivalence in the case that $\varphi$ is a right Frobenius ring homomorphism holds similarly.
+\end{proof}

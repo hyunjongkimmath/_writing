@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:regular_representation_of_a_finite_group_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a finite \CrefAndHyperrefIfExist{definition:group}{group} and $k$ a \CrefAndHyperrefIfExist{definition:field}{field}. Let \hl{$k[G]$} denote the \hldef{group algebra of $G$ over $k$}, i.e., the vector space over $k$ with basis $\{\delta_g : g \in G\}$ indexed by elements of $G$, equipped with multiplication extending $g \cdot h = gh$ linearly.
+
+    The \hldef{(left) regular representation of $G$ over $k$} is the \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representation}
+    $$\hlin{\lambda : G \to \mathrm{GL}(k[G])}$$
+    defined by left multiplication on basis vectors: $\lambda(g)(\delta_h) = \delta_{gh}$ for all $g, h \in G$.
+
+    The \hldef{(right) regular representation of $G$ over $k$} is the representation
+    $$\hlin{\rho : G \to \mathrm{GL}(k[G])}$$
+    defined by right multiplication on basis vectors: $\rho(g)(\delta_h) = \delta_{hg^{-1}}$ for all $g, h \in G$.
+
+    The dimension of the regular representation is $\dim k[G] = |G|$.
+\end{definition}

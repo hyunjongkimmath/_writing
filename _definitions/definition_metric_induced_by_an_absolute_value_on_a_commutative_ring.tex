@@ -1,0 +1,22 @@
+\begin{definition}[Metric induced by an absolute value on a commutative ring] \label{definition:metric_induced_by_an_absolute_value_on_a_commutative_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in an ordered semiring}:
+    $$|\cdot| : R \to T.$$
+
+    The \hldef{metric induced by $|\cdot|$} is the function
+    $$\hlin{d : R \times R \to T, \quad (a,b) \mapsto |a - b|}$$
+    defined by
+    $$d(a,b) := |a - b|.$$
+
+    The map $d$ satisfies the axioms of a metric valued in $T$: for all $a,b,c \in R$,
+    \begin{enumerate}
+        \item Positive definiteness: $d(a,b) = 0_T$ if and only if $a = b$, by positive definiteness of $|\cdot|$.
+        \item Symmetry: $d(a,b) = |a - b| = |-1_R| \cdot |b - a| = |b - a| = d(b,a)$, since $|-1_R| = 1_T$ follows from multiplicativity ($|-1_R|^2 = |(-1_R)^2| = |1_R| = 1_T$) and positive definiteness.
+        \item Triangle inequality: $d(a,c) = |a - c| = |(a - b) + (b - c)| \leq |a - b| + |b - c| = d(a,b) + d(b,c)$, by subadditivity of $|\cdot|$.
+    \end{enumerate}
+
+    In the case that $T$ is not explicit, the absolute value $|\cdot|$ is almost always taken to be valued in $\bbR_{\geq 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, so that $d$ takes values in $\bbR_{\geq 0}$.
+
+    \TextIfExists{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{
+        If $R$ is also regarded as a module over itself, then the metric induced by $|\cdot|$ coincides with the \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{metric induced by an extended norm} on the rank-1 free module $R$, where the absolute value $|\cdot|$ is regarded as a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{norm} on $R$.
+    }
+\end{definition}

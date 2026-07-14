@@ -1,0 +1,47 @@
+\begin{proposition} \label{proposition:grothendieck_ring_operations_well_defined}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative semiring} and let $\sim$ be the equivalence relation from \Cref{proposition:grothendieck_ring_equivalence_relation}. If $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$ in $R \times R$, then
+\begin{enumerate}
+    \item $(a + c,\, b + d) \sim (a' + c',\, b' + d')$;
+    \item $(ac + bd,\, ad + bc) \sim (a'c' + b'd',\, a'd' + b'c')$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+Because $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$, there exist $s, t \in R$ such that
+\begin{align}
+    a + b' + s &= b + a' + s, \label{eq:witness1} \\
+    c + d' + t &= d + c' + t. \label{eq:witness2}
+\end{align}
+
+\begin{enumerate}
+    \item For addition, add \Cref{eq:witness1} and \Cref{eq:witness2} to obtain
+    $$a + b' + c + d' + s + t = b + a' + d + c' + s + t.$$
+    By associativity and commutativity of addition in $R$\CrefIfExists{definition:semiring}, this rearranges to
+    $$(a + c) + (b' + d') + (s + t) = (b + d) + (a' + c') + (s + t).$$
+    Hence $(a + c,\, b + d) \sim (a' + c',\, b' + d')$.
+
+    \item For multiplication, we prove the claim by first showing that the class of the product is unchanged when the first factor is replaced by an equivalent pair, and then that the same holds for the second factor.
+
+    We first replace the first factor. From \Cref{eq:witness1}, multiply both sides by $c$ and by $d$ respectively, using distributivity in $R$\CrefIfExists{definition:semiring}:
+    \begin{align}
+        ac + b'c + sc &= bc + a'c + sc, \label{eq:m1} \\
+        ad + b'd + sd &= bd + a'd + sd. \label{eq:m2}
+    \end{align}
+    The left-hand side of \Cref{eq:m1} plus the right-hand side of \Cref{eq:m2} equals the right-hand side of \Cref{eq:m1} plus the left-hand side of \Cref{eq:m2}:
+    $$(ac + b'c + sc) + (bd + a'd + sd) = (bc + a'c + sc) + (ad + b'd + sd).$$
+    By associativity and commutativity of addition, this simplifies to
+    $$(ac + bd) + (a'd + b'c) + s(c+d) = (ad + bc) + (a'c + b'd) + s(c+d).$$
+    Thus $(ac + bd,\, ad + bc) \sim (a'c + b'd,\, a'd + b'c)$.
+
+    We now replace the second factor. Apply the previous argument with $(c,d)$ in the role of the first factor. Since multiplication is commutative\CrefIfExists{definition:semiring}, we have
+    $$(ac + bd,\, ad + bc) = (ca + db,\, cb + da),$$
+    and interchanging the roles of $(a,b)$ and $(c,d)$ in Step 1 gives
+    $$(ca + db,\, cb + da) \sim (c'a + d'b,\, c'b + d'a).$$
+    Reversing the commutativity, $(c'a + d'b,\, c'b + d'a) = (a'c' + b'd',\, a'd' + b'c')$.
+
+    Chaining the two equivalences via transitivity yields
+    $$(ac + bd,\, ad + bc) \sim (a'c' + b'd',\, a'd' + b'c'),$$
+    as required.
+\end{enumerate}
+\end{proof}

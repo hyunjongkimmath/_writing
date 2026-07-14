@@ -1,0 +1,14 @@
+\begin{definition}[Ordered abelian group] \label{definition:ordered_abelian_group}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item An \hldef{ordered abelian group} is an \CrefAndHyperrefIfExist{definition:group}{abelian group} $(G,+)$ equipped with a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partial order} $\leq$ that is compatible with the group operation. That is, for all $a,b,c \in G$, if $a \leq b$, then
+        $$a + c \leq b + c.$$
+        If the partial order $\leq$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}, then $G$ is called a \hldef{totally ordered abelian group}.
+
+        \item Equivalently, an ordered abelian group may be defined as an abelian group $(G,+)$ equipped with a \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partial order} $<$ that is compatible with the group operation: for all $a,b,c \in G$, if $a < b$, then
+        $$a + c < b + c.$$
+        These two definitions are identified via the natural correspondence between a partial order $\leq$ and its associated strict partial order $<$ given by $a < b \iff a \leq b \text{ and } a \neq b$\CrefIfExists{proposition:correspondence_between_partial_orders_and_strict_partial_orders_on_a_set}. When using the strict formulation, we adopt the notations that $a \leq b$ means $a < b$ or $a = b$, and \hl{$b > a$} (resp. \hl{$b \geq a$}) means $a < b$ (resp. $a \leq b$).
+    \end{enumerate}
+
+    Writing $0 \in G$ for the identity of $G$, elements $a \in G$ such that $a > 0$ are called \hldef{positive}, elements $a \in G$ such that $a < 0$ are called \hldef{negative}, elements $a \in G$ such that $a \geq 0$ are called \hldef{non-negative}, and elements $a \in G$ such that $a \leq 0$ are called \hldef{non-positive}.
+\end{definition}

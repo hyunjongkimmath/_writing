@@ -1,0 +1,30 @@
+\begin{theorem}[Integration by parts for Riemann integrals] \label{theorem:integration_by_parts_for_riemann_integrals_on_closed_intervals}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$. Let $f, g : [a, b] \to \mathbb{R}$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions}.
+
+    Suppose that:
+    \begin{enumerate}
+        \item Both $f$ and $g$ are \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at each point of $(a, b)$;
+        \item The derivatives $f'$ and $g'$ are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+    \end{enumerate}
+    Then
+    $$\int_a^b f(x)\,g'(x)\,dx = \Bigl[f(x)\,g(x)\Bigr]_{x=a}^{x=b} - \int_a^b f'(x)\,g(x)\,dx.$$
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Define $h(x) = f(x)g(x)$ for all $x \in [a, b]$. Since both $f$ and $g$ are differentiable at each point of $(a, b)$, the product rule\CrefIfExists{proposition:derivative_rules_for_sum_product_quotient_and_chain} implies that $h$ is also differentiable on $(a, b)$ with
+    $$h'(x) = f'(x)g(x) + f(x)g'(x).$$
+
+    Both $f'$ and $g'$ are Riemann integrable by hypothesis. Since $f$ and $g$ are differentiable on $(a, b)$, they are continuous\CrefIfExists{proposition:differentiability_implies_continuity_at_a_point}, hence bounded on the compact interval $[a, b]$. The products of a bounded continuous function with an integrable function are themselves Riemann integrable\TODO{reference to justify}. Therefore both $f'g$ and $fg'$ are Riemann integrable on $[a, b]$, and so is their sum $h' = f'g + fg'$.
+
+    We apply the Fundamental Theorem of Calculus, Part II\CrefIfExists{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative} to the function $h'$ on $[a, b]$:
+    $$\int_a^b h'(x)\,dx = h(b) - h(a).$$
+
+    Substituting $h(x) = f(x)g(x)$ and $h'(x) = f'(x)g(x) + f(x)g'(x)$:
+    $$\int_a^b \bigl(f'(x)g(x) + f(x)g'(x)\bigr)\,dx = f(b)g(b) - f(a)g(a).$$
+
+    By linearity of the Riemann integral\TODO{justify}:
+    $$\int_a^b f'(x)g(x)\,dx + \int_a^b f(x)g'(x)\,dx = f(b)g(b) - f(a)g(a).$$
+
+    Rearranging gives the integration by parts formula:
+    $$\int_a^b f(x)g'(x)\,dx = \Bigl[f(x)g(x)\Bigr]_{x=a}^{x=b} - \int_a^b f'(x)g(x)\,dx.$$
+\end{proof}

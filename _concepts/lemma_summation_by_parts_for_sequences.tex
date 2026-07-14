@@ -1,0 +1,32 @@
+\begin{lemma}[Summation by parts for sequences] \label{lemma:summation_by_parts_for_sequences}
+    \TODO{AI generated, verify}
+    Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be two sequences in $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}. Define partial sums $A_N = \sum_{n=0}^N a_n$ for each $N \geq 0$, with the convention $A_{-1} = 0$.
+
+    Then for any integer $N \geq 0$,
+    $$\sum_{n=0}^N a_n b_n = A_N b_N + \sum_{n=0}^{N-1} A_n (b_n - b_{n+1}).$$
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We rewrite each term $a_n$ in terms of partial sums: for $n \geq 0$, we have $a_n = A_n - A_{n-1}$ where $A_{-1} = 0$. Substituting this into the left-hand side:
+    $$\sum_{n=0}^N a_n b_n = \sum_{n=0}^N (A_n - A_{n-1}) b_n.$$
+
+    Expand the sum by separating out the $n = N$ term:
+    $$\sum_{n=0}^N (A_n - A_{n-1}) b_n = A_N b_N + \sum_{n=0}^{N-1} (A_n - A_{n-1}) b_n.$$
+
+    Now expand the remaining sum:
+    $$\sum_{n=0}^{N-1} (A_n - A_{n-1}) b_n = \sum_{n=0}^{N-1} A_n b_n - \sum_{n=0}^{N-1} A_{n-1} b_n.$$
+
+    In the second sum, shift the index by letting $m = n - 1$:
+    $$\sum_{n=0}^{N-1} A_{n-1} b_n = \sum_{m=-1}^{N-2} A_m b_{m+1}.$$
+
+    Since $A_{-1} = 0$, the term for $m = -1$ vanishes, so this equals $\sum_{m=0}^{N-2} A_m b_{m+1}$. Renaming $m$ back to $n$:
+    $$\sum_{n=0}^{N-1} (A_n - A_{n-1}) b_n = \sum_{n=0}^{N-1} A_n b_n - \sum_{n=0}^{N-2} A_n b_{n+1}.$$
+
+    Now combine the two sums on the right. The term for $n = N-1$ appears only in the first sum:
+    $$\sum_{n=0}^{N-1} A_n b_n - \sum_{n=0}^{N-2} A_n b_{n+1} = A_{N-1} b_{N-1} + \sum_{n=0}^{N-2} A_n (b_n - b_{n+1}).$$
+
+    Putting everything together:
+    $$\sum_{n=0}^N a_n b_n = A_N b_N + A_{N-1} b_{N-1} + \sum_{n=0}^{N-2} A_n (b_n - b_{n+1}) = A_N b_N + \sum_{n=0}^{N-1} A_n (b_n - b_{n+1}),$$
+    as desired. For the base case $N = 0$, both sides equal $a_0 b_0 = A_0 b_0$, and the sum $\sum_{n=0}^{-1}$ is empty and evaluates to zero, so the formula holds in that case as well.
+\end{proof}

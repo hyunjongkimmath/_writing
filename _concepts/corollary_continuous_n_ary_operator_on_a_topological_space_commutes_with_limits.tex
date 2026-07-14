@@ -1,0 +1,10 @@
+\begin{corollary} \label{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits}
+
+    Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, let $n \geq 1$ be an \CrefAndHyperrefIfExist{definition:ring_of_integers}{integer}, and let $m: Y^n \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} $n$-ary operation. Let $S \subseteq X$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Let $f_1,\ldots,f_n : S \to Y$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions} such that $\lim_{x \to p, x \in S} f_i(x) = L_i$\CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point} for each $i \in \{1,\ldots,n\}$. We have
+
+    $$\lim_{x \to p, x \in S} m(f_1(x), \ldots, f_n(x)) = m(L_1,\ldots,L_n).$$
+
+\end{corollary}
+\begin{proof}
+    Let $f = (f_1,\ldots,f_n): S \to Y^n$. Apply \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit} to this and the map $m: Y^n \to Y$, noting \Cref{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}.
+\end{proof}

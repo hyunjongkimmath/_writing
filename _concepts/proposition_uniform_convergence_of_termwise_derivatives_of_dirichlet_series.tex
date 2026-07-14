@@ -1,0 +1,23 @@
+\begin{proposition}[Uniform convergence of termwise derivatives of a Dirichlet series on compact subsets of the half-plane of absolute convergence]
+\label{proposition:uniform_convergence_of_termwise_derivatives_of_dirichlet_series}
+\TODO{AI generated, verify}
+Let $D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}$ be a \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{Dirichlet series of a sequence of complex numbers} with abscissa of absolute convergence $\sigma_a \in [-\infty, \infty]$.
+Then for every $k \in \mathbb{N}_0$, the series
+$$\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$$
+converges absolutely and uniformly on every compact interval $[a,b] \subseteq (\sigma_a, \infty)$.
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+Fix $k \in \mathbb{N}_0$ and a compact interval $[a,b] \subseteq (\sigma_a, \infty)$.
+Since $a > \sigma_a$, the series $\sum_{n=1}^\infty |a_n| n^{-a}$ converges by definition of $\sigma_a$.
+For all $s \in [a,b]$ and all $n \ge 1$, we have $n^{-s} \le n^{-a}$ (since $s \ge a$).
+Thus, for all $s \in [a,b]$,
+$$\left| a_n \frac{(-1)^k (\ln n)^k}{n^s} \right| = |a_n| \frac{(\ln n)^k}{n^s} \le |a_n| \frac{(\ln n)^k}{n^a}.$$
+We claim $\sum_{n=1}^\infty |a_n| \frac{(\ln n)^k}{n^a} < \infty$.
+For any $\epsilon > 0$ with $a - \epsilon > \sigma_a$, we have $(\ln n)^k = o(n^\epsilon)$ as $n \to \infty$.
+Hence for sufficiently large $n$, $(\ln n)^k \le n^\epsilon$, and
+$$|a_n| \frac{(\ln n)^k}{n^a} \le |a_n| \frac{n^\epsilon}{n^a} = |a_n| n^{-(a-\epsilon)}.$$
+Since $a - \epsilon > \sigma_a$, the series $\sum |a_n| n^{-(a-\epsilon)}$ converges.
+By the \CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}{comparison test}, $\sum |a_n| \frac{(\ln n)^k}{n^a}$ converges.
+Therefore, by the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_function_series}{Weierstrass M-test} with $M_n = |a_n| \frac{(\ln n)^k}{n^a}$, the series $\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$ converges absolutely and uniformly on $[a,b]$.
+\end{proof}

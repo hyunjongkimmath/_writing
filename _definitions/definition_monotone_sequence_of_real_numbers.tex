@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:monotone_sequence_of_real_numbers}
+    \TODO{AI generated, verify. Generalized from sequences in $\mathbb{R}$ to sequences in any partially ordered set.}
+    Let $(X, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} and let $(a_n)_{n=1}^\infty$ be a sequence in $X$.
+
+    The sequence is called \hldef{nondecreasing} (or \hldef{monotonically nondecreasing}) if for all $m, n \in \mathbb{N}$ with $m \leq n$, we have
+    $$a_m \leq a_n.$$
+
+    The sequence is called \hldef{nonincreasing} (or \hldef{monotonically nonincreasing}) if for all $m, n \in \mathbb{N}$ with $m \leq n$, we have
+    $$a_m \geq a_n.$$
+
+    The sequence is called \hldef{strictly increasing} if for all $m, n \in \mathbb{N}$ with $m < n$, we have
+    $$a_m < a_n.$$
+
+    The sequence is called \hldef{strictly decreasing} if for all $m, n \in \mathbb{N}$ with $m < n$, we have
+    $$a_m > a_n.$$
+
+    The sequence is called \hldef{monotone} (or \hldef{monotonically ordered}) if it is either nondecreasing or nonincreasing. Equivalently, the sequence is monotone when viewed as a function $f : \mathbb{N} \to X$\CrefIfExists{definition:monotone_function_on_an_ordered_set}.
+\end{definition}

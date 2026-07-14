@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:lipschitz_continuous_function_between_metric_spaces}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, d_X)$ and $(Y, d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric spaces valued in $T^\infty$}. Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}.
+
+    The function $f$ is called \hldef{Lipschitz continuous} (or simply \hldef{Lipschitz}) if there exists a constant $C \in T_{\ge 0}$ such that
+    $$d_Y(f(x), f(y)) \le C \cdot d_X(x, y) \qquad \forall x, y \in X.$$
+    Any such $C$ is called a \hldef{Lipschitz constant for $f$}. The smallest possible Lipschitz constant is called the \hldef{Lipschitz constant of $f$}, often denoted by \hl{$\operatorname{Lip}(f)$} or \hl{$\|f\|_{\mathrm{Lip}}$}.
+
+    A Lipschitz continuous function with Lipschitz constant $C \in T_{\ge 0}$ satisfying $C < 1_T$ is called a \hldef{contraction} (or a \hldef{contractive map}).
+
+    A function $f$ is called \hldef{bi-Lipschitz} if it is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection} and $f$ and $f^{-1}$ are both Lipschitz continuous.
+\end{definition}

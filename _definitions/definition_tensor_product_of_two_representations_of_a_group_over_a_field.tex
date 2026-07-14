@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:tensor_product_of_two_representations_of_a_group_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group}, $k$ a \CrefAndHyperrefIfExist{definition:field}{field}, and $(\rho_1, V)$, $(\rho_2, W)$ two finite-dimensional \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representations} of $G$ over $k$.
+
+    The \hldef{(internal) tensor product of $\rho_1$ and $\rho_2$} is the representation
+    $$\hlin{\rho_1 \otimes \rho_2 : G \to \mathrm{GL}(V \otimes_k W)}$$
+    defined by $(\rho_1 \otimes \rho_2)(g) = \rho_1(g) \otimes \rho_2(g)$ for all $g \in G$, i.e., on simple tensors,
+    $$\hlin{(\rho_1 \otimes \rho_2)(g)(v \otimes w) = \rho_1(g)v \otimes \rho_2(g)w.}$$
+
+    If $(H, *)$ is another group and $(\sigma, W)$ a representation of $H$ over $k$, the \hldef{external tensor product of $\rho_1$ and $\sigma$} is the representation of $G \times H$ on $V \otimes_k W$ given by
+    $$\hlin{(\rho_1 \boxtimes \sigma)(g, h) = \rho_1(g) \otimes \sigma(h).}$$
+\end{definition}

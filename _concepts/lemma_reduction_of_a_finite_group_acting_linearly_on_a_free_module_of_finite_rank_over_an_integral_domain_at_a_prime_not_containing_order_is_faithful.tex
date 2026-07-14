@@ -1,0 +1,18 @@
+\begin{lemma}[Faithfulness of reduction mod $\ell$]  \label{lemma:reduction_of_a_finite_group_acting_linearly_on_a_free_module_of_finite_rank_over_an_integral_domain_at_a_prime_not_containing_order_is_faithful}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain}. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free $R$-module} of \CrefAndHyperrefIfExist{definition:rank_of_a_module_over_a_commutative_ring}{finite rank} $d$. Let $G$ be a finite group acting $R$-linearly on $M$; such an action corresponds to a group homomorphism $G \to \Aut_R(M)$.
+
+    Let $\mathfrak{p}$ be a prime ideal of $R$ such that $|G| \not \in \mathfrak{p}$. If $g \in G$ acts as the identity on $M/\mathfrak{p} M$, then $g$ acts as the identity on $M$. 
+\end{lemma}
+
+\begin{proof}
+Let $N = |G|$. Since the image of $N$ in $R/\mathfrak{p}$ is nonzero, we have $\operatorname{char}(R/\mathfrak{p}) \nmid N$. Let $K = \operatorname{Frac}(R)$ and set $V = M \otimes_R K$, a finite-dimensional $K$-vector space. The action of $g$ extends $K$-linearly to $V$, and $g^N = 1_V$.
+
+We note that $\operatorname{char}(K) \nmid N$ --- otherwise, $N \in (0)\subseteq \mathfrak{p}$ in $R$, which contradicts the hypothesis that $N \not \in \mathfrak{p}$. Thus, Maschke's theorem applies to imply that $g$ is semisimple on $V$. In particular, it is diagonalizable over $\bar{K}$ and its eigenvalues are $N$-th roots of unity.
+
+\TODO{write about lying over}
+Fix an $R$-basis for $M$. The characteristic polynomial $\chi_g(x) \in R[x]$ is monic of degree $d = \operatorname{rank}_R M$. Since $g \equiv I \pmod{\mathfrak{p}}$, reduction modulo $\mathfrak{p}$ gives
+   $$\overline{\chi}_g(x) = (x-1)^d \quad \text{in } (R/\mathfrak{p})[x].$$
+The roots of $\chi_g(x)$ in $\bar{K}$ are the eigenvalues of $g$, hence $N$-th roots of unity. Let $\zeta \in \bar{K}$ be such a root. Its reduction modulo any prime $\mathfrak{P}$ in the integral closure of $R$ lying over $\mathfrak{p}$ must be a root of $\overline{\chi}_g(x) = (x-1)^d$, so $\zeta \equiv 1 \pmod{\mathfrak{P}}$. Since $\operatorname{char}(R/\mathfrak{p}) \nmid N$, the polynomial $x^N - 1$, whose derivative is $Nx^{N-1}$, is \CrefAndHyperrefIfExist{definition:separable_polynomial_over_a_field}{separable} over $\Frac(R/\mathfrak{p})$. Separability lifts to any extension field, so distinct $N$-th roots of unity remain distinct modulo $\mathfrak{P}$. The only way $\zeta \equiv 1 \pmod{\mathfrak{P}}$ is if $\zeta = 1$ in $\bar{K}$.
+
+Thus all eigenvalues of $g$ on $V$ are exactly $1$. Since $g$ acts semisimply on $V$, it must in fact be the identity on $V$. Hence, $g$ acts as the identity on $M$. 
+\end{proof}

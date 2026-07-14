@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:character_of_an_affine_algebraic_group_scheme_over_a_scheme}
+    \TODO{AI generated, verify}
+
+    Let $S$ be a \CrefAndHyperrefIfExist{definition:scheme}{scheme}, and $G$ an \CrefAndHyperrefIfExist{definition:algebraic_group_scheme_over_a_scheme}{affine algebraic group scheme over $S$}.
+
+    A \hldef{character of $G$ over $S$} is a homomorphism of group schemes over $S$
+    $$\hlin{\chi : G \to \mathbf{G}_{\mathrm{m},S},}$$
+    where $\mathbf{G}_{\mathrm{m},S} = \mathbb{G}_m \times S$ is the multiplicative group scheme over $S$.
+
+    The set of characters
+    $$\hlin{\mathrm{X}^*(G) := \Hom_{\mathrm{gr.\ sch./}S}(G, \mathbf{G}_{\mathrm{m},S})}$$
+    forms an abelian group under pointwise multiplication (given by the multiplication morphism $\mathbf{G}_{\mathrm{m},S} \times_S \mathbf{G}_{\mathrm{m},S} \to \mathbf{G}_{\mathrm{m},S}$). This is called the \hldef{character group of $G$ over $S$}.
+
+    When $G = \Spec(A)$ is affine, $\mathrm{X}^*(G)$ embeds into $A^\times$ via $\chi \mapsto \chi^\sharp(1)$, where $\chi^\sharp: \mathcal{O}_S \to A$ is the comorphism. Each character corresponds to a group-like element of the Hopf algebra.
+
+    If $S = \Spec(k)$ for a \CrefAndHyperrefIfExist{definition:field}{field} $k$, then $\mathrm{X}^*(G)(k) \cong \Hom_{k\text{-gr.\ sch.}}(G, \mathbf{G}_m)$ recovers the algebraic analogue of the \CrefAndHyperrefIfExist{definition:character_of_a_group_valued_in_a_field}{character of a group valued in $k$}.
+\end{definition}

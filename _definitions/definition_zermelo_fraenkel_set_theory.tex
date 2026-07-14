@@ -6,6 +6,10 @@ The \hldef{axioms of Zermelo–Fraenkel set theory (ZF)} are the following state
   \item \textbf{Axiom of Extensionality:} Two sets are equal if and only if they have the same elements.
   $$\forall A\, \forall B\, (\forall x\, (x \in A \leftrightarrow x \in B) \rightarrow A = B).$$
 
+  \item \textbf{Axiom of Empty Set:} There exists a set with no elements.
+  $$\exists S\, \forall x\, (x \notin S).$$
+  By extensionality, this set is unique; it is denoted by \hl{$\varnothing$}.
+
   \item \textbf{Axiom of Pairing:} For any sets $x, y$, there exists a set containing exactly $x$ and $y$ as elements.
   $$\forall x\, \forall y\, \exists A\, \forall z\, [z \in A \leftrightarrow (z = x \vee z = y)].$$
 
@@ -15,13 +19,20 @@ The \hldef{axioms of Zermelo–Fraenkel set theory (ZF)} are the following state
   \item \textbf{Axiom of Power Set:} For any set $A$, there exists a set $\mathcal{P}(A)$ containing all subsets of $A$.
   $$\forall A\, \exists P\, \forall B\, [B \in P \leftrightarrow B \subseteq A].$$
 
+  \TODO{inductive set}
   \item \textbf{Axiom of Infinity:} There exists an inductive set, that is, a set containing the empty set and closed under the successor operation.
   $$\exists I\, [\varnothing \in I \wedge \forall x\, (x \in I \rightarrow x \cup \{x\} \in I)].$$
 
-  \item \textbf{Axiom Schema of Separation:} For any property $\varphi(x)$ expressible in the language of set theory and any set $A$, there is a subset of $A$ consisting of the elements of $A$ satisfying $\varphi(x)$.
+  \TODO{language of set theory}
+  \item \textbf{Axiom Schema of Separation:} For any property $\varphi(x)$ expressible in the language of set theory and any set $A$, there is a subset of $A$ consisting of the elements of $A$ satisfying $\varphi(x)$:
   $$\forall A\, \exists B\, \forall x\, [x \in B \leftrightarrow (x \in A \wedge \varphi(x))].$$
+  One commonly writes $B$ in the following manners:
+  $$\hlin{\{x \in A: \varphi(x)\}}$$
+  or
+  $$\hlin{\{x \in A \mid \varphi(x)\}.}$$
 
-  \item \textbf{Axiom Schema of Replacement:} For any definable function given by a formula $\varphi(x,y)$ ensuring that for each $x$ there exists a unique $y$ with $\varphi(x,y)$, the image of any set under this function is also a set.
+  \TODO{definable function}
+  \item \textbf{Axiom Schema of Replacement:} For any definable function given by a formula $\varphi(x,y)$ ensuring that for each $x$ there exists a unique $y$ with $\varphi(x,y)$, the \CrefAndHyperrefIfExist{definition:function_of_sets}{image} of any set under this function is also a set.
   $$\forall A\, [\forall x \in A\, \exists! y\, \varphi(x,y)] \rightarrow \exists B\, \forall y\, (y \in B \leftrightarrow \exists x \in A\, \varphi(x,y)).$$
 
   \item \textbf{Axiom of Foundation (Regularity):} Every nonempty set $A$ contains an element $x$ that is disjoint from $A$.

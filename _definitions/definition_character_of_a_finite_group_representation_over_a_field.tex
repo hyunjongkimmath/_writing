@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:character_of_a_finite_group_representation_over_a_field}
+    \TODO{AI generated, verify}
+
+    Let $(G, \cdot)$ be a finite \CrefAndHyperrefIfExist{definition:group}{group}, $k$ a \CrefAndHyperrefIfExist{definition:field}{field} of characteristic zero or coprime to $|G|$, and $(\rho, V)$ a finite-dimensional \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representation} of $G$ over $k$.
+
+    The \hldef{character of $\rho$} is the function
+    $$\hlin{\chi_\rho : G \to k, \quad g \mapsto \mathrm{tr}(\rho(g)).}$$
+
+    Since $\mathrm{tr}(AB) = \mathrm{tr}(BA)$, the character satisfies $\chi_\rho(ghg^{-1}) = \chi_\rho(h)$ for all $g, h \in G$. A function $f : G \to k$ with this property is called a \hldef{class function on $G$}. Thus every character is a class function.
+
+    The set of class functions on $G$ forms a vector space over $k$, denoted by \hl{$\mathrm{Cl}(G, k)$}.
+\end{definition}

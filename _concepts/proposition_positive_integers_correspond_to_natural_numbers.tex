@@ -1,0 +1,44 @@
+\begin{proposition} \label{proposition:positive_integers_correspond_to_natural_numbers}
+\TODO{AI generated, verify}
+    Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers} and let $\bbZ_{> 0} \subset \bbZ$ be its \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone}. Let $\bbN$ be the \CrefAndHyperrefIfExist{definition:natural_numbers}{set of natural numbers}, regarded as a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} via the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$}.
+
+    The map $\psi: \bbN \to \bbZ_{> 0}$ defined by
+    $$\psi(n) = [(n+1, 1)]$$
+    is an isomorphism of totally ordered semirings. Consequently, $\bbZ_{> 0}$ is order-isomorphic to $\bbN$, and in particular $\bbZ_{> 0}$ is well-ordered.
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+    We verify each structure in turn.
+
+    \begin{enumerate}
+        \item $\psi$ is injective. If $\psi(n) = \psi(m)$ for $n,m \in \bbN$, then $[(n+1,1)] = [(m+1,1)]$ in $\bbZ$, so $(n+1,1) \sim (m+1,1)$ in $\bbN \times \bbN$. This means $n+1+1 = 1 + m+1$, i.e. $n+2 = m+2$. By \Cref{proposition:natural_numbers_addition_associative_commutative} (cancellativity), $n = m$.
+
+        \item $\psi$ is surjective onto $\bbZ_{> 0}$. Let $x = [(a,b)] \in \bbZ_{> 0}$. Since $x > 0_\bbZ$, we have $a > b$ in $\bbN$. By the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$}, there exists $n \in \bbN$ such that $a = b + n$. Then:
+        $$(a,b) = (b+n, b) \sim (n+1, 1),$$
+        because $(b+n) + 1 = b + n + 1 = b + (n+1)$. Hence $x = [(n+1,1)] = \psi(n)$, so $\psi$ is surjective.
+
+        \item $\psi$ preserves addition. For $n,m \in \bbN$,
+        \begin{align*}
+        \psi(n) + \psi(m) &= [(n+1, 1)] + [(m+1, 1)] = [(n+m+2,\, 2)], \\
+        \psi(n+m) &= [(n+m+1,\, 1)].
+        \end{align*}
+        We check that $(n+m+2,2) \sim (n+m+1,1)$ in $\bbN \times \bbN$:
+        $$(n+m+2) + 1 = n+m+3 = 2 + (n+m+1)$$
+        by associativity and commutativity of addition in $\bbN$\CrefIfExists{proposition:natural_numbers_addition_associative_commutative}. Thus $\psi(n) + \psi(m) = \psi(n+m)$.
+
+        \item $\psi$ preserves multiplication. For $n,m \in \bbN$,
+        \begin{align*}
+        \psi(n) \cdot \psi(m) &= [(n+1,1)] \cdot [(m+1,1)] = [((n+1)(m+1)+1\cdot 1,\; (n+1)\cdot 1 + 1\cdot(m+1))] \\
+        &= [(nm+n+m+2,\; n+m+2)], \\
+        \psi(nm) &= [(nm+1,\, 1)].
+        \end{align*}
+        We verify $(nm+n+m+2,\, n+m+2) \sim (nm+1,\, 1)$:
+        $$(nm+n+m+2) + 1 = nm+n+m+3 = (n+m+2) + (nm+1)$$
+        by associativity and commutativity of addition in $\bbN$\CrefIfExists{proposition:natural_numbers_addition_associative_commutative}. Hence $\psi(n) \cdot \psi(m) = \psi(nm)$.
+
+        \item $\psi$ preserves unity. The multiplicative identity of $\bbN$ is $1$, and $\psi(1) = [(2,1)] = 1_\bbZ$\CrefIfExists{definition:integers_from_natural_numbers}.
+
+        \item $\psi$ preserves order. For $n,m \in \bbN$, we have $n < m$ iff there exists $k \in \bbN$ with $n + k = m$ (\Cref{definition:standard_order_on_natural_numbers}). Then $\psi(n) = [(n+1,1)]$ and $\psi(m) = [(m+1,1)] = [(n+k+1,1)]$. In $\bbZ$, we have $\psi(m) - \psi(n) = [(n+k+1,1)] - [(n+1,1)] = [(k, 1)]$, which is positive because $k \geq 1$. Hence $\psi(n) < \psi(m)$. Conversely, if $\psi(n) < \psi(m)$ in $\bbZ$, then by the identification $\bbZ_{> 0} = \{[(a,b)] : a > b\}$ we have $n < m$. Thus $\psi$ is an order isomorphism.
+    \end{enumerate}
+\end{proof}

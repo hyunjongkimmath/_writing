@@ -1,0 +1,28 @@
+\begin{lemma}[Positive and negative parts of conditionally convergent series of real numbers diverge] \label{lemma:positive_and_negative_parts_of_conditionally_convergent_series_diverge}
+    \TODO{AI generated, verify. This is inherently $\bbR$-specific — the positive and negative parts and conditional convergence use $\bbR$'s order topology and metric. Generalizing would require the order topology.}
+    Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}. Define the positive and negative parts of each term by $a_n^+ = \max(a_n, 0)$ and $a_n^- = \max(-a_n, 0)$\CrefIfExists{definition:positive_and_negative_parts_of_a_real_valued_function_on_a_set}.
+
+    If the series $\sum_{n=1}^\infty a_n$ converges (in the usual topology of $\mathbb{R}$) but does not converge absolutely, then both $\sum_{n=1}^\infty a_n^+$ and $\sum_{n=1}^\infty a_n^-$ diverge to $+\infty$.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    For each $n$, the identities
+    $$a_n = a_n^+ - a_n^- \quad \text{and} \quad |a_n| = a_n^+ + a_n^-$$
+    follow directly from the definitions: if $a_n \geq 0$, then $a_n^+ = a_n$ and $a_n^- = 0$, while if $a_n < 0$, then $a_n^+ = 0$ and $a_n^- = -a_n$.
+
+    Let $P_N = \sum_{n=1}^N a_n^+$, $Q_N = \sum_{n=1}^N a_n^-$, and $S_N = \sum_{n=1}^N a_n$ denote the partial sums. Since $a_n^+ \geq 0$ and $a_n^- \geq 0$, both $(P_N)$ and $(Q_N)$ are \CrefAndHyperrefIfExist{definition:monotone_sequence_of_real_numbers}{nondecreasing}.
+
+    We have for each $N$:
+    $$S_N = P_N - Q_N \quad \text{and} \quad \sum_{n=1}^N |a_n| = P_N + Q_N.$$
+
+    By hypothesis, $\lim_{N\to\infty} S_N = S$ exists in $\mathbb{R}$ because the series converges. We show that if either $(P_N)$ or $(Q_N)$ converged to a finite limit, then $\sum_{n=1}^\infty |a_n|$ would converge, contradicting conditional convergence.
+
+    Suppose for contradiction that $(P_N)$ converges to some finite $P \in \mathbb{R}$. Since $(P_N)$ is nondecreasing, it is bounded above by $P$, so by the \CrefAndHyperrefIfExist{theorem:monotone_convergence_theorem_for_sequences_of_real_numbers}{monotone convergence theorem} $P = \sup\{P_N : N \in \mathbb{N}\}$. Then $Q_N = P_N - S_N$ for all $N$, and taking limits gives
+    $$\lim_{N\to\infty} Q_N = \lim_{N\to\infty} (P_N - S_N) = P - S,$$
+    which is finite. Hence $(Q_N)$ is bounded above, and by the monotone convergence theorem it converges to $P - S$. Consequently $P_N + Q_N$ converges to $P + (P - S) = 2P - S$, which means $\sum_{n=1}^\infty |a_n|$ converges, contradicting the hypothesis that the series does not converge absolutely.
+
+    Similarly, if $(Q_N)$ converged to some finite $Q \in \mathbb{R}$, then $P_N = S_N + Q_N$ would converge to $S + Q$, and again $\sum_{n=1}^\infty |a_n|$ would converge, a contradiction.
+
+    Therefore neither $(P_N)$ nor $(Q_N)$ can converge to a finite limit. Since both are nondecreasing sequences of nonnegative real numbers, the only alternative is that both diverge to $+\infty$.
+\end{proof}

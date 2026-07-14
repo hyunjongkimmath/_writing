@@ -2,10 +2,14 @@
     Let $\calC$ be a \CrefAndHyperrefIfExist{definition:locally_small_category}{small category}, let $(\calD, K)$ be a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{site}, let $u: \calC \to \calD$ be a \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful functor}, and equip $\calC$ with the \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{Grothendieck topology} $J$ \CrefAndHyperrefIfExist{definition:induced_topology_on_a_category_by_a_functor_to_a_site}{induced by} $u$. Let $\calA$ be a \CrefAndHyperref{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete category}, i.e. a category which admits all \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small limits}.
 
     If the objects of $\calC$ form a \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{topologically generating family}\TODO{I need to check that the condition of covering in SGA really matches the notion of topologically generating family} of $\calD$, then the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image}/restriction functor 
-    $$u_s: \Sh(\calD, K; \calA) \to \Sh(\calC, J; \calA)$$
+    $$u^s: \Sh(\calD, K; \calA) \to \Sh(\calC, J; \calA)$$
     is an \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence of categories}. In particular, $\Sh(\calD, K; \calA)$ is a \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small category}.
 \end{theorem}
 \begin{proof}
+    Note that the direct image indeed is a functor between the categories of sheaves by \Cref{proposition:equivalent_conditions_for_continuous_functor_of_sites} because $u: \calC \to \calD$ is a \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous functor} between the sites by \Cref{proposition:functor_from_induced_site_to_site_is_continuous_functor}.  
+    \TODO{talk about the right kan extension --- in particular, how does it relate to the left Kan extension and to the direct image/inverse image of a functor?}
+    \TODO{continue}
+
 We explicitly construct the inverse functor and prove the equivalence without assuming \textit{a priori} that $\text{Sh}(\mathcal{D}, K)$ is locally small.
 
 Step 1: Construction of the Inverse Functor $u_*$

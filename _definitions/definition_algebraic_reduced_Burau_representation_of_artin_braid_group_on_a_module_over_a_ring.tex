@@ -1,0 +1,17 @@
+\begin{definition}[Algebraic reduced Burau representation] \label{definition:algebraic_reduced_Burau_representation_of_artin_braid_group_on_a_module_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, let $t$ be an indeterminate, and let $K = R[t, t^{-1}]$ be the \CrefAndHyperrefIfExist{definition:laurent_polynomial_ring_over_a_commutative_ring}{Laurent polynomial ring} in one variable over $R$. Let $M_{n-1}$ be the free $K$-module of rank $n-1$ with standard basis $e_1, \dots, e_{n-1}$.
+
+    The \hldef{algebraic reduced Burau representation of $B_n$ on $M_{n-1}$} is the group homomorphism
+    $$\hlin{\beta^{\mathrm{r}}: B_n \to \operatorname{GL}(M_{n-1})}$$
+    defined by its action on the standard basis. For each Artin generator $\sigma_i$ ($1 \leq i < n$), the image $\beta^{\mathrm{r}}(\sigma_i)$ is the $K$-linear endomorphism whose matrix in the basis $e_1, \dots, e_{n-1}$ equals the identity except for the $2 \times 2$ block at rows and columns $(i, i+1)$:
+    $$\begin{pmatrix} 1 - t & t \\ 1 & 0 \end{pmatrix} \quad (1 < i < n-1),$$
+    and for $i = 1$ the matrix has the same block at rows and columns $(1, 2)$ with an additional factor of $t$ on every diagonal entry not in that block.
+
+    Equivalently, $\beta^{\mathrm{r}}(\sigma_i)$ acts on the basis by
+    \begin{align*}
+        e_i &\mapsto (1 - t)e_i + e_{i+1}, \\
+        e_{i+1} &\mapsto t e_i, \\
+        e_j &\mapsto t e_j \quad (j \neq i, i+1).
+    \end{align*}
+\TODO{AI generated, verify}
+\end{definition}

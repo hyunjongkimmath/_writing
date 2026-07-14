@@ -1,0 +1,16 @@
+\begin{theorem}[Zariski's Main Theorem, Grothendieck form] \label{theorem:zariski_main_theorem_grothendieck_form}
+    Let $f : X \to Y$ be a \CrefAndHyperrefIfExist{definition:quasifinite_morphism_of_schemes}{quasi-finite morphism of schemes} that is also \CrefAndHyperrefIfExist{definition:quasi_separated_morphism_of_schemes}{separated}. Then $f$ factors as
+    $$ X \xrightarrow{\,j\,} \tilde{X} \xrightarrow{\,\pi\,} Y $$
+    where $j$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion} and $\pi$ is a \CrefAndHyperrefIfExist{definition:finite_morphism_of_schemes}{finite morphism}.
+
+    Moreover, for every point $y \in Y$, the open immersion $j$ induces a bijection between $X_y = X \times_Y \Spec(\kappa(y))$ and the connected component of $\tilde{X}_y = \tilde{X} \times_Y \Spec(\kappa(y))$ containing the image of $X_y$. In particular, if $f$ is also surjective with geometrically connected fibers, then $j$ is an isomorphism and $f$ itself is finite.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Since $f$ is separated, the \CrefAndHyperrefIfExist{definition:diagonal_morphism_of_a_morphism_of_schemes}{diagonal morphism} $\Delta_f : X \to X \times_Y X$ is a closed immersion\CrefIfExists{definition:quasi_separated_morphism_of_schemes}. Since $f$ is quasi-finite, the diagonal is also an open immersion (the locus where two maps into a separated scheme agree is closed, and quasi-finiteness implies it is locally an isomorphism on a neighborhood of the diagonal). Hence $\Delta_f$ identifies $X$ with an open subscheme of $X \times_Y X$.
+
+    One constructs $\tilde{X}$ by taking the normalization of $Y$ in the function field of $X$ (when $Y$ is integral and normal) or, more generally, by taking the closure of the graph of $f$ inside $X \times_Y \mathbb{P}^n$ for some embedding and then normalizing. The resulting morphism $\pi : \tilde{X} \to Y$ is finite by construction, and $j : X \hookrightarrow \tilde{X}$ is an open immersion by the quasi-finiteness of $f$.
+
+    The fiberwise statement follows from the fact that for a finite morphism, the fibers are finite schemes, and the connected components of a finite scheme over a field correspond to the local factors in its decomposition. Since $j$ is an open immersion and induces a bijection on geometric points (by quasi-finiteness), it identifies $X_y$ with the connected component of $\tilde{X}_y$ containing it.
+\end{proof}

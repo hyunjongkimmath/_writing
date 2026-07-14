@@ -1,0 +1,20 @@
+\begin{definition} \label{definition:multilinear_map_of_abelian_groups}
+    \TODO{AI generated, verify}
+Let $A_1, \ldots, A_k, B$ be \CrefAndHyperrefIfExist{definition:group}{abelian groups} (written additively). A function
+$$\Phi: A_1 \times \cdots \times A_k \to B$$
+is called a \hldef{multilinear map of abelian groups} (or simply a \hldef{multilinear map} when the context is clear) if for each $j = 1, \ldots, k$ and for all fixed $a_i \in A_i$ with $i \neq j$, the map
+$$A_j \to B, \quad a_j \mapsto \Phi(a_1, \ldots, a_j, \ldots, a_k)$$
+is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} of abelian groups.
+
+When $k = 2$, a multilinear map is called a \hldef{bilinear map of abelian groups} (or simply a \hldef{bilinear map}). Explicitly, a map $\Phi: A_1 \times A_2 \to B$ is bilinear if for all $a_1, a_1' \in A_1$, $a_2, a_2' \in A_2$:
+\begin{align*}
+\Phi(a_1 + a_1', a_2) &= \Phi(a_1, a_2) + \Phi(a_1', a_2), \\
+\Phi(a_1, a_2 + a_2') &= \Phi(a_1, a_2) + \Phi(a_1, a_2').
+\end{align*}
+
+\TextIfExists{definition:multilinear_map_of_modules_over_rings}{
+This is a special case of the \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{definition of multilinear maps of modules over rings}, obtained by taking all rings to be $\bbZ$ and all modules to be the underlying abelian groups (i.e., $\bbZ$-modules).
+}
+
+Similarly, one may speak of \hldef{trilinear maps} ($k=3$), \hldef{quadrilinear maps} ($k=4$), etc.
+\end{definition}

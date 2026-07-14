@@ -1,0 +1,32 @@
+\begin{proposition} \label{proposition:natural_numbers_addition_associative_commutative}
+Let $\bbN$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. For all $n, m, k \in \bbN$:
+\begin{enumerate}
+    \item $(n + m) + k = n + (m + k)$ (associativity),
+    \item $n + m = m + n$ (commutativity),
+    \item If $n + k = m + k$, then $n = m$ (cancellativity).
+\end{enumerate}
+\CrefIfExists{proposition:natural_numbers_addition_existence} 
+\TextIfExists{definition:semigroup}{
+In other words, $(\bbN,+)$ is a \CrefAndHyperrefIfExist{definition:semigroup}{commutative semigroup}.
+}
+\end{proposition}
+
+\begin{proof}
+    \begin{enumerate}
+        \item Fix $n, m$ and induct on $k$. For $k = 1$, 
+        $$(n + m) + 1 = s(n + m) = n + s(m) = n + (m + 1).$$ 
+        If the identity holds for $k$, then 
+        $$(n + m) + s(k) = s((n + m) + k) = s(n + (m + k)) = n + s(m + k) = n + (m + s(k)).$$
+
+        \item We first prove that $1+n = n+1$ for all $n \in \bbN$ by induction on $n$. Clearly, $1+1 = 1+1$. Suppose inductively that $1+k = k+1$ for some $k \in \bbN$, i.e. $1+k = s(k)$. It follows that 
+        \begin{align*}
+        1+s(k) &= s(1+k) = s(k+1) = k + s(1) = k + (1+1) \\
+        &= (k+1) +1 = (1+k) +1 = s(k) +1.
+        \end{align*}
+        Now we induct in $n$ for fixed $m$: the base case is true because we showed $1+m = m+1$ for any $m \in \bbN$. Suppose that $k \in \bbN$ satisfies $k+m = m+k$. By \CrefAndHyperrefIfExist{lemma:successor_left_addition}{the successor-left addition lemma}, $s(k)+m = s(k+m)$. Hence
+        $$s(k) + m = s(k+m) = s(m+k) = m + s(k).$$
+
+        \item Fix $n$ and $m$ and induct on $k$. For $k=1$, suppose $n+1 = m+1$. By property (i) of addition, $s(n) = s(m)$, so $n=m$ by injectivity of the successor function. Now suppose inductively that $k \in \bbN$ satisfies the implication $(n+k = m+k)  \Rightarrow (n = m)$. Suppose that $n+s(k) = m+s(k)$. It follows that $s(n+k) = s(m+k)$. By injectivity of the successor function, $n+k = m+k$, so by the inductive hypothesis, $n=m$.
+    \end{enumerate}
+
+\end{proof}

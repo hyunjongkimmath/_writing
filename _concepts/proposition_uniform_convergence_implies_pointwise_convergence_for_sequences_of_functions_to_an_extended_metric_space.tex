@@ -1,0 +1,22 @@
+\begin{proposition}[Uniform convergence implies pointwise convergence for sequences of functions to an extended metric space] \label{proposition:uniform_convergence_implies_pointwise_convergence_for_sequences_of_functions_to_an_extended_metric_space}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, let $X$ be a set, and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}. Let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : X \to Y$ and let $f : X \to Y$ be a function.
+
+    If $(f_n)$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges uniformly} to $f$, then $(f_n)$ \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges pointwise} to $f$.
+\end{proposition}
+
+\begin{proof}
+    Suppose $(f_n)$ converges uniformly to $f$. By the definition of uniform convergence,
+    $$\lim_{n \to \infty} \sup_{x \in X} d(f_n(x), f(x)) = 0_T.$$
+    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}
+    Equivalently, for every $\varepsilon \in T_{>0}$, there exists $N \in \mathbb{N}$ such that for all $n \geq N$,
+    $$\sup_{x \in X} d(f_n(x), f(x)) < \varepsilon.$$
+
+    Fix an arbitrary $x_0 \in X$. For every $n \geq N$, we have
+    $$d(f_n(x_0), f(x_0)) \leq \sup_{x \in X} d(f_n(x), f(x)) < \varepsilon$$
+    \CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+    where the first inequality holds because the supremum is an upper bound. Thus for every $\varepsilon \in T_{>0}$ and every $x_0 \in X$, there exists $N \in \mathbb{N}$ such that for all $n \geq N$,
+    $$d(f_n(x_0), f(x_0)) < \varepsilon.$$
+    This is precisely the definition of pointwise convergence.
+    \CrefIfExists{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}
+    Hence $(f_n)$ converges pointwise to $f$.
+\end{proof}

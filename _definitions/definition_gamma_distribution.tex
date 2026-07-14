@@ -1,0 +1,8 @@
+\begin{definition}[Gamma distribution] \label{definition:gamma_distribution}
+\TODO{AI generated, verify}
+Let $\alpha > 0$ and $\beta > 0$. A real-valued random variable $X$ on a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space} has the \hldef{gamma distribution with shape $\alpha$ and rate $\beta$} (denoted \hl{$\operatorname{Gamma}(\alpha, \beta)$}) if its \CrefAndHyperrefIfExist{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} is the measure on $\mathbb{R}$ given by
+$$\hlin{\mu_X(A) = \int_A \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha - 1} e^{-\beta x} \mathbf{1}_{(0, \infty)}(x) \, dx}$$
+for every Borel set $A \subseteq \mathbb{R}$, where $\Gamma(\alpha) = \int_0^\infty t^{\alpha - 1} e^{-t} \, dt$.
+
+The probability density function is $$f(x) = \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha - 1} e^{-\beta x} \mathbf{1}_{(0, \infty)}(x).$$ The \CrefAndHyperrefIfExist{definition:expectation_of_a_random_variable_on_a_probability_measure_space}{expectation} is $\mathbb{E}[X] = \tfrac{\alpha}{\beta}$, and the \CrefAndHyperrefIfExist{definition:variance_and_covariance}{variance} is $\operatorname{Var}(X) = \tfrac{\alpha}{\beta^2}$.
+\end{definition}

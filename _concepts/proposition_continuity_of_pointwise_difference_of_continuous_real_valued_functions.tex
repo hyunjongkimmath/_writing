@@ -1,0 +1,8 @@
+\begin{proposition} \label{proposition:continuity_of_pointwise_difference_of_continuous_real_valued_functions}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers} equipped with its \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard topology}. Let $f,g : X \to \bbR$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} functions. Their pointwise difference $f - g : X \to \bbR$, defined by $(f - g)(x) = f(x) - g(x)$, is continuous.
+\end{proposition}
+\begin{proof}
+    Let $a \in X$. Since $f$ and $g$ are continuous at $a$, we have
+    $$\lim_{x \to a} f(x) = f(a) \quad\text{and}\quad \lim_{x \to a} g(x) = g(a)$$
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_equivalent_to_topological_definition_and_limit_at_accumulation_point}. Write $f - g = f + (-g)$. The function $(-g)(x) = (-1) \cdot g(x)$ is the scalar multiple of $g$ by $-1$, which is continuous by \Cref{proposition:continuity_of_pointwise_scalar_multiple_of_continuous_real_valued_function}. By \Cref{proposition:continuity_of_pointwise_sum_of_continuous_real_valued_functions}, the sum of two continuous functions is continuous, so $f - g$ is continuous.
+\end{proof}

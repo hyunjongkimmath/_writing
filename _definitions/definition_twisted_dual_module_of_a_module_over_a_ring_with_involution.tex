@@ -1,11 +1,23 @@
 \begin{definition} \label{definition:twisted_dual_module_of_a_module_over_a_ring_with_involution}
-Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $N$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}.
-The \hldef{twisted dual module}, denoted by notations such as \hl{$N^*$}, (or sometimes \hl{$N^\vee$}; not to be confused with the standard \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{dual} $N^\vee$) or \hl{$\operatorname{Hom}_A(N, A)_\sigma$}, is the set of all \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$A$-linear maps} $f: N \to A$, equipped with the left $A$-module structure given by
-$$ (f \cdot r)(n) = \sigma(r) \cdot f(n) $$
-for all $r \in A$, $f \in N^\vee$, $n \in N$.
-Equivalently, it may be constructed as $\overline{M^\vee}$, where by $\overline{\cdot}$, we mean the \CrefAndHyperref{definition:opposite_module_of_a_module_over_a_ring_with_involution}{opposite module} and by ${\cdot}^\vee$, we mean the \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{standard dual}. 
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $N$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{one-sided $A$-module}.
+The \hldef{twisted dual module}, denoted by notations such as \hl{$N^*$}, (or sometimes \hl{$N^\vee$}; not to be confused with the standard \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{dual} $N^\vee$) or \hl{$\operatorname{Hom}_A(N, A)_\sigma$}, is the following:
+\begin{enumerate}
+    \item In the case that $N$ is a right $A$-module, it is the set of all \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $A$-linear maps} $f: N \to A$, equipped with the right $A$-module structure given by
+    $$ (f \cdot r)(n) = \sigma(r) \cdot f(n) $$
+    for all $r \in A$, $f \in N^\vee$, $n \in N$.
+    Equivalently, it may be constructed as $\overline{N^\vee}$, where by $\overline{\cdot}$, we mean the \CrefAndHyperref{definition:opposite_module_of_a_module_over_a_ring_with_involution}{opposite module} and by ${\cdot}^\vee$, we mean the \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{standard dual}. 
 
-Symmetrically, one may also construct the twisted dual module $N$ of a left $A$-module $N$; twisted dual module constructions thus yield functors
+    \item In the case that $N$ is a left $A$-module, it is the set of all 
+    \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $A$-linear maps} $f: N \to A$, equipped with the left $A$-module structure given by
+    $$ (r \cdot f)(n) = f(n) \cdot \sigma(r)$$
+    for all $r \in A$, $f \in N^\vee$, $n \in N$.
+    Equivalently, it may be constructed as $\overline{N^\vee}$, where by $\overline{\cdot}$, we mean the \CrefAndHyperref{definition:opposite_module_of_a_module_over_a_ring_with_involution}{opposite module} and by ${\cdot}^\vee$, we mean the \CrefAndHyperref{definition:dual_of_a_left_right_two_sided_module}{standard dual}. 
+
+\end{enumerate}
+
+
+% Symmetrically, one may also construct the twisted dual module $N$ of a left $A$-module $N$; 
+Twisted dual module constructions thus yield functors
 \begin{align*}
     \Mod_A^{\op} \to \Mod_A \\
     _{A} \Mod^{\op} \to _{A} \Mod.\\
@@ -14,5 +26,5 @@ Symmetrically, one may also construct the twisted dual module $N$ of a left $A$-
 
 Given a morphism $h: M \to N$ of right or left $A$-modules, we may write \hl{$h^*$} for the morphism $h^*: N^* \to M^*$ in \CrefAndHyperrefIfExist{definition:functor_between_categories}{functorial} fashion.
 
-The construction $M^* = \overline{M^\vee}$ is \CrefAndHyperref{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to $(\overline{M})^\vee$\CrefIfExists{lemma:twisted_dual_module_of_a_module_over_a_ring_with_involution_can_be_defined_as_opposite_of_dual_or_dual_of_opposite}.
+The construction $N^* = \overline{N^\vee}$ is \CrefAndHyperref{definition:natural_transformation_between_functors_between_categories}{naturally isomorphic} to $(\overline{N})^\vee$\CrefIfExists{lemma:twisted_dual_module_of_a_module_over_a_ring_with_involution_can_be_defined_as_opposite_of_dual_or_dual_of_opposite}.
 \end{definition}

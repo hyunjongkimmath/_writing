@@ -1,0 +1,40 @@
+\begin{lemma} \label{lemma:hermitian_form_evaluates_by_transpose_of_first_column_vector_then_matrix_then_vector}
+    Let $(A,\sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}, where $\sigma$ is denoted by $a \mapsto \overline{a}$. Let $M$ be a \CrefAndHyperrefIfExist{definition:free_bimodule_over_rings}{free} (left/right) $A$-module of finite rank $n$ with ordered basis $\mathcal{E} = (e_1,\ldots,e_n)$, and let $h: M \times M \to A$ be an \CrefAndHyperrefIfExist{definition:varepsilon_hermitian_form_on_a_module_over_a_ring_with_involution}{$\varepsilon$-Hermitian form} for some $\varepsilon \in Z(A)$\CrefIfExists{definition:center_of_a_ring} with $\varepsilon \cdot \overline{\varepsilon} = 1$.
+
+    \begin{enumerate}
+        \item Suppose that $M$ is a right $A$-module (so that Hermitian forms are conjugate linear in the first variable and linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution})
+
+        \TODO{column vectors with respect to basis}
+        For any \CrefAndHyperrefIfExist{definition:row_vector_and_column_vector_over_a_ring}{column vectors} $u,v \in A^n$ \CrefAndHyperrefIfExist{definition:coordinate_vector_of_an_element_of_a_free_module_with_respect_to_a_basis}{representing elements of $M$ in the basis $\mathcal{E}$} (so $x = \sum_i e_i u_i$, $y = \sum_j e_j v_j$), we have
+        $$h(x,y) = u^* H_{\mathcal{E}} v,$$
+        \CrefIfExists{definition:conjugate_transpose_of_a_matrix_over_a_ring_with_involution}
+
+        \item Suppose that $M$ is a left $A$-module (so that Hermitian forms are linear in the first variable and conjugate linear in the second\CrefIfExists{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution})
+
+        For any \CrefAndHyperrefIfExist{definition:row_vector_and_column_vector_over_a_ring}{column vectors} $u,v \in A^n$ representing elements of $M$ in the basis $\mathcal{E}$ (so $x = \sum_i u_i e_i$, $y = \sum_j v_j e_j$), we have
+        $$h(x,y) = u^\top H_{\mathcal{E}} \overline{v},$$
+        \CrefIfExists{definition:transpose_of_a_matrix_over_a_ring}\CrefIfExists{definition:conjugate_of_a_matrix_over_a_ring_with_involution}
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item We have 
+        $$h(x,y) = h\left(\sum_i u_i e_i, \sum_j v_j e_j \right) = \sum_{i,j} \overline{u}_i \cdot h(e_i,e_j) \cdot v_j.$$
+        On the other hand,
+        \begin{align*}
+        u^{*} H_\calE v &= \begin{pmatrix} \overline{u}_1 & \cdots & \overline{u}_n \end{pmatrix} \cdot \begin{pmatrix} h(e_1,e_1) & \cdots & h(e_n,e_1) \\ \vdots & \ddots & \vdots \\ h(e_1, e_n) & \cdots & h(e_n,e_n) \end{pmatrix} \cdot \begin{pmatrix} v_1 \\ \vdots \\ v_n \end{pmatrix} \\
+        &= \sum_{i,j} \overline{u}_i \cdot h(e_i,e_j) \cdot v_j
+        \end{align*}
+        so $h(x,y) = u^* H_{\mathcal{E}} v$ indeed holds.
+
+        \item We have 
+        $$h(x,y) = h\left(\sum_i u_i e_i, \sum_j v_j e_j \right) = \sum_{i,j} u_i \cdot h(e_i,e_j) \cdot \overline{v}_j.$$
+        On the other hand,
+        \begin{align*}
+        u^{\top} H_\calE \overline{v} &= \begin{pmatrix} u_1 & \cdots & u_n \end{pmatrix} \cdot \begin{pmatrix} h(e_1,e_1) & \cdots & h(e_n,e_1) \\ \vdots & \ddots & \vdots \\ h(e_1, e_n) & \cdots & h(e_n,e_n) \end{pmatrix} \cdot \begin{pmatrix} \overline{v}_1 \\ \vdots \\ \overline{v}_n \end{pmatrix} \\
+        &= \sum_{i,j} u_i \cdot h(e_i,e_j) \cdot \overline{v}_j
+        \end{align*}
+        so $h(x,y) = u^\top H_{\mathcal{E}} v$ indeed holds.
+    \end{enumerate}
+
+\end{proof}

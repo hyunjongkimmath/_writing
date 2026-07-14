@@ -1,0 +1,12 @@
+\begin{definition}[Cauchy product of two sequences in a commutative ring] \label{definition:cauchy_product_of_two_sequences_in_a_commutative_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $(a_n)_{n=0}^\infty$ and $(b_n)_{n=0}^\infty$ be two sequences in $R$.
+
+    The \hldef{Cauchy product of $(a_n)$ and $(b_n)$} is the sequence $(c_n)_{n=0}^\infty$ defined by
+    $$c_n = \sum_{k=0}^n a_k b_{n-k}$$
+    for each $n \geq 0$.
+
+    If the series $\sum_{n=0}^\infty a_n$ and $\sum_{n=0}^\infty b_n$ converge, the series
+    $$\sum_{n=0}^\infty c_n = \sum_{n=0}^\infty \left( \sum_{k=0}^n a_k b_{n-k} \right)$$
+    is called the \hldef{Cauchy product of the series $\sum_{n=0}^\infty a_n$ and $\sum_{n=0}^\infty b_n$}.
+\end{definition}

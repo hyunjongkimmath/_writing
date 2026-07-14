@@ -1,0 +1,7 @@
+\begin{lemma} \label{lemma:recursive_upper_bound_for_two_color_ramsey_numbers}
+\TODO{AI generated, verify}
+For all integers $r, s \geq 3$, the two-color Ramsey numbers satisfy the recursive inequality
+$$R(r,s) \leq R(r-1,s) + R(r,s-1).$$
+
+The proof considers a graph $G$ on $R(r-1,s) + R(r,s-1)$ vertices and fixes a vertex $v$. Let $A$ be the set of neighbors of $v$ and $B$ the set of non-neighbors. Since $|A| + |B| = R(r-1,s) + R(r,s-1) - 1$, either $|A| \geq R(r-1,s)$ or $|B| \geq R(r,s-1)$. If $|A| \geq R(r-1,s)$, then the subgraph induced by $A$ contains a clique of size $r-1$ (which together with $v$ gives a clique of size $r$) or an independent set of size $s$. If $|B| \geq R(r,s-1)$, then the subgraph induced by $B$ contains a clique of size $r$ or an independent set of size $s-1$ (which together with $v$ gives an independent set of size $s$).
+\end{lemma}

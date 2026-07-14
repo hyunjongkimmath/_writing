@@ -1,0 +1,12 @@
+\begin{definition}[Dupire's local volatility model for option pricing] \label{definition:dupires_local_volatility_model_for_option_pricing}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t \geq 0}, \mathbb{Q})$ be a filtered probability space under the risk-neutral measure. Let $S = \{S_t\}_{t \geq 0}$ follow the SDE
+$$\hlin{dS_t = r S_t \, dt + \sigma_{\text{loc}}(t, S_t) S_t \, dW_t},$$
+where $W$ is a $\mathbb{Q}$-Brownian motion and $\sigma_{\text{loc}}: [0, \infty) \times (0, \infty) \to (0, \infty)$ is the \hldef{local volatility surface}.
+
+Given an arbitrage-free implied volatility surface $\sigma_{\text{imp}}(K, T)$, Dupire's formula determines the local volatility:
+$$\sigma_{\text{loc}}^2(K, T) = \frac{\frac{\partial V}{\partial T} + rK \frac{\partial V}{\partial K}}{\frac{1}{2} K^2 \frac{\partial^2 V}{\partial K^2}}$$
+where $V(K, T) = e^{-rT} \mathbb{E}^{\mathbb{Q}}[(S_T - K)^+]$ is the European call price. The partial derivatives are evaluated at strike $K$ and maturity $T$.
+
+The local volatility model exactly reproduces the observed market prices of all vanilla options, but typically generates a volatility smile that differs from the observed dynamics.
+\end{definition}

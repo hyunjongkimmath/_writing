@@ -1,0 +1,21 @@
+\begin{definition} \label{definition:real_numbers_as_cauchy_completion_of_rational_numbers}
+    Let $\mathcal{C}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_rational_numbers}{ring of Cauchy sequences in $\bbQ$}\CrefIfExists{proposition:cauchy_sequences_of_rational_numbers_form_commutative_ring} and let $\mathcal{N}_\bbQ \subseteq \mathcal{C}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:null_sequence_in_rational_numbers}{ideal of null sequences}\CrefIfExists{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}.
+
+    The \hldef{field of real numbers} is the \CrefAndHyperrefIfExist{definition:quotient_ring_of_a_ring_by_a_two_sided_ideal}{quotient ring}
+    $$\hlin{\bbR := \mathcal{C}_\bbQ / \mathcal{N}_\bbQ.}$$
+    The \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence class} of a Cauchy sequence $(a_n)$ in $\bbR$ is denoted by \hl{$[a_n]$} or simply by \hl{$(a_n)$} if no confusion is possible.
+
+    The constant sequence $(q)$ for $q \in \bbQ$ determines an element $[q] \in \bbR$, and the map
+
+    \hlalign{
+        \begin{align*}
+            \iota : \bbQ &\longrightarrow \bbR,\\
+            q &\longmapsto [q],
+        \end{align*}
+    }
+
+    is an injective \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}\CrefIfExists{proposition:rational_numbers_embed_into_real_numbers}. Under this identification, $\bbQ$ is a \CrefAndHyperrefIfExist{definition:extension_of_a_field}{subfield} of $\bbR$.
+
+    The ring $\bbR$ is a \CrefAndHyperrefIfExist{definition:field}{field} because $\mathcal{N}_\bbQ$ is a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal}\CrefIfExists{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}.
+    Moreover, $\bbR$ is a \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{complete ordered field} when equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{standard order}\CrefIfExists{proposition:real_numbers_form_ordered_field}.
+\end{definition}

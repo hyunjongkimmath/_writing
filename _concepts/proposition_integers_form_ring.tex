@@ -1,0 +1,109 @@
+\begin{proposition} \label{proposition:integers_form_ring}
+Let $\bbZ$ be the set of integers with addition and multiplication from \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{integers from natural numbers}. Then $\bbZ$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring with unity}. Specifically:
+\begin{enumerate}
+    \item $(\bbZ, +)$ is an \CrefAndHyperrefIfExist{definition:group}{abelian group} with identity $0_\bbZ = [(1, 1)]$.
+    \item $(\bbZ, \times)$ is a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} with identity $1_\bbZ = [(2, 1)]$.
+    \item Multiplication distributes over addition.
+    \item Every element has an additive inverse: $-[(a, b)] = [(b, a)]$.
+\end{enumerate}
+Moreover, $\bbZ$ is an \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain}, i.e. it has no \CrefAndHyperrefIfExist{definition:zero_divisor_of_a_ring}{zero divisors}.
+\end{proposition}
+
+\begin{proof}
+Let $\alpha = [(a,b)]$, $\beta = [(c,d)]$, $\gamma = [(e,f)]$ denote arbitrary elements of $\bbZ$. Recall various properties of addition and multiplication on $\bbN$ from \Cref{proposition:natural_numbers_addition_associative_commutative} and \Cref{proposition:natural_numbers_multiplication_associative_commutative_distributive}. 
+
+\begin{enumerate}
+    \item We show that $(\bbZ, +)$ is an abelian group.
+
+    \begin{itemize}
+        
+        \item We show that $+$ is associative.  We have $\alpha + \beta = [(a+c, b+d)]$, so
+        $$(\alpha + \beta) + \gamma = [(a+c+e, b+d+f)].$$
+        Similarly, $\beta + \gamma = [(c+e, d+f)]$, so
+        $$\alpha + (\beta + \gamma) = [(a+(c+e), b+(d+f))].$$
+        By associativity of addition on $\bbN$, $a+c+e = a+(c+e)$ and $b+d+f = b+(d+f)$, hence the pairs are identical and $(\alpha+\beta)+\gamma = \alpha+(\beta+\gamma)$.
+
+        \item We show that $+$ is commutative. We have $\alpha + \beta = [(a+c, b+d)] = [(c+a, d+b)] = \beta + \alpha$, where the middle equality uses commutativity of addition on $\bbN$.
+
+        \item We show that $0_\bbZ = [(1,1)]$ is the additive identity for $+$. For any $\alpha = [(a,b)]$,
+        $$\alpha + 0_\bbZ = [(a+1, b+1)].$$
+        To see that $[(a+1, b+1)] = [(a,b)]$, we check the equivalence condition: $(a+1) + b = a + (b+1)$, which holds by associativity of addition on $\bbN$. By commutativity of addition on $\bbZ$ (proven above), $0_\bbZ + \alpha = \alpha$ as well.
+
+        \item We show that $-\alpha = [(b,a)]$ is the additive inverse of $\alpha$. Indeed,
+        $$\alpha + (-\alpha) = [(a+b, b+a)].$$
+        To see that $[(a+b, b+a)] = [(1,1)] = 0_\bbZ$, we check: $(a+b) + 1 = (b+a) + 1$, which holds by commutativity of addition on $\bbN$ ($a+b = b+a$). By commutativity of addition on $\bbZ$, $(-\alpha) + \alpha = 0_\bbZ$ as well.
+
+    \end{itemize}
+
+
+    \item We show that $(\bbZ, \times)$ is a commutative monoid.
+
+    \begin{itemize}
+    
+        \item We show that $\times$ is commutative. Compute
+        $$\alpha \times \beta = [(ac + bd, bc + ad)],$$
+        $$\beta \times \alpha = [(ca + db, da + cb)].$$
+        To see these are equal, check: $(ac+bd) + (da+cb) = (bc+ad) + (ca+db)$. The left side rearranges to $ac+bd+ad+bc$ and the right side to $bc+ad+ac+bd$, which are equal by associativity and commutativity of addition on $\bbN$.
+
+        \item We show that $1_\bbZ = [(2,1)]$ is the multiplicative identity. Compute
+        $$\alpha \times 1_\bbZ = [(a \times 2 + b \times 1, b \times 2 + a \times 1)] = [(2a + b, 2b + a)].$$
+        To see that $[(2a+b, 2b+a)] = [(a,b)]$, we check the equivalence condition:
+        $$(2a + b) + b = 2a + 2b = a + (2b + a),$$
+        where $2a + 2b = a + a + b + b$ and $a + (2b + a) = a + b + b + a$, which are equal by associativity and commutativity of addition on $\bbN$. That $1_\bbZ \times \alpha = \alpha$ follows from the commutativity of $\times$.
+
+        \item We show that $\times$ is associative. We compute $(\alpha \times \beta) \times \gamma$. First,
+        $$\alpha \times \beta = [(ac + bd, bc + ad)].$$
+        Then
+        \begin{align*}
+        (\alpha \times \beta) \times \gamma &= [((ac+bd)e + (bc+ad)f,\; (ac+bd)f + (bc+ad)e)] \\
+        &= [(ace + bde + bcf + adf,\; acf + bdf + bce + ade)],
+        \end{align*}
+        where the expansion uses distributivity on $\bbN$.
+
+        Next, we compute $\alpha \times (\beta \times \gamma)$. First,
+        $$\beta \times \gamma = [(ce + df, cf + de)].$$
+        Then
+        \begin{align*}
+        \alpha \times (\beta \times \gamma) &= [(a(ce+df) + b(cf+de),\; a(cf+de) + b(ce+df))] \\
+        &= [(ace + adf + bcf + bde,\; acf + ade + bce + bdf)],
+        \end{align*}
+        again using distributivity on $\bbN$.
+
+        To check equivalence, we need the sum of the first component of $(\alpha\times\beta)\times\gamma$ and the second component of $\alpha\times(\beta\times\gamma)$ to equal the sum of the second component of $(\alpha\times\beta)\times\gamma$ and the first component of $\alpha\times(\beta\times\gamma)$:
+        \begin{align*}
+        &\quad (ace + bde + bcf + adf) + (acf + ade + bce + bdf) \\
+        &= ace + bde + bcf + adf + acf + ade + bce + bdf \\
+        &= acf + bdf + bce + ade + ace + adf + bcf + bde \\
+        &= (acf + bdf + bce + ade) + (ace + adf + bcf + bde),
+        \end{align*}
+        where the rearrangement uses only associativity and commutativity of addition on $\bbN$. Hence $(\alpha\times\beta)\times\gamma = \alpha\times(\beta\times\gamma)$.
+
+    \end{itemize}
+
+    \item We show that multiplication is distributive over addition, i.e. that $\alpha \times (\beta + \gamma) = \alpha \times \beta + \alpha \times \gamma$.
+    Compute $\beta + \gamma = [(c+e, d+f)]$, so
+    $$\alpha \times (\beta + \gamma) = [(a(c+e) + b(d+f),\; a(d+f) + b(c+f))].$$
+    On the other hand,
+    $$\alpha \times \beta = [(ac+bd, bc+ad)], \quad \alpha \times \gamma = [(ae+bf, af+be)],$$
+    so
+    $$\alpha \times \beta + \alpha \times \gamma = [(ac+bd+ae+bf,\; bc+ad+af+be)].$$
+    To check equivalence, we need:
+    $$a(c+e) + b(d+f) + (bc+ad+af+be) = (a(d+f) + b(c+f)) + (ac+bd+ae+bf).$$
+    Expanding using distributivity on $\bbN$: the left side becomes $ac+ae+bd+bf+bc+ad+af+be$, and the right side becomes $ad+af+bc+bf+ac+bd+ae+be$. These are equal by associativity and commutativity of addition on $\bbN$.
+
+    \item We show that $\bbZ$ has no zero divisors. Suppose that $\alpha \times \beta = 0_\bbZ = [(1,1)]$. This means
+    $$(ac + bd, bc + ad) \sim (1, 1),$$
+    i.e., $ac + bd + 1 = bc + ad + 1$ in $\bbN$, which simplifies to $ac + bd = bc + ad$ by \CrefAndHyperrefIfExist{proposition:natural_numbers_addition_associative_commutative}{cancellativity of addition on $\bbN$}. We consider cases using \CrefAndHyperrefIfExist{proposition:natural_numbers_order_compatibility}{trichotomy of order on $\bbN$}:
+    \begin{enumerate}
+        \item If $a = b$, then $\alpha = [(a,a)] = [(1,1)] = 0_\bbZ$, so we are done.
+        \item If $c = d$, then $\beta = [(c,c)] = [(1,1)] = 0_\bbZ$, so we are done.
+        \item If $a > b$, then by the definition of the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order} on $\bbN$ there exists $x \in \bbN$ such that $a = b + x$. Substituting into $ac + bd = bc + ad$:
+        $$(b+x)c + bd = bc + (b+x)d.$$
+        Expanding by distributivity on $\bbN$: $bc + xc + bd = bc + bd + xd$. By cancellativity of addition on $\bbN$ (canceling $bc + bd$ from both sides), $xc = xd$. Since $x \in \bbN$ and $x \geq 1$, by \CrefAndHyperrefIfExist{proposition:cancellativity_of_multiplication_in_the_natural_numbers}{cancellativity of multiplication on $\bbN$}, $c = d$. Hence $\beta = [(c,c)] = 0_\bbZ$.
+        \item If $b > a$, then there exists $x \in \bbN$ with $b = a + x$. Substituting into $ac + bd = bc + ad$ yields
+        $$ac + (a+x)d = (a+x)c + ad.$$
+        Expanding, we have $ac + ad + xd = ac + xc + ad$. Canceling $ac + ad$ from both sides, we have $xd = xc$. Since $x \geq 1$, cancellativity of multiplication gives $d = c$. Hence $\beta = [(c,c)] = 0_\bbZ$.
+    \end{enumerate}
+    In all cases, either $\alpha = 0_\bbZ$ or $\beta = 0_\bbZ$.
+\end{enumerate}
+\end{proof}

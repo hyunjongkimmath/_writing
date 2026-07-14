@@ -1,0 +1,13 @@
+\begin{definition} \label{definition:multi_additive_map_of_abelian_groups}
+    \TODO{AI generated, verify}
+    Let $G_1, \ldots, G_k$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{abelian groups}. A map $\Phi: G_1 \times \cdots \times G_k \to H$ is called a \hldef{multi-additive map} if it is additive in each argument separately; that is, for every $j = 1,\ldots,k$ and fixed elements $g_i \in G_i$ ($i \neq j$), the map
+    $$G_j \to H, \quad g_j \mapsto \Phi(g_1, \ldots, g_k)$$
+    is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
+
+    When $k = 2$, the map $\Phi$ is called a \hldef{bi-additive map} (or \hldef{bilinear map of abelian groups}). A bi-additive map $\Phi: G_1 \times G_2 \to H$ satisfies
+    $$\Phi(g + g', f) = \Phi(g, f) + \Phi(g', f), \quad \Phi(g, f + f') = \Phi(g, f) + \Phi(g, f')$$
+    for all $g, g' \in G_1$ and $f, f' \in G_2$.
+
+    Every multi-additive map $\Phi: G_1 \times \cdots \times G_k \to H$ factors uniquely through the tensor product of abelian groups, inducing a group homomorphism
+    $$\tilde{\Phi}: G_1 \otimes_{\mathbb{Z}} \cdots \otimes_{\mathbb{Z}} G_k \to H.$$
+\end{definition}

@@ -2,8 +2,10 @@
 Let $X$ be a set. A \hldef{topology on $X$} is a collection $\mathcal{T}$ of subsets of $X$ such that:
 \begin{enumerate}
     \item $\emptyset \in \mathcal{T}$ and $X \in \mathcal{T}$,
+
     \item For any collection $\{ U_i \}_{i \in I} \subseteq \mathcal{T}$ (with $I$ arbitrary), the union $\bigcup_{i \in I} U_i \in \mathcal{T}$,
-    \item For any finite collection $\{ U_1, \ldots, U_n \} \subseteq \mathcal{T}$, the intersection $U_1 \cap \cdots \cap U_n \in \mathcal{T}$.
+
+    \item For any finite collection $\{ U_1, \ldots, U_n \} \subseteq \mathcal{T}$, the intersection $U_1 \cap \cdots \cap U_n$ is in $\mathcal{T}$. Equivalently, for any $U_1,U_2 \in \calT$, the intersection $U_1 \cap U_2$ is in $\calT$
 \end{enumerate}
 If $\mathcal{T}$ is a topology on $X$, the pair $(X, \mathcal{T})$ is called a \hldef{topological space}. Members of $\mathcal{T}$ are called \hldef{open sets}. 
 

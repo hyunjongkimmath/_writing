@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:recursive_function_on_naturals}
+Let $(\bbN, 1, s)$ be the set of \CrefAndHyperrefIfExist{definition:natural_numbers}{natural numbers}. Let $A$ be a set, let $a \in A$, and let $g: A \to A$ be a function.
+
+A function $f: \bbN \to A$ is called a \hldef{recursive function on $(a, g)$} if it satisfies:
+\begin{enumerate}
+    \item $f(1) = a$, and
+    \item for all $n \in \bbN$, $f(s(n)) = g(f(n))$.
+\end{enumerate}
+A recursive function on $(a,g)$ exists and is unique\CrefIfExists{proposition:recursive_function_existence_uniqueness}.
+
+Colloquially, one may define a recursive function $f: \bbN \to A$ by 
+\begin{enumerate}
+    \item Specifying the value of $f(1)$
+    \item Specifying what $f(n+1)$ is in terms of $f(n)$.
+\end{enumerate}
+One might call $a$ the \hldef{initial value of $f$} and the function $g$ the \hldef{recursive relation of $f$}.
+\end{definition}

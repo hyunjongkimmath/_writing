@@ -1,0 +1,28 @@
+\begin{definition} \label{definition:twist_of_an_etale_sheaf_on_a_scheme_with_various_coefficients_by_a_character_on_the_etale_fundamental_group}
+    \TODO{AI generated, verify}
+    Let $U$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:scheme}{scheme}, and let $\bar{u}: \Spec(\Omega) \to U$ be a \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point}. Let $\pioneet(U, \bar{u})$ denote the \CrefAndHyperrefIfExist{definition:etale_fundamental_group_of_a_connected_scheme}{\'etale fundamental group} of $U$ at $\bar{u}$.
+
+    Let $\Lambda$ be one of the following coefficient rings:
+    \begin{enumerate}
+        \item A finite ring,
+        \item A complete DVR $R$,
+        \item The \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{field of fractions} $E$ of a \CrefAndHyperrefIfExist{definition:complete_ring_with_respect_to_an_ideal}{complete} DVR $R$, or
+        \item An \CrefAndHyperrefIfExist{definition:algebraic_element_minimal_polynomial_of_an_algebraic_element_algebraic_field_extension_transcendental_element_field_extension}{algebraic extension} of the \CrefAndHyperrefIfExist{definition:field_of_fractions_of_an_integral_domain}{field of fractions} $E$ of a complete DVR $R$.
+    \end{enumerate}
+    If $\Lambda$ is a complete DVR, a fraction field thereof, or an algebraic extension of such a fraction field, then further assume that $U$ is a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{noetherian scheme}.
+
+    \begin{enumerate}
+        \item Let $A$ be one of the coefficient rings listed above. A \hldef{character on $\pioneet(U, \bar{u})$ with values in $A$} is a continuous group homomorphism
+        $$\hlin{\chi: \pioneet(U, \bar{u}) \to A^\times}$$
+        where $A^\times$ denotes the group of units of $A$, equipped with the discrete topology.
+
+        \item Let $\chi: \pioneet(U, \bar{u}) \to A^\times$ be a character as in (1). By the equivalence of categories between lisse sheaves on $U_{\text{'\'et}}$ and continuous representations of $\pioneet(U, \bar{u})$
+        \CrefIfExists{theorem:locally_constant_sheaves_on_X_etale_are_equivalent_to_representations_of_the_etale_fundamental_group}\CrefIfExists{theorem:lisse_ell_adic_sheaves_on_connected_noetherian_schemes_are_equivalent_to_representations_of_etale_fundamental_group_over_adic_ring}, the character $\chi$ corresponds uniquely to a rank-1 \CrefAndHyperrefIfExist{definition:lisse_sheaf_on_a_scheme}{lisse sheaf}, denoted $\mathcal{L}_\chi$, often called the \hldef{rank-1 lisse sheaf associated to $\chi$}. The stalks of $\mathcal{L}_\chi$ are isomorphic to $A$ as $A$-modules, and the action of $\gamma \in \pioneet(U, \bar{u})$ on a stalk is multiplication by $\chi(\gamma)$.
+
+        \item Let $\mathscr{F}$ be a \CrefAndHyperrefIfExist{definition:lisse_sheaf_on_a_scheme}{lisse sheaf} with coefficients in $A$, corresponding to a representation $\rho: \pioneet(U, \bar{u}) \to \text{Aut}_A(V)$, and let $\chi$ be a character as above. The \hldef{twist of $\mathscr{F}$ by $\chi$}, denoted \hl{$\mathscr{F}_\chi$}, is the lisse sheaf $\mathscr{F} \otimes \mathcal{L}_\chi$\CrefIfExists{definition:sheafified_tensor_product_of_sheaves_of_modules_of_sheaves_of_rings_on_a_site_with_a_small_topologically_generating_family} corresponding to the tensor product representation $$(\rho \otimes \chi)(\gamma) = \chi(\gamma) \cdot \rho(\gamma)$$
+        for all $\gamma \in \pioneet(U, \bar{u})$. Since $\mathcal{L}_\chi$ has rank 1, the stalks of $\mathscr{F} \otimes \mathcal{L}_\chi$ are isomorphic to those of $\mathscr{F}$ as $A$-modules, but the monodromy action is scaled by the character $\chi$.
+
+        \item Two lisse sheaves $\mathscr{F}$ and $\mathscr{G}$ with coefficients in $A$ are called \hldef{twists of each other} if there exists a character $\chi: \pioneet(U, \bar{u}) \to A^\times$ such that
+        $$\mathscr{G} \cong \mathscr{F} \otimes \mathcal{L}_\chi.$$
+    \end{enumerate}
+\end{definition}

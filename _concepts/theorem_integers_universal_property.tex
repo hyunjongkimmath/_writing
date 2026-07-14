@@ -1,0 +1,27 @@
+\begin{theorem} \label{theorem:integers_universal_property}
+\TODO{AI generated, verify}
+    Let $R$ be a ring with \CrefAndHyperrefIfExist{definition:commutative_ring}{unity} $1_R$, and let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers}. Then there exists a unique \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\phi: \bbZ \to R$ such that $\phi(1_\bbZ) = 1_R$. The homomorphism is defined recursively by
+    \begin{align*}
+        \phi(1) &= 1_R, \\
+        \phi(n+1) &= \phi(n) + 1_R \quad\text{for every } n \in \bbZ_{> 0}, \\
+        \phi(0) &= 0_R, \\
+        \phi(-n) &= -\phi(n) \quad\text{for every } n \in \bbZ_{> 0},
+    \end{align*}
+    where $\bbZ_{> 0}$ is identified with \CrefAndHyperrefIfExist{definition:natural_numbers}{$\bbN$} via the \CrefAndHyperrefIfExist{proposition:positive_integers_correspond_to_natural_numbers}{order isomorphism of totally ordered semirings}.
+    The kernel of $\phi$ is either $\{0_\bbZ\}$, in which case $\bbZ$ embeds into $R$, or $p\bbZ$ for some \CrefAndHyperrefIfExist{definition:prime_number}{prime number $p$}, in which case the image of $\phi$ is isomorphic to $\bbF_p$\CrefIfExists{definition:finite_field}.
+\end{theorem}
+
+\begin{proof}
+\TODO{AI generated, verify}
+    Let $\bbN_0$ be the \CrefAndHyperrefIfExist{definition:natural_numbers_with_zero}{set of natural numbers including zero}, regarded as a \CrefAndHyperrefIfExist{definition:semiring}{semiring}\CrefIfExists{proposition:natural_numbers_with_zero_form_commutative_semiring}. By \Cref{proposition:grothendieck_ring_of_natural_numbers_with_zero}, there is an isomorphism $\Phi: K(\bbN_0) \cong \bbZ$, where $K(\bbN_0)$ is the \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring} of $\bbN_0$.
+
+    Define a map $\psi: \bbN_0 \to R$ by $\psi(0) = 0_R$, $\psi(1) = 1_R$, and $\psi(n+1) = \psi(n) + 1_R$ for $n \in \bbN$. This is a \CrefAndHyperrefIfExist{definition:semiring_homomorphism}{semiring homomorphism} because the recursive definition respects the semiring structure: addition in $\bbN_0$ corresponds to iterated addition of $1_R$, and multiplication corresponds to iterated addition via distributivity.
+
+    By the \CrefAndHyperrefIfExist{theorem:grothendieck_ring_universal_property}{universal property of the Grothendieck ring}, $\psi$ extends uniquely to a ring homomorphism $\widetilde{\psi}: K(\bbN_0) \to R$ satisfying $\widetilde{\psi} \circ \iota_{\bbN_0} = \psi$, where $\iota_{\bbN_0}: \bbN_0 \to K(\bbN_0)$ is the canonical map.
+
+    The composite $\phi := \widetilde{\psi} \circ \Phi^{-1}: \bbZ \to R$ is a ring homomorphism. Since $\Phi^{-1}(1_\bbZ) = [(1,0)] = \iota_{\bbN_0}(1)$, we have $\phi(1_\bbZ) = \widetilde{\psi}(\iota_{\bbN_0}(1)) = \psi(1) = 1_R$. The recursive description of $\phi$ follows from the identification $\bbN \cong \bbZ_{> 0}$ and the fact that $\phi$ preserves addition and additive inverses.
+
+    For uniqueness, let $\phi': \bbZ \to R$ be any ring homomorphism with $\phi'(1_\bbZ) = 1_R$. Since $\bbZ$ is generated as a ring by $1_\bbZ$, the value on every integer is forced: $\phi'(1) = 1_R$, $\phi'(n+1) = \phi'(n) + 1_R$ by additivity, $\phi'(0) = 0_R$, and $\phi'(-n) = -\phi'(n)$. Hence $\phi' = \phi$.
+
+    The analysis of the kernel follows from the \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic of a ring}: the kernel is $c\bbZ$ where $c$ is the characteristic of $R$, and $c$ is either $0$ (giving trivial kernel) or a prime $p$ (giving kernel $p\bbZ$).
+\end{proof}

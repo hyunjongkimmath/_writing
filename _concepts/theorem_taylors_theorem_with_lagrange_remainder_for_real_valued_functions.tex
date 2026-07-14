@@ -1,0 +1,51 @@
+\begin{theorem}[Taylor's theorem with Lagrange remainder] \label{theorem:taylors_theorem_with_lagrange_remainder_for_real_valued_functions}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Fix an integer $n \geq 0$ and a point $x_0 \in [a, b]$.
+
+    Suppose that:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{$n$ times differentiable} on $(x_0, b]$ (if $x_0 < b$) or on $[b, x_0)$ (if $x_0 > b$), and the derivatives $f^{(k)}$ for $k = 0, 1, \dots, n-1$ are continuous on the closed interval between $x_0$ and $b$;
+        \item The $(n+1)$-th derivative $f^{(n+1)}(t)$ exists for each $t$ strictly between $x_0$ and $b$.
+    \end{enumerate}
+    Then for any $x \in [a, b]$ there exists $c$ strictly between $x_0$ and $x$ such that
+    $$f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(x_0)}{k!} (x - x_0)^k + \frac{f^{(n+1)}(c)}{(n+1)!} (x - x_0)^{n+1}.$$
+\end{theorem}
+\begin{proof}
+    If $x = x_0$, then the identity holds trivially with any choice of $c$ between $x_0$ and $x_0$. Assume $x \neq x_0$. Without loss of generality suppose $x > x_0$; the case $x < x_0$ is symmetric by replacing $f(t)$ with $f(-t)$.
+
+    \TODO{define $n$th Taylor polynomial}
+    Let $P_n(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k$ denote the $n$-th Taylor polynomial of $f$ at $x_0$. Define a constant
+    $$C = \frac{f(x) - P_n(x)}{(x - x_0)^{n+1}} \cdot (n+1)!.$$
+
+    Now define an auxiliary function $g : [x_0, x] \to \mathbb{R}$ by
+    $$g(t) = f(x) - \sum_{k=0}^{n} \frac{f^{(k)}(t)}{k!}(x - t)^k + C \cdot \frac{(x - t)^{n+1}}{(n+1)!}.$$
+
+    We verify the boundary values. At $t = x$, all terms with $(x-t)$ vanish except the $k=0$ term in the sum, giving
+    $$g(x) = f(x) - \frac{f^{(0)}(x)}{0!}(x-x)^0 + 0 = f(x) - f(x) = 0.$$
+    At $t = x_0$,
+    $$g(x_0) = f(x) - \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + C \cdot \frac{(x - x_0)^{n+1}}{(n+1)!}.$$
+    By the definition of $C$, the last term equals $-(f(x) - P_n(x)) = P_n(x) - f(x)$, so $g(x_0) = f(x) - P_n(x) + P_n(x) - f(x) = 0$.
+
+    Since $g(x_0) = g(x) = 0$ and $g(t)$ is continuous on $[x_0, x]$ (as each term involves compositions of continuous functions), we may apply \CrefAndHyperrefIfExist{theorem:rolles_theorem_for_differentiable_functions_vanishing_at_endpoints}{Rolle's theorem} to conclude that there exists a point $c \in (x_0, x)$ such that $g'(c) = 0$.
+
+    We compute $g'$. For each term in the sum with index $k$,
+    $$\frac{d}{dt}\left[\frac{f^{(k)}(t)}{k!}(x - t)^k\right] = \frac{f^{(k+1)}(t)}{k!}(x-t)^k + \frac{f^{(k)}(t)}{k!} \cdot k(x-t)^{k-1}(-1)$$
+    $$= \frac{f^{(k+1)}(t)}{k!}(x-t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1},$$
+    \CrefIfExists{proposition:derivative_rules_for_sum_product_quotient_and_chain}
+    where the second term is understood to be zero when $k = 0$. For the constant term:
+    $$\frac{d}{dt}\left[C \cdot \frac{(x-t)^{n+1}}{(n+1)!}\right] = C \cdot \frac{(n+1)(x-t)^n(-1)}{(n+1)!} = -C \cdot \frac{(x-t)^n}{n!}.$$
+
+    Therefore,
+    $$g'(t) = -\sum_{k=0}^n \left[\frac{f^{(k+1)}(t)}{k!}(x-t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1}\right] - C \cdot \frac{(x-t)^n}{n!}.$$
+
+    The sum telescopes. Writing out the terms explicitly, for each $k$ from $0$ to $n$, the first part contributes $\frac{f^{(k+1)}(t)}{k!}(x-t)^k$ and the second part (for $k \geq 1$) contributes $\frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1}$. Setting $j = k-1$, these cancel with the first parts at index $j$:
+    $$\sum_{k=0}^n \left[\frac{f^{(k+1)}(t)}{k!}(x-t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1}\right] = \frac{f^{(n+1)}(t)}{n!}(x-t)^n.$$
+
+    Hence $g'(t) = -\frac{f^{(n+1)}(t)}{n!}(x-t)^n - C \cdot \frac{(x-t)^n}{n!}$. Evaluating at $t = c$:
+    $$0 = g'(c) = -\frac{f^{(n+1)}(c)}{n!}(x-c)^n - C \cdot \frac{(x-c)^n}{n!}.$$
+
+    Since $c < x$, we have $(x-c)^n/n! \neq 0$, so dividing through gives $C = -f^{(n+1)}(c)$. Substituting the expression for $C$:
+    $$\frac{f(x) - P_n(x)}{(x-x_0)^{n+1}} \cdot (n+1)! = f^{(n+1)}(c).$$
+
+    Rearranging yields the desired Lagrange remainder formula:
+    $$f(x) = P_n(x) + \frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}.$$
+\end{proof}

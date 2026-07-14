@@ -1,0 +1,42 @@
+\begin{proposition} \label{proposition:rational_numbers_embed_into_real_numbers}
+    \TODO{AI generated, verify}
+    Let $\bbQ$ be the \CrefAndHyperrefIfExist{definition:field_of_rational_numbers}{field of rational numbers} and let $\bbR = \mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{field of real numbers}. Consider the map
+    $$\iota: \bbQ \longrightarrow \bbR, \qquad \iota(q) = [(q)],$$
+    where $(q)$ denotes the constant sequence $(q, q, q, \dots)$.
+
+    Then:
+    \begin{enumerate}
+        \item $\iota$ is an \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}.
+        \TODO{define order preserving}
+        \item $\iota$ is order-preserving: for $q_1, q_2 \in \bbQ$, we have $q_1 \le q_2$ in $\bbQ$ if and only if $\iota(q_1) \le \iota(q_2)$ in $\bbR$\CrefIfExists{proposition:real_numbers_form_ordered_field}.
+        \TODO{norm preserving}
+        \item $\iota$ is norm-preserving: for $q \in \bbQ$, we have $|\iota(q)|_\bbR = \iota(|q|_\bbQ)$.
+    \end{enumerate}
+    Hence $\bbQ$ is identified with a \CrefAndHyperrefIfExist{definition:subring}{subfield} of $\bbR$ and the order and absolute value on $\bbQ$ coincide with the restrictions of the order and absolute value on $\bbR$.
+\end{proposition}
+
+\begin{proof}
+    We verify each claim in turn.
+
+    \begin{enumerate}
+        \item To show $\iota$ is a ring homomorphism, we check the three axioms from \Cref{definition:ring_homomorphism}. For addition,
+        $$\iota(q_1 + q_2) = [(q_1 + q_2)] = [(q_1) + (q_2)] = [(q_1)] + [(q_2)] = \iota(q_1) + \iota(q_2),$$
+        where the second equality holds because the constant sequence $(q_1 + q_2)$ is termwise the sum of $(q_1)$ and $(q_2)$, and the third holds by definition of addition in the quotient ring (\Cref{definition:quotient_ring_of_a_ring_by_a_two_sided_ideal}). For multiplication,
+        $$\iota(q_1 q_2) = [(q_1 q_2)] = [(q_1) \cdot (q_2)] = [(q_1)] \cdot [(q_2)] = \iota(q_1) \iota(q_2),$$
+        by the same reasoning. Finally, $\iota(1_\bbQ) = [(1)] = 1_{\bbR}$, where $1_\bbQ$ and $1_{\bbR}$ denote the multiplicative identities of $\bbQ$ and $\bbR$, respectively.
+
+        For injectivity, suppose $\iota(q) = [(q)] = [0]$. Then the constant sequence $(q)$ is a null sequence, meaning that for every $\varepsilon \in \bbQ_{>0}$, we have $|q| < \varepsilon$. The only rational number with this property is $q = 0$ (by positive-definiteness of $|\,\cdot\,|_\bbQ$, \Cref{definition:absolute_value_on_rational_numbers}). Hence $\ker \iota = \{0\}$, so $\iota$ is injective.
+
+        \item First, suppose $q_1 \le q_2$ in $\bbQ$. Write $q_2 - q_1 = \frac{a}{b}$ with $a \ge 0$ in $\bbZ$ and $b > 0$ in $\bbZ$ (\Cref{definition:standard_order_on_field_of_rational_numbers}). The constant sequence $(q_2 - q_1)$ has constant value $\frac{a}{b} \ge 0$. If $a = 0$ then $q_2 - q_1 = 0$, so $[q_2] - [q_1] = [0]$ and $\iota(q_1) = \iota(q_2)$; in particular $\iota(q_1) \le \iota(q_2)$. If $a > 0$, then $\frac{a}{b} > 0$, so there exists $\varepsilon = \frac{a}{b} \in \bbQ_{>0}$ such that the constant sequence $(q_2 - q_1)$ is $\ge \varepsilon$ at every index. Thus $[q_2] - [q_1] \in \bbR_{>0}$ by \Cref{definition:standard_order_on_real_numbers}, giving $\iota(q_1) < \iota(q_2)$ and in particular $\iota(q_1) \le \iota(q_2)$.
+
+        Conversely, suppose $\iota(q_1) \le \iota(q_2)$ in $\bbR$, i.e.\ $[q_2] - [q_1] \in \bbR_{\ge 0}$. If $[q_2] - [q_1] = [0]$, then $q_2 - q_1$ is a rational number whose constant sequence is null, forcing $q_2 - q_1 = 0$, so $q_1 = q_2$. If $[q_2] - [q_1] \in \bbR_{>0}$, then there exist $\varepsilon \in \bbQ_{>0}$ and $N \in \bbN$ such that the constant value $q_2 - q_1$ satisfies $q_2 - q_1 \ge \varepsilon > 0$ for all $n \ge N$. Hence $q_2 - q_1 > 0$, i.e.\ $q_1 < q_2$ in $\bbQ$. In either case, $q_1 \le q_2$.
+
+        \item Let $q \in \bbQ$. By \Cref{definition:standard_absolute_value_on_real_numbers}, $|\iota(q)|_\bbR = \max\{\iota(q), -\iota(q)\}$. Since $\iota$ is an injective ring homomorphism preserving order,
+        $$|\iota(q)|_\bbR = \begin{cases} \iota(q) & \text{if } \iota(q) \ge [0], \\ -\iota(q) & \text{if } \iota(q) < [0], \end{cases}
+        = \iota\!\left(\begin{cases} q & \text{if } q \ge 0, \\ -q & \text{if } q < 0 \end{cases}\right)
+        = \iota(|q|_\bbQ),$$
+        where the second equality follows from part (2) and the third from \Cref{definition:absolute_value_on_rational_numbers}.
+    \end{enumerate}
+
+    By parts (1) and (2), $\iota$ identifies $\bbQ$ with an ordered subfield of $\bbR$, and part (3) shows that the absolute value is preserved under this identification.
+\end{proof}

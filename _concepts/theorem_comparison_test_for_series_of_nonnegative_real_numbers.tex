@@ -1,0 +1,19 @@
+\begin{theorem}[Comparison test for series of nonnegative elements in a totally ordered abelian group with the least upper bound property] \label{theorem:comparison_test_for_series_of_nonnegative_real_numbers}
+    \TODO{AI generated, verify. Generalized from $\bbR$ to any totally ordered abelian group with the LUB property.}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $(a_n)_{n=1}^\infty$ and $(b_n)_{n=1}^\infty$ be sequences in $G$\CrefIfExists{definition:monotone_sequence_of_real_numbers} such that $0 \leq a_n \leq b_n$ for all $n$. For a series of nonnegative terms, we say that it \hldef{converges} if its sequence of partial sums is bounded above; in this case the supremum of the partial sums exists by the least upper bound property, and the series is said to \hldef{converge to} that supremum.
+
+    \begin{enumerate}
+        \item If the series $\sum_{n=1}^\infty b_n$ converges, then the series $\sum_{n=1}^\infty a_n$ also converges.
+        \item If the series $\sum_{n=1}^\infty a_n$ diverges (i.e., its partial sums are not bounded above), then the series $\sum_{n=1}^\infty b_n$ also diverges.
+    \end{enumerate}
+\end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $A_N = \sum_{n=1}^N a_n$ and $B_N = \sum_{n=1}^N b_n$ denote the partial sums. Since $0 \leq a_n \leq b_n$ for all $n$, the compatibility of the order with addition implies $0 \leq A_N \leq B_N$ for all $N$.
+
+    \begin{enumerate}
+        \item Suppose $\sum b_n$ converges, so the set $\{B_N : N \in \mathbb{N}\}$ is bounded above. By the least upper bound property of $G$, its supremum $\sup_N B_N$ exists. Since $A_N \leq B_N \leq \sup_N B_N$ for all $N$, the sequence $(A_N)$ is also bounded above. Moreover, $(A_N)$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_real_numbers}{nondecreasing} because each $a_n \geq 0$. Hence $\sum a_n$ converges.
+
+        \item This follows from part (1) by contraposition: if $\sum b_n$ converged, then $\sum a_n$ would converge; therefore, if $\sum a_n$ diverges, $\sum b_n$ must also diverge.
+    \end{enumerate}
+\end{proof}

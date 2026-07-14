@@ -1,0 +1,22 @@
+\begin{proposition} \label{proposition:category_of_right_R_modules_is_equivalent_to_Z_R_bimodules}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}. The \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of right $R$-modules} $\mathsf{Mod}_R$ is \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent} to the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $\bbZ$-$R$-bimodules} ${}_\bbZ\mathsf{Mod}_R$.
+
+    \paragraph{Functor from right $R$-modules to $\bbZ$-$R$-bimodules.}
+    Let $F \colon \mathsf{Mod}_R \to {}_\bbZ\mathsf{Mod}_R$ be the functor that equips a right $R$-module $M$ with a left $\bbZ$-action via
+    $$\hlin{n \cdot m = \underbrace{m + \cdots + m}_{n \text{ times}} \quad (n > 0), \qquad 0 \cdot m = 0_M, \qquad (-n) \cdot m = -(n \cdot m) \quad (n > 0),}$$
+    for $m \in M$ and $n \in \bbZ$. The left $\bbZ$-action and the right $R$-action commute because the right action is additive:
+    $$(n \cdot m) \cdot r = (\underbrace{m + \cdots + m}_{n}) \cdot r = \underbrace{mr + \cdots + mr}_{n} = n \cdot (m \cdot r).$$
+    Hence $M$ becomes a $\bbZ$-$R$-bimodule. On morphisms, $F$ acts as the identity: a right $R$-linear map is automatically $\bbZ$-linear since it preserves addition and hence integer multiples.
+
+    \paragraph{Functor from $\bbZ$-$R$-bimodules to right $R$-modules.}
+    Let $G \colon {}_\bbZ\mathsf{Mod}_R \to \mathsf{Mod}_R$ be the forgetful functor that sends a $\bbZ$-$R$-bimodule to its underlying right $R$-module (forgetting the left $\bbZ$-action).
+
+    \paragraph{Natural isomorphisms.}
+    We have:
+    \begin{enumerate}
+        \item $F \circ G = \operatorname{id}_{{}_\bbZ\mathsf{Mod}_R}$, because for any $\bbZ$-$R$-bimodule $M$, the left $\bbZ$-action is uniquely determined by the additive structure of $M$.
+        \item $G \circ F = \operatorname{id}_{\mathsf{Mod}_R}$, because the underlying right $R$-module of $F(M)$ is exactly $M$.
+    \end{enumerate}
+    Any right $R$-linear map between bimodules is automatically a bimodule map: if $f \colon M \to N$ satisfies $f(mr) = f(m)r$, then it also satisfies $f(nm) = n\,f(m)$ for all $n \in \bbZ$. Hence $F$ is fully faithful and essentially surjective.
+\end{proposition}

@@ -1,12 +1,30 @@
 \begin{definition} \label{definition:sesquilinear_form_on_a_module_over_a_ring_with_involution}
-Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. Let $M$ be a \CrefAndHyperref{definition:module_of_a_ring}{right $A$-module}.
-A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $b: M \times M \to A$ such that for all $u, v, w \in M$ and $a \in A$:
+Let $(A, \sigma)$ be a \CrefAndHyperrefIfExist{definition:involution_on_a_ring}{ring with involution}. 
 \begin{enumerate}
-    \item $b(u + v, w) = b(u, w) + b(v, w)$ and $b(u, v + w) = b(u, v) + b(u, w)$;
-    \item $b(ua, v) = \sigma(a)b(u, v)$ (conjugate-linear in the first variable);
-    \item $b(u, va) = b(u, v)a$ (linear in the second variable).
-\end{enumerate}
-Alternatively, one can impose the convention that the module $M$ be a left module and that the sesquilinear form is so that the first variable is linear and the second variable is conjugate-linear. The above convention is used in \cite{knus_qhfr}.
+    \item Let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $A$-module}.
+    A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $b: M \times M \to A$ such that
+    \begin{enumerate}
+        \item $b$ is \CrefAndHyperrefIfExist{definition:multi_additive_map_of_abelian_groups}{bi-additive}, i.e.
+        $$b(u + v, w) = b(u, w) + b(v, w) \text{ and } b(u, v + w) = b(u, v) + b(u, w)$$
+        for all $u,w, \in M$, and 
+        \item $b$ is conjugate-linear in the first variable and linear in the second variable, i.e. 
+        $$b(ua_1, va_2) = \sigma(a_1) \cdot b(u,v) \cdot a_2$$
+        for all $u,v \in M$ and $a_1,a_2 \in A$.
+    \end{enumerate}
 
-We may denote the set of sesquilinear forms on $M$ by \hl{$\operatorname{Sesq}_A(M)$}. It is a module over the \CrefAndHyperref{definition:center_of_a_ring}{center of $A$}.
+    \item Let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $A$-module}. A \hldef{$\sigma$-sesquilinear form} (or simply \hldef{sesquilinear form}) on $M$ is a map $b: M \times M \to A$ such that
+    \begin{enumerate}
+        \item $b$ is \CrefAndHyperrefIfExist{definition:multi_additive_map_of_abelian_groups}{bi-additive}, i.e.
+        $$b(u + v, w) = b(u, w) + b(v, w) \text{ and } b(u, v + w) = b(u, v) + b(u, w)$$
+        for all $u,w, \in M$, and 
+        \item $b$ is linear in the first variable and conjugate-linear in the second variable, i.e. 
+        $$b(a_1u, a_2v) = a_1 \cdot b(u,v) \cdot \sigma(a_2)$$
+        for all $u,v \in M$ and $a_1,a_2 \in A$.
+    \end{enumerate}
+\end{enumerate}
+Note that the difference between sesquilinear forms on right $A$-modules vs. left $A$-modules is which variable is linear and which variable is conjugate-linear. In case the module is both a left and a right $A$-module, one should more directly emphasize which variable is linear and which is conjugate-linear.
+% Alternatively, one can impose the convention that the module $M$ be a left module and that the sesquilinear form is so that the first variable is linear and the second variable is conjugate-linear. 
+\cite{knus_qhfr} discusses sesquilinear forms on right $A$-modules. We usually adopt this same convention by default.
+
+We may denote the set of sesquilinear forms on $M$ by \hl{$\operatorname{Sesq}_A(M)$}. It is a module over the \CrefAndHyperrefIfExist{definition:center_of_a_ring}{center of $A$}.
 \end{definition}

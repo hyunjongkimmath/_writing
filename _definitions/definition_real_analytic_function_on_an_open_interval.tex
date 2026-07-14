@@ -1,0 +1,6 @@
+\begin{definition} \label{definition:real_analytic_function_on_an_open_interval}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an open interval, let $a \in I$, and let $f : I \to \mathbb{R}$ be a function that is infinitely differentiable at every point of $I$. The function $f$ is called \hldef{real analytic at $a$} if there exists a radius $\delta > 0$ such that the open interval $(a - \delta, a + \delta) \subseteq I$, and for all $x \in (a - \delta, a + \delta)$ the function equals its \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Taylor series centered at $a$}:
+    $$f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x - a)^k.$$
+    The function $f$ is called \hldef{real analytic on $I$} if it is real analytic at every point of $I$. Equivalently, for each $a \in I$, the Taylor series of $f$ centered at $a$ has a positive radius of convergence and converges to $f(x)$ in some neighborhood of $a$.
+\end{definition}

@@ -1,0 +1,27 @@
+\begin{proposition}[Continuous functions are Riemann integrable on closed intervals] \label{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the standard topology and $[a, b]$ with the subspace topology.
+
+    If $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}, then $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a, b]$}.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We show that for every $\varepsilon > 0$, there exists a partition $P$ of $[a, b]$ such that the difference between the upper and lower Riemann sums satisfies $U(f,P) - L(f,P) < \varepsilon$. This implies Riemann integrability by definition.
+
+    Since $f$ is continuous on the closed bounded interval $[a, b]$, it is uniformly continuous (by compactness of $[a, b]$). Given $\varepsilon > 0$, choose $\delta > 0$ such that for all $x, y \in [a, b]$,
+    $$|x - y| < \delta \implies |f(x) - f(y)| < \frac{\varepsilon}{b-a}.$$
+
+    Let $P = \{x_0, x_1, \dots, x_n\}$ be any partition of $[a, b]$ with mesh size smaller than $\delta$, i.e., $\max_k (x_k - x_{k-1}) < \delta$. For each subinterval $I_k = [x_{k-1}, x_k]$, let
+    $$m_k = \inf\{f(x) : x \in I_k\}, \qquad M_k = \sup\{f(x) : x \in I_k\}.$$
+
+    Since $f$ is continuous on the closed interval $I_k$, by the extreme value theorem (\CrefAndHyperrefIfExist{theorem:extreme_value_theorem_for_continuous_functions_on_closed_bounded_intervals}) it attains both its maximum and minimum on $I_k$. Therefore there exist points $u_k, v_k \in I_k$ such that
+    $$f(u_k) = M_k, \qquad f(v_k) = m_k.$$
+
+    Because the length of $I_k$ is less than $\delta$, we have $|u_k - v_k| < \delta$. By uniform continuity,
+    $$M_k - m_k = |f(u_k) - f(v_k)| < \frac{\varepsilon}{b-a}.$$
+
+    The difference between upper and lower sums is therefore bounded by:
+    $$U(f,P) - L(f,P) = \sum_{k=1}^n (M_k - m_k)(x_k - x_{k-1})$$
+    $$< \frac{\varepsilon}{b-a} \sum_{k=1}^n (x_k - x_{k-1}) = \frac{\varepsilon}{b-a} \cdot (b-a) = \varepsilon.$$
+
+    Since $U(f,P) - L(f,P)$ can be made arbitrarily small, the upper and lower Riemann integrals coincide. Hence $f$ is Riemann integrable on $[a, b]$.
+\end{proof}

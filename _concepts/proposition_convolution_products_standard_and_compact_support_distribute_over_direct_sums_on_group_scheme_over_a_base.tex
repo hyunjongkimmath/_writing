@@ -1,0 +1,52 @@
+\begin{proposition}[Convolution distributes over direct sums] \label{proposition:convolution_products_standard_and_compact_support_distribute_over_direct_sums_on_group_scheme_over_a_base}
+    \TODO{AI generated, verify}
+    Let $S$ be a \CrefAndHyperref{definition:scheme}{scheme}. Let \CrefAndHyperref{definition:algebraic_group_scheme_over_a_scheme}{$G$ be an algebraic group scheme over $S$} with multiplication morphism $m: G \times_S G \to G$.
+
+    The convolution products \CrefAndHyperref{definition:convolution_product_compact_support_and_standard_on_group_scheme_over_a_base_scheme}{$*_*$ and $*_!$} distribute over direct sums in the following cases.
+    \begin{enumerate}
+        \item[\textbf{(a) Torsion coefficients.}] Let $A$ be a \CrefAndHyperrefIfExist{definition:noetherian_ring}{noetherian} \CrefAndHyperrefIfExist{definition:torsion_ring}{torsion ring}. For $M, N, P \in D(G_{\et}, A)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_etale_sheaves_with_torsion_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            M *_* (N \oplus P) &\cong (M *_* N) \oplus (M *_* P), \\
+            (M \oplus N) *_* P &\cong (M *_* P) \oplus (N *_* P), \\
+            M *_! (N \oplus P) &\cong (M *_! N) \oplus (M *_! P), \\
+            (M \oplus N) *_! P &\cong (M *_! P) \oplus (N *_! P).
+        \end{align*}
+
+        \item[\textbf{(b) Integral adic coefficients.}] Let $\ell$ be a prime invertible on $G$ and $S$, let $R$ be the \CrefAndHyperrefIfExist{definition:integral_element_over_a_ring}{integral closure} of $\bbZ_\ell$ in a finite extension $E$ of $\Qell$. For $M, N, P \in D_c^b(G,R)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_of_adic_sheaves_with_integral_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            M *_* (N \oplus P) &\cong (M *_* N) \oplus (M *_* P), \\
+            (M \oplus N) *_* P &\cong (M *_* P) \oplus (N *_* P), \\
+            M *_! (N \oplus P) &\cong (M *_! N) \oplus (M *_! P), \\
+            (M \oplus N) *_! P &\cong (M *_! P) \oplus (N *_! P).
+        \end{align*}
+
+        \item[\textbf{(c) Rational adic coefficients.}] With $R$ and $E$ as above, for $M, N, P \in \Dbc(G,E)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_rational_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            M *_* (N \oplus P) &\cong (M *_* N) \oplus (M *_* P), \\
+            (M \oplus N) *_* P &\cong (M *_* P) \oplus (N *_* P), \\
+            M *_! (N \oplus P) &\cong (M *_! N) \oplus (M *_! P), \\
+            (M \oplus N) *_! P &\cong (M *_! P) \oplus (N *_! P).
+        \end{align*}
+
+        \item[\textbf{(d) Algebraic adic coefficients.}] Let $F/E$ be an algebraic extension. For $M, N, P \in \Dbc(G,F)$ (\Cref{definition:six_functor_formalism_on_derived_category_of_bdd_constr_complexes_with_algebraic_coefficients_on_a_noetherian_scheme}),
+        \begin{align*}
+            M *_* (N \oplus P) &\cong (M *_* N) \oplus (M *_* P), \\
+            (M \oplus N) *_* P &\cong (M *_* P) \oplus (N *_* P), \\
+            M *_! (N \oplus P) &\cong (M *_! N) \oplus (M *_! P), \\
+            (M \oplus N) *_! P &\cong (M *_! P) \oplus (N *_! P).
+        \end{align*}
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    We use that the functors in a six functor formalism are each right or left adjoints, that right and left adjoints respect products and coproducts respectively, and that finite direct sums in an additive category such as the derived categories above are simultaneously finite products and finite coproducts. To demonstrate the first isomorphism (torsion case), note that
+    \begin{align*}
+        M *_* (N \oplus P) &\cong Rm_*(M \boxtimes_A^L (N \oplus P)) \\
+        &\cong Rm_*(\pr_1^* M \otimes_A^L (\pr_2^* (N \oplus P))) \\
+        &\cong Rm_*(\pr_1^* M \otimes_A^L (\pr_2^* N \oplus \pr_2^* P)) \\
+        &\cong Rm_*((\pr_1^* M \otimes_A^L \pr_2^* N) \oplus (\pr_1^* M \otimes_A^L \pr_2^* P)) \\
+        &\cong Rm_*(\pr_1^* M \otimes_A^L \pr_2^* N) \oplus Rm_*(\pr_1^* M \otimes_A^L \pr_2^* P) \\
+        &\cong (M *_* N) \oplus (M *_* P).
+    \end{align*}
+    The other isomorphisms can be obtained similarly.
+\end{proof}

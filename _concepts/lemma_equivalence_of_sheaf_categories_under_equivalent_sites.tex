@@ -1,0 +1,14 @@
+\begin{lemma} \label{lemma:equivalence_of_sheaf_categories_under_equivalent_sites}
+    \TODO{AI generated, verify}
+Let $(\mathcal{C}_1, J_1)$ and $(\mathcal{C}_2, J_2)$ be \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{sites} that are \CrefAndHyperrefIfExist{definition:equivalence_of_sites}{equivalent as sites}, and let $\mathcal{B}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}. Then the \CrefAndHyperrefIfExist{definition:sheaf_on_a_site}{sheaf categories} $\Shv(\mathcal{C}_1, J_1, \mathcal{B})$ and $\Shv(\mathcal{C}_2, J_2, \mathcal{B})$ are \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalent}.
+
+More precisely, let $F: \mathcal{C}_1 \to \mathcal{C}_2$ and $G: \mathcal{C}_2 \to \mathcal{C}_1$ be the functors witnessing the equivalence of sites, with natural isomorphisms
+$$\eta: \mathrm{Id}_{\mathcal{C}_1} \xrightarrow{\sim} G \circ F, \qquad \epsilon: F \circ G \xrightarrow{\sim} \mathrm{Id}_{\mathcal{C}_2}.$$
+Precomposition with $F$ and $G$ induces functors
+$$F^*: \Shv(\mathcal{C}_2, J_2, \mathcal{B}) \to \Shv(\mathcal{C}_1, J_1, \mathcal{B}), \quad F^*(\mathcal{H}) = \mathcal{H} \circ F$$
+and
+$$G^*: \Shv(\mathcal{C}_1, J_1, \mathcal{B}) \to \Shv(\mathcal{C}_2, J_2, \mathcal{B}), \quad G^*(\mathcal{K}) = \mathcal{K} \circ G,$$
+which are well-defined because $F$ and $G$ are \CrefAndHyperrefIfExist{definition:continuous_functor_of_sites}{continuous} (so precomposition sends sheaves to sheaves). The natural isomorphisms $\eta$ and $\epsilon$ induce natural isomorphisms
+$$\eta^*: \mathrm{Id}_{\Shv(\mathcal{C}_1, J_1, \mathcal{B})} \xrightarrow{\sim} G^* \circ F^* \quad \text{and} \quad \epsilon^*: F^* \circ G^* \xrightarrow{\sim} \mathrm{Id}_{\Shv(\mathcal{C}_2, J_2, \mathcal{B})},$$
+thereby exhibiting an equivalence of categories.
+\end{lemma}

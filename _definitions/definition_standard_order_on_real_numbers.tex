@@ -1,0 +1,16 @@
+\begin{definition} \label{definition:standard_order_on_real_numbers}
+    Let $\bbR = \mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{field of real numbers} constructed as the quotient of the \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_rational_numbers}{ring of Cauchy sequences in $\bbQ$} by the \CrefAndHyperrefIfExist{definition:null_sequence_in_rational_numbers}{ideal of null sequences}\CrefIfExists{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}.
+
+    Define the set of \hldef{strictly positive real numbers} by
+    $$\hlin{\bbR_{> 0} = \left\{ [a_n] \in \bbR \;\middle|\; \exists\, \varepsilon \in \bbQ_{> 0},\; \exists\, N \in \bbN,\; \forall\, n \ge N : a_n \ge \varepsilon \right\}.}$$
+    This subset is well-defined: if $(a_n) \sim (b_n)$ (i.e.\ their difference is a null sequence), then $a_n \ge \varepsilon$ for all sufficiently large $n$ implies $b_n \ge \varepsilon/2$ for all sufficiently large $n$ by the definition of a null sequence. Hence the membership of $[a_n]$ in $\bbR_{>0}$ is independent of the choice of representative.
+
+    The set of \hldef{non-negative real numbers} is
+    $$\hlin{\bbR_{\ge 0} = \bbR_{> 0} \cup \{ [0] \}.}$$
+
+    The \hldef{standard order on $\bbR$} is the binary relation $\le$ defined by
+    $$[a_n] \le [b_n] \quad\iff\quad [b_n] - [a_n] \in \bbR_{\ge 0},$$
+    for $[a_n], [b_n] \in \bbR$. As usual, we write $[a_n] < [b_n]$ when $[a_n] \le [b_n]$ and $[a_n] \neq [b_n]$.
+
+    Equipped with this order, $\bbR$ is a \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{totally ordered field}\CrefIfExists{proposition:real_numbers_form_ordered_field} and $\bbR_{\geq 0}$ is the \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} of $\bbR$ for the standard order.
+\end{definition}

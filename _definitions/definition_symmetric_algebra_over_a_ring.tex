@@ -1,0 +1,14 @@
+\begin{definition}[cf. {\cite[Chapter I, 7.4]{knus_qhfr}} in the case that the base ring is commutative.] \label{definition:symmetric_algebra_over_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative ring}. An \CrefAndHyperrefIfExist{definition:algebra_of_a_ring}{$R$-algebra $A$} is called a \hldef{symmetric $R$-algebra} if the ring homomorphism $R \to A$ is \CrefAndHyperref{definition:symmetrically_self_dual_ring_over_a_ring}{symmetrically self-dual over $R$}. Many texts additionally require $A$ to be finitely generated and projective as an $R$-module; we do not impose this condition here.
+        % There exists an isomorphism of $(A, A)$-bimodules $\psi: A \xrightarrow{\cong} A^\vee$.
+        % , where the \CrefAndHyperrefIfExist{definition:dual_of_a_left_right_two_sided_module}{dual} $A^\vee = \operatorname{Hom}_{R}(A, R) = \Hom_{R-\bbZ}(A,R)$ is the set of \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{left $R$-linear maps}.
+    \TextIfExists{definition:left_right_frobenius_self_dual_ring_homomorphism}{
+        Any symmetric $R$-algebra is both a left and right \CrefAndHyperrefIfExist{definition:left_right_frobenius_self_dual_ring_homomorphism}{Frobenius ring homomorphism}.
+    }
+    % The $(A, A)$-bimodule structure on $A^*$ is defined for $f \in A^*$ and $u, v, a \in A$ by:
+    % \begin{align*}
+    %     (u \cdot f)(a) &= f(au) \\
+    %     (f \cdot v)(a) &= f(va)
+    % \end{align*}
+    % Under this isomorphism, the element $\varphi = \psi(1) \in A^\vee$ is called the \hldef{symmetric trace}, and necessarily satisfies $\varphi(ab) = \varphi(ba)$ for all $a, b \in A$.
+\end{definition}

@@ -1,0 +1,29 @@
+\begin{proposition}[Pushforward of locally constant sheaf under finite \'etale morphism is locally constant]
+\label{proposition:pushforward_of_locally_constant_sheaf_under_finite_etale_morphism_is_locally_constant}
+Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale morphism of schemes}. Let $\mathcal{A}$ be a \CrefAndHyperrefIfExist{definition:category}{category} satisfying the following conditions:
+\begin{enumerate}
+    \item $\mathcal{A}$ has a \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{terminal object} (so that \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaves} valued in $\mathcal{A}$ exist).
+    \item $\mathcal{A}$ has finite \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{coproducts} (so that finite direct sums of constant sheaves valued in $\mathcal{A}$ exist).
+    \item A \CrefAndHyperrefIfExist{definition:sheafification_functor_on_a_site}{sheafification functor} exists for presheaves on \CrefAndHyperrefIfExist{definition:small_etale_site_of_a_scheme}{$X_{\et}$} and $Y_{\et}$ valued in $\mathcal{A}$ (e.g. $\mathcal{A}$ is \CrefAndHyperrefIfExist{definition:complete_and_cocomplete_category}{complete, cocomplete}, small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered colimits} in $\mathcal{A}$ are \CrefAndHyperrefIfExist{definition:left_right_exact_functor_between_categories}{exact}, and $\mathcal{A}$ satisfies the \CrefAndHyperrefIfExist{definition:ipc_property_of_a_category_that_admits_small_products_and_small_filtered_limits}{IPC-property}, see \Cref{theorem:sheafification_of_a_presheaf_of_sets_on_a_small_enough_site}).
+\end{enumerate}
+Let $\mathcal{F}$ be a \CrefAndHyperrefIfExist{definition:locally_constant_sheaf_on_a_site_with_sheafification}{locally constant sheaf} on $X_{\et}$ valued in $\mathcal{A}$. Then the \CrefAndHyperrefIfExist{definition:direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism}{direct image} $f_* \mathcal{F}$ is a locally constant sheaf on $Y_{\et}$ valued in $\mathcal{A}$.
+\TODO{AI generated, verify}
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+Since $f$ is finite \'etale, there exists an \CrefAndHyperrefIfExist{definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family}{\'etale covering} $\{V_i \to Y\}$ such that for each $i$, the base change $X \times_Y V_i$ is isomorphic to a finite disjoint union $\coprod_{j=1}^{n_i} V_i$ of copies of $V_i$ over $V_i$. \TODO{This fact} This is a standard property of finite \'etale morphisms: they are \'etale-locally trivial.
+
+Let $\mathcal{F}$ be locally constant on $X_{\et}$. By definition, there exists an \'etale covering $\{U_k \to X\}$ such that for each $k$, the \CrefAndHyperrefIfExist{definition:restriction_of_a_sheaf_on_a_site_to_an_object_of_the_underlying_category_of_the_site}{restriction} $\mathcal{F}|_{U_k}$ is \CrefAndHyperrefIfExist{definition:isomorphism_of_objects_in_a_category}{isomorphic} to a \CrefAndHyperrefIfExist{definition:constant_sheaf_on_a_site_with_sheafification}{constant sheaf} $\underline{A_k}$ on the \CrefAndHyperrefIfExist{definition:site_induced_by_a_site_on_an_over_category}{slice site} $(X_{\et})_{/U_k}$.
+
+Consider the composite covering $\{V_i \to Y\}$ of $Y$ and the pullback $\{U_k \times_Y V_i \to X \times_Y V_i\}$ of the covering $\{U_k \to X\}$ along the projection $X \times_Y V_i \to X$. Refining the covering $\{V_i \to Y\}$ if necessary, we may assume that for each $i$, the restriction $\mathcal{F}|_{X \times_Y V_i}$ is constant on each component of $X \times_Y V_i \cong \coprod_{j=1}^{n_i} V_i$.
+
+For each $i$, the restriction of $f_* \mathcal{F}$ to $V_i$ is given by
+$$(f_* \mathcal{F})|_{V_i} \cong (f|_{X \times_Y V_i})_* (\mathcal{F}|_{X \times_Y V_i})$$
+\TODO{base change property of direct image}
+by the base change property of the direct image. Since $X \times_Y V_i \cong \coprod_{j=1}^{n_i} V_i$ and $\mathcal{F}|_{X \times_Y V_i}$ is constant on each component, we have
+$$(f|_{X \times_Y V_i})_* (\mathcal{F}|_{X \times_Y V_i}) \cong \bigoplus_{j=1}^{n_i} \underline{A_{ij}}$$
+for some objects $A_{ij}$ of $\mathcal{A}$, where $\underline{A_{ij}}$ denotes the constant sheaf on $V_i$ with value $A_{ij}$. The finite coproduct exists in $\mathcal{A}$ by hypothesis, and the sheafification functor preserves finite coproducts (as a left adjoint), so the right-hand side is a sheaf on $V_i$.
+
+A finite coproduct of constant sheaves is locally constant: indeed, each $\underline{A_{ij}}$ is constant, and a finite coproduct of constant sheaves on a site is isomorphic to the constant sheaf associated to the finite coproduct $\coprod_{j=1}^{n_i} A_{ij}$ in $\mathcal{A}$, hence is itself constant. Therefore $(f_* \mathcal{F})|_{V_i}$ is constant for each $i$, and thus $f_* \mathcal{F}$ is locally constant on $Y_{\et}$.
+\end{proof}

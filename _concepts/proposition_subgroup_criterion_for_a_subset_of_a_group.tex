@@ -1,0 +1,30 @@
+\begin{proposition}[Subgroup criterion] \label{proposition:subgroup_criterion_for_a_subset_of_a_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \subseteq G$ be a subset. Then $H$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup of $G$} if and only if the following conditions hold:
+    \begin{enumerate}
+        \item $H \neq \emptyset$,
+        \item $H$ is closed under the group operation, i.e. for all $h_1, h_2 \in H$, the product $h_1 h_2$ is an element of $H$,
+        \item $H$ is closed under the inverse operator of $G$, i.e. for all $h \in H$, the inverse $h^{-1}$ is an element of $H$.
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Suppose that $H$ is a subgroup of $G$, i.e. that the \CrefAndHyperrefIfExist{definition:n_ary_operation_on_a_set}{operations} 
+    $$\cdot|_H: H \times H \to G, \quad (h_1,h_2) \mapsto h_1 \cdot h_2$$
+    $$\cdot^{-1}|_H: H H \to G, \quad h \mapsto h^{-1}$$
+    have images contained in $H$, and these operations along with the identity element of $G$ make $H$ into a group. By the group axioms, $H$ has an identity element, so $H$ is not the empty set. By the assumption that $\cdot|_H$ has image contained in $H$, we have that $h_1h_2$ is an element of $H$ for all $h_1,h_2 \in H$. Similarly, by the assumption that ${}^{-1}|_H: H \to G$ has image contained in $H$, we have that $h^{-1}$ is an element of $H$ for all $h \in H$.
+
+    Conversely, suppose that $H \neq \emptyset$, that $H$ is closed under the group operation, and that $H$ is closed under the inverse operator of $G$. We show that $H$ is a subgroup of $G$. For any $h_1,h_2 \in H$, we have $h_1 \cdot|_H h_2 = h_1 \cdot h_2$, which is assumed to be in $H$, so the image of $\cdot|_H$ is contained in $H$. Similarly, for any $h \in H$, we have $h^{-1}|_H = h^{-1}$, which is assumed to be in $H$, so the image of ${}^{-1}|_H$ is contained in $H$.
+    
+    Write $\cdot_H$ as shorthand for $\cdot|_H$. For any $h_1,h_2,h_3 \in H$, we have 
+    $$(h_1 \cdot_H h_2) \cdot_H h_3 = (h_1 \cdot h_2) \cdot h_3 = h_1 \cdot (h_2 \cdot h_3) = h_1 \cdot_H (h_2 \cdot_H h_3)$$
+    so $\cdot_H$ is \CrefAndHyperrefIfExist{definition:associative_binary_operation_on_a_set}{associative}. 
+    
+    The identity element $1$ of $G$ is an identity element of $\cdot_H$ because 
+    $$1 \cdot_H h = 1 \cdot h = h = h \cdot 1 = h \cdot_H 1$$
+    for all $h \in H$. 
+
+    Lastly, for all $h \in H$, the element $h^{-1}$ is an inverse of $h$ with respect to the operation $\cdot_H$ on $H$ because 
+    $$h \cdot_H h^{-1} = h \cdot h^{-1} = 1$$
+    and
+    $$h^{-1} \cdot_H h = h^{-1} \cdot h = 1.$$
+    Thus, $H$ is a subgroup of $G$ as desired. 
+\end{proof}

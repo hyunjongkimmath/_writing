@@ -1,0 +1,11 @@
+\begin{theorem} \label{theorem:finite_ramseys_theorem_existence_of_two_color_ramsey_numbers}
+\TODO{AI generated, verify}
+For all positive integers $r$ and $s$, the two-color Ramsey number $R(r,s)$ exists and is finite.
+
+This is proved by double induction on $r+s$. The base cases $r=1$ or $s=1$ are trivial since $R(1,k) = 1$ and $R(k,1) = 1$. For the inductive step, \CrefAndHyperrefIfExist{lemma:recursive_upper_bound_for_two_color_ramsey_numbers}{the recursive bound} gives
+$$R(r,s) \leq R(r-1,s) + R(r,s-1),$$
+where both terms on the right are finite by the induction hypothesis.
+
+An explicit upper bound follows from this recursion:
+$$R(r,s) \leq \binom{r+s-2}{r-1}.$$
+\end{theorem}

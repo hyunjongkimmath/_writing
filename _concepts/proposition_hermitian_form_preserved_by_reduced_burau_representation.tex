@@ -1,0 +1,15 @@
+\begin{proposition}[Hermitian form preserved by the reduced Burau representation {\cite[Section 1.1.3]{venkataramana_ibrd} \cite[Section 4.1]{venkataramana_ibrd}}] \label{proposition:hermitian_form_preserved_by_reduced_burau_representation}
+\TODO{AI generated, verify}
+    Equip $\bbZ[t,t^{-1}]$ with the involution determined by $t \mapsto t^{-1}$. Let $(R,\sigma)$ be an \CrefAndHyperrefIfExist{definition:homomorphism_of_involution_rings}{involution algebra} over $\bbZ[t,t^{-1}]$. For integers $n \geq 2$, let $H_n^r \in M_{n-1}(R)$\CrefIfExists{definition:matrix_over_a_ring} be the tridiagonal matrix
+
+    $$H_n^r = \begin{pmatrix}
+        \frac{(t+1)^2}{t} & -(\frac{1}{t}+1) & 0 & 0 & \cdots & 0 \\
+        -(t + 1) & \frac{(t+1)^2}{t} & -(\frac{1}{t} + 1) & 0 & \cdots & 0 \\
+        0 & -(t+1) & \frac{(t+1)^2}{t} & -(\frac{1}{t} + 1) & \cdots & 0 \\
+        \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & 0 & \cdots & \frac{(t+1)^2}{t}
+    \end{pmatrix}.$$
+    Then $(H_n^r)^* = H_n^r$, so $H_n^r$ is a \CrefAndHyperrefIfExist{definition:epsilon_hermitian_matrix_over_a_ring_with_involution}{Hermitian matrix} (i.e., $1$-Hermitian matrix) over $(R,\sigma)$, and the \CrefAndHyperrefIfExist{definition:algebraic_reduced_Burau_representation_of_artin_braid_group_on_a_module_over_a_ring}{algebraic reduced Burau representation} $\psi_n^r: B_n \to \GL_{n-1}(R)$\CrefIfExists{definition:artin_braid_group} satisfies
+    $$(\psi_n^r(\sigma_i))^* H_n^r \psi_n^r(\sigma_i) = H_n^r \quad \text{for all } i = 1,\ldots,n-1.$$
+    Equivalently, the image of $\psi_n^r$ is contained in the \CrefAndHyperrefIfExist{definition:unitary_group_of_a_matrix_form_over_a_ring_with_involution}{unitary group of $H_n^r$}, $U(H_n^r) \subseteq \GL_{n-1}(R)$. The \CrefAndHyperrefIfExist{definition:matrix_of_an_epsilon_hermitian_form_on_a_free_module_over_a_ring_with_involution}{associated Hermitian form} $\tilde{h}_n^r: R^{\oplus(n-1)} \times R^{\oplus(n-1)} \to R^{\sigma}$ given by $\tilde{h}_n^r(v,w) = c_v^* H_n^r c_w$ is preserved by $\psi_n^r$. Furthermore, $\det H_n^r = \left( \frac{t+1}{t} \right)^{n-1} \left( \frac{t^{n} - 1}{t-1} \right)$.
+\end{proposition}

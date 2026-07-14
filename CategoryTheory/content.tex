@@ -1,4 +1,3 @@
-
 \section{Basic category theory}
 
 \input{../_definitions/definition_category.tex}
@@ -93,13 +92,15 @@
 
 \input{../_concepts/theorem_right_left_adjoints_commute_with_limits_colimits.tex}
 
-\Cref{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits} states the colimits commutes with colimits and limits commute with limits.
+\Cref{theorem:colimits_commute_with_colimits_and_limits_commute_with_limits} states that colimits commutes with colimits and limits commute with limits.
 
 \input{../_concepts/theorem_colimits_commute_with_colimits_and_limits_commute_with_limits.tex}
 
 At times, we may want to consider the limit/colimit of a system of functors. Such limits/colimits can be computed ``pointwise'', whenever the pointwise limits/colimits exist.
 
 \input{../_concepts/proposition_limits_and_colimits_in_functor_categories_may_be_computed_pointwise.tex}
+
+\input{../_concepts/lemma_equivalence_of_functor_categories_under_equivalent_source_categories.tex}
 
 
 \input{../_definitions/definition_diagonal_functor_from_a_category_to_a_diagram_category_of_the_category.tex}
@@ -196,76 +197,6 @@ At times, we may want to consider the limit/colimit of a system of functors. Suc
 
 \input{../_definitions/definition_groupoid_object_in_a_category.tex}
 
-\TODO{}
-\begin{definition}[Semigroup, monoid and group objects in an $\infty$-category]
-Let $\mathcal{C}$ be an $\infty$-category with finite products.
-\begin{enumerate}
-  \item A \hldef{semigroup object} in $\mathcal{C}$ is a functor
-  $$
-  A : \mathrm{N}(\Delta_{\mathrm{inj}}^{\mathrm{op}}) \to \mathcal{C}
-  $$
-  from the nerve of the subcategory of $\Delta$ consisting of injective maps, satisfying the Segal condition:
-  for each $[n] \in \Delta$ with $n \geq 2$, the canonical map
-  $$
-  A([n]) \to A([1]) \times \cdots \times A([1])
-  $$
-  (induced by the $n$ face maps $[1] \to [n]$) is an equivalence in $\mathcal{C}$.
-
-  \item A \hldef{monoid object} in $\mathcal{C}$ is a functor
-  $$
-  A : \mathrm{N}(\Delta^{\mathrm{op}}) \to \mathcal{C}
-  $$
-  satisfying the Segal condition as above, together with a choice of unit encoded by the image of the unique degeneracy map $[0] \to [1]$, such that the usual associativity and unit diagrams hold up to coherent homotopy (i.e.\ $A$ is a unital Segal object in $\mathcal{C}$).
-
-  \item A \hldef{group object} in $\mathcal{C}$ is a monoid object $A$ such that the induced monoid object $\pi_0(A)$ in the homotopy category $h\mathcal{C}$ is a group object (equivalently, the underlying $E_1$-space is grouplike).
-\end{enumerate}
-\end{definition}
-
-\begin{definition}[Ring objects in an $\infty$-category]
-Let $\mathcal{C}$ be an $\infty$-category with finite products.
-\begin{enumerate}
-  \item A \hldef{ring object} in $\mathcal{C}$ is an object $R \in \mathcal{C}$ equipped with:
-  \begin{itemize}
-    \item a group object structure $(R,+,0,-)$ in $\mathcal{C}$ (additive structure),
-    \item a monoid object structure $(R,\cdot,1_R)$ in $\mathcal{C}$ (multiplicative structure),
-  \end{itemize}
-  such that the distributivity, absorption and unital axioms for a ring hold up to coherent homotopy, expressed by the homotopy-commutativity of the diagrams corresponding to
-  $$
-  a \cdot (b + c) \simeq a \cdot b + a \cdot c,
-  \qquad
-  (a + b) \cdot c \simeq a \cdot c + b \cdot c,
-  $$
-  and $0 \cdot a \simeq 0 \simeq a \cdot 0$, for all $a,b,c \in R$.
-  \item A \hldef{commutative ring object} in $\mathcal{C}$ is a ring object whose multiplicative monoid structure is commutative up to coherent homotopy (i.e.\ a commutative monoid object in the sense above).
-\end{enumerate}
-\end{definition}
-
-\begin{definition}[Module objects over a ring object in an $\infty$-category]
-Let $\mathcal{C}$ be an $\infty$-category with finite products and let $R$ be a ring object in $\mathcal{C}$.
-An \hldef{$R$-module object in $\mathcal{C}$} is an object $M \in \mathcal{C}$ together with
-\begin{itemize}
-  \item a group object structure $(M,+_M,0_M,-_M)$ in $\mathcal{C}$,
-  \item an action morphism in $\mathcal{C}$
-  $$
-  \alpha : R \times M \to M,
-  $$
-\end{itemize}
-such that the usual module axioms hold up to coherent homotopy, i.e.\ the diagrams expressing
-$$
-r \cdot (m_1 +_M m_2) \simeq r \cdot m_1 +_M r \cdot m_2,
-\qquad
-(r_1 + r_2) \cdot m \simeq r_1 \cdot m +_M r_2 \cdot m,
-$$
-$$
-(r_1 \cdot r_2) \cdot m \simeq r_1 \cdot (r_2 \cdot m),
-\qquad
-1_R \cdot m \simeq m,
-\qquad
-0_R \cdot m \simeq 0_M \simeq r \cdot 0_M
-$$
-commute in the homotopy-coherent sense in $\mathcal{C}$.
-\end{definition}
-
 
 
 \section{Monoidal categories}
@@ -296,6 +227,7 @@ commute in the homotopy-coherent sense in $\mathcal{C}$.
 
 \TODO{Carefully check what statements need to assume that the categories are locally small and which do not}
 \input{../_definitions/definition_additive_category_preadditive_category.tex}
+\input{../_concepts/lemma_hom_to_from_zero_object_in_preadditive_category_is_zero_group.tex}
 \input{../_definitions/definition_additive_functor_between_additive_categories.tex}
 \input{../_definitions/definition_abelian_category.tex}
 
@@ -366,7 +298,11 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \section{Sites, sheaves and topoi}
 
 \input{../_definitions/definition_presheaf_on_a_category.tex}
+\input{../_definitions/definition_subfunctor_of_a_presheaf_of_sets_on_a_category.tex}
+\input{../_concepts/proposition_subobjects_of_presheaf_category_are_pointwise_injective.tex}
+\input{../_concepts/proposition_images_of_morphisms_in_set_valued_presheaves_on_a_category_are_computed_pointwise.tex}
 \input{../_concepts/lemma_category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small.tex}
+\input{../_concepts/lemma_equivalence_of_presheaf_categories_under_equivalent_source_categories.tex}
 \begin{remark}
     Even when $\calC$ is ($U$-)locally small and ($\calA$ is ($U$-)locally small), $\PreShv(\calC, \calA)$ may not be locally small.
 \end{remark}
@@ -393,15 +329,23 @@ We might want to study categories whose hom-sets carry additional structure beyo
 
 
 \input{../_definitions/definition_maximal_sieve_on_an_object_in_a_category.tex}
+\input{../_concepts/lemma_sieve_containing_identity_morphism_is_maximal_sieve_on_the_object.tex}
 \input{../_definitions/definition_sieve_on_an_object_of_a_category_generated_by_a_family_of_morphisms.tex}
 
 \input{../_definitions/definition_pullback_sieve_of_an_object_in_a_category_via_a_morphism_to_the_object.tex}
 
 \input{../_concepts/lemma_pullback_sieve_on_an_object_in_a_category_via_a_morphism_to_the_object_is_indeed_a_sieve.tex}
 
+\input{../_concepts/proposition_sieves_as_subfunctors_of_representable_functors.tex}
+
+
 \subsubsection{Grothendieck pretopologies}
 
 \input{../_definitions/definition_basis_and_grothendieck_pretopology_for_a_grothendieck_topology_on_a_category.tex}
+
+\input{../_definitions/definition_cech_nerve_of_a_family_of_morphisms_to_an_object_in_a_category.tex}
+
+\input{../_definitions/definition_sheaf_on_a_grothendieck_pretopology_valued_in_a_category.tex}
 
 \subsubsection{Coverages}
 
@@ -410,8 +354,10 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \subsubsection{Grothendieck topologies}
 
 \input{../_definitions/definition_grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family.tex}
+\input{../_concepts/proposition_sieve_containing_covering_sieve_is_covering_with_respect_to_grothendieck_topology.tex}
 \input{../_definitions/definition_small_site_locally_small_site_U_site_U_small_site_U_topology.tex}
 \input{../_definitions/definition_grothendieck_topology_generated_by_a_pretopology.tex}
+\input{../_concepts/theorem_grothendieck_topology_on_a_cateogry_generated_by_a_pretopology_is_indeed_a_grothendieck_topology_and_is_the_coarsest_one_containing_all_the_covering_sieves_generated_by_the_pretopology_families.tex}
 
 \input{../_definitions/definition_coarser_finer_than_for_sites_on_a_category.tex}
 
@@ -443,6 +389,11 @@ We might want to study categories whose hom-sets carry additional structure beyo
 \subsubsection{Sheaf on a site}
 
 \input{../_definitions/definition_sheaf_on_a_site.tex}
+
+\input{../_concepts/theorem_limits_of_presheaf_diagrams_valued_in_a_category_are_computed_sectionwise.tex}
+\input{../_concepts/theorem_limits_of_sheaf_diagrams_on_a_site_valued_in_a_category_are_computed_sectionwise.tex}
+
+\input{../_concepts/proposition_sheaf_on_pretopology_equivalent_to_sheaf_on_generated_topology.tex}
 
 \input{../_definitions/definition_sheaf_on_a_topological_space_valued_in_a_category_with_a_terminal_object.tex}
 \input{../_definitions/definition_morphism_of_presheaves_on_a_topological_space.tex}
@@ -536,10 +487,18 @@ defined by the mapping $((m \otimes n) \otimes p) \mapsto (m \otimes (n \otimes 
 \subsubsection{Continuous functors between sites and Morphisms between sites}
 \input{../_definitions/definition_continuous_functor_of_sites.tex}
 
+\input{../_concepts/proposition_equivalent_conditions_for_continuous_functor_of_sites.tex}
+
 \input{../_definitions/definition_continuous_functor_between_sites_of_opens_on_topological_spaces_induced_by_continuous_map.tex}
 \input{../_definitions/definition_continuous_functors_on_sites_on_schemes_induced_by_scheme_morphism.tex}
 
 \input{../_definitions/definition_morphism_of_sites.tex}
+
+\input{../_definitions/definition_equivalence_of_sites.tex}
+
+\input{../_concepts/lemma_equivalence_of_sheaf_categories_under_equivalent_sites.tex}
+
+\input{../_concepts/proposition_unique_site_structure_induced_by_equivalence_of_categories.tex}
 
 \input{../_concepts/proposition_identity_functor_from_finer_site_to_coarser_site_on_the_same_category_is_continuous_and_induces_a_site_morphism.tex}
 
@@ -578,11 +537,11 @@ There are multiple types of morphisms of topoi induced by functors between sites
 
 \input{../_concepts/proposition_categories_of_sets_functors_from_small_categories_to_sets_and_modules_satisfy_ipc_property.tex}
 
-\begin{proposition}[{\cite[Proposition 3.1.11(iii)]}]
+\begin{proposition}[{\cite[Proposition 3.1.11(iii)]{kashiwara_schapira_cs}}]
     \TODO{think about whether local smallness can be removed}
     Let $\calA$ be a \CrefAndHyperrefIfExist{lemma:category_of_presheaves_on_a_small_category_of_locally_small_value_is_locally_small}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} that admits \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products} and small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered limits}.
 
-    Assume that there exist a set $I$ and a functor $\lambda: \calA \to \Sets^I$ \CrefIfExists{definition:category_of_sets}\CrefIfExists{definition:diagram_in_a_category_indexed_by_a_small_category} such that 
+    Assume that there exist a set $I$ and a functor $\lambda: \calA \to \Sets^I$ \CrefIfExists{definition:category_of_sets}\CrefIfExists{definition:diagram_in_a_category_indexed_by_a_category} such that 
     \begin{itemize}
         \item $\lambda$ commutes with \CrefAndHyperrefIfExist{definition:small_and_finite_limits_and_colimits_in_a_category}{small} \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{products}
         \item $\lambda$ commutes with small \CrefAndHyperrefIfExist{definition:projective_and_inductive_limits_in_categories}{filtered inductive limits}
@@ -610,6 +569,8 @@ The following expresses the idea that sheafification functors exist for small en
 
 
 \input{../_definitions/definition_direct_image_of_a_sheaf_on_a_site_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
+
+
 \input{../_definitions/definition_inverse_image_of_a_sheaf_under_a_continuous_functor_of_sites_or_a_site_morphism.tex}
 \input{../_concepts/theorem_adjunction_between_inverse_images_and_direct_images_of_sheaves_under_continuous_functor_of_sites.tex}
 
@@ -891,6 +852,9 @@ Quasi-categories provide one framework for $\infty$-categories.
 \input{../_definitions/definition_kan_extension_condition_for_a_horn_for_a_simplicial_set.tex}
 
 \input{../_definitions/definition_infty_category_quasi_category.tex}
+\input{../_definitions/definition_Kan_fibration_between_simplicial_sets.tex}
+\input{../_definitions/definition_trivial_Kan_fibration_between_simplicial_sets.tex}
+\input{../_concepts/proposition_simplicial_set_is_quasi_category_iff_maps_from_Delta_2_to_maps_from_Lambda_1_2_is_a_trivial_kan_fibration.tex}
 
 A basic class of \CrefAndHyperrefIfExist{definition:infty_category_quasi_category}{quasi-categories} would be \CrefAndHyperrefIfExist{definition:nerve_of_a_category}{nerves of categories} (\Cref{proposition:simplicial_set_is_the_nerve_of_a_small_category_if_and_only_if_maps_from_inner_horns_lift_uniquely}).
 
@@ -907,9 +871,84 @@ A basic class of \CrefAndHyperrefIfExist{definition:infty_category_quasi_categor
 
 \input{../_concepts/lemma_every_kan_complex_is_a_quasi_category.tex}
 
+\input{../_concepts/lemma_0_simplex_is_terminal_object_in_category_of_simplicial_sets.tex}
+
+\input{../_definitions/definition_empty_simplicial_set.tex}
+
+\input{../_concepts/lemma_empty_simplicial_set_is_initial_object_in_category_of_simplicial_sets.tex}
+
+
+\input{../_concepts/lemma_simplicial_set_is_kan_complex_iff_simplicial_set_map_to_final_simplicial_set_is_a_kan_fibration.tex}
+
 \input{../_concepts/proposition_infty_groupoids_are_equivalent_to_kan_complexes.tex}
 
 \input{../_concepts/proposition_mapping_space_between_objects_of_a_quasi_category_is_an_infty_groupoid.tex}
+
+\section{Limits and colimits in \texorpdfstring{$\infty$}{infty}-categories}
+
+\input{../_definitions/definition_join_of_simplicial_sets.tex}
+\input{../_concepts/proposition_existence_of_overcategory_simplicial_set_S_slash_p_with_universal_property.tex}
+\input{../_definitions/definition_overcategory_and_undercategory_of_an_infty_category_with_respect_to_a_map_from_a_simplicial_set.tex}
+\input{../_definitions/definition_limit_and_colimit_for_a_map_from_a_simplicial_set_to_an_infty_category.tex}
+\input{../_definitions/definition_terminal_object_in_an_infty_category.tex}
+\input{../_definitions/definition_pullback_and_pushforward_of_maps_to_and_from_objects_in_an_infty_category.tex}
+
+\section{Algebraic objects in \texorpdfstring{$\infty$}{infty}-categories}
+
+
+\input{../_definitions/definition_simplicial_object_in_an_infty_category.tex}
+\input{../_definitions/definition_category_object_in_an_infty_category.tex}
+\input{../_definitions/definition_semigroup_object_in_an_infty_category.tex}
+\input{../_definitions/definition_monoid_object_in_an_infty_category.tex}
+\input{../_definitions/definition_group_object_in_an_infty_category.tex}
+
+\TODO{}
+
+\begin{definition}[Ring objects in an $\infty$-category]
+Let $\mathcal{C}$ be an $\infty$-category with finite products.
+\begin{enumerate}
+  \item A \hldef{ring object} in $\mathcal{C}$ is an object $R \in \mathcal{C}$ equipped with:
+  \begin{itemize}
+    \item a group object structure $(R,+,0,-)$ in $\mathcal{C}$ (additive structure),
+    \item a monoid object structure $(R,\cdot,1_R)$ in $\mathcal{C}$ (multiplicative structure),
+  \end{itemize}
+  such that the distributivity, absorption and unital axioms for a ring hold up to coherent homotopy, expressed by the homotopy-commutativity of the diagrams corresponding to
+  $$
+  a \cdot (b + c) \simeq a \cdot b + a \cdot c,
+  \qquad
+  (a + b) \cdot c \simeq a \cdot c + b \cdot c,
+  $$
+  and $0 \cdot a \simeq 0 \simeq a \cdot 0$, for all $a,b,c \in R$.
+  \item A \hldef{commutative ring object} in $\mathcal{C}$ is a ring object whose multiplicative monoid structure is commutative up to coherent homotopy (i.e.\ a commutative monoid object in the sense above).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Module objects over a ring object in an $\infty$-category]
+Let $\mathcal{C}$ be an $\infty$-category with finite products and let $R$ be a ring object in $\mathcal{C}$.
+An \hldef{$R$-module object in $\mathcal{C}$} is an object $M \in \mathcal{C}$ together with
+\begin{itemize}
+  \item a group object structure $(M,+_M,0_M,-_M)$ in $\mathcal{C}$,
+  \item an action morphism in $\mathcal{C}$
+  $$
+  \alpha : R \times M \to M,
+  $$
+\end{itemize}
+such that the usual module axioms hold up to coherent homotopy, i.e.\ the diagrams expressing
+$$
+r \cdot (m_1 +_M m_2) \simeq r \cdot m_1 +_M r \cdot m_2,
+\qquad
+(r_1 + r_2) \cdot m \simeq r_1 \cdot m +_M r_2 \cdot m,
+$$
+$$
+(r_1 \cdot r_2) \cdot m \simeq r_1 \cdot (r_2 \cdot m),
+\qquad
+1_R \cdot m \simeq m,
+\qquad
+0_R \cdot m \simeq 0_M \simeq r \cdot 0_M
+$$
+commute in the homotopy-coherent sense in $\mathcal{C}$.
+\end{definition}
+
 
 
 
@@ -1255,8 +1294,10 @@ with monoidal structure maps induced by the external product and the lax symmetr
 \input{../_definitions/definition_commutative_ring.tex}
 \input{../_definitions/definition_ring_homomorphism.tex}
 \input{../_definitions/definition_group.tex}
+\input{../_definitions/definition_trivial_group_zero_group.tex}
 \input{../_definitions/definition_group_homomorphism.tex}
 \input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_multilinear_map_of_abelian_groups.tex}
 \input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
 \input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
 
@@ -1294,7 +1335,6 @@ For any set $x$, the following conditions are equivalent:
     \item $x \subseteq \mathcal{P}(x)$, where \hl{$\mathcal{P}(x)$} denotes the power set of $x$.
 \end{enumerate}
 \end{proposition}
-
 \input{../_definitions/definition_transitive_closure_of_a_set.tex}
 
 \input{../_definitions/definition_ordinal_number.tex}

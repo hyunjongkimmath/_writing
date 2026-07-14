@@ -1,0 +1,24 @@
+\begin{lemma}[Rearrangement preserves convergence of series of nonnegative elements in a totally ordered abelian group with the least upper bound property] \label{lemma:absolute_convergence_preserved_by_rearrangement_of_nonnegative_terms}
+    \TODO{AI generated, verify. Generalized from $\bbR$ to any totally ordered abelian group with the LUB property.}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $(a_n)_{n=1}^\infty$ be a sequence in $G$\CrefIfExists{definition:monotone_sequence_of_real_numbers} with $a_n \geq 0$ for all $n$. Let $\sigma : \mathbb{N} \to \mathbb{N}$ be any bijection. For a series of nonnegative terms, we say that it \hldef{converges} if its sequence of partial sums is bounded above; in this case the supremum of the partial sums exists by the least upper bound property, and the series is said to \hldef{converge to} that supremum.
+
+    Then $\sum_{n=1}^\infty a_n$ converges if and only if $\sum_{n=1}^\infty a_{\sigma(n)}$ converges, and in that case
+    $$\hlin{\sum_{n=1}^\infty a_{\sigma(n)} = \sum_{n=1}^\infty a_n.}$$
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S_N = \sum_{n=1}^N a_n$ and $T_M = \sum_{m=1}^M a_{\sigma(m)}$ denote the partial sums of the original and rearranged series respectively. Since $a_n \geq 0$ for all $n$, both $(S_N)$ and $(T_M)$ are \CrefAndHyperrefIfExist{definition:monotone_sequence_of_real_numbers}{nondecreasing} sequences.
+
+    We first show that if $\sum a_n$ converges, then $\sum a_{\sigma(n)}$ also converges and has the same sum. Let $S = \sup\{S_N : N \in \mathbb{N}\}$ be the sum of the original series.
+
+    For any $M \in \mathbb{N}$, let $K = \max\{\sigma(1), \sigma(2), \dots, \sigma(M)\}$. Then $\{\sigma(1), \dots, \sigma(M)\} \subseteq \{1, \dots, K\}$, so since all terms are nonnegative we have
+    $$T_M = \sum_{m=1}^M a_{\sigma(m)} \leq \sum_{n=1}^K a_n = S_K \leq S.$$
+    Hence $(T_M)$ is bounded above by $S$, so $\sum a_{\sigma(n)}$ converges, and its sum $T := \sup\{T_M : M \in \mathbb{N}\}$ satisfies $T \leq S$.
+
+    Conversely, for any $N \in \mathbb{N}$, since $\sigma$ is surjective, there exists for each $n \in \{1, \dots, N\}$ some $m_n$ such that $\sigma(m_n) = n$. Let $M = \max\{m_1, \dots, m_N\}$. Then $\{1, \dots, N\} \subseteq \{\sigma(1), \dots, \sigma(M)\}$, so
+    $$S_N \leq \sum_{m=1}^M a_{\sigma(m)} = T_M \leq T.$$
+    Thus $S = \sup\{S_N : N \in \mathbb{N}\} \leq T$. Combining $T \leq S$ and $S \leq T$, we obtain $S = T$.
+
+    The reverse direction follows by applying the same argument to the bijection $\sigma^{-1}$: if $\sum a_{\sigma(n)}$ converges to $S'$, then rearranging back via $\sigma^{-1}$ gives $\sum a_n = S'$.
+\end{proof}

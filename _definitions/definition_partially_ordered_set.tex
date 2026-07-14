@@ -5,13 +5,22 @@
         \[
         \leq : P \times P \to \{\text{true}, \text{false}\}
         \]
-        is a binary relation on $P$ satisfying the following axioms for all $a,b,c \in P$:
+        is a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} on $P$ satisfying the following axioms for all $a,b,c \in P$:
         \begin{itemize}
-            \item \hldef{Reflexivity:} $a \leq a$,
-            \item \hldef{Antisymmetry:} if $a \leq b$ and $b \leq a$, then $a = b$,
-            \item \hldef{Transitivity:} if $a \leq b$ and $b \leq c$, then $a \leq c$.
+            \item \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{Reflexivity}: $a \leq a$,
+            \item \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{Antisymmetry}: if $a \leq b$ and $b \leq a$, then $a = b$,
+            \item \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{Transitivity}: if $a \leq b$ and $b \leq c$, then $a \leq c$.
         \end{itemize}
         The relation $\leq$ is called an \hldef{order} or a \hldef{partial order}
+
+        One writes \hl{$a \geq b$} synonymously for $b \leq a$. One might also synonymously write \hl{$a < b$} and \hl{$a > b$} respectively for 
+        \begin{itemize}
+            \item $a \leq b$ and $a \neq b$,
+            \item $a \geq b$ and $a \neq b$.
+        \end{itemize}
+        This binary relation $<$ is then a \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partial order} on $P$\CrefIfExists{proposition:correspondence_between_partial_orders_and_strict_partial_orders_on_a_set}.
+
+        One also says ``\hldef{$a$ is less than or equal or $b$}'', ``\hldef{$a$ is at most $b$}'', or ``\hldef{$a$ is bounded above by $b$}'' to mean $a \leq b$, says ``\hldef{$a$ is greater than or equal to $b$}'', ``\hldef{$a$ is at least $b$}'', or ``\hldef{$a$ is bounded below by $b$}'' to mean $a \geq b$, says ``\hldef{$a$ is less than $b$}'' or ``\hldef{$a$ is strictly bounded above by $b$}'' to mean $a < b$, and says ``\hldef{$a$ is greater than $b$}'' or ``\hldef{$a$ is strictly bounded below by $b$}'' to mean $a > b$.
 
         \item A partially ordered set $(P, \leq)$ is called a \hldef{directed partially ordered set} if for every pair $a,b \in P$, there exists $c \in P$ such that
         \[

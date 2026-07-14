@@ -73,12 +73,245 @@ Let $C/\bbF_q$ be a smooth, geometrically connected curve. Let $X/K(C)$ be a sup
 
 % Let $\Conf_{X/C}^n$ be the configuration space of $n$ unordered points of $C$. 
 
+\begin{context} \label{context:quadratic_twist_of_a_family_of_elliptic_curves_by_a_universal_family_of_polynomials}
+    Let \hl{$q$} be a prime power. Fix an elliptic curve \hl{$E_1/\Fq(t)$} with non-constant $j$-invariant and let \hl{$\mathcal{E}_1 \to \bbP^1_{\Fq}$} be its \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron model}. Let \hl{$\ell$} be a prime not dividing $q$. The kernel $\calE_{1}[\ell]$ is a \CrefAndHyperrefIfExist{definition:etale_morphism_of_schemes}{\'etale} group scheme over $C$\CrefIfExists{proposition:multiplication_by_ell_for_commutative_group_scheme_over_general_base_is_etale_if_characteristic_of_residue_fields_is_different_from_ell} and in particular is \CrefAndHyperrefIfExist{definition:quasifinite_morphism_of_schemes}{quasi-finite}\CrefIfExists{proposition:etale_morphisms_of_schemes_are_quasifinite}.
+
+    For a positive integer $d$, and for an algebraically closed extension field $\bark$ of $\Fq$, identify a geometric point $(C_0,\ldots,C_{d-1}) (\Spec \Fq[c_0,\ldots,c_{d-1}])(\bark)$ for $(C_0,\ldots,C_{d-1}) \in \bark^d$ with a monic polynomial $t^d + C_{d-1} t^{d-1} + \cdots + C_1 t + C_0 \in \Fqbar[t]$. Fixing a polynomial $m \in \bbF_q[t]$, let \hl{$F_d \subset \Spec \Fq[c_0,\ldots,c_{d-1}]$} be the parameter space of square-free polynomials of degree $d$ relatively prime to $m$. Explicitly, 
+    $$F_d = \Spec \Fq[c_0,\ldots,c_{d-1}] \setminus (\Delta \cup V(m))$$
+    \TODO{resultant}
+    where \hl{$\Delta$} is the \CrefAndHyperrefIfExist{definition:discriminant_of_a_polynomial_over_a_commutative_ring}{discriminant} locus in $\Spec \Fq[c_0,\ldots,c_{d-1}]$ and \hl{$V(m)$} is the locus of polynomials that are not coprime with $m$. For each geometric point of $F_d(\Fqbar)$ corresponding to a polynomial $f \in \Fqbar[t]$, let \hl{$E_f/K$} be the \CrefAndHyperrefIfExist{definition:quadratic_twist_of_an_elliptic_curve_over_a_field}{quadratic twist} of by $f$. Let \hl{$\calE_f \to \bbP_\Fq^1$} be its \CrefAndHyperrefIfExist{definition:neron_model_of_an_abelian_variety_over_the_function_field_of_an_integral_scheme.tex}{N\'eron model}. 
+
+    Let \hl{$S \coloneq \bbP_\Fq^1 \times F_d$}; in accordance to the notations above, it has coordinates $(t,c)$. Let \hl{$P(t,c) = t^d+c_{d-1} t^{d-1} + \cdots + c_1 t + c_0 \in \Fq[t][c_0,\ldots,c_{d-1}]$} be the universal monic polynomial of degree $d$ over $F_d$ --- it is a function on $\bbA^1 \times F_d \subset S$. Let \hl{$\calE_{\text{univ}} = \calE_1 \times_{\bbP_\Fq^1} S \to S$}. Let \hl{$\widetilde{S} \subset \bbA_\Fq^1 \times S$}, with coordinates $(y,t,c)$, be the closed subscheme defined by 
+    $$w^2 = P(t,c).$$
+    The natural projection 
+    $$\hlin{\sigma: \widetilde{S} \to S, \quad (w,t,c) \mapsto (t,c)}$$
+    is a finite flat double cover. Let \hl{$U_{\text{ram}} \subset S$} be the branch locus of $\sigma$, explicitly given by $P(t,c) = 0$. Let \hl{$U = S \setminus U_{\text{ram}}$}. In particular, the restriction $\sigma|_{\widetilde{S}|_U} : \widetilde{S}|_U \to U$ is a finite \'etale Galois cover with Galois group $\Z/2\Z$.
+
+    Let \hl{$\iota: \widetilde{S} \to \widetilde{S}$} be the involution $(w,t,c) \mapsto (-w,t,c)$. Writing $(Q, w, t, c)$ for a point of 
+    $$\sigma^* \calE_{\text{univ}} = \calE_1 \times_S \widetilde{S} = (\calE_1 \times_{\bbP_\Fq^1} S) \times_S \widetilde{S} = \widetilde{E}_1\times_{\bbP_{\Fq}^1} \widetilde{S},$$
+    there is an action by $\bbZ/2\bbZ$ on $\sigma^* \mathcal{E}_{\text{univ}}$ by the action
+    $$(Q, w, t, c) \mapsto (-Q, \iota(w,t,c)) = (-Q, -w, t, c).$$
+    This action is \'etale and free on the generic fiber. The quotient $\sigma^* \calE_{\text{univ}} / (\bbZ/2\bbZ)$ of $\sigma^* \calE_{\text{univ}}$ by this action, which exists by faithfully flat descent, is a family of generalized elliptic curves $S$. 
+    \TODO{generalized elliptic curve}
+    \TODO{understand how faithfully flat descent works}
+\end{context}
+
+\begin{proposition}  \label{proposition:fiber_of_quadratic_twist_of_family_of_neron_model_of_elliptic_curves_over_F_q_t_over_polynomials_at_a_polynomial_is_quadaratic_twist_of_elliptic_curve_by_polynomial}
+    Assume \Cref{context:quadratic_twist_of_a_family_of_elliptic_curves_by_a_universal_family_of_polynomials}.
+
+    \TODO{should I be expressing this as a fiber of a point or a fiber over $\bbP_{\Fq}^1 \times \text{point}$? Because depending on whether I'm going for a point or a closed locus, I would be taking about a quadratic twist of $E_1$ or $\calE_1$.}
+    For every geometric point $\overline{f} \in F_d(\Fqbar)$ corresponding to a square-free polynomial $f(t) \in \Fqbar[t]$, the restriction of $\calG \coloneq (\sigma^* \calE_{\text{univ}})/(\bbZ/2\bbZ)$, which is a family of generalized elliptic curves over $S$, to the fiber $\bbP_{\Fqbar}^1 \times \{\overline{f}\} \subset S$ is isomorphic to the N\'eron model $\calE_f \to \bbP_{\Fqbar}^1$ of the quadratic twist $E_f$. 
+    \TODO{recheck proof, evaluating why it's the smooth locus}
+    % The fiber of $(\sigma^* \calE_{\text{univ}})/(\bbZ/2\bbZ) \to S$ over a 
+    % point $(t_0, C) \in S(\Fq)$ is the quadratic twist of $\mathcal{E}_1$ by $P(t_0,C)$. 
+\end{proposition}
+\begin{proof}
+    Since $2$ is invertible in $\Fq$, the N\'eron model $\calE_1 \to C$ admits a relative Weierstrass equation
+    % Note that an arbitrary elliptic scheme does not automatically admit a global Weierstrass equation, but we still have local Weierstrass equations.
+    $$y^2 = x^3 + Ax + B$$
+    \TODO{probably a relative Riemann-Roch theorem yields this}
+    locally over $C$ where $A$ and $B$ are sections of $\underline{\omega}_{\calE_1/C}^{\oplus 4}$ and $\underline{\omega}_{\calE_1/C}^{\oplus 6}$ respectively. Write $\pi: S = \bbP_{\Fq}^1 \times F_d \to F_d$ be the projection and let $\sigma: \widetilde{S} \to S$ be the double cover as in \Cref{context:quadratic_twist_of_a_family_of_elliptic_curves_by_a_universal_family_of_polynomials}. The pullback of $\calE_1 \to C$ via $\sigma \circ p$ is the total space $\sigma^* \calE_{\text{univ}} \to \widetilde{S}$, which has equation
+    $$y^2 = x^3 + (\sigma \circ \pi)^* A \cdot x + (\sigma \circ \pi)^* B.$$
+    The involution $(Q,w,t,c) \mapsto (-Q,-w,t,c)$ on $\sigma^* \calE_{\text{univ}}$ fixes $x$ and negates $y$ and $w$. Setting
+    $$X = x, \quad Y = wy,$$
+    these are invariant under the action since $(-w)(-y) = wy$. These satisfy
+    $$Y^2 = w^2 y^2 = P(t,c) \cdot \left( X^3 + (\sigma \circ \pi)^* A \cdot X + (\sigma \circ \pi)^* B \right),$$
+    which is an equation that descends to $S$ because $P(t,c)$, $(\sigma \circ \pi)^* A$, and $(\sigma \circ \pi)^* B$ do not depend on $w$. In other words, we have a family of elliptic curves over $S$ with Weierstrass equation given by
+    $$Y^2 = P(t,c) \cdot (X^3 + p^* A \cdot X + p^* B).$$
+    The fibers of this relative generalized elliptic curve over $(t_0, C) \in S(\Fq)$ is thus indeed the quadratic twist of $\calE_1$ by $P(t_0,c_0)$.
+\end{proof}
+
+\begin{proposition}
+    Assume \Cref{context:quadratic_twist_of_a_family_of_elliptic_curves_by_a_universal_family_of_polynomials}. Let $\calG = \sigma^* \calE_{\text{univ}} / (\bbZ/2\bbZ)$, which is a family of generalized elliptic curves over $S$. 
+    \TODO{semistable}
+    Let $j: S_{\text{sm}} \hookrightarrow S$ be the open immersion of the semistable locus, i.e. the locus where $\calG \to S$ has good or multiplicative reduction. The kernel $\calG[\ell]$ of multiplication by $\ell$ is an \'etale group scheme over $S$ that restricts to a finite group scheme over $S_{\text{sm}}$. We identify $\calG[\ell]$ with a an \'etale $\bbF_\ell$-sheaf $\calG_\ell$ on $S$ whose restriction to $S_{\text{sm}}$ is lisse. In particular, $j_* j^* \calG_\ell$ is a constructible $\bbF_\ell$-sheaf on $S$. Let $\pi: S = \bbP_{\Fq}^1 \times F_d \to F_d$ be the projection. The first higher direct image
+    $$\hlin{\calT_{d,\ell} = R^1 \pi_* (j_* j^* \calG_\ell)}$$
+    is a lisse $\bbF_\ell$-sheaf on $F_d$ and for every geometric point $\overline{f} \in F_d(\Fqbar)$, the geometric fiber is 
+    $$\calT_{d,\ell}|_{\overline{f}} \cong H^1(\bbP_{\Fqbar}^1, \calE_{f,\ell})$$
+    where \hl{$\calE_{f,\ell}$} is the N\'eron model of $\ell$-torsion subgroup $E_f[\ell]$ for the quadratic twist $E_f/\Fq(t)$.
+\end{proposition}
+\begin{proof}
+    We have a Cartesian diagram:
+    \begin{center}
+    \begin{tikzcd}
+    \mathbb{P}^1_{\overline{\mathbb{F}}_q} \arrow[r, "i_{\overline{f}}"] \arrow[d, "\pi_{\overline{f}}"] & S = \mathbb{P}^1_{\mathbb{F}_q} \times F_d \arrow[d, "\pi"] \\
+    \text{Spec } \overline{\mathbb{F}}_q \arrow[r, "\overline{f}"] & F_d
+    \end{tikzcd}
+    \end{center}
+    Since $\pi: S \to F_d$ is a proper morphism and $j_* j^* \calG_\ell$ is a constructible $\mathbb{F}_\ell$-sheaf on $S$, the Proper Base Change Theorem yields a canonical isomorphism:
+    \TODO{proper base change theorem in this context}
+    \[ \calT_{d,\ell}|_{\overline{f}} = (R^1 \pi_* (j_* j^* \calG_\ell))_{\overline{f}} \cong H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, i_{\overline{f}}^* j_* j^* \calG_\ell). \]
+
+    Let $j_{\overline{f}}: S_{\text{sm}} \times_S \mathbb{P}^1_{\overline{\mathbb{F}}_q} \hookrightarrow \mathbb{P}^1_{\overline{\mathbb{F}}_q}$ denote the pullback of the open immersion $j$ via the inclusion $i_{\overline{f}}$:
+    \begin{center}
+    \begin{tikzcd}
+        S_{\text{sm}} \times_S \mathbb{P}^1_{\overline{\mathbb{F}}_q} \arrow[r, "i_{\overline{f}, \text{sm}}"] \arrow[d, "j_{\overline{f}}"] & S_{\text{sm}} \arrow[d, "j"] \\
+        \mathbb{P}^1_{\overline{\mathbb{F}}_q} \arrow[r, "i_{\overline{f}}"] & S.
+    \end{tikzcd}
+    \end{center}
+    By the base change theorem for direct images of unramified torsion sheaves along open immersions, we have a canonical isomorphism:
+    \[ i_{\overline{f}}^* j_* j^* \calG_\ell \cong (j_{\overline{f}})_* i_{\overline{f}, \text{sm}}^* j^* \calG_\ell. \]
+
+    By \Cref{proposition:fiber_of_quadratic_twist_of_family_of_neron_model_of_elliptic_curves_over_F_q_t_over_polynomials_at_a_polynomial_is_quadaratic_twist_of_elliptic_curve_by_polynomial}, the restriction of $\calG$ to the fiber $\mathbb{P}^1_{\overline{\mathbb{F}}_q}$ is canonically isomorphic to the N\'eron model $\calE_f$. Since the formation of $\ell$-torsion kernels commutes with base change, we have the following sequence of canonical isomorphisms of group schemes over the smooth locus of the fiber:
+    \[
+    i_{\overline{f}, \text{sm}}^* \left( \calG|_{S_{\text{sm}}}[\ell] \right) \cong \left( i_{\overline{f}, \text{sm}}^* \calG|_{S_{\text{sm}}} \right)[\ell] \cong \left( j_{\overline{f}}^* \calE_f^{\text{sm}} \right)[\ell] \cong j_{\overline{f}}^* \left( \calE_f^{\text{sm}}[\ell] \right).
+    \]
+    Passing to the associated \'etale $\mathbb{F}_\ell$-sheaves yields the identification $i_{\overline{f}, \text{sm}}^* j^* \calG_\ell \cong j_{\overline{f}}^* \calE_{f,\ell}$. Substituting this into the above base change isomorphism gives:
+    \[ i_{\overline{f}}^* j_* j^* \calG_\ell \cong (j_{\overline{f}})_* j_{\overline{f}}^* \calE_{f,\ell}. \]
+
+    Since $\ell \nmid q$, the $\ell$-torsion subgroup scheme of a N\'eron model satisfies the extension property $\calE_{f,\ell} \cong (j_{\overline{f}})_* j_{\overline{f}}^* \calE_{f,\ell}$. We thereby obtain the desired identification of the geometric fiber:
+    \[ \calT_{d,\ell}|_{\overline{f}} \cong H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell}). \]
+    
+    \TODO{verify the below}
+    It remains to show that $\calT_{d,\ell}$ is a lisse $\mathbb{F}_\ell$-sheaf on $F_d$. Since $F_d$ is smooth over $\mathbb{F}_q$, it suffices to show that the dimension of the geometric fibers $\dim_{\mathbb{F}_\ell} H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell})$ is constant for all $\overline{f} \in F_d(\overline{\mathbb{F}}_q)$ and that the sheaf is unramified. 
+    
+    The dimension of $H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell})$ is given by the Grothendieck--Ogg--Shafarevich formula applied to the elliptic curve $E_f / \overline{\mathbb{F}}_q(t)$:
+    \[ \dim_{\mathbb{F}_\ell} H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell}) = 2 \cdot \text{deg}(\text{Cond}(E_f)) - 4 + \sum_{v \in \mathbb{P}^1} \delta_v(E_f[\ell]). \]
+    Because $\ell \neq p$, the wild ramification terms vanish ($\delta_v = 0$). Furthermore, since $f$ is a square-free polynomial of degree $d$ coprime to the conductor of $E_1$, the degree of the conductor divisor $\text{deg}(\text{Cond}(E_f))$ is constant across all $\overline{f} \in F_d(\overline{\mathbb{F}}_q)$. Thus, the higher direct image $\calT_{d,\ell}$ has constant fiber dimension and is locally constant, hence it is a lisse $\mathbb{F}_\ell$-sheaf on $F_d$.
+    
+    % By \Cref{prop:universal_quadratic_twist}, the restriction of $\calG$ to the fiber over $\overline{f}$ is canonically isomorphic to the smooth locus of the N\'eron model $\calE_f \to \mathbb{P}^1_{\overline{\mathbb{F}}_q}$. Taking $\ell$-torsion preserves this isomorphism on the smooth loci, so $i_{\overline{f}, \text{sm}}^* j^* \calG_\ell \cong j_{\overline{f}}^* \calE_{f,\ell}$. Substituting this back yields:
+    % \[ i_{\overline{f}}^* j_* j^* \calG_\ell \cong (j_{\overline{f}})_* j_{\overline{f}}^* \calE_{f,\ell}. \]
+    
+    % By the extension property of the $\ell$-torsion subgroup scheme of a N\'eron model when $\ell \nmid q$, the natural map $\calE_{f,\ell} \to (j_{\overline{f}})_* j_{\overline{f}}^* \calE_{f,\ell}$ is an isomorphism. Consequently, we obtain the desired identification of the geometric fiber:
+    % \[ \calT_{d,\ell}|_{\overline{f}} \cong H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell}). \]
+    
+    % It remains to show that $\calT_{d,\ell}$ is a lisse $\mathbb{F}_\ell$-sheaf on $F_d$. Since $F_d$ is smooth over $\mathbb{F}_q$, it suffices to show that the dimension of the geometric fibers $\dim_{\mathbb{F}_\ell} H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell})$ is constant for all $\overline{f} \in F_d(\overline{\mathbb{F}}_q)$ and that the sheaf is unramified. 
+    
+    % The dimension of $H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell})$ can be computed via the Grothendieck--Ogg--Shafarevich formula applied to the elliptic curve $E_f$ over $\overline{\mathbb{F}}_q(t)$:
+    % \[ \dim_{\mathbb{F}_\ell} H^1(\mathbb{P}^1_{\overline{\mathbb{F}}_q}, \calE_{f,\ell}) = 2 \cdot \text{deg}(\text{Cond}(E_f)) - 4 + \sum_{v \in \mathbb{P}^1} \delta_v(E_f[\ell]) \]
+    % where $\text{Cond}(E_f)$ is the conductor divisor and $\delta_v$ denotes the local wild ramification terms. Since $\ell \neq p$, the wild ramification terms vanish ($\delta_v = 0$). 
+    
+    % Furthermore, because $f$ is a square-free polynomial of degree $d$ coprime to the conductor of $E_1$, the conductor of the quadratic twist $E_f$ changes in a totally predictable, uniform manner based purely on the degree $d$ and the bad reduction locus of $E_1$. Thus, the degree of the conductor $\text{deg}(\text{Cond}(E_f))$ is completely invariant across all $\overline{f} \in F_d(\overline{\mathbb{F}}_q)$. 
+    
+    % Because the dimensions of the fibers are constant and the underlying sheaf sequence transitions smoothly in a family over the smooth base parameter space $F_d$, the higher direct image $\calT_{d,\ell}$ is locally constant, and hence a lisse $\mathbb{F}_\ell$-sheaf on $F_d$.
+\end{proof}
+
+\begin{proposition} \label{proposition:geometric_stalk_of_pushforward_of_lisse_sheaf_on_open_subscheme_of_integral_normal_scheme_at_codimension_1_point_is_invariant_subgroup_of_representation_by_inertia_group}
+    Let $X$ be an \CrefAndHyperrefIfExist{definition:integral_scheme}{integral} \CrefAndHyperrefIfExist{definition:normal_and_factorial_scheme}{normal scheme} with \CrefAndHyperrefIfExist{definition:generic_point_of_a_topological_space}{generic point} $\eta$. Let $j: U \hookrightarrow X$ be the inclusion of a non-empty \CrefAndHyperrefIfExist{definition:open_and_closed_subscheme_of_a_scheme}{open subscheme}. Let $x \in X \setminus U$ be a point of \CrefAndHyperrefIfExist{definition:codimension_of_an_irreducible_closed_subset_in_a_topological_space}{codimension} $1$ in $X$. Write $I_x \subset \pioneet(U,\overline{\eta})$ for the \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{inertia group}. 
+
+    % Let $C$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}, \CrefAndHyperrefIfExist{definition:connected_object_of_a_galois_category}{connected}, \CrefAndHyperrefIfExist{definition:algebraic_curve_over_a_field}{algebraic curve} over an \CrefAndHyperrefIfExist{definition:algebraically_closed_field}{algebraically closed} \CrefAndHyperrefIfExist{definition:field}{field} $k$. Let $S \subset X$ be a \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{finite set} of closed points, and let $U = X \setminus S$ be the open complement. Let $j: U \hookrightarrow X$ be the \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{open immersion}. For any \CrefAndHyperrefIfExist{definition:closed_point_of_a_topological_space}{closed point} $x \in S$, let $\overline{x} \to X$ be a chosen \CrefAndHyperrefIfExist{definition:geometric_point_of_a_scheme}{geometric point} over $x$. This choice determines a local \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{decomposition group} at $x$, which canonically identifies with the local \CrefAndHyperrefIfExist{definition:decomposition_and_inertia_subgroups_of_etale_fundamental_group_of_dense_open_of_integral_normal_scheme_at_point_in_complement}{inertia group} $I_x \subset \pioneet(U,\overline{\eta})$ where $\eta$ is the generic point of $U$. 
+
+    Let $\calG$ be a \CrefAndHyperrefIfExist{definition:lisse_sheaf_on_a_scheme}{lisse sheaf} on $U$, in any of the following sense:
+    \begin{enumerate}
+        \item a $\Lambda$-lisse sheaf where $\Lambda$ is a finite ring,
+        \item An adic lisse sheaf with coefficients in $R$, $E$, or $K$, where $(R,\lambda)$ is a complete DVR with $R/\lambda^n$ finite for all $n \geq 1$, $E$ is its fraction field, and $K$ is an algebraic extension of $E$, 
+    \end{enumerate}
+    Write $\rho: \pioneet(U,\overline{\eta}) \to \GL(V)$ for the corresponding\CrefIfExists{theorem:locally_constant_sheaves_on_X_etale_are_equivalent_to_representations_of_the_etale_fundamental_group}\CrefIfExists{theorem:lisse_ell_adic_sheaves_on_connected_noetherian_schemes_are_equivalent_to_representations_of_etale_fundamental_group_over_adic_ring} continuous representation where $V$ is a module over an appropriate ring.
+
+    The geometric stalk $(j_* \calG)_{\overline{x}}$
+    \CrefIfExists{definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point}\CrefIfExists{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme}\CrefIfExists{definition:geometric_stalk_of_an_etale_lambda_adic_sheaf_on_a_scheme_with_rational_coefficients} is isomorphic to $V^{I_{\overline{x}}}$ \CrefIfExists{definition:invariant_subgroup_of_a_group_acting_on_an_abelian_group}.
+\end{proposition}
+\begin{proof}
+    It suffices to prove this in the case that $\calG$ is a lisse sheaf with coefficients in $\Lambda$ for a finite ring $\Lambda$. By \Cref{theorem:stalks_of_etale_sheaves_at_geometric_points_are_the_values_of_the_sheaves_at_the_strict_henselization_of_the_local_rings_at_the_image_of_the_point}, we have 
+    $$(j_* \calG)_{\overline{x}} \cong \Gamma(\Spec(\calO_{X,x}^{\text{sh}}), g^* j_* \calG)$$
+    where $g: \Spec(\calO_{X,x}^{\text{sh}}) \to X$ is the canonical morphism. Let $K_x^{\text{sh}}$ be the fraction field of $\calO_{X,x}^{\text{sh}}$. We have the Cartesian square
+    \begin{center}
+    \begin{tikzcd}
+        K_x^{\text{sh}} \ar[r, "\widetilde{g}"]   \ar[d, "\widetilde{j}"] & U \ar[d, "j"] \\ 
+        \Spec(\calO_{X,x}^{\text{sh}}) \ar[r, "g"] & X.  
+    \end{tikzcd}
+    \end{center}
+    By the base change theorem, \TODO{which one}
+    $$g^* j_* \calG \cong \widetilde{j}_*\widetilde{g}^* \calG$$
+    and hence
+    $$(j_* \calG)_{\overline{x}} \cong \Gamma(\Spec(\calO_{X,x}^{\text{sh}}), \widetilde{j}_*\widetilde{g}^* \calG) \cong \Gamma(\Spec(K_x^{\text{sh}}) , \widetilde{g}^* \calG)$$
+    \TODO{write as a general fact that inertia group inclusion corresponds to scheme map $\Spec(K_x^{\text{sh}}) \to U$}
+    The inclusion $\widetilde{g}: \Spec(K_x^{\text{sh}}) \to U$ induces the inclusion $I_{x} \hookrightarrow \pioneet(U, \overline{\eta})$ of the inertia group at $x$. In particular, the pullback $\widetilde{g}^* \calG$ corresponds to the representation $\rho$ restricted to $I_{x}$ and its global sections is the $I_x$-invariants of $V$. In other words, $(j_* \calG)_{\overline{x}} \cong V^{I_x}$ as desired.
+\end{proof}
+
+% \begin{proof}
+%     We have a Cartesian diagram
+%     \begin{center}
+%     \begin{tikzcd}
+%     \mathbb{P}^1_{\overline{\mathbb{F}}q} \arrow[r, "i_{\overline{f}}"] \arrow[d, "\pi_{\overline{f}}"] & S = \mathbb{P}^1_{\mathbb{F}_q} \times F_d \arrow[d, "\pi"] \\
+%     \text{Spec } \overline{\mathbb{F}}_q \arrow[r, "\overline{f}"] & F_d
+%     \end{tikzcd}
+%     \end{center}
+%     By the proper base change theorem,
+%     $$(R^1 \pi_* (j_* j^* \calG_\ell))_{\overline{f}} \cong H^1(\bbP_{\Fqbar}^1, i_{\overline{f}}^* j_* j^* \calG_\ell )$$
+
+%     \begin{center}
+%     \begin{tikzcd}
+%         S_{\text{sm}} \cap (\bbP_{\Fqbar}^1)  \ar[r] \ar[d]  & \Spec \Fqbar \ar[d, "\overline{f}"]  \\
+%     S_{\text{sm}} \ar[r, "j \circ \pi"]  & F_d 
+%     \end{tikzcd}
+%     \end{center}
+%     Write $\Spec \Fqbar \to $
+% \end{proof}
+
 \input{../_assembly/source_bridge/theorem_explicit_construction_of_T_d_ell_as_derived_pushforward_of_Neron_l_torsion_sheaf_on_universal_quadratic_cover.tex}
 
-\begin{definition} \label{definition:}
 
+\section{Ellenberg and Landesman's Needs}
+
+\begin{definition}[see {\cite[Definition 2.4.2.]{ellenberg_landesman_hsghssgqtfff}} for a discussion] \label{definition:hurwitz_stack_of_G_covers_over_a_curve_over_a_base_scheme}
+    \TODO{divisor over a scheme}
+    Let $B$ be a \CrefAndHyperrefIfExist{definition:scheme}{base scheme}. Let $C \to B$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}, \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} \CrefAndHyperrefIfExist{definition:curve_over_a_scheme}{relative curve} with \CrefAndHyperrefIfExist{definition:has_geometrically_connected_fibers_for_a_morphism_of_schemes}{geometrically connected fibers} of \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}{genus} $g$. Let $Z \subset C$ be a \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale} \CrefAndHyperrefIfExist{definition:relative_effective_cartier_divisor_on_a_scheme_over_a_scheme}{divisor} over $B$. Let $U = C \setminus Z$. 
+
+    \TODO{boundary compnent, puncture}
+    Let $\Sigma_{g,n,f+1}$ a \CrefAndHyperrefIfExist{definition:genus_of_a_topological_space}{genus} $g$ \CrefAndHyperrefIfExist{definition:surface_as_a_manifold}{topological surface} with $b$ boundary components and $f$ punctures.
+    \TODO{action}
+    Suppose that $\mathcal{S} \subset \Hom(\pioneet(\Sigma_{g,n,f+1}),G)$ is a $G$ conjugation invariant subset preserved by the action of $\pioneet(\Conf_{U_{\overline{b}} / \overline{b}}^n)$ acting on the first $n$ points. Define the \hldef{Hurwitz stack} $\Hur_{C/B}^{G,n,Z,S}$ to be the \CrefAndHyperrefIfExist{definition:artin_stack_over_a_scheme_for_a_grothendieck_topology_on_the_category_of_S_schemes}{algebraic stack} over $B$ whose functor of points is defined as follows: for $T$ a $B$-scheme, $\Hur_{C/B}^{G,n,Z,S}(T)$ is the \CrefAndHyperrefIfExist{definition:groupoid}{groupoid} whose objects are the tuples
+    $$(D,i: D \to C_T, X, h: X \to C_T)$$
+    such that 
+    \begin{itemize}
+        \item $D$ is a \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale cover} of $T$ of degree $n$.
+        \item $i$ is a \CrefAndHyperrefIfExist{definition:open_and_closed_immersions_of_schemes}{closed immersion} $i: D \subset C_T$ that is disjoint from $Z_T \subset C_T$.
+        \item $X$ is a smooth proper relative curve over $T$, not necessarily having geometrically connected fibers.
+        \item $h: X \to C_T$ is a \CrefAndHyperrefIfExist{definition:finite_locally_free_morphism_of_schemes}{finite locally free} \CrefAndHyperrefIfExist{definition:galois_morphism_of_schemes}{Galois $G$-cover} that is \'etale away from $Z_T \cup i(D) \subset C_T$. 
+        \item Let ${\overline{t}} \to T$ be a fixed geometric point. Let $\overline{\eta}$ denote the geometric generic point of $(C_T)_{\overline{t}}$. Then the representation $\rho: \pi_1((U_T)_{\overline{t}}-i(D_{\overline{t}}), \overline{\eta}) \to G$ \CrefAndHyperrefIfExist{theorem:finite_etale_covers_of_a_connected_scheme_correspond_to_finite_sets_with_an_action_of_the_etale_fundamental_group}{corresponding to} the $G$-cover $h$, under the identification of $\mathrm{Hom}(\pi_1((U_T)_{\overline{t}}-i(D_{\overline{t}}), \overline{\eta}),G)$ and $\mathrm{Hom}(\pi_1(\Sigma_{g,n+f+1}), G)$ corresponds to an element of $\mathcal S$.
+    \end{itemize}
+    Two covers $X \to C_T$ are considered equivalent if they are related by the $G$-conjugation action \TODO{what does this mean}. Morphisms between two points $(D_j, i_j, X_j, h_j)$ for $j \in \{1,2\}$ are given by $(\phi_D, \psi_X)$ where $\phi_D: D_1 \simeq D_2$ is an isomorphism so that $i_2 \circ \phi_D = i_2$ and $\psi_X: X_1 \simeq X_2$ is an isomorphism such that $h_2 \circ \psi_X = h_1$ and $\psi_X = g^{-1} \psi_X g$ for every $g \in G$.
 \end{definition}
 
+\begin{definition}
+    Let $B$ be a \CrefAndHyperrefIfExist{definition:scheme}{base scheme}. Let $C \to B$ be a \CrefAndHyperrefIfExist{definition:smooth_morphism_of_schemes}{smooth}, \CrefAndHyperrefIfExist{definition:proper_morphism_of_schemes}{proper} \CrefAndHyperrefIfExist{definition:curve_over_a_scheme}{relative curve} with \CrefAndHyperrefIfExist{definition:has_geometrically_connected_fibers_for_a_morphism_of_schemes}{geometrically connected fibers} of \CrefAndHyperrefIfExist{definition:geometric_genus_of_a_smooth_projective_variety_over_a_field}{genus} $g$. Let $Z \subset C$ be a \CrefAndHyperrefIfExist{definition:finite_etale_cover_of_a_scheme}{finite \'etale} \CrefAndHyperrefIfExist{definition:relative_effective_cartier_divisor_on_a_scheme_over_a_scheme}{divisor} over $B$. Let $U = C \setminus Z$. 
+
+    
+\end{definition}
+
+\begin{proposition}
+    Let $B = \overline{b} = \Spec k$ be a geometric point where $k$ is an algebraically closed field.
+    
+    \TODO{say what g,r,f, Dx, F} are
+    Let $n$ be an even integer such that 
+    \begin{align*}
+        n > \max\left(2g,\frac{2(2r+1)(f+1) - \sum_{y \in D_x({\overline b})} \mathrm{Drop}_y(\mathscr F)}{2r} - (2g-2) \right).
+    \end{align*}
+    \CrefIfExists{definition:drop_of_a_lisse_sheaf_on_dense_open_of_integral_normal_scheme_at_point_in_complement}
+    Let $C \to B$ be a smooth, proper connected curve of genus $g$. Let $Z \subset C$ be a finite \'etale divisor over $B$. Let $U = C \setminus Z$. 
+    Let $\operatorname{QTwist}_{U/B}^n \coloneq \operatorname{Hur}_{C/B}^{\bbZ/2\bbZ, n, Z, \mathcal{S}}$(\Cref{definition:hurwitz_stack_of_G_covers_over_a_curve_over_a_base_scheme}); note that there is a natural projection map 
+    $$\operatorname{QTwist}_{U/B}^n \to \Conf_{U/B}^n.$$
+    \TODO{this variant of the configuration space}
+    Let $x = [(D,\phi)] \in \operatorname{QTwist}_{U/B}^n$ be a $k$-point, let $y \in \Conf_{U/B}^n$ be its image under the above projection map. Let 
+    $$\mathscr{C}_B^n \coloneq \Conf_{U/B}^n \times_B C$$
+    be the ``universal curve'' over the configuration space $\Conf_{U/B}^n$ associated to the curve $C \to B$, and let 
+    $$\xi: \mathscr{C}_B^n \to \Conf_{U/B}^n$$
+    be the projection map. Let $C_x \cong y \times_B C \cong C$ be the fiber of $\xi$ over $y$. 
+
+    By \TODO{cite katz}, there is a map $h: C_x \to \mathbb{P}^1$ of degree $n$ such that the branch locus $\operatorname{br}(h)$ of $h$ is disjoint from $h((Z \cup D)_x)$, $h$ separates points of $(Z \cup D)_x$, and precisely one point $\delta \in D_x$ maps to $\infty \in \bbP^1$. Let $W \subset \mathbb{P}^1$ to be the complement of $\operatorname{br}(h) \cup h(Z \cup D)$. 
+
+    \TODO{wait, how do we define kummer sheaves over more general fields?}
+    We construct a map $\phi: W \to \operatorname{QTwist}_{U/\overline{b}}^n$. Such a map corresponds to a finite double cover $V$ of $C \times_{\overline{b}} W$, which in turn is equivalent to specifying a rank $1$ locally constant constructible $\bbZ/\ell\bbZ$-sheaf on an open subset of $C \times_{\overline{b}} W$ whose monodromy is trivialized by. Let $t: X \to U$ be the finite double cover corresponding to $x$; in particular, $t$ is \'etale away from $D$. Let $\bbV \coloneq t_* (\bbZ/\ell \bbZ)/(\bbZ/\ell\bbZ)$, which is a rank $1$ constructible sheaf $\bbZ/\ell \bbZ$-sheaf on $U$ that becomes locally constant on $U-D$. Let $\mathscr{F}' = \mathscr{F} \otimes \mathbb{V}$, i.e. $\mathscr{F}'$ is the quadratic twist of $\mathscr{F}$ corresponding to $x$.  \TODO{think about how $\mathscr{F}'$ is the quadratic twist corresponding to $x$}
+    
+    Let $\calL_\chi$ be the \CrefAndHyperrefIfExist{definition:kummer_sheaf_associated_to_a_character_on_points_of_a_connected_commutative_algebraic_group_over_a_finite_field}{Kummer sheaf} on $\bbG_m$ corresponding to the double cover $\bbG_m \xrightarrow{z \mapsto z^2} \bbG_m$. Construct the following maps:
+    \begin{align*}
+    \alpha'&: \bbA^1 \times \bbA^1 -\Delta \to \bbG_m, \quad (x,y) \mapsto x-y \\
+    \alpha&: Y \coloneq (h,\id)^{-1}(W \times W - \Delta) \xrightarrow{(h,\id)} \bbA^1 \times \bbA^1 - \Delta \xrightarrow{\alpha'} \bbG_m.
+    \end{align*}
+    let $\mathbb{W} \coloneq \alpha^* \calL_\chi$. 
+    Let $p_C: C \times W \to C$ be the projection.
+    % Let $\pi_2: Y \to \bbA^1$ be the second projection. 
+    \TODO{continue} 
+    Noting that $h^{-1}(W-0) \subset U-D$, let $\mathbb{V}'$ be the sheaf on $h^{-1}(W-0)$ given by 
+    $$\mathbb{V}' \coloneq \mathbb{W}|_{h^{-1}(W-0) \times 0} \otimes \mathbb{V}|_{h^{-1}(W-0)}.$$
+    
+
+\end{proposition}
+
+\section{Twists}
+
+\input{../_definitions/definition_twist_of_an_etale_sheaf_on_a_scheme_with_various_coefficients_by_a_character_on_the_etale_fundamental_group.tex}
 
 
 
@@ -128,3 +361,4 @@ Let $C/\bbF_q$ be a smooth, geometrically connected curve. Let $X/K(C)$ be a sup
 \input{../_definitions/definition_inertia_group_of_a_general_galois_extension_of_valuation_fields.tex}
 
 \input{../_concepts/proposition_mor_from_et_fund_grp_of_gen_pt_of_norm_int_sch_to_et_fund_grp_of_scheme_is_quo_map_of_gal_grp_of_sep_clos_of_func_field_to_gal_grp_of_max_unr_ext.tex}
+\input{../_definitions/definition_drop_of_a_lisse_sheaf_on_dense_open_of_integral_normal_scheme_at_point_in_complement.tex}

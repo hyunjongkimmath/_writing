@@ -1,0 +1,21 @@
+\begin{definition} \label{definition:non_degenerate_nonsingular_perfect_bilinear_form_on_modules_over_a_commutative_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be a commutative \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $\beta: M \times N \to R$ be a \CrefAndHyperrefIfExist{definition:multilinear_map_of_modules_over_rings}{bilinear form} on \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} $M$ and $N$. Let $\hat{\beta}_L: M \to N^\vee$ and $\hat{\beta}_R: N \to M^\vee$ be the \CrefAndHyperrefIfExist{definition:adjoint_maps_of_a_bilinear_form_on_modules_over_a_commutative_ring}{adjoint maps} of $\beta$.
+
+    The bilinear form $\beta$ is called:
+    \begin{enumerate}
+        \item \hldef{non-degenerate on the left} if $\hat{\beta}_L$ is injective;
+        \item \hldef{non-degenerate on the right} if $\hat{\beta}_R$ is injective;
+        \item \hldef{non-degenerate} if both $\hat{\beta}_L$ and $\hat{\beta}_R$ are injective.
+
+        If $\beta$ is symmetric or skew-symmetric (so $M = N$), then $\hat{\beta}_L = \pm \hat{\beta}_R$, so non-degeneracy on the left is equivalent to non-degeneracy on the right.
+    \end{enumerate}
+
+    When $M$ and $N$ are free of finite rank over $R$, the bilinear form $\beta$ is called:
+    \begin{enumerate}
+        \item \hldef{nonsingular} (or \hldef{regular}) if $\hat{\beta}_L$ and $\hat{\beta}_R$ are isomorphisms;
+        \item \hldef{perfect} if $\hat{\beta}_L$ and $\hat{\beta}_R$ are isomorphisms.
+    \end{enumerate}
+
+    For free modules of finite rank, nonsingularity is equivalent to the determinant of the matrix representing $\beta$ in any basis being a unit in $R$.
+\end{definition}

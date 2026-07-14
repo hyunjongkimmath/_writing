@@ -1,0 +1,14 @@
+\begin{definition}[Mutual information between two random variables] \label{definition:mutual_information_between_two_random_variables}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probability_measure_space_for_a_measure_on_a_measurable_space}{probability measure space}. Let $X$ and $Y$ be random variables on $\Omega$ taking values in finite or countable sets $\mathcal{X}$ and $\mathcal{Y}$, with joint distribution $p_{XY}(x, y) = P(X = x, Y = y)$ and marginals $p_X(x)$ and $p_Y(y)$.
+
+The \hldef{mutual information between $X$ and $Y$} (base $e$, measured in nats), denoted \hl{$I(X; Y)$}, is defined as
+$$\hlin{I(X; Y) = \sum_{x \in \mathcal{X}} \sum_{y \in \mathcal{Y}} p_{XY}(x, y) \log \frac{p_{XY}(x, y)}{p_X(x) p_Y(y)}}.$$
+
+Equivalently, $I(X; Y) = D_{\mathrm{KL}}(P_{XY} \| P_X \otimes P_Y)$, where $D_{\mathrm{KL}}$ is the \CrefAndHyperrefIfExist{definition:kullback_leibler_divergence_between_two_probability_distributions}{Kullback--Leibler divergence}. Thus $I(X; Y) \geq 0$, with equality if and only if $X$ and $Y$ are independent.
+
+For continuous random variables with joint density $f_{XY}$ and marginals $f_X, f_Y$, the mutual information is defined analogously as
+$$I(X; Y) = \int \int f_{XY}(x, y) \log \frac{f_{XY}(x, y)}{f_X(x) f_Y(y)} \, dx \, dy.$$
+
+Mutual information satisfies $I(X; Y) = H(X) - H(X \mid Y) = h(X) - h(X \mid Y)$ in the discrete and continuous cases respectively.
+\end{definition}

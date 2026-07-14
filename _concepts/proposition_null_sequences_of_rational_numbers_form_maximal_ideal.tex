@@ -1,0 +1,47 @@
+\begin{proposition} \label{proposition:null_sequences_of_rational_numbers_form_maximal_ideal}
+    Let $\mathcal{C}_\bbQ$ be the \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_rational_numbers}{ring of Cauchy sequences in $\bbQ$}\CrefIfExists{proposition:cauchy_sequences_of_rational_numbers_form_commutative_ring} and let $\mathcal{N}_\bbQ \subseteq \mathcal{C}_\bbQ$ be the set of \CrefAndHyperrefIfExist{definition:null_sequence_in_rational_numbers}{null sequences in $\bbQ$}. Then:
+    \begin{enumerate}
+        \item $\mathcal{N}_\bbQ$ is an \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideal} of $\mathcal{C}_\bbQ$.
+        \item $\mathcal{N}_\bbQ$ is a \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{proper ideal} of $\mathcal{C}_\bbQ$. In fact, $\mathcal{N}_\bbQ$ is a \CrefAndHyperrefIfExist{definition:prime_and_maximal_ideal_of_a_ring}{maximal ideal} of $\mathcal{C}_\bbQ$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We verify each claim in turn.
+
+    \begin{enumerate}
+        \item We show that $\mathcal{N}_\bbQ$ is an ideal of $\mathcal{C}_\bbQ$ by verifying the defining properties from \Cref{definition:ideal_of_a_ring}.
+
+        First, $\mathcal{N}_\bbQ$ is nonempty because the constant sequence $(0)$ is a null sequence. For closure under addition, let $(a_n), (b_n) \in \mathcal{N}_\bbQ$ and let $\varepsilon \in \bbQ_{>0}$. Choose $N_a, N_b \in \bbN$ such that $|a_n| < \varepsilon/2$ for all $n \ge N_a$ and $|b_n| < \varepsilon/2$ for all $n \ge N_b$. Set $N = \max\{N_a, N_b\}$. Then for all $n \ge N$, the triangle inequality (\Cref{definition:absolute_value_on_rational_numbers}) gives
+        $$|a_n + b_n| \le |a_n| + |b_n| < \varepsilon/2 + \varepsilon/2 = \varepsilon,$$
+        so $(a_n + b_n) \in \mathcal{N}_\bbQ$. For additive inverses, if $(a_n) \in \mathcal{N}_\bbQ$, then $|{-a_n}| = |a_n|$ by \Cref{definition:absolute_value_on_rational_numbers}, hence $(-a_n) \in \mathcal{N}_\bbQ$ with the same $N$. Thus $\mathcal{N}_\bbQ$ is an additive subgroup of $\mathcal{C}_\bbQ$.
+
+        Next, we show that $\mathcal{C}_\bbQ \cdot \mathcal{N}_\bbQ \subseteq \mathcal{N}_\bbQ$. Let $(a_n) \in \mathcal{C}_\bbQ$ and $(b_n) \in \mathcal{N}_\bbQ$. Since $(a_n)$ is Cauchy, it is bounded: there exists $M \in \bbQ_{>0}$ such that $|a_n| \le M$ for all $n$ (see the boundedness argument in the proof of \Cref{proposition:cauchy_sequences_of_rational_numbers_form_commutative_ring}). Given $\varepsilon \in \bbQ_{>0}$, choose $N \in \bbN$ such that $|b_n| < \varepsilon/(M+1)$ for all $n \ge N$. Then for all $n \ge N$, multiplicativity of $|\,\cdot\,|$ (\Cref{definition:absolute_value_on_rational_numbers}) gives
+        $$|a_n b_n| = |a_n|\,|b_n| \le M\cdot\frac{\varepsilon}{M+1} < \varepsilon,$$
+        so $(a_n b_n) \in \mathcal{N}_\bbQ$. Therefore $\mathcal{N}_\bbQ$ is an ideal.
+
+        \item The constant sequence $(1)$ is not a null sequence (for $\varepsilon = 1/2$, we have $|1| = 1 \not< 1/2$), so $\mathcal{N}_\bbQ$ is proper.
+
+        To prove maximality, we show that the quotient ring $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ is a field. Since $\mathcal{C}_\bbQ$ is a commutative ring with unity (\Cref{proposition:cauchy_sequences_of_rational_numbers_form_commutative_ring}) and $\mathcal{N}_\bbQ$ is a proper ideal, it suffices to prove that every element of $\mathcal{C}_\bbQ$ not in $\mathcal{N}_\bbQ$ is invertible modulo $\mathcal{N}_\bbQ$.
+
+        Let $(a_n) \in \mathcal{C}_\bbQ \setminus \mathcal{N}_\bbQ$. Since $(a_n)$ is not null, there exists $\varepsilon_0 \in \bbQ_{>0}$ such that for infinitely many $n$, $|a_n| \ge \varepsilon_0$. Because $(a_n)$ is Cauchy, we can choose $N_0 \in \bbN$ such that $|a_m - a_n| < \varepsilon_0/2$ for all $m, n \ge N_0$. For any $n \ge N_0$, if $|a_n| < \varepsilon_0/2$, then the inequality
+        $$|a_m| \le |a_m - a_n| + |a_n| < \varepsilon_0/2 + \varepsilon_0/2 = \varepsilon_0$$
+        would hold for all $m \ge N_0$, contradicting that $(a_n)$ is not null (since all but finitely many terms would then be bounded by $\varepsilon_0$). Hence $|a_n| \ge \varepsilon_0/2$ for all $n \ge N_0$.
+
+        Define $(b_n)$ by
+        $$b_n = \begin{cases} 0 & \text{if } n < N_0, \\ 1/a_n & \text{if } n \ge N_0. \end{cases}$$
+        We claim $(b_n) \in \mathcal{C}_\bbQ$. For $m, n \ge N_0$,
+        \begin{align*}
+            |b_m - b_n|
+            &= \left|\frac{1}{a_m} - \frac{1}{a_n}\right|
+            = \frac{|a_n - a_m|}{|a_m a_n|}
+            \le \frac{|a_m - a_n|}{(\varepsilon_0/2)^2},
+        \end{align*}
+        where we used $|a_m a_n| \ge (\varepsilon_0/2)^2$ by multiplicativity of $|\,\cdot\,|$ (\Cref{definition:absolute_value_on_rational_numbers}). Given $\varepsilon \in \bbQ_{>0}$, choose $N \ge N_0$ such that $|a_m - a_n| < \varepsilon (\varepsilon_0/2)^2$ for all $m, n \ge N$. Then $|b_m - b_n| < \varepsilon$, so $(b_n)$ is Cauchy.
+
+        The product $(a_n) \cdot (b_n)$ equals $0$ for $n < N_0$ and $1$ for $n \ge N_0$. This differs from the constant sequence $(1)$ by finitely many terms, hence by a null sequence. Therefore $[(a_n)] \cdot [(b_n)] = [1]$ in $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$, providing a multiplicative inverse for $[(a_n)]$.
+
+        Since every nonzero element of $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$ is invertible, the quotient is a field, so $\mathcal{N}_\bbQ$ is maximal by \Cref{definition:prime_and_maximal_ideal_of_a_ring}.
+    \end{enumerate}
+\end{proof}

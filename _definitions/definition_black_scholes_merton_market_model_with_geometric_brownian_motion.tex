@@ -1,0 +1,13 @@
+\begin{definition}[Black--Scholes--Merton market model] \label{definition:black_scholes_merton_market_model_with_geometric_brownian_motion}
+\TODO{AI generated, verify}
+Let $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{0 \leq t \leq T}, P)$ be a filtered probability space supporting a standard Brownian motion $\{B_t\}_{t \geq 0}$. The Black--Scholes--Merton model consists of:
+
+\begin{enumerate}
+    \item A risk-free asset with constant rate $r \in \mathbb{R}$, price process $B_t = e^{rt}$.
+    \item A risky asset (stock) following a \CrefAndHyperrefIfExist{definition:geometric_brownian_motion_on_a_filtered_probability_space}{geometric Brownian motion}:
+    $$dS_t = \mu S_t \, dt + \sigma S_t \, dB_t, \quad S_0 > 0,$$
+    where $\mu \in \mathbb{R}$ is the drift and $\sigma > 0$ is the volatility.
+\end{enumerate}
+
+The model assumes no transaction costs, continuous trading, no dividends (unless otherwise specified), and that $\sigma$ and $r$ are constant. Under these assumptions the market is complete and admits a unique equivalent martingale measure.
+\end{definition}

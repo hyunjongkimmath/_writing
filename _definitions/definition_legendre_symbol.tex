@@ -1,0 +1,10 @@
+\begin{definition} \label{definition:legendre_symbol}
+    \TODO{AI generated, verify}
+    Let $p$ be an odd \CrefAndHyperref{definition:prime_number}{prime number} and let $a \in \bbZ$. The \hldef{Legendre symbol} is defined as
+    $$\hlin{\left(\frac{a}{p}\right) = \begin{cases}
+        0 & \text{if } p \mid a, \\
+        1 & \text{if } a \equiv x^2 \pmod{p} \text{ for some } x \in \bbZ \text{ with } p \nmid x, \\
+        -1 & \text{if } a \not\equiv x^2 \pmod{p} \text{ for all } x \in \bbZ.
+    \end{cases}}$$
+    When $\left(\frac{a}{p}\right) = 1$, we say that $a$ is a \hldef{quadratic residue modulo $p$}. When $\left(\frac{a}{p}\right) = -1$, we say that $a$ is a \hldef{quadratic nonresidue modulo $p$}.
+\end{definition}
