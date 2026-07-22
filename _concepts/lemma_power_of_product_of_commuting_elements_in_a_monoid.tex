@@ -1,0 +1,23 @@
+\begin{lemma}[Power of a product of commuting elements] \label{lemma:power_of_product_of_commuting_elements_in_a_monoid}
+    Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:monoid}{monoid}, and let $g, h \in M$ be elements that commute, i.e., $gh = hg$. For any integer $n \in \bbZ_{\geq 0}$,
+    $$(gh)^n = g^n h^n,$$
+    where $g^n$ and $h^n$ denote the \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{$n$th powers} in $M$.
+\end{lemma}
+
+\begin{proof}
+    For $n > 0$, the statement follows directly from \Cref{lemma:power_of_product_of_commuting_elements_in_a_semigroup} applied to the underlying semigroup of $M$.
+
+    For $n = 0$, note that $(gh)^0 = e$ by \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{definition}, and $g^0 h^0 = e \cdot e = e$, so the identity holds.
+
+    For the group case with $n \in \bbZ$, if $n \ge 0$, the result follows from the monoid case applied to the underlying monoid of $G$. If $n < 0$, let $m = -n > 0$. Then
+    \begin{align*}
+        (gh)^n &= ((gh)^{-1})^m \\
+        &= (h^{-1} g^{-1})^m \\
+        &= (g^{-1} h^{-1})^m \quad\text{\Cref{lemma:powers_of_elements_in_a_semigroup_monoid_group_commute_if_and_only_if_the_elements_commute}} \\
+        &= (g^{-1})^m (h^{-1})^m \quad\text{(by the monoid case)} \\
+        &= g^{-m} h^{-m} \\
+        &= g^n h^n,
+    \end{align*}
+    \CrefIfExists{lemma:inverse_of_product_of_two_elements_in_a_group}
+    where we used $(gh)^{-1} = h^{-1} g^{-1}$ from \CrefAndHyperrefIfExist{definition:group} and the fact that $g^{-1}$ and $h^{-1}$ commute when $g$ and $h$ commute.
+\end{proof}

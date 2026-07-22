@@ -1,0 +1,10 @@
+\begin{lemma}[Powers of semigroup elements remain in the semigroup]
+\label{lemma:power_of_semigroup_element_is_in_semigroup}
+Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup} and let $a \in M$. For every positive integer $n \in \bbZ_{>0}$, the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{power} $a^n$ belongs to $M$.
+\end{lemma}
+
+\begin{proof}
+We proceed by induction on $n \in \bbZ_{>0}$. For $n =1$, note that $a^1 = a \in M$ by definition. Suppose inductively that $a^k \in M$ for some $k \ge 1$. By the recursive definition of powers,
+$$ a^{k+1} := a \cdot a^k. $$
+Since $a \in M$ and $a^k \in M$ by the inductive hypothesis, and $M$ is closed under the binary operation $\cdot$ (as it is a semigroup), the product $a \cdot a^k$ belongs to $M$. Hence $a^{k+1} \in M$. By \CrefAndHyperrefIfExist{proposition:mathematical_induction_on_natural_numbers}{induction}, $a^n \in M$ for all $n \in \bbZ_{>0}$.
+\end{proof}

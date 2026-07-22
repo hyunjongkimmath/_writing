@@ -6,6 +6,12 @@
     given by $(\iota \rtimes \operatorname{id}_H)(n, h) = (\iota(n), h)$ is an injective \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}.
 \end{corollary}
 \begin{proof}
-    \TODO{}
-    % The map $\iota$ is $H$-equivariant by definition of the restricted action: $\iota(\phi_1(h)(n)) = \phi_2(h)(\iota(n))$. By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, $\iota \rtimes \operatorname{id}_H$ is a homomorphism. For injectivity, suppose $(\iota(n), h) = (e_{N_2}, e_H)$. Then $h = e_H$ and $\iota(n) = e_{N_2}$. Since $\iota$ is an inclusion, $n = e_{N_1}$. Hence the kernel is trivial.
+    \TODO{AI generated, verify}
+    We first verify that $(\iota, \operatorname{id}_H)$ is a morphism in $\mathbf{ActGrp}$ by checking the compatibility condition from \Cref{definition:category_of_group_actions}. For each $h \in H$ and $n \in N_1$, we have
+    $$\iota(\phi_1(h)(n)) = \phi_2(h)(\iota(n)).$$
+    This holds because $\phi_1(h)$ is defined as the restriction of $\phi_2(h)$ to $N_1$ and $\iota$ is the inclusion map. Hence, $(\iota, \operatorname{id}_H)$ satisfies the compatibility condition.
+
+    By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, the induced homomorphism $\iota \rtimes \operatorname{id}_H : N_1 \rtimes_{\phi_1} H \to N_2 \rtimes_{\phi_2} H$ is a group homomorphism.
+
+    We show that $\iota \rtimes \operatorname{id}_H$ is injective by verifying it has trivial kernel. Suppose that $(\iota(n), h) = (e_{N_2}, e_H)$ for some $n \in N_1$ and $h \in H$. Then $h = e_H$ and $\iota(n) = e_{N_2}$. Since $\iota$ is the inclusion of a subgroup, it is injective, so $\iota(n) = e_{N_2}$ implies $n = e_{N_1}$. Hence $(n, h) = (e_{N_1}, e_H)$, which is the identity element of $N_1 \rtimes_{\phi_1} H$. Therefore, $\iota \rtimes \operatorname{id}_H$ has trivial kernel, so it is injective by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
 \end{proof}

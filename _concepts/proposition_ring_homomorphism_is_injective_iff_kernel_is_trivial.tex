@@ -1,0 +1,9 @@
+\begin{proposition} \label{proposition:ring_homomorphism_is_injective_iff_kernel_is_trivial}
+Let $\phi: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. Then $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $\operatorname{ker}(\phi) = \{0_R\}$.
+\end{proposition}
+
+\begin{proof}
+Suppose $\phi$ is injective. If $x \in \operatorname{ker}(\phi)$, then $\phi(x) = 0_S = \phi(0_R)$. By injectivity, $x = 0_R$, so $\operatorname{ker}(\phi) = \{0_R\}$.
+
+Conversely, suppose $\operatorname{ker}(\phi) = \{0_R\}$. Let $x, y \in R$ such that $\phi(x) = \phi(y)$. Then $\phi(x - y) = \phi(x) - \phi(y) = 0_S$, so $x - y \in \operatorname{ker}(\phi) = \{0_R\}$. Hence $x - y = 0_R$, so $x = y$. Thus $\phi$ is injective.
+\end{proof}

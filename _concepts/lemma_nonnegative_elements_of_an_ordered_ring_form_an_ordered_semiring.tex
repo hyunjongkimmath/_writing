@@ -1,0 +1,10 @@
+\begin{lemma} \label{lemma:nonnegative_elements_of_an_ordered_ring_form_an_ordered_semiring}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}. Let $R_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} be the set of nonnegative elements. Assuming that $1 \geq 0$, the set $R_{\geq 0}$ forms an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered sub-semiring} of $R$.
+\end{lemma}
+\begin{proof}
+    By the axioms of an ordered ring, $R_{\geq 0}$ is closed under addition and multiplication. Moreover, $0 \geq 0$ as $0 = 0$. Furthermore, since we assume that $1 \geq 0$, we have that $0,1 \in R_{\geq 0}$ and hence that $R_{\geq 0}$ is a sub-semiring of $R$.
+
+    Finally, because the operations on $R_{\geq 0}$ are restricted from $R$, the ordering $\geq$ on $R_{\geq 0}$ 
+    inherits compatibility with addition and multiplication directly from the ordered ring properties of $R$. 
+    Thus, $R_{\geq 0}$ is an ordered sub-semiring.
+\end{proof}

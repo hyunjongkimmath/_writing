@@ -12,10 +12,17 @@
 \input{../_definitions/definition_commutative_binary_operation_on_a_set.tex}
 \input{../_definitions/definition_semigroup.tex}
 \input{../_definitions/definition_power_of_a_semigroup_element_by_a_positive_integer.tex}
+\input{../_concepts/lemma_power_of_semigroup_element_is_in_semigroup.tex}
 \input{../_concepts/lemma_additivity_of_powers_in_a_semigroup.tex}
+\input{../_concepts/lemma_power_of_product_of_commuting_elements_in_a_semigroup.tex}
+\input{../_concepts/lemma_monoid_element_that_commutes_with_element_commutes_with_power_of_element.tex}
+\input{../_concepts/lemma_powers_of_elements_in_a_semigroup_monoid_group_commute_if_and_only_if_the_elements_commute.tex}
 \input{../_definitions/definition_monoid.tex}
 \input{../_definitions/definition_power_of_a_monoid_element_by_a_nonnegative_integer.tex}
 \input{../_concepts/lemma_additivity_of_powers_in_a_monoid.tex}
+\input{../_concepts/lemma_power_of_identity_in_a_monoid_is_the_identity.tex}
+\input{../_concepts/lemma_identity_element_is_its_own_inverse_in_a_monoid.tex}
+\input{../_concepts/lemma_power_of_product_of_commuting_elements_in_a_monoid.tex}
 
 \section{Basic Group theory}
 
@@ -30,8 +37,14 @@
 \end{remark}
 
 \input{../_definitions/definition_power_of_a_group_element_by_an_integer.tex}
+\input{../_concepts/lemma_power_of_identity_in_a_group_by_any_integer_is_identity.tex}
+\input{../_concepts/lemma_group_element_is_identity_iff_its_inverse_is_identity.tex}
+\input{../_concepts/lemma_powers_of_elements_in_a_semigroup_monoid_group_commute_if_and_only_if_the_elements_commute.tex}
+\input{../_concepts/lemma_power_of_product_of_commuting_elements_in_a_group.tex}
 \input{../_concepts/lemma_additivity_of_powers_in_a_group.tex}
 \input{../_concepts/lemma_inverse_of_power_equals_power_of_inverse_in_a_group.tex}
+\input{../_concepts/lemma_inverse_of_product_of_two_elements_in_a_group.tex}
+\input{../_concepts/lemma_one_sided_inverse_is_two_sided_inverse_in_a_group.tex}
 
 \input{../_concepts/lemma_cancellation_law_for_group_operations.tex}
 \input{../_concepts/corollary_cancellation_law_for_identity_element_of_group_operation.tex}
@@ -51,14 +64,19 @@
 \input{../_definitions/definition_conjugation_of_group_elements_and_subgroup_by_a_group_element.tex}
 
 \input{../_definitions/definition_coset_of_a_subgroup_of_a_group_by_an_element.tex}
+\input{../_definitions/definition_coset_space_of_a_subgroup_of_a_group.tex}
 
 \input{../_definitions/definition_index_of_a_subgroup_in_a_group.tex}
 
 \input{../_definitions/definition_order_of_a_group.tex}
+\input{../_concepts/lemma_cosets_are_equal_iff_product_of_elements_is_in_subgroup.tex}
+\input{../_concepts/lemma_left_cosets_of_subgroup_partition_the_group.tex}
+\input{../_concepts/lemma_all_cosets_of_subgroup_have_equal_cardinality.tex}
+\input{../_concepts/proposition_left_and_right_cosets_of_a_subgroup_of_a_group_have_equal_cardinality.tex}
 \input{../_concepts/theorem_lagranges_theorem_for_finite_groups.tex}
+\input{../_concepts/proposition_order_of_cyclic_subgroup_generated_by_element_equals_order_of_element.tex}
 \input{../_concepts/corollary_order_of_element_divides_order_of_finite_group.tex}
 
-\input{../_concepts/proposition_order_of_cyclic_subgroup_generated_by_element_equals_order_of_element.tex}
 
 \input{../_definitions/definition_normal_subgroup_of_a_group.tex}
 \input{../_concepts/lemma_every_subgroup_of_an_abelian_group_is_a_normal_subgroup.tex}
@@ -81,6 +99,7 @@
 
 \input{../_concepts/lemma_unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel.tex}
 
+\input{../_concepts/lemma_fibers_of_group_homomorphism_are_cosets_of_kernel.tex}
 \input{../_concepts/theorem_first_isomorphism_theorem_for_groups.tex}
 \input{../_concepts/theorem_second_isomorphism_theorem_for_groups.tex}
 \input{../_concepts/theorem_third_isomorphism_theorem_for_groups.tex}
@@ -99,6 +118,7 @@
 \subsubsection{Normalizer of a subgroup and centralizer of a subset of a group}
 
 \input{../_definitions/definition_normalizer_of_a_subgroup_of_a_group.tex}
+\input{../_concepts/lemma_normalizer_of_subgroup_is_subgroup_of_group.tex}
 \input{../_concepts/proposition_subgroup_of_a_group_is_normal_subgroup_of_normalizer.tex}
 
 \input{../_definitions/definition_centralizer_of_a_subgroup_of_a_group.tex}
@@ -111,37 +131,10 @@
 \input{../_definitions/definition_stabilizer_of_an_element_of_a_set_under_a_group_action.tex}
 \input{../_definitions/definition_fixed_point_set_of_a_group_acting_on_a_set.tex}
 
-\begin{proposition}
-    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
-    Define a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} $\sim$ on $X$ by
-    $$x \sim y \;\; \Longleftrightarrow \;\; \exists g \in G : g \cdot x = y.$$
-    Then $\sim$ is an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} on $X$, and the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence classes} are exactly the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbits} $\{ G \cdot x : x \in X \}$.
-
-
-\end{proposition}
-
-\begin{proposition}
-    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
-    For all $x \in X$, the \CrefAndHyperrefIfExist{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}{stabilizer}
-        $$\operatorname{Stab}_G(x) = \{ g \in G : g \cdot x = x \}$$
-        is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G$.
-\end{proposition}
-
-\begin{proposition}
-    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
-    For all $x \in X$, there is a bijection of sets
-    $$G / \operatorname{Stab}_G(x) \;\;\longleftrightarrow\;\; G \cdot x, \quad g \operatorname{Stab}_G(x) \mapsto g \cdot x.$$
-    In particular, if $G$ is finite then
-    $$|G \cdot x| = [G : \operatorname{Stab}_G(x)] = \frac{|G|}{|\operatorname{Stab}_G(x)|}.$$
-
-\end{proposition}
-
-\begin{proposition}
-    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.    
-    For any subgroup $H \subseteq G$, the \CrefAndHyperrefIfExist{definition:fixed_point_set_of_a_group_acting_on_a_set}{fixed point set}
-    $$X^H = \{ x \in X : h \cdot x = x \text{ for all } h \in H \}$$
-    satisfies $X^H \subseteq X^{H'}$ whenever $H' \subseteq H$.
-\end{proposition}
+\input{../_concepts/proposition_orbits_of_group_action_form_equivalence_relation_on_set.tex}
+\input{../_concepts/proposition_stabilizer_of_element_under_group_action_is_subgroup.tex}
+\input{../_concepts/proposition_orbit_stabilizer_bijection_for_group_actions_on_sets.tex}
+\input{../_concepts/proposition_fixed_point_set_of_group_action_is_antitone_in_subgroup.tex}
 
 \subsection{Constructions of Groups from others}
 
@@ -243,6 +236,10 @@
 
 \input{../_concepts/lemma_unit_group_of_a_field_just_excludes_zero.tex}
 
+\input{../_concepts/lemma_unit_is_nonzero_in_nonzero_ring.tex}
+
+\input{../_concepts/proposition_field_has_only_trivial_ideals.tex}
+
 \input{../_definitions/definition_exponentiation_in_a_semiring.tex}
 \input{../_definitions/definition_exponentiation_in_a_ring.tex}
 
@@ -252,6 +249,9 @@ A prominent example of a field would be the field of fractions of an integral do
 \input{../_definitions/definition_field_of_fractions_of_an_integral_domain.tex}
 
 \input{../_definitions/definition_ring_homomorphism.tex}
+
+\input{../_concepts/proposition_kernel_of_ring_homomorphism_is_an_ideal.tex}
+\input{../_concepts/proposition_ring_homomorphism_is_injective_iff_kernel_is_trivial.tex}
 
 \input{../_definitions/definition_category_of_rings.tex}
 
@@ -281,6 +281,7 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_definitions/definition_polynomial_ring_over_a_commutative_ring.tex}
 \input{../_concepts/lemma_polynomial_ring_over_an_integral_domain_is_an_integral_domain.tex}
+\input{../_definitions/definition_degree_and_leading_coefficient_of_a_polynomial.tex}
 \input{../_definitions/definition_function_field_over_an_integral_domain_in_finitely_many_variables.tex}
 
 \input{../_definitions/definition_subring_of_a_ring.tex}
@@ -299,7 +300,6 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_concepts/proposition_ring_is_product_ring_if_and_ony_if_it_has_central_orthogonal_idempotents.tex}
 
-\TODO{define component of ring element by product ring}
 
 
 
@@ -311,7 +311,8 @@ A prominent example of a field would be the field of fractions of an integral do
 \input{../_definitions/definition_prime_number.tex}
 
 \input{../_definitions/definition_factorial_of_a_nonnegative_integer.tex}
-\input{../_definitions/definition_combinatorial_choose_function.tex}
+\input{../_definitions/definition_combinatorial_choose_function_binomial_coefficient.tex}
+\input{../_concepts/lemma_pascal_identity_for_binomial_coefficients.tex}
 \input{../_concepts/theorem_binomial_theorem_for_a_commutative_ring.tex}
 
 
@@ -332,6 +333,7 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
 \input{../_concepts/proposition_category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules.tex}
+\input{../_concepts/lemma_minus_one_times_element_is_inverse_in_Z_module.tex}
 \input{../_concepts/proposition_category_of_left_R_modules_is_equivalent_to_R_Z_bimodules.tex}
 \input{../_concepts/proposition_category_of_right_R_modules_is_equivalent_to_Z_R_bimodules.tex}
 
@@ -397,9 +399,11 @@ A prominent example of a field would be the field of fractions of an integral do
 
 \input{../_concepts/lemma_determinant_lemma_for_modules_over_a_ring.tex}
 
-\input{../_concepts/lemma_nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical.tex}
-
+\input{../_concepts/proposition_nonzero_finitely_generated_module_over_a_ring_has_a_maximal_submodule.tex}
+\input{../_concepts/proposition_jacobson_radical_annihilates_every_simple_right_module_over_a_ring.tex}
 \input{../_concepts/lemma_nakayamas_submodule_lemma_for_finitely_generated_modules_over_a_ring.tex}
+
+\input{../_concepts/lemma_nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical.tex}
 
 \input{../_concepts/proposition_nakayamas_generator_criterion_for_finitely_generated_modules_over_a_ring.tex}
 
@@ -625,6 +629,17 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 \input{../_definitions/definition_morphism_of_vector_spaces.tex}
 \input{../_definitions/definition_dual_of_a_left_right_two_sided_module.tex}
 \input{../_definitions/definition_matrix_over_a_ring.tex}
+\input{../_definitions/definition_determinant_of_a_matrix_over_a_ring.tex}
+
+\subsubsection{Determinants over commutative rings}
+
+\input{../_concepts/proposition_determinant_of_transpose_equals_determinant_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_determinant_of_product_equals_product_of_determinants_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_determinant_of_identity_matrix_equals_one_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_adjugate_formula_for_determinant_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_determinant_characterizes_invertibility_of_matrices_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_determinant_is_alternating_multilinear_in_rows_and_columns_over_a_commutative_ring.tex}
+\input{../_concepts/proposition_cramers_rule_for_solving_linear_systems_over_a_commutative_ring.tex}
 
 \subsection{Dimension theory and rank}
 
@@ -632,6 +647,7 @@ If $R$ is commutative and we restrict to the full subcategory $\mathsf{Alg}_R$ o
 \input{../_concepts/proposition_kernel_is_subspace_image_is_subspace_of_linear_maps.tex}
 \input{../_definitions/definition_rank_of_a_linear_map_and_of_a_matrix_over_a_field.tex}
 \input{../_concepts/theorem_rank_nullity_theorem_for_finite_dimensional_vector_spaces.tex}
+\input{../_concepts/lemma_basis_of_subspace_of_finite_dimensional_vector_space_extends_to_basis_of_ambient_space.tex}
 
 \subsection{Direct sums and quotient spaces}
 
@@ -818,6 +834,8 @@ Let $G$ be a group and $\iota: G \to \widehat{G}$ be the canonical map to its pr
 \input{../_definitions/definition_n_ary_relation_on_sets.tex}
 \input{../_definitions/definition_equivalence_relation_on_a_set.tex}
 \input{../_definitions/definition_equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation.tex}
+\input{../_definitions/definition_partition_of_a_set.tex}
+\input{../_concepts/lemma_equivalence_relations_on_a_set_correspond_to_partitions.tex}
 
 \input{../_definitions/definition_cardinal_number_and_cardinality_of_a_set.tex}
 

@@ -1,3 +1,14 @@
-\begin{lemma}\label{lemma:extension_of_a_field_is_a_vector_space}
-Let $L/K$ be a \CrefAndHyperrefIfExist{definition:extension_of_a_field}{field extension}. Then $L$ is a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over $K$.  
+\begin{lemma} \label{lemma:extension_of_a_field_is_a_vector_space}
+    Let $L/K$ be a \CrefAndHyperrefIfExist{definition:extension_of_a_field}{field extension}. Then $L$ is a \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} over $K$.
 \end{lemma}
+\begin{proof}
+    By \CrefIfExists{definition:extension_of_a_field}, the field $L$ contains $K$ as a subfield, so the addition and multiplication operations of $K$ are restrictions of those of $L$. We verify that $L$, equipped with its own addition and with scalar multiplication defined by the restriction of multiplication to $K \times L$, satisfies the vector space axioms over $K$.
+
+    Since $(L,+)$ is an abelian group (being a field), it serves as the additive group of the vector space. Scalar multiplication $K \times L \to L$ given by $(\lambda, x) \mapsto \lambda x$ satisfies the required axioms: for all $\lambda, \mu \in K$ and $x, y \in L$,
+    $$\lambda(x + y) = \lambda x + \lambda y,$$
+    $$(\lambda + \mu)x = \lambda x + \mu x,$$
+    $$\lambda(\mu x) = (\lambda \mu)x,$$
+    and
+    $$1_K \cdot x = x,$$
+    all of which follow from the distributivity, associativity, and identity axioms of the field $L$. Hence $L$ is a vector space over $K$ by \CrefIfExists{definition:vector_space_over_a_field}.
+\end{proof}

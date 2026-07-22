@@ -2,3 +2,15 @@
 Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}. 
 If $k$ is \CrefAndHyperrefIfExist{definition:algebraically_closed_field}{algebraically closed}, of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $0$, or a \CrefAndHyperrefIfExist{definition:finite_field}{finite field}, then $k$ is a \CrefAndHyperrefIfExist{definition:perfect_field}{perfect field}.
 \end{proposition}
+\begin{proof} \TODO{AI generated, verify}
+We show that $k$ satisfies one of the equivalent conditions for being a perfect field given in \Cref{definition:perfect_field}. We treat the three hypotheses separately.
+
+\begin{enumerate}
+    \item Suppose that $k$ is algebraically closed by \Cref{definition:algebraically_closed_field}. Every irreducible polynomial over $k$ is linear, because any nonconstant polynomial has a root in $k$ and therefore factors as a product of linear terms. A linear polynomial has exactly one root, which is simple; hence every irreducible polynomial over $k$ has distinct roots in any algebraic closure of $k$. Thus $k$ is perfect by condition (1) of \Cref{definition:perfect_field}.
+
+    \item Suppose that $\operatorname{char}(k) = 0$. Then $k$ is perfect directly by condition (2) of \Cref{definition:perfect_field}, which states that a field of characteristic $0$ is perfect.
+
+    \item Suppose that $k$ is a finite field by \Cref{definition:finite_field}. By \Cref{proposition:characteristic_of_a_field_is_zero_or_a_prime}, $\operatorname{char}(k) = p$ for some prime number $p$. The Frobenius endomorphism $\Phi : k \to k$, given by $\Phi(x) = x^p$, is a ring endomorphism by \Cref{definition:absolute_p_nth_power_frobenius_endomorphism_of_a_ring_of_prime_characteristic}. Since $\Phi$ is a homomorphism of fields, it is injective by \Cref{proposition:field_homomorphism_is_injective}. Because $k$ is finite, an injective map from $k$ to itself is also surjective; hence $\Phi$ is an automorphism. Therefore $k$ is perfect by condition (2) of \Cref{definition:perfect_field}.
+\end{enumerate}
+In all three cases, $k$ is a perfect field.
+\end{proof}

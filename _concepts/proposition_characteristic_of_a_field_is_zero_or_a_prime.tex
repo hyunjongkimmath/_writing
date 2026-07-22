@@ -1,4 +1,11 @@
 \begin{proposition} \label{proposition:characteristic_of_a_field_is_zero_or_a_prime}
-Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}.
-Then \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{$\operatorname{char}(K)$} is either $0$ or a prime number $p$.
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}.
+    Then the \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $\operatorname{char}(K)$ is either $0$ or a prime number $p$.
 \end{proposition}
+\begin{proof}
+    Let $\phi : \bbZ \to K$ be the unique ring homomorphism sending $1_\bbZ$ to $1_K$. The kernel of $\phi$ is an ideal of $\bbZ$, so by \CrefIfExists{definition:principal_ideal_ring}, there exists a unique nonnegative integer $n$ such that $\operatorname{ker}(\phi) = (n)$. By \CrefIfExists{definition:characteristic_of_a_ring}, this integer $n$ is precisely $\operatorname{char}(K)$.
+
+    We claim that $n$ is either $0$ or a prime number. Suppose for contradiction that $n > 1$ is composite, so $n = ab$ for some integers $a, b$ with $1 < a, b < n$. Then $ab \in \operatorname{ker}(\phi)$, which means $\phi(a)\phi(b) = \phi(ab) = 0_K$. Since $K$ is a field, it has no zero divisors by \CrefIfExists{definition:field}, so either $\phi(a) = 0_K$ or $\phi(b) = 0_K$. This implies either $a \in \operatorname{ker}(\phi)$ or $b \in \operatorname{ker}(\phi)$, contradicting the minimality of $n$ as the smallest positive generator of $\operatorname{ker}(\phi)$. Therefore $n$ cannot be composite.
+
+    It follows that $\operatorname{char}(K)$ is either $0$ or a prime number.
+\end{proof}

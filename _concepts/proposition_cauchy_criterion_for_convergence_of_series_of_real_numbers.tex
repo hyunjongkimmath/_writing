@@ -2,9 +2,11 @@
     \TODO{AI generated, verify}
     Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} and let $S_N = \sum_{n=1}^N a_n$ be the sequence of partial sums.
 
-    The series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space}{converges} if and only if for every $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for all $M \geq N$,
+    The series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges} if and only if for every $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for all $M \geq N$,
     $$\left| \sum_{n=N+1}^M a_n \right| < \varepsilon.$$
-    Equivalently, the series converges if and only if the sequence of partial sums $(S_N)$ is a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space}{Cauchy sequence} in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}.
+    Equivalently, the series converges if and only if the sequence of partial sums $(S_N)$ is a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{Cauchy sequence} in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}.
+
+    This is a special case of the more general \CrefAndHyperrefIfExist{proposition:cauchy_criterion_for_convergence_of_series_in_an_abelian_group_with_an_extended_metric_valued_in_ordered_commutative_monoids_with_adjoined_infinity}{Cauchy criterion for series in an abelian group with an extended metric}, applied to $\mathbb{R}$ with its standard absolute value.
 \end{proposition}
 \begin{proof}
     \TODO{AI generated, verify}

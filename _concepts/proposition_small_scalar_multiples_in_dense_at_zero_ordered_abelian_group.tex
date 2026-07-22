@@ -1,0 +1,16 @@
+\begin{proposition}[Small scalar multiples in a totally ordered abelian groups dense at zero] \label{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group}
+Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group} that is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero} and such that the partial order $\leq$ restricted to the \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive elements} of $T$ is a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{codirected partial order} --- in particular, a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} that is dense at zero satisfies these hypotheses\CrefIfExists{lemma:ordered_monoid_with_codirected_strict_partial_order_on_positives_is_dense_at_zero_and_totally_ordered_monoid_that_is_dense_at_zero_has_strict_partial_order_that_is_codirected}. For every $\varepsilon \in T_{>0}$ and every $n \in \mathbb{Z}_{\geq 1}$, there exists $\delta \in T_{>0}$ such that
+$$n \cdot \delta < \varepsilon.$$
+
+More generally, for any finite collection $\varepsilon_1, \dots, \varepsilon_k \in T_{>0}$, and any $n \in \bbZ_{\geq 1}$, there exists $\eta \in T_{>0}$ such that $n \cdot \eta < \varepsilon_i$ for all $i$.
+\end{proposition}
+
+
+\begin{proof}
+We prove the first statement by induction on $n$. For $n = 1$, density at zero gives $\delta \in T_{>0}$ with $1 \cdot \delta < \varepsilon$.
+
+Suppose the claim holds for some $n \geq 1$: there exists $\delta_n \in T_{>0}$ such that $n\delta_n < \varepsilon$. Since $T$ is an ordered abelian group, this implies $0_T < \varepsilon - n\delta_n$. By density at zero, there exists some $\gamma \in T_{>0}$ such that $\gamma < \varepsilon - n\delta_n$. Because the partial order restricted to $T_{>0}$ is codirected, the finite subset $\{\delta_n, \gamma\}$ has a common lower bound $\delta_{n+1} \in T_{>0}$ such that $\delta_{n+1} \leq \delta_n$ and $\delta_{n+1} < \gamma$. Then, by the translation-invariance and monotonicity of addition in ordered abelian groups:
+$$ (n+1)\delta_{n+1} = n\delta_{n+1} + \delta_{n+1} \leq n\delta_n + \gamma < n\delta_n + (\varepsilon - n\delta_n) = \varepsilon. $$
+
+For the general statement, since $T_{>0}$ is codirected, any finite subset of $T_{>0}$ has a common lower bound in $T_{>0}$. More precisely, there exists $\varepsilon_0 \in T_{>0}$ such that $\varepsilon_0 \leq \varepsilon_i$ for all $1 \leq i \leq k$. Applying the first part of the proposition to $\varepsilon_0$, there exists $\eta \in T_{>0}$ such that $n\eta < \varepsilon_0 \leq \varepsilon_i$ for all $i$.
+\end{proof}

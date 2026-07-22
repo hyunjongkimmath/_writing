@@ -1,0 +1,15 @@
+\begin{definition}[Extended seminorm on an ordered abelian group valued in an ordered commutative monoid with adjoined infinity] \label{definition:extended_seminorm_on_an_ordered_abelian_group_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}
+    \TODO{AI generated, verify}
+    Let $(G, +, \leq)$ be an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group} (written additively), and let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid} (written additively with identity $0_T$). Let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered commutative monoid with adjoined infinity} obtained from $T$ by adjoining an element $\infty$ with $t < \infty$ for all $t \in T$ and $t + \infty = \infty + t = \infty$ for all $t \in T^\infty$.
+
+An \hldef{extended seminorm on $G$ valued in $T^\infty$} is a function
+$$\hlin{v : G \to T^\infty}$$
+satisfying the following for all $x, y \in G$:
+\begin{enumerate}
+    \item Positive definiteness: $v(x) = 0_T$ if and only if $x = 0_G$.
+    \item Symmetry (invariance under negation): $v(-x) = v(x)$.
+    \item Triangle inequality (subadditivity): $v(x + y) \leq v(x) + v(y)$.
+\end{enumerate}
+
+When $T = \bbR_{\ge 0}$ and $T^\infty = [0, \infty]$, this recovers the standard notion of an extended seminorm on an abelian group. When $G$ is also equipped with a partial order making it an ordered abelian group, the compatibility between the seminorm and the order is a separate concept (see below).
+\end{definition}

@@ -2,9 +2,7 @@
     \begin{enumerate}
         \item 
         A \hldef{partially ordered set} (or \hldef{poset}), or \hldef{ordered set} is a pair $(P, \leq)$ where $P$ is a set and 
-        \[
-        \leq : P \times P \to \{\text{true}, \text{false}\}
-        \]
+        $$\leq : P \times P \to \{\text{true}, \text{false}\}$$
         is a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} on $P$ satisfying the following axioms for all $a,b,c \in P$:
         \begin{itemize}
             \item \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{Reflexivity}: $a \leq a$,
@@ -22,14 +20,12 @@
 
         One also says ``\hldef{$a$ is less than or equal or $b$}'', ``\hldef{$a$ is at most $b$}'', or ``\hldef{$a$ is bounded above by $b$}'' to mean $a \leq b$, says ``\hldef{$a$ is greater than or equal to $b$}'', ``\hldef{$a$ is at least $b$}'', or ``\hldef{$a$ is bounded below by $b$}'' to mean $a \geq b$, says ``\hldef{$a$ is less than $b$}'' or ``\hldef{$a$ is strictly bounded above by $b$}'' to mean $a < b$, and says ``\hldef{$a$ is greater than $b$}'' or ``\hldef{$a$ is strictly bounded below by $b$}'' to mean $a > b$.
 
+        If $a \leq b$ or $b \leq a$ for $a,b \in P$, then we say that $a$ and $b$ are \hldef{comparable}.
+
         \item A partially ordered set $(P, \leq)$ is called a \hldef{directed partially ordered set} if for every pair $a,b \in P$, there exists $c \in P$ such that
-        \[
-        a \leq c \quad \text{and} \quad b \leq c.
-        \]
+        $$a \leq c \quad \text{and} \quad b \leq c.$$
 
         \item A partially ordered set $(P, \leq)$ is called a \hldef{codirected partially ordered set} (or \hldef{downward directed poset}) if for every pair $a,b \in P$, there exists $d \in P$ such that
-        \[
-        d \leq a \quad \text{and} \quad d \leq b.
-        \]
+        $$d \leq a \quad \text{and} \quad d \leq b.$$
         \end{enumerate}
 \end{definition}

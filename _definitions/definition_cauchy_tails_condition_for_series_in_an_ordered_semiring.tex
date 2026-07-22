@@ -1,0 +1,19 @@
+\begin{definition}[Cauchy tails condition for series in an ordered semiring] \label{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}. A sequence $(M_n)_{n=1}^\infty$ in $T_{\ge 0}$ is said to satisfy the \hldef{Cauchy tails condition} if for every $\varepsilon \in T_{>0}$, there exists $N_0 \in \mathbb{N}$ such that for all $K > N \ge N_0$, one has
+    $$\sum_{n=N+1}^K M_n < \varepsilon.$$
+
+    This condition is the natural analogue of the Cauchy criterion for series, adapted to ordered semirings where subtraction may not be available. It does not require a metric structure on $T$ itself, only addition and order.
+
+    When $T = \bbR_{\ge 0}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, the Cauchy tails condition is equivalent to the series $\sum_{n=1}^\infty M_n$ converging to a finite sum in $T$\CrefIfExists{proposition:cauchy_criterion_for_convergence_of_series_of_real_numbers}.
+
+    More generally, if $T = R'_{\ge 0}$ is the positive cone of an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} $R'$ equipped with an \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended metric}, and the series $\sum_{n=1}^\infty M_n$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_in_a_topological_abelian_group}{converges} in $R'$, then $(M_n)$ satisfies the Cauchy tails condition\TODO{verify this}. 
+
+    
+    % sequence of partial sums $(\sum_{n=1}^N M_n)_{N=1}^\infty$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges} in $R'$, then $(M_n)$ satisfies the Cauchy tails condition. 
+    % Indeed, convergence in $R'$ implies that partial sums form a Cauchy sequence\CrefIfExists{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}, so for every $\varepsilon \in T_{>0}$ there exists $N_0$ such that for all $K > N \ge N_0$, one has
+    % $$\left| \sum_{n=N+1}^K M_n \right| = \left| \sum_{n=1}^K M_n - \sum_{n=1}^N M_n \right| < \varepsilon.$$
+    % Since $M_n \ge 0$, the tail sum $\sum_{n=N+1}^K M_n$ is non-negative, so its absolute value equals itself.
+
+    In particular, when $T = \bbR_{\ge 0}$ and $(M_n)$ are real numbers with $\sum_{n=1}^\infty M_n < \infty$, the Cauchy tails condition holds by the standard convergence of series in $\mathbb{R}$.
+\end{definition}

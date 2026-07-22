@@ -6,3 +6,36 @@
 \TextIfExists{definition:homomorphism_of_modules_over_a_ring}{These invariants are well-defined on the underlying endomorphism of a free module, independent of the choice of basis; they are special cases of invariants of \Cref{definition:homomorphism_of_modules_over_a_ring}s between free modules of finite rank.}
 \TODO{AI generated, verify}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $L_A : F^n \to F^n$ and $L_B : F^n \to F^n$ denote the linear maps defined by left multiplication by $A$ and $B$, respectively. The matrix $P$ defines an invertible linear map $L_P : F^n \to F^n$. Similarity means that for every vector $v \in F^n$, we have
+    $$L_B(v) = P^{-1}APv = L_{P^{-1}}(L_A(L_P(v))).$$
+    In other words, $L_B = L_{P^{-1}} \circ L_A \circ L_P$.
+
+    We prove each invariance separately.
+
+    \begin{enumerate}
+        \item (Determinant.) By the multiplicativity of the determinant (\Cref{proposition:determinant_of_product_equals_product_of_determinants_over_a_commutative_ring}), we have
+        $$\det(B) = \det(P^{-1}AP) = \det(P^{-1})\det(A)\det(P).$$
+        Since $F$ is a field, multiplication in $F$ is commutative, so $\det(P^{-1})\det(P) = \det(P)^{-1}\det(P) = 1$. Hence, $\det(B) = \det(A)$.
+
+        \item (Trace.) The trace of a matrix is the sum of its diagonal entries. For $B = P^{-1}AP$, we have
+        $$\operatorname{tr}(B)_{ii} = \sum_{j=1}^n (P^{-1})_{ij}A_{jk}P_{ki},$$
+        where we use the standard matrix multiplication formula. Summing over $i$ gives
+        $$\operatorname{tr}(B) = \sum_{i,j,k} (P^{-1})_{ij}A_{jk}P_{ki}.$$
+        By commutativity of addition in $F$, we may rearrange the summation order:
+        $$\operatorname{tr}(B) = \sum_{j,k} A_{jk} \left(\sum_i P_{ki}(P^{-1})_{ij}\right).$$
+        The inner sum is the $(k,j)$-entry of $PP^{-1} = I_n$, which equals $\delta_{kj}$, the Kronecker delta. Hence, only terms with $j = k$ survive:
+        $$\operatorname{tr}(B) = \sum_j A_{jj}\delta_{jj} = \sum_j A_{jj} = \operatorname{tr}(A).$$
+
+        \item (Characteristic polynomial.) For each $t \in F$, we have
+        $$tI_n - B = tI_n - P^{-1}AP = P^{-1}(tI_n - A)P.$$
+        Taking determinants of both sides and applying part (1), we get
+        $$\det(tI_n - B) = \det(P^{-1})\det(tI_n - A)\det(P) = \det(tI_n - A).$$
+        Hence, $p_B(t) = p_A(t)$ by \Cref{definition:characteristic_polynomial_of_a_square_matrix_over_a_field}.
+
+        \item (Rank.) The rank of a matrix equals the dimension of the image of its associated linear map (\Cref{definition:rank_of_a_linear_map_and_of_a_matrix_over_a_field}). Since $L_B = L_{P^{-1}} \circ L_A \circ L_P$ and both $L_P$ and $L_{P^{-1}}$ are isomorphisms (because $P$ is invertible), the image of $L_B$ equals $L_{P^{-1}}(\operatorname{im}(L_A))$. The map $L_{P^{-1}}$ restricted to $\operatorname{im}(L_A)$ is injective, so it preserves dimension. Hence,
+        $$\dim_F(\operatorname{im}(L_B)) = \dim_F(\operatorname{im}(L_A)).$$
+        Therefore, $\operatorname{rank}(B) = \operatorname{rank}(A)$.
+    \end{enumerate}
+\end{proof}

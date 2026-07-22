@@ -1,0 +1,34 @@
+\begin{proposition}[Continuity of real exponentiation] \label{proposition:continuity_of_real_exponentiation}
+    \TODO{AI generated, verify}
+    For every $a > 0$, the function $x \mapsto a^x$ from $\mathbb{R}$ to $\mathbb{R}$ is continuous.
+    \CrefIfExists{definition:real_exponentiation_via_supremum}\CrefIfExists{definition:continuous_map_of_topological_spaces}
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We treat the cases $a > 1$, $a = 1$, and $0 < a < 1$ separately.
+
+    \begin{itemize}
+        \item For $a = 1$, the function is constant, $x \mapsto 1$, which is trivially continuous.
+        \CrefIfExists{proposition:constant_function_is_continuous_between_topological_spaces}
+
+        \item Suppose that $a > 1$. By \CrefAndHyperrefIfExist{definition:real_exponentiation_via_supremum}{construction}, $a^x = \sup\{a^q : q \in \mathbb{Q},\; q \leq x\}$.
+        We show that $x \mapsto a^x$ is continuous at an arbitrary $x_0 \in \mathbb{R}$ using the sequential characterization of continuity.
+        \CrefIfExists{proposition:sequential_characterization_of_continuity_at_a_point_for_functions_between_extended_metric_space_valued_in_ordered_commutative_monoids_with_adjoined_infinity}
+
+        Let $(x_n)_{n \in \mathbb{N}}$ be a sequence in $\mathbb{R}$ converging to $x_0$. For each $n$, choose a rational number $q_n$ such that $x_n - 1/n < q_n \leq x_n$. Then $q_n \to x_0$ and $q_n \leq x_n$.
+        By monotonicity of rational exponentiation (since $a > 1$), we have $a^{q_n} \leq a^{x_n}$. By definition of $a^{x_n}$ as a supremum, for any $\varepsilon > 0$ there exists a rational $r_n$ with $x_n - \varepsilon < r_n \leq x_n$ such that $a^{x_n} < a^{r_n} + \varepsilon$.
+        Since $q_n \to x_0$ and $a > 1$, by continuity of rational exponentiation (which follows from continuity of the exponential function on $\mathbb{Q}$ via the usual properties), we have $a^{q_n} \to a^{x_0}$.
+        Using the squeeze theorem, $a^{x_n} \to a^{x_0}$.
+        \CrefIfExists{theorem:squeeze_theorem_for_limits_of_real_valued_functions_on_real_numbers}
+
+        Alternatively, using the representation $a^x = \exp(x \ln a)$ from \Cref{proposition:real_exponentiation_via_exp_and_ln}, the continuity follows immediately from the continuity of $\exp$ and the fact that $x \mapsto x \ln a$ is continuous.
+        \CrefIfExists{proposition:continuity_of_pointwise_scalar_multiple_of_continuous_real_valued_function}\CrefIfExists{proposition:continuity_of_composition_of_continuous_functions}
+
+        \item \textbf{Case $0 < a < 1$:} Write $a = (a^{-1})^{-1}$ with $a^{-1} > 1$. Then $a^x = (a^{-1})^{-x}$.
+        The map $x \mapsto -x$ is continuous, and by the previous case $y \mapsto (a^{-1})^y$ is continuous.
+        By composition of continuous functions, $x \mapsto a^x$ is continuous.
+        \CrefIfExists{proposition:continuity_of_composition_of_continuous_functions}
+    \end{itemize}
+
+    In all cases, $x \mapsto a^x$ is continuous on $\mathbb{R}$.
+\end{proof}

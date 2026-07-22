@@ -21,7 +21,7 @@
 
     Next we show that the addition map $\alpha(a,b) = a + b$ is continuous on $R \times R$. We distinguish two cases based on the structure of $T_{>0}$.
 
-    If $T_{>0}$ has no minimal element (i.e.\ $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_semiring_dense_at_zero_ordered_semiring}{dense at zero}), then for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that $\delta + \delta < \varepsilon$. Fix $(a,b) \in R \times R$ and let $\varepsilon \in T_{>0}$. Choose $\delta \in T_{>0}$ with $\delta + \delta < \varepsilon$. Then for any $(x,y) \in B(a, \delta) \times B(b, \delta)$, we have by subadditivity of $|\cdot|$:
+    If $T_{>0}$ has no minimal element (i.e.\ $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}), then for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that $\delta + \delta < \varepsilon$. Fix $(a,b) \in R \times R$ and let $\varepsilon \in T_{>0}$. Choose $\delta \in T_{>0}$ with $\delta + \delta < \varepsilon$. Then for any $(x,y) \in B(a, \delta) \times B(b, \delta)$, we have by subadditivity of $|\cdot|$:
     $$d(\alpha(x,y), \alpha(a,b)) = |(x+y) - (a+b)| = |(x-a) + (y-b)| \leq |x-a| + |y-b| < \delta + \delta < \varepsilon.$$
     Thus $\alpha(B(a, \delta) \times B(b, \delta)) \subseteq B(a+b, \varepsilon)$, so the preimage of $B(a+b, \varepsilon)$ is a neighborhood of $(a,b)$ in the product topology. Since $(a,b)$ was arbitrary, $\alpha$ is continuous.
 

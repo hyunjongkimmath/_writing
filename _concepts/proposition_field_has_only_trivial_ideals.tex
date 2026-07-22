@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:field_has_only_trivial_ideals}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Then the only \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{ideals} of $F$ are $\{0_F\}$ and $F$ itself.
+\end{proposition}
+
+\begin{proof}
+Let $I$ be an ideal of $F$. If $I = \{0_F\}$, we are done. Otherwise, there exists some nonzero $a \in I$. Since $F$ is a field, $a$ is a \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit}, so $a^{-1} \cdot a = 1_F$. Because $I$ is an ideal, $a \in I$, and $a^{-1} \in F$, we have $1_F = a^{-1} \cdot a \in I$. Then for any $x \in F$, $x = x \cdot 1_F \in I$, so $I = F$. Hence the only ideals of $F$ are $\{0_F\}$ and $F$.
+\end{proof}

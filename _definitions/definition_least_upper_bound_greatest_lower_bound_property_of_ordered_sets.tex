@@ -1,7 +1,9 @@
 \begin{definition} \label{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}
-    Let $(P, \leq )$ be an \CrefAndHyperrefIfExist{definition:partially_ordered_set}{ordered set}.
+    Let $(P, \leq )$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
     \begin{enumerate}
-        \item $P$ is said to have the \hldef{least upper bound property} or \hldef{supremum property} if every nonempty subset $S$ of $P$ with an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}.
-        \item $P$ is said to have the \hldef{greatest lower bound property} or \hldef{infimum property} if every nonempty subset $S$ of $P$ with an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{lower bound} has an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}.
+        \item $P$ is said to have the \hldef{least upper bound property} or \hldef{supremum property} if every nonempty subset $S$ of $P$ with an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}, i.e. if $S \subseteq P$ is nonempty and if there exists $x \in P$ such that $y \leq x$ for all $y \in S$, then there exists a supremum of $S$ in $P$.
+
+        \item $P$ is said to have the \hldef{greatest lower bound property} or \hldef{infimum property} if every nonempty subset $S$ of $P$ with an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{lower bound} has an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}, i.e. if $S \subseteq P$ is nonempty and if there exists $x \in P$ such that $x \leq y$ for all $y \in S$, then there exists an infimum of $S$ in $P$.
     \end{enumerate}
+    A partially ordered set has the least upper bound property if and only if it has the greatest lower bound property\CrefIfExists{lemma:least_upper_bound_and_greatest_lower_bound_property_on_a_partially_ordered_set_are_equivalent}.
 \end{definition}

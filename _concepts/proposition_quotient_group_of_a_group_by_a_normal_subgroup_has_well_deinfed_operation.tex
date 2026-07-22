@@ -1,4 +1,33 @@
 \begin{proposition} \label{proposition:quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation}
-Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $N$ a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
-The binary operation of the \CrefAndHyperrefIfExist{definition:quotient_group_of_a_group_by_a_normal_subgroup}{quotient group} $G/N$ is well defined and $G/N$ is indeed a group.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and $N$ a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
+    The binary operation of the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group} $G/N$ is well defined, i.e.
+    $$(g N) (hN) := (gh)N$$
+    is well defined, and $G/N$ is indeed a group.
 \end{proposition}
+\begin{proof}
+    Let $e$ denote the identity element of $G$. We first show that the operation on cosets is well-defined, then verify the group axioms.
+
+    To show that the operation $(gN)(hN) = (gh)N$ is well-defined, suppose that $g_1 N = g_2 N$ and $h_1 N = h_2 N$. Then $g_2^{-1} g_1 \in N$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup} and $h_2^{-1} h_1 \in N$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. We need to show $(g_1 h_1)N = (g_2 h_2)N$, i.e., that $(g_2 h_2)^{-1} (g_1 h_1) \in N$. Compute:
+    $$(g_2 h_2)^{-1} (g_1 h_1) = h_2^{-1} g_2^{-1} g_1 h_1.$$
+    Since $N$ is normal, we have $h_2^{-1} (g_2^{-1} g_1) h_2 \in N$\CrefIfExists{definition:normal_subgroup_of_a_group}. Therefore
+    $$h_2^{-1} g_2^{-1} g_1 h_1 = \bigl(h_2^{-1} (g_2^{-1} g_1) h_2\bigr) (h_2^{-1} h_1).$$
+    Both factors lie in $N$: the first by normality and the second because $h_2^{-1} h_1 \in N$. Their product is therefore in $N$ by closure of $N$ under the group operation, which implies that $(g_1 h_1)N = (g_2 h_2)N$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}.
+
+    For any $g_1, g_2, g_3 \in G$, we have
+    $$\bigl((g_1 N)(g_2 N)\bigr)(g_3 N) = ((g_1 g_2)N)(g_3 N) = ((g_1 g_2)g_3)N = (g_1(g_2 g_3))N = (g_1 N)\bigl((g_2 N)(g_3 N)\bigr),$$
+    where $(g_1 g_2)g_3 = g_1(g_2 g_3)$ by associativity of the group operation in $G$. Thus, the operation on $G/N$ is \CrefAndHyperrefIfExist{definition:associative_binary_operation_on_a_set}{associative}.
+
+    The \CrefAndHyperrefIfExist{definition:left_right_identity_element_of_a_binary_operation_on_a_set}{identity element} is the coset $eN = N$, because for any $gN \in G/N$ we have
+    $$(eN)(gN) = (eg)N = gN$$
+    and
+    $$(gN)(eN) = (ge)N = gN,$$
+    since $e$ is the identity in $G$.
+
+    We show that $(g^{-1} N)$ is the \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{inverse} of $gN$. We compute
+    $$(gN)(g^{-1} N) = (gg^{-1})N = eN = N$$
+    and
+    $$(g^{-1} N)(gN) = (g^{-1} g)N = eN = N,$$
+    so $(gN)^{-1} = g^{-1} N$.
+
+    This verifies that $G/N$ satisfies all the group axioms with the well-defined operation.
+\end{proof}

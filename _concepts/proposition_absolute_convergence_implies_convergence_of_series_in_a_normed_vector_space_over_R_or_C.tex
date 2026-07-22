@@ -7,9 +7,9 @@
 
 \begin{proof}
     \TODO{AI generated, verify}
-    Let $S_N = \sum_{n=1}^N v_n$ denote the partial sums. We show that $(S_N)$ is a Cauchy sequence in $V$\CrefIfExists{definition:cauchy_sequence_in_an_extended_metric_space}, and then invoke completeness of $V$.
+    Let $S_N = \sum_{n=1}^N v_n$ denote the partial sums. We show that $(S_N)$ is a Cauchy sequence in $V$\CrefIfExists{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}, and then invoke completeness of $V$.
 
-    The function $d(x,y) = \|x - y\|$ defines an \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended metric} on $V$\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}. A sequence in $V$ is Cauchy with respect to this metric if and only if for every $\varepsilon > 0$ there exists $N_0 \geq 1$ such that $\|S_M - S_K\| < \varepsilon$ for all $M, K \geq N_0$.
+    The function $d(x,y) = \|x - y\|$ defines an \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{extended metric} on $V$\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}. A sequence in $V$ is Cauchy with respect to this metric if and only if for every $\varepsilon > 0$ there exists $N_0 \geq 1$ such that $\|S_M - S_K\| < \varepsilon$ for all $M, K \geq N_0$.
 
     Let $\varepsilon > 0$ be given. Since $\sum_{n=1}^\infty \|v_n\|$ converges in $\mathbb{R}$, the sequence of partial sums $T_M = \sum_{n=1}^M \|v_n\|$ is a Cauchy sequence in $\mathbb{R}$. Equivalently, by the Cauchy criterion for series of real numbers$\CrefIfExists{proposition:cauchy_criterion_for_convergence_of_series_of_real_numbers}$, there exists $N_0 \geq 1$ such that for all $M \geq N_0$:
     $$\sum_{n=N_0+1}^M \|v_n\| < \varepsilon.$$

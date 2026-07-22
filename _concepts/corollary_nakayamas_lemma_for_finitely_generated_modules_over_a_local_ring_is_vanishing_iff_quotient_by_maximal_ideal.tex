@@ -1,7 +1,13 @@
 \begin{corollary}[Nakayama's lemma for local rings: vanishing]  \label{corollary:nakayamas_lemma_for_finitely_generated_modules_over_a_local_ring_is_vanishing_iff_quotient_by_maximal_ideal}
-\TODO{AI generated, verify}
+	\TODO{AI generated, verify}
 
-Let $(R, \mathfrak{m})$ be a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} (not necessarily commutative) with unique maximal ideal $\mathfrak{m}$, and let $M$ be a \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} right $R$-module.
+	Let $(R, \mathfrak{m})$ be a \CrefAndHyperrefIfExist{definition:local_ring}{local ring} (not necessarily commutative) with unique maximal ideal $\mathfrak{m}$, and let $M$ be a \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} right $R$-module.
 
-Then $M = 0$ if and only if $M/\mathfrak{m}M = 0$.
+	Then $M = 0$ if and only if $M/\mathfrak{m}M = 0$.
 \end{corollary}
+\begin{proof}
+	\TODO{AI generated, verify}
+	The forward direction is trivial: if $M = 0$, then $\mathfrak{m}M = 0$ and $M/\mathfrak{m}M = 0$.
+
+	For the converse, suppose that $M/\mathfrak{m}M = 0$. Since $(R, \mathfrak{m})$ is a local ring, $\mathfrak{m} = J(R)$. Apply Nakayama's lemma\CrefIfExists{lemma:nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical} with $I = \mathfrak{m} = J(R)$. The hypothesis gives $\mathfrak{m}M = M$, and since $M$ is finitely generated, Nakayama's lemma implies that $M = 0$. Therefore, $M = 0$.
+\end{proof}

@@ -1,0 +1,28 @@
+\begin{proposition} \label{proposition:orbits_of_group_action_form_equivalence_relation_on_set}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.
+    Define a \CrefAndHyperrefIfExist{definition:n_ary_relation_on_sets}{binary relation} $\sim$ on $X$ by
+    $$x \sim y \;\; \Longleftrightarrow \;\; \exists g \in G : g \cdot x = y.$$
+    Then $\sim$ is an \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} on $X$, and the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence classes} are exactly the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbits} $\{ G \cdot x : x \in X \}$.
+    In other words, the orbits \CrefAndHyperrefIfExist{definition:partition_of_a_set}{partition} $X$\CrefIfExists{theorem:equivalence_relations_and_partitions}.
+\end{proposition}
+\begin{proof}
+    We first show that $\sim$ is an equivalence relation on $X$.
+
+    \begin{enumerate}
+        \item $\sim$ is \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{reflexive} because for every $x \in X$, we have $e \cdot x = x$ by the identity axiom of the group action\CrefIfExists{definition:left_and_right_group_actions_on_a_set}, so $x \sim x$.
+
+        \item $\sim$ is \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{symmetric} in that if $x \sim y$, then there exists some $g \in G$ such that $g \cdot x = y$. Applying $g^{-1}$ to both sides, we obtain
+        $$g^{-1} \cdot (g \cdot x) = g^{-1} \cdot y.$$
+        By the compatibility axiom of the group action\CrefIfExists{definition:left_and_right_group_actions_on_a_set}, the left-hand side equals $(g^{-1}g) \cdot x = e \cdot x = x$. Hence $g^{-1} \cdot y = x$, so $y \sim x$.
+
+        \item $\sim$ is \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{transitive} in that if $x \sim y$ and $y \sim z$, then there exist $g, h \in G$ such that $g \cdot x = y$ and $h \cdot y = z$. Substituting the first equation into the second gives
+        $$z = h \cdot (g \cdot x) = (hg) \cdot x,$$
+        where the last equality follows from the compatibility axiom\CrefIfExists{definition:left_and_right_group_actions_on_a_set}. Since $hg \in G$, we have $x \sim z$.
+    \end{enumerate}
+
+    Next we show that the equivalence classes of $\sim$ coincide with the orbits. Fix $x \in X$. The \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence class} of $x$ is
+    $$[x] = \{ y \in X : x \sim y \} = \{ y \in X : \exists g \in G, \; g \cdot x = y \}.$$
+    On the other hand, the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbit} of $x$ is
+    $$G \cdot x = \{ g \cdot x : g \in G \}.$$
+    These two sets are identical by definition.
+\end{proof}

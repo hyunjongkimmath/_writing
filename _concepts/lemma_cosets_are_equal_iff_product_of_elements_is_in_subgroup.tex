@@ -1,0 +1,25 @@
+\begin{lemma}[Cosets are equal iff product of elements is in subgroup]  \label{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}
+	Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}, let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}, and let $g_1, g_2 \in G$.
+	\begin{enumerate}
+	    \item $g_1 H = g_2 H $\CrefIfExists{definition:coset_of_a_subgroup_of_a_group_by_an_element} if and only if $g_1^{-1} g_2 \in H$.
+	    \item $H g_1 = H g_2$\CrefIfExists{definition:coset_of_a_subgroup_of_a_group_by_an_element} if and only if $g_1 g_2^{-1} \in H$.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+	We first prove the statement for left cosets.
+
+	Suppose that $g_1 H = g_2 H$. Since $e \in H$, we have $g_1 = g_1 e \in g_1 H = g_2 H$, so $g_1 = g_2 h$ for some $h \in H$. Multiplying both sides on the left by $g_1^{-1}$ and on the right by $h^{-1}$, we obtain $g_1^{-1} g_2 = h \in H$. Hence, $g_1^{-1} g_2 \in H$.
+
+	Conversely, suppose that $g_1^{-1} g_2 \in H$, and let $h' \in H$ be such that $g_1^{-1} g_2 = h'$. We show that $g_1 H \subseteq g_2 H$ and $g_2 H \subseteq g_1 H$. For any $x \in g_1 H$, we have $x = g_1 h$ for some $h \in H$. Writing $g_1 = g_2 (h')^{-1}$, we obtain
+	$$x = g_2 (h')^{-1} h.$$
+	Since $(h')^{-1} h \in H$, it follows that $x \in g_2 H$. Therefore, $g_1 H \subseteq g_2 H$.
+
+	For the reverse inclusion, note that $g_2 = g_1 h'$, so for any $y \in g_2 H$, we have $y = g_2 h$ for some $h \in H$. Writing this as
+	$$y = g_1 h' h,$$
+	and since $h' h \in H$, we obtain $y \in g_1 H$. Therefore, $g_2 H \subseteq g_1 H$.
+
+	It follows that $g_1 H = g_2 H$.
+
+	The statement for right cosets is analogous. Suppose that $H g_1 = H g_2$. Since $e \in H$, we have $g_1 = e g_1 \in H g_1 = H g_2$, so $g_1 = h g_2$ for some $h \in H$. Multiplying both sides on the left by $h^{-1}$ and on the right by $g_2^{-1}$, we obtain $g_1 g_2^{-1} = h \in H$. Conversely, suppose that $g_1 g_2^{-1} \in H$, and let $h'' \in H$ be such that $g_1 g_2^{-1} = h''$. Then $g_1 = h'' g_2$, and for any $x \in H g_1$, we have $x = h g_1 = h h'' g_2 \in H g_2$. For the reverse inclusion, $g_2 = (h'')^{-1} g_1$, so for any $y \in H g_2$, we have $y = h g_2 = h (h'')^{-1} g_1 \in H g_1$. Therefore, $H g_1 = H g_2$.
+\end{proof}

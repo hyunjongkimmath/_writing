@@ -1,0 +1,29 @@
+\begin{lemma}[Powers commute iff elements commute] \label{lemma:powers_of_elements_in_a_semigroup_monoid_group_commute_if_and_only_if_the_elements_commute}
+    \begin{enumerate}
+        \item If $S$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup}, and $g, h \in S$, then the following are equivalent:
+        \begin{enumerate}
+            \item $g$ and $h$ commute, i.e., $gh = hg$.
+            \item For all $m, n \in \bbZ_{>0}$, the powers $g^m$ and $h^n$ commute, i.e., $g^m h^n = h^n g^m$.
+        \end{enumerate}
+
+        \item If $M$ is a \CrefAndHyperrefIfExist{definition:monoid}{monoid} and $g, h \in M$, then the following are equivalent:
+        \begin{enumerate}
+            \item $g$ and $h$ commute.
+            \item For all $m, n \in \bbZ_{\ge 0}$, the powers $g^m$ and $h^n$ commute, i.e., $g^m h^n = h^n g^m$.
+        \end{enumerate}
+
+        \item If $G$ is a \CrefAndHyperrefIfExist{definition:group}{group} and $g, h \in G$, then the following are equivalent:
+        \begin{enumerate}
+            \item $g$ and $h$ commute.
+            \item For all $m, n \in \bbZ$, the powers $g^m$ and $h^n$ commute, i.e., $g^m h^n = h^n g^m$.
+        \end{enumerate}
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    Clearly in each case, the condition that the powers $g^m$ and $h^n$ commute imply that $g$ and $h$ commute because $m,n = 1$ are positive integers, and $g^1 = g$ and $h^1 = h$. 
+
+    For a semigroup $S$, suppose that $g,h \in S$ are elements that commute, i.e. $gh = hg$. By \Cref{lemma:monoid_element_that_commutes_with_element_commutes_with_power_of_element}, $g$ commutes with $h^n$ for all $n \in \bbZ_{>0}$. By \Cref{lemma:monoid_element_that_commutes_with_element_commutes_with_power_of_element} again, $g^m$ commutes with $h^n$ for all $m \in \bbZ_{>0}$.
+
+    Similarly, for a monoid $M$ and commuting elements $g,h \in M$, we have that $g^m$ commutes with $h^n$ for all $m,n \in \bbZ_{\geq 0}$ and for a group $G$ and commuting elements $g,h \in G$, we have that $g^m$ commutes with $h^n$ for all $m,n \in \bbZ$.
+\end{proof}

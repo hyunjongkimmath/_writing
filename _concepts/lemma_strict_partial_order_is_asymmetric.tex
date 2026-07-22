@@ -1,14 +1,12 @@
 \begin{lemma} \label{lemma:strict_partial_order_is_asymmetric}
-    \TODO{AI generated, verify}
     Let $(P, <)$ be a \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partially ordered set}.
     Then $<$ is \CrefAndHyperrefIfExist{definition:asymmetric_binary_relation_on_a_set}{asymmetric}:
     for all $a, b \in P$, if $a < b$, then $\lnot (b < a)$.
 \end{lemma}
 
 \begin{proof}
-    \TODO{AI generated, verify}
     Suppose that $a, b \in P$ satisfy $a < b$ and, for contradiction, that $b < a$.
-    By transitivity of the strict partial order, $a < b$ and $b < a$ imply $a < a$.
-    This contradicts the irreflexivity of $<$, which requires that $a \not< a$ for every $a \in P$.
+    By \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{transitivity} of the strict partial order, $a < b$ and $b < a$ imply $a < a$.
+    This contradicts the \CrefAndHyperrefIfExist{definition:irreflexive_binary_relation_on_a_set}{irreflexivity} of $<$, which requires that $a \not< a$ for every $a \in P$.
     Hence our assumption $b < a$ is false, i.e. $\lnot (b < a)$.
 \end{proof}

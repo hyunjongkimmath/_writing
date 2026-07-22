@@ -8,10 +8,10 @@
 
     \begin{enumerate}
         \item If $M$ is a right $R$-module, then for all $x \in M$,
-        $$\hlin{[x]_\mathcal{E} = P \, [x]_\mathcal{F}}.$$
+        $$[x]_\mathcal{E} = P \, [x]_\mathcal{F}.$$
 
         \item If $M$ is a left $R$-module, then for all $x \in M$,
-        $$\hlin{[x]_\mathcal{E} = P \, [x]_\mathcal{F}}.$$
+        $$[x]_\mathcal{E} = P \, [x]_\mathcal{F}.$$
     \end{enumerate}
 
     In particular, the formula $[x]_\mathcal{E} = P [x]_\mathcal{F}$ holds for both left and right modules with the same column-vector convention.
@@ -20,18 +20,18 @@
     Write $x = \sum_{j=1}^n f_j \, a_j$ if $M$ is a right $R$-module, or $x = \sum_{j=1}^n a_j \, f_j$ if $M$ is a left $R$-module, so that $[x]_\mathcal{F} = (a_1,\ldots,a_n)^\top$.
 
     \begin{enumerate}
-        \item Suppose $M$ is a right $R$-module. By definition of $P$, we have $f_j = \sum_{i=1}^n e_i \, P(i,j)$. Substituting,
+        \item Suppose that $M$ is a right $R$-module. By definition of $P$, we have $f_j = \sum_{i=1}^n e_i \, P(i,j)$. Substituting,
         \begin{align*}
             x &= \sum_{j=1}^n \bigl( \sum_{i=1}^n e_i \, P(i,j) \bigr) a_j
               = \sum_{i=1}^n e_i \bigl( \sum_{j=1}^n P(i,j) \, a_j \bigr).
         \end{align*}
-        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n P(i,j) a_j$, which is precisely the $i$-th entry of the column vector $P [x]_\mathcal{F}$. Hence $[x]_\mathcal{E} = P [x]_\mathcal{F}$.
+        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n P(i,j) a_j$, which is precisely the $i$-th entry of the column vector $P [x]_\mathcal{F}$. Hence, $[x]_\mathcal{E} = P [x]_\mathcal{F}$.
 
-        \item Suppose $M$ is a left $R$-module. By definition of $P$, we have $f_j = \sum_{i=1}^n P(i,j) \, e_i$. Substituting,
+        \item Suppose that $M$ is a left $R$-module. By definition of $P$, we have $f_j = \sum_{i=1}^n P(i,j) \, e_i$. Substituting,
         \begin{align*}
             x &= \sum_{j=1}^n a_j \bigl( \sum_{i=1}^n P(i,j) \, e_i \bigr)
               = \sum_{i=1}^n \bigl( \sum_{j=1}^n a_j \, P(i,j) \bigr) e_i.
         \end{align*}
-        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n a_j P(i,j)$, which is the $i$-th entry of $P [x]_\mathcal{F}$ (since $P(i,j)$ is the $(i,j)$-entry of $P$ and $a_j$ is the $j$-th entry of $[x]_\mathcal{F}$). Hence $[x]_\mathcal{E} = P [x]_\mathcal{F}$.
+        The coefficient of $e_i$ in this expression is $\sum_{j=1}^n a_j P(i,j)$, which is the $i$-th entry of $P [x]_\mathcal{F}$ (since $P(i,j)$ is the $(i,j)$-entry of $P$ and $a_j$ is the $j$-th entry of $[x]_\mathcal{F}$). Hence, $[x]_\mathcal{E} = P [x]_\mathcal{F}$.
     \end{enumerate}
 \end{proof}

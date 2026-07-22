@@ -1,3 +1,19 @@
 \begin{theorem} \label{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}
-The map $\pi: G \to G/N$ defined by $\pi(g) = gN$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} with \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel} $N$. This map is called the \hldef{canonical projection} or \hldef{natural homomorphism}.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $N$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$. The map $\pi : G \to G/N$\CrefIfExists{definition:quotient_of_a_group_by_a_normal_subgroup} defined by $\pi(g) = gN$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} with \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel} $N$. This map is called the \hldef{canonical projection} or \hldef{natural homomorphism}.
 \end{theorem}
+\begin{proof}
+    Let $\pi : G \to G/N$ be defined by $\pi(g) = gN$. We verify each property in turn.
+
+    \begin{enumerate}
+        \item For any $g_1, g_2 \in G$, we compute using the operation on $G/N$:
+        $$\pi(g_1 g_2) = (g_1 g_2)N = (g_1 N)(g_2 N) = \pi(g_1)\pi(g_2).$$
+        Thus, $\pi$ is a homomorphism.
+
+        \item To see that $\pi$ is surjective, note that we have $\pi(x) = xN$ for any coset $xN \in G/N$, so every element of $G/N$ is in the image.
+
+        \item To see that the kernel of $\pi$ is exactly $N$, recall that $eN = N$ is the identity element of $G/N$ and, for any $g \in G$,  that
+        $$\pi(g) = N \iff gN = N \iff g \in N$$
+        Therefore $\operatorname{ker}(\pi) = \{g \in G : \pi(g) = N\} = N$.
+    \end{enumerate}
+    This establishes that $\pi$ is a surjective homomorphism with kernel $N$.
+\end{proof}

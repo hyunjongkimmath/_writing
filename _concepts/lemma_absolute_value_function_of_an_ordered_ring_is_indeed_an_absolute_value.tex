@@ -1,0 +1,34 @@
+\begin{lemma}[Standard absolute value on a totally ordered ring is an absolute value] \label{lemma:absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ordered_ring}{totally ordered commutative ring} with \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} $R_{\geq 0}$.
+    The \CrefAndHyperrefIfExist{definition:standard_absolute_value_of_an_ordered_ring}{absolute value function}
+    $$|\cdot|: R \to R_{\geq 0}$$
+    is an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} on $R$ valued in the \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} $R_{\geq 0}$\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}.
+\end{lemma}
+
+\begin{proof}
+    Since $R$ is totally ordered, trichotomy holds: for every element $a \in R$, exactly one of $a > 0_R$, $a = 0_R$, or $-a > 0_R$ holds\CrefIfExists{definition:ordered_ring}. Hence the absolute value simplifies to
+    $$|a| = \begin{cases} a &\text{if } a \geq 0_R, \\ -a &\text{if } a < 0_R.\end{cases}$$
+
+    We verify the three axioms of an absolute value\CrefIfExists{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}.
+
+    \begin{enumerate}
+        \item Positive definiteness: If $a = 0_R$, then $|a| = |0_R| = 0_R$ by the first case. Conversely, if $|a| = 0_R$, then either $a = 0_R$ (first case) or $-a = 0_R$ (second case). In the second case, $-a = 0_R$ implies $a = -0_R = 0_R$. Hence $|a| = 0_R$ if and only if $a = 0_R$.
+
+        \item Multiplicativity: We must show $|ab| = |a||b|$ for all $a,b \in R$. We consider cases based on the sign of $a$ and $b$.
+        \begin{enumerate}
+            \item If $a \geq 0_R$ and $b \geq 0_R$, then $ab \geq 0_R$ by compatibility of the order with multiplication\CrefIfExists{definition:ordered_ring}. Hence $|ab| = ab = |a||b|$.
+            \item If $a < 0_R$ and $b < 0_R$, then $-a > 0_R$ and $-b > 0_R$, so $(-a)(-b) > 0_R$ by compatibility. Since $(-a)(-b) = ab$ in any ring, we have $ab > 0_R$. Hence $|ab| = ab = (-a)(-b) = |a||b|$.
+            \item If $a \geq 0_R$ and $b < 0_R$, then $-b > 0_R$. Since both $a$ and $-b$ are nonnegative, their product $a(-b) = -ab$ is nonnegative by compatibility, so $ab \leq 0_R$. Hence either $ab = 0_R$ (in which case $|ab| = 0_R = |a||b|$) or $ab < 0_R$ (in which case $|ab| = -ab = a(-b) = |a||b|$).
+            \item If $a < 0_R$ and $b \geq 0_R$, the argument is symmetric: since both $-a$ and $b$ are nonnegative, their product $(-a)b = -(ab)$ is nonnegative, so $ab \leq 0_R$. Hence $|ab| = -ab = (-a)b = |a||b|$ or $|ab| = 0_R = |a||b|$ if $ab = 0_R$.
+        \end{enumerate}
+
+        \item Triangle inequality: We first show that for all $a \in R$, we have the two-sided bound $-|a| \leq a \leq |a|$. If $a \geq 0_R$, then $|a| = a$ and $-|a| = -a \leq 0_R \leq a = |a|$, so both inequalities hold. If $a < 0_R$, then $|a| = -a > 0_R$ and $a = -(-a) = -|a|$, so again $-|a| \leq a \leq |a|$.
+
+        Now apply this bound to both $a$ and $b$ and add the resulting inequalities (valid by translation-invariance\CrefIfExists{definition:ordered_ring}):
+        $$-(|a| + |b|) \leq a + b \leq |a| + |b|.$$
+
+        Consider the sign of $a+b$. If $a+b \geq 0_R$, then $|a+b| = a+b \leq |a| + |b|$ by the right-hand inequality above. If $a+b < 0_R$, then $|a+b| = -(a+b)$. From the left-hand inequality, we have $-(|a| + |b|) \leq a + b$; negating both sides (which reverses the inequality in an ordered ring) gives $-(a+b) \leq |a| + |b|$, i.e., $|a+b| \leq |a| + |b|$. In both cases, $|a+b| \leq |a| + |b|$.
+    \end{enumerate}
+
+    This completes the verification that $|\cdot|$ satisfies all three axioms of an absolute value on $R$ valued in $R_{\geq 0}$.
+\end{proof}

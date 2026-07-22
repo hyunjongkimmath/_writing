@@ -1,0 +1,30 @@
+\begin{proposition}[Ordered abelian group equals $P - P$ iff directed] \label{proposition:ordered_abelian_group_equals_P_minus_P_iff_directed}
+    \TODO{AI generated, verify}
+    Let $(G,\leq)$ be an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group}, and let $P = G_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} be the set of nonnegative elements. Let
+    $$P - P := \{a - b : a,b \in P\}.$$
+
+    The following are equivalent:
+    \begin{enumerate}
+        \item Every element of $G$ is a difference of two nonnegative elements, i.e., $G = P - P$.
+        \item For every pair $x,y \in G$, there exists $z \in G$ such that $z \geq x$ and $z \geq y$, i.e., $(G,\leq)$ is a \CrefAndHyperrefIfExist{definition:directed_partially_ordered_set_with_non_strict_order}{directed partially ordered set}.
+    \end{enumerate}
+
+    If $G = R$ is the additive group of an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}, then condition (2) means that $(R,+,\leq)$ is a directed abelian group. In this case, elements outside $P - P$ are precisely those incomparable to $0_R$ in the partial order.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the equivalence of (1) and (2).
+
+    $(1) \Rightarrow (2)$: Assume $G = P - P$. Let $x,y \in G$. By hypothesis, we may write $x = a - b$ and $y = c - d$ for some $a,b,c,d \in P$. Set $z = a + c$. Since $P$ is closed under addition (as the positive cone of an ordered abelian group\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}), we have $z \in P$, so $z \geq 0$. Now
+    $$z - x = (a + c) - (a - b) = c + b \in P,$$
+    because both $b,c \in P$ and $P$ is closed under addition. Hence $z \geq x$. Similarly,
+    $$z - y = (a + c) - (c - d) = a + d \in P,$$
+    so $z \geq y$. Thus $(G,\leq)$ is directed.
+
+    $(2) \Rightarrow (1)$: Assume $(G,\leq)$ is directed. Let $x \in G$. By the directedness of $G$, there exists $z \in G$ such that $z \geq x$ and $z \geq 0$. The inequality $z \geq 0$ means $z \in P$. The inequality $z \geq x$ means $z - x \geq 0$, i.e., $z - x \in P$. Set $a = z$ and $b = z - x$. Then $a,b \in P$ and
+    $$x = a - b,$$
+    so $x \in P - P$. Since $x$ was arbitrary, $G = P - P$.
+
+    For the final remark: if an element $x \in R$ is neither in $P$ nor in $-P$, then $x \not\geq 0_R$ and $-x \not\geq 0_R$, which means $x$ is incomparable to $0_R$. Such an element cannot be written as $a - b$ with $a,b \in P$ unless the directedness condition holds.
+\end{proof}

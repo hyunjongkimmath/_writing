@@ -1,0 +1,23 @@
+\begin{theorem}[Equivalence Relations and Partitions]
+\label{theorem:equivalence_relations_and_partitions}
+\TODO{AI generated, verify}
+Let $S$ be a set.
+
+\paragraph{Equivalence relations induce partitions.}
+Let $\sim$ be a \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} on $S$. For each $x \in S$, let $[x] := \{ y \in S \mid y \sim x \}$ be the \CrefAndHyperrefIfExist{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}{equivalence class} of $x$. Then the collection
+$$ \mathcal{P}_\sim := \{ [x] \mid x \in S \} $$
+is a \hldef{partition of $S$}, i.e.:
+\begin{enumerate}
+\item Each equivalence class $[x]$ is nonempty.
+\item Distinct equivalence classes are disjoint: if $[x] \neq [y]$, then $[x] \cap [y] = \varnothing$.
+\item The union of all equivalence classes is $S$: $\bigcup_{x \in S} [x] = S$.
+\end{enumerate}
+
+\paragraph{Partitions induce equivalence relations.}
+Conversely, let $\mathcal{P} = \{ P_i \}_{i \in I}$ be a \hldef{partition of $S$} (a collection of nonempty, pairwise disjoint subsets of $S$ whose union is $S$). Define a relation $\sim_\mathcal{P}$ on $S$ by
+$$ x \sim_\mathcal{P} y \iff \exists i \in I \text{ such that } x, y \in P_i. $$
+Then $\sim_\mathcal{P}$ is a \CrefAndHyperrefIfExist{definition:equivalence_relation_on_a_set}{equivalence relation} on $S$, and its equivalence classes are exactly the sets $P_i$ of the partition: $[x]_{\sim_\mathcal{P}} = P_i$ for the unique $i$ with $x \in P_i$.
+
+\paragraph{The correspondence is bijective.}
+The assignments $\sim \mapsto \mathcal{P}_\sim$ and $\mathcal{P} \mapsto \sim_\mathcal{P}$ are mutually inverse. Thus there is a bijection between the set of all equivalence relations on $S$ and the set of all partitions of $S$.
+\end{theorem}

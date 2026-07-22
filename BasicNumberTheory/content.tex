@@ -30,6 +30,7 @@
 \subsection{Definition and Basic Properties}
 
 \input{../_definitions/definition_natural_numbers.tex}
+\input{../_remarks/remark_natural_numbers_zero_inclusive.tex}
 \input{../_concepts/proposition_natural_numbers_addition_existence.tex}
 \input{../_concepts/proposition_natural_numbers_multiplication_existence.tex}
 \input{../_concepts/proposition_natural_numbers_addition_properties.tex}
@@ -88,13 +89,8 @@
 \input{../_definitions/definition_ordered_abelian_group.tex}
 \input{../_definitions/definition_subtraction_of_an_element_of_a_set_by_a_uniquely_invertible_element_for_a_commutative_binary_operation_written_additively.tex}
 \input{../_definitions/definition_ordered_ring.tex}
-\input{../_definitions/definition_absolute_value_of_an_ordered_ring.tex}
-\begin{lemma} \label{lemma:absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value}
-    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} $R_{\geq 0}$.
-    The \CrefAndHyperrefIfExist{definition:absolute_value_of_an_ordered_ring}{absolute value function} 
-    $$|\cdot|: R \to R_{\geq 0}$$
-    is indeed an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} on $R$ valued in $R_{\geq 0}$.
-\end{lemma}
+\input{../_definitions/definition_standard_absolute_value_of_an_ordered_ring.tex}
+\input{../_concepts/lemma_absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value.tex}
 \begin{lemma}
     Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}.
     For $a,b,c,d \in R$, if $a < b$ and $c < d$, then $a + c < b+d$.
@@ -113,6 +109,7 @@
 \section{Divisibility}
 
 \input{../_definitions/definition_gcd_and_lcm_of_integers.tex}
+\input{../_concepts/theorem_division_algorithm_for_integers_euclidean_algorithm_for_integers.tex}
 \input{../_concepts/proposition_bezout_identity_for_gcd_of_integers.tex}
 
 
@@ -123,6 +120,7 @@
 
 \input{../_definitions/definition_congruence_modulo_n.tex}
 \input{../_definitions/definition_residue_class_modulo_n.tex}
+\input{../_concepts/lemma_number_of_residue_classes_modulo_m_is_m.tex}
 \input{../_concepts/theorem_chinese_remainder_theorem_for_pairwise_coprime_moduli.tex}
 
 

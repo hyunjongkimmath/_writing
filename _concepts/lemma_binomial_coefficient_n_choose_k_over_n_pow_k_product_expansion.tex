@@ -1,0 +1,18 @@
+\begin{lemma} \label{lemma:binomial_coefficient_n_choose_k_over_n_pow_k_product_expansion}
+    For all integers $n \geq 1$ and $0 \leq k \leq n$, we have
+    $$\binom{n}{k} \frac{1}{n^k} = \frac{n(n-1)\cdots(n-k+1)}{k! \cdot n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
+    \CrefIfExists{definition:combinatorial_choose_function_binomial_coefficient}\CrefIfExists{definition:factorial_of_a_nonnegative_integer}\CrefIfExists{definition:exponentiation_in_a_field}
+\end{lemma}
+\begin{proof}
+    By the \CrefAndHyperrefIfExist{definition:combinatorial_choose_function_binomial_coefficient}{definition of the binomial coefficient},
+    $$\binom{n}{k} = \frac{n!}{k!(n-k)!} = \frac{n(n-1)\cdots(n-k+1)}{k!}.$$
+    Dividing both sides by $n^k$ gives the first equality:
+    $$\binom{n}{k} \frac{1}{n^k} = \frac{n(n-1)\cdots(n-k+1)}{k! \cdot n^k}.$$
+    Factor $n$ out of each term in the numerator:
+    \begin{align*}
+    n(n-1)\cdots(n-k+1) &= n \cdot n\left(1 - \frac{1}{n}\right) \cdot n\left(1 - \frac{2}{n}\right) \cdots n\left(1 - \frac{k-1}{n}\right) \\
+    &= n^k \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).
+    \end{align*}
+    Substituting this into the previous expression and canceling $n^k$ yields the second equality:
+    $$\frac{n(n-1)\cdots(n-k+1)}{k! \cdot n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
+\end{proof}

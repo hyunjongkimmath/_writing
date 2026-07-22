@@ -1,9 +1,38 @@
 \begin{proposition} \label{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}
-Let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
-\begin{enumerate}
-    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel $\operatorname{ker}(\phi)$} is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
-    \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image} $\operatorname{im}(\phi)$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $H$.
-    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $\operatorname{ker}(\phi) = \{e_G\}$, where $e_G$ is the identity element of $G$.
-    \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} if and only if $\operatorname{im}(\phi) = H$.
-\end{enumerate}
+    Let $\phi : G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}.
+    \begin{enumerate}
+        \item The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel $\operatorname{ker}(\phi)$} is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$.
+        \item\label{item:image_of_group_homomoprhism_is_subgroup_of_codomain} The \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image} $\operatorname{im}(\phi)$ is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $H$.
+        \item\label{item:group_hom_is_injective_iff_kernel_is_trivial} The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $\operatorname{ker}(\phi) = \{e_G\}$, where $e_G$ is the identity element of $G$.
+        \item The homomorphism $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective} if and only if $\operatorname{im}(\phi) = H$.
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+    Let $e_G$ and $e_H$ denote the identity elements of $G$ and $H$, respectively.
+
+    \begin{enumerate}
+        \item We verify that $\operatorname{ker}(\phi)$ is a subgroup using the criterion from \CrefIfExists{proposition:subgroup_criterion_for_a_subset_of_a_group}. First, $\operatorname{ker}(\phi) \neq \emptyset$ because $\phi(e_G) = e_H$, so $e_G \in \operatorname{ker}(\phi)$ by \CrefIfExists{definition:kernel_image_of_group_homomorphism}; the equality $\phi(e_G) = e_H$ follows from \CrefIfExists{definition:group_homomorphism}. Second, if $g_1, g_2 \in \operatorname{ker}(\phi)$, then
+        $$\phi(g_1 g_2) = \phi(g_1)\phi(g_2) = e_H e_H = e_H,$$
+        so $g_1 g_2 \in \operatorname{ker}(\phi)$. Third, if $g \in \operatorname{ker}(\phi)$, then
+        $$\phi(g^{-1}) = \phi(g)^{-1} = e_H^{-1} = e_H,$$
+        so $g^{-1} \in \operatorname{ker}(\phi)$. Hence $\operatorname{ker}(\phi) \leq G$.
+
+        To show normality, let $x \in G$ and $k \in \operatorname{ker}(\phi)$. Compute:
+        $$\phi(x k x^{-1}) = \phi(x)\phi(k)\phi(x)^{-1} = \phi(x)e_H\phi(x)^{-1} = e_H,$$
+        so $x k x^{-1} \in \operatorname{ker}(\phi)$. Thus $\operatorname{ker}(\phi)$ is closed under conjugation by elements of $G$, making it a normal subgroup by \CrefIfExists{definition:normal_subgroup_of_a_group}.
+
+        \item We verify that $\operatorname{im}(\phi)$ is a subgroup using the same criterion. First, $\operatorname{im}(\phi) \neq \emptyset$ because $e_H = \phi(e_G) \in \operatorname{im}(\phi)$. Second, if $h_1, h_2 \in \operatorname{im}(\phi)$, there exist $g_1, g_2 \in G$ with $\phi(g_1) = h_1$ and $\phi(g_2) = h_2$, so
+        $$h_1 h_2 = \phi(g_1)\phi(g_2) = \phi(g_1 g_2) \in \operatorname{im}(\phi).$$
+        Third, if $h \in \operatorname{im}(\phi)$ with $\phi(g) = h$, then
+        $$h^{-1} = \phi(g)^{-1} = \phi(g^{-1}) \in \operatorname{im}(\phi).$$
+        Hence $\operatorname{im}(\phi) \leq H$.
+
+        \item Suppose first that $\phi$ is injective. If $g \in \operatorname{ker}(\phi)$, then $\phi(g) = e_H = \phi(e_G)$. By injectivity, $g = e_G$, so $\operatorname{ker}(\phi) = \{e_G\}$.
+
+        Conversely, suppose $\operatorname{ker}(\phi) = \{e_G\}$. If $\phi(g_1) = \phi(g_2)$ for some $g_1, g_2 \in G$, then
+        $$\phi(g_2^{-1} g_1) = \phi(g_2)^{-1}\phi(g_1) = e_H,$$
+        so $g_2^{-1} g_1 \in \operatorname{ker}(\phi) = \{e_G\}$. Hence, $g_2^{-1} g_1 = e_G$, which implies that $g_1 = g_2$. Therefore, $\phi$ is injective.
+
+        \item This follows directly from the definition of surjectivity and the image: $\phi$ is surjective means for every $h \in H$ there exists $g \in G$ with $\phi(g) = h$, which is equivalent to saying that every element of $H$ lies in $\operatorname{im}(\phi)$, i.e., $\operatorname{im}(\phi) = H$.
+    \end{enumerate}
+\end{proof}

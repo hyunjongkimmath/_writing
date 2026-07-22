@@ -1,0 +1,23 @@
+\begin{proposition}[Totally ordered ring equals $P - P$ and Grothendieck recovery] \label{proposition:totally_ordered_ring_equals_P_minus_P_and_Grothendieck_recovery}
+    \TODO{AI generated, verify}
+    Let $(R,\leq)$ be a \CrefAndHyperrefIfExist{definition:ordered_ring}{commutative totally ordered ring}, and let $P = R_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} be the set of nonnegative elements. Then every element $x \in R$ can be written as a difference of two nonnegative elements, i.e.,
+    $$R = P - P := \{a - b : a,b \in P\}.$$
+
+    As a consequence, if we form the \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring} $K(P)$ of the commutative semiring $P$\CrefIfExists{lemma:nonnegative_elements_of_an_ordered_ring_form_an_ordered_semiring}, then the canonical map $\iota_R: P \to K(P)$ induces a surjective\CrefIfExists{definition:injective_surjective_bijective_map_of_sets} ring homomorphism $R \to K(P)$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $x \in R$. By trichotomy of the total order on $R$\CrefIfExists{definition:ordered_ring}, exactly one of $x > 0$, $x = 0$, or $x < 0$ holds.
+
+    \begin{enumerate}
+        \item If $x \geq 0$, then $x \in P$, and we may write $x = x - 0$ with $x, 0 \in P$.
+        \item If $x < 0$, then $-x > 0$, so $-x \in P$. We may write $x = 0 - (-x)$ with $0, -x \in P$.
+    \end{enumerate}
+
+    In all cases, $x \in P - P$, which shows that $R = P - P$.
+
+    For the consequence: the set $P$ is a commutative semiring\CrefIfExists{lemma:nonnegative_elements_of_an_ordered_ring_form_an_ordered_semiring}, so its Grothendieck ring $K(P)$ is well-defined\CrefIfExists{definition:grothendieck_ring_of_a_commutative_semiring}. The canonical map $\iota_R(p) = [(p, 0_P)]$ sends each element of $P$ to its equivalence class in $K(P)$. Every element of $K(P)$ is of the form $[(a,b)]$ for some $a,b \in P$. Since $R = P - P$, we may write $a - b = x$ for some $x \in R$. Then
+    $$[(a,b)] = [(a,0_P)] + [(0_P,b)] = \iota_R(a) - \iota_R(b),$$
+    showing that the induced map $R \to K(P)$ is surjective.
+\end{proof}

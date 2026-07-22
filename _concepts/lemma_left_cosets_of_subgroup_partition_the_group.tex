@@ -1,0 +1,18 @@
+\begin{lemma}[Cosets partition the group] \label{lemma:left_cosets_of_subgroup_partition_the_group}
+Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}.
+\begin{enumerate}
+    \item The collection of left cosets $\{gH : g \in G\}$ covers $G$, and any two distinct left cosets are disjoint. In other words, the left cosets form a \CrefAndHyperrefIfExist{definition:partition_of_a_set}{partition} of $G$.
+    \item The collection of right cosets $\{Hg : g \in G\}$ covers $G$, and any two distinct right cosets are disjoint. In other words, the right cosets form a \CrefAndHyperrefIfExist{definition:partition_of_a_set}{partition} of $G$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+We verify the conditions for the left cosets to form a partition of $G$; the argument for right cosets is analogous.
+
+Every element of $G$ belongs to some left coset because for any $x \in G$, we have $x = x e \in xH$, where $e$ is the identity element of $G$ by \CrefIfExists{definition:group}.
+
+Suppose that $g_1, g_2 \in G$ satisfy $g_1 H \cap g_2 H \neq \emptyset$. Then there exist $h_1, h_2 \in H$ such that $g_1 h_1 = g_2 h_2$. Multiplying both sides on the left by $g_1^{-1}$ and on the right by $h_2^{-1}$ (which exist since $H \leq G$), we obtain
+$$g_1^{-1} g_2 = h_1 h_2^{-1}.$$
+Since $h_1 h_2^{-1} \in H$, it follows that $g_1^{-1} g_2 \in H$, which implies that $g_1 H = g_2 H$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}.
+
+Therefore, any two left cosets are either disjoint or equal. Since they also cover $G$, the left cosets form a partition of $G$. For right cosets, an intersecting pair $H g_1 \cap H g_2 \neq \emptyset$ yields $h_1 g_1 = h_2 g_2$ for some $h_1, h_2 \in H$, so $g_1 g_2^{-1} = h_1^{-1} h_2 \in H$, which implies that $H g_1 = H g_2$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}.
+\end{proof}

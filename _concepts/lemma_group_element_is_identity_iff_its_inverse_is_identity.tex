@@ -1,0 +1,12 @@
+\begin{lemma}
+\label{lemma:group_element_is_identity_iff_its_inverse_is_identity}
+Let $G$ be a group with identity element $e$. An element $g \in G$ satisfies $g = e$ if and only if $g^{-1} = e$.
+\end{lemma}
+
+\begin{proof}
+We show each direction separately.
+
+Note that $e \cdot e = e$, so $e$ is an inverse of $e$. By \CrefAndHyperrefIfExist{lemma:identity_element_is_its_own_inverse_in_a_monoid}{the identity element is its own inverse in a monoid} (every group is a monoid), $e$ is then the unique inverse of $e$, i.e. $e = e^{-1}$.
+
+Conversely, suppose that $g^{-1} = e$. Then $g = (g^{-1})^{-1}$ by \Cref{corollary:inverse_of_inverse_in_group_is_element}. Substituting $g^{-1} = e$, we get $g = e^{-1}$. From the above, $e^{-1} = e$, so $g = e$.
+\end{proof}

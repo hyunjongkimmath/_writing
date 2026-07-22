@@ -6,13 +6,9 @@ Let $k$ be a commutative ring. A \hldef{dg-category} (differential graded catego
     \item For each triple of objects $X,Y,Z \in \mathrm{Ob}(\mathcal{C})$, a morphism of complexes (composition)
     $$\hlin{\circ : \mathrm{Hom}_\mathcal{C}(Y,Z) \otimes_k \mathrm{Hom}_\mathcal{C}(X,Y) \to \mathrm{Hom}_\mathcal{C}(X,Z)}$$
     which is associative and satisfies the graded Leibniz rule with respect to the differential $d$:
-    \[
-    d(f \circ g) = d(f) \circ g + (-1)^{|f|} f \circ d(g),
-    \]
+    $$d(f \circ g) = d(f) \circ g + (-1)^{|f|} f \circ d(g),$$
     for homogeneous $f,g$ with $|f|$ denoting the degree of $f$.
     \item For each object $X$, an identity morphism \hl{$1_X \in \mathrm{Hom}_\mathcal{C}^0(X,X)$} such that for any $f \in \mathrm{Hom}_\mathcal{C}(X,Y)$,
-    \[
-    1_Y \circ f = f, \quad f \circ 1_X = f.
-    \]
+    $$1_Y \circ f = f, \quad f \circ 1_X = f.$$
 \end{itemize}
 \end{definition}

@@ -15,20 +15,16 @@ such that the following coherence diagrams commute:
 \bigskip
 
 \textbf{Pentagon coherence:} For all $W,X,Y,Z \in \mathcal{C}$, the diagram
-\[
-\begin{tikzcd}[column sep=huge]
+$$\begin{tikzcd}[column sep=huge]
 ((W \otimes X) \otimes Y) \otimes Z \arrow[r, "\alpha_{W\otimes X, Y, Z}"] \arrow[d, "\alpha_{W,X,Y} \otimes \mathrm{id}_Z"'] & (W \otimes X) \otimes (Y \otimes Z) \arrow[r, "\alpha_{W,X,Y \otimes Z}"] & W \otimes (X \otimes (Y \otimes Z)) \\
 (W \otimes (X \otimes Y)) \otimes Z \arrow[rr, "\alpha_{W,X \otimes Y, Z}"'] & & W \otimes ((X \otimes Y) \otimes Z) \arrow[u, "\mathrm{id}_W \otimes \alpha_{X,Y,Z}"'].
-\end{tikzcd}
-\]
+\end{tikzcd}$$
 
 \bigskip
 
 \textbf{Triangle coherence:} For all $X,Y \in \mathcal{C}$, the diagram
-\[
-\begin{tikzcd}[column sep=large]
+$$\begin{tikzcd}[column sep=large]
 (X \otimes \mathbb{I}) \otimes Y \arrow[r, "\alpha_{X, \mathbb{I}, Y}"] \arrow[dr, "\rho_X \otimes \mathrm{id}_Y"'] & X \otimes (\mathbb{I} \otimes Y) \arrow[d, "\mathrm{id}_X \otimes \lambda_Y"] \\
 & X \otimes Y.
-\end{tikzcd}
-\]
+\end{tikzcd}$$
 \end{definition}

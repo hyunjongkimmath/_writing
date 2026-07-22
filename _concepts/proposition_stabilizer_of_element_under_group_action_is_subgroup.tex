@@ -1,0 +1,18 @@
+\begin{proposition} \label{proposition:stabilizer_of_element_under_group_action_is_subgroup}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.
+    For all $x \in X$, the \CrefAndHyperrefIfExist{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}{stabilizer}
+    $$\operatorname{Stab}_G(x) = \{ g \in G : g \cdot x = x \}$$
+    is a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G$.
+\end{proposition}
+\begin{proof}
+        The stabilizer $\operatorname{Stab}_G(x)$ is nonempty because $e \cdot x = x$ by the identity axiom of the group action\CrefIfExists{definition:left_and_right_group_actions_on_a_set}, so $e \in \operatorname{Stab}_G(x)$.
+
+        The stabilizer $\operatorname{Stab}_G(x)$ is closed under the group operation because if $g_1, g_2 \in \operatorname{Stab}_G(x)$, then $g_1 \cdot x = x$ and $g_2 \cdot x = x$, so
+        $$(g_1 g_2) \cdot x = g_1 \cdot (g_2 \cdot x) = g_1 \cdot x = x,$$
+        where the first equality follows from the compatibility axiom\CrefIfExists{definition:left_and_right_group_actions_on_a_set}. Hence $g_1 g_2 \in \operatorname{Stab}_G(x)$.
+
+        The stabilizer $\operatorname{Stab}_G(x)$ is closed under inverses because if $g \in \operatorname{Stab}_G(x)$, then $g \cdot x = x$. Applying $g^{-1}$ to both sides gives
+        $$g^{-1} \cdot (g \cdot x) = g^{-1} \cdot x.$$
+        The left-hand side equals $(g^{-1}g) \cdot x = e \cdot x = x$, so $g^{-1} \cdot x = x$. Hence $g^{-1} \in \operatorname{Stab}_G(x)$.
+    Therefore, $\operatorname{Stab}_G(x)$ is a subgroup of $G$.
+\end{proof}

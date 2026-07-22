@@ -6,9 +6,8 @@
 \begin{proof}
     Fix $n \geq 1$. By the \CrefAndHyperrefIfExist{theorem:binomial_theorem_for_a_commutative_ring}{binomial theorem}, applied to the commutative ring $\mathbb{Q}$, we have:
     $$\left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}.$$
-    \TODO{factor this fact out as a lemma}
-    Expanding the binomial coefficient $\binom{n}{k} = \frac{n!}{k!(n-k)!}$, we can rewrite each term as:
-    $$\binom{n}{k} \frac{1}{n^k} = \frac{n(n-1)\cdots(n-k+1)}{k! \cdot n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
+    By \Cref{lemma:binomial_coefficient_n_choose_k_over_n_pow_k_product_expansion}, each term can be rewritten as:
+    $$\binom{n}{k} \frac{1}{n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
     Similarly, for $a_{n+1}$:
     $$\binom{n+1}{k} \frac{1}{(n+1)^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n+1}\right) \left(1 - \frac{2}{n+1}\right) \cdots \left(1 - \frac{k-1}{n+1}\right).$$
     Since $n < n+1$, we have $\frac{j}{n} > \frac{j}{n+1}$ for each positive integer $j$, and hence $1 - \frac{j}{n} < 1 - \frac{j}{n+1}$. Therefore, for each fixed $k$ with $0 \leq k \leq n$:

@@ -10,3 +10,33 @@
 \TextIfExists{definition:short_exact_sequence_in_an_additive_category}{These are the vector-space special cases of the additivity of length in \Cref{definition:short_exact_sequence_in_an_additive_category} of finite-length objects.}
 \TODO{AI generated, verify}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove each part separately.
+
+    \begin{enumerate}
+        \item (Direct sum.) Let $d_i = \dim_F(V_i)$ for each $i = 1, \dots, n$, and let $\{e_{i,1}, \dots, e_{i,d_i}\}$ be a basis for $V_i$. We claim that the set of all vectors
+        $$\{(v_1, \dots, v_n) : v_i \in \{e_{i,1}, \dots, e_{i,d_i}\} \text{ for each } i\}$$
+        forms a basis for $V_1 \oplus \cdots \oplus V_n$. The total number of such vectors is $\sum_{i=1}^n d_i$.
+
+        We first show spanning. Let $(v_1, \dots, v_n) \in V_1 \oplus \cdots \oplus V_n$. For each $i$, write $v_i = c_{i,1}e_{i,1} + \cdots + c_{i,d_i}e_{i,d_i}$ for some scalars $c_{i,j} \in F$. By component-wise addition and scalar multiplication in the external direct sum (\Cref{definition:direct_sum_of_vector_spaces_internal_and_external}), we have
+        $$(v_1, \dots, v_n) = \sum_{j=1}^{d_1} c_{1,j}(e_{1,j}, 0, \dots, 0) + \cdots + \sum_{j=1}^{d_n} c_{n,j}(0, \dots, 0, e_{n,j}),$$
+        so the set spans $V_1 \oplus \cdots \oplus V_n$.
+
+        Next we show linear independence. Suppose that a linear combination of these vectors equals $(0, \dots, 0)$. By component-wise operations in the external direct sum, each component must separately equal zero. Since $\{e_{i,1}, \dots, e_{i,d_i}\}$ is linearly independent for each $i$, all coefficients in the $i$-th component must be zero. Hence, all coefficients are zero, so the set is linearly independent by \CrefIfExists{definition:basis_and_dimension_of_a_vector_space_over_a_field}.
+
+        Therefore, the dimension of $V_1 \oplus \cdots \oplus V_n$ equals the number of basis vectors, which is $\sum_{i=1}^n d_i$.
+
+        \item (Quotient.) Let $\pi: V \to V/W$ be the canonical projection defined by $\pi(v) = v + W$ (\Cref{definition:quotient_vector_space_and_canonical_projection}). The map $\pi$ is linear because
+        $$\pi(v_1 + v_2) = (v_1 + v_2) + W = (v_1 + W) + (v_2 + W) = \pi(v_1) + \pi(v_2),$$
+        and $\pi(cv) = cv + W = c(v + W) = c\pi(v)$ for all $v, v_1, v_2 \in V$ and $c \in F$.
+
+        The kernel of $\pi$ is precisely $W$, because $\pi(v) = 0_{V/W} = W$ if and only if $v + W = W$, which holds if and only if $v \in W$. Hence, $\ker(\pi) = W$.
+
+        The map $\pi$ is surjective by definition of the quotient space: every element of $V/W$ has the form $v + W = \pi(v)$ for some $v \in V$. Therefore, $\operatorname{im}(\pi) = V/W$.
+
+        Applying the rank-nullity theorem (\Cref{theorem:rank_nullity_theorem_for_finite_dimensional_vector_spaces}) to $\pi$ gives
+        $$\dim_F(\ker(\pi)) + \dim_F(\operatorname{im}(\pi)) = \dim_F(V).$$
+        Substituting $\ker(\pi) = W$ and $\operatorname{im}(\pi) = V/W$ yields the desired formula.
+    \end{enumerate}
+\end{proof}

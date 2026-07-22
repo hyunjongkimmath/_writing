@@ -1,0 +1,17 @@
+\begin{lemma} \label{lemma:factorial_lower_bound_by_power_of_two_for_n_ge_4}
+    For every integer $n \geq 4$, we have
+    $$n! \geq 2^n.$$
+    \CrefIfExists{definition:factorial_of_a_nonnegative_integer}
+    \CrefIfExists{definition:power_of_an_element_of_a_ring_by_a_nonnegative_integer}
+\end{lemma}
+\begin{proof}
+    We proceed by \CrefAndHyperrefIfExist{proposition:mathematical_induction_on_natural_numbers}{induction} on $n \geq 4$.
+    \begin{itemize}
+        \item \textbf{Base case ($n = 4$):} We have $4! = 24$ and $2^4 = 16$, so $4! \geq 2^4$ holds.
+        \item \textbf{Inductive step:} Assume the statement holds for some $n \geq 4$, i.e., $n! \geq 2^n$. We must show $(n+1)! \geq 2^{n+1}$.
+        Since $n \geq 4$, we have $n+1 \geq 5 > 2$. Multiplying both sides of the inductive hypothesis by $n+1$ gives
+        $$(n+1)! = (n+1) \cdot n! \geq (n+1) \cdot 2^n > 2 \cdot 2^n = 2^{n+1}.$$
+        Thus $(n+1)! \geq 2^{n+1}$.
+    \end{itemize}
+    By induction, the inequality holds for all $n \geq 4$.
+\end{proof}

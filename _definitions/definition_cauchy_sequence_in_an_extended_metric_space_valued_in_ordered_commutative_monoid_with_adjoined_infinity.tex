@@ -1,0 +1,9 @@
+\begin{definition}[Cauchy sequence in an extended metric space valued in an ordered monoid with adjoined infinity] \label{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered monoid with adjoined infinity} obtained from $T$, and let $(X, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
+    A sequence $(x_n)_{n \in \mathbb{N}}$ in $X$ is called a \hldef{Cauchy sequence} if for every $\varepsilon \in T_{>0}$, there exists $N \in \mathbb{N}$ such that for all $m, n \geq N$,
+    $$d(x_m, x_n) < \varepsilon.$$
+
+    Because the quantification is over $\varepsilon \in T_{>0} \subseteq T$ (not including $\infty$), any Cauchy sequence must eventually have finite pairwise distances: for all sufficiently large $m,n$, we have $d(x_m,x_n) \in T$.
+
+    When $T = \bbR_{\geq 0}$, this recovers the standard definition of a Cauchy sequence. In general, if $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}, then the condition allows pairwise distances to become arbitrarily small without being zero. If $T$ has a minimum positive element $\varepsilon_0$, then every Cauchy sequence is eventually constant: for all sufficiently large $m,n$, we must have $d(x_m,x_n) < \varepsilon_0$. Since $\varepsilon_0$ is the smallest strictly positive element, this forces $d(x_m,x_n) = 0_T$ and hence $x_m = x_n$.
+\end{definition}

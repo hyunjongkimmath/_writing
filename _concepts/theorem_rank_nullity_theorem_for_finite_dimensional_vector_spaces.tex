@@ -8,3 +8,31 @@
 \TextIfExists{definition:short_exact_sequence_in_an_additive_category}{This is the vector-space special case of the additivity of dimension in short exact sequences: if $0 \to \ker(T) \to V \to \operatorname{im}(T) \to 0$ is a \Cref{definition:short_exact_sequence_in_an_additive_category}, then $\dim(V) = \dim(\ker(T)) + \dim(\operatorname{im}(T))$.}
 \TODO{AI generated, verify}
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{proposition:kernel_is_subspace_image_is_subspace_of_linear_maps}, $\ker(T)$ is a subspace of $V$. Let $k = \dim_F(\ker(T))$, and let $\{v_1, \dots, v_k\}$ be a basis for $\ker(T)$.
+
+    By \Cref{lemma:basis_of_subspace_of_finite_dimensional_vector_space_extends_to_basis_of_ambient_space}, we can extend $\{v_1, \dots, v_k\}$ to a basis $\{v_1, \dots, v_k, u_1, \dots, u_r\}$ for $V$, where $r = \dim_F(V) - k$.
+
+    We claim that $\{T(u_1), \dots, T(u_r)\}$ is a basis for $\operatorname{im}(T)$.
+
+    We first show that these vectors span $\operatorname{im}(T)$. Let $w \in \operatorname{im}(T)$. Then there exists $v \in V$ such that $T(v) = w$. Write $v$ in terms of the basis for $V$:
+    $$v = c_1 v_1 + \cdots + c_k v_k + d_1 u_1 + \cdots + d_r u_r$$
+    for some scalars $c_1, \dots, c_k, d_1, \dots, d_r \in F$. Applying $T$ and using linearity gives
+    $$w = T(v) = c_1 T(v_1) + \cdots + c_k T(v_k) + d_1 T(u_1) + \cdots + d_r T(u_r).$$
+    Since each $v_i \in \ker(T)$, we have $T(v_i) = 0_W$, so the first $k$ terms vanish. Hence
+    $$w = d_1 T(u_1) + \cdots + d_r T(u_r),$$
+    which shows that $\{T(u_1), \dots, T(u_r)\}$ spans $\operatorname{im}(T)$.
+
+    Next we show linear independence. Suppose that $d_1 T(u_1) + \cdots + d_r T(u_r) = 0_W$ for some scalars $d_1, \dots, d_r \in F$. By linearity,
+    $$T(d_1 u_1 + \cdots + d_r u_r) = 0_W,$$
+    so $d_1 u_1 + \cdots + d_r u_r \in \ker(T)$. Since this vector lies in $\ker(T)$, it can be written as a linear combination of the basis vectors of $\ker(T)$:
+    $$d_1 u_1 + \cdots + d_r u_r = c_1 v_1 + \cdots + c_k v_k$$
+    for some scalars $c_1, \dots, c_k \in F$. Rearranging gives
+    $$-c_1 v_1 - \cdots - c_k v_k + d_1 u_1 + \cdots + d_r u_r = 0_V.$$
+    Since $\{v_1, \dots, v_k, u_1, \dots, u_r\}$ is a basis for $V$, it is linearly independent, so all coefficients must be zero. In particular, $d_1 = \cdots = d_r = 0$. Hence, $\{T(u_1), \dots, T(u_r)\}$ is linearly independent by \CrefIfExists{definition:basis_and_dimension_of_a_vector_space_over_a_field}.
+
+    Therefore, $\{T(u_1), \dots, T(u_r)\}$ is a basis for $\operatorname{im}(T)$ of size $r$. This means
+    $$\dim_F(\operatorname{im}(T)) = r = \dim_F(V) - k = \dim_F(V) - \dim_F(\ker(T)).$$
+    Rearranging yields the desired equality.
+\end{proof}

@@ -6,3 +6,19 @@
 \TextIfExists{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}{This is the vector-space special case of \Cref{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}, where kernel and image of any module homomorphism are submodules.}
 \TODO{AI generated, verify}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $0_V$ and $0_W$ denote the zero vectors in $V$ and $W$, respectively.
+
+    We show that $\ker(T)$ is a subspace of $V$. By \Cref{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}, it suffices to verify nonemptiness, closure under addition, and closure under scalar multiplication. First, $T(0_V) = 0_W$ by \Cref{definition:morphism_of_vector_spaces}, so $0_V \in \ker(T)$ and $\ker(T) \neq \emptyset$. Second, if $v_1, v_2 \in \ker(T)$, then
+    $$T(v_1 + v_2) = T(v_1) + T(v_2) = 0_W + 0_W = 0_W,$$
+    so $v_1 + v_2 \in \ker(T)$. Third, if $c \in F$ and $v \in \ker(T)$, then
+    $$T(cv) = cT(v) = c \cdot 0_W = 0_W,$$
+    so $cv \in \ker(T)$. Hence, $\ker(T)$ is a subspace of $V$.
+
+    We show that $\operatorname{im}(T)$ is a subspace of $W$ using the same criterion. First, $T(0_V) = 0_W$, so $0_W \in \operatorname{im}(T)$ and $\operatorname{im}(T) \neq \emptyset$. Second, if $w_1, w_2 \in \operatorname{im}(T)$, there exist $v_1, v_2 \in V$ such that $T(v_1) = w_1$ and $T(v_2) = w_2$, so
+    $$w_1 + w_2 = T(v_1) + T(v_2) = T(v_1 + v_2) \in \operatorname{im}(T).$$
+    Third, if $c \in F$ and $w \in \operatorname{im}(T)$ with $T(v) = w$, then
+    $$cw = cT(v) = T(cv) \in \operatorname{im}(T).$$
+    Hence, $\operatorname{im}(T)$ is a subspace of $W$.
+\end{proof}

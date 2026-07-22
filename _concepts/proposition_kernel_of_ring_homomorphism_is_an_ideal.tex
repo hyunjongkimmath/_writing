@@ -1,0 +1,11 @@
+\begin{proposition} \label{proposition:kernel_of_ring_homomorphism_is_an_ideal}
+Let $\phi: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} between rings $R$ and $S$. Then the kernel $\operatorname{ker}(\phi) = \{ r \in R \mid \phi(r) = 0_S \}$ is a \CrefAndHyperrefIfExist{definition:ideal_of_a_ring}{two-sided ideal} of $R$.
+\end{proposition}
+
+\begin{proof}
+We verify the ideal axioms. Since $\phi(0_R) = 0_S$, we have $0_R \in \operatorname{ker}(\phi)$, so the kernel is nonempty.
+
+Let $x, y \in \operatorname{ker}(\phi)$. Then $\phi(x) = 0_S$ and $\phi(y) = 0_S$. By additivity of $\phi$, we have $\phi(x - y) = \phi(x) - \phi(y) = 0_S - 0_S = 0_S$, so $x - y \in \operatorname{ker}(\phi)$. Hence $\operatorname{ker}(\phi)$ is an additive subgroup of $R$.
+
+Now let $r \in R$ and $x \in \operatorname{ker}(\phi)$. Then $\phi(rx) = \phi(r)\phi(x) = \phi(r) \cdot 0_S = 0_S$ and $\phi(xr) = \phi(x)\phi(r) = 0_S \cdot \phi(r) = 0_S$. Thus $rx \in \operatorname{ker}(\phi)$ and $xr \in \operatorname{ker}(\phi)$. Therefore $\operatorname{ker}(\phi)$ is a two-sided ideal of $R$.
+\end{proof}

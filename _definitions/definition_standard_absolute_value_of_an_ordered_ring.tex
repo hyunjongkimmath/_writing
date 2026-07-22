@@ -1,0 +1,8 @@
+\begin{definition} \label{definition:standard_absolute_value_of_an_ordered_ring}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} $R_{\geq 0}$.
+    The \hldef{(standard) absolute value function} is the function
+    $$|\cdot|: R \to R_{\geq 0}$$
+    defined as follows:
+    $$|r| = \begin{cases} r &\text{if } r \in P \\ -r &\text{if } -r \in P \\ 0 &\text{otherwise}.\end{cases}$$
+    If $R$ is totally ordered, then it is indeed an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} on $R$ valued in $R_{\geq 0}$. \CrefIfExists{lemma:absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value} For a merely partially ordered ring, $|\cdot|$ may fail positive definiteness (if $r$ is incomparable to $0_R$, then $|r| = 0_R$ while $r \neq 0_R$) and multiplicativity.
+\end{definition}

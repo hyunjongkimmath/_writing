@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:partition_of_a_set}
+A \hldef{partition of a set $X$} is a collection $\mathcal{P}$ of nonempty subsets of $X$ such that:
+\begin{enumerate}
+    \item The union of all subsets in $\mathcal{P}$ is $X$: $\bigcup_{A \in \mathcal{P}} A = X$.
+    \item Any two distinct subsets in $\mathcal{P}$ are disjoint: if $A, B \in \mathcal{P}$ with $A \neq B$, then $A \cap B = \varnothing$.
+\end{enumerate}
+The subsets in $\mathcal{P}$ are called the \hldef{blocks} (or \hldef{parts} or \hldef{cells}) of the partition.
+
+\TextIfExists{theorem:equivalence_relations_and_partitions}{
+    Partitions of $X$ precisely determine \CrefAndHyperrefIfExist{definition:equivalence_of_categories}{equivalence} relations on $X$, see \Cref{theorem:equivalence_relations_and_partitions}.
+}
+\end{definition}

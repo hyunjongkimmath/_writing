@@ -3,3 +3,13 @@
     $$\operatorname{id}_{N \times H} : N \times H \longrightarrow N \rtimes_\varphi H, \quad (n,h) \mapsto (n,h),$$
     is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group isomorphism}, where $N \times H$ carries the componentwise \CrefAndHyperrefIfExist{definition:product_of_groups}{direct product} operation and $N \rtimes_\varphi H$ carries the semidirect product operation.
 \end{proposition}
+
+\begin{proof}
+    Since $\operatorname{id}_{N \times H}$ is a bijection on the underlying sets, we only need to show that it preserves the group operations. The multiplication in $N \rtimes_\varphi H$ is given by
+    $$ (n_1, h_1)(n_2, h_2) = (n_1 \varphi(h_1)(n_2), h_1 h_2).$$
+    Since $\varphi$ is the trivial homomorphism, $\varphi(h)(n) = n$ for all $h \in H$ and $n \in N$. Hence the semidirect product multiplication simplifies to
+    $$ (n_1, h_1)(n_2, h_2) = (n_1 n_2, h_1 h_2),$$
+    which is exactly the componentwise multiplication in the direct product $N \times H$.
+
+    Therefore, $\operatorname{id}_{N \times H}$ is a group homomorphism. It is also clearly \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijective}, so it is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group isomorphism}.
+\end{proof}

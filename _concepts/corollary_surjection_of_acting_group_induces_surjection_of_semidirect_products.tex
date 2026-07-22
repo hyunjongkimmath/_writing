@@ -6,6 +6,17 @@
     given by $(\operatorname{id}_N \rtimes p)(n, h_1) = (n, p(h_1))$ is a surjective \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. Its kernel is $\{e_N\} \times \ker(p)$.
 \end{corollary}
 \begin{proof}
-    \TODO{}
-    % The pair $(\operatorname{id}_N, p)$ satisfies the compatibility condition: $\operatorname{id}_N(\phi_1(h_1)(n)) = \phi_2(p(h_1))(n) = \phi_2(p(h_1))(\operatorname{id}_N(n))$. By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, $\operatorname{id}_N \rtimes p$ is a homomorphism. For surjectivity, let $(n, h_2) \in N \rtimes_{\phi_2} H_2$. Since $p$ is surjective, there exists $h_1 \in H_1$ with $p(h_1) = h_2$. Then $(\operatorname{id}_N \rtimes p)(n, h_1) = (n, h_2)$. The kernel is $\{(n, h_1) : n = e_N, p(h_1) = e_{H_2}\} = \{e_N\} \times \ker(p)$.
+    \TODO{AI generated, verify}
+    We first verify that $(\operatorname{id}_N, p)$ is a morphism in $\mathbf{ActGrp}$ by checking the compatibility condition from \Cref{definition:category_of_group_actions}. For each $h_1 \in H_1$ and $n \in N$, we have
+    $$\operatorname{id}_N(\phi_1(h_1)(n)) = \phi_2(p(h_1))(n) = \phi_2(p(h_1))(\operatorname{id}_N(n)),$$
+    where the first equality uses $\phi_1 = \phi_2 \circ p$ and the second uses that $\operatorname{id}_N$ is the identity map. Hence, $(\operatorname{id}_N, p)$ satisfies the compatibility condition.
+
+    By \Cref{proposition:functoriality_of_semidirect_product_via_category_of_group_actions}, the induced homomorphism $\operatorname{id}_N \rtimes p : N \rtimes_{\phi_1} H_1 \to N \rtimes_{\phi_2} H_2$ is a group homomorphism.
+
+    We show that $\operatorname{id}_N \rtimes p$ is surjective. Let $(n, h_2) \in N \rtimes_{\phi_2} H_2$. Since $p: H_1 \to H_2$ is surjective by hypothesis, there exists $h_1 \in H_1$ such that $p(h_1) = h_2$. Then $(\operatorname{id}_N \rtimes p)(n, h_1) = (n, p(h_1)) = (n, h_2)$. Hence $\operatorname{id}_N \rtimes p$ is surjective.
+
+    We now compute the kernel. An element $(n, h_1)$ lies in the kernel if and only if
+    $$(\operatorname{id}_N \rtimes p)(n, h_1) = (e_N, e_{H_2}),$$
+    which is equivalent to $n = e_N$ and $p(h_1) = e_{H_2}$. The condition $p(h_1) = e_{H_2}$ means precisely that $h_1 \in \ker(p)$. Therefore, the kernel of $\operatorname{id}_N \rtimes p$ is
+    $$\{(n, h_1) : n = e_N \text{ and } h_1 \in \ker(p)\} = \{e_N\} \times \ker(p).$$
 \end{proof}

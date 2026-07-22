@@ -1,0 +1,14 @@
+\begin{theorem}[Bounded monotone sequence has supremum in a poset with the least upper bound property] \label{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property}
+    Let $(X, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property} (or equivalently, the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{greatest lower bound property}\CrefIfExists{lemma:least_upper_bound_and_greatest_lower_bound_property_on_a_partially_ordered_set_are_equivalent}). Let $(a_n)_{n=1}^\infty$ be a sequence in $X$.
+
+    \begin{enumerate}
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then the set $\{a_n : n \in \mathbb{N}\}$ has a supremum in $X$.
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nonincreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded below}, then the set $\{a_n : n \in \mathbb{N}\}$ has an infimum in $X$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    We prove the nondecreasing case; the nonincreasing case follows by duality.
+
+    Let $(a_n)_{n=1}^\infty$ be a nondecreasing sequence in $X$ that is bounded above. The set $S = \{a_n : n \in \mathbb{N}\}$ is nonempty and bounded above in $X$. By the least upper bound property of $X$, the supremum $\sup S$ exists in $X$.
+\end{proof}

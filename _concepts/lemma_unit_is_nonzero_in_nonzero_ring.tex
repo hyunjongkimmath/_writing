@@ -1,0 +1,7 @@
+\begin{lemma} \label{lemma:unit_is_nonzero_in_nonzero_ring}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:zero_ring}{nontrivial ring} and let $u \in R$ be a \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit}. Then $u \neq 0_R$.
+\end{lemma}
+
+\begin{proof}
+Suppose for contradiction that $u = 0_R$. Since $u$ is a unit, there exists $v \in R$ such that $u v = 1_R = v u$. But $u v = 0_R \cdot v = 0_R$, so $1_R = 0_R$, contradicting the assumption that $R$ is a nontrivial ring. Hence $u \neq 0_R$.
+\end{proof}

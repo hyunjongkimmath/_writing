@@ -1,0 +1,20 @@
+\begin{lemma}[Power of a product in a group with commuting elements] \label{lemma:power_of_product_of_commuting_elements_in_a_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g, h \in G$ be elements that commute, i.e., $gh = hg$. For all integers $n \in \bbZ$,
+    $$(gh)^n = g^n h^n,$$
+    \CrefIfExists{definition:power_of_a_group_element_by_an_integer}
+\end{lemma}
+
+\begin{proof}
+    This follows directly from \Cref{lemma:power_of_product_of_commuting_elements_in_a_monoid}, which covers both the monoid case ($n \ge 0$) and the group case ($n \in \bbZ$) when the underlying monoid is a group.
+
+    For $n \in \bbZ_{\geq 0}$, this follows from \Cref{lemma:power_of_product_of_commuting_elements_in_a_monoid}. 
+    For $n < 0$, let $m = -n > 0$. We have
+    \begin{align*}
+        (gh)^n &= ((gh)^{-1})^m \\
+        &= (h^{-1} g^{-1})^m \quad\text{\CrefIfExists{lemma:inverse_of_product_of_two_elements_in_a_group}} \\ 
+        &= (g^{-1} h^{-1})^m \quad\text{(\Cref{lemma:powers_of_elements_in_a_semigroup_monoid_group_commute_if_and_only_if_the_elements_commute})} \\
+        &= (g^{-1})^m (h^{-1})^m \quad\text{(\Cref{lemma:power_of_product_of_commuting_elements_in_a_monoid})} \\
+        &= g^{-m} h^{-m} \\
+        &= g^n h^n.
+    \end{align*}
+\end{proof}

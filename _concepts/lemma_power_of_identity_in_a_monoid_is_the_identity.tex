@@ -1,0 +1,8 @@
+\begin{lemma} \label{lemma:power_of_identity_in_a_monoid_is_the_identity}
+    Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:monoid}{monoid} with identity element $e$. For all $n \in \bbZ_{\ge 0}$,
+    $$e^n = e,$$
+    where $e^n$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{$n$th power of $e$}.
+\end{lemma}
+\begin{proof}
+    We prove this by induction. By the definition of \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{powers in a monoid}, $e^0 = e$. For $n \ge 0$, suppose inductively that $e^n = e$. We have $e^{n+1} = e \cdot e^n = e \cdot e = e$. Hence $e^n = e$ for all $n \in \bbZ_{\ge 0}$.
+\end{proof}

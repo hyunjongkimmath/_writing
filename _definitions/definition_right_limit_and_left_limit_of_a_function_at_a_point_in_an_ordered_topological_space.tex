@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:right_limit_and_left_limit_of_a_function_at_a_point_in_an_ordered_topological_space}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{T})$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} equipped with a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order} $\leq$ such that the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology} on $(X, \leq)$ is coarser than $\mathcal{T}$ (i.e., every order-open set is open in $\mathcal{T}$). Let $Y$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. Let $f: S \to Y$ be a function defined on a subset $S \subseteq X$. Let $p \in X$ be such that $p$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S \cap (p, \infty)$ (for the right limit) or of $S \cap (-\infty, p)$ (for the left limit).
+
+    We say that the \hldef{right limit of $f$ as $x$ approaches $p$ is $L$}, written
+    $$\hlin{\lim_{x \to p^+} f(x) = L \qquad\text{or}\qquad \lim_{x \downarrow p} f(x) = L}$$
+    if for every neighborhood $V$ of $L$ in $Y$, there exists an open interval $(p, b)$ with $b > p$ such that $f\bigl( S \cap (p, b) \bigr) \subseteq V$.
+
+    We say that the \hldef{left limit of $f$ as $x$ approaches $p$ is $L$}, written
+    $$\hlin{\lim_{x \to p^-} f(x) = L \qquad\text{or}\qquad \lim_{x \uparrow p} f(x) = L}$$
+    if for every neighborhood $V$ of $L$ in $Y$, there exists an open interval $(a, p)$ with $a < p$ such that $f\bigl( S \cap (a, p) \bigr) \subseteq V$.
+
+    If such an $L$ exists, we say that $f$ \hldef{has a right limit at $p$} (respectively, \hldef{has a left limit at $p$}). Although the limit $L$ may not be unique in general (unless $Y$ is Hausdorff), we may still write $\lim_{x \to p^+} f(x)$ (respectively $\lim_{x \to p^-} f(x)$) for a right (left) limit when it exists.
+
+    \TextIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}{
+        The two-sided limit $\lim_{x \to p} f(x)$ exists if and only if both one-sided limits exist and are equal.
+    }
+\end{definition}

@@ -8,3 +8,19 @@
 \TextIfExists{definition:coproduct_of_modules_of_rings}{This is the vector-space special case of the canonical isomorphism between an internal direct sum of submodules and \Cref{definition:coproduct_of_modules_of_rings}.}
 \TODO{AI generated, verify}
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{definition:direct_sum_of_vector_spaces_internal_and_external}, the external direct sum $W_1 \oplus \cdots \oplus W_n$ is the Cartesian product equipped with component-wise addition and scalar multiplication.
+
+    We first show that $\Phi$ is a linear map. For $(w_1, \dots, w_n), (w'_1, \dots, w'_n) \in W_1 \oplus \cdots \oplus W_n$ and $c \in F$, we have
+    $$\Phi(w_1 + w'_1, \dots, w_n + w'_n) = (w_1 + w'_1) + \cdots + (w_n + w'_n) = (w_1 + \cdots + w_n) + (w'_1 + \cdots + w'_n) = \Phi(w_1, \dots, w_n) + \Phi(w'_1, \dots, w'_n),$$
+    and
+    $$\Phi(cw_1, \dots, cw_n) = cw_1 + \cdots + cw_n = c(w_1 + \cdots + w_n) = c\Phi(w_1, \dots, w_n).$$
+    Hence $\Phi$ is linear by \Cref{definition:morphism_of_vector_spaces}.
+
+    We show that $\Phi$ is surjective. Let $w \in W$. By the definition of the internal direct sum (\Cref{definition:direct_sum_of_vector_spaces_internal_and_external}), every element of $W = W_1 + \cdots + W_n$ can be written as a sum $w_1 + \cdots + w_n$ with $w_i \in W_i$. Hence, $\Phi(w_1, \dots, w_n) = w$, so $\Phi$ is surjective.
+
+    We show that $\Phi$ is injective by verifying it has trivial kernel. Suppose that $\Phi(w_1, \dots, w_n) = 0_V$. Then $w_1 + \cdots + w_n = 0_V$ with $w_i \in W_i$. By the uniqueness of the expression in an internal direct sum (\Cref{definition:direct_sum_of_vector_spaces_internal_and_external}), this implies that each $w_i = 0_{W_i}$. Hence, $(w_1, \dots, w_n) = (0_{W_1}, \dots, 0_{W_n})$, which is the zero vector of the external direct sum. Therefore, $\Phi$ has trivial kernel, so it is injective by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial} (applying the group-theoretic statement to the underlying abelian groups of vector spaces).
+
+    Hence, $\Phi$ is a bijective linear map, i.e., an isomorphism of $F$-vector spaces.
+\end{proof}

@@ -1,15 +1,14 @@
 \begin{corollary}[Derivative of a real polynomial function] \label{corollary:derivative_of_a_real_polynomial_function_on_real_interval}
-    \TODO{AI generated, verify}
-    Let $I \subseteq \bbR$ be an interval and let $p \in \bbR[x]$\CrefIfExists{definition:polynomial_ring_over_a_commutative_ring} be a polynomial, written as
+    Let $I \subseteq \bbR$ be an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{interval} and let $p \in \bbR[x]$ be a \CrefAndHyperrefIfExist{definition:polynomial_ring_over_a_commutative_ring}{polynomial}, written as
     $$p(x) = \sum_{k=0}^{n} a_k x^k$$ Define the function $f : I \to \bbR$ by evaluation $f(x) = p(x)$. Then $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every $x \in I$ and
     $$f'(x) = \sum_{k=1}^{n} k a_k x^{k-1}.$$
 \end{corollary}
 \begin{proof}
-    \TODO{AI generated, verify}
-    For each term $a_k x^k$, the power function $x \mapsto x^k$ is differentiable on $I$ with derivative $k x^{k-1}$ by \Cref{proposition:derivative_of_a_power_function_on_a_real_interval_for_natural_exponents}. Multiplying by the constant $a_k$ and applying \Cref{proposition:derivative_rules_for_sum_product_quotient_and_chain} (product rule with the constant function $a_k$, whose derivative is $0$ by \Cref{proposition:derivative_of_a_constant_real_valued_function_on_a_real_interval}) gives
+    For each term $a_k x^k$, the power function $x \mapsto x^k$ is differentiable on $I$ with derivative $k x^{k-1}$\CrefIfExists{proposition:derivative_of_a_power_function_on_a_real_interval_for_natural_exponents}. We have 
     $$\frac{d}{dx}\bigl(a_k x^k\bigr) = a_k \cdot k x^{k-1}.$$
+    \CrefIfExists{corollary:derivative_of_real_scalar_multiple_of_differentiable_function_on_real_interval}
 
-    Applying the sum rule from \Cref{proposition:derivative_rules_for_sum_product_quotient_and_chain} repeatedly to the finite sum $f(x) = \sum_{k=0}^n a_k x^k$, we obtain
+    Applying the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{sum rule of differentiation} recursively/inductively to the finite sum $f(x) = \sum_{k=0}^n a_k x^k$, we obtain
     $$f'(x) = \sum_{k=0}^n \frac{d}{dx}\bigl(a_k x^k\bigr) = \sum_{k=1}^n k a_k x^{k-1},$$
     where the $k=0$ term contributes $0$ because the derivative of the constant $a_0$ is $0$.
 \end{proof}

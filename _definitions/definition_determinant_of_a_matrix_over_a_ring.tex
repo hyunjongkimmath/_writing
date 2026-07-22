@@ -1,3 +1,9 @@
 \begin{definition} \label{definition:determinant_of_a_matrix_over_a_ring}
-    \TODO{} 
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) ring}, and let $n \geq 1$ be an integer. Let $A = (a_{ij}) \in M_n(R)$ be an $n \times n$ \CrefAndHyperrefIfExist{definition:matrix_over_a_ring}{matrix} over $R$.
+
+    The \hldef{determinant of $A$} is the element \hl{$\det(A) \in R$} given by the Leibniz formula
+    $$\hlin{\det(A) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \, a_{1,\sigma(1)} \cdots a_{n,\sigma(n)},}$$
+    where $S_n$\CrefIfExists{definition:symmetric_group_on_a_set} is the \CrefAndHyperrefIfExist{definition:symmetric_group_on_a_set}{symmetric group on $\{1, \ldots, n\}$}, and $\operatorname{sgn}(\sigma)$ is the \hldef{sign of the permutation $\sigma$}\TODO{AI generated, reference needed: definition of sign of a permutation}.
+
+    For $n = 0$, we set $\det(A) = 1_R$.
 \end{definition}

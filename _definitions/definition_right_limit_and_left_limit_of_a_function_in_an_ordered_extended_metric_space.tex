@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:right_limit_and_left_limit_of_a_function_in_an_ordered_extended_metric_space}
+    \TODO{AI generated, verify}
+    Let $(X, \leq, d_X)$ and $(Y, d_Y)$ be \CrefAndHyperrefIfExist{definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{ordered extended metric spaces} valued in the same \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered commutative monoid with adjoined infinity} $T^\infty$. Let $S \subseteq X$ and let $f: S \to Y$ be a function. Let $p \in X$ be a point such that $p$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} of $S \cap (p, \infty)$ (for the right limit) or of $S \cap (-\infty, p)$ (for the left limit).
+
+    We say that the \hldef{right limit of $f$ at $p$ is $L$}, written
+    $$\hlin{\lim_{x \to p^+} f(x) = L}$$
+    if for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that for all $x \in S$ with $p < x$ and $d_X(x, p) < \delta$, we have $d_Y(f(x), L) < \varepsilon$.
+
+    We say that the \hldef{left limit of $f$ at $p$ is $L$}, written
+    $$\hlin{\lim_{x \to p^-} f(x) = L}$$
+    if for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that for all $x \in S$ with $x < p$ and $d_X(x, p) < \delta$, we have $d_Y(f(x), L) < \varepsilon$.
+
+    If such an $L$ exists, we say that $f$ \hldef{has a right limit at $p$} (respectively, \hldef{has a left limit at $p$}). If $Y$ is Hausdorff (e.g., $T$ is a group), the limit $L$ is unique and we may write $\lim_{x \to p^+} f(x)$ (respectively $\lim_{x \to p^-} f(x)$) unambiguously.
+
+    \TextIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}{
+        The two-sided limit $\lim_{x \to p} f(x)$ exists if and only if both one-sided limits exist and are equal.
+    }
+\end{definition}

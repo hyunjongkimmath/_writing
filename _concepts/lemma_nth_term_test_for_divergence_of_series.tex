@@ -9,7 +9,7 @@
     \TODO{AI generated, verify}
     Let $(S_N)_{N=0}^\infty$ be the sequence of partial sums, where $S_0 = 0$ and $S_N = \sum_{n=1}^N v_n$\CrefIfExists{definition:partial_sum_of_a_sequence_in_an_abelian_group}. Since $\sum_{n=1}^\infty v_n$ converges, there exists $v \in V$ such that $S_N \to v$ as $N \to \infty$.
 
-    Convergence of $(S_N)$ to $v$ means that for every $\varepsilon > 0$ there exists $N_0 \geq 1$ such that $\|S_N - v\| < \varepsilon/2$ for all $N \geq N_0$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}.
+    Convergence of $(S_N)$ to $v$ means that for every $\varepsilon > 0$ there exists $N_0 \geq 1$ such that $\|S_N - v\| < \varepsilon/2$ for all $N \geq N_0$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
 
     For any $n \geq N_0 + 1$, we have $v_n = S_n - S_{n-1}$. By the triangle inequality for the norm\CrefIfExists{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}:
     $$\|v_n\| = \|S_n - v + v - S_{n-1}\| \leq \|S_n - v\| + \|v - S_{n-1}\|.$$

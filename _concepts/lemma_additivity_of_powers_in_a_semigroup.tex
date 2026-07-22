@@ -1,6 +1,14 @@
 \begin{lemma} \label{lemma:additivity_of_powers_in_a_semigroup}
-    \TODO{AI generated, verify}
-Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup} and let $a \in M$. For all positive integers $m,n \in \bbZ_{>0}$,
-$$a^m \cdot a^n = a^{m+n},$$
-where $a^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power of $a$}.
+    Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup} and let $a \in M$. For all positive integers $m,n \in \bbZ_{>0}$,
+    $$a^m \cdot a^n = a^{m+n},$$
+    where $a^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power of $a$}.
 \end{lemma}
+\begin{proof}
+    Fix $n \in \bbZ_{>0}$ and induct on $m$. For the base case $m = 1$, we have by \CrefIfExists{definition:power_of_a_semigroup_element_by_a_positive_integer}:
+    $$a^1 \cdot a^n = a \cdot a^n = a^{n+1} = a^{1+n},$$
+    so the identity holds. Inductively assume that $m \in \bbZ_{>0}$ satisfies $a^m \cdot a^n = a^{m+n}$ for all $n \in \bbZ_{>0}$. Then
+    $$a^{m+1} \cdot a^n = (a \cdot a^m) \cdot a^n$$
+    by the definition of powers. By the associativity of $\cdot$, this equals
+    $$a \cdot (a^m \cdot a^n) = a \cdot a^{m+n}$$
+    by the inductive hypothesis. Since $a \cdot a^{m+n} = a^{(m+n)+1} = a^{(m+1)+n}$ by definition of powers, the identity holds for $m+1$. This completes the induction.
+\end{proof}

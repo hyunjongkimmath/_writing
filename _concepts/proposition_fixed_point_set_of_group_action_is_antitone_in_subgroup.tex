@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:fixed_point_set_of_group_action_is_antitone_in_subgroup}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.
+    For any \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} $H \subseteq G$, we have $X^H \subseteq X^{H'}$ whenever $H' \subseteq H$\CrefIfExists{definition:fixed_point_set_of_a_group_acting_on_a_set}.
+\end{proposition}
+\begin{proof}
+    Let $x \in X^H$. By definition\CrefIfExists{definition:fixed_point_set_of_a_group_acting_on_a_set}, this means that $h \cdot x = x$ for all $h \in H$. Since $H' \subseteq H$, every element $h' \in H'$ is also an element of $H$, so in particular $h' \cdot x = x$ for all $h' \in H'$. Hence $x \in X^{H'}$, which shows that $X^H \subseteq X^{H'}$.
+\end{proof}

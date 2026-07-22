@@ -5,7 +5,7 @@
 \begin{proof}
     Let $I \subseteq \mathbb{R}$ be an interval and let $f : I \to \mathbb{R}$ be a constant function with value $c \in \mathbb{R}$. Let $a \in I$. The \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative} of $f$ at $a$ is given by the limit
     $$f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h},$$
-    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_at_an_accumulation_point} provided the limit exists in $\mathbb{R}$. Since $f$ is constant, we have $f(a+h) = c$ and $f(a) = c$ for all $h$ such that $a+h \in I$. Therefore, for all such $h$ with $h \neq 0$,
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point} provided the limit exists in $\mathbb{R}$. Since $f$ is constant, we have $f(a+h) = c$ and $f(a) = c$ for all $h$ such that $a+h \in I$. Therefore, for all such $h$ with $h \neq 0$,
     $$\frac{f(a+h) - f(a)}{h} = \frac{c - c}{h} = \frac{0}{h} = 0.$$
     The constant function $h \mapsto 0$ has limit $0$ as $h \to 0$\CrefIfExists{corollary:limit_of_constant_real_valued_function_at_accumulation_point}. 
     Hence $f'(a) = 0$. Since $a \in I$ was arbitrary, $f$ is differentiable at every point of $I$ with derivative $0$. Thus $f' \equiv 0$ on $I$.

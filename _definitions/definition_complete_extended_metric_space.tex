@@ -1,8 +1,0 @@
-\begin{definition}[Complete extended metric space valued in a semiring with adjoined infinity] \label{definition:complete_extended_metric_space}
-    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
-    The space $(X, d)$ is said to be \hldef{complete} if every \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space}{Cauchy sequence in $X$} \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space}{converges to a point in $X$}; that is,
-    for every sequence $(x_n)_{n \in \mathbb{N}}$ in $X$ such that for all $\varepsilon \in T_{>0}$ there exists $N \in \mathbb{N}$ with $d(x_m, x_n) < \varepsilon$ for all $m, n \geq N$, there exists $x \in X$ such that
-    $$\lim_{n \to \infty} d(x_n, x) = 0_T.$$
-
-    When $T = \bbR_{\geq 0}$, this recovers the standard definition of a complete extended metric space. Note that if $T$ has a minimum positive element, then every Cauchy sequence is eventually constant (see \Cref{definition:cauchy_sequence_in_an_extended_metric_space}), so completeness holds trivially for all such spaces.
-\end{definition}

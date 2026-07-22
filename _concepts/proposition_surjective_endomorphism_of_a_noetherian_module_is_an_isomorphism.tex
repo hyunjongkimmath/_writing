@@ -1,13 +1,32 @@
 \begin{proposition}[Surjective endomorphism of a Noetherian module is an isomorphism]  \label{proposition:surjective_endomorphism_of_a_noetherian_module_is_an_isomorphism}
-\TODO{AI generated, verify}
+	\TODO{AI generated, verify}
 
-Let $A$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $M$ be a left $A$-module.
+	Let $A$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $M$ be a left $A$-module.
 
-\begin{enumerate}
-    \item If $M$ is a \CrefAndHyperrefIfExist{definition:noetherian_artinian_module_over_a_ring}{Noetherian $A$-module} and $u \colon M \to M$ is a surjective $A$-linear endomorphism, then $u$ is an isomorphism.
+	\begin{enumerate}
+	    \item If $M$ is a \CrefAndHyperrefIfExist{definition:noetherian_artinian_module_over_a_ring}{Noetherian $A$-module} and $u \colon M \to M$ is a surjective $A$-linear endomorphism, then $u$ is an isomorphism.
 
-    \item If $M$ is a \CrefAndHyperrefIfExist{definition:noetherian_artinian_module_over_a_ring}{Artinian $A$-module} and $u \colon M \to M$ is an injective $A$-linear endomorphism, then $u$ is an isomorphism.
-\end{enumerate}
+	    \item If $M$ is a \CrefAndHyperrefIfExist{definition:noetherian_artinian_module_over_a_ring}{Artinian $A$-module} and $u \colon M \to M$ is an injective $A$-linear endomorphism, then $u$ is an isomorphism.
+	\end{enumerate}
 
-(cf.\ \cite[Chapter 6, Exercise 1]{atiyah_macdonald})
+	(cf.\ \cite[Chapter 6, Exercise 1]{atiyah_macdonald})
 \end{proposition}
+\begin{proof}
+	\TODO{AI generated, verify}
+
+	\begin{enumerate}
+	    \item Suppose that $M$ is Noetherian and $u \colon M \to M$ is surjective. We show that $u$ is injective by showing that $\ker(u) = 0$. Consider the ascending chain of submodules
+	    $$\ker(u) \subseteq \ker(u^2) \subseteq \ker(u^3) \subseteq \cdots,$$
+	    where $u^n$ denotes the $n$-fold composition of $u$ with itself. Since $\ker(u^n)$ consists of all elements mapped to zero by $u^n$, and $u(\ker(u^{n+1})) \subseteq \ker(u^n)$, this chain is well-defined.
+
+	    Because $M$ is Noetherian, the ascending chain stabilizes: there exists some $N \geq 1$ such that $\ker(u^N) = \ker(u^{N+1})$. Since $u$ is surjective, so is $u^N$. For any $x \in \ker(u)$, we have $u(x) = 0$. By surjectivity of $u^N$, there exists some $y \in M$ such that $u^N(y) = x$. Then $u^{N+1}(y) = u(x) = 0$, so $y \in \ker(u^{N+1}) = \ker(u^N)$. Hence $x = u^N(y) = 0$. Therefore, $\ker(u) = 0$, and $u$ is injective.
+
+	    \item Suppose that $M$ is Artinian and $u \colon M \to M$ is injective. We show that $u$ is surjective by showing that $\operatorname{im}(u) = M$. Consider the descending chain of submodules
+	    $$M \supseteq \operatorname{im}(u) \supseteq \operatorname{im}(u^2) \supseteq \operatorname{im}(u^3) \supseteq \cdots.$$
+	    Because $M$ is Artinian, the descending chain stabilizes: there exists some $N \geq 1$ such that $\operatorname{im}(u^N) = \operatorname{im}(u^{N+1})$.
+
+	    For any $x \in \operatorname{im}(u^N)$, since $\operatorname{im}(u^N) = \operatorname{im}(u^{N+1})$, there exists some $y \in M$ such that $x = u^{N+1}(y) = u(u^N(y))$. Hence $x \in \operatorname{im}(u|_{\operatorname{im}(u^N)})$. Because $u$ is injective, the restriction $u|_{\operatorname{im}(u^N)} \colon \operatorname{im}(u^N) \to \operatorname{im}(u^{N+1}) = \operatorname{im}(u^N)$ is a bijection. In particular, it is surjective onto $\operatorname{im}(u^N)$.
+
+	    Applying this argument iteratively, we see that $u$ maps $\operatorname{im}(u^{N-1})$ onto $\operatorname{im}(u^N)$, and so on down to the fact that $u$ maps $M$ onto $\operatorname{im}(u) = M$. Therefore, $u$ is surjective.
+	\end{enumerate}
+\end{proof}

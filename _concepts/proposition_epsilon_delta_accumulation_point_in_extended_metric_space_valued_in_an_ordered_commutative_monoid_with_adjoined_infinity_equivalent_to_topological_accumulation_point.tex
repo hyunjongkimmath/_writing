@@ -1,0 +1,20 @@
+\begin{proposition} \label{proposition:epsilon_delta_accumulation_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_accumulation_point}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered monoid with adjoined infinity} obtained from $T$, and let $(X,d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space valued in $T^\infty$}. Let $\mathcal{T}_d$ be the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric}{topology induced by $d$} on $X$. Let $A \subseteq X$, and let $x \in X$.
+
+    The point $x$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point of $A$} as a subset of the extended metric space $X$ if and only if it is an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point of $A$} in the topological space $X$.
+    % with respect to $\mathcal{T}_d$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X,d)$ be an extended metric space valued in $T^\infty$, let $\mathcal{T}_d$ be the topology induced by $d$, and let $A \subseteq X$ and $x \in X$. We prove the two implications separately.
+
+    \begin{enumerate}
+        \item[$(\Rightarrow)$] Suppose that $x$ is an accumulation point of $A$ in the $\varepsilon$-$\delta$ sense of \Cref{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}. Let $U$ be an open neighborhood of $x$ with respect to $\mathcal{T}_d$. By \Cref{definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric}, since $U$ is open and $x \in U$, there exists $\varepsilon \in T_{>0}$ such that the open ball $B(x,\varepsilon) = \{y \in X : d(x,y) < \varepsilon\}$ satisfies $B(x,\varepsilon) \subseteq U$. By the definition of accumulation point, there exists $y \in A \setminus \{x\}$ such that $d(x,y) < \varepsilon$. This point $y$ lies in $B(x,\varepsilon)$ because $d(x,y) < \varepsilon$, and it satisfies $y \neq x$ because $y \in A \setminus \{x\}$. Since $B(x,\varepsilon) \subseteq U$, we have $y \in U$ with $y \in A$ and $y \neq x$. Therefore, $x$ is an accumulation point of $A$ in the topological sense of \Cref{definition:accumulation_point_of_a_subset_of_a_topological_space}.
+
+        \item[$(\Leftarrow)$] Suppose that $x$ is an accumulation point of $A$ with respect to $\mathcal{T}_d$ in the sense of \Cref{definition:accumulation_point_of_a_subset_of_a_topological_space}. Let $\varepsilon \in T_{>0}$. The open ball $B(x,\varepsilon) = \{y \in X : d(x,y) < \varepsilon\}$ is an open set in $\mathcal{T}_d$ by \Cref{definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric}, and it contains $x$. By the topological definition of accumulation point, there exists $y \in A$ such that $y \in B(x,\varepsilon)$ and $y \neq x$. We have $d(x,y) < \varepsilon$ because $y \in B(x,\varepsilon)$, and $y \in A \setminus \{x\}$ because $y \in A$ and $y \neq x$. Therefore, $x$ is an accumulation point of $A$ in the $\varepsilon$-$\delta$ sense of \Cref{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
+    \end{enumerate}
+
+    The two notions of accumulation point are equivalent.
+\end{proof}

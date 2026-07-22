@@ -1,0 +1,11 @@
+\begin{lemma} \label{lemma:least_upper_bound_and_greatest_lower_bound_property_on_a_partially_ordered_set_are_equivalent}
+    Let $(P, \leq )$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
+    It has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property} if and only if it has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{greatest lower bound property}.
+\end{lemma}
+\begin{proof}
+    We show that if $P$ has the least upper bound property, then it has the greatest lower bound property --- that the greatest lower bound property implies the least upper bound property holds symmetrically. Suppose that $B \subseteq P$ is a nonempty, \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded below} subset. Let 
+    $$L = \{y \in P: y \leq x \text{ for all } x \in B\}.$$
+    Since $B$ is bounded below, there exists some element of $L$, i.e. $L \neq \emptyset$. By construction, every $x \in B$ is an upper bound for $L$. Since $B$ is nonempty, $L$ is bounded above. The least upper bound property of $P$ implies that $L$ has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{least upper bound}, say $\alpha = \sup L$. 
+    
+    We show that $\alpha$ is the \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{greatest lower bound} of $B$. To see that $\alpha$ is a lower bound of $B$, note that any $x \in B$ is an upper bound for $L$ by construct. Since $\alpha$ is the least upper bound of $L$, we must have $\alpha \leq x$. Therefore, $\alpha$ is a lower bound of $B$. In particular, $\alpha \in L$. To see that $\alpha$ is the greatest lower bound of $B$, suppose that $y$ is any lower bound of $B$. By construction, $y \in L$. Since $\alpha$ is an upper bound for $L$, we have $y \leq \alpha$. Therefore, $\alpha$ is the greatest lower bound of $B$ and hence $P$ has the greatest lower bound property.
+\end{proof}

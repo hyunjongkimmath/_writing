@@ -9,7 +9,7 @@
     Write $x = \sum_{j=1}^n e_j a_j$ if $M$ is a right $R$-module, or $x = \sum_{j=1}^n a_j e_j$ if $M$ is a left $R$-module, so that $[x]_\mathcal{E}^{\mathsf{r}} = (a_1,\ldots,a_n)$.
 
     \begin{enumerate}
-        \item Suppose $M$ is a right $R$-module. By $R$-linearity of $T$,
+        \item Suppose that $M$ is a right $R$-module. By $R$-linearity of $T$,
         \begin{align*}
             T(x) &= T\!\left( \sum_{j=1}^n e_j a_j \right)
                   = \sum_{j=1}^n T(e_j) a_j.
@@ -20,9 +20,9 @@
                   = \sum_{i=1}^n \left( \sum_{j=1}^n e_j \, [T]_\mathcal{E}^{\mathsf{r}}(i,j) \right) a_i \\
                 &= \sum_{j=1}^n e_j \left( \sum_{i=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, a_i \right).
         \end{align*}
-        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, a_i$, which is precisely the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
+        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, a_i$, which is precisely the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence, $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
 
-        \item Suppose $M$ is a left $R$-module. By $R$-linearity of $T$,
+        \item Suppose that $M$ is a left $R$-module. By $R$-linearity of $T$,
         \begin{align*}
             T(x) &= T\!\left( \sum_{j=1}^n a_j e_j \right)
                   = \sum_{j=1}^n a_j \, T(e_j).
@@ -33,7 +33,7 @@
                   = \sum_{i=1}^n a_i \left( \sum_{j=1}^n [T]_\mathcal{E}^{\mathsf{r}}(i,j) \, e_j \right) \\
                 &= \sum_{j=1}^n \left( \sum_{i=1}^n a_i \, [T]_\mathcal{E}^{\mathsf{r}}(i,j) \right) e_j.
         \end{align*}
-        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n a_i \, [T]_\mathcal{E}^{\mathsf{r}}(i,j)$, which is the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
+        The coefficient of $e_j$ in this expression is $\sum_{i=1}^n a_i \, [T]_\mathcal{E}^{\mathsf{r}}(i,j)$, which is the $j$-th entry of the row vector $[x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$. Hence, $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$.
     \end{enumerate}
 
     In both cases, the formula $[T(x)]_\mathcal{E}^{\mathsf{r}} = [x]_\mathcal{E}^{\mathsf{r}} \, [T]_\mathcal{E}^{\mathsf{r}}$ holds.

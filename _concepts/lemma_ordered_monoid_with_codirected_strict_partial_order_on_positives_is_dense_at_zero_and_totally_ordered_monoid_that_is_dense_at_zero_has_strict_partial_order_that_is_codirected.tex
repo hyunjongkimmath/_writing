@@ -1,0 +1,16 @@
+\begin{lemma} \label{lemma:ordered_monoid_with_codirected_strict_partial_order_on_positives_is_dense_at_zero_and_totally_ordered_monoid_that_is_dense_at_zero_has_strict_partial_order_that_is_codirected}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoid}. Write $<$ for the \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict partial order} of the partial order on $T$.
+    \begin{enumerate}
+        \item If $<$ restricted to $T_{>0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} is \CrefAndHyperrefIfExist{definition:directed_codirected_strict_partially_ordered_set}{codirected}, then $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. 
+
+        \item If $T$ is a \CrefAndHyperrefIfExist{definition:totally_ordered_monoid}{totally ordered monoid} and $T$ is dense at zero, then $<$ restricted to $T_{>0}$ is \CrefAndHyperrefIfExist{definition:directed_codirected_strict_partially_ordered_set}{codirected}.
+    \end{enumerate}
+\end{lemma}
+\begin{proof}
+    \begin{enumerate}
+        \item Let $\varepsilon \in T$ satisfy $\varepsilon > 0$. By the codirectedness of $<$, there exists some $\delta \in T_{>0}$ such that $0 < \delta < \varepsilon$. 
+
+        \item Let $a,b \in T_{>0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid}. Without loss of generality, say that $a \leq b$. By the density at zero, there exists some $\delta \in T_{>0}$ such that $\delta < a \leq b$. In particular, $\delta < a$ and $\delta < b$. Thus, $<$ restricted to $T_{>0}$ is codirected. 
+    \end{enumerate}
+
+\end{proof}

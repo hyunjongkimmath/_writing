@@ -1,8 +1,32 @@
 \begin{theorem}[First Isomorphism Theorem for Groups] \label{theorem:first_isomorphism_theorem_for_groups}
-\TODO{AI generated, verify}
-Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}. Let $\operatorname{ker}(\phi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel of $\phi$} and $\operatorname{im}(\phi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image of $\phi$}.
+    Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\phi : G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}. Let $\operatorname{ker}(\phi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{kernel of $\phi$} and $\operatorname{im}(\phi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_of_group_homomorphism}{image of $\phi$}.
 
-Then $\operatorname{ker}(\phi)$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$, and there exists a unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group isomorphism}
-$$ \hlin{\bar{\phi}: G/\operatorname{ker}(\phi) \xrightarrow{\,\sim\,} \operatorname{im}(\phi)} $$
-such that $\bar{\phi}(g \cdot \operatorname{ker}(\phi)) = \phi(g)$ for all $g \in G$. Here $G/\operatorname{ker}(\phi)$ denotes the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group}.
+    Then $\operatorname{ker}(\phi)$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$, and there exists a unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}
+    $$\bar{\phi} : G/\operatorname{ker}(\phi) \xrightarrow{\,\sim\,} \operatorname{im}(\phi)$$
+    which is a bijection, such that $\bar{\phi}(g \cdot \operatorname{ker}(\phi)) = \phi(g)$ for all $g \in G$. Here $G/\operatorname{ker}(\phi)$ denotes the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group}.
 \end{theorem}
+\begin{proof}
+    Let $K = \operatorname{ker}(\phi)$ and let $e_H$ denote the identity element of $H$.
+
+    \begin{enumerate}
+        \item The kernel $K$ is a normal subgroup of $G$ by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}, so the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group} $G/K$ is well-defined.
+
+        \item We define a map on objects
+        $$\bar{\phi} : G/K \longrightarrow \operatorname{im}(\phi), \quad gK \longmapsto \phi(g).$$
+        To show that $\bar{\phi}$ is well-defined, suppose $g_1 K = g_2 K$ for some $g_1, g_2 \in G$. Then $g_2^{-1} g_1 \in K$, so $\phi(g_2^{-1} g_1) = e_H$ by \Cref{definition:kernel_image_of_group_homomorphism}. Since $\phi$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}, we compute
+        $$\phi(g_1) = \phi\bigl(g_2 (g_2^{-1} g_1)\bigr) = \phi(g_2) \phi(g_2^{-1} g_1) = \phi(g_2) e_H = \phi(g_2).$$
+        Thus, $\bar{\phi}(g_1 K) = \bar{\phi}(g_2 K)$, so the map is independent of the choice of coset representative.
+
+        \item The map $\bar{\phi}$ is a group homomorphism because for any $g_1 K, g_2 K \in G/K$, we have $(g_1 K)(g_2 K) = (g_1 g_2)K$ by \Cref{definition:quotient_of_a_group_by_a_normal_subgroup}, and since $\phi$ is a homomorphism,
+        $$\bar{\phi}\bigl((g_1 K)(g_2 K)\bigr) = \bar{\phi}\bigl((g_1 g_2)K\bigr) = \phi(g_1 g_2) = \phi(g_1) \phi(g_2) = \bar{\phi}(g_1 K) \cdot \bar{\phi}(g_2 K).$$
+        \CrefIfExists{proposition:quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation}\CrefIfExists{definition:group_homomorphism}
+
+        \item We show that the map $\bar{\phi}$ is bijective. First, $\bar{\phi}$ is surjective onto $\operatorname{im}(\phi)$ because for any $y \in \operatorname{im}(\phi)$ there exists $g \in G$ such that $\phi(g) = y$ by \Cref{definition:kernel_image_of_group_homomorphism}, and then $\bar{\phi}(gK) = \phi(g) = y$. Second, $\bar{\phi}$ is injective because if $\bar{\phi}(g_1 K) = \bar{\phi}(g_2 K)$ for some $g_1, g_2 \in G$, then $\phi(g_1) = \phi(g_2)$, and since $\phi$ is a homomorphism we have
+        $$\phi(g_2^{-1} g_1) = \phi(g_2)^{-1} \phi(g_1) = e_H.$$
+        Therefore $g_2^{-1} g_1 \in K$, which means $g_1 K = g_2 K$.
+
+        To show that $\bar{\phi}$ is uniquen, suppose $\psi : G/K \to \operatorname{im}(\phi)$ is another homomorphism satisfying $\psi(gK) = \phi(g)$ for all $g \in G$. Then $\psi$ agrees with $\bar{\phi}$ on every element of $G/K$, so $\psi = \bar{\phi}$.
+    \end{enumerate}
+
+    This establishes the existence and uniqueness of the isomorphism $\bar{\phi} : G/\operatorname{ker}(\phi) \xrightarrow{\,\sim\,} \operatorname{im}(\phi)$.
+\end{proof}

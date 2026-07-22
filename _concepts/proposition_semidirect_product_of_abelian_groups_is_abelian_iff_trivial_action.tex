@@ -1,3 +1,17 @@
 \begin{proposition} \label{proposition:semidirect_product_of_abelian_groups_is_abelian_iff_trivial_action}
-    Let $N$ and $H$ be abelian \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\varphi: H \to \operatorname{Aut}(N)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. The \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} $N \rtimes_\varphi H$ is abelian if and only if $\varphi$ is the trivial homomorphism (i.e., $\varphi(h) = \operatorname{id}_N$ for all $h \in H$). In that case, $N \rtimes_\varphi H$ coincides with the \CrefAndHyperrefIfExist{definition:product_of_groups}{direct product} $N \times H$.
+    Let $N$ and $H$ be abelian \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\varphi: H \to \operatorname{Aut}(N)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. The \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} $N \rtimes_\varphi H$ is abelian if and only if $\varphi$ is the trivial homomorphism (i.e., $\varphi(h) = \operatorname{id}_N$ for all $h \in H$). In that case, $N \rtimes_\varphi H$ coincides with the \CrefAndHyperrefIfExist{definition:product_of_groups}{direct product} $N \times H$\CrefIfExists{proposition:direct_product_is_semidirect_product_with_trivial_action}.
 \end{proposition}
+
+\begin{proof}
+    The multiplication in $N \rtimes_\varphi H$ is $(n_1, h_1)(n_2, h_2) = (n_1 \cdot \varphi(h_1)(n_2), h_1 h_2)$.
+
+    Suppose that $N \rtimes_\varphi H$ is abelian. Taking arbitrary $n \in N$ and $h \in H$, commutativity of $(n, 1_H)$ and $(1_N, h)$ gives
+    $$(n, 1_H)(1_N, h) =  (1_N, h)(n, 1_H).$$
+    so
+    $$(nh, h) = (\varphi(h)(n), h)$$
+    Comparing the first components, we get $\varphi(h)(n) = n$ for all $n \in N$ and $h \in H$. Hence $\varphi(h) = \operatorname{id}_N$ for all $h$, so $\varphi$ is the trivial homomorphism.
+
+    Conversely, suppose that $\varphi$ is the trivial homomorphism. Then $\varphi(h)(n) = n$ for all $h \in H$ and $n \in N$, so the multiplication becomes
+    $$(n_1, h_1)(n_2, h_2) = (n_1 n_2, h_1 h_2).$$
+    Since $N$ and $H$ are both abelian, we have $(n_1 n_2, h_1 h_2) = (n_2 n_1, h_2 h_1) = (n_2, h_2)(n_1, h_1)$. Therefore, $N \rtimes_\varphi H$ is abelian. By \Cref{proposition:direct_product_is_semidirect_product_with_trivial_action}, it coincides with the direct product $N \times H$.
+\end{proof}

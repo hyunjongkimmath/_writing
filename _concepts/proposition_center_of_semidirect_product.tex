@@ -1,6 +1,96 @@
 \begin{proposition} \label{proposition:center_of_semidirect_product}
+    \TODO{Recheck; this statement may be incorrect}
     Let $N$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\varphi: H \to \operatorname{Aut}(N)$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{homomorphism}. Write the action of $h \in H$ on $n \in N$ as $h \cdot n = \varphi(h)(n)$. Let $Z(N)$ and $Z(H)$ denote the \CrefAndHyperrefIfExist{definition:center_of_a_group}{centers} of $N$ and $H$, respectively, and let
     $$N^H = \{ n \in N : h \cdot n = n \text{ for all } h \in H \}$$
     be the set of $H$-fixed points in $N$. The \CrefAndHyperrefIfExist{definition:center_of_a_group}{center} of the \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{external semidirect product} $N \rtimes_\varphi H$ is
     $$Z(N \rtimes_\varphi H) = \bigl( Z(N) \cap N^H \bigr) \times \bigl( Z(H) \cap \ker(\varphi) \bigr).$$
 \end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    An element $(n,h) \in N \rtimes_\varphi H$ is central if and only if it commutes with every element of $N \rtimes_\varphi H$. Using the semidirect product multiplication $(x,k)(y,l) = (x \cdot k(y), kl)$, we compute for arbitrary $(x,k) \in N \rtimes_\varphi H$:
+    \begin{align*}
+        (n,h)(x,k) &= (n \cdot h(x), hk), \\
+        (x,k)(n,h) &= (x \cdot k(n), kh).
+    \end{align*}
+
+    These are equal if and only if both $hk = kh$ in $H$ and $n \cdot h(x) = x \cdot k(n)$ in $N$. We analyze these conditions.
+
+    First, taking $(1_N, k)$ for arbitrary $k \in H$, we need $hk = kh$ (so $h \in Z(H)$) and $n \cdot h(1_N) = 1_N \cdot k(n)$, which simplifies to $n = k(n)$. Hence $n \in N^H$.
+
+    Next, taking $(x, 1_H)$ for arbitrary $x \in N$, we need $h1_H = 1_H h$ (trivially satisfied) and $n \cdot h(x) = x \cdot 1_H(n) = xn$. Since we already have $n \in N^H$, the condition with $(x,k)$ for arbitrary $k$ becomes $n \cdot h(x) = x k(n) = xn$, which is the same as the condition from $(x, 1_H)$. Thus the only conditions are:
+    \begin{enumerate}
+        \item $h \in Z(H)$,
+        \item $n \in N^H$,
+        \item $n h(x) = xn$ for all $x \in N$.
+    \end{enumerate}
+
+    Condition (3) can be rewritten as $\varphi(h)(x) = n^{-1}xn$ for all $x \in N$, i.e., $\varphi(h)$ is the inner automorphism given by conjugation by $n^{-1}$.
+
+    We now show that these three conditions are equivalent to $h \in Z(H) \cap \ker(\varphi)$ and $n \in Z(N) \cap N^H$.
+
+    ($\Rightarrow$) Suppose (1), (2), and (3) hold. For any $k \in H$, since $\varphi$ is a homomorphism from $H$ to $\operatorname{Aut}(N)$, we have $\varphi(k)\varphi(h) = \varphi(kh) = \varphi(hk) = \varphi(h)\varphi(k)$. Applying both sides to $x \in N$:
+    $$\varphi(k)(n^{-1}xn) = n^{-1}\varphi(k)(x)n,$$
+    where the last equality uses $\varphi(h) = \operatorname{inn}(n^{-1})$ and the fact that $k(n) = n$ (since $n \in N^H$). The left side is $\varphi(k)(n^{-1})\varphi(k)(x)\varphi(k)(n) = n^{-1}\varphi(k)(x)n$ since $k(n) = n$. This gives no new information.
+
+    Instead, we argue directly. From (3), for every $x \in N$, $\varphi(h)(x) = n^{-1}xn$. Now take any $k \in H$ and apply $\varphi(k)$ to both sides of the equation in (3): $n h(x) = xn$. Since $\varphi$ is a homomorphism,
+    $$\varphi(kh)(y) = \varphi(k)\varphi(h)(y)$$
+    for all $y \in N$. Using (3), $\varphi(k)(n^{-1}yn) = n^{-1}\varphi(k)(y)n$ by $k(n) = n$. On the other hand, $\varphi(kh)(y) = \varphi(hk)(y)$ since $h \in Z(H)$. This gives $\varphi(h)(\varphi(k)(y)) = n^{-1}\varphi(k)(y)n$, which is consistent with (3).
+
+    To see that $h \in \ker(\varphi)$ and $n \in Z(N)$, observe: for any $k \in H$ and $x \in N$, the condition $n h(x) = x k(n)$ must hold. With $k = 1_H$: $nh(x) = xn$. With arbitrary $k$ and $x = 1_N$: $n = k(n)$, so $n \in N^H$. Now for any $k$, the condition reads $nh(x) = xk(n) = xn$ (since $n \in N^H$). This is identical to the $k = 1_H$ case, so no further constraint arises.
+
+    From (3), $\varphi(h)(x) = n^{-1}xn$. For any $k \in H$, since $h \in Z(H)$ and $\varphi$ is a homomorphism, $\varphi(k)\varphi(h) = \varphi(h)\varphi(k)$. Applying to $y \in N$:
+    $$\varphi(k)(n^{-1}yn) = n^{-1}\varphi(k)(y)n.$$
+    The left side is $k(n^{-1})\varphi(k)(y)k(n) = n^{-1}\varphi(k)(y)n$ (since $k(n) = n$). So this holds identically for any choice of $h \in Z(H)$, $n \in N^H$, and $\varphi(h) = \operatorname{inn}(n^{-1})$.
+
+    Now observe: if additionally we set $x = n$ in (3), then $n h(n) = nn = n^2$, so $h(n) = n$, i.e., $n$ is fixed by $\varphi(h)$. This is automatic since $\operatorname{inn}(n^{-1})(n) = n^{-1}nn = n$.
+
+    To conclude, we need to show that (3) implies both $h \in \ker(\varphi)$ and $n \in Z(N)$. Take any $x \in N$ and use the action homomorphism property: for all $k \in H$, $\varphi(k)\varphi(h) = \varphi(kh)$. Since $h \in Z(H)$, this equals $\varphi(hk) = \varphi(h)\varphi(k)$. Apply to $x$:
+    $$\varphi(k)(n^{-1}xn) = n^{-1}\varphi(k)(x)n.$$
+    As computed above, the left side is indeed $n^{-1}\varphi(k)(x)n$ by $k(n) = n$. This shows consistency but does not force $\varphi(h) = \operatorname{id}_N$.
+
+    In fact, we need to check: can $(n,h)$ be central with $\varphi(h) \neq \operatorname{id}_N$? If so, the proposition's claim would be wrong. Let us verify by checking whether the conditions force $h \in \ker(\varphi)$.
+
+    The condition is that for all $(x,k)$: $n h(x) = x k(n)$. With $k=1_H$: $nh(x) = xn$, so $\varphi(h)(x) = n^{-1}xn$. If this holds and $h \in Z(H)$, then for any $g \in H$:
+    $$\varphi(g)\varphi(h) = \varphi(gh) = \varphi(hg) = \varphi(h)\varphi(g).$$
+    So $\operatorname{inn}(n^{-1})$ commutes with every element of the image of $\varphi$. This does not force $n \in Z(N)$ in general.
+
+    Wait — let me re-examine. The proposition claims equality, so either there is an additional assumption or my derivation missed a step. Let me check: for $(n,h)$ to be central, we need it to commute with all elements. With $(1_N, g)$ for $g \in H$:
+    $$ (n,h)(1_N,g) = (nh(1_N), hg) = (n, hg),$$
+    $$(1_N,g)(n,h) = (g(n), gh).$$
+    So we need $hg = gh$ (i.e., $h \in Z(H)$) and $n = g(n)$ for all $g \in H$ (i.e., $n \in N^H$).
+
+    With $(x, 1_H)$ for $x \in N$:
+    $$ (n,h)(x,1_H) = (nh(x), h),$$
+    $$(x,1_H)(n,h) = (xn, h).$$
+    So we need $nh(x) = xn$ for all $x$, i.e., $\varphi(h)(x) = n^{-1}xn$.
+
+    Now combine: since $n \in N^H$, for any $g \in H$:
+    $$ g(nh(x)) = g(xn).$$
+    Using the homomorphism property of $\varphi$ and $n \in N^H$:
+    $$ n \cdot gh(x) = g(x)n.$$
+    But also from (3), $gh(x) = g(n^{-1}xn) = g(n)^{-1}g(x)g(n) = n^{-1}g(x)n$. So:
+    $$n \cdot n^{-1}g(x)n = g(x)n,$$
+    which is trivially true. This gives no new constraint.
+
+    However, the conditions (3), $h \in Z(H)$, and $n \in N^H$ are exactly what's needed for centrality. The proposition claims this equals $(Z(N) \cap N^H) \times (Z(H) \cap \ker(\varphi))$. This would require $\operatorname{inn}(n^{-1}) = \operatorname{id}_N$, i.e., $n \in Z(N)$, and then $\varphi(h) = \operatorname{id}_N$, i.e., $h \in \ker(\varphi)$. But the derivation shows that $(n,h)$ is central iff $\varphi(h) = \operatorname{inn}(n^{-1})$, not necessarily $\varphi(h) = \operatorname{id}_N$ and $n \in Z(N)$.
+
+    Actually, wait. Let me re-derive more carefully. We need $(n,h)$ to commute with $(x,g)$ for ALL $g \in H$ simultaneously. The condition is:
+    $$n h(x) = x g(n) \quad \text{for all } x \in N, g \in H.$$
+    With $n \in N^H$, this becomes $nh(x) = xn$ for all $x$. But wait — we also need to check with $(x,g)$ where both $x \neq 1_N$ and $g \neq 1_H$:
+    $$ (n,h)(x,g) = (nh(x), hg),$$
+    $$(x,g)(n,h) = (xg(n), gh).$$
+    Equality requires $hg = gh$ and $nh(x) = xg(n)$. With $h \in Z(H)$ and $n \in N^H$, the second condition is $nh(x) = xn$. This must hold for all $x \in N$, which means $\varphi(h)(x) = n^{-1}xn$ for all $x$.
+
+    So the center consists of pairs $(n,h)$ such that:
+    \begin{enumerate}
+        \item $h \in Z(H)$,
+        \item $n \in N^H$,
+        \item $\varphi(h) = \operatorname{inn}(n^{-1})$.
+    \end{enumerate}
+
+    The proposition claims this is $(Z(N) \cap N^H) \times (Z(H) \cap \ker(\varphi))$. These are equal if and only if condition (3) implies both $\varphi(h) = \operatorname{id}_N$ and $n \in Z(N)$. But in general this is not true — one can have nontrivial inner automorphisms commuting with the image of $\varphi$.
+
+    Therefore, there may be an error in the proposition statement. The correct characterization should be:
+    $$Z(N \rtimes_\varphi H) = \{ (n,h) : h \in Z(H), n \in N^H, \varphi(h) = \operatorname{inn}(n^{-1}) \}.$$
+\end{proof}

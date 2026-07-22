@@ -1,7 +1,24 @@
 \begin{lemma}[Tower Law] \label{lemma:tower_law_for_degrees_of_field_extensions}
-Let $K \subseteq F \subseteq L$ be a tower of \CrefAndHyperrefIfExist{definition:extension_of_a_field}{field extensions}. Then
-\[
-[L:K] = [L:F] \cdot [F:K],
-\]
-where the product is interpreted in the extended sense: if either $[L:F]$ or $[F:K]$ is infinite, then $[L:K]$ is infinite.
+    Let $K \subseteq F \subseteq L$ be a tower of \CrefAndHyperrefIfExist{definition:extension_of_a_field}{field extensions}. Then
+    $$[L:K] = [L:F] \cdot [F:K],$$
+    where the product is interpreted in the extended sense: if either $[L:F]$ or $[F:K]$ is infinite, then $[L:K]$ is infinite.
 \end{lemma}
+\begin{proof}
+    By \CrefIfExists{lemma:extension_of_a_field_is_a_vector_space}, we may regard $L$ as a vector space over $F$ and $F$ as a vector space over $K$. We consider the finite case first; the infinite cases follow by a limiting argument.
+
+    Suppose both $[L:F] = n < \infty$ and $[F:K] = m < \infty$. Let $\{x_1, \dots, x_n\}$ be a basis of $L$ over $F$, and let $\{y_1, \dots, y_m\}$ be a basis of $F$ over $K$, by \CrefIfExists{definition:degree_of_a_field_extension}. We claim that the set
+    $$B = \{x_i y_j : 1 \leq i \leq n,\ 1 \leq j \leq m\}$$
+    is a basis of $L$ over $K$.
+
+    First, we show spanning. Given any $\ell \in L$, we can write $\ell = \sum_{i=1}^n a_i x_i$ for some $a_1, \dots, a_n \in F$, since the $x_i$ span $L$ over $F$. Each coefficient $a_i \in F$ can be written as $a_i = \sum_{j=1}^m b_{ij} y_j$ for some $b_{ij} \in K$, since the $y_j$ span $F$ over $K$. Substituting, we obtain
+    $$\ell = \sum_{i=1}^n \left(\sum_{j=1}^m b_{ij} y_j\right) x_i = \sum_{i=1}^n \sum_{j=1}^m b_{ij} (x_i y_j),$$
+    so $B$ spans $L$ over $K$.
+
+    Next, we show linear independence. Suppose $\sum_{i,j} c_{ij} x_i y_j = 0$ for some scalars $c_{ij} \in K$. Rearranging the sum:
+    $$\sum_{i=1}^n \left(\sum_{j=1}^m c_{ij} y_j\right) x_i = 0.$$
+    Since $\{x_1, \dots, x_n\}$ is linearly independent over $F$, we must have $\sum_{j=1}^m c_{ij} y_j = 0$ in $F$ for each $i$. But $\{y_1, \dots, y_m\}$ is linearly independent over $K$, so $c_{ij} = 0$ for all $j$. Hence $B$ is linearly independent.
+
+    Since $B$ has exactly $nm$ elements, we conclude $[L:K] = nm = [L:F] \cdot [F:K]$.
+
+    If either $[L:F]$ or $[F:K]$ is infinite, then the set $B$ constructed above is infinite and still linearly independent over $K$, so $[L:K]$ must also be infinite. This completes the proof in all cases.
+\end{proof}

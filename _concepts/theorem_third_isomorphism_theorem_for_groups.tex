@@ -1,8 +1,58 @@
 \begin{theorem}[Third Isomorphism Theorem for Groups (Factor Theorem)] \label{theorem:third_isomorphism_theorem_for_groups}
-\TODO{AI generated, verify}
-Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $N$ and $M$ be \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroups} of $G$ with $M \subseteq N$.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group}. Let $N$ and $M$ be \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroups} of $G$ with $M \subseteq N$.
 
-Then $M$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group} $G/M$, and there is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group isomorphism}
-$$ \hlin{\Phi: (G/M)/(N/M) \xrightarrow{\,\sim\,} G/N} $$
-given by $\Phi((gM)(N/M)) = gN$ for all $g \in G$.
+    Then $N/M = \{nM : n \in N\}$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of the \CrefAndHyperrefIfExist{definition:quotient_of_a_group_by_a_normal_subgroup}{quotient group} $G/M$, and there is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}
+    $$\Phi : (G/M)/(N/M) \xrightarrow{\,\sim\,} G/N$$
+    which is a bijection, given by $\Phi((gM)(N/M)) = gN$ for all $g \in G$.
 \end{theorem}
+\begin{proof}
+    Let $\pi : G \to G/M$ be the canonical projection by \Cref{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}.
+
+    \begin{enumerate}
+        \item We show that the set $N/M = \{nM : n \in N\}$ is a subgroup of $G/M$. Since $M \subseteq N$, the image $\pi(N)$ equals $\{nM : n \in N\} = N/M$. As $N$ is a subgroup of $G$, its image under the homomorphism $\pi$ is a subgroup by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:image_of_group_homomoprhism_is_subgroup_of_codomain}.
+
+        To see that $N/M$ is normal in $G/M$, let $gM \in G/M$ and $nM \in N/M$. Compute the conjugate:
+        $$(gM)(nM)(gM)^{-1} = (gM)(nM)(g^{-1}M) = (gn g^{-1})M.$$
+        Since $N \trianglelefteq G$, we have $gn g^{-1} \in N$, so $(gn g^{-1})M \in N/M$. Hence $N/M \trianglelefteq G/M$.
+
+        \item Define $\Phi : (G/M)/(N/M) \to G/N$ by $\Phi((gM)(N/M)) = gN$. To show that $\Phi$ is well-defined, suppose that $(g_1 M)(N/M) = (g_2 M)(N/M)$. In particular, $g_2^{-1} g_1 M \in N/M$, so there exists $n \in N$ with $g_2^{-1} g_1 M = nM$. This means $n^{-1} g_2^{-1} g_1 \in M \subseteq N$, hence $g_2^{-1} g_1 \in N$, which implies that $g_1 N = g_2 N$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}.
+
+        \item The map $\Phi$ is a group homomorphism because for any $g_1, g_2 \in G$,
+        \begin{align*}
+        \Phi\bigl(((g_1 M)(N/M))((g_2 M)(N/M))\bigr) &= \Phi\bigl((g_1 g_2 M)(N/M)\bigr) = g_1 g_2 N = (g_1 N)(g_2 N) \\
+        &= \Phi((g_1 M)(N/M)) \cdot \Phi((g_2 M)(N/M)).
+        \end{align*}
+        \CrefIfExists{definition:quotient_of_a_group_by_a_normal_subgroup}
+
+        \item We show that the map $\Phi$ is injective. Suppose that $\Phi((gM)(N/M))$ equals $N$, the identity in $G/N$. In other words, $gN = N$, so $g \in N$. Thus, $gM \in N/M$, which means $(gM)(N/M) = N/M$, the identity in $(G/M)/(N/M)$. Therefore, $\operatorname{ker}(\Phi)$ is trivial, so $\Phi$ is injective by part 3 of \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}.
+
+        \item The map $\Phi$ is surjective because given any $gN \in G/N$, we have $\Phi((gM)(N/M)) = gN$.
+    \end{enumerate}
+
+    This establishes that $\Phi$ is a group isomorphism $(G/M)/(N/M) \cong G/N$.
+\end{proof}
+
+% \begin{proof}
+%     \TODO{AI generated, verify}
+%     Let $\pi : G \to G/M$ be the canonical projection by \Cref{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}.
+
+%     \begin{enumerate}
+%         \item We show that the set $N/M = \{nM : n \in N\}$ is a subgroup of $G/M$. Since $M \subseteq N$, the image $\pi(N) = \{nM : n \in N\} = N/M$. As $N$ is a subgroup of $G$, its image under the homomorphism $\pi$ is a subgroup by part 2 of \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}.
+
+%         To see that $N/M$ is normal in $G/M$, let $gM \in G/M$ and $nM \in N/M$. Compute the conjugate:
+%         $$(gM)(nM)(gM)^{-1} = (gM)(nM)(g^{-1}M) = (gn g^{-1})M.$$
+%         Since $N \trianglelefteq G$, we have $gn g^{-1} \in N$, so $(gn g^{-1})M \in N/M$. Hence $N/M \trianglelefteq G/M$.
+
+%         \item Define $\Phi : (G/M)/(N/M) \to G/N$ by $\Phi((gM)(N/M)) = gN$. To show well-definedness, suppose $(g_1 M)(N/M) = (g_2 M)(N/M)$. Then $g_2^{-1} g_1 M \in N/M$, so there exists $n \in N$ with $g_2^{-1} g_1 M = nM$. This means $n^{-1} g_2^{-1} g_1 \in M \subseteq N$, hence $g_2^{-1} g_1 \in N$, which gives $g_1 N = g_2 N$.
+
+%         \item The map $\Phi$ is a group homomorphism because for any $g_1, g_2 \in G$,
+%         $$\Phi\bigl(((g_1 M)(N/M))((g_2 M)(N/M))\bigr) = \Phi\bigl((g_1 g_2 M)(N/M)\bigr) = g_1 g_2 N = (g_1 N)(g_2 N) = \Phi((g_1 M)(N/M)) \cdot \Phi((g_2 M)(N/M)).$$
+%         \CrefIfExists{definition:quotient_of_a_group_by_a_normal_subgroup}
+
+%         \item The map $\Phi$ is injective. Suppose $\Phi((gM)(N/M)) = N$, the identity in $G/N$. Then $gN = N$, so $g \in N$. Hence $gM \in N/M$, which means $(gM)(N/M) = N/M$, the identity in $(G/M)/(N/M)$. Therefore $\operatorname{ker}(\Phi)$ is trivial, so $\Phi$ is injective by part 3 of \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}.
+
+%         \item The map $\Phi$ is surjective because given any $gN \in G/N$, we have $\Phi((gM)(N/M)) = gN$.
+%     \end{enumerate}
+
+%     This establishes that $\Phi$ is a group isomorphism $(G/M)/(N/M) \cong G/N$.
+% \end{proof}

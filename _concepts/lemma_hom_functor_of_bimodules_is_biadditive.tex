@@ -1,0 +1,14 @@
+\begin{lemma}[Hom is biadditive]\label{lemma:hom_functor_of_bimodules_is_biadditive}
+    \TODO{AI generated, verify}
+Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{rings}.
+\begin{enumerate}
+    \item Let $M$ be a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule} and $N$ an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$T$-bimodule}. Then the functor
+    $$\Hom_R(-, N) : {}_R \mathbf{Mod}_S^{\op} \to {}_S \mathbf{Mod}_T$$
+    is \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive}. Explicitly, for fixed $M$, the functor $\Hom_R(M, -)$ is additive, and for fixed $N$, the functor $\Hom_R(-, N)$ is additive (contravariant).
+
+    \item Dually, let $M$ be an $S$-$R$-bimodule and $N$ a $T$-$R$-bimodule. Then
+    $$\Hom_R(-, N) : {}_S \mathbf{Mod}_R^{\op} \to {}_S \mathbf{Mod}_T$$
+    is biadditive.
+\end{enumerate}
+These functors are \CrefAndHyperrefIfExist{definition:n_ary_additive_functor_between_additive_categories}{biadditive functors} in the sense of \Cref{definition:n_ary_additive_functor_between_additive_categories}. The target categories ${}_S \mathbf{Mod}_T$ are \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{categories of bimodules}, which are \CrefAndHyperrefIfExist{theorem:the_category_of_R_S_bimodules_is_a_grothendieck_abelian_category_and_AB4_star}{Grothendieck abelian categories satisfying AB4$^*$}.
+\end{lemma}

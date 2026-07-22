@@ -1,0 +1,11 @@
+\begin{definition}[Limit of a function] \label{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered monoid with adjoined infinity} obtained from $T$, and let $(X,d_X)$, $(Y,d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric spaces valued in $T^\infty$}. Let $f : X \to Y$, let $a$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} of $X$, and let $L \in Y$.
+
+    We say that \hldef{$f$ has limit $L$ at $a$} and write
+    $$\hlin{\lim_{x\to a} f(x) = L}$$
+    if for every $\varepsilon \in T_{>0}$ there exists $\delta \in T_{>0}$ such that $0 < d_X(x,a) < \delta$ implies $d_Y(f(x),L) < \varepsilon$.
+
+    \TextIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}{
+        $f$ has a limit $L$ at $a$ in the above sense if and only if it does so in the sense of \Cref{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}\CrefIfExists{proposition:epsilon_delta_definition_of_limit_of_functions_on_extended_metric_spaces_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_are_equivalent_to_topological_limit_definition}.
+    }
+\end{definition}

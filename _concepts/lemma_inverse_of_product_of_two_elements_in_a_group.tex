@@ -1,0 +1,16 @@
+\begin{lemma} \label{lemma:inverse_of_product_of_two_elements_in_a_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g,h \in G$. Then
+    $$(gh)^{-1} = h^{-1} g^{-1}.$$
+\end{lemma}
+\begin{proof}
+    Since $G$ is a group, it has an identity element $e$ and every element has a two-sided inverse. We compute:
+    \begin{align*}
+        (gh)(h^{-1}g^{-1}) 
+        &= g(h(h^{-1}g^{-1})) \\
+        &= g((hh^{-1})g^{-1}) \\
+        &= g (e g^{-1} ) \\ 
+        &= g g^{-1}  \\
+        &= e.
+    \end{align*}
+    This shows that $h^{-1}g^{-1}$ is a right inverse of $(gh)$ in $G$. By \Cref{lemma:one_sided_inverse_is_two_sided_inverse_in_a_group}, $h^{-1}g^{-1}$ is a left inverse of $(gh)$ in $G$ as well, i.e. is an \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{inverse} of $(gh)$. By the uniqueness of inverses in a group\CrefIfExists{lemma:inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists}, we have $(gh)^{-1} = h^{-1}g^{-1}$.
+\end{proof}

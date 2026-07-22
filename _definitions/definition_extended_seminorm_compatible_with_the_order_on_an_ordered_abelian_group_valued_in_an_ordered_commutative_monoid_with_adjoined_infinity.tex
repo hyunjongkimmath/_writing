@@ -1,0 +1,20 @@
+\begin{definition}[Extended seminorm compatible with the order on an ordered abelian group valued in an ordered commutative monoid with adjoined infinity] \label{definition:extended_seminorm_compatible_with_the_order_on_an_ordered_abelian_group_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}
+    \TODO{AI generated, verify}
+    Let $(G, +, \leq)$ be an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group} (written additively), and let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid} (written additively with identity $0_T$). Let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered commutative monoid with adjoined infinity} obtained from $T$.
+
+    An \hldef{extended seminorm on $G$ valued in $T^\infty$ compatible with the order $\leq$} is a function
+    $$\hlin{v : G \to T^\infty}$$
+    together with an \hldef{order-preserving monoid homomorphism}\CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered commutative monoid} $\iota : (G, +, 0_G) \to (T^\infty, +, 0_T)$ such that the following hold for all $x, y \in G$:
+    \begin{enumerate}
+        \item Positive definiteness: $v(x) = 0_T$ if and only if $x = 0_G$.
+        \item Symmetry (invariance under negation): $v(-x) = v(x)$.
+        \item Triangle inequality (subadditivity): $v(x + y) \leq v(x) + v(y)$.
+        \item Compatibility with the order: For all $x \in G$, if $x \geq 0_G$, then $v(x) = \iota(x)$.
+    \end{enumerate}
+
+    The homomorphism $\iota$ is called the \hldef{embedding of $G$ into $T^\infty$ associated to $v$}. When $\iota$ is clear from context, we simply say that $v$ is an extended seminorm compatible with the order on $G$.
+
+    In the case that $G$ and $T^\infty$ share a common source (e.g., when $G \subseteq T$ or when there is a canonical embedding), $\iota$ may be taken to be the inclusion map, and the compatibility condition reduces to $v(x) = x$ for all $x \geq 0_G$.
+
+    When $T = \bbR_{\ge 0}$ and $G = \bbR$, this recovers the standard absolute value on $\bbR$: $|x| = x$ for $x \geq 0$ and $|-x| = |x|$ by symmetry.
+\end{definition}

@@ -8,7 +8,8 @@ In particular, $\int_0^x e^t \, dt = e^x - 1$ for all $x \in \mathbb{R}$, where 
     $$\frac{d}{dx} e^{cx} = \frac{d}{dy} e^{y} \cdot \frac{d}{dx} (cx) = e^y \cdot c = c \cdot e^{cx}.$$
     Therefore, 
     $$\frac{d}{dx} \frac{1}{c} e^{cx} = e^{cx}.$$
-    \TODO{linearity of derivatives, linearity of integrals} In particular, $e^{cx}$ is differentiable on $\bbR$ as well. Moreover, $e^{cx}$ is continuous on $\bbR$, and hence is Riemann integrable on $[a,b]$\CrefIfExists{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}. Therefore, by the \CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{fundamental theorem of calculus}, 
+    \CrefIfExists{theorem:linearity_of_riemann_integral}
+    In particular, $e^{cx}$ is differentiable on $\bbR$ as well. Moreover, $e^{cx}$ is continuous on $\bbR$, and hence is Riemann integrable on $[a,b]$\CrefIfExists{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}. Therefore, by the \CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{fundamental theorem of calculus}, 
     $$\int_a^b e^{cx} dx = \frac{1}{c} e^{cx} \biggr \vert_a^b = \frac{e^{cb} - e^{ca}}{c}$$
     as desired. 
 \end{proof}

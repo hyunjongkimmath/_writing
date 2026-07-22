@@ -1,0 +1,20 @@
+\begin{corollary}[Monotone convergence theorem for sequences of real numbers] \label{corollary:monotone_convergence_theorem_for_sequences_of_real_numbers}
+    Let $(a_n)_{n=1}^\infty$ be a sequence in \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{$\mathbb{R}$}.
+
+    \begin{enumerate}
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then it \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges} (in the metric sense induced by the standard absolute value on $\mathbb{R}$) to $\sup\{a_n : n \in \mathbb{N}\}$\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}.
+        \item If the sequence is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nonincreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded below}, then it \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges} (in the metric sense induced by the standard absolute value on $\mathbb{R}$) to $\inf\{a_n : n \in \mathbb{N}\}$\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}.
+    \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+    We prove the nondecreasing case; the nonincreasing case follows by considering $(-a_n)$.
+
+    Let $(a_n)_{n=1}^\infty$ be a nondecreasing sequence in $\mathbb{R}$ that is bounded above. By \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property}, applied to $\mathbb{R}$ with its standard order, which has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}\CrefIfExists{proposition:real_numbers_have_least_upper_bound_property}, the set $S = \{a_n : n \in \mathbb{N}\}$ has a supremum $L := \sup S \in \mathbb{R}$.
+
+    We now prove metric convergence: $a_n \to L$ in the standard metric on $\mathbb{R}$. Let $\varepsilon > 0$. Since $L = \sup S$, $L - \varepsilon$ is not an upper bound of $S$. Hence there exists some $N \in \mathbb{N}$ such that $a_N > L - \varepsilon$. Because the sequence is nondecreasing, for all $n \ge N$ we have $a_n \ge a_N > L - \varepsilon$. Also $a_n \le L$ for all $n$ since $L$ is an upper bound of $S$. Thus for all $n \ge N$,
+    $$|a_n - L| = L - a_n < \varepsilon.$$
+    This is precisely the $\varepsilon$-$N$ definition of convergence in the metric space $\mathbb{R}$ with the standard absolute value, so $\lim_{n \to \infty} a_n = L$.
+
+    The nonincreasing case: let $(b_n)$ be nonincreasing and bounded below. Then $(-b_n)$ is nondecreasing and bounded above. By the first part, $-b_n \to \sup\{-b_n\} = -\inf\{b_n\}$. Since negation is an isometry on $\mathbb{R}$, $b_n \to \inf\{b_n\}$.
+\end{proof}

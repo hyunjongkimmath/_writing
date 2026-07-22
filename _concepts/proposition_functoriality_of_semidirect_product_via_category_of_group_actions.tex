@@ -9,15 +9,31 @@
     is defined by $(f \rtimes g)(n, h) = (f(n), g(h))$.
 \end{proposition}
 \begin{proof}
-    \TODO{}
-    % We verify that $f \rtimes g$ is a group homomorphism. For $(n_1, h_1), (n_2, h_2) \in N \rtimes_\phi H$,
-    % $$\begin{aligned}
-    % (f \rtimes g)((n_1, h_1)(n_2, h_2)) &= (f \rtimes g)(n_1 \phi(h_1)(n_2), h_1 h_2) \\
-    % &= (f(n_1 \phi(h_1)(n_2)), g(h_1 h_2)) \\
-    % &= (f(n_1) f(\phi(h_1)(n_2)), g(h_1)g(h_2)) \\
-    % &= (f(n_1) \psi(g(h_1))(f(n_2)), g(h_1)g(h_2)) \\
-    % &= (f(n_1), g(h_1))(f(n_2), g(h_2)) \\
-    % &= (f \rtimes g)(n_1, h_1) \cdot (f \rtimes g)(n_2, h_2).
-    % \end{aligned}$$
-    % The third equality uses that $f$ and $g$ are homomorphisms. The fourth equality uses the compatibility condition $f(\phi(h_1)(n_2)) = \psi(g(h_1))(f(n_2))$. Functor axioms (preservation of identities and composition) are immediate from the componentwise definition.
+    \TODO{AI generated, verify}
+    We first show that $f \rtimes g$ is a group homomorphism. For $(n_1, h_1), (n_2, h_2) \in N \rtimes_\phi H$, we have
+    \begin{align*}
+        (f \rtimes g)((n_1, h_1)(n_2, h_2)) &= (f \rtimes g)(n_1\phi(h_1)(n_2), h_1h_2) \\
+        &= (f(n_1\phi(h_1)(n_2)), g(h_1h_2)).
+    \end{align*}
+
+    Since $f$ and $g$ are group homomorphisms by \Cref{definition:category_of_group_actions}, we have $f(n_1\phi(h_1)(n_2)) = f(n_1)f(\phi(h_1)(n_2))$ and $g(h_1h_2) = g(h_1)g(h_2)$. The compatibility condition for morphisms in $\mathbf{ActGrp}$ gives $f(\phi(h_1)(n_2)) = \psi(g(h_1))(f(n_2))$. Hence,
+    \begin{align*}
+        (f \rtimes g)((n_1, h_1)(n_2, h_2)) &= (f(n_1)\psi(g(h_1))(f(n_2)), g(h_1)g(h_2)).
+    \end{align*}
+
+    On the other hand, by \Cref{definition:semidirect_product_of_groups_external_and_internal},
+    $$(f \rtimes g)(n_1, h_1) \cdot (f \rtimes g)(n_2, h_2) = (f(n_1), g(h_1))(f(n_2), g(h_2)) = (f(n_1)\psi(g(h_1))(f(n_2)), g(h_1)g(h_2)).$$
+    Therefore, $f \rtimes g$ preserves the group operation.
+
+    Next we verify that functoriality holds for identities. For each object $(N, H, \phi)$ of $\mathbf{ActGrp}$, the identity morphism is $(\operatorname{id}_N, \operatorname{id}_H)$. The induced homomorphism
+    $$(\operatorname{id}_N \rtimes \operatorname{id}_H)(n, h) = (\operatorname{id}_N(n), \operatorname{id}_H(h)) = (n, h),$$
+    which is the identity morphism on $N \rtimes_\phi H$.
+
+    Finally we verify that functoriality holds for composition. Let $(f, g): (N, H, \phi) \to (M, K, \psi)$ and $(f', g'): (M, K, \psi) \to (L, J, \chi)$ be morphisms in $\mathbf{ActGrp}$. For each $(n, h) \in N \rtimes_\phi H$,
+    $$(f' \rtimes g')((f \rtimes g)(n, h)) = (f' \rtimes g')(f(n), g(h)) = (f'(f(n)), g'(g(h))) = ((f' \circ f)(n), (g' \circ g)(h)).$$
+    On the other hand,
+    $$((f' \rtimes g') \circ (f \rtimes g))(n, h) = ((f' \circ f)(n), (g' \circ g)(h)),$$
+    so $(f' \rtimes g') \circ (f \rtimes g) = (f' \circ f) \rtimes (g' \circ g)$, which is the homomorphism induced by the composition of morphisms in $\mathbf{ActGrp}$.
+
+    Hence, the external semidirect product defines a functor $\mathbf{ActGrp} \to \mathbf{Grp}$.
 \end{proof}

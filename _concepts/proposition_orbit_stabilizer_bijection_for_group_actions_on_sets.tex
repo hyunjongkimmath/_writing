@@ -1,0 +1,25 @@
+\begin{proposition}[Orbit–Stabilizer bijection] \label{proposition:orbit_stabilizer_bijection_for_group_actions_on_sets}
+    Let $(G,\cdot)$ be a \CrefAndHyperrefIfExist{definition:group}{group} \CrefAndHyperrefIfExist{definition:left_and_right_group_actions_on_a_set}{acting} (on the left) on a set $X$.
+    For all $x \in X$, there is a bijection of sets
+    $$G / \operatorname{Stab}_G(x) \;\;\longleftrightarrow\;\; G \cdot x, \quad g \operatorname{Stab}_G(x) \mapsto g \cdot x.$$
+    \CrefIfExists{definition:coset_space_of_a_subgroup_of_a_group}\CrefIfExists{definition:coset_of_a_subgroup_of_a_group_by_an_element}
+    In particular, if $G$ is finite then
+    $$|G \cdot x| = [G : \operatorname{Stab}_G(x)] = \frac{|G|}{|\operatorname{Stab}_G(x)|}.$$
+\end{proposition}
+\begin{proof}
+    Let $H := \operatorname{Stab}_G(x)$. We construct a bijection
+    $$\Phi : G / H \longrightarrow G \cdot x, \quad gH \mapsto g \cdot x.$$
+
+    We first show that $\Phi$ is well-defined. Suppose that $g_1 H = g_2 H$ for some $g_1, g_2 \in G$. Then $g_2^{-1} g_1 \in H$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}, so $(g_2^{-1} g_1) \cdot x = x$ by the definition of $H$\CrefIfExists{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}. Applying $g_2$ to both sides gives
+    $$g_2 \cdot ((g_2^{-1} g_1) \cdot x) = g_2 \cdot x.$$
+    The left-hand side equals $(g_2 (g_2^{-1} g_1)) \cdot x = g_1 \cdot x$ by the compatibility axiom\CrefIfExists{definition:left_and_right_group_actions_on_a_set}. Hence $g_1 \cdot x = g_2 \cdot x$, so $\Phi(g_1 H) = \Phi(g_2 H)$.
+
+    Next we show that $\Phi$ is surjective. Let $y \in G \cdot x$. By the definition of the \CrefAndHyperrefIfExist{definition:orbit_of_a_group_action}{orbit}, there exists some $g \in G$ such that $y = g \cdot x$. Then $\Phi(gH) = g \cdot x = y$, so $\Phi$ is surjective.
+
+    Finally we show that $\Phi$ is injective. Suppose that $\Phi(g_1 H) = \Phi(g_2 H)$ for some $g_1, g_2 \in G$. Then $g_1 \cdot x = g_2 \cdot x$. Applying $g_2^{-1}$ to both sides gives
+    $$g_2^{-1} \cdot (g_1 \cdot x) = g_2^{-1} \cdot (g_2 \cdot x).$$
+    The left-hand side equals $(g_2^{-1} g_1) \cdot x$ and the right-hand side equals $(g_2^{-1} g_2) \cdot x = e \cdot x = x$, both by the compatibility axiom\CrefIfExists{definition:left_and_right_group_actions_on_a_set}. Therefore $g_2^{-1} g_1 \in H$, which implies that $g_1 H = g_2 H$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. Hence $\Phi$ is injective.
+
+    The map $\Phi$ is therefore a bijection. In particular, if $G$ is finite then the set of left cosets $G/H$ has cardinality equal to the \CrefAndHyperrefIfExist{definition:index_of_a_subgroup_in_a_group}{index} $[G:H]$, and by \CrefAndHyperrefIfExist{theorem:lagranges_theorem_for_finite_groups}{Lagrange's theorem}, this index equals $\frac{|G|}{|H|}$. Since $\Phi$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection}, we have
+    $$|G \cdot x| = [G : H] = \frac{|G|}{|\operatorname{Stab}_G(x)|}.$$
+\end{proof}

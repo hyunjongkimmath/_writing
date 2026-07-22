@@ -1,5 +1,19 @@
 \begin{lemma} \label{lemma:inverse_of_power_equals_power_of_inverse_in_a_group}
-Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $n \in \bbZ$,
-$$(g^n)^{-1} = g^{-n} = (g^{-1})^n,$$
-where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$} and $g^{-1}$ is the \CrefAndHyperrefIfExist{definition:group}{inverse} of $g$.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $n \in \bbZ$,
+    $$(g^n)^{-1} = g^{-n} = (g^{-1})^n,$$
+    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
 \end{lemma}
+\begin{proof}
+    For the first equality, observe that by \Cref{lemma:additivity_of_powers_in_a_group}, we have $g^n g^{-n} = g^{n + (-n)} = g^0 = e$. Similarly, $g^{-n} g^n = g^{-n + n} = g^0 = e$. Therefore $g^{-n}$ is the inverse of $g^n$, so $(g^n)^{-1} = g^{-n}$.
+
+    We show that $(g^{-1})^n = (g^{n})^{-1}$ for all $n \in \bbZ$. Note that $g \cdot g^{-1} = e = g^{-1} g$, so $g$ and $g^{-1}$ commute. For $n \geq 0$, \Cref{lemma:power_of_product_of_commuting_elements_in_a_monoid} then yields
+    $$g^n (g^{-1})^n = (g g^{-1})^n = e^n = e$$
+    \CrefIfExists{lemma:power_of_identity_in_a_group_by_any_integer_is_identity}
+    Hence $(g^{-1})^n = (g^n)^{-1} = g^{-n}$. If $n < 0$, let $a = -n > 0$. Then
+    $$g^{-n} = g^a$$
+    and
+    $$(g^{-1})^n = ((g^{-1})^{-1})^a = g^a.$$
+    \CrefIfExists{corollary:inverse_of_inverse_in_group_is_element} Therefore, $g^{-n} = (g^{-1})^n$ in this case as well.
+
+    Combining both equalities, $(g^n)^{-1} = g^{-n} = (g^{-1})^n$.
+\end{proof}

@@ -1,3 +1,8 @@
 \begin{lemma} \label{lemma:every_subgroup_of_an_abelian_group_is_a_normal_subgroup}
-    Every \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of an \CrefAndHyperrefIfExist{definition:group}{abelian group} is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup}.
+    Let $G$ be an \CrefAndHyperrefIfExist{definition:group}{abelian group}. Every \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup} of $G$ is a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup}.
 \end{lemma}
+\begin{proof}
+    Let $H \leq G$ be a subgroup. For any $g \in G$ and any $h \in H$, we compute the \CrefAndHyperrefIfExist{definition:conjugation_of_group_elements_and_subgroup_by_a_group_element}{conjugate}:
+    $$ghg^{-1} = hgg^{-1} = he = h \in H.$$
+    Thus, the subgroup $H$ is closed under conjugation by elements of $G$, i.e. $H$ is a normal subgroup.
+\end{proof}

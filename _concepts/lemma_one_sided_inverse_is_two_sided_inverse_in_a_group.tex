@@ -1,0 +1,23 @@
+\begin{lemma} \label{lemma:one_sided_inverse_is_two_sided_inverse_in_a_group}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g,h \in G$.
+    \begin{enumerate}
+        \item If $h$ is a \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{left inverse} of $g$ (i.e., $hg = e$), then $h$ is also a \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{right inverse} of $g$ (i.e., $gh = e$).
+        \item If $h$ is a \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{right inverse} of $g$ (i.e., $gh = e$), then $h$ is also a \CrefAndHyperrefIfExist{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}{left inverse} of $g$ (i.e., $hg = e$).
+    \end{enumerate}
+    In particular, any one-sided inverse in a group is a two-sided inverse, and therefore equals the unique inverse $g^{-1}$\CrefIfExists{lemma:inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists}.
+\end{lemma}
+\begin{proof}
+    Let $e$ denote the identity element of $G$. Since $G$ is a group, every element has a two-sided inverse.
+
+    \begin{enumerate}
+        \item Suppose that $hg = e$. Since $h \in G$, $h$ has a (two-sided) inverse $h^{-1} \in G$. Multiplying both sides of $hg = e$ on the left by $h^{-1}$ gives
+        $$h^{-1}(hg) = h^{-1}e.$$
+        By associativity and the definition of inverse, the left side is $(h^{-1}h)g = eg = g$, and the right side is $h^{-1}$. Thus $g = h^{-1}$. Therefore $h$ is the inverse of $g$, and in particular $gh = e$.
+
+        \item Suppose that $gh = e$. Since $g \in G$, $g$ has a (two-sided) inverse $g^{-1} \in G$. Multiplying both sides of $gh = e$ on the left by $g^{-1}$ gives
+        $$g^{-1}(gh) = g^{-1}e.$$
+        By associativity and the definition of inverse, the left side is $(g^{-1}g)h = eh = h$, and the right side is $g^{-1}$. Thus $h = g^{-1}$. Therefore $h$ is the inverse of $g$, and in particular $hg = e$.
+    \end{enumerate}
+
+    In both cases, the one-sided inverse $h$ equals the unique two-sided inverse $g^{-1}$\CrefIfExists{lemma:inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists}.
+\end{proof}

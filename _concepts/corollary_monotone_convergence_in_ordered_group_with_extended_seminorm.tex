@@ -1,0 +1,18 @@
+\begin{corollary}[Monotone convergence in a totally ordered abelian group with compatible extended seminorm] \label{corollary:monotone_convergence_in_ordered_group_with_compatible_extended_seminorm}
+    Let $(G, +, \leq)$ be a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_monoid}{commutative ordered monoid} and let $T^\infty$ be its \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{adjoined infinity}.
+
+    Let $v : G \to T^\infty$ be an \CrefAndHyperrefIfExist{definition:extended_seminorm_compatible_with_the_order_on_an_ordered_abelian_group_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended seminorm on $G$ valued in $T^\infty$ compatible with the order $\leq$}, and let $d : G \times G \to T^\infty$ be the \CrefAndHyperrefIfExist{definition:extended_metric_induced_by_an_extended_seminorm_on_an_ordered_abelian_group}{induced extended metric} defined by
+    $$d(x, y) = v(x - y).$$
+
+    Assume that $(G, \leq, d)$ is an \CrefAndHyperrefIfExist{definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{ordered extended metric space}, so that the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric}{metric topology} coincides with the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}.
+
+    Let $(x_n)_{n=1}^\infty$ be a sequence in $G$.
+    \begin{enumerate}
+        \item If $(x_n)$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then $L := \sup\{x_n : n \in \mathbb{N}\}$ exists in $G$ and $(x_n)$ converges to $L$ in the metric $d$.
+        \item If $(x_n)$ is nonincreasing and bounded below, then $L := \inf\{x_n : n \in \mathbb{N}\}$ exists in $G$ and $(x_n)$ converges to $L$ in the metric $d$.
+    \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+    This follows directly from \Cref{theorem:monotone_convergence_in_ordered_extended_metric_space}, since $(G, +, \leq)$ is a partially ordered set with the least upper bound property, $d$ is an extended metric on $G$ valued in $T^\infty$, and the assumption that $(G, \leq, d)$ is an ordered extended metric space ensures the topological compatibility required by the theorem.
+\end{proof}

@@ -1,0 +1,24 @@
+\begin{theorem}[Monotone convergence in an ordered extended metric space with the least upper bound property] \label{theorem:monotone_convergence_in_ordered_extended_metric_space}
+    Let $(X, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} equipped with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_monoid}{commutative ordered monoid}, and let $(X, d)$ be an \CrefAndHyperrefIfExist{definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{ordered extended metric space valued in $T^\infty$}, i.e. an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space} such that the \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric}{metric topology} coincides with the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}.
+
+    Let $(x_n)_{n=1}^\infty$ be a sequence in $X$.
+    \begin{enumerate}
+        \item If $(x_n)$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then $L := \sup\{x_n : n \in \mathbb{N}\}$ exists in $X$ (by the least upper bound property) and $(x_n)$ converges to $L$ in the metric $d$.
+        \item If $(x_n)$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nonincreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded below}, then $L := \inf\{x_n : n \in \mathbb{N}\}$ exists in $X$ (by the greatest lower bound property) and $(x_n)$ converges to $L$ in the metric $d$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    We prove the nondecreasing case; the nonincreasing case follows by a symmetric argument. Let $(x_n)_{n=1}^\infty$ be a nondecreasing sequence bounded above in $X$. By the least upper bound property of $(X, \leq)$, the set $\{x_n : n \in \mathbb{N}\}$ has a supremum $L := \sup\{x_n : n \in \mathbb{N}\} \in X$ by \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property}.
+
+    We show that $(x_n)$ converges to $L$ in the metric topology induced by $d$. Let $\varepsilon \in T_{>0}$ and consider the open ball $B(L, \varepsilon) = \{y \in X : d(y, L) < \varepsilon\}$. Since the order topology equals the metric topology, there exists a set $U$ open in the order topology such that $L \in U \subseteq B(L, \varepsilon)$. By definition of the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology} on $(X, \leq)$, the subbasis consists of open intervals and rays. Thus, there exists a finite intersection $J$ of such subbasis elements such that $L \in J \subseteq U \subseteq B(L, \varepsilon)$\CrefIfExists{lemma:point_in_open_set_has_finite_subbasis_intersection_neighborhood}.
+
+    The subbasis elements containing $L$ are lower rays $(-\infty, b_j) = \{x \in X : x < b_j\}$ for some $b_j > L$, and upper rays $(a_k, \infty) = \{x \in X : x > a_k\}$ for some $a_k < L$. Let
+    $$J = \bigcap_{j=1}^m (-\infty, b_j) \cap \bigcap_{k=1}^n (a_k, \infty).$$
+
+    Since $(x_n)$ is nondecreasing and bounded above by $L$, we have $x_n \leq L < b_j$ for all $n \in \mathbb{N}$ and all $j = 1, \dots, m$. Hence $x_n \in (-\infty, b_j)$ for every $n$ and every $j$.
+
+    Since $a_k < L = \sup\{x_n : n \in \mathbb{N}\}$, the element $a_k$ is not an upper bound of $\{x_n\}$. Hence there exists some index $N_k \in \mathbb{N}$ such that $x_{N_k} > a_k$. Since $(x_n)$ is nondecreasing, for all $n \geq N_k$ we have $x_n \geq x_{N_k} > a_k$, so $x_n \in (a_k, \infty)$.
+
+    Let $N := \max\{N_1, \dots, N_n\}$ (with $N = 0$ if there are no upper rays). Then for all $n \geq N$, we have $x_n \in J \subseteq B(L, \varepsilon)$, which means $d(x_n, L) < \varepsilon$. This establishes that $(x_n)$ converges to $L$ in the metric topology.
+\end{proof}

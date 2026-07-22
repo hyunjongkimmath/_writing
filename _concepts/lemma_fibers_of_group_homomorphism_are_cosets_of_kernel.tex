@@ -1,0 +1,18 @@
+\begin{lemma}[Fibers of a homomorphism are cosets of the kernel] \label{lemma:fibers_of_group_homomorphism_are_cosets_of_kernel}
+    Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, and let $\phi : G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}. For any $g_0 \in G$ and any $h = \phi(g_0) \in \operatorname{im}(\phi)$, the fiber of $\phi$ over $h$ is the left coset of $\operatorname{ker}(\phi)$ determined by $g_0$:
+    $$\phi^{-1}(h) = \{ g \in G : \phi(g) = h \} = g_0 \cdot \operatorname{ker}(\phi).$$
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $K = \operatorname{ker}(\phi)$\CrefIfExists{definition:kernel_image_of_group_homomorphism}. We show set equality by proving both inclusions.
+
+    We first show that $g_0 K \subseteq \phi^{-1}(h)$. Suppose that $g \in g_0 K$. Then $g = g_0 k$ for some $k \in K$. Because $\phi$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} and because $k \in K$ implies $\phi(k) = e_H$\CrefIfExists{definition:kernel_image_of_group_homomorphism}, we have
+    $$\phi(g) = \phi(g_0 k) = \phi(g_0) \phi(k) = h \cdot e_H = h.$$
+    Hence, $g \in \phi^{-1}(h)$.
+
+    Conversely, we show that $\phi^{-1}(h) \subseteq g_0 K$. Suppose that $g \in G$ satisfies $\phi(g) = h$. Because $\phi$ is a homomorphism, we have
+    $$\phi(g_0^{-1} g) = \phi(g_0)^{-1} \phi(g) = h^{-1} h = e_H.$$
+    Therefore, $g_0^{-1} g \in K$, so $g = g_0 (g_0^{-1} g) \in g_0 K$.
+
+    Since both inclusions hold, $\phi^{-1}(h) = g_0 K$ as desired.
+\end{proof}

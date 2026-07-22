@@ -1,0 +1,12 @@
+\begin{proposition} \label{proposition:determinant_is_alternating_multilinear_in_rows_and_columns_over_a_commutative_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and let $n \geq 1$.
+
+    The determinant function $\det \colon M_n(R) \to R$ has the following properties:
+    \begin{enumerate}
+        \item It is multilinear in the rows of the matrix, i.e. if one row of $A \in M_n(R)$ is replaced by a sum of two vectors or multiplied by a scalar from $R$, then $\det(A)$ behaves linearly with respect to that operation on that row while all other rows are held fixed.
+
+        \item It is alternating in the rows, i.e. if any two rows of $A$ are equal, then $\det(A) = 0$. Equivalently, swapping two rows of $A$ multiplies the determinant by $-1_R$.
+
+        \item The same multilinearity and alternation properties hold for columns: this follows from the fact that $\det(A^{\mathsf{T}}) = \det(A)$.
+    \end{enumerate}
+\end{proposition}

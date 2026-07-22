@@ -1,0 +1,22 @@
+\begin{lemma}[Power of a product of commuting elements in a semigroup] \label{lemma:power_of_product_of_commuting_elements_in_a_semigroup}
+    Let $(S,\cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup}, and let $g, h \in S$ be elements that commute, i.e., $gh = hg$. For any integer $n \in \bbZ_{>0}$,
+    $$(gh)^n = g^n h^n,$$
+    where $g^n$ and $h^n$ denote the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$n$th powers} in $S$.
+\end{lemma}
+
+\begin{proof}
+    We prove $(gh)^n = g^n h^n$ by induction on $n \ge 1$.
+
+    For the base case $n = 1$, we have $(gh)^1 = gh = g^1 h^1$ by definition of powers.
+
+    Inductively assume that the identity holds for some $n \ge 1$. Then
+    \begin{align*}
+        (gh)^{n+1} &= (gh)^n (gh) \\
+        &= (g^n h^n) (gh) & \text{by the inductive hypothesis} \\
+        &= g^n (h^n g) h & \text{(associativity)} \\
+        &= g^n (g h^n) h & \text{(\Cref{lemma:monoid_element_that_commutes_with_element_commutes_with_power_of_element})} \\
+        &= (g^n g) (h^n h) \\
+        &= g^{n+1} h^{n+1}.
+    \end{align*}
+    This completes the induction for $n \ge 1$.
+\end{proof}

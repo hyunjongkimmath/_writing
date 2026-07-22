@@ -1,4 +1,10 @@
 \begin{proposition} \label{proposition:field_homomorphism_is_injective}
-Let $K$ and $L$ be \CrefAndHyperrefIfExist{definition:field}{fields} and let $\phi: K \to L$ be a \CrefAndHyperrefIfExist{definition:field_homomorphism}{field homomorphism}.
-Then $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}.
+    Let $K$ and $L$ be \CrefAndHyperrefIfExist{definition:field}{fields} and let $\phi: K \to L$ be a \CrefAndHyperrefIfExist{definition:field_homomorphism}{field homomorphism}.
+    Then $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}.
 \end{proposition}
+
+\begin{proof}
+    Since $\phi$ is a field homomorphism, it is in particular a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. 
+    
+    The kernel $\operatorname{ker}(\phi)$ is an ideal of $K$\CrefIfExists{proposition:kernel_of_ring_homomorphism_is_an_ideal}. The only ideals of $K$ are $\{0_K\}$ and $K$ itself\CrefIfExists{proposition:field_has_only_trivial_ideals}. Since $\phi(1_K) = 1_L \neq 0_L$, we have $1_K \notin \operatorname{ker}(\phi)$, so $\operatorname{ker}(\phi) \neq K$. Therefore, $\operatorname{ker}(\phi) = \{0_K\}$. Hence, $\phi$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective}\CrefIfExists{proposition:ring_homomorphism_is_injective_iff_kernel_is_trivial}.
+\end{proof}

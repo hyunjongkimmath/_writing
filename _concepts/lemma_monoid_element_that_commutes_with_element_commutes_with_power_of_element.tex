@@ -1,0 +1,27 @@
+\begin{lemma}[Commuting with powers of a commuting element] \label{lemma:monoid_element_that_commutes_with_element_commutes_with_power_of_element}
+    Let $(S,\cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup}, and let $g, h \in S$ be elements that commute, i.e., $gh = hg$. For any integer $k \in \bbZ_{>0}$,
+    $$g h^k = h^k g,$$
+    where $h^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power}.
+
+    If $S = (M,\cdot)$ is a \CrefAndHyperrefIfExist{definition:monoid}{monoid} (or a \CrefAndHyperrefIfExist{definition:group}{group}), the same statement holds for $k \in \bbZ_{\geq 0}$ (with $h^0 = e$). If $S = G$ is a group, it holds for all $k \in \bbZ$, where $h^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{integer power}.
+\end{lemma}
+
+\begin{proof}
+    We first prove that $g h^k = h^k g$ by induction on $k \geq 1$ in the case that $S$ is only assumed to be a semigroup.
+
+    For $k = 1$, we have $g h^1 = g h = h g = h^1 g$ since $g$ and $h$ commute. Suppose inductively that $g h^k = h^k g$ for some $k \ge 1$. We have
+    \begin{align*}
+        g h^{k+1} &= g (h^k h) \\
+        &= (g h^k) h \quad\text{(associativity)} \\
+        &= (h^k g) h \quad\text{(inductive hypothesis)} \\
+        &= h^k (g h) \\
+        &= h^k (h g) \quad\text{(since $g$ and $h$ commute)} \\
+        &= (h^k h) g \\
+        &= h^{k+1} g.
+    \end{align*}
+    By induction, $gh^k = h^kg$ indeed holds for $k \geq 1$.
+
+    Assuming that $S$ is a monoid, it now suffices to prove the case of $k = 0$. We have $g h^0 = g e = g = e g = h^0 g$ by \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{definition}.
+
+    Further assuming that $S$ is a group, it now suffices to prove the case that $k < 0$. Let $m = -k > 0$. Since $h^k = h^{-m} = (h^{-1})^m$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}, we have $g h^k = g (h^{-1})^m$. Since $m > 0$, the work shown above implies $g (h^{-1})^m = (h^{-1})^m g$, which in turn equals $h^k g$. 
+\end{proof}

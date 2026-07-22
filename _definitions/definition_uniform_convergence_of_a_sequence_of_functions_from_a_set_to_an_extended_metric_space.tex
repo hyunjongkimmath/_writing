@@ -1,8 +1,0 @@
-\begin{definition} \label{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}
-    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $X$ be a set and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space valued in $T^\infty$}. A sequence of functions $f_n : X \to Y$ is said to \hldef{converge uniformly to a function $f : X \to Y$} if
-    $$\lim_{n \to \infty} \sup_{x \in X} d(f_n(x), f(x)) = 0_T.$$
-    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space}\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
-    That is, for every $\varepsilon \in T_{>0}$, there exists $N \in \mathbb{N}$ such that for all $n \geq N$ and all $x \in X$, one has $d(f_n(x), f(x)) < \varepsilon$.
-
-    If $(f_n)$ uniformly converges to $f$, then $(f_n)$ \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{converges pointwise} to $f$ as well\CrefIfExists{proposition:uniform_convergence_implies_pointwise_convergence_for_sequences_of_functions_to_an_extended_metric_space} and hence $f$ is the \CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space}{limit} of $(f_n)$.
-\end{definition}

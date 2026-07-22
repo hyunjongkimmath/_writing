@@ -1,0 +1,32 @@
+\begin{proposition}[Sequential characterization of function limits] \label{proposition:sequential_characterization_of_limits_of_functions_between_extended_metric_spaces_valued_in_ordered_commutative_monoids_with_adjoined_infinity}
+    \TODO{AI generated, verify}
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered monoid with adjoined infinity} obtained from $T$, and let $(X, d_X)$ and $(Y, d_Y)$ be \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric spaces valued in $T^\infty$}. Let $S \subseteq X$, let $p$ be a \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} of $S$, and let $f : S \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Let $L \in Y$.
+
+    The following hold:
+    \begin{enumerate}
+        \item If $\lim_{x \to p, x \in S} f(x) = L$ in the sense of \Cref{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}, then for every sequence $(x_n)_{n=1}^\infty$ in $S \setminus \{p\}$ such that $x_n \to p$, we have $f(x_n) \to L$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
+
+        \item If there exists a sequence $(\delta_n)_{n=1}^\infty$ in $T_{>0}$ such that for every $\varepsilon \in T_{>0}$ there is some $N \in \mathbb{N}$ with $\delta_N < \varepsilon$ (e.g., if $\mathbb{Q}_{\geq 0} \hookrightarrow T$ and $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{Archimedean}), then the converse also holds: if $f(x_n) \to L$ for every sequence $(x_n)$ in $S \setminus \{p\}$ with $x_n \to p$, then $\lim_{x \to p, x \in S} f(x) = L$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the two implications separately.
+
+    \begin{enumerate}
+        \item Assume $\lim_{x \to p, x \in S} f(x) = L$ in the sense of \Cref{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}. Let $(x_n)_{n=1}^\infty$ be a sequence in $S \setminus \{p\}$ such that $x_n \to p$, and we show that $f(x_n) \to L$.
+
+        Let $\varepsilon \in T_{>0}$. By the epsilon-delta condition for the limit, there exists $\delta \in T_{>0}$ such that for all $x \in S$ satisfying $0 < d_X(x,p) < \delta$, we have $d_Y(f(x),L) < \varepsilon$. Since $x_n \to p$, there exists $N \in \bbN$ such that for all $n \geq N$, $d_X(x_n, p) < \delta$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}. For each $n$, since $x_n \in S \setminus \{p\}$, we have $x_n \neq p$, and therefore $d_X(x_n, p) > 0$ by the non-negativity axiom of extended metrics\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}. Consequently, for all $n \geq N$, we have $0 < d_X(x_n, p) < \delta$, which implies $d_Y(f(x_n), L) < \varepsilon$. This shows that $f(x_n) \to L$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
+
+        \item We show the converse by contrapositive under the assumption that a sequence $(\delta_n)_{n=1}^\infty$ in $T_{>0}$ exists with $\delta_n$ probing arbitrarily small distances: for every $\varepsilon \in T_{>0}$ there is some $N$ with $\delta_N < \varepsilon$.
+
+        Assume $\lim_{x \to p, x \in S} f(x) = L$ does not hold in the sense of \Cref{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}. In other words, there exists $\varepsilon_0 \in T_{>0}$ such that for every $\delta \in T_{>0}$, there is some $x \in S$ with $0 < d_X(x,p) < \delta$ and $d_Y(f(x),L) \geq \varepsilon_0$.
+
+        For each $n \in \bbN$, apply this with $\delta = \delta_n$. There exists $x_n \in S$ such that $0 < d_X(x_n, p) < \delta_n$ and $d_Y(f(x_n), L) \geq \varepsilon_0$. Since $d_X(x_n, p) > 0$, we have $x_n \neq p$ by\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}, so each $x_n$ lies in $S \setminus \{p\}$.
+
+        We claim that $x_n \to p$. Let $\varepsilon \in T_{>0}$. By assumption, there exists $N \in \bbN$ such that for all sufficiently large $n$, $\delta_n < \varepsilon$. Then for all such $n$, we have $d_X(x_n, p) < \delta_n < \varepsilon$, so $x_n \to p$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
+
+        On the other hand, $d_Y(f(x_n), L) \geq \varepsilon_0 > 0_T$ for all $n \in \bbN$, which means that $f(x_n) \not\to L$. This establishes the contrapositive: if condition (1) fails, then condition (2) also fails.
+    \end{enumerate}
+\end{proof}

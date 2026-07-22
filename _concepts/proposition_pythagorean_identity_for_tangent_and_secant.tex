@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:pythagorean_identity_for_tangent_and_secant}
+    For every $x \in \mathbb{R}$ such that $\cos(x) \neq 0$, the \CrefAndHyperrefIfExist{definition:tangent_function_on_real_line}{tangent function} $\tan$ and the \CrefAndHyperrefIfExist{definition:secant_cosecant_and_cotangent_functions_on_real_line}{secant function} $\sec$ satisfy
+    $$1 + \tan^2(x) = \sec^2(x)$$
+    This is called the Pythagorean identity for tangent and secant.
+    \CrefIfExists{definition:tangent_function_on_real_line}
+    \CrefIfExists{definition:secant_cosecant_and_cotangent_functions_on_real_line}
+    \end{proposition}
+    \begin{proof}
+    From the \CrefAndHyperrefIfExist{proposition:pythagorean_identity_for_sine_and_cosine_functions}{Pythagorean identity for sine and cosine}, we have $\sin^2(x) + \cos^2(x) = 1$ for all $x \in \mathbb{R}$. Dividing both sides by $\cos^2(x) \neq 0$ yields
+    $$\frac{\sin^2(x)}{\cos^2(x)} + 1 = \frac{1}{\cos^2(x)}$$
+    By the definitions of $\tan$ and $\sec$, this is exactly
+    $$\tan^2(x) + 1 = \sec^2(x)$$
+    which rearranges to the stated identity.
+\end{proof}

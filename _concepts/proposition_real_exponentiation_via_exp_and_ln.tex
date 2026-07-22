@@ -19,10 +19,10 @@
         $$\exp(q \ln(a))^n = \exp(n \cdot q \ln(a)) = \exp(m \ln(a)) = a^m,$$
         so $\exp(q \ln(a))$ is the unique positive $n$-th root of $a^m$, which is $a^{m/n} = a^q$.
 
-        Now, for irrational $x > 0$, since $a > 1$, the function $t \mapsto a^t$ on $\mathbb{Q}$ is strictly increasing (by \CrefAndHyperrefIfExist{lemma:properties_of_rational_exponentiation}{monotonicity of rational exponentiation}). The map $s \mapsto \exp(s)$ is also strictly increasing because its derivative $\exp(s) > 0$ everywhere. Since $a^q = \exp(q \ln(a))$ for all $q \in \\mathbb{Q}$, and both sides are continuous in the exponent (the supremum definition gives continuity of $a^x$, and $\exp(x \ln(a))$ is a composition of continuous functions), we have
+        Now, for irrational $x > 0$, since $a > 1$, the function $t \mapsto a^t$ on $\mathbb{Q}$ is strictly increasing (by \CrefAndHyperrefIfExist{lemma:properties_of_rational_exponentiation}{monotonicity of rational exponentiation}). The map $s \mapsto \exp(s)$ is also strictly increasing because its derivative $\exp(s) > 0$ everywhere. By \Cref{proposition:continuity_of_real_exponentiation}, the function $x \mapsto a^x$ is continuous. Since $a^q = \exp(q \ln(a))$ for all $q \in \mathbb{Q}$, and $\exp(x \ln(a))$ is a composition of continuous functions, both sides are continuous in the exponent. Therefore,
         $$a^x = \sup_{q \leq x, q \in \mathbb{Q}} a^q = \sup_{q \leq x, q \in \mathbb{Q}} \exp(q \ln(a)) = \exp(x \ln(a)).$$
 
-        \item \textbf{Case $0 < a < 1$:} By definition, $a^x = \inf\{ a^q : q \in \mathbb{Q},\; q \leq x \}$. The same rational case argument as above shows $a^q = \exp(q \ln(a))$ for all $q \in \mathbb{Q}$. Since now $\ln(a) < 0$, the map $s \mapsto s \ln(a)$ reverses inequalities, and $\exp(s)$ is strictly increasing. The infimum over $q \leq x$ of $\exp(q \ln(a))$ equals $\exp(x \ln(a))$ by continuity:
+        \item \textbf{Case $0 < a < 1$:} By definition, $a^x = \inf\{ a^q : q \in \mathbb{Q},\; q \leq x \}$. The same rational case argument as above shows $a^q = \exp(q \ln(a))$ for all $q \in \mathbb{Q}$. Since now $\ln(a) < 0$, the map $s \mapsto s \ln(a)$ reverses inequalities, and $\exp(s)$ is strictly increasing. By \Cref{proposition:continuity_of_real_exponentiation}, the function $x \mapsto a^x$ is continuous. The infimum over $q \leq x$ of $\exp(q \ln(a))$ equals $\exp(x \ln(a))$ by continuity:
         $$a^x = \inf_{q \leq x, q \in \mathbb{Q}} a^q = \inf_{q \leq x, q \in \mathbb{Q}} \exp(q \ln(a)) = \exp(x \ln(a)).$$
     \end{enumerate}
 

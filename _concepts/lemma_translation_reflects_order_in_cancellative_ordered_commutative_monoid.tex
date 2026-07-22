@@ -1,0 +1,9 @@
+\begin{lemma}[Translation reflects order in a cancellative ordered commutative monoid] \label{lemma:translation_reflects_order_in_cancellative_ordered_commutative_monoid}
+    Let $(M,+)$ be a \CrefAndHyperrefIfExist{definition:cancellative_monoid}{cancellative} \CrefAndHyperrefIfExist{definition:algebraically_ordered_naturally_ordered_commutative_monoid}{algebraically} \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered commutative monoid}. In particular, for all $a,b \in M$, $a \leq b$ if and only if there exists $p \in M_{\geq 0}$ such that $a + p = b$. Then for all $x,y,z \in M$, if $z + x \leq z + y$ then $x \leq y$.
+\end{lemma}
+
+\begin{proof}
+    Assume $z + x \leq z + y$ in $M$. By the difference property, there exists $p \in M_{\geq 0}$ such that $(z + x) + p = z + y$. By associativity and commutativity of addition in $M$, this becomes
+    $$z + (x + p) = z + y.$$
+    Since $(M,+)$ is cancellative, cancelling $z$ from both sides gives $x + p = y$. Since $p \in M_{\geq 0}$, the difference property implies $x \leq y$.
+\end{proof}

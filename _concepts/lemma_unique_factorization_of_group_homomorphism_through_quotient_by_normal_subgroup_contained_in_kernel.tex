@@ -1,28 +1,31 @@
 \begin{lemma}[Factorization of a Group Homomorphism through a Quotient] \label{lemma:unique_factorization_of_group_homomorphism_through_quotient_by_normal_subgroup_contained_in_kernel}
-\TODO{AI generated, verify}
-Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, let $\phi: G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}, and let $N$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$ such that $N \subseteq \operatorname{ker}(\phi)$. Let $\pi: G \to G/\!N$ denote the \CrefAndHyperrefIfExist{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}{canonical projection}.
+    \TODO{AI generated, verify}
+    Let $G$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}, let $\phi : G \to H$ be a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}, and let $N$ be a \CrefAndHyperrefIfExist{definition:normal_subgroup_of_a_group}{normal subgroup} of $G$ such that $N \subseteq \operatorname{ker}(\phi)$. Let $\pi : G \to G/\!N$ denote the \CrefAndHyperrefIfExist{theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup}{canonical projection}.
 
-Then there exists a unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $\bar{\phi}: G/\!N \to H$ such that $\phi = \bar{\phi} \circ \pi$. Explicitly, $\bar{\phi}(gN) = \phi(g)$ for all $g \in G$. Moreover:
-\begin{enumerate}
-    \item $\bar{\phi}$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $N = \operatorname{ker}(\phi)$.
-    \item If $N = \operatorname{ker}(\phi)$, then $\bar{\phi}$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group isomorphism} onto $\operatorname{im}(\phi)$.
-\end{enumerate}
+    Then there exists a unique \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} $\bar{\phi} : G/\!N \to H$ such that $\phi = \bar{\phi} \circ \pi$. Explicitly, $\bar{\phi}(gN) = \phi(g)$ for all $g \in G$. Moreover:
+    \begin{enumerate}
+        \item\label{item:factorization_hom_injective_iff_N_equals_kernel} The homomorphism $\bar{\phi}$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{injective} if and only if $N = \operatorname{ker}(\phi)$.
+        \item If $N = \operatorname{ker}(\phi)$, then $\bar{\phi}$ is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} that is a bijection onto $\operatorname{im}(\phi)$.
+    \end{enumerate}
 \end{lemma}
 
 \begin{proof}
+    \TODO{AI generated, verify}
+    Let $e_H$ denote the identity element of $H$. Define $\bar{\phi} : G/\!N \to H$ by $\bar{\phi}(gN) = \phi(g)$.
 
-\TODO{AI generated, verify}
-\textbf{Well-definedness.} Define $\bar{\phi}: G/\!N \to H$ by $\bar{\phi}(gN) = \phi(g)$. Suppose $g_1 N = g_2 N$ for $g_1, g_2 \in G$. Then $g_2^{-1} g_1 \in N$. Since $N \subseteq \operatorname{ker}(\phi)$, we have $\phi(g_2^{-1} g_1) = e_H$. Because $\phi$ is a homomorphism, $\phi(g_2)^{-1} \phi(g_1) = e_H$, so $\phi(g_1) = \phi(g_2)$. Hence $\bar{\phi}$ is well-defined.
+    We show that $\bar{\phi}$ is well-defined. Suppose that $g_1 N = g_2 N$ for some $g_1, g_2 \in G$. Then $g_2^{-1} g_1 \in N$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. Since $N \subseteq \operatorname{ker}(\phi)$, we have $\phi(g_2^{-1} g_1) = e_H$. Because $\phi$ is a homomorphism\CrefIfExists{definition:group_homomorphism}, we obtain $\phi(g_2)^{-1} \phi(g_1) = e_H$. Multiplying both sides on the left by $\phi(g_2)$, we get $\phi(g_1) = \phi(g_2)$. Hence, $\bar{\phi}(g_1 N) = \bar{\phi}(g_2 N)$.
 
-\textbf{Homomorphism.} For any $g_1 N, g_2 N \in G/\!N$,
-$$ \bar{\phi}\bigl((g_1 N)(g_2 N)\bigr) = \bar{\phi}\bigl((g_1 g_2) N\bigr) = \phi(g_1 g_2) = \phi(g_1)\phi(g_2) = \bar{\phi}(g_1 N)\,\bar{\phi}(g_2 N), $$
-so $\bar{\phi}$ is a group homomorphism.
+    We show that $\bar{\phi}$ is a group homomorphism. For any $g_1 N, g_2 N \in G/\!N$, we have $(g_1 N)(g_2 N) = (g_1 g_2)N$\CrefIfExists{proposition:quotient_group_of_a_group_by_a_normal_subgroup_has_well_deinfed_operation}. Therefore,
+    $$\bar{\phi}\bigl((g_1 N)(g_2 N)\bigr) = \bar{\phi}\bigl((g_1 g_2)N\bigr) = \phi(g_1 g_2) = \phi(g_1)\phi(g_2) = \bar{\phi}(g_1 N)\,\bar{\phi}(g_2 N),$$
+    where $\phi(g_1 g_2) = \phi(g_1)\phi(g_2)$ because $\phi$ is a homomorphism.
 
-\textbf{Factorization.} For any $g \in G$, $(\bar{\phi} \circ \pi)(g) = \bar{\phi}(gN) = \phi(g)$, so $\phi = \bar{\phi} \circ \pi$.
+    For any $g \in G$, we have $(\bar{\phi} \circ \pi)(g) = \bar{\phi}(gN) = \phi(g)$, so $\phi = \bar{\phi} \circ \pi$.
 
-\textbf{Uniqueness.} Suppose $\psi: G/\!N \to H$ is another homomorphism with $\phi = \psi \circ \pi$. Then for any $gN \in G/\!N$, $\psi(gN) = \psi(\pi(g)) = \phi(g) = \bar{\phi}(gN)$, so $\psi = \bar{\phi}$.
+    We show uniqueness. Suppose that $\psi : G/\!N \to H$ is another group homomorphism satisfying $\phi = \psi \circ \pi$. Then for any $gN \in G/\!N$, we have $\psi(gN) = \psi(\pi(g)) = \phi(g) = \bar{\phi}(gN)$, so $\psi = \bar{\phi}$.
 
-\textbf{Injectivity criterion.} We compute $\operatorname{ker}(\bar{\phi}) = \{ gN \in G/\!N \mid \phi(g) = e_H \} = \{ gN \mid g \in \operatorname{ker}(\phi) \}$. This is the trivial coset $N$ if and only if $\operatorname{ker}(\phi) \subseteq N$. Since we already have $N \subseteq \operatorname{ker}(\phi)$, injectivity of $\bar{\phi}$ is equivalent to $N = \operatorname{ker}(\phi)$.
+    We establish the injectivity criterion. The kernel of $\bar{\phi}$ is
+    $$\operatorname{ker}(\bar{\phi}) = \{ gN \in G/\!N : \bar{\phi}(gN) = e_H \} = \{ gN : \phi(g) = e_H \} = \{ gN : g \in \operatorname{ker}(\phi) \}.$$
+    This equals the trivial coset $N$ if and only if $\operatorname{ker}(\phi) \subseteq N$. Since we already have $N \subseteq \operatorname{ker}(\phi)$ by hypothesis, the injectivity of $\bar{\phi}$ is equivalent to $N = \operatorname{ker}(\phi)$ by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
 
-\textbf{Isomorphism onto the image.} When $N = \operatorname{ker}(\phi)$, part (1) gives that $\bar{\phi}$ is injective, so it is an isomorphism onto its image $\operatorname{im}(\bar{\phi}) = \operatorname{im}(\phi)$.
+    When $N = \operatorname{ker}(\phi)$, the previous item implies that $\bar{\phi}$ is injective. The image of $\bar{\phi}$ equals $\operatorname{im}(\phi)$ because for any $g \in G$, we have $\bar{\phi}(gN) = \phi(g)$, and conversely every element of $\operatorname{im}(\phi)$ has the form $\phi(g) = \bar{\phi}(gN)$. Therefore, $\bar{\phi}$ is a bijection onto $\operatorname{im}(\phi)$.
 \end{proof}

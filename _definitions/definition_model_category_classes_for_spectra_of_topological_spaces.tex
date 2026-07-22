@@ -1,10 +1,12 @@
 \begin{definition}[{\cite[Definition 0.38]{nlab:model_structure_on_topological_sequential_spectra}}] \label{definition:model_category_classes_for_spectra_of_topological_spaces}
-Let $f_\bullet: X_\bullet \to Y_\bullet$ be a morphism of spectra. 
+Let $f_\bullet: X_\bullet \to Y_\bullet$ be a \CrefAndHyperrefIfExist{definition:spectrum_of_topological_spaces}{morphism of spectra of topological spaces}. 
 \begin{enumerate}
-    \item We say that $f$ is a \hl{strict weak equivalence} if each component $f_n: X_n \to Y_n$ is a weak homotopy equivalence (i.e. a weak equivalence for the classical model category structure for topological spaces).
+    \item We say that $f$ is a \hl{strict weak equivalence} if each component $f_n: X_n \to Y_n$ is a \CrefAndHyperrefIfExist{definition:weak_homotopy_equivalence_of_topological_spaces}{weak homotopy equivalence} (i.e. a weak equivalence for the classical model category structure for topological spaces).
+    \TODO{define the classical model category structure for topological spaces}
 
-    \item We say that $f$ is a \hl{strict fibration} if each component $f_n: X_n \to Y_n$ is a Serre fibration (i.e. a fibration for the classical model category structure for topological spaces).
+    \item We say that $f$ is a \hl{strict fibration} if each component $f_n: X_n \to Y_n$ is a \CrefAndHyperrefIfExist{definition:serre_fibration_of_topological_spaces}{Serre fibration} (i.e. a fibration for the classical model category structure for topological spaces).
 
+    \TODO{retract; relative cell complexes}
     \item We say that $f$ is a \hl{strict cofibration} if $f_0: X_0 \to Y_0$ and the maps 
     $$(f_{n+1}, \sigma_n^Y): X_{n+1} \coprod_{S^1 \wedge X_n} (S^1 \wedge Y_n) \to Y_{n+1}$$
     for $n > 1$ are retracts of relative cell complexes (i.e. cofibrations for the classical model category structure for topological spaces).

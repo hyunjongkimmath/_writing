@@ -1,0 +1,7 @@
+\begin{lemma} \label{lemma:identity_element_is_its_own_inverse_in_a_monoid}
+    Let $(M,\cdot)$ be a \CrefAndHyperrefIfExist{definition:monoid}{monoid} with identity element $e$. Then $e$ is its own inverse, i.e.,
+    $$e \cdot e = e \quad\text{and hence}\quad e^{-1} = e.$$
+\end{lemma}
+\begin{proof}
+    By definition of the identity element in a monoid \CrefIfExists{definition:monoid}, we have $e \cdot e = e$. This means $e$ satisfies the definition of being its own inverse \CrefIfExists{definition:left_right_inverse_of_an_element_for_a_binary_operation_on_a_set}: $e$ is both a left inverse of $e$ ($e \cdot e = e$) and a right inverse of $e$ ($e \cdot e = e$). Therefore $e$ is an inverse of itself. (If the inverse is unique in $M$, which holds when $M$ is a monoid by \CrefIfExists{lemma:inverse_of_an_element_for_a_binary_operation_on_a_set_is_unique_if_exists}, then $e^{-1} = e$.)
+\end{proof}

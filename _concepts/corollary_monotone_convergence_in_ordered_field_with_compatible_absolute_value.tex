@@ -1,0 +1,24 @@
+\begin{corollary}[Monotone convergence in a totally ordered field with standard absolute value] \label{corollary:monotone_convergence_in_ordered_field_with_compatible_absolute_value}
+    \TODO{AI generated, verify}
+    Let $(F, +, \cdot, \leq)$ be a \CrefAndHyperrefIfExist{definition:ordered_field}{totally ordered field} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $|\cdot| : F \to F_{\geq 0}$ be the \CrefAndHyperrefIfExist{definition:standard_absolute_value_of_an_ordered_ring}{(standard) absolute value} on $F$, and let $d : F \times F \to F_{\geq 0}$ be the \CrefAndHyperrefIfExist{definition:metric_induced_by_an_absolute_value_on_a_commutative_ring}{induced metric} defined by
+    $$d(x, y) = |x - y|.$$
+
+    Assume that $(F, \leq, d)$ is an \CrefAndHyperrefIfExist{definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{ordered extended metric space}, so that the metric topology induced by $d$ coincides with the order topology on $(F, \leq)$.
+
+    Let $(x_n)_{n=1}^\infty$ be a sequence in $F$.
+    \begin{enumerate}
+        \item If $(x_n)$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing} and \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{bounded above}, then $L := \sup\{x_n : n \in \mathbb{N}\}$ exists in $F$ and $(x_n)$ converges to $L$ in the metric $d$.
+        \item If $(x_n)$ is nonincreasing and bounded below, then $L := \inf\{x_n : n \in \mathbb{N}\}$ exists in $F$ and $(x_n)$ converges to $L$ in the metric $d$.
+    \end{enumerate}
+\end{corollary}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We check that all hypotheses of \Cref{theorem:monotone_convergence_in_ordered_extended_metric_space} are satisfied with $X = F$ and $T = F_{\geq 0}$.
+
+    The set $F_{\geq 0}$ is an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}\CrefIfExists{proposition:positive_cone_of_ordered_ring_is_ordered_semiring}, so its additive monoid $(F_{\geq 0}, +, 0_F)$ is a \CrefAndHyperrefIfExist{definition:ordered_monoid}{commutative ordered monoid}. The standard absolute value $|\cdot| : F \to F_{\geq 0}$ is an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value} on $F$ valued in $F_{\geq 0}$ by \Cref{lemma:absolute_value_function_of_an_ordered_ring_is_indeed_an_absolute_value}. The induced metric $d(x,y) = |x-y|$ makes $(F, d)$ an extended metric space valued in $F_{\geq 0}$.
+
+    The partially ordered set $(F, \leq)$ has the least upper bound property by hypothesis. The assumption that $(F, \leq, d)$ is an \CrefAndHyperrefIfExist{definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{ordered extended metric space} ensures that the metric topology coincides with the order topology.
+
+    The result follows directly from \Cref{theorem:monotone_convergence_in_ordered_extended_metric_space}.
+\end{proof}

@@ -8,7 +8,7 @@
 
     Observe that
     $$\left|\frac{1}{x} - \frac{1}{a}\right| = \frac{|x - a|}{|a| \cdot |x|}.$$
-    Choose $\delta_1 = |a|/2$. Since $(\bbR, |\cdot|)$ is an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_semiring_with_adjoined_infinity}{extended metric space} via the \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard absolute value}, the \CrefAndHyperrefIfExist{proposition:reverse_triangle_inequality_in_extended_metric_space}{reverse triangle inequality} gives $|x| = |a - (a - x)| \geq |a| - |a - x|$. Thus $|x - a| < \delta_1$ implies $|x| > |a|/2$. Then
+    Choose $\delta_1 = |a|/2$. Since $(\bbR, |\cdot|)$ is an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space} via the \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard absolute value}, the \CrefAndHyperrefIfExist{proposition:reverse_triangle_inequality_in_extended_metric_space}{reverse triangle inequality} gives $|x| = |a - (a - x)| \geq |a| - |a - x|$. Thus $|x - a| < \delta_1$ implies $|x| > |a|/2$. Then
     $$\frac{|x - a|}{|a| \cdot |x|} < \frac{|x - a|}{|a| \cdot (|a|/2)} = \frac{2|x - a|}{|a|^2}.$$
     Choose $\delta_2 = \varepsilon |a|^2 / 2$ and set $\delta = \min(\delta_1, \delta_2)$. For $|x - a| < \delta$, we have
     $$\left|\frac{1}{x} - \frac{1}{a}\right| =  \frac{|x - a|}{|a| \cdot |x|} < \frac{2|x-a|}{|a|^2} < \frac{2\delta}{|a|^2} \leq \frac{2 \delta_2}{|a|^2} \leq \varepsilon.$$

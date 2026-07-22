@@ -1,10 +1,7 @@
 \begin{definition}[Valuation on a field] \label{definition:valuation_on_a_field}
 Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field}. A \hldef{valuation on $K$} is a function
-\[
-v : K \to \Gamma \cup \{\infty\},
-\]
-\TODO{ordered group}
-where $(\Gamma, +, \leq)$ is a totally ordered abelian group and $\infty$ is an element greater than all elements of $\Gamma$, satisfying for all $x, y \in K$:
+$$v : K \to \Gamma \cup \{\infty\},$$
+where $(\Gamma, +, \leq)$ is a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} and $\infty$ is an element greater than all elements of $\Gamma$, satisfying for all $x, y \in K$:
 \begin{enumerate}
     \item $v(x) = \infty$ if and only if $x = 0$,
     \item $v(xy) = v(x) + v(y)$, \label{part:valuation_on_a_field_turns_multiplication_into_addition}

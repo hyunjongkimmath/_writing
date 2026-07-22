@@ -6,8 +6,7 @@
 \begin{proof}
     Fix $n \geq 1$. By the \CrefAndHyperrefIfExist{theorem:binomial_theorem_for_a_commutative_ring}{binomial theorem}, applied to $\mathbb{Q}$, we have:
     $$\left(1 + \frac{1}{n}\right)^n = \sum_{k=0}^n \binom{n}{k} \frac{1}{n^k}.$$
-    \TODO{factor this fact out as a lemma}
-    As shown in the proof of \Cref{lemma:sequence_one_plus_one_over_n_to_the_n_is_strictly_increasing}, each term can be written as:
+    By \Cref{lemma:binomial_coefficient_n_choose_k_over_n_pow_k_product_expansion}, each term can be written as:
     $$\binom{n}{k} \frac{1}{n^k} = \frac{1}{k!} \cdot \left(1 - \frac{1}{n}\right) \left(1 - \frac{2}{n}\right) \cdots \left(1 - \frac{k-1}{n}\right).$$
     Since each factor $1 - j/n$ is at most $1$, we obtain the crude bound:
     $$\binom{n}{k} \frac{1}{n^k} \leq \frac{1}{k!}.$$

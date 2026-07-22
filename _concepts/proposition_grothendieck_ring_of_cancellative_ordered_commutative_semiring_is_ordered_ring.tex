@@ -1,0 +1,56 @@
+\begin{proposition}[Grothendieck ring of a cancellative ordered commutative semiring is an ordered ring] \label{proposition:grothendieck_ring_of_cancellative_ordered_commutative_semiring_is_ordered_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:semiring}{commutative} \CrefAndHyperrefIfExist{definition:algebraically_ordered_naturally_ordered_commutative_monoid}{algebraically ordered} \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring} that is \CrefAndHyperrefIfExist{definition:cancellative_monoid}{cancellative} as an additive monoid. Let $K(R)$ be its \CrefAndHyperrefIfExist{definition:grothendieck_ring_of_a_commutative_semiring}{Grothendieck ring}. Define a relation $\leq$ on $K(R)$ by
+    $$[(a,b)] \leq [(c,d)] \iff a + d \leq b + c \text{ in } R.$$
+    Then $\leq$ is a well-defined partial order on $K(R)$ that makes $K(R)$ into an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring}\CrefIfExists{definition:ordered_ring}. If $R$ is a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring}, then $K(R)$ with this order is a totally ordered ring.
+\end{proposition}
+
+\begin{proof}
+    Since $(R,+)$ is a cancellative commutative monoid, the equivalence relation defining $K(R)$ simplifies: for $(a,b),(c,d) \in R \times R$, we have $(a,b) \sim (c,d) \iff a + d = b + c$\CrefIfExists{definition:grothendieck_ring_of_a_commutative_semiring}.
+
+    We first verify that $\leq$ is well-defined. Suppose $(a,b) \sim (a',b')$ and $(c,d) \sim (c',d')$, so that $a + b' = b + a'$ and $c + d' = d + c'$ in $R$. Assume $[(a,b)] \leq [(c,d)]$, i.e., $a + d \leq b + c$ in $R$. Add $b'$ to both sides of this inequality (valid by translation-invariance of the order on $R$\CrefIfExists{definition:ordered_semiring}):
+    $$a + d + b' \leq b + c + b'.$$
+    Using $a + b' = b + a'$, the left side becomes $b + a' + d$, so we have
+    $$b + a' + d \leq b + c + b'.$$
+    By \Cref{lemma:translation_reflects_order_in_cancellative_ordered_commutative_monoid}, cancelling the common translation by $b$ gives $a' + d \leq c + b'$. Add $d'$ to both sides (again by translation-invariance):
+    $$a' + d + d' \leq c + b' + d'.$$
+    Using $c + d' = d + c'$ on the right side, this becomes
+    $$a' + d + d' \leq b' + d + c'.$$
+    By \Cref{lemma:translation_reflects_order_in_cancellative_ordered_commutative_monoid}, cancelling the common translation by $d$ yields $a' + d' \leq b' + c'$, which precisely means $[(a',b')] \leq [(c',d')]$.
+
+    Next we verify that $\leq$ is a partial order on $K(R)$.
+    \begin{enumerate}
+        \item The relation $\leq$ is reflexive because for any $[(a,b)] \in K(R)$, we have $a + b = b + a$ by commutativity of addition in $R$, so $a + b \leq b + a$, which means $[(a,b)] \leq [(a,b)]$.
+        \item The relation $\leq$ is antisymmetric because if $[(a,b)] \leq [(c,d)]$ and $[(c,d)] \leq [(a,b)]$, then $a + d \leq b + c$ and $c + b \leq d + a$. By commutativity, $c + b = b + c$ and $d + a = a + d$, so we have $a + d \leq b + c$ and $b + c \leq a + d$. By antisymmetry of the partial order on $R$, this implies $a + d = b + c$, which is exactly $(a,b) \sim (c,d)$. Hence $[(a,b)] = [(c,d)]$.
+        \item The relation $\leq$ is transitive because if $[(a,b)] \leq [(c,d)]$ and $[(c,d)] \leq [(e,f)]$, then $a + d \leq b + c$ and $c + f \leq d + e$. Add these two inequalities (valid by translation-invariance of the order on $R$):
+        $$a + d + c + f \leq b + c + d + e.$$
+        Rearrange using commutativity and associativity: $(a + f) + (c + d) \leq (b + e) + (c + d)$. By \Cref{lemma:translation_reflects_order_in_cancellative_ordered_commutative_monoid}, cancelling the common translation by $c + d$ in the ordered cancellative monoid $(R,+)$ gives $a + f \leq b + e$, which means $[(a,b)] \leq [(e,f)]$.
+    \end{enumerate}
+
+    We now verify that $\leq$ makes $K(R)$ into an ordered ring. Since $K(R)$ is already a commutative unital ring\CrefIfExists{proposition:grothendieck_ring_is_a_ring}, we check the two conditions of \Cref{definition:ordered_ring}.
+    \begin{enumerate}
+        \item We show that the additive group $(K(R),+)$ is an ordered abelian group. Translation-invariance means that for all $\alpha,\beta,\gamma \in K(R)$, if $\alpha \leq \beta$ then $\alpha + \gamma \leq \beta + \gamma$. Let $\alpha = [(a,b)]$, $\beta = [(c,d)]$, and $\gamma = [(e,f)]$. Assume $[(a,b)] \leq [(c,d)]$, so $a + d \leq b + c$. Then
+        $$\alpha + \gamma = [(a+e,\; b+f)], \quad \beta + \gamma = [(c+e,\; d+f)].$$
+        We need $(a+e) + (d+f) \leq (b+f) + (c+e)$, which rearranges to $(a+d) + (e+f) \leq (b+c) + (e+f)$. Since $a + d \leq b + c$ and the order on $R$ is translation-invariant, adding $e + f$ to both sides gives the desired inequality.
+
+        \item We show that the order is compatible with multiplication, i.e., for $\alpha,\beta \in K(R)$, if $\alpha \geq 0_{K(R)}$ and $\beta \geq 0_{K(R)}$, then $\alpha\beta \geq 0_{K(R)}$. Note that $[(a,b)] \geq [(0_R,0_R)] \iff a + 0_R \geq b + 0_R \iff a \geq b$ in $R$. Let $\alpha = [(a,b)]$ and $\beta = [(c,d)]$ with $a \geq b$ and $c \geq d$. Recall that
+        $$\alpha\beta = [(ac+bd,\; ad+bc)].$$
+        We need to show $ac + bd \geq ad + bc$, i.e., the first component is at least the second.
+        Since $R$ is assumed to be algebraically ordered, there exist $x,y \in R_{\geq 0_R}$ such that $a = b+x$ and $c = d+y$. Compute using distributivity, associativity, and commutativity in $R$:
+        $$\begin{aligned}
+            ac + bd &= (b+x)(d+y) + bd \\
+            &= bd + by + xd + xy + bd \\
+            &= 2bd + by + xd + xy,
+        \end{aligned}$$
+        and
+        $$\begin{aligned}
+            ad + bc &= (b+x)d + b(d+y) \\
+            &= bd + xd + bd + by \\
+            &= 2bd + by + xd.
+        \end{aligned}$$
+        Thus $ac + bd = (ad + bc) + xy$. Since $x,y \geq 0_R$ and the order on $R$ is compatible with multiplication, $xy \geq 0_R$\CrefIfExists{definition:ordered_semiring}. Hence $ac + bd \geq ad + bc$ by translation-invariance (adding the non-negative element $xy$ to $ad+bc$), which precisely means $\alpha\beta = [(ac+bd,\; ad+bc)] \geq [(0_R,0_R)] = 0_{K(R)}$.
+    \end{enumerate}
+
+    This completes the verification that $(K(R), \leq)$ is an ordered ring.
+
+    Finally, suppose $R$ is a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring}. Given $[(a,b)], [(c,d)] \in K(R)$, trichotomy in $R$ gives exactly one of $a+d < b+c$, $a+d = b+c$, or $a+d > b+c$. In each of these cases, we have $[(a,b)] < [(c,d)]$, $[(a,b)] = [(c,d)]$, or $[(a,b)] > [(c,d)]$.
+\end{proof}

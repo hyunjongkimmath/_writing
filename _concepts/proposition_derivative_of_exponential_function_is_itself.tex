@@ -1,34 +1,37 @@
 \begin{proposition} \label{proposition:derivative_of_exponential_function_is_itself}
-    \TODO{AI generated, verify}
 The \CrefAndHyperrefIfExist{definition:real_exponential_function}{exponential function} $\exp : \mathbb{R} \to \mathbb{R}$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $x \in \mathbb{R}$, and
 $$\frac{d}{dx} \exp(x) = \exp(x)$$
 \end{proposition}
 \begin{proof}
-    \TODO{AI generated, verify}
-By definition (\CrefAndHyperrefIfExist{definition:real_exponential_function}), we have $\exp(x) = e^x$, where $e$ is Euler's number. The derivative of $\exp$ at any point $c \in \mathbb{R}$ is the limit
+By \Cref{definition:real_exponential_function}, we have $\exp(x) = e^x$, where $e$ is Euler's number. The derivative of $\exp$ at any point $c \in \mathbb{R}$ is the limit
 $$\lim_{h \to 0} \frac{\exp(c+h) - \exp(c)}{h}.$$
 
-By the additivity property of real exponentiation (\CrefAndHyperrefIfExist{theorem:properties_of_real_exponentiation}), we have $\exp(c+h) = e^{c+h} = e^c \cdot e^h = \exp(c) \cdot \exp(h)$. Hence
+By the additivity property of real exponentiation\CrefIfExists{theorem:properties_of_real_exponentiation}, we have $\exp(c+h) = e^{c+h} = e^c \cdot e^h = \exp(c) \cdot \exp(h)$. Hence
 $$\frac{\exp(c+h) - \exp(c)}{h} = \frac{\exp(c)\bigl(\exp(h) - 1\bigr)}{h} = \exp(c) \cdot \frac{\exp(h) - 1}{h}.$$
 
 To compute the limit, we must show that
 $$\lim_{h \to 0} \frac{\exp(h) - 1}{h} = 1.$$
 
-We first establish this for $h > 0$. Since $\exp(h) = e^h$ and $e > 1$, by the monotonicity of real exponentiation (\CrefAndHyperrefIfExist{theorem:properties_of_real_exponentiation}), we have $\exp(h) > \exp(0) = 1$ for all $h > 0$.
+We first establish this for $h > 0$. Since $\exp(h) = e^h$ and $e > 1$, by the monotonicity of real exponentiation\CrefIfExists{theorem:properties_of_real_exponentiation}, we have $\exp(h) > \exp(0) = 1$ for all $h > 0$.
 
-To bound $\exp(h)$, we use the fact that for any rational number $q$, if $h > 0$, then by Bernoulli's inequality (which follows from induction on nonnegative integers and extends to rationals),
-$$\left(1 + \frac{h}{n}\right)^n \leq e^h = \exp(h)$$
-for all sufficiently large $n$. This gives $\exp(h) \geq 1 + nh$ for any fixed $n$, which is not useful directly. Instead, we use the following approach:
+% \TODO{benoulli's inequality}
+% To bound $\exp(h)$, we use the fact that for any rational number $q$, if $h > 0$, then by Bernoulli's inequality (which follows from induction on nonnegative integers and extends to rationals),
+% $$\left(1 + \frac{h}{n}\right)^n \leq e^h = \exp(h)$$
+% for all sufficiently large $n$. This gives $\exp(h) \geq 1 + nh$ for any fixed $n$, which is not useful directly. Instead, we use the following approach:
 
-For $h > 0$, consider the sequence of rational numbers $(r_n)$ with $0 < r_n \leq h$ and $r_n \to h$. By definition (\CrefAndHyperrefIfExist{definition:real_exponentiation_via_supremum}), we have $\exp(h) = \sup\{e^r : r \in \mathbb{Q},\; r \leq h\}$. Since $e > 1$, for any rational $r$ with $0 < r \leq h$, we have
+% For $h > 0$, consider the sequence of rational numbers $(r_n)$ with $0 < r_n \leq h$ and $r_n \to h$. 
+By definition\CrefIfExists{definition:real_exponentiation_via_supremum}, we have $\exp(h) = \sup\{e^r : r \in \mathbb{Q},\; r \leq h\}$\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}. Since $e > 1$, for any rational $r$ with $0 < r \leq h$, we have
 $$e^r \geq 1 + r$$
-by the binomial theorem applied to $(1+(e-1))^n$ and taking appropriate roots. Taking suprema, we get $\exp(h) \geq 1 + h$. Hence for $h > 0$,
+by the binomial theorem applied to $(1+(e-1))^n$ and taking appropriate roots\TODO{make this more explicit}. Taking suprema, we get $\exp(h) \geq 1 + h$. Hence for $h > 0$,
 $$\frac{\exp(h) - 1}{h} \geq \frac{1+h-1}{h} = 1.$$
 
-For the upper bound when $h > 0$, we use that $\exp(h/2)^2 = \exp(h)$ by additivity of exponents. Since $\exp(h/2) > 0$ and $(\exp(h/2))^2 = \exp(h)$, we have
-$$\frac{\exp(h)-1}{h} = \frac{(\exp(h/2))^2 - 1}{h} = \frac{(\exp(h/2)-1)(\exp(h/2)+1)}{h}.$$
+% For the upper bound when $h > 0$, we use that $\exp(h/2)^2 = \exp(h)$ by additivity of exponents. Since $\exp(h/2) > 0$ and $(\exp(h/2))^2 = \exp(h)$, we have
+% $$\frac{\exp(h)-1}{h} = \frac{(\exp(h/2))^2 - 1}{h} = \frac{(\exp(h/2)-1)(\exp(h/2)+1)}{h}.$$
 
-This approach requires more careful estimates. Instead, we use the standard inequality that for $0 < h < 1$,
+% This approach requires more careful estimates. 
+
+\TODO{extract the $e^h \leq \frac{1}{1-h}$ as a lemma and prove that without power series or anything}
+Instead, we use the standard inequality that for $0 < h < 1$,
 $$e^h \leq \frac{1}{1-h},$$
 which follows from the fact that $(1-h)e^h$ is decreasing on $[0,1)$. To see this without power series: by definition of real exponentiation and rational properties, for any rational $r \in (0,h)$ we have $e^r < e^h$, so it suffices to show $e^r(1-h) \leq 1$ for all such $r$. This holds because $(1-1/n)^n$ increases toward $1/e$ as $n \to \infty$, and setting $h = r_n \to h$ gives the result.
 
@@ -37,7 +40,9 @@ $$\exp(h) - 1 \leq \frac{1}{1-h} - 1 = \frac{h}{1-h},$$
 so
 $$\frac{\exp(h)-1}{h} \leq \frac{1}{1-h}.$$
 
-As $h \to 0^+$, the right side approaches $1$, so by the squeeze theorem (\CrefAndHyperrefIfExist{theorem:squeeze_theorem_for_limits_of_real_valued_functions_on_real_numbers}),
+As $h \to 0^+$, the right side approaches $1$, so by the \CrefAndHyperrefIfExist{theorem:squeeze_theorem_for_limits_of_real_valued_functions_on_real_numbers}{squeeze theorem},
+\TODO{I'm not sure that the squeeze theorem as statedd applies because this is a one sided limit.}
+\TODO{define the notion of a one sided limit and how they relate to two-sided limits}
 $$\lim_{h \to 0^+} \frac{\exp(h)-1}{h} = 1.$$
 
 For $h < 0$, write $k = -h > 0$. Then
@@ -47,13 +52,17 @@ Since $e^k > 1$ for $k > 0$, we have
 $$\frac{1 - 1/e^k}{k} = \frac{e^k-1}{k e^k} = \frac{\exp(k)-1}{k} \cdot \frac{1}{\exp(k)}.$$
 
 As $k \to 0^+$, we have $\frac{\exp(k)-1}{k} \to 1$ and $\exp(k) \to \exp(0) = 1$. Hence
+\TODO{probably need that exponentiation of any positive base is continuous}
 $$\lim_{h \to 0^-} \frac{\exp(h)-1}{h} = 1.$$
+\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}\CrefIfExists{lemma:accumulation_point_criteria_for_subsets_of_real_numbers}
 
 Since both one-sided limits equal $1$, we conclude that
 $$\lim_{h \to 0} \frac{\exp(h)-1}{h} = 1.$$
+\TODO{need to reference how limits of real functions are equivalent to both two-sided limits agreeing}
 
 Therefore, for any $c \in \mathbb{R}$:
-$$\frac{d}{dx}\biggr|_{x=c} \exp(x) = \exp(c) \cdot \lim_{h \to 0} \frac{\exp(h)-1}{h} = \exp(c) \cdot 1 = \exp(c).$$
+$$\frac{d}{dx}\biggr|_{x=c} \exp(x) = \lim_{h \to 0} \left( \exp(c) \cdot  \frac{\exp(h)-1}{h} \right) = \exp(c) \cdot \lim_{h \to 0} \frac{\exp(h)-1}{h} = \exp(c) \cdot 1 = \exp(c).$$
+\CrefIfExists{proposition:limit_algebra_for_real_valued_functions}
 
 This proves that $\exp$ is differentiable everywhere and its derivative equals itself.
 \end{proof}

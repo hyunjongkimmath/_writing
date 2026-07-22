@@ -1,0 +1,14 @@
+\begin{definition}[Directed partially ordered set with non-strict order] \label{definition:directed_partially_ordered_set_with_non_strict_order}
+    \TODO{AI generated, verify}
+    Let $(P,\leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
+
+    The poset $P$ is called a \hldef{directed partially ordered set (with non-strict order)} if for every pair $a,b \in P$, there exists $c \in P$ such that
+    $$a \leq c \quad\text{and}\quad b \leq c.$$
+
+    The poset $P$ is called a \hldef{codirected partially ordered set (with non-strict order)} if for every pair $a,b \in P$, there exists $d \in P$ such that
+    $$d \leq a \quad\text{and}\quad d \leq b.$$
+
+    \TextIfExists{definition:directed_codirected_strict_partially_ordered_set}{
+        Note that the notion of a directed poset defined here uses non-strict inequalities ($\leq$), whereas \Cref{definition:directed_codirected_strict_partially_ordered_set} uses strict inequalities ($<$). The two definitions coincide when $P$ has no maximal elements, but differ in general.
+    }
+\end{definition}

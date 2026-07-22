@@ -1,5 +1,42 @@
 \begin{lemma} \label{lemma:additivity_of_powers_in_a_group}
-Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $m,n \in \bbZ$,
-$$g^m g^n = g^{m+n},$$
-where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $m,n \in \bbZ$,
+    $$g^m g^n = g^{m+n},$$
+    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
 \end{lemma}
+\begin{proof}
+    We proceed by case analysis on the signs of $m$ and $n$. Recall from that\CrefIfExists{definition:power_of_a_group_element_by_an_integer} for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
+
+    \begin{enumerate}
+        \item Suppose $m \geq 0$ and $n \geq 0$. Then $g^m g^n = g^{m+n}$ follows from additivity of powers in the underlying monoid by \Cref{lemma:additivity_of_powers_in_a_monoid}.
+
+        \item Suppose $m < 0$ and $n < 0$. Let $a = -m > 0$ and $b = -n > 0$. Then
+        $$g^m g^n = (g^{-1})^a (g^{-1})^b = (g^{-1})^{a+b}$$
+        by \Cref{lemma:additivity_of_powers_in_a_monoid} applied to the element $g^{-1}$ in the underlying monoid. Since $a + b = -(m+n)$, we have $(g^{-1})^{a+b} = g^{-(a+b)} = g^{m+n}$.
+
+        \item Suppose $m > 0$ and $n < 0$. Let $b = -n > 0$. We consider subcases using the trichotomy of order on $\bbZ$:
+            \begin{enumerate}
+                \item Suppose $m \geq b$, so that $m - b \geq 0$. We compute:
+                \begin{align*}
+                    g^m g^n &= g^m (g^{-1})^b \\
+                    &= g^{m-b} g^b (g^{-1})^b
+                \end{align*}
+                because $m - b \ge 0$ and $b \ge 0$, so by \Cref{lemma:additivity_of_powers_in_a_monoid} applied to the underlying monoid, $g^{m-b} g^b = g^{(m-b)+b} = g^m$. Now
+                $$g^b (g^{-1})^b = (g g^{-1})^b = e^b = e$$
+                by \Cref{lemma:power_of_product_of_commuting_elements_in_a_monoid} applied to the commuting elements $g$ and $g^{-1}$ in the underlying monoid (note that $g$ and $g^{-1}$ commute in any group), and by \CrefAndHyperrefIfExist{definition:group} we have $g g^{-1} = e$. Since $e$ is the identity, $g^{m-b} e = g^{m-b}$. Since $m + n = m - b$, we have $g^{m+n} = g^{m-b}$.
+
+                \item Suppose $m < b$, so that $b - m > 0$. We compute:
+                \begin{align*}
+                    g^m g^n &= g^m (g^{-1})^b \\
+                    &= g^m (g^{-1})^m (g^{-1})^{b-m} \\
+                    &= (g g^{-1})^m (g^{-1})^{b-m} \\
+                    &= e^m (g^{-1})^{b-m} \\
+                    &= (g^{-1})^{b-m},
+                \end{align*}
+                where the second equality uses \Cref{lemma:additivity_of_powers_in_a_monoid} applied to $g^{-1}$ in the underlying monoid to write $(g^{-1})^b = (g^{-1})^m (g^{-1})^{b-m}$ (since $m \ge 0$, $b-m \ge 0$), the third equality uses that powers of $g$ and $g^{-1}$ commute in the monoid, the fourth uses $g g^{-1} = e$, and the fifth uses that $e$ is the identity. Since $m + n = m - b < 0$, we have $g^{m+n} = (g^{-1})^{-(m-n)} = (g^{-1})^{b-m}$.
+            \end{enumerate}
+
+        \item Suppose $m < 0$ and $n > 0$. The argument is symmetric to the previous case by swapping the roles of $m$ and $n$ and using commutativity of addition in $\bbZ$.
+    \end{enumerate}
+
+    In all cases, $g^m g^n = g^{m+n}$ as desired.
+\end{proof}

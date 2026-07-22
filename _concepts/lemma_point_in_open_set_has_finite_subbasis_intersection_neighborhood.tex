@@ -1,0 +1,10 @@
+\begin{lemma}[Point in open set has finite subbasis intersection neighborhood] \label{lemma:point_in_open_set_has_finite_subbasis_intersection_neighborhood}
+    \TODO{AI generated, verify}
+    Let $X$ be a set and $\mathcal{S}$ a \CrefAndHyperrefIfExist{definition:topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology}{subbasis} for a \CrefAndHyperrefIfExist{definition:topological_space}{topology} $\tau$. If $U \in \tau$ and $x \in U$, then there exists a finite intersection $J$ of elements of $\mathcal{S}$ such that
+    $$x \in J \subseteq U.$$
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{proposition:subset_of_a_topology_generated_by_a_collection_of_subsets_is_open_if_and_only_if_union_of_finite_intersections}, the collection of all finite intersections of elements of $\mathcal{S}$ forms a basis for $\tau$. Hence $U$ is the union of some family of such finite intersections. Since $x \in U$, there exists one finite intersection $J$ from this family with $x \in J \subseteq U$.
+\end{proof}

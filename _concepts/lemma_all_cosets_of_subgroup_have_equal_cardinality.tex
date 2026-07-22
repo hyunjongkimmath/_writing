@@ -1,0 +1,16 @@
+\begin{lemma}[All cosets have equal cardinality] \label{lemma:all_cosets_of_subgroup_have_equal_cardinality}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}. For any $g \in G$, the map
+    $$\varphi_g : H \longrightarrow gH, \quad h \longmapsto gh$$
+    is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection}. In particular, $|gH| = |H|$ for all $g \in G$.
+\end{lemma}
+\begin{proof}
+    Fix $g \in G$ and define $\varphi_g : H \to gH$ by $\varphi_g(h) = gh$. We verify that $\varphi_g$ is well-defined, surjective, and injective.
+
+    The map is well-defined because for any $h \in H$, the product $gh$ lies in $gH$\CrefIfExists{definition:coset_of_a_subgroup_of_a_group_by_an_element}.
+
+    Given any $y \in gH$, there exists $h \in H$ such that $y = gh$ by the definition of the left coset $gH$, so $\varphi_g(h) = y$. Thus, $\varphi_g$ is surjective.
+
+    Suppose $h_1, h_2 \in H$ satisfy $\varphi_g(h_1) = \varphi_g(h_2)$. Then $gh_1 = gh_2$, and by the left \CrefAndHyperrefIfExist{lemma:cancellation_law_for_group_operations}{cancellation law} in $G$ we obtain $h_1 = h_2$. Thus, $\varphi_g$ is ijective.
+
+    Since $\varphi_g$ is a bijection, the sets $H$ and $gH$ have the same \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality}.
+\end{proof}

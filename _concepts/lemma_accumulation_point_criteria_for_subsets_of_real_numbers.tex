@@ -2,17 +2,17 @@
     Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers} equipped with the \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard absolute value}. Let $A \subseteq \bbR$ and $p \in \bbR$.
 
     \begin{enumerate}
-        \item $p$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space}{accumulation point} of $A$ if and only if for every $\varepsilon > 0$ there exists $a \in A$ such that $a \neq p$ and $|a - p| < \varepsilon$.
-        \item $p$ is an accumulation point of $A$ if and only if there exists a \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space}{convergent sequence} $(a_n)_{n \in \bbN}$ in $A \setminus \{p\}$ such that $\lim_{n \to \infty} a_n = p$.
+        \item $p$ is an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} of $A$ if and only if for every $\varepsilon > 0$ there exists $a \in A$ such that $a \neq p$ and $|a - p| < \varepsilon$.
+        \item $p$ is an accumulation point of $A$ if and only if there exists a \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{convergent sequence} $(a_n)_{n \in \bbN}$ in $A \setminus \{p\}$ such that $\lim_{n \to \infty} a_n = p$.
         \item Let $I$ be an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{interval in the real line} that is \emph{not a singleton}\CrefIfExists{definition:singleton_set}. Suppose $p \in I \subseteq A$. Then $p$ is an accumulation point of $A$.
     \end{enumerate}
 \end{lemma}
 \begin{proof}
     \TODO{AI generated, verify}
     \begin{enumerate}
-        \item This is exactly the $\varepsilon$-$\delta$ definition of an accumulation point in the extended metric space $\bbR$ as in \Cref{definition:accumulation_point_in_an_extended_metric_space}.
+        \item This is exactly the $\varepsilon$-$\delta$ definition of an accumulation point in the extended metric space $\bbR$ as in \Cref{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
 
-        \item Suppose $p$ is an accumulation point of $A$. For each $n \in \bbN$, the open ball $B(p, 1/(n+1))$ contains a point $a_n \in A \setminus \{p\}$ by part~(1). Then $|a_n - p| < 1/(n+1)$, so $(a_n)$ converges to $p$ in the sense of \Cref{definition:convergence_and_limit_of_sequence_in_extended_metric_space}.
+        \item Suppose $p$ is an accumulation point of $A$. For each $n \in \bbN$, the open ball $B(p, 1/(n+1))$ contains a point $a_n \in A \setminus \{p\}$ by part~(1). Then $|a_n - p| < 1/(n+1)$, so $(a_n)$ converges to $p$ in the sense of \Cref{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}.
 
         Conversely, suppose there exists a sequence $(a_n)_{n \in \bbN}$ in $A \setminus \{p\}$ converging to $p$. Let $\varepsilon > 0$. There exists $N \in \bbN$ such that $|a_n - p| < \varepsilon$ for all $n \geq N$. In particular, $a_N \in A \setminus \{p\}$ and $|a_N - p| < \varepsilon$, so $p$ is an accumulation point of $A$ by part~(1).
 

@@ -1,7 +1,49 @@
 \begin{theorem} \label{theorem:group_is_semidirect_product_of_groups_if_and_only_if_there_is_a_split_short_exact_sequence}
 Let $N$ and $H$ be \CrefAndHyperrefIfExist{definition:group}{groups}.
 A group $G$ is \CrefAndHyperrefIfExist{definition:group_homomorphism}{isomorphic} to a \CrefAndHyperrefIfExist{definition:semidirect_product_of_groups_external_and_internal}{semidirect product} of $N$ by $H$ if and only if there exists a short exact sequence
-\TODO{short exact sequence of groups, splitting, section}
 $$ 1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1 $$
-that splits, meaning there exists a section $s: H \to G$, i.e. a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} such that $\pi \circ s = \operatorname{id}_H$. In this case, $G \cong N \rtimes_\varphi H$ with $\varphi(h)(n) = s(h) n s(h)^{-1}$ (identifying $N$ with its image $\iota(N)$).
+that splits, meaning there exists a section $s: H \to G$, i.e.~a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism} such that $\pi \circ s = \operatorname{id}_H$. In this case, $G \cong N \rtimes_\varphi H$ with $\varphi(h)(n) = s(h)n s(h)^{-1}$ (identifying $N$ with its image $\iota(N)$).
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the two directions separately.
+
+    \begin{enumerate}
+        \item ($\Rightarrow$) Suppose that $G \cong N \rtimes_\varphi H$ for some homomorphism $\varphi: H \to \operatorname{Aut}(N)$ by \Cref{definition:semidirect_product_of_groups_external_and_internal}. Define $\iota: N \to G$ by $\iota(n) = (n, e_H)$ and $\pi: G \to H$ by $\pi(n, h) = h$. The map $\iota$ is a group homomorphism because
+        $$\iota(n_1)\iota(n_2) = (n_1, e_H)(n_2, e_H) = (n_1\varphi(e_H)(n_2), e_He_H) = (n_1n_2, e_H) = \iota(n_1n_2).$$
+        The map $\pi$ is a group homomorphism because
+        $$\pi((n_1,h_1)(n_2,h_2)) = \pi(n_1\varphi(h_1)(n_2), h_1h_2) = h_1h_2 = \pi(n_1,h_1)\pi(n_2,h_2).$$
+        Define $s: H \to G$ by $s(h) = (e_N, h)$. This is a homomorphism because
+        $$s(h_1)s(h_2) = (e_N, h_1)(e_N, h_2) = (e_N\varphi(h_1)(e_N), h_1h_2) = (e_N, h_1h_2) = s(h_1h_2).$$
+        Moreover, $\pi(s(h)) = \pi(e_N, h) = h$, so $\pi \circ s = \operatorname{id}_H$. Hence $s$ is a section by \Cref{definition:section_and_splitting_of_a_short_exact_sequence_of_groups}.
+
+        Exactness at $N$: the kernel of $\iota$ is trivial because $\iota(n) = (n, e_H) = (e_N, e_H)$ if and only if $n = e_N$, so exactness holds at $N$ by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
+
+        Exactness at $G$: we have $\operatorname{im}(\iota) = \{(n, e_H) : n \in N\}$ and $\ker(\pi) = \{(n, h) : \pi(n,h) = e_H\} = \{(n, e_H) : n \in N\}$, so $\operatorname{im}(\iota) = \ker(\pi)$.
+
+        Exactness at $H$: the map $\pi$ is surjective because for every $h \in H$, we have $\pi(e_N, h) = h$. Hence, by \Cref{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}, the sequence
+        $$1 \longrightarrow N \xrightarrow{\iota} G \xrightarrow{\pi} H \longrightarrow 1$$
+        is short exact and splits.
+
+        \item ($\Leftarrow$) Suppose that $1 \to N \xrightarrow{\iota} G \xrightarrow{\pi} H \to 1$ is a short exact sequence of groups, and let $s: H \to G$ be a section by \Cref{definition:section_and_splitting_of_a_short_exact_sequence_of_groups}. By \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}, the map $\iota$ is injective, so we identify $N$ with its image $\iota(N) = \ker(\pi)$ by \Cref{definition:exact_sequence_short_exact_sequence_of_group_homomorphisms}.
+
+        We first define the action of $H$ on $N$. For each $h \in H$ and $n \in N$, let $\varphi(h)(n) = s(h)n s(h)^{-1}$. Since $N = \ker(\pi)$ is a normal subgroup of $G$ by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}, the conjugate $s(h)n s(h)^{-1}$ lies in $N$, so $\varphi(h): N \to N$ is well-defined. The map $\varphi(h)$ is an automorphism of $N$ because conjugation by any group element preserves the group operation and has an inverse (conjugation by the inverse). The assignment $h \mapsto \varphi(h)$ is a homomorphism from $H$ to $\operatorname{Aut}(N)$ because
+        $$\varphi(h_1h_2)(n) = s(h_1h_2)n s(h_1h_2)^{-1} = s(h_1)s(h_2) n s(h_2)^{-1}s(h_1)^{-1} = \varphi(h_1)(\varphi(h_2)(n))$$
+        for all $h_1, h_2 \in H$ and $n \in N$, where we used that $s$ is a homomorphism.
+
+        Define $\Phi: N \rtimes_\varphi H \to G$ by $\Phi(n, h) = n s(h)$. We verify that $\Phi$ is a group homomorphism. For $(n_1, h_1), (n_2, h_2) \in N \rtimes_\varphi H$,
+        \begin{align*}
+            \Phi((n_1, h_1)(n_2, h_2)) &= \Phi(n_1\varphi(h_1)(n_2), h_1h_2) \\
+            &= n_1\varphi(h_1)(n_2)s(h_1h_2) \\
+            &= n_1 s(h_1)n_2s(h_1)^{-1}s(h_1)s(h_2) \\
+            &= n_1 s(h_1)n_2 s(h_2) \\
+            &= \Phi(n_1, h_1)\Phi(n_2, h_2).
+        \end{align*}
+
+        We show that $\Phi$ is surjective. Let $g \in G$. Since $\pi: G \to H$ is surjective by exactness, let $h = \pi(g)$. Then $\pi(s(h)) = (\pi \circ s)(h) = h$, so $\pi(gs(h)^{-1}) = \pi(g)\pi(s(h))^{-1} = hh^{-1} = e_H$. Hence, $gs(h)^{-1} \in \ker(\pi) = N$. Write $gs(h)^{-1} = n$ for some $n \in N$. Then $g = ns(h) = \Phi(n, h)$, so $\Phi$ is surjective.
+
+        We show that $\Phi$ is injective by verifying it has trivial kernel. Suppose that $\Phi(n, h) = e_G$. Then $ns(h) = e_G$, so $n = s(h)^{-1}$. Applying $\pi$ to both sides gives $\pi(n) = \pi(s(h))^{-1}$. Since $n \in N = \ker(\pi)$, we have $\pi(n) = e_H$. Also, $\pi(s(h)) = h$, so $e_H = h^{-1}$, which implies $h = e_H$. Hence, $s(h) = s(e_H) = e_G$ and $n = e_G^{-1} = e_N$. Therefore, $(n, h) = (e_N, e_H)$, so $\Phi$ has trivial kernel by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}. Hence, $\Phi$ is injective.
+
+        Therefore, $G \cong N \rtimes_\varphi H$.
+    \end{enumerate}
+\end{proof}
