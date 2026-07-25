@@ -1,0 +1,17 @@
+\begin{definition}[Tempered distributions] \label{definition:tempered_distributions}
+    \TODO{AI generated, verify}
+    Let $\mathcal{S}(\mathbb{R}^n)$ be the \CrefAndHyperrefIfExist{definition:schwartz_space_on_Rn}{Schwartz space}. The topological dual space of $\mathcal{S}(\mathbb{R}^n)$ is called the \hldef{space of tempered distributions}, denoted by \hl{$\mathcal{S}'(\mathbb{R}^n)$}. A linear functional $T : \mathcal{S}(\mathbb{R}^n) \to \mathbb{C}$ belongs to $\mathcal{S}'(\mathbb{R}^n)$ if and only if there exist constants $C > 0$ and integers $k, m \geq 0$ such that for all $\phi \in \mathcal{S}(\mathbb{R}^n)$,
+    $$\hlin{|T(\phi)| \leq C \sum_{|\alpha|, |\beta| \leq k, m} \sup_{x \in \mathbb{R}^n} |x^\alpha D^\beta \phi(x)|},$$
+    where the sum runs over all multi-indices $\alpha, \beta$ with $|\alpha| \leq k$ and $|\beta| \leq m$.
+
+    The space $\mathcal{S}'(\mathbb{R}^n)$ is equipped with the weak-* topology: a net $(T_\alpha)_{\alpha \in D}$ in $\mathcal{S}'(\mathbb{R}^n)$ converges to $T$ if and only if $T_\alpha(\phi) \to T(\phi)$ for every $\phi \in \mathcal{S}(\mathbb{R}^n)$.
+
+    Every tempered distribution is a distribution in the sense that it extends continuously to $C_c^\infty(\mathbb{R}^n)$, so there is a natural inclusion
+    $$\hlin{\mathcal{S}'(\mathbb{R}^n) \hookrightarrow \mathcal{D}'(\mathbb{R}^n)}.$$
+    In particular, every $f \in L^p(\mathbb{R}^n)$ for $1 \leq p \leq \infty$ defines a tempered distribution via
+    $$T_f(\phi) = \int_{\mathbb{R}^n} f(x)\,\phi(x)\,dx \quad \text{for } \phi \in \mathcal{S}(\mathbb{R}^n).$$
+
+    The Fourier transform extends to a topological isomorphism $\mathcal{S}'(\mathbb{R}^n) \xrightarrow{\,\sim\,} \mathcal{S}'(\mathbb{R}^n)$ by duality: for $T \in \mathcal{S}'(\mathbb{R}^n)$, the tempered distribution $\widehat{T}$ is defined by
+    $$\hlin{\langle \widehat{T}, \phi \rangle = \langle T, \widehat{\phi} \rangle}$$
+    for all $\phi \in \mathcal{S}(\mathbb{R}^n)$.
+\end{definition}

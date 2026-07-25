@@ -1,0 +1,14 @@
+\begin{definition} \label{definition:petersson_inner_product_on_cusp_forms_of_a_congruence_subgroup}
+\TODO{AI generated, verify}
+Let $k$ be a positive even integer and let $\Gamma \leq \mathrm{SL}_2(\bbZ)$ be a \CrefAndHyperrefIfExist{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup}. The \hldef{Petersson inner product} on the space of \CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{cusp forms} \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{$S_k(\Gamma)$} is defined by
+$$\hlin{\langle f, g \rangle = \iint_{\Gamma \backslash \mathbb{H}} f(z) \, \overline{g(z)} \, y^k \, \frac{dx \, dy}{y^2},}$$
+\CrefIfExists{definition:quotient_of_a_topological_space_under_group_action}\CrefIfExists{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_upper_half_plane}
+\TODO{I'd like a \CrefIfExists{} reference associated to the double integral here. In what sense does this integral make sense? Is it supposed to be a Lebesgue integral? Precisely how should the notion of $dx dy$ be made sense as a measure on $\Gamma \setminus \mathbb{H}$ then? }
+where $z = x + iy$ and the integral is taken over a fundamental domain for $\Gamma$ acting on the upper half-plane $\mathbb{H}$ via the \CrefAndHyperrefIfExist{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_upper_half_plane}{modular action}.
+
+The \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure} $y^{-2} \, dx \, dy$ is the unique (up to scalar) $\mathrm{SL}_2(\bbR)$-invariant measure on \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{$\mathbb{H}$}, so the integrand $f(z)\overline{g(z)} y^k \, y^{-2}\,dx\,dy$ is well-defined and independent of the choice of fundamental domain.
+\TODO{define fundamental domain and reference it}
+
+For cusp forms $f, g \in S_k(\Gamma)$, this integral \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely}, and $\langle \cdot, \cdot \rangle$ defines a positive-definite Hermitian inner product on $S_k(\Gamma)$.
+\TODO{define the notion of Hermitian inner product and reference it --- how is it related to hermitian form?}
+\end{definition}

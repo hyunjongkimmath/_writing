@@ -1,0 +1,11 @@
+\begin{definition}[Coroot system] \label{definition:coroot_system_of_a_root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}
+  \TODO{AI generated, verify}
+Let $V$ be a \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{finite-dimensional} $\mathbb{Q}$-\CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} with a fixed $\bbQ$-valued \CrefAndHyperrefIfExist{definition:symmetric_and_skew_symmetric_bilinear_forms}{symmetric bilinear form} $\langle\cdot,\cdot\rangle$. Let $R \subseteq V$ be a \CrefAndHyperrefIfExist{definition:root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}{root system with respect to $\langle\cdot,\cdot\rangle$}.
+For each $\alpha \in R$, define its \hldef{coroot}
+$$\hlin{\alpha^\vee := \frac{2\alpha}{\langle \alpha, \alpha \rangle} \in V.}$$
+The \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{set} of coroots is
+$$\hlin{R^\vee := \{\, \alpha^\vee \mid \alpha \in R \,\} \subseteq V.}$$
+The set $R^\vee$ is again a root system (the \hldef{coroot system}) in $V$ with respect to the same bilinear form $\langle\cdot,\cdot\rangle$: the reflection attached to $\alpha^\vee$ is $s_{\alpha^\vee}(v) = v - 2\frac{\langle v,\alpha^\vee\rangle}{\langle\alpha^\vee,\alpha^\vee\rangle}\alpha^\vee$, and the Cartan integers satisfy $2\frac{\langle\beta^\vee,\alpha^\vee\rangle}{\langle\alpha^\vee,\alpha^\vee\rangle} = 2\frac{\langle\beta,\alpha\rangle}{\langle\alpha,\alpha\rangle}$ so the integrality condition follows from that of $R$.
+
+When $R$ is obtained from a root datum $(X,\Phi,X^\vee,\Phi^\vee)$ with $V = X \otimes_{\bbZ} \bbQ$, the identification $V \cong V^\ast$ induced by the bilinear form sends $\alpha^\vee \in V$ to the functional $\frac{2\langle\alpha,-\rangle}{\langle\alpha,\alpha\rangle} \in V^\ast$, which is the image of the coroot $\alpha^\vee \in X^\vee$ under the inclusion $X^\vee \hookrightarrow V^\ast$.
+\end{definition}

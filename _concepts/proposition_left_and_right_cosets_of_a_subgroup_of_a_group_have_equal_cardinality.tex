@@ -1,16 +1,14 @@
 \begin{proposition}[Left and right cosets of a subgroup have equal cardinality]
 \label{proposition:left_and_right_cosets_of_a_subgroup_of_a_group_have_equal_cardinality}
-\TODO{AI generated, verify}
 Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $H \leq G$ be a \CrefAndHyperrefIfExist{definition:subgroup_of_a_group}{subgroup}.
 The \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{sets} of \CrefAndHyperrefIfExist{definition:coset_of_a_subgroup_of_a_group_by_an_element}{left cosets} $G/H = \{gH : g \in G\}$ and right cosets $H\backslash G = \{Hg : g \in G\}$ have the same \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality}.
 \end{proposition}
 
 \begin{proof}
-\TODO{AI generated, verify}
 Define a map $\phi : G/H \to H\backslash G$ by $\phi(gH) = Hg^{-1}$ for each $g \in G$.
 We first verify that $\phi$ is well-defined.
 Suppose that $g_1 H = g_2 H$.
-Then $g_2^{-1} g_1 \in H$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}, so $(g_2^{-1} g_1)^{-1} = g_1^{-1} g_2 \in H$, which implies that $Hg_1^{-1} = Hg_2^{-1}$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. Therefore $\phi(g_1 H) = \phi(g_2 H)$.
+Then $g_2^{-1} g_1 \in H$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}, so $(g_2^{-1} g_1)^{-1} = g_1^{-1} g_2 \in H$\CrefIfExists{lemma:inverse_of_product_of_two_elements_in_a_group}, which implies that $Hg_1^{-1} = Hg_2^{-1}$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. Therefore $\phi(g_1 H) = \phi(g_2 H)$.
 Thus $\phi$ is well-defined.
 
 We show that $\phi$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}.

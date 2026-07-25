@@ -1,0 +1,43 @@
+\begin{proposition} \label{proposition:hecke_operators_are_self_adjoint_wrt_petersson_inner_product}
+\TODO{AI generated, verify}
+Let $k$ be a positive even integer and let $\Gamma = \mathrm{SL}_2(\bbZ)$. For each prime $p$, the Hecke operator $T_p$ is self-adjoint with respect to the \CrefAndHyperref{definition:petersson_inner_product_on_cusp_forms_of_a_congruence_subgroup}{Petersson inner product} on the \CrefAndHyperref{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$: for all $f, g$ in this space,
+$$\hlin{\langle T_p f, g \rangle = \langle f, T_p g \rangle.}$$
+
+As a consequence, the operators $\{T_p : p \text{ prime}\}$ are simultaneously diagonalizable on $S_k(\Gamma)$ with respect to an orthonormal basis of eigenforms.
+\CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{cusp form}
+
+\end{proposition}
+
+% ============================================================================
+% PROOF OUTLINE — Reference these labels when writing the proof:
+% ============================================================================
+%
+% === Sublemma 3a: Involution preserves measure ===
+% Define the Fricke involution w_p = √p · [[0,-1],[p,0]] ∈ GL₂(ℝ). Show that for any γ ∈ SL₂(ℤ),
+% the map z ↦ -1/(pz) (or more precisely, the action of w_p on ℍ) preserves the hyperbolic measure y^{-2} dx dy.
+% More directly: prove that the transformation z ↦ -1/(pz) has Jacobian determinant p · y²/x² + ... which
+% integrates to preserve the total measure. Alternatively, use that SL₂(ℝ) acts on ℍ preserving y^{-2}dx·dy.
+% Reference: definition:petersson_inner_product_on_cusp_forms (Petersson inner product, hyperbolic measure)
+%
+% === Sublemma 3b: The adjoint of the slash operator ===
+% For γ ∈ GL₂(ℝ)^+ with det(γ) > 0, define the adjoint operation γ* such that
+% for any f,g and z = x+iy, the identity (f|ₖγ)(z) · \overline{g(z)} y^k = ... holds.
+% Show that T_p is self-adjoint by computing:
+%   ⟨T_p f, g⟩ = p^{k-1} ∑_{ad=p, 0≤b<d} d^{-k} ⟨f|ₖ diag(a,b), g⟩
+% and using a change of variables z ↦ γz in the integral to move each γ from f to g.
+% The key identity is: (f|ₖγ)|ₖγ* = f where γ* = (det γ) · γ^{-T}.
+% Reference: definition:weight_k_operator_on_meromorphic_functions_by_elements (slash operator cocycle relation — see proof of theorem:hecke_operators_are_well_defined_linear_operators_on_modular_forms)
+%
+% === Proof of self-adjointness: ===
+% Write ⟨T_p f, g⟩ as p^{k-1} ∑_{d|p} d^{-k} ∫∫ (f|ₖ diag(a,b)) · \overline{g} y^k dx dy/y².
+% For each term in the sum, make the change of variables z ↦ γz where γ = [[a,b],[0,d]].
+% The Jacobian of this transformation gives a factor that cancels the d^{-k} and produces the adjoint action.
+% After summing over all coset representatives, the result equals ⟨f, T_p g⟩.
+% Reference: definition:petersson_inner_product_on_cusp_forms (Petersson inner product integral)
+%           theorem:hecke_operators_are_well_defined_linear_operators_on_modular_forms (well-definedness proof outline — cocycle relation)
+%
+% === Proof of simultaneous diagonalizability: ===
+% Since each T_p is self-adjoint and the operators commute by proposition:hecke_operators_commute_and_satisfy_recurrence_relations,
+% they can be simultaneously diagonalized on the finite-dimensional Hermitian space (S_k(Γ), ⟨·,·⟩).
+% This is a standard result from linear algebra: commuting families of self-adjoint operators on a finite-dimensional inner product space have a common orthonormal eigenbasis.
+% Reference: proposition:hecke_operators_commute_and_satisfy_recurrence_relations (commutativity)

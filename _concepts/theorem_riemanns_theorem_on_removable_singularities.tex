@@ -1,0 +1,31 @@
+\begin{theorem}[Riemann's theorem on removable singularities] \label{theorem:riemanns_theorem_on_removable_singularities}
+    \TODO{AI generated, verify}
+    Let $U \subset \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \setminus \{z_0\} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} with an \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{isolated singularity} at $z_0$. Let $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$ be the \CrefAndHyperrefIfExist{definition:laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity}{Laurent expansion} of $f$ on a punctured neighborhood $0 < |z - z_0| < R$. The following are equivalent:
+    \begin{enumerate}
+        \item $z_0$ is a removable singularity of $f$, i.e.\ $f$ admits a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic extension} to all of $U$.
+        \item The limit $\lim_{z \to z_0} (z - z_0) f(z) = 0$ exists.
+        \item The function $f$ is bounded in a punctured neighborhood of $z_0$, i.e.\ there exists $\varepsilon > 0$ such that $\sup_{0 < |z - z_0| < \varepsilon} |f(z)| < \infty$.
+        \item The Laurent expansion of $f$ at $z_0$ has no negative-degree terms, i.e.\ $a_n = 0$ for all $n < 0$, so that the Laurent series reduces to the \CrefAndHyperrefIfExist{definition:taylor_series_expansion_of_a_holomorphic_function_on_an_open_disk_in_the_complex_plane}{Taylor series}
+        $$f(z) = \sum_{n=0}^{\infty} a_n (z - z_0)^n$$
+        for $0 < |z - z_0| < R$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the cycle of implications $(1) \Rightarrow (3) \Rightarrow (2) \Rightarrow (4) \Rightarrow (1)$.
+
+    \begin{enumerate}
+        \item[$(1) \Rightarrow (3)$:] If $f$ extends holomorphically to $U$, then the extension is continuous at $z_0$ by \Cref{proposition:complex_differentiability_implies_continuity}, so $f$ is bounded in a neighborhood of $z_0$.
+
+        \item[$(3) \Rightarrow (2)$:] If $|f(z)| \le M$ for $0 < |z - z_0| < \varepsilon$, then $|(z - z_0) f(z)| \le M |z - z_0|$ for $0 < |z - z_0| < \varepsilon$, so $(z - z_0) f(z) \to 0$ as $z \to z_0$.
+
+        \item[$(2) \Rightarrow (4)$:] Suppose $\lim_{z \to z_0} (z - z_0) f(z) = 0$. Then for any $\rho > 0$ sufficiently small, the function $f$ is bounded on the circle $|z - z_0| = \rho$ (since $(z - z_0) f(z)$ is bounded and $|z - z_0| = \rho$ is fixed). More precisely, for each $r > 0$ with $0 < r < R$, the Laurent coefficients satisfy the Cauchy estimate
+        $$|a_n| \le \frac{1}{2\pi} \oint_{|z - z_0| = r} \frac{|f(z)|}{|z - z_0|^{n+1}}\,|dz| \le \frac{\max_{|z - z_0| = r} |f(z)|}{r^n}.$$
+        For $n < 0$, write $n = -k$ with $k > 0$. Then $|a_{-k}| \le r^k \max_{|z - z_0| = r} |f(z)|$. Since $(z - z_0) f(z) \to 0$ as $z \to z_0$, we have $\max_{|z - z_0| = r} |(z - z_0) f(z)| \to 0$ as $r \to 0$, so $\max_{|z - z_0| = r} |f(z)| \le \frac{1}{r} \cdot \varepsilon(r)$ where $\varepsilon(r) \to 0$ as $r \to 0$. Hence
+        $$|a_{-k}| \le r^{k-1} \varepsilon(r) \to 0 \quad \text{as } r \to 0,$$
+        implying $a_{-k} = 0$ for all $k \ge 1$. Thus all negative-degree coefficients vanish.
+
+        \item[$(4) \Rightarrow (1)$:] The power series $\sum_{n=0}^\infty a_n (z - z_0)^n$ has radius of convergence at least $R$ because it converges for $0 < |z - z_0| < R$. By \Cref{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}, it defines a holomorphic function on $D(z_0, R)$ that agrees with $f$ on $0 < |z - z_0| < R$, hence gives a holomorphic extension of $f$ across $z_0$.
+    \end{enumerate}
+\end{proof}

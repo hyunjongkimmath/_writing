@@ -1,0 +1,14 @@
+\begin{theorem}[Euler product for Dirichlet L-functions] \label{theorem:euler_product_for_dirichlet_L_function_of_a_dirichlet_character}
+\TODO{AI generated, verify}
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} $L(s, \chi) = \sum_{n=1}^\infty \chi(n) n^{-s}$ admits an Euler product expansion
+$$
+\boxed{ L(s, \chi) = \prod_{p \text{ prime}} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1} }
+$$
+which converges absolutely for $\operatorname{Re}(s) > 1$. If $\chi$ is the principal character modulo $k$, the product can also be written as
+$$
+L(s, \chi_0) = \prod_{p \nmid k} \left( 1 - \frac{1}{p^s} \right)^{-1} = \zeta(s) \prod_{p \mid k} \left( 1 - p^{-s} \right).
+$$
+
+\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
+\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
+\end{theorem}

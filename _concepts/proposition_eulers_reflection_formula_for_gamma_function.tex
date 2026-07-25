@@ -1,0 +1,47 @@
+\begin{proposition}[Euler's reflection formula for the Gamma function] \label{proposition:eulers_reflection_formula_for_gamma_function}
+	\TODO{AI generated, verify}
+	For all complex numbers $z \in \mathbb{C}$ that are not integers, the \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(z)$ satisfies Euler's reflection formula:
+	$$
+	\boxed{\Gamma(z) \, \Gamma(1 - z) = \frac{\pi}{\sin(\pi z)}.}
+	$$
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+\end{proposition}
+
+\begin{proof}
+	\TODO{AI generated, verify}
+	The proof proceeds by evaluating the integral $\int_0^\infty \frac{t^{z-1}}{1+t}\,dt$ in two different ways: first via contour integration and then via the Beta function. We assume $0 < \Re(z) < 1$ for convergence; the result extends to all non-integers by analytic continuation\TODO{AI generated, reference needed: theorem on analytic continuation of meromorphic functions}.
+
+	We evaluate $\int_0^\infty \frac{t^{z-1}}{1+t}\,dt$ using contour integration. Consider the function $f(w) = \frac{w^{z-1}}{1+w}$ where we take a branch cut along the positive real axis so that $w^{z-1} = e^{(z-1)\log w}$ with $\arg w \in (0, 2\pi)$. Let $\gamma$ be the keyhole contour consisting of:
+	\begin{enumerate}
+		\item The upper edge of the positive real axis from $r$ to $R$, parametrized by $w = t e^{i0}$;
+		\item A large circle $|w| = R$ traversed counterclockwise from angle $0$ to $2\pi$;
+		\item The lower edge of the positive real axis from $R$ back to $r$, parametrized by $w = t e^{2\pi i}$;
+		\item A small circle $|w| = r$ traversed clockwise from angle $2\pi$ to $0$.
+	\end{enumerate}
+
+	The integrand has a simple pole at $w = -1 = e^{i\pi}$ inside the contour. The residue is
+	$$\operatorname{Res}_{w=-1} f(w) = \lim_{w \to -1} (w+1)\frac{w^{z-1}}{1+w} = (-1)^{z-1} = e^{i\pi(z-1)} = -e^{i\pi z}.$$
+	By the residue theorem\Cref{theorem:the_residue_theorem_relating_the_contour_integral_of_a_meromorphic_function_along_a_closed_piecewise_continuously_differentiable_path_to_the_sum_of_residues_at_isolated_singularities_enclosed_by_the_path}, we have
+	$$\oint_\gamma f(w)\,dw = 2\pi i \cdot (-e^{i\pi z}) = -2\pi i e^{i\pi z}.$$
+
+	On the upper edge, $w = t$ with $\arg w = 0$, so $w^{z-1} = t^{z-1}$. On the lower edge, $w = t e^{2\pi i}$ with $\arg w = 2\pi$, so $w^{z-1} = t^{z-1} e^{2\pi i(z-1)}$. The integrals along the upper and lower edges give
+	$$\int_r^R \frac{t^{z-1}}{1+t}\,dt + \int_R^r \frac{t^{z-1}e^{2\pi i(z-1)}}{1+t}\,dt = (1 - e^{2\pi i(z-1)}) \int_r^R \frac{t^{z-1}}{1+t}\,dt.$$
+	As $r \to 0$ and $R \to \infty$, the integrals along the small and large circles vanish because $|w^{z-1}| = |w|^{\Re(z)-1}$ is bounded by powers of $r$ and $R$ respectively (using $0 < \Re(z) < 1$\TODO{AI generated, reference needed: lemma on estimation of contour integrals via bounds}). Therefore,
+	$$\oint_\gamma f(w)\,dw = (1 - e^{2\pi i(z-1)}) \int_0^\infty \frac{t^{z-1}}{1+t}\,dt.$$
+
+	Equating the two expressions for the contour integral:
+	$$(1 - e^{2\pi i(z-1)}) \int_0^\infty \frac{t^{z-1}}{1+t}\,dt = -2\pi i e^{i\pi z}.$$
+	Simplifying $1 - e^{2\pi i(z-1)} = 1 - e^{2\pi i z}$:
+	$$\int_0^\infty \frac{t^{z-1}}{1+t}\,dt = \frac{-2\pi i e^{i\pi z}}{1 - e^{2\pi i z}} = \frac{2\pi i}{e^{i\pi z} - e^{-i\pi z}} = \frac{\pi}{\sin(\pi z)}.$$
+
+	We relate this integral to the Gamma function via the Beta function. For $0 < \Re(z) < 1$, the identity
+	$$B(z, 1-z) = \int_0^\infty \frac{t^{z-1}}{1+t}\,dt = \Gamma(z)\Gamma(1-z)$$
+	follows from the integral representation of the Beta function\Cref{definition:gamma_function} and the functional equation $\Gamma(z+1) = z\Gamma(z)$\TODO{AI generated, reference needed: proposition on Beta function identity $B(x,y) = \Gamma(x)\Gamma(y)/\Gamma(x+y)$}. Since $\Gamma(1) = 1$, we have
+	$$\Gamma(z)\Gamma(1-z) = B(z, 1-z) = \frac{\pi}{\sin(\pi z)}.$$
+
+	The formula holds for $0 < \Re(z) < 1$ by the above computation. By analytic continuation to all non-integers (both sides are meromorphic on $\mathbb{C}$ with poles only at integers), we obtain Euler's reflection formula for all $z \in \mathbb{C} \setminus \mathbb{Z}$.
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+	\Cref{theorem:the_residue_theorem_relating_the_contour_integral_of_a_meromorphic_function_along_a_closed_piecewise_continuously_differentiable_path_to_the_sum_of_residues_at_isolated_singularities_enclosed_by_the_path}
+\end{proof}

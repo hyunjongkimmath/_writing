@@ -1,5 +1,4 @@
 \begin{proposition}[Submodule criterion] \label{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}
-    \TODO{AI generated, verify}
     Let $R,S$ be \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutative rings} and let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule}. Let $N \subseteq M$ be a subset. Then $N$ is an \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{$R$-$S$-submodule of $M$} if and only if the following conditions hold:
     \begin{itemize}
         \item $N \neq \emptyset$,
@@ -15,7 +14,6 @@
     \end{enumerate}
 \end{proposition}
 \begin{proof}
-    \TODO{AI generated, verify}
     If $N$ is an $R$-$S$-submodule of $M$, then the listed conditions hold by definition. Conversely, suppose that the listed conditions hold. We show that $N$ is indeed an $R$-$S$-submodule of $M$.
 
     First, we verify that $N$ is a subgroup of the underlying abelian group of $M$. By \CrefAndHyperrefIfExist{proposition:subgroup_criterion_for_a_subset_of_a_group}{the subgroup criterion}, it suffices to show that $N$ is nonempty, closed under addition, and closed under additive inverses. The first two conditions are given. For closure under additive inverses, fix any $n \in N$. Since $(-1) \cdot n = -n$\CrefIfExists{lemma:minus_one_times_element_is_inverse_in_Z_module} and $N$ is closed under left multiplication by elements of $R$, we have $-n = (-1) \cdot n \in N$. Therefore, $N$ is a subgroup of $M$.

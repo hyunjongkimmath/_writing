@@ -1,5 +1,32 @@
-\begin{theorem} \label{theorem:cauchy_integral_theorem_for_contour_integrals_of_holomorphic_functions_on_simply_connected_domains}
+\begin{theorem} \label{theorem:cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes}
+    \TODO{AI generated, verify}
 Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset (a simply connected domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. Then for every closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} $\gamma$ in $U$,
-$\hlin{\int_{\gamma} f(z)\,dz = 0}$.
+$$\hlin{\oint_{\gamma} f(z)\,dz = 0}$$
 (\Cref{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path})
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We prove the statement by showing that $f$ admits a primitive on $U$, then applying the fundamental theorem of calculus.
+
+Fix a base point $z_0 \in U$. Since $U$ is simply connected, it is path-connected. For any $z \in U$, choose a piecewise continuously differentiable path $\eta_z$ from $z_0$ to $z$ in $U$. Define $F : U \to \mathbb{C}$ by
+$$F(z) := \int_{\eta_z} f(w)\,dw.$$
+
+We first show that $F$ is well-defined, i.e. independent of the choice of $\eta_z$. Let $\eta_z$ and $\tilde{\eta}_z$ be two paths from $z_0$ to $z$ in $U$. Their concatenation $\gamma' = \eta_z \cdot \tilde{\eta}_z^{-1}$ is a closed path. We approximate $\gamma'$ by a finite chain of triangles inside $U$. For each triangle contained in a disk of holomorphy, the contour integral of $f$ over its boundary vanishes because $f$ has a local primitive on any disk (by integrating its power series termwise, as holomorphic functions are locally given by convergent power series). By subdividing $\gamma'$ into sufficiently small segments and applying this local vanishing property to each triangular subdivision, we obtain
+$$\oint_{\eta_z \cdot \tilde{\eta}_z^{-1}} f(w)\,dw = 0,$$
+so $\int_{\eta_z} f = \int_{\tilde{\eta}_z} f$, and $F$ is well-defined.
+
+We verify that $F'(z) = f(z)$ for all $z \in U$. For small $h \in \mathbb{C}$ with $z + h \in U$, let $\ell_h$ be the straight line segment from $z$ to $z + h$. Because $F$ is well-defined, we may take $\eta_{z+h} = \eta_z \cdot \ell_h$, so
+$$F(z + h) - F(z) = \int_{\ell_h} f(w)\,dw.$$
+By \Cref{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}, we compute
+$$\int_{\ell_h} f(w)\,dw = \int_0^1 f(z + th) \cdot h \,dt = h \int_0^1 f(z + th)\,dt.$$
+Therefore,
+$$\frac{F(z + h) - F(z)}{h} - f(z) = \int_0^1 \bigl(f(z + th) - f(z)\bigr)\,dt.$$
+For any $\varepsilon > 0$, $f$ is continuous at $z$ by \Cref{proposition:complex_differentiability_implies_continuity}, so there exists $\delta > 0$ such that $|w - z| < \delta$ implies $|f(w) - f(z)| < \varepsilon$. For $|h| < \delta$, we have $|z + th - z| = t|h| \leq |h| < \delta$ for all $t \in [0,1]$, thus
+$$\bigl|\int_0^1 (f(z + th) - f(z))\,dt\bigr| \leq \int_0^1 |f(z + th) - f(z)|\,dt < \varepsilon.$$
+Hence $\lim_{h \to 0} \frac{F(z + h) - F(z)}{h} = f(z)$, so $F'(z) = f(z)$.
+
+Having a primitive $F$ of $f$ on $U$, we apply the \Cref{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{fundamental theorem of calculus}. For $\gamma : [a,b] \to U$,
+$$\oint_{\gamma} f(z)\,dz = \int_a^b f(\gamma(t))\,\gamma'(t)\,dt = \int_a^b F'(\gamma(t))\,\gamma'(t)\,dt = F(\gamma(b)) - F(\gamma(a)).$$
+Since $\gamma$ is closed, $\gamma(b) = \gamma(a)$, so the difference vanishes.
+\end{proof}

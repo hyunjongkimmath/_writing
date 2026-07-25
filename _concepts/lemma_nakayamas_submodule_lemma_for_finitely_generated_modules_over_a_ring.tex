@@ -1,21 +1,18 @@
 \begin{lemma}[Nakayama's submodule lemma]  \label{lemma:nakayamas_submodule_lemma_for_finitely_generated_modules_over_a_ring}
-	\TODO{AI generated, verify}
-
 	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, $M$ a \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} right $R$-module, $N$ a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $M$, and $I$ a left ideal of $R$ with $I \subseteq J(R)$\CrefIfExists{definition:jacobson_radical_of_a_ring}.
 
-	If $N + IM = M$, then $N = M$.
+	If $N + IM = M$\CrefIfExists{definition:product_of_a_module_by_an_ideal_of_a_ring}, then $N = M$.
 \end{lemma}
 \begin{proof}
-	\TODO{AI generated, verify}
-	Suppose for contradiction that $N \neq M$. Then the quotient module $M/N$ is nonzero. Since $M$ is finitely generated, every quotient of $M$ is also finitely generated; in particular, $M/N$ is a finitely generated right $R$-module.
+	Suppose for contradiction that $N \neq M$. Then the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module} $M/N$ is nonzero. Since $M$ is finitely generated, $M/N$ is also finitely generated\TODO{write and reference as a lemma that quotients of finitely generated modules are finitely generated}.
 
 	We first show that $(M/N)I = M/N$. For each $\bar{x} \in M/N$, choose a representative $x \in M$. By hypothesis, $N + IM = M$, so $x = n + \sum_{k=1}^m y_k a_k$ for some $n \in N$, $y_k \in M$, and $a_k \in I$. Passing to the quotient, $\bar{x} = \sum_{k=1}^m \bar{y}_k a_k \in (M/N)I$. Hence, $(M/N)I = M/N$.
 
-	Since $M/N$ is a nonzero finitely generated module, it has a maximal submodule by \Cref{proposition:nonzero_finitely_generated_module_over_a_ring_has_a_maximal_submodule}. Let $L$ be a maximal submodule of $M/N$. The quotient $(M/N)/L$ is therefore a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} right $R$-module.
+	Since $M/N$ is a nonzero finitely generated module, it has a maximal proper submodule by \Cref{proposition:nonzero_finitely_generated_module_over_a_ring_has_a_maximal_submodule}. Let $L$ be a maximal proper submodule of $M/N$. The quotient $(M/N)/L$ is therefore a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} right $R$-module\TODO{is the ``therefore'' basically supposed to be by an isomorphism theorem for modules?}.
 
-	We next show that $((M/N)/L)I = 0$. Since $I \subseteq J(R)$ and the Jacobson radical annihilates every simple right $R$-module by \Cref{proposition:jacobson_radical_annihilates_every_simple_right_module_over_a_ring}, we have $((M/N)/L)J(R) = 0$, which implies that $((M/N)/L)I = 0$.
+	We next show that $((M/N)/L)I = 0$. Since $I \subseteq J(R)$ and the Jacobson radical annihilates every simple right $R$-module\CrefIfExists{proposition:jacobson_radical_annihilates_every_simple_right_module_over_a_ring}, we have $((M/N)/L)J(R) = 0$, which implies that $((M/N)/L)I = 0$.
 
-	On the other hand, since $(M/N)I = M/N$, the surjective $R$-linear map $M/N \to (M/N)/L$ implies that $((M/N)/L)I = (M/N)/L$. Therefore, $(M/N)/L = ((M/N)/L)I = 0$.
+	On the other hand, since $(M/N)I = M/N$, the surjectivity of the $R$-linear map $M/N \to (M/N)/L$ implies that $((M/N)/L)I = (M/N)/L$. Therefore, $(M/N)/L = ((M/N)/L)I = 0$.
 
-	This contradicts the fact that a simple module is nonzero. Hence, $N = M$.
+	This contradicts the fact that the simple module $(M/N)/L$ is nonzero. Hence, $N = M$.
 \end{proof}

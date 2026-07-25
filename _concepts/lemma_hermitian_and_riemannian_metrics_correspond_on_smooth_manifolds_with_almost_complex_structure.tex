@@ -1,0 +1,19 @@
+\begin{lemma}[Correspondence between Hermitian and Riemannian metrics] \label{lemma:hermitian_and_riemannian_metrics_correspond_on_smooth_manifolds_with_almost_complex_structure}
+    Let $M$ be a smooth manifold of real dimension $2n$ equipped with an \CrefAndHyperrefIfExist{definition:almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension}{almost complex structure}
+    $$J : TM \to TM,$$
+    and let $h$ be a Hermitian metric on the complex vector bundle $(TM, J)$. Then there exists a unique Riemannian metric
+    $$g : TM \times TM \to \mathbb{R}$$
+    such that, for all vector fields $X, Y \in \Gamma(TM)$,
+    $$h(X, Y) = g(X, Y) - i\, g(JX, Y).$$
+    Equivalently, the Riemannian metric $g$ is the real part of $h$,
+    $$g(X, Y) = \operatorname{Re} h(X, Y),$$
+    and the \hldef{associated fundamental 2-form} \hl{$\omega$} defined by
+    $$\omega(X, Y) := g(JX, Y) = - \operatorname{Im} h(X, Y)$$
+    is skew-symmetric.
+    
+    Conversely, given a Riemannian metric $g$ on $M$ which is $J$-invariant, i.e.,
+    $$g(JX, JY) = g(X, Y),$$
+    the above formula defines a Hermitian metric $h$ on $(TM, J)$.
+
+    In particular, there is a one-to-one correspondence between Hermitian metrics on $(TM, J)$ and $J$-invariant Riemannian metrics on $M$.
+\end{lemma}

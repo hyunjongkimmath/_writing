@@ -1,0 +1,17 @@
+\begin{proposition}[Limit algebra for complex-valued functions] \label{proposition:limit_algebra_for_complex_valued_functions}
+    \TODO{AI generated, verify}
+Let $S \subseteq \mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}, let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} of $S$, and let $f, g : S \to \mathbb{C}$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions} such that $\displaystyle\lim_{z \to p,\; z \in S} f(z) = L$\CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point} and $\displaystyle\lim_{z \to p,\; z \in S} g(z) = M$ exist in $\mathbb{C}$. Let $c \in \mathbb{C}$.
+
+Then:
+\begin{enumerate}
+    \item[(sum)] $\displaystyle\lim_{z \to p,\; z \in S} \bigl(f(z) + g(z)\bigr) = L + M.$
+    \item[(scalar multiple)] $\displaystyle\lim_{z \to p,\; z \in S} c \cdot f(z) = c \cdot L.$
+    \item[(product)] $\displaystyle\lim_{z \to p,\; z \in S} f(z) \cdot g(z) = L \cdot M.$
+    \item[(quotient)] If $M \neq 0$, then $\displaystyle\lim_{z \to p,\; z \in S} \frac{f(z)}{g(z)} = \frac{L}{M}.$
+    \item[(composition)] Let $h : \mathbb{C} \to \mathbb{C}$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at $L$. Then $\displaystyle\lim_{z \to p,\; z \in S} h(f(z)) = h(L).$
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    These are all consequences of \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit} and \Cref{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits}, because $\mathbb{C}$ is a \CrefAndHyperrefIfExist{definition:topological_field}{topological field} under the \CrefAndHyperrefIfExist{definition:topology_on_a_field_induced_by_an_absolute_value}{topology induced by the complex absolute value}.
+\end{proof}

@@ -1,0 +1,41 @@
+\begin{theorem}[Rouch\'{e}'s Theorem] \label{theorem:rouches_theorem_comparing_number_of_zeros_of_two_holomorphic_functions_inside_a_contour}
+    \TODO{AI generated, verify}
+    Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} open subset and let $f, g : U \to \mathbb{C}$ be \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic functions} on $U$. Let $\gamma$ be a \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{closed} \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} in $U$ whose image is a simple closed curve. Suppose that
+    $$|f(z) - g(z)| < |g(z)|$$
+    for all $z$ on $\gamma$. Then $f$ and $g$ have the same number of zeros inside $\gamma$, counted with multiplicity.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    The inequality $|f(z) - g(z)| < |g(z)|$ on $\gamma$ implies that $g(z) \neq 0$ on $\gamma$ and that $f(z) \neq 0$ on $\gamma$ (otherwise $|g(z)| < |g(z)|$). Moreover, the inequality shows that $f(z)/g(z)$ never takes non-positive real values on $\gamma$, so $f/g$ never vanishes on $\gamma$ and its image under $f/g$ avoids the negative real axis.
+
+    \begin{enumerate}
+        \item Define $h(z) = \frac{f(z)}{g(z)}$. Then $h$ is holomorphic on $U$ minus the zeros of $g$, and never takes a value in $(-\infty, 0]$ on $\gamma$. In particular, $h(z) \neq 0$ on $\gamma$, so both $f$ and $g$ are nonvanishing on $\gamma$.
+
+        \item Consider the contour integral
+        $$\frac{1}{2\pi i} \int_{\gamma} \frac{h'(z)}{h(z)} \, dz.$$
+        \CrefIfExists{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}
+        By \Cref{theorem:argument_principle_for_meromorphic_functions_relating_contour_integral_of_f_prime_over_f_to_zeros_and_poles}, this equals $Z_h - P_h$, where $Z_h$ is the number of zeros of $h$ inside $\gamma$ and $P_h$ is the number of poles of $h$ inside $\gamma$, both counted with multiplicity.
+
+        \item Observe that
+        $$\frac{h'(z)}{h(z)} = \frac{f'(z)}{f(z)} - \frac{g'(z)}{g(z)}.$$
+        Therefore
+        \begin{align*}
+        \frac{1}{2\pi i} \int_{\gamma} \frac{h'(z)}{h(z)} \, dz
+        &= \frac{1}{2\pi i} \int_{\gamma} \frac{f'(z)}{f(z)} \, dz - \frac{1}{2\pi i} \int_{\gamma} \frac{g'(z)}{g(z)} \, dz \\
+        &= (N_f - P_f) - (N_g - P_g),
+        \end{align*}
+        \CrefIfExists{theorem:argument_principle_for_meromorphic_functions_relating_contour_integral_of_f_prime_over_f_to_zeros_and_poles}
+        where $N_f$, $P_f$ are the zero and pole counts of $f$ inside $\gamma$, and $N_g$, $P_g$ are those of $g$.
+
+        \item Since $f$ and $g$ are holomorphic (not merely meromorphic) on $U$, we have $P_f = P_g = 0$. Moreover, the inequality $|f - g| < |g|$ on $\gamma$ forces $h(z) = f(z)/g(z)$ to lie in the right half-plane $\operatorname{Re}(h(z)) > 0$ on $\gamma$, so the image curve $h \circ \gamma$ does not wind around the origin. Hence
+        $$\frac{1}{2\pi i} \int_{\gamma} \frac{h'(z)}{h(z)} \, dz = 0$$
+        by \Cref{theorem:argument_principle_for_meromorphic_functions_relating_contour_integral_of_f_prime_over_f_to_zeros_and_poles} applied to $h$.
+
+        \item Combining the above, we obtain
+        $$N_f - N_g = 0,$$
+        so $N_f = N_g$. Thus $f$ and $g$ have the same number of zeros inside $\gamma$, counted with multiplicity.
+    \end{enumerate}
+
+    This completes the proof.
+\end{proof}

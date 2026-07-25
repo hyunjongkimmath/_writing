@@ -1,0 +1,45 @@
+\begin{theorem}[First Isomorphism Theorem for Modules] \label{theorem:first_isomorphism_theorem_for_modules_over_rings}
+    \TODO{AI generated, verify}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings}, and let $M$ and $N$ be \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Let
+    $$\varphi : M \longrightarrow N$$
+    be an \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-$S$-bimodule homomorphism}. Let $\ker(\varphi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}{kernel of $\varphi$} and $\operatorname{im}(\varphi)$ denote the \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}{image of $\varphi$}.
+
+    Then $\ker(\varphi)$ is a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $M$, $\operatorname{im}(\varphi)$ is a submodule of $N$, and there exists a unique \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{isomorphism of $R$-$S$-bimodules}
+    $$\bar{\varphi} : M/\ker(\varphi) \xrightarrow{\,\sim\,} \operatorname{im}(\varphi)$$
+    such that $\bar{\varphi}(m + \ker(\varphi)) = \varphi(m)$ for all $m \in M$. Here $M/\ker(\varphi)$ denotes the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient $R$-$S$-bimodule}.
+
+    \TextIfExists{definition:module_of_a_ring}{If $M$ and $N$ are left/right/two-sided $R$-modules, then the corresponding statement holds for the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures}.}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $K = \ker(\varphi)$ and let $0_N$ denote the zero element of $N$.
+
+    We first recall that $K$ is a submodule of $M$ and $\operatorname{im}(\varphi)$ is a submodule of $N$ by \Cref{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}. Hence, the quotient module $M/K$ is well-defined by \Cref{definition:quotient_module_of_a_module_by_a_module_of_a_ring}.
+
+    We define a map
+    $$\bar{\varphi} : M/K \longrightarrow \operatorname{im}(\varphi), \quad m + K \longmapsto \varphi(m).$$
+
+    We show that $\bar{\varphi}$ is well-defined. Suppose that $m_1 + K = m_2 + K$ for some $m_1, m_2 \in M$. Then $m_2 - m_1 \in K$\CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}, so $\varphi(m_2 - m_1) = 0_N$ by the definition of the kernel. Since $\varphi$ is an $R$-$S$-bimodule homomorphism, we have
+    $$\varphi(m_2) - \varphi(m_1) = \varphi(m_2 - m_1) = 0_N,$$
+    which implies that $\varphi(m_1) = \varphi(m_2)$. Therefore, $\bar{\varphi}(m_1 + K) = \bar{\varphi}(m_2 + K)$, so the map is independent of the choice of coset representative.
+
+    We show that $\bar{\varphi}$ is an $R$-$S$-bimodule homomorphism. For any $m_1, m_2 \in M$, any $r \in R$, and any $s \in S$, we have
+    \begin{align*}
+    \bar{\varphi}\bigl((m_1 + K) + (m_2 + K)\bigr) &= \bar{\varphi}\bigl((m_1 + m_2) + K\bigr) = \varphi(m_1 + m_2) = \varphi(m_1) + \varphi(m_2) \\
+    &\qquad = \bar{\varphi}(m_1 + K) + \bar{\varphi}(m_2 + K), \\
+    \bar{\varphi}\bigl(r \cdot (m_1 + K)\bigr) &= \bar{\varphi}(r m_1 + K) = \varphi(r m_1) = r \varphi(m_1) = r \cdot \bar{\varphi}(m_1 + K), \\
+    \bar{\varphi}\bigl((m_1 + K) \cdot s\bigr) &= \bar{\varphi}(m_1 s + K) = \varphi(m_1 s) = \varphi(m_1) s = \bar{\varphi}(m_1 + K) \cdot s.
+    \end{align*}
+    The additivity of $\bar{\varphi}$ follows from the additivity of $\varphi$\CrefIfExists{definition:homomorphism_of_modules_over_a_ring}, and the compatibility with the scalar actions follows from the $R$-$S$-bilinearity of $\varphi$\CrefIfExists{definition:homomorphism_of_modules_over_a_ring}.
+
+    We show that $\bar{\varphi}$ is injective. Suppose that $\bar{\varphi}(m + K) = 0_N$ for some $m \in M$. Then $\varphi(m) = 0_N$, so $m \in K$ by the definition of the kernel. Hence, $m + K = K$, which is the zero element of $M/K$. Therefore, $\bar{\varphi}$ has trivial kernel, so $\bar{\varphi}$ is injective by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
+
+    We show that $\bar{\varphi}$ is surjective onto $\operatorname{im}(\varphi)$. For any $y \in \operatorname{im}(\varphi)$, there exists $m \in M$ such that $\varphi(m) = y$ by the definition of the image. Then $\bar{\varphi}(m + K) = \varphi(m) = y$, so $y$ lies in the image of $\bar{\varphi}$.
+
+    Since $\bar{\varphi}$ is an injective and surjective $R$-$S$-bimodule homomorphism, it is an isomorphism by \Cref{definition:homomorphism_of_modules_over_a_ring}.
+
+    We show that $\bar{\varphi}$ is unique. Suppose that $\psi : M/K \to \operatorname{im}(\varphi)$ is another $R$-$S$-bimodule homomorphism satisfying $\psi(m + K) = \varphi(m)$ for all $m \in M$. Then for any $m + K \in M/K$, we have $\psi(m + K) = \varphi(m) = \bar{\varphi}(m + K)$, so $\psi = \bar{\varphi}$.
+
+    This establishes the existence and uniqueness of the isomorphism $\bar{\varphi} : M/\ker(\varphi) \xrightarrow{\,\sim\,} \operatorname{im}(\varphi)$.
+\end{proof}

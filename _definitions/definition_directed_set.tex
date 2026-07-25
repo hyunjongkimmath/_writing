@@ -1,0 +1,12 @@
+\begin{definition}[Directed set] \label{definition:directed_set}
+    \TODO{AI generated, verify}
+
+    A nonempty set $D$ equipped with a binary relation $\leq$ is called a \hldef{directed set} (or \hldef{directed preorder}) if the following conditions hold:
+    \begin{enumerate}
+        \item \textbf{Reflexivity:} For every $\alpha \in D$, we have $\alpha \leq \alpha$.
+        \item \textbf{Transitivity:} For every $\alpha, \beta, \gamma \in D$, if $\alpha \leq \beta$ and $\beta \leq \gamma$, then $\alpha \leq \gamma$.
+        \item \textbf{Upper bound property:} For every pair $\alpha, \beta \in D$, there exists $\gamma \in D$ such that $\alpha \leq \gamma$ and $\beta \leq \gamma$.
+    \end{enumerate}
+
+    A subset $E \subseteq D$ is called a \hldef{cofinal subset} of $D$ if for every $\alpha \in D$, there exists $\beta \in E$ such that $\alpha \leq \beta$.
+\end{definition}

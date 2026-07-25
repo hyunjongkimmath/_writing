@@ -1,0 +1,14 @@
+\begin{definition}[Quotient topology] \label{definition:quotient_topology_of_a_topological_space}
+    \TODO{AI generated, verify}
+
+    Let $X$ be a topological space and let $\sim$ be an equivalence relation on the underlying set of $X$. Write $\pi : X \to X/\sim$ for the canonical quotient map that sends each point to its equivalence class. The \hldef{quotient topology on $X/\sim$} is the unique topology on the quotient set $X/\sim$ characterized by any of the following equivalent conditions:
+    \begin{enumerate}
+        \item A subset $U \subseteq X/\sim$ is open if and only if $\pi^{-1}(U)$ is open in $X$.
+        \item The quotient topology is the \CrefAndHyperrefIfExist{definition:final_topology_on_a_set_with_respect_to_a_family_of_functions}{final topology} with respect to the single map $\pi : X \to X/\sim$.
+        \item A function $f : X/\sim \to Y$ from the quotient space to any topological space $Y$ is continuous if and only if the composition $f \circ \pi : X \to Y$ is continuous.
+    \end{enumerate}
+
+    The resulting topological space $(X/\sim, \mathcal{T}_{\mathrm{quot}})$ is called the \hldef{quotient space of $X$ by $\sim$}.
+
+    More generally, let $X$ be a topological space and let $f : X \to Y$ be any surjective map to a set $Y$. The \hldef{quotient topology on $Y$ induced by $f$} is the final topology with respect to $f$, i.e., a subset $U \subseteq Y$ is open if and only if $f^{-1}(U)$ is open in $X$.
+\end{definition}

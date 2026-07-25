@@ -1,9 +1,9 @@
 % \begin{theorem}[Extension-Restriction and Restriction-Coextension adjunction for modules] \label{theorem:extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings}
 % Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}.
-
+%
 % \begin{enumerate}
 %     \item \textbf{Extension-Restriction adjunction:} The \CrefAndHyperrefIfExist{definition:extension_of_scalars_base_change_induction_for_modules_along_ring_homomorphisms}{extension of scalars functor} $f^* \coloneqq S \otimes_R -$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor} $f_*$.
-    
+%
 %     Explicitly, for any left $R$-module $M$ and any left $S$-module $N$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
 %     \[
 %         \Hom_S(S \otimes_R M, N) \cong \Hom_R(M, f_*N)
@@ -12,18 +12,17 @@
 %     \[
 %         \Psi \mapsto (m \mapsto \Psi(1 \otimes m)).
 %     \]
-
+%
 %     \item \textbf{Restriction-Coextension adjunction:} The \CrefAndHyperrefIfExist{definition:coextension_coinduction_of_scalars_of_modules_along_a_ring_homomorphism}{co-extension of scalars functor} $f^! \coloneqq \Hom_R(S, -)$ is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor $f_*$.
-    
+%
 %     Explicitly, for any left $S$-module $N$ and any left $R$-module $M$, there is a \CrefAndHyperrefIfExist{definition:natural_transformation_between_functors_between_categories}{natural isomorphism} of abelian groups:
 %     \[ \Hom_R(f_*N, M) \cong \Hom_S(N, \Hom_R(S, M)) \]
 %     where $S$ is viewed as an $(R, S)$-bimodule when constructing the the \CrefAndHyperrefIfExist{definition:hom_of_left_right_bi_modules_of_rings}{Hom-module $\Hom_R(S, M)$}.
 % \end{enumerate}
 % \end{theorem}
-
-
+%
 \begin{theorem}[Extension-Restriction and Restriction-Coextension adjunction for modules] \label{theorem:extension_restriction_and_restriction_coextension_adjunction_for_modules_over_rings}
-Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $f: R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. Let $T$ be a ring.
+Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessarily commutative), and let $\varphi : R \to S$ be a \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism}. Let $T$ be a ring.
 
 \begin{enumerate}
     \item \textbf{Extension-Restriction adjunction:}
@@ -33,7 +32,7 @@ Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessar
         \CrefIfExists{definition:category_of_modules_and_bimodules_over_rings}
         is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{left adjoint} to the \CrefAndHyperrefIfExist{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}{restriction of scalars functor}
         \[ f_* : {}_S\mathsf{Mod}_T \to {}_R\mathsf{Mod}_T. \]
-        Explicitly, for any $R-T$-bimodule $M$ and any $S-T$-bimodule $N$, there is a natural isomorphism:
+        Explicitly, for any $R$-$T$-bimodule $M$ and any $S$-$T$-bimodule $N$, there is a natural isomorphism:
         \[
             \Hom_{S-T}(S \otimes_R M, N) \cong \Hom_{R-T}(M, f_*N).
         \]
@@ -42,7 +41,7 @@ Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessar
         \[ f^* = - \otimes_R S : {}_T\mathsf{Mod}_R \to {}_T\mathsf{Mod}_S \]
         is left adjoint to the restriction of scalars functor
         \[ f_* : {}_T\mathsf{Mod}_S \to {}_T\mathsf{Mod}_R. \]
-        Explicitly, for any $T-R$-bimodule $M$ and any $T-S$-bimodule $N$, there is a natural isomorphism:
+        Explicitly, for any $T$-$R$-bimodule $M$ and any $T$-$S$-bimodule $N$, there is a natural isomorphism:
         \[
             \Hom_{T-S}(M \otimes_R S, N) \cong \Hom_{T-R}(M, f_*N).
         \]
@@ -54,16 +53,89 @@ Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{rings} (not necessar
         \[ f^! = \Hom_R(S, -) : {}_R\mathsf{Mod}_T \to {}_S\mathsf{Mod}_T \]
         is \CrefAndHyperrefIfExist{definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors}{right adjoint} to the restriction of scalars functor
         \[ f_* : {}_S\mathsf{Mod}_T \to {}_R\mathsf{Mod}_T. \]
-        Explicitly, for any $S-T$-bimodule $N$ and any $R-T$-bimodule $M$, there is a natural isomorphism:
+        Explicitly, for any $S$-$T$-bimodule $N$ and any $R$-$T$-bimodule $M$, there is a natural isomorphism:
         \[ \Hom_{R-T}(f_*N, M) \cong \Hom_{S-T}(N, \Hom_R(S, M)). \]
 
         \item \textbf{Restriction on the Right:} The co-extension of scalars functor
         \[ f^! = \Hom_R(S, -) : {}_T\mathsf{Mod}_R \to {}_T\mathsf{Mod}_S \]
         is right adjoint to the restriction of scalars functor
         \[ f_* : {}_T\mathsf{Mod}_S \to {}_T\mathsf{Mod}_R. \]
-        Explicitly, for any $T-S$-bimodule $N$ and any $T-R$-bimodule $M$, there is a natural isomorphism:
+        Explicitly, for any $T$-$S$-bimodule $N$ and any $T$-$R$-bimodule $M$, there is a natural isomorphism:
         \[ \Hom_{T-R}(f_*N, M) \cong \Hom_{T-S}(N, \Hom_R(S, M)) \]
         where here $\Hom_R(S, M)$ uses the left $R$-module structure on $S$ and the right $R$-module structure on $M$.
     \end{enumerate}
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove part (1)(a), the left-restriction extension-Restriction adjunction. The other three cases follow by identical arguments with left/right roles swapped.
+
+    Let $M$ be an $R$-$T$ bimodule and $N$ be an $S$-$T$ bimodule. For any $S$-$T$ bimodule homomorphism $\Psi : S \otimes_R M \to N$, define
+    $$\Phi(\Psi) : M \to f_*N, \quad m \mapsto \Psi(1_S \otimes m).$$
+    We verify that $\Phi(\Psi)$ is an $R$-$T$ bimodule homomorphism. For any $r \in R$, $t \in T$, and $m \in M$:
+    $$\Phi(\Psi)(r \cdot m) = \Psi(1_S \otimes r \cdot m).$$
+    In the tensor product $S \otimes_R M$, we have $1_S \otimes r \cdot m = 1_S \otimes \varphi(r)m = \varphi(r) \cdot 1_S \otimes m = (\varphi(r) \cdot 1_S) \otimes m$. Since $\Psi$ is an $S$-$T$ bimodule homomorphism and hence in particular $R$-linear (via restriction), we obtain
+    $$\Phi(\Psi)(r \cdot m) = \Psi(\varphi(r) \cdot (1_S \otimes m)) = \varphi(r) \cdot \Psi(1_S \otimes m).$$
+    By the definition of restriction of scalars\CrefIfExists{definition:restriction_of_scalars_of_a_left_or_right_module_along_a_ring_homomorphism_from_the_base_ring}, we have $r \cdot_R x = \varphi(r) \cdot_S x$ for any element $x$ of an $S$-module. Thus, $\Phi(\Psi)(r \cdot m) = r \cdot_R \Phi(\Psi)(m)$, and similarly $\Phi(\Psi)(m \cdot t) = \Phi(\Psi)(m) \cdot t$. Therefore, $\Phi(\Psi) \in \operatorname{Hom}_{R-T}(M, f_*N)$.
+
+    Next we construct the inverse map. Given an $R$-$T$ bimodule homomorphism $g : M \to f_*N$, consider the map
+    $$\gamma_g : S \times M \to N, \quad (s, m) \mapsto s \cdot g(m).$$
+    We verify that $\gamma_g$ satisfies the hypotheses of \Cref{proposition:universal_property_of_the_tensor_product_of_bimodules}. For all $r \in R$, $t \in T$, $m,m' \in M$, and $s \in S$:
+    $$\gamma_g(s, m+m') = s \cdot g(m+m') = s \cdot (g(m) + g(m')) = \gamma_g(s,m) + \gamma_g(s,m'),$$
+    where the second equality uses that $g$ is additive and the third uses that scalar multiplication in $N$ distributes over addition. Similarly, $\gamma_g(s+s', m) = (s+s') \cdot g(m) = s \cdot g(m) + s' \cdot g(m) = \gamma_g(s,m) + \gamma_g(s',m)$, and
+    $$\gamma_g(s, m \cdot t) = s \cdot g(m \cdot t) = s \cdot (g(m) \cdot t) = (s \cdot g(m)) \cdot t = \gamma_g(s,m) \cdot t,$$
+    where the second equality uses that $g$ is a $T$-bimodule homomorphism and the third uses the bimodule axioms on $N$. Finally, for the balancing condition over $R$:
+    $$\gamma_g(s \cdot \varphi(r), m) = (s \cdot \varphi(r)) \cdot g(m) = s \cdot (\varphi(r) \cdot g(m)) = s \cdot (r \cdot_R g(m)),$$
+    while also
+    $$\gamma_g(s, r \cdot m) = s \cdot g(r \cdot m).$$
+    Since $g$ is an $R$-$T$ bimodule homomorphism from $M$ to $f_*N$, we have $g(r \cdot m) = r \cdot_R g(m) = \varphi(r) \cdot_S g(m)$ by the definition of restriction of scalars. Therefore,
+    $$\gamma_g(s, r \cdot m) = s \cdot (\varphi(r) \cdot g(m)) = (s \cdot \varphi(r)) \cdot g(m) = \gamma_g(\varphi(r)s, m).$$
+    This is the correct balancing condition for the tensor product $S \otimes_R M$, where $S$ is viewed as an $(S,R)$-bimodule via $\varphi$. By \Cref{proposition:universal_property_of_the_tensor_product_of_bimodules}, there exists a unique group homomorphism
+    $$\Theta(g) : S \otimes_R M \to N$$
+    such that $\Theta(g)(s \otimes m) = s \cdot g(m)$ for all $s \in S$, $m \in M$.
+
+    We verify that $\Theta(g)$ is an $S$-$T$ bimodule homomorphism. For any $s' \in S$ and pure tensor $s \otimes m$:
+    $$\Theta(g)(s' \cdot (s \otimes m)) = \Theta(g)((s's) \otimes m) = (s's) \cdot g(m) = s' \cdot (s \cdot g(m)) = s' \cdot \Theta(g)(s \otimes m).$$
+    For the right $T$-action:
+    $$\Theta(g)((s \otimes m) \cdot t) = \Theta(g)(s \otimes (m \cdot t)) = s \cdot g(m \cdot t) = s \cdot (g(m) \cdot t) = (s \cdot g(m)) \cdot t = \Theta(g)(s \otimes m) \cdot t.$$
+    Since both actions are additive, these equalities extend to all of $S \otimes_R M$. Thus, $\Theta(g) \in \operatorname{Hom}_{S-T}(S \otimes_R M, N)$.
+
+    We verify that $\Phi$ and $\Theta$ are mutual inverses. For any $\Psi : S \otimes_R M \to N$:
+    $$\Theta(\Phi(\Psi))(1_S \otimes m) = 1_S \cdot \Phi(\Psi)(m) = 1_S \cdot \Psi(1_S \otimes m) = \Psi(1_S \otimes m).$$
+    Since both $\Theta(\Phi(\Psi))$ and $\Psi$ are $S$-$T$ bimodule homomorphisms agreeing on all pure tensors of the form $1_S \otimes m$, and every element of $S \otimes_R M$ is a finite sum of elements $s \otimes m = s(1_S \otimes m)$, we have $\Theta(\Phi(\Psi)) = \Psi$. Conversely, for any $g : M \to f_*N$:
+    $$\Phi(\Theta(g))(m) = \Theta(g)(1_S \otimes m) = 1_S \cdot g(m) = g(m).$$
+    Therefore, $\Phi(\Theta(g)) = g$, and the correspondence is bijective.
+
+    For the Restriction-Coextension adjunction (part (2)(a)), let $N$ be an $S$-$T$ bimodule and $M$ be an $R$-$T$ bimodule. Given an $R$-$T$ bimodule homomorphism $g : f_*N \to M$, define
+    $$\Psi_g : N \to \Hom_R(S, M), \quad n \mapsto (s \mapsto g(s \cdot n)).$$
+    We verify that for each $n \in N$, the map $\Psi_g(n) : S \to M$ is a left $R$-module homomorphism. For all $r \in R$ and $s \in S$:
+    $$\Psi_g(n)(rs) = g((rs) \cdot n).$$
+    The element $rs$ acts on $n$ via the $(S,R)$-bimodule structure: $rs \cdot n = r \cdot_S s \cdot n = \varphi(r)s \cdot n$. Since $g$ is an $R$-$T$ bimodule homomorphism, we have
+    $$\Psi_g(n)(rs) = g(\varphi(r)s \cdot n) = r \cdot g(s \cdot n) = r \cdot \Psi_g(n)(s),$$
+    so $\Psi_g(n) \in \operatorname{Hom}_R(S, M)$ by the definition of left $R$-linearity.
+
+    We verify that $\Psi_g : N \to \Hom_R(S, M)$ is an $S$-$T$ bimodule homomorphism. For any $s' \in S$, $t \in T$, and $n \in N$:
+    $$\bigl(\Psi_g(s' \cdot n)\bigr)(s) = g(s \cdot s' \cdot n) = g((ss') \cdot n).$$
+    On the other hand, by the definition of the left $S$-action on $\Hom_R(S,M)$ from \Cref{definition:hom_of_left_right_bi_modules_of_rings}:
+    $$(s' \cdot \Psi_g(n))(s) = \Psi_g(n)(s \cdot s') = g((ss') \cdot n).$$
+    Thus, $\Psi_g(s' \cdot n) = s' \cdot \Psi_g(n)$, and similarly for the right $T$-action. Therefore, $\Psi_g \in \operatorname{Hom}_{S-T}(N, \Hom_R(S, M))$.
+
+    We construct the inverse. Given $h : N \to \Hom_R(S, M)$ in $\operatorname{Hom}_{S-T}(N, \Hom_R(S, M))$, define
+    $$\Gamma(h) : f_*N \to M, \quad n \mapsto h(n)(1_S).$$
+    We verify that $\Gamma(h)$ is an $R$-$T$ bimodule homomorphism. For any $r \in R$:
+    $$\Gamma(h)(r \cdot_R n) = \Gamma(h)(\varphi(r) \cdot n) = h(\varphi(r) \cdot n)(1_S).$$
+    Since $h$ is an $S$-$T$ bimodule homomorphism, we have $h(\varphi(r) \cdot n) = \varphi(r) \cdot h(n)$ in $\Hom_R(S, M)$. By the left $S$-action on $\Hom_R(S, M)$:
+    $$\bigl(\varphi(r) \cdot h(n)\bigr)(1_S) = h(n)(1_S \cdot \varphi(r)) = h(n)(\varphi(r)).$$
+    On the other hand, since $h(n) : S \to M$ is a left $R$-module homomorphism:
+    $$h(n)(\varphi(r)) = h(n)(r \cdot_S 1_S) = r \cdot h(n)(1_S).$$
+    Therefore, $\Gamma(h)(r \cdot_R n) = r \cdot h(n)(1_S) = r \cdot \Gamma(h)(n)$, as required. Similarly for the right $T$-action.
+
+    We verify that $\Psi$ and $\Gamma$ are mutual inverses. For any $g : f_*N \to M$:
+    $$\bigl(\Psi_{\Gamma(g)}(n)\bigr)(s) = \Gamma(g)(s \cdot n) = g(s \cdot n),$$
+    so $\Psi_{\Gamma(g)}(n) = g(s \cdot n)$ for all $s$, which is exactly the definition of $\Psi_g(n)$. Thus, $\Psi_{\Gamma(g)} = g$. Conversely, for any $h : N \to \Hom_R(S, M)$:
+    $$\Gamma(\Psi_h)(n) = \Psi_h(n)(1_S) = h(n)(1_S \cdot 1_S) = h(n)(1_S).$$
+    Therefore, $\Gamma(\Psi_h) = h$. The correspondence is bijective and natural in both arguments by construction.
+
+    Cases (1)(b), (2)(b) follow by the same constructions with left/right roles interchanged.
+\end{proof}

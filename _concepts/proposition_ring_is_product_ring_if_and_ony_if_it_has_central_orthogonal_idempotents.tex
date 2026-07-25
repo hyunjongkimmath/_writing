@@ -22,9 +22,8 @@
 
     Next we show that $\Phi$ is \CrefAndHyperrefIfExist{definition:injective_and_projective_objects_in_a_category}{injective}. Suppose that $\Phi(r) = (0,\ldots,0)$. Then $e_i r = 0$ for all $i$. Since $\sum_{i=1}^n e_i = 1_R$, we have
     $$r = 1_R \cdot r = \left(\sum_{i=1}^n e_i\right)r = \sum_{i=1}^n e_i r = 0.$$
-    \TODO{reference how ring homomoprhisms are injective iff they have trivial kernel}
     \TODO{write definition of kernel of ring homomorphism}
-    Therefore, $\Phi$ has trivial kernel, so $\Phi$ is injective.
+    Therefore, $\Phi$ has trivial kernel, so $\Phi$ is injective\CrefIfExists{proposition:ring_homomorphism_is_injective_iff_kernel_is_trivial}.
     
 
     Finally we show that $\Phi$ is \CrefAndHyperrefIfExist{definition:property_of_representable_1_morphism_of_categories_fibered_in_groupoids_over_asite_on_the_category_of_schemes_over_a_scheme}{surjective}. Let $(x_1,\ldots,x_n) \in \prod_{i=1}^n R_i$. For each $i$, write $x_i = e_i r_i$ for some $r_i \in R$. Set $r = \sum_{j=1}^n e_j r_j$. Then for any $k$:

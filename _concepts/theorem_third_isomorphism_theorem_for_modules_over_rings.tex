@@ -1,0 +1,53 @@
+\begin{theorem}[Third Isomorphism Theorem for Modules (Factor Theorem)] \label{theorem:third_isomorphism_theorem_for_modules_over_rings}
+    \TODO{AI generated, verify}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings}, and let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule}. Let $N$ and $P$ be \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{$R$-$S$-submodules} of $M$ with $P \subseteq N$.
+
+    Then $N/P$ is an $R$-$S$-submodule of the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient $R$-$S$-bimodule} $M/P$, and there exists an \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{isomorphism of $R$-$S$-bimodules}
+    $$\Phi : (M/P)/(N/P) \xrightarrow{\,\sim\,} M/N$$
+    given by $\Phi((m + P) + N/P) = m + N$ for all $m \in M$.
+
+    \TextIfExists{definition:module_of_a_ring}{If $M$ is a left/right/two-sided $R$-module, then the corresponding statement holds for the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures}.}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item We show that the set $N/P = \{ n + P : n \in N \}$ is an $R$-$S$-submodule of $M/P$. The set $N/P$ is nonempty because $0 \in N$, so $0 + P = P \in N/P$. For any $n_1 + P, n_2 + P \in N/P$, we have
+        $$(n_1 + P) + (n_2 + P) = (n_1 + n_2) + P \in N/P$$
+        because $n_1 + n_2 \in N$. For any $r \in R$ and $n + P \in N/P$, we have
+        $$r \cdot (n + P) = r n + P \in N/P$$
+        because $r n \in N$. Similarly, for any $s \in S$, we have $(n + P) \cdot s = n s + P \in N/P$ because $n s \in N$. Hence, $N/P$ is an $R$-$S$-submodule of $M/P$ by \Cref{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}.
+
+        \item We verify that the quotient modules in the statement are well-defined. Since $P \subseteq N \subseteq M$, both $M/P$ and $M/N$ are well-defined quotient modules by \Cref{definition:quotient_module_of_a_module_by_a_module_of_a_ring}. Moreover, $N/P$ is a submodule of $M/P$ by part 1, so the quotient $(M/P)/(N/P)$ is also well-defined.
+
+        \item We define a map
+        $$\Phi : (M/P)/(N/P) \longrightarrow M/N, \qquad (m + P) + N/P \longmapsto m + N,$$
+        where $m \in M$.
+
+        We show that $\Phi$ is well-defined. Suppose that $(m_1 + P) + N/P = (m_2 + P) + N/P$ for some $m_1, m_2 \in M$. Then
+        $$(m_1 + P) - (m_2 + P) \in N/P$$
+        by \Cref{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup} applied to the additive group of $M/P$. Simplifying, we obtain
+        $$(m_1 - m_2) + P \in N/P,$$
+        so there exists $n \in N$ such that $(m_1 - m_2) + P = n + P$. This means $m_1 - m_2 - n \in P \subseteq N$, so $m_1 - m_2 \in N$ (since $n \in N$). Therefore, $m_1 + N = m_2 + N$, which means $\Phi((m_1 + P) + N/P) = \Phi((m_2 + P) + N/P)$. Hence, $\Phi$ is independent of the choice of representatives.
+
+        \item We show that $\Phi$ is an $R$-$S$-bimodule homomorphism. For any $m_1, m_2 \in M$, $r \in R$, and $s \in S$, we have
+        \begin{align*}
+        \Phi\bigl(((m_1 + P) + N/P) + ((m_2 + P) + N/P)\bigr) &= \Phi\bigl((m_1 + m_2 + P) + N/P\bigr) = m_1 + m_2 + N \\
+        &\qquad = (m_1 + N) + (m_2 + N) \\
+        &\qquad = \Phi((m_1 + P) + N/P) + \Phi((m_2 + P) + N/P), \\
+        \Phi\bigl(r \cdot ((m + P) + N/P)\bigr) &= \Phi\bigl((r m + P) + N/P\bigr) = r m + N \\
+        &\qquad = r \cdot (m + N) = r \cdot \Phi((m + P) + N/P), \\
+        \Phi\bigl(((m + P) + N/P) \cdot s\bigr) &= \Phi\bigl((m s + P) + N/P\bigr) = m s + N \\
+        &\qquad = (m + N) \cdot s = \Phi((m + P) + N/P) \cdot s.
+        \end{align*}
+        The additivity and scalar compatibility follow from the corresponding properties of the quotient module operations\CrefIfExists{definition:quotient_module_of_a_module_by_a_module_of_a_ring}.
+
+        \item We show that $\Phi$ is injective. Suppose that $\Phi((m + P) + N/P) = N$, the zero element in $M/N$. Then $m + N = N$, so $m \in N$. Hence, $m + P \in N/P$, which means $(m + P) + N/P = N/P$, the zero element of $(M/P)/(N/P)$. Therefore, $\Phi$ has trivial kernel, so $\Phi$ is injective by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
+
+        \item We show that $\Phi$ is surjective. For any $m + N \in M/N$, we have $m \in M$, so $m + P \in M/P$, and therefore
+        $$\Phi((m + P) + N/P) = m + N.$$
+        Hence, every element of $M/N$ lies in the image of $\Phi$, so $\Phi$ is surjective.
+    \end{enumerate}
+
+    Since $\Phi$ is an injective and surjective $R$-$S$-bimodule homomorphism, it is an isomorphism by \Cref{definition:homomorphism_of_modules_over_a_ring}. This establishes the isomorphism $(M/P)/(N/P) \cong M/N$.
+\end{proof}

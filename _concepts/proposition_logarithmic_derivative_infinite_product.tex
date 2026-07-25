@@ -1,0 +1,45 @@
+\begin{proposition}[Logarithmic derivative of an infinite product] \label{proposition:logarithmic_derivative_infinite_product}
+\TODO{define and reference isolated points}
+Let $\{f_n(z)\}_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic functions} on a domain $D \subseteq \bbC$ such that the \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{infinite product} $\prod_{n=1}^\infty f_n(z)$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on \CrefAndHyperrefIfExist{compact}{compact subsets} of $D$, and the product defines a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} $f(z)$ that is not identically zero. Suppose each $f_n(z)$ has no zeros in $D$ except possibly at isolated points. Then for $z \in D$ where the product and its \CrefAndHyperrefIfExist{definition:logarithmic_derivative_of_a_holomorphic_function}{logarithmic derivative} are defined,
+$$
+\frac{f'(z)}{f(z)} = \sum_{n=1}^\infty \frac{f_n'(z)}{f_n(z)},
+$$
+where the sum converges uniformly on compact subsets of $D$ avoiding the zeros of $f$.
+
+In particular, if $f(z) = \prod_{n=1}^\infty (1 - z/a_n)$ with $\{a_n\}$ a sequence of nonzero complex numbers such that $\sum_{n=1}^\infty 1/|a_n|$ converges, then
+$$
+\frac{f'(z)}{f(z)} = \sum_{n=1}^\infty \frac{-1/a_n}{1 - z/a_n} = -\sum_{n=1}^\infty \frac{1}{a_n - z}.
+$$
+\TODO{write reference a thing that states what the complex derivative of the identity function is, along with the linearity of complex derivatives}
+
+This follows by taking the \CrefAndHyperrefIfExist{definition:logarithmic_derivative_of_a_holomorphic_function}{logarithmic derivative} of both sides and using uniform convergence of the product to justify termwise differentiation.
+
+\begin{proof}
+	\TODO{AI generated, verify}
+	Let $P_N(z) = \prod_{n=1}^N f_n(z)$ denote the partial products. By hypothesis, $P_N(z)$ converges to $f(z)$ uniformly on compact subsets of $D$, and each $P_N$ is holomorphic as a finite product of holomorphic functions\CrefIfExists{proposition:complex_derivative_rules_for_sum_product_quotient_and_chain}. The limit function $f$ is holomorphic by \Cref{theorem:the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets}.
+
+	We first compute the logarithmic derivative of each finite partial product. For $N = 1$, we have $(P_1)'(z)/P_1(z) = f_1'(z)/f_1(z)$ trivially. For $N \geq 2$, applying the \CrefAndHyperrefIfExist{proposition:complex_derivative_rules_for_sum_product_quotient_and_chain}{quotient rule} to the product $P_N = P_{N-1} \cdot f_N$ gives
+	$$\frac{P_N'(z)}{P_N(z)} = \frac{P_{N-1}'(z)f_N(z) + P_{N-1}(z)f_N'(z)}{P_{N-1}(z)f_N(z)} = \frac{P_{N-1}'(z)}{P_{N-1}(z)} + \frac{f_N'(z)}{f_N(z)},$$
+	at any point $z$ where neither $P_{N-1}(z)$ nor $f_N(z)$ vanishes. By induction on $N$, we obtain for all $N$:
+	$$\frac{P_N'(z)}{P_N(z)} = \sum_{n=1}^N \frac{f_n'(z)}{f_n(z)},$$
+	at any point $z$ where none of the factors $f_1(z), \dots, f_N(z)$ vanish.
+
+	Next we show that the series $\sum_{n=1}^\infty f_n'(z)/f_n(z)$ converges uniformly on compact subsets of $D$ avoiding the zeros of $f$. Let $K \subset D$ be a compact set on which $f(z) \neq 0$ for all $z \in K$. Since $P_N \to f$ uniformly on $K$ and $f$ is bounded away from zero on $K$ (because $|f|$ attains a positive minimum on the compact set $K$\CrefIfExists{proposition:continuous_real_valued_function_on_compact_topological_space_attains_maximum_and_minimum}), there exists $N_0$ such that for all $N \geq N_0$ and all $z \in K$, both $|P_N(z)| > 0$ and $|f_N(z) - 1|$ is sufficiently small. The absolute convergence of the infinite product $\prod f_n(z)$ on compact subsets implies that $\sum |f_n(z) - 1|$ converges uniformly on $K$. For large $n$, we have $|f_n(z) - 1| < 1/2$ on $K$, which means $f_n(z) \neq 0$ and the logarithmic derivative $f_n'(z)/f_n(z)$ is well-defined.
+
+	We verify that $\sum f_n'/f_n$ converges uniformly on $K$. Because the product $\prod f_n(z)$ converges absolutely and uniformly on compact subsets, we have $f_n \to 1$ uniformly on $K$. For each $n$, the function $f_n'$ is holomorphic on $D$, hence continuous. The uniform convergence of the product implies that for any compact set $K' \subset D$ containing $K$ in its interior, the sequence $P_N$ converges uniformly to $f$ on $K'$. By \Cref{theorem:the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets}, the derivatives $P_N'$ converge uniformly to $f'$ on compact subsets of $D$.
+
+	We conclude by passing to the limit in the logarithmic derivative. For $N$ sufficiently large so that $P_N(z) \neq 0$ on $K$, we have
+	$$\frac{P_N'(z)}{P_N(z)} = \sum_{n=1}^N \frac{f_n'(z)}{f_n(z)}.$$
+	Since $P_N' \to f'$ and $P_N \to f$ uniformly on $K$, and since $f$ is bounded away from zero on $K$, the quotient $P_N'/P_N$ converges uniformly to $f'/f$ on $K$. Therefore, the partial sums $\sum_{n=1}^N f_n'(z)/f_n(z)$ converge uniformly to $f'(z)/f(z)$ on $K$. This establishes
+	$$\frac{f'(z)}{f(z)} = \sum_{n=1}^\infty \frac{f_n'(z)}{f_n(z)},$$
+	for all $z \in K$, where the convergence is uniform.
+
+	We derive the special case for $f(z) = \prod_{n=1}^\infty (1 - z/a_n)$ with $\sum 1/|a_n| < \infty$. Here $f_n(z) = 1 - z/a_n$, so $f_n'(z) = -1/a_n$. Substituting into the general formula:
+	$$\frac{f_n'(z)}{f_n(z)} = \frac{-1/a_n}{1 - z/a_n} = -\frac{1}{a_n - z},$$
+	and the convergence condition $\sum 1/|a_n| < \infty$ guarantees absolute and uniform convergence of the product on compact subsets avoiding the points $a_n$.
+
+	\CrefAndHyperrefIfExist{definition:logarithmic_derivative_of_a_holomorphic_function}{logarithmic derivative}
+	\Cref{proposition:complex_derivative_rules_for_sum_product_quotient_and_chain}
+	\Cref{theorem:the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets}
+\end{proof}
+\end{proposition}

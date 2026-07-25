@@ -1,0 +1,9 @@
+\begin{corollary}[Euler product for the Riemann zeta function] \label{corollary:euler_product_for_riemann_zeta_function}
+The \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function} admits the Euler product expansion
+$$ \boxed{ \zeta(s) = \prod_{p \text{ prime}} \left( 1 - \frac{1}{p^s} \right)^{-1} } $$
+which \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for $\operatorname{Re}(s) > 1$.
+\end{corollary}
+
+\begin{proof}
+This follows from \Cref{theorem:euler_product_for_dirichlet_L_function_of_a_dirichlet_character} applied to the trivial character modulo $1$, noting that $\mathbf{1}_1(p) = 1$ for all primes $p$.
+\end{proof}

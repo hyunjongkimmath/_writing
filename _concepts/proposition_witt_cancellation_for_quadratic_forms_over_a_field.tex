@@ -1,3 +1,33 @@
 \begin{proposition}[Witt cancellation] \label{proposition:witt_cancellation_for_quadratic_forms_over_a_field}
-    Let $R$ be a \CrefAndHyperrefIfExist{definition:field}{field} and $q: M \to R$, $q': M' \to R$ \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{quadratic forms} such that $(M, q) \cong (M', q') \oplus (H, q_H)$ as quadratic modules, where $(H, q_H)$ is a \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic plane}. Then \CrefAndHyperrefIfExist{definition:isometry_of_quadratic_modules_over_a_commutative_ring}{$(M, q) \cong (M', q')$}.
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $(M_1, q_1)$ and $(M_2, q_2)$ be finite-dimensional quadratic modules over $F$. If there exists an isometry between $(M_1, q_1) \oplus (H, q_H)$ and $(M_2, q_2) \oplus (H, q_H)$ for some \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic plane} $(H, q_H)$, then there exists an isometry between $(M_1, q_1)$ and $(M_2, q_2)$.
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\phi: M_1 \oplus H \to M_2 \oplus H$ be an isometry. We equip $M_1 \oplus H$ with the quadratic form $q_1 + q_H$ and $M_2 \oplus H$ with $q_2 + q_H$, where the polarization on direct sums satisfies
+    $$B_{q_1+q_H}((m_1, h_1), (m_2, h_2)) = B_{q_1}(m_1, m_2) + B_{q_H}(h_1, h_2).$$
+    \TODO{AI generated, reference needed: definition of direct sum of quadratic modules and its polarization}
+
+    Let $e_1 = (1,0)$ and $e_2 = (0,1)$ be the standard basis for $H$. Define vectors in $\{0\} \times H \subset M_2 \oplus H$:
+    $$u_1 = (0, e_1), \quad u_2 = (0, e_2).$$
+    By \Cref{lemma:properties_of_the_hyperbolic_plane_over_a_commutative_ring}, we have $q_H(e_1) = q_H(e_2) = 0$ and $B_{q_H}(e_1,e_2) = 1$. Hence, the subspace $\operatorname{span}\{u_1, u_2\} \subset M_2 \oplus H$ is a hyperbolic plane.
+
+    We show that the orthogonal complement of $\operatorname{span}\{u_1, u_2\}$ in $M_2 \oplus H$ with respect to the polarization $B_{q_2+q_H}$ is isometric to $(M_2, q_2)$. A vector $(m, h) \in M_2 \oplus H$ lies in the orthogonal complement if and only if
+    $$B_{q_2+q_H}((m,h), (0,e_1)) = 0 \quad \text{and} \quad B_{q_2+q_H}((m,h), (0,e_2)) = 0.$$
+    Expanding the polarization gives:
+    $$B_{q_2}(m, 0) + B_{q_H}(h, e_1) = 0 \quad \text{and} \quad B_{q_2}(m, 0) + B_{q_H}(h, e_2) = 0.$$
+    Since $B_{q_2}(m, 0) = 0$, these reduce to:
+    $$B_{q_H}(h, e_1) = 0 \quad \text{and} \quad B_{q_H}(h, e_2) = 0.$$
+    Writing $h = a e_1 + b e_2$ for some scalars $a, b \in F$, we compute:
+    $$B_{q_H}(ae_1 + be_2, e_1) = a B_{q_H}(e_1, e_1) + b B_{q_H}(e_2, e_1) = 0 + b = b,$$
+    and similarly $a = 0$. Hence $h = 0$, so the orthogonal complement is exactly $\{(m, 0) : m \in M_2\} \cong (M_2, q_2)$.
+
+    Let $v_1 = \phi^{-1}(u_1)$ and $v_2 = \phi^{-1}(u_2)$ in $M_1 \oplus H$. Since $\phi$ is an isometry, the subspace $W = \operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ is a hyperbolic plane. The Gram matrix of $\{v_1, v_2\}$ with respect to $B_{q_1+q_H}$ has determinant $-1 \neq 0$, so $W$ is nondegenerate. Hence, $M_1 \oplus H = W \oplus W^{\perp}$ as an orthogonal direct sum.
+    \TODO{AI generated, reference needed: lemma that a nondegenerate subspace of a finite-dimensional quadratic space over a field has an orthogonal complement giving V = S oplus S perp}
+
+    The isometry $\phi$ maps $W$ to $\operatorname{span}\{u_1, u_2\}$ and therefore maps $W^{\perp}$ to $(\operatorname{span}\{u_1, u_2\})^{\perp} \cong (M_2, q_2)$. Hence, $\phi|_{W^{\perp}}: W^{\perp} \to (M_2, q_2)$ is an isometry.
+
+    We show that $W^{\perp}$ is isometric to $(M_1, q_1)$ by the same argument applied in reverse: the subspace $\operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ has orthogonal complement isometric to $(M_1, q_1)$.
+    \TODO{AI generated, reference needed: symmetric argument that W perp in M1 oplus H cong (M1, q1), or explicit verification similar to the M2 case}
+
+    Therefore, $(M_1, q_1) \cong W^{\perp} \cong (M_2, q_2)$ as quadratic modules.
+\end{proof}

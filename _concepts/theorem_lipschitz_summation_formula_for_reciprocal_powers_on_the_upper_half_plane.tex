@@ -1,0 +1,66 @@
+\begin{theorem}[Lipschitz summation formula for reciprocal powers on the upper half-plane]
+\label{theorem:lipschitz_summation_formula_for_reciprocal_powers_on_the_upper_half_plane}
+\TODO{AI generated, verify}
+Let $k \geq 2$ be an integer and let $z \in \mathbb{H}$ be a point of the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}. Then
+$$\sum_{n=-\infty}^{\infty} \frac{1}{(z+n)^k} = \frac{(-2\pi i)^k}{(k-1)!} \sum_{m=1}^{\infty} m^{k-1} e^{2\pi i m z},$$
+where $e^{2\pi i m z}$ denotes the \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function} and $(k-1)!$ is the value of the \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(k)$ at the integer $k$.
+\end{theorem}
+
+\begin{proof}
+\TODO{AI generated, verify}
+We prove the identity by computing the Fourier transform of the function $x \mapsto (x+z)^{-k}$ on $\mathbb{R}$ and applying \Cref{theorem:poisson_summation_formula_for_schwartz_functions_on_real_numbers}.
+
+Fix $z \in \mathbb{H}$ and write $z = a + iy$ with $a \in \mathbb{R}$ and $y > 0$. Define $f : \mathbb{R} \to \mathbb{C}$ by
+$$f(x) = \frac{1}{(x+z)^k} = \frac{1}{(x + a + iy)^k}.$$
+For $k \geq 2$, the function $f$ is smooth and satisfies $|f(x)| \leq C |x|^{-k}$ for $|x| \gg 0$, hence $f \in L^1(\mathbb{R})$.
+
+We compute the Fourier transform of $f$ with respect to the communications and signal processing convention:
+$$\hat{f}(\xi) = \int_{-\infty}^{\infty} \frac{e^{-2\pi i \xi x}}{(x+z)^k} \, dx, \quad \xi \in \mathbb{R}.$$
+
+Consider the contour integral over a large semicircle in the lower half-plane. For $\xi > 0$, the factor $e^{-2\pi i \xi x}$ decays as $\Im(x) \to -\infty$ (since $e^{-2\pi i \xi (u+iv)} = e^{-2\pi i \xi u} e^{2\pi \xi v}$, and for $v < 0$ this decays). For $\xi < 0$, the factor decays in the upper half-plane.
+
+\medskip
+\noindent\textit{Case $\xi > 0$.} Close the contour in the lower half-plane with a large semicircle of radius $R$. The integrand has a single pole of order $k$ at $x = -z = -a - iy$, which lies in the lower half-plane because $\Im(-z) = -y < 0$. The contribution of the semicircle tends to $0$ as $R \to \infty$ (since $k \geq 2$). By the \Cref{theorem:the_residue_theorem_relating_the_contour_integral_of_a_meromorphic_function_along_a_closed_piecewise_continuously_differentiable_path_to_the_sum_of_residues_at_isolated_singularities_enclosed_by_the_path}{residue theorem}, the integral along the real axis equals $-2\pi i$ times the residue at $x = -z$ (the negative sign arises from the clockwise orientation of the closed contour in the lower half-plane).
+
+The residue of $g(x) = e^{-2\pi i \xi x} (x+z)^{-k}$ at the pole $x = -z$ of order $k$ is
+\begin{align*}
+\Res(g, -z) &= \frac{1}{(k-1)!} \lim_{x \to -z} \frac{d^{k-1}}{dx^{k-1}} \bigl( (x+z)^k g(x) \bigr) \\
+&= \frac{1}{(k-1)!} \lim_{x \to -z} \frac{d^{k-1}}{dx^{k-1}} e^{-2\pi i \xi x} \\
+&= \frac{1}{(k-1)!} (-2\pi i \xi)^{k-1} e^{-2\pi i \xi (-z)} \\
+&= \frac{(-2\pi i \xi)^{k-1}}{(k-1)!} e^{2\pi i \xi z}.
+\end{align*}
+\CrefIfExists{definition:residue_of_a_holomorphic_function_at_an_isolated_singularity_defined_as_the_coefficient_of_z_minus_z_0_to_the_negative_1_in_its_laurent_expansion}
+
+Hence for $\xi > 0$,
+$$\hat{f}(\xi) = -2\pi i \cdot \Res(g, -z) = -2\pi i \cdot \frac{(-2\pi i \xi)^{k-1}}{(k-1)!} e^{2\pi i \xi z} = \frac{(-2\pi i)^k}{(k-1)!} \xi^{k-1} e^{2\pi i \xi z}.$$
+
+\medskip
+\noindent\textit{Case $\xi < 0$.} Close the contour in the upper half-plane. The function $g(x) = e^{-2\pi i \xi x} (x+z)^{-k}$ has no poles in the upper half-plane (the only pole is at $x = -z$, which lies in the lower half-plane). By the residue theorem, the contour integral encloses no poles, so
+$$\hat{f}(\xi) = 0.$$
+
+\medskip
+\noindent\textit{Case $\xi = 0$.} The integral $\int_{-\infty}^{\infty} (x+z)^{-k} \, dx$ converges absolutely for $k \geq 2$ and equals $0$ by a standard residue calculation (or by noting that the integral is unchanged under the change of variable $x \mapsto -x$ after shifting the contour).
+
+Thus we have established
+$$\hat{f}(\xi) = \begin{cases}
+\displaystyle \frac{(-2\pi i)^k}{(k-1)!} \, \xi^{k-1} e^{2\pi i \xi z}, & \xi > 0, \\[1em]
+0, & \xi \leq 0
+\end{cases}$$
+
+\medskip
+\noindent\textit{Application of Poisson summation.} For $k \geq 2$, both $f$ and $\hat{f}$ are in $L^1(\mathbb{R})$ (since $\hat{f}(\xi) \sim \xi^{k-1}$ near $\xi = 0$ and decays exponentially as $\xi \to \infty$). By the standard extension of \Cref{theorem:poisson_summation_formula_for_schwartz_functions_on_real_numbers} to functions in $L^1(\mathbb{R})$ with $L^1$ Fourier transform, we have
+$$\sum_{n \in \mathbb{Z}} f(n) = \sum_{m \in \mathbb{Z}} \hat{f}(m).$$
+
+The left-hand side is
+$$\sum_{n=-\infty}^{\infty} f(n) = \sum_{n=-\infty}^{\infty} \frac{1}{(z+n)^k},$$
+which converges absolutely for $k \geq 2$ by comparison with $\sum |n|^{-k}$.
+
+The right-hand side is
+\begin{align*}
+\sum_{m \in \mathbb{Z}} \hat{f}(m) &= \hat{f}(0) + \sum_{m=1}^{\infty} \hat{f}(m) + \sum_{m=-\infty}^{-1} \hat{f}(m) \\
+&= 0 + \sum_{m=1}^{\infty} \frac{(-2\pi i)^k}{(k-1)!} m^{k-1} e^{2\pi i m z} + 0 \\
+&= \frac{(-2\pi i)^k}{(k-1)!} \sum_{m=1}^{\infty} m^{k-1} e^{2\pi i m z}.
+\end{align*}
+
+Equating the two sides yields the claimed identity.
+\end{proof}

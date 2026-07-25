@@ -1,0 +1,25 @@
+\begin{definition}[Homotopy fiber of a map of topological spaces] \label{definition:homotopy_fiber_of_a_map_of_topological_spaces}
+
+Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, and let $y_0 \in Y$ be a base point.
+
+\begin{enumerate}
+    \item The \hldef{homotopy fiber of $f$ at $y_0$}, denoted by \hl{$\operatorname{hofib}(f)_{y_0}$} or \hl{$F_f(y_0)$}, is the topological space consisting of pairs $(x, \gamma)$ where $x \in X$ and $\gamma: [0,1] \to Y$ is a path in $Y$ such that $\gamma(0) = f(x)$ and $\gamma(1) = y_0$. The topology on $\operatorname{hofib}(f)_{y_0}$ is the subspace topology inherited from the product $X \times \operatorname{Map}([0,1], Y)$ where $\operatorname{Map}([0,1], Y)$ carries the compact-open topology.
+
+    \item The homotopy fiber fits into a commutative square
+    $$
+    \begin{tikzcd}
+    F_f(y_0) \arrow[r] \arrow[d] & X \arrow[d, "f"] \\
+    * \arrow[r, "\gamma_{y_0}"'] & Y^I
+    \end{tikzcd}
+    $$
+    where the right vertical map sends $x \in X$ to the constant path at $f(x)$, the bottom horizontal map picks out the evaluation-at-endpoint fibration $Y^I \to Y$, and the left vertical projection is given by $(x, \gamma) \mapsto x$. This square is a pullback in the category of topological spaces.
+
+    \item There is a canonical continuous map $\partial: F_f(y_0) \to \Omega_{y_0}Y$ from the homotopy fiber to the \CrefAndHyperrefIfExist{definition:loop_space_of_a_pointed_topological_space}{based loop space} of $Y$ at $y_0$, defined by $\partial(x, \gamma) = \gamma$. This exhibits the homotopy fiber as an $\Omega_{y_0}Y$-bundle over $X$ up to homotopy.
+
+    \item If $f: X \to Y$ is itself a fibration, then the inclusion of the strict fiber $f^{-1}(y_0) \hookrightarrow \operatorname{hofib}(f)_{y_0}$ is a \CrefAndHyperrefIfExist{definition:homotopy_equivalence_between_topological_spaces}{homotopy equivalence}. Thus for fibrations, the homotopy fiber agrees up to homotopy with the ordinary fiber.
+\end{enumerate}
+
+When $Y$ is path-connected, the homotopy type of $\operatorname{hofib}(f)_{y_0}$ is independent of the choice of base point $y_0 \in Y$.
+
+\TODO{AI generated, verify}
+\end{definition}

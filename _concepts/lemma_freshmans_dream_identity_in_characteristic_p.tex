@@ -1,0 +1,27 @@
+\begin{lemma} \label{lemma:freshmans_dream_identity_in_characteristic_p}
+    \TODO{AI generated, verify}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} of \CrefAndHyperrefIfExist{definition:characteristic_of_a_ring}{characteristic} $p$ for some \CrefAndHyperrefIfExist{definition:prime_number}{prime number} $p$. Then for all $a, b \in R$ and each integer $k \geq 0$, we have
+    $$(a + b)^{p^k} = a^{p^k} + b^{p^k}.$$
+    Moreover, $(-a)^{p^k} = -a^{p^k}$.
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first prove the identity $(a + b)^p = a^p + b^p$. By \Cref{theorem:binomial_theorem_for_a_commutative_ring},
+    $$(a + b)^p = \sum_{i=0}^p \binom{p}{i} a^i b^{p-i} = a^p + b^p + \sum_{i=1}^{p-1} \binom{p}{i} a^i b^{p-i},$$
+    where the terms for $i = 0$ and $i = p$ have been separated. For each $1 \leq i \leq p-1$, the binomial coefficient $\binom{p}{i}$ is an integer multiple of $p$; indeed,
+    $$\binom{p}{i} = \frac{p \cdot (p-1) \cdots (p-i+1)}{i!},$$
+    and since $p$ does not divide the denominator $i!$ (as $i < p$), the numerator contains a factor of $p$ that remains after cancellation, so $\binom{p}{i} \equiv 0 \pmod{p}$. Because $\operatorname{char}(R) = p$, we have $\binom{p}{i} \cdot r = 0_R$ for all $r \in R$. Therefore, all intermediate terms vanish, and $(a + b)^p = a^p + b^p$.
+
+    We now prove the general statement by induction on $k$. The base case $k = 0$ is trivial: $(a + b)^1 = a + b$. For $k = 1$, we have established $(a + b)^p = a^p + b^p$. Suppose that $(a + b)^{p^k} = a^{p^k} + b^{p^k}$ holds for some $k \geq 1$. Then
+    \begin{align*}
+        (a + b)^{p^{k+1}} &= \bigl((a + b)^{p^k}\bigr)^p \\
+        &= (a^{p^k} + b^{p^k})^p \qquad\text{(by the inductive hypothesis)}\\
+        &= (a^{p^k})^p + (b^{p^k})^p \qquad\text{(by the case $k = 1$ applied to $a^{p^k}, b^{p^k}$)}\\
+        &= a^{p^{k+1}} + b^{p^{k+1}},
+    \end{align*}
+    which completes the induction.
+
+    For the sign identity, first note that $p$ is odd if $p \neq 2$, so $p^k$ is odd; if $p = 2$, then $-1 = 1$ in $R$. In either case we obtain $(-1)^{p^k} = -1$ in $R$. Hence
+    $$(-a)^{p^k} = ((-1)a)^{p^k} = (-1)^{p^k} a^{p^k} = -a^{p^k}.$$
+    This completes the proof.
+\end{proof}

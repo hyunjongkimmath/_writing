@@ -1,0 +1,20 @@
+\begin{definition}[Logarithmic derivative of a real-valued function] \label{definition:logarithmic_derivative_of_a_real_valued_function}
+Let $I \subseteq \bbR$ be an interval and let $f : I \to \bbR$ be a \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} function that does not vanish on $I$ (i.e., $f(x) \neq 0$ for all $x \in I$).
+
+The \hldef{logarithmic derivative of $f$} is the function
+$$
+\frac{f'}{f} : I \to \bbR, \qquad x \mapsto \frac{f'(x)}{f(x)}.
+$$
+
+Equivalently, if $f$ is positive on $I$, the logarithmic derivative is the derivative of the natural logarithm of $f$:
+$$
+\frac{f'(x)}{f(x)} = \frac{d}{dx} \log f(x),
+$$
+where the right-hand side exists by the \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm} and the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule} for differentiation.
+
+If $f$ is allowed to vanish at isolated points, the logarithmic derivative is defined on $I \setminus f^{-1}(0)$ as a \CrefAndHyperrefIfExist{definition:meromorphic_function_on_an_open_subset_of_the_complex_plane}{meromorphic function} with simple poles at the zeros of $f$.
+
+\CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{derivative of a real valued function}
+\CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm}
+\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule}
+\end{definition}

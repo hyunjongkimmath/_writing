@@ -1,11 +1,9 @@
 \begin{lemma}[Minus one times an element is its inverse in a \texorpdfstring{$\bbZ$}{Z}-module]\label{lemma:minus_one_times_element_is_inverse_in_Z_module}
-    \TODO{AI generated, verify}
 Let $A$ be an abelian group and let it be equipped with the canonical \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$\bbZ$-module structure} via the \CrefAndHyperrefIfExist{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}{equivalence of categories between abelian groups and $\bbZ$-modules}. For any $a \in A$, we have
 $$ (-1) \cdot a = -a, $$
 where $-a$ denotes the inverse of $a$ in the abelian group $(A,+)$.
 \end{lemma}
 
 \begin{proof}
-    \TODO{AI generated, verify}
-    By the definition of the canonical left $\bbZ$-action on an abelian group\CrefIfExists{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}, for $n > 0$ we have $n \cdot a = \underbrace{a + \cdots + a}_{n \text{ times}}$, and $(-n) \cdot a = -(n \cdot a)$. Taking $n = 1$, we get $(-1) \cdot a = -(1 \cdot a)$. Since $1 \cdot a = a$ by the module axiom $1_\bbZ a = a$, we obtain $(-1) \cdot a = -a$.
+    By the definition of the canonical left $\bbZ$-action on an abelian group\CrefIfExists{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}, for $n > 0$ we have $1 \cdot a = a$, and $(-n) \cdot a = -(1 \cdot a) = -a$.
 \end{proof}

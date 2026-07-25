@@ -1,9 +1,37 @@
 \begin{proposition} \label{proposition:v_decomposes_as_direct_sum_of_subspace_and_its_orthogonal_complement}
-    Let $V$ be a finite-dimensional inner product space over $\mathbb{R}$ or $\mathbb{C}$, and let $W$ be a subspace of $V$.
+    Let $V$ be a finite-dimensional \CrefAndHyperrefIfExist{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}{inner product space} over $\mathbb{R}$ or $\mathbb{C}$, and let $W$ be a subspace of $V$.
 
     Then
     $$\hlin{V = W \oplus W^{\perp}}.$$
-    Moreover, $\dim_F(W) + \dim_F(W^{\perp}) = \dim_F(V)$, and $(W^{\perp})^{\perp} = W$.
+    Moreover, $\dim_{\mathbb{F}}(W) + \dim_{\mathbb{F}}(W^{\perp}) = \dim_{\mathbb{F}}(V)$, and $(W^{\perp})^{\perp} = W$.
+
 \TextIfExists{definition:involution_on_a_ring}{This orthogonal decomposition is the vector-space special case of the direct-sum decomposition induced by a nondegenerate sesquilinear form on modules over a ring with \Cref{definition:involution_on_a_ring}. The finite-dimensionality assumption ensures $W^{\perp \perp} = W$, which fails in infinite dimensions.}
 \TODO{AI generated, verify}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\{e_1, \dots, e_k\}$ be a basis for $W$, where $k = \dim_{\mathbb{F}}(W)$. Define the Gram matrix $G \in M_{k \times k}(\mathbb{F})$ by $G_{ij} = \langle e_i, e_j \rangle$. We first show that $G$ is invertible. Suppose that $x_1, \dots, x_k \in \mathbb{F}$ satisfy
+    $$\sum_{i=1}^k \sum_{j=1}^k \overline{x_i} G_{ij} x_j = 0.$$
+    Expanding the sum gives
+    $$\sum_{i=1}^k \sum_{j=1}^k \overline{x_i} \langle e_i, e_j \rangle x_j = \left\langle \sum_{i=1}^k x_i e_i, \sum_{j=1}^k x_j e_j \right\rangle = \langle v, v \rangle,$$
+    where $v = \sum_{i=1}^k x_i e_i$. By positive-definiteness of the inner product (\Cref{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}), $\langle v, v \rangle = 0$ if and only if $v = 0$. Since $\{e_1, \dots, e_k\}$ is linearly independent by \Cref{definition:basis_and_dimension_of_a_vector_space_over_a_field}, we have $v = 0$ if and only if all $x_i = 0$. Hence, the only solution to $\sum_{i,j} \overline{x_i} G_{ij} x_j = 0$ is the trivial one, so $G$ is a nonsingular matrix and therefore invertible.
+
+    For each vector $v \in V$, define coefficients $c_1(v), \dots, c_k(v) \in \mathbb{F}$ as the unique solution to the linear system
+    $$\sum_{j=1}^k G_{ij} c_j(v) = \langle v, e_i \rangle \quad \text{for each } i = 1, \dots, k.$$
+    Define $P: V \to W$ by setting $P(v) = \sum_{i=1}^k c_i(v) e_i$. The map $P$ is linear because the coefficients $c_j(v)$ are obtained by applying $G^{-1}$ to the vector $(\langle v, e_1 \rangle, \dots, \langle v, e_k \rangle)^T$, and each inner product $\langle v, e_i \rangle$ depends linearly on $v$ by linearity in the first argument (\Cref{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}).
+
+    We show that for every $v \in V$, the vector $v - P(v)$ is orthogonal to $W$. For each $j = 1, \dots, k$, we compute
+    $$\langle v - P(v), e_j \rangle = \langle v, e_j \rangle - \sum_{i=1}^k c_i(v) \langle e_i, e_j \rangle = \langle v, e_j \rangle - \sum_{i=1}^k G_{ji} c_i(v).$$
+    By the defining equation for $c_i(v)$ with index $j$, we have $\sum_{i=1}^k G_{ji} c_i(v) = \langle v, e_j \rangle$. Hence, $\langle v - P(v), e_j \rangle = 0$ for all $j = 1, \dots, k$. Since $\{e_1, \dots, e_k\}$ spans $W$, linearity of the inner product in the first argument implies that $\langle v - P(v), w \rangle = 0$ for all $w \in W$. Therefore, $v - P(v) \in W^{\perp}$ by \Cref{definition:orthogonal_complement_of_a_subspace_in_an_inner_product_space}.
+
+    We have $V = W + W^{\perp}$ because every vector $v \in V$ can be written as $v = P(v) + (v - P(v))$ with $P(v) \in W$ and $v - P(v) \in W^{\perp}$.
+
+    We show that the sum is direct by verifying $W \cap W^{\perp} = \{0_V\}$. Suppose that $w \in W \cap W^{\perp}$. Then $\langle w, w \rangle = 0$ because $w \in W^{\perp}$ and $w \in W$, so $w$ is orthogonal to itself. By positive-definiteness of the inner product (\Cref{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}), this implies that $w = 0_V$. Hence, $W \cap W^{\perp} = \{0_V\}$.
+
+    Therefore, $V = W \oplus W^{\perp}$ by \Cref{definition:direct_sum_of_vector_spaces_internal_and_external}.
+
+    The dimension formula follows from the additivity of dimension for direct sums (\Cref{proposition:dimension_formula_for_direct_sum_and_quotient_spaces}):
+    $$\dim_{\mathbb{F}}(W) + \dim_{\mathbb{F}}(W^{\perp}) = \dim_{\mathbb{F}}(W \oplus W^{\perp}) = \dim_{\mathbb{F}}(V).$$
+
+    Finally, we show that $(W^{\perp})^{\perp} = W$. The inclusion $W \subseteq (W^{\perp})^{\perp}$ holds because every element of $W$ is orthogonal to every element of $W^{\perp}$: if $w \in W$ and $x \in W^{\perp}$, then $\langle x, w \rangle = 0$ by definition of $W^{\perp}$, so $\langle w, x \rangle = \overline{\langle x, w \rangle} = 0$ by conjugate symmetry (\Cref{definition:inner_product_on_a_vector_space_over_the_reals_or_complex_numbers}). Applying the dimension formula to $W^{\perp}$ in place of $W$ gives $\dim_{\mathbb{F}}(W^{\perp}) + \dim_{\mathbb{F}}((W^{\perp})^{\perp}) = \dim_{\mathbb{F}}(V)$. Combining with the dimension formula for $W$, we obtain $\dim_{\mathbb{F}}((W^{\perp})^{\perp}) = \dim_{\mathbb{F}}(W)$. Since $W$ is a subspace of $(W^{\perp})^{\perp}$ with the same dimension, any basis of $W$ is a linearly independent set in $(W^{\perp})^{\perp}$ whose cardinality equals $\dim_{\mathbb{F}}((W^{\perp})^{\perp})$, so it spans $(W^{\perp})^{\perp}$ by \Cref{definition:basis_and_dimension_of_a_vector_space_over_a_field}. Hence, $W = (W^{\perp})^{\perp}$.
+\end{proof}

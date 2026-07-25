@@ -1,0 +1,15 @@
+\begin{definition}[Eisenstein series of weight $k$ for a congruence subgroup of $\SL_2(\mathbb{Z})$]
+\label{definition:eisenstein_series_of_weight_k_for_a_congruence_subgroup_of_SL_2_Z}
+\TODO{AI generated, verify}
+Let $\Gamma \subset \SL_2(\bbZ)$ be a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup of $\SL_2(\bbZ)$}, let $\Gamma_\infty = \Gamma \cap \left\{ \pm \begin{pmatrix} 1 & n \\ 0 & 1 \end{pmatrix} : n \in \mathbb{Z} \right\}$ be the \CrefAndHyperrefIfExist{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}{stabilizer} of $\infty$ in $\Gamma$\CrefIfExists{definition:modular_action_of_a_subgroup_of_SL_2_Z_on_the_extended_upper_half_plane}, and let $k \geq 3$ be an integer. Let $\mathbb{H}$ denote the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}.
+
+The \hldef{Eisenstein series of weight $k$ for $\Gamma$} is the function \hl{$E_k^\Gamma : \mathbb{H} \to \mathbb{C}$} defined by
+$$\hlin{E_k^\Gamma(z) = \sum_{\gamma \in \Gamma_\infty \backslash \Gamma} j(\gamma, z)^{-k}.}$$
+Here $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ and $j(\gamma, z) = cz + d$ is the \CrefAndHyperrefIfExist{definition:weight_k_operator_on_meromorphic_functions_by_elements}{automorphy factor}. The sum is taken over a set of representatives of the right cosets $\Gamma_\infty \backslash \Gamma$.
+
+For $\Gamma = \SL_2(\bbZ)$, the coset space $\Gamma_\infty \backslash \SL_2(\bbZ)$ is identified with the set of coprime pairs $(c,d) \in \mathbb{Z}^2$ up to sign, and the Eisenstein series reduces to the lattice sum
+$$E_k^{\SL_2(\bbZ)}(z) = \frac{1}{2} \sum_{\substack{(c,d) \in \mathbb{Z}^2 \\ (c,d) = 1}} \frac{1}{(cz + d)^k},$$
+where the factor $\frac{1}{2}$ accounts for the fact that $(c,d)$ and $(-c,-d)$ represent the same coset. The \hldef{unnormalized Eisenstein series} is
+$$\hlin{G_k(z) = \sum_{\substack{(m,n) \in \mathbb{Z}^2 \\ (m,n) \neq (0,0)}} \frac{1}{(mz + n)^k}.}$$
+We have $G_k(z) = 2\zeta(k) \, E_k^{\SL_2(\bbZ)}(z)$  where $\zeta(k)$ is the \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function} evaluated at $k$.
+\end{definition}

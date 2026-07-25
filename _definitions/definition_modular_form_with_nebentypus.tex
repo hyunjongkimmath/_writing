@@ -1,0 +1,25 @@
+\begin{definition} \label{definition:modular_form_with_nebentypus}
+\TODO{AI generated, verify}
+\TODO{defne the notion of primitivity for dirichlet characters}
+Let $N$ be a positive integer and let $\chi : (\bbZ/N\bbZ)^\times \to \bbC^\times$ be a \CrefAndHyperrefIfExist{definition:character_of_a_group_valued_in_a_field}{group character}, viewed as a primitive \CrefAndHyperref{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $N$}. 
+
+A function $f : \mathbb{H} \to \bbC$ is called a \hldef{modular form of weight $k$ with nebentypus $\chi$ for $\Gamma_1(N)$}\CrefIfExists{definition:gamma_1_N_subgroup_of_SL_2_Z} if:
+\begin{enumerate}
+    \item $f$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic} on the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane} $\mathbb{H}$.
+    \item For every $\gamma = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \Gamma_1(N)$, we have
+    $$\hlin{f|_k \gamma = \chi(d) \cdot f},$$
+    where $f|_k \gamma$ is the \CrefAndHyperrefIfExist{definition:weight_k_operator_on_meromorphic_functions_by_elements}{weight-$k$ slash operator}.
+    \item For every $\sigma \in \mathrm{SL}_2(\bbZ)$, the function $f|_k \sigma$ is \CrefAndHyperrefIfExist{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{holomorphic at $\infty$}.
+\end{enumerate}
+
+The space of such modular forms is denoted by
+$$\hlin{M_k(\Gamma_1(N), \chi).}$$
+
+\TODO{define the notion of fourier expansion at a cusp}
+A form $f \in M_k(\Gamma_1(N), \chi)$ is called a \hldef{cusp form with nebentypus $\chi$} if its Fourier expansion at every cusp has zero constant term. The space of such forms is denoted by
+$$\hlin{S_k(\Gamma_1(N), \chi) \subseteq M_k(\Gamma_1(N), \chi).}$$
+
+When $\chi$ is the trivial character, $M_k(\Gamma_1(N), \chi)$ coincides with the space $M_k(\Gamma_0(N))$ of modular forms for $\Gamma_0(N)$ as defined by the \CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{general definition of modular forms for congruence subgroups}.
+\CrefAndHyperrefIfExist{definition:cusps_of_a_congruence_subgroup_of_SL_2_Z}{Cusp}
+
+\end{definition}

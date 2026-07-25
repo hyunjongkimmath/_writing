@@ -1,0 +1,9 @@
+\begin{definition}[Cluster point of a filter] \label{definition:cluster_point_of_a_filter}
+    \TODO{AI generated, verify}
+
+    Let $X$ be a topological space and let $\mathcal{F}$ be a filter on the underlying set of $X$. A point $x \in X$ is called a \hldef{cluster point} (or \hldef{accumulation point}) of the filter $\mathcal{F}$ if for every $A \in \mathcal{F}$ and every open neighborhood $U$ of $x$, the intersection $A \cap U$ is nonempty. Equivalently,
+    $$\bigcap_{A \in \mathcal{F}} \overline{A} \neq \emptyset,$$
+    where $\overline{A}$ denotes the closure of $A$.
+
+    A filter $\mathcal{F}$ has a cluster point if and only if there exists an ultrafilter $\mathcal{U}$ finer than $\mathcal{F}$ that converges to some point. In particular, every free ultrafilter on a compact space converges.
+\end{definition}

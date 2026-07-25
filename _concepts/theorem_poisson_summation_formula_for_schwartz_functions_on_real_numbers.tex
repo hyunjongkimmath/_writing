@@ -1,0 +1,33 @@
+\begin{theorem}[Poisson summation formula for Schwartz functions on $\mathbb{R}$]
+\label{theorem:poisson_summation_formula_for_schwartz_functions_on_real_numbers}
+\TODO{AI generated, verify}
+Let $f \in \mathcal{S}(\mathbb{R})$ be a \CrefAndHyperrefIfExist{definition:schwartz_space_on_Rn}{Schwartz function} on $\mathbb{R}$, and let $\hat{f}$ denote its \CrefAndHyperrefIfExist{definition:fourier_transform_of_an_L_1_function_on_R}{Fourier transform} taken with respect to the communications and signal processing convention
+$$\hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) \, e^{-2\pi i \xi x} \, dx.$$
+
+Then
+$$\hlin{\sum_{n \in \mathbb{Z}} f(n) = \sum_{m \in \mathbb{Z}} \hat{f}(m).}$$
+\end{theorem}
+
+\begin{proof}
+\TODO{AI generated, verify}
+We prove the identity by constructing a periodic function from $f$ and comparing its two representations.
+
+Define $F : \mathbb{R} \to \mathbb{C}$ by
+$$F(x) = \sum_{n \in \mathbb{Z}} f(x + n).$$
+Since $f$ is a Schwartz function, the series converges absolutely and uniformly on compact subsets of $\mathbb{R}$, and $F$ is smooth and $1$-periodic: $F(x+1) = F(x)$ for all $x \in \mathbb{R}$.
+
+The $m$-th Fourier coefficient of $F$ is
+\begin{align*}
+c_m &= \int_0^1 F(x) \, e^{-2\pi i m x} \, dx \\
+    &= \int_0^1 \sum_{n \in \mathbb{Z}} f(x + n) \, e^{-2\pi i m x} \, dx \\
+    &= \sum_{n \in \mathbb{Z}} \int_0^1 f(x + n) \, e^{-2\pi i m x} \, dx &&\text{(absolute convergence justifies interchange)} \\
+    &= \sum_{n \in \mathbb{Z}} \int_n^{n+1} f(y) \, e^{-2\pi i m (y - n)} \, dy &&(y = x + n) \\
+    &= \sum_{n \in \mathbb{Z}} \int_n^{n+1} f(y) \, e^{-2\pi i m y} \, dy &&(e^{2\pi i m n} = 1) \\
+    &= \int_{-\infty}^{\infty} f(y) \, e^{-2\pi i m y} \, dy \\
+    &= \hat{f}(m). \CrefIfExists{definition:fourier_transform_of_an_L_1_function_on_R}
+\end{align*}
+
+Since $F$ is smooth and $1$-periodic, its Fourier series converges pointwise to $F(x)$ for all $x \in \mathbb{R}$ (a standard theorem from Fourier analysis). Evaluating at $x = 0$, we obtain
+$$\sum_{n \in \mathbb{Z}} f(n) = F(0) = \sum_{m \in \mathbb{Z}} c_m = \sum_{m \in \mathbb{Z}} \hat{f}(m),$$
+which is precisely the claimed identity.
+\end{proof}

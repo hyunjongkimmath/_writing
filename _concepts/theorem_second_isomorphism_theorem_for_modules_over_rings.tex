@@ -1,0 +1,56 @@
+\begin{theorem}[Second Isomorphism Theorem for Modules (Diamond Isomorphism Theorem)] \label{theorem:second_isomorphism_theorem_for_modules_over_rings}
+    \TODO{AI generated, verify}
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{(not-necessarily commutative) rings}, and let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodule}. Let $A$ and $B$ be \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{$R$-$S$-submodules} of $M$.
+
+    Then $A + B$ is an $R$-$S$-submodule of $M$, $A \cap B$ is an $R$-$S$-submodule of $M$, and there exists an \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{isomorphism of $R$-$S$-bimodules}
+    $$\psi : (A + B)/B \xrightarrow{\,\sim\,} A/(A \cap B)$$
+    \CrefIfExists{definition:quotient_module_of_a_module_by_a_module_of_a_ring}
+    given by $\psi((a + b) + B) = a + (A \cap B)$ for all $a \in A$ and $b \in B$.
+
+    \TextIfExists{definition:module_of_a_ring}{If $M$ is a left/right/two-sided $R$-module, then the corresponding statement holds for the \CrefAndHyperrefIfExist{definition:module_of_a_ring}{natural bimodule structures}.}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item We show that $A + B$ is an $R$-$S$-submodule of $M$. The set $A + B$ is nonempty because $0 \in A$ and $0 \in B$, so $0 = 0 + 0 \in A + B$. For any $a_1 + b_1, a_2 + b_2 \in A + B$, we have
+        $$(a_1 + b_1) + (a_2 + b_2) = (a_1 + a_2) + (b_1 + b_2) \in A + B.$$
+        For any $r \in R$ and $a + b \in A + B$, we have $r(a + b) = ra + rb \in A + B$ because $A$ and $B$ are closed under left multiplication by $R$. Similarly, for any $s \in S$, we have $(a + b)s = as + bs \in A + B$. Hence, $A + B$ is an $R$-$S$-submodule of $M$ by \Cref{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}.
+
+        \item We show that $A \cap B$ is an $R$-$S$-submodule of $M$. The intersection is nonempty because $0 \in A \cap B$. For any $x_1, x_2 \in A \cap B$, we have $x_1 + x_2 \in A$ (since $A$ is a submodule) and $x_1 + x_2 \in B$ (since $B$ is a submodule), so $x_1 + x_2 \in A \cap B$. For any $r \in R$ and $x \in A \cap B$, we have $rx \in A$ and $rx \in B$, so $rx \in A \cap B$. Similarly, for any $s \in S$, we have $xs \in A \cap B$. Hence, $A \cap B$ is an $R$-$S$-submodule of $M$ by \Cref{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}.
+
+        \item We verify that the quotient modules in the statement are well-defined. Since $B$ is a submodule of $M$ and $B \subseteq A + B$, it follows that $B$ is a submodule of $A + B$. Hence, the quotient $(A + B)/B$ is well-defined by \Cref{definition:quotient_module_of_a_module_by_a_module_of_a_ring}. Similarly, $A \cap B$ is a submodule of $A$, so the quotient $A/(A \cap B)$ is well-defined.
+
+        \item We define a map
+        $$\psi : (A + B)/B \longrightarrow A/(A \cap B), \quad (a + b) + B \longmapsto a + (A \cap B),$$
+        where $a \in A$ and $b \in B$.
+
+        We show that $\psi$ is well-defined. Suppose that $(a_1 + b_1) + B = (a_2 + b_2) + B$ for some $a_1, a_2 \in A$ and $b_1, b_2 \in B$. Then
+        $$(a_1 + b_1) - (a_2 + b_2) \in B$$
+        by \Cref{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup} applied to the additive group of $M$. Rearranging, we obtain
+        $$(a_1 - a_2) + (b_1 - b_2) \in B.$$
+        Since $b_1 - b_2 \in B$, it follows that $a_1 - a_2 \in B$. But $a_1 - a_2 \in A$ (since $A$ is a submodule), so $a_1 - a_2 \in A \cap B$. Therefore,
+        $$a_1 + (A \cap B) = a_2 + (A \cap B),$$
+        which means $\psi((a_1 + b_1) + B) = \psi((a_2 + b_2) + B)$. Hence, $\psi$ is independent of the choice of representatives.
+
+        \item We show that $\psi$ is an $R$-$S$-bimodule homomorphism. For any $a_1, a_2 \in A$, $b_1, b_2 \in B$, $r \in R$, and $s \in S$, we have
+        \begin{align*}
+        \psi\bigl(((a_1 + b_1) + B) + ((a_2 + b_2) + B)\bigr) &= \psi\bigl((a_1 + a_2 + b_1 + b_2) + B\bigr) = (a_1 + a_2) + (A \cap B) \\
+        &\qquad = \bigl(a_1 + (A \cap B)\bigr) + \bigl(a_2 + (A \cap B)\bigr) \\
+        &\qquad = \psi((a_1 + b_1) + B) + \psi((a_2 + b_2) + B), \\
+        \psi\bigl(r \cdot ((a + b) + B)\bigr) &= \psi\bigl((ra + rb) + B\bigr) = ra + (A \cap B) \\
+        &\qquad = r \cdot \bigl(a + (A \cap B)\bigr) = r \cdot \psi((a + b) + B), \\
+        \psi\bigl(((a + b) + B) \cdot s\bigr) &= \psi\bigl((as + bs) + B\bigr) = as + (A \cap B) \\
+        &\qquad = \bigl(a + (A \cap B)\bigr) \cdot s = \psi((a + b) + B) \cdot s.
+        \end{align*}
+        The additivity and scalar compatibility follow from the corresponding properties of the quotient module operations\CrefIfExists{definition:quotient_module_of_a_module_by_a_module_of_a_ring}.
+
+        \item We show that $\psi$ is injective. Suppose that $\psi((a + b) + B) = A \cap B$, the zero element in $A/(A \cap B)$. Then $a + (A \cap B) = A \cap B$, so $a \in A \cap B$. In particular, $a \in B$. Then $a + b \in B$ (since $b \in B$), so $(a + b) + B = B$, the zero element of $(A + B)/B$. Therefore, $\psi$ has trivial kernel, so $\psi$ is injective by \Cref{proposition:basic_facts_about_kernel_and_image_of_group_homomorphisms}\eqref{item:group_hom_is_injective_iff_kernel_is_trivial}.
+
+        \item We show that $\psi$ is surjective. For any $a + (A \cap B) \in A/(A \cap B)$, we have $a \in A \subseteq A + B$, so $a + 0 \in A + B$. Then
+        $$\psi((a + 0) + B) = a + (A \cap B),$$
+        which shows that $a + (A \cap B)$ lies in the image of $\psi$. Hence, $\psi$ is surjective.
+    \end{enumerate}
+
+    Since $\psi$ is an injective and surjective $R$-$S$-bimodule homomorphism, it is an isomorphism by \Cref{definition:homomorphism_of_modules_over_a_ring}. This establishes the isomorphism $(A + B)/B \cong A/(A \cap B)$.
+\end{proof}

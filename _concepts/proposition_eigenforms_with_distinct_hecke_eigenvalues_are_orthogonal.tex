@@ -1,0 +1,28 @@
+\begin{proposition} \label{proposition:eigenforms_with_distinct_hecke_eigenvalues_are_orthogonal}
+\TODO{AI generated, verify}
+Let $k$ be a positive even integer and let $\Gamma = \mathrm{SL}_2(\bbZ)$. Let $f, g$ in the \CrefAndHyperref{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$ be nonzero simultaneous eigenforms for all Hecke operators with eigenvalues $\{\lambda_n(f)\}_{n\geq 1}$ and $\{\lambda_n(g)\}_{n\geq 1}$ respectively. If there exists some positive integer $m$ such that
+$$\hlin{\lambda_m(f) \neq \lambda_m(g)},$$
+then $f$ and $g$ are orthogonal with respect to the \CrefAndHyperref{definition:petersson_inner_product_on_cusp_forms_of_a_congruence_subgroup}{Petersson inner product}:
+$$\hlin{\langle f, g \rangle = 0.}$$
+
+In particular, if $\lambda_p(f) \neq \lambda_p(g)$ for some prime $p$, then $\langle f, g \rangle = 0$.
+
+\CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{cusp form}
+\CrefAndHyperrefIfExist{definition:hecke_operator_on_modular_forms_for_SL_2_Z}{Hecke operator}
+
+\end{proposition}
+
+% ============================================================================
+% PROOF OUTLINE — Reference these labels when writing the proof:
+% ============================================================================
+%
+% === Proof: ===
+% Without loss of generality, assume λₘ(f) ≠ λₘ(g). Since f is an eigenform for T_m:
+%   ⟨T_m f, g⟩ = ⟨λₘ(f) · f, g⟩ = λₘ(f) · ⟨f, g⟩.
+% On the other hand, since T_m is self-adjoint (by proposition:hecke_operators_are_self_adjoint_wrt_petersson_inner_product):
+%   ⟨T_m f, g⟩ = ⟨f, T_m g⟩ = ⟨f, λₘ(g) · g⟩ = \overline{λₘ(g)} · ⟨f, g⟩.
+% Therefore: (λₘ(f) - \overline{λₘ(g)}) · ⟨f, g⟩ = 0.
+% Since f and g are Hecke eigenforms for SL₂(ℤ), the eigenvalues λₙ(g) are real (they are Fourier coefficients of a normalized eigenform, hence algebraic integers that are fixed by complex conjugation). Thus \overline{λₘ(g)} = λₘ(g).
+% Since λₘ(f) ≠ λₘ(g), we must have ⟨f, g⟩ = 0.
+% Reference: proposition:hecke_operators_are_self_adjoint_wrt_petersson_inner_product (T_m is self-adjoint)
+%           corollary:euler_product_for_l_function_of_hecke_eigenform (eigenvalues are real for SL₂(ℤ))

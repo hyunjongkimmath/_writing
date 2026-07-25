@@ -1,0 +1,23 @@
+\begin{proposition}[Expansion of $\pi z \cot(\pi z)$ in terms of Bernoulli numbers] \label{proposition:cotangent_expansion_bernoulli_numbers}
+\TODO{AI generated, verify}
+For $|z| < 1$, the function $\pi z \cot(\pi z)$ has the power series expansion
+$$
+\pi z \cot(\pi z) = 1 - 2 \sum_{m=1}^\infty \frac{(-1)^{m+1} (2\pi)^{2m} B_{2m}}{(2m)!} z^{2m},
+$$
+where $B_{2m}$ are the \CrefAndHyperrefIfExist{definition:bernoulli_numbers}{Bernoulli numbers} (with $B_1 = -1/2$, $B_{2m+1} = 0$ for $m \ge 1$).
+
+Equivalently,
+$$
+\pi \cot(\pi z) = \frac{1}{z} - 2 \sum_{m=1}^\infty \frac{(-1)^{m+1} (2\pi)^{2m} B_{2m}}{(2m)!} z^{2m-1}, \qquad 0 < |z| < 1.
+$$
+
+This follows from the generating function of the Bernoulli numbers:
+$$
+\frac{w}{e^w - 1} = \sum_{n=0}^\infty B_n \frac{w^n}{n!}, \qquad |w| < 2\pi,
+$$
+by setting $w = 2\pi i z$ and using $e^{2\pi i z} - 1 = 2i e^{\pi i z} \sin(\pi z)$, together with the definition of the \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions}.
+
+\CrefAndHyperrefIfExist{definition:bernoulli_numbers}{Bernoulli numbers}
+\CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions}
+\CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function}
+\end{proposition}

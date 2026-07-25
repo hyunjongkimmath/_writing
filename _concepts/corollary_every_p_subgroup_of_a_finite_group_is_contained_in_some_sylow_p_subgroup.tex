@@ -3,16 +3,15 @@ Let $G$ be a finite group and $p$ a prime number.
 Every \CrefAndHyperrefIfExist{definition:p_subgroup_of_a_finite_group}{$p$-subgroup} of $G$ is contained in some \CrefAndHyperrefIfExist{definition:sylow_p_subgroup_of_a_finite_group}{Sylow $p$-subgroup} of $G$.
 \end{corollary}
 \begin{proof}
-    \TODO{AI generated, verify}
     Let $Q$ be a $p$-subgroup of $G$. By Sylow's first theorem (\Cref{theorem:sylows_theorems}), there exists at least one \CrefAndHyperrefIfExist{definition:sylow_p_subgroup_of_a_finite_group}{Sylow $p$-subgroup} $P_0$ of $G$.
 
     The group $Q$ acts on the set of left cosets $G/P_0 = \{gP_0 : g \in G\}$ by left multiplication: for each $q \in Q$ and $gP_0 \in G/P_0$, we define $q \cdot (gP_0) = qgP_0$.
 
-    The number of cosets is $|G/P_0| = [G : P_0] = m$, where $p \nmid m$ because $|P_0| = p^n$ is the highest power of $p$ dividing $|G|$ by \Cref{definition:sylow_p_subgroup_of_a_finite_group}.
+    Let $m = |G/P_0| = [G : P_0] = m$\CrefIfExists{definition:index_of_a_subgroup_in_a_group}. Note that $p \nmid m$ because $|P_0| = p^n$ is the highest power of $p$ dividing $|G|$ since $P_0$ is a Sylow $p$-subgroup.
 
-    By the orbit-stabilizer bijection (\Cref{proposition:orbit_stabilizer_bijection_for_group_actions_on_sets}), each orbit of this action has cardinality equal to the index $[Q : \operatorname{Stab}_Q(gP_0)]$, which divides $|Q|$ by \Cref{theorem:lagranges_theorem_for_finite_groups}. Since $|Q|$ is a power of $p$ by \Cref{definition:p_subgroup_of_a_finite_group}, each orbit has size either $1$ or divisible by $p$. The orbits partition the set $G/P_0$, so $m = \sum_i |\mathcal{O}_i|$. Because the total sum $m$ is not divisible by $p$, there must exist at least one orbit whose size is not divisible by $p$. The only such divisor of a power of $p$ is $1$. Hence, there exists a fixed point $gP_0 \in G/P_0$ such that for all $q \in Q$, we have $qgP_0 = gP_0$.
+    By the \CrefAndHyperrefIfExist{proposition:orbit_stabilizer_bijection_for_group_actions_on_sets}{orbit-stabilizer bijection}, each orbit of this action has cardinality equal to the index $[Q : \operatorname{Stab}_Q(gP_0)]$\CrefIfExists{definition:stabilizer_of_an_element_of_a_set_under_a_group_action}, which divides $|Q|$ by \Cref{theorem:lagranges_theorem_for_finite_groups}. Since $|Q|$ is a power of $p$ by \CrefIfExists{definition:p_subgroup_of_a_finite_group}{definition}, each orbit has size either $1$ or divisible by $p$. The orbits \CrefAndHyperrefIfExist{definition:partition_of_a_set}{partition} the set $G/P_0$\CrefIfExists{proposition:orbits_of_group_action_form_equivalence_relation_on_set}, so $m = \sum_i |\mathcal{O}_i|$. Because the total sum $m$ is not divisible by $p$, there must exist at least one orbit whose size is not divisible by $p$. The only such divisor of a power of $p$ is $1$. Hence, there exists a fixed point $gP_0 \in G/P_0$ such that for all $q \in Q$, we have $qgP_0 = gP_0$.
 
     This implies that for all $q \in Q$, we have $g^{-1}qg \in P_0$ by \CrefIfExists{lemma:cosets_are_equal_iff_product_of_elements_is_in_subgroup}. Therefore, $g^{-1}Qg \subseteq P_0$, which implies that $Q \subseteq gP_0g^{-1}$.
 
-    The subgroup $P = gP_0g^{-1}$ has the same order as $P_0$, namely $p^n$. Hence, $P$ is a Sylow $p$-subgroup of $G$ by \Cref{definition:sylow_p_subgroup_of_a_finite_group}. Therefore, $Q$ is contained in the Sylow $p$-subgroup $P$.
+    The subgroup $P = gP_0g^{-1}$\TODO{reference that conjugating a subset of a group fixes order of the subset} has the same order as $P_0$, namely $p^n$. Hence, $P$ is a Sylow $p$-subgroup of $G$ by \Cref{definition:sylow_p_subgroup_of_a_finite_group}. Therefore, $Q$ is contained in the Sylow $p$-subgroup $P$.
 \end{proof}

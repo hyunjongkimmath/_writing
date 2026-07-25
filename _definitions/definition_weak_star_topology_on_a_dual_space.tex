@@ -1,0 +1,11 @@
+\begin{definition}[Weak* topology on a dual space] \label{definition:weak_star_topology_on_a_dual_space}
+    \TODO{AI generated, verify}
+
+    Let $V$ be a vector space over a field $k$, and let $V^*$ denote its algebraic dual. Fix a pairing $\langle V, V^* \rangle : V \times V^* \to k$ given by evaluation: $\langle v, f \rangle = f(v)$ for $v \in V$ and $f \in V^*$. The \hldef{weak* topology on $V^*$} is the \CrefAndHyperrefIfExist{definition:initial_topology_on_a_set_with_respect_to_a_family_of_functions}{initial topology} with respect to the family of evaluation maps $\{\mathrm{ev}_v : V^* \to k\}_{v \in V}$, where each copy of $k$ carries its standard topology.
+
+    Equivalently, a net $(f_\alpha)_{\alpha \in D}$ in $V^*$ converges to $f \in V^*$ in the weak* topology if and only if $f_\alpha(v) \to f(v)$ in $k$ for every $v \in V$. A subset $C \subseteq V^*$ is called \hldef{weak*-closed} if it is closed in the weak* topology.
+
+    When $V$ carries a norm, we write $V'$ for its continuous dual and $V^{**}$ for the bidual. The weak* topology on $V^*$ is always coarser than the original norm topology (the topology induced by operator norms), and they coincide if and only if $V$ is finite-dimensional.
+
+    By the Banach–Alaoglu theorem, when $k = \mathbb{R}$ or $\mathbb{C}$ and $V$ is a normed vector space, the closed unit ball in $V^*$ is compact in the weak* topology.
+\end{definition}

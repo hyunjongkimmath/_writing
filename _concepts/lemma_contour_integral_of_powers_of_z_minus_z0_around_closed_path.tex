@@ -1,0 +1,35 @@
+\begin{lemma} \label{lemma:contour_integral_of_powers_of_z_minus_z0_around_closed_path}
+    \TODO{AI generated, verify}
+    Let $\gamma : [a,b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{closed} \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} and let $z_0 \in \mathbb{C} \setminus \gamma([a,b])$ be a point not lying on the image of $\gamma$. For every integer $n \in \mathbb{Z}$, we have
+    $$\oint_{\gamma} (z - z_0)^n \, dz =
+    \begin{cases}
+        2\pi i \cdot n(\gamma, z_0), & n = -1,\\
+        0,                           & n \neq -1,
+    \end{cases}$$
+    where $n(\gamma, z_0)$ is the \CrefAndHyperrefIfExist{definition:winding_number_of_a_closed_path_around_a_point}{winding number of $\gamma$ around $z_0$}.
+    \CrefIfExists{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We consider two cases.
+
+    \begin{enumerate}
+        \item Suppose $n \neq -1$. The function $(z - z_0)^n$ admits a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic} primitive on $\mathbb{C} \setminus \{z_0\}$, namely
+        $$F(z) = \frac{(z - z_0)^{n+1}}{n+1},$$
+        whose derivative is $F'(z) = (z - z_0)^n$
+        \CrefIfExists{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}.
+
+        By \Cref{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}, we have
+        $$\int_{\gamma} (z - z_0)^n \, dz = \int_a^b (\gamma(t) - z_0)^n \gamma'(t) \, dt.$$
+        Since $\frac{d}{dt} F(\gamma(t)) = F'(\gamma(t))\gamma'(t) = (\gamma(t) - z_0)^n \gamma'(t)$ by the chain rule (\Cref{proposition:complex_derivative_rules_for_sum_product_quotient_and_chain}) and the definition of $F$, by \Cref{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative} applied separately to the real and imaginary parts of $F \circ \gamma$ (which are real-valued differentiable functions) we obtain
+        $$\int_a^b (\gamma(t) - z_0)^n \gamma'(t) \, dt = F(\gamma(b)) - F(\gamma(a)).$$
+        Because $\gamma$ is a closed path, we have $\gamma(b) = \gamma(a)$\CrefIfExists{definition:path_and_loop_in_a_topological_space}, so $F(\gamma(b)) = F(\gamma(a))$ and therefore
+        $$\int_{\gamma} (z - z_0)^n \, dz = 0.$$
+
+        \item Suppose $n = -1$. By \Cref{definition:winding_number_of_a_closed_path_around_a_point}, we have
+        $$n(\gamma, z_0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z - z_0},$$
+        so multiplying both sides by $2\pi i$ gives $\int_{\gamma} (z - z_0)^{-1} \, dz = 2\pi i \cdot n(\gamma, z_0)$.
+    \end{enumerate}
+
+    Thus the claimed formula holds in both cases.
+\end{proof}

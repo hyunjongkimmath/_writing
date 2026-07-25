@@ -1,0 +1,45 @@
+\begin{definition}[Serre spectral sequence] \label{definition:serre_spectral_sequence}
+
+Let $p: E \to B$ be a \CrefAndHyperrefIfExist{definition:serre_fibration_of_topological_spaces}{Serre fibration} (or more generally, a fiber bundle) of path-connected \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, with base point $b_0 \in B$ and fiber $F = p^{-1}(b_0)$. Let $\calR$ be a commutative ring with unity.
+
+\begin{enumerate}
+    \item There exists a cohomological \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{spectral sequence in the category of $\calR$-modules}, called the \hldef{Serre spectral sequence} associated to the fibration $p$, with $E_2$-term:
+    $$ E_2^{p,q} = H^p\bigl(B, \mathcal{H}^q(F; \calR)\bigr) $$
+    converging to the graded ring associated to a filtered module over $H^{p+q}(E; \calR)$:
+    $$ E_2^{p,q} \implies H^{p+q}(E; \calR). $$
+    Here $\mathcal{H}^q(F; \calR)$ denotes the local coefficient system on $B$ given by the cohomology of the fibers with coefficients in $\calR$. More precisely, for each point $b \in B$, the fiber $F_b = p^{-1}(b)$ is homotopy equivalent to $F$ (at least when $p$ is a fiber bundle over a path-connected base), and the assignment $b \mapsto H^q(F_b; \calR)$ defines a locally constant sheaf on $B$. When $\pi_1(B)$ acts trivially on $H^q(F; \calR)$, this local system reduces to the constant sheaf with stalk $H^q(F; \calR)$.
+
+    \item The Serre spectral sequence is functorial in the fibration. Given a morphism of fibrations over the same base
+    $$
+    \begin{tikzcd}
+    E' \arrow[r, "f"] \arrow[d, "p'"] & E \arrow[d, "p"] \\
+    B \arrow[Rightarrow, equal] & B
+    \end{tikzcd}
+    $$
+    there is an induced morphism of spectral sequences from that of $p'$ to that of $p$, compatible with the map on cohomology $H^*(E; \calR) \to H^*(E'; \calR)$.
+
+    \item The edge homomorphisms yield:
+    $$ E_2^{n,0} = H^n(B; \calR) \xrightarrow{\ p^*\ } H^n(E; \calR) \quad \text{(pullback)} $$
+    and
+    $$ H^n(E; \calR) \to E_\infty^{0,n} \hookrightarrow E_2^{0,n} = H^0(B; \mathcal{H}^n(F; \calR)) \cong H^n(F; \calR)^{\pi_1(B)} $$
+    (restriction to the fiber, landing in the $\pi_1(B)$-invariant part).
+
+    \item The $E_2$ page carries a graded ring structure induced by the cup product on cohomology. The differentials are derivations with respect to this product structure: for homogeneous elements $x, y$,
+    $$ d_r(xy) = d_r(x)y + (-1)^{|x|} x\,d_r(y). $$
+
+    \item If the local coefficient system $\mathcal{H}^q(F; \calR)$ is trivial (e.g., when $B$ is simply connected), then:
+    $$ E_2^{p,q} = H^p(B; \calR) \otimes_\calR H^q(F; \calR). $$
+
+    \item The Serre spectral sequence can be constructed by filtering the singular cochain complex $C^*(E; \calR)$ according to the skeletal filtration of the base $B$. Let $B^{(n)}$ denote the $n$-skeleton of $B$ (or more generally, a filtration of $B$ by subspaces). Define:
+    $$ F^n C^k(E) = \ker\bigl(C^k(E) \to C^k(p^{-1}(B^{(n-1)}))\bigr). $$
+    This is a decreasing filtration of the cochain complex, and the associated spectral sequence has $E_0$ term related to relative cochains on the fibers over skeleta. The $E_1$ page involves cochains on the pairs $(p^{-1}(B^{(n)}), p^{-1}(B^{(n-1)}))$, which are essentially cochains on the fiber, yielding $E_1^{p,q} \cong C^p(B; \mathcal{H}^q(F; \calR))$.
+
+    \item For a fibration with fiber $F$ over base $B$, if both $H^*(B; \calR)$ and $H^*(F; \calR)$ are finitely generated $\calR$-modules in each degree, then the Euler characteristic satisfies:
+    $$ \chi(E) = \chi(B) \cdot \chi(F), $$
+    provided that either $\chi(B) = 0$ or $\chi(F) = 0$, or more generally when the spectral sequence collapses at $E_2$.
+
+    \item The Serre spectral sequence generalizes the \CrefAndHyperrefIfExist{definition:kunneth_spectral_sequence}{Künneth spectral sequence}: for a product space $E = B \times F$ with the trivial fibration $p: B \times F \to B$, the $E_2$ term becomes $H^p(B; \calR) \otimes H^q(F; \calR)$ and the spectral sequence degenerates at $E_2$, recovering the Künneth formula.
+\end{enumerate}
+
+\TODO{AI generated, verify}
+\end{definition}

@@ -1,0 +1,9 @@
+\begin{theorem}[Change of variables for Lebesgue integrals on $\mathbb{R}^n$] \label{theorem:change_of_variables_for_lebesgue_integrals_on_Rn}
+    \TODO{AI generated, verify}
+    Let $U, V \subseteq \mathbb{R}^n$ be \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring}{open subsets} and let $\Phi : U \to V$ be a \CrefAndHyperrefIfExist{definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions}{$C^1$} diffeomorphism. For any \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue measurable function} $f : V \to [0,\infty]$, we have
+    $$\hlin{\int_V f(y)\,d\lambda^n(y) = \int_U f(\Phi(x))\,|\det D\Phi(x)|\,d\lambda^n(x),}$$
+    \CrefIfExists{definition:determinant_of_a_matrix_over_a_ring}
+    where $D\Phi(x)$ denotes the \hldef{Jacobian matrix} of $\Phi$ at $x$ and $|\det D\Phi(x)|$ is its absolute determinant.
+
+    If $f : V \to \overline{\mathbb{R}}$ is Lebesgue integrable, then the same equality holds, with both sides finite.
+\end{theorem}

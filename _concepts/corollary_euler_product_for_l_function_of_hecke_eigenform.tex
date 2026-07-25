@@ -1,0 +1,70 @@
+\begin{corollary} \label{corollary:euler_product_for_l_function_of_hecke_eigenform}
+\TODO{AI generated, verify}
+Let $k$ be a positive even integer and let $\Gamma = \mathrm{SL}_2(\bbZ)$. Let $f$ in the \CrefAndHyperref{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$ be a nonzero \CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{cusp form} that is a simultaneous eigenform for all Hecke operators, i.e., there exist complex numbers $\lambda_n$ such that
+$$T_n f = \lambda_n \cdot f \quad \text{for all } n \geq 1.$$
+
+Normalize $f$ so that its first Fourier coefficient is $a_1 = 1$. Then:
+
+\begin{enumerate}
+    \item The eigenvalues satisfy $\lambda_n = a_n$ for all $n \geq 1$, where $a_n$ are the Fourier coefficients of $f(z) = \sum_{n=0}^\infty a_n q^n$.
+
+    \item The eigenvalues (and Fourier coefficients) are multiplicative: if $(m, n) = 1$, then
+    $$\hlin{a_{mn} = a_m a_n.}$$
+
+    \item The eigenvalues satisfy the recurrence relation for each prime $p$ and $r \geq 1$:
+    $$\hlin{a_p^r \cdot a_p = a_{p^{r+1}} + p^{k-1} a_p^{r-1}.}$$
+
+    \item The \CrefAndHyperrefIfExist{definition:L_function_of_a_modular_form}{L-function of $f$} admits an Euler product expansion:
+    $$\hlin{L(f,s) = \sum_{n=1}^\infty a_n n^{-s} = \prod_p \left(1 - a_p p^{-s} + p^{k-1-2s}\right)^{-1},}$$
+    which converges absolutely for $\operatorname{Re}(s)$ sufficiently large.
+
+    \item The Fourier coefficients $a_n$ are algebraic integers for all $n \geq 1$.
+\end{enumerate}
+
+\CrefAndHyperrefIfExist{definition:hecke_operator_on_modular_forms_for_SL_2_Z}{Hecke operator}
+\CrefAndHyperrefIfExist{definition:L_function_of_a_modular_form}{L-function of a modular form}
+\end{corollary}
+
+% ============================================================================
+% PROOF OUTLINE — Reference these labels when writing the proof:
+% ============================================================================
+%
+% === Proof of part 1 (eigenvalues = Fourier coefficients): ===
+% Since T_n f = λₙ f, compare Fourier coefficients on both sides.
+% From the definition in definition:hecke_operator_on_modular_forms_for_SL_2_Z, the first Fourier coefficient b₁ of T_n f is:
+%   b₁ = ∑_{d|gcd(1,n)} d^{k-1} a_{n/d²} = a_n  (since gcd(1,n) = 1, so only d=1 contributes).
+% Thus λₙ · a₁ = a_n. Since a₁ = 1 by normalization, λₙ = a_n.
+% Reference: definition:hecke_operator_on_modular_forms_for_SL_2_Z (Fourier coefficient formula for T_n f)
+%           definition:L_function_of_a_modular_form (L-function def)
+%
+% === Proof of part 2 (multiplicativity): ===
+% Since f is an eigenform, T_m T_n f = λₘλₙ f and T_{mn} f = λ_{mn} f.
+% For (m,n) = 1: T_m T_n = T_{mn} by proposition:hecke_operators_commute_and_satisfy_recurrence_relations part (1).
+% Hence λₘλₙ f = T_m T_n f = T_{mn} f = λ_{mn} f. Since f ≠ 0, we get λ_{mn} = λₘλₙ, i.e., a_{mn} = a_m a_n.
+% Reference: proposition:hecke_operators_commute_and_satisfy_recurrence_relations (T_m T_n = T_{mn} for coprime m,n)
+%
+% === Proof of part 3 (recurrence): ===
+% Apply the same logic to the prime power relation T_p^{r+1} = T_p^r · T_p - p^{k-1} T_p^{r-1}.
+% Acting on f: λ_p^{r+1} f = T_p^{r+1} f = (T_p^r · T_p)f - p^{k-1} T_p^{r-1}f = (λ_p^r · λ_p - p^{k-1} λ_{p^{r-1}}) f.
+% Hence a_{p^{r+1}} = a_p^{r+1} = a_p^r · a_p - p^{k-1} a_{p^{r-1}}, which gives the recurrence.
+% Reference: proposition:hecke_operators_commute_and_satisfy_recurrence_relations (T_p^r T_p = T_p^{r+1} + p^{k-1} T_p^{r-1})
+%           definition:hecke_operator_on_modular_forms_for_SL_2_Z (Hecke operator def)
+%
+% === Proof of part 4 (Euler product): ===
+% Use the multiplicativity a_{mn} = a_m a_n for (m,n)=1 to write:
+%   L(f,s) = ∑_{n=1}^∞ a_n n^{-s} = ∏_p (∑_{r=0}^∞ a_{p^r} p^{-rs}).
+% For each prime p, use the recurrence from part 3 to show:
+%   (1 - a_p p^{-s} + p^{k-1-2s}) · ∑_{r=0}^∞ a_{p^r} p^{-rs} = 1.
+% This is verified by expanding the product and using the recurrence relation to cancel all terms for r ≥ 2,
+% while the r=0 term gives 1 and the r=1 term gives 0.
+% Hence ∑_{r=0}^∞ a_{p^r} p^{-rs} = (1 - a_p p^{-s} + p^{k-1-2s})^{-1}.
+% The absolute convergence for Re(s) >> 0 follows from the bound |a_n| ≤ d(n) n^{(k-1)/2} (Ramanujan-Petersson).
+% Reference: definition:L_function_of_a_modular_form (L-function as Dirichlet series)
+%           corollary:euler_product_for_l_function_of_hecke_eigenform (multiplicativity from parts 1-3)
+%
+% === Proof of part 5 (algebraic integers): ===
+% The Hecke operators T_n are defined over ℤ (their matrix coefficients in any basis with algebraic integer Fourier
+% coefficients are algebraic integers). Since f is an eigenvector for all T_n, the eigenvalues λₙ = aₙ are algebraic
+% integers. More precisely, the characteristic polynomial of each T_p has integer coefficients, so its roots (which include a_p)
+% are algebraic integers.
+% Reference: definition:hecke_operator_on_modular_forms_for_SL_2_Z (Hecke operator def — matrix entries are rational/integer)

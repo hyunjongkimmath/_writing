@@ -1,0 +1,35 @@
+\begin{definition}[de Rham cohomology of a smooth manifold] \label{definition:de_rham_cohomology_of_a_smooth_manifold}
+
+Let $M$ be an $n$-dimensional \CrefAndHyperrefIfExist{definition:C_infty_atlas_on_a_topological_manifold}{smooth manifold}. The \hldef{de Rham complex} of $M$ is the cochain complex $(\Omega^*(M), d)$ defined as follows:
+
+\begin{enumerate}
+    \item For each integer $0 \leq k \leq n$, let $\Omega^k(M)$ denote the space of smooth differential $k$\hypformulas on $M$, consisting of smooth sections of the exterior power bundle $\Lambda^k T^*M$. The space $\Omega^0(M) = C^\infty(M)$ consists of smooth functions on $M$.
+
+    \item Let $d: \Omega^k(M) \to \Omega^{k+1}(M)$ be the \CrefAndHyperrefIfExist{definition:exterior_derivative_on_smooth_k_forms_on_a_smooth_manifold}{exterior derivative}. By property of the exterior derivative, $d \circ d = 0$, so we have a cochain complex:
+    $$ 0 \to \Omega^0(M) \xrightarrow{\ d\ } \Omega^1(M) \xrightarrow{\ d\ } \Omega^2(M) \xrightarrow{\ d\ } \cdots \xrightarrow{\ d\ } \Omega^n(M) \to 0 $$
+
+    \item The \hldef{de Rham cohomology groups of $M$} are the cohomology groups of this complex:
+    $$ H^k_{\mathrm{dR}}(M) := \frac{\ker(d: \Omega^k(M) \to \Omega^{k+1}(M))}{\operatorname{im}(d: \Omega^{k-1}(M) \to \Omega^k(M))} $$
+    for $0 \leq k \leq n$. Elements of $\ker(d)$ are called closed forms, and elements of $\operatorname{im}(d)$ are called exact forms. Thus $H^k_{\mathrm{dR}}(M) = Z^k(M) / B^k(M)$.
+
+    \item The de Rham cohomology groups carry the structure of real vector spaces. By linearity of $d$, addition and scalar multiplication on forms descend to well-defined operations on the quotient. In particular:
+    $$ H^0_{\mathrm{dR}}(M) = C^\infty(M)^{\operatorname{const}} \cong \mathbb{R}^{c(M)} $$
+    where $c(M)$ is the number of path-connected components of $M$.
+
+    \item The wedge product descends to a bilinear map on cohomology classes:
+    $$ H^p_{\mathrm{dR}}(M) \times H^q_{\mathrm{dR}}(M) \to H^{p+q}_{\mathrm{dR}}(M), \quad [\omega] \smile [\eta] = [\omega \wedge \eta] $$
+    making $H^*_{\mathrm{dR}}(M) = \bigoplus_k H^k_{\mathrm{dR}}(M)$ into a graded-commutative $\mathbb{R}$-algebra.
+
+    \item For any smooth map $f: M \to N$, the pullback $f^*: \Omega^*(N) \to \Omega^*(M)$ commutes with $d$ and thus induces linear maps on cohomology:
+    $$ f^*: H^*_{\mathrm{dR}}(N) \to H^*_{\mathrm{dR}}(M) $$
+    making de Rham cohomology a contravariant functor from the category of smooth manifolds and smooth maps to graded real algebras.
+
+    \item If $U_1, U_2 \subseteq M$ are open subsets with inclusions $i_j: U_j \hookrightarrow M$, then the restriction map on forms induces:
+    $$ H^*_{\mathrm{dR}}(M) \to H^*_{\mathrm{dR}}(U_1 \cap U_2) $$
+    and for any open cover $\{U_\alpha\}$ of $M$, there is a Mayer--Vietoris long exact sequence:
+    $$ \cdots \to H^k_{\mathrm{dR}}(M) \to H^k_{\mathrm{dR}}(U_1) \oplus H^k_{\mathrm{dR}}(U_2) \to H^k_{\mathrm{dR}}(U_1 \cap U_2) \xrightarrow{\ d^* } H^{k+1}_{\mathrm{dR}}(M) \to \cdots $$
+    where $d^*$ is the connecting homomorphism.
+\end{enumerate}
+
+\TODO{AI generated, verify}
+\end{definition}

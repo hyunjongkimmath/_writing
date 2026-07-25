@@ -1,7 +1,42 @@
 \begin{theorem}[Witt decomposition theorem] \label{theorem:witt_decomposition_theorem_for_quadratic_forms_over_fields}
-Let $R$ be a \CrefAndHyperrefIfExist{definition:field}{field} and $q: M \to R$ a \CrefAndHyperrefIfExist{definition:nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring}{non-degenerate} \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{quadratic form}. 
-Then there exists a unique (up to isomorphism) decomposition $M \cong M_a \oplus H^k$ where $M_a$ is \CrefAndHyperrefIfExist{definition:isotropic_vector_subspace_anisotropic_quadratic_form_of_a_module_over_a_commutative_ring_with_quadratic_form}{anisotropic} and $H^k$ is a direct sum of $k$ \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic planes}.
-\TODO{direct sum of quadratic modules}
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $(M, q)$ be a finite-dimensional quadratic module over $F$ with nondegenerate polarization. Then there exists an isometric decomposition
+$$M \cong M_a \oplus H^k$$
+where $(M_a, q|_{M_a})$ is \CrefAndHyperrefIfExist{definition:isotropic_vector_subspace_anisotropic_quadratic_form_of_a_module_over_a_commutative_ring_with_quadratic_form}{anisotropic} and $H^k$ is a direct sum of $k$ \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic planes}. The pair $(M_a, k)$ is unique up to isometry.
 
-The integer $k$ is called the \hldef{\emph{Witt index} of $q$}.
+The integer $k$ is called the \hldef{\emph{Witt index} of $q$.}
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove existence and uniqueness separately.
+
+    \textbf{(Existence.)} We proceed by induction on $\dim M$. If $\dim M = 0$, then $M = 0$ is trivially anisotropic with $k = 0$. If $(M, q)$ is anisotropic, then $M_a = M$ and $k = 0$.
+
+    Suppose that $(M, q)$ contains a nonzero isotropic vector $x \in M$, i.e., $q(x) = 0$ with $x \neq 0$. We show that there exists another isotropic vector $y \in M$ such that $\operatorname{span}\{x, y\}$ is a hyperbolic plane. Since the polarization $B_q$ is nondegenerate by hypothesis (\Cref{definition:nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring}), there exists some $z \in M$ such that $B_q(x, z) \neq 0$. By scaling $z$, we may assume $B_q(x, z) = 1$. Define
+    $$y' = z - q(z)x.$$
+    We verify that $y'$ is isotropic. For any scalar $c \in F$ and vectors $u, v \in M$:
+    $$q(u + cv) = q(u) + c B_q(u,v) + c^2 q(v).$$
+    Applying this with $u = z$, $v = -x$, and $c = q(z)$:
+    $$q(y') = q(z) + q(z) B_q(z, -x) + q(z)^2 q(-x).$$
+    Since $B_q$ is bilinear, $B_q(z, -x) = -B_q(z, x) = -1$, and since $q(-x) = (-1)^2 q(x) = 0$:
+    $$q(y') = q(z) - q(z) \cdot 1 + 0 = 0.$$
+    Hence, $y'$ is isotropic. Moreover, $B_q(x, y') = B_q(x, z) + q(z) B_q(x, -x) = 1 + q(z) \cdot 0 = 1$. Therefore, $\operatorname{span}\{x, y'\}$ is a hyperbolic plane by \Cref{proposition:isomorphism_criterion_for_a_quadratic_module_over_a_commutative_ring_to_be_a_hyperbolic_plane}.
+
+    Let $W = \operatorname{span}\{x, y'\}$. We show that the orthogonal complement of $W$ in $M$ with respect to $B_q$ is nondegenerate and that $M = W \oplus W^{\perp}$ as an orthogonal direct sum. The Gram matrix of $\{x, y'\}$ has entries:
+    $$B_q(x, x) = 2q(x) = 0, \quad B_q(x, y') = 1, \quad B_q(y', x) = 1, \quad B_q(y', y') = 2q(y') = 0.$$
+    The determinant is $-1 \neq 0$, so $W$ itself is nondegenerate. For any vector $v \in M$ orthogonal to all of $W$, we have $B_q(v, x) = 0$ and $B_q(v, y') = 0$. If such a $v$ were also orthogonal to all of $W^{\perp}$ (the $B_q$-orthogonal complement of $W$ in $M$), then $v \in W \cap W^{\perp}$. But since $W$ is nondegenerate, $W \cap W^{\perp} = \{0\}$. Hence, the restriction of $B_q$ to $W^{\perp}$ is nondegenerate.
+    \TODO{AI generated, reference needed: lemma that a nondegenerate subspace $S$ of a finite-dimensional quadratic space over a field satisfies $V = S \oplus S^{\perp}$ and $S^{\perp}$ inherits nondegeneracy}
+
+    We have $M = W \oplus W^{\perp}$ as an orthogonal direct sum. The restriction of $q$ to $W^{\perp}$ has a nondegenerate polarization by the argument above. By the inductive hypothesis applied to $(W^{\perp}, q|_{W^{\perp}})$, there exists a decomposition
+    $$W^{\perp} \cong M_a' \oplus H^{k'}$$
+    where $M_a'$ is anisotropic. Therefore, $M = W \oplus W^{\perp} \cong H \oplus M_a' \oplus H^{k'} \cong M_a' \oplus H^{k'+1}$, which completes the inductive step.
+
+    The induction terminates because at each step either the space is anisotropic (base case) or we reduce the dimension by 2. Hence, a Witt decomposition exists.
+
+    \textbf{(Uniqueness.)} Suppose that $(M, q)$ admits two decompositions:
+    $$M \cong M_1 \oplus H^{k_1} \quad \text{and} \quad M \cong M_2 \oplus H^{k_2},$$
+    where $M_1$ and $M_2$ are anisotropic. Without loss of generality, assume $k_1 \geq k_2$. We apply Witt cancellation (\Cref{proposition:witt_cancellation_for_quadratic_forms_over_a_field}) repeatedly to cancel $H^{k_2}$ from both sides:
+    $$M_1 \oplus H^{k_1 - k_2} \cong M_2.$$
+    If $k_1 > k_2$, then $M_2$ contains a hyperbolic plane as a direct summand, which means $M_2$ has nonzero isotropic vectors. This contradicts the assumption that $M_2$ is anisotropic (\Cref{definition:isotropic_vector_subspace_anisotropic_quadratic_form_of_a_module_over_a_commutative_ring_with_quadratic_form}). Hence, $k_1 = k_2$, and we obtain $M_1 \cong M_2$.
+
+    Therefore, the Witt decomposition is unique up to isometry.
+\end{proof}

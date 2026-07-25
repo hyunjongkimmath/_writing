@@ -1,0 +1,9 @@
+\begin{definition}[Weak topology on a vector space] \label{definition:weak_topology_on_a_vector_space}
+    \TODO{AI generated, verify}
+
+    Let $V$ be a vector space over a field $k$, and let $\langle V, V^* \rangle : V \times V^* \to k$ denote the canonical bilinear pairing between $V$ and its algebraic dual $V^*$. The \hldef{weak topology on $V$} is the \CrefAndHyperrefIfExist{definition:initial_topology_on_a_set_with_respect_to_a_family_of_functions}{initial topology} with respect to the family of all linear functionals $\{f : V \to k\}_{f \in V^*}$, where each copy of $k$ carries its standard topology.
+
+    Equivalently, a net $(x_\alpha)_{\alpha \in D}$ in $V$ converges weakly to $x \in V$ if and only if $f(x_\alpha) \to f(x)$ in $k$ for every $f \in V^*$. A subset $C \subseteq V$ is called \hldef{weakly closed} if it is closed in the weak topology.
+
+    When $V$ carries an additional norm (or more generally a locally convex topology), the \hldef{continuous dual space} $V'$ of continuous linear functionals may be smaller than the full algebraic dual $V^*$. In this case, one defines the \hldef{weak topology relative to the pairing $\langle V, V' \rangle$} as the initial topology with respect to $\{f : V \to k\}_{f \in V'}$. The weak topology is always coarser than the original norm (or locally convex) topology on $V$, and they coincide if and only if $V$ is finite-dimensional.
+\end{definition}

@@ -1,0 +1,34 @@
+\begin{proposition}[Value of the Gamma function at one half] \label{proposition:value_of_gamma_function_at_one_half}
+	\TODO{AI generated, verify}
+	The \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(z)$ evaluated at $z = 1/2$ satisfies
+	$$
+	\boxed{\Gamma(1/2) = \sqrt{\pi}.}
+	$$
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+\end{proposition}
+
+\begin{proof}
+	\TODO{AI generated, verify}
+	By the definition of the Gamma function\Cref{definition:gamma_function}, we have
+	$$\Gamma(1/2) = \int_0^\infty t^{-1/2} e^{-t}\,dt.$$
+	We make the substitution $t = u^2$, so that $dt = 2u\,du$ and $t^{-1/2} = 1/u$. The limits of integration transform from $(0, \infty)$ to $(0, \infty)$. Applying the substitution rule for integrals\Cref{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals} (extended to improper integrals\TODO{AI generated, reference needed: proposition on substitution rule for improper integrals}), we obtain
+	$$\Gamma(1/2) = \int_0^\infty \frac{1}{u} e^{-u^2} \cdot 2u\,du = 2 \int_0^\infty e^{-u^2}\,du.$$
+
+	We compute the Gaussian integral $I = \int_{-\infty}^\infty e^{-x^2}\,dx$. Because the integrand is an even function, we have
+	$$\Gamma(1/2) = I.$$
+	Squaring and writing as a double integral over $\mathbb{R}^2$:
+	$$I^2 = \left( \int_{-\infty}^\infty e^{-x^2}\,dx \right) \left( \int_{-\infty}^\infty e^{-y^2}\,dy \right) = \iint_{\mathbb{R}^2} e^{-(x^2 + y^2)}\,dx\,dy.$$
+	By Fubini's theorem\Cref{theorem:fubini_theorem}, the iterated integrals equal the double integral. We switch to polar coordinates $x = r\cos\theta$, $y = r\sin\theta$, with Jacobian determinant $r$. The integral becomes
+	$$I^2 = \int_0^{2\pi} \int_0^\infty e^{-r^2} r\,dr\,d\theta.$$
+	The inner integral is evaluated by the substitution $s = r^2$, $ds = 2r\,dr$:
+	$$\int_0^\infty e^{-r^2} r\,dr = \frac{1}{2} \int_0^\infty e^{-s}\,ds = \frac{1}{2}.$$
+	The outer integral is then
+	$$I^2 = \int_0^{2\pi} \frac{1}{2}\,d\theta = \pi.$$
+	Taking the positive square root (since $e^{-x^2} > 0$ for all real $x$, so $I > 0$):
+	$$I = \sqrt{\pi}.$$
+	Consequently, $\Gamma(1/2) = I = \sqrt{\pi}$.
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+	\Cref{theorem:fubini_theorem}
+\end{proof}

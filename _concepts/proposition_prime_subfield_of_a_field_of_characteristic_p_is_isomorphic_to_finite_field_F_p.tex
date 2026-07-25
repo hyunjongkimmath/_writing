@@ -1,0 +1,12 @@
+\begin{proposition} \label{proposition:prime_subfield_of_a_field_of_characteristic_p_is_isomorphic_to_finite_field_F_p}
+    \TODO{AI generated, verify}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:field}{field} and suppose that $\operatorname{char}(K) = p > 0$ is a \CrefAndHyperrefIfExist{definition:prime_number}{prime number}. Then the \CrefAndHyperrefIfExist{definition:prime_subfield_of_a_field}{prime subfield} of $K$ is isomorphic to the \CrefAndHyperrefIfExist{definition:finite_field}{finite field} $\bbF_p \cong \bbZ/p\bbZ$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\phi : \bbZ \to K$ be the unique ring homomorphism sending $1_\bbZ$ to $1_K$. By \Cref{definition:characteristic_of_a_ring}, the kernel of $\phi$ is $\operatorname{ker}(\phi) = (p)$, because $\operatorname{char}(K) = p$. Hence $\phi$ factors through the quotient $\bbZ/(p) = \bbZ/p\bbZ$, inducing an injective ring homomorphism
+    $$\overline{\phi} : \bbZ/p\bbZ \hookrightarrow K.$$
+    The image $\operatorname{Im}(\overline{\phi})$ is a subring of $K$ isomorphic to $\bbZ/p\bbZ$. Since $\bbZ/p\bbZ$ is a field, its isomorphic image $\operatorname{Im}(\overline{\phi})$ is therefore a subfield of $K$.
+
+    The prime subfield of $K$ is the intersection of all subfields of $K$. Consequently, it is contained in $\operatorname{Im}(\overline{\phi})$. Conversely, $\operatorname{Im}(\overline{\phi})$ is itself a subfield of $K$, so the prime subfield (being the intersection of all subfields) is contained in $\operatorname{Im}(\overline{\phi})$. Therefore the prime subfield equals $\operatorname{Im}(\overline{\phi})$, which is isomorphic to $\bbF_p \cong \bbZ/p\bbZ$.
+\end{proof}

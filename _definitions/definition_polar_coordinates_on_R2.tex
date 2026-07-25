@@ -1,0 +1,18 @@
+\begin{definition}[Polar coordinates on $\mathbb{R}^2$] \label{definition:polar_coordinates_on_R2}
+    \TODO{AI generated, verify}
+    The \hldef{polar coordinate map} is the function $\Phi : [0,\infty) \times \mathbb{R} \to \mathbb{R}^2$ defined by
+    $$\hlin{\Phi(r,\theta) = (r\cos\theta,\; r\sin\theta).}$$
+
+    For a point $(x,y) \in \mathbb{R}^2 \setminus \{(0,0)\}$, the standard restrictions are
+    \hl{$r = \sqrt{x^2 + y^2} > 0$} (the \hldef{radial coordinate}) and
+    $\theta$ (the \hldef{angular coordinate}) is any real number satisfying
+    $x = r\cos\theta$ and $y = r\sin\theta$.
+
+    The restriction of $\Phi$ to $(0,\infty) \times (-\pi,\pi]$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection} onto $\mathbb{R}^2 \setminus \{(0,0)\}$.
+    The \hldef{standard domain for polar coordinates} is the open set
+    $$U = (0,\infty) \times (-\pi,\pi) \subseteq \mathbb{R}^2,$$
+    on which $\Phi$ is a \CrefAndHyperrefIfExist{definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions}{$C^\infty$} diffeomorphism onto its image $\Phi(U) = \mathbb{R}^2 \setminus \{(x,0) : x \leq 0\}$.
+
+    The \hldef{Jacobian determinant of the polar coordinate transformation} is
+    $$\hlin{\det D\Phi(r,\theta) = r.}$$
+\end{definition}

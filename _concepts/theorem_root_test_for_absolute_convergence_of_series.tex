@@ -1,14 +1,15 @@
 \begin{theorem}[Root test for absolute convergence of series] \label{theorem:root_test_for_absolute_convergence_of_series}
     \TODO{AI generated, verify}
+    \TODO{generalize this to encompass more general extended metric spaces, not just $\bbR$ or $\bbC$}
     Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}. Suppose that the limit
     $$L = \limsup_{n \to \infty} |a_n|^{1/n}$$
     exists in $\mathbb{R}_{\geq 0}$.
 
     \begin{enumerate}
-        \item If $L < 1$, then the series $\sum_{n=1}^\infty a_n$ converges absolutely.
-        \item If $L > 1$, then the series $\sum_{n=1}^\infty a_n$ diverges (and in particular $a_n \not\to 0$).
+        \item If $L < 1$, then the series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely}.
+        \item If $L > 1$, then the series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{diverges} (and in particular $a_n \not\to 0$).
     \end{enumerate}
-    The case $L = 1$ is inconclusive.
+    The case $L = 1$ is inconclusive, i.e. in general such a sequence may converge or diverge.
 \end{theorem}
 \begin{proof}
     \TODO{AI generated, verify}

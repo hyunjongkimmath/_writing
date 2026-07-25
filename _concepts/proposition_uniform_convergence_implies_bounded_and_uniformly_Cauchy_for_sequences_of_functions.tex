@@ -1,6 +1,6 @@
 \begin{proposition} \label{proposition:uniform_convergence_implies_bounded_and_uniformly_Cauchy_for_sequences_of_functions}
-    \TODO{The use of \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group} is incorrect here probably.}
-    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, let $X$ be a set, and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
+    \TODO{AI generated, verify — hypothesis strengthened: $T$ is now the positive cone of a dense-at-zero totally ordered ring, so that \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group} applies to the ambient ordered abelian group $(R,+)$.}
+    Let $T = R_{\ge 0}$ be the \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} of a totally ordered ring $R$ that is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. In particular, $T$ is an ordered semiring with an adjoined infinity $T^\infty$. Let $X$ be a set, and let $(Y, d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space valued in $T^\infty$}.
     Let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : X \to Y$, and let $f : X \to Y$.
 
     If $(f_n)$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges uniformly} to $f$ on $X$, then:
@@ -21,7 +21,7 @@
     Unwinding the definition of convergence in $T^\infty$, for every $\varepsilon \in T_{>0}$ there exists $N \in \mathbb{N}$ such that for all $n \geq N$, one has $\sup_{x \in X} d(f_n(x), f(x)) < \varepsilon$. 
     % Because $\varepsilon$ is finite (it lies in $T_{>0} \subseteq T$), the supremum itself must be finite for all sufficiently large $n$.
 
-    For part (b), we distinguish two cases depending on whether $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. Suppose first that $T$ is dense at zero. Let $\eta \in T_{>0}$ be arbitrary. By \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group}, there exists $\delta \in T_{>0}$ such that $2\delta < \eta$. By the uniform convergence of $f_n$ to $f$, there exists $N_0 \in \mathbb{N}$ such that for all $n \geq N_0$ and all $x \in X$, one has
+    For part (b), we distinguish two cases depending on whether $T$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. Suppose first that $T$ is dense at zero. Since $R$ is a totally ordered ring dense at zero, its additive group $(R, +)$ is an ordered abelian group dense at zero. Let $\eta \in T_{>0}$ be arbitrary. Applying \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group} to $(R, +)$ with $\varepsilon = \eta$, we obtain $\delta \in R_{>0} = T_{>0}$ such that $2\delta < \eta$. By the uniform convergence of $f_n$ to $f$, there exists $N_0 \in \mathbb{N}$ such that for all $n \geq N_0$ and all $x \in X$, one has
     $$d(f_n(x), f(x)) < \delta.$$
     For any $n,m \geq N_0$ and any $x \in X$, the \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{triangle inequality} for the extended metric $d$ yields
     $$d(f_n(x), f_m(x)) \leq d(f_n(x), f(x)) + d(f(x), f_m(x)) < \delta + \delta = 2\delta < \eta.$$
@@ -36,7 +36,7 @@
     \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}
     This assignment defines a function $f : X \to Y$.
 
-    We now show that $(f_n)$ converges uniformly to $f$ on $X$, again distinguishing the two cases. First suppose that $T$ is dense at zero. Let $\varepsilon \in T_{>0}$ be arbitrary. By \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group}, there exists $\delta \in T_{>0}$ such that $2\delta < \varepsilon$. By the uniformly Cauchy hypothesis, there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$ and all $x \in X$, one has
+    We now show that $(f_n)$ converges uniformly to $f$ on $X$, again distinguishing the two cases. First suppose that $T$ is dense at zero. Let $\varepsilon \in T_{>0}$ be arbitrary. Applying \Cref{proposition:small_scalar_multiples_in_dense_at_zero_ordered_abelian_group} to $(R, +)$ with $\varepsilon$, we obtain $\delta \in R_{>0} = T_{>0}$ such that $2\delta < \varepsilon$. By the uniformly Cauchy hypothesis, there exists $N \in \mathbb{N}$ such that for all $n, m \geq N$ and all $x \in X$, one has
     $$d(f_n(x), f_m(x)) < \delta.$$
     For $n \geq N$ and $x \in X$, and for any $m \geq N$, the triangle inequality yields
     $$d(f_n(x), f(x)) \leq d(f_n(x), f_m(x)) + d(f_m(x), f(x)).$$

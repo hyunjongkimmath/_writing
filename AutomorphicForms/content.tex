@@ -5,10 +5,22 @@
 
 \input{../_definitions/definition_congruence_subgroup_of_SL_2_Z.tex}
 
+\input{../_definitions/definition_principal_congruence_subgroup_Gamma_N_of_SL_2_Z.tex}
+
 \input{../_concepts/lemma_every_congruence_subgroup_of_SL_2_Z_has_a_translation_matrix.tex}
 
 
+\input{../_definitions/definition_upper_half_plane_in_the_complex_plane.tex}
+
+\input{../_definitions/definition_extended_upper_half_plane_in_the_complex_plane.tex}
+
+\input{../_definitions/definition_closed_upper_half_plane_in_the_complex_plane.tex}
+
+\input{../_definitions/definition_nontangential_limit_of_a_holomorphic_function_on_the_upper_half_plane.tex}
+
 \input{../_definitions/definition_modular_action_of_a_subgroup_of_SL_2_Z_on_the_upper_half_plane.tex}
+
+\input{../_definitions/definition_modular_action_of_a_subgroup_of_SL_2_Z_on_the_extended_upper_half_plane.tex}
 
 \input{../_definitions/definition_weight_k_operator_on_meromorphic_functions_by_elements.tex}
 
@@ -18,8 +30,12 @@
 
 \input{../_definitions/definition_holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane.tex}
 
+\input{../_definitions/definition_fourier_expansion_of_a_periodic_holomorphic_function_on_the_upper_half_plane.tex}
 
-\input{../_definitions/definition_modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z.tex}
+\input{../_concepts/theorem_periodic_holomorphic_function_on_upper_half_plane_descends_to_punctured_disk_and_has_fourier_laurent_expansion.tex}
+
+
+\input{../_definitions/definition_modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z.tex}
 
 
 \input{../_definitions/definition_automorphic_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z.tex}
@@ -31,7 +47,7 @@ We define the $L$-function of a modular form by putting the Fourier coefficients
 The construction of the $L$-function of a modular form is not arbitrary --- a Fourier transform involving the modular form yields the completed $L$-function.
 
 \begin{theorem}
-Let $k \in \mathbb{Z}_{>0}$, and let $f:\mathbb{H}\to\mathbb{C}$ be a \CrefAndHyperref{definition:modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form} of weight $k$ with respect to a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup} $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$. Let
+Let $k \in \mathbb{Z}_{>0}$, and let $f:\mathbb{H}\to\mathbb{C}$ be a \CrefAndHyperref{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form} of weight $k$ with respect to a \CrefAndHyperref{definition:congruence_subgroup_of_SL_2_Z}{congruence subgroup} $\Gamma \subseteq \mathrm{SL}_2(\mathbb{Z})$. Let
 $$ f(\tau) = \sum_{n=0}^\infty a_n e^{\frac{2\pi i n \tau}{h}} $$
 be the \CrefAndHyperref{definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane}{Fourier expansion of $f$} where $h > 0$ is an appropriate integer. 
 
@@ -104,10 +120,67 @@ The Mellin transform of $f(i\tau)$ equals the completed $L$-function $\Lambda(f,
 \end{proof}
 
 
-\subsection{$L$-function of a modular form}
+\subsection{Hecke operators and Petersson inner product}
+
+\input{../_definitions/definition_vector_space_of_modular_and_cusp_forms.tex}
+
+\input{../_definitions/definition_double_coset_of_a_subgroup_in_a_group.tex}
+
+\input{../_definitions/definition_hecke_operator_on_modular_forms_for_SL_2_Z.tex}
+
+\input{../_definitions/definition_petersson_inner_product_on_cusp_forms_of_a_congruence_subgroup.tex}
+
+\input{../_definitions/definition_modular_form_with_nebentypus.tex}
+
+\input{../_concepts/theorem_hecke_operators_are_well_defined_linear_operators_on_modular_forms.tex}
+
+\input{../_concepts/proposition_hecke_operators_commute_and_satisfy_recurrence_relations.tex}
+
+\input{../_concepts/proposition_hecke_operators_are_self_adjoint_wrt_petersson_inner_product.tex}
+
+\input{../_concepts/corollary_euler_product_for_l_function_of_hecke_eigenform.tex}
+
+\input{../_concepts/proposition_eigenforms_with_distinct_hecke_eigenvalues_are_orthogonal.tex}
 
 
+\subsection{Modular curves}
 
+\input{../_definitions/definition_classical_affine_modular_curve_associated_to_a_congruence_subgroup_of_SL_2_Z.tex}
+
+\input{../_definitions/definition_classical_compactified_modular_curve_associated_to_a_congruence_subgroup_of_SL_2_Z.tex}
+
+\input{../_definitions/definition_cusps_of_a_congruence_subgroup_of_SL_2_Z.tex}
+
+\input{../_definitions/definition_modular_curves_X0.tex}
+
+\input{../_definitions/definition_modular_curve_X_N_with_level_N_structure.tex}
+
+\input{../_definitions/definition_X_0_N_compactified_modular_curve_parameterizing_cyclic_N_isogenies_on_generalized_elliptic_curves.tex}
+
+\input{../_definitions/definition_X_H_intermediate_modular_curve_parameterizing_elliptic_curves_with_H_structure.tex}
+
+\input{../_definitions/definition_X_N_compactified_modular_curve_parameterizing_level_N_structures_on_generalized_elliptic_curves.tex}
+
+\input{../_definitions/definition_X_s_N_nonclassical_modular_curve_quotient_by_noncongruence_subgroup.tex}
+
+
+\subsection{Eisenstein series}
+
+\input{../_definitions/definition_series_indexed_by_a_countable_set.tex}
+
+\input{../_concepts/lemma_absolute_convergence_over_a_countable_index_set_is_unconditional.tex}
+
+\input{../_concepts/theorem_comparison_of_double_series_to_double_integrals_of_nonnegative_functions.tex}
+
+\input{../_definitions/definition_polar_coordinates_on_R2.tex}
+
+\input{../_concepts/theorem_change_of_variables_for_lebesgue_integrals_on_Rn.tex}
+
+\input{../_definitions/definition_lebesgue_integral_over_a_measurable_subset_of_Rn.tex}
+
+\input{../_definitions/definition_eisenstein_series_of_weight_k_for_a_congruence_subgroup_of_SL_2_Z.tex}
+
+\input{../_concepts/theorem_eisenstein_series_for_SL_2_Z_is_a_modular_form_with_fourier_expansion.tex}
 
 
 \section{Automorphic forms}
@@ -166,6 +239,10 @@ Automorphic forms generalize classical modular forms by encoding arithmetic and 
 
 \input{../_definitions/definition_topological_group.tex}
 
+\input{../_definitions/definition_congruence_modulo_n.tex}
+
+\input{../_definitions/definition_star_congruence_of_matrices_over_a_ring_with_involution.tex}
+
 
 \section{Ad\`eles and id\'eles of global fields }
 
@@ -186,3 +263,25 @@ Automorphic forms generalize classical modular forms by encoding arithmetic and 
 
 
 \input{../_definitions/definition_linear_algebraic_group_over_a_scheme.tex}
+
+
+\subsection{Hecke characters and $L$-functions}
+
+\input{../_definitions/definition_hecke_character_of_a_number_field.tex}
+
+\input{../_definitions/definition_hecke_L_function_of_a_hecke_character_of_a_number_field.tex}
+
+\input{../_definitions/definition_completed_hecke_L_function_of_a_hecke_character_of_a_number_field.tex}
+
+\input{../_concepts/theorem_functional_equation_for_a_hecke_L_function_of_a_hecke_character_of_a_number_field.tex}
+
+\input{../_definitions/definition_mellin_transform_of_a_measurable_function_on_the_positive_real_numbers.tex}
+
+\input{../_definitions/definition_zeta_integral_of_a_schwartz_bruhat_function_on_the_adeles_by_a_quasi_character_on_the_ideles_of_a_number_field.tex}
+
+\appendix
+\section{Complex Analysis}
+
+\input{../_concepts/theorem_the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets.tex}
+\input{../_concepts/theorem_lipschitz_summation_formula_for_reciprocal_powers_on_the_upper_half_plane.tex}
+\input{../_concepts/theorem_weierstrass_m_test_for_uniform_convergence_of_function_series.tex}

@@ -3,7 +3,30 @@ Let $(H, q_H)$ be a \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_c
     \begin{enumerate}
     \item The \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{polarization} is $B_{q_H}((x_1,y_1),(x_2,y_2)) = x_1 y_2 + y_1 x_2$.
     \item The vectors $e_1 = (1,0)$ and $e_2 = (0,1)$ satisfy $q_H(e_1) = q_H(e_2) = 0$ and $B_{q_H}(e_1,e_2) = 1$.
-    \TODO{symplectic basis}
-    \item $H$ admits a symplectic basis $\{e_1,e_2\}$ where $B_{q_H}(e_i,e_j) = \delta_{i,3-j}$.
+    \item The basis $\{e_1,e_2\}$ satisfies $B_{q_H}(e_i,e_j) = \delta_{i,3-j}$.
     \end{enumerate}
 \end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{definition:hyperbolic_plane_over_a_commutative_ring}, the hyperbolic plane is $H = R^2$ equipped with the quadratic form $q_H(x,y) = xy$.
+
+    We compute the polarization. For $(x_1, y_1), (x_2, y_2) \in R^2$, we have
+    $$B_{q_H}((x_1, y_1), (x_2, y_2)) = q_H(x_1 + x_2, y_1 + y_2) - q_H(x_1, y_1) - q_H(x_2, y_2)$$
+    by \Cref{definition:quadratic_formm_on_a_module_over_a_commutative_ring}. Expanding the terms gives
+    $$(x_1 + x_2)(y_1 + y_2) - x_1 y_1 - x_2 y_2 = x_1 y_1 + x_1 y_2 + x_2 y_1 + x_2 y_2 - x_1 y_1 - x_2 y_2 = x_1 y_2 + x_2 y_1.$$
+    Hence, $B_{q_H}((x_1, y_1), (x_2, y_2)) = x_1 y_2 + y_1 x_2$.
+
+    We evaluate on the standard basis vectors. For $e_1 = (1, 0)$ and $e_2 = (0, 1)$, we compute
+    $$q_H(e_1) = q_H(1, 0) = 1 \cdot 0 = 0,$$
+    $$q_H(e_2) = q_H(0, 1) = 0 \cdot 1 = 0,$$
+    and
+    $$B_{q_H}(e_1, e_2) = B_{q_H}((1, 0), (0, 1)) = 1 \cdot 1 + 0 \cdot 0 = 1.$$
+
+    We verify the Kronecker delta formula. Computing each entry of the Gram matrix:
+    $$B_{q_H}(e_1, e_1) = B_{q_H}((1, 0), (1, 0)) = 1 \cdot 0 + 0 \cdot 1 = 0 = \delta_{1,2},$$
+    $$B_{q_H}(e_1, e_2) = 1 = \delta_{1,1},$$
+    $$B_{q_H}(e_2, e_1) = B_{q_H}((0, 1), (1, 0)) = 0 \cdot 0 + 1 \cdot 1 = 1 = \delta_{2,2},$$
+    and
+    $$B_{q_H}(e_2, e_2) = B_{q_H}((0, 1), (0, 1)) = 0 \cdot 1 + 1 \cdot 0 = 0 = \delta_{2,1}.$$
+    Hence, $B_{q_H}(e_i, e_j) = \delta_{i,3-j}$ for all $i, j \in \{1, 2\}$.
+\end{proof}

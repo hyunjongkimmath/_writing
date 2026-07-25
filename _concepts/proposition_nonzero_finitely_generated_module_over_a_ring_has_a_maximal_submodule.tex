@@ -1,5 +1,19 @@
 \begin{proposition}[Nonzero finitely generated module has a maximal submodule]  \label{proposition:nonzero_finitely_generated_module_over_a_ring_has_a_maximal_submodule}
 	\TODO{AI generated, verify}
-
-	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $M$ be a nonzero \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} right $R$-module. Then there exists a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{proper submodule} $L \subsetneq M$ that is maximal among proper submodules, i.e., no proper submodule of $M$ strictly contains $L$.
+	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring} and let $M$ be a nonzero \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{(right) $R$-module}. Then there exists a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{proper submodule} $L \subsetneq M$ that is maximal among proper submodules, i.e., no proper submodule of $M$ strictly contains $L$.
 \end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We show that $M$ has a maximal submodule using \CrefAndHyperrefIfExist{definition:zorns_lemma}{Zorn's lemma}. Let $\mathcal{S}$ be the set of all proper submodules of $M$, partially ordered by inclusion.
+
+    The set $\mathcal{S}$ is nonempty because $M$ is nonzero, so $\{0\}$ is a proper \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $M$.
+
+    We show that every chain in $\mathcal{S}$ has an upper bound. Let $\{N_i\}_{i \in I}$ be a chain in $\mathcal{S}$, i.e. a subset of $\mathcal{S}$ that is \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered} by inclusion. Define $N = \bigcup_{i \in I} N_i$.
+
+    We first verify that $N$ is a submodule of $M$ using \Cref{proposition:submodule_criterion_for_a_subset_of_a_module_over_a_ring}. Since each $N_i$ is a submodule, the set $N$ is nonempty. For any $n_1, n_2 \in N$, there exist $i, j \in I$ with $n_1 \in N_i$ and $n_2 \in N_j$. Because $\{N_i\}_{i \in I}$ is a chain, we have $N_i \subseteq N_j$ or $N_j \subseteq N_i$; without loss of generality, assume $N_i \subseteq N_j$. Then $n_1, n_2 \in N_j$, so $n_1 + n_2 \in N_j \subseteq N$. For any $r \in R$ and $n \in N$, we have $n \in N_i$ for some $i$, so $nr \in N_i \subseteq N$ (since $M$ is a right $R$-module). Thus, $N$ is a submodule of $M$.
+
+    We next show that $N$ is a proper submodule. Suppose for contradiction that $N = M$. Since $M$ is \CrefAndHyperrefIfExist{definition:finitely_generated_modules_over_rings}{finitely generated}, there exists a finite generating set $\{m_1, \dots, m_k\}$ of $M$ over $R$. Because each $m_\ell \in M = N$, there exists $i_\ell \in I$ such that $m_\ell \in N_{i_\ell}$. Since $\{N_i\}_{i \in I}$ is a chain, the finite set $\{N_{i_1}, \dots, N_{i_k}\}$ has a maximal element under inclusion, say $N_{i_{\max}}$. Then $m_1, \dots, m_k \in N_{i_{\max}}$, so $N_{i_{\max}}$ contains a generating set of $M$. Hence, $N_{i_{\max}} = M$, which contradicts the fact that each $N_i$ is a proper submodule of $M$. Therefore, $N \neq M$, so $N \in \mathcal{S}$ is an upper bound of the chain $\{N_i\}_{i \in I}$.
+
+    By \Cref{definition:zorns_lemma}, $\mathcal{S}$ has a \CrefAndHyperrefIfExist{definition:maximal_element_in_a_subset_of_a_partially_ordered_set}{maximal element} $L$. Since $L$ is a proper submodule of $M$ and is maximal in $\mathcal{S}$, there exists no proper submodule of $M$ strictly containing $L$. Thus, $L$ is a maximal submodule of $M$.
+\end{proof}

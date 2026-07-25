@@ -1,3 +1,17 @@
-\begin{proposition}[Isomorphism criterion] \label{proposition:isomorphism_criterion_for_a_quadratic_module_over_a_commutative_ring_to_be_a_hyperbolic_plane}
-    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{module} of $R$, $H \cong R^2$ a \CrefAndHyperrefIfExist{definition:submodule_of_a_module_over_a_ring}{submodule} of $M$, and $q: M \to R$ a \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{quadratic form}.  Then $(H, q|_H)$ is a \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic plane} if and only if $q|_H \cong q_H$ as quadratic forms via some basis of $H$.
+\begin{proposition}[Isomorphism criterion for hyperbolic planes] \label{proposition:isomorphism_criterion_for_a_quadratic_module_over_a_commutative_ring_to_be_a_hyperbolic_plane}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and let $(H, q)$ be a quadratic module such that $H$ is a free $R$-module of rank 2. Then $(H, q)$ is a \CrefAndHyperrefIfExist{definition:hyperbolic_plane_over_a_commutative_ring}{hyperbolic plane} if and only if there exists an $R$-basis $\{u, v\}$ for $H$ such that
+    $$q(r u + s v) = rs \quad \text{for all } r, s \in R.$$
+
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    $(\Rightarrow)$ Suppose that $(H, q)$ is a hyperbolic plane. By \Cref{definition:hyperbolic_plane_over_a_commutative_ring}, there exists an isometry $\phi: (R^2, q_H) \to (H, q)$ where $q_H(x, y) = xy$. Let $e_1 = (1, 0)$ and $e_2 = (0, 1)$ be the standard basis for $R^2$, and define $u = \phi(e_1)$ and $v = \phi(e_2)$. Since $\phi$ is an $R$-module isomorphism (\Cref{definition:isometry_of_quadratic_modules_over_a_commutative_ring}), the set $\{u, v\}$ forms a basis for $H$. For any $r, s \in R$, we compute
+    $$q(r u + s v) = q(\phi(r e_1 + s e_2)) = q_H(r e_1 + s e_2) = q_H((r, s)) = rs,$$
+    where the second equality uses the fact that $\phi$ preserves quadratic forms by \Cref{definition:isometry_of_quadratic_modules_over_a_commutative_ring}.
+
+    $(\Leftarrow)$ Suppose that there exists a basis $\{u, v\}$ for $H$ such that $q(r u + s v) = rs$ for all $r, s \in R$. Define a map $\phi: (R^2, q_H) \to (H, q)$ by setting
+    $$\phi((x, y)) = x u + y v.$$
+    The map $\phi$ is an $R$-module isomorphism because it sends the standard basis of $R^2$ to the basis $\{u, v\}$ of $H$. We show that $\phi$ preserves quadratic forms. For all $(x, y) \in R^2$, we compute
+    $$q(\phi(x, y)) = q(x u + y v) = xy = q_H(x, y).$$
+    Hence, $\phi$ is an isometry by \Cref{definition:isometry_of_quadratic_modules_over_a_commutative_ring}. Therefore, $(H, q)$ is a hyperbolic plane by \Cref{definition:hyperbolic_plane_over_a_commutative_ring}.
+\end{proof}

@@ -1,0 +1,39 @@
+\begin{lemma}[Zorn's Lemma is equivalent to the Axiom of Choice under ZF] \label{lemma:zorns_lemma_is_equivalent_to_axiom_of_choice_under_ZF}
+    \TODO{AI generated, verify}
+
+    Let ZF denote \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Zermelo--Fraenkel set theory}. Then ZF together with \Cref{definition:zorns_lemma} (Zorn's Lemma) is equivalent to ZF together with the \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Axiom of Choice} (AC). In other words, over ZF, Zorn's Lemma and the Axiom of Choice are logically equivalent.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+
+    We prove each direction separately.
+
+    \begin{enumerate}
+        \item We show that under ZF, the Axiom of Choice implies Zorn's Lemma. Let $(P, \leq)$ be a nonempty \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} in which every \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{chain} has an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound}. We show that $P$ has a \CrefAndHyperrefIfExist{definition:maximal_element_in_a_subset_of_a_partially_ordered_set}{maximal element}.
+
+        Suppose for contradiction that $P$ has no maximal element. Then for every $x \in P$, the set
+        $$U_x := \{y \in P : y > x\}$$
+        is nonempty. By the Axiom of Choice, there exists a choice function
+        $$f: \mathcal{P}(P) \setminus \{\varnothing\} \longrightarrow P$$
+        such that $f(A) \in A$ for every nonempty $A \subseteq P$. Define a function $s: P \to P$ by $s(x) = f(U_x)$; by construction, $s(x) > x$ for all $x \in P$.
+
+        Using $s$, we construct a strictly increasing sequence indexed by the \CrefAndHyperrefIfExist{definition:ordinal_number}{ordinals} by \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{transfinite recursion}\TODO{AI generated, reference needed: transfinite recursion theorem}. For each ordinal $\alpha$, define $a_\alpha$ by
+        $$a_\alpha = s\!\left(\bigcup_{\beta < \alpha} \{a_\beta\}\right)$$
+        with the convention that the union over an empty set is some fixed element of $P$ (e.g., chosen by $f$). The transfinite recursion theorem guarantees that this definition yields a unique $a_\alpha \in P$ for every ordinal $\alpha$.
+
+        Since $s(x) > x$ for all $x \in P$, we have $a_\beta < a_\alpha$ whenever $\beta < \alpha$. Hence, the map $\alpha \mapsto a_\alpha$ is an injective function from the ordinals to $P$. By the \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Axiom Schema of Replacement}, the image of this map is a set, so the ordinals would be a set. This contradicts the \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{Burali-Forti paradox}\TODO{AI generated, reference needed: Burali-Forti paradox, ordinals form a proper class}, which asserts that the ordinals form a proper class and therefore cannot be a set. Hence, our assumption that $P$ has no maximal element is false, and $P$ has a maximal element.
+
+        \item We show that under ZF, Zorn's Lemma implies the Axiom of Choice. Let $X$ be a set of nonempty sets. We construct a choice function on $X$, i.e. a function $f: X \to \bigcup X$ such that $f(A) \in A$ for all $A \in X$.
+
+        Let $\mathcal{F}$ be the set of all partial choice functions, i.e., all functions $g: Y \to \bigcup X$ where $Y \subseteq X$ and $g(A) \in A$ for all $A \in Y$. The set $\mathcal{F}$ is nonempty because the empty function (with domain $\varnothing$) is vacuously a partial choice function.
+
+        Partially order $\mathcal{F}$ by extension: for $g_1, g_2 \in \mathcal{F}$, we declare $g_1 \leq g_2$ if $\operatorname{dom}(g_1) \subseteq \operatorname{dom}(g_2)$ and $g_2|_{\operatorname{dom}(g_1)} = g_1$ (i.e., $g_2$ extends $g_1$).
+
+        We verify that $(\mathcal{F}, \leq)$ satisfies the hypothesis of Zorn's Lemma. Let $\{g_i\}_{i \in I}$ be a chain in $\mathcal{F}$ (i.e., a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered} subset under extension). Define $h: \bigcup_{i \in I} \operatorname{dom}(g_i) \to \bigcup X$ by $h(A) = g_i(A)$ for any $i$ with $A \in \operatorname{dom}(g_i)$; this is well-defined because the $g_i$ are compatible on overlaps (since they form a chain under extension). Then $h$ is a partial choice function, and it is an upper bound of $\{g_i\}_{i \in I}$ in $\mathcal{F}$.
+
+        By Zorn's Lemma, $\mathcal{F}$ has a maximal element $f_{\max}$. We show that $\operatorname{dom}(f_{\max}) = X$. Suppose for contradiction that there exists $A \in X \setminus \operatorname{dom}(f_{\max})$. Since $A$ is nonempty, choose any $a \in A$. Extend $f_{\max}$ to $f'$ by setting $\operatorname{dom}(f') = \operatorname{dom}(f_{\max}) \cup \{A\}$ and $f'(A) = a$, and $f'(B) = f_{\max}(B)$ for $B \in \operatorname{dom}(f_{\max})$. Then $f' \in \mathcal{F}$ and $f_{\max} < f'$, contradicting the maximality of $f_{\max}$. Hence, $\operatorname{dom}(f_{\max}) = X$, so $f_{\max}$ is a choice function on $X$.
+    \end{enumerate}
+
+    Having proven both directions, we conclude that Zorn's Lemma and the Axiom of Choice are equivalent over ZF.
+\end{proof}

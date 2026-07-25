@@ -1,0 +1,15 @@
+\begin{definition}[Convergence of a net] \label{definition:convergence_of_a_net_in_a_topological_space}
+    \TODO{AI generated, verify}
+
+    Let $X$ be a topological space and let $(D, \leq)$ be a \CrefAndHyperrefIfExist{definition:directed_set}{directed set}. Consider a net $(x_\alpha)_{\alpha \in D}$ in $X$.
+
+    We say that the net $(x_\alpha)_{\alpha \in D}$ \hldef{converges} to a point $x \in X$ (written $x_\alpha \to x$ or $\lim_{\alpha \in D} x_\alpha = x$) if for every open neighborhood $U$ of $x$, there exists $\alpha_0 \in D$ such that for all $\alpha \geq \alpha_0$, we have $x_\alpha \in U$.
+
+    The point $x$ is called a \hldef{limit} of the net $(x_\alpha)_{\alpha \in D}$. A net may have multiple limits if $X$ is not Hausdorff; in a Hausdorff space, every convergent net has at most one limit.
+
+    Nets are significant because they provide a complete characterization of topological spaces:
+    \begin{enumerate}
+        \item A subset $C \subseteq X$ is closed if and only if it contains the limits of all convergent nets in $C$.
+        \item A function $f : X \to Y$ between topological spaces is continuous if and only if for every net $(x_\alpha)_{\alpha \in D}$ in $X$ converging to $x$, the net $(f(x_\alpha))_{\alpha \in D}$ converges to $f(x)$ in $Y$.
+    \end{enumerate}
+\end{definition}

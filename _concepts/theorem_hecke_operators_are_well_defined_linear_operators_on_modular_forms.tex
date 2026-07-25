@@ -1,0 +1,59 @@
+\begin{theorem} \label{theorem:hecke_operators_are_well_defined_linear_operators_on_modular_forms}
+\TODO{AI generated, verify}
+Let $k \in \bbZ$ and let $\Gamma = \mathrm{SL}_2(\bbZ)$. For each positive integer $n$, the Hecke operator $T_n$ defined in \CrefAndHyperref{definition:hecke_operator_on_modular_forms_for_SL_2_Z}{the definition of Hecke operators} is a well-defined linear map
+$$T_n : M_k(\Gamma) \longrightarrow M_k(\Gamma),$$
+as defined in \CrefAndHyperref{definition:vector_space_of_modular_and_cusp_forms}{the space of modular forms}, and it restricts to an endomorphism $T_n : S_k(\Gamma) \to S_k(\Gamma)$ on the subspace of cusp forms.
+
+\begin{enumerate}
+    \item For any modular form $f$ in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of modular forms} $M_k(\Gamma)$, the function $T_n f$ is holomorphic on $\mathbb{H}$ and satisfies the weight-$k$ transformation law with respect to $\Gamma$.
+    \item The function $T_n f$ has a Fourier expansion at $\infty$, hence is holomorphic at all cusps of $\Gamma$ (since $\Gamma = \mathrm{SL}_2(\bbZ)$ has only one cusp).
+    \item If $f$ is in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$, then the constant term in the Fourier expansion of $T_n f$ vanishes, so $T_n f \in S_k(\Gamma)$.
+\end{enumerate}
+
+Moreover, $T_n$ is a linear operator on both $M_k(\Gamma)$ and $S_k(\Gamma)$.
+\CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form}
+\end{theorem}
+
+% ============================================================================
+% PROOF OUTLINE — Reference these labels when writing the proof:
+% ============================================================================
+%
+% === Sublemma 1a: Double coset decomposition is finite ===
+% Prove that for each n ≥ 1, the double coset Γ diag(n,1) Γ decomposes into finitely many right cosets.
+% The explicit decomposition uses matrices [[a,b],[0,d]] with ad=n, d>0, 0≤b<d.
+% Count: there are exactly σ₀(n) = ∑_{d|n} 1 such double coset representatives.
+% Reference: definition:double_coset_of_a_subgroup_in_a_group (definition of double cosets)
+%
+% === Sublemma 1b: Slash operator cocycle relation ===
+% Prove that for any γ₁, γ₂ ∈ SL₂(ℤ), (f|ₖγ₁)|ₖγ₂ = f|ₖ(γ₁γ₂).
+% This uses the automorphy factor j(γ,z) = cz+d and the identity:
+%   j(γ₁γ₂, z) = j(γ₁, γ₂z) · j(γ₂, z)
+% Reference: definition:weight_k_operator_on_meromorphic_functions_by_elements (slash operator def)
+%
+% === Proof of part 1: T_n f is holomorphic and transforms correctly ===
+% Step A: Each term f|ₖ diag(a,b) is holomorphic on ℍ because f is, the slash
+%         operator preserves holomorphicity, and each matrix has det > 0 so it maps ℍ to ℍ.
+% Step B: The sum is finite (σ₀(n) terms), so T_n f is holomorphic as a finite sum of holomorphic functions.
+% Step C: For any γ ∈ Γ, show (T_n f)|ₖγ = T_n f using the double coset decomposition:
+%         Γ diag(n,1) Γ · γ = Γ diag(n,1) Γ  (the double coset is invariant under right multiplication by Γ).
+%         This requires showing that right-multiplying each representative by γ gives another
+%         set of representatives for the same double coset. Use the cocycle relation from Sublemma 1b.
+% Reference: definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z (modular transformation law)
+%           definition:congruence_subgroup_of_SL_2_Z (Γ = SL₂(ℤ))
+%
+% === Proof of part 2: T_n f is holomorphic at ∞ ===
+% Step A: Use the Fourier expansion formula for T_n f given in the definition:
+%         if f = Σ a_m q^m, then T_n f = Σ b_m q^m where b_m = ∑_{d|gcd(m,n)} d^{k-1} a_{mn/d²}.
+% Step B: This is a formal power series in q = e^{2πiz}, so it defines a holomorphic function on ℍ.
+%         Since the sum starts at m=0 (not -∞), there are no negative powers of q, hence T_n f is holomorphic at ∞.
+% Reference: definition:fourier_expansion_of_a_periodic_holomorphic_function_on_the_upper_half_plane (Fourier expansion)
+%           definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane (holomorphic at cusps)
+%
+% === Proof of part 3: T_n preserves cusp forms ===
+% The constant term b_0 of T_n f equals ∑_{d|n} d^{k-1} a_0. If f ∈ S_k(Γ), then a_0 = 0 (since f is cuspidal),
+% so b_0 = 0, meaning T_n f is also cuspidal.
+% Reference: definition:modular_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z (cusp form def)
+%
+% === Proof of linearity ===
+% The slash operator |ₖ is linear in f for each fixed γ, and T_n is a finite sum over γ with coefficients n^{k-1}d^{-k}.
+% Hence T_n(cf + g) = cT_n f + T_n g.

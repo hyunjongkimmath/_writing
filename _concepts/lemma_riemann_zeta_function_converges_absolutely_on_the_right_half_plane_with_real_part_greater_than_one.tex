@@ -1,0 +1,18 @@
+\begin{lemma} \label{lemma:riemann_zeta_function_converges_absolutely_on_the_right_half_plane_with_real_part_greater_than_one}
+    \TODO{AI generated, verify}
+    Let $s \in \bbC$ with $\Re(s) > 1$. The \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}
+    $$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}$$
+    \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} on this region.
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Write $s = \sigma + it$ with $\sigma, t \in \bbR$ and $\sigma > 1$. The \CrefAndHyperrefIfExist{definition:complex_absolute_value}{complex absolute value} of $n^{-s}$ is
+    $$|n^{-s}| = |e^{-s \log n}| = |e^{-(\sigma + it) \log n}| = e^{-\sigma \log n} |e^{-it \log n}| = n^{-\sigma},$$
+    since $|e^{-it \log n}| = 1$. Thus the series of norms is $\sum_{n=1}^\infty n^{-\sigma}$.
+
+    We show that $\sum_{n=1}^\infty n^{-\sigma}$ converges for $\sigma > 1$. For $\sigma > 0$, the function $x \mapsto x^{-\sigma}$ is decreasing on $[1, \infty)$, so by the integral bound
+    $$\sum_{n=2}^\infty n^{-\sigma} \leq \int_1^\infty x^{-\sigma}\,dx = \left[\frac{x^{1-\sigma}}{1-\sigma}\right]_1^\infty = \frac{1}{\sigma-1}.$$
+    Since $\sigma > 1$, the improper integral converges, and therefore the series $\sum_{n=2}^\infty n^{-\sigma}$ is bounded above. Adding the $n=1$ term $1^{-\sigma}=1$, the full series $\sum_{n=1}^\infty n^{-\sigma}$ also converges.
+
+    Hence $\sum_{n=1}^\infty |n^{-s}|$ converges, i.e., the Riemann zeta function converges absolutely for $\Re(s) > 1$.
+\end{proof}

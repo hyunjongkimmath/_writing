@@ -1,0 +1,388 @@
+%notation% Delete this \nocite command invocation to make the references section only list out the bibitems that are actually cited.
+\nocite{*}
+
+The purpose of this document is to compile common notions in basic topology.
+
+\section{Basic topolgy}
+
+\subsection{Topological spaces}
+
+\input{../_definitions/definition_topological_space.tex}
+\input{../_definitions/definition_clopen_subset_of_a_topological_space.tex}
+
+\subsubsection{Generating topologies from subsets}
+
+\input{../_definitions/definition_coarser_smaller_finer_larger_for_topologies_on_a_set.tex}
+\input{../_concepts/proposition_coarser_and_finer_topologies_and_continuous_maps.tex}
+\input{../_concepts/proposition_topology_generated_by_a_collection_of_subsets_is_the_coarset_topology_making_the_members_open.tex}
+
+\input{../_definitions/definition_topology_on_a_set_generated_by_a_collection_of_subsets_and_subbasis_for_a_topology.tex}
+\input{../_concepts/proposition_subset_of_a_topology_generated_by_a_collection_of_subsets_is_open_if_and_only_if_union_of_finite_intersections.tex}
+\input{../_concepts/proposition_function_of_topological_spaces_is_continuous_if_and_only_if_subbasis_members_are_pulled_back_to_open_sets.tex}
+
+\subsubsection{Initial and final topologies}
+
+\input{../_definitions/definition_initial_topology_on_a_set_with_respect_to_a_family_of_functions.tex}
+\input{../_definitions/definition_final_topology_on_a_set_with_respect_to_a_family_of_functions.tex}
+\input{../_concepts/proposition_continuous_maps_and_initial_final_topologies.tex}
+
+\subsubsection{Quotient and disjoint union topologies}
+
+\input{../_definitions/definition_quotient_topology_of_a_topological_space.tex}
+\input{../_definitions/definition_disjoint_union_topology_of_topological_spaces.tex}
+\input{../_concepts/proposition_universal_property_of_quotient_topology.tex}
+\input{../_concepts/proposition_universal_property_of_disjoint_union_topology.tex}
+
+\subsubsection{Basis of a topological space}
+
+\input{../_definitions/definition_neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_basis_for_a_topology.tex}
+\input{../_definitions/definition_first_and_second_countable_topological_space.tex}
+
+
+
+\subsubsection{Separation axioms}
+\input{../_definitions/definition_G_delta_set_and_F_sigma_set_of_a_topological_space.tex}
+\input{../_definitions/definition_separation_axioms_of_topology.tex}
+
+\subsubsection{Subspaces of a topological space}
+
+\input{../_definitions/definition_subspace_of_a_topological_space.tex}
+\input{../_conventions/convention_subset_of_a_topological_space_is_usually_considered_as_a_subspace.tex}
+\input{../_definitions/definition_discrete_topological_space_of_a_set.tex}
+\input{../_definitions/definition_trivial_topological_space_of_a_set.tex}
+
+\input{../_definitions/definition_closure_of_a_subspace_of_a_topological_space.tex}
+
+\subsection{Properties of topological spaces}
+\input{../_definitions/definition_dense_subset_of_a_topological_space.tex}
+
+\input{../_definitions/definition_disconnected_and_connected_topological_spaces.tex}
+\input{../_definitions/definition_connected_component_of_a_point_of_a_topological_space.tex}
+\input{../_definitions/definition_totally_disconnected_topological_space.tex}
+\input{../_concepts/proposition_compact_hausdorff_space_is_totally_disconnected_iff_clopen_subsets_form_a_basis.tex}
+
+
+
+\subsubsection{Compact topological spaces}
+\input{../_definitions/definition_compact_topological_space.tex}
+
+Here is an alternate, essentially equivalent definition, of compactness: 
+\input{../_definitions/definition_compact_subset_of_a_topological_space_alternate_definition.tex}
+\begin{proposition}
+ Let $(X, \mathcal{T})$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}. A \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace} $K \subseteq X$ is compact in the sense of \Cref{definition:compact_subset_of_a_topological_space_alternate_definition} if and only if the space $K$ is compact in the sense of \Cref{definition:compact_topological_space}.
+\end{proposition}
+
+\input{../_definitions/definition_locally_compact_topological_space.tex}
+
+% Definition: Boundary and interior of a subset
+\input{../_definitions/definition_interior_and_boundary_of_topological_space.tex}
+
+
+\subsection{Continuous maps of topological spaces}
+
+% Definition: Continuous map
+\input{../_definitions/definition_continuous_map_of_topological_spaces.tex}
+
+
+% Definition: Homeomorphism
+\input{../_definitions/definition_homeomorphism_of_topological_spaces.tex}
+
+\input{../_definitions/definition_pointed_topological_space.tex}
+
+\input{../_definitions/definition_preimage_of_a_subset_of_the_codomain_of_a_set_map.tex}
+
+\input{../_definitions/definition_fiber_of_a_map_of_topological_spaces_over_a_point.tex}
+
+
+\subsection{Constructions of topological spaces from other topological spaces}
+
+
+\input{../_definitions/definition_product_of_sets.tex}
+
+\input{../_definitions/definition_box_topology_on_a_cartesian_product_of_topological_spaces.tex}
+\input{../_definitions/definition_product_topology_on_a_cartesian_product_of_topological_spaces.tex}
+
+
+\begin{proposition}
+Let $I$ be an index set and $\{X_i\}_{i \in I}$ be a collection of \CrefAndHyperrefIfExist{definition:topological_spaces}{topological spaces}. Let $X = \prod_{i \in I} X_i$ be the \CrefAndHyperrefIfExist{definition:product_of_sets}{set theoretic Cartesian product} of these spaces. 
+
+If $X = \prod_{i \in I} X_i$ is endowed with the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}, then a \CrefAndHyperrefIfExist{definition:function_of_sets}{function} $f: Z \to X$ from a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} $Z$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} if and only if each component function $f_i = p_i \circ f: Z \to X_i$ is continuous. 
+
+This universal property generally fails for the \CrefAndHyperrefIfExist{definition:box_topology_on_a_cartesian_product_of_topological_spaces}{box topology} when $I$ is \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{infinite}.
+\end{proposition}
+
+\input{../_concepts/theorem_tychonoffs_theorem_for_the_compactness_of_a_small_product_of_compact_topological_spaces.tex}
+
+\subsection{Concrete examples of topological spaces}
+
+
+\input{../_definitions/definition_euclidean_n_space.tex}
+\input{../_definitions/definition_interval_in_the_real_line.tex}
+
+\input{../_definitions/definition_n_dimensional_unit_ball_disk.tex}
+
+\input{../_definitions/definition_n_dimensional_unit_sphere.tex}
+
+\input{../_definitions/definition_standard_unit_interval_in_the_real_lines.tex}
+
+\input{../_definitions/definition_n_dimensional_unit_cube_in_euclidean_space.tex}
+
+\input{../_definitions/definition_n_dimensional_torus.tex}
+
+\input{../_definitions/definition_real_or_complex_projective_space.tex}
+
+
+\subsection{Compactly generated}
+
+\input{../_definitions/definition_compactly_generated_topological_space.tex}
+
+\input{../_definitions/definition_weakly_hausdorff_topological_space.tex}
+
+
+
+\subsection{Metrics, absolute values, and norms}
+
+\subsubsection{Extended metric spaces}
+\input{../_definitions/definition_extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity.tex}
+\input{../_definitions/definition_isometry_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity.tex}
+
+\input{../_definitions/definition_extended_metric_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric.tex}
+
+
+\subsection{Convergence in extended metric spaces}
+
+\input{../_definitions/definition_convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity.tex}
+\input{../_definitions/definition_cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity.tex}
+\input{../_definitions/definition_complete_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity.tex}
+
+\input{../_definitions/definition_completion_of_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity.tex}
+
+\begin{proposition}
+Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X,d)$ be an \CrefAndHyperrefIfExist{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{extended metric space valued in $T^\infty$}. A \CrefAndHyperrefIfExist{definition:completion_of_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{completion} $(\widehat{X}, \widehat{d})$ of $(X,d)$ exists and is unique up to unique isometry. Moreover, if $(X,d)$ is a metric space, then so is $(\widehat{X}, \widehat{d})$.
+\end{proposition}
+\begin{proof}
+    \TODO: actually complete this proof
+Let $\calC$ be the set of all Cauchy sequences in \((X,d)\):
+\[
+\mathcal{C} = \{(x_n)_{n \in \mathbb{N}} : (x_n) \text{ is a Cauchy sequence in } (X,d)\},
+\]
+and define a relation \(\sim\) on \(\mathcal{C}\) by
+\[ (x_n) \sim (y_n) \iff \lim_{n \to \infty} d(x_n, y_n) = 0.  \]
+This relation is well-defined and in fact an equivalence relation. \TODO{Show that the relation is well-defined and an equivalence relation} Let \(\widehat{X} = \mathcal{C} / \sim\) and let \(\widehat{d} : \widehat{X} \times \widehat{X} \to [0, \infty]\) be defined by
+\[ \widehat{d}([(x_n)], [(y_n)]) := \lim_{n \to \infty} d(x_n, y_n).  \]
+This limit exists as a value in $[0,\infty]$ and is independent of representative sequences chosen. \TODO{Demonstrate why the limit exists and is well defined}
+
+It can be verified that \(\widehat{d}\) is an extended metric on \(\widehat{X}\) and that \((\widehat{X}, \widehat{d})\) is complete by construction.
+
+Define an embedding
+\[
+i : X \to \widehat{X}, \quad i(x) := [(x,x,x,\ldots)],
+\]
+which is an isometry:
+\[
+\widehat{d}(i(x), i(y)) = \lim_{n \to \infty} d(x,y) = d(x,y).
+\]
+
+Moreover, \(i(X)\) is dense in \(\widehat{X}\) because any equivalence class \([(x_n)]\) of a Cauchy sequence can be approximated arbitrarily closely by points \(i(x_n)\) in the image of \(X\).
+
+\bigskip
+
+\textbf{Uniqueness:}
+
+Suppose \((\widehat{X}', \widehat{d}')\) is another completion of \((X,d)\) with isometric embedding \(i' : X \to \widehat{X}'\).
+
+By the universal property of completions, there exists a unique isometry
+\[
+\Phi : \widehat{X} \to \widehat{X}'
+\]
+such that \(\Phi \circ i = i'\).
+
+The map \(\Phi\) is onto since \(i'(X)\) is dense in \(\widehat{X}'\) and \(\Phi\) preserves limits of Cauchy sequences.
+
+Therefore, \(\Phi\) is a unique isometry between the completions, and the completion is unique up to unique isometry.
+\end{proof}
+
+\subsubsection{Absolute values on fields}
+\input{../_definitions/definition_absolute_value_on_a_ring_valued_in_an_ordered_semiring.tex}
+
+\subsubsection{Norms on vector spaces over fields with absolute values}
+\input{../_definitions/definition_extended_norm_on_a_vector_space_over_a_field_with_absolute_value.tex}
+\input{../_definitions/definition_topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring.tex}
+
+\subsubsection{Inner product on a vector space over the reals or complex numbers}
+\input{../_definitions/definition_inner_product_on_a_vector_space_over_the_reals_or_complex_numbers.tex}
+\input{../_definitions/definition_norm_induced_by_an_inner_product_on_a_real_or_complex_vector_space.tex}
+
+\subsection{Euclidean space}
+
+% Notation: Euclidean n-space
+\input{../_definitions/definition_euclidean_n_space.tex}
+
+\subsection{Connectivity of topological spaces}
+
+\input{../_definitions/definition_path_connected_topological_space.tex}
+\input{../_definitions/definition_locally_path_connected_topological_space.tex}
+\input{../_definitions/definition_path_component_of_a_point_in_a_topological_space.tex}
+\input{../_definitions/definition_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_simply_connected_iff_path_connected_and_every_continuous_map_from_the_circle_is_null_homotopic.tex}
+
+\begin{proposition}
+    \TODO{}
+Let $X$ be a topological space. If $X$ is contractible, then $X$ is simply connected. The converse is not true in general; for example, the $n$-dimensional sphere $S^n$ is simply connected for $n \geq 2$ but is not contractible.
+\end{proposition}
+
+\input{../_definitions/definition_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_locally_simply_connected_topological_space_is_locally_path_connected_and_semi_locally_simply_connected.tex}
+\input{../_concepts/proposition_topological_manifolds_are_locally_simply_connected.tex}
+\input{../_definitions/definition_locally_contractible_topological_space.tex}
+\input{../_definitions/definition_semi_locally_simply_connected_space.tex}
+\input{../_concepts/proposition_topological_space_is_semi_local_simply_connected_iff_every_point_has_open_neighborhood_such_that_every_loop_based_there_is_null_homotopic_in_ambient_space.tex}
+
+\subsection{Stone spaces, ultrafilters, and Boolean algebras}
+
+\input{../_definitions/definition_stone_space.tex}
+\input{../_definitions/definition_category_of_stone_spaces.tex}
+
+\input{../_definitions/definition_boolean_algebra.tex}
+\input{../_definitions/definition_morphism_of_boolean_algebras.tex}
+\input{../_definitions/definition_category_of_boolean_algebras.tex}
+\input{../_concepts/proposition_function_between_boolean_algebras_is_a_morphism_of_boolean_algebras_iff_it_is_a_ring_homomorphism_between_the_boolean_rings.tex}
+
+\input{../_definitions/definition_filter_and_ultrafilter_on_a_boolean_algebra.tex}
+\input{../_concepts/proposition_filter_is_an_ultrafilter_if_and_only_if_every_element_or_negation_is_in_it.tex}
+
+\input{../_definitions/definition_stone_space_of_a_boolean_algebra.tex}
+
+\input{../_concepts/theorem_stones_representation_theorem.tex}
+
+\section{Covering spaces}
+
+\input{../_definitions/definition_covering_space_of_a_topological_space.tex}
+\input{../_definitions/definition_morphism_of_covering_spaces_of_a_topological_space.tex}
+\input{../_definitions/definition_deck_transformation_of_a_covering_space.tex}
+\input{../_definitions/definition_universal_cover_of_a_topological_space.tex}
+
+\input{../_concepts/theorem_map_of_fundamental_groups_induced_by_covering_of_a_path_connected_and_locally_path_connected_space_is_injective.tex}
+
+\input{../_definitions/definition_lift_of_a_continuous_map_under_a_covering_of_topological_spaces.tex}
+
+\begin{proposition}
+Every simply \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} topological space space is \CrefAndHyperrefIfExist{definition:semi_locally_simply_connected_space}{semi-locally simply connected}. Furthermore, every locally simply connected space is semi-locally simply connected. However, there exist semi-locally simply connected spaces, such as the \CrefAndHyperrefIfExist{definition:polyhedral_cone_in_a_finite_dimensional_real_vector_space}{cone} over the Hawaiian earring, that are not locally simply connected.
+\textit{Remark:} \TODO{define locally simply connected}.
+\end{proposition}
+
+\input{../_definitions/definition_normal_covering_space_of_a_topological_space.tex}
+\input{../_concepts/theorem_lift_exists_for_a_map_of_pointed_spaces_under_a_covering_of_pointed_spaces_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_lift_for_a_map_of_pointed_spaces_to_a_map_of_covers_exists_iff_images_of_fundamental_groups_are_contained.tex}
+\input{../_concepts/theorem_universal_cover_exists_for_connected_locally_path_connected_semi_locally_simply_connected_topological_space.tex}
+\input{../_concepts/proposition_isom_class_of_conn_pointed_covers_of_a_conn_loc_path_conn_semiloc_simp_conn_pointed_space_corresponds_to_subgroup_of_fund_gp.tex}
+\input{../_concepts/theorem_deck_transformation_group_of_a_connected_pointed_covering_is_quotient.tex}
+
+\section{Homotopy}
+
+The notions of homotopy have the following variants:
+\begin{enumerate}
+    \item Absolute, on unpointed spaces
+    \item Relative, on unpointed spaces
+    \item Absolute, on pointed spaces
+    \item Relative, on pointed spaces.
+\end{enumerate}
+
+\input{../_definitions/definition_homotopy_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+
+\input{../_definitions/definition_homotopy_equivalence_between_topological_spaces.tex}
+
+\input{../_definitions/definition_homotopy_class_of_maps_of_topological_spaces_relative_to_a_subset.tex}
+
+\input{../_definitions/definition_homotopy_category_of_topological_spaces.tex}
+
+\input{../_concepts/proposition_homotopy_classes_of_maps_between_topological_spaces_are_preserved_by_composition.tex}
+
+\input{../_concepts/theorem_functor_from_category_of_topological_spaces_to_homotopy_category_of_topological_spaces.tex}
+
+
+\input{../_definitions/definition_path_and_loop_in_a_topological_space.tex}
+
+\input{../_definitions/definition_homotopy_groups_of_a_pointed_topological_space.tex}
+\input{../_definitions/definition_relative_homotopy_groups_of_pointed_pairs_of_topological_spaces.tex}
+
+\input{../_definitions/definition_weak_homotopy_equivalence_of_topological_spaces.tex}
+
+
+
+
+\section{Singular homology and cohomology}
+
+\input{../_definitions/definition_geometric_simplex_of_independent_points_in_a_real_vector_space.tex}
+
+
+
+\input{../_definitions/definition_singular_simplex_of_a_topological_space.tex}
+
+\input{../_definitions/definition_singular_chain_group_of_a_topological_space_with_ceofficients_in_an_abelian_group.tex}
+
+
+\input{../_definitions/definition_singular_chain_complex_of_a_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_definitions/definition_singular_homology_and_relative_singular_homology_of_topological_space_with_coefficients_in_an_abelian_group.tex}
+
+\input{../_definitions/definition_singular_cochain_group_and_complex_relative_singular_cochain_group_and_complex_of_topological_space_with_coefficients_in_a_commutative_unital_ring.tex}
+
+
+
+\input{../_definitions/definition_singular_cohomology_group_relative_singular_cohomology_group_of_topological_space_with_coefficients_in_a_commutative_ring.tex}
+
+\section{CW complexes}
+
+\input{../_definitions/definition_CW_complex.tex}
+
+\section{Fibrations}
+
+\subsection{Hurewicz fibrations}
+
+\input{../_definitions/definition_homotopy_lifting_property_for_a_continuous_map_of_topological_spaces_with_respect_to_a_topological_space.tex}
+\input{../_definitions/definition_hurewicz_fibration_of_topological_spaces.tex}
+
+\subsection{Serre fibrations}
+
+\input{../_definitions/definition_serre_fibration_of_topological_spaces.tex}
+\input{../_concepts/lemma_hurewicz_fibrations_are_serre_fibrations.tex}
+
+\subsection{Fiber bundles}
+
+\input{../_definitions/definition_fiber_bundle_of_topological_spaces.tex}
+
+\input{../_definitions/definition_paracompact_topological_space.tex}
+\input{../_concepts/theorem_nice_enough_topological_spaces_are_paracompact.tex}
+\input{../_concepts/proposition_fiber_bundles_with_paracompact_base_is_a_hurewicz_fibration.tex}
+\input{../_concepts/proposition_any_fiber_bundle_of_topological_spaces_is_a_serre_fibration.tex}
+
+
+
+\appendix
+\section{Set theory}
+
+\input{../_definitions/definition_countable_finite_uncountable_sets.tex}
+
+\input{../_definitions/definition_injective_surjective_bijective_map_of_sets.tex}
+
+\section{Category Theory}
+\input{../_definitions/definition_category.tex}
+\input{../_definitions/definition_locally_small_category.tex}
+
+\section{Group Theory}
+
+\input{../_definitions/definition_group.tex}
+\input{../_definitions/definition_group_homomorphism.tex}
+
+\section{Ring Theory}
+
+\input{../_definitions/definition_commutative_ring.tex}
+\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_hom_of_left_right_bi_modules_of_rings.tex}
+
+\section{Homological algebra}
+\input{../_definitions/definition_chain_complex_of_objects_in_a_preadditive_category.tex}
+\input{../_definitions/definition_homology_and_cohomology_objects_for_a_chain_complex_in_an_abelian_category.tex}

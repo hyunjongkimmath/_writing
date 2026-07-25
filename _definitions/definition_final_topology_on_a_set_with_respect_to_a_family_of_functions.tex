@@ -1,0 +1,11 @@
+\begin{definition}[Final topology] \label{definition:final_topology_on_a_set_with_respect_to_a_family_of_functions}
+    \TODO{AI generated, verify}
+
+    Let $X$ be a topological space and let $\{f_i : X_i \to X\}_{i \in I}$ be a family of maps from topological spaces to a set $X$. The \hldef{final topology on $X$ with respect to the family $\{f_i\}_{i \in I}$} is the finest topology on $X$ such that every map $f_i : X_i \to X$ is continuous.
+
+    Specifically, a subset $U \subseteq X$ is open in the final topology if and only if $f_i^{-1}(U)$ is open in $X_i$ for every $i \in I$. Equivalently, a net $(x_\alpha)$ in $X$ converges to $x \in X$ in the final topology if and only if there exists some index $j \in I$, a point $y \in X_j$, and a net $(y_\beta)$ in $X_j$ converging to $y$ such that $f_j(y_\beta) = x_{\alpha(\beta)}$ for all $\beta$ and $f_j(y) = x$.
+
+    The resulting topological space is called the \hldef{final topological space induced by $\{f_i\}_{i \in I}$}. When no confusion can arise, we simply say "the final topology" and refer to the family $\{f_i\}_{i \in I}$ as the \hldef{structure maps} or \hldef{defining family}.
+
+    The final topology is the \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{colimit} in the category of topological spaces of the diagram consisting of the domain spaces $\{X_i\}_{i \in I}$ together with the structure maps. In particular, it satisfies the following universal property: a map $g : X \to Y$ to any topological space $Y$ is continuous if and only if each composite $g \circ f_i : X_i \to Y$ is continuous for all $i \in I$.
+\end{definition}

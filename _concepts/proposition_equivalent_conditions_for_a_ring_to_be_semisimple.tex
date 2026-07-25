@@ -8,3 +8,46 @@ For a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$, the following are equi
     \item Every left $R$-module is \CrefAndHyperrefIfExist{definition:injective_bimodule_over_rings}{injective}.
 \end{enumerate}
 \end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the cycle of implications $(1) \Rightarrow (2) \Rightarrow (3) \Rightarrow (4) \Rightarrow (5) \Rightarrow (1)$.
+
+    \begin{enumerate}
+        \item Assume that $R$ is a semisimple ring\CrefIfExists{definition:semisimple_ring}. By definition, $R_R$ is a direct sum of simple left ideals. Since $1_R \in R$, there exists a finite subset of these simple ideals whose sum contains $1_R$, and hence their sum equals $R$. Therefore, $R$ is a finite direct sum of simple left ideals. A finite direct sum of simple modules is both Artinian and Noetherian (each has a composition series of finite length), so $R$ is left Artinian\CrefIfExists{definition:left_right_artinian_ring}.
+
+        We show that $J(R) = \{0\}$. The Jacobson radical $J(R)$ is the intersection of all maximal left ideals\CrefIfExists{definition:jacobson_radical_of_a_ring}. Since $R$ is a finite direct sum of simple modules, every nonzero submodule has a complement. Suppose that $x \in J(R)$ with $x \neq 0$. Then $Rx$ is a nonzero submodule of $R$, so it contains a minimal left ideal $L$ (since any descending chain of submodules in the finitely generated module $Rx$ must stabilize). The intersection of all maximal left ideals contains $J(R) \ni x$, but since $L$ is simple and $L \subseteq Rx$, we have $L \cap J(R) = L$ if $L \subseteq J(R)$, or $L \oplus M = R$ for some maximal left ideal $M$. The latter cannot hold because then $x \in J(R) \cap M = \{0\}$, a contradiction. Alternatively, since every submodule of a semisimple module is a direct summand, no nonzero element can lie in every maximal left ideal (each element generates a summand with complement). Therefore, $J(R) = \{0\}$.
+
+        \item Assume that $R$ is left Artinian and $J(R) = \{0\}$. Let $M$ be any left $R$-module. We show that $M$ is semisimple, i.e., that every submodule of $M$ is a direct summand\CrefIfExists{definition:simple_irreducible_semisimple_module_over_a_ring}.
+
+        Let $N \subseteq M$ be a submodule. If $N = M$, then $N = M \oplus 0$. Suppose that $N \neq M$. By Zorn's lemma, there exists a maximal submodule $K$ of some complement of $N$ (formally: consider the poset of submodules $L \subseteq M$ such that $L \cap N = 0$, ordered by inclusion; any chain has an upper bound given by the union, so a maximal element $K$ exists). Then $N \oplus K$ is a submodule of $M$ with $(N \oplus K) / K \cong N \neq 0$.
+
+        We claim that every nonzero quotient of a left Artinian ring contains a simple module. Since $R$ is left Artinian, any nonzero left $R$-module that is finitely generated has a simple submodule (descending chain condition on submodules of $R$ implies the same for f.g. modules). In particular, any nonzero cyclic module $R/I$ has a simple quotient.
+
+        We apply this to show that every nonzero module contains a simple submodule when the ring is semisimple. Since $J(R) = \{0\}$ and $R$ is left Artinian, by \Cref{proposition_nonzero_finitely_generated_module_over_a_ring_has_a_maximal_submodule} (which asserts that every nonzero finitely generated module has a maximal submodule), we deduce structural constraints on $R$-modules.
+
+        Instead, we use a classical argument. Since $J(R) = \{0\}$ and $R$ is left Artinian, the regular representation $R_R$ decomposes as a finite direct sum of minimal left ideals:
+        $$R = L_1 \oplus L_2 \oplus \cdots \oplus L_k,$$
+        where each $L_i$ is simple. This follows from the structure theory of Artinian rings with zero Jacobson radical (see \Cref{theorem_artin_wedderburn_theorem_semisimple_ring_classification}).
+
+        We now show that every left module $M$ is a sum of simple submodules, hence semisimple. Let $S = \sum \{S' \subseteq M : S' \text{ is simple}\}$. Then $S$ is a submodule of $M$, and we claim $S = M$. Suppose not; then $M/S \neq 0$. Since every nonzero left ideal of $R$ contains a minimal left ideal (because $J(R) = \{0\}$ and $R$ is Artinian), every cyclic module $R/I$ has a simple submodule. Therefore, any quotient of $M$ by a proper submodule would have a simple submodule, implying that there exists a simple submodule of $M$ not contained in $S$, contradicting the definition of $S$.
+
+        More precisely: let $x \in M \setminus S$ and consider the cyclic submodule $Rx \cong R/\operatorname{ann}(x)$. Since $R$ is left Artinian with $J(R) = \{0\}$, the module $R/\operatorname{ann}(x)$ has a simple submodule (equivalently, $\operatorname{ann}(x)$ is contained in a maximal left ideal $I$, and $R/I$ is simple). Thus $Rx$ contains a simple submodule. But this simple submodule must be contained in $S$, which contradicts that $x \notin S$. Therefore, $M = S$, so every module is a sum of simple submodules.
+
+        Since any module that is a sum of simple submodules is itself a direct sum of some of them (by standard arguments using Zorn's lemma), every left $R$-module is semisimple\CrefIfExists{definition:simple_irreducible_semisimple_module_over_a_ring}.
+
+        \item Assume that every left $R$-module is semisimple. We show that every left $R$-module is projective. A module $P$ is projective if and only if every surjective homomorphism onto $P$ splits, or equivalently, $P$ is a direct summand of a free module\CrefIfExists{definition:projective_bimodule_over_rings}.
+
+        Let $M$ be any left $R$-module. By hypothesis, $M$ is semisimple. Every free module is semisimple (being a direct sum of copies of $R$, which is itself semisimple since it is a finite direct sum of simple ideals). Therefore, every free module is projective: if $F$ is free and we have an epimorphism $\pi : A \to B$ and a map $f : F \to B$, then since $F$ decomposes as a direct sum of simple modules, each simple component lifts (simple modules are quotients of free modules, and every surjection onto a semisimple module splits). More directly: if every module is semisimple, then every short exact sequence $0 \to A \to B \to C \to 0$ splits (since $C$, being semisimple, has each simple submodule lift to $B$). Therefore, every module is projective.
+
+        \item Assume that every left $R$-module is projective. We show that every left $R$-module is injective. A module $E$ is injective if and only if every embedding $E \hookrightarrow M$ splits\CrefIfExists{definition:injective_bimodule_over_rings}.
+
+        Let $M$ be any left $R$-module. By hypothesis, $M$ is projective. Therefore, every short exact sequence ending in $M$ splits. In particular, for any embedding $E \hookrightarrow M$ with $E$ injective (injective hulls always exist), the sequence $0 \to E \to M \to M/E \to 0$ splits because $M$, being projective by hypothesis...
+
+        We use a cleaner argument. Since every module is projective, every short exact sequence of left modules splits: given $0 \to A \xrightarrow{f} B \xrightarrow{g} C \to 0$, the map $\operatorname{id}_C : C \to C$ lifts to $h : C \to B$ because $C$ is projective, so $g \circ h = \operatorname{id}_C$ and the sequence splits. Therefore, every module is injective (if every short exact sequence splits, then for any embedding $E \hookrightarrow M$, there exists a retraction $M \twoheadrightarrow E$, which is precisely the definition of injectivity\CrefIfExists{definition:injective_bimodule_over_rings}).
+
+        \item Assume that every left $R$-module is injective. We show that $R$ is semisimple as a left module over itself. Since every short exact sequence splits (for any $0 \to A \to B \to C \to 0$, the map $C \to I(C)$ into its injective hull extends to $B \to I(C)$, and composing with the projection gives a splitting), it follows that every submodule of every module is a direct summand. In particular, every left ideal of $R$ is a direct summand of $R_R$. Therefore, $R$ decomposes as a finite direct sum of minimal left ideals (since $R$ has an identity and any decomposition into summands must be finite), so $R$ is semisimple\CrefIfExists{definition:simple_irreducible_semisimple_module_over_a_ring}.
+    \end{enumerate}
+
+    This completes the proof.
+\end{proof}

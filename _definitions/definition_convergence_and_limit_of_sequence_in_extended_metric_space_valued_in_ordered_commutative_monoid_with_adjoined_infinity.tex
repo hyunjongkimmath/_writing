@@ -3,7 +3,8 @@
     A sequence $(x_n)_{n=1}^\infty$ in $X$ \hldef{converges to a point $x \in X$} if for every $\varepsilon \in T_{>0}$, there exists an integer $N \in \mathbb{N}$ such that for all $n \geq N$,
     $$d(x_n, x) < \varepsilon.$$
     In that case, $x$ is called the \hldef{limit of the sequence $(x_n)$}, and we write
-    $$\hlin{\lim_{n \to \infty} x_n = x \quad \text{or} \quad x_n \to x}$$
+    $$\hlin{\lim_{n \to \infty} x_n = x \quad \text{or} \quad x_n \to x.}$$
+    Otherwise, we say that $(x_n)_{n=1}^\infty$ \hldef{diverges}.
 
     When $T = \bbR_{\geq 0}$, this recovers the standard definition of convergence in an extended metric space. In general, if $T$ has no minimum positive element (e.g., $T = \bbR_{\geq 0}$ or any dense ordered semiring), then the condition "$d(x_n,x) < \varepsilon$ for all $\varepsilon \in T_{>0}$" is strictly weaker than $d(x_n,x) = 0_T$, allowing sequences to approach $x$ without eventually equaling it. If $T$ has a minimum positive element, then convergence forces eventual equality: $(x_n)$ converges to $x$ if and only if $x_n = x$ for all sufficiently large $n$.
 

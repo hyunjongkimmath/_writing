@@ -1,0 +1,11 @@
+\begin{definition}[Ultrafilter on a set] \label{definition:ultrafilter_on_a_set}
+    \TODO{AI generated, verify}
+
+    Let $S$ be a nonempty set. A filter $\mathcal{U}$ on $S$ is called an \hldef{ultrafilter on $S$} if it is maximal among all filters on $S$ with respect to inclusion. Equivalently, $\mathcal{U}$ is an ultrafilter if and only if for every subset $A \subseteq S$, either $A \in \mathcal{U}$ or $S \setminus A \in \mathcal{U}$.
+
+    An ultrafilter $\mathcal{U}$ is called a \hldef{principal ultrafilter} (or \hldef{fixed ultrafilter}) if there exists a point $x \in S$ such that
+    $$\mathcal{U} = \{\, A \subseteq S \mid x \in A \,\}.$$
+    Principal ultrafilters are exactly those of the form $\dot{x}$ where $\dot{x}$ is the point filter at $x$. An ultrafilter that is not principal is called a \hldef{free ultrafilter} (or \hldef{non-principal ultrafilter}).
+
+    Every filter on a set can be extended to an ultrafilter on that set. This is equivalent to the Boolean prime ideal theorem, which follows from the Axiom of Choice.
+\end{definition}

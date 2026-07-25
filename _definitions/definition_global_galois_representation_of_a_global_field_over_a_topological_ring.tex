@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:global_galois_representation_of_a_global_field_over_a_topological_ring}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:global_field}{global field}. Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}.
+
+    \begin{enumerate}
+        \item A \hldef{global Galois representation of $K$ over $R$} is a \CrefAndHyperrefIfExist{definition:galois_representation_over_a_topological_ring_of_a_field}{Galois representation} of $K$ over $R$, i.e., a \CrefAndHyperrefIfExist{definition:continuous_representation_of_a_topological_group_on_a_topological_module_over_a_topological_ring}{continuous representation}
+        $$\rho: G_K \longrightarrow \Aut_R(M)$$
+        of the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} $G_K = \Gal(\overline{K}/K)$ (equipped with its \CrefAndHyperrefIfExist{definition:profinite_group}{profinite topology}) on a \CrefAndHyperrefIfExist{definition:topological_module_over_topological_rings}{topological $R$-module} $M$.
+
+        \item For each \CrefAndHyperrefIfExist{definition:place_of_a_global_field}{place $v$ of $K$}, let $K_v$ denote the \CrefAndHyperrefIfExist{definition:completion_of_a_global_field_at_a_place}{completion of $K$ at $v$}, and let $G_{K_v} = \Gal(\overline{K}_v/K_v)$ be the absolute Galois group of $K_v$. Fix an embedding $\overline{K} \hookrightarrow \overline{K}_v$ extending the natural inclusion $K \hookrightarrow K_v$; this induces a continuous injection $G_{K_v} \hookrightarrow G_K$ defined up to conjugation. The \hldef{localization of $\rho$ at $v$} is the restriction
+        $$\rho_v: G_{K_v} \longrightarrow \Aut_R(M)$$
+        of $\rho$ along this injection, which is a \CrefAndHyperrefIfExist{definition:local_galois_representation_of_a_local_field_over_a_topological_ring}{local Galois representation of $K_v$ over $R$}.
+
+        \item A global Galois representation is said to be \hldef{unramified at a place $v$} if its localization $\rho_v$ at $v$ is unramified, i.e., the \CrefAndHyperrefIfExist{definition:inertia_group_in_the_absolute_galois_group_of_the_function_field_of_a_dedekind_scheme_at_a_closed_point}{inertia subgroup} $I_{K_v} \subset G_{K_v}$ acts trivially on $M$.
+    \end{enumerate}
+
+    The notion of a global Galois representation is the central object of study in \hldef{global Galois theory}, whose local-global compatibility and \hldef{compatible systems} (see \Cref{definition:compatible_system_of_representations_on_a_profinite_group_equipped_with_dense_frobenius_elements}) form the foundation of the Langlands program.
+\end{definition}

@@ -1,0 +1,41 @@
+\begin{theorem}[Laurent series expansion] \label{theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli}
+    \TODO{AI generated, verify}
+    Let $U \subseteq \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \setminus \{z_0\} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} with an \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{isolated singularity} at $z_0$.
+
+    Suppose that there exists $R > 0$ such that the \CrefAndHyperrefIfExist{definition:punctured_disk_in_the_complex_plane}{punctured disk} $D^*(z_0, R) = \{z \in \mathbb{C} : 0 < |z - z_0| < R\}$ is contained in $U \setminus \{z_0\}$. Then $f$ admits a \CrefAndHyperrefIfExist{definition:laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity}{Laurent series expansion} centered at $z_0$, i.e. a series of the form
+    $$f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$$
+    that \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for every $z$ with $0 < |z - z_0| < R$ and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on every \CrefAndHyperrefIfExist{definition:annulus_in_the_complex_plane}{annulus} $r_1 \leq |z - z_0| \leq r_2$ with $0 < r_1 < r_2 < R$. The coefficients are uniquely determined by the \CrefAndHyperrefIfExist{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}{contour integral}
+    $$a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho} \frac{f(w)}{(w - z_0)^{n+1}}\,dw$$
+    for any $\rho \in (0, R)$, and are independent of the choice of $\rho$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the existence of the Laurent series expansion by applying the Cauchy integral formula on two concentric circles and expanding the Cauchy kernel as a geometric series.
+
+    For each $r$ with $0 < r < R$, let $\gamma_r$ denote the positively oriented circle centered at $z_0$ of radius $r$, parametrized by $\gamma_r(t) = z_0 + r e^{2\pi i t}$ for $t \in [0,1]$. Fix any point $z$ with $0 < |z - z_0| < R$. Choose radii $r_1, r_2$ such that $0 < r_1 < |z - z_0| < r_2 < R$.
+
+    By \Cref{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_and_derivatives_via_contour_integrals} applied to the holomorphic function $f$ on the annulus bounded by $\gamma_{r_1}$ and $\gamma_{r_2}$, we have
+    $$f(z) = \frac{1}{2\pi i} \oint_{\gamma_{r_2}} \frac{f(w)}{w - z}\,dw - \frac{1}{2\pi i} \oint_{\gamma_{r_1}} \frac{f(w)}{w - z}\,dw.$$
+
+    We expand each Cauchy kernel as a geometric series. For $w$ on $\gamma_{r_2}$, we have $|w - z_0| = r_2 > |z - z_0|$, so
+    $$\frac{1}{w - z} = \frac{1}{(w - z_0) - (z - z_0)} = \frac{1}{w - z_0} \cdot \frac{1}{1 - \frac{z - z_0}{w - z_0}} = \sum_{n=0}^{\infty} \frac{(z - z_0)^n}{(w - z_0)^{n+1}},$$
+    where the series converges uniformly in $w$ on $\gamma_{r_2}$ because $\bigl|\frac{z - z_0}{w - z_0}\bigr| < 1$. For $w$ on $\gamma_{r_1}$, we have $|w - z_0| = r_1 < |z - z_0|$, so
+    $$\frac{1}{w - z} = -\frac{1}{(z - z_0) - (w - z_0)} = -\frac{1}{z - z_0} \cdot \frac{1}{1 - \frac{w - z_0}{z - z_0}} = -\sum_{n=1}^{\infty} \frac{(w - z_0)^{n-1}}{(z - z_0)^n},$$
+    which also converges uniformly in $w$ on $\gamma_{r_1}$.
+
+    Substituting these expansions into the contour integrals and integrating termwise — justified by the \Cref{proposition:linearity_of_the_contour_integral}{linearity of the contour integral} and the \Cref{theorem:weierstrass_m_test_for_uniform_convergence_of_function_series}{Weierstrass $M$-test} for uniform convergence (as the geometric series are bounded by a convergent geometric series of constants) — we obtain
+    \begin{align*}
+        f(z) &= \frac{1}{2\pi i} \sum_{n=0}^{\infty} (z - z_0)^n \oint_{\gamma_{r_2}} \frac{f(w)}{(w - z_0)^{n+1}}\,dw \\
+        &\quad + \frac{1}{2\pi i} \sum_{n=1}^{\infty} \frac{1}{(z - z_0)^n} \oint_{\gamma_{r_1}} f(w)(w - z_0)^{n-1}\,dw.
+    \end{align*}
+
+    Let $\rho$ be any number with $0 < \rho < R$. For any integer $n$, \Cref{theorem:cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes} applied to the holomorphic function $\frac{f(w)}{(w - z_0)^{n+1}}$ on the annulus implies that the integral $\oint_{|w - z_0| = \rho} \frac{f(w)}{(w - z_0)^{n+1}}\,dw$ is independent of the choice of $\rho$. Therefore we may define
+    $$a_n = \frac{1}{2\pi i} \oint_{|w - z_0| = \rho} \frac{f(w)}{(w - z_0)^{n+1}}\,dw$$
+    for all $n \in \mathbb{Z}$. The second sum above can be re-indexed with $n \mapsto -n$ to match this formula: for $n \geq 1$,
+    $$\frac{1}{2\pi i} \oint_{\gamma_{r_1}} f(w)(w - z_0)^{n-1}\,dw = a_{-n}.$$
+    Thus the full expansion takes the form
+    $$f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n.$$
+
+    Finally, we verify the claimed convergence. On any closed annulus $r_1 \leq |z - z_0| \leq r_2$ with $0 < r_1 < r_2 < R$, choose any $\rho$ with $r_2 < \rho < R$. By compactness of the circle $|w - z_0| = \rho$, the function $f$ is bounded there, so the coefficients $a_n$ satisfy $|a_n| \leq \frac{M}{\rho^n}$ for a uniform constant $M$. The Weierstrass $M$-test therefore shows that the series $\sum_{n=0}^{\infty} a_n (z - z_0)^n$ converges absolutely and uniformly for $|z - z_0| \leq r_2$, and the series $\sum_{n=1}^{\infty} a_{-n} (z - z_0)^{-n}$ converges absolutely and uniformly for $|z - z_0| \geq r_1$. Hence the full Laurent series converges absolutely and uniformly on the closed annulus.
+\end{proof}

@@ -1,0 +1,29 @@
+\begin{theorem}[Comparison of double series to double integrals of monotone functions] \label{theorem:comparison_of_double_series_to_double_integrals_of_nonnegative_functions}
+    \TODO{AI generated, verify}
+    Let $f : [0,\infty)^2 \to [0,\infty)$ be a function that is \CrefAndHyperrefIfExist{definition:monotone_function_on_an_ordered_set}{nonincreasing} in each variable separately, i.e.\ for all $x_1 \le x_2$ and $y_1 \le y_2$,
+    $$f(x_1,y_1) \ge f(x_2,y_1) \quad\text{and}\quad f(x_1,y_1) \ge f(x_1,y_2).$$
+
+    \begin{enumerate}
+        \item For any integers $m_0, n_0 \ge 0$,
+        $$\sum_{m=m_0+1}^\infty \sum_{n=n_0+1}^\infty f(m,n) \le \iint_{[m_0,\infty) \times [n_0,\infty)} f(x,y)\,dx\,dy \le \sum_{m=m_0}^\infty \sum_{n=n_0}^\infty f(m,n)$$
+        \CrefIfExists{definition:lebesgue_measure_on_Rn},
+        where the integrals are taken with respect to \CrefAndHyperrefIfExist{definition:lebesgue_measure_on_Rn}{Lebesgue measure} on $\mathbb{R}^2$.
+        \item In particular, the double series $\sum_{(m,n) \neq (0,0)} f(m,n)$ converges if and only if the double integral $\iint_{[0,\infty)^2} f(x,y)\,dx\,dy$ is finite.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    The monotonicity of $f$ implies that for any $(m,n) \in \mathbb{Z}_{\ge 0}^2$,
+    $$f(m+1,n+1) \le f(x,y) \le f(m,n) \quad\text{for all } (x,y) \in [m,m+1] \times [n,n+1].$$
+
+    Summing these inequalities over $m \ge m_0$, $n \ge n_0$ and using the fact that the Lebesgue measure of the unit square $[m,m+1] \times [n,n+1]$ is $1$, we obtain
+    \begin{align*}
+        \sum_{m=m_0+1}^\infty \sum_{n=n_0+1}^\infty f(m,n)
+        &\le \sum_{m=m_0}^\infty \sum_{n=n_0}^\infty \iint_{[m,m+1] \times [n,n+1]} f(x,y)\,dx\,dy \\
+        &\le \sum_{m=m_0}^\infty \sum_{n=n_0}^\infty f(m,n).
+    \end{align*}
+    The middle double sum equals $\iint_{[m_0,\infty) \times [n_0,\infty)} f(x,y)\,dx\,dy$ by \Cref{theorem:tonelli_theorem} (the terms are nonnegative, so the iterated integral equals the double integral). This proves (1).
+
+    Statement (2) follows from (1) by taking $m_0 = n_0 = 0$ and noting that the finiteness of the double series is equivalent to the finiteness of $\sum_{m=1}^\infty \sum_{n=1}^\infty f(m,n)$ (since the boundary terms $m=0$ or $n=0$ contribute at most a finite number of additional terms).
+\end{proof}

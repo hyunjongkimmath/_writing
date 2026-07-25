@@ -1,0 +1,44 @@
+\begin{proposition}[Legendre's duplication formula for the Gamma function] \label{proposition:legendres_duplication_formula_for_gamma_function}
+	\TODO{AI generated, verify}
+	For all complex numbers $z \in \mathbb{C}$ with $\Re(z) > 0$, the \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(z)$ satisfies Legendre's duplication formula:
+	$$
+	\boxed{\Gamma(z) \, \Gamma\!\left( z + \frac{1}{2} \right) = 2^{1 - 2z} \sqrt{\pi} \, \Gamma(2z).}
+	$$
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+\end{proposition}
+
+\begin{proof}
+	\TODO{AI generated, verify}
+	The proof relates the Beta functions $B(z,z)$ and $B(1/2, z)$ via a change of variables. We use the identity $B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$\TODO{AI generated, reference needed: proposition on Beta function identity $B(x,y) = \Gamma(x)\Gamma(y)/\Gamma(x+y)$}, which gives
+	$$B(z,z) = \frac{\Gamma(z)^2}{\Gamma(2z)}, \qquad B(1/2, z) = \frac{\sqrt{\pi}\,\Gamma(z)}{\Gamma(z+1/2)}.$$
+
+	The Beta function has the integral representation $B(x,y) = \int_0^1 t^{x-1}(1-t)^{y-1}\,dt$ for $\Re(x), \Re(y) > 0$\TODO{AI generated, reference needed: proposition on integral representation of Beta function}. For $B(z,z)$ this is
+	$$B(z,z) = \int_0^1 t^{z-1}(1-t)^{z-1}\,dt.$$
+
+	We make the substitution $t = (1+u)/2$, so that $dt = du/2$ and the limits transform from $(0,1)$ to $(-1,1)$. The integrand becomes
+	$$B(z,z) = \int_{-1}^1 \left(\frac{1+u}{2}\right)^{z-1} \left(\frac{1-u}{2}\right)^{z-1} \cdot \frac{du}{2}.$$
+
+	Simplifying the product of powers:
+	$$\left(\frac{1+u}{2}\right)^{z-1} \left(\frac{1-u}{2}\right)^{z-1} = 2^{-2(z-1)} (1+u)(1-u))^{z-1} = 2^{-2z+2}(1-u^2)^{z-1}.$$
+
+	Therefore,
+	$$B(z,z) = \frac{1}{2} \cdot 2^{-2z+2} \int_{-1}^1 (1-u^2)^{z-1}\,du = 2^{-2z+1} \int_0^1 (1-u^2)^{z-1}\,du,$$
+	where we used the symmetry of $(1-u^2)^{z-1}$ about $u=0$ to halve the interval.
+
+	We substitute $v = u^2$, so that $dv = 2u\,du$ and $du = \frac{1}{2}v^{-1/2}\,dv$. The limits transform from $(0,1)$ to $(0,1)$:
+	$$B(z,z) = 2^{-2z+1} \cdot \frac{1}{2} \int_0^1 (1-v)^{z-1} v^{-1/2}\,dv = 2^{1-2z} B(1/2, z).$$
+
+	Substituting the Gamma function expressions for both Beta functions:
+	$$\frac{\Gamma(z)^2}{\Gamma(2z)} = 2^{1-2z} \frac{\sqrt{\pi}\,\Gamma(z)}{\Gamma(z+1/2)}.$$
+
+	Canceling $\Gamma(z)$ from both sides (which is nonzero for $\Re(z) > 0$):
+	$$\frac{\Gamma(z)}{\Gamma(2z)} = \frac{2^{1-2z}\sqrt{\pi}}{\Gamma(z+1/2)}.$$
+
+	Rearranging gives Legendre's duplication formula:
+	$$\Gamma(z)\Gamma\!\left(z+\frac{1}{2}\right) = 2^{1-2z}\sqrt{\pi}\,\Gamma(2z).$$
+
+	The formula holds for $\Re(z) > 0$ by the above computation. By analytic continuation, it extends to all $z \in \mathbb{C}$ except at the poles of the Gamma function.
+
+	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
+\end{proof}

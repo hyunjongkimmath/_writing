@@ -5,24 +5,25 @@ $$ \varphi(h)(n) = hnh^{-1} $$
 for all $h \in H$ and $n \in N$. Under this isomorphism, the subgroups $N$ and $H$ of the internal product correspond to the subgroups $\{(n, 1_H) : n \in N\}$ and $\{(1_N, h) : h \in H\}$ of the external product, respectively.
 \end{theorem}
 \begin{proof}
-    \TODO{AI generated, verify}
     We first define the conjugation action. If $G$ is an internal semidirect product of $N$ and $H$, then $N \trianglelefteq G$ by condition (1) of \Cref{definition:semidirect_product_of_groups_external_and_internal}, so for each $h \in H \subseteq G$ and $n \in N$, we have $hnh^{-1} \in N$. Define $\varphi: H \to \operatorname{Aut}(N)$ by $\varphi(h)(n) = hnh^{-1}$. The map $\varphi(h)$ is a group automorphism of $N$ because conjugation preserves the group operation. The assignment $h \mapsto \varphi(h)$ is a homomorphism because
+    $$\varphi(1_H)(n) = 1_H \cdot n \cdot 1_H^{-1} = n$$
+    for all $n \in N$ and
     $$\varphi(h_1 h_2)(n) = (h_1 h_2)n(h_1 h_2)^{-1} = h_1(h_2nh_2^{-1})h_1^{-1} = \varphi(h_1)(\varphi(h_2)(n))$$
     for all $h_1, h_2 \in H$ and $n \in N$.
 
     Define $\Phi: N \rtimes_\varphi H \to G$ by $\Phi(n, h) = nh$. We verify that $\Phi$ is a group homomorphism. For $(n_1, h_1), (n_2, h_2) \in N \rtimes_\varphi H$, we have
     \begin{align*}
         \Phi((n_1, h_1)(n_2, h_2)) &= \Phi(n_1\varphi(h_1)(n_2), h_1h_2) \\
-        &= n_1\varphi(h_1)(n_2)h_1h_2 \\
-        &= n_1(h_1n_2h_1^{-1})h_1h_2 \\
+        &= n_1\cdot (\varphi(h_1)(n_2)) \cdot h_1h_2 \\
+        &= n_1 \cdot (h_1n_2h_1^{-1}) \cdot h_1h_2 \\
         &= n_1h_1n_2h_2 \\
         &= \Phi(n_1, h_1) \cdot \Phi(n_2, h_2).
     \end{align*}
 
     We now prove the equivalence.
 
-    \begin{enumerate}
-        \item ($\Rightarrow$) Suppose that $G$ is the internal semidirect product of $N$ and $H$. We show that $\Phi$ is a group isomorphism.
+    \begin{itemize}
+        \item Suppose that $G$ is the internal semidirect product of $N$ and $H$. We show that $\Phi$ is a group isomorphism.
 
         For surjectivity, let $g \in G$. Since $G = NH$ by condition (2) of \Cref{definition:semidirect_product_of_groups_external_and_internal}, there exist $n \in N$ and $h \in H$ such that $g = nh = \Phi(n, h)$. Hence $\Phi$ is surjective.
 
@@ -30,7 +31,7 @@ for all $h \in H$ and $n \in N$. Under this isomorphism, the subgroups $N$ and $
 
         Under this isomorphism, the subgroup $N \times \{e_H\} = \{(n, e_H) : n \in N\}$ of $N \rtimes_\varphi H$ maps to $\{\Phi(n, e_H) : n \in N\} = \{ne_H : n \in N\} = N$, and the subgroup $\{e_N\} \times H = \{(e_N, h) : h \in H\}$ maps to $H$.
 
-        \item ($\Leftarrow$) Suppose that $\varphi(h)(n) = hnh^{-1}$ defines a homomorphism $H \to \operatorname{Aut}(N)$ and that $\Phi: N \rtimes_\varphi H \to G$ is a group isomorphism. We show that $G$ satisfies the three conditions of an internal semidirect product.
+        \item Conversely, suppose that $\varphi(h)(n) = hnh^{-1}$ defines a homomorphism $H \to \operatorname{Aut}(N)$ and that $\Phi: N \rtimes_\varphi H \to G$ is a group isomorphism. We show that $G$ satisfies the three conditions of an internal semidirect product.
 
         First, we verify that $N$ is normal in $G$. In the external semidirect product $N \rtimes_\varphi H$, the subset $\{(n, e_H) : n \in N\}$ is a normal subgroup because for any $(a, b) \in N \rtimes_\varphi H$ and $(n, e_H)$ with $n \in N$, we have
         \begin{align*}
@@ -45,5 +46,5 @@ for all $h \in H$ and $n \in N$. Under this isomorphism, the subgroups $N$ and $
         Third, we show that $N \cap H = \{e_G\}$. Suppose that $x \in N \cap H$. Then $\Phi(x, e_H) = xe_H = x$ and $\Phi(e_N, x) = e_Nx = x$, so $\Phi(x, e_H) = \Phi(e_N, x)$. Since $\Phi$ is injective, we have $(x, e_H) = (e_N, x)$, which implies $x = e_N = e_G$. Hence, $N \cap H = \{e_G\}$.
 
         Therefore, $G$ satisfies all three conditions of the internal semidirect product by \Cref{definition:semidirect_product_of_groups_external_and_internal}.
-    \end{enumerate}
+    \end{itemize}
 \end{proof}

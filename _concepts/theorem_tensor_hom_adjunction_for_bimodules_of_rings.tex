@@ -4,7 +4,7 @@
         \item Let $R,S,T$ be \CrefAndHyperrefIfExist{definition:ring}{(not necessarily commutative) rings}. Let $M$ be an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$ bimodule}, let $N$ be an $S$-$T$ bimodule, and let $P$ be an $R$-$T$ bimodule. Then there is a natural isomorphism of abelian groups
         $$ \operatorname{Hom}_{R\text{-}T}(M \otimes_S N,\, P) \;\;\cong\;\; \operatorname{Hom}_{S\text{-}T}(N,\, \operatorname{Hom}_R(M, P)) $$
         \CrefIfExists{definition:tensor_product_of_bimodules_of_rings} \CrefIfExists{definition:hom_of_left_right_bi_modules_of_rings}.
-        Note that $\operatorname{Hom}_{R\text{-}T}$ is the abelian group of $R$-$T$ bimodule homomorphisms, $\operatorname{Hom}_{S\text{-}T}$ is the abelian group of $S$-$T$ bimodule homomorphisms, and $\operatorname{Hom}_R(M,P)$, which is the abelian group of left $R$-linear homomorhisms $M \to P$, is endowed with the structure of an $S$-$T$ bimodule via
+        Note that $\operatorname{Hom}_{R\text{-}T}$ is the abelian group of $R$-$T$ bimodule homomorphisms, $\operatorname{Hom}_{S\text{-}T}$ is the abelian group of $S$-$T$ bimodule homomorphisms, and $\operatorname{Hom}_R(M,P)$, which is the abelian group of left $R$-linear homomorphisms $M \to P$, is endowed with the structure of an $S$-$T$ bimodule via
         \begin{align*}
         (s \cdot f)(m) &= f(m \cdot s), \\
         (f \cdot t)(m) &= f(m) \cdot t,
@@ -19,7 +19,7 @@
         Note that $\operatorname{Hom}_{R\text{-}T}$ is the abelian group of $R$-$T$ bimodule homomorphisms, $\operatorname{Hom}_{R\text{-}S}$ is the abelian group of $R$-$S$ bimodule homomorphisms, and $\operatorname{Hom}_T(N,P)$, which is the abelian group of right $T$-linear homomorphisms $N \to P$, is endowed with the structure of an $R$-$S$ bimodule via
         \begin{align*}
         (r \cdot f)(n) &= r \cdot f(n), \\
-        (f \cdot s)(n) &= f(n \cdot s),
+        (f \cdot s)(n) &= f(s \cdot n),
         \end{align*}
         for all $r \in R$, $s \in S$, $f \in \operatorname{Hom}_T(N,P)$, and $n \in N$.
 
@@ -27,3 +27,83 @@
 
     \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove part (1). The proof of part (2) is analogous with left/right roles interchanged.
+
+    Let $\Phi : \operatorname{Hom}_{R-T}(M \otimes_S N, P) \to \operatorname{Hom}_{S-T}(N, \operatorname{Hom}_R(M, P))$ be defined as follows. Given an $R$-$T$ bimodule homomorphism $f : M \otimes_S N \to P$, we construct $\Phi(f) : N \to \operatorname{Hom}_R(M, P)$ by setting
+    $$\Phi(f)(n) = f_n : M \to P, \quad m \mapsto f(m \otimes n),$$
+    and extending linearly.
+
+    We first verify that for each $n \in N$, the map $f_n : M \to P$ is a left $R$-module homomorphism. For any $r \in R$ and $m \in M$:
+    $$f_r(m) = f(rm \otimes n).$$
+    In the tensor product $M \otimes_S N$, we have $rm \otimes n = m' \otimes ?$. Actually, since $M$ is an $R$-$S$ bimodule and $N$ is just a right $T$-module with left $S$-action, the left $R$-action on $M \otimes_S N$ is given by $r \cdot (m \otimes n) = rm \otimes n$. Since $f$ is an $R$-$T$ bimodule homomorphism:
+    $$f_r(m) = f(rm \otimes n) = f(r \cdot (m \otimes n)) = r \cdot f(m \otimes n) = r \cdot f_n(m).$$
+    Therefore, $f_r : M \to P$ is left $R$-linear.
+
+    We verify that $\Phi(f) : N \to \operatorname{Hom}_R(M, P)$ is an $S$-$T$ bimodule homomorphism. For any $s' \in S$, $n \in N$, and $m \in M$:
+    $$\bigl(\Phi(f)(s' \cdot n)\bigr)(m) = f(m \otimes s'n).$$
+    In the tensor product over $S$, we have $m \otimes s'n = ms' \otimes n$. Therefore:
+    $$f(ms' \otimes n) = f_n(ms') = (s' \cdot f_n)(m),$$
+    where the last equality uses the definition of the left $S$-action on $\operatorname{Hom}_R(M, P)$ from \Cref{definition:hom_of_left_right_bi_modules_of_rings}. Thus, $\Phi(f)(s'n) = s' \cdot \Phi(f)(n)$.
+
+    For the right $T$-action and any $t \in T$:
+    $$\bigl(\Phi(f)(nt)\bigr)(m) = f(m \otimes nt) = f((m \otimes n)t).$$
+    Since $f$ is an $R$-$T$ bimodule homomorphism:
+    $$f((m \otimes n)t) = f(m \otimes n) \cdot t = f_n(m) \cdot t.$$
+    By the definition of the right $T$-action on $\operatorname{Hom}_R(M, P)$:
+    $$(f_n \cdot t)(m) = f_n(m) \cdot t.$$
+    Therefore, $\Phi(f)(nt) = \Phi(f)(n) \cdot t$.
+
+    We construct the inverse map. Given $g : N \to \operatorname{Hom}_R(M, P)$ in $\operatorname{Hom}_{S-T}(N, \operatorname{Hom}_R(M, P))$, consider the map
+    $$\gamma_g : M \times N \to P, \quad (m,n) \mapsto (g(n))(m).$$
+    We verify that $\gamma_g$ satisfies the hypotheses of \Cref{proposition:universal_property_of_the_tensor_product_of_bimodules}.
+
+    For additivity in each argument, for all $m,m' \in M$, $n,n' \in N$:
+    $$\gamma_g(m+m', n) = (g(n))(m+m') = (g(n))(m) + (g(n))(m') = \gamma_g(m,n) + \gamma_g(m',n),$$
+    where the second equality uses that $g(n)$ is a left $R$-module homomorphism and hence additive. Similarly:
+    $$\gamma_g(m, n+n') = (g(n+n'))(m).$$
+    Since $g$ is an $S$-$T$ bimodule homomorphism, we have $g(n+n') = g(n) + g(n')$. Therefore:
+    $$\gamma_g(m,n+n') = (g(n)+g(n'))(m) = g(n)(m) + g(n')(m) = \gamma_g(m,n) + \gamma_g(m,n').$$
+
+    For the balancing condition over $S$, for all $s \in S$:
+    $$\gamma_g(ms, n) = (g(n))(ms),$$
+    while
+    $$\gamma_g(m, s'n) = (g(s'n))(m).$$
+    Since $g$ is an $S$-$T$ bimodule homomorphism:
+    $$g(s'n) = s' \cdot g(n),$$
+    and by the definition of the left $S$-action on $\operatorname{Hom}_R(M, P)$:
+    $$(s' \cdot g(n))(m) = (g(n))(ms').$$
+    Therefore, $\gamma_g(ms, n) = \gamma_g(m, s'n)$ as required.
+
+    For the left $R$-linearity and right $T$-linearity of $\gamma_g$: for all $r \in R$, $t \in T$:
+    $$\gamma_g(rm, n) = (g(n))(rm) = r \cdot (g(n))(m) = r \cdot \gamma_g(m,n),$$
+    where the second equality uses that $g(n)$ is left $R$-linear. Similarly:
+    $$\gamma_g(m, nt) = (g(nt))(m) = ((g(n))t)(m) = (g(n))(m)t = \gamma_g(m,n) \cdot t,$$
+    where the second equality uses that $g$ is a right $T$-module homomorphism.
+
+    By \Cref{proposition:universal_property_of_the_tensor_product_of_bimodules}, there exists a unique group homomorphism
+    $$\widetilde{g} : M \otimes_S N \to P$$
+    such that $\widetilde{g}(m \otimes n) = (g(n))(m)$ for all $m \in M$, $n \in N$.
+
+    We verify that $\widetilde{g}$ is an $R$-$T$ bimodule homomorphism. For any $r \in R$:
+    $$\widetilde{g}(rm \otimes n) = (g(n))(rm) = r \cdot (g(n))(m) = r \cdot \widetilde{g}(m \otimes n),$$
+    using that $g(n)$ is left $R$-linear. For any $t \in T$:
+    $$\widetilde{g}((m \otimes n)t) = \widetilde{g}(m \otimes nt) = (g(nt))(m).$$
+    Since $g$ is right $T$-linear:
+    $$(g(nt))(m) = ((g(n))t)(m) = (g(n))(m)t.$$
+    Therefore, $\widetilde{g}$ respects both the left $R$-action and right $T$-action on pure tensors, and hence is an $R$-$T$ bimodule homomorphism.
+
+    We define $\Psi(g) = \widetilde{g}$. We verify that $\Phi$ and $\Psi$ are mutual inverses. For any $f : M \otimes_S N \to P$:
+    $$\bigl(\Phi(\Psi(f))(n)\bigr)(m) = (f_n')(m),$$
+    where $f'_n(m) = f(m \otimes n)$, which is exactly the definition of $\Phi(f)(n)(m)$. Therefore, $\Phi(\Psi(f)) = f$.
+
+    Conversely, for any $g : N \to \operatorname{Hom}_R(M, P)$:
+    $$\bigl(\Psi(g)\bigr)(m \otimes n) = (g(n))(m).$$
+    Applying $\Phi$ to this:
+    $$\bigl(\Phi(\Psi(g))(n)\bigr)(m) = (\Psi(g))_n(m) = (\Psi(g))(m \otimes n) = (g(n))(m).$$
+    Therefore, $\Phi(\Psi(g)) = g$, and the correspondence is bijective.
+
+    Part (2) follows by an identical argument with left/right roles interchanged: given $f : M \otimes_S N \to P$, define $\Phi'(f)(m) = f_m : N \to P$ by $f_m(n) = f(m \otimes n)$, verify that $f_m$ is right $T$-linear and carries the correct $R$-$S$ bimodule structure on $\operatorname{Hom}_T(N, P)$, then use the universal property of the tensor product to construct the inverse.
+\end{proof}

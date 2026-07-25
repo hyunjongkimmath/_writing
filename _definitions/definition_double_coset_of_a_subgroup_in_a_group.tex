@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:double_coset_of_a_subgroup_in_a_group}
+\TODO{AI generated, verify}
+Let $G$ be a group and let $\Gamma \leq G$ be a subgroup. For $g \in G$, the \hldef{$(\Gamma,\Gamma)$-double coset of $g$ in $G$}, denoted by \hl{$\Gamma g \Gamma$}, is defined as
+$$\hlin{\Gamma g \Gamma = \{ \gamma_1 g \gamma_2 : \gamma_1, \gamma_2 \in \Gamma \}.}$$
+Equivalently, $\Gamma g \Gamma$ is the orbit of $g$ under the action of $\Gamma \times \Gamma$ on $G$ given by $(\gamma_1, \gamma_2) \cdot x = \gamma_1 x \gamma_2^{-1}$ for $\gamma_1, \gamma_2 \in \Gamma$ and $x \in G$.
+\CrefIfExists{definition:action_of_a_group_on_a_set}
+
+The set of all $(\Gamma,\Gamma)$-double cosets in $G$ is denoted by \hl{$\Gamma \backslash G / \Gamma$}. When $\Gamma g \Gamma = \Gamma g' \Gamma$, we write $g' \in \Gamma g \Gamma$.
+\CrefIfExists{definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation}
+
+For any right coset representative $\alpha$ of $\Gamma$ in the double coset $\Gamma g \Gamma$, we have a decomposition
+$$\Gamma g \Gamma = \bigsqcup_{i} \Gamma \alpha_i$$
+into finitely or countably many disjoint right cosets, depending on whether $[\Gamma : \Gamma \cap g^{-1}\Gamma g]$ is finite.
+
+\end{definition}

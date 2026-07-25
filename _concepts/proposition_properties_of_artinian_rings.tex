@@ -1,8 +1,51 @@
 \begin{proposition} \label{proposition:properties_of_artinian_rings}
-Let $R$ be a \CrefAndHyperrefIfExist{definition:left_right_artinian_ring}{left/right Artinian ring}. Then:
+Let $R$ be a \CrefAndHyperrefIfExist{definition:left_right_artinian_ring}{left Artinian ring}. Then:
 \begin{enumerate}
-    \item $R$ is also a \CrefAndHyperrefIfExist{definition:locally_noetherian_and_noetherian_scheme}{left/right Noetherian ring} (Hopkins-Levitzki Theorem).
+    \item $R$ is also a \CrefAndHyperrefIfExist{definition:noetherian_ring}{left Noetherian ring} (Hopkins--Levitzki Theorem).
     \item The \CrefAndHyperrefIfExist{definition:jacobson_radical_of_a_ring}{Jacobson radical} \hl{$J(R)$} is a \CrefAndHyperrefIfExist{definition:nilpotent_ideal_of_a_ring}{nilpotent ideal}.
     \item $R/J(R)$ is a \CrefAndHyperrefIfExist{definition:semisimple_ring}{semisimple ring}.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+
+    We prove the three items in the order (2), (3), then (1). The nilpotence of $J(R)$ and the semisimplicity of $R/J(R)$ are the key inputs for the Hopkins--Levitzki theorem.
+
+    \begin{enumerate}
+        \item We show that $J(R)$ is a nilpotent ideal. Consider the descending chain of powers of the Jacobson radical:
+        $$J(R) \supseteq J(R)^2 \supseteq J(R)^3 \supseteq \cdots$$
+        Since $R$ is left Artinian, it satisfies the DCC on left ideals by \Cref{definition:left_right_artinian_ring}. Hence this chain stabilizes: there exists a positive integer $n$ such that $J(R)^k = J(R)^n$ for all $k \geq n$. In particular, we have $J(R)^n = J(R) \cdot J(R)^n$.
+
+        Suppose for contradiction that $J(R)^n \neq 0$. Consider the set $\mathcal{S}$ of all left ideals $L$ of $R$ such that $L \cdot J(R)^n \neq L$. The set $\mathcal{S}$ is nonempty because $R \in \mathcal{S}$ (since $J(R)^n \subseteq J(R) \subsetneq R$, we have $R \cdot J(R)^n = J(R)^n \neq R$). Since $R$ is left Artinian, $\mathcal{S}$ has a minimal element $L_0$ by the DCC on left ideals.
+
+        We claim that $L_0 \cdot J(R)^n \in \mathcal{S}$. Indeed, $(L_0 \cdot J(R)^n) \cdot J(R)^n = L_0 \cdot J(R)^{2n} = L_0 \cdot J(R)^n$, where the second equality holds because $J(R)^{2n} = J(R)^n$ (since $2n \geq n$). Since $L_0 \cdot J(R)^n \subseteq L_0$ and both are left ideals, the minimality of $L_0$ in $\mathcal{S}$ implies that $L_0 \cdot J(R)^n \notin \mathcal{S}$. But we just showed $(L_0 \cdot J(R)^n) \cdot J(R)^n = L_0 \cdot J(R)^n$, contradicting the fact that $L_0 \cdot J(R)^n \in \mathcal{S}$ unless $L_0 \cdot J(R)^n = 0$. If instead $L_0 \cdot J(R)^n = 0$, then $L_0 \subseteq L_0$ and $L_0 \cdot J(R)^n = 0$, which means $L_0 \in \mathcal{S}$ (since $J(R)^n \neq 0$). But now we have a nonzero left ideal $L_0$ such that $L_0 \cdot J(R)^n = 0$.
+
+        Since $L_0 \neq 0$, choose any nonzero element $x \in L_0$. Consider the left ideal $Rx$. We have $(Rx) \cdot J(R)^n \subseteq L_0 \cdot J(R)^n = 0$, so $R x \cdot J(R)^n = 0$ as well. In particular, $x \cdot J(R)^n = 0$.
+
+        On the other hand, since $J(R)^n = J(R) \cdot J(R)^n$ and $x \neq 0$, we can apply \CrefAndHyperrefIfExist{lemma:nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical}{Nakayama's lemma} to the cyclic left $R$-module $Rx$. The module $Rx$ is finitely generated (by the single element $x$), and we have $(Rx) \cdot J(R)^n = 0$. But $J(R)^n \subseteq J(R)$, so by \Cref{lemma:nakayamas_lemma_for_finitely_generated_modules_over_a_ring_with_ideal_in_jacobson_radical} applied with the ideal $I = J(R)^n \subseteq J(R)$ and submodule $N = 0$, the hypothesis $0 + (Rx) \cdot J(R)^n = Rx$ implies that $Rx = 0$. This contradicts the fact that $x \neq 0$.
+
+        Therefore, our assumption that $J(R)^n \neq 0$ was false. Hence $J(R)^n = \{0\}$ for some positive integer $n$, so $J(R)$ is a nilpotent ideal by \Cref{definition:nilpotent_ideal_of_a_ring}.
+
+        \item We show that $R/J(R)$ is a semisimple ring, i.e., it is semisimple as a left module over itself. Let $\overline{R} = R/J(R)$. Since $J(\overline{R}) = J(R)/J(R) = 0$ (because the Jacobson radical of a quotient by $J(R)$ is trivial), we have $J(\overline{R}) = 0$.
+
+        We claim that every nonzero left ideal $\overline{I}$ of $\overline{R}$ contains a minimal nonzero left ideal. To see this, let $\overline{I} \neq 0$ be a left ideal of $\overline{R}$, and let $I \subseteq R$ be its preimage under the quotient map $R \to R/J(R)$. Since $\overline{I} \neq 0$, we have $I \supsetneq J(R)$. Consider the set of left ideals $J$ of $R$ such that $J(R) \subsetneq J \subseteq I$. This set is nonempty (it contains $I$), and since $R$ is left Artinian, it has a minimal element by the DCC on left ideals. Call this minimal element $M$.
+
+        We claim that $\overline{M}/J(R)$ is a minimal nonzero left ideal of $\overline{R}$. Suppose for contradiction that there exists a left ideal $\overline{K}$ of $\overline{R}$ such that $0 \subsetneq \overline{K} \subsetneq \overline{M}/J(R)$. Let $K$ be the preimage of $\overline{K}$ in $R$. Then $J(R) \subseteq K \subsetneq M$, and since $M/K \cong (\overline{M}/J(R))/(\overline{K}) \neq 0$, we have $K \supsetneq J(R)$. But then $K$ is a left ideal strictly between $J(R)$ and $M$, contradicting the minimality of $M$ among left ideals properly containing $J(R)$. Hence $\overline{M}/J(R)$ is a minimal nonzero left ideal of $\overline{R}$.
+
+        It follows that every nonzero left ideal of $\overline{R}$ contains a simple submodule (a minimal left ideal). Now let $S$ be the sum of all minimal left ideals of $\overline{R}$. Since every nonzero left ideal of $\overline{R}$ contains a simple submodule, we have $S \cdot J(\overline{R}) = S \cdot 0 = 0$, and moreover $S$ intersects every nonzero left ideal nontrivially. In particular, if $S \subsetneq \overline{R}$ were proper, then $\overline{R}/S$ would be a nonzero left $\overline{R}$-module, and by the argument above it would contain a minimal left ideal — but this minimal left ideal lifts to a minimal left ideal of $\overline{R}$ not contained in $S$, contradicting the definition of $S$. Therefore $S = \overline{R}$.
+
+        Hence $\overline{R}$ is the sum of its minimal left ideals, which means $\overline{R}$ is semisimple as a left module over itself by \Cref{definition:simple_irreducible_semisimple_module_over_a_ring}. Therefore $R/J(R)$ is a semisimple ring.
+
+        \item We show that $R$ is left Noetherian, i.e., it satisfies the ACC on left ideals. Consider the filtration of $R$ by powers of $J(R)$:
+        $$R = J(R)^0 \supseteq J(R) \supseteq J(R)^2 \supseteq \cdots \supseteq J(R)^n = \{0\}.$$
+        By part (2), this filtration is finite. For each $k$ with $0 \leq k < n$, consider the quotient left $R$-module $J(R)^k / J(R)^{k+1}$. This module is annihilated by $J(R)$, since $J(R) \cdot J(R)^k = J(R)^{k+1}$, so it naturally has the structure of a left $\overline{R} = R/J(R)$-module.
+
+        By part (3), $\overline{R}$ is a semisimple ring, and hence every left $\overline{R}$-module is \CrefAndHyperrefIfExist{definition:semisimple_additive_category}{semisimple}. In particular, each quotient $J(R)^k / J(R)^{k+1}$ is a semisimple left $\overline{R}$-module.
+
+        We now show that each $J(R)^k / J(R)^{k+1}$ has finite length as an $\overline{R}$-module (and hence also as an $R$-module). Since $R$ is left Artinian, the left ideal $J(R)^k$ satisfies the DCC on submodules. A semisimple module that satisfies the DCC must be a finite direct sum of simple modules: if it were an infinite direct sum of simples, we could form a strictly descending chain by omitting one summand at each step. Therefore each quotient $J(R)^k / J(R)^{k+1}$ has finite length as an $\overline{R}$-module.
+
+        Since the filtration $R = J(R)^0 \supseteq J(R) \supseteq \cdots \supseteq J(R)^n = \{0\}$ is finite and each factor has finite length, the left $R$-module $R$ itself has finite length. A module of finite length satisfies both the ACC and DCC on submodules by \Cref{definition:noetherian_artinian_module_over_a_ring}. In particular, $R$ satisfies the ACC on left ideals, so $R$ is a left Noetherian ring by \Cref{definition:noetherian_ring}.
+    \end{enumerate}
+
+    This completes the proof of all three items.
+\end{proof}

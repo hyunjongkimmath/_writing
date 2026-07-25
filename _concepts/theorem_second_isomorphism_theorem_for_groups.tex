@@ -10,13 +10,13 @@
     Let $e$ denote the identity element of $G$.
 
     \begin{enumerate}
-        \item We show that the set $HN = \{hn : h \in H, n \in N\}$ is a subgroup of $G$. First, $e = ee \in HN$. Second, if $h_1 n_1, h_2 n_2 \in HN$, then $n_1 h_2 = h_2 (h_2^{-1} n_1 h_2)$, so
+        \item We show that the set $HN = \{hn : h \in H, n \in N\}$ is a subgroup of $G$. First, $e = ee \in HN$. Second, if $h_1 n_1, h_2 n_2 \in HN$, then we rewrite the product as $n_1 h_2 = h_2 (h_2^{-1} n_1 h_2)$, so
         $$h_1 n_1 h_2 n_2 = h_1 h_2 (h_2^{-1} n_1 h_2) n_2.$$
-        Since $h_2^{-1} n_1 h_2 \in N$ by normality, the above lies in $HN$. Third, if $hn \in HN$, then we have $n^{-1} h^{-1} = h^{-1} (h n^{-1} h^{-1})$, so
+        Since $N \trianglelefteq G$, we have $h_2^{-1} n_1 h_2 \in N$, so the product lies in $HN$. Third, if $hn \in HN$, then we rewrite $(hn)^{-1}$ as $n^{-1} h^{-1} = h^{-1} (h n^{-1} h^{-1})$, so
         $$(hn)^{-1} = h^{-1} (h n^{-1} h^{-1}).$$
-        Since $h n^{-1} h^{-1} \in N$ by the normality of $N$ in $G$, we have $(hn)^{-1} \in HN$. Therefore, $HN$ is indeed a subgroup of $G$.
+        Since $N \trianglelefteq G$, we have $h n^{-1} h^{-1} \in N$, which implies that $(hn)^{-1} \in HN$. Therefore, $HN$ is indeed a subgroup of $G$.
 
-        \item We show that the intersection $H \cap N$ is a normal subgroup of $H$. It is a subgroup since both $H$ and $N$ are subgroups\CrefIfExists{lemma:intersection_of_subgroups_of_a_group_is_a_subgroup}. To show that $H$ is in fact a normal subgroup of $H$, let $h_0 \in H$ and $x \in H \cap N$. Then $h_0 x h_0^{-1} \in N$ because $x \in N$ and $N \trianglelefteq G$, and also $h_0 x h_0^{-1} \in H$ because $x \in H$ and $H$ is a group. Hence $h_0 x h_0^{-1} \in H \cap N$, so $H \cap N \trianglelefteq H$.
+        \item We show that the intersection $H \cap N$ is a normal subgroup of $H$. It is a subgroup since both $H$ and $N$ are subgroups\CrefIfExists{lemma:intersection_of_subgroups_of_a_group_is_a_subgroup}. To show that $H \cap N$ is in fact a normal subgroup of $H$, let $h_0 \in H$ and $x \in H \cap N$. Then $h_0 x h_0^{-1} \in N$ because $x \in N$ and $N \trianglelefteq G$, and also $h_0 x h_0^{-1} \in H$ because $x \in H$ and $H$ is a group. Hence $h_0 x h_0^{-1} \in H \cap N$, so $H \cap N \trianglelefteq H$.
 
         \item The quotient groups $H/(H \cap N)$ and $HN/N$ are well-defined because $H \cap N \trianglelefteq H$ by part 2 and $N \trianglelefteq HN$ since $N \trianglelefteq G$ and $HN$ is a subgroup of $G$ containing $N$ as a consequence of \Cref{proposition:intersection_of_normal_subgroup_and_subgroup_is_normal_subgroup_of_subgroup}.
 

@@ -1,0 +1,15 @@
+\begin{definition} \label{definition:local_galois_representation_of_a_local_field_over_a_topological_ring}
+    Let $K$ be a \CrefAndHyperrefIfExist{definition:local_field}{local field}. Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}.
+
+    \begin{enumerate}
+        \item A \hldef{local Galois representation of $K$ over $R$} is a \CrefAndHyperrefIfExist{definition:galois_representation_over_a_topological_ring_of_a_field}{Galois representation} of $K$ over $R$, i.e., a \CrefAndHyperrefIfExist{definition:continuous_representation_of_a_topological_group_on_a_topological_module_over_a_topological_ring}{continuous representation}
+        $$\rho: G_K \longrightarrow \Aut_R(M)$$
+        of the \CrefAndHyperrefIfExist{definition:absolute_galois_group_of_a_field}{absolute Galois group} $G_K = \Gal(\overline{K}/K)$ (equipped with its \CrefAndHyperrefIfExist{definition:profinite_group}{profinite topology} if $K$ is non-archimedean) on a \CrefAndHyperrefIfExist{definition:topological_module_over_topological_rings}{topological $R$-module} $M$.
+
+        \item If $K$ is an \CrefAndHyperrefIfExist{definition:local_field}{archimedean local field} (i.e., $K \cong \bbR$ or $K \cong \bbC$), then $G_K$ is a finite group, so the continuity condition is automatic for any topology on $M$, and the representation theory of $G_K$ reduces to the representation theory of a finite group over $R$.
+
+        \item If $K$ is a non-archimedean local field, then $G_K$ is a \CrefAndHyperrefIfExist{definition:profinite_group}{profinite group}, and the representation is continuous if and only if the action map $G_K \times M \to M$ is continuous.
+    \end{enumerate}
+
+    The \hldef{restriction of a local representation to the inertia subgroup} refers to the restriction of $\rho$ to the \CrefAndHyperrefIfExist{definition:inertia_group_of_a_general_galois_extension_of_valuation_fields}{inertia subgroup} $I_K \subset G_K$, and the representation is said to be \hldef{unramified} if $I_K$ acts trivially on $M$ (see \Cref{definition:unramified_galois_representation_for_a_dedekind_scheme_at_a_closed_point}).
+\end{definition}

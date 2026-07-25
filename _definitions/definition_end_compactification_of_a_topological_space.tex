@@ -1,0 +1,15 @@
+\begin{definition}[End compactification of a topological space] \label{definition:end_compactification_of_a_topological_space}
+    \TODO{AI generated, verify}
+    Let $X$ be a locally compact Hausdorff space. An \hldef{end} of $X$ is an equivalence class of nested sequences $(U_n)_{n=1}^\infty$ of connected open subsets with compact boundary, where two such sequences $(U_n)$ and $(V_n)$ are equivalent if for every $n$, there exists $m$ such that $U_m \subseteq V_n$ and vice versa. Let $\mathcal{E}(X)$ denote the set of all ends of $X$.
+
+    The \hldef{end compactification} of $X$, denoted by \hl{$\hat{X}$}, is the disjoint union
+    $$\hat{X} = X \sqcup \mathcal{E}(X).$$
+    A basis for the topology on $\hat{X}$ is given by:
+    \begin{enumerate}
+        \item open subsets of $X$ (as a subspace), and
+        \item sets of the form $U_n \cup \{e \in \mathcal{E}(X) : U_k \subseteq V \text{ for some representative } V \text{ of } e\}$, where $(U_n)$ is a sequence representing the end $e$.
+    \end{enumerate}
+    With this topology, $\hat{X}$ is compact. If $X$ has finitely many ends, then $\mathcal{E}(X)$ is finite and discrete in $\hat{X}$. The space $X$ embeds as an open dense subspace of $\hat{X}$, and $\hat{X} \setminus X = \mathcal{E}(X)$.
+
+    When $X$ is connected and locally compact Hausdorff with one end (i.e., every compact subset has exactly one non-compact component in its complement), the end compactification coincides with the one-point compactification.
+\end{definition}

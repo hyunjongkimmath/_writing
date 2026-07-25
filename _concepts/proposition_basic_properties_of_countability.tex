@@ -1,0 +1,24 @@
+\begin{proposition}[Basic properties of countability] \label{proposition:basic_properties_of_countability}
+    \TODO{AI generated, verify}
+    The following properties hold in \CrefAndHyperrefIfExist{definition:zermelo_fraenkel_set_theory}{$\ZF$} set theory.
+
+    \begin{enumerate}
+        \item Every subset of an \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{at most countable} set is at most countable.
+        \item The \CrefAndHyperrefIfExist{definition:function_of_sets}{image} of an at most countable set under any function is at most countable.
+        \item The \CrefAndHyperrefIfExist{definition:product_of_sets}{Cartesian product} of finitely many \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{countably infinite} sets is countably infinite. In particular, $\mathbb{Z}^2$ is countable.
+        \item The \CrefAndHyperrefIfExist{definition:union_of_sets}{union} of countably many at most countable sets is at most countable.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item Let $A$ be an at most countable set and let $B \subseteq A$. If $A$ is finite, then $B$ is finite. If $A$ is countably infinite, fix a bijection $\varphi : \mathbb{N} \to A$. Define $f : \mathbb{N} \to B$ recursively by $f(n) = \varphi(\min\{k \in \mathbb{N} : \varphi(k) \in B \setminus \{f(1),\dots,f(n-1)\}\})$ if the set on the right is nonempty, and stop otherwise. The image of $f$ is $B$, so $B$ is either finite or countably infinite. (Equivalently, the inclusion $B \hookrightarrow A$ composed with $\varphi^{-1}$ gives an injection $B \to \mathbb{N}$, so $B$ has cardinality $\leq |\mathbb{N}|$.)
+
+        \item Let $A$ be at most countable and $g : A \to C$ any function. The image $g(A)$ is at most countable because $g \circ \varphi : \mathbb{N} \to g(A)$ is surjective when $\varphi$ is a bijection $\mathbb{N} \to A$ (or a surjection from $\mathbb{N}$ onto a finite $A$).
+
+        \item It suffices to show $\mathbb{N}^2$ is countable; the general case follows by induction. Define $\pi : \mathbb{N}^2 \to \mathbb{N}$ by $\pi(m,n) = \frac{(m+n)(m+n+1)}{2} + n$ (the Cantor pairing function). This map is a bijection (a standard diagonal enumeration). Hence $\mathbb{N}^2$ is countably infinite. For $\mathbb{Z}^2$, note that $\mathbb{Z}$ is countably infinite via the bijection $n \mapsto \begin{cases} 2n & n \ge 0 \\ -2n-1 & n < 0 \end{cases}$, so $\mathbb{Z}^2$ is countable by applying the same argument twice.
+
+        \item Let $\{A_i\}_{i \in \mathbb{N}}$ be a family of at most countable sets. Fix for each $i$ a surjection $\varphi_i : \mathbb{N} \to A_i$ (if $A_i$ is finite, extend a finite enumeration periodically). Define $\Phi : \mathbb{N}^2 \to \bigcup_i A_i$ by $\Phi(i,j) = \varphi_i(j)$. Since $\mathbb{N}^2$ is countable by~(3), the image $\bigcup_i A_i$ is at most countable by~(2).
+    \end{enumerate}
+\end{proof}

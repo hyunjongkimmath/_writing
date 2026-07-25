@@ -1,0 +1,53 @@
+\begin{lemma}[Absolute convergence over a countable index set is unconditional] \label{lemma:absolute_convergence_over_a_countable_index_set_is_unconditional}
+    \TODO{AI generated, verify}
+    Let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} or $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers}, with norm $\|\cdot\|$.
+    Let $I$ be a \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{countable} set and $(v_i)_{i \in I}$ a family in $V$ such that
+    $$\hlin{\sum_{i\in I} \|v_i\| := \sup_{\substack{F \subseteq I \\ |F| < \infty}} \sum_{i\in F} \|v_i\| < \infty.}$$
+    \CrefIfExists{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}
+
+    Then the following hold:
+    \begin{enumerate}
+        \item Absolute convergence for any enumeration: For every \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection} $\varphi : \mathbb{N} \to I$, the ordinary series $\sum_{n=1}^\infty v_{\varphi(n)}$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} in $V$; consequently it converges in $V$ by \Cref{proposition:absolute_convergence_implies_convergence_of_series_in_a_normed_vector_space_over_R_or_C}.
+        \item Uniqueness of the sum: For any two bijections $\varphi, \psi : \mathbb{N} \to I$,
+        $$\sum_{n=1}^\infty v_{\varphi(n)} = \sum_{n=1}^\infty v_{\psi(n)}.$$
+    \end{enumerate}
+    In particular, for an absolutely convergent family $(v_i)_{i\in I}$, the common sum is well-defined and is denoted \hl{$\sum_{i\in I} v_i$}.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S = \sum_{i\in I} \|v_i\| < \infty$ be the supremum.
+
+    \begin{enumerate}
+        \item Let $\varphi : \mathbb{N} \to I$ be any bijection. For each $N$, the set $\{\varphi(1),\dots,\varphi(N)\}$ is a finite subset of $I$, so
+        $$\sum_{n=1}^N \|v_{\varphi(n)}\| \leq S.$$
+        Hence the sequence of partial sums of $\sum_{n=1}^\infty \|v_{\varphi(n)}\|$ is bounded above by $S$\CrefIfExists{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}, so the series of norms converges to some value $\leq S$. Thus $\sum_{n=1}^\infty v_{\varphi(n)}$ converges absolutely, and by \Cref{proposition:absolute_convergence_implies_convergence_of_series_in_a_normed_vector_space_over_R_or_C} it converges in $V$.
+
+        \item Let $\varphi, \psi : \mathbb{N} \to I$ be two bijections. Denote
+        $$S_\varphi = \sum_{n=1}^\infty v_{\varphi(n)}, \qquad S_\psi = \sum_{n=1}^\infty v_{\psi(n)},$$
+        which exist by part~(1). Let $\varepsilon > 0$ be given. Since $S = \sum_{i\in I} \|v_i\|$ is finite, there exists a finite subset $F \subseteq I$ such that
+        $$\sum_{i\in I\setminus F} \|v_i\| < \varepsilon.$$
+
+        Choose $N$ large enough that $F \subseteq \{\varphi(1),\dots,\varphi(N)\}$ and $F \subseteq \{\psi(1),\dots,\psi(N)\}$, which is possible because $\varphi$ and $\psi$ are bijections. For this $N$, the symmetric differences
+        $$\varphi(\{1,\dots,N\}) \setminus \psi(\{1,\dots,N\}) \quad\text{and}\quad \psi(\{1,\dots,N\}) \setminus \varphi(\{1,\dots,N\})$$
+        are both contained in $I \setminus F$, because every element of $F$ belongs to both sets. Hence
+        \begin{align*}
+        \Bigl\|\sum_{n=1}^N v_{\varphi(n)} - \sum_{n=1}^N v_{\psi(n)}\Bigr\|
+        &\leq \sum_{i\in \varphi(\{1,\dots,N\})\setminus\psi(\{1,\dots,N\})} \|v_i\|
+          + \sum_{i\in \psi(\{1,\dots,N\})\setminus\varphi(\{1,\dots,N\})} \|v_i\| \\
+        &\leq 2\sum_{i\in I\setminus F} \|v_i\| < 2\varepsilon.
+        \end{align*}
+
+        By part~(1), $\sum_{n=1}^N v_{\varphi(n)} \to S_\varphi$ and $\sum_{n=1}^N v_{\psi(n)} \to S_\psi$ as $N \to \infty$. Choose $N$ large enough that additionally
+        $$\Bigl\|\sum_{n=1}^N v_{\varphi(n)} - S_\varphi\Bigr\| < \varepsilon \quad\text{and}\quad \Bigl\|\sum_{n=1}^N v_{\psi(n)} - S_\psi\Bigr\| < \varepsilon.$$
+        Then by the triangle inequality,
+        \begin{align*}
+        \|S_\varphi - S_\psi\|
+        &\leq \|S_\varphi - \sum_{n=1}^N v_{\varphi(n)}\|
+           + \Bigl\|\sum_{n=1}^N v_{\varphi(n)} - \sum_{n=1}^N v_{\psi(n)}\Bigr\|
+           + \Bigl\|\sum_{n=1}^N v_{\psi(n)} - S_\psi\Bigr\| \\
+        &< \varepsilon + 2\varepsilon + \varepsilon = 4\varepsilon.
+        \end{align*}
+        Since $\varepsilon > 0$ was arbitrary, $\|S_\varphi - S_\psi\| = 0$, so $S_\varphi = S_\psi$.
+    \end{enumerate}
+\end{proof}

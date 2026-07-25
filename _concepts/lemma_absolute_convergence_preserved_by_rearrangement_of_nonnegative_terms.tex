@@ -1,10 +1,11 @@
 \begin{lemma}[Rearrangement preserves convergence of series of nonnegative elements in a totally ordered abelian group with the least upper bound property] \label{lemma:absolute_convergence_preserved_by_rearrangement_of_nonnegative_terms}
+    \TODO{See also \Cref{lemma:regrouping_preserves_absolute_convergence}; consider merging}
     \TODO{does this require an abelian group? We're just adding things, so I think we can take a commutative monoid. Does this reqiure a total ordering? It seems that all the things that we compare are actually comparable.}
     Let $G$ be a \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{totally ordered abelian group} with the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}. Let $(a_n)_{n=1}^\infty$ be a sequence in $G$\CrefIfExists{definition:monotone_sequence_of_elements_in_a_partially_ordered_set} with $a_n \geq 0$ for all $n$. Let $\sigma : \mathbb{N} \to \mathbb{N}$ be any bijection. 
     
     % For a series of nonnegative terms, we say that it \hldef{converges} if its sequence of partial sums is bounded above; in this case the supremum of the partial sums exists by the least upper bound property, and the series is said to \hldef{converge to} that supremum.
 
-    Then $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_in_a_topological_abelian_group}{converges} if and only if $\sum_{n=1}^\infty a_{\sigma(n)}$ converges, and in that case
+    Then $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converges} if and only if $\sum_{n=1}^\infty a_{\sigma(n)}$ converges, and in that case
     $$\sum_{n=1}^\infty a_{\sigma(n)} = \sum_{n=1}^\infty a_n.$$
 \end{lemma}
 

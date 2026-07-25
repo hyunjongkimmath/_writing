@@ -1,0 +1,12 @@
+\begin{definition}[Series indexed by a countable set] \label{definition:series_indexed_by_a_countable_set}
+    \TODO{AI generated, verify}
+    Let $I$ be a \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{countable} set and $(a_i)_{i\in I}$ a family of real numbers.
+
+    The \hldef{series $\sum_{i\in I} a_i$} is said to \hldef{converge absolutely} if the supremum over all finite subsets is finite:
+    $$\hlin{\sum_{i\in I} |a_i| := \sup_{\substack{F \subseteq I \\ |F| < \infty}} \sum_{i\in F} |a_i| < \infty.}$$
+
+    In this case, \Cref{lemma:absolute_convergence_over_a_countable_index_set_is_unconditional} guarantees that for every \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection} $\varphi : \mathbb{N} \to I$, the ordinary series $\sum_{n=1}^\infty a_{\varphi(n)}$ converges (absolutely) and to the same sum independent of the enumeration; this common sum is denoted
+    $$\hlin{\sum_{i\in I} a_i.}$$
+
+    When the terms are nonnegative, the sum reduces to the supremum above, and the series converges precisely when this supremum is finite.
+\end{definition}

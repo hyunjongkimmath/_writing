@@ -1,0 +1,18 @@
+\begin{definition}[Root system] \label{definition:root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}
+  \TODO{AI generated, verify}
+Let $V$ be a \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{finite-dimensional} $\mathbb{Q}$-\CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector space} with a fixed $\bbQ$-valued \CrefAndHyperrefIfExist{definition:symmetric_and_skew_symmetric_bilinear_forms}{symmetric bilinear form} $\langle \cdot, \cdot \rangle$.
+The form takes values in $\bbQ$ and the integrality condition in the axioms below requires $\bbZ$ as a subring; thus $\bbQ$ is the natural base field. (The classical theory often works over $\bbR$ with a positive-definite form, but $\bbQ$ suffices and the purely combinatorial data encoded by the Cartan integers is independent of the choice of field.)
+
+A \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{finite} \CrefAndHyperrefIfExist{definition:subset_of_a_set}{subset} $R \subseteq V$ is called a \hldef{root system in $V$ with respect to $\langle \cdot, \cdot \rangle$} if:
+\begin{itemize}
+  \item $R$ \CrefAndHyperrefIfExist{definition:span_a_module_over_a_ring_for_elements_of_the_module}{spans} $V$.
+  \item $0 \notin R$.
+  \item For every $\alpha \in R$, the only scalar multiples of $\alpha$ in $R$ are $\pm\alpha$.
+  \item For every $\alpha \in R$, the reflection $s_\alpha: V \to V$ defined by
+  $$s_\alpha(v) = v - 2\dfrac{\langle v, \alpha \rangle}{\langle \alpha, \alpha \rangle}\alpha,$$
+  permutes $R$.
+  \item For all $\alpha, \beta \in R$, the number $2\dfrac{\langle \beta,\alpha \rangle}{\langle \alpha, \alpha \rangle}$ is an \CrefAndHyperrefIfExist{definition:ring_of_integers}{integer}.
+\end{itemize}
+
+The above axiomatizes root systems via a bilinear form, which is the classical formulation. An equivalent formulation replaces the bilinear form with a lattice $X$ (a free $\bbZ$-module) and its dual $X^\vee = \Hom_{\bbZ}(X,\bbZ)$ equipped with the natural pairing $\langle\cdot,\cdot\rangle: X \times X^\vee \to \bbZ$; one can then define a root datum $(X,\Phi,X^\vee,\Phi^\vee)$ where $\Phi \subset X$ and $\Phi^\vee \subset X^\vee$ are in bijection $\alpha \leftrightarrow \alpha^\vee$ with $\langle\alpha,\alpha^\vee\rangle = 2$, and the reflections $s_\alpha(x) = x - \langle x,\alpha^\vee\rangle\alpha$ and $s_{\alpha^\vee}(y) = y - \langle\alpha,y\rangle\alpha^\vee$ preserve $\Phi$ and $\Phi^\vee$ respectively. The two formulations coincide when $V = X \otimes_{\bbZ} \bbQ$ and the bilinear form on $V$ induces an identification $V \cong V^\ast$ under which $\alpha^\vee$ corresponds to $2\alpha/\langle\alpha,\alpha\rangle$.
+\end{definition}

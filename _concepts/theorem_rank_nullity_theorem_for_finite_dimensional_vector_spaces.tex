@@ -18,7 +18,7 @@
 
     We first show that these vectors span $\operatorname{im}(T)$. Let $w \in \operatorname{im}(T)$. Then there exists $v \in V$ such that $T(v) = w$. Write $v$ in terms of the basis for $V$:
     $$v = c_1 v_1 + \cdots + c_k v_k + d_1 u_1 + \cdots + d_r u_r$$
-    for some scalars $c_1, \dots, c_k, d_1, \dots, d_r \in F$. Applying $T$ and using linearity gives
+    for some scalars $c_1, \dots, c_k, d_1, \dots, d_r \in F$. Applying $T$ and using linearity yields
     $$w = T(v) = c_1 T(v_1) + \cdots + c_k T(v_k) + d_1 T(u_1) + \cdots + d_r T(u_r).$$
     Since each $v_i \in \ker(T)$, we have $T(v_i) = 0_W$, so the first $k$ terms vanish. Hence
     $$w = d_1 T(u_1) + \cdots + d_r T(u_r),$$
@@ -28,7 +28,7 @@
     $$T(d_1 u_1 + \cdots + d_r u_r) = 0_W,$$
     so $d_1 u_1 + \cdots + d_r u_r \in \ker(T)$. Since this vector lies in $\ker(T)$, it can be written as a linear combination of the basis vectors of $\ker(T)$:
     $$d_1 u_1 + \cdots + d_r u_r = c_1 v_1 + \cdots + c_k v_k$$
-    for some scalars $c_1, \dots, c_k \in F$. Rearranging gives
+    for some scalars $c_1, \dots, c_k \in F$. Rearranging yields
     $$-c_1 v_1 - \cdots - c_k v_k + d_1 u_1 + \cdots + d_r u_r = 0_V.$$
     Since $\{v_1, \dots, v_k, u_1, \dots, u_r\}$ is a basis for $V$, it is linearly independent, so all coefficients must be zero. In particular, $d_1 = \cdots = d_r = 0$. Hence, $\{T(u_1), \dots, T(u_r)\}$ is linearly independent by \CrefIfExists{definition:basis_and_dimension_of_a_vector_space_over_a_field}.
 

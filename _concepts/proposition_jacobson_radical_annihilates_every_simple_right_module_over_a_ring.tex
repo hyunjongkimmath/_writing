@@ -1,5 +1,32 @@
 \begin{proposition}[Jacobson radical annihilates every simple right module]  \label{proposition:jacobson_radical_annihilates_every_simple_right_module_over_a_ring}
 	\TODO{AI generated, verify}
 
-	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, not assumed commutative, and let $S$ be a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} right $R$-module. Then the \CrefAndHyperrefIfExist{definition:jacobson_radical_of_a_ring}{Jacobson radical} $J(R)$ annihilates $S$, i.e., $s \cdot x = 0$ for all $s \in S$ and all $x \in J(R)$.
+	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, not assumed commutative, and let $S$ be a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{(right) $R$-module}. Then the \CrefAndHyperrefIfExist{definition:jacobson_radical_of_a_ring}{Jacobson radical} $J(R)$ annihilates $S$, i.e., $s \cdot x = 0$ for all $s \in S$ and all $x \in J(R)$.
 \end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+
+    Let $S$ be a simple right $R$-module and let $x \in J(R)$. We show that $sx = 0$ for all $s \in S$.
+
+    If $S = \{0\}$, then the claim is vacuous. So suppose that $S \neq \{0\}$. Choose any nonzero $s \in S$. Consider the map
+    $$\varphi: R \longrightarrow S, \quad r \longmapsto sr.$$
+
+    We verify that $\varphi$ is a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $R$-module homomorphism}. For all $r_1, r_2 \in R$, we have $\varphi(r_1 + r_2) = s(r_1 + r_2) = sr_1 + sr_2 = \varphi(r_1) + \varphi(r_2)$ by the distributivity axiom of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}. Moreover, $\varphi(r_1 r_2) = s(r_1 r_2) = (sr_1) r_2 = \varphi(r_1) r_2$ by the associativity axiom of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}.
+
+    The image $\operatorname{im}(\varphi)$ is a \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}{submodule} of $S$. Since $s \neq 0$, we have $\varphi(1_R) = s \neq 0$, so $\operatorname{im}(\varphi) \neq \{0\}$. Because $S$ is simple, the only nonzero submodule of $S$ is $S$ itself. Hence, $\operatorname{im}(\varphi) = S$, i.e. $\varphi$ is surjective.
+
+    The kernel of $\varphi$ is the left ideal
+    $$\operatorname{ann}_R(s) := \{r \in R : sr = 0\} \subseteq R,$$
+    i.e. the annihilator of $s$ in $R$.
+
+    Since $\varphi$ is surjective, it induces an isomorphism of right $R$-modules
+    $$\bar{\varphi}: R / \operatorname{ann}_R(s) \xrightarrow{\cong} S, \quad r + \operatorname{ann}_R(s) \longmapsto sr.$$
+    This map is well-defined because if $r \equiv r' \pmod{\operatorname{ann}_R(s)}$, then $r - r' \in \operatorname{ann}_R(s)$, so $s(r - r') = 0$, i.e. $sr = sr'$. It is injective because if $\bar{\varphi}(r + \operatorname{ann}_R(s)) = 0$, then $sr = 0$, so $r \in \operatorname{ann}_R(s)$, and hence $r + \operatorname{ann}_R(s) = 0$ in the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient $R / \operatorname{ann}_R(s)$}. It is surjective because $\varphi$ is surjective. The $R$-linearity follows from the $R$-linearity of $\varphi$ and the definition of the \CrefAndHyperrefIfExist{definition:quotient_module_of_a_module_by_a_module_of_a_ring}{quotient module structure}.
+
+    Because $S$ is simple, the quotient module $R / \operatorname{ann}_R(s)$ is also simple. By \Cref{definition:prime_and_maximal_ideal_of_a_ring}, a left ideal $M$ of $R$ is maximal if and only if the quotient module $R/M$ is a simple left $R$-module. Hence, $\operatorname{ann}_R(s)$ is a maximal left ideal of $R$.
+
+    By \Cref{definition:jacobson_radical_of_a_ring}, the Jacobson radical $J(R)$ is the intersection of all maximal left ideals of $R$. Therefore, $J(R) \subseteq \operatorname{ann}_R(s)$, i.e. $sx = 0$ for all $x \in J(R)$.
+
+    Since $s \in S$ was arbitrary, we conclude that $S \cdot J(R) = 0$, as desired.
+\end{proof}

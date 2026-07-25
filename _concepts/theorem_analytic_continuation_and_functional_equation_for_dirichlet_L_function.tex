@@ -1,0 +1,22 @@
+\begin{theorem}[Analytic continuation and functional equation for Dirichlet L-functions] \label{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
+\TODO{AI generated, verify}
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} $L(s, \chi)$ admits an analytic continuation to an entire function on $\bbC$, except for a simple pole at $s = 1$ with residue $1$ when $\chi = \chi_0$ is the principal character modulo $k$.
+
+Define the \hldef{completed Dirichlet $L$-function}
+$$
+\boxed{ \Lambda(s, \chi) = \left( \frac{k}{\pi} \right)^{s/2} \Gamma\!\left( \frac{s + a(\chi)}{2} \right) L(s, \chi), }
+$$
+where $a(\chi) = 0$ if $\chi(-1) = 1$ (even character) and $a(\chi) = 1$ if $\chi(-1) = -1$ (odd character). Then $\Lambda(s, \chi)$ satisfies the functional equation
+$$
+\boxed{ \Lambda(s, \chi) = \varepsilon(\chi) \, \Lambda(1 - s, \overline{\chi}), }
+$$
+where the \hldef{root number} $\varepsilon(\chi)$ is given by
+$$
+\varepsilon(\chi) = \frac{\tau(\chi)}{i^{a(\chi)} \sqrt{k}}, \qquad \tau(\chi) = \sum_{m=1}^k \chi(m) e^{2\pi i m / k}
+$$
+is the \hldef{Gauss sum} of $\chi$, and $\overline{\chi}$ is the complex conjugate character. In particular, $|\varepsilon(\chi)| = 1$.
+
+\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
+\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
+\CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}
+\end{theorem}

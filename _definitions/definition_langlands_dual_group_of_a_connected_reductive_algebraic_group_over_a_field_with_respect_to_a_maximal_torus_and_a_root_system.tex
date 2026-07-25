@@ -1,0 +1,20 @@
+\begin{definition}[Langlands dual group] \label{definition:langlands_dual_group_of_a_connected_reductive_algebraic_group_over_a_field_with_respect_to_a_maximal_torus_and_a_root_system}
+  \TODO{AI generated, verify}
+Let $k$ be a \CrefAndHyperrefIfExist{definition:field}{field}, and let $G$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} \CrefAndHyperrefIfExist{definition:reductive_linear_algebraic_group_over_a_scheme}{reductive algebraic group} defined over $k$.
+Fix a separable closure $\overline{k}$ of $k$ and denote by $\Gamma = \mathrm{Gal}(\overline{k}/k)$ the absolute Galois group of $k$.
+
+\TODO{Define a maximal torus, Borel subgroup}
+Choose a maximal torus $T \subseteq G_{\overline{k}}$ and a Borel subgroup $B \supseteq T$.
+Let $\Phi \subseteq X^\ast(T)$ denote the \CrefAndHyperrefIfExist{definition:root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}{root system} of $(G,T)$, and $\Phi^\vee \subseteq X_\ast(T)$ the corresponding \CrefAndHyperrefIfExist{definition:coroot_system_of_a_root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}{coroot system}.  Here $X^\ast(T)$ is the \CrefAndHyperrefIfExist{definition:character_lattice_of_a_torus_over_a_field}{character lattice}, a free $\bbZ$-module, and the root system axioms are satisfied after tensoring with $\bbQ$: the $\bbQ$-vector space $V = X^\ast(T) \otimes_{\bbZ} \bbQ$ carries a Weyl-invariant symmetric bilinear form induced from the Lie algebra of $G$, with respect to which $\Phi \subset X^\ast(T) \subset V$ is a root system in the sense of \CrefAndHyperrefIfExist{definition:root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form}{the above definition}.  Similarly $\Phi^\vee \subset X_\ast(T) \subset V^\ast$ becomes a root system in $V^\ast$, and the pairing $\langle\cdot,\cdot\rangle: X^\ast(T) \times X_\ast(T) \to \bbZ$ recovers the Cartan integers via $\langle\alpha,\alpha^\vee\rangle = 2$ and $\langle\beta,\alpha^\vee\rangle = 2\frac{\langle\beta,\alpha\rangle}{\langle\alpha,\alpha\rangle}$.
+
+Then the \hldef{Langlands dual group} ${}^LG$ of $G$ is defined as follows:
+\begin{itemize}
+  \item First form the connected complex reductive group $\widehat{G}$ whose root datum is the dual root datum
+  $$(X_\ast(T), \Phi^\vee, X^\ast(T), \Phi).$$
+  \TODO{establish that root data correspond to groups}
+  \item The absolute Galois group $\Gamma$ acts naturally on the root datum of $G$, hence on that of $\widehat{G}$.
+  \item One then defines
+  $${}^LG \;=\; \widehat{G} \rtimes \Gamma,$$
+  the semidirect product with respect to this action.
+\end{itemize}
+\end{definition}

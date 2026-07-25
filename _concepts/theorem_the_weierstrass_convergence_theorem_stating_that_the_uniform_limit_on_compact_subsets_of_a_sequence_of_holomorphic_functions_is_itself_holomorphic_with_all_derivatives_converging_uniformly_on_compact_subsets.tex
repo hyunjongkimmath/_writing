@@ -5,3 +5,68 @@ Let $U \subset \mathbb{C}$ be an open set and let $(f_n)_{n=1}^{\infty}$ be a se
   \item For each $k = 0, 1, 2, \ldots$, the sequence of \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{derivatives} $(f_n^{(k)})$ converges to $f^{(k)}$ uniformly on every compact subset of $U$.
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first establish the continuity of $f$, then prove that $f$ is holomorphic, and finally prove the uniform convergence of derivatives on compact subsets.
+
+    We begin with the continuity of the limit function. Let $z_0 \in U$ be arbitrary. Since $U$ is open, there exists a compact neighborhood $K$ of $z_0$ contained in $U$\TODO{state and reference a general fact that there is a compact subneighborhood of an open neighbordhood --- in particular, is this only true in Eucliean spaces or is it more true of other kinds of general topological spaces that euclidean spaces just happen to be an example of?}. By the hypothesis of uniform convergence on compact subsets, $(f_n)$ converges to $f$ uniformly on $K$. Each $f_n$ is holomorphic and hence continuous by \Cref{proposition:complex_differentiability_implies_continuity}. By \Cref{theorem:uniform_convergence_of_a_sequence_of_continuous_functions_on_a_topological_space_to_an_extended_metric_space_valud_in_a_totally_ordered_semiring_implies_the_limit_function_is_continuous}, the uniform limit $f$ on $K$ is continuous at $z_0$. Since $z_0$ was arbitrary, $f$ is continuous on $U$.
+
+    Next we prove that $f$ is holomorphic. Fix $z_0 \in U$ and choose $r > 0$ such that the \CrefAndHyperrefIfExist{definition:complex_disk_open_and_closed_in_the_complex_plane}{closed disk} $\overline{D}(z_0, r)$ is contained in $U$. Let $\gamma$ be the positively oriented circle of radius $r$ centered at $z_0$, parametrized by $\gamma(t) = z_0 + r e^{it}$ for $t \in [0, 2\pi]$.
+
+    For each $n$, since $f_n$ is holomorphic on $U$ and the open disk $D(z_0, r)$ is simply connected, \Cref{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_and_derivatives_via_contour_integrals} applied to $f_n$ on $D(z_0, r)$ and the curve $\gamma$ gives, for every $z \in D(z_0, r)$,
+    $$f_n(z) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f_n(w)}{w - z}\,dw.$$
+
+    The image $\gamma([0,2\pi])$ is compact, so by the hypothesis of uniform convergence on compact subsets, $(f_n)$ converges uniformly to $f$ on $\gamma([0,2\pi])$. For each fixed $z \in D(z_0, r)$, the function $w \mapsto \frac{1}{w - z}$ is bounded on $\gamma([0,2\pi])$. Hence,
+    $$\frac{f_n(\gamma(t))}{\gamma(t) - z}\,\gamma'(t) \longrightarrow \frac{f(\gamma(t))}{\gamma(t) - z}\,\gamma'(t)$$
+    uniformly on $[0,2\pi]$ as $n \to \infty$.
+
+    By \Cref{theorem:uniform_convergence_of_a_sequence_of_riemann_integrable_functions_on_a_closed_interval_implies_the_limit_function_is_riemann_integrable_and_its_integral_equals_the_limit_of_the_integrals} applied separately to the real and imaginary parts of the integrand, the limit commutes with the integral. Therefore, for every $z \in D(z_0, r)$,
+    $$f(z) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{w - z}\,dw.$$
+
+    We now show that this integral representation implies that $f$ is holomorphic on $D(z_0, r)$. For $z, z + h \in D(z_0, r)$ with $h \neq 0$, we compute
+    \begin{align*}
+        \frac{f(z + h) - f(z)}{h}
+        &= \frac{1}{2\pi i} \oint_{\gamma} f(w) \cdot \frac{1}{h}\left( \frac{1}{w - z - h} - \frac{1}{w - z} \right) dw \\
+        &= \frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z - h)(w - z)}\,dw.
+    \end{align*}
+
+    We compare this with the candidate derivative $\frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z)^2}\,dw$. The difference is
+    \begin{align*}
+        \frac{f(z + h) - f(z)}{h} - \frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z)^2}\,dw
+        &= \frac{1}{2\pi i} \oint_{\gamma} f(w) \cdot \frac{h}{(w - z - h)(w - z)^2}\,dw.
+    \end{align*}
+
+    For $|h|$ sufficiently small, specifically $|h| < \frac{r - |z - z_0|}{2}$, we have for all $w \in \gamma$ the estimates
+    $$|w - z| \ge r - |z - z_0|, \qquad |w - z - h| \ge |w - z| - |h| \ge \frac{r - |z - z_0|}{2}.$$
+    Hence,
+    \begin{align*}
+        \left|\frac{f(z + h) - f(z)}{h} - \frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z)^2}\,dw\right|
+        &\le \frac{|h|}{2\pi} \oint_{\gamma} \frac{|f(w)|}{|w - z - h||w - z|^2}\,|dw| \\
+        &\le \frac{|h|}{2\pi} \cdot \sup_{w \in \gamma} |f(w)| \cdot \frac{1}{(r - |z - z_0|)^3} \cdot (2\pi r).
+    \end{align*}
+
+    The right-hand side tends to $0$ as $h \to 0$. Consequently, the limit of the difference quotient exists and equals $\frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z)^2}\,dw$, i.e.,
+    $$f'(z) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(w)}{(w - z)^2}\,dw$$
+    for every $z \in D(z_0, r)$. Thus $f$ is complex differentiable on $D(z_0, r)$, hence holomorphic on $D(z_0, r)$ by \Cref{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}. Since $z_0$ was arbitrary, $f$ is holomorphic on all of $U$.
+
+    Finally we prove the uniform convergence of derivatives on compact subsets. Let $K \subset U$ be an arbitrary compact set. For each $z \in K$, choose $r_z > 0$ such that $\overline{D}(z, 2r_z) \subset U$. The collection $\{D(z, r_z) : z \in K\}$ is an open cover of $K$, from which we extract a finite subcover $\{D(z_j, r_j)\}_{j=1}^m$.
+
+    For each $j$, let $\gamma_j$ be the positively oriented circle of radius $2r_j$ centered at $z_j$, so that $\overline{D}(z_j, r_j) \subset D(z_j, 2r_j) \subset U$ and $\gamma_j$ lies in $U$. By \Cref{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_and_derivatives_via_contour_integrals}, for each $n$ and each $z \in D(z_j, r_j)$ we have
+    $$f_n^{(k)}(z) = \frac{k!}{2\pi i} \oint_{\gamma_j} \frac{f_n(w)}{(w - z)^{k+1}}\,dw.$$
+
+    Since we have already shown that $f$ is holomorphic on $U$, the same theorem applied to $f$ yields
+    $$f^{(k)}(z) = \frac{k!}{2\pi i} \oint_{\gamma_j} \frac{f(w)}{(w - z)^{k+1}}\,dw.$$
+
+    For $z \in \overline{D}(z_j, r_j)$ and $w \in \gamma_j$, we have $|w - z| \ge |w - z_j| - |z - z_j| \ge 2r_j - r_j = r_j$. Therefore,
+    \begin{align*}
+        |f_n^{(k)}(z) - f^{(k)}(z)|
+        &\le \frac{k!}{2\pi} \oint_{\gamma_j} \frac{|f_n(w) - f(w)|}{|w - z|^{k+1}}\,|dw| \\
+        &\le \frac{k!}{2\pi} \cdot \frac{\sup_{w \in \gamma_j} |f_n(w) - f(w)|}{r_j^{k+1}} \cdot (4\pi r_j) \\
+        &= \frac{2\,k!}{r_j^k} \sup_{w \in \gamma_j} |f_n(w) - f(w)|.
+    \end{align*}
+
+    Since $f_n \to f$ uniformly on the compact set $\gamma_j$, the right-hand side tends to $0$ as $n \to \infty$, uniformly for $z \in \overline{D}(z_j, r_j)$ and hence for $z \in D(z_j, r_j)$. Taking the maximum over the finite index set $\{1,\dots,m\}$, we obtain
+    $$\sup_{z \in K} |f_n^{(k)}(z) - f^{(k)}(z)| \longrightarrow 0$$
+    as $n \to \infty$. Thus $(f_n^{(k)})$ converges to $f^{(k)}$ uniformly on $K$, and since $K$ was an arbitrary compact subset of $U$, the convergence is uniform on every compact subset of $U$.
+\end{proof}

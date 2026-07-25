@@ -1,0 +1,32 @@
+\begin{definition}[Homotopy cofiber of a map of topological spaces] \label{definition:homotopy_cofiber_of_a_map_of_topological_spaces}
+
+Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous map} of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}.
+
+\begin{enumerate}
+    \item The \hldef{homotopy cofiber of $f$}, denoted by \hl{$\operatorname{hocofib}(f)$} or \hl{$C_f^{\mathrm{h}}$}, is the topological space obtained by attaching the cone on $X$ to $Y$ along $f$. Formally:
+    $$ C_f^{\mathrm{h}} = Y \cup_f (X \times [0,1]) / \sim $$
+    where the equivalence relation $\sim$ identifies $(x, 1) \sim f(x)$ for all $x \in X$, and collapses $X \times \{0\}$ to a single point (the cone vertex). Equivalently, this is the pushout of the diagram:
+    $$ * \leftarrow CX \xrightarrow{i_1} Y $$
+    where $CX = (X \times [0,1]) / (X \times \{0\})$ is the reduced cone on $X$ and $i_1$ includes $X \cong X \times \{1\}$ into $CX$, composed with $f$.
+
+    \item The homotopy cofiber fits into a commutative square
+    $$
+    \begin{tikzcd}
+    X \arrow[r, "f"] \arrow[d] & Y \arrow[d] \\
+    CX \arrow[r] & C_f^{\mathrm{h}}
+    \end{tikzcd}
+    $$
+    which is a pushout in the category of topological spaces. This construction replaces the strict cofiber (the quotient $Y / f(X)$) by keeping track of the path information through the cone.
+
+    \item When $f$ is a \CrefAndHyperrefIfExist{definition:cofibration_of_topological_spaces}{cofibration}, the canonical map $\operatorname{hocofib}(f) \to Y/f(X)$ from the homotopy cofiber to the strict quotient is a \CrefAndHyperrefIfExist{definition:homotopy_equivalence_between_topological_spaces}{homotopy equivalence}. Thus for cofibrations, the homotopy cofiber agrees up to homotopy with the ordinary mapping cone.
+
+    \item The sequence $X \xrightarrow{f} Y \to C_f^{\mathrm{h}}$ extends to a cofibration sequence (also called a Puppe sequence). For any space $Z$, applying $\operatorname{Map}(-, Z)$ yields an exact sequence of pointed sets:
+    $$ 0 \to [C_f^{\mathrm{h}}, Z]_* \to [Y, Z]_* \xrightarrow{f^*} [X, Z]_* $$
+
+    \item For a map of pairs $f: (X, A) \to (Y, B)$, the \hldef{relative homotopy cofiber} is defined as $\operatorname{hocofib}(f|_A: A \to B)$ viewed inside $\operatorname{hocofib}(f)$ via the natural inclusion.
+\end{enumerate}
+
+The homotopy cofiber is dual to the \CrefAndHyperrefIfExist{definition:homotopy_fiber_of_a_map_of_topological_spaces}{homotopy fiber}: applying the loop space functor $\Omega$ levelwise to a cofibration sequence yields a fibration sequence.
+
+\TODO{AI generated, verify}
+\end{definition}

@@ -1,12 +1,13 @@
 \begin{definition} \label{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}
-Let $\gamma : [a, b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} and let $f : \gamma([a, b]) \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} complex-valued function defined on the image of $\gamma$. 
-\TODO{image of a topological space under a continuous map as a topological space}
+Let $\gamma : [a, b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} and let $f : \gamma([a, b]) \to \mathbb{C}$\CrefIfExists{definition:image_of_continuous_map_of_topological_spaces_as_topological_space} be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} complex-valued function defined on the image of $\gamma$. 
 The \hldef{contour integral/line integral of $f$ along $\gamma$}, denoted
-$\hlin{\int_{\gamma} f(z)\,dz}$,
+$$\hlin{\int_{\gamma} f(z)\,dz,}$$
 is defined by
-$\hlin{\int_{\gamma} f(z)\,dz := \int_{a}^{b} f(\gamma(t))\,\gamma'(t)\,dt}$,
+$$\hlin{\int_{\gamma} f(z)\,dz := \int_{a}^{b} f(\gamma(t))\,\gamma'(t)\,dt},$$
+\CrefIfExists{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}
+
 where $\gamma'(t)$ exists for all $t \in [a, b] \setminus \{t_1, \ldots, t_{k-1}\}$ and the Riemann integral on the right-hand side is well-defined since $f \circ \gamma$ is continuous and $\gamma'$ is piecewise continuous on $[a, b]$.
 \TODO{talk about how this is preserved under orientation preserving reparameterizations}
 
-In case $\gamma$ is a closed path, one denotes $\int_{\gamma} f(z)\,dz$ by \hl{$\oint_{\gamma} f(z)\,dz$}
+In case $\gamma$ is a \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{closed path}, one denotes $\int_{\gamma} f(z)\,dz$ by \hl{$\oint_{\gamma} f(z)\,dz$}
 \end{definition}

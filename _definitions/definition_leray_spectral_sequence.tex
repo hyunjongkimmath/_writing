@@ -1,0 +1,41 @@
+\begin{definition}[Leray spectral sequence] \label{definition:leray_spectral_sequence}
+
+Let $f: X \to Y$ be a continuous map of \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}, and let $\calF$ be a sheaf of abelian groups on $X$.
+
+\begin{enumerate}
+    \item There exists a cohomological \CrefAndHyperrefIfExist{definition:spectral_sequence_in_an_abelian_category}{spectral sequence in the category of abelian groups}, called the \hldef{Leray spectral sequence} associated to $(f, \calF)$, with $E_2$-term:
+    $$ E_2^{p,q} = H^p\bigl(Y, R^q f_* \calF\bigr) $$
+    converging to the sheaf cohomology of $\calF$ on $X$:
+    $$ E_2^{p,q} \implies H^{p+q}(X, \calF). $$
+    Here $R^q f_* \calF$ denotes the $q$th right derived functor presheaf (which is a sheaf after sheafification) of the composition of direct image with taking cohomology, and its sections over an open set $U \subseteq Y$ satisfy:
+    $$ (R^q f_* \calF)(U) = H^q(f^{-1}(U), \calF|_{f^{-1}(U)}). $$
+
+    \item The Leray spectral sequence is functorial in both $f$ and $\calF$. Given a commutative diagram of topological spaces
+    $$
+    \begin{tikzcd}
+    X' \arrow[r, "g'"] \arrow[d, "f'"] & X \arrow[d, "f"] \\
+    Y' \arrow[r, "g"] & Y
+    \end{tikzcd}
+    $$
+    and a morphism of sheaves $\calF \to \calG$ on $X$, there is an induced morphism of spectral sequences from that of $(f', g'^*\calF)$ to that of $(f, \calF)$.
+
+    \item The edge homomorphisms of the Leray spectral sequence yield natural maps:
+    $$ H^1(Y, f_* \calF) \to H^1(X, \calF) \quad \text{and} \quad H^{n-1}(Y, R^1 f_* \calF) \to \ker\bigl(H^n(X, \calF) \to H^0(Y, R^n f_* \calF)\bigr). $$
+    In particular, the map $H^0(Y, R^n f_* \calF) \to H^n(X, \calF)$ is the natural map from global sections of the higher direct image sheaf to the cohomology of $\calF$.
+
+    \item If all higher direct image sheaves $R^q f_* \calF$ vanish for $q > 0$ (for instance, if $f$ is an affine morphism of schemes or a trivial fibration with contractible fibers), then the Leray spectral sequence degenerates at the $E_2$ page, and there are canonical isomorphisms:
+    $$ H^n(X, \calF) \cong H^n(Y, f_* \calF). $$
+    This isomorphism is called the \hldef{Leray isomorphism}.
+
+    \item The Leray spectral sequence can be constructed in several equivalent ways:
+    \begin{enumerate}
+        \item Via the composition of derived functors theorem applied to $\Gamma_X = \Gamma_Y \circ f_*$, using an injective resolution of $\calF$. Since $f_*$ sends injective sheaves to flasque (hence acyclic) sheaves on $Y$, one computes $R(f_* \circ \Gamma_X)$ by first applying $\Gamma_X$ then $f_*$.
+        \item Via the Čech-to-derived spectral sequence, comparing the Čech cohomology of $\calF$ with respect to covers pulled back from $Y$ against arbitrary covers on $X$.
+    \end{enumerate}
+
+    \item More generally, if $\calA$ is an \CrefAndHyperrefIfExist{definition:abelian_category}{abelian category} with enough injectives and $\calF$ is a sheaf of objects in $\calA$ on $X$, then the Leray spectral sequence exists in $\calA$:
+    $$ E_2^{p,q} = R^p \Gamma_Y(R^q f_* \calF) \implies R^{p+q} \Gamma_X(\calF). $$
+\end{enumerate}
+
+\TODO{AI generated, verify}
+\end{definition}

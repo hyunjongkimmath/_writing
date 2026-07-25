@@ -1,0 +1,17 @@
+\begin{corollary}[Trivial zeros of Dirichlet L-functions] \label{corollary:trivial_zeros_of_dirichlet_L_function}
+\TODO{AI generated, verify}
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$} with parity $a(\chi) \in \{0,1\}$ (where $a(\chi)=0$ if $\chi(-1)=1$ and $a(\chi)=1$ if $\chi(-1)=-1$). The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} $L(s, \chi)$ has simple zeros at
+$$
+\begin{cases}
+s = -2n & \text{for } n \in \bbN \text{ if } \chi \text{ is even } (a(\chi)=0), \\
+s = -(2n+1) & \text{for } n \in \bbN_0 \text{ if } \chi \text{ is odd } (a(\chi)=1).
+\end{cases}
+$$
+These are called the \hldef{trivial zeros} of $L(s, \chi)$.
+
+They arise from the poles of the gamma factor $\Gamma\!\big(\frac{s + a(\chi)}{2}\big)$ in the functional equation of the completed $L$-function $\Lambda(s, \chi)$; the gamma function has simple poles at non-positive integers, which cancel the analytic continuation of $L(s, \chi)$ to produce zeros.
+
+\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
+\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
+\Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
+\end{corollary}

@@ -1,16 +1,16 @@
 \begin{proposition}[Cauchy criterion for convergence of series of real numbers] \label{proposition:cauchy_criterion_for_convergence_of_series_of_real_numbers}
-    \TODO{AI generated, verify}
     Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} and let $S_N = \sum_{n=1}^N a_n$ be the sequence of partial sums.
 
     The series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges} if and only if for every $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for all $M \geq N$,
     $$\left| \sum_{n=N+1}^M a_n \right| < \varepsilon.$$
     Equivalently, the series converges if and only if the sequence of partial sums $(S_N)$ is a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{Cauchy sequence} in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}.
 
-    This is a special case of the more general \CrefAndHyperrefIfExist{proposition:cauchy_criterion_for_convergence_of_series_in_an_abelian_group_with_an_extended_metric_valued_in_ordered_commutative_monoids_with_adjoined_infinity}{Cauchy criterion for series in an abelian group with an extended metric}, applied to $\mathbb{R}$ with its standard absolute value.
+    \TextIfExists{proposition:cauchy_criterion_for_convergence_of_series_in_an_abelian_group_with_an_extended_metric_valued_in_ordered_commutative_monoids_with_adjoined_infinity}{
+        This is a special case of the more general \CrefAndHyperrefIfExist{proposition:cauchy_criterion_for_convergence_of_series_in_an_abelian_group_with_an_extended_metric_valued_in_ordered_commutative_monoids_with_adjoined_infinity}{Cauchy criterion for series in an abelian group with an extended metric}, applied to $\mathbb{R}$ with its standard absolute value.
+    }
 \end{proposition}
 \begin{proof}
-    \TODO{AI generated, verify}
-    The series $\sum_{n=1}^\infty a_n$ converges if and only if the sequence of partial sums $(S_N)$ converges in $\mathbb{R}$. Since $\mathbb{R}$ is complete (every Cauchy sequence converges), a sequence in $\mathbb{R}$ converges if and only if it is a Cauchy sequence.
+    The series $\sum_{n=1}^\infty a_n$ converges if and only if the sequence of partial sums $(S_N)$ converges in $\mathbb{R}$. Since $\mathbb{R}$ is \CrefAndHyperrefIfExist{definition:complete_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{complete}\CrefIfExists{proposition:real_numbers_form_ordered_field} (every Cauchy sequence converges), a sequence in $\mathbb{R}$ converges if and only if it is a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{Cauchy sequence}.
 
     The sequence $(S_N)$ is Cauchy means that for every $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for all $M, K \geq N$,
     $$|S_M - S_K| < \varepsilon.$$
@@ -20,6 +20,4 @@
 
     Therefore the Cauchy condition on $(S_N)$ is equivalent to: for every $\varepsilon > 0$ there exists $N \in \mathbb{N}$ such that for all $M \geq N$,
     $$\left| \sum_{n=N+1}^M a_n \right| < \varepsilon.$$
-
-    This completes the proof.
 \end{proof}

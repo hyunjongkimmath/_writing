@@ -1,4 +1,10 @@
 \begin{corollary}[Dimension formula] \label{corollary:dimension_formula_for_nondegenerate_quadratic_forms_on_vector_spcaes}
-Let $R$ be a \CrefAndHyperrefIfExist{definition:field}{field} and $q: M \to R$ a \CrefAndHyperrefIfExist{definition:nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring}{non-degenerate} \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{quadratic form}.
-We have $\dim M \equiv \dim M_a \pmod{2}$.
+Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field} and $q: M \to F$ a \CrefAndHyperrefIfExist{definition:nondegenerate_quadratic_form_on_a_module_over_a_commutative_ring}{non-degenerate} \CrefAndHyperrefIfExist{definition:quadratic_formm_on_a_module_over_a_commutative_ring}{quadratic form}.
+We have $\dim M = \dim M_a + 2k$, where $M_a$ is the anisotropic part and $k$ is the Witt index. In particular, $\dim M \equiv \dim M_a \pmod{2}$.
 \end{corollary}
+\begin{proof}
+    \TODO{AI generated, verify}
+    By \Cref{theorem:witt_decomposition_theorem_for_quadratic_forms_over_fields}, there exists a decomposition $M \cong M_a \oplus H^k$ where $M_a$ is anisotropic and $H^k$ is the direct sum of $k$ hyperbolic planes. Each hyperbolic plane has dimension 2 by \Cref{definition:hyperbolic_plane_over_a_commutative_ring}. Hence, applying the additivity of dimension for direct sums (\Cref{proposition:dimension_formula_for_direct_sum_and_quotient_spaces}), we obtain
+    $$\dim M = \dim M_a + k \cdot 2 = \dim M_a + 2k.$$
+    Therefore, $\dim M \equiv \dim M_a \pmod{2}$.
+\end{proof}
