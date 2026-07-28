@@ -1,0 +1,33 @@
+\begin{theorem}[Morera's theorem] \label{theorem:moreras_theorem_stating_complex_valued_functions_on_an_open_subset_of_the_complex_plane_whose_contour_integrals_on_triangles_in_the_domain_vanish_are_holomorphic}
+    \TODO{AI generated, verify}
+Let $U \subseteq \mathbb{C}$ be an open set and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} function. Suppose that for every closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} $\gamma$ in $U$ whose image is the boundary of a triangle contained entirely in $U$, we have
+$$\hlin{\oint_{\gamma} f(z)\,dz = 0.}$$
+Then $f$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic} on $U$. In particular, $f$ admits a holomorphic primitive $F : U \to \mathbb{C}$ such that $F'(z) = f(z)$ for all $z \in U$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first construct a primitive of $f$ on $U$, then show that any function with a holomorphic primitive is itself holomorphic.
+
+    Fix a point $z_0 \in U$. For each $z$ in the same connected component of $U$ as $z_0$, choose a piecewise continuously differentiable path $\eta_z$ from $z_0$ to $z$ lying entirely in that component. Define $F : U \to \mathbb{C}$ by
+    $$F(z) := \begin{cases}
+        \displaystyle\int_{\eta_z} f(w)\,dw & \text{if } z \text{ is in the same connected component of } U \text{ as } z_0,\\[1.5em]
+        0 & \text{otherwise.}
+    \end{cases}$$
+
+    We first show $F$ is well-defined on the connected component of $z_0$. Let $\eta_z$ and $\tilde{\eta}_z$ be two such paths from $z_0$ to $z$. Their concatenation $\gamma = \eta_z \cdot \tilde{\eta}_z^{-1}$ is a closed path. By approximating $\gamma$ with a chain of triangles inside $U$, the hypothesis implies that
+    $$\oint_{\gamma} f(w)\,dw = 0,$$
+    so $\int_{\eta_z} f = \int_{\tilde{\eta}_z} f$, and $F$ is well-defined.
+
+    We now show that $F'(z) = f(z)$ for all $z$ in the connected component of $z_0$. Fix such a point $z$ and let $h \in \mathbb{C}$ be sufficiently small so that $z + h$ lies in the same component. Let $\ell_h$ denote the straight line segment from $z$ to $z + h$. We may take $\eta_{z+h} = \eta_z \cdot \ell_h$, so
+    $$F(z + h) - F(z) = \int_{\ell_h} f(w)\,dw.$$
+    Parametrizing $\ell_h$ by $w = z + th$ for $t \in [0,1]$, we compute
+    $$\int_{\ell_h} f(w)\,dw = h \int_0^1 f(z + th)\,dt.$$
+    Therefore,
+    $$\frac{F(z+h) - F(z)}{h} - f(z) = \int_0^1 \bigl(f(z + th) - f(z)\bigr)\,dt.$$
+    For any $\varepsilon > 0$, since $f$ is continuous at $z$\CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}, there exists $\delta > 0$ such that $|w - z| < \delta$ implies $|f(w) - f(z)| < \varepsilon$. For $|h| < \delta$, we have $|z + th - z| = t|h| \leq |h| < \delta$ for all $t \in [0,1]$, so
+    $$\biggl|\int_0^1 (f(z + th) - f(z))\,dt\biggr| \leq \int_0^1 |f(z + th) - f(z)|\,dt < \varepsilon.$$
+    Hence $\lim_{h \to 0} \frac{F(z+h) - F(z)}{h} = f(z)$, so $F'(z) = f(z)$.
+
+    Since $F$ is holomorphic\CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}, its derivative satisfies $F'(z) = f(z)$, so $f$ is itself holomorphic on that component. The same argument applies to each connected component of $U$, so $f$ is holomorphic on all of $U$.
+\end{proof}

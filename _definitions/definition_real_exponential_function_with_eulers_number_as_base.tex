@@ -1,0 +1,18 @@
+\begin{definition} \label{definition:real_exponential_function_with_eulers_number_as_base}
+    The \hldef{(real) exponential function on $\mathbb{R}$}, denoted by \hl{$\exp : \mathbb{R} \to \mathbb{R}_{> 0}$}, is defined as
+    $$\exp(x) = e^x$$
+    \CrefIfExists{definition:exponents_of_real_numbers_by_real_numbers_via_supremum} where $e$ is \CrefAndHyperrefIfExist{definition:euler_number_e_as_limit}{Euler's number}.
+
+    \TextIfExists{definition:complex_exponential_function}{
+        We call this the real exponential function to distinguish it from the \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function}.
+    }
+
+    For each $x \in \mathbb{R}$, we have an equality
+    $$\exp(x) = \sum_{n=0}^\infty \frac{x^n}{n!}.$$
+    \CrefIfExists{corollary:eulers_number_equals_series_of_reciprocals_of_integer_factorials}
+    The \CrefAndHyperrefIfExist{definition:real_power_series_centered_at_a_real_number_and_radius_of_convergence_of_a_real_power_series}{power series} \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for every $x \in \mathbb{R}$.
+    % , where $x^n$ is the \CrefAndHyperrefIfExist{definition:exponentiation_in_a_field}{$n$th power} of $x$ in $\mathbb{R}$ and $0! := 1$.
+
+    % The value of the exponential function at $1$, denoted by \hl{$e$}, is called \CrefAndHyperrefIfExist{definition:euler_number_e_as_limit}{Euler's number}. We write \hl{$e^x$} for $\exp(x)$, in agreement with the notation for \CrefAndHyperrefIfExist{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}{real exponentiation of positive reals}, i.e.\ $e^x = \exp(x)$.
+    % \TODO{prove that $e^x = \exp(x)$}
+\end{definition}

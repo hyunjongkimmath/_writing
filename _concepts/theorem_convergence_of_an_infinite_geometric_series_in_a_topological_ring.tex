@@ -1,7 +1,20 @@
 \begin{theorem}[Convergence of an infinite geometric series in a topological ring] \label{theorem:convergence_of_an_infinite_geometric_series_in_a_topological_ring}
     \TODO{AI generated, verify}
-    Let $R$ be a topological ring. Let $a, r \in R$. Suppose that the sequence $(r^N)_{N=1}^\infty$ converges to zero in $R$, and that multiplication by $1-r$ is an automorphism of the additive group of $R$ (e.g., if $1-r$ is invertible in $R$).
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}. Let $a, r \in R$. Suppose that the sequence $(r^N)_{N=1}^\infty$ \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_a_topological_space}{converges to} zero in $R$, and that $1-r$ is \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{invertible} in $R$.
 
-    Then the infinite geometric series $\sum_{n=1}^\infty ar^{n-1}$ converges in $R$\CrefIfExists{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}, and its sum is
+    Then the \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{infinite geometric series} $\sum_{n=1}^\infty ar^{n-1}$ converges in $R$\CrefIfExists{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}, and its sum is
     $$\sum_{n=1}^\infty ar^{n-1} = a(1-r)^{-1}.$$
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S_N = \sum_{n=1}^N ar^{n-1}$ be the $N$-th partial sum. By the \CrefAndHyperrefIfExist{proposition:sum_formula_for_a_finite_geometric_series_over_a_commutative_ring}{finite geometric series formula}, we have for each $N \geq 1$
+    $$(1-r)S_N = a(1 - r^N).$$
+    \CrefIfExists{proposition:sum_formula_for_a_finite_geometric_series_over_a_commutative_ring}
+
+    Since $r^N \to 0$ by hypothesis, the map $f : R \to R$, $x \mapsto 1 - x$, is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} (it factors as $x \mapsto (-x)$ by the continuous negation map of the \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}, composed with the constant $1$ map and addition), so by \Cref{lemma:continuous_map_of_topological_spaces_preserves_limits_of_convergent_sequences} we have $1 - r^N \to 1$. By \Cref{lemma:multiplication_by_fixed_element_in_topological_ring_is_continuous}, left multiplication by $a$ is continuous, so $a(1 - r^N) \to a \cdot 1 = a$.
+
+    Thus $\lim_{N \to \infty} (1-r)S_N = a$. The map $m_{1-r} : R \to R$, $x \mapsto (1-r)x$, is a continuous bijection with inverse $x \mapsto (1-r)^{-1}x$ (by \Cref{lemma:multiplication_by_fixed_element_in_topological_ring_is_continuous} again, since $1-r$ is invertible). By \Cref{lemma:continuous_map_of_topological_spaces_preserves_limits_of_convergent_sequences}, applying the inverse continuous map gives
+    $$\lim_{N \to \infty} S_N = (1-r)^{-1}a.$$
+
+    Since $R$ is a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}, its multiplication is associative, so $(1-r)^{-1}a = a(1-r)^{-1}$. Therefore the infinite geometric series converges and its sum is $a(1-r)^{-1}$.
+\end{proof}

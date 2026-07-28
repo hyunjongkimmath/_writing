@@ -1,8 +1,23 @@
 \begin{theorem} \label{theorem:liouvilles_theorem_on_bounded_entire_holomorphic_functions}
-Let $f : \mathbb{C} \to \mathbb{C}$ be an \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{entire function}. 
+Let $f : \mathbb{C} \to \mathbb{C}$ be an \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{entire function}.
 \TODO{bounded function}
 \TODO{constant function}
 If $f$ is bounded, meaning there exists $M > 0$ such that
 $|f(z)| \leq M$
 for all $z \in \mathbb{C}$, then $f$ is constant.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Suppose that there exists $M > 0$ such that $|f(z)| \leq M$ for all $z \in \mathbb{C}$. We show that $f$ is constant by showing that its derivative vanishes everywhere.
+
+Let $z_0 \in \mathbb{C}$ be arbitrary. By the Cauchy integral formula for derivatives \Cref{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_of_derivatives_of_holomorphic_functions_on_simply_connected_open_subsets_of_the_complex_planevia_contour_integrals}, we have for any $R > 0$:
+$$f'(z_0) = \frac{1}{2\pi i} \int_{|z-z_0|=R} \frac{f(z)}{(z-z_0)^2}\,dz.$$
+
+We estimate the magnitude of this integral using the standard contour integral bound. For $z$ on the circle $|z-z_0| = R$, we have $|f(z)| \leq M$ by the boundedness assumption, and $|z-z_0|^2 = R^2$. The length of the contour is $2\pi R$. Therefore,
+$$|f'(z_0)| \leq \frac{1}{2\pi} \cdot \frac{M}{R^2} \cdot 2\pi R = \frac{M}{R}.$$
+
+Since this inequality holds for all $R > 0$, we let $R \to \infty$ to obtain $|f'(z_0)| = 0$. Hence, $f'(z_0) = 0$.
+
+Because $z_0$ was arbitrary, we have $f'(z) = 0$ for all $z \in \mathbb{C}$. A holomorphic function with vanishing derivative on a connected domain is constant \TODO{AI generated, reference needed: proposition that holomorphic function with zero derivative on connected open set is constant}. Therefore, $f$ is constant.
+\end{proof}

@@ -1,0 +1,9 @@
+\begin{corollary} \label{corollary:limit_of_polynomial_function_over_topological_field_at_accumulation_point}
+    \TODO{AI generated, verify}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}, let $S \subseteq F$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Let $q \in F[x]$\CrefIfExists{definition:polynomial_ring_over_a_commutative_ring} be a polynomial. The function $q : S \to F$ given by evaluation satisfies
+    $$\lim_{x \to p, x \in S} q(x) = q(p).$$
+    \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+\end{corollary}
+\begin{proof}
+    The polynomial function $q : F \to F$ given by evaluation is continuous on all of $F$ by \Cref{proposition:polynomial_function_over_topological_field_is_continuous}. Its restriction to $S$, denoted $q|_S : S \to F$, is therefore continuous at every point of $S$. Since $p$ is an accumulation point of $S$, the definition of continuity at a point for functions between topological spaces implies that $\lim_{x \to p, x \in S} q(x) = q(p)$ \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}.
+\end{proof}

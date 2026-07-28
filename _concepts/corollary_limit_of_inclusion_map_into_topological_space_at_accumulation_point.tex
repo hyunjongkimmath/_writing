@@ -1,0 +1,10 @@
+\begin{corollary} \label{corollary:limit_of_inclusion_map_into_topological_space_at_accumulation_point}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $S \subseteq X$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. The inclusion map $\iota : S \hookrightarrow X$ satisfies
+    $$\lim_{x \to p, x \in S} x = p.$$
+    \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+\end{corollary}
+\begin{proof}
+    The inclusion map $\iota : S \hookrightarrow X$ is continuous by \Cref{proposition:identity_function_between_topological_spaces_is_continuous} (the inclusion is the identity on $S$, which carries the \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace topology}). Hence $\iota$ is continuous at every point of $S$. Since $p$ is an accumulation point of $S$, the definition of continuity at a point for functions between topological spaces implies that $\lim_{x \to p, x \in S} \iota(x) = \iota(p)$ \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}. Thus
+    $$\lim_{x \to p, x \in S} x = p.$$
+\end{proof}

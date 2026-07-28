@@ -1,4 +1,24 @@
 \begin{theorem} \label{theorem:the_open_mapping_theorem_stating_that_every_non_constant_holomorphic_function_on_a_connected_open_subset_of_the_complex_plane_is_an_open_map}
-Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} open subset (a domain) and let $f : U \to \mathbb{C}$ be a non-constant \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. 
+Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} open subset (a domain) and let $f : U \to \mathbb{C}$ be a non-constant \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} on $U$.
 Then $f$ is an \CrefAndHyperrefIfExist{definition:open_and_closed_map_of_topological_spaces}{open map}: for every open subset $V \subset U$, the image $f(V)$ is open in $\mathbb{C}$.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We show that for every point $z_0 \in U$ and every neighborhood $W$ of $z_0$ contained in $U$, the image $f(W)$ contains a neighborhood of $f(z_0)$. Since $f$ is non-constant and holomorphic on the connected open set $U$, it is analytic at every point, meaning it admits a convergent power series expansion in a neighborhood of each point \Cref{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}.
+
+Fix an arbitrary point $z_0 \in U$. Since $f$ is non-constant, there exists a minimal integer $k \geq 1$ such that $f^{(k)}(z_0) \neq 0$. The minimality of $k$ implies that $f'(z_0) = f''(z_0) = \cdots = f^{(k-1)}(z_0) = 0$. In a sufficiently small disk $D(z_0, r) \subset U$, the power series expansion of $f$ at $z_0$ takes the form
+$$f(z) = f(z_0) + (z - z_0)^k g(z),$$
+where $g(z) = \sum_{n=0}^\infty a_{n+k}(z - z_0)^n$ with $a_k = f^{(k)}(z_0)/k! \neq 0$. The function $g$ is holomorphic on $D(z_0, r)$ as a convergent power series, and $g(z_0) = a_k \neq 0$.
+
+Since $g$ is continuous at $z_0$ and $g(z_0) \neq 0$, there exists $\rho \in (0, r]$ such that $g(z) \neq 0$ for all $z \in \overline{D}(z_0, \rho)$. On the compact circle $|z - z_0| = \rho$, the continuous function $|g|$ attains a positive minimum $\epsilon > 0$. Therefore,
+$$\min_{|z-z_0|=\rho} |g(z)| = \epsilon > 0.$$
+
+We show that for any $w \in \mathbb{C}$ with $|w - f(z_0)| < \epsilon \rho^k$, the equation $f(z) = w$ has a solution in $D(z_0, \rho)$. Define two functions on the circle $|z - z_0| = \rho$:
+$$h_1(z) = (z - z_0)^k g(z), \quad h_2(z) = f(z_0) - w.$$
+For $z$ on the circle $|z - z_0| = \rho$, we have $|h_1(z)| = |z - z_0|^k |g(z)| = \rho^k |g(z)| \geq \epsilon \rho^k$. The constant function satisfies $|h_2(z)| = |f(z_0) - w| < \epsilon \rho^k$. Therefore,
+$$|h_2(z)| < |h_1(z)|$$
+for all $z$ on the circle $|z - z_0| = \rho$. By Rouché's theorem \Cref{theorem:rouches_theorem_comparing_number_of_zeros_of_two_holomorphic_functions_inside_a_contour}, the functions $h_1 + h_2 = f(z) - w$ and $h_1(z) = (z - z_0)^k g(z)$ have the same number of zeros inside $D(z_0, \rho)$, counting multiplicity. The function $h_1$ has exactly one zero at $z_0$ with multiplicity $k$. Therefore, $f(z) - w$ also has a zero in $D(z_0, \rho)$, meaning there exists $z_w \in D(z_0, \rho)$ such that $f(z_w) = w$.
+
+We conclude that the open disk $D(f(z_0), \epsilon \rho^k)$ is contained in $f(D(z_0, \rho)) \subset f(U)$. Since $z_0$ was arbitrary, every point of $f(U)$ has a neighborhood contained in $f(U)$; hence $f(U)$ is open. For any open subset $V \subset U$, the same argument applied to the restriction $f|_V : V \to \mathbb{C}$ shows that $f(V)$ is open in $\mathbb{C}$. Therefore, $f$ is an open map.
+\end{proof}

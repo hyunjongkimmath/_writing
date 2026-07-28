@@ -1,5 +1,23 @@
 \begin{proposition}[Complex exponential function is entire and its derivative is itself] \label{proposition:complex_exponential_function_is_entire_and_its_derivative_is_itself}
     \TODO{AI generated, verify}
-    The \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function} $\exp : \mathbb{C} \to \mathbb{C}$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{entire}, and its complex derivative satisfies
+    The \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function} $\exp : \mathbb{C} \to \mathbb{C}$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{entire}, and its complex derivative satisfies
     $$\frac{d}{dz} \exp(z) = \exp(z) \quad \text{for all } z \in \mathbb{C}.$$
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    The complex exponential function is defined by the power series:
+    $$\exp(z) = \sum_{n=0}^\infty \frac{z^n}{n!}.$$
+
+    \TODO{the ratio test currently seems to be stated only for the reals; should it be generalized?}
+    We first show that this series has infinite radius of convergence. By the ratio test, for any $z \in \mathbb{C}$:
+    $$\lim_{n \to \infty} \left|\frac{\frac{z^{n+1}}{(n+1)!}}{\frac{z^n}{n!}}\right| = \lim_{n \to \infty} \frac{|z|}{n+1} = 0 < 1.$$
+    Hence the series converges absolutely for every $z \in \mathbb{C}$, and its radius of convergence is $\infty$.
+
+    \TODO{reference needed: I need a generalization of \CrefIfExists{corollary_derivative_of_a_real_polynomial_function_on_real_interval.tex} for complex polynomials}
+    Now consider the termwise derivative. Each term $\frac{z^n}{n!}$ is a polynomial, hence\CrefIfExists{proposition:complex_polynomials_are_entire_functions} entire with derivative $\frac{n z^{n-1}}{n!} = \frac{z^{n-1}}{(n-1)!}$ for $n \geq 1$. The series of derivatives is
+    $$\sum_{n=1}^\infty \frac{z^{n-1}}{(n-1)!} = \sum_{k=0}^\infty \frac{z^k}{k!},$$
+    which is exactly the same power series for $\exp(z)$. Since the original series has infinite radius of convergence, the derived series also \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on any compact disk $|z| \leq R$ by \Cref{proposition:power_series_in_one_complex_variable_on_closed_disks_inside_its_radius_of_convergence_converges_absolutely_and_uniformly}.
+    % by the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}{Weierstrass M-test}. 
+    By the termwise differentiation theorem for power series (\CrefAndHyperrefIfExist{proposition:cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable}), we conclude that $\exp$ is holomorphic on all of $\mathbb{C}$, i.e.\ entire, and
+    $$\frac{d}{dz} \exp(z) = \sum_{k=0}^\infty \frac{z^k}{k!} = \exp(z).$$
+\end{proof}

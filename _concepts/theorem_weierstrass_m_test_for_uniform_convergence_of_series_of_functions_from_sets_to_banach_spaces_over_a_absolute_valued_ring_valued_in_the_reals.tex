@@ -1,0 +1,13 @@
+\begin{theorem} \label{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $\bbR$}. Let $(V, \|\cdot\|)$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{complete extended normed module over $R$ valued in} $\bbR \cup \{\infty\}$\CrefIfExists{definition:ordered_semiring_with_adjoined_infinity}. Let $S$ be a set and let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : S \to V$.
+
+    Suppose there exists a sequence $(M_n)_{n=1}^\infty$ in $\bbR_{\ge 0}$ such that:
+    \begin{enumerate}
+        \item For each $n$ and each $x \in S$, $\|f_n(x)\| \le M_n$;
+        \item The series $\sum_{n=1}^\infty M_n$ converges.
+    \end{enumerate}
+    Then the series $\sum_{n=1}^\infty f_n(x)$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges uniformly} on $S$ to a function $f : S \to V$.
+\end{theorem}
+\begin{proof}
+    This is a consequence of \Cref{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_commutative_rings_with_absolute_values_valued_in_ordered_semirings} by letting the ordered ring be $\mathbb{R}$ --- note that $\bbR$ is \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field} and \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}\CrefIfExists{lemma:positive_real_numbers_are_dense_at_zero}. Moreover, since the $M_n$ are elements of $\bbR_{\geq 0}$, the \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{convergence} of $\sum_{n=1}^\infty M_n$ is equivalent to the \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{Cauchy}-tails condition of $(M_n)$\CrefIfExists{proposition:convergence_of_series_implies_cauchy_tails_condition_in_ordered_abelian_group}.
+\end{proof}

@@ -1,0 +1,34 @@
+\begin{proposition}[Reparameterization invariance of contour integrals] \label{proposition:contour_integral_of_a_complex_valued_functions_along_a_piecewise_continuously_differentiable_path_is_invariant_under_reparametrization}
+    \TODO{AI generated, verify}
+Let $\gamma : [a,b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path}, and let $f : \gamma([a,b]) \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} function. Let $\sigma : [c,d] \to [a,b]$ be an orientation-preserving diffeomorphism, i.e., $\sigma$ is a bijection such that both $\sigma$ and $\sigma^{-1}$ are continuously differentiable with $\sigma' > 0$. Define $\tilde{\gamma} = \gamma \circ \sigma : [c,d] \to \mathbb{C}$. Then
+$$\hlin{\oint_{\tilde{\gamma}} f(z)\,dz = \oint_{\gamma} f(z)\,dz.}$$
+
+More generally, if $\sigma : [c,d] \to [a,b]$ is a piecewise continuously differentiable bijection with $\sigma' > 0$ wherever it exists and $\sigma(c) = a$, then
+$$\hlin{\int_c^d f(\tilde{\gamma}(t))\,\tilde{\gamma}'(t)\,dt = \int_a^b f(\gamma(s))\,\gamma'(s)\,ds.}$$
+
+If instead $\sigma$ is orientation-reversing (i.e., $\sigma' < 0$ wherever it exists and $\sigma(c) = b$), then
+$$\hlin{\oint_{\tilde{\gamma}} f(z)\,dz = -\oint_{\gamma} f(z)\,dz.}$$
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By the \CrefAndHyperrefIfExist{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}{definition of the contour integral}, we have
+    $$\oint_{\tilde{\gamma}} f(z)\,dz = \int_c^d f(\tilde{\gamma}(t))\,\tilde{\gamma}'(t)\,dt.$$
+
+    For $t$ where $\sigma'(t)$ exists, the chain rule\CrefAndHyperrefIfExist{proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane} gives
+    $$\tilde{\gamma}'(t) = \frac{d}{dt}(\gamma \circ \sigma)(t) = \gamma'(\sigma(t))\,\sigma'(t).$$
+
+    Therefore, the integrand becomes
+    $$f(\tilde{\gamma}(t))\,\tilde{\gamma}'(t) = f(\gamma(\sigma(t)))\,\gamma'(\sigma(t))\,\sigma'(t).$$
+
+    By the \CrefAndHyperrefIfExist{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals}{substitution rule for Riemann integrals} applied to each piece of the partition where $\gamma$ is continuously differentiable, we have
+    $$\int_c^d f(\gamma(\sigma(t)))\,\gamma'(\sigma(t))\,\sigma'(t)\,dt = \int_{\sigma(c)}^{\sigma(d)} f(\gamma(s))\,\gamma'(s)\,ds.$$
+
+    Since $\sigma$ is a bijection with $\sigma(c) = a$ and $\sigma(d) = b$ in the orientation-preserving case, we obtain
+    $$\int_c^d f(\tilde{\gamma}(t))\,\tilde{\gamma}'(t)\,dt = \int_a^b f(\gamma(s))\,\gamma'(s)\,ds.$$
+
+    In the orientation-reversing case, $\sigma(c) = b$ and $\sigma(d) = a$, so
+    $$\int_c^d f(\tilde{\gamma}(t))\,\tilde{\gamma}'(t)\,dt = \int_b^a f(\gamma(s))\,\gamma'(s)\,ds = -\int_a^b f(\gamma(s))\,\gamma'(s)\,ds.$$
+
+    The finitely many points where $\sigma'$ or $\gamma'$ may not exist contribute nothing to the Riemann integral.
+\end{proof}

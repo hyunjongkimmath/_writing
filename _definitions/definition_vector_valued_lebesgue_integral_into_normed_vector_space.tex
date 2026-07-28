@@ -1,0 +1,25 @@
+\begin{definition}[Vector-valued Lebesgue integral into a normed vector space] \label{definition:vector_valued_lebesgue_integral_into_normed_vector_space}
+    \TODO{AI generated, verify}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector space} over $\bbF \in \{\bbR, \bbC\}$ with norm $\|\cdot\|$.
+
+\begin{enumerate}
+  \item A \hldef{vector-valued simple function on $X$ with values in $V$} is a function of the form
+  $$s = \sum_{k=1}^m v_k \mathbf{1}_{A_k},$$
+  where $v_k \in V$ and $A_k \in \mathcal{A}$ are pairwise disjoint. The \hldef{Lebesgue integral of $s$ with respect to $\mu$} is defined by
+  $$\hlin{\int_X s\,d\mu := \sum_{k=1}^m v_k \mu(A_k).}$$
+
+  \item A function $f : X \to V$ is called \hldef{Bochner measurable} if there exists a sequence of vector-valued simple functions $(s_n)_{n=1}^\infty$ such that $\lim_{n \to \infty} \|f(x) - s_n(x)\| = 0$ for $\mu$-almost every $x \in X$. Equivalently, $f$ is Bochner measurable if the map $x \mapsto f(x)$ is measurable with respect to $\mathcal{A}$ and the Borel $\sigma$-algebra of $V$, and there exists a set $N \in \mathcal{A}$ with $\mu(N) = 0$ such that $f(X \setminus N)$ is contained in a separable subspace of $V$.
+
+  \item A Bochner measurable function $f : X \to V$ is called \hldef{(Bochner) integrable} or \hldef{Lebesgue integrable with values in $V$} if the real-valued function $x \mapsto \|f(x)\|$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable}, i.e.,
+  $$\int_X \|f\|\,d\mu < \infty.$$
+
+  \item For a Bochner integrable function $f : X \to V$, choose a sequence of vector-valued simple functions $(s_n)_{n=1}^\infty$ such that $\lim_{n \to \infty} \|f(x) - s_n(x)\| = 0$ pointwise and $\int_X \|f(x) - s_n(x)\|\,d\mu \to 0$ as $n \to \infty$. The \hldef{Lebesgue integral of $f$ with respect to $\mu$} is defined by
+  $$\hlin{\int_X f\,d\mu := \lim_{n \to \infty} \int_X s_n\,d\mu,}$$
+  where the limit exists in $V$. The definition is independent of the choice of approximating simple functions.
+
+  \item For a measurable set $E \in \mathcal{A}$ and any Bochner integrable function $f : X \to V$, the \hldef{Lebesgue integral of $f$ over $E$} is defined by
+  $$\hlin{\int_E f\,d\mu := \int_X f \mathbf{1}_E\,d\mu.}$$
+\end{enumerate}
+
+In particular, when $V = \bbC$, a function $f : X \to \bbC$ is Bochner integrable if and only if its real part $\operatorname{Re}(f)$ and imaginary part $\operatorname{Im}(f)$ are both real-valued Lebesgue integrable functions.
+\end{definition}

@@ -14,7 +14,7 @@ where the integrals are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_s
     \begin{enumerate}
         \item For $\int_a^b \tan(x)\,dx$: Since $\cos(x) \neq 0$ on $[a, b]$, the function $\tan(x) = \sin(x)/\cos(x)$ is continuous on $[a, b]$ (as a quotient of continuous functions with nonzero denominator), hence Riemann integrable by \CrefAndHyperrefIfExist{proposition:continuous_functions_are_riemann_integrable_on_closed_intervals}.
 
-        Consider the function $H(x) = -\ln|\cos(x)|$. On any subinterval where $\cos(x)$ does not change sign, this is differentiable. By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}):
+        Consider the function $H(x) = -\ln|\cos(x)|$. On any subinterval where $\cos(x)$ does not change sign, this is differentiable. By the chain rule (\CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}):
         $$\frac{d}{dx} \left[-\ln|\cos(x)|\right] = -\frac{1}{\cos(x)} \cdot (-\sin(x)) = \tan(x),$$
         where we used $\frac{d}{dx}\cos(x) = -\sin(x)$ from \CrefAndHyperrefIfExist{proposition:derivatives_of_sine_and_cosine} and the derivative of $\ln$ from \CrefAndHyperrefIfExist{proposition:derivative_of_natural_logarithm_is_reciprocal}.
 

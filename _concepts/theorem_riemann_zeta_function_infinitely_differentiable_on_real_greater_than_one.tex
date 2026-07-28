@@ -10,8 +10,8 @@ $$\zeta^{(k)}(s) = \sum_{n=1}^\infty \frac{(-1)^k (\ln n)^k}{n^s}.$$
 \TODO{AI generated, verify}
 The Riemann zeta function is the Dirichlet series with coefficients $a_n = 1$ for all $n \ge 1$:
 $$\zeta(s) = \sum_{n=1}^\infty \frac{1}{n^s}.$$
-This series \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for $\Re(s) > 1$\CrefIfExists{riemann_zeta_function_converges_absolutely_on_the_right_half_plane_with_real_part_greater_than_one}, so its abscissa of absolute convergence is $\sigma_a = 1$.
-Applying \Cref{corollary:termwise_differentiation_of_dirichlet_series} with $\sigma_a = 1$, we obtain that $\zeta(s)$ is infinitely differentiable on $(1, \infty)$ and for each $k \in \mathbb{N}_0$,
+This series \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for $\Re(s) > 1$\CrefIfExists{riemann_zeta_function_converges_absolutely_on_the_right_half_plane_with_real_part_greater_than_one}, so its \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{abscissa of absolute convergence} is $\sigma_a = 1$.
+Applying \Cref{corollary:termwise_differentiation_of_a_dirichlet_series_of_a_sequence_of_complex_numbers} with $\sigma_a = 1$, we obtain that $\zeta(s)$ is infinitely differentiable on $(1, \infty)$ and for each $k \in \mathbb{N}_0$,
 $$\zeta^{(k)}(s) = \sum_{n=1}^\infty \frac{(-1)^k (\ln n)^k}{n^s} \quad \text{for all } s \in (1, \infty).$$
 This is exactly the statement.
 \end{proof}

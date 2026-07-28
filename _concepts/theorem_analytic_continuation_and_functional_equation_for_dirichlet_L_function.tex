@@ -1,22 +1,61 @@
 \begin{theorem}[Analytic continuation and functional equation for Dirichlet L-functions] \label{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
 \TODO{AI generated, verify}
-Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} $L(s, \chi)$ admits an analytic continuation to an entire function on $\bbC$, except for a simple pole at $s = 1$ with residue $1$ when $\chi = \chi_0$ is the principal character modulo $k$.
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} $L(s, \chi)$ admits a \CrefAndHyperrefIfExist{definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{meromorphic continuation} to an \CrefAndHyperrefIfExist{definition:entire_function_on_complex_space}{entire function}, except when $\chi = \chi_0$ is the principal character modulo $k$, in which case the continuation has at most a \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{simple pole} at $s = 1$ with \CrefAndHyperrefIfExist{definition:residue_of_a_holomorphic_function_at_an_isolated_singularity_defined_as_the_coefficient_of_z_minus_z_0_to_the_negative_1_in_its_laurent_expansion}{residue} $1$.
 
-Define the \hldef{completed Dirichlet $L$-function}
-$$
-\boxed{ \Lambda(s, \chi) = \left( \frac{k}{\pi} \right)^{s/2} \Gamma\!\left( \frac{s + a(\chi)}{2} \right) L(s, \chi), }
-$$
-where $a(\chi) = 0$ if $\chi(-1) = 1$ (even character) and $a(\chi) = 1$ if $\chi(-1) = -1$ (odd character). Then $\Lambda(s, \chi)$ satisfies the functional equation
-$$
-\boxed{ \Lambda(s, \chi) = \varepsilon(\chi) \, \Lambda(1 - s, \overline{\chi}), }
-$$
-where the \hldef{root number} $\varepsilon(\chi)$ is given by
-$$
-\varepsilon(\chi) = \frac{\tau(\chi)}{i^{a(\chi)} \sqrt{k}}, \qquad \tau(\chi) = \sum_{m=1}^k \chi(m) e^{2\pi i m / k}
-$$
-is the \hldef{Gauss sum} of $\chi$, and $\overline{\chi}$ is the complex conjugate character. In particular, $|\varepsilon(\chi)| = 1$.
-
-\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
-\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
-\CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}
+The \CrefAndHyperrefIfExist{definition:completed_dirichlet_L_function_of_a_dirichlet_character_modulo_k}{completed Dirichlet $L$-function} $\Lambda(s,\chi)$ satisfies the functional equation
+$$\boxed{\Lambda(s, \chi) = \varepsilon(\chi) \, \Lambda(1 - s, \overline{\chi})},$$
+where $\varepsilon(\chi)$ is the \CrefAndHyperrefIfExist{definition:root_number_of_a_dirichlet_character}{root number of $\chi$} and $\overline{\chi}$ is the \CrefAndHyperrefIfExist{definition:complex_conjugate_of_a_dirichlet_character}{complex conjugate character}.
 \end{theorem}
+\begin{proof}
+\TODO{AI generated, verify}
+We prove the theorem in two steps: first for primitive characters, then by reducing the general case to the primitive case.
+
+\noindent \textbf{Step 1: Primitive characters.} Assume $\chi$ is a \CrefAndHyperrefIfExist{definition:primitive_dirichlet_character}{primitive character modulo $k$}.
+
+\medskip
+\noindent \emph{(a) Mellin representation.} For $\Re(s) > 1$, the integral representation of the \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{Gamma function} from \Cref{lemma:mellin_transform_integral_representation_of_gamma_function} gives, after summing over $n \geq 1$ and interchanging summation with integration (justified by absolute convergence for $\Re(s) > 1$\CrefIfExists{corollary:monotone_convergence_theorem_for_series_of_nonnegative_functions}\CrefIfExists{theorem:tonelli_theorem}),
+\begin{align*}
+\Lambda(s, \chi) &= \left( \frac{k}{\pi} \right)^{\!\frac{s + a(\chi)}{2}} \Gamma\!\left( \frac{s + a(\chi)}{2} \right) \sum_{n=1}^\infty \chi(n) n^{-s} \\
+&= \int_0^\infty u^{\frac{s + a(\chi)}{2} - 1} \left( \sum_{n=1}^\infty \chi(n) e^{-\pi n^2 u / k} \right) du.
+\end{align*}
+By the definition of the \CrefAndHyperrefIfExist{definition:theta_function_associated_to_a_dirichlet_character}{theta function $\theta_\chi(u)$}, we have $\sum_{n=1}^\infty \chi(n) e^{-\pi n^2 u / k} = (\theta_\chi(u) - \chi(0))/2$. Hence
+\begin{equation}\label{eq:mellin_representation}
+\Lambda(s, \chi) = \frac{1}{2} \int_0^\infty u^{\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(u) - \chi(0) \bigr) \, du.
+\end{equation}
+
+\medskip
+\noindent \emph{(b) Splitting the integral.} We split the Mellin integral \eqref{eq:mellin_representation} at $u = 1$:
+\begin{equation}\label{eq:split_integral}
+\Lambda(s, \chi) = \frac{1}{2} \int_0^1 u^{\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(u) - \chi(0) \bigr) \, du
++ \frac{1}{2} \int_1^\infty u^{\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(u) - \chi(0) \bigr) \, du.
+\end{equation}
+
+\medskip
+\noindent \emph{(c) The theta transformation.} For the integral from $0$ to $1$, we apply the change of variable $v = 1/u$ together with the \CrefAndHyperrefIfExist{lemma:theta_transformation_formula_for_primitive_dirichlet_characters}{theta transformation formula} $\theta_\chi(1/v) = \varepsilon(\chi)(v/k)^{1/2}\theta_{\overline{\chi}}(v)$:
+\begin{align*}
+\int_0^1 u^{\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(u) - \chi(0) \bigr) \, du
+&= \int_1^\infty v^{-\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(1/v) - \chi(0) \bigr) \, dv \\
+&= \varepsilon(\chi) \, k^{-1/2} \int_1^\infty v^{\frac{1 - s + a(\chi)}{2} - 1} \bigl( \theta_{\overline{\chi}}(v) - \overline{\chi}(0) \bigr) \, dv \\
+&\qquad + \int_1^\infty v^{-\frac{s + a(\chi)}{2} - 1} \bigl( \varepsilon(\chi) k^{-1/2} v^{1/2} \overline{\chi}(0) - \chi(0) \bigr) \, dv.
+\end{align*}
+
+\medskip
+\noindent \emph{(d) Meromorphic continuation and functional equation.} Substituting this back into \eqref{eq:split_integral}, we obtain the representation
+\begin{align*}
+\Lambda(s, \chi) &= \frac{1}{2} \int_1^\infty u^{\frac{s + a(\chi)}{2} - 1} \bigl( \theta_\chi(u) - \chi(0) \bigr) \, du \\
+&\quad + \frac{\varepsilon(\chi)}{2\sqrt{k}} \int_1^\infty u^{\frac{1 - s + a(\chi)}{2} - 1} \bigl( \theta_{\overline{\chi}}(u) - \overline{\chi}(0) \bigr) \, du \\
+&\quad + C_\chi(s),
+\end{align*}
+where $C_\chi(s)$ is an explicit elementary function arising from the constant terms. The two integrals converge absolutely for all $s \in \mathbb{C}$ by the rapid decay of $\theta_\chi(u)$ and $\theta_{\overline{\chi}}(u)$ as $u \to \infty$, hence they define \CrefAndHyperrefIfExist{definition:entire_function_on_complex_space}{entire functions}\CrefIfExists{lemma:holomorphic_function_defined_by_parameter_integral_with_uniform_convergence}. The function $C_\chi(s)$ is entire except for at most a \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{simple pole} at $s = 1$ when $\chi$ is principal. Therefore, $\Lambda(s, \chi)$ extends to a \CrefAndHyperrefIfExist{definition:meromorphic_function_on_an_open_subset_of_the_complex_plane}{meromorphic function on $\mathbb{C}$}.
+
+Comparing this expression with the same formula for $\varepsilon(\chi)\Lambda(1 - s, \overline{\chi})$, we find that the two integrals match term by term, and an explicit computation (see \Cref{lemma:constant_terms_in_the_functional_equation_for_dirichlet_L_functions}) shows that $\varepsilon(\chi) C_{\overline{\chi}}(1 - s) = C_\chi(s)$. Hence
+$$\Lambda(s, \chi) = \varepsilon(\chi) \, \Lambda(1 - s, \overline{\chi}).$$
+
+\medskip
+\noindent \emph{(e) Analytic continuation of $L(s, \chi)$.} Since $\Lambda(s, \chi)$ extends meromorphically to $\mathbb{C}$ with at most a simple pole at $s = 1$ (arising only for principal characters), and the gamma factor $\Gamma((s + a(\chi))/2)$ has poles at $s = -a(\chi) - 2n$ for $n \in \mathbb{N}_0$, the $L$-function $L(s, \chi) = \Lambda(s, \chi) / \bigl( (k/\pi)^{s/2} \Gamma((s + a(\chi))/2) \bigr)$ is \CrefAndHyperrefIfExist{definition:entire_function_on_complex_space}{entire} for non-principal $\chi$, and has a simple pole at $s = 1$ for principal $\chi$ with residue as stated in the theorem (and computed in \Cref{corollary:pole_of_dirichlet_L_function_at_s_equals_1_for_principal_characters}).
+
+\medskip
+\noindent \textbf{Step 2: Reduction from imprimitive to primitive.} If $\chi$ is not a \CrefAndHyperrefIfExist{definition:primitive_dirichlet_character}{primitive character}, let $\chi^*$ be the primitive character that induces $\chi$, with modulus $k^* \mid k$. The Gauss sums are related by \Cref{proposition:gauss_sums_of_imprimitive_dirichlet_characters_factor_through_inducing_primitive_character}, so the completed $L$-function $\Lambda(s, \chi)$ satisfies the same functional equation as $\Lambda(s, \chi^*)$, with the same root number up to a factor $\mu$ of modulus $1$.
+
+This completes the proof.
+\end{proof}

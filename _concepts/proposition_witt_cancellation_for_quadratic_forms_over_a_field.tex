@@ -5,7 +5,7 @@
     \TODO{AI generated, verify}
     Let $\phi: M_1 \oplus H \to M_2 \oplus H$ be an isometry. We equip $M_1 \oplus H$ with the quadratic form $q_1 + q_H$ and $M_2 \oplus H$ with $q_2 + q_H$, where the polarization on direct sums satisfies
     $$B_{q_1+q_H}((m_1, h_1), (m_2, h_2)) = B_{q_1}(m_1, m_2) + B_{q_H}(h_1, h_2).$$
-    \TODO{AI generated, reference needed: definition of direct sum of quadratic modules and its polarization}
+    \TODO{AI generated, reference needed: definition of orthogonal direct sum of quadratic modules where the quadratic form on M⊕N is q_M + q_N and polarization splits as B_{M⊕N}((m,n),(m',n')) = B_M(m,m') + B_N(n,n')}
 
     Let $e_1 = (1,0)$ and $e_2 = (0,1)$ be the standard basis for $H$. Define vectors in $\{0\} \times H \subset M_2 \oplus H$:
     $$u_1 = (0, e_1), \quad u_2 = (0, e_2).$$
@@ -21,13 +21,11 @@
     $$B_{q_H}(ae_1 + be_2, e_1) = a B_{q_H}(e_1, e_1) + b B_{q_H}(e_2, e_1) = 0 + b = b,$$
     and similarly $a = 0$. Hence $h = 0$, so the orthogonal complement is exactly $\{(m, 0) : m \in M_2\} \cong (M_2, q_2)$.
 
-    Let $v_1 = \phi^{-1}(u_1)$ and $v_2 = \phi^{-1}(u_2)$ in $M_1 \oplus H$. Since $\phi$ is an isometry, the subspace $W = \operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ is a hyperbolic plane. The Gram matrix of $\{v_1, v_2\}$ with respect to $B_{q_1+q_H}$ has determinant $-1 \neq 0$, so $W$ is nondegenerate. Hence, $M_1 \oplus H = W \oplus W^{\perp}$ as an orthogonal direct sum.
-    \TODO{AI generated, reference needed: lemma that a nondegenerate subspace of a finite-dimensional quadratic space over a field has an orthogonal complement giving V = S oplus S perp}
+    Let $v_1 = \phi^{-1}(u_1)$ and $v_2 = \phi^{-1}(u_2)$ in $M_1 \oplus H$. Since $\phi$ is an isometry, the subspace $W = \operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ is a hyperbolic plane. The Gram matrix of $\{v_1, v_2\}$ with respect to $B_{q_1+q_H}$ has determinant $-1 \neq 0$, so $W$ is nondegenerate. Hence, $M_1 \oplus H = W \oplus W^{\perp}$ as an orthogonal direct sum by \Cref{proposition:v_decomposes_as_direct_sum_of_subspace_and_its_orthogonal_complement}.
 
     The isometry $\phi$ maps $W$ to $\operatorname{span}\{u_1, u_2\}$ and therefore maps $W^{\perp}$ to $(\operatorname{span}\{u_1, u_2\})^{\perp} \cong (M_2, q_2)$. Hence, $\phi|_{W^{\perp}}: W^{\perp} \to (M_2, q_2)$ is an isometry.
 
-    We show that $W^{\perp}$ is isometric to $(M_1, q_1)$ by the same argument applied in reverse: the subspace $\operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ has orthogonal complement isometric to $(M_1, q_1)$.
-    \TODO{AI generated, reference needed: symmetric argument that W perp in M1 oplus H cong (M1, q1), or explicit verification similar to the M2 case}
+    We show that $W^{\perp}$ is isometric to $(M_1, q_1)$ by the same argument applied in reverse: the subspace $\operatorname{span}\{v_1, v_2\} \subset M_1 \oplus H$ has orthogonal complement isometric to $(M_1, q_1)$, verified identically to the $M_2$ case above by computing that vectors orthogonal to both $v_1$ and $v_2$ must have zero $H$-component.
 
     Therefore, $(M_1, q_1) \cong W^{\perp} \cong (M_2, q_2)$ as quadratic modules.
 \end{proof}

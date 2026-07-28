@@ -1,0 +1,64 @@
+\begin{proposition}[Complex derivative rules for sum, product, quotient, and chain] \label{proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane}
+    \TODO{AI generated, verify}
+Let $U \subseteq \mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers} be an open set and let $f, g : U \to \mathbb{C}$ be \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic functions} at a point $a \in U$.
+
+\begin{enumerate}
+    \item[\textbf{(Sum rule)}] The function $f + g$ is holomorphic at $a$ and
+    $$(f + g)'(a) = f'(a) + g'(a).$$
+
+    \item[\textbf{(Product rule)}] The function $f \cdot g$ is holomorphic at $a$ and
+    $$(f \cdot g)'(a) = f'(a)\,g(a) + f(a)\,g'(a).$$
+
+    \item[\textbf{(Quotient rule)}] If in addition $g(a) \neq 0$, then the function $f/g$ is holomorphic at $a$ and
+    $$\left(\frac{f}{g}\right)'(a) = \frac{f'(a)\,g(a) - f(a)\,g'(a)}{g(a)^2}.$$
+
+    \item[\textbf{(Chain rule)}] Let $V \subseteq \mathbb{C}$ be an open set and let $h : V \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} at $f(a)$, with $f(U) \subseteq V$. Then the composition $h \circ f$ is holomorphic at $a$ and
+    $$(h \circ f)'(a) = h'(f(a))\,f'(a).$$
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    We prove each rule in turn.
+
+    \textbf{Sum rule.} We compute directly:
+    \begin{align*}
+        (f + g)'(a) &= \lim_{z \to a} \frac{(f+g)(z) - (f+g)(a)}{z - a} \\
+        &= \lim_{z \to a} \left( \frac{f(z) - f(a)}{z - a} + \frac{g(z) - g(a)}{z - a} \right).
+    \end{align*}
+    By \Cref{proposition:limit_algebra_for_complex_valued_functions}, since both limits on the right-hand side exist (as $f$ and $g$ are holomorphic at $a$), the limit of the sum equals the sum of the limits:
+    $$(f + g)'(a) = f'(a) + g'(a).$$
+
+    \textbf{Product rule.} Add and subtract $f(z)g(a)$ in the numerator:
+    \begin{align*}
+        (f \cdot g)'(a) &= \lim_{z \to a} \frac{f(z)g(z) - f(a)g(a)}{z - a} \\
+        &= \lim_{z \to a} \left( \frac{f(z) - f(a)}{z - a}\,g(z) + f(a)\,\frac{g(z) - g(a)}{z - a} \right).
+    \end{align*}
+    The first term on the right-hand side is a product of two factors. By \Cref{proposition:limit_algebra_for_complex_valued_functions}, since $\displaystyle\lim_{z \to a} \frac{f(z) - f(a)}{z - a} = f'(a)$ and $\displaystyle\lim_{z \to a} g(z) = g(a)$ (the latter by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}), the limit of their product is $f'(a)\,g(a)$. The second term has limit $f(a)\,g'(a)$. Summing gives
+    $$(f \cdot g)'(a) = f'(a)\,g(a) + f(a)\,g'(a).$$
+
+    \textbf{Quotient rule.} Write $\frac{f}{g} = f \cdot \frac{1}{g}$. Since $g$ is continuous at $a$ by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous} and $g(a) \neq 0$, there exists a neighborhood of $a$ on which $g(z) \neq 0$. First compute the derivative of $1/g$ at $a$: for $z$ near $a$ with $z \neq a$,
+    \begin{align*}
+        \frac{\frac{1}{g(z)} - \frac{1}{g(a)}}{z - a} &= \frac{g(a) - g(z)}{(z - a)\,g(z)g(a)} \\
+        &= -\frac{g(z) - g(a)}{z - a} \cdot \frac{1}{g(z)g(a)}.
+    \end{align*}
+    Taking the limit as $z \to a$, the first factor converges to $g'(a)$ and the second converges to $1/g(a)^2$ by continuity of $g$ at $a$ and \Cref{proposition:limit_algebra_for_complex_valued_functions}. Hence
+    $$\left(\frac{1}{g}\right)'(a) = -\frac{g'(a)}{g(a)^2}.$$
+    Now apply the product rule to $f \cdot \frac{1}{g}$:
+    $$\left(\frac{f}{g}\right)'(a) = f'(a)\cdot\frac{1}{g(a)} + f(a)\cdot\left(-\frac{g'(a)}{g(a)^2}\right) = \frac{f'(a)g(a) - f(a)g'(a)}{g(a)^2}.$$
+
+    \textbf{Chain rule.} For $z$ near $a$ with $z \neq a$, write the difference quotient
+    $$\frac{(h \circ f)(z) - (h \circ f)(a)}{z - a} = \frac{h(f(z)) - h(f(a))}{f(z) - f(a)} \cdot \frac{f(z) - f(a)}{z - a},$$
+    provided $f(z) \neq f(a)$.  Since $f$ is holomorphic at $a$, it is continuous at $a$ by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}, so $f(z) \to f(a)$ as $z \to a$.  If $f(z) \neq f(a)$ for all $z$ sufficiently close to $a$ (other than $z = a$), then the first factor converges to $h'(f(a))$ by definition of the complex derivative of $h$ at $f(a)$, and the second factor converges to $f'(a)$.  Hence
+    $$(h \circ f)'(a) = h'(f(a))\,f'(a),$$
+    by \Cref{proposition:limit_algebra_for_complex_valued_functions}.
+
+    If instead $f(z) = f(a)$ for some $z$ arbitrarily close to $a$, then on those points the difference quotient $\frac{h(f(z)) - h(f(a))}{z - a}$ equals $0$.  In this case, the function $f$ is constant on a set with $a$ as an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point}, so $f'(a) = 0$ and the chain rule formula reduces to $0 = h'(f(a))\cdot 0$, which holds trivially.  More rigorously, define the auxiliary function
+    $$\varphi(w) = \begin{cases}
+        \dfrac{h(w) - h(f(a))}{w - f(a)} & \text{if } w \neq f(a), \\[1em]
+        h'(f(a)) & \text{if } w = f(a),
+    \end{cases}$$
+    which is continuous at $w = f(a)$ by the definition of $h'(f(a))$.  Then
+    $$\frac{h(f(z)) - h(f(a))}{z - a} = \varphi(f(z)) \cdot \frac{f(z) - f(a)}{z - a}$$
+    holds for all $z \neq a$, because when $f(z) = f(a)$ the right-hand side becomes $h'(f(a)) \cdot 0 = 0$, matching the left-hand side.  Taking the limit $z \to a$ and applying the composition rule of \Cref{proposition:limit_algebra_for_complex_valued_functions} to $\varphi \circ f$ together with the product rule gives
+    $$(h \circ f)'(a) = \lim_{z \to a} \varphi(f(z)) \cdot \lim_{z \to a} \frac{f(z) - f(a)}{z - a} = h'(f(a)) \cdot f'(a).$$
+\end{proof}

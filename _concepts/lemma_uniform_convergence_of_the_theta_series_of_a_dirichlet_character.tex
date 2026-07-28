@@ -1,0 +1,11 @@
+\begin{lemma}[Uniform convergence of the theta series of a Dirichlet character] \label{lemma:uniform_convergence_of_the_theta_series_of_a_dirichlet_character}
+Let $k \in \mathbb{Z}_{\geq 1}$, let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}, and let $\delta > 0$. The series
+$$\sum_{n \in \mathbb{Z}} \chi(n) e^{-\pi n^2 u / k}$$
+\CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} for $u \geq \delta$.
+\end{lemma}
+\begin{proof}
+\TODO{reference needed: lemma that value of Dirichlet character is either 0 or of absolute value $1$}
+Since $|\chi(n)| \leq 1$ for all $n \in \mathbb{Z}$, we have the estimate
+$$|\chi(n) e^{-\pi n^2 u / k}| \leq e^{-\pi n^2 \delta / k}$$
+for all $u \geq \delta$. The series $\sum_{n=0}^\infty e^{-\pi n^2 \delta / k}$ converges by the \CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}{comparison test}\CrefIfExists{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}, since $e^{-\pi n^2 \delta / k} \leq e^{-c n}$ for all sufficiently large $n$ and any $c \in (0, \pi\delta/k)$, and $\sum_{n=0}^\infty e^{-c n}$ is a convergent \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{geometric series}\CrefIfExists{theorem:convergence_of_an_infinite_geometric_series_in_a_topological_ring}. Hence by the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}{Weierstrass $M$-test}, the series converges absolutely and uniformly for $u \geq \delta$.
+\end{proof}

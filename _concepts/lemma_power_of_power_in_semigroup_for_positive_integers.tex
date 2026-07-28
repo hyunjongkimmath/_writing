@@ -1,0 +1,15 @@
+\begin{lemma}[Power of a power in a semigroup for positive integer exponents] \label{lemma:power_of_power_in_semigroup_for_positive_integers}
+    \TODO{AI generated, verify}
+    Let $(S, \cdot)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{semigroup} and let $a \in S$. For all positive integers $m, n \in \bbZ_{>0}$,
+    $$ (a^m)^n = a^{mn}, $$
+    where $a^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power of $a$}.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We proceed by induction on $n$. For the base case $n = 1$, we have $(a^m)^1 = a^m = a^{m \cdot 1}$ by definition. Now assume that $(a^m)^k = a^{mk}$ for some positive integer $k$. Then
+    $$ (a^m)^{k+1} = (a^m)^k \cdot a^m $$
+    by the recursive definition of powers in a semigroup (\CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power}). By the inductive hypothesis this equals $a^{mk} \cdot a^m$. Since $mk > 0$ and $m > 0$, we may apply \Cref{lemma:additivity_of_powers_in_a_semigroup} to obtain
+    $$ a^{mk} \cdot a^m = a^{mk + m} = a^{m(k+1)}. $$
+    This completes the induction.
+\end{proof}

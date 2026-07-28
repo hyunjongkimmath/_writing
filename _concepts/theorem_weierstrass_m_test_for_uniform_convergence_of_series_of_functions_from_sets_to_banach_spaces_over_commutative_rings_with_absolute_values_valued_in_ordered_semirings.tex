@@ -1,0 +1,28 @@
+\begin{theorem}[Weierstrass M-test for uniform convergence of function series] \label{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_commutative_rings_with_absolute_values_valued_in_ordered_semirings}
+    Let $T = \widetilde{R}_{\ge 0}$ be the \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} of a \CrefAndHyperrefIfExist{definition:ordered_ring}{totally ordered ring} $\widetilde{R}$ that is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. In particular, $T$ is an ordered semiring with an adjoined infinity $T^\infty$. Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring} equipped with an \CrefAndHyperrefIfExist{definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring}{absolute value valued in $T$}. Let $(V, \|\cdot\|)$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{complete extended normed module over $R$ valued in $T^\infty$}. Let $S$ be a set and let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : S \to V$.
+
+    Suppose there exists a sequence $(M_n)_{n=1}^\infty$ in $T_{\ge 0}$ such that:
+    \begin{enumerate}
+        \item For each $n$ and each $x \in S$, $\|f_n(x)\| \le M_n$;
+        \item The sequence $(M_n)$ satisfies the \CrefAndHyperrefIfExist{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}{Cauchy tails condition}.
+    \end{enumerate}
+    Then the series $\sum_{n=1}^\infty f_n(x)$ \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges uniformly} on $S$ to a function $f : S \to V$.
+
+    In particular, since $T$ is a subset of $\widetilde{R}$, if the sequence of partial sums $(\sum_{n=1}^N M_n)_{N=1}^\infty$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converges} in $\widetilde{R}$, then $(M_n)$ satisfies the Cauchy tails condition\CrefIfExists{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}.
+\end{theorem}
+\begin{proof}
+    We prove pointwise convergence first, then uniform convergence.
+
+    Fix $x \in S$. The partial sums of the series $\sum f_n(x)$ form a sequence in $V$. For any $K > N$, by the \CrefAndHyperrefIfExist{definition:extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value}{triangle inequality} for the norm, we have
+    $$\left\|\sum_{n=N+1}^K f_n(x)\right\| \le \sum_{n=N+1}^K \|f_n(x)\| \leq \sum_{n=N+1}^K M_n.$$
+
+    By the \CrefAndHyperrefIfExist{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}{Cauchy tails condition} on $(M_n)$, for every $\varepsilon \in T_{>0}$ there exists $N_0$ such that for all $K > N \ge N_0$:
+    $$\sum_{n=N+1}^K M_n < \varepsilon.$$
+
+    Therefore, the partial sums satisfy, uniformly in $x$, the Cauchy condition:
+    $$\left\|\sum_{n=N+1}^K f_n(x)\right\| < \varepsilon \quad \text{for all } x \in S.$$
+
+    In other words, for any $K > N \geq N_0$, we have
+    $$\left\|\sum_{n=1}^K f_n(x) - \sum_{n=1}^N f_n(x)\right\| = \left\|\sum_{n=N+1}^K f_n(x)\right\| < \varepsilon,$$
+    i.e. the partial sums $(\sum_{n=1}^N f_n(x))_{N=1}^\infty$ form a \CrefAndHyperrefIfExist{definition:cauchy_sequence_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{Cauchy sequence} in $V$; recall that the extended metric on $V$ is given by $d_V(v_1,v_2) = \|v_1-v_2\|$. Since $V$ is \CrefAndHyperrefIfExist{definition:complete_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{complete} under this extended metric, for each fixed $x$ the series $\sum f_n(x)$ thus converges to some limit, which we denote by $f(x)$. In fact, note that the convergence is \CrefAndHyperrefIfExist{definition:uniformly_Cauchy_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly Cauchy}. By \Cref{proposition:uniform_convergence_implies_bounded_and_uniformly_Cauchy_for_sequences_of_functions}, since $(V, \|\cdot\|)$ is complete (with respect to the extended metric induced by $\|\cdot\|$), the convergence is thus \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniform}.
+\end{proof}

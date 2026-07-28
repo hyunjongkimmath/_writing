@@ -1,0 +1,15 @@
+\begin{proposition}[Absolute convergence justifies interchange of summation and integration] \label{proposition:absolute_convergence_justifies_interchange_of_summation_and_integration}
+    \TODO{AI generated, verify}
+    Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
+    Let $\{f_n\}_{n=1}^\infty$ be a sequence of measurable functions $f_n : X \to \bbC$\TODO{AI generated, reference needed: definition of field of complex numbers and measurable function from measure space to C (Bochner/measurable)} such that the series of integrals of absolute values converges in $\mathbb{R}$, i.e.
+    $$\sum_{n=1}^\infty \int_X |f_n|\,d\mu < \infty.$$
+
+    Then:
+
+    \begin{enumerate}
+        \item The series $\sum_{n=1}^\infty f_n(x)$ converges absolutely for \CrefAndHyperrefIfExist{definition:property_holds_almost_everywhere_for_a_measure_space}{$\mu$-almost every} $x \in X$, and the sum defines a measurable function.
+
+        \item One has
+        $$\int_X \sum_{n=1}^\infty f_n\,d\mu = \sum_{n=1}^\infty \int_X f_n\,d\mu.$$
+    \end{enumerate}
+\end{proposition}

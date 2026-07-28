@@ -1,14 +1,65 @@
 \begin{theorem}[Dominated convergence theorem] \label{theorem:dominated_convergence_theorem}
+    \TODO{AI generated, verify}
 Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
 
 Let $(f_n)_{n \geq 1}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n : X \to \overline{\mathbb{R}}$ (or $\mathbb{C}$) and let $f : X \to \overline{\mathbb{R}}$ (or $\mathbb{C}$) be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Suppose that:
 \begin{enumerate}
     \item $f_n \to f$ \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost everywhere} as $n \to \infty$, and
-    \TODO{dominated by...}
-    \item there exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable function} $g : X \to [0,\infty]$ such that $|f_n(x)| \leq g(x)$ for all $n \geq 1$ and all $x \in X$ (i.e. $(f_n)$ is \hldef{dominated} by an integrable function).
+    \item there exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable function} $g : X \to [0,\infty]$ such that $|f_n(x)| \leq g(x)$ for all $n \geq 1$ and all $x \in X$.
 \end{enumerate}
 
 Then each $f_n$ (and $f$) is integrable, and
 $$\lim_{n \to \infty} \int_X f_n\,d\mu = \int_X f\,d\mu.$$
 Equivalently, $\|f_n - f\|_1 \to 0$, i.e. $f_n \to f$ in $L^1(\mu)$.
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ be a measure space. Fix the sequence of measurable functions $(f_n)$ and the dominating integrable function $g : X \to [0,\infty]$.
+
+    First we show that each $f_n$ is integrable. Since $|f_n(x)| \leq g(x)$ for all $x$, we have
+    $$\int_X |f_n|\,d\mu \leq \int_X g\,d\mu < \infty.$$
+    Hence each $f_n$ is integrable by the definition of Lebesgue integrability (\CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}).
+
+    Since $f_n \to f$ almost everywhere, we have for almost every $x$:
+    $$|f(x)| = \lim_{n \to \infty} |f_n(x)| \leq g(x).$$
+    Hence $\int_X |f|\,d\mu \leq \int_X g\,d\mu < \infty$, so $f$ is also integrable.
+
+    Next we apply Fatou's lemma (\CrefAndHyperrefIfExist{lemma:fatous_lemma}) to the nonnegative measurable functions $g + |f_n - f|$. Since $|f_n(x)| \leq g(x)$ and $|f(x)| \leq g(x)$ almost everywhere, by the triangle inequality:
+    $$g(x) + |f_n(x) - f(x)| \geq 0.$$
+
+    Moreover, since $f_n \to f$ almost everywhere, we have $|f_n(x) - f(x)| \to 0$ almost everywhere, which implies that
+    $$\lim_{n \to \infty} (g(x) + |f_n(x) - f(x)|) = g(x)$$
+    almost everywhere.
+
+    Apply Fatou's lemma to the sequence $(g + |f_n - f|)_n$:
+    $$\int_X \liminf_{n \to \infty} (g + |f_n - f|)\,d\mu \leq \liminf_{n \to \infty} \int_X (g + |f_n - f|)\,d\mu.$$
+
+    The left-hand side equals $\int_X g\,d\mu$. By the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}), the right-hand side is
+    $$\liminf_{n \to \infty} \left(\int_X g\,d\mu + \int_X |f_n - f|\,d\mu\right) = \int_X g\,d\mu + \liminf_{n \to \infty} \int_X |f_n - f|\,d\mu.$$
+
+    Subtracting $\int_X g\,d\mu$ from both sides (which is finite):
+    $$0 \leq \liminf_{n \to \infty} \int_X |f_n - f|\,d\mu.$$
+
+    Since $|f_n - f| \geq 0$, this inequality holds automatically. To obtain the reverse direction, note that for each $n$ we have
+    $$g + f_n \geq 0 \quad \text{and} \quad g + f \geq 0.$$
+
+    Apply Fatou's lemma to both $2g - (|f_n| + |f|)$ and the related expressions. Instead, observe that since $|f_n(x) - f(x)| \leq |f_n(x)| + |f(x)| \leq 2g(x)$ for all $n$, we can apply Fatou's lemma to $(2g - |f_n - f|)_n$:
+    $$\int_X \liminf_{n \to \infty} (2g - |f_n - f|)\,d\mu \leq \liminf_{n \to \infty} \int_X (2g - |f_n - f|)\,d\mu.$$
+
+    The left-hand side is $\int_X 2g\,d\mu$. The right-hand side simplifies to:
+    $$\liminf_{n \to \infty} \left(2\int_X g\,d\mu - \int_X |f_n - f|\,d\mu\right) = 2\int_X g\,d\mu + \limsup_{n \to \infty} \left(-\int_X |f_n - f|\,d\mu\right).$$
+
+    Hence:
+    $$\int_X 2g\,d\mu \leq 2\int_X g\,d\mu - \limsup_{n \to \infty} \int_X |f_n - f|\,d\mu.$$
+
+    Subtracting $2\int_X g\,d\mu$:
+    $$0 \leq -\limsup_{n \to \infty} \int_X |f_n - f|\,d\mu.$$
+
+    Since $\int_X |f_n - f|\,d\mu \geq 0$, the only possibility is:
+    $$\lim_{n \to \infty} \int_X |f_n - f|\,d\mu = 0.$$
+
+    By the triangle inequality for integrals:
+    $$\left|\int_X f_n\,d\mu - \int_X f\,d\mu\right| \leq \int_X |f_n - f|\,d\mu.$$
+
+    Hence $\lim_{n \to \infty} \int_X f_n\,d\mu = \int_X f\,d\mu$, and equivalently $\|f_n - f\|_1 \to 0$.
+\end{proof}

@@ -1,13 +1,12 @@
 \begin{definition}[Dirichlet series of a sequence of complex numbers]
 \label{definition:dirichlet_series_of_a_sequence_of_complex_numbers}
-\TODO{AI generated, verify}
-Let $(a_n)_{n=1}^\infty$ be a sequence of complex numbers.
+Let $(a_n)_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:field_of_complex_numbers}{complex numbers}.
 The \hldef{Dirichlet series with coefficients $(a_n)$} is the formal expression
 $$\hlin{D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s},}$$
-where $s \in \mathbb{C}$ is a complex variable and $n^s = \exp(s \ln n)$ for $n \ge 1$ (with $\ln n$ the \CrefAndHyperrefIfExist{definition:natural_logarithm_as_inverse_of_exponential}{natural logarithm} of $n$).
-For a given $s \in \mathbb{C}$, the series is said to \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely} if
+where $s \in \mathbb{C}$ is a complex variable and $n^s = \exp(s \ln n)$ for $n \ge 1$ (with $\ln n$ the \CrefAndHyperrefIfExist{definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function}{natural logarithm} of $n$).
+For a given $s \in \mathbb{C}$, the series \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely} if
 $$\sum_{n=1}^\infty \frac{|a_n|}{n^{\Re(s)}} < \infty,$$
-and to \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converge} (conditionally) if the sequence of partial sums $\sum_{n=1}^N \frac{a_n}{n^s}$ converges in $\mathbb{C}$ as $N \to \infty$.
+and \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converges (conditionally)} if the sequence of partial sums $\sum_{n=1}^N \frac{a_n}{n^s}$ converges in $\mathbb{C}$ as $N \to \infty$.
 The \hldef{abscissa of absolute convergence} $\sigma_a \in [-\infty, \infty]$ is the infimum of all $\sigma \in \mathbb{R}$ such that the series converges absolutely for all $s$ with $\Re(s) > \sigma$.
 The \hldef{abscissa of conditional convergence} $\sigma_c \in [-\infty, \infty]$ is the infimum of all $\sigma \in \mathbb{R}$ such that the series converges for all $s$ with $\Re(s) > \sigma$.
 \end{definition}

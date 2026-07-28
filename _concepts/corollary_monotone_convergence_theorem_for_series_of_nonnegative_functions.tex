@@ -1,6 +1,24 @@
 \begin{corollary}[Monotone convergence theorem for series of nonnegative functions] \label{corollary:monotone_convergence_theorem_for_series_of_nonnegative_functions}
-\TODO{AI generated, verify}
+    \TODO{AI generated, verify}
 Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $(g_k)_{k=1}^{\infty}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $g_k : X \to [0, \infty]$. Then
 $$\int_X \sum_{k=1}^\infty g_k \, d\mu = \sum_{k=1}^\infty \int_X g_k \, d\mu.$$
 \CrefIfExists{theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions}
 \end{corollary}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S_N(x) = \sum_{k=1}^N g_k(x)$ for each $N \in \mathbb{N}$ and $x \in X$. Since each $g_k$ is a nonnegative measurable function, the finite sum $S_N$ is also a nonnegative measurable function. Moreover, since $g_k(x) \geq 0$ for all $k$, we have
+    $$S_1(x) \leq S_2(x) \leq \cdots.$$
+    Thus $(S_N)_{N=1}^\infty$ is a monotonically increasing sequence of nonnegative measurable functions.
+
+    By definition, the infinite series $\sum_{k=1}^\infty g_k(x)$ equals $\lim_{N \to \infty} S_N(x)$. Applying the monotone convergence theorem (\CrefAndHyperrefIfExist{theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions}) to $(S_N)$:
+    $$\int_X \sum_{k=1}^\infty g_k \, d\mu = \int_X \lim_{N \to \infty} S_N \, d\mu = \lim_{N \to \infty} \int_X S_N \, d\mu.$$
+
+    By the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}), for each $N$:
+    $$\int_X S_N \, d\mu = \int_X \sum_{k=1}^N g_k \, d\mu = \sum_{k=1}^N \int_X g_k \, d\mu.$$
+
+    Hence:
+    $$\lim_{N \to \infty} \int_X S_N \, d\mu = \lim_{N \to \infty} \sum_{k=1}^N \int_X g_k \, d\mu = \sum_{k=1}^\infty \int_X g_k \, d\mu.$$
+
+    Combining these equalities:
+    $$\int_X \sum_{k=1}^\infty g_k \, d\mu = \sum_{k=1}^\infty \int_X g_k \, d\mu.$$
+\end{proof}

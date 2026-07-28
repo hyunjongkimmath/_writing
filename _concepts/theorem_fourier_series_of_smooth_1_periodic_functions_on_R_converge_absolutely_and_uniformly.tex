@@ -1,0 +1,51 @@
+\begin{theorem}[Fourier series of smooth 1-periodic functions on $\mathbb{R}$ converge absolutely and uniformly]
+\label{theorem:fourier_series_of_smooth_1_periodic_functions_on_R_converge_absolutely_and_uniformly}
+\TODO{AI generated, verify}
+Suppose that $G : \mathbb{R} \to \mathbb{C}$ is a smooth ($C^\infty$) function that is 1-periodic, i.e., $G(x+1) = G(x)$ for all $x \in \mathbb{R}$. Let $\{c_m\}_{m \in \mathbb{Z}}$ denote the Fourier coefficients of $G$:
+$$c_m = \int_0^1 G(x) \, e^{-2\pi i m x} \, dx.$$
+\CrefIfExists{definition:fourier_coefficient_of_a_periodic_function_on_R}\CrefIfExists{definition:complex_exponential_function}
+
+Then the Fourier series of $G$ converges absolutely and uniformly on $\mathbb{R}$ to $G(x)$:
+$$G(x) = \sum_{m=-\infty}^{\infty} c_m \, e^{2\pi i m x}.$$
+\CrefIfExists{definition:complex_exponential_function}
+
+In particular, for every integer $k \geq 0$, the Fourier coefficients satisfy the rapid decay estimate: there exist constants $C_k > 0$ such that
+$$|c_m| \leq \frac{C_k}{1 + |m|^k} \quad \text{for all } m \in \mathbb{Z}.$$
+\end{theorem}
+
+\begin{proof}
+\TODO{AI generated, verify}
+\medskip
+\noindent\textit{Step 1: Rapid decay of Fourier coefficients via integration by parts.} Fix an integer $k \geq 0$. Because $G$ is smooth and 1-periodic, each derivative $G^{(j)}$ is also 1-periodic for all $j \geq 0$. For any nonzero integer $m \in \mathbb{Z} \setminus \{0\}$, apply integration by parts $k$ times to the Fourier coefficient integral:
+$$c_m = \int_0^1 G(x) \, e^{-2\pi i m x} \, dx.$$
+The first integration by parts yields
+$$c_m = \left[ \frac{G(x) \, e^{-2\pi i m x}}{-2\pi i m} \right]_{x=0}^{x=1} + \frac{1}{2\pi i m} \int_0^1 G'(x) \, e^{-2\pi i m x} \, dx.$$
+The boundary term vanishes because $G$ is 1-periodic and $e^{-2\pi i m x}$ is 1-periodic for integer $m$, so the product evaluates to the same value at $x = 0$ and $x = 1$. Repeating this argument $k$ times gives
+$$c_m = \frac{1}{(2\pi i m)^k} \int_0^1 G^{(k)}(x) \, e^{-2\pi i m x} \, dx.$$
+
+Since $G^{(k)}$ is continuous on the compact interval $[0,1]$, it is bounded: let
+$$M_k := \sup_{x \in [0,1]} |G^{(k)}(x)| < \infty.$$
+Then for all nonzero integers $m$:
+$$|c_m| \leq \frac{1}{|2\pi m|^k} \int_0^1 |G^{(k)}(x)| \, dx \leq \frac{M_k}{(2\pi)^k |m|^k}.$$
+For $m = 0$, the coefficient $c_0$ is bounded by $|c_0| \leq M_0$. Taking $C_k = \max\{1 + |c_0|, (2\pi)^{-k}(1+M_k)\}$ ensures that
+$$|c_m| \leq \frac{C_k}{1 + |m|^k} \quad \text{for all } m \in \mathbb{Z}.$$
+
+\medskip
+\noindent\textit{Step 2: Absolute and uniform convergence of the Fourier series.} Choose $k = 3$. Then for all nonzero integers $m$:
+$$|c_m \, e^{2\pi i m x}| = |c_m| \leq \frac{C_3}{1 + |m|^3}.$$
+The bound is independent of $x$ because $|e^{2\pi i m x}| = 1$. Since $\sum_{m \in \mathbb{Z}} (1+|m|^3)^{-1}$ converges, the Fourier series $\sum_{m=-\infty}^\infty c_m e^{2\pi i m x}$ converges absolutely and uniformly on $\mathbb{R}$ by the Weierstrass M-test. Let $S(x)$ denote the uniform limit:
+$$S(x) := \sum_{m=-\infty}^{\infty} c_m \, e^{2\pi i m x}.$$
+
+\medskip
+\noindent\textit{Step 3: The Fourier series converges to $G(x)$.} We show that $c_m(G - S) = 0$ for all $m \in \mathbb{Z}$, which forces $G = S$. By linearity of the integral and absolute convergence of the series (which justifies interchanging summation and integration):
+$$\begin{aligned}
+c_m(G - S) &= \int_0^1 G(x) e^{-2\pi i m x} \, dx - \sum_{n=-\infty}^\infty c_n \int_0^1 e^{2\pi i n x} e^{-2\pi i m x} \, dx \\
+&= c_m - \sum_{n=-\infty}^\infty c_n \int_0^1 e^{2\pi i (n-m) x} \, dx.
+\end{aligned}$$
+
+The orthogonality relation gives $\int_0^1 e^{2\pi i (n-m) x} \, dx = \delta_{nm}$, which collapses the sum to $c_m$. Therefore:
+$$c_m(G - S) = c_m - c_m = 0 \quad \text{for all } m \in \mathbb{Z}.$$
+
+Because all Fourier coefficients of $G-S$ vanish and $G-S$ is continuous, the function $G-S$ must be identically zero. This follows from the fact that a smooth periodic function with vanishing Fourier series has uniformly convergent partial sums that are identically zero at every point; consequently,
+$$G(x) = S(x) = \sum_{m=-\infty}^{\infty} c_m \, e^{2\pi i m x} \quad \text{for all } x \in \mathbb{R}.$$
+\end{proof}

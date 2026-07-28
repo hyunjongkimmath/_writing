@@ -1,18 +1,15 @@
 \begin{definition}[Convergence of a monotone sequence in an ordered semiring with adjoined infinity] \label{definition:convergence_of_a_monotone_sequence_in_an_ordered_semiring_with_adjoined_infinity}
-    \TODO{AI generated, verify}
-    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, and let \hl{$T^\infty$} be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$. Let $(s_N)_{N=1}^\infty$ be a sequence in $T^\infty$.
+    Let $T$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, and let \hl{$T^\infty$} be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$. Let $(s_N)_{N=1}^\infty$ be a \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{monotone sequence} in $T^\infty$.
 
-    The sequence is called \hldef{nondecreasing} if for all $M, N \in \bbN$ with $M \leq N$, we have $s_M \leq s_N$ in $T^\infty$.
-
-    A nondecreasing sequence $(s_N)_{N=1}^\infty$ is said to \hldef{converge to an element $s \in T^\infty$} if
     \begin{enumerate}
-        \item $s_N \leq s$ for all $N \in \bbN$, and
-        \item for every $t \in T^\infty$ such that $s_N \leq t$ for all $N \in \bbN$, we have $s \leq t$.
-    \end{enumerate}
-    In other words, $s$ is the \hldef{supremum} of the set $\{s_N : N \in \bbN\}$ in $T^\infty$, denoted by
-    $$s = \sup_{N \in \bbN} s_N.$$
+        \item If $(s_N)_{N=1}^\infty$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nondecreasing}, then is said to \hldef{converge to an element $s \in T$} if $s$ is a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum} of the sequence.
 
-    A nondecreasing sequence converges if and only if it is bounded above in $T^\infty$ and its supremum exists. If the sequence is not bounded above, or if its supremum does not exist in $T^\infty$, we say that the sequence \hldef{diverges}.
+        If such a supremum does not exist in $T$, then we say that the sequence \hldef{diverges}.
+
+        \item If $(s_N)_{N=1}^\infty$ is \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{nonincreasing}, then is said to \hldef{converge to an element $s \in T$} if $s$ is a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum} of the sequence.
+
+        If such a supremum does not exist in $T^\infty$, then we say that the sequence \hldef{diverges}.
+    \end{enumerate}
 
     In the case that $s_N = \infty$ for some $N$, the sequence converges to $\infty$.
 \end{definition}

@@ -1,12 +1,50 @@
 \begin{theorem}[Bounded convergence theorem] \label{theorem:bounded_convergence_theorem}
-Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperref{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{finite measure space}, i.e., $\mu(X) < \infty$. Let $\{f_n\}_{n=1}^\infty$ be a sequence of \CrefAndHyperref{definition:lebesgue_integral_of_measurable_functions_into_the}{measurable functions} $f_n: X \to \mathbb{R}$, and let $f: X \to \mathbb{R}$ be measurable.
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{finite measure space}, i.e., $\mu(X) < \infty$. Let $\{f_n\}_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n: X \to \mathbb{R}$, and let $f: X \to \mathbb{R}$ be measurable.
 
 Suppose that:
 \begin{enumerate}
-    \item $f_n \to f$ \CrefAndHyperref{definition:property_holds_almost_everywhere_for_a_measure_space}{almost everywhere} with respect to $\mu$, and
-    \item there exists a constant $M < \infty$ such that $|f_n(x)| \leq M$ for all $n \in \mathbb{N}$ and all $x \in X$.
+    \item $f_n \to f$ \CrefAndHyperrefIfExist{definition:property_holds_almost_everywhere_for_a_measure_space}{almost everywhere} with respect to $\mu$, and
+    \item there exists a constant $M > 0$ such that $|f_n(x)| \leq M$ for all $n \in \mathbb{N}$ and all $x \in X$.
 \end{enumerate}
 
-Then each $f_n$ and $f$ are \CrefAndHyperref{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable}, and
+Then each $f_n$ and $f$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable}, and
 $$\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.$$
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{M}, \mu)$ be a finite measure space. Fix the measurable functions $f_n$ and $f$, and the uniform bound $M > 0$.
+
+    Since $\mu(X) < \infty$ and each $f_n$ is bounded by $M$, we have
+    $$\int_X |f_n|\,d\mu \leq M \cdot \mu(X) < \infty.$$
+    Hence each $f_n$ is integrable. Similarly, since $|f(x)| = \lim_{n \to \infty} |f_n(x)| \leq M$ almost everywhere, the function $f$ is also bounded by $M$ almost everywhere, so $\int_X |f|\,d\mu \leq M \cdot \mu(X) < \infty$, and $f$ is integrable.
+
+    Define $h_n(x) = 2M - |f_n(x) - f(x)|$. We verify that $h_n(x) \geq 0$ for all $x$: since $|f_n(x)| \leq M$ and $|f(x)| \leq M$, by the triangle inequality,
+    $$|f_n(x) - f(x)| \leq |f_n(x)| + |f(x)| \leq 2M.$$
+    Hence $h_n(x) \geq 0$. Moreover, since $f_n \to f$ almost everywhere, we have $|f_n(x) - f(x)| \to 0$ almost everywhere, which implies that $h_n(x) \to 2M$ almost everywhere.
+
+    Apply Fatou's lemma (\CrefAndHyperrefIfExist{lemma:fatous_lemma}) to the nonnegative measurable functions $h_n$:
+    $$\int_X \liminf_{n \to \infty} h_n \, d\mu \leq \liminf_{n \to \infty} \int_X h_n \, d\mu.$$
+
+    Since $\lim_{n \to \infty} h_n(x) = 2M$ almost everywhere, the left-hand side is
+    $$\int_X 2M \, d\mu = 2M \cdot \mu(X).$$
+
+    For the right-hand side, using the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}):
+    $$\int_X h_n \, d\mu = \int_X (2M - |f_n(x) - f(x)|)\,d\mu = 2M \cdot \mu(X) - \int_X |f_n - f|\,d\mu.$$
+
+    Substituting into Fatou's lemma:
+    $$2M \cdot \mu(X) \leq \liminf_{n \to \infty} \left(2M \cdot \mu(X) - \int_X |f_n - f|\,d\mu\right).$$
+
+    Since $2M \cdot \mu(X)$ is a constant, this simplifies to:
+    $$0 \leq -\limsup_{n \to \infty} \int_X |f_n - f|\,d\mu.$$
+
+    Because $\int_X |f_n - f|\,d\mu \geq 0$, the only possibility is that
+    $$\lim_{n \to \infty} \int_X |f_n - f|\,d\mu = 0.$$
+
+    By the triangle inequality for integrals (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}):
+    $$\left|\int_X f_n \, d\mu - \int_X f \, d\mu\right| = \left|\int_X (f_n - f)\,d\mu\right| \leq \int_X |f_n - f|\,d\mu.$$
+
+    Hence
+    $$\lim_{n \to \infty} \left|\int_X f_n \, d\mu - \int_X f \, d\mu\right| = 0,$$
+    which implies that $\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu$.
+\end{proof}

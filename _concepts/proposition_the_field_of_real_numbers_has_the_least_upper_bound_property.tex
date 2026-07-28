@@ -1,0 +1,42 @@
+\begin{proposition} \label{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property}
+    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{field of real numbers} constructed as $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$, equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{standard order}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}. Then $\bbR$ has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}: every nonempty subset $S \subseteq \bbR$ that is bounded above (i.e.\ there exists $M \in \bbR$ such that $s \le M$ for all $s \in S$) has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{least upper bound} $\sup S \in \bbR$.
+
+    Dually, every nonempty subset $T \subseteq \bbR$ that is bounded below has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{greatest lower bound} $\inf T \in \bbR$.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S \subseteq \bbR$ be nonempty and bounded above. We construct $\sup S$ as an equivalence class of Cauchy sequences.
+
+    We first construct a candidate for the least upper bound as an equivalence class of Cauchy sequences. For each $n \in \bbN$, let
+    $$T_n = \left\{ k \in \bbZ : \iota\!\left(\frac{k}{2^n}\right) \ge s \text{ for all } s \in S \right\},$$
+    where $\iota: \bbQ \hookrightarrow \bbR$ is the canonical embedding (\Cref{proposition:the_field_of_rational_numbers_embeds_into_the_field_of_real_numbers}). We claim that $T_n$ is nonempty and bounded below in $\bbZ$, so it has a minimum.
+
+    To see that $T_n$ is nonempty, observe that $S$ is bounded above: pick an upper bound $M = [M_k] \in \bbR$ of $S$. Since $(M_k)$ is a Cauchy sequence in $\bbQ$, it is bounded above by some rational number $u \in \bbQ$; hence $\iota(u) \ge M$. By the Archimedean property of $\bbQ$ (\CrefAndHyperrefIfExist{proposition:the_field_of_rational_numbers_is_archimedean}{Archimedean property}), there exists $k \in \bbZ$ with $k/2^n \ge u$, so $k \in T_n$.
+
+    To see that $T_n$ is bounded below, note that since $S$ is nonempty we may pick some $s = [s_k] \in S$. Because $(s_k)$ is a Cauchy sequence in $\bbQ$, it is bounded below by some rational number $\ell \in \bbQ$; then $\iota(\ell) \le s$. Choose any integer $k$ with $k/2^n < \ell$ (such an integer exists by the Archimedean property of $\bbQ$, see \Cref{proposition:the_field_of_rational_numbers_is_archimedean}). This $k$ does not belong to $T_n$, so $T_n$ is bounded below. Hence $k_n := \min T_n$ exists, and we set
+    $$a_n := \frac{k_n}{2^n} \in \bbQ.$$
+
+    We next verify that the sequence $(a_n)$ is Cauchy in $\bbQ$.
+    By minimality of $k_n$, the rational $(k_n-1)/2^n = a_n - 1/2^n$ is \emph{not} an upper bound of $S$, i.e.\ there exists $s \in S$ with $s > \iota(a_n - 1/2^n)$. At scale $2^{n+1}$, we have $2k_n/2^{n+1} = a_n \in T_n$, so the minimal $k_{n+1}$ satisfies $k_{n+1} \le 2k_n$. Moreover, because $(k_n-1)/2^n$ is not an upper bound, any $k \le 2k_n - 2$ gives $k/2^{n+1} \le (k_n-1)/2^n$, which is also not an upper bound; hence $k_{n+1} \ge 2k_n - 1$. Consequently,
+    $$a_n - \frac{1}{2^{n+1}} \le a_{n+1} \le a_n.$$
+    By induction, for any $m > n$ we have $|a_m - a_n| \le 1/2^n$. Given $\varepsilon \in \bbQ_{>0}$, choose $N$ with $1/2^{N-1} < \varepsilon$; then for all $m, n \ge N$ we have $|a_m - a_n| < \varepsilon$, so $(a_n)$ is a \Cref{definition:cauchy_sequence_in_rational_numbers}{Cauchy sequence} in $\bbQ$. Set $\sigma := [a_n] \in \bbR$.
+
+    We now show that $\sigma$ is an upper bound of $S$.
+    Let $s = [s_n] \in S$. We must show $\sigma \ge s$, i.e.\ $[a_n - s_n] \in \bbR_{\ge 0}$. Suppose otherwise, that $[a_n - s_n] \in \bbR_{<0}$. Then there exist $\varepsilon \in \bbQ_{>0}$ and $N_0 \in \bbN$ such that $s_n - a_n \ge \varepsilon$ for all $n \ge N_0$. Since each $a_m$ (as a constant sequence) is an upper bound of $S$ by construction, we have $\iota(a_m) \ge s$, i.e.\ $[a_m - s_n] \in \bbR_{\ge 0}$ for every fixed $m$.
+
+    Choose $m \ge N_0$ large enough so that $1/2^m < \varepsilon/4$ and also such that $|a_m - a_n| < \varepsilon/4$ whenever $n \ge m$ (possible because $(a_n)$ is Cauchy). For any $n \ge \max\{N_0, m\}$,
+    $$s_n - a_m = (s_n - a_n) + (a_n - a_m) \ge \varepsilon - |a_n - a_m| > \varepsilon - \varepsilon/4 = 3\varepsilon/4 > 0.$$
+    Hence the sequence $(s_n - a_m)$ is eventually $\ge 3\varepsilon/4 > 0$, so $s - \iota(a_m) = [s_n - a_m] \in \bbR_{>0}$, contradicting that $\iota(a_m)$ is an upper bound of $S$. Therefore $\sigma \ge s$ for all $s \in S$.
+
+    We next show that $\sigma$ is the least upper bound of $S$.
+    Let $\tau \in \bbR$ be any upper bound of $S$ and suppose $\tau < \sigma$. Then $\sigma - \tau \in \bbR_{>0}$, so there exist $\delta \in \bbQ_{>0}$ and $N_1 \in \bbN$ such that $a_n - \tau \ge \delta$ for all $n \ge N_1$ (where we identify $a_n$ with $\iota(a_n)$). Choose $n \ge N_1$ with $1/2^n < \delta/2$. Then
+    $$a_n - \frac{1}{2^n} > a_n - \frac{\delta}{2} \ge \tau + \frac{\delta}{2} > \tau.$$
+    Since $a_n - 1/2^n$ is not an upper bound of $S$ (by the minimality of $k_n$), there exists $s \in S$ with $s > a_n - 1/2^n > \tau$, contradicting that $\tau$ is an upper bound. Hence $\tau \ge \sigma$, so $\sigma = \sup S$.
+
+    Finally we verify the dual statement about greatest lower bounds. Let $T \subseteq \bbR$ be nonempty and bounded below. Set $S := \{-t : t \in T\}$. Then $S$ is nonempty (because $T$ is) and bounded above: if $\ell \in \bbR$ is a lower bound of $T$, then for every $s \in S$ we have $s = -t$ for some $t \in T$, so $s = -t \ge -\ell$; thus $-\ell$ is an upper bound of $S$. By the first part, $\sup S$ exists. We claim that $-\sup S$ is the greatest lower bound of $T$.
+
+    First we show that $-\sup S$ is a lower bound of $T$. For any $t \in T$, we have $-t \in S$, so $-t \le \sup S$. Multiplying both sides by $-1$ reverses the inequality (by compatibility of order with multiplication in \Cref{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}): $t \ge -\sup S$. Hence $-\sup S$ is a lower bound of $T$.
+
+    Next we show that it is the greatest such. Let $\ell'$ be any other lower bound of $T$. Then for every $t \in T$, we have $t \ge \ell'$, so $-t \le -\ell'$. This means $-\ell'$ is an upper bound of $S$. Since $\sup S$ is the least upper bound of $S$, we have $\sup S \le -\ell'$, which gives $\ell' \le -\sup S$. Therefore $-\sup S = \inf T$.
+\end{proof}

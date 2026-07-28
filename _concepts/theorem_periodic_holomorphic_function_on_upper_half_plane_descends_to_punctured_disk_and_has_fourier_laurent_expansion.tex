@@ -1,7 +1,7 @@
 \begin{theorem}[Periodic holomorphic function on the upper half-plane descends to the punctured disk and has a Fourier--Laurent expansion]
 \label{theorem:periodic_holomorphic_function_on_upper_half_plane_descends_to_punctured_disk_and_has_fourier_laurent_expansion}
 \TODO{AI generated, verify}
-Let $h \in \mathbb{R}_{>0}$, let $\mathbb{H}$ denote the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}, and let $f : \mathbb{H} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} satisfying
+Let $h \in \mathbb{R}_{>0}$, let $\mathbb{H}$ denote the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}, and let $f : \mathbb{H} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} satisfying
 $$f(z + h) = f(z) \quad \text{for all } z \in \mathbb{H}.$$
 
 Define the map $\phi : \mathbb{H} \to \mathbb{C}$ by
@@ -11,12 +11,12 @@ where $e^w$ denotes the \CrefAndHyperrefIfExist{definition:complex_exponential_f
 \begin{enumerate}
   \item The image of $\phi$ is the \CrefAndHyperrefIfExist{definition:punctured_disk_in_the_complex_plane}{punctured unit disk}
   $$D^* = \{q \in \mathbb{C} : 0 < |q| < 1\},$$
-  and $\phi : \mathbb{H} \to D^*$ is a local \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_complex_space}{biholomorphism} whose fibres are precisely the orbits of the translation $z \mapsto z + h$\CrefIfExists{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}.
+  and $\phi : \mathbb{H} \to D^*$ is a local \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space}{biholomorphism} whose fibres are precisely the orbits of the translation $z \mapsto z + h$\CrefIfExists{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}.
 
   \item There exists a unique holomorphic function $g : D^* \to \mathbb{C}$ such that
   $$f(z) = g(e^{2\pi i z / h}) \quad \text{for all } z \in \mathbb{H}.$$
 
-  \item The function $g$ admits a \CrefAndHyperrefIfExist{theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli}{Laurent expansion}
+  \item The function $g$ admits a \CrefAndHyperrefIfExist{theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli_in_the_complex_plane}{Laurent expansion}
   $$g(q) = \sum_{n=-\infty}^{\infty} a_n q^n$$
   valid for all $q \in D^*$, which converges absolutely and uniformly on every \CrefAndHyperrefIfExist{definition:annulus_in_the_complex_plane}{annulus} $0 < r_1 \leq |q| \leq r_2 < 1$. The coefficients $a_n$ are given by the contour integral
   $$a_n = \frac{1}{2\pi i} \oint_{|q| = \rho} \frac{g(q)}{q^{n+1}} \, dq$$
@@ -38,11 +38,11 @@ We prove each part in order.
   $$|\phi(z)| = |e^{2\pi i (x + iy) / h}| = e^{-2\pi y / h} < 1,$$
   so $\phi(z) \in D^*$. Conversely, for any $q \in D^*$, write $q = re^{i\theta}$ with $0 < r < 1$ and $\theta \in \mathbb{R}$. Then $z = \frac{h}{2\pi}(\theta - i \log r)$ satisfies $\phi(z) = q$, and $\Im(z) = -\frac{h}{2\pi} \log r > 0$, so $z \in \mathbb{H}$. Hence $\phi(\mathbb{H}) = D^*$.
 
-  The derivative $\phi'(z) = \frac{2\pi i}{h} e^{2\pi i z / h}$ never vanishes on $\mathbb{H}$ because the exponential function never vanishes. By \Cref{proposition:complex_differentiability_implies_continuity} and the inverse function theorem, $\phi$ is a local biholomorphism. Moreover, $\phi(z_1) = \phi(z_2)$ if and only if $e^{2\pi i (z_1 - z_2)/h} = 1$, which holds precisely when $z_1 - z_2 \in h\mathbb{Z}$. Thus the fibres of $\phi$ are the orbits of the translation $z \mapsto z + h$.
+  The derivative $\phi'(z) = \frac{2\pi i}{h} e^{2\pi i z / h}$ never vanishes on $\mathbb{H}$ because the exponential function never vanishes. By \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous} and the inverse function theorem, $\phi$ is a local biholomorphism. Moreover, $\phi(z_1) = \phi(z_2)$ if and only if $e^{2\pi i (z_1 - z_2)/h} = 1$, which holds precisely when $z_1 - z_2 \in h\mathbb{Z}$. Thus the fibres of $\phi$ are the orbits of the translation $z \mapsto z + h$.
 
   \item Since $f(z + h) = f(z)$, the function $f$ is constant on each fibre of $\phi$. Because $\phi$ is a local biholomorphism, the universal property of the quotient by a local biholomorphism implies that there exists a unique function $g : D^* \to \mathbb{C}$ such that $f = g \circ \phi$. To see that $g$ is holomorphic, fix $q_0 \in D^*$ and choose $z_0 \in \phi^{-1}(q_0)$. Let $U$ be a neighbourhood of $z_0$ on which $\phi$ restricts to a biholomorphism $\phi|_U : U \xrightarrow{\sim} V$. Then $g|_V = f \circ (\phi|_U)^{-1}$, which is a composition of holomorphic maps and hence holomorphic on $V$. Thus $g$ is holomorphic on $D^*$.
 
-  \item The function $g$ is holomorphic on the punctured disk $D^* = D(0, 1) \setminus \{0\}$. By \Cref{theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli}, $g$ admits a Laurent expansion
+  \item The function $g$ is holomorphic on the punctured disk $D^* = D(0, 1) \setminus \{0\}$. By \Cref{theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli_in_the_complex_plane}, $g$ admits a Laurent expansion
   $$g(q) = \sum_{n=-\infty}^{\infty} a_n q^n$$
   valid for all $q \in D^*$, converging absolutely and uniformly on every closed annulus $0 < r_1 \leq |q| \leq r_2 < 1$. The coefficients are given by the contour integral formula.
 

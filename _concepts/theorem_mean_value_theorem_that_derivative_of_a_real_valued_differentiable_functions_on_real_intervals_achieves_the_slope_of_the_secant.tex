@@ -1,0 +1,22 @@
+\begin{theorem}[Mean value theorem] \label{theorem:mean_value_theorem_that_derivative_of_a_real_valued_differentiable_functions_on_real_intervals_achieves_the_slope_of_the_secant}
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the standard topology and $[a, b]$ with the subspace topology.
+
+    Suppose that:
+    \begin{enumerate}
+        \item $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} on $[a, b]$;
+        \item $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at each point of $(a, b)$.
+    \end{enumerate}
+    Then there exists $c \in (a, b)$ such that
+    $$f'(c) = \frac{f(b) - f(a)}{b - a}.$$
+\end{theorem}
+
+\begin{proof}
+    Define an auxiliary function $g : [a, b] \to \mathbb{R}$ by
+    $$g(x) = f(x) - \left( f(a) + \frac{f(b) - f(a)}{b - a}(x - a) \right).$$
+    Geometrically, $g(x)$ measures the vertical difference between the graph of $f$ and the secant line through $(a, f(a))$ and $(b, f(b))$. By construction, $g(a) = 0$ and $g(b) = 0$. The function $g$ is continuous on $[a, b]$ as a sum of continuous functions, and differentiable at each point of $(a, b)$ with
+    $$g'(x) = f'(x) - \frac{f(b) - f(a)}{b - a}.$$
+
+    We apply \Cref{theorem:rolles_theorem_that_real_differentiable_functions_valued_in_the_reals_with_same_values_at_end_points_have_vanishing_derivative_at_some_point} to $g$. There exists $c \in (a, b)$ such that $g'(c) = 0$, which means
+    $$f'(c) - \frac{f(b) - f(a)}{b - a} = 0,$$
+    giving the desired equality.
+\end{proof}

@@ -1,6 +1,26 @@
 \begin{proposition}[Complex derivative of a branch of the complex logarithm] \label{proposition:complex_derivative_of_a_branch_of_complex_logarithm_is_reciprocal}
-    \TODO{AI generated, reference needed: definition of complex logarithm/principal branch}
     \TODO{AI generated, verify}
-    Let $\operatorname{Log} : U \to \mathbb{C}$ be a branch of the complex logarithm (i.e., a right inverse of the \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function}) defined on an open set $U \subseteq \mathbb{C} \setminus \{0\}$\CrefIfExists{definition:field_of_complex_numbers}. Then $\operatorname{Log}$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic} on $U$, and its complex derivative satisfies
+    Let $\operatorname{Log} : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:branch_of_the_complex_logarithm_on_an_open_subset}{branch of the complex logarithm} defined on an open set $U \subseteq \mathbb{C} \setminus \{0\}$\CrefIfExists{definition:field_of_complex_numbers}. Then $\operatorname{Log}$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic} on $U$, and its complex derivative satisfies
     $$\frac{d}{dz} \operatorname{Log}(z) = \frac{1}{z} \quad \text{for all } z \in U.$$
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\operatorname{Log} : U \to \mathbb{C}$ be a branch of the complex logarithm. By definition (\CrefAndHyperrefIfExist{definition:branch_of_the_complex_logarithm_on_an_open_subset}), $\operatorname{Log}$ is holomorphic on $U$ and satisfies
+    $$\exp(\operatorname{Log}(z)) = z \quad \text{for all } z \in U.$$
+
+    Differentiate both sides using the chain rule for complex derivatives (\CrefAndHyperrefIfExist{proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane}). The left-hand side differentiates to
+    $$\frac{d}{dz} \exp(\operatorname{Log}(z)) = \exp'(\operatorname{Log}(z)) \cdot \operatorname{Log}'(z).$$
+
+    By the fact that the derivative of the complex exponential is itself (\CrefAndHyperrefIfExist{proposition:complex_exponential_function_is_entire_and_its_derivative_is_itself}), we have $\exp'(w) = \exp(w)$ for all $w \in \mathbb{C}$. Hence
+    $$\frac{d}{dz} \exp(\operatorname{Log}(z)) = \exp(\operatorname{Log}(z)) \cdot \operatorname{Log}'(z).$$
+
+    By the defining property of $\operatorname{Log}$, we have $\exp(\operatorname{Log}(z)) = z$. Therefore:
+    $$\frac{d}{dz} \exp(\operatorname{Log}(z)) = z \cdot \operatorname{Log}'(z).$$
+
+    The right-hand side of our original equation differentiates to $1$ (\CrefAndHyperrefIfExist{proposition:complex_derivative_of_n_to_the_s_for_fixed_positive_integer_n}). Equating both sides:
+    $$z \cdot \operatorname{Log}'(z) = 1.$$
+
+    Since $z \in U \subseteq \mathbb{C} \setminus \{0\}$, we have $z \neq 0$, so we may divide by $z$:
+    $$\operatorname{Log}'(z) = \frac{1}{z}.$$
+    This holds for all $z \in U$.
+\end{proof}

@@ -1,9 +1,9 @@
 \begin{lemma} \label{lemma:unit_group_of_a_field_just_excludes_zero}
-    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Its \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit group $F^\times$} as a set equals $F - \{0\}$.
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}. Its \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{unit group $F^\times$} as a set equals $F - \{0\}$.
 \end{lemma}
 
 \begin{proof}
-    Since $F$ is a \CrefAndHyperrefIfExist{definition:field}{field}, it is a commutative \CrefAndHyperrefIfExist{definition:division_ring}{division ring}. By definition of a division ring, every nonzero element $a \in F - \{0\}$ is a \CrefAndHyperrefIfExist{definition:unit_of_a_ring}{unit}, i.e., there exists $a^{-1} \in F$ such that $a a^{-1} = 1 = a^{-1} a$. Hence, $F - \{0\} \subseteq F^\times$.
+    Since $F$ is a \CrefAndHyperrefIfExist{definition:field}{field}, it is a commutative \CrefAndHyperrefIfExist{definition:division_ring}{division ring}. By definition of a division ring, every nonzero element $a \in F - \{0\}$ is a \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{unit}, i.e., there exists $a^{-1} \in F$ such that $a a^{-1} = 1 = a^{-1} a$. Hence, $F - \{0\} \subseteq F^\times$.
 
     Conversely, suppose that $u \in F^\times$. Then $u$ is a unit, so $u \neq 0$\CrefIfExists{lemma:unit_is_nonzero_in_nonzero_ring} (since $F$ is a \CrefAndHyperrefIfExist{definition:field}{field} and hence a \CrefAndHyperrefIfExist{definition:zero_ring}{nontrivial ring}). Therefore, $F^\times \subseteq F - \{0\}$, so $F^\times = F - \{0\}$ as desired.
 \end{proof}

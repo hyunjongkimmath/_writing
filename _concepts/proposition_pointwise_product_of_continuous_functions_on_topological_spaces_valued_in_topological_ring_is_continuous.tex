@@ -1,0 +1,8 @@
+\begin{proposition} \label{proposition:pointwise_product_of_continuous_functions_on_topological_spaces_valued_in_topological_ring_is_continuous}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}. Let $f,g : X \to R$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} functions. Their pointwise product $f \cdot g : X \to R$, defined by $(f \cdot g)(x) = f(x) \cdot g(x)$, is continuous.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    The map $(f,g) : X \to R \times R$, $x \mapsto (f(x), g(x))$, is continuous by the universal property of the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}. The multiplication map $\cdot : R \times R \to R$ is continuous by the definition of a topological ring. Since $f \cdot g = \cdot \circ (f,g)$, it is a composition of continuous maps, hence continuous.
+\end{proof}

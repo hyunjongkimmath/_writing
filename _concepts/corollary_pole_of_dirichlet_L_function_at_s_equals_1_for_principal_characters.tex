@@ -7,9 +7,19 @@ $$
 where $\varphi$ is the \CrefAndHyperrefIfExist{definition:euler_totient_function}{Euler totient function}.
 
 In particular, for the trivial character $\mathbf{1}_1$ modulo $1$, $L(s, \mathbf{1}_1) = \zeta(s)$ has a simple pole at $s=1$ with residue $1$.
-
-\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
-\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
-\CrefAndHyperrefIfExist{definition:euler_totient_function}{Euler totient function}
-\CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}
 \end{corollary}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\chi_0$ be the principal \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. By definition, $\chi_0(n) = 1$ if $\gcd(n,k) = 1$ and $\chi_0(n) = 0$ otherwise. The associated \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} is
+    $$L(s, \chi_0) = \sum_{\substack{n=1 \\ \gcd(n,k)=1}}^\infty \frac{1}{n^s}.$$
+    By the \CrefAndHyperrefIfExist{theorem:euler_product_for_dirichlet_L_function_of_a_dirichlet_character}{Euler product for Dirichlet $L$-functions}, we have for $\Re(s) > 1$:
+    $$L(s, \chi_0) = \prod_{p \nmid k} \left(1 - p^{-s}\right)^{-1}.$$
+    The full \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function} has the Euler product $\zeta(s) = \prod_p (1 - p^{-s})^{-1}$. Comparing these two products, we obtain
+    $$L(s, \chi_0) = \zeta(s) \cdot \prod_{p \mid k} \left(1 - p^{-s}\right).$$
+    The finite product $\prod_{p \mid k} (1 - p^{-s})$ is holomorphic at $s = 1$ and equals $\prod_{p \mid k} (1 - 1/p)$ there. Since $\zeta(s)$ has a simple pole at $s = 1$ with residue $1$\CrefIfExists{corollary:analytic_continuation_and_functional_equation_for_riemann_zeta_function}, the function $L(s, \chi_0)$ inherits this pole, with residue
+    $$\operatorname{Res}_{s=1} L(s, \chi_0) = 1 \cdot \prod_{p \mid k} \left(1 - \frac{1}{p}\right).$$
+    By the formula for the \CrefAndHyperrefIfExist{definition:euler_totient_function}{Euler totient function}, $\varphi(k)/k = \prod_{p \mid k} (1 - 1/p)$, giving the claimed residue.
+
+    For $k = 1$, every integer satisfies $\gcd(n,1) = 1$, so $\chi_0(n) = 1$ for all $n$. The product over primes dividing $k$ is empty (equal to $1$), and $L(s, \chi_0) = \zeta(s)$ has residue $1$ at $s = 1$.
+\end{proof}

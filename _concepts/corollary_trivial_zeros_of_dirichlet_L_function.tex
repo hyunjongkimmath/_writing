@@ -9,9 +9,23 @@ s = -(2n+1) & \text{for } n \in \bbN_0 \text{ if } \chi \text{ is odd } (a(\chi)
 $$
 These are called the \hldef{trivial zeros} of $L(s, \chi)$.
 
-They arise from the poles of the gamma factor $\Gamma\!\big(\frac{s + a(\chi)}{2}\big)$ in the functional equation of the completed $L$-function $\Lambda(s, \chi)$; the gamma function has simple poles at non-positive integers, which cancel the analytic continuation of $L(s, \chi)$ to produce zeros.
-
-\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
-\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
-\Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
+They arise from the poles of the \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{gamma factor} $\Gamma\!\big(\frac{s + a(\chi)}{2}\big)$ in the functional equation of the completed $L$-function $\Lambda(s, \chi)$; the gamma function has simple poles at non-positive integers, which cancel the analytic continuation of $L(s, \chi)$ to produce zeros.
 \end{corollary}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By the \CrefAndHyperrefIfExist{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}{functional equation for Dirichlet $L$-functions}, the completed $L$-function $\Lambda(s,\chi)$ satisfies
+    $$\Lambda(s, \chi) = \varepsilon(\chi)\, \Lambda(1 - s, \overline{\chi}).$$
+    The completed $L$--function is defined as\CrefIfExists{definition:completed_dirichlet_L_function_of_a_dirichlet_character_modulo_k}
+    $$\Lambda(s,\chi) = \left(\frac{k}{\pi}\right)^{(s+a(\chi))/2} \Gamma\!\left(\frac{s + a(\chi)}{2}\right) L(s, \chi).$$
+
+    The \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{Gamma function} $\Gamma(z)$ has simple poles at $z = 0, -1, -2, \ldots$. Hence $\Gamma\bigl(\frac{s + a(\chi)}{2}\bigr)$ has simple poles precisely when
+    $$\frac{s + a(\chi)}{2} = -n \quad (n \in \bbN_0),$$
+    i.e., at $s = -a(\chi) - 2n$.
+
+    For even characters ($a(\chi) = 0$), the poles occur at $s = -2n$ for $n \in \bbN_0$. For odd characters ($a(\chi) = 1$), they occur at $s = -(2n+1)$ for $n \in \bbN_0$.
+
+    Since $\Lambda(s,\chi)$ is meromorphic on $\bbC$ (entire for non-principal $\chi$, with at most a simple pole at $s=1$ for principal $\chi$), and the factor $(k/\pi)^{(s+a(\chi))/2}$ never vanishes, the poles of $\Gamma\bigl(\frac{s + a(\chi)}{2}\bigr)$ must be cancelled by zeros of $L(s,\chi)$. At each such point $s_0 = -a(\chi) - 2n$ with $n \geq 1$ (or $n \geq 0$ for odd characters), the Gamma factor has a simple pole, while $\Lambda(s,\chi)$ is holomorphic (for non-principal $\chi$) or at worst meromorphic. Therefore $L(s,\chi)$ must vanish at these points to cancel the pole.
+
+    The order of vanishing is exactly one because both the pole of $\Gamma$ and the zero of $L$ are simple: the functional equation relates $\Lambda(s,\chi)$ to $\Lambda(1-s, \overline{\chi})$, and at the reflected point $1 - s_0 = 1 + a(\chi) + 2n > 1$, the value $\Lambda(1-s_0, \overline{\chi})$ is finite and nonzero (as it lies in the half-plane of absolute convergence of the Dirichlet series).
+\end{proof}

@@ -1,8 +1,8 @@
 \begin{theorem}[Riemann's theorem on removable singularities] \label{theorem:riemanns_theorem_on_removable_singularities}
     \TODO{AI generated, verify}
-    Let $U \subset \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \setminus \{z_0\} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} with an \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{isolated singularity} at $z_0$. Let $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$ be the \CrefAndHyperrefIfExist{definition:laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity}{Laurent expansion} of $f$ on a punctured neighborhood $0 < |z - z_0| < R$. The following are equivalent:
+    Let $U \subset \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \setminus \{z_0\} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} with an \CrefAndHyperrefIfExist{definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential}{isolated singularity} at $z_0$. Let $f(z) = \sum_{n=-\infty}^{\infty} a_n (z - z_0)^n$ be the \CrefAndHyperrefIfExist{definition:laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity}{Laurent expansion} of $f$ on a punctured neighborhood $0 < |z - z_0| < R$. The following are equivalent:
     \begin{enumerate}
-        \item $z_0$ is a removable singularity of $f$, i.e.\ $f$ admits a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic extension} to all of $U$.
+        \item $z_0$ is a removable singularity of $f$, i.e.\ $f$ admits a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic extension} to all of $U$.
         \item The limit $\lim_{z \to z_0} (z - z_0) f(z) = 0$ exists.
         \item The function $f$ is bounded in a punctured neighborhood of $z_0$, i.e.\ there exists $\varepsilon > 0$ such that $\sup_{0 < |z - z_0| < \varepsilon} |f(z)| < \infty$.
         \item The Laurent expansion of $f$ at $z_0$ has no negative-degree terms, i.e.\ $a_n = 0$ for all $n < 0$, so that the Laurent series reduces to the \CrefAndHyperrefIfExist{definition:taylor_series_expansion_of_a_holomorphic_function_on_an_open_disk_in_the_complex_plane}{Taylor series}
@@ -16,7 +16,7 @@
     We prove the cycle of implications $(1) \Rightarrow (3) \Rightarrow (2) \Rightarrow (4) \Rightarrow (1)$.
 
     \begin{enumerate}
-        \item[$(1) \Rightarrow (3)$:] If $f$ extends holomorphically to $U$, then the extension is continuous at $z_0$ by \Cref{proposition:complex_differentiability_implies_continuity}, so $f$ is bounded in a neighborhood of $z_0$.
+        \item[$(1) \Rightarrow (3)$:] If $f$ extends holomorphically to $U$, then the extension is continuous at $z_0$ by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}, so $f$ is bounded in a neighborhood of $z_0$.
 
         \item[$(3) \Rightarrow (2)$:] If $|f(z)| \le M$ for $0 < |z - z_0| < \varepsilon$, then $|(z - z_0) f(z)| \le M |z - z_0|$ for $0 < |z - z_0| < \varepsilon$, so $(z - z_0) f(z) \to 0$ as $z \to z_0$.
 

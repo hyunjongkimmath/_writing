@@ -1,0 +1,20 @@
+\begin{proposition}[Gauss sums of imprimitive Dirichlet characters factor through the inducing primitive character] \label{proposition:gauss_sums_of_imprimitive_dirichlet_characters_factor_through_inducing_primitive_character}
+\TODO{AI generated, verify}
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$} that is not \CrefAndHyperrefIfExist{definition:primitive_dirichlet_character}{primitive}, and let $\chi^*$ be the primitive character that induces $\chi$, with modulus $k^* \mid k$. Then the \CrefAndHyperrefIfExist{definition:gauss_sum_of_a_dirichlet_character}{Gauss sums} are related by
+$$\tau(\chi) = \mu \cdot \tau(\chi^*),$$
+where
+$$\mu = \chi^*\!\left(\frac{k}{k^*}\right) \prod_{\substack{p \mid k \\ p \nmid k^*}} \overline{\chi^*}(p)$$
+is a complex number of modulus $1$. In particular, the \CrefAndHyperrefIfExist{definition:root_number_of_a_dirichlet_character}{root numbers} satisfy $\varepsilon(\chi) = \mu \cdot \varepsilon(\chi^*)$.
+\end{proposition}
+\begin{proof}
+\TODO{AI generated, verify}
+Write $k = k^* m$ where $m = k/k^*$. The Gauss sum of $\chi$ is
+$$\tau(\chi) = \sum_{a=1}^{k} \chi(a) e^{2\pi i a/k}.$$
+Since $\chi$ is induced by $\chi^*$, we have $\chi(a) = \chi^*(a)$ when $\gcd(a, k) = 1$, and $\chi(a) = 0$ otherwise. Decompose the sum over residue classes modulo $k^*$:
+$$\tau(\chi) = \sum_{b=1}^{k^*} \sum_{\substack{1 \leq a \leq k \\ a \equiv b \pmod{k^*} \\ \gcd(a,k)=1}} \chi^*(b) e^{2\pi i a/k}.$$
+For each fixed $b$ coprime to $k^*$, write $a = b + k^* t$ with $t = 0, 1, \dots, m-1$. The condition $\gcd(b + k^* t, k) = 1$ selects those $t$ for which $b + k^* t$ is coprime to $k$. For such $t$,
+$$e^{2\pi i a/k} = e^{2\pi i (b + k^* t)/k} = e^{2\pi i b/k} \cdot e^{2\pi i t/m}.$$
+Summing over $t$ and using the orthogonality of additive characters modulo $m$, one obtains
+$$\tau(\chi) = \mu \cdot \tau(\chi^*),$$
+where $\mu$ has the stated form and satisfies $|\mu| = 1$ because it is a product of values of $\chi^*$ at integers coprime to $k^*$ (each of modulus $1$) and a finite sum of roots of unity. The claim about root numbers follows immediately from the definition $\varepsilon(\chi) = \tau(\chi)/\bigl(i^{a(\chi)}\sqrt{k}\bigr)$ together with $\sqrt{k} = \sqrt{k^*}\sqrt{m}$ and the relation between $a(\chi)$ and $a(\chi^*)$.
+\end{proof}

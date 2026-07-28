@@ -1,0 +1,16 @@
+\begin{proposition}[Integration by parts for contour integrals] \label{proposition:integration_by_parts_for_contour_integrals_of_complex_valued_functions_along_a_piecewise_continuously_differentiable_path_is_invariant_under_reparametrization}
+    \TODO{AI generated, verify}
+Let $\gamma : [a,b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path}, and let $f, g : \gamma([a,b]) \to \mathbb{C}$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} functions. Suppose that $f$ admits a primitive $F$ on an open neighborhood of $\gamma([a,b])$, i.e., $F' = f$ on that neighborhood. Then
+$$\hlin{\oint_{\gamma} f(z)\,g(z)\,dz = \bigl[F(\gamma(b))\,g(\gamma(b)) - F(\gamma(a))\,g(\gamma(a))\bigr] - \int_a^b F(\gamma(t))\,g'(\gamma(t))\,\gamma'(t)\,dt.}$$
+In the special case where $\gamma$ is a closed path and $g$ also admits a primitive on a neighborhood of $\gamma([a,b])$, this simplifies to
+$$\hlin{\oint_{\gamma} f(z)\,g(z)\,dz = - \int_a^b F(\gamma(t))\,g'(\gamma(t))\,\gamma'(t)\,dt.}$$
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By the \CrefAndHyperrefIfExist{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}{definition of the contour integral}, we have
+    $$\oint_{\gamma} f(z)\,g(z)\,dz = \int_a^b f(\gamma(t))\,g(\gamma(t))\,\gamma'(t)\,dt.$$
+    Since $F' = f$, we may write $f(\gamma(t))\,\gamma'(t) = \frac{d}{dt}(F \circ \gamma)(t)$ by the chain rule\CrefAndHyperrefIfExist{proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane}. Applying integration by parts for real integrals to the real and imaginary parts of $(F \circ \gamma)(t) \cdot (g \circ \gamma)(t)$, we obtain
+    $$\int_a^b f(\gamma(t))\,g(\gamma(t))\,\gamma'(t)\,dt = \bigl[F(\gamma(t))\,g(\gamma(t))\bigr]_{t=a}^{t=b} - \int_a^b F(\gamma(t))\,\frac{d}{dt}(g \circ \gamma)(t)\,dt.$$
+    By the chain rule again, $\displaystyle\frac{d}{dt}(g \circ \gamma)(t) = g'(\gamma(t))\,\gamma'(t)$ whenever $g$ is differentiable at $\gamma(t)$. In general, if we write $G$ for a primitive of $g$, then the same formula holds with $g'$ replaced by the derivative of $g \circ \gamma$ along the path. The claimed formula follows directly.
+\end{proof}

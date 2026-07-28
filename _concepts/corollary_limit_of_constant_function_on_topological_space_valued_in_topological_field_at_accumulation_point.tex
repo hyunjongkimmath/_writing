@@ -1,0 +1,10 @@
+\begin{corollary} \label{corollary:limit_of_constant_function_on_topological_space_valued_in_topological_field_at_accumulation_point}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $S \subseteq X$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Let $F$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field} and let $c \in F$. The constant function $f \equiv c : S \to F$ satisfies
+    $$\lim_{x \to p, x \in S} c = c.$$
+    \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+\end{corollary}
+\begin{proof}
+    The constant function $f \equiv c : S \to F$ is continuous by \Cref{proposition:constant_function_between_topological_spaces_is_continuous}. Hence $f$ is continuous at every point of $S$, in particular at $p$. Since $p$ is an accumulation point of $S$, the definition of continuity at a point for functions between topological spaces implies that $\lim_{x \to p, x \in S} f(x) = f(p)$ \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}. Thus
+    $$\lim_{x \to p, x \in S} c = c.$$
+\end{proof}

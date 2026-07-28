@@ -1,0 +1,52 @@
+\begin{theorem}[Properties of rational exponentiation] \label{theorem:properties_of_exponentiation_of_real_numbers_by_rational_numbers}
+    \TODO{AI generated, verify}
+    Let $a,b > 0$ and let $r,s \in \mathbb{Q}$.
+
+    \begin{enumerate}
+        \item (Additivity of exponents) $a^r \cdot a^s = a^{r+s}$ in the sense of \CrefAndHyperrefIfExist{definition:exponentiation_of_positive_real_numbers_by_rational_exponents}.
+        \item (Power of a power) $\left(a^r\right)^s = a^{rs}$.
+        \item (Monotonicity in the base) If $0 < a \leq b$, then $a^r \leq b^r$ for all $r > 0$.
+        \item (Monotonicity in the exponent) If $a > 1$ and $r < s$, then $a^r < a^s$. If $0 < a < 1$ and $r < s$, then $a^r > a^s$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We write $r = p/q$ and $s = u/v$ with $p,u \in \mathbb{Z}$, $q,v \in \mathbb{Z}_{>0}$ (we do not require the fractions to be in lowest terms).
+
+\begin{enumerate}
+    \item We show that $a^{p/q} \cdot a^{u/v} = a^{(pv+qu)/(qv)}$. To compare these two positive real numbers, we raise both sides to the power $qv$ and check they yield the same result. By the power-of-a-power identity for integer exponents (\CrefAndHyperrefIfExist{lemma:power_of_a_power_in_a_field_for_integer_exponents_is_power_by_product_of_the_exponents}):
+    $$\left(a^{p/q} \cdot a^{u/v}\right)^{qv} = \left(\left(a^{p/q}\right)^q\right)^v \cdot \left(\left(a^{u/v}\right)^v\right)^q.$$
+    By the definition of rational exponentiation (\CrefAndHyperrefIfExist{definition:exponentiation_of_positive_real_numbers_by_rational_exponents}), $a^{p/q}$ is defined as the unique positive real whose $q$th power equals $a^p$, so $\left(a^{p/q}\right)^q = a^p$. Similarly, $\left(a^{u/v}\right)^v = a^u$. Hence
+    $$\left(a^{p/q} \cdot a^{u/v}\right)^{qv} = (a^p)^v \cdot (a^u)^q = a^{pv} \cdot a^{qu}.$$
+    By the multiplicativity of powers in a field (\CrefAndHyperrefIfExist{lemma:product_of_powers_of_the_same_base_in_a_field_is_additive_in_exponents}), $a^{pv} \cdot a^{qu} = a^{pv+qu}$. On the other hand, by definition $a^{(pv+qu)/(qv)}$ is the unique positive real whose $(qv)$th power equals $a^{pv+qu}$. Since both $a^{p/q} \cdot a^{u/v}$ and $a^{(pv+qu)/(qv)}$ are positive reals with the same $(qv)$th power, they must be equal by uniqueness in the definition.
+
+    \item We compute $\left(a^r\right)^s = (a^{p/q})^{u/v}$. By definition of rational exponentiation (\CrefAndHyperrefIfExist{definition:exponentiation_of_positive_real_numbers_by_rational_exponents}), this is the unique positive real whose $v$th power equals $\left(a^{p/q}\right)^u$. Using part 1 to combine powers:
+    $$\left(\left(a^{p/q}\right)^{u/v}\right)^{qv} = \left(\left(a^{p/q}\right)^{u/v}\right)^v \text{ raised to the power } q.$$
+    By definition, $\left(a^{p/q}\right)^{u/v}$ is the unique positive real whose $v$th power equals $\left(a^{p/q}\right)^u$. Hence:
+    $$\left(\left(a^{p/q}\right)^{u/v}\right)^{qv} = \left(\left(a^{p/q}\right)^u\right)^v.$$
+    Now, $a^{p/q}$ is the unique positive real whose $q$th power equals $a^p$, so $\left(a^{p/q}\right)^q = a^p$. Raising both sides to the power $u$:
+    $$\left(\left(a^{p/q}\right)^q\right)^u = (a^p)^u = a^{pu}.$$
+    By the power-of-a-power identity (\CrefAndHyperrefIfExist{lemma:power_of_a_power_in_a_field_for_integer_exponents_is_power_by_product_of_the_exponents}): $\left(\left(a^{p/q}\right)^q\right)^u = \left(\left(a^{p/q}\right)^u\right)^q$. Hence $\left(\left(a^{p/q}\right)^u\right)^v$ has $(qv)$th power equal to:
+    $$\left(\left(\left(a^{p/q}\right)^u\right)^q\right)^v = \left(a^{pu}\right)^v = a^{puv}.$$
+    Similarly, $rs = (p/q)(u/v) = pu/(qv)$, so $a^{rs}$ is the unique positive real whose $(qv)$th power equals $a^{puv}$. Both $\left(a^r\right)^s$ and $a^{rs}$ are positive reals with $(qv)$th power equal to $a^{puv}$, so they coincide by uniqueness.
+
+    \item We show that if $0 < a \leq b$ and $r > 0$, then $a^r \leq b^r$. Write $r = p/q$ with $p \in \mathbb{Z}_{>0}$ and $q \in \mathbb{Z}_{>0}$. By \CrefAndHyperrefIfExist{lemma:integer_powers_of_positive_real_numbers_are_monotonic}{monotonicity of integer powers} (applied to the positive integer power $p$), we have $a^p \leq b^p$.
+
+    We claim that taking positive $q$th roots preserves order. To see this, observe that the function $x \mapsto x^{1/q}$ on $(0,\infty)$ is strictly increasing: if $0 < x < y$, then $x = z^q$ and $y = w^q$ for unique positive reals $z,w$. Since $z^q < w^q$ and the map $t \mapsto t^q$ on $(0,\infty)$ is strictly increasing (by repeated application of part 1 with base comparison), we have $z < w$, i.e., $x^{1/q} < y^{1/q}$\TODO{AI generated, reference needed: proposition that the q-th root function $x^{(1/q)}$ is strictly increasing on positive reals}. Applying this to $a^p \leq b^p$:
+    $$\left(a^p\right)^{1/q} \leq \left(b^p\right)^{1/q},$$
+    which means $a^{p/q} \leq b^{p/q}$ by the definition of rational exponentiation.
+
+    \item We show that if $a > 1$ and $r < s$, then $a^r < a^s$. Let $t := s - r > 0$. Then
+    $$a^s = a^{r+t} = a^r \cdot a^t$$
+    by part 1. Since $a > 1$ and $t > 0$, we claim that $a^t > 1$. Write $t = p/q$ with $p,q > 0$. By definition, $a^{p/q}$ is the unique positive real whose $q$th power equals $a^p$. Since $a > 1$ and $p \geq 1$, we have $a^p > 1$ (by part 1 applied to base comparison $1 < a$ raised to power $p$: $1^p = 1 < a^p$). The unique positive real whose $q$th power exceeds $1$ must itself exceed $1$ (because if $x \leq 1$, then $x^q \leq 1^q = 1$ by part 3). Hence $a^t > 1$.
+
+    Since $a^r > 0$ and $a^t > 1$, multiplying gives $a^s = a^r \cdot a^t > a^r \cdot 1 = a^r$, so $a^r < a^s$.
+
+    For the case $0 < a < 1$, we have $a^{-1} > 1$ (since if $a^{-1} \leq 1$, multiplying by positive $a$ would give $1 \leq a$, contradicting $a < 1$). We rewrite using the power-of-a-power identity:
+    $$a^r = \left(a^{-1}\right)^{-r} \quad\text{and}\quad a^s = \left(a^{-1}\right)^{-s}.$$
+    Since $-r > -s$ and base $a^{-1} > 1$, applying the previous case with base $a^{-1}$:
+    $$\left(a^{-1}\right)^{-s} < \left(a^{-1}\right)^{-r},$$
+    which means $a^s < a^r$, or equivalently $a^r > a^s$.
+\end{enumerate}
+\end{proof}

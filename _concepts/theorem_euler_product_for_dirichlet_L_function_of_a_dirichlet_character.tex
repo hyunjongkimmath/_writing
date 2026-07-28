@@ -8,7 +8,26 @@ which converges absolutely for $\operatorname{Re}(s) > 1$. If $\chi$ is the prin
 $$
 L(s, \chi_0) = \prod_{p \nmid k} \left( 1 - \frac{1}{p^s} \right)^{-1} = \zeta(s) \prod_{p \mid k} \left( 1 - p^{-s} \right).
 $$
-
-\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
-\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. The \CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function} is defined by the Dirichlet series
+    $$L(s, \chi) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s},$$
+    which converges absolutely for $\Re(s) > 1$.
+
+    Since $\chi$ is a completely multiplicative function (i.e., $\chi(mn) = \chi(m)\chi(n)$ for all $m,n \geq 1$), we can apply the standard Euler product argument. By the fundamental theorem of arithmetic, every positive integer has a unique factorization into prime powers:
+    $$\prod_{p \text{ prime}} \left( \sum_{j=0}^\infty \frac{\chi(p^j)}{p^{js}} \right) = \sum_{n=1}^\infty \frac{\chi(n)}{n^s},$$
+    where the rearrangement is justified by absolute convergence for $\Re(s) > 1$\CrefIfExists{lemma:absolute_convergence_over_a_countable_index_set_is_unconditional}.
+
+    For each prime $p$, since $\chi$ is completely multiplicative, we have $\chi(p^j) = \chi(p)^j$. The inner sum is a geometric series:
+    $$\sum_{j=0}^\infty \left(\frac{\chi(p)}{p^s}\right)^j = \frac{1}{1 - \frac{\chi(p)}{p^s}},$$
+    which converges because $|\chi(p)| \leq 1$ and $\Re(s) > 1$, so $|\chi(p)/p^s| < 1$. Hence
+    $$L(s, \chi) = \prod_{p \text{ prime}} \left(1 - \frac{\chi(p)}{p^s}\right)^{-1}.$$
+
+    For the principal character $\chi_0$ modulo $k$, we have $\chi_0(p) = 1$ if $p \nmid k$ and $\chi_0(p) = 0$ if $p \mid k$. Hence
+    $$L(s, \chi_0) = \prod_{p \nmid k} \left(1 - p^{-s}\right)^{-1}.$$
+    Comparing with the Euler product for $\zeta(s)$\CrefIfExists{corollary:euler_product_for_riemann_zeta_function}, we have $\zeta(s) = \prod_p (1 - p^{-s})^{-1}$, so
+    $$L(s, \chi_0) = \zeta(s) \cdot \prod_{p \mid k} \left(1 - p^{-s}\right),$$
+    as claimed.
+\end{proof}

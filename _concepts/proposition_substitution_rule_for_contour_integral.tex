@@ -1,0 +1,23 @@
+\begin{proposition}[Substitution rule for contour integrals] \label{proposition:substitution_rule_for_contour_integrals}
+    \TODO{AI generated, verify}
+    \TODO{apparently, this statement is currently stated very weakly --- it might be able to state $$\oint_{\phi \circ \gamma} f(w),dw = \oint_\gamma f(\phi(z)),\phi'(z),dz$$}
+Let $\gamma : [a,b] \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path}, and let $U \subseteq \mathbb{C}$ be an open set containing $\gamma([a,b])$. Let $\phi : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic} function such that $\phi' : U \to \mathbb{C}$ is continuous on $U$ and injective on the interior of each subinterval where $\gamma$ is continuously differentiable. Let $f : \phi(\gamma([a,b])) \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} function. Then
+$$\hlin{\oint_{\phi \circ \gamma} f(w)\,dw = \int_a^b f(\phi(\gamma(t)))\,\phi'(\gamma(t))\,\gamma'(t)\,dt.}$$
+
+In the special case where $f$ is the identity function (i.e., integrating with respect to $w = \phi(z)$), this yields
+$$\hlin{\oint_{\phi \circ \gamma} w\,dw = \int_a^b \phi(\gamma(t))\,\phi'(\gamma(t))\,\gamma'(t)\,dt.}$$
+
+If in addition $\gamma$ is a closed path and $f$ admits a primitive on a neighborhood of the image of $\phi \circ \gamma$, then
+$$\oint_{\phi \circ \gamma} f(w)\,dw = 0.$$
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    By the \CrefAndHyperrefIfExist{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}{definition of the contour integral}, we have
+    $$\oint_{\phi \circ \gamma} f(w)\,dw = \int_a^b f((\phi \circ \gamma)(t))\,(\phi \circ \gamma)'(t)\,dt.$$
+    Since $\phi$ is holomorphic on $U$\CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point} and $\gamma([a,b]) \subset U$, the chain rule\CrefAndHyperrefIfExist{proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane} gives
+    $$(\phi \circ \gamma)'(t) = \phi'(\gamma(t))\,\gamma'(t)$$
+    for all $t$ where $\gamma'(t)$ exists. The integral over the finitely many points of discontinuity does not affect the Riemann integral, so
+    $$\oint_{\phi \circ \gamma} f(w)\,dw = \int_a^b f(\phi(\gamma(t)))\,\phi'(\gamma(t))\,\gamma'(t)\,dt.$$
+    The special cases follow immediately.
+\end{proof}

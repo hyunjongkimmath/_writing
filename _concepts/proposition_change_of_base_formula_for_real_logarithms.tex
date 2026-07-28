@@ -1,0 +1,20 @@
+\begin{proposition}[Change of base formula for real logarithms] \label{proposition:change_of_base_formula_for_real_logarithms}
+    Let $a, b \in \mathbb{R}$ with $a > 0$, $b > 0$, and $a \neq 1$, $b \neq 1$. For all $x > 0$, the change-of-base formula holds:
+    $$\log_b(x) = \frac{\log_a(x)}{\log_a(b)}$$
+    \CrefIfExists{definition:logarithm_with_base_b_of_positive_real}
+    In particular, $\log_b(x) = \dfrac{\ln(x)}{\ln(b)}$\CrefIfExists{definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function}.
+\end{proposition}
+
+\begin{proof}
+    Let $x > 0$. The map $\varphi : \mathbb{R} \to (0, \infty)$ defined by $\varphi(x) = a^x$ is a bijection\CrefIfExists{proposition:base_b_exponentiation_is_bijective_from_R_to_positive_reals}. By definition, we have \CrefAndHyperrefIfExist{definition:logarithm_with_base_b_of_positive_real}{$\log_a(x)$} is the unique real number satisfying $a^{\log_a(x)} = x$. Similarly, $\log_a(b)$ satisfies $a^{\log_a(b)} = b$.
+
+    We compute:
+    $$b^{\frac{\log_a(x)}{\log_a(b)}} = \left(a^{\log_a(b)}\right)^{\frac{\log_a(x)}{\log_a(b)}}.$$
+    This equals
+    $$a^{\log_a(b) \cdot \frac{\log_a(x)}{\log_a(b)}} = a^{\log_a(x)} = x.$$
+    \TODO{reference needed: that $(c^{u})^v = c^{uv}$ first for $u,v$ rational, then for reals.}
+    Since $b^{\frac{\log_a(x)}{\log_a(b)}} = x$ and $\log_b(x)$ is the unique real number satisfying $b^y = x$, we conclude that
+    $$\log_b(x) = \frac{\log_a(x)}{\log_a(b)}.$$
+
+    For the particular case with natural logarithms, substitute $a = e$\CrefIfExists{definition:euler_number_e_as_limit}. Since $\ln(e) = 1$, we obtain $\log_b(x) = \dfrac{\ln(x)}{\ln(b)}$.
+\end{proof}

@@ -5,11 +5,42 @@ Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a
 \begin{enumerate}
     \item If $\mu(X) < \infty$ and $f_n \to f$ almost surely (i.e., \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost everywhere}), then $f_n \to f$ \CrefAndHyperrefIfExist{definition:almost_uniform_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost uniformly}.
 
-    \item If $f_n \to f$ almost uniformly, then $f_n \to f$ \CrefAndHyperrefIfExist{definition:convergence_in_measure}{in measure}.
+    \item If $f_n \to f$ almost uniformly, then $f_n \to f$ \CrefAndHyperrefIfExist{definition:convergence_in_measure_for_a_sequence_of_measurable_functions_on_a_measure_space_into_an_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{in measure}.
 
-    \item If $f_n, f$ are measurable functions from $X$ to $\mathbb{R}$ and there exists $M > 0$ such that $|f_n(x)| \le M$ for all $n$ and all $x \in X$, then almost uniform convergence implies \CrefAndHyperrefIfExist{definition:sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm}{convergence in the} \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^p$ norm} for every $1 \le p < \infty$.
+    \item If $f_n, f$ are measurable functions from $X$ to $\mathbb{R}$ and there exists $M > 0$ such that $|f_n(x)| \leq M$ for all $n$ and all $x \in X$, then almost uniform convergence implies \CrefAndHyperrefIfExist{definition:sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm}{convergence in the} \CrefAndHyperrefIfExist{definition:L_p_norm_on_a_measure_space}{$L^p$ norm} for every $1 \leq p < \infty$.
 
-    \item If $f_n, f \in L^p(X, \mathcal{A}, \mu)$ for some $1 \le p < \infty$ and $\|f_n - f\|_p \to 0$, then there exists a subsequence $(f_{n_k})_{k=1}^\infty$ such that $f_{n_k} \to f$ \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost everywhere} as $k \to \infty$.
+    \item If $f_n, f \in L^p(X, \mathcal{A}, \mu)$ for some $1 \leq p < \infty$ and $\|f_n - f\|_p \to 0$, then there exists a subsequence $(f_{n_k})_{k=1}^\infty$ such that $f_{n_k} \to f$ \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost everywhere} as $k \to \infty$.
 \end{enumerate}
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ be a measure space and let $(S,d)$ be the metric space. We prove each implication separately.
 
+    \begin{enumerate}
+        \item We show that almost sure convergence on a finite measure space implies almost uniform convergence (Egorov's theorem). Suppose that $\mu(X) < \infty$ and $f_n \to f$ almost everywhere. Let $A \subseteq X$ be the set where convergence holds, so $\mu(A^c) = 0$. For each $k \in \mathbb{N}$ and each $n \in \mathbb{N}$, define
+        $$E_{n,k} = \bigcup_{m=n}^\infty \{x \in A : d(f_m(x), f(x)) \geq 1/k\}.$$
+        The sets $E_{n,k}$ are measurable and satisfy $E_{n+1,k} \subseteq E_{n,k}$ for each $k$. Since $f_n \to f$ pointwise on $A$, we have $\bigcap_{n=1}^\infty E_{n,k} = \emptyset$. Because $\mu(X) < \infty$, the continuity from above of measures gives $\lim_{n \to \infty} \mu(E_{n,k}) = 0$.
+
+        Fix $\varepsilon > 0$. For each $k \in \mathbb{N}$, choose $n_k$ such that $\mu(E_{n_k,k}) < \varepsilon/2^k$. Let $E = \bigcup_{k=1}^\infty E_{n_k,k}$. Then
+        $$\mu(E) \leq \sum_{k=1}^\infty \mu(E_{n_k,k}) < \sum_{k=1}^\infty \varepsilon/2^k = \varepsilon.$$
+
+        On $X \setminus E$, for each $k$ and all $m \geq n_k$, we have $d(f_m(x), f(x)) < 1/k$. Hence $f_n \to f$ uniformly on $X \setminus E$. Since $\mu(E) < \varepsilon$, this establishes almost uniform convergence.
+
+        \item We show that almost uniform convergence implies convergence in measure. Suppose that $f_n \to f$ almost uniformly. Fix $\delta > 0$ and $\eta > 0$. By the definition of almost uniform convergence, there exists a measurable set $E$ with $\mu(E) < \eta/2$ such that $f_n \to f$ uniformly on $X \setminus E$. Choose $N$ such that for all $n \geq N$ and all $x \in X \setminus E$, we have $d(f_n(x), f(x)) < \delta$. Then for $n \geq N$:
+        $$\{x : d(f_n(x), f(x)) \geq \delta\} \subseteq E.$$
+        Hence $\mu(\{x : d(f_n(x), f(x)) \geq \delta\}) \leq \mu(E) < \eta/2 < \eta$. This shows that $f_n \to f$ in measure.
+
+        \item We show that almost uniform convergence plus a uniform bound implies convergence in $L^p$. Suppose $|f_n(x)| \leq M$ for all $n, x$, and $f_n \to f$ almost uniformly. Fix $\varepsilon > 0$. There exists a measurable set $E$ with $\mu(E) < \varepsilon/(4M)^p$ such that $f_n \to f$ uniformly on $X \setminus E$. Also $|f(x)| \leq M$ almost everywhere. For any $n$:
+        $$\int_X |f_n - f|^p\,d\mu = \int_{X \setminus E} |f_n - f|^p\,d\mu + \int_E |f_n - f|^p\,d\mu.$$
+        On $E$, we have $|f_n(x) - f(x)|^p \leq (2M)^p$, so $\int_E |f_n - f|^p\,d\mu \leq (2M)^p \cdot \mu(E) < \varepsilon/2$. On $X \setminus E$, since $f_n \to f$ uniformly, choose $N$ such that for all $n \geq N$, we have $\sup_{x \in X \setminus E} |f_n(x) - f(x)|^p < \varepsilon/(2\mu(X))$. Hence $\int_{X \setminus E} |f_n - f|^p\,d\mu < \varepsilon/2$. Combining:
+        $$\|f_n - f\|_p^p < \varepsilon.$$
+
+        \item We show that $L^p$ convergence implies almost everywhere convergence of a subsequence. Suppose $\|f_n - f\|_p \to 0$. Choose a subsequence $(n_k)$ such that $\|f_{n_k} - f\|_p < 1/2^{k/p}$ for each $k$. Let
+        $$E_k = \{x : |f_{n_k}(x) - f(x)| \geq 1/2^{k}\}.$$
+        By Chebyshev's inequality (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}):
+        $$\mu(E_k) \leq 2^k \|f_{n_k} - f\|_p < 2^k / 2^k = 1/2^{k(1-1)}.$$
+        More precisely, $\mu(E_k) \leq (2^k)^p \|f_{n_k} - f\|_p^p < 2^{kp}/2^k$. We have $\sum_{k=1}^\infty \mu(E_k) < \infty$. By the Borel-Cantelli lemma (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}),
+        $$\mu(\limsup_{k \to \infty} E_k) = 0.$$
+        Hence for almost every $x$, there exists $K(x)$ such that for all $k \geq K(x)$ we have $|f_{n_k}(x) - f(x)| < 1/2^k$. This implies $f_{n_k}(x) \to f(x)$ almost everywhere.
+    \end{enumerate}
+\end{proof}

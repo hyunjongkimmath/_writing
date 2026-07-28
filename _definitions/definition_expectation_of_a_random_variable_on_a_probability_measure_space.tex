@@ -5,17 +5,17 @@ Let $(\Omega, \mathcal{F}, P)$ be a \CrefAndHyperrefIfExist{definition:probabili
     \item If $X: \Omega \to \mathbb{R}$ is a real-valued random variable, 
     its \hldef{expectation} (or \hldef{expected value}) is defined by
     $$\hlin{\mathbb{E}[X] := \int_\Omega X\,dP},$$
-    where the integral on the right-hand side is the \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue integral} with respect to the probability measure $P$.
+    where the integral on the right-hand side is the \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integral} with respect to the probability measure $P$.
 
     More explicitly, one defines
     \begin{enumerate}
         \item If $X : \Omega \to [0, \infty)$ is a nonnegative random variable, then 
         $$\mathbb{E}[X] := \int_\Omega X\,dP,$$
-        where the integral on the right-hand side is the \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue integral} with respect to the probability measure $P$.
+        where the integral on the right-hand side is the \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integral} with respect to the probability measure $P$.
 
         \item If $X : \Omega \to \mathbb{R}$ is a real-valued random variable, then
         $$\mathbb{E}[X] := \mathbb{E}[X^+] - \mathbb{E}[X^-],$$
-        where we decompose $X = X^+ - X^-$ by letting $X^+ = \max(X, 0)$ and $X^- = \max(-X, 0)$; provided that at least one of $\mathbb{E}[X^+]$, $\mathbb{E}[X^-]$ is finite, this is defined as a value in \CrefAndHyperrefIfExist{definition:extended_real_line}{$[-\infty, \infty]$}. If both are finite (i.e., $X$ is a \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{$P$-integrable function}), then $\mathbb{E}[X]$ is a well-defined real number.
+        where we decompose $X = X^+ - X^-$ by letting $X^+ = \max(X, 0)$ and $X^- = \max(-X, 0)$; provided that at least one of $\mathbb{E}[X^+]$, $\mathbb{E}[X^-]$ is finite, this is defined as a value in \CrefAndHyperrefIfExist{definition:extended_real_line}{$[-\infty, \infty]$}. If both are finite (i.e., $X$ is a \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{$P$-integrable function}), then $\mathbb{E}[X]$ is a well-defined real number.
     \end{enumerate}
 
     \item More generally, if $(S,\calS)$ is a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measurable space} and if $X : \Omega \to S$ is an \CrefAndHyperrefIfExist{definition:random_variable_on_a_probability_measure_space}{$(S, \mathcal{S})$-valued random variable} with \CrefAndHyperrefIfExist{definition:distribution_of_a_random_variable_on_a_probability_measure_space}{distribution} $\mu_X$ on $(S, \mathcal{S})$, and if $g : S \to \mathbb{R}$ is a \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} such that $g \in L^1(S, \mathcal{S}, \mu_X)$, then we define the expectation of $g$:

@@ -1,6 +1,26 @@
-\begin{theorem}[Fatou's lemma]
-\label{theorem:fatous_lemma}
-Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $\{f_n\}_{n=1}^{\infty}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n : X \to [0, \infty]$. Then
-$$\int_X \liminf_{n \to \infty} f_n \, d\mu \leq \liminf_{n \to \infty} \int_X f_n \, d\mu.$$
-(\Cref{definition:lebesgue_integral_of_measurable_functions_into_the}\CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line}
-\end{theorem}
+\begin{lemma}[Fatou's lemma] \label{lemma:fatous_lemma}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $\{f_n\}_{n=1}^{\infty}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n : X \to [0, \infty]$. Then
+    $$\int_X \liminf_{n \to \infty} f_n \, d\mu \leq \liminf_{n \to \infty} \int_X f_n \, d\mu.$$
+    \CrefIfExists{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}
+    \CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line}
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $g_n(x) = \inf_{k \geq n} f_k(x)$ for each $n \in \mathbb{N}$ and $x \in X$. Since each $f_k$ is measurable and nonnegative, the infimum of a countable collection of measurable functions is also measurable. Hence each $g_n$ is a measurable function from $X$ to $[0, \infty]$.
+
+    Moreover, for each $n$ we have $g_1(x) \leq g_2(x) \leq \cdots$, because the infimum is taken over smaller and smaller sets. Thus $(g_n)_{n=1}^\infty$ is a monotonically increasing sequence of nonnegative measurable functions. By construction,
+    $$\lim_{n \to \infty} g_n(x) = \sup_{n \geq 1} \inf_{k \geq n} f_k(x) = \liminf_{n \to \infty} f_n(x).$$
+
+    For each fixed $n$, and for every $k \geq n$ we have $g_n(x) \leq f_k(x)$, so by the monotonicity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}),
+    $$\int_X g_n \, d\mu \leq \int_X f_k \, d\mu.$$
+    Taking the infimum over $k \geq n$ gives
+    $$\int_X g_n \, d\mu \leq \inf_{k \geq n} \int_X f_k \, d\mu.$$
+
+    Since $(g_n)$ is an increasing sequence of nonnegative measurable functions converging to $\liminf_{n \to \infty} f_n$, by the monotone convergence theorem (\CrefAndHyperrefIfExist{theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions}), we have
+    $$\int_X \liminf_{n \to \infty} f_n \, d\mu = \int_X \lim_{n \to \infty} g_n \, d\mu = \lim_{n \to \infty} \int_X g_n \, d\mu.$$
+
+    Combining these inequalities:
+    $$\int_X \liminf_{n \to \infty} f_n \, d\mu = \lim_{n \to \infty} \int_X g_n \, d\mu \leq \lim_{n \to \infty} \inf_{k \geq n} \int_X f_k \, d\mu = \liminf_{n \to \infty} \int_X f_k \, d\mu.$$
+    This establishes the desired inequality.
+\end{proof}

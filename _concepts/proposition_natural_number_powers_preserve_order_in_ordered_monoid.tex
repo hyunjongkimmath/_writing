@@ -1,0 +1,13 @@
+\begin{proposition} \label{proposition:natural_number_powers_preserve_order_in_ordered_monoid}
+    \TODO{AI generated, verify}
+    Let $M$ be a \CrefAndHyperrefIfExist{definition:ordered_monoid}{commutative ordered monoid} with identity $e$. For any $a,b \in M$ with $a \le b$ and any $n \in \mathbb{N}_0$ (where $\mathbb{N}_0 = \{0,1,2,\dots\}$),
+    $$a^n \le b^n.$$
+    If $M$ is a \CrefAndHyperrefIfExist{definition:strictly_ordered_monoid}{strictly ordered monoid}, then for $a < b$ and $n \ge 1$, we have $a^n < b^n$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    For $n=0$, we have $a^0 = e = b^0$, so $a^0 \le b^0$ holds trivially. For $n \ge 1$, we proceed by induction. The base case $n=1$ is $a \le b$, which holds by hypothesis. Assume $a^n \le b^n$ for some $n \ge 1$. Since $M$ is commutative and the order is compatible with the monoid operation,
+    $$a^{n+1} = a^n \cdot a \le b^n \cdot a \le b^n \cdot b = b^{n+1},$$
+    where the first inequality uses $a \le b$ and compatibility with multiplication on the right, and the second uses $a^n \le b^n$ and compatibility on the left. By \Cref{proposition:mathematical_induction_on_natural_numbers}, the claim holds for all $n \in \mathbb{N}_0$.
+    For the strict case: if $M$ is a \CrefAndHyperrefIfExist{definition:strictly_ordered_monoid}{strictly ordered monoid} and $a < b$, then $a^n < b^n$ for all $n \ge 1$ by a similar induction, since at each step we multiply by elements $\ge e$ (and $a^n \ge e$ for $n \ge 1$ when $a \ge e$; the general case requires $a,b \ge e$).
+\end{proof}

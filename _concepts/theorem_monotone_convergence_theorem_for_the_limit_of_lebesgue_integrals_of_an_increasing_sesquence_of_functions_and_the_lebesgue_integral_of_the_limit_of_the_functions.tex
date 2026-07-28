@@ -1,7 +1,32 @@
-\begin{theorem}[Monotone convergence theorem]
-\label{theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions}
+\begin{theorem}[Monotone convergence theorem] \label{theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions}
     \TODO{AI generated, verify}
-Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $\{f_n\}_{n=1}^{\infty}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n : X \to [0, \infty]$ such that $f_1(x) \leq f_2(x) \leq \cdots$ for all $x \in X$. Define $f : X \to [0, \infty]$ by $f(x) = \lim_{n \to \infty} f_n(x) = \sup_{n \in \mathbb{N}} f_n(x)$ \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}. Then each $f_n$ and $f$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue integrable} and
+Let $(X, \mathcal{M}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $\{f_n\}_{n=1}^{\infty}$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} $f_n : X \to [0, \infty]$ such that $f_1(x) \leq f_2(x) \leq \cdots$ for all $x \in X$. Define $f : X \to [0, \infty]$ by $f(x) = \lim_{n \to \infty} f_n(x) = \sup_{n \in \mathbb{N}} f_n(x)$\CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}. Then each $f_n$ and $f$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integrable} and
 $$\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.$$
-(\Cref{definition:lebesgue_integral_of_measurable_functions_into_the})
+\CrefIfExists{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{M}, \mu)$ be a measure space. Fix the increasing sequence of nonnegative measurable functions $(f_n)_{n=1}^\infty$ and let $f(x) = \sup_{n} f_n(x)$.
+
+    Since each $f_n$ is measurable and the supremum of a countable collection of measurable functions is measurable, the function $f$ is also measurable. Moreover, since $0 \leq f_1 \leq f_2 \leq \cdots$, by the monotonicity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}), we have
+    $$\int_X f_1 \, d\mu \leq \int_X f_2 \, d\mu \leq \cdots.$$
+    Hence the sequence of integrals $(\int_X f_n \, d\mu)_{n=1}^\infty$ is monotonically increasing in $[0,\infty]$, so its limit exists.
+
+    Since $f_n(x) \leq f(x)$ for all $x$, we have $\int_X f_n \, d\mu \leq \int_X f \, d\mu$ by monotonicity of the integral. Taking the supremum over $n$:
+    $$\lim_{n \to \infty} \int_X f_n \, d\mu \leq \int_X f \, d\mu.$$
+
+    For the reverse inequality, fix $\alpha > 1$ and let $\beta = \frac{\alpha - 1}{\alpha} < 1$. Define measurable sets
+    $$E_n = \{x : f_n(x) \geq \beta f(x)\}.$$
+    Since $f_n(x)$ increases to $f(x)$ for each $x$, if $f(x) > 0$ there exists some $n$ such that $f_n(x) \geq \beta f(x)$. If $f(x) = 0$, then since $f_n(x) \geq 0$, we have $f_n(x) = 0 = \beta f(x)$, so the condition holds for all $n$. Hence $\bigcup_{n=1}^\infty E_n = X$ (up to a set where $f(x) = \infty$, which can be handled separately).
+
+    For each $n$:
+    $$\int_X f_n \, d\mu \geq \int_{E_n} f_n \, d\mu \geq \beta \int_{E_n} f \, d\mu.$$
+
+    Taking the limit as $n \to \infty$:
+    $$\lim_{n \to \infty} \int_X f_n \, d\mu \geq \beta \cdot \sup_n \int_{E_n} f \, d\mu = \beta \int_X f \, d\mu,$$
+    where the last equality uses that $E_n$ exhausts $X$ and the monotone convergence of integrals over increasing sets. Since $\beta < 1$ was arbitrary (we chose any $\alpha > 1$), letting $\beta \to 1$:
+    $$\lim_{n \to \infty} \int_X f_n \, d\mu \geq \int_X f \, d\mu.$$
+
+    Combining both inequalities:
+    $$\lim_{n \to \infty} \int_X f_n \, d\mu = \int_X f \, d\mu.$$
+\end{proof}

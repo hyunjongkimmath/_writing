@@ -1,0 +1,41 @@
+\begin{theorem}[Termwise differentiation of uniformly convergent complex series] \label{theorem:termwise_differentiation_of_uniformly_convergent_complex_series}
+    \TODO{AI generated, verify}
+Let $U \subseteq \mathbb{C}$ be an open set and let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : U \to \mathbb{C}$. Suppose that:
+
+\begin{enumerate}
+    \item Each $f_n$ is \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic} on $U$;
+    \item The series $\sum_{n=1}^\infty f_n(z)$ converges pointwise to a function $f : U \to \mathbb{C}$ for each $z \in U$;\CrefAndHyperrefIfExist{definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}
+    \item The series of derivatives $\sum_{n=1}^\infty f_n'$ converges \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on every compact subset of $U$.
+\end{enumerate}
+
+Then the series $\sum_{n=1}^\infty f_n$ converges uniformly to $f$ on every compact subset of $U$, and $f$ is holomorphic on $U$ with
+$$\hlin{f'(z) = \sum_{n=1}^\infty f_n'(z)}$$
+for all $z \in U$. Moreover, for each non-negative integer $k$, the $k$-th derivative satisfies
+$$\hlin{f^{(k)}(z) = \sum_{n=1}^\infty f_n^{(k)}(z),}$$
+and these series also converge uniformly on every compact subset of $U$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $K \subset U$ be a compact set. Since each $f_n$ is holomorphic\CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}, it is continuous on $U$\CrefAndHyperrefIfExist{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}. Let $\varepsilon > 0$. By hypothesis (3), there exists $N$ such that for all $M \geq N$ and all $z \in U$,
+    $$\biggl|\sum_{n=N}^M f_n'(z)\biggr| < \varepsilon.$$
+
+    Fix $z_0 \in U$. For any $z \in U$ in a small disk around $z_0$ contained in $U$, we write
+    $$\sum_{n=1}^\infty f_n(z) = \sum_{n=1}^\infty (f_n(z) - f_n(z_0)) + \sum_{n=1}^\infty f_n(z_0).$$
+
+    For $M \geq N$ and any path $\eta_z$ from $z_0$ to $z$ in the disk, we have
+    $$\sum_{n=N}^M (f_n(z) - f_n(z_0)) = \int_{\eta_z} \sum_{n=N}^M f_n'(w)\,dw.$$
+
+    Parametrizing $\eta_z$ by $w(t)$ and using the bound on the derivative series,
+    $$\biggl|\sum_{n=N}^M (f_n(z) - f_n(z_0))\biggr| \leq |\eta_z| \cdot \varepsilon,$$
+    where $|\eta_z|$ is the arc length of $\eta_z$. Since this holds for all $M \geq N$, the series $\sum_{n=N}^\infty (f_n(z) - f_n(z_0))$ converges uniformly on compact sets. Combined with hypothesis (2), the full series $\sum_{n=1}^\infty f_n(z)$ converges uniformly on every compact subset of $U$.
+
+    To show $f'(z) = \sum_{n=1}^\infty f_n'(z)$, we write for any $M \geq N$ and $h$ small:
+    $$\frac{f(z+h) - f(z)}{h} - \sum_{n=1}^\infty f_n'(z) = A_M(h) + B_M + C_M,$$
+    where
+    $$A_M(h) = \frac{\sum_{n=M+1}^\infty (f_n(z+h) - f_n(z))}{h},\quad B_M = \sum_{n=1}^M f_n'(z) - \sum_{n=1}^\infty f_n'(z),\quad C_M = \frac{\sum_{n=1}^M (f_n(z+h) - f_n(z))}{h}.$$
+
+    For fixed $M$, as $h \to 0$, we have $A_M(h) \to 0$ by termwise differentiation of the finite sum, and $B_M \to 0$ as $M \to \infty$ by (3). For $C_M$, uniform convergence on compact sets gives $|C_M| \leq \varepsilon$ for large $N$. Thus $\limsup_{h \to 0} |f'(z) - \sum_{n=1}^\infty f_n'(z)| \leq \varepsilon$, and since $\varepsilon > 0$ was arbitrary, we conclude $f'(z) = \sum_{n=1}^\infty f_n'(z)$.
+
+    The higher derivative case follows by induction on $k$.
+\end{proof}

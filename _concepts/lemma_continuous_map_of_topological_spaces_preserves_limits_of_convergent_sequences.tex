@@ -1,0 +1,8 @@
+\begin{lemma} \label{lemma:continuous_map_of_topological_spaces_preserves_limits_of_convergent_sequences}
+    Let $X$ and $Y$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces} and let $f: X \to Y$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at $x_0 \in X$\CrefIfExists{definition:continuity_at_a_point_for_a_function_between_topological_spaces}. If $(x_n)_{n=1}^\infty$ is a \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_a_topological_space}{convergent sequence} in $X$ with $\lim_{n \to \infty} x_n = x_0$, then $(f(x_n))_{n=1}^\infty$ converges in $Y$ and
+    $$\lim_{n \to \infty} f(x_n) = f(x_0).$$
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $V$ be an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} of $f(x_0)$ in $Y$. Since $f$ is continuous at $x_0$, there exists an open neighborhood $U$ of $x_0$ in $X$ such that $f(U) \subseteq V$. Since $x_n \to x_0$, there exists an integer $N$ such that $x_n \in U$ for all $n \geq N$. Then $f(x_n) \in V$ for all $n \geq N$, which shows $f(x_n) \to f(x_0)$.
+\end{proof}

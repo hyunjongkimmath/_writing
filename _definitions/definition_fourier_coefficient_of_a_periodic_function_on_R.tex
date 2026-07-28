@@ -1,0 +1,13 @@
+\begin{definition}[Fourier coefficient of a periodic function on $\mathbb{R}$]
+\label{definition:fourier_coefficient_of_a_periodic_function_on_R}
+\TODO{AI generated, verify}
+Let $T > 0$, let $f : \mathbb{R} \to \mathbb{C}$ be a function that is $T$-periodic, i.e., $f(x + T) = f(x)$ for all $x \in \mathbb{R}$, and \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Lebesgue integrable} on the interval $[0,T]$.
+
+For each integer $n \in \mathbb{Z}$, the \hldef{$n$-th Fourier coefficient of $f$} is the complex number
+$$\hlin{c_n = \frac{1}{T} \int_0^T f(x) \, e^{-2\pi i n x / T} \, dx.}$$
+\CrefIfExists{definition:complex_exponential_function}
+
+The \hldef{Fourier series of $f$} (with respect to the above convention) is the formal series
+$$f(x) \sim \sum_{n=-\infty}^{\infty} c_n \, e^{2\pi i n x / T},$$
+where $c_n$ are the Fourier coefficients of $f$.
+\end{definition}

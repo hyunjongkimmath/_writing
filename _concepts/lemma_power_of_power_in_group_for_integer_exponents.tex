@@ -1,0 +1,35 @@
+\begin{lemma}[Power of a power in a group for integer exponents] \label{lemma:power_of_power_in_group_for_integer_exponents}
+    \TODO{AI generated, verify}
+    Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $m, n \in \bbZ$,
+    $$ (g^m)^n = g^{mn}, $$
+    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We proceed by case analysis on the signs of $m$ and $n$. Recall from \CrefIfExists{definition:power_of_a_group_element_by_an_integer} that for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
+
+    \begin{enumerate}
+        \item Suppose $m \geq 0$ and $n \geq 0$. Then $(g^m)^n = g^{mn}$ follows directly from \Cref{lemma:power_of_power_in_monoid_for_nonnegative_integers} applied to the underlying monoid of $G$.
+
+        \item Suppose $m < 0$ and $n \geq 0$. Let $a = -m > 0$, so $g^m = (g^{-1})^a$. Then
+        $$ (g^m)^n = ((g^{-1})^a)^n. $$
+        Since $a > 0$ and $n \geq 0$, we apply \Cref{lemma:power_of_power_in_monoid_for_nonnegative_integers} to the element $g^{-1}$ in the underlying monoid:
+        $$ ((g^{-1})^a)^n = (g^{-1})^{an}. $$
+        Since $mn = (-a)n = -(an)$, we have $g^{mn} = g^{-(an)}$. If $an \geq 0$, then by definition of negative powers in a group, $g^{-(an)} = (g^{-1})^{an}$, so the identity holds.
+
+        \item Suppose $m \geq 0$ and $n < 0$. Let $b = -n > 0$, so $(g^m)^n = ((g^m)^{-1})^b$. By \Cref{lemma:inverse_of_power_equals_power_of_inverse_in_a_group}, we have $(g^m)^{-1} = g^{-m}$ (where the latter uses the group power definition). Thus
+        $$ (g^m)^n = (g^{-m})^b. $$
+        Since $-m \leq 0$ and $b > 0$, this reduces to case (2) above with exponent $-m$ in place of $m$. The result is $(g^{-1})^{mb}$ when $m > 0$, which equals $g^{-mb} = g^{mn}$ since $n = -b$. If $m = 0$, both sides equal the identity.
+
+        \item Suppose $m < 0$ and $n < 0$. Let $a = -m > 0$ and $b = -n > 0$. Then $g^m = (g^{-1})^a$. We compute
+        $$ (g^m)^n = ((g^{-1})^a)^{-b}. $$
+        By case (3) above with the element $g^{-1}$ in place of $g$, exponent $a$ as the inner power, and exponent $-b < 0$ as the outer power:
+        $$ ((g^{-1})^a)^{-b} = ((g^{-1})^{-a})^b. $$
+        Since $(g^{-1})^{-a} = g^a$ by \Cref{lemma:inverse_of_power_equals_power_of_inverse_in_a_group}, this equals $(g^a)^b$. By case (1) since $a > 0$ and $b > 0$:
+        $$ (g^a)^b = g^{ab}. $$
+        Since $mn = (-a)(-b) = ab$, the identity holds.
+    \end{enumerate}
+
+    In all cases, $(g^m)^n = g^{mn}$ as desired.
+\end{proof}

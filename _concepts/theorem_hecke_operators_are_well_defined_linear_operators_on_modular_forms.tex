@@ -1,18 +1,34 @@
 \begin{theorem} \label{theorem:hecke_operators_are_well_defined_linear_operators_on_modular_forms}
 \TODO{AI generated, verify}
-Let $k \in \bbZ$ and let $\Gamma = \mathrm{SL}_2(\bbZ)$. For each positive integer $n$, the Hecke operator $T_n$ defined in \CrefAndHyperref{definition:hecke_operator_on_modular_forms_for_SL_2_Z}{the definition of Hecke operators} is a well-defined linear map
+Let $k \in \bbZ$ and let $\Gamma = \mathrm{SL}_2(\bbZ)$. For each positive integer $n$, the \CrefAndHyperrefIfExist{definition:hecke_operator_on_modular_forms_for_SL_2_Z}{Hecke operator} $T_n$ is a well-defined \CrefAndHyperrefIfExist{definition:linear_map_between_vector_spaces_over_a_field}{linear map}
 $$T_n : M_k(\Gamma) \longrightarrow M_k(\Gamma),$$
-as defined in \CrefAndHyperref{definition:vector_space_of_modular_and_cusp_forms}{the space of modular forms}, and it restricts to an endomorphism $T_n : S_k(\Gamma) \to S_k(\Gamma)$ on the subspace of cusp forms.
+and it restricts to an endomorphism $T_n : S_k(\Gamma) \to S_k(\Gamma)$ on the subspace of \CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{cusp forms}.
 
-\begin{enumerate}
-    \item For any modular form $f$ in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of modular forms} $M_k(\Gamma)$, the function $T_n f$ is holomorphic on $\mathbb{H}$ and satisfies the weight-$k$ transformation law with respect to $\Gamma$.
-    \item The function $T_n f$ has a Fourier expansion at $\infty$, hence is holomorphic at all cusps of $\Gamma$ (since $\Gamma = \mathrm{SL}_2(\bbZ)$ has only one cusp).
-    \item If $f$ is in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$, then the constant term in the Fourier expansion of $T_n f$ vanishes, so $T_n f \in S_k(\Gamma)$.
-\end{enumerate}
+% \begin{enumerate}
+%     \item For any modular form $f$ in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of modular forms} $M_k(\Gamma)$, the function $T_n f$ is holomorphic on $\mathbb{H}$ and satisfies the weight-$k$ transformation law with respect to $\Gamma$.
+%     \item The function $T_n f$ has a Fourier expansion at $\infty$ \CrefIfExists{definition:fourier_expansion_of_a_periodic_holomorphic_function_on_the_upper_half_plane}, hence is holomorphic at all cusps\TODO{AI generated, reference needed: definition of holomorphic at cusps for modular forms} of $\Gamma$ (since $\Gamma = \mathrm{SL}_2(\bbZ)$ has only one cusp).
+%     \item If $f$ is in the \CrefAndHyperrefIfExist{definition:vector_space_of_modular_and_cusp_forms}{space of cusp forms} $S_k(\Gamma)$, then the constant term in the Fourier expansion of $T_n f$ vanishes, so $T_n f \in S_k(\Gamma)$.
+% \end{enumerate}
 
-Moreover, $T_n$ is a linear operator on both $M_k(\Gamma)$ and $S_k(\Gamma)$.
-\CrefAndHyperrefIfExist{definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z}{modular form}
+% Moreover, $T_n$ is a linear operator on both $M_k(\Gamma)$ and $S_k(\Gamma)$.
 \end{theorem}
+
+\begin{proof}
+    We first show that $T_n$ is well defined as a map from $M_k(\Gamma)$ to itself.
+    By definition, for $f \in M_k(\Gamma)$, we have
+    \begin{align*}
+    (T_n f)(z) &= n^{k-1} \sum_{ad=n,\,d>0,\,0 \leq b < d} d^{-k}\, f\bigg|_k \begin{pmatrix} a & b \\ 0 & d \end{pmatrix}(z) \\
+    &= n^{k-1} \sum_{ad=n,\,d>0,\,0 \leq b < d} d^{-k} \cdot d^{-k} f\left( \frac{az+b}{d} \right) \\
+    &= n^{k-1} \sum_{ad=n,\,d>0,\,0 \leq b < d} d^{-2k} f\left( \frac{az+b}{d} \right)
+    \end{align*}
+    \CrefIfExists{definition:weight_k_operator_on_meromorphic_functions_by_elements}
+    The above is a finite sum, $z \mapsto \frac{az+b}{d}$ is holomorphic on $\bbH$, and $f$ is holomorphic on $\bbH$, so the above is holomorphic on $\bbH$.
+
+    We need to show that $T_n f$ is a \CrefAndHyperrefIfExist{definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z}{weakly modular form} of weight $k$ with respect to $\Gamma$, i.e. that
+    $$((T_n f)|_k \gamma)(z) = (T_n f)(z)$$
+    for all $\gamma \in \Gamma$.
+    
+\end{proof}
 
 % ============================================================================
 % PROOF OUTLINE — Reference these labels when writing the proof:

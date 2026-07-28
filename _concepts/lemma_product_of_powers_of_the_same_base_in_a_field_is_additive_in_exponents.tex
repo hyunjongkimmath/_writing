@@ -1,0 +1,31 @@
+\begin{lemma}[Multiplicativity of powers in a field] \label{lemma:product_of_powers_of_the_same_base_in_a_field_is_additive_in_exponents}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $a \in F$, and let $m,n \in \mathbb{Z}$.  We have
+    $$\left(a^m\right)\cdot\left(a^n\right) = a^{m+n}$$
+    \CrefIfExists{definition:exponentiation_in_a_field}
+    whenever $a^m$, $a^n$, and $a^{m+n}$ are well defined.
+    % In particular, if either $a \neq 0_F$ or both $m,n \geq 0$, then the identity holds.
+\end{lemma}
+
+\begin{proof}
+We consider the different possible values of $m$ and $n$, treating separately the case when $a = 0_F$ from the case when $a \neq 0_F$.
+
+\textbf{Case 1:} $a = 0_F$. By the convention in \CrefAndHyperrefIfExist{definition:exponentiation_in_a_field}{exponentiation in a field}, we have $0_F^k = 0_F$ for all positive integers $k > 0$, and $0_F^0 = 1_F$. The expression $0_F^j$ is undefined when $j < 0$ (since division by zero is not defined). Therefore, both $a^m$ and $a^n$ are only defined when $m \geq 0$ and $n \geq 0$. In this case:
+\begin{enumerate}
+    \item If both $m > 0$ and $n > 0$, then $(0_F)^m \cdot (0_F)^n = 0_F \cdot 0_F = 0_F$ and $0_F^{m+n} = 0_F$ since $m+n > 0$. The identity holds.
+    \item If $m = 0$ (and hence $n \geq 0$), then $(0_F)^0 \cdot (0_F)^n = 1_F \cdot (0_F)^n = (0_F)^n$ and $0_F^{0+n} = 0_F^n$. The identity holds.
+    \item If $n = 0$, the argument is symmetric to the previous subcase.
+\end{enumerate}
+
+\textbf{Case 2:} $a \neq 0_F$. Then $a$ belongs to the multiplicative group of nonzero elements $F^\times := F \setminus \{0_F\}$, which forms a \CrefAndHyperrefIfExist{definition:group}{group} under multiplication\CrefIfExists{lemma:unit_group_of_a_field_just_excludes_zero}. We have $(a^m) \cdot (a^n) = a^{m+n}$ by \Cref{lemma:additivity_of_powers_in_a_group}.
+
+% because every field's nonzero elements form an abelian group.
+
+% We consider subcases based on the signs of $m$ and $n$:
+% \begin{enumerate}
+%     \item If both $m \geq 0$ and $n \geq 0$, then $(a^m)(a^n) = a^{m+n}$ follows directly from \Cref{lemma:additivity_of_powers_in_a_monoid}, since the multiplication in $F$ forms a commutative monoid with identity $1_F$.
+
+%     \item If one or both of $m, n$ are negative, we use the fact that in any group, the power law $(a^m)(a^n) = a^{m+n}$ holds for all integers (\CrefAndHyperrefIfExist{lemma:additivity_of_powers_in_a_group}{additivity of powers in a group}). Since $F^\times$ is a group under multiplication, this identity applies to all $m, n \in \mathbb{Z}$.
+% \end{enumerate}
+
+In all cases, $(a^m)(a^n) = a^{m+n}$ whenever both sides are defined.
+\end{proof}

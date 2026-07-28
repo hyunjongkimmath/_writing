@@ -1,0 +1,15 @@
+\begin{lemma}[Mellin transform integral representation of the Gamma function] \label{lemma:mellin_transform_integral_representation_of_gamma_function}
+Let $s$ be a \CrefAndHyperrefIfExist{definition:field_of_complex_numbers}{complex number} with $\Re(s) > 0$, and let $A > 0$ be a positive \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{real number}. 
+We have 
+$$A^s \Gamma(s) = \int_0^\infty u^{s-1} e^{-u/A} \, du.$$
+\CrefIfExists{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}\CrefIfExists{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}\CrefIfExists{definition:real_exponential_function_with_eulers_number_as_base}
+In particular, for any positive real numbers $k > 0$ and $n > 0$, letting $A = \pi n^2 / k$\CrefIfExists{definition:archimedes_constant_pi_via_cosine_root} gives
+$$\left( \frac{k}{\pi n^2} \right)^{\!s} \Gamma(s) = \int_0^\infty u^{s-1} e^{-\pi n^2 u / k} \, du.$$
+
+\end{lemma}
+\begin{proof}
+The \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{Gamma function} admits the integral representation
+$$\Gamma(s) = \int_0^\infty t^{s-1} e^{-t} \, dt,$$
+and by the change of variable $t = A u$ (via the \CrefAndHyperrefIfExist{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals}{substitution rule} applied on $[\varepsilon, N]$ and taking limits $\varepsilon \to 0^+$, $N \to \infty$), one obtains
+$$A^s \Gamma(s) = \int_0^\infty u^{s-1} e^{-u/A} \, du.$$
+\end{proof}

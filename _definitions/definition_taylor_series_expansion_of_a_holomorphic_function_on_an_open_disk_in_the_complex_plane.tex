@@ -1,7 +1,7 @@
 \begin{definition} \label{definition:taylor_series_expansion_of_a_holomorphic_function_on_an_open_disk_in_the_complex_plane}
-Let $U \subset \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. 
+Let $U \subset \mathbb{C}$ be an open set, let $z_0 \in U$, and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} on $U$. 
 
 Suppose there exists $R \in (0, \infty]$ such that the open disk $D(z_0, R) = \{z \in \mathbb{C} : |z - z_0| < R\}$ is contained in $U$. Then $f$ admits a \hldef{Taylor series expansion centered at $z_0$}, which is the following \CrefAndHyperrefIfExist{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}{power series}:
 $$f(z) = \sum_{n=0}^{\infty} \frac{f^{(n)}(z_0)}{n!}\,(z - z_0)^n$$
-for all $z \in D(z_0, R)$, where the series converges uniformly on every compact subset of $D(z_0, R)$ by \Cref{lemma:power_series_in_one_complex_variable_converges_uniformly_and_absolutely_on_compact_subsets_of_its_disk_of_convergence}. The coefficients are given by $a_n = \frac{f^{(n)}(z_0)}{n!}$ for $n = 0, 1, 2, \ldots$.
+for all $z \in D(z_0, R)$, where the series \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges uniformly} on every compact subset of $D(z_0, R)$ by \Cref{lemma:power_series_in_one_complex_variable_converges_uniformly_and_absolutely_on_compact_subsets_of_its_disk_of_convergence}. The coefficients are given by $a_n = \frac{f^{(n)}(z_0)}{n!}$ for $n = 0, 1, 2, \ldots$.
 \end{definition}

@@ -1,0 +1,48 @@
+\begin{proposition}[Periodized Schwartz function is smooth and 1-periodic]
+\label{proposition:periodized_schwartz_function_on_R_is_smooth_and_1_periodic}
+\TODO{AI generated, verify}
+Let $f \in \mathcal{S}(\mathbb{R})$ be a \CrefAndHyperrefIfExist{definition:schwartz_space_on_Rn}{Schwartz function} on $\mathbb{R}$, and define $F : \mathbb{R} \to \mathbb{C}$ by
+$$F(x) = \sum_{n \in \mathbb{Z}} f(x + n).$$
+
+Then:
+\begin{enumerate}
+    \item The series defining $F(x)$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for every $x \in \mathbb{R}$.
+    \label{item:periodized_schwartz_function_absolute_convergence}
+    \item The partial sums of the series converge uniformly on compact subsets of $\mathbb{R}$, so that $F$ is well-defined and \CrefAndHyperrefIfExist{definition:continuous_map_between_open_subsets_of_euclidean_spaces}{continuous}.
+    \label{item:periodized_schwartz_function_uniform_convergence_on_compacta}
+    \item $F$ is 1-periodic, i.e., $F(x+1) = F(x)$ for all $x \in \mathbb{R}$.
+    \label{item:periodized_schwartz_function_1_periodic}
+    \item $F$ is smooth (i.e., $F \in C^\infty(\mathbb{R})$), and for each nonnegative integer $k$, the derivative series converges uniformly on compact subsets:
+    $$F^{(k)}(x) = \sum_{n \in \mathbb{Z}} f^{(k)}(x + n).$$
+    \label{item:periodized_schwartz_function_smooth}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+\medskip
+\noindent\textit{Step 1: Polynomial decay of $f$.} By \CrefAndHyperrefIfExist{definition:schwartz_space_on_Rn}{the definition}, for every multi-index $\alpha \in \mathbb{N}$, the seminorm $p_{\alpha,0}(f) = \sup_{x \in \mathbb{R}} |x^\alpha f(x)|$ is finite. In particular, taking $\alpha = 2$, there exists a constant $C > 0$ such that
+$$|f(x)| \leq \frac{C}{1 + x^2} \quad \text{for all } x \in \mathbb{R}.$$
+
+\medskip
+\noindent\textit{Step 2: Absolute convergence.} Fix $x \in \mathbb{R}$. For each integer $n \in \mathbb{Z}$, we have $|x + n| \geq |n| - |x|$. If $|n| \geq 2|x|$, then $|x+n| \geq |n|/2$, which implies
+$$|f(x+n)| \leq \frac{C}{1 + (|n|/2)^2}.$$
+The right-hand side decays like $O(|n|^{-2})$. Since $\sum_{n \in \mathbb{Z}} |n|^{-2}$ converges, the series $\sum_{n \in \mathbb{Z}} f(x+n)$ converges absolutely by comparison.
+
+\medskip
+\noindent\textit{Step 3: Uniform convergence on compact subsets.} Let $K \subseteq \mathbb{R}$ be a compact set, and choose $M > 0$ such that $|x| \leq M$ for all $x \in K$. For $|n| \geq 2M$ and any $x \in K$, we have $|x+n| \geq |n|/2$, so
+$$\sup_{x \in K} |f(x+n)| \leq \frac{C}{1 + (|n|/2)^2}.$$
+The bound on the right is independent of $x$ and summable over $n \in \mathbb{Z}$, so the series converges uniformly on $K$.
+
+\medskip
+\noindent\textit{Step 4: Periodicity.} For any $x \in \mathbb{R}$, we have
+$$F(x+1) = \sum_{n \in \mathbb{Z}} f(x + 1 + n) = \sum_{m \in \mathbb{Z}} f(x + m) = F(x),$$
+where the second equality follows from reindexing $m = n+1$.
+
+\medskip
+\noindent\textit{Step 5: Smoothness.} For each nonnegative integer $k$, the derivative $f^{(k)}$ is also a Schwartz function because $\mathcal{S}(\mathbb{R})$ is closed under differentiation. Applying Steps 1--3 to $f^{(k)}$ in place of $f$, we see that the series $\sum_{n \in \mathbb{Z}} f^{(k)}(x+n)$ converges absolutely and uniformly on compact subsets of $\mathbb{R}$.
+
+To justify term-by-term differentiation, enumerate $\mathbb{Z}$ as a sequence $(n_j)_{j=1}^\infty$ (e.g., $0, 1, -1, 2, -2, \ldots$), and set $g_j(x) = f(x + n_j)$. The partial sums $S_N(x) = \sum_{j=1}^N g_j(x)$ are smooth functions. Because the series converges absolutely for every $x$, it converges at any chosen point $x_0 \in \mathbb{R}$; moreover, the derivative series $\sum_{j=1}^\infty g_j'$ converges uniformly on compact intervals by the uniform convergence established above. By \CrefAndHyperrefIfExist{theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series}{the termwise differentiation theorem for series}, $F$ is differentiable with
+$$F'(x) = \sum_{n \in \mathbb{Z}} f^{(1)}(x + n).$$
+The same argument applied inductively to $F^{(k-1)}$ yields $F^{(k)}(x) = \sum_{n \in \mathbb{Z}} f^{(k)}(x+n)$ for all $k \geq 0$, establishing that $F$ is smooth.
+\end{proof}

@@ -1,0 +1,13 @@
+\begin{proposition}[Complex differentiability implies continuity] \label{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}
+    \TODO{AI generated, verify}
+    \TODO{I think this could better be true of holomorphic maps $\bbC^n \to \bbC^m$}
+Let $U \subseteq \mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers} be an open set and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} at a point $a \in U$. Equip $\mathbb{C}$ with the \CrefAndHyperrefIfExist{definition:topology_on_a_field_induced_by_an_absolute_value}{topology induced by the complex absolute value} and $U$ with the subspace topology. Then $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at $a$.
+\end{proposition}
+
+\begin{proof}
+    Since $f$ is holomorphic at $a$, the limit $f'(a) = \displaystyle\lim_{z \to a} \frac{f(z) - f(a)}{z - a}$ exists in $\mathbb{C}$. We compute
+    $$f(z) - f(a) = \frac{f(z) - f(a)}{z - a} \cdot (z - a)$$
+    for $z \neq a$. By \Cref{proposition:limit_algebra_for_complex_valued_functions}, the product of limits equals the limit of the product whenever both limits exist. The first factor converges to $f'(a)$ and the second factor converges to $0$, so
+    $$\lim_{z \to a} \bigl(f(z) - f(a)\bigr) = f'(a) \cdot 0 = 0.$$
+    By \Cref{proposition:limit_algebra_for_complex_valued_functions}, $\displaystyle\lim_{z \to a} f(z)$ thus equals $f(a)$, so $f$ is continuous at $a$.
+\end{proof}

@@ -1,0 +1,31 @@
+\begin{proposition}[Bijectivity of base-$b$ exponentiation] \label{proposition:base_b_exponentiation_is_bijective_from_R_to_positive_reals}
+    \TODO{AI generated, verify}
+    Let $b \in \mathbb{R}$ with $b > 0$ and $b \neq 1$. The map $\varphi : \mathbb{R} \to (0, \infty)$ defined by $\varphi(x) = b^x$ is a \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{bijection}.
+
+    Specifically:
+    \begin{enumerate}
+        \item If $b > 1$, then $\varphi$ is strictly increasing, unbounded above, and satisfies $\inf\{\varphi(x) : x \in \mathbb{R}\} = 0$. Hence $\varphi(\mathbb{R}) = (0, \infty)$ and $\varphi$ is injective.
+        \item If $0 < b < 1$, then $\varphi$ is strictly decreasing, unbounded above, and satisfies $\inf\{\varphi(x) : x \in \mathbb{R}\} = 0$. Hence $\varphi(\mathbb{R}) = (0, \infty)$ and $\varphi$ is injective.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the case $b > 1$; the case $0 < b < 1$ follows by symmetry using $b^{-1} > 1$\CrefIfExists{corollary:in_ordered_field_b_less_than_1_iff_inverse_greater_than_1}.
+
+    We show \CrefAndHyperrefIfExist{definition:monotone_function_between_ordered_sets}{strict monotonicity} of $x \mapsto b^x$, which implies injectivity by \Cref{lemma:strictly_monotone_function_between_ordered_sets_is_injective}. Let $x, y \in \mathbb{R}$ with $x < y$. We show that $b^x < b^y$. Choose a rational number $q$ such that $x < q \leq y$ (such a $q$ exists because $\mathbb{Q}$ is dense in $\mathbb{R}$\CrefIfExists{proposition:field_of_rational_numbers_is_dense_in_field_of_real_numbers}). By the definition of \CrefAndHyperrefIfExist{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}{real exponentiation}, since $b > 1$ we have
+    $$b^x = \sup\{ b^r : r \in \mathbb{Q},\; r \leq x \}.$$
+    Since $q > x$ and $b > 1$, the \CrefAndHyperrefIfExist{theorem:properties_of_exponentiation_of_real_numbers_by_rational_numbers}{monotonicity of rational exponents} implies that for all $r \in \mathbb{Q}$ with $r \leq x$, we have $b^r < b^q$. Hence $b^x = \sup\{ b^r : r \leq x, r \in \mathbb{Q} \} \leq b^q$ (the supremum of values strictly less than $b^q$ cannot exceed $b^q$). On the other hand, since $q \leq y$, we have by definition
+    $$b^y = \sup\{ b^s : s \in \mathbb{Q},\; s \leq y \}.$$
+    Because $q \leq y$ and $q \in \mathbb{Q}$, the value $b^q$ appears in this supremum, so $b^y \geq b^q$. We obtain $b^x \leq b^q \leq b^y$. To see strict inequality, note that if $b^x = b^y$, then $b^x = b^q$ and $b^y = b^q$, which would imply $\sup\{ b^r : r \in \mathbb{Q},\; r \leq x \} = b^q$. But for any rational $r \leq x < q$, we have $b^r < b^q$ by strict monotonicity of rational exponentiation, so the supremum over a set bounded above by values strictly less than $b^q$ cannot equal $b^q$ unless there are rationals arbitrarily close to $x$ from below whose images approach $b^q$. Since $x < q$, we can choose another rational $r'$ with $x < r' < q$, and then $b^{r'} < b^q$. The supremum is attained at values approaching $x$ from below, not at $q$. Hence $b^x < b^q \leq b^y$, establishing strict monotonicity.
+
+    We show that $x \mapsto b^x$ is \CrefAndHyperrefIfExist{definition:injective_surjective_bijective_map_of_sets}{surjective}, i.e. that for every $y \in (0, \infty)$ there exists $x \in \mathbb{R}$ such that $b^x = y$. By the definition of real exponentiation (\CrefAndHyperrefIfExist{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}), the function $\varphi(x) = b^x$ is defined via supremum over rational powers. We first establish that the range contains arbitrarily large and small positive values.
+
+    For any $M > 0$, by the Archimedean property of $\mathbb{R}$\CrefIfExists{proposition:the_field_of_real_numbers_has_the_archimedean_property} and \Cref{corollary:integer_powers_of_real_number_greater_than_1_are_unbounded}, there exists an integer $n$ such that $b^n > M$. Hence $\varphi(n) = b^n > M$, showing the range is unbounded above.
+
+    For any $\varepsilon \in (0, 1)$, choosing a negative integer $-m$ with $m$ sufficiently large gives $b^{-m} = 1/b^m < \varepsilon$. Hence the range contains values arbitrarily close to $0$.
+
+    Since $\varphi$ is strictly increasing and its image contains values spanning from near $0$ to infinity, by the \CrefAndHyperrefIfExist{theorem:intermediate_value_theorem_for_continuous_functions_on_real_intervals_valued_in_the_real_numbers}{intermediate value theorem}, the image of $\varphi$ is exactly $(0, \infty)$.
+
+    For the case $0 < b < 1$, observe that $b^{-1} > 1$. The map $x \mapsto b^x = (b^{-1})^{-x}$ is strictly decreasing as a composition of the strictly increasing map $t \mapsto (b^{-1})^t$ with the order-reversing map $x \mapsto -x$. The range argument is identical: positive powers approach $0$ and negative powers are unbounded above.
+\end{proof}

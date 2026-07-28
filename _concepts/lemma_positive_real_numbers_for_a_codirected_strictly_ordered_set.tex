@@ -1,0 +1,21 @@
+\begin{lemma}[Positive real numbers form a codirected strictly ordered set] \label{lemma:positive_real_numbers_for_a_codirected_strictly_ordered_set}
+    \TODO{AI generated, verify}
+    The set $\mathbb{R}_{>0}$ of positive real numbers, equipped with the strict order $<$ inherited from $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}, is a \CrefAndHyperrefIfExist{definition:directed_codirected_strict_partially_ordered_set}{codirected strict partially ordered set}. That is, for every $a, b \in \mathbb{R}_{>0}$, there exists $\delta \in \mathbb{R}_{>0}$ such that
+    \[
+    \delta < a \quad \text{and} \quad \delta < b.
+    \]
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $a, b \in \mathbb{R}_{>0}$. We construct an element $\delta \in \mathbb{R}_{>0}$ that is strictly smaller than both $a$ and $b$.
+
+    By the trichotomy property of the total order on the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{real numbers}, exactly one of the following holds: $a < b$, $a = b$, or $b < a$. We set $\delta$ to be half the smaller of the two values:
+    $$\delta := \frac{1}{2} \cdot \min\{a, b\}.$$
+    Since $a > 0$ and $b > 0$, we have $\min\{a, b\} > 0$. Multiplying a positive real by $\frac{1}{2}$ preserves positivity (by the compatibility of order with multiplication in \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered fields}), so $\delta > 0$.
+
+    Moreover, since $\min\{a, b\} \leq a$ and $\min\{a, b\} \leq b$, we have
+    $$\delta = \frac{\min\{a, b\}}{2} < \min\{a, b\} \leq a \quad \text{and} \quad \delta = \frac{\min\{a, b\}}{2} < \min\{a, b\} \leq b,$$
+    where the strict inequalities $\frac{x}{2} < x$ for $x > 0$ follow from the fact that multiplying both sides of $\frac{1}{2} < 1$ by the positive real $x$ preserves the inequality in an \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered field}.
+
+    Therefore, for every pair $a, b \in \mathbb{R}_{>0}$ there exists $\delta \in \mathbb{R}_{>0}$ with $\delta < a$ and $\delta < b$, so $\mathbb{R}_{>0}$ is \CrefAndHyperrefIfExist{definition:directed_codirected_strict_partially_ordered_set}{codirected}.
+\end{proof}

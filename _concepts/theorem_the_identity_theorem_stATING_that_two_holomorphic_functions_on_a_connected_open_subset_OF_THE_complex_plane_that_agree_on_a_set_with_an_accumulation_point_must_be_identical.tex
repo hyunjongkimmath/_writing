@@ -1,7 +1,30 @@
-\begin{theorem} \label{theorem:the_identity_theorem_stATING_that_two_holomorphic_functions_on_a_connected_open_subset_OF_THE_complex_plane_that_agree_on_a_set_with_an_accumulation_point_must_be_identical}
-Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} open subset (a domain) and let $f, g : U \to \mathbb{C}$ be two \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic functions} on $U$. If the set
+\begin{theorem} \label{theorem:the_identity_theorem_stating_that_two_holomorphic_functions_on_a_connected_open_subset_OF_THE_complex_plane_that_agree_on_a_set_with_an_accumulation_point_must_be_identical}
+Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:disconnected_and_connected_topological_spaces}{connected} open subset (a domain) and let $f, g : U \to \mathbb{C}$ be two \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic functions} on $U$. If the set
 $\{z \in U : f(z) = g(z)\}$
 has an \CrefAndHyperrefIfExist{definition:accumulation_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{accumulation point} — that is, there exists $z_0 \in U$ such that every neighborhood of $z_0$ contains infinitely many points $z \neq z_0$ with $f(z) = g(z)$ — then
 $f(z) = g(z)$
 for all $z \in U$. In other words, $f \equiv g$ on $U$.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Let $h = f - g$. The function $h : U \to \mathbb{C}$ is holomorphic as the difference of holomorphic functions. The set $\{ z \in U : f(z) = g(z) \}$ equals $\{ z \in U : h(z) = 0 \}$. Suppose that there exists $z_0 \in U$ such that every neighborhood of $z_0$ contains infinitely many points $z \neq z_0$ with $h(z) = 0$. We show that $h \equiv 0$ on $U$, which implies $f \equiv g$ on $U$.
+
+We first show that the zeros of a nonzero holomorphic function are isolated. Suppose that $h$ is not identically zero. Since $h$ is holomorphic on $U$, it is analytic at every point of $U$, meaning it admits a convergent power series expansion in a neighborhood of each point \Cref{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}. If $h(z_0) = 0$ and $h'(z_0) = 0, \dots, h^{(k-1)}(z_0) = 0$ but $h^{(k)}(z_0) \neq 0$ for some minimal $k \geq 1$, then in a sufficiently small disk $D(z_0, r)$ we have
+$$h(z) = (z - z_0)^k \sum_{n=0}^\infty a_{n+k}(z - z_0)^n,$$
+where the series converges uniformly on compact subsets of $D(z_0, r)$. The factor $\sum_{n=0}^\infty a_{n+k}(z - z_0)^n$ is nonzero at $z_0$ and continuous, hence nonzero in a possibly smaller neighborhood. Therefore, $h(z) \neq 0$ for all $z \in D(z_0, r) \setminus \{z_0\}$, showing that the zero at $z_0$ is isolated \TODO{AI generated, reference needed: proposition that zeros of non-identically-zero holomorphic functions are isolated}.
+
+We now show that the set of zeros of $h$ has empty interior in $U$. Define
+$$Z = \{ z \in U : h(z) = 0 \}.$$
+By hypothesis, $z_0$ is an accumulation point of $Z$. We consider two cases:
+
+\begin{enumerate}
+    \item Suppose that all derivatives of $h$ at $z_0$ vanish, i.e., $h^{(n)}(z_0) = 0$ for all $n \geq 0$. Then the power series expansion of $h$ at $z_0$ is identically zero. Since $h$ is analytic, this implies that $h$ vanishes on some open disk around $z_0$. Define
+    $$S = \{ z \in U : h^{(n)}(w) = 0 \text{ for all } n \geq 0 \text{ and all } w \text{ in a neighborhood of } z \}.$$
+    The set $S$ is nonempty because it contains $z_0$. The set $S$ is open by definition. To see that $S$ is closed in $U$, let $w_j \in S$ be a sequence converging to $w \in U$. For each $j$, all derivatives of $h$ vanish at $w_j$. By continuity of the derivatives (which are holomorphic and hence continuous), all derivatives of $h$ also vanish at $w$. Hence $w \in S$. Since $U$ is connected and $S$ is both open and closed in $U$ and nonempty, we have $S = U$. Therefore, all derivatives of $h$ vanish everywhere on $U$, which implies that the power series expansion of $h$ at any point is identically zero, so $h \equiv 0$ on $U$.
+
+    \item If not all derivatives of $h$ at $z_0$ vanish, then there exists a minimal $k \geq 0$ such that $h^{(k)}(z_0) \neq 0$. If $k = 0$, then $h(z_0) \neq 0$, contradicting the fact that $z_0$ is an accumulation point of zeros. If $k \geq 1$, then as shown above, the zero at $z_0$ is isolated, contradicting the hypothesis that every neighborhood of $z_0$ contains points $z \neq z_0$ with $h(z) = 0$.
+\end{enumerate}
+
+In case 1, we directly obtain $h \equiv 0$. In case 2, we reach a contradiction unless all derivatives vanish. Therefore, in all cases, $h \equiv 0$ on $U$, which implies $f \equiv g$ on $U$.
+\end{proof}

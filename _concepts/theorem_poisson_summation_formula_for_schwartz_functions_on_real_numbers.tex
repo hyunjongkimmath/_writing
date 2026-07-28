@@ -3,20 +3,20 @@
 \TODO{AI generated, verify}
 Let $f \in \mathcal{S}(\mathbb{R})$ be a \CrefAndHyperrefIfExist{definition:schwartz_space_on_Rn}{Schwartz function} on $\mathbb{R}$, and let $\hat{f}$ denote its \CrefAndHyperrefIfExist{definition:fourier_transform_of_an_L_1_function_on_R}{Fourier transform} taken with respect to the communications and signal processing convention
 $$\hat{f}(\xi) = \int_{-\infty}^{\infty} f(x) \, e^{-2\pi i \xi x} \, dx.$$
+\CrefIfExists{definition:complex_exponential_function}\CrefIfExists{definition:vector_valued_lebesgue_integral_into_normed_vector_space}
 
 Then
-$$\hlin{\sum_{n \in \mathbb{Z}} f(n) = \sum_{m \in \mathbb{Z}} \hat{f}(m).}$$
+$$\sum_{n \in \mathbb{Z}} f(n) = \sum_{m \in \mathbb{Z}} \hat{f}(m).$$
 \end{theorem}
 
 \begin{proof}
 \TODO{AI generated, verify}
 We prove the identity by constructing a periodic function from $f$ and comparing its two representations.
-
 Define $F : \mathbb{R} \to \mathbb{C}$ by
 $$F(x) = \sum_{n \in \mathbb{Z}} f(x + n).$$
-Since $f$ is a Schwartz function, the series converges absolutely and uniformly on compact subsets of $\mathbb{R}$, and $F$ is smooth and $1$-periodic: $F(x+1) = F(x)$ for all $x \in \mathbb{R}$.
+By \CrefAndHyperrefIfExist{proposition:periodized_schwartz_function_on_R_is_smooth_and_1_periodic}{the periodization lemma}, the series converges absolutely and uniformly on compact subsets of $\mathbb{R}$, $F$ is smooth, and $F(x+1) = F(x)$ for all $x \in \mathbb{R}$.
 
-The $m$-th Fourier coefficient of $F$ is
+The $m$-th \CrefAndHyperrefIfExist{definition:fourier_coefficient_of_a_periodic_function_on_R}{Fourier coefficient} of $F$ is
 \begin{align*}
 c_m &= \int_0^1 F(x) \, e^{-2\pi i m x} \, dx \\
     &= \int_0^1 \sum_{n \in \mathbb{Z}} f(x + n) \, e^{-2\pi i m x} \, dx \\
@@ -24,10 +24,11 @@ c_m &= \int_0^1 F(x) \, e^{-2\pi i m x} \, dx \\
     &= \sum_{n \in \mathbb{Z}} \int_n^{n+1} f(y) \, e^{-2\pi i m (y - n)} \, dy &&(y = x + n) \\
     &= \sum_{n \in \mathbb{Z}} \int_n^{n+1} f(y) \, e^{-2\pi i m y} \, dy &&(e^{2\pi i m n} = 1) \\
     &= \int_{-\infty}^{\infty} f(y) \, e^{-2\pi i m y} \, dy \\
-    &= \hat{f}(m). \CrefIfExists{definition:fourier_transform_of_an_L_1_function_on_R}
+    &= \hat{f}(m). 
 \end{align*}
+\CrefIfExists{definition:fourier_transform_of_an_L_1_function_on_R}
 
-Since $F$ is smooth and $1$-periodic, its Fourier series converges pointwise to $F(x)$ for all $x \in \mathbb{R}$ (a standard theorem from Fourier analysis). Evaluating at $x = 0$, we obtain
+By \CrefAndHyperrefIfExist{theorem:fourier_series_of_smooth_1_periodic_functions_on_R_converge_absolutely_and_uniformly}{the Fourier series convergence theorem}, its Fourier series $\sum_{m\in\mathbb{Z}} c_m e^{2\pi i m x}$ converges absolutely and uniformly to $F(x)$ for all $x \in \mathbb{R}$. Evaluating at $x = 0$, we obtain
 $$\sum_{n \in \mathbb{Z}} f(n) = F(0) = \sum_{m \in \mathbb{Z}} c_m = \sum_{m \in \mathbb{Z}} \hat{f}(m),$$
 which is precisely the claimed identity.
 \end{proof}

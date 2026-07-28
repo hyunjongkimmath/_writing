@@ -1,10 +1,10 @@
 \begin{proposition}[Uniform convergence of termwise derivatives of a Dirichlet series on compact subsets of the half-plane of absolute convergence]
 \label{proposition:uniform_convergence_of_termwise_derivatives_of_dirichlet_series}
 \TODO{AI generated, verify}
-Let $D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}$ be a \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{Dirichlet series of a sequence of complex numbers} with abscissa of absolute convergence $\sigma_a \in [-\infty, \infty]$.
+Let $D(s) = \sum_{n=1}^\infty \frac{a_n}{n^s}$ be a \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{Dirichlet series of a sequence of complex numbers} with \CrefAndHyperrefIfExist{definition:dirichlet_series_of_a_sequence_of_complex_numbers}{abscissa of absolute convergence} $\sigma_a \in [-\infty, \infty]$.
 Then for every $k \in \mathbb{N}_0$, the series
 $$\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$$
-converges absolutely and uniformly on every compact interval $[a,b] \subseteq (\sigma_a, \infty)$.
+\CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on every compact interval $[a,b] \subseteq (\sigma_a, \infty)$.
 \end{proposition}
 \begin{proof}
 \TODO{AI generated, verify}
@@ -14,10 +14,10 @@ For all $s \in [a,b]$ and all $n \ge 1$, we have $n^{-s} \le n^{-a}$ (since $s \
 Thus, for all $s \in [a,b]$,
 $$\left| a_n \frac{(-1)^k (\ln n)^k}{n^s} \right| = |a_n| \frac{(\ln n)^k}{n^s} \le |a_n| \frac{(\ln n)^k}{n^a}.$$
 We claim $\sum_{n=1}^\infty |a_n| \frac{(\ln n)^k}{n^a} < \infty$.
-For any $\epsilon > 0$ with $a - \epsilon > \sigma_a$, we have $(\ln n)^k = o(n^\epsilon)$ as $n \to \infty$.
-Hence for sufficiently large $n$, $(\ln n)^k \le n^\epsilon$, and
+For any $\epsilon > 0$ with $a - \epsilon > \sigma_a$, we have $(\ln n)^k = o(n^\epsilon)$ as $n \to \infty$ \TODO{AI generated, reference needed: proposition that for any $k >= 0 and epsilon > 0, (ln n)^k = o(n^epsilon) as n -> infinity$}.
+Hence for all sufficiently large $n$, $(\ln n)^k \le n^\epsilon$, and
 $$|a_n| \frac{(\ln n)^k}{n^a} \le |a_n| \frac{n^\epsilon}{n^a} = |a_n| n^{-(a-\epsilon)}.$$
 Since $a - \epsilon > \sigma_a$, the series $\sum |a_n| n^{-(a-\epsilon)}$ converges.
 By the \CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}{comparison test}, $\sum |a_n| \frac{(\ln n)^k}{n^a}$ converges.
-Therefore, by the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_function_series}{Weierstrass M-test} with $M_n = |a_n| \frac{(\ln n)^k}{n^a}$, the series $\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$ converges absolutely and uniformly on $[a,b]$.
+Therefore, by the \CrefAndHyperrefIfExist{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}{Weierstrass M-test} with $M_n = |a_n| \frac{(\ln n)^k}{n^a}$, the series $\sum_{n=1}^\infty a_n \frac{(-1)^k (\ln n)^k}{n^s}$ converges absolutely and uniformly on $[a,b]$.
 \end{proof}

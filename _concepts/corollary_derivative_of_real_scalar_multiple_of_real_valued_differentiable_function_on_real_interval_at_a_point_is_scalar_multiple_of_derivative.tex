@@ -1,0 +1,17 @@
+\begin{corollary}[Derivative of a real scalar multiple of a differentiable function] \label{corollary:derivative_of_real_scalar_multiple_of_real_valued_differentiable_function_on_real_interval_at_a_point_is_scalar_multiple_of_derivative}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{interval} and let $f : I \to \mathbb{R}$ be a function. Let $a \in I$ be a point such that there is an \CrefAndHyperrefIfExist{definition:neighborhood_and_neighborhood_basis_of_a_point_in_a_topological_space}{open neighborhood} of $a$ contained in $I$, and let $c \in \mathbb{R}$ be a scalar.
+
+    If $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable at $a$}, then the function $cf : I \to \mathbb{R}$ defined by $(cf)(x) = c \cdot f(x)$ is also differentiable at $a$, and
+    $$(cf)'(a) = c \cdot f'(a).$$
+\end{corollary}
+\begin{proof}
+    \TODO{AI generated, verify}
+    By the definition of the derivative (\CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}), we compute:
+    $$ (cf)'(a) = \lim_{h \to 0} \frac{(cf)(a+h) - (cf)(a)}{h}. $$
+    Substituting the definition of $cf$:
+    $$\frac{(cf)(a+h) - (cf)(a)}{h} = c \cdot \frac{f(a+h) - f(a)}{h}.$$
+    Since $f$ is differentiable at $a$, the limit $\lim_{h \to 0} \frac{f(a+h) - f(a)}{h} = f'(a)$ exists. By the constant multiple rule for limits (\CrefAndHyperrefIfExist{proposition:limits_of_functions_from_topological_spaces_to_real_number_field_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}), we have
+    $$\lim_{h \to 0} c \cdot \frac{f(a+h) - f(a)}{h} = c \cdot \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} = c \cdot f'(a).$$
+    Therefore, $cf$ is differentiable at $a$ and $(cf)'(a) = c \cdot f'(a)$.
+\end{proof}

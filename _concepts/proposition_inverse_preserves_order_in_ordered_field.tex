@@ -1,0 +1,12 @@
+\begin{proposition} \label{proposition:inverse_preserves_order_in_ordered_field}
+    \TODO{AI generated, verify}
+    Let $F$ be an \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered field}. For $a,b \in F^\times = F \setminus \{0\}$,
+    $$0 < a \le b \iff 0 < b^{-1} \le a^{-1}.$$
+    In particular, the map $x \mapsto x^{-1}$ on $F_{>0}$ is strictly decreasing.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Suppose $0 < a \le b$. Multiply by the positive element $a^{-1}b^{-1}$:
+    $$a \cdot a^{-1}b^{-1} = b^{-1} \le b \cdot a^{-1}b^{-1} = a^{-1}.$$
+    Since $b > 0$, $b^{-1} > 0$ (otherwise $0 = b \cdot b^{-1} > 0 \cdot b^{-1} = 0$, contradiction). The converse follows by applying the same argument to $b^{-1} \le a^{-1}$ and using $(x^{-1})^{-1} = x$ from \Cref{corollary:inverse_of_inverse_in_group_is_element}.
+\end{proof}

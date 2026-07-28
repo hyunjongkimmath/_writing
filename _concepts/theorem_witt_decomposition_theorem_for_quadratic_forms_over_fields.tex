@@ -23,8 +23,7 @@ The integer $k$ is called the \hldef{\emph{Witt index} of $q$.}
 
     Let $W = \operatorname{span}\{x, y'\}$. We show that the orthogonal complement of $W$ in $M$ with respect to $B_q$ is nondegenerate and that $M = W \oplus W^{\perp}$ as an orthogonal direct sum. The Gram matrix of $\{x, y'\}$ has entries:
     $$B_q(x, x) = 2q(x) = 0, \quad B_q(x, y') = 1, \quad B_q(y', x) = 1, \quad B_q(y', y') = 2q(y') = 0.$$
-    The determinant is $-1 \neq 0$, so $W$ itself is nondegenerate. For any vector $v \in M$ orthogonal to all of $W$, we have $B_q(v, x) = 0$ and $B_q(v, y') = 0$. If such a $v$ were also orthogonal to all of $W^{\perp}$ (the $B_q$-orthogonal complement of $W$ in $M$), then $v \in W \cap W^{\perp}$. But since $W$ is nondegenerate, $W \cap W^{\perp} = \{0\}$. Hence, the restriction of $B_q$ to $W^{\perp}$ is nondegenerate.
-    \TODO{AI generated, reference needed: lemma that a nondegenerate subspace $S$ of a finite-dimensional quadratic space over a field satisfies $V = S \oplus S^{\perp}$ and $S^{\perp}$ inherits nondegeneracy}
+    The determinant is $-1 \neq 0$, so $W$ itself is nondegenerate. For any vector $v \in M$ orthogonal to all of $W$, we have $B_q(v, x) = 0$ and $B_q(v, y') = 0$. If such a $v$ were also orthogonal to all of $W^{\perp}$ (the $B_q$-orthogonal complement of $W$ in $M$), then $v \in W \cap W^{\perp}$. But since $W$ is nondegenerate, $W \cap W^{\perp} = \{0\}$. Hence, the restriction of $B_q$ to $W^{\perp}$ is nondegenerate by \Cref{proposition:v_decomposes_as_direct_sum_of_subspace_and_its_orthogonal_complement}.
 
     We have $M = W \oplus W^{\perp}$ as an orthogonal direct sum. The restriction of $q$ to $W^{\perp}$ has a nondegenerate polarization by the argument above. By the inductive hypothesis applied to $(W^{\perp}, q|_{W^{\perp}})$, there exists a decomposition
     $$W^{\perp} \cong M_a' \oplus H^{k'}$$

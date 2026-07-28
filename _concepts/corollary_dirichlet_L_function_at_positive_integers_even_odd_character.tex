@@ -1,10 +1,26 @@
 \begin{corollary}[Dirichlet L-function at positive integers for even/odd characters] \label{corollary:dirichlet_L_function_at_positive_integers_even_odd_character}
 \TODO{AI generated, verify}
-Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}. For $n \in \bbN$ with $n \equiv a(\chi) \pmod{2}$ (where $a(\chi) = 0$ if $\chi(-1)=1$ and $a(\chi)=1$ if $\chi(-1)=-1$), the value $L(n, \chi)$ is a non-zero algebraic multiple of $\pi^n$ times an appropriate Gauss sum. In particular, for even characters ($a=0$), $L(2n, \chi) \in \overline{\bbQ} \cdot \pi^{2n}$; for odd characters ($a=1$), $L(2n+1, \chi) \in \overline{\bbQ} \cdot \pi^{2n+1}$.
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$} with parity $a(\chi) \in \{0,1\}$ (where $\chi(-1) = (-1)^{a(\chi)}$). For each integer $n \geq 1$ with $n \equiv a(\chi) + 1 \pmod{2}$, the value $L(n, \chi)$ is an algebraic multiple of $\pi^n$ and the \CrefAndHyperrefIfExist{definition:gauss_sum_of_a_dirichlet_character}{Gauss sum} $\tau(\chi)$. In particular:
+\begin{enumerate}
+    \item If $\chi$ is even ($a(\chi) = 0$), then $L(2n, \chi) \in \overline{\bbQ} \cdot \pi^{2n}$ for all $n \geq 1$.
+    \item If $\chi$ is odd ($a(\chi) = 1$), then $L(2n+1, \chi) \in \tau(\chi) \cdot \overline{\bbQ} \cdot \pi^{2n+1}$ for all $n \geq 0$.
+\end{enumerate}
 
-This follows from the functional equation in \Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function} and the analytic class number formula for Dirichlet L-functions.
-
-\CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character}
-\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet L-function}
-\Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
+This follows from the functional equation in \Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function} and the values of $\zeta(-m)$ at non-positive integers\CrefIfExists{corollary:values_of_riemann_zeta_at_non_positive_integers}\TODO{AI generated, reference needed: analytic class number formula for Dirichlet L-functions}.
 \end{corollary}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We use the functional equation from \Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}:
+    $$\Lambda(s, \chi) = \varepsilon(\chi)\, \Lambda(1 - s, \overline{\chi}),$$
+    where $\Lambda(s,\chi) = (k/\pi)^{(s+a(\chi))/2} \Gamma((s+a(\chi))/2)\, L(s,\chi)$ and $\varepsilon(\chi) = \tau(\chi)/(i^{a(\chi)}\sqrt{k})$.
+
+    Setting $s$ to a negative integer on the left-hand side relates $L(n,\chi)$ at positive integers to $L(-m,\overline{\chi})$ at non-positive integers. The values $L(-m,\overline{\chi})$ are rational multiples of Gauss sums, which can be computed explicitly using the functional equation and the \CrefAndHyperrefIfExist{definition:bernoulli_numbers}{Bernoulli numbers}.
+
+    For even characters ($a(\chi) = 0$), evaluating at $s = -2n+1$ for $n \geq 1$:
+    $$\Lambda(-2n+1, \chi) = \varepsilon(\chi)\, \Lambda(2n, \overline{\chi}).$$
+
+    The Gamma factor $\Gamma((s)/2)$ at $s = -2n+1$ has a pole, which is cancelled by the zero of $L(-2n+1,\chi)$. Solving for $L(2n,\overline{\chi})$ in terms of $L(-2n+1,\chi)$ gives an algebraic multiple of $\pi^{2n}$ times the root number.
+
+    For odd characters ($a(\chi) = 1$), a similar evaluation at negative even integers yields the result for positive odd integers. The Gauss sum $\tau(\chi)$ appears explicitly in the root number $\varepsilon(\chi)$.
+\end{proof}

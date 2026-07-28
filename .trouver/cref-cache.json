@@ -153,6 +153,9 @@
   "$\\bbq$-divisor": [
     "definition:Q_divisor_on_a_scheme"
   ],
+  "$\\bbr$": [
+    "definition:field_of_real_numbers"
+  ],
   "$\\bbr[i]$": [
     "definition:subalgebra_of_an_algebra_over_a_not_necessarily_commutative_ring_generated_by_a_subset"
   ],
@@ -334,7 +337,7 @@
     "definition:affine_scheme"
   ],
   "$\\exp$": [
-    "definition:real_exponential_function"
+    "definition:real_exponential_function_with_eulers_number_as_base"
   ],
   "$\\ext$": [
     "definition:ext_functors_of_bimodules_of_rings"
@@ -355,7 +358,7 @@
     "definition:absolute_p_nth_power_frobenius_morphism_on_a_scheme"
   ],
   "$\\gamma$-function": [
-    "definition:gamma_function"
+    "definition:gamma_function_on_the_complex_numbers"
   ],
   "$\\gamma$-graded ring": [
     "definition:graded_ring_by_a_monoid"
@@ -692,6 +695,7 @@
     "definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space"
   ],
   "$\\sigma$-finite measure spaces": [
+    "definition:measure_on_a_measurable_space_and_measure_space",
     "definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space"
   ],
   "$\\sigma$-ideal": [
@@ -882,9 +886,6 @@
   ],
   "$c(x,y)$": [
     "definition:continuous_map_of_topological_spaces"
-  ],
-  "$c^1$": [
-    "definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions"
   ],
   "$c^1$-manifold": [
     "definition:C_k_manifold"
@@ -1197,6 +1198,9 @@
   "$j$-invariant": [
     "definition:j_invariant_of_a_general_weierstrass_equation_with_invertible_discriminant"
   ],
+  "$j$-th derivative of $f$ at $c$": [
+    "definition:derivative_of_a_real_valued_function_on_a_real_interval"
+  ],
   "$k \\simeq n(\\mathcal{c": [
     "definition:nerve_of_a_category"
   ],
@@ -1272,6 +1276,9 @@
   ],
   "$k$-th exterior power": [
     "definition:exterior_power_of_a_vector_bundle_on_a_topological_manifold"
+  ],
+  "$k$-times differentiable at $c$": [
+    "definition:derivative_of_a_real_valued_function_on_a_real_interval"
   ],
   "$k$-varieties": [
     "definition:algebraic_variety_over_a_field"
@@ -1482,7 +1489,7 @@
     "definition:p_group_of_finite_order"
   ],
   "$p$-integrable function": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "$p$-subgroup": [
     "definition:p_subgroup_of_a_finite_group"
@@ -1672,7 +1679,7 @@
     "definition:opposite_ring_of_a_ring"
   ],
   "$r^\\times$": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "$r^n \\lim a_i = 0$": [
     "definition:projective_and_inductive_limits_in_categories"
@@ -1688,6 +1695,9 @@
   ],
   "$r_\\bullet$": [
     "definition:ringed_site_structure_on_category_of_inverse_sequences_of_a_site"
+  ],
+  "$r_{>0": [
+    "definition:positive_cone_in_an_ordered_monoid"
   ],
   "$r_{i-1": [
     "definition:module_of_a_ring"
@@ -1929,7 +1939,7 @@
     "definition:category"
   ],
   "(lebesgue) integrable": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "(left or right) $a$-module": [
     "definition:module_of_a_ring"
@@ -2022,6 +2032,9 @@
   "(projective) weierstrass equation": [
     "definition:weierstrass_equation_over_a_ring"
   ],
+  "(real) sine and cosine functions": [
+    "definition:real_sine_and_cosine_functions_on_real_line_via_power_series"
+  ],
   "(real) topological manifold": [
     "definition:topological_manifold"
   ],
@@ -2090,6 +2103,9 @@
   ],
   "(two-sided) ideal": [
     "definition:ideal_of_a_ring"
+  ],
+  "(unitary)": [
+    "definition:unitary_character_of_a_group_valued_in_the_complex_numbers"
   ],
   "(unitary) additive character": [
     "definition:additive_and_multiplicative_characters_of_a_ring"
@@ -2234,6 +2250,9 @@
   "abelian as a group": [
     "definition:group"
   ],
+  "abelian as a semigroup": [
+    "definition:semigroup"
+  ],
   "abelian categories": [
     "definition:abelian_category"
   ],
@@ -2292,6 +2311,9 @@
   "abelian variety over $k(s)$": [
     "definition:abelian_variety_over_a_field"
   ],
+  "abscissa of absolute convergence": [
+    "definition:dirichlet_series_of_a_sequence_of_complex_numbers"
+  ],
   "absolute $p^n$th frobenius endomorphism of $k$": [
     "definition:absolute_p_nth_power_frobenius_endomorphism_of_a_ring_of_prime_characteristic"
   ],
@@ -2329,6 +2351,9 @@
   "absolute value on $\\bbq$": [
     "definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring",
     "definition:absolute_value_on_rational_numbers"
+  ],
+  "absolute value valued in $\\bbr$": [
+    "definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring"
   ],
   "absolute value valued in $t$": [
     "definition:absolute_value_on_a_ring_valued_in_an_ordered_semiring"
@@ -2467,6 +2492,7 @@
     "proposition:natural_numbers_addition_existence"
   ],
   "additive": [
+    "definition:character_of_a_group_valued_in_a_ring",
     "definition:additive_functor_between_additive_categories",
     "definition:additive_category_preadditive_category"
   ],
@@ -2483,7 +2509,8 @@
     "definition:additive_category_preadditive_category"
   ],
   "additive character": [
-    "definition:additive_and_multiplicative_characters_of_a_ring"
+    "definition:additive_and_multiplicative_characters_of_a_ring",
+    "definition:character_of_a_group_valued_in_a_ring"
   ],
   "additive functor": [
     "definition:additive_functor_between_additive_categories",
@@ -2510,11 +2537,8 @@
   "additively": [
     "definition:monoid"
   ],
-  "additivity": [
-    "lemma:properties_of_real_exponentiation"
-  ],
-  "additivity of real exponentiation": [
-    "lemma:properties_of_real_exponentiation"
+  "additivity of powers in a group": [
+    "lemma:additivity_of_powers_in_a_group"
   ],
   "adele ring": [
     "definition:adeles_and_ideles_of_a_global_field"
@@ -2558,7 +2582,7 @@
     "definition:admits_a_symmetric_algebra_with_involution_over_a_ring_for_a_bilinear_form_on_a_finitely_generated_projective_module"
   ],
   "admits": [
-    "theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli",
+    "theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli_in_the_complex_plane",
     "lemma:equalizer_coequalizer_in_an_additive_category_are_given_by_kernel_and_cokernel"
   ],
   "affine": [
@@ -2810,6 +2834,10 @@
   "archimedean places": [
     "definition:place_of_a_global_field"
   ],
+  "archimedean property": [
+    "definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid",
+    "proposition:the_field_of_rational_numbers_is_archimedean"
+  ],
   "archimedes' constant": [
     "definition:archimedes_constant_pi_via_cosine_root"
   ],
@@ -2826,6 +2854,9 @@
   ],
   "arithmetic frobenius element $\\frob_{l": [
     "definition:arithmetic_and_geometric_frobenius_automorphisms_of_algebraic_extensions_of_finite_fields"
+  ],
+  "arithmetic function": [
+    "definition:arithmetic_function_on_positive_integers_with_values_in_a_ring"
   ],
   "arithmetic function on $\\mathbb{z": [
     "definition:arithmetic_function_on_positive_integers_with_values_in_a_ring"
@@ -3008,6 +3039,9 @@
   "banach space": [
     "definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
   ],
+  "banach space over $\\mathbb{c": [
+    "definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
+  ],
   "banach space over $k$": [
     "definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
   ],
@@ -3139,16 +3173,16 @@
     "definition:bigraded_object_in_a_category"
   ],
   "biholomorphic": [
-    "definition:biholomorphic_map_of_open_subsets_of_complex_space"
+    "definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space"
   ],
   "biholomorphic map": [
-    "definition:biholomorphic_map_of_open_subsets_of_complex_space"
+    "definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space"
   ],
   "biholomorphic maps": [
-    "definition:biholomorphic_map_of_open_subsets_of_complex_space"
+    "definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space"
   ],
   "biholomorphism": [
-    "definition:biholomorphic_map_of_open_subsets_of_complex_space"
+    "definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space"
   ],
   "biholomorphisms": [
     "definition:holomorphism_and_biholomoprhism_of_complex_manifolds"
@@ -3209,6 +3243,9 @@
   "black--scholes--merton model": [
     "definition:black_scholes_merton_market_model_with_geometric_brownian_motion"
   ],
+  "bochner integrable function": [
+    "definition:vector_valued_lebesgue_integral_into_normed_vector_space"
+  ],
   "boolean algebra": [
     "definition:boolean_algebra"
   ],
@@ -3259,7 +3296,7 @@
     "definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set",
     "definition:bounded_double_complex_of_objects_in_an_additive_category",
     "definition:bounded_complexes_on_an_additive_category_and_homologically_bounded_objects_on_an_abelian_category",
-    "definition:bounded_above_below_and_bounded_function_on_a_subset_of_an_ordered_set"
+    "definition:bounded_above_below_and_bounded_function_on_a_set_to_an_ordered_set"
   ],
   "bounded above adic complexes": [
     "definition:derived_category_of_bounded_above_complexes_of_adic_sheaves_on_a_scheme"
@@ -3321,6 +3358,12 @@
   ],
   "braids": [
     "definition:artin_braid_group"
+  ],
+  "branch": [
+    "definition:branch_of_the_complex_logarithm_on_an_open_subset"
+  ],
+  "branch of the complex logarithm": [
+    "definition:branch_of_the_complex_logarithm_on_an_open_subset"
   ],
   "brutal truncation": [
     "definition:stupid_truncation_of_a_chain_complex_in_an_additive_category"
@@ -3736,6 +3779,9 @@
   "cauchy criterion for series in an abelian group with an extended metric": [
     "proposition:cauchy_criterion_for_convergence_of_series_in_an_abelian_group_with_an_extended_metric_valued_in_ordered_commutative_monoids_with_adjoined_infinity"
   ],
+  "cauchy integral formula": [
+    "theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_of_derivatives_of_holomorphic_functions_on_simply_connected_open_subsets_of_the_complex_planevia_contour_integrals"
+  ],
   "cauchy integral theorem": [
     "theorem:cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes"
   ],
@@ -3760,10 +3806,11 @@
     "definition:cauchy_sequence_in_rational_numbers"
   ],
   "cauchy tails condition": [
+    "definition:cauchy_tails_condition_for_series_in_an_ordered_monoid",
     "definition:cauchy_tails_condition_for_series_in_an_ordered_semiring"
   ],
   "cauchy--hadamard formula": [
-    "proposition:cauchy_hadamard_formula_for_power_series_in_one_complex_variable"
+    "proposition:cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable"
   ],
   "cellular complex": [
     "definition:cellular_complex"
@@ -3850,12 +3897,13 @@
     "definition:chain_complex_of_objects_in_a_preadditive_category"
   ],
   "chain rule": [
-    "proposition:derivative_rules_for_sum_product_quotient_and_chain"
+    "proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals"
   ],
   "change-of-basis matrix from $\\mathcal{f": [
     "definition:change_of_basis_matrix_for_a_free_module_over_a_ring"
   ],
   "character": [
+    "definition:character_of_a_group_valued_in_a_ring",
     "definition:quasi_character_of_a_locally_compact_hausdorff_group"
   ],
   "character lattice": [
@@ -3865,7 +3913,7 @@
     "definition:character_module_of_a_torus_over_a_field"
   ],
   "character of a group valued in $k$": [
-    "definition:character_of_a_group_valued_in_a_field"
+    "definition:character_of_a_group_valued_in_a_ring"
   ],
   "characteristic": [
     "definition:characteristic_a_prime_for_a_scheme",
@@ -3942,11 +3990,14 @@
   "closed as a monoidal category": [
     "definition:closed_monoidal_category"
   ],
+  "closed bounded interval": [
+    "definition:interval_in_the_real_line"
+  ],
   "closed category": [
     "definition:closed_category"
   ],
   "closed disk": [
-    "definition:complex_disk_open_and_closed_in_the_complex_plane"
+    "definition:open_complex_disk_and_closed_complex_disk_in_the_complex_plane"
   ],
   "closed embedding": [
     "definition:open_and_closed_immersions_of_schemes"
@@ -4125,6 +4176,9 @@
   ],
   "codirected poset": [
     "definition:partially_ordered_set"
+  ],
+  "codirected strict partially ordered set": [
+    "definition:directed_codirected_strict_partially_ordered_set"
   ],
   "coend": [
     "definition:end_coend_of_functor_from_opposite_and_category_to_category"
@@ -4401,9 +4455,11 @@
     "definition:compact_topological_space"
   ],
   "compact subset": [
+    "definition:compact_subset_of_a_topological_space_alternate_definition",
     "definition:compact_topological_space"
   ],
   "compact subsets": [
+    "definition:compact_topological_space",
     "compact"
   ],
   "compact topological space": [
@@ -4501,6 +4557,9 @@
   "complete extended metric space valued in $t^\\infty$": [
     "definition:complete_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
   ],
+  "complete extended normed module over $r$ valued in": [
+    "definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
+  ],
   "complete extended normed module over $r$ valued in $t^\\infty$": [
     "definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
   ],
@@ -4533,6 +4592,9 @@
   ],
   "complete, cocomplete": [
     "definition:complete_and_cocomplete_category"
+  ],
+  "completed dirichlet $l$-function": [
+    "definition:completed_dirichlet_L_function_of_a_dirichlet_character_modulo_k"
   ],
   "completed hecke $l$-function": [
     "definition:completed_hecke_L_function_of_a_hecke_character_of_a_number_field"
@@ -4569,17 +4631,23 @@
   "complex analytic manifolds": [
     "definition:complex_analytic_manifold"
   ],
+  "complex conjugate character": [
+    "definition:complex_conjugate_of_a_dirichlet_character"
+  ],
   "complex conjugation": [
     "definition:cm_field"
+  ],
+  "complex exponential": [
+    "definition:complex_exponential_function"
   ],
   "complex exponential function": [
     "definition:complex_exponential_function"
   ],
-  "complex exponentiation": [
-    "definition:complex_exponential_function"
-  ],
   "complex extension of": [
     "definition:complex_exponential_function"
+  ],
+  "complex logarithm functions": [
+    "definition:branch_of_the_complex_logarithm_on_an_open_subset"
   ],
   "complex manifold": [
     "definition:complex_analytic_manifold"
@@ -4593,6 +4661,9 @@
   ],
   "complex multiplication": [
     "definition:complex_multiplication_of_an_abelian_variety_over_a_field"
+  ],
+  "complex number": [
+    "definition:field_of_complex_numbers"
   ],
   "complex numbers": [
     "definition:field_of_complex_numbers",
@@ -4751,11 +4822,20 @@
   "constructible sheaves": [
     "definition:constructible_sheaf_on_a_small_site_on_a_scheme_or_a_topological_space"
   ],
-  "construction": [
-    "definition:real_exponentiation_via_supremum"
-  ],
   "construction from zf axioms": [
     "definition:zermelo_fraenkel_set_theory"
+  ],
+  "continuity of composition": [
+    "proposition:composition_of_continuous_functions_on_topological_spaces_is_continuous"
+  ],
+  "continuity of constant functions": [
+    "proposition:constant_function_between_topological_spaces_is_continuous"
+  ],
+  "continuity of scalar multiples": [
+    "proposition:continuity_of_pointwise_scalar_multiple_of_continuous_real_valued_function"
+  ],
+  "continuity of the distance function": [
+    "proposition:distance_function_to_a_fixed_point_in_an_extended_metric_space_valued_in_a_commutative_ordered_semiring_is_continuous"
   ],
   "continuous": [
     "definition:continuous_map_of_topological_spaces",
@@ -4776,6 +4856,9 @@
     "definition:continuity_at_a_point_in_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "continuous at $a$ in the topological sense": [
+    "definition:continuity_at_a_point_for_a_function_between_topological_spaces"
+  ],
+  "continuous at $l$": [
     "definition:continuity_at_a_point_for_a_function_between_topological_spaces"
   ],
   "continuous at $x$": [
@@ -4855,14 +4938,12 @@
   "contravariant functors": [
     "definition:functor_between_categories"
   ],
-  "converge": [
-    "definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup"
-  ],
   "converge absolutely": [
     "definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
   ],
   "convergence": [
-    "definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category"
+    "definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category",
+    "definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup"
   ],
   "convergence in the": [
     "definition:sequence_of_measurable_functions_on_a_measure_space_that_converges_to_a_function_in_the_L_p_norm"
@@ -4871,6 +4952,7 @@
     "definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category"
   ],
   "convergent sequence": [
+    "definition:convergence_and_limit_of_sequence_in_a_topological_space",
     "definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "convergent subsequence": [
@@ -4879,10 +4961,17 @@
   "converges": [
     "definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity",
     "definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup",
-    "definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category"
+    "definition:converges_to_a_graded_object_for_a_spectral_sequence_in_an_abelian_category",
+    "definition:convergence_of_a_monotone_sequence_in_an_ordered_semiring_with_adjoined_infinity"
+  ],
+  "converges (conditionally)": [
+    "definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup"
   ],
   "converges absolutely": [
     "definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring"
+  ],
+  "converges absolutely and uniformly for $u \\geq \\delta > 0$": [
+    "lemma:uniform_convergence_of_the_theta_series_of_a_dirichlet_character"
   ],
   "converges in distribution": [
     "definition:convergence_in_distribution_of_real_valued_random_variables"
@@ -4891,7 +4980,8 @@
     "definition:pointwise_convergence_of_a_sequence_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "converges to": [
-    "definition:convergence_and_limit_of_sequence_in_a_topological_space"
+    "definition:convergence_and_limit_of_sequence_in_a_topological_space",
+    "definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "converges to $\\mu$ in probability": [
     "definition:convergence_in_measure_for_a_sequence_of_measurable_functions_on_a_measure_space_into_an_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity"
@@ -5133,6 +5223,7 @@
   ],
   "definition": [
     "definition:euler_characteristic_of_a_topological_space",
+    "definition:exponentiation_in_a_field",
     "definition:submodule_of_a_module_over_a_ring",
     "definition:quotient_module_of_a_module_by_a_module_of_a_ring",
     "definition:power_of_a_monoid_element_by_a_nonnegative_integer",
@@ -5195,7 +5286,7 @@
     "proposition:derivative_of_natural_logarithm_is_reciprocal"
   ],
   "derivatives": [
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
   ],
   "derivatives of sine and cosine": [
     "proposition:derivatives_of_sine_and_cosine"
@@ -5340,7 +5431,7 @@
     "definition:derivative_of_a_real_valued_function_on_a_real_interval"
   ],
   "differentiability implies continuity": [
-    "proposition:differentiability_implies_continuity_at_a_point"
+    "proposition:differentiability_at_a_point_for_a_function_on_an_interval_of_the_real_numbers_valued_in_the_real_numbers_implies_continuity_at_a_point"
   ],
   "differentiable": [
     "definition:derivative_of_a_real_valued_function_on_a_real_interval"
@@ -5507,17 +5598,20 @@
   "dirichlet character": [
     "definition:dirichlet_character_modulo_a_nonnegative_integer"
   ],
-  "dirichlet character modulo $k$": [
+  "dirichlet character modulo $k \\geq 1$": [
     "definition:dirichlet_character_modulo_a_nonnegative_integer"
   ],
-  "dirichlet character modulo $n$": [
+  "dirichlet character modulo $k$": [
     "definition:dirichlet_character_modulo_a_nonnegative_integer"
   ],
   "dirichlet characters": [
     "definition:dirichlet_character_modulo_a_nonnegative_integer"
   ],
-  "dirichlet l-function": [
-    "definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer"
+  "dirichlet characters modulo $k$": [
+    "definition:dirichlet_character_modulo_a_nonnegative_integer"
+  ],
+  "dirichlet convolution": [
+    "definition:dirichlet_convolution_of_arithmetic_functions"
   ],
   "dirichlet series": [
     "definition:dirichlet_series_of_a_sequence_of_complex_numbers"
@@ -5600,7 +5694,8 @@
     "proposition:natural_numbers_multiplication_associative_commutative_distributive"
   ],
   "diverges": [
-    "definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity"
+    "definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity",
+    "definition:convergence_of_a_monotone_sequence_in_an_ordered_semiring_with_adjoined_infinity"
   ],
   "divisibility": [
     "definition:divisibility_of_elements_of_rings"
@@ -5634,6 +5729,7 @@
     "definition:domain_integral_domain"
   ],
   "dominated convergence theorem": [
+    "theorem:dominated_convergence_theorem",
     "definition:dominated_convergence_theorem_for_lebesgue_integration"
   ],
   "dominates": [
@@ -5836,8 +5932,16 @@
   "enriched presheaves": [
     "definition:enriched_presheaf"
   ],
+  "entire": [
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point",
+    "definition:entire_function_on_complex_space"
+  ],
   "entire function": [
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:entire_function_on_complex_space",
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
+  ],
+  "entire functions": [
+    "definition:entire_function_on_complex_space"
   ],
   "enumeration": [
     "definition:injective_surjective_bijective_map_of_sets"
@@ -5981,6 +6085,9 @@
     "definition:euler_characteristic_of_a_topological_space",
     "definition:euler_characteristic_of_a_coherent_sheaf_on_a_proper_scheme_over_a_field"
   ],
+  "euler product for dirichlet $l$-functions": [
+    "theorem:euler_product_for_dirichlet_L_function_of_a_dirichlet_character"
+  ],
   "euler totient function": [
     "definition:euler_totient_function"
   ],
@@ -6071,10 +6178,13 @@
     "definition:expectation_of_a_random_variable_on_a_probability_measure_space"
   ],
   "exponential and logarithm are mutual inverses": [
-    "proposition:exponential_and_logarithm_are_mutual_inverses"
+    "proposition:real_exponential_and_real_natural_logarithm_functions_are_mutual_inverses"
   ],
   "exponential function": [
-    "definition:real_exponential_function"
+    "definition:real_exponential_function_with_eulers_number_as_base"
+  ],
+  "exponential generating function": [
+    "definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula"
   ],
   "exponential objects": [
     "definition:exponential_object_in_a_category"
@@ -6082,8 +6192,8 @@
   "exponential simplicial set $d^c$": [
     "definition:simplicial_category_of_simplicial_sets"
   ],
-  "exponentiation in a semiring": [
-    "definition:exponentiation_in_a_semiring"
+  "exponentiation in a field": [
+    "definition:exponentiation_in_a_field"
   ],
   "ext": [
     "definition:ext_functors_of_bimodules_of_rings"
@@ -6108,6 +6218,9 @@
   ],
   "extended metric spaces valued in $t^\\infty$": [
     "definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity"
+  ],
+  "extended metric topology": [
+    "definition:topology_induced_by_an_extended_metric_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_and_open_ball_for_an_extended_metric"
   ],
   "extended metric valued in": [
     "definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity"
@@ -6231,6 +6344,9 @@
   ],
   "factor through": [
     "definition:morphism_in_a_category_factoring_through_a_morphism"
+  ],
+  "factorial of $j$": [
+    "definition:factorial_of_a_nonnegative_integer"
   ],
   "factorial of $k$": [
     "definition:factorial_of_a_nonnegative_integer"
@@ -6531,6 +6647,9 @@
   "finite geometric series": [
     "definition:geometric_progression_and_geometric_series_over_a_commutative_semiring"
   ],
+  "finite geometric series formula": [
+    "proposition:sum_formula_for_a_finite_geometric_series_over_a_commutative_ring"
+  ],
   "finite global dimension": [
     "definition:left_right_global_dimension_of_a_ring"
   ],
@@ -6557,7 +6676,7 @@
     "definition:finite_locally_free_morphism_of_schemes"
   ],
   "finite measure space": [
-    "definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space"
+    "definition:measure_on_a_measurable_space_and_measure_space"
   ],
   "finite morphism": [
     "definition:finite_morphism_of_schemes",
@@ -6737,6 +6856,9 @@
   "formal power series ring": [
     "definition:formal_power_series_ring_in_one_variable_over_a_commutative_ring"
   ],
+  "fourier coefficient": [
+    "definition:fourier_coefficient_of_a_periodic_function_on_R"
+  ],
   "fourier expansion": [
     "definition:fourier_expansion_of_a_periodic_holomorphic_function_on_the_upper_half_plane"
   ],
@@ -6902,6 +7024,9 @@
   "function spaces (with the compact-open topology)": [
     "definition:compact_open_topology_on_the_set_of_continuous_maps_between_topological_spaces_and_function_space"
   ],
+  "functional equation for dirichlet $l$-functions": [
+    "theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function"
+  ],
   "functions": [
     "definition:function_of_sets"
   ],
@@ -7035,8 +7160,20 @@
     "definition:galois_representation_over_a_topological_ring_of_a_field",
     "definition:ell_adic_tate_group_of_a_commutative_group_scheme_over_a_field"
   ],
+  "gamma factor": [
+    "definition:gamma_function_on_the_complex_numbers"
+  ],
   "gamma function": [
-    "definition:gamma_function"
+    "definition:gamma_function_on_the_complex_numbers"
+  ],
+  "gauss sum": [
+    "definition:gauss_sum_of_a_dirichlet_character"
+  ],
+  "gauss sum of $\\chi$": [
+    "definition:gauss_sum_of_a_dirichlet_character"
+  ],
+  "gauss sums": [
+    "definition:gauss_sum_of_a_dirichlet_character"
   ],
   "general definition of modular forms for congruence subgroups": [
     "definition:modular_form_and_cusp_form_of_weight_k_with_respect_to_a_congruence_subgroup_of_SL_2_Z"
@@ -7172,6 +7309,9 @@
   ],
   "geometric realizations": [
     "definition:geometric_realization_of_a_simplicial_set"
+  ],
+  "geometric series": [
+    "definition:geometric_progression_and_geometric_series_over_a_commutative_semiring"
   ],
   "geometric stalk": [
     "definition:stalk_of_a_presheaf_on_the_small_etale_site_of_a_schem_at_a_geometric_point"
@@ -7356,7 +7496,7 @@
     "definition:regular_representation_of_a_finite_group_over_a_field"
   ],
   "group character": [
-    "definition:character_of_a_group_valued_in_a_field"
+    "definition:character_of_a_group_valued_in_a_ring"
   ],
   "group cochain complex": [
     "definition:group_cochain_complex_with_coefficients_in_a_group_module_over_a_ring"
@@ -7403,7 +7543,7 @@
     "definition:deck_transformation_of_a_covering_space"
   ],
   "group of units": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "group ring": [
     "definition:group_ring_of_a_group_over_a_ring"
@@ -7625,19 +7765,22 @@
   ],
   "holomorphic": [
     "definition:holomorphism_and_biholomoprhism_of_complex_manifolds",
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
   ],
   "holomorphic at $\\infty$": [
     "definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane"
   ],
   "holomorphic extension": [
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
   ],
   "holomorphic function": [
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
   ],
   "holomorphic functions": [
-    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm"
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
+  ],
+  "holomorphic on all of $\\bbc^n$": [
+    "definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point"
   ],
   "hom object": [
     "definition:category"
@@ -7992,7 +8135,7 @@
     "definition:category_fibered_in_groupoids_over_a_category"
   ],
   "in measure": [
-    "definition:convergence_in_measure"
+    "definition:convergence_in_measure_for_a_sequence_of_measurable_functions_on_a_measure_space_into_an_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "in particular": [
     "proposition:dvrs_are_dedekind_domains"
@@ -8132,11 +8275,12 @@
   "infinite dimensional affine space": [
     "definition:infinite_dimensional_affine_space_over_a_scheme_indexed_by_a_set"
   ],
-  "infinite series": [
-    "definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup"
+  "infinite geometric series": [
+    "definition:geometric_progression_and_geometric_series_over_a_commutative_semiring"
   ],
   "infinitely differentiable": [
-    "definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions"
+    "definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions",
+    "definition:derivative_of_a_real_valued_function_on_a_real_interval"
   ],
   "initial and final": [
     "definition:initial_final_zero_objects_of_a_category"
@@ -8225,14 +8369,16 @@
     "theorem:integers_uniqueness"
   ],
   "integrable": [
+    "definition:vector_valued_lebesgue_integral_into_normed_vector_space",
     "definition:integrable_almost_complex_structure_on_a_smooth_manifold_of_even_real_dimension",
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "integrable function": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "integral": [
-    "definition:integral_scheme"
+    "definition:integral_scheme",
+    "lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function"
   ],
   "integral $\\ell$-adic tate module": [
     "definition:ell_adic_tate_module_of_an_abelian_variety_over_a_field"
@@ -8264,7 +8410,7 @@
     "definition:middle_extension_functor_for_perverse_sheaves_with_algebraic_coefficients_on_open_immersion"
   ],
   "intermediate value theorem": [
-    "theorem:intermediate_value_theorem_for_continuous_functions_on_intervals"
+    "theorem:intermediate_value_theorem_for_continuous_functions_on_real_intervals_valued_in_the_real_numbers"
   ],
   "internal hom": [
     "definition:internal_hom_object_in_a_category"
@@ -8396,6 +8542,7 @@
     "definition:system_in_a_category_indexed_by_a_directed_poset"
   ],
   "invertible": [
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group",
     "definition:invertible_matrix_over_a_ring"
   ],
   "invertible $n \\times n$ matrices": [
@@ -8405,7 +8552,7 @@
     "definition:fractional_ideal_of_an_integral_domain"
   ],
   "invertible in $r$": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "invertible matrix": [
     "definition:invertible_matrix_over_a_ring"
@@ -8560,6 +8707,9 @@
   "isotropic": [
     "definition:isotropic_element_of_a_module_with_a_sesquliinear_form_over_a_ring_with_involution"
   ],
+  "it extends meromorphically to $\\bbc$ with a single simple pole at $s = 1$ when $\\chi$ is principal and is entire otherwise, and satisfies a functional equation.": [
+    "theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function"
+  ],
   "it is": [
     "lemma:examples_of_projective_and_injective_objects",
     "proposition:projective_modules_are_flat"
@@ -8694,9 +8844,6 @@
   "l-function of $f$": [
     "definition:L_function_of_a_modular_form"
   ],
-  "l-function of a modular form": [
-    "definition:L_function_of_a_modular_form"
-  ],
   "lagrange's theorem": [
     "theorem:lagranges_theorem_for_finite_groups"
   ],
@@ -8719,7 +8866,7 @@
     "definition:lattice_over_a_commutative_ring"
   ],
   "laurent expansion": [
-    "theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli",
+    "theorem:laurent_series_expansion_for_holomorphic_functions_on_annuli_in_the_complex_plane",
     "definition:laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity"
   ],
   "laurent polynomial ring": [
@@ -8751,19 +8898,17 @@
     "definition:tree_forest_in_graph_theory"
   ],
   "lebesgue integrable": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities",
+    "definition:vector_valued_lebesgue_integral_into_normed_vector_space"
   ],
   "lebesgue integral": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
-  ],
-  "lebesgue measurable function": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
-  ],
-  "lebesgue measurable subset": [
-    "definition:lebesgue_measure_on_Rn"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "lebesgue measure": [
     "definition:lebesgue_measure_on_Rn"
+  ],
+  "lebesgue's criterion for riemann integrability": [
+    "theorem:riemann_and_lebesgue_integrals_agree_for_riemann_integrable_functions_on_closed_intervals"
   ],
   "left $a$-linear maps": [
     "definition:homomorphism_of_modules_over_a_ring"
@@ -9322,6 +9467,9 @@
   "logarithm with base $b$": [
     "definition:logarithm_with_base_b_of_positive_real"
   ],
+  "logarithmic derivative": [
+    "definition:logarithmic_derivative_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane"
+  ],
   "logarithmic height function": [
     "definition:height_of_points_on_projective_space_over_a_global_field"
   ],
@@ -9364,7 +9512,7 @@
     "theorem:lyndon_hochschild_serre_spectral_sequence_for_group_cohomoloogy_and_homology"
   ],
   "maclaurin series": [
-    "definition:taylor_and_maclaurin_series_of_a_real_valued_function"
+    "definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line"
   ],
   "map": [
     "definition:C_k_morphism_between_C_k_manifolds"
@@ -9485,14 +9633,13 @@
     "definition:maximal_sieve_on_an_object_in_a_category"
   ],
   "mean value theorem": [
-    "theorem:mean_value_theorem_for_differentiable_functions_on_intervals"
+    "theorem:mean_value_theorem_that_derivative_of_a_real_valued_differentiable_functions_on_real_intervals_achieves_the_slope_of_the_secant"
   ],
   "measurable function": [
     "definition:measurable_function_between_measure_spaces"
   ],
   "measurable functions": [
-    "definition:measurable_function_between_measure_spaces",
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:measurable_function_between_measure_spaces"
   ],
   "measurable space": [
     "definition:sigma_algebra_on_a_set_and_measurable_space"
@@ -9517,7 +9664,13 @@
   "meromorphic at $\\infty$": [
     "definition:holomorphic_at_infinity_for_a_meromorphic_function_on_the_upper_half_plane"
   ],
+  "meromorphic continuation": [
+    "definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane"
+  ],
   "meromorphic function": [
+    "definition:meromorphic_function_on_an_open_subset_of_the_complex_plane"
+  ],
+  "meromorphic function on $\\mathbb{c": [
     "definition:meromorphic_function_on_an_open_subset_of_the_complex_plane"
   ],
   "metric": [
@@ -9588,6 +9741,9 @@
     "definition:minimal_element_in_a_subset_of_a_partially_ordered_set"
   ],
   "minimum": [
+    "definition:least_element_in_a_subset_of_a_partially_ordered_set"
+  ],
+  "minimum and maximum": [
     "definition:least_element_in_a_subset_of_a_partially_ordered_set"
   ],
   "mittag-leffler condition": [
@@ -9718,17 +9874,17 @@
   ],
   "monotone convergence theorem": [
     "corollary:monotone_convergence_theorem_for_sequences_of_real_numbers",
-    "theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property",
+    "theorem:bounded_monotone_sequence_has_supremum_in_poset_with_least_upper_bound_property",
     "theorem:monotone_convergence_theorem_for_the_limit_of_lebesgue_integrals_of_an_increasing_sesquence_of_functions_and_the_lebesgue_integral_of_the_limit_of_the_functions"
   ],
   "monotone convergence theorem for sequences of real numbers": [
     "corollary:monotone_convergence_theorem_for_sequences_of_real_numbers"
   ],
-  "monotonicity of powers": [
-    "lemma:monotonicity_of_integer_powers_of_positive_reals"
+  "monotone sequence": [
+    "definition:monotone_sequence_of_elements_in_a_partially_ordered_set"
   ],
-  "monotonicity of rational exponentiation": [
-    "lemma:properties_of_rational_exponentiation"
+  "monotonicity of integer powers": [
+    "lemma:integer_powers_of_positive_real_numbers_are_monotonic"
   ],
   "mordell--weil rank": [
     "theorem:mordell_weil_theorem_for_abelian_varieties_over_global_fields"
@@ -9922,14 +10078,18 @@
   "multiplication on $\\bbn$": [
     "proposition:natural_numbers_multiplication_existence"
   ],
-  "multiplicative (unitary) character": [
-    "definition:additive_and_multiplicative_characters_of_a_ring"
+  "multiplicative": [
+    "definition:character_of_a_group_valued_in_a_ring"
+  ],
+  "multiplicative character": [
+    "definition:character_of_a_group_valued_in_a_ring"
   ],
   "multiplicative function": [
     "definition:multiplicative_function_on_positive_integers_with_values_in_a_ring"
   ],
   "multiplicative group": [
-    "definition:multiplicative_group_scheme_over_a_scheme"
+    "definition:multiplicative_group_scheme_over_a_scheme",
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "multiplicative group $\\mathbb{g": [
     "definition:multiplicative_group_scheme_over_a_scheme"
@@ -9938,7 +10098,7 @@
     "definition:multiplicative_group_scheme_over_a_scheme"
   ],
   "multiplicative inverse": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "multiplicative monoid": [
     "definition:monoid"
@@ -9957,6 +10117,9 @@
   ],
   "multiplicative system": [
     "definition:multiplicative_system_of_morphisms_in_a_category"
+  ],
+  "multiplicativity of powers": [
+    "lemma:product_of_powers_of_the_same_base_in_a_field_is_additive_in_exponents"
   ],
   "mumford-tate conjecture": [
     "conjecture:mumford_tate_conjecture_for_an_abelian_variety_over_a_number_field"
@@ -10024,7 +10187,10 @@
     "definition:natural_transformation_between_functors_between_categories"
   ],
   "natural logarithm": [
-    "definition:natural_logarithm_as_inverse_of_exponential"
+    "definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function"
+  ],
+  "natural logarithm of the positive integer $n$": [
+    "definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function"
   ],
   "natural numbers": [
     "definition:natural_numbers"
@@ -10164,6 +10330,9 @@
     "definition:non_degenerate_t_structure_on_a_triangulated_category",
     "definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring"
   ],
+  "non-negative": [
+    "definition:ordered_abelian_group"
+  ],
   "non-negative elements": [
     "definition:ordered_ring"
   ],
@@ -10196,19 +10365,19 @@
   ],
   "nonincreasing": [
     "definition:monotone_sequence_of_elements_in_a_partially_ordered_set",
-    "definition:monotone_function_on_an_ordered_set"
+    "definition:monotone_function_between_ordered_sets"
   ],
   "nonsingular": [
     "definition:nondegenerate_nonsingular_regular_sesquilinear_form_on_a_module_over_an_involution_ring"
   ],
-  "nontrivial additive (unitary) character": [
-    "definition:additive_and_multiplicative_characters_of_a_ring"
+  "nontrivial": [
+    "definition:trivial_character_of_a_group_valued_in_a_ring"
   ],
   "nontrivial ring": [
     "definition:zero_ring"
   ],
   "nonunit element": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "norm": [
     "definition:normed_algebra_over_a_field_with_a_complete_non_trivial_absolute_value",
@@ -10451,8 +10620,8 @@
   "open subset": [
     "definition:topological_space"
   ],
-  "open subsets": [
-    "definition:topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring"
+  "open subsets of $\\mathbb{r": [
+    "definition:field_of_real_numbers"
   ],
   "open-and-closed subschemes": [
     "definition:open_and_closed_subscheme_of_a_scheme"
@@ -10511,11 +10680,17 @@
   "order topology": [
     "definition:order_topology_on_a_partially_ordered_set"
   ],
+  "order-complete": [
+    "definition:field_of_real_numbers"
+  ],
   "ordered": [
     "definition:ordered_ring"
   ],
   "ordered abelian group": [
     "definition:ordered_abelian_group"
+  ],
+  "ordered abelian group homomorphism": [
+    "definition:homomorphism_of_ordered_abelian_groups"
   ],
   "ordered commutative monoid": [
     "definition:ordered_commutative_monoid",
@@ -10540,6 +10715,9 @@
     "definition:ordered_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity"
   ],
   "ordered field": [
+    "definition:ordered_field_complete_ordered_field"
+  ],
+  "ordered fields": [
     "definition:ordered_field_complete_ordered_field"
   ],
   "ordered monoid": [
@@ -10657,6 +10835,9 @@
   "paracompact space": [
     "definition:paracompact_topological_space"
   ],
+  "parity of $\\chi$": [
+    "definition:parity_of_a_dirichlet_character"
+  ],
   "partial order": [
     "definition:partially_ordered_set"
   ],
@@ -10722,6 +10903,9 @@
   ],
   "pid's": [
     "definition:principal_ideal_ring"
+  ],
+  "piecewise continuous on $[a,b]$": [
+    "definition:piecewise_continuous_function_on_a_closed_interval"
   ],
   "piecewise continuously differentiable path": [
     "definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane"
@@ -10817,6 +11001,9 @@
   "poisson distribution with parameter $\\lambda(t - s)$": [
     "definition:poisson_distribution"
   ],
+  "poisson summation formula": [
+    "theorem:poisson_summation_formula_for_schwartz_functions_on_real_numbers"
+  ],
   "polar coordinate map": [
     "definition:polar_coordinates_on_R2"
   ],
@@ -10873,7 +11060,7 @@
   ],
   "power series": [
     "definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula",
-    "definition:real_power_series_and_radius_of_convergence"
+    "definition:real_power_series_centered_at_a_real_number_and_radius_of_convergence_of_a_real_power_series"
   ],
   "power series in one complex variable": [
     "definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula"
@@ -11016,6 +11203,9 @@
   "prime element": [
     "definition:prime_element_of_a_ring"
   ],
+  "prime factorization": [
+    "theorem:fundamental_theorem_of_arithmetic"
+  ],
   "prime field": [
     "definition:prime_subfield_of_a_field"
   ],
@@ -11046,6 +11236,21 @@
   ],
   "primes": [
     "definition:balmer_prime_of_a_tensor_triangulated_category"
+  ],
+  "primitive": [
+    "definition:primitive_dirichlet_character"
+  ],
+  "primitive character": [
+    "definition:primitive_dirichlet_character"
+  ],
+  "primitive character modulo $k$": [
+    "definition:primitive_dirichlet_character"
+  ],
+  "primitive dirichlet character modulo $k$": [
+    "definition:primitive_dirichlet_character"
+  ],
+  "primitive dirichlet character modulo $n$": [
+    "definition:primitive_dirichlet_character"
   ],
   "principal": [
     "definition:ideal_generated_by_a_subset_of_a_ring"
@@ -11137,7 +11342,7 @@
     "definition:products_of_rings"
   ],
   "product rule": [
-    "proposition:derivative_rules_for_sum_product_quotient_and_chain"
+    "proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals"
   ],
   "product space": [
     "definition:box_topology_on_a_cartesian_product_of_topological_spaces",
@@ -11369,7 +11574,7 @@
     "definition:cocartesian_sum_of_two_objects_in_a_category_under_an_object"
   ],
   "pythagorean identity for sine and cosine": [
-    "proposition:pythagorean_identity_for_sine_and_cosine_functions"
+    "proposition:pythagorean_identity_for_real_sine_and_cosine_functions"
   ],
   "quadratic extension": [
     "definition:finite_field_extension"
@@ -11560,7 +11765,8 @@
     "definition:Z_over_NZ"
   ],
   "quotient rule": [
-    "proposition:derivative_rules_for_sum_product_quotient_and_chain"
+    "proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals",
+    "proposition:proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane"
   ],
   "quotient set": [
     "definition:equivalence_class_of_an_element_of_a_set_under_an_equivalence_relation_and_quotient_of_set_by_equivalence_relation"
@@ -11595,6 +11801,7 @@
   ],
   "radius of convergence": [
     "definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula",
+    "definition:real_power_series_centered_at_a_real_number_and_radius_of_convergence_of_a_real_power_series",
     "definition:real_power_series_and_radius_of_convergence"
   ],
   "radon--nikodym theorem": [
@@ -11641,7 +11848,7 @@
     "definition:rationally_equivalent_k_dimensional_algebraic_cycles_of_a_noetherian_scheme"
   ],
   "rational exponentiation": [
-    "definition:rational_exponentiation_of_positive_reals"
+    "definition:exponentiation_of_positive_real_numbers_by_rational_exponents"
   ],
   "rational hodge type": [
     "definition:rational_hodge_type_of_a_complex_abelian_variety"
@@ -11671,16 +11878,13 @@
     "definition:real_analytic_function_on_an_open_interval"
   ],
   "real cosine function": [
-    "definition:sine_and_cosine_functions_on_real_line_via_power_series"
+    "definition:real_sine_and_cosine_functions_on_real_line_via_power_series"
   ],
   "real exponential function": [
-    "definition:real_exponential_function"
-  ],
-  "real exponentiation": [
-    "definition:real_exponentiation_via_supremum"
+    "definition:real_exponential_function_with_eulers_number_as_base"
   ],
   "real exponentiation of positive reals": [
-    "definition:real_exponentiation_via_supremum"
+    "definition:exponents_of_real_numbers_by_real_numbers_via_supremum"
   ],
   "real exponentiation via exp and ln": [
     "proposition:real_exponentiation_via_exp_and_ln"
@@ -11701,12 +11905,12 @@
     "definition:field_of_real_numbers"
   ],
   "real numbers": [
-    "definition:real_numbers_as_cauchy_completion_of_rational_numbers",
     "definition:field_of_real_numbers",
+    "definition:real_numbers_as_cauchy_completion_of_rational_numbers",
     "definition:real_numbers"
   ],
   "real power series": [
-    "definition:real_power_series_and_radius_of_convergence"
+    "definition:real_power_series_centered_at_a_real_number_and_radius_of_convergence_of_a_real_power_series"
   ],
   "real vector bundle": [
     "definition:C_k_vector_bundle_on_C_k_manifold"
@@ -11787,7 +11991,7 @@
     "definition:presheaf_on_a_topological_space"
   ],
   "region enclosed by $\\gamma$": [
-    "definition:winding_number_of_a_closed_path_around_a_point"
+    "definition:winding_number_of_a_closed_path_in_the_complex_plane_around_a_point"
   ],
   "regular": [
     "definition:regular_spectral_sequence_in_an_abelian_category",
@@ -11923,6 +12127,7 @@
   ],
   "representation of $g$": [
     "definition:representation_of_a_lie_group_on_a_topological_vector_space",
+    "definition:representation_of_a_group_on_a_vector_space_over_a_field",
     "definition:representation_of_an_affine_algebraic_group_scheme_over_a_scheme",
     "definition:representation_of_a_group_on_a_module_over_a_not_necessarily_commutative_ring"
   ],
@@ -11962,6 +12167,9 @@
   "represents": [
     "definition:representable_functor_on_a_locally_small_category"
   ],
+  "residue": [
+    "definition:residue_of_a_holomorphic_function_at_an_isolated_singularity_defined_as_the_coefficient_of_z_minus_z_0_to_the_negative_1_in_its_laurent_expansion"
+  ],
   "residue classes": [
     "definition:residue_class_modulo_n"
   ],
@@ -11979,6 +12187,9 @@
   ],
   "residue of $f$ at $z_j$": [
     "definition:residue_of_a_holomorphic_function_at_an_isolated_singularity_defined_as_the_coefficient_of_z_minus_z_0_to_the_negative_1_in_its_laurent_expansion"
+  ],
+  "residue theorem": [
+    "theorem:the_residue_theorem_relating_the_contour_integral_of_a_meromorphic_function_along_a_closed_piecewise_continuously_differentiable_path_to_the_sum_of_residues_at_isolated_singularities_enclosed_by_the_path"
   ],
   "resolution": [
     "definition:left_right_resolution_of_an_object_by_a_class_of_objects_in_an_abelian_category",
@@ -12057,6 +12268,9 @@
     "definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function"
   ],
   "riemann integrable on $[a, b]$": [
+    "definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function"
+  ],
+  "riemann integrable on $[a,b]$": [
     "definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function"
   ],
   "riemann integral": [
@@ -12219,6 +12433,9 @@
     "definition:ring",
     "definition:commutative_ring"
   ],
+  "ring $\\bbz / n\\bbz$": [
+    "definition:residue_class_modulo_n"
+  ],
   "ring (not necessarily commutative)": [
     "definition:ring"
   ],
@@ -12305,7 +12522,13 @@
     "definition:ring"
   ],
   "rolle's theorem": [
-    "theorem:rolles_theorem_for_differentiable_functions_vanishing_at_endpoints"
+    "theorem:rolles_theorem_that_real_differentiable_functions_valued_in_the_reals_with_same_values_at_end_points_have_vanishing_derivative_at_some_point"
+  ],
+  "root number of $\\chi$": [
+    "definition:root_number_of_a_dirichlet_character"
+  ],
+  "root numbers": [
+    "definition:root_number_of_a_dirichlet_character"
   ],
   "root system": [
     "definition:root_system_of_a_finite_dimensional_Q_vector_space_with_a_symmetric_bilinear_form"
@@ -12854,6 +13077,9 @@
   "simple abelian variety over $\\overline{k": [
     "definition:simple_abelian_variety_over_a_field"
   ],
+  "simple function": [
+    "definition:simple_function_on_a_measure_space"
+  ],
   "simple graph": [
     "definition:simple_graph_directed_graph_multigraph_weighted_graph"
   ],
@@ -12871,6 +13097,9 @@
   ],
   "simple objects": [
     "definition:simple_object_of_an_additive_category"
+  ],
+  "simple pole": [
+    "definition:isolated_singularity_of_a_holomorphic_function_from_an_open_subset_of_the_complex_plane_to_the_complex_plane_classified_as_removable_pole_or_essential"
   ],
   "simple representations": [
     "definition:irreducible_simple_representation_of_a_group_on_a_left_module_over_a_ring"
@@ -12945,10 +13174,13 @@
     "definition:simply_transitive_action_of_a_group_on_a_set"
   ],
   "sine and cosine functions": [
-    "definition:sine_and_cosine_functions_on_real_line_via_power_series"
+    "definition:real_sine_and_cosine_functions_on_real_line_via_power_series"
   ],
   "sine and cosine functions on $\\mathbb{r": [
-    "definition:sine_and_cosine_functions_on_real_line_via_power_series"
+    "definition:real_sine_and_cosine_functions_on_real_line_via_power_series"
+  ],
+  "sine function": [
+    "definition:real_sine_and_cosine_functions_on_real_line_via_power_series"
   ],
   "singular $n$-simplices in $x$": [
     "definition:singular_simplex_of_a_topological_space"
@@ -13363,6 +13595,7 @@
   ],
   "standard absolute value": [
     "definition:standard_absolute_value_on_real_numbers",
+    "definition:complex_absolute_value",
     "definition:standard_absolute_value_of_an_ordered_ring"
   ],
   "standard action": [
@@ -13388,8 +13621,8 @@
   ],
   "standard order": [
     "definition:standard_order_on_natural_numbers",
-    "definition:standard_order_on_real_numbers",
-    "definition:standard_order_on_field_of_rational_numbers"
+    "definition:standard_order_on_field_of_rational_numbers",
+    "definition:standard_order_on_real_numbers"
   ],
   "standard order on $\\bbn$": [
     "definition:standard_order_on_natural_numbers"
@@ -13616,11 +13849,17 @@
   "subspaces": [
     "definition:subspace_of_a_topological_space"
   ],
+  "substitution rule": [
+    "theorem:substitution_rule_for_riemann_integrals_on_closed_intervals"
+  ],
+  "substitution rule for riemann integrals": [
+    "theorem:substitution_rule_for_riemann_integrals_on_closed_intervals"
+  ],
   "successor ordinal": [
     "definition:successor_ordinal_of_an_ordinal"
   ],
   "sum rule of differentiation": [
-    "proposition:derivative_rules_for_sum_product_quotient_and_chain"
+    "proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals"
   ],
   "superelliptic curve": [
     "definition:superelliptic_curve_over_a_field"
@@ -13800,7 +14039,7 @@
     "definition:tangent_bundle_of_a_C_k_manifold"
   ],
   "tangent function": [
-    "definition:tangent_function_on_real_line"
+    "definition:real_tangent_function"
   ],
   "tangent space": [
     "definition:tangent_space_of_a_topological_manifold_at_a_point"
@@ -13839,13 +14078,13 @@
   ],
   "taylor series": [
     "definition:taylor_series_expansion_of_a_holomorphic_function_on_an_open_disk_in_the_complex_plane",
-    "definition:taylor_and_maclaurin_series_of_a_real_valued_function"
+    "definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line"
   ],
   "taylor series centered at $a$": [
-    "definition:taylor_and_maclaurin_series_of_a_real_valued_function"
+    "definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line"
   ],
   "taylor series expansion": [
-    "definition:taylor_and_maclaurin_series_of_a_real_valued_function"
+    "definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line"
   ],
   "tensor categories over $r$": [
     "definition:tensor_category_over_a_commutative_ring"
@@ -13920,14 +14159,17 @@
   "the coproduct of modules": [
     "definition:coproduct_of_modules_of_rings"
   ],
-  "the definition of hecke operators": [
-    "definition:hecke_operator_on_modular_forms_for_SL_2_Z"
+  "the definition": [
+    "definition:schwartz_space_on_Rn"
   ],
   "the definition via $\\mathbf{fin": [
     "definition:commutative_monoid_in_an_infinity_category"
   ],
   "the existence theorem": [
     "theorem:existence_of_weil_restriction"
+  ],
+  "the fourier series convergence theorem": [
+    "theorem:fourier_series_of_smooth_1_periodic_functions_on_R_converge_absolutely_and_uniformly"
   ],
   "the identity element is its own inverse in a monoid": [
     "lemma:identity_element_is_its_own_inverse_in_a_monoid"
@@ -13936,7 +14178,7 @@
     "theorem:infinite_ramseys_theorem_for_countable_complete_graph_edge_colorings"
   ],
   "the lebesgue integral": [
-    "definition:lebesgue_integral_of_measurable_functions_into_the"
+    "definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities"
   ],
   "the lemma": [
     "lemma:recursive_upper_bound_for_two_color_ramsey_numbers"
@@ -13946,6 +14188,9 @@
   ],
   "the one": [
     "definition:grothendieck_topology_on_the_category_of_profinite_sets"
+  ],
+  "the periodization lemma": [
+    "proposition:periodized_schwartz_function_on_R_is_smooth_and_1_periodic"
   ],
   "the profinite topology": [
     "definition:profinite_topology_on_Z"
@@ -13968,9 +14213,6 @@
   "the slice sites $\\calc_{/u_i": [
     "definition:site_induced_by_a_site_on_an_over_category"
   ],
-  "the space of modular forms": [
-    "definition:vector_space_of_modular_and_cusp_forms"
-  ],
   "the subgroup criterion": [
     "proposition:subgroup_criterion_for_a_subset_of_a_group"
   ],
@@ -13983,6 +14225,9 @@
   "the termwise differentiation theorem": [
     "theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series"
   ],
+  "the termwise differentiation theorem for series": [
+    "theorem:termwise_differentiation_of_series_under_uniform_convergence_of_derivative_series"
+  ],
   "the torsion coefficient case": [
     "definition:canonical_forgets_support_map_from_derived_direct_image_with_compact_support_to_derived_direct_image_for_complexes_of_etale_sheaves_of_lambda_modules_on_compactifiable_morphisms",
     "definition:canonical_forgets_support_map_from_direct_image_with_compact_support_to_direct_image_for_etale_sheaves_of_lambda_modules_on_compactifiable_morphisms"
@@ -13992,6 +14237,15 @@
   ],
   "there is": [
     "theorem:canonical_projection_from_group_to_quotient_by_normal_subgroup"
+  ],
+  "theta function $\\theta_\\chi(u)$": [
+    "definition:theta_function_associated_to_a_dirichlet_character"
+  ],
+  "theta function associated to $\\chi$": [
+    "definition:theta_function_associated_to_a_dirichlet_character"
+  ],
+  "theta transformation formula": [
+    "lemma:theta_transformation_formula_for_primitive_dirichlet_characters"
   ],
   "thick": [
     "definition:thick_subcategory_of_a_triangulated_category"
@@ -14035,6 +14289,9 @@
   ],
   "topological abelian group": [
     "definition:topological_group"
+  ],
+  "topological abelian semigroup": [
+    "definition:topological_semigroup"
   ],
   "topological categories": [
     "definition:topological_category"
@@ -14318,9 +14575,6 @@
   "transcendence degree": [
     "definition:transcendence_degree_of_a_field_extension"
   ],
-  "transfinite recursion": [
-    "definition:zermelo_fraenkel_set_theory"
-  ],
   "transition functions": [
     "definition:C_k_vector_bundle_on_C_k_manifold"
   ],
@@ -14418,6 +14672,9 @@
   ],
   "trivial affine module": [
     "definition:trivial_affine_module_of_a_module_over_a_ring"
+  ],
+  "trivial character": [
+    "definition:trivial_character_of_a_group_valued_in_a_ring"
   ],
   "trivial involution": [
     "definition:trivial_involution_on_a_ring",
@@ -14566,7 +14823,7 @@
   ],
   "unit": [
     "definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors",
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "unit and counit morphisms": [
     "definition:adjoint_functors_between_categories_unit_counit_of_adjoint_functors"
@@ -14578,10 +14835,10 @@
     "definition:n_dimensional_unit_sphere"
   ],
   "unit group $f^\\times = f - \\{0\\": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "unit group $f^\\times$": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "unit ideal": [
     "definition:unit_ideal_of_a_ring"
@@ -14596,7 +14853,7 @@
     "definition:monoidal_category"
   ],
   "unit of $r$": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "unital ring": [
     "definition:unital_ring"
@@ -14624,7 +14881,10 @@
     "definition:unitary_ring"
   ],
   "units": [
-    "definition:unit_of_a_ring"
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
+  ],
+  "units of $r$": [
+    "definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group"
   ],
   "unity": [
     "definition:commutative_ring"
@@ -14765,12 +15025,6 @@
   "valued fields": [
     "definition:valuation_on_a_field"
   ],
-  "values of the riemann zeta function at even positive integers": [
-    "corollary:values_of_riemann_zeta_at_even_positive_integers"
-  ],
-  "values of the riemann zeta function at non-positive integers": [
-    "corollary:values_of_riemann_zeta_at_non_positive_integers"
-  ],
   "variance": [
     "definition:variance_and_covariance"
   ],
@@ -14871,6 +15125,9 @@
   "weakly modular": [
     "definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z"
   ],
+  "weakly modular form": [
+    "definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z"
+  ],
   "weakly modular form $f$": [
     "definition:weakly_modular_form_with_respect_to_a_subgroup_of_SL_2_Z"
   ],
@@ -14884,13 +15141,19 @@
     "definition:wedge_cowedge_between_functor_from_opposite_and_category_to_category_and_object_of_target"
   ],
   "weierstrass $m$-test": [
-    "theorem:weierstrass_m_test_for_uniform_convergence_of_function_series"
+    "theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals"
+  ],
+  "weierstrass convergence theorem": [
+    "theorem:the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets"
   ],
   "weierstrass equation": [
     "definition:weierstrass_equation_over_a_ring"
   ],
+  "weierstrass factorization of the sine function": [
+    "proposition:weierstrass_factorization_sine_function"
+  ],
   "weierstrass m-test": [
-    "theorem:weierstrass_m_test_for_uniform_convergence_of_function_series"
+    "theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals"
   ],
   "weierstrass model": [
     "definition:weierstrass_model_of_an_elliptic_curve_over_the_fraction_field_of_a_dedekind_domain"
@@ -14923,6 +15186,9 @@
   "well ordered set": [
     "definition:well_ordered_set"
   ],
+  "well ordering": [
+    "definition:well_ordered_set"
+  ],
   "well-ordered set": [
     "definition:well_ordered_set"
   ],
@@ -14943,10 +15209,10 @@
     "definition:wildly_ramified_etale_algebra_over_a_dvr"
   ],
   "winding number of $\\gamma$ around $z_0$": [
-    "definition:winding_number_of_a_closed_path_around_a_point"
+    "definition:winding_number_of_a_closed_path_in_the_complex_plane_around_a_point"
   ],
   "winding number of $\\gamma$ around $z_j$": [
-    "definition:winding_number_of_a_closed_path_around_a_point"
+    "definition:winding_number_of_a_closed_path_in_the_complex_plane_around_a_point"
   ],
   "with a pretopology": [
     "definition:grothendieck_topology_on_a_category_site_covering_sieve_topologically_generating_family"

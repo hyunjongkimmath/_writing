@@ -13,4 +13,6 @@
     Choose $\delta_2 = \varepsilon |a|^2 / 2$ and set $\delta = \min(\delta_1, \delta_2)$. For $|x - a| < \delta$, we have
     $$\left|\frac{1}{x} - \frac{1}{a}\right| =  \frac{|x - a|}{|a| \cdot |x|} < \frac{2|x-a|}{|a|^2} < \frac{2\delta}{|a|^2} \leq \frac{2 \delta_2}{|a|^2} \leq \varepsilon.$$
     Hence $\operatorname{rec}$ is continuous at $a$. Since $a$ was arbitrary, $\operatorname{rec}$ is continuous \CrefIfExists{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}.
+    \medskip
+    \noindent\textit{Remark.} This is a special case of \Cref{proposition:multiplicative_inverse_in_topological_field_is_continuous}, because $\bbR$ equipped with its standard topology induced by the absolute value is a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}.
 \end{proof}

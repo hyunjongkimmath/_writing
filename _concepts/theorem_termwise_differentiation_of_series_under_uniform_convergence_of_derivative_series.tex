@@ -18,7 +18,7 @@
     \medskip
     \noindent\textit{Step 1: Pointwise convergence of $(S_N)$.} We show that $(S_N(x))$ converges for each $x \in I$. At $x_0$, convergence is given by hypothesis. For any other $x \in I$, we show $(S_N(x))$ is Cauchy in $\mathbb{R}$. Let $\varepsilon > 0$. Since $(D_N)$ is uniformly Cauchy on $I$, there exists $N_0$ such that for all $N, M \geq N_0$ and all $y \in I$,
     $$|D_N(y) - D_M(y)| < \varepsilon.$$
-    For $N, M \geq N_0$ with $M > N$, the function $S_M - S_N$ is differentiable on $I$ as a finite sum of differentiable functions, with derivative $D_M - D_N$. By the \CrefAndHyperrefIfExist{theorem:mean_value_theorem_for_differentiable_functions_on_intervals}{Mean Value Theorem}, there exists $\xi$ between $x$ and $x_0$ such that
+    For $N, M \geq N_0$ with $M > N$, the function $S_M - S_N$ is differentiable on $I$ as a finite sum of differentiable functions, with derivative $D_M - D_N$. By the \CrefAndHyperrefIfExist{theorem:mean_value_theorem_that_derivative_of_a_real_valued_differentiable_functions_on_real_intervals_achieves_the_slope_of_the_secant}{Mean Value Theorem}, there exists $\xi$ between $x$ and $x_0$ such that
     $$S_M(x) - S_N(x) = (S_M(x_0) - S_N(x_0)) + (D_M(\xi) - D_N(\xi))(x - x_0).$$
     Hence
     $$|S_M(x) - S_N(x)| \leq |S_M(x_0) - S_N(x_0)| + \varepsilon \cdot |x - x_0|.$$

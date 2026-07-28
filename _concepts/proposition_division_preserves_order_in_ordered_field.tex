@@ -1,0 +1,14 @@
+\begin{proposition} \label{proposition:division_preserves_order_in_ordered_field}
+    \TODO{AI generated, verify}
+    Let $F$ be an \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered field}. For $a,b,c \in F$ with $c > 0$,
+    $$a \le b \iff \frac{a}{c} \le \frac{b}{c}.$$
+    More generally, for $c \neq 0$:
+    \begin{itemize}
+        \item If $c > 0$, then $a \le b \iff a/c \le b/c$.
+        \item If $c < 0$, then $a \le b \iff a/c \ge b/c$.
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Division by $c$ is multiplication by $c^{-1}$. If $c > 0$, then $c^{-1} > 0$ by \Cref{proposition:inverse_preserves_order_in_ordered_field}, and multiplication by a positive element preserves order by the definition of an ordered semiring (an ordered field is an ordered semiring). If $c < 0$, then $c^{-1} < 0$ and multiplication by a negative element reverses order (since $c^{-1} = -|c|^{-1}$ and negation reverses order by \Cref{proposition:negation_reverses_order_in_ordered_group}).
+\end{proof}

@@ -5,7 +5,10 @@
 \begin{proof}
     Let $a \in X$. Since $f$ is continuous at $a$, we have
     $$\lim_{x \to a} f(x) = f(a)$$
-    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. By \Cref{proposition:limit_algebra_for_real_valued_functions}, the limit of a scalar multiple is the scalar multiple of the limit, so
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. By \Cref{proposition:limits_of_functions_from_topological_spaces_to_real_number_field_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}, the limit of a scalar multiple is the scalar multiple of the limit, so
     $$\lim_{x \to a} (c f)(x) = c \cdot \lim_{x \to a} f(x) = c \cdot f(a) = (c f)(a).$$
     Thus $c f$ is continuous at $a$ \CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. Since $a$ was arbitrary, $c f$ is continuous \CrefIfExists{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}.
+
+    \medskip
+    \noindent\textit{Alternative proof.} Since $\bbR$ with its standard topology is a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}, this also follows from the general result \Cref{proposition:pointwise_scalar_multiple_of_continuous_function_on_topological_space_valued_in_topological_ring_is_continuous}.
 \end{proof}

@@ -1,9 +1,8 @@
 \begin{proposition} \label{proposition:mobius_inversion_formula}
-    \TODO{AI generated, verify}
-    Let $f, g: \bbZ_{>0} \to \bbC$ be \CrefAndHyperrefIfExist{definition:arithmetic_function_on_positive_integers_with_values_in_a_ring}{arithmetic functions}. The following are equivalent:
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $f, g: \bbZ_{>0} \to R$ be \CrefAndHyperrefIfExist{definition:arithmetic_function_on_positive_integers_with_values_in_a_ring}{arithmetic functions}. The following are equivalent:
     \begin{enumerate}
         \item For all $n \in \bbZ_{>0}$, $g(n) = \sum_{d \mid n} f(d).$
-        \item For all $n \in \bbZ_{>0}$, $f(n) = \sum_{d \mid n} \mu\left(\frac{n}{d}\right) g(d),$ where $\mu$ is the \CrefAndHyperref{definition:mobius_function_on_positive_integers}{Möbius function}.
+        \item For all $n \in \bbZ_{>0}$, $f(n) = \sum_{d \mid n} \mu\left(\frac{n}{d}\right) g(d),$ where $\mu$ is the \CrefAndHyperrefIfExist{definition:mobius_function_on_positive_integers}{Möbius function}, i.e. $f = \mu * g$\CrefIfExists{definition:dirichlet_convolution_of_arithmetic_functions}.
     \end{enumerate}
     Equivalently, $f(n) = \sum_{d \mid n} \mu(d)\, g\left(\frac{n}{d}\right).$
 \end{proposition}

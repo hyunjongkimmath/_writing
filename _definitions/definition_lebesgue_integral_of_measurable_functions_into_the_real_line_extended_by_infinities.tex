@@ -1,0 +1,19 @@
+\begin{definition}[Lebesgue integral of measurable functions] \label{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
+
+\begin{enumerate}
+  \item For a nonnegative \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} $f : X \to [0,\infty]$, the \hldef{Lebesgue integral of $f$ with respect to $\mu$} is defined by
+  $$\hlin{\int_X f\,d\mu := \sup\Bigl\{\int_X s\,d\mu : s \text{ is a } simple function \text{ on } X \text{ with } 0 \le s \le f\Bigr\}.}$$
+  \CrefIfExists{definition:simple_function_on_a_measure_space}\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+
+  \item A measurable function $f : X \to [-\infty,\infty]$ is said to be \hldef{(Lebesgue) integrable} or \hldef{(Lebesgue) $\mu$-integrable} if
+  $$\int_X |f|\,d\mu < \infty.$$
+  In this case, its \hldef{Lebesgue integral} is defined by
+  $$\hlin{\int_X f\,d\mu := \int_X f^+\,d\mu - \int_X f^-\,d\mu,}$$
+  where $f^+ = \max(f,0)$ and $f^- = \max(-f,0)$.
+
+  \item For a measurable set $E \in \mathcal{A}$ and any measurable function $f : X \to [-\infty,\infty]$, the \hldef{Lebesgue integral of $f$ over $E$} is defined by
+  $$\hlin{\int_E f\,d\mu := \int_X f \mathbf{1}_E\,d\mu.}$$
+  The integral is said to \hldef{converge over $E$} (or that \hldef{$f$ is integrable over $E$}) when $\int_E |f|\,d\mu < \infty$. In particular, for a nonnegative measurable function $f : X \to [0,\infty]$, the integral $\int_E f\,d\mu$ is always defined as an element of $[0,\infty]$ (possibly infinite).
+\end{enumerate}
+\end{definition}

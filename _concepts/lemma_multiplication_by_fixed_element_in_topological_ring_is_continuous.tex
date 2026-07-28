@@ -1,0 +1,12 @@
+\begin{lemma} \label{lemma:multiplication_by_fixed_element_in_topological_ring_is_continuous}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} and let $c \in R$. The map
+    \begin{align*}
+    L_c : R &\to R \\
+    x &\mapsto c \cdot x
+    \end{align*}
+    is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}. Similarly, the map $R_c : R \to R$, $x \mapsto x \cdot c$, is continuous.
+\end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    The map $x \mapsto (c, x)$ from $R$ to $R \times R$ is continuous by the universal property of the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology} (a map into a product is continuous if and only if each component is continuous, and the constant map $x \mapsto c$ is continuous by \Cref{proposition:constant_function_between_topological_spaces_is_continuous}). The multiplication map $m : R \times R \to R$, $(a,b) \mapsto a \cdot b$, is continuous by the definition of a topological ring. Since $L_c = m \circ (c, \operatorname{id}_R)$, it is a composition of continuous maps, hence continuous. The same argument applied to $(x, c)$ shows continuity of $R_c$.
+\end{proof}

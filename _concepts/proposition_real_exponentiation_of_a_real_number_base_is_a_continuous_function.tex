@@ -1,0 +1,21 @@
+\begin{proposition}[Continuity of real exponentiation] \label{proposition:real_exponentiation_of_a_real_number_base_is_a_continuous_function}
+    \TODO{AI generated, verify}
+    For every $a > 0$, the function $x \mapsto a^x$ from $\mathbb{R}$ to $\mathbb{R}$ is continuous.
+    \CrefIfExists{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}\CrefIfExists{definition:continuous_map_of_topological_spaces}
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    We treat the three possible values of the base separately: $a = 1$, $a > 1$, and $0 < a < 1$.
+
+    For $a = 1$, the function is constant: $x \mapsto 1^x = 1$ for all $x \in \mathbb{R}$. Constant functions are continuous by \CrefAndHyperrefIfExist{proposition:constant_function_between_topological_spaces_is_continuous}{continuity of constant functions}.
+
+    Now suppose that $a > 1$. We show that $x \mapsto a^x$ is continuous at an arbitrary point $x_0 \in \mathbb{R}$. Rather than working directly with the supremum definition, we use the representation from \CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}{real exponentiation via exp and ln}, which states that for every $x \in \mathbb{R}$:
+    $$a^x = \exp(x \ln(a)).$$
+    The map $x \mapsto x \ln(a)$ is continuous because it is a scalar multiple of the identity function $x \mapsto x$, and scalar multiplication by $\ln(a) > 0$ is continuous on $\mathbb{R}$ (\CrefAndHyperrefIfExist{proposition:continuity_of_pointwise_scalar_multiple_of_continuous_real_valued_function}{continuity of scalar multiples}, applied to the identity function which is continuous by \CrefAndHyperrefIfExist{proposition:identity_function_between_topological_spaces_is_continuous}). The exponential function $\exp : \mathbb{R} \to (0, \infty)$ is continuous\TODO{AI generated, reference needed: proposition that $exp(x) = sum x^n/n!$ is continuous on R}. By the chain rule for limits of compositions (\CrefAndHyperrefIfExist{proposition:composition_of_continuous_functions_on_topological_spaces_is_continuous}{continuity of composition}), the composite function $x \mapsto \exp(x \ln(a))$ is therefore continuous.
+
+    Finally, suppose that $0 < a < 1$. Then its multiplicative inverse satisfies $a^{-1} > 1$ (if $a^{-1} \leq 1$, multiplying by positive $a$ would give $1 \leq a$, contradicting $a < 1$). We can write:
+    $$a^x = \left(a^{-1}\right)^{-x}.$$
+    The map $x \mapsto -x$ is continuous (as the scalar multiple of the identity by $-1$), and by the previous case applied to the base $a^{-1} > 1$, the function $y \mapsto (a^{-1})^y$ is continuous. By composition of continuous functions (\CrefAndHyperrefIfExist{proposition:composition_of_continuous_functions_on_topological_spaces_is_continuous}), the composite $x \mapsto (a^{-1})^{-x}$ is therefore continuous, which means $x \mapsto a^x$ is continuous.
+
+    In all cases, the function $x \mapsto a^x$ is continuous on $\mathbb{R}$.
+\end{proof}

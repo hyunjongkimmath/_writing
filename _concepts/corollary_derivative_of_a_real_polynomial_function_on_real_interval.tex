@@ -6,9 +6,9 @@
 \begin{proof}
     For each term $a_k x^k$, the power function $x \mapsto x^k$ is differentiable on $I$ with derivative $k x^{k-1}$\CrefIfExists{proposition:derivative_of_a_power_function_on_a_real_interval_for_natural_exponents}. We have 
     $$\frac{d}{dx}\bigl(a_k x^k\bigr) = a_k \cdot k x^{k-1}.$$
-    \CrefIfExists{corollary:derivative_of_real_scalar_multiple_of_differentiable_function_on_real_interval}
+    \CrefIfExists{corollary:derivative_of_real_scalar_multiple_of_real_valued_differentiable_function_on_real_interval_at_a_point_is_scalar_multiple_of_derivative}
 
-    Applying the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{sum rule of differentiation} recursively/inductively to the finite sum $f(x) = \sum_{k=0}^n a_k x^k$, we obtain
+    Applying the \CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{sum rule of differentiation} recursively/inductively to the finite sum $f(x) = \sum_{k=0}^n a_k x^k$, we obtain
     $$f'(x) = \sum_{k=0}^n \frac{d}{dx}\bigl(a_k x^k\bigr) = \sum_{k=1}^n k a_k x^{k-1},$$
     where the $k=0$ term contributes $0$ because the derivative of the constant $a_0$ is $0$.
 \end{proof}

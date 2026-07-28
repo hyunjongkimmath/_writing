@@ -1,0 +1,31 @@
+\begin{proposition}[Convergence of series implies Cauchy tails condition in an ordered abelian group] \label{proposition:convergence_of_series_implies_cauchy_tails_condition_in_ordered_abelian_group}
+    \TODO{AI generated, verify}
+    Let $G$ be an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group} (written additively) equipped with the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}. Let $(M_n)_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{non-negative} elements $M_n \in G_{\ge 0}$, and let $S_N = \sum_{n=1}^N M_n$ be the sequence of partial sums.
+
+    \begin{enumerate}
+        \item \label{item:convergence_implies_cauchy_tails}If the series $\sum_{n=1}^\infty M_n$ \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converges} to an element $S \in G$, then the sequence $(M_n)$ satisfies the \CrefAndHyperrefIfExist{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}{Cauchy tails condition}.
+
+        \item \label{item:cauchy_tails_and_completeness_implies_convergence}If $(M_n)$ satisfies the Cauchy tails condition and $G$ is \hldef{order-complete} in the sense that every non-decreasing bounded-above sequence converges in the order topology \TODO{AI generated, reference needed: definition of order-complete ordered abelian group (every non-decreasing bounded-above sequence converges)}, then the series $\sum_{n=1}^\infty M_n$ converges.
+    \end{enumerate}
+
+    In particular, when $G = \mathbb{R}$ with its standard order (which is \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{order-complete} in the above sense), the Cauchy tails condition for a sequence in $\mathbb{R}_{\ge 0}$ is equivalent to the convergence of the series $\sum_{n=1}^\infty M_n$. This recovers the standard fact that a non-negative real series converges if and only if its partial sums are bounded above, and in that case the Cauchy tails condition holds.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove the two statements separately.
+
+    \begin{enumerate}
+        \item Suppose that $\sum_{n=1}^\infty M_n$ converges to $S \in G$ in the order topology. Since each $M_n \ge 0$, the sequence $(S_N)$ is non-decreasing: $S_N \le S_{N+1}$ for all $N$. The limit $S$ is therefore a supremum in the sense that $S_N \le S$ for all $N$, and for any $t \in G$ with $S_N \le t$ for all $N$, we have $S \le t$; this follows from convergence in the order topology because if there were $t < S$ that were an upper bound, then $S$ would not be a limit point.
+
+        Let $\varepsilon \in G_{>0}$. Since $S_N \to S$ in the order topology, there exists $N_0 \in \mathbb{N}$ such that for all $N \ge N_0$, we have $S - S_N < \varepsilon$ (equivalently, $S_N$ lies in the open interval $(S - \varepsilon, S + \varepsilon)$). For any $K > N \ge N_0$, we have
+        $$\sum_{n=N+1}^K M_n = S_K - S_N \le S - S_N < \varepsilon,$$
+        where the inequality $S_K - S_N \le S - S_N$ holds because $S_K \le S$ (since $S$ is the supremum) and we subtract $S_N$. Thus $(M_n)$ satisfies the Cauchy tails condition.
+
+        \item Conversely, suppose that $(M_n)$ satisfies the Cauchy tails condition. Then for every $\varepsilon \in G_{>0}$, there exists $N_0 \in \mathbb{N}$ such that for all $K > N \ge N_0$, we have $S_K - S_N < \varepsilon$. In particular, taking $N = N_0$, we see that $S_K < S_{N_0} + \varepsilon$ for all $K > N_0$. Since $(S_N)$ is non-decreasing and $G$ is assumed to be such that every non-decreasing bounded-above sequence converges in the order topology, the sequence $(S_N)$ converges to some $S \in G$, i.e., the series $\sum_{n=1}^\infty M_n$ converges.
+
+        The Cauchy tails condition guarantees the sequence is bounded above: fix any $\varepsilon \in G_{>0}$ and let $N_0$ be as in the condition for this $\varepsilon$; then $S_K \le S_{N_0} + \varepsilon$ for all $K > N_0$. Together with the monotonicity of $(S_N)$, this implies convergence.
+
+        The particular case of $\mathbb{R}$ follows because $\mathbb{R}$ has the property that every non-decreasing bounded-above sequence converges in the order topology (the supremum exists and is the limit). In $\mathbb{R}_{\ge 0}$, the Cauchy tails condition is therefore equivalent to convergence of the series, which is the standard Cauchy criterion for non-negative real series.
+    \end{enumerate}
+\end{proof}

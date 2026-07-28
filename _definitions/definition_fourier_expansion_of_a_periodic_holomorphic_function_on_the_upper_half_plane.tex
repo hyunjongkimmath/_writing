@@ -1,7 +1,7 @@
 \begin{definition}[Fourier expansion of a periodic holomorphic function on the upper half-plane]
 \label{definition:fourier_expansion_of_a_periodic_holomorphic_function_on_the_upper_half_plane}
 \TODO{AI generated, verify}
-Let $h \in \mathbb{R}_{>0}$, let $\mathbb{H}$ denote the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}, and let $f : \mathbb{H} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} satisfying
+Let $h \in \mathbb{R}_{>0}$, let $\mathbb{H}$ denote the \CrefAndHyperrefIfExist{definition:upper_half_plane_in_the_complex_plane}{upper half-plane}, and let $f : \mathbb{H} \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} satisfying
 $$f(z + h) = f(z) \quad \text{for all } z \in \mathbb{H}.$$
 
 For each integer $n \in \mathbb{Z}$, the \hldef{$n$-th Fourier coefficient of $f$} is the complex number
@@ -11,7 +11,5 @@ where the integral is taken along any \CrefAndHyperrefIfExist{definition:piecewi
 
 The \hldef{Fourier expansion (or Fourier series) of $f$} is the formal series
 $$\hlin{f(z) = \sum_{n=-\infty}^{\infty} a_n \, e^{2\pi i n z / h},}$$
-where $a_n$ are the Fourier coefficients of $f$.
-\CrefIfExists{theorem:periodic_holomorphic_function_on_upper_half_plane_descends_to_punctured_disk_and_has_fourier_laurent_expansion}
-\TODO{why the $\sim$, why not just an equality?}
+where $a_n$ are the Fourier coefficients of $f$. The series converges absolutely for $\Im(z) > 0$\CrefIfExists{theorem:periodic_holomorphic_function_on_upper_half_plane_descends_to_punctured_disk_and_has_fourier_laurent_expansion}.
 \end{definition}

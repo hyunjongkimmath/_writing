@@ -11,10 +11,10 @@
 \end{theorem}
 \begin{proof}
     \TODO{AI generated, verify}
-    Define $h(x) = f(x)g(x)$ for all $x \in [a, b]$. Since both $f$ and $g$ are differentiable at each point of $(a, b)$, the product rule\CrefIfExists{proposition:derivative_rules_for_sum_product_quotient_and_chain} implies that $h$ is also differentiable on $(a, b)$ with
+    Define $h(x) = f(x)g(x)$ for all $x \in [a, b]$. Since both $f$ and $g$ are differentiable at each point of $(a, b)$, the product rule\CrefIfExists{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals} implies that $h$ is also differentiable on $(a, b)$ with
     $$h'(x) = f'(x)g(x) + f(x)g'(x).$$
 
-    Both $f'$ and $g'$ are Riemann integrable by hypothesis. Since $f$ and $g$ are differentiable on $(a, b)$, they are continuous\CrefIfExists{proposition:differentiability_implies_continuity_at_a_point}, hence bounded on the compact interval $[a, b]$. The products of a bounded continuous function with an integrable function are themselves Riemann integrable\TODO{reference to justify}. Therefore both $f'g$ and $fg'$ are Riemann integrable on $[a, b]$, and so is their sum $h' = f'g + fg'$.
+    Both $f'$ and $g'$ are Riemann integrable by hypothesis. Since $f$ and $g$ are differentiable on $(a, b)$, they are continuous\CrefIfExists{proposition:differentiability_at_a_point_for_a_function_on_an_interval_of_the_real_numbers_valued_in_the_real_numbers_implies_continuity_at_a_point}, hence bounded on the compact interval $[a, b]$. The products of a bounded continuous function with an integrable function are themselves Riemann integrable\TODO{reference to justify}. Therefore both $f'g$ and $fg'$ are Riemann integrable on $[a, b]$, and so is their sum $h' = f'g + fg'$.
 
     We apply the Fundamental Theorem of Calculus, Part II\CrefIfExists{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative} to the function $h'$ on $[a, b]$:
     $$\int_a^b h'(x)\,dx = h(b) - h(a).$$

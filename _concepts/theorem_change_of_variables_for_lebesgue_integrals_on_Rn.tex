@@ -1,9 +1,33 @@
 \begin{theorem}[Change of variables for Lebesgue integrals on $\mathbb{R}^n$] \label{theorem:change_of_variables_for_lebesgue_integrals_on_Rn}
     \TODO{AI generated, verify}
-    Let $U, V \subseteq \mathbb{R}^n$ be \CrefAndHyperrefIfExist{definition:topology_induced_by_an_extended_norm_on_a_module_over_a_commutative_ring_with_absolute_value_valued_in_an_ordered_semiring}{open subsets} and let $\Phi : U \to V$ be a \CrefAndHyperrefIfExist{definition:differentiability_classes_Ck_Cinfty_and_Comega_for_real_valued_functions}{$C^1$} diffeomorphism. For any \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue measurable function} $f : V \to [0,\infty]$, we have
-    $$\hlin{\int_V f(y)\,d\lambda^n(y) = \int_U f(\Phi(x))\,|\det D\Phi(x)|\,d\lambda^n(x),}$$
-    \CrefIfExists{definition:determinant_of_a_matrix_over_a_ring}
-    where $D\Phi(x)$ denotes the \hldef{Jacobian matrix} of $\Phi$ at $x$ and $|\det D\Phi(x)|$ is its absolute determinant.
+Let $U, V \subseteq \mathbb{R}^n$ be open subsets and let $\Phi : U \to V$ be a $C^1$ diffeomorphism. For any Lebesgue measurable function $f : V \to [0,\infty]$, we have the change of variables formula
+$$\int_V f(y)\,d\lambda^n(y) = \int_U f(\Phi(x))\,|\det D\Phi(x)|\,d\lambda^n(x),$$
+\CrefIfExists{definition:determinant_of_a_matrix_over_a_ring}
+where $D\Phi(x)$ denotes the Jacobian matrix of $\Phi$ at $x$ and $|\det D\Phi(x)|$ is its absolute determinant.
 
-    If $f : V \to \overline{\mathbb{R}}$ is Lebesgue integrable, then the same equality holds, with both sides finite.
+If $f : V \to \overline{\mathbb{R}}$ is Lebesgue integrable, then the same equality holds, with both sides finite.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+The proof proceeds by first establishing the theorem for linear maps, then extending to general $C^1$ diffeomorphisms via a local approximation argument and the Radon-Nikodym theorem.
+
+First, let $T : \mathbb{R}^n \to \mathbb{R}^n$ be an invertible linear transformation with determinant $\det T$. We show that Lebesgue measure transforms by the absolute value of the determinant, i.e., for any measurable set $E \subseteq \mathbb{R}^n$, we have $\lambda^n(T(E)) = |\det T| \cdot \lambda^n(E)$. This follows from the fact that every invertible linear transformation can be decomposed into elementary matrices (shears, scalings, and permutations), each of which transforms Lebesgue measure in a way determined by its determinant. For a shear matrix, the volume is preserved; for a scaling matrix, the volume scales by the absolute value of the scalar; for a permutation matrix, the volume is unchanged. Multiplicativity of the determinant \Cref{definition:determinant_of_a_matrix_over_a_ring} ensures that the total change in measure equals $|\det T|$. Consequently,
+$$\int_{\mathbb{R}^n} f(Tx)\,d\lambda^n(x) = |\det T|^{-1} \int_{\mathbb{R}^n} f(y)\,d\lambda^n(y),$$
+for any nonnegative measurable function $f$.
+
+Second, we establish a local approximation. Fix an arbitrary point $x_0 \in U$. The map $\Phi$ is differentiable at $x_0$, so the Jacobian matrix $D\Phi(x_0)$ exists and is invertible because $\Phi$ is a diffeomorphism. Define the linear approximation
+$$L_{x_0}(h) = D\Phi(x_0)(h),$$
+and let $R(h) = \Phi(x_0 + h) - \Phi(x_0) - L_{x_0}(h)$ be the remainder. By differentiability, we have $\lim_{h \to 0} |R(h)| / |h| = 0$. For small neighborhoods of $x_0$, the map $\Phi$ is well-approximated by its linearization, and the error in this approximation becomes negligible relative to the size of the neighborhood.
+
+Third, we show that for any measurable set $E \subseteq U$, the change of variables formula holds approximately at small scales. Specifically, as the diameter of $E$ tends to zero, we have
+$$\frac{\lambda^n(\Phi(E))}{|\det D\Phi(x_0)| \cdot \lambda^n(E)} \to 1$$
+for any fixed $x_0 \in E$. This is proved by comparing $\Phi$ on small sets near $x_0$ to the linear map $D\Phi(x_0)$, using the fact that the remainder term becomes uniformly small. The Jacobian determinant is continuous because $\Phi$ is $C^1$, so it varies little over small neighborhoods.
+
+Fourth, we complete the proof by a covering argument and Radon-Nikodym differentiation. Define a measure $\mu$ on Borel subsets of $U$ by
+$$\mu(E) = \int_{\Phi(E)} f(y)\,d\lambda^n(y).$$
+The function $g(x) = f(\Phi(x)) |\det D\Phi(x)|$ defines another measure $\nu(E) = \int_E g(x)\,d\lambda^n(x)$. By the local approximation established above and the Radon-Nikodym theorem \TODO{AI generated, reference needed: Radon-Nikodym theorem for absolutely continuous measures}, we show that $\mu$ is absolutely continuous with respect to Lebesgue measure on $U$, and its Radon-Nikodym derivative equals $g$. Therefore,
+$$\int_V f(y)\,d\lambda^n(y) = \int_U f(\Phi(x)) |\det D\Phi(x)|\,d\lambda^n(x).$$
+
+The case of integrable functions follows from the nonnegative case by decomposing $f$ into its positive and negative parts.
+\end{proof}

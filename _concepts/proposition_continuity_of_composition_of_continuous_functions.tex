@@ -1,6 +1,0 @@
-\begin{proposition}[Continuity of composition of continuous functions] \label{proposition:continuity_of_composition_of_continuous_functions}
-    Let $X,Y,Z$ be \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. If $f : X \to Y$ and $g : Y \to Z$ are \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} functions, then the composition $g \circ f : X \to Z$ is continuous.
-\end{proposition}
-\begin{proof}
-    Let $W \subseteq Z$ be an open set. Since $g$ is continuous, $g^{-1}(W)$ is open in $Y$. Since $f$ is continuous, $f^{-1}(g^{-1}(W))$ is open in $X$. But $(g \circ f)^{-1}(W) = f^{-1}(g^{-1}(W))$, so the preimage of $W$ under $g \circ f$ is open. Hence $g \circ f$ is continuous.
-\end{proof}

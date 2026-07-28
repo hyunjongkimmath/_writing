@@ -9,7 +9,7 @@
 \end{theorem}
 
 \begin{proof}
-    We prove the nondecreasing case; the nonincreasing case follows by a symmetric argument. Let $(x_n)_{n=1}^\infty$ be a nondecreasing sequence bounded above in $X$. By the least upper bound property of $(X, \leq)$, the set $\{x_n : n \in \mathbb{N}\}$ has a supremum $L := \sup\{x_n : n \in \mathbb{N}\} \in X$ by \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property}.
+    We prove the nondecreasing case; the nonincreasing case follows by a symmetric argument. Let $(x_n)_{n=1}^\infty$ be a nondecreasing sequence bounded above in $X$. By the least upper bound property of $(X, \leq)$, the set $\{x_n : n \in \mathbb{N}\}$ has a supremum $L := \sup\{x_n : n \in \mathbb{N}\} \in X$ by \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_least_upper_bound_property}.
 
     We show that $(x_n)$ converges to $L$ in the metric topology induced by $d$. Let $\varepsilon \in T_{>0}$ and consider the open ball $B(L, \varepsilon) = \{y \in X : d(y, L) < \varepsilon\}$. Since the order topology equals the metric topology, there exists a set $U$ open in the order topology such that $L \in U \subseteq B(L, \varepsilon)$. By definition of the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology} on $(X, \leq)$, the subbasis consists of open intervals and rays. Thus, there exists a finite intersection $J$ of such subbasis elements such that $L \in J \subseteq U \subseteq B(L, \varepsilon)$\CrefIfExists{lemma:point_in_open_set_has_finite_subbasis_intersection_neighborhood}.
 

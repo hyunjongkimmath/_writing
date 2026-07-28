@@ -1,0 +1,33 @@
+\begin{proposition}[Archimedean property of the real numbers] \label{proposition:the_field_of_real_numbers_has_the_archimedean_property}
+    \TODO{AI generated, verify}
+    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers}.
+
+    \begin{enumerate}
+        \item $\bbR_{>0}$ has the \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{archimedean property} as an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group}, i.e. for all $a,b \in \bbR_{>0}$, there exists some $n \in \bbN$\CrefIfExists{definition:natural_numbers} such that $n \cdot a \not\le b$, or equivalently, as $\bbR$ is \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}, $n \cdot a > b$.
+
+        \item For every $x \in \bbR$, there exists a natural number $n \in \bbN$ such that $n > x$.
+
+        \item For every $\varepsilon \in \bbR$ with $\varepsilon > 0$, there exists a natural number $N \in \bbN$ such that $\frac{1}{N} < \varepsilon$. In particular, $\bbR$ is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}.
+
+    \end{enumerate}
+\end{proposition}
+\begin{proof}
+    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{field of real numbers}. We use the fact that $\bbR$ has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property} (see \Cref{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property}) and that $(\bbR,+,\cdot,\le)$ is a \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{totally ordered field} (see \Cref{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}).
+
+    \begin{enumerate}
+        \item Fix $a,b \in \bbR_{>0}$. We show that there exists $n \in \bbN$\CrefIfExists{definition:natural_numbers} with $n \cdot a > b$. Suppose for contradiction that no such $n$ exists, i.e.\ $n \cdot a \le b$ for all $n \in \bbN$. Then the set
+        $$S := \{n \cdot a : n \in \bbN\} \subseteq \bbR$$
+        is bounded above by $b$. By the least upper bound property, $\alpha := \sup S$ exists in $\bbR$.
+
+        Since $a > 0$, the compatibility of the strict order with addition in an ordered field (see \Cref{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}) gives $\alpha - a < \alpha$. Thus $\alpha - a$ is not an upper bound of $S$, so there exists some $m \in \bbN$ such that $m \cdot a > \alpha - a$. Adding $a$ to both sides and using the compatibility of the order with addition once more, we obtain
+        $$(m+1) \cdot a = m \cdot a + a > (\alpha - a) + a = \alpha.$$
+        But $(m+1) \cdot a$ belongs to $S$, contradicting the fact that $\alpha$ is an upper bound of $S$. Therefore our supposition is false, so there exists $n \in \bbN$ with $n \cdot a > b$.
+
+        \item Let $x \in \bbR$. If $x \le 0$, then $n = 1$ satisfies $1 > x$ because $1 > 0$ in $\bbR$ (see \Cref{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}). If $x > 0$, we apply part (1) with $a = 1$ and $b = x$. Since $1 \in \bbR_{>0}$ and $x \in \bbR_{>0}$, part (1) supplies $n \in \bbN$ such that $n \cdot 1 > x$, i.e.\ $n > x$ under the natural identification of $n$ with its image $n \cdot 1_\bbR$ under the \CrefAndHyperrefIfExist{definition:homomorphism_of_ordered_abelian_groups}{ordered abelian group homomorphism} $\bbN \to \bbR$.
+        \TODO{AI generated, reference needed: natural embedding $\bbN \hookrightarrow \bbR$ as an ordered abelian group homomorphism $n \mapsto n \cdot 1_\bbR$}
+
+        \item Let $\varepsilon \in \bbR$ satisfy $\varepsilon > 0$. Then $1/\varepsilon \in \bbR_{>0}$ by the properties of an ordered field.
+        \TODO{AI generated, reference needed: in an ordered field, the reciprocal of a positive element is positive}
+        By part (2) applied to $x = 1/\varepsilon$, there exists $N \in \bbN$ such that $N > 1/\varepsilon$ (under the identification $n \mapsto n \cdot 1_\bbR$). Multiplying the inequality $N > 1/\varepsilon$ by $\varepsilon > 0$ preserves the inequality (see \Cref{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}), giving $N\varepsilon > 1$. Multiplying by $1/N > 0$ preserves the inequality once more, yielding $\varepsilon > 1/N$, i.e.\ $1/N < \varepsilon$.
+    \end{enumerate}
+\end{proof}

@@ -1,6 +1,32 @@
 \begin{theorem} \label{theorem:maximum_modulus_principle_if_a_holo_func_on_a_conn_open_subset_of_complex_plane_attains_maximum_modulus_at_an_interior_point_then_the_func_is_constant}
-Let $U \subset \mathbb{C}$ be a connected open subset (a domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. 
+Let $U \subset \mathbb{C}$ be a connected open subset (a domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} on $U$.
 If there exists a point $z_0 \in U$ such that
 $\hlin{|f(z_0)| \geq |f(z)|}$
 for all $z \in U$, then $f$ is constant on $U$. Equivalently, a non-constant holomorphic function on a connected open subset of $\mathbb{C}$ cannot attain its maximum modulus at an interior point.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Suppose that there exists a point $z_0 \in U$ such that $|f(z_0)| \geq |f(z)|$ for all $z \in U$. We show that $f$ is constant on $U$.
+
+We first show that $|f|$ is constant in a neighborhood of $z_0$. Since $U$ is open, there exists $r > 0$ such that the closed disk $\overline{D}(z_0, r) = \{ z \in \mathbb{C} : |z - z_0| \leq r \}$ is contained in $U$. By the Cauchy integral formula \Cref{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_of_derivatives_of_holomorphic_functions_on_simply_connected_open_subsets_of_the_complex_planevia_contour_integrals}, we have
+$$f(z_0) = \frac{1}{2\pi} \int_0^{2\pi} f(z_0 + re^{i\theta})\,d\theta.$$
+
+Taking absolute values and using the triangle inequality for integrals, we obtain
+$$|f(z_0)| \leq \frac{1}{2\pi} \int_0^{2\pi} |f(z_0 + re^{i\theta})|\,d\theta.$$
+
+Since $|f(z_0)| \geq |f(z)|$ for all $z \in U$, we have $|f(z_0 + re^{i\theta})| \leq |f(z_0)|$ for all $\theta \in [0, 2\pi]$. Therefore,
+$$\frac{1}{2\pi} \int_0^{2\pi} |f(z_0 + re^{i\theta})|\,d\theta \leq \frac{1}{2\pi} \int_0^{2\pi} |f(z_0)|\,d\theta = |f(z_0)|.$$
+
+Combining the inequalities, we have
+$$|f(z_0)| \leq \frac{1}{2\pi} \int_0^{2\pi} |f(z_0 + re^{i\theta})|\,d\theta \leq |f(z_0)|.$$
+
+This forces equality throughout. In particular,
+$$\frac{1}{2\pi} \int_0^{2\pi} |f(z_0 + re^{i\theta})|\,d\theta = |f(z_0)|.$$
+
+Since $|f(z_0 + re^{i\theta})| \leq |f(z_0)|$ for all $\theta$, the only way the average can equal $|f(z_0)|$ is if $|f(z_0 + re^{i\theta})| = |f(z_0)|$ for all $\theta \in [0, 2\pi]$. Because $r$ was arbitrary, it follows that $|f(z)| = |f(z_0)|$ for all $z$ in the open disk $D(z_0, r)$.
+
+We now show that $|f|$ is constant on all of $U$. Define $S = \{ z \in U : |f(z)| = |f(z_0)| \}$. The set $S$ is nonempty because $z_0 \in S$. The set $S$ is closed in $U$ because $|f|$ is continuous. The same argument as above shows that if $z_1 \in S$, then $|f(z)| = |f(z_0)|$ in a neighborhood of $z_1$; hence $S$ is open. Since $U$ is connected and $S$ is both open and closed in $U$ and nonempty, we must have $S = U$. Therefore, $|f(z)| = |f(z_0)|$ for all $z \in U$.
+
+A holomorphic function with constant modulus on a connected open set is constant \TODO{AI generated, reference needed: proposition that holomorphic function with constant modulus on connected domain is constant}. Hence, $f$ is constant on $U$.
+\end{proof}

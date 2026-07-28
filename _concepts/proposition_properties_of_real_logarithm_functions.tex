@@ -1,0 +1,29 @@
+\begin{proposition} \label{proposition:properties_of_real_logarithm_functions}
+    Let $b \in \mathbb{R}$ with $b > 0$ and $b \neq 1$. The \CrefAndHyperrefIfExist{definition:logarithm_with_base_b_of_positive_real}{logarithm with base $b$}, $\log_b : (0, \infty) \to \mathbb{R}$, satisfies the following properties for all $x, y > 0$ and all $r \in \mathbb{R}$:
+    \begin{enumerate}
+        \item The product rule holds: $\log_b(xy) = \log_b(x) + \log_b(y)$.
+        \item The quotient rule holds: $\log_b(x/y) = \log_b(x) - \log_b(y)$.
+        \item The power rule holds: $\log_b(x^r) = r \cdot \log_b(x)$.
+        \item The special values are $\log_b(1) = 0$ and $\log_b(b) = 1$.
+    \end{enumerate}
+    Moreover, the function $x \mapsto \log_b(x)$ is strictly increasing if $b > 1$, and strictly decreasing if $0 < b < 1$. It is continuous on $(0, \infty)$.
+\end{proposition}
+\begin{proof}
+    By the \CrefAndHyperrefIfExist{proposition:change_of_base_formula_for_real_logarithms}{change-of-base formula}, we have $\log_b(x) = \dfrac{\ln(x)}{\ln(b)}$ for all $x > 0$. Since $b \neq 1$ and $b > 0$, the denominator $\ln(b)$ is nonzero, so this expression is well-defined.
+
+    The properties follow from the corresponding properties of the natural logarithm (\CrefAndHyperrefIfExist{definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function}{natural logarithm}) and the linearity of scalar multiplication in a field. Specifically:
+
+    \begin{enumerate}
+        \item $\log_b(xy) = \dfrac{\ln(xy)}{\ln(b)} = \dfrac{\ln(x) + \ln(y)}{\ln(b)} = \dfrac{\ln(x)}{\ln(b)} + \dfrac{\ln(y)}{\ln(b)} = \log_b(x) + \log_b(y)$, where we used $\ln(xy) = \ln(x) + \ln(y)$\TODO{AI generated, reference needed: proposition that ln(ab) = ln(a) + ln(b)}.
+
+        \item $\log_b(x/y) = \dfrac{\ln(x/y)}{\ln(b)} = \dfrac{\ln(x) - \ln(y)}{\ln(b)} = \log_b(x) - \log_b(y)$, where we used $\ln(x/y) = \ln(x) - \ln(y)$\TODO{AI generated, reference needed: proposition that ln(a/b) = ln(a) - ln(b)}.
+
+        \item By \CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}{real exponentiation via exp and ln}, $x^r = \exp(r \ln(x))$. Applying $\ln$ and using that $\ln$ and $\exp$ are mutual inverses (\CrefAndHyperrefIfExist{proposition:real_exponential_and_real_natural_logarithm_functions_are_mutual_inverses}), we get $\ln(x^r) = r \ln(x)$. Hence $\log_b(x^r) = \dfrac{r \ln(x)}{\ln(b)} = r \cdot \dfrac{\ln(x)}{\ln(b)} = r \cdot \log_b(x)$.
+
+        \item $\log_b(1) = \dfrac{\ln(1)}{\ln(b)} = 0$ since $\ln(1) = 0$\TODO{AI generated, reference needed: proposition that ln(1) = 0}. And $\log_b(b) = \dfrac{\ln(b)}{\ln(b)} = 1$.
+    \end{enumerate}
+
+    For monotonicity, $x \mapsto \log_b(x)$ is the inverse of the strictly increasing map $t \mapsto b^t$ when $b > 1$, and the inverse of the strictly decreasing map $t \mapsto b^t$ when $0 < b < 1$ (\CrefAndHyperrefIfExist{proposition:base_b_exponentiation_is_bijective_from_R_to_positive_reals}{bijectivity of base-$b$ exponentiation}). The inverse of a strictly increasing function is strictly increasing, and the inverse of a strictly decreasing function is strictly decreasing.
+
+    For continuity, $\log_b(x) = \dfrac{1}{\ln(b)} \cdot \ln(x)$ is a constant multiple of the natural logarithm, which is continuous on $(0, \infty)$ as the inverse of the continuous exponential function \TODO{AI generated, reference needed: proposition that the inverse of a continuous strictly monotone function is continuous}. Hence $\log_b$ is continuous.
+\end{proof}

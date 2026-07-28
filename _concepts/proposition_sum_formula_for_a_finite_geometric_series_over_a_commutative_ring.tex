@@ -3,11 +3,42 @@
     Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}. Let $a, r \in R$. 
     % The sequence $(ar^{n-1})_{n=1}^\infty$ is a \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{geometric progression}.
 
-    For each integer $N \geq 1$, the sum of the \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{finite geometric series} of length $N$ satisfies
-    $$\sum_{n=1}^N ar^{n-1} = a + ar + ar^2 + \cdots + ar^{N-1}.$$
-    If $r \neq 1$, then
-    $$(1-r)\sum_{n=1}^N ar^{n-1} = a(1-r^N),$$
-    i.e., the telescoping identity holds in $R$. In particular, if $1-r$ is invertible in $R$, then
-    $$\sum_{n=1}^N ar^{n-1} = a\frac{1-r^N}{1-r}.$$
-    If $r = 1$, then $\sum_{n=1}^N ar^{n-1} = Na$.
+    Let $N \geq 1$. The \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{finite geometric series}
+    $$\sum_{n=1}^N ar^{n-1}.$$
+    of length $N$ satisfies the following:
+    \begin{enumerate}
+        \item 
+        $$\sum_{n=1}^N ar^{n-1} = a + ar + ar^2 + \cdots + ar^{N-1}.$$
+
+        \item 
+        If $r \neq 1$, then
+        $$(1-r)\sum_{n=1}^N ar^{n-1} = a(1-r^N),$$
+        i.e., the telescoping identity holds in $R$. In particular, if $1-r$ is \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{invertible} in $R$, then
+        For each integer $N \geq 1$, the sum of the \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{finite geometric series} of length $N$ satisfies
+        $$\sum_{n=1}^N ar^{n-1} = a\frac{1-r^N}{1-r}.$$
+
+        \item 
+        If $r = 1$, then $\sum_{n=1}^N ar^{n-1} = Na$.
+    \end{enumerate}
 \end{proposition}
+\begin{proof}
+    Fix $a, r \in R$ and an integer $N \geq 1$.
+
+    \TODO{I would prefer this proof to be a more precise proof by induction}
+    First, the trivial identity $\sum_{n=1}^N ar^{n-1} = a + ar + ar^2 + \cdots + ar^{N-1}$ follows directly from the definition of finite summation notation.
+
+    Next assume that $r \neq 1$. We compute $(1-r)\sum_{n=1}^N ar^{n-1}$ by distributing:
+    \begin{align*}
+        (1-r)\sum_{n=1}^N ar^{n-1} &= \sum_{n=1}^N ar^{n-1} - \sum_{n=1}^N ar^n \\
+        &= a + ar + ar^2 + \cdots + ar^{N-1} - (ar + ar^2 + \cdots + ar^N) \\
+        &= a - ar^N.
+    \end{align*}
+    All intermediate terms cancel in the telescoping sum, leaving only $a$ and $-ar^N$. By factoring out $a$, we obtain $(1-r)\sum_{n=1}^N ar^{n-1} = a(1 - r^N)$.
+
+    If furthermore $1-r$ is invertible in $R$, then multiplying both sides by the inverse $(1-r)^{-1}$ yields
+    $$\sum_{n=1}^N ar^{n-1} = a \frac{1-r^N}{1-r}.$$
+
+    Finally, if $r = 1$, then for each $n$ we have $r^{n-1} = 1$. Hence the sum is
+    $$\sum_{n=1}^N ar^{n-1} = \sum_{n=1}^N a = Na,$$
+    where $Na$ denotes adding $a$ to itself $N$ times in $R$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}.
+\end{proof}

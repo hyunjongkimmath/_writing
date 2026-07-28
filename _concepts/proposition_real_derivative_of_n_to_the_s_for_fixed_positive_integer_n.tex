@@ -4,3 +4,19 @@
     $$f_n^{(k)}(s) = (\ln n)^k n^s \quad \text{for all } s \in \mathbb{R}.$$
     In particular, the first derivative is $f_n'(s) = n^s \ln n$.
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Fix a positive integer $n \in \mathbb{Z}_{>0}$. By definition (\CrefAndHyperrefIfExist{proposition:real_exponentiation_via_exp_and_ln}), we have $f_n(s) = n^s = \exp(s \ln n)$, where $\exp : \mathbb{R} \to (0,\infty)$ is the real exponential function and $\ln$ is its inverse.
+
+    We first compute the derivative. Since $n > 0$, the number $\ln n$ exists in $\mathbb{R}$. The map $s \mapsto s \ln n$ is a linear function, hence differentiable with derivative $\ln n$\CrefIfExists{proposition:derivative_of_a_power_function_on_a_real_interval_for_natural_exponents}. By the chain rule (\CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}), and using the fact that $\frac{d}{dx}\exp(x) = \exp(x)$ (\CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}), we obtain
+    $$f_n'(s) = \frac{d}{ds} \exp(s \ln n) = \exp(s \ln n) \cdot \ln n = n^s \ln n.$$
+
+    Next we show by induction on $k \in \mathbb{N}_0$ that the higher derivative formula holds, i.e.\ $f_n^{(k)}(s) = (\ln n)^k n^s$. For the base case $k = 0$, we have $f_n^{(0)}(s) = f_n(s) = n^s = (\ln n)^0 n^s$, which is trivial.
+
+    Suppose that for some $k \geq 0$ we have $f_n^{(k)}(s) = (\ln n)^k n^s$. Differentiating once more and using the first derivative formula:
+    $$f_n^{(k+1)}(s) = \frac{d}{ds} \left((\ln n)^k n^s\right).$$
+    Since $(\ln n)^k$ is a constant, by the scalar multiple rule for derivatives (\CrefAndHyperrefIfExist{corollary:derivative_of_real_scalar_multiple_of_real_valued_differentiable_function_on_real_interval_at_a_point_is_scalar_multiple_of_derivative}), we have
+    $$f_n^{(k+1)}(s) = (\ln n)^k \cdot (n^s \ln n) = (\ln n)^{k+1} n^s.$$
+
+    By induction, the formula holds for all $k \in \mathbb{N}_0$. Since each derivative exists everywhere on $\mathbb{R}$, the function $f_n$ is infinitely differentiable.
+\end{proof}

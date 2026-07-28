@@ -26,7 +26,7 @@
     Let $A^* = \sum_{k=0}^\infty |a_k|$ and $B^* = \sum_{j=0}^\infty |b_j|$ be the sums of the absolute series in $T^\infty$, which exist by absolute convergence. Since the partial sums of nonnegative terms are nondecreasing and converge to their suprema, we have $\sum_{k=0}^N |a_k| \leq A^*$ and $\sum_{j=0}^N |b_j| \leq B^*$ for all $N$. Therefore:
     $$C_N^* \leq A^* B^*.$$
 
-    The sequence $(C_N^*)$ is nondecreasing (since $|c_n| \geq 0_T$) and bounded above by $A^* B^* < \infty$ in $T^\infty$. Since $T^\infty$ has the least upper bound property, the \CrefAndHyperrefIfExist{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_lub_property}{monotone convergence theorem} implies that $(C_N^*)$ converges to its supremum in $T^\infty$. Hence $\sum_{n=0}^\infty |c_n|$ converges, so the Cauchy product series converges absolutely.
+    The sequence $(C_N^*)$ is nondecreasing (since $|c_n| \geq 0_T$) and bounded above by $A^* B^* < \infty$ in $T^\infty$. Since $T^\infty$ has the least upper bound property, the \CrefAndHyperrefIfExist{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_least_upper_bound_property}{monotone convergence theorem} implies that $(C_N^*)$ converges to its supremum in $T^\infty$. Hence $\sum_{n=0}^\infty |c_n|$ converges, so the Cauchy product series converges absolutely.
 
     Since both $\sum a_n$ and $\sum b_n$ converge absolutely, we may apply \Cref{theorem:mertens_theorem_on_cauchy_product_of_series} (which requires only that one series converge absolutely) to conclude that $\sum c_n = AB$.
 \end{proof}

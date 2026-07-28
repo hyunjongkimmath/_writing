@@ -1,0 +1,19 @@
+\begin{proposition} \label{proposition:pythagorean_identity_for_real_sine_and_cosine_functions}
+\TODO{AI generated, verify}
+For every $x \in \mathbb{R}$, the \CrefAndHyperrefIfExist{definition:real_sine_and_cosine_functions_on_real_line_via_power_series}{sine and cosine functions} satisfy
+$$\hlin{\sin^2(x) + \cos^2(x) = 1}$$
+This is called the \hldef{Pythagorean identity}.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Define $g(x) = \sin^2(x) + \cos^2(x)$ for $x \in \mathbb{R}$. We show that $g$ is constant by proving its derivative vanishes everywhere.
+
+    The functions $\sin : \mathbb{R} \to \mathbb{R}$ and $\cos : \mathbb{R} \to \mathbb{R}$ are differentiable at every point, with derivatives given by
+    $$\frac{d}{dx}\sin(x) = \cos(x), \qquad \frac{d}{dx}\cos(x) = -\sin(x),$$
+    as established in \Cref{proposition:derivatives_of_sine_and_cosine}. By the chain rule and product rule for derivatives (\Cref{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}), we compute:
+    $$g'(x) = 2\sin(x)\cos(x) + 2\cos(x)(-\sin(x)) = 0.$$
+
+    Since $g'(x) = 0$ for all $x \in \mathbb{R}$, the function $g$ is constant on $\mathbb{R}$. To determine this constant, evaluate at $x = 0$:
+    $$\cos(0) = \sum_{n=0}^\infty (-1)^n \frac{0^{2n}}{(2n)!} = 1, \qquad \sin(0) = \sum_{n=0}^\infty (-1)^n \frac{0^{2n+1}}{(2n+1)!} = 0.$$
+    Hence $g(0) = 0^2 + 1^2 = 1$. Since $g$ is constant, we have $\sin^2(x) + \cos^2(x) = 1$ for all $x \in \mathbb{R}$.
+\end{proof}

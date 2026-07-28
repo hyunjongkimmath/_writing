@@ -1,13 +1,32 @@
 \begin{proposition}[Weierstrass factorization of the sine function] \label{proposition:weierstrass_factorization_sine_function}
 \TODO{AI generated, verify}
-The \CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine function} has the infinite product representation
+The \CrefAndHyperrefIfExist{definition:real_sine_and_cosine_functions_on_real_line_via_power_series}{sine function} extended to $\bbC$ via its power series has the infinite product representation
 $$
 \sin(\pi z) = \pi z \prod_{n=1}^\infty \left( 1 - \frac{z^2}{n^2} \right), \qquad z \in \bbC.
 $$
-The product converges absolutely and uniformly on compact subsets of $\bbC$.
+The product \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} and \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly} on compact subsets of $\bbC$.
 
-This is a special case of the Weierstrass factorization theorem for entire functions of order 1. The zeros of $\sin(\pi z)$ are exactly the integers $z \in \bbZ$, with simple zeros at $z = 0, \pm 1, \pm 2, \dots$.
-
-\CrefAndHyperrefIfExist{definition:sine_and_cosine_functions_on_real_line_via_power_series}{sine function}
-\CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function}
+This is a special case of the Weierstrass factorization theorem for \CrefAndHyperrefIfExist{definition:entire_function_on_complex_space}{entire functions} \TODO{AI generated, reference needed: Weierstrass factorization theorem for entire functions of finite order}. The zeros of $\sin(\pi z)$ are exactly the integers $z \in \bbZ$, with simple zeros at $z = 0, \pm 1, \pm 2, \dots$.
 \end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove this directly using partial fraction decomposition. Consider the function
+    $$f(z) := \frac{\pi}{\sin(\pi z)}.$$
+    The zeros of $\sin(\pi z)$ are exactly at $z = n \in \bbZ$, each simple. Hence $f$ has simple poles at each integer with residue
+    $$\operatorname{Res}_{z=n} f(z) = \lim_{z \to n} (z-n)\frac{\pi}{\sin(\pi z)} = \frac{\pi}{\pi(-1)^n} = (-1)^n.$$
+
+    We use the standard partial fraction expansion for $\cot(\pi z)$, which follows from contour integration. By the \CrefAndHyperrefIfExist{theorem:the_residue_theorem_relating_the_contour_integral_of_a_meromorphic_function_along_a_closed_piecewise_continuously_differentiable_path_to_the_sum_of_residues_at_isolated_singularities_enclosed_by_the_path}{residue theorem}, integrating $\frac{\cot(\pi w)}{z-w}$ over a large square contour and letting the size tend to infinity gives
+    $$\pi \cot(\pi z) = \frac{1}{z} + \sum_{n=1}^\infty \left(\frac{1}{z-n} + \frac{1}{z+n}\right).$$
+
+    Taking the logarithmic derivative of both sides of the claimed product formula:
+    $$\log\left(\pi z \prod_{n=1}^\infty \left(1 - \frac{z^2}{n^2}\right)\right) = \log(\pi z) + \sum_{n=1}^\infty \log\left(1 - \frac{z^2}{n^2}\right).$$
+
+    Differentiating:
+    $$\frac{\frac{d}{dz}\sin(\pi z)}{\sin(\pi z)} = \frac{1}{z} + \sum_{n=1}^\infty \left(\frac{-2z/n^2}{1-z^2/n^2}\right) = \frac{1}{z} + \sum_{n=1}^\infty \left(\frac{1}{z-n} + \frac{1}{z+n}\right).$$
+
+    This matches $\pi \cot(\pi z)$, so the logarithmic derivatives agree. Hence the two functions differ by at most a multiplicative constant $C$:
+    $$\sin(\pi z) = C \cdot \pi z \prod_{n=1}^\infty \left(1 - \frac{z^2}{n^2}\right).$$
+
+    Evaluating at $z = 0$ using $\lim_{z \to 0} \sin(\pi z)/(\pi z) = 1$, we find $C = 1$. The absolute and uniform convergence on compact subsets follows from the fact that $\sum 1/n^2 < \infty$.
+\end{proof}

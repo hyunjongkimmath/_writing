@@ -1,0 +1,9 @@
+\begin{corollary} \label{corollary:limit_of_reciprocal_function_on_topological_field_at_accumulation_point}
+    \TODO{AI generated, verify}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}, let $S \subseteq F^\times = F \setminus \{0\}$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. The reciprocal function $\operatorname{rec} : S \to F^\times$, defined by $\operatorname{rec}(x) = 1/x$, satisfies
+    $$\lim_{x \to p, x \in S} \frac{1}{x} = \frac{1}{p}.$$
+    \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}
+\end{corollary}
+\begin{proof}
+    The reciprocal function $\operatorname{rec} : F^\times \to F^\times$ is continuous by \Cref{proposition:multiplicative_inverse_map_in_topological_field_is_continuous}. Its restriction to $S$, denoted $\operatorname{rec}|_S : S \to F^\times$, is therefore continuous at every point of $S$. Since $p$ is an accumulation point of $S$, the definition of continuity at a point for functions between topological spaces implies that $\lim_{x \to p, x \in S} (1/x) = 1/p$ \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point}.
+\end{proof}

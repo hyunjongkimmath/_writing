@@ -18,14 +18,13 @@ First, we use the \CrefAndHyperrefIfExist{proposition:weierstrass_factorization_
 \sin(\pi z) = \pi z \prod_{n=1}^\infty \left( 1 - \frac{z^2}{n^2} \right), \qquad z \in \bbC.
 \end{equation}
 
-Next, we take the \CrefAndHyperrefIfExist{definition:logarithmic_derivative_of_a_holomorphic_function}{logarithmic derivative} of both sides of \eqref{eq:sine_product}:
+Next, we take the \CrefAndHyperrefIfExist{definition:logarithmic_derivative_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{logarithmic derivative} of both sides of \eqref{eq:sine_product}:
 \begin{align*}
 \pi \cot(\pi z) &= \frac{d}{dz} \log \sin(\pi z) \\
 &= \frac{1}{z} + \sum_{n=1}^\infty \frac{d}{dz} \log \left( 1 - \frac{z^2}{n^2} \right) \\
 &= \frac{1}{z} + \sum_{n=1}^\infty \frac{-2z/n^2}{1 - z^2/n^2} \\
 &= \frac{1}{z} - 2z \sum_{n=1}^\infty \frac{1}{n^2 - z^2}
 \end{align*}
-\TODO{write concepts for complex derivative of sine, cosine, etc and reference the sine one}
 \CrefIfExists{proposition:logarithmic_derivative_infinite_product}
 
 For $|z| < 1$, we expand each term as a \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{geometric series}:
@@ -35,8 +34,7 @@ For $|z| < 1$, we expand each term as a \CrefAndHyperrefIfExist{definition:geome
 &= \frac{1}{z} - 2 \sum_{k=0}^\infty \left( \sum_{n=1}^\infty \frac{1}{n^{2k+2}} \right) z^{2k+1}.
 \end{align*}
 \CrefIfExists{proposition:sum_formula_for_a_finite_geometric_series_over_a_commutative_ring}
-\TODO{reference the thing that says that reordering series of positive numbers does not change the series}
-By the definition of the \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}, the inner sum is $\zeta(2k+2)$. Thus
+The rearrangement of the double series is justified by absolute convergence\CrefIfExists{lemma:absolute_convergence_over_a_countable_index_set_is_unconditional}. By the definition of the \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}, the inner sum is $\zeta(2k+2)$. Thus
 \begin{equation} \label{eq:cotangent_expansion}
 \pi \cot(\pi z) = \frac{1}{z} - 2 \sum_{m=1}^\infty \zeta(2m) z^{2m-1}, \qquad |z| < 1.
 \end{equation}
@@ -45,7 +43,7 @@ Now we use the Bernoulli number generating function. The \CrefAndHyperrefIfExist
 $$
 \frac{w}{e^w - 1} = \sum_{n=0}^\infty B_n \frac{w^n}{n!}, \qquad |w| < 2\pi.
 $$
-Setting $w = 2\pi i z$ and \TODO{this should be written as a lemma and referenced}\TODO{also, Euler's identity should be written as a proposition}using $e^{2\pi i z} - 1 = 2i e^{\pi i z} \sin(\pi z)$, we obtain
+Setting $w = 2\pi i z$ and using $e^{2\pi i z} - 1 = 2i e^{\pi i z} \sin(\pi z)$\TODO{AI generated, reference needed: proposition that $e^{2\pi i z} - 1 = 2i e^{\pi i z} \sin(\pi z)$ via Euler's formula}, we obtain
 \begin{align*}
 \frac{2\pi i z}{e^{2\pi i z} - 1} &= \frac{\pi z}{i \sin(\pi z)} e^{-\pi i z} \\
 &= \pi z \frac{\cos(\pi z) - i \sin(\pi z)}{i \sin(\pi z)} \\
@@ -60,7 +58,6 @@ Solving for $\pi \cot(\pi z)$ and using that $B_{2k+1} = 0$ for $k \ge 1$ and $B
 \pi \cot(\pi z) &= -\frac{1}{z} - \frac{1}{\pi i z} \sum_{n=0}^\infty B_n \frac{(2\pi i z)^n}{n!} \\
 &= \frac{1}{z} - 2 \sum_{m=1}^\infty \frac{(-1)^{m+1} (2\pi)^{2m} B_{2m}}{(2m)!} z^{2m-1}.
 \end{align*}
-\TODO{if the proposition below is being invoked anyway, then much of the above work is sort of moot and should be moved to the proof of the proposition}
 \CrefIfExists{proposition:cotangent_expansion_bernoulli_numbers}
 
 Comparing the expansions in \eqref{eq:cotangent_expansion} and above, we equate coefficients of $z^{2m-1}$:
@@ -72,7 +69,7 @@ $$
 \zeta(2m) = \frac{(-1)^{m+1} (2\pi)^{2m}}{2 (2m)!} B_{2m}.
 $$
 
-Finally, using the known values $B_2 = 1/6$, $B_4 = -1/30$, $B_6 = 1/42$\TODO{write as a lemma the first few values of $B_n$ and then reference it here}, we obtain the explicit values
+Finally, using the known values $B_2 = 1/6$, $B_4 = -1/30$, $B_6 = 1/42$ \CrefIfExists{definition:bernoulli_numbers}, we obtain the explicit values
 \begin{align*}
 \zeta(2) &= \frac{(-1)^{2} (2\pi)^2}{2 \cdot 2!} \cdot \frac{1}{6} = \frac{\pi^2}{6}, \\
 \zeta(4) &= \frac{(-1)^{3} (2\pi)^4}{2 \cdot 4!} \cdot \left(-\frac{1}{30}\right) = \frac{\pi^4}{90}, \\

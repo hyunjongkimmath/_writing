@@ -1,7 +1,25 @@
 \begin{theorem} \label{theorem:the_riemann_mapping_theorem_stATING_that_any_simply_connected_proper_open_subset_OF_THE_complex_plane_is_biholomorphic_to_the_open_unit_disk}
     \TODO{AI generated, verify}
 Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset with $U \neq \mathbb{C}$. 
-Then there exists a \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_complex_space}{biholomorphic map}
+Then there exists a \CrefAndHyperrefIfExist{definition:biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space}{biholomorphic map}
 $f : U \xrightarrow{\;\sim\;} \mathbb{D}$
 from $U$ onto the open unit disk $\mathbb{D} = \{z \in \mathbb{C} : |z| < 1\}$. Moreover, given $z_0 \in U$ and $\theta \in \mathbb{R}$, there exists a unique such biholomorphic map satisfying $f(z_0) = 0$ and $\arg(f'(z_0)) = \theta$.
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $U \subsetneq \bbC$ be simply connected and proper, and fix $z_0 \in U$. We construct a biholomorphism $\phi : U \to D = \{w \in \bbC : |w| < 1\}$ with $\phi(z_0) = 0$ and $\phi'(z_0) > 0$.
+
+    Define the extremal family
+    $$\mathcal{F} = \left\{f : U \to D \text{ injective holomorphic, } f(z_0) = 0, f'(z_0) > 0\right\}.$$
+
+    Since $U$ is proper and simply connected, $\mathcal{F}$ is nonempty. Choose any $w_0 \notin U$. Because $U$ is simply connected, the function $z - w_0$ admits a holomorphic square root on $U$, say $g(z) = \sqrt{z - w_0}$. The map $g$ is injective and its image avoids one of the two rays from the origin. Compose with a Möbius transformation to obtain an element of $\mathcal{F}$.
+
+    Let $M = \sup\{f'(z_0) : f \in \mathcal{F}\} > 0$. Choose a sequence $f_n \in \mathcal{F}$ with $f_n'(z_0) \to M$. Since each $|f_n(z)| < 1$, the family is uniformly bounded on compact subsets of $U$. By Montel's theorem, there exists a subsequence converging locally uniformly to some holomorphic $\phi : U \to \overline{D}$.
+
+    We verify that $\phi$ is injective using Hurwitz's theorem: for any distinct $a, b \in U$, the functions $f_n(z) - f_n(a)$ have no zeros near $b$ (by injectivity), so their limit $\phi(z) - \phi(a)$ has either a zero of infinite order or none at all. This implies $\phi(b) \neq \phi(a)$, hence $\phi$ is injective.
+
+    We show surjectivity onto $D$. If not, let $w_1 \in D \setminus \phi(U)$. The function $(\phi(z) - w_1)^{-1/2}$ composed with a suitable Möbius transformation gives an element of $\mathcal{F}$ with strictly larger derivative at $z_0$, contradicting the maximality of $M$. Hence $\phi$ maps onto $D$.
+
+    Finally, uniqueness follows from the Schwarz lemma: if $\psi : D \to D$ is biholomorphic with $\psi(0) = 0$, then $\psi(w) = e^{i\alpha}w$ for some $\alpha \in \bbR$. The condition on the argument of $f'(z_0)$ fixes this rotation uniquely.
+\end{proof}

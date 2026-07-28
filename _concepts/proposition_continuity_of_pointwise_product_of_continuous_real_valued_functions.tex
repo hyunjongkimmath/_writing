@@ -5,7 +5,10 @@
 \begin{proof}
     Let $a \in X$. Since $f$ and $g$ are continuous at $a$, we have
     $$\lim_{x \to a} f(x) = f(a) \quad\text{and}\quad \lim_{x \to a} g(x) = g(a)$$
-    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. By \Cref{proposition:limit_algebra_for_real_valued_functions}, the limit of the product is the product of the limits, so
+    \CrefIfExists{definition:limit_of_a_function_between_extended_metric_spaces_valued_in_ordered_commutative_monoid_with_adjoined_infinity_at_an_accumulation_point}\CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. By \Cref{proposition:limits_of_functions_from_topological_spaces_to_real_number_field_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}, the limit of the product is the product of the limits, so
     $$\lim_{x \to a} (f \cdot g)(x) = \left(\lim_{x \to a} f(x) \right) \cdot \left(\lim_{x \to a} g(x) \right) =  f(a) \cdot g(a) = (f \cdot g)(a).$$
     Thus $f \cdot g$ is continuous at $a$ \CrefIfExists{proposition:continuity_at_a_point_in_extended_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity_equivalent_to_topological_definition_and_limit_at_accumulation_point}. Since $a$ was arbitrary, $f \cdot g$ is continuous \CrefIfExists{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}.
+
+    \medskip
+    \noindent\textit{Alternative proof.} Since $\bbR$ with its standard topology is a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring}, this also follows from the general result \Cref{proposition:pointwise_product_of_continuous_functions_on_topological_spaces_valued_in_topological_ring_is_continuous}.
 \end{proof}

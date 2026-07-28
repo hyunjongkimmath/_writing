@@ -1,0 +1,22 @@
+\begin{lemma}[Constant terms in the functional equation for Dirichlet L-functions] \label{lemma:constant_terms_in_the_functional_equation_for_dirichlet_L_functions}
+\TODO{AI generated, verify}
+Let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k \geq 1$}, and let $a(\chi) \in \{0,1\}$ be the \CrefAndHyperrefIfExist{definition:parity_of_a_dirichlet_character}{parity of $\chi$}. Define
+$$C_\chi(s) = \frac{\varepsilon(\chi)}{\sqrt{k}} \frac{\overline{\chi}(0)}{s + a(\chi) - 1} - \frac{\chi(0)}{s + a(\chi)},$$
+where $\varepsilon(\chi)$ is the \CrefAndHyperrefIfExist{definition:root_number_of_a_dirichlet_character}{root number of $\chi$}. Then $C_\chi(s)$ satisfies the symmetry
+$$\varepsilon(\chi) \, C_{\overline{\chi}}(1 - s) = C_\chi(s).$$
+In particular:
+\begin{enumerate}
+    \item If $\chi$ is non-principal, then $\chi(0) = 0$ and $\overline{\chi}(0) = 0$, so $C_\chi(s) = 0$.
+    \item If $\chi$ is the principal character modulo $k$, then $\chi(0) = 0$ for $k > 1$ and $\chi(0) = 1$ for $k = 1$; the formula above reduces to an explicit rational function in $s$ for which the symmetry can be verified directly.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\TODO{AI generated, verify}
+The function $C_\chi(s)$ arises from the constant term in the theta transformation
+$$C_\chi(s) = \frac{1}{2} \int_1^\infty u^{-\frac{s + a(\chi)}{2} - 1} \bigl( \varepsilon(\chi) k^{-1/2} u^{1/2} \overline{\chi}(0) - \chi(0) \bigr) \, du.$$
+Evaluating the elementary integrals $\int_1^\infty u^{\alpha} \, du = -1/(\alpha+1)$ for $\Re(\alpha) < -1$, one obtains the closed form above.
+
+For the symmetry, note that $\overline{\overline{\chi}} = \chi$, $a(\overline{\chi}) = a(\chi)$, and $\varepsilon(\overline{\chi}) = \overline{\varepsilon(\chi)}$, so $|\varepsilon(\chi)| = 1$ implies $\varepsilon(\chi) \varepsilon(\overline{\chi}) = 1$. Substituting $s \mapsto 1-s$ and multiplying by $\varepsilon(\chi)$ gives
+$$\varepsilon(\chi) C_{\overline{\chi}}(1-s) = \frac{\overline{\chi}(0)}{s + a(\chi) - 1} - \frac{\varepsilon(\chi) \chi(0)}{1 - s + a(\chi)}.$$
+Using $\overline{\chi}(0) = \chi(0)$ (both are $0$ or $1$) and noting that $1/(1 - s + a(\chi)) = -1/(s - a(\chi) - 1)$ when $a(\chi) = 0,1$, one checks case by case that this equals $C_\chi(s)$.
+\end{proof}

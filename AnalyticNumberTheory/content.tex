@@ -11,6 +11,8 @@
 
 \input{../_definitions/definition_dirichlet_convolution_of_arithmetic_functions.tex}
 
+\input{../_concepts/proposition_algebraic_properties_of_dirichlet_convolution.tex}
+
 \input{../_definitions/definition_euler_totient_function.tex}
 
 \input{../_concepts/proposition_formula_for_euler_totient_function.tex}
@@ -21,13 +23,32 @@
 
 \section{Dirichlet Characters and Dirichlet L-Functions}
 
-\input{../_definitions/definition_dirichlet_series.tex}
+\input{../_definitions/definition_dirichlet_series_of_a_sequence_of_complex_numbers.tex}
 
 \input{../_definitions/definition_dirichlet_character_modulo_a_nonnegative_integer.tex}
+\input{../_definitions/definition_primitive_dirichlet_character.tex}
+\input{../_definitions/definition_parity_of_a_dirichlet_character.tex}
+\input{../_definitions/definition_gauss_sum_of_a_dirichlet_character.tex}
+\input{../_definitions/definition_root_number_of_a_dirichlet_character.tex}
+\input{../_concepts/proposition_gauss_sums_of_imprimitive_dirichlet_characters_factor_through_inducing_primitive_character.tex}
+\input{../_definitions/definition_complex_conjugate_of_a_dirichlet_character.tex}
+\input{../_concepts/theorem_orthogonality_of_dirichlet_characters.tex}
 
 \input{../_definitions/definition_dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer.tex}
 
+\input{../_definitions/definition_completed_dirichlet_L_function_of_a_dirichlet_character_modulo_k.tex}
+
 \input{../_concepts/theorem_euler_product_for_dirichlet_L_function_of_a_dirichlet_character.tex}
+
+\input{../_definitions/definition_theta_function_associated_to_a_dirichlet_character.tex}
+
+\input{../_concepts/lemma_uniform_convergence_of_the_theta_series_of_a_dirichlet_character.tex}
+
+\input{../_concepts/lemma_mellin_transform_integral_representation_of_gamma_function.tex}
+
+\input{../_concepts/lemma_theta_transformation_formula_for_primitive_dirichlet_characters.tex}
+
+\input{../_concepts/lemma_constant_terms_in_the_functional_equation_for_dirichlet_L_functions.tex}
 
 \input{../_concepts/theorem_analytic_continuation_and_functional_equation_for_dirichlet_L_function.tex}
 
@@ -43,7 +64,7 @@
 
 \input{../_concepts/proposition_uniform_convergence_of_termwise_derivatives_of_dirichlet_series.tex}
 
-\input{../_concepts/corollary_termwise_differentiation_of_dirichlet_series.tex}
+\input{../_concepts/corollary_termwise_differentiation_of_a_dirichlet_series_of_a_sequence_of_complex_numbers.tex}
 
 \section{Riemann and Dedekind Zeta Functions}
 
@@ -51,7 +72,9 @@
 
 \input{../_definitions/definition_logarithmic_derivative_of_a_real_valued_function.tex}
 
-\input{../_definitions/definition_logarithmic_derivative_of_a_holomorphic_function.tex}
+\input{../_definitions/definition_branch_of_the_complex_logarithm_on_an_open_subset.tex}
+
+\input{../_definitions/definition_logarithmic_derivative_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane.tex}
 
 \input{../_concepts/theorem_riemann_zeta_function_infinitely_differentiable_on_real_greater_than_one.tex}
 
@@ -73,7 +96,7 @@
 
 \input{../_definitions/definition_dedekind_zeta_function_of_a_number_field.tex}
 
-\input{../_definitions/definition_gamma_function.tex}
+\input{../_definitions/definition_gamma_function_on_the_complex_numbers.tex}
 
 \section{Hecke Characters and Hecke L-Functions}
 
@@ -144,31 +167,31 @@
 
 \subsection{Holomorphic Functions}
 
-\input{../_definitions/definition_holomorphic_function_from_a_subset_of_Cn_to_Cm.tex}
+\input{../_definitions/definition_holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point.tex}
 
-\input{../_concepts/proposition_complex_differentiability_implies_continuity.tex}
+\input{../_concepts/proposition_holomorphic_functions_on_open_subsets_of_C_are_continuous.tex}
 
-\input{../_concepts/proposition_complex_derivative_rules_for_sum_product_quotient_and_chain.tex}
+\input{../_concepts/proposition_proposition_sum_rule_product_rule_quotient_rule_chain_rule_for_complex_derivatives_of_holomorphic_functions_on_open_subsets_of_the_complex_plane.tex}
 
-\input{../_concepts/proposition_complex_polynomials_are_entire.tex}
+\input{../_concepts/proposition_complex_polynomials_are_entire_functions.tex}
 
-\input{../_definitions/definition_biholomorphic_map_of_open_subsets_of_complex_space.tex}
+\input{../_definitions/definition_biholomorphic_map_of_open_subsets_of_general_dimensional_complex_space.tex}
 
 \subsection{Complex Power Series}
 
 \input{../_definitions/definition_power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula.tex}
 
-\input{../_concepts/proposition_cauchy_hadamard_formula_for_power_series_in_one_complex_variable.tex}
+\input{../_concepts/proposition_cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable.tex}
 
 \input{../_concepts/proposition_power_series_in_one_complex_variable_on_closed_disks_inside_its_radius_of_convergence_converges_absolutely_and_uniformly.tex}
 
 \input{../_concepts/lemma_power_series_in_one_complex_variable_converges_uniformly_and_absolutely_on_compact_subsets_of_its_disk_of_convergence.tex}
 
-\input{../_definitions/definition_complex_disk_open_and_closed_in_the_complex_plane.tex}
+\input{../_definitions/definition_open_complex_disk_and_closed_complex_disk_in_the_complex_plane.tex}
 
 \input{../_definitions/definition_taylor_series_expansion_of_a_holomorphic_function_on_an_open_disk_in_the_complex_plane.tex}
 
-\input{../_concepts/theorem_eulers_formula_for_complex_exponential.tex}
+\input{../_concepts/theorem_eulers_formula_for_complex_exponential_function.tex}
 
 \subsection{Contour Integration and Cauchy Theory}
 
@@ -176,15 +199,15 @@
 
 \input{../_definitions/definition_contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path.tex}
 
-\input{../_concepts/proposition_linearity_of_the_contour_integral.tex}
+\input{../_concepts/proposition_linearity_of_the_contour_integral_of_a_complex_valued_functions_along_a_piecewise_continuously_differentiable_path.tex}
 
-\input{../_definitions/definition_winding_number_of_a_closed_path_around_a_point.tex}
+\input{../_definitions/definition_winding_number_of_a_closed_path_in_the_complex_plane_around_a_point.tex}
 
 \input{../_concepts/theorem_cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes.tex}
 
-\input{../_concepts/theorem_cauchy_integral_formula_for_holomorphic_functions_expressing_values_and_derivatives_via_contour_integrals.tex}
+\input{../_concepts/theorem_cauchy_integral_formula_for_holomorphic_functions_expressing_values_of_derivatives_of_holomorphic_functions_on_simply_connected_open_subsets_of_the_complex_planevia_contour_integrals.tex}
 
-\input{../_concepts/lemma_contour_integral_of_powers_of_z_minus_z0_around_closed_path.tex}
+\input{../_concepts/lemma_contour_integral_of_powers_of_z_minus_z0_around_closed_path_in_complex_plane.tex}
 
 \subsection{Laurent Series, Singularities, and the Residue Theorem}
 
@@ -192,7 +215,7 @@
 
 \input{../_definitions/definition_annulus_in_the_complex_plane.tex}
 
-\input{../_concepts/theorem_laurent_series_expansion_for_holomorphic_functions_on_annuli.tex}
+\input{../_concepts/theorem_laurent_series_expansion_for_holomorphic_functions_on_annuli_in_the_complex_plane.tex}
 
 \input{../_definitions/definition_laurent_series_expansion_of_a_holomorphic_function_on_an_annulus_centered_at_an_isolated_singularity.tex}
 
@@ -215,7 +238,7 @@
 % \input{../_concepts/theorem_liouvilles_theorem_on_bounded_entire_holomorphic_functions.tex}
 \input{../_concepts/theorem_liouvilles_theorem_stating_that_every_bounded_entire_holomorphic_function_on_the_complex_plane_is_constant.tex}
 
-\input{../_concepts/theorem_the_identity_theorem_stATING_that_two_holomorphic_functions_on_a_connected_open_subset_OF_THE_complex_plane_that_agree_on_a_set_with_an_accumulation_point_must_be_identical.tex}
+\input{../_concepts/theorem_the_identity_theorem_stating_that_two_holomorphic_functions_on_a_connected_open_subset_OF_THE_complex_plane_that_agree_on_a_set_with_an_accumulation_point_must_be_identical.tex}
 
 \input{../_concepts/theorem_the_weierstrass_convergence_theorem_stating_that_the_uniform_limit_on_compact_subsets_of_a_sequence_of_holomorphic_functions_is_itself_holomorphic_with_all_derivatives_converging_uniformly_on_compact_subsets.tex}
 
@@ -228,3 +251,11 @@
 \input{../_definitions/definition_meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane.tex}
 
 \input{../_concepts/theorem_the_riemann_mapping_theorem_stATING_that_any_simply_connected_proper_open_subset_OF_THE_complex_plane_is_biholomorphic_to_the_open_unit_disk.tex}
+
+\appendix
+\section{Analysis}
+
+\input{../_concepts/theorem_weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_commutative_rings_with_absolute_values_valued_in_ordered_semirings.tex}
+\input{../_concepts/theorem_weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals.tex}
+
+\input{../_concepts/theorem_comparison_test_for_series_of_nonnegative_real_numbers.tex}

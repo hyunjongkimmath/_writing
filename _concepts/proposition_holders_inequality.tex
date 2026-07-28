@@ -1,10 +1,36 @@
 \begin{proposition}[Hölder's inequality] \label{proposition:holders_inequality}
+    \TODO{AI generated, verify}
 Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}. Let $p, q \in (1,\infty)$ be conjugate exponents, i.e. $\frac{1}{p} + \frac{1}{q} = 1$.
-\TODO{conjugate exponents}
+\TODO{AI generated, reference needed: definition of conjugate exponents}
 
-Let $f : X \to \mathbb{R}$ (or $\mathbb{C}$) and $g : X \to \mathbb{R}$ (or $\mathbb{C}$) be two \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{measurable functions} such that $f^p$ and $g^q$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable}, i.e.
+Let $f : X \to \mathbb{R}$ (or $\mathbb{C}$) and $g : X \to \mathbb{R}$ (or $\mathbb{C}$) be two \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable functions} such that $|f|^p$ and $|g|^q$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable}, i.e.
 $$\int_X |f|^p\,d\mu < \infty \quad \text{and} \quad \int_X |g|^q\,d\mu < \infty.$$
 
 Then $fg$ is integrable and
 $$\int_X |fg|\,d\mu \leq \left(\int_X |f|^p\,d\mu\right)^{\frac{1}{p}} \left(\int_X |g|^q\,d\mu\right)^{\frac{1}{q}}.$$
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Fix the measure space $(X, \mathcal{A}, \mu)$ and conjugate exponents $p, q \in (1,\infty)$ with $\frac{1}{p} + \frac{1}{q} = 1$. Let $f$ and $g$ be measurable functions such that $|f|^p$ and $|g|^q$ are integrable.
+
+    If either $\int_X |f|^p\,d\mu = 0$ or $\int_X |g|^q\,d\mu = 0$, then one of the two factors on the right-hand side is zero. Since $|f|^p$ and $|g|^q$ are nonnegative integrable functions with zero integral, they vanish almost everywhere (\CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}). Hence $fg = 0$ almost everywhere, so $\int_X |fg|\,d\mu = 0$, and the inequality holds trivially.
+
+    Suppose that both integrals are strictly positive. Define the normalized functions
+    $$F(x) = \frac{|f(x)|}{\left(\int_X |f|^p\,d\mu\right)^{1/p}}, \qquad G(x) = \frac{|g(x)|}{\left(\int_X |g|^q\,d\mu\right)^{1/q}}.$$
+    By construction, $\int_X F^p\,d\mu = 1$ and $\int_X G^q\,d\mu = 1$.
+
+    We use Young's inequality for products: for all $a, b \geq 0$,
+    $$ab \leq \frac{a^p}{p} + \frac{b^q}{q},$$
+    where equality holds if and only if $a^p = b^q$. This follows from the concavity of the logarithm function on $(0,\infty)$, i.e.\ the fact that $\ln(\lambda x + (1-\lambda)y) \geq \lambda \ln(x) + (1-\lambda)\ln(y)$ for $x,y > 0$ and $\lambda \in [0,1]$, applied with $a^p = x$, $b^q = y$, and $\lambda = 1/p$.
+    \TODO{AI generated, reference needed: Young's inequality for products}
+
+    Apply Young's inequality pointwise with $a = F(x)$ and $b = G(x)$:
+    $$F(x)G(x) \leq \frac{F(x)^p}{p} + \frac{G(x)^q}{q}.$$
+    Integrating both sides over $X$ and using the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}):
+    $$\int_X F G \,d\mu \leq \frac{1}{p}\int_X F^p\,d\mu + \frac{1}{q}\int_X G^q\,d\mu = \frac{1}{p} \cdot 1 + \frac{1}{q} \cdot 1 = 1.$$
+
+    Substituting back the definitions of $F$ and $G$:
+    $$\int_X |fg|\,d\mu \leq \left(\int_X |f|^p\,d\mu\right)^{\frac{1}{p}} \left(\int_X |g|^q\,d\mu\right)^{\frac{1}{q}}.$$
+
+    Since $|fg|$ is measurable and its integral is finite (bounded by the right-hand side), $fg$ is integrable.
+\end{proof}

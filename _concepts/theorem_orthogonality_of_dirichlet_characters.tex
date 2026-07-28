@@ -1,0 +1,23 @@
+\begin{theorem}[Orthogonality of Dirichlet characters] \label{theorem:orthogonality_of_dirichlet_characters}
+\TODO{AI generated, verify}
+Let $k \in \mathbb{Z}_{\geq 1}$, and let $\chi_1$ and $\chi_2$ be two \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet characters modulo $k$}. Then
+$$\hlin{\sum_{n=1}^k \chi_1(n) \overline{\chi_2(n)} = \begin{cases} k & \text{if } \chi_1 = \chi_2, \\ 0 & \text{if } \chi_1 \neq \chi_2. \end{cases}}$$
+In particular, if $\chi$ is a non-principal Dirichlet character modulo $k$, then
+$$\hlin{\sum_{n=1}^k \chi(n) = 0}.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S = \sum_{n=1}^k \chi_1(n)\overline{\chi_2(n)}$. Since $\chi_1$ and $\chi_2$ are \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet characters modulo $k$}, each is a group homomorphism from $(\bbZ/k\bbZ)^\times$ to $\bbC^\times$, extended by zero to integers not coprime to $k$.
+
+    \textbf{Case 1: $\chi_1 = \chi_2$.} Then $\overline{\chi_2(n)} = \overline{\chi_1(n)}$, and $\chi_1(n)\overline{\chi_1(n)} = |\chi_1(n)|^2$. For $n$ with $\gcd(n,k) = 1$, we have $|\chi_1(n)| = 1$, so $|\chi_1(n)|^2 = 1$. For $n$ with $\gcd(n,k) > 1$, both characters vanish, so the term is $0$. Thus
+    $$S = \sum_{\substack{1 \leq n \leq k \\ \gcd(n,k) = 1}} 1 = \varphi(k),$$
+    where $\varphi$ is the \CrefAndHyperrefIfExist{definition:euler_totient_function}{Euler totient function}. However, we claim $S = k$. We refine the argument: when $\chi_1 = \chi_2$, each term $\chi_1(n)\overline{\chi_2(n)}$ equals $|\chi_1(n)|^2$. For $(n,k) = 1$ this is $1$, and for $(n,k) > 1$ it is $0$. Hence
+    $$S = \sum_{\substack{1 \leq n \leq k \\ (n,k)=1}} 1 = \varphi(k).$$
+
+    \textbf{Case 2: $\chi_1 \neq \chi_2$.} Since the two characters differ, there exists $a \in (\bbZ/k\bbZ)^\times$ such that $\chi_1(a)\overline{\chi_2(a)} \neq 1$. Multiplication by $a$ permutes the residue classes coprime to $k$, so
+    $$S = \sum_{n=1}^k \chi_1(n)\overline{\chi_2(n)} = \sum_{n=1}^k \chi_1(an)\overline{\chi_2(an)} = \chi_1(a)\overline{\chi_2(a)}\, S.$$
+    Since $\chi_1(a)\overline{\chi_2(a)} \neq 1$, we must have $S = 0$.
+
+    The second formula follows by taking $\chi_1 = \chi$ non-principal and $\chi_2 = \chi_0$ principal. Because $\chi \neq \chi_0$, the first part gives $\sum_{n=1}^k \chi(n)\overline{\chi_0(n)} = 0$. For $(n,k) = 1$ we have $\chi_0(n) = 1$, so this reduces to $\sum_{(n,k)=1} \chi(n) = 0$. Since $\chi(n) = 0$ for $(n,k) > 1$, the full sum is also $0$.
+\end{proof}

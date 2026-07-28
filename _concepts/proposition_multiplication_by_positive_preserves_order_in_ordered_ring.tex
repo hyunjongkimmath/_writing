@@ -1,0 +1,11 @@
+\begin{proposition} \label{proposition:multiplication_by_positive_preserves_order_in_ordered_ring}
+    \TODO{AI generated, verify}
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with order $\le$. For any $a,b \in R$ and $c \in R_{\ge 0}$ (the set of non-negative elements of $R$),
+    $$a \le b \implies a \cdot c \le b \cdot c \quad\text{and}\quad c \cdot a \le c \cdot b.$$
+\end{proposition>
+\begin{proof>
+    \TODO{AI generated, verify>
+    We prove $a \le b \implies a \cdot c \le b \cdot c$; the other direction is symmetric.
+
+    Since $a \le b$, we have $b - a \ge 0$ (by compatibility of the order with the additive group structure of the ordered ring). Then $b \cdot c = (a + (b - a)) \cdot c = a \cdot c + (b - a) \cdot c$. Since $b - a \ge 0$ and $c \ge 0$, by \Cref{definition:ordered_ring} the product $(b - a) \cdot c \ge 0$. Hence $a \cdot c + (b - a) \cdot c \ge a \cdot c$, i.e., $b \cdot c \ge a \cdot c$.
+\end{proof>

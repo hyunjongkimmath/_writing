@@ -1,0 +1,12 @@
+\begin{definition} \label{definition:gamma_function_on_the_complex_numbers}
+The \hldef{Gamma function} \hl{$\Gamma : \{ z \in \mathbb{C} : \Re(z) > 0 \} \to \mathbb{C}$} is defined by the \CrefAndHyperrefIfExist{lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{integral}
+$$
+\Gamma(z) := \int_0^\infty t^{z-1} e^{-t} \, dt,
+$$
+which \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for all complex numbers $z$ with real part $\Re(z) > 0$.
+
+The Gamma function $\Gamma(z)$ admits a unique \CrefAndHyperrefIfExist{definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{meromorphic continuation} to the entire complex plane $\mathbb{C}$, with simple poles at non-positive integers $z = 0, -1, -2, \ldots$, and satisfies the functional equation
+$$ \Gamma(z+1) = z \Gamma(z). $$
+\CrefIfExists{lemma:mellin_transform_integral_representation_of_gamma_function} This meromorphic continuation is unique by the identity theorem for holomorphic functions.
+\end{definition}
+

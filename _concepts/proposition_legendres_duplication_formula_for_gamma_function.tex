@@ -1,19 +1,17 @@
 \begin{proposition}[Legendre's duplication formula for the Gamma function] \label{proposition:legendres_duplication_formula_for_gamma_function}
 	\TODO{AI generated, verify}
-	For all complex numbers $z \in \mathbb{C}$ with $\Re(z) > 0$, the \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(z)$ satisfies Legendre's duplication formula:
+	For all complex numbers $z \in \mathbb{C}$ with $\Re(z) > 0$, the \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{Gamma function} $\Gamma(z)$ satisfies Legendre's duplication formula:
 	$$
 	\boxed{\Gamma(z) \, \Gamma\!\left( z + \frac{1}{2} \right) = 2^{1 - 2z} \sqrt{\pi} \, \Gamma(2z).}
 	$$
-
-	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
 \end{proposition}
 
 \begin{proof}
 	\TODO{AI generated, verify}
-	The proof relates the Beta functions $B(z,z)$ and $B(1/2, z)$ via a change of variables. We use the identity $B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$\TODO{AI generated, reference needed: proposition on Beta function identity $B(x,y) = \Gamma(x)\Gamma(y)/\Gamma(x+y)$}, which gives
+	The proof relates the Beta functions $B(z,z)$ and $B(1/2, z)$ via a change of variables. We use the identity $B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)}$ \TODO{AI generated, reference needed: proposition establishing Beta function identity $B(x,y) = \Gamma(x)\Gamma(y)/\Gamma(x+y)$ for Re(x),Re(y)>0}, which gives
 	$$B(z,z) = \frac{\Gamma(z)^2}{\Gamma(2z)}, \qquad B(1/2, z) = \frac{\sqrt{\pi}\,\Gamma(z)}{\Gamma(z+1/2)}.$$
 
-	The Beta function has the integral representation $B(x,y) = \int_0^1 t^{x-1}(1-t)^{y-1}\,dt$ for $\Re(x), \Re(y) > 0$\TODO{AI generated, reference needed: proposition on integral representation of Beta function}. For $B(z,z)$ this is
+	The Beta function has the integral representation $B(x,y) = \int_0^1 t^{x-1}(1-t)^{y-1}\,dt$ for $\Re(x), \Re(y) > 0$ \TODO{AI generated, reference needed: proposition establishing integral representation of Beta function $B(x,y) = \int_0^1 t^{x-1}(1-t)^{y-1} dt$}. For $B(z,z)$ this is
 	$$B(z,z) = \int_0^1 t^{z-1}(1-t)^{z-1}\,dt.$$
 
 	We make the substitution $t = (1+u)/2$, so that $dt = du/2$ and the limits transform from $(0,1)$ to $(-1,1)$. The integrand becomes
@@ -39,6 +37,4 @@
 	$$\Gamma(z)\Gamma\!\left(z+\frac{1}{2}\right) = 2^{1-2z}\sqrt{\pi}\,\Gamma(2z).$$
 
 	The formula holds for $\Re(z) > 0$ by the above computation. By analytic continuation, it extends to all $z \in \mathbb{C}$ except at the poles of the Gamma function.
-
-	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
 \end{proof}

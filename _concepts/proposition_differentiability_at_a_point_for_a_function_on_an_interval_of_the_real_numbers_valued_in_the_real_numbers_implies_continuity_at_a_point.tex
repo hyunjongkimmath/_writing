@@ -1,0 +1,14 @@
+\begin{proposition}[Differentiability implies continuity] \label{proposition:differentiability_at_a_point_for_a_function_on_an_interval_of_the_real_numbers_valued_in_the_real_numbers_implies_continuity_at_a_point}
+    \TODO{I feel like this might be better generalized to function $I \to \bbR^n$, in which case it is necessarily to define what it means for such a fucntion to be differentiable; alternatively, it might be best to just use \Cref{definition_C_k_map_between_open_subsets_of_closed_half_spaces_of_Rns.tex}}
+    Let $I \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be an interval and let $f : I \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Let $a \in I$ be a point at which $f$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable at $a$}.
+
+    Equip $\mathbb{R}$ with the standard topology and $I$ with the subspace topology. Then $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} at $a$.
+\end{proposition}
+
+\begin{proof}
+    Since $f$ is differentiable at $a$, the limit $f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h}$ exists in $\mathbb{R}$. We compute
+    $$\lim_{x \to a} (f(x) - f(a)) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a} \cdot (x - a).$$
+    By \Cref{proposition:limits_of_functions_from_topological_spaces_to_real_number_field_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}, the product of limits equals the limit of products whenever both limits exist. The first factor converges to $f'(a)$ and the second factor converges to $0$, so
+    $$\lim_{x \to a} (f(x) - f(a)) = f'(a) \cdot 0 = 0.$$
+    By \Cref{proposition:limits_of_functions_from_topological_spaces_to_real_number_field_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}, $\lim_{x \to a} f(x)$ thus equals $f(a)$, so $f$ is continuous at $a$.
+\end{proof}

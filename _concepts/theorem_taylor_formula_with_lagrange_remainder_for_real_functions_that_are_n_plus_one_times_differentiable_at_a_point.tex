@@ -1,0 +1,45 @@
+\begin{theorem}[Taylor's formula with Lagrange remainder] \label{theorem:taylor_formula_with_lagrange_remainder_for_real_functions_that_are_n_plus_one_times_differentiable_at_a_point}
+    \TODO{AI generated, verify}
+    \TODO{extract the definition of lagrange remainder}
+    Let $I \subseteq \mathbb{R}$ be an open interval, let $a \in I$, and let $f : I \to \mathbb{R}$ be a function that has derivatives $f^{(k)}$ on $I$ for all $k = 0, 1, \dots, n+1$, where $n \geq 0$. Then for each $x \in I$, there exists a real number $\xi$ strictly between $a$ and $x$ such that
+    $$f(x) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x - a)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1},$$
+    where $k!$ is the \CrefAndHyperrefIfExist{definition:factorial_of_a_nonnegative_integer}{factorial of $k$}. The remainder term
+
+    $$R_n(x) := f(x) - \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(x - a)^k$$
+
+    is called the \hldef{Lagrange remainder of order $n$ for $f$ at $a$}. Equivalently, there exists $\xi = a + \theta(x-a)$ for some $\theta \in (0, 1)$ such that
+
+    $$R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1}.$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Fix $x \in I$ with $x \neq a$. We show that there exists $\xi$ strictly between $a$ and $x$ such that the remainder equals the Lagrange form. The case $x = a$ is trivial because both sides vanish.
+
+Define the $n$-th Taylor polynomial of $f$ at $a$ as
+$$P_n(t) = \sum_{k=0}^n \frac{f^{(k)}(a)}{k!}(t - a)^k.$$
+The remainder function is $R_n(t) = f(t) - P_n(t)$. We observe that $R_n(a) = R_n'(a) = \cdots = R_n^{(n)}(a) = 0$ because the first $n$ derivatives of $P_n$ at $a$ match those of $f$.
+
+Define an auxiliary function $\Phi : I \to \mathbb{R}$ by
+$$\Phi(t) = f(t) - P_n(t) - \frac{f(x) - P_n(x)}{(x - a)^{n+1}}(t - a)^{n+1}.$$
+
+We verify that $\Phi(a) = 0$ and $\Phi(x) = 0$. At $t = a$, we have $P_n(a) = f(a)$, so
+$$\Phi(a) = f(a) - f(a) - \frac{f(x) - P_n(x)}{(x - a)^{n+1}} \cdot 0 = 0.$$
+At $t = x$, the second and third terms cancel by construction:
+$$\Phi(x) = f(x) - P_n(x) - \frac{f(x) - P_n(x)}{(x - a)^{n+1}}(x - a)^{n+1} = 0.$$
+
+Since $\Phi(a) = \Phi(x) = 0$, by Rolle's theorem \Cref{theorem:rolles_theorem_that_real_differentiable_functions_valued_in_the_reals_with_same_values_at_end_points_have_vanishing_derivative_at_some_point}, there exists $c_1$ strictly between $a$ and $x$ such that $\Phi'(c_1) = 0$. Differentiating $\Phi$ gives
+$$\Phi'(t) = f'(t) - P_n'(t) - \frac{(n+1)(f(x) - P_n(x))}{(x - a)^{n+1}}(t - a)^n.$$
+
+We compute that $P_n'(a) = f'(a)$, so $\Phi'(a) = 0$. Since $\Phi'(a) = \Phi'(c_1) = 0$, we apply Rolle's theorem again to obtain $c_2$ strictly between $a$ and $c_1$ such that $\Phi''(c_2) = 0$. Continuing inductively, after applying Rolle's theorem $n+1$ times, we obtain a point $\xi$ strictly between $a$ and $x$ such that
+$$\Phi^{(n+1)}(\xi) = 0.$$
+
+We compute the $(n+1)$-st derivative of $\Phi$. The function $P_n(t)$ is a polynomial of degree at most $n$, so $P_n^{(n+1)}(t) = 0$ for all $t$. Differentiating the third term $n+1$ times yields
+$$\frac{d^{n+1}}{dt^{n+1}} \left[ \frac{f(x) - P_n(x)}{(x - a)^{n+1}}(t - a)^{n+1} \right] = \frac{f(x) - P_n(x)}{(x - a)^{n+1}} \cdot (n+1)!.$$
+Therefore,
+$$\Phi^{(n+1)}(\xi) = f^{(n+1)}(\xi) - \frac{f(x) - P_n(x)}{(x - a)^{n+1}} \cdot (n+1)! = 0.$$
+
+Rearranging gives
+$$f(x) - P_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x - a)^{n+1},$$
+which is the desired Lagrange remainder formula. Since $\xi$ lies strictly between $a$ and $c_1$, and $c_1$ lies strictly between $a$ and $x$, we have that $\xi$ is strictly between $a$ and $x$. The equivalent formulation with $\theta \in (0, 1)$ follows by writing $\xi = a + \theta(x - a)$.
+\end{proof}

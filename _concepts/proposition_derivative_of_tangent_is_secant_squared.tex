@@ -1,11 +1,11 @@
 \begin{proposition} \label{proposition:derivative_of_tangent_is_secant_squared}
-The \CrefAndHyperrefIfExist{definition:tangent_function_on_real_line}{tangent function} $\tan$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $x$ in its domain, and
+The \CrefAndHyperrefIfExist{definition:real_tangent_function}{tangent function} $\tan$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} at every point $x$ in its domain, and
 \TODO{$\sec^2(x) = 1 + \tan^2(x)$ identity}
 $$\frac{d}{dx} \tan(x) = \sec^2(x) = 1 + \tan^2(x).$$
 \CrefIfExists{definition:secant_cosecant_and_cotangent_functions_on_real_line}
 \end{proposition}
 \begin{proof}
-    By the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{quotient rule},
+    By the \CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{quotient rule},
     \begin{align*}
         \frac{d}{dx} \frac{\sin(x)}{\cos(x)} &= \frac{\cos(x) \cdot \frac{d}{dx} \sin(x) - \sin(x) \cdot \frac{d}{dx} \cos(x)}{\cos^2(x)} \\
         &= \frac{\cos(x) \cdot \cos(x) - \sin(x) \cdot (-\sin(x))}{\cos^2(x)} \\
@@ -13,6 +13,6 @@ $$\frac{d}{dx} \tan(x) = \sec^2(x) = 1 + \tan^2(x).$$
         &= \frac{1}{\cos^2(x)} \\
         &= \sec^2(x).
     \end{align*}
-    \CrefIfExists{proposition:pythagorean_identity_for_sine_and_cosine_functions}
+    \CrefIfExists{proposition:pythagorean_identity_for_real_sine_and_cosine_functions}
     \CrefIfExists{proposition:derivatives_of_sine_and_cosine}
 \end{proof}

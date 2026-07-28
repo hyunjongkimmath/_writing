@@ -1,0 +1,21 @@
+\begin{lemma}[The unit group of a ring is a group] \label{lemma:unit_group_of_a_ring_is_a_group}
+    \TODO{AI generated, verify}
+    Let $(R,+,\cdot)$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutative ring} with multiplicative identity $1_R$. Let $R^\times$ denote the set of \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{units of $R$}. Then $(R^\times, \cdot)$ is a \CrefAndHyperrefIfExist{definition:group}{group} under the multiplication operation inherited from $R$.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We verify the three group axioms for $(R^\times, \cdot)$.
+
+    \textbf{Closure.} Let $u, v \in R^\times$. By definition there exist $u^{-1}, v^{-1} \in R$ such that $uu^{-1} = 1_R = u^{-1}u$ and $vv^{-1} = 1_R = v^{-1}v$. We claim that $uv \in R^\times$ with inverse $v^{-1}u^{-1}$. Indeed,
+    $$ (uv)(v^{-1}u^{-1}) = u(vv^{-1})u^{-1} = u(1_R)u^{-1} = uu^{-1} = 1_R, $$
+    and similarly
+    $$ (v^{-1}u^{-1})(uv) = v^{-1}(u^{-1}u)v = v^{-1}(1_R)v = v^{-1}v = 1_R. $$
+    Hence $uv$ is a unit, so $R^\times$ is closed under multiplication.
+
+    \textbf{Associativity.} Multiplication in $R^\times$ is inherited from the multiplication in $R$, which is associative by the definition of a ring. Thus associativity holds in $R^\times$.
+
+    \textbf{Identity and inverses.} The multiplicative identity $1_R \in R$ satisfies $1_R \cdot 1_R = 1_R$, so $1_R \in R^\times$ with inverse equal to itself. Moreover, for every $u \in R^\times$, its inverse $u^{-1}$ also belongs to $R^\times$ because $(u^{-1})^{-1} = u$.
+
+    Therefore $(R^\times, \cdot)$ is a group.
+\end{proof}

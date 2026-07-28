@@ -3,7 +3,7 @@
     \TODO{generalize this to encompass more general extended metric spaces, not just $\bbR$ or $\bbC$}
     Let $(a_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers}. Suppose that the limit
     $$L = \limsup_{n \to \infty} |a_n|^{1/n}$$
-    exists in $\mathbb{R}_{\geq 0}$.
+    \CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line} exists in $\mathbb{R}_{\geq 0}$.
 
     \begin{enumerate}
         \item If $L < 1$, then the series $\sum_{n=1}^\infty a_n$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely}.
@@ -20,7 +20,7 @@
         Raising both sides to the power $n$ (which preserves the inequality since both sides are nonnegative):
         $$|a_n| < r^n \quad \text{for all } n \geq N.$$
 
-        The series $\sum_{n=N}^\infty r^n$ is a geometric series with common ratio $r < 1$, which converges. By the comparison test (\CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}), the tail $\sum_{n=N}^\infty |a_n|$ also converges. Adding finitely many terms does not affect convergence, so $\sum_{n=1}^\infty |a_n|$ converges.
+        The series $\sum_{n=N}^\infty r^n$ is a \CrefAndHyperrefIfExist{definition:geometric_progression_and_geometric_series_over_a_commutative_semiring}{geometric series} with common ratio $r < 1$, which converges by \Cref{theorem:convergence_of_an_infinite_geometric_series_in_a_topological_ring}. By the comparison test (\CrefAndHyperrefIfExist{theorem:comparison_test_for_series_of_nonnegative_real_numbers}), the tail $\sum_{n=N}^\infty |a_n|$ also converges. Adding finitely many terms does not affect convergence, so $\sum_{n=1}^\infty |a_n|$ converges.
 
         \item Suppose $L > 1$. By the definition of limsup, for any $N$ there exists some $n \geq N$ such that
         $$|a_n|^{1/n} > 1.$$

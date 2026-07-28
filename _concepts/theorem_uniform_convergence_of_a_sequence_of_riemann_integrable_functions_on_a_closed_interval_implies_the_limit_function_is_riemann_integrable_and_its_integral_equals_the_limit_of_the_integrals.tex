@@ -7,3 +7,22 @@ Let $[a, b] \subset \mathbb{R}$ be a closed bounded interval and let $(f_n)_{n=1
   $\lim_{n \to \infty} \int_{a}^{b} f_n(x)\,dx = \int_{a}^{b} f(x)\,dx$.
 \end{enumerate}
 \end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We prove that $f$ is Riemann integrable and that the integrals converge to the integral of the limit. The proof uses uniform convergence to control the difference between upper and lower Darboux sums.
+
+First, we show that $f$ is bounded on $[a,b]$. Since each $f_n$ is Riemann integrable, it is bounded. By uniform convergence, there exists $N$ such that for all $n \geq N$ and all $x \in [a,b]$, we have $|f(x) - f_N(x)| < 1$. Let $M = \sup_{x \in [a,b]} |f_N(x)|$. Then $|f(x)| \leq M + 1$ for all $x \in [a,b]$, so $f$ is bounded.
+
+Second, we show that $f$ is Riemann integrable on $[a,b]$. Let $\epsilon > 0$. Choose $N$ such that for all $n \geq N$ and all $x \in [a,b]$, we have $|f(x) - f_n(x)| < \epsilon / (3(b-a))$. Fix $n = N$. Since $f_N$ is Riemann integrable, there exists a partition $P = \{x_0, x_1, \dots, x_k\}$ of $[a,b]$ such that
+$$U(f_N, P) - L(f_N, P) < \epsilon / 3.$$
+For each subinterval $[x_{i-1}, x_i]$, let $m_i = \inf f$ and $M_i = \sup f$. We have for any $y, z \in [x_{i-1}, x_i]$:
+$$|f(y) - f(z)| \leq |f(y) - f_N(y)| + |f_N(y) - f_N(z)| + |f_N(z) - f(z)| < 2\epsilon / (3(b-a)) + |f_N(y) - f_N(z)|.$$
+This implies that $M_i(f) - m_i(f) \leq M_i(f_N) - m_i(f_N) + 2\epsilon / (3(b-a))$. Summing over all subintervals gives
+$$U(f, P) - L(f, P) \leq U(f_N, P) - L(f_N, P) + 2\epsilon < \epsilon.$$
+Therefore, $f$ is Riemann integrable on $[a,b]$.
+
+Third, we show that the integrals converge. For any $\epsilon > 0$, choose $N$ such that for all $n \geq N$ and all $x \in [a,b]$, we have $|f(x) - f_n(x)| < \epsilon / (b-a)$. Then
+$$\left|\int_a^b f_n(x)\,dx - \int_a^b f(x)\,dx\right| \leq \int_a^b |f_n(x) - f(x)|\,dx < \frac{\epsilon}{b-a} \cdot (b-a) = \epsilon.$$
+Therefore, $\lim_{n \to \infty} \int_a^b f_n(x)\,dx = \int_a^b f(x)\,dx$.
+\end{proof}

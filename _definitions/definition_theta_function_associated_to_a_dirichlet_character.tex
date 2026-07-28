@@ -1,0 +1,9 @@
+\begin{definition}[Theta function associated to a Dirichlet character] \label{definition:theta_function_associated_to_a_dirichlet_character}
+\TODO{AI generated, verify}
+Let $k \in \mathbb{Z}_{\geq 1}$, let $\chi$ be a \CrefAndHyperrefIfExist{definition:dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet character modulo $k$}, and let $u > 0$. The \hldef{theta function associated to $\chi$} is the real-valued function \hl{$\theta_\chi(u)$} defined by
+$$\theta_\chi(u) := \sum_{n \in \mathbb{Z}} \chi(n) e^{-\pi n^2 u / k}.$$
+\CrefIfExists{definition:real_exponential_function_with_eulers_number_as_base}
+The $n = 0$ term is $\chi(0)$, which vanishes for $k > 1$ and equals $1$ only when $\chi$ is the principal character modulo $1$. For $n \leq -1$, the parity condition $\chi(-n) = \chi(-1)\chi(n) = (-1)^{a(\chi)}\chi(n)$ relates the negative-index terms to the positive ones, where $a(\chi) \in \{0,1\}$ is the \CrefAndHyperrefIfExist{definition:parity_of_a_dirichlet_character}{parity of $\chi$}. Hence
+$$\theta_\chi(u) = \chi(0) + 2 \sum_{n=1}^\infty \chi(n) e^{-\pi n^2 u / k}.$$
+The series \CrefAndHyperrefIfExist{lemma:uniform_convergence_of_the_theta_series_of_a_dirichlet_character}{converges absolutely and uniformly for $u \geq \delta > 0$}.
+\end{definition}

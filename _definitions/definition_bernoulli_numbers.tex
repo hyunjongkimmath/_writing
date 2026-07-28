@@ -1,17 +1,15 @@
 \begin{definition} \label{definition:bernoulli_numbers}
-The \hldef{Bernoulli numbers} $B_n \in \bbQ$ ($n \ge 0$) are defined by the exponential generating function
-\TODO{write definition for generating function and reference it}
+The \hldef{Bernoulli numbers} $B_n$ ($n \geq 0$) are the unique rational numbers defined by the \CrefAndHyperrefIfExist{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}{exponential generating function}
 $$
-\boxed{ \frac{z}{e^z - 1} = \sum_{n=0}^\infty B_n \frac{z^n}{n!}, \qquad |z| < 2\pi. }
+\boxed{\frac{z}{e^z - 1} = \sum_{n=0}^\infty B_n \frac{z^n}{n!}}
 $$
-\TODO{write lemma that justifies why this series converges and reference it here.}
-Explicitly, $B_0 = 1$, $B_1 = -1/2$, $B_2 = 1/6$, $B_4 = -1/30$, $B_6 = 1/42$, $B_8 = -1/30$, and $B_{2k+1} = 0$ for all $k \ge 1$.
+which converges for $|z| < 2\pi$\CrefIfExists{proposition:cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable}. Explicitly, $B_0 = 1$, $B_1 = -1/2$, $B_2 = 1/6$, $B_4 = -1/30$, $B_6 = 1/42$, $B_8 = -1/30$, and $B_{2k+1} = 0$ for all $k \geq 1$.
 
-\TODO{write a concept that says that the above definition of Bernoulli numbers is equivalent to the below one then reference it here}
-They can also be defined recursively by $B_0 = 1$ and
+Equivalently, they are defined recursively by $B_0 = 1$ and
 $$
-\sum_{k=0}^m \binom{m+1}{k} B_k = 0 \quad \text{for all } m \ge 1.
+\sum_{k=0}^m \binom{m+1}{k} B_k = 0 \quad \text{for all } m \geq 1.
 $$
+\CrefIfExists{proposition:cotangent_expansion_bernoulli_numbers}
 
 \TODO{AI generated, verify}
 

@@ -1,0 +1,31 @@
+\begin{proposition}[Heine--Borel theorem for closed and bounded intervals in $\mathbb{R}$] \label{proposition:heine_borel_theorem_for_closed_and_bounded_intervals_in_real_numbers}
+    \TODO{AI generated, verify}
+    Let $[a,b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{closed bounded interval} with $a < b$, equipped with the \CrefAndHyperrefIfExist{definition:subspace_of_a_topological_space}{subspace topology} induced from $\mathbb{R}$. Then $[a,b]$ is \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact}.
+
+    Equivalently, every \CrefAndHyperrefIfExist{definition:open_covering_of_a_topological_space}{open cover} of $[a,b]$ admits a finite subcover.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $\{U_i\}_{i \in I}$ be a collection of open subsets of $\mathbb{R}$ (in the standard topology \CrefIfExists{definition:field_of_real_numbers}) such that $[a,b] \subseteq \bigcup_{i \in I} U_i$. Define
+    $$S = \{\, x \in [a,b] : \text{the interval } [a,x] \text{ is covered by finitely many } U_i \,\}.$$
+    \CrefIfExists{definition:open_covering_of_a_topological_space}
+
+    The set $S$ is nonempty because $a \in U_{i_0}$ for some $i_0 \in I$, so $[a,a] = \{a\}$ is covered by the single set $U_{i_0}$; consequently $a \in S$.
+
+    Since $S \subseteq [a,b]$, the set $S$ is bounded above (by $b$). By the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property} of $\mathbb{R}$ (\Cref{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property}) set
+    $$c = \sup_{x \in S} x \in \mathbb{R}.$$
+    \CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+    We claim that $c = b$.
+
+    First, $c > a$. Indeed, since $a \in U_{i_0}$ and $U_{i_0}$ is open, there exists $\varepsilon > 0$ such that $(a - \varepsilon, a + \varepsilon) \subseteq U_{i_0}$. Consequently $[a, a + \varepsilon/2] \subseteq U_{i_0}$, so $a + \varepsilon/2 \in S$, whence $c \ge a + \varepsilon/2 > a$.
+
+    Now $c \in [a,b]$ because $c = \sup S \le b$ and $c > a$. Choose $i_c \in I$ with $c \in U_{i_c}$, and pick $\delta > 0$ such that $(c - \delta, c + \delta) \subseteq U_{i_c}$ (possible because $U_{i_c}$ is open). Suppose, for contradiction, that $c < b$; shrink $\delta$ if necessary so that $c + \delta < b$ as well.
+
+    Since $c = \sup S$, there exists $x \in S$ with $c - \delta < x \le c$. The interval $[a,x]$ is covered by finitely many $U_i$ by definition of $S$. Then
+    $$[a, c + \delta/2] \subseteq [a,x] \cup (c - \delta, c + \delta) \subseteq (\text{finite union}) \cup U_{i_c}.$$
+    \CrefIfExists{definition:open_covering_of_a_topological_space}
+    Hence $c + \delta/2 \in S$, contradicting $c = \sup S$ (as $c + \delta/2 > c$). Therefore $c = b$.
+
+    Finally, since $b \in U_{i_b}$ for some $i_b \in I$ and $U_{i_b}$ is open, pick $\eta > 0$ with $(b - \eta, b + \eta) \subseteq U_{i_b}$. Because $b = \sup S$, there exists $y \in S$ such that $b - \eta < y \le b$. The finite subcover covering $[a,y]$ together with $U_{i_b}$ provides a finite subcover of $[a,b]$. Thus $[a,b]$ is compact.
+\end{proof}

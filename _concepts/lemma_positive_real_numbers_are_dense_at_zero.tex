@@ -1,0 +1,9 @@
+\begin{lemma}[Positive real numbers are dense at zero] \label{lemma:positive_real_numbers_are_dense_at_zero}
+    The additive ordered monoid $\mathbb{R}_{\ge 0}$\CrefIfExists{definition:field_of_real_numbers} is \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{dense at zero}. That is, for every $\varepsilon > 0$, there exists $\delta > 0$ such that $0 < \delta < \varepsilon$.
+    \TextIfExists{proposition:the_field_of_real_numbers_has_the_archimedean_property}{
+    See also \CrefIfExists{proposition:the_field_of_real_numbers_has_the_archimedean_property}
+    }
+\end{lemma}
+\begin{proof}
+    Let $\varepsilon \in \mathbb{R}$ satisfy $\varepsilon > 0$. By part (3) of \Cref{proposition:the_field_of_real_numbers_has_the_archimedean_property}, there exists $N \in \mathbb{N}$ such that $\frac{1}{N} < \varepsilon$. Setting $\delta := \frac{1}{N} \in \mathbb{R}_{>0}$ gives $0 < \delta < \varepsilon$, as desired.
+\end{proof}

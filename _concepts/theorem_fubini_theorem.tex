@@ -1,11 +1,39 @@
 \begin{theorem}[Fubini's theorem (integrable case)] \label{theorem:fubini_theorem}
-Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be two \CrefAndHyperrefIfExist{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{$\sigma$-finite measure spaces}. Let $\mathcal{A} \otimes \mathcal{B}$ be the \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product $\sigma$-algebra} and $\mu \times \nu$ the corresponding \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product measure}.
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be two \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{$\sigma$-finite measure spaces}. Let $\mathcal{A} \otimes \mathcal{B}$ be the \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product $\sigma$-algebra} and $\mu \times \nu$ the corresponding \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product measure}.
 
-Let $f : X \times Y \to \overline{\mathbb{R}}$ be a \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} with respect to $\mathcal{A} \otimes \mathcal{B}$ such that $f$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{Lebesgue integrable}, i.e.
+Let $f : X \times Y \to \overline{\mathbb{R}}$ be a \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} with respect to $\mathcal{A} \otimes \mathcal{B}$ such that $f$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integrable}, i.e.
 $$\int_{X \times Y} |f|\,d(\mu \times \nu) < \infty.$$
 
-Then for \CrefAndHyperrefIfExist{definition:property_holds_almost_everywhere_for_a_measure_space}{$\mu$-almost every} $x \in X$, the function $y \mapsto f(x,y)$ is $\nu$-integrable on $Y$, and the function
+Then for $\mu$-almost every $x \in X$, the function $y \mapsto f(x,y)$ is $\nu$-integrable on $Y$, and the function
 $$x \mapsto \int_Y f(x,y)\,d\nu(y)$$
 is $\mu$-integrable on $X$. Similarly, for $\nu$-almost every $y \in Y$, the function $x \mapsto f(x,y)$ is $\mu$-integrable on $X$, and
 $$\int_X \left(\int_Y f(x,y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} f\,d(\mu \times \nu) = \int_Y \left(\int_X f(x,y)\,d\mu(x)\right) d\nu(y).$$
 \end{theorem}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be $\sigma$-finite measure spaces. Fix the integrable function $f : X \times Y \to \overline{\mathbb{R}}$.
+
+    Since $|f|$ is nonnegative and measurable, by Tonelli's theorem (\CrefAndHyperrefIfExist{theorem:tonelli_theorem}) applied to $|f|$:
+    $$\int_X \left(\int_Y |f(x,y)|\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} |f|\,d(\mu \times \nu) < \infty.$$
+
+    Because the iterated integral of $|f|$ is finite, for $\mu$-almost every $x \in X$, the inner integral $\int_Y |f(x,y)|\,d\nu(y)$ must be finite. For such $x$, the function $y \mapsto f(x,y)$ is therefore $\nu$-integrable. This establishes that the map
+    $$x \mapsto \int_Y f(x,y)\,d\nu(y)$$
+    is defined for almost every $x$.
+
+    Moreover, this function is measurable (as a consequence of the measurability of $f$ and Fubini-Tonelli theory). To see that it is integrable:
+    $$\int_X \left|\int_Y f(x,y)\,d\nu(y)\right| d\mu(x) \leq \int_X \left(\int_Y |f(x,y)|\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} |f|\,d(\mu \times \nu) < \infty.$$
+
+    Now decompose $f$ into its positive and negative parts: $f = f_+ - f_-$. Both $f_+$ and $f_-$ are nonnegative measurable functions. By Tonelli's theorem applied to each:
+    $$\int_{X \times Y} f_+\,d(\mu \times \nu) = \int_X \left(\int_Y f_+(x,y)\,d\nu(y)\right) d\mu(x),$$
+    and similarly for $f_-$. Since both integrals are finite (because $|f|$ is integrable), we can subtract:
+    $$\int_{X \times Y} f\,d(\mu \times \nu) = \int_{X \times Y} f_+\,d(\mu \times \nu) - \int_{X \times Y} f_-\,d(\mu \times \nu).$$
+
+    By the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}):
+    $$\int_X \left(\int_Y f(x,y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} f\,d(\mu \times \nu).$$
+
+    The same argument with the order of integration reversed gives:
+    $$\int_Y \left(\int_X f(x,y)\,d\mu(x)\right) d\nu(y) = \int_{X \times Y} f\,d(\mu \times \nu).$$
+
+    Combining these equalities establishes Fubini's theorem.
+\end{proof}

@@ -1,0 +1,13 @@
+\begin{proposition}[Piecewise continuous functions on closed intervals are Riemann integrable] \label{proposition:piecewise_continuous_functions_on_closed_intervals_are_riemann_integrable}
+    \TODO{AI generated, verify}
+Let $[a,b] \subset \mathbb{R}$ be a closed bounded interval with $a < b$, and let $f : [a,b] \to \mathbb{R}$ be a function.
+
+If $f$ is \CrefAndHyperrefIfExist{definition:piecewise_continuous_function_on_a_closed_interval}{piecewise continuous on $[a,b]$}, then $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a,b]$}.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Since $f$ is piecewise continuous on $[a,b]$, there exists a partition $P = \{x_0,\dots,x_n\}$ of $[a,b]$ such that the restriction of $f$ to each open subinterval $(x_{i-1},x_i)$ is continuous and the one-sided limits at each endpoint exist. In particular, $f$ has at most finitely many points of discontinuity — namely a subset of $\{x_0,\dots,x_n\}$.
+
+A finite set in $\mathbb{R}$ has \CrefAndHyperrefIfExist{definition:lebesgue_measure_on_Rn}{Lebesgue measure} zero. By \CrefAndHyperrefIfExist{theorem:riemann_and_lebesgue_integrals_agree_for_riemann_integrable_functions_on_closed_intervals}{Lebesgue's criterion for Riemann integrability}, $f$ is continuous almost everywhere with respect to Lebesgue measure and hence is Riemann integrable on $[a,b]$.
+\end{proof}

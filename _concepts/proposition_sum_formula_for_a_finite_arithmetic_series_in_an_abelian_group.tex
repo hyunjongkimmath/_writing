@@ -6,3 +6,23 @@
     $$\sum_{n=1}^N (a + (n-1)d) = Na + \frac{N(N-1)}{2}d,$$
     Note that $\frac{N(N-1)}{2}$ is always an integer, and the notation $Na$ and $\frac{N(N-1)}{2}d$ refers to the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{integer powers of group elements}.
 \end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Fix $a, d \in A$. We proceed by induction on $N \geq 1$.
+
+    For the base case $N = 1$, we have
+    $$\sum_{n=1}^1 (a + (n-1)d) = a + 0 \cdot d = a,$$
+    where $0 \cdot d = 0_A$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}. On the other hand, $1 \cdot a + \frac{1 \cdot 0}{2} d = a + 0 \cdot d = a$. Thus the formula holds for $N = 1$.
+
+    Suppose that the formula holds for some integer $N \geq 1$. We show that it also holds for $N+1$. Compute:
+    $$\sum_{n=1}^{N+1} (a + (n-1)d) = \sum_{n=1}^N (a + (n-1)d) + (a + Nd).$$
+    By the inductive hypothesis, this equals
+    $$Na + \frac{N(N-1)}{2}d + a + Nd.$$
+    By associativity and commutativity of addition in $A$, we may regroup:
+    $$(Na + a) + \left(\frac{N(N-1)}{2}d + Nd\right) = (N+1)a + \left(\frac{N(N-1)}{2} + N\right)d.$$
+    We verify the integer arithmetic: $\frac{N(N-1)}{2} + N = \frac{N^2 - N + 2N}{2} = \frac{N^2 + N}{2} = \frac{(N+1)N}{2}$. Hence the expression equals
+    $$(N+1)a + \frac{(N+1)((N+1)-1)}{2}d,$$
+    which is exactly the desired formula for $N+1$.
+
+    By induction, the formula holds for all integers $N \geq 1$.
+\end{proof}

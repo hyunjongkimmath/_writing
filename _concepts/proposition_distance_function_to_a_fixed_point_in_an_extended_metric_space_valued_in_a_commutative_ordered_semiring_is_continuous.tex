@@ -1,0 +1,21 @@
+\begin{proposition}[Distance function to a fixed point in an extended metric space is continuous]
+\label{proposition:distance_function_to_a_fixed_point_in_an_extended_metric_space_valued_in_a_commutative_ordered_semiring_is_continuous}
+\TODO{AI generated, verify}
+Let $T$ be a commutative \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $T^\infty$ be the \CrefAndHyperrefIfExist{definition:ordered_semiring_with_adjoined_infinity}{ordered semiring with adjoined infinity} obtained from $T$, and let $(X, d)$ be an extended metric space valued in $T^\infty$\CrefIfExists{definition:extended_metric_on_a_set_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}.
+
+Fix a point $p \in X$. The distance function to $p$,
+$$\delta_p : X \to T^\infty, \quad x \mapsto d(x, p),$$
+is continuous on $\{x \in X : d(x, p) < \infty\}$ with respect to the topology induced by $d$. In particular, for all $x, y$ in this set,
+$$|d(x, p) - d(y, p)| \leq d(x, y),$$
+so $\delta_p$ is Lipschitz continuous with Lipschitz constant $1$\CrefIfExists{proposition:reverse_triangle_inequality_in_extended_metric_space}.
+\end{proposition}
+
+\begin{proof}
+\TODO{AI generated, verify}
+For any $x, y \in X$ with $d(x, p) < \infty$ and $d(y, p) < \infty$, the reverse triangle inequality\CrefIfExists{proposition:reverse_triangle_inequality_in_extended_metric_space} gives
+$$|d(x, p) - d(y, p)| \leq d(x, y).$$
+
+To show continuity at any point $x$ with $d(x, p) < \infty$, let $\varepsilon > 0$. Choose $\delta = \varepsilon$. Then for any $y$ with $d(x, y) < \delta$, we have
+$$|d(y, p) - d(x, p)| \leq d(x, y) < \varepsilon,$$
+which establishes continuity at $x$. Because the inequality is uniform in $x$, $\delta_p$ is Lipschitz continuous with constant $1$.
+\end{proof}

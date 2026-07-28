@@ -1,0 +1,32 @@
+\begin{proposition}[Algebraic properties of Dirichlet convolution] \label{proposition:algebraic_properties_of_dirichlet_convolution}
+\TODO{AI generated, verify}
+Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, and let $f, g, h: \bbZ_{>0} \to R$ be \CrefAndHyperrefIfExist{definition:arithmetic_function_on_positive_integers_with_values_in_a_ring}{arithmetic functions}. The \CrefAndHyperrefIfExist{definition:dirichlet_convolution_of_arithmetic_functions}{Dirichlet convolution} satisfies the following properties:
+\begin{enumerate}
+    \item \textbf{Commutativity:} $f * g = g * f$.
+    \item \textbf{Associativity:} $(f * g) * h = f * (g * h)$.
+    \item \textbf{Identity:} The arithmetic function $\varepsilon$ defined by $\varepsilon(1) = 1$ and $\varepsilon(n) = 0$ for $n > 1$ is the \CrefAndHyperrefIfExist{definition:left_right_identity_element_of_a_binary_operation_on_a_set}{identity element} for Dirichlet convolution, i.e., $f * \varepsilon = \varepsilon * f = f$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove each property directly from the definition of Dirichlet convolution\CrefIfExists{definition:dirichlet_convolution_of_arithmetic_functions}. Let $n \in \bbZ_{>0}$ be arbitrary.
+
+    \textbf{Commutativity.} By \Cref{definition:dirichlet_convolution_of_arithmetic_functions},
+    $$(f * g)(n) = \sum_{d \mid n} f(d)\, g\left(\frac{n}{d}\right).$$
+    As $d$ ranges over the divisors of $n$, so does $n/d$. Substituting $d' = n/d$, we obtain
+    $$(f * g)(n) = \sum_{d' \mid n} f\left(\frac{n}{d'}\right)\, g(d') = (g * f)(n),$$
+    where the last equality uses commutativity of multiplication in the ring $R$\CrefIfExists{definition:ring}.
+
+    \textbf{Associativity.} We compute
+    $$((f * g) * h)(n) = \sum_{d \mid n} (f * g)(d)\, h\left(\frac{n}{d}\right) = \sum_{d \mid n} \sum_{e \mid d} f(e)\, g\left(\frac{d}{e}\right)\, h\left(\frac{n}{d}\right).$$
+    The pair $(e,d)$ satisfies $e \mid d$ and $d \mid n$, hence $e \mid n$. Writing $d = ef$ with $f \in \bbZ_{>0}$, the condition $d \mid n$ becomes $ef \mid n$, i.e., $f \mid (n/e)$. Setting $g' = d/e$ and $h' = n/d$, we have $e g' h' = n$. Thus
+    $$((f * g) * h)(n) = \sum_{\substack{e, g', h' \in \bbZ_{>0} \\ e g' h' = n}} f(e)\, g(g')\, h(h').$$
+    By the same computation with $g$ and $h$ in place of $f$ and $g$, we obtain
+    $$(f * (g * h))(n) = \sum_{\substack{e, g', h' \in \bbZ_{>0} \\ e g' h' = n}} f(e)\, g(g')\, h(h'),$$
+    so both expressions are equal.
+
+    \textbf{Identity.} We compute for $n \geq 1$:
+    $$(f * \varepsilon)(n) = \sum_{d \mid n} f(d)\, \varepsilon\left(\frac{n}{d}\right).$$
+    The function $\varepsilon(m)$ is nonzero only when $m = 1$, i.e., when $n/d = 1$, which means $d = n$. Hence the sum reduces to the single term $f(n)\, \varepsilon(1) = f(n) \cdot 1 = f(n)$. By commutativity, $(\varepsilon * f)(n) = (f * \varepsilon)(n) = f(n)$ as well.
+\end{proof}

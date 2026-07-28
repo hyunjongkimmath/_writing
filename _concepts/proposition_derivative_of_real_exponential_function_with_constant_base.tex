@@ -14,10 +14,10 @@ We proceed by induction on $k \in \mathbb{N}_0$.
 
 \paragraph{Base case $k = 0$.} $f^{(0)}(s) = f(s) = a^s = (\ln a)^0 a^s$, which holds since $(\ln a)^0 = 1$.
 
-\paragraph{Base case $k = 1$.} By definition, $f(s) = \exp(s \ln a)$. Since $\ln a \in \mathbb{R}$ is a constant, the function $g(s) = s \ln a$ is differentiable on $\mathbb{R}$ with $g'(s) = \ln a$. The exponential function $\exp$ is differentiable on $\mathbb{R}$ with derivative $\exp$ itself (\CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}). By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{chain rule}), the composition $f = \exp \circ g$ is differentiable on $\mathbb{R}$ and
+\paragraph{Base case $k = 1$.} By definition, $f(s) = \exp(s \ln a)$. Since $\ln a \in \mathbb{R}$ is a constant, the function $g(s) = s \ln a$ is differentiable on $\mathbb{R}$ with $g'(s) = \ln a$. The exponential function $\exp$ is differentiable on $\mathbb{R}$ with derivative $\exp$ itself (\CrefAndHyperrefIfExist{proposition:derivative_of_exponential_function_is_itself}). By the chain rule (\CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{chain rule}), the composition $f = \exp \circ g$ is differentiable on $\mathbb{R}$ and
 $$f'(s) = \exp(g(s)) \cdot g'(s) = \exp(s \ln a) \cdot \ln a = a^s \ln a = (\ln a)^1 a^s.$$
 
-\paragraph{Inductive step.} Assume the formula holds for some $k \ge 1$, i.e. $f^{(k)}(s) = (\ln a)^k a^s$ for all $s \in \mathbb{R}$. Since $(\ln a)^k$ is a constant and $a^s = f(s)$ is differentiable by the $k=1$ case, the product rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{product rule}) gives
+\paragraph{Inductive step.} Assume the formula holds for some $k \ge 1$, i.e. $f^{(k)}(s) = (\ln a)^k a^s$ for all $s \in \mathbb{R}$. Since $(\ln a)^k$ is a constant and $a^s = f(s)$ is differentiable by the $k=1$ case, the product rule (\CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{product rule}) gives
 \begin{align*}
 f^{(k+1)}(s) &= \frac{d}{ds} \bigl( (\ln a)^k a^s \bigr) \\
 &= (\ln a)^k \frac{d}{ds} a^s \\

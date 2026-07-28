@@ -1,0 +1,30 @@
+\begin{proposition}[Limit algebra for functions valued in a topological ring] \label{proposition:limits_of_functions_from_topological_spaces_to_topological_rings_at_accumulation_points_are_preserved_under_arithmetic_and_scalar_multiplication}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space}, let $S \subseteq X$, and let $p$ be an \CrefAndHyperrefIfExist{definition:accumulation_point_of_a_subset_of_a_topological_space}{accumulation point} of $S$. Let $R$ be a \CrefAndHyperrefIfExist{definition:topological_ring}{topological ring} and let $f,g : S \to R$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions} such that
+    $$\lim_{x \to p, x \in S} f(x) = L \quad\text{and}\quad \lim_{x \to p, x \in S} g(x) = M$$
+    \CrefIfExists{definition:limit_of_a_function_between_topological_spaces_at_an_accumulation_point} exist in $R$. Let $c \in R$.
+
+    Then:
+    \begin{enumerate}
+        \item[$(+)$] $\displaystyle\lim_{x \to p, x \in S} (f(x) + g(x)) = L + M$.
+        \item[$(-)$] $\displaystyle\lim_{x \to p, x \in S} (-f(x)) = -L$.
+        \item[$(-)$] $\displaystyle\lim_{x \to p, x \in S} (f(x) - g(x)) = L - M$.
+        \item[$(\cdot)$] $\displaystyle\lim_{x \to p, x \in S} f(x) \cdot g(x) = L \cdot M$.
+        \item[$(c\,\cdot)$] $\displaystyle\lim_{x \to p, x \in S} c \cdot f(x) = c \cdot L$.
+        \item[$\circ$] Let $Y$ be a topological space and let $h : R \to Y$ be \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at $L$}. Then $\displaystyle\lim_{x \to p, x \in S} h(f(x)) = h(L)$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    These are all consequences of \Cref{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits} and \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit}, together with the continuity of the ring operations on $R$ (by \Cref{definition:topological_ring}) and the continuity of the map $R \to R$ given by $x \mapsto c \cdot x$ (which is continuous because it is the composition of the map $x \mapsto (c, x)$, continuous by the universal property of the \CrefAndHyperrefIfExist{definition:product_topology_on_a_cartesian_product_of_topological_spaces}{product topology}, with the continuous multiplication map $R \times R \to R$).
+
+    \begin{enumerate}
+        \item[(+)] The map $+ : R \times R \to R$ is continuous, so by \Cref{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits} applied with $n=2$ and $m = +$, the limit of the sum is the sum of the limits.
+        \item[(-)] The negation map $-$ : $R \to R$ is continuous (by \Cref{definition:topological_ring}), so by \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit}, the limit of $-f$ is $-$ of the limit of $f$.
+        \item[(-)] Combine (+) and (-) with $f - g = f + (-g)$.
+        \item[($\cdot$)] The map $\cdot : R \times R \to R$ is continuous, so by \Cref{corollary:continuous_n_ary_operator_on_a_topological_space_commutes_with_limits}, the limit of the product is the product of the limits.
+        \item[$(c\,\cdot)$] The map $m_c : R \to R$, $x \mapsto c \cdot x$, is continuous. Apply \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit}.
+        \item[$\circ$] This is exactly \Cref{proposition:continuous_function_between_topological_spaces_at_limit_point_respects_limit}.
+    \end{enumerate}
+\end{proof}

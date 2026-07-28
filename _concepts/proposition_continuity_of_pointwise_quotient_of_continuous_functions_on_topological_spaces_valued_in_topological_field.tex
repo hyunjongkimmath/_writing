@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:continuity_of_pointwise_quotient_of_continuous_functions_on_topological_spaces_valued_in_topological_field}
+    \TODO{AI generated, verify}
+    Let $X$ be a \CrefAndHyperrefIfExist{definition:topological_space}{topological space} and let $F$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}. Let $f,g : X \to F$ be \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} functions such that $g(x) \neq 0$ for all $x \in X$. Their pointwise quotient $f/g : X \to F$, defined by $(f/g)(x) = f(x) \cdot g(x)^{-1}$, is continuous.
+\end{proposition}
+\begin{proof}
+    Since $g(x) \neq 0$ for all $x$, the map $g$ factors through $F^\times = F \setminus \{0\}$. The multiplicative inverse map $\operatorname{inv} : F^\times \to F^\times$, $x \mapsto x^{-1}$, is continuous by \Cref{proposition:multiplicative_inverse_map_in_topological_field_is_continuous}. Hence $\operatorname{inv} \circ g : X \to F$ is continuous as a composition of continuous maps by \Cref{proposition:composition_of_continuous_functions_on_topological_spaces_is_continuous}. The product $f \cdot (\operatorname{inv} \circ g)$ is then continuous by \Cref{proposition:pointwise_product_of_continuous_functions_on_topological_spaces_valued_in_topological_ring_is_continuous}, and this product is precisely $f/g$.
+\end{proof}

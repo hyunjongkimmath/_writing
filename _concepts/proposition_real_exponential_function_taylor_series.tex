@@ -1,7 +1,7 @@
 \begin{proposition} \label{proposition:real_exponential_function_taylor_series}
-    For all $a \in \bbR$\CrefIfExists{definition:field_of_real_numbers}, the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Taylor series expansion} of the \CrefAndHyperrefIfExist{definition:real_exponential_function}{real exponential function} $\exp(x)$ centered at $a$ is 
+    For all $a \in \bbR$\CrefIfExists{definition:field_of_real_numbers}, the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line}{Taylor series expansion} of the \CrefAndHyperrefIfExist{definition:real_exponential_function_with_eulers_number_as_base}{real exponential function} $\exp(x)$ centered at $a$ is 
     $$\exp(x) = \sum_{n=0}^\infty \frac{e^a}{n!} (x-a)^n$$
-    and this converges absolute ly for all $x \in \bbR$. In particular, letting $a = 0$, we have the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function}{Maclaurin series}
+    and this \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} for all $x \in \bbR$. In particular, letting $a = 0$, we have the \CrefAndHyperrefIfExist{definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line}{Maclaurin series}
     $$\exp(x) = \sum_{n=0}^\infty \frac{1}{n!} x^n.$$
 \end{proposition}
 \begin{proof}
@@ -10,5 +10,5 @@
     \CrefIfExists{proposition:derivative_of_exponential_function_is_itself} Therefore, 
     $$\left(\frac{d^n}{dx^n} e^x\right)(a) = e^a$$
     for all $n \in \bbZ_{+}$ and $a \in \bbR$. 
-    Apply \Cref{theorem:taylor_series_convergence_criterion_for_real_functions}.
+    Apply \Cref{theorem:taylor_series_convergence_criterion_for_real_valued_functions_on_a_real_interval}\TODO{The justification for why this theorem can be applied needs to be more thorough}.
 \end{proof}

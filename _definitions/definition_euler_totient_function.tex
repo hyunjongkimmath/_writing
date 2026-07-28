@@ -1,6 +1,5 @@
 \begin{definition} \label{definition:euler_totient_function}
-    \TODO{AI generated, verify}
-    Let $n \in \bbZ_{>0}$. The \hldef{Euler totient function} evaluated at $n$, denoted by \hl{$\varphi(n)$}, is the number of integers $a$ with $1 \leq a \leq n$ such that $\gcd(a, n) = 1$:
+    Let $n \in \bbZ_{>0}$. The \hldef{Euler totient function} evaluated at $n$, denoted by \hl{$\varphi(n)$}, is the number of integers $a$ with $1 \leq a \leq n$ such that $\gcd(a, n) = 1$\CrefIfExists{definition:gcd_and_lcm_of_integers}:
     $$\hlin{\varphi(n) = \left| \{ a \in \bbZ : 1 \leq a \leq n,\; \gcd(a, n) = 1 \} \right|.}$$
-    Equivalently, $\varphi(n)$ is the cardinality of the multiplicative group $(\bbZ / n\bbZ)^\times$.
+    Equivalently, $\varphi(n)$ is the \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality} of the \CrefAndHyperrefIfExist{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}{multiplicative group} $(\bbZ / n\bbZ)^\times$ of the \CrefAndHyperrefIfExist{definition:residue_class_modulo_n}{ring $\bbZ / n\bbZ$}.
 \end{definition}

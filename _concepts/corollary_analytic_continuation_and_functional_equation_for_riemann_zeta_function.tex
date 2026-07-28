@@ -1,12 +1,12 @@
 \begin{corollary}[Analytic continuation and functional equation for the Riemann zeta function] \label{corollary:analytic_continuation_and_functional_equation_for_riemann_zeta_function}
 \TODO{AI generated, verify}
-The \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function} $\zeta(s)$ admits a meromorphic continuation to $\bbC$ with a single simple pole at $s = 1$ of residue $1$.
+The \CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function} $\zeta(s)$ admits a \CrefAndHyperrefIfExist{definition:meromorphic_continuation_of_a_holomorphic_function_on_an_open_subset_of_the_complex_plane}{meromorphic continuation} to $\bbC$ with a single simple pole at $s = 1$ of residue $1$.
 
 Define the \hldef{completed Riemann zeta function}
 $$
 \boxed{ \xi(s) = \frac{1}{2} s (s - 1) \pi^{-s/2} \Gamma\!\left( \frac{s}{2} \right) \zeta(s). }
 $$
-Then $\xi(s)$ is an entire function satisfying the symmetric functional equation
+Then $\xi(s)$ is an \CrefAndHyperrefIfExist{definition:entire_function_on_complex_space}{entire function} satisfying the symmetric functional equation
 $$
 \boxed{ \xi(s) = \xi(1 - s). }
 $$
@@ -16,11 +16,12 @@ $$
 \zeta(s) = 2^s \pi^{s-1} \sin\!\left( \frac{\pi s}{2} \right) \Gamma(1-s) \, \zeta(1-s), \qquad s \in \bbC \setminus \{1\}.
 $$
 
+
+\end{corollary}
 \begin{proof}
 	\TODO{AI generated, verify}
 	We specialize \Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function} to the trivial Dirichlet character modulo $1$. Let $\chi_0$ denote the principal character modulo $k = 1$, so that $\chi_0(n) = 1$ for all $n \geq 1$. The associated Dirichlet $L$-function is
 	$$L(s, \chi_0) = \sum_{n=1}^\infty \frac{1}{n^s} = \zeta(s).$$
-	\CrefAndHyperrefIfExist{definition:dirichlet_L_function_of_a_dirichlet_character_modulo_a_nonnegative_integer}{Dirichlet $L$-function}
 
 	Since $\chi_0(-1) = 1$, the character is even, so $a(\chi_0) = 0$. The Gauss sum and root number are
 	$$\tau(\chi_0) = \sum_{m=1}^1 \chi_0(m) e^{2\pi i m / 1} = 1,$$
@@ -35,7 +36,7 @@ $$
 
 	We verify that $\xi(s)$ is entire. The only singularity of $\zeta(s)$ in $\bbC$ is a simple pole at $s = 1$ with residue $1$\CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}. At $s = 1$, the factor $s - 1$ in $\xi(s)$ cancels this pole, so that
 	$$\lim_{s \to 1} \xi(s) = \frac{1}{2} \cdot 1 \cdot \pi^{-1/2} \Gamma\!\left( \frac{1}{2} \right) \cdot 1 = \frac{1}{2},$$
-	where we used $\Gamma(1/2) = \sqrt{\pi}$\Cref{proposition:value_of_gamma_function_at_one_half}. The functions $s(s-1)$, $\pi^{-s/2}$, and $\Gamma(s/2)$ are holomorphic for all $s \in \bbC$ except possibly at the poles of $\Gamma(s/2)$, which occur at non-positive even integers; at those points $\zeta(s)$ vanishes, so the product remains finite. Therefore, $\xi(s)$ extends to an entire function on $\bbC$.
+	where we used $\Gamma(1/2) = \sqrt{\pi}$\CrefIfExists{proposition:value_of_gamma_function_at_one_half}. The functions $s(s-1)$, $\pi^{-s/2}$, and $\Gamma(s/2)$ are holomorphic for all $s \in \bbC$ except possibly at the poles of $\Gamma(s/2)$, which occur at non-positive even integers; at those points $\zeta(s)$ vanishes, so the product remains finite. Therefore, $\xi(s)$ extends to an entire function on $\bbC$.
 
 	We derive the classical functional equation for $\zeta(s)$ from the identity $\xi(s) = \xi(1 - s)$. Substituting the definition of $\xi$ and dividing both sides by $s(s-1)$, we obtain
 	$$\pi^{-s/2} \Gamma\!\left( \frac{s}{2} \right) \zeta(s) = \pi^{-(1-s)/2} \Gamma\!\left( \frac{1 - s}{2} \right) \zeta(1 - s).$$
@@ -54,8 +55,4 @@ $$
 	Substituting this ratio back into the expression for $\zeta(s)$:
 	$$\zeta(s) = \pi^{s-1/2} \cdot \frac{2^s}{\sqrt{\pi}} \sin\!\left( \frac{\pi s}{2} \right) \Gamma(1-s) \, \zeta(1-s) = 2^s \pi^{s-1} \sin\!\left( \frac{\pi s}{2} \right) \Gamma(1-s) \, \zeta(1-s).$$
 	This is the classical functional equation.
-
-	\CrefAndHyperrefIfExist{definition:riemann_zeta_function}{Riemann zeta function}
-	\Cref{theorem:analytic_continuation_and_functional_equation_for_dirichlet_L_function}
 \end{proof}
-\end{corollary}

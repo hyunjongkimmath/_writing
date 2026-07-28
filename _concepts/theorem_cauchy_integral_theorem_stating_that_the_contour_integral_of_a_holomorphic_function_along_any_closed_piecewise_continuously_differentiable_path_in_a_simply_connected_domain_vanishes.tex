@@ -1,6 +1,6 @@
 \begin{theorem} \label{theorem:cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes}
     \TODO{AI generated, verify}
-Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset (a simply connected domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm}{holomorphic function} on $U$. Then for every closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} $\gamma$ in $U$,
+Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset (a simply connected domain) and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} on $U$. Then for every closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} $\gamma$ in $U$,
 $$\hlin{\oint_{\gamma} f(z)\,dz = 0}$$
 (\Cref{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path})
 \end{theorem}
@@ -22,7 +22,7 @@ By \Cref{definition:contour_integral_of_a_complex_valued_function_along_a_piecew
 $$\int_{\ell_h} f(w)\,dw = \int_0^1 f(z + th) \cdot h \,dt = h \int_0^1 f(z + th)\,dt.$$
 Therefore,
 $$\frac{F(z + h) - F(z)}{h} - f(z) = \int_0^1 \bigl(f(z + th) - f(z)\bigr)\,dt.$$
-For any $\varepsilon > 0$, $f$ is continuous at $z$ by \Cref{proposition:complex_differentiability_implies_continuity}, so there exists $\delta > 0$ such that $|w - z| < \delta$ implies $|f(w) - f(z)| < \varepsilon$. For $|h| < \delta$, we have $|z + th - z| = t|h| \leq |h| < \delta$ for all $t \in [0,1]$, thus
+For any $\varepsilon > 0$, $f$ is continuous at $z$ by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}, so there exists $\delta > 0$ such that $|w - z| < \delta$ implies $|f(w) - f(z)| < \varepsilon$. For $|h| < \delta$, we have $|z + th - z| = t|h| \leq |h| < \delta$ for all $t \in [0,1]$, thus
 $$\bigl|\int_0^1 (f(z + th) - f(z))\,dt\bigr| \leq \int_0^1 |f(z + th) - f(z)|\,dt < \varepsilon.$$
 Hence $\lim_{h \to 0} \frac{F(z + h) - F(z)}{h} = f(z)$, so $F'(z) = f(z)$.
 

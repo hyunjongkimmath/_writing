@@ -1,3 +1,13 @@
 \begin{lemma} \label{lemma:function_between_topological_spaces_is_continuous_iff_continuous_at_all_points}
     Let $f: X \to Y$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function} between \CrefAndHyperrefIfExist{definition:topological_space}{topological spaces}. It is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} if and only if it is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous at all points of $X$}.
 \end{lemma}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $(X, \tau_X)$ and $(Y, \tau_Y)$ be topological spaces. Recall that $f$ is continuous if for every open set $V \in \tau_Y$, the preimage $f^{-1}(V) \in \tau_X$. On the other hand, $f$ is continuous at a point $x \in X$ if for every neighborhood $V$ of $f(x)$ in $Y$, there exists a neighborhood $U$ of $x$ in $X$ such that $f(U) \subseteq V$.
+
+    Assume that $f$ is continuous. Fix any $x \in X$ and let $V$ be an arbitrary neighborhood of $f(x)$ in $Y$. By definition of a neighborhood, there exists an open set $W \in \tau_Y$ with $f(x) \in W \subseteq V$. Since $f$ is continuous, the preimage $f^{-1}(W)$ is open in $X$. Moreover, $x \in f^{-1}(W)$ because $f(x) \in W$. Let $U = f^{-1}(W)$. Then $U$ is an open neighborhood of $x$, and for every $u \in U$ we have $f(u) \in W \subseteq V$, so $f(U) \subseteq V$. Hence $f$ is continuous at $x$. Since $x$ was arbitrary, $f$ is continuous at all points.
+
+    Assume that $f$ is continuous at every point of $X$. Let $V \in \tau_Y$ be an open set in $Y$. If $V = \emptyset$, then $f^{-1}(V) = \emptyset \in \tau_X$, so we are done. Otherwise, for each $x \in f^{-1}(V)$, the point $f(x)$ lies in $V$. Since $V$ is open, it is a neighborhood of $f(x)$. By continuity at $x$, there exists an open neighborhood $U_x$ of $x$ such that $f(U_x) \subseteq V$. In particular, $U_x \subseteq f^{-1}(V)$ for each $x \in f^{-1}(V)$. We can write
+    $$f^{-1}(V) = \bigcup_{x \in f^{-1}(V)} U_x.$$
+    Each $U_x$ is open in $X$, so their union is open. Hence $f^{-1}(V)$ is open, and therefore $f$ is continuous.
+\end{proof}

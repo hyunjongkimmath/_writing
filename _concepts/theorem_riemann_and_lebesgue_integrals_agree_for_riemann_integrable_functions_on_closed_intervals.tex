@@ -1,0 +1,41 @@
+\begin{theorem}[Agreement of Riemann and Lebesgue integrals] \label{theorem:riemann_and_lebesgue_integrals_agree_for_riemann_integrable_functions_on_closed_intervals}
+    \TODO{AI generated, verify}
+Let $[a,b] \subset \mathbb{R}$ be a closed interval with $a < b$, and let $f : [a,b] \to \mathbb{R}$ be a bounded function.
+
+\begin{enumerate}
+  \item If $f$ is \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integrable on $[a,b]$}, then $f$ is also \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integrable} with respect to the \CrefAndHyperrefIfExist{definition:lebesgue_measure_on_Rn}{Lebesgue measure} on $[a,b]$, and the two integrals coincide:
+  $$\int_a^b f(x)\,dx = \int_{[a,b]} f\,d\lambda.$$
+
+  \item (Lebesgue's criterion for Riemann integrability) The function $f$ is Riemann integrable on $[a,b]$ if and only if the set of points at which $f$ is discontinuous has Lebesgue measure zero. Equivalently, $f$ is continuous \CrefAndHyperrefIfExist{definition:property_holds_almost_everywhere_for_a_measure_space}{almost everywhere} with respect to the Lebesgue measure.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+We prove part 1 first (agreement of integrals), then turn to part 2 (Lebesgue's criterion). The proof uses upper and lower Darboux sums together with simple function approximations.
+
+\begin{enumerate}
+    \item Suppose that $f$ is Riemann integrable on $[a,b]$. We show that $f$ is Lebesgue measurable and that the two integrals coincide. For any partition $P = \{x_0, x_1, \dots, x_n\}$ of $[a,b]$ with $a = x_0 < x_1 < \cdots < x_n = b$, define the lower and upper Darboux sums by
+    $$L(f,P) = \sum_{i=1}^n m_i (x_i - x_{i-1}), \quad U(f,P) = \sum_{i=1}^n M_i (x_i - x_{i-1}),$$
+    where $m_i = \inf_{x \in [x_{i-1}, x_i]} f(x)$ and $M_i = \sup_{x \in [x_{i-1}, x_i]} f(x)$. Define the associated lower and upper Darboux step functions by
+    $$\underline{s}_P(x) = m_i, \quad \overline{s}_P(x) = M_i$$
+    for $x \in (x_{i-1}, x_i)$, with arbitrary values at the partition points. These are Lebesgue measurable simple functions satisfying $\underline{s}_P(x) \leq f(x) \leq \overline{s}_P(x)$ for all $x$.
+
+    Since $f$ is Riemann integrable, there exists a sequence of partitions $(P_k)$ such that $U(f,P_k) - L(f,P_k) \to 0$ as $k \to \infty$. For each $k$, the difference $\overline{s}_{P_k} - \underline{s}_{P_k}$ is a nonnegative simple function with Lebesgue integral equal to $U(f,P_k) - L(f,P_k)$, which tends to zero. Therefore, both sequences converge in $L^1$ to the same limit.
+
+    We show that $f$ is measurable by observing that the set of discontinuity points has measure zero (proved in part 2). A function continuous almost everywhere on a closed interval is Lebesgue measurable because continuity at a point implies measurability locally, and modifying a function on a null set preserves measurability.
+
+    The integrals coincide because $\int \underline{s}_{P_k}\,d\lambda = L(f,P_k)$ and $\int \overline{s}_{P_k}\,d\lambda = U(f,P_k)$. As $k \to \infty$, both converge to the Riemann integral of $f$ by definition. By the dominated convergence theorem (applicable because $f$ is bounded on a finite measure set), we obtain
+    $$\int_{[a,b]} f\,d\lambda = \lim_{k \to \infty} L(f,P_k) = \int_a^b f(x)\,dx.$$
+
+    \item We prove Lebesgue's criterion. For each $n \geq 1$, define the set
+    $$E_n = \{x \in [a,b] : M_i(P) - m_i(P) \geq 1/n \text{ for all partitions } P \text{ containing } x\}.$$
+    Equivalently, $E_n$ is the set of points at which the oscillation of $f$ is at least $1/n$. The oscillation of $f$ at a point $x$ is defined as $\lim_{\delta \to 0} (\sup_{y,z \in (x-\delta,x+\delta)\cap[a,b]} |f(y) - f(z)|)$. A function is continuous at $x$ if and only if its oscillation at $x$ is zero. Therefore, the set of discontinuity points equals $\bigcup_{n=1}^\infty E_n$.
+
+    We show that each $E_n$ is a closed set. If $x_j \in E_n$ and $x_j \to x$, then every neighborhood of $x$ contains points arbitrarily close to the $x_j$, at which the oscillation is at least $1/n$. Hence the oscillation at $x$ is also at least $1/n$, so $x \in E_n$.
+
+    We now show that if $f$ is Riemann integrable, then $\lambda(E_n) = 0$ for each $n$. Fix $n$ and let $\epsilon > 0$. There exists a partition $P$ such that $U(f,P) - L(f,P) < \epsilon$. The intervals of the partition can be divided into two groups: those on which $M_i - m_i \geq 1/n$, and those on which $M_i - m_i < 1/n$. The total length of intervals in the first group is bounded by $n(U(f,P) - L(f,P)) < n\epsilon$. Since $\epsilon$ is arbitrary, the set $E_n$ has measure zero. Therefore, the union $\bigcup_{n=1}^\infty E_n$ also has measure zero, meaning $f$ is continuous almost everywhere.
+
+    Conversely, suppose that $f$ is continuous almost everywhere on $[a,b]$. We show that $f$ is Riemann integrable by showing that for every $\epsilon > 0$, there exists a partition with $U(f,P) - L(f,P) < \epsilon$. Since $f$ is bounded, let $K = \sup_{x \in [a,b]} |f(x)|$. The set of discontinuity points $D$ has measure zero. For each $\delta > 0$, there exists a finite collection of open intervals covering $D$ with total length less than $\delta$. On the complement (a compact set), $f$ is uniformly continuous, so we can refine the partition to make the oscillation arbitrarily small on those subintervals. Choosing $\delta$ sufficiently small and refining appropriately yields $U(f,P) - L(f,P) < \epsilon$. Therefore, $f$ is Riemann integrable.
+\end{enumerate}
+\end{proof}

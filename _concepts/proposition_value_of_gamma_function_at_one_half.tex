@@ -1,18 +1,16 @@
 \begin{proposition}[Value of the Gamma function at one half] \label{proposition:value_of_gamma_function_at_one_half}
 	\TODO{AI generated, verify}
-	The \CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function} $\Gamma(z)$ evaluated at $z = 1/2$ satisfies
+	The \CrefAndHyperrefIfExist{definition:gamma_function_on_the_complex_numbers}{Gamma function} $\Gamma(z)$ evaluated at $z = 1/2$ satisfies
 	$$
 	\boxed{\Gamma(1/2) = \sqrt{\pi}.}
 	$$
-
-	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
 \end{proposition}
 
 \begin{proof}
 	\TODO{AI generated, verify}
-	By the definition of the Gamma function\Cref{definition:gamma_function}, we have
+	By the definition of the Gamma function\Cref{definition:gamma_function_on_the_complex_numbers}, we have
 	$$\Gamma(1/2) = \int_0^\infty t^{-1/2} e^{-t}\,dt.$$
-	We make the substitution $t = u^2$, so that $dt = 2u\,du$ and $t^{-1/2} = 1/u$. The limits of integration transform from $(0, \infty)$ to $(0, \infty)$. Applying the substitution rule for integrals\Cref{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals} (extended to improper integrals\TODO{AI generated, reference needed: proposition on substitution rule for improper integrals}), we obtain
+	We make the substitution $t = u^2$, so that $dt = 2u\,du$ and $t^{-1/2} = 1/u$. The limits of integration transform from $(0, \infty)$ to $(0, \infty)$. Applying the substitution rule for integrals\Cref{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals}, extended to improper integrals via limits \TODO{AI generated, reference needed: proposition that substitution rule extends to improper integrals on [0,infty) by taking limits}, we obtain
 	$$\Gamma(1/2) = \int_0^\infty \frac{1}{u} e^{-u^2} \cdot 2u\,du = 2 \int_0^\infty e^{-u^2}\,du.$$
 
 	We compute the Gaussian integral $I = \int_{-\infty}^\infty e^{-x^2}\,dx$. Because the integrand is an even function, we have
@@ -28,7 +26,4 @@
 	Taking the positive square root (since $e^{-x^2} > 0$ for all real $x$, so $I > 0$):
 	$$I = \sqrt{\pi}.$$
 	Consequently, $\Gamma(1/2) = I = \sqrt{\pi}$.
-
-	\CrefAndHyperrefIfExist{definition:gamma_function}{Gamma function}
-	\Cref{theorem:fubini_theorem}
 \end{proof}

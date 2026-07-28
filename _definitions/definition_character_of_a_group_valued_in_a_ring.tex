@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:character_of_a_group_valued_in_a_ring}
+    Let $R$ be a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, and $G$ a \CrefAndHyperrefIfExist{definition:group}{group}.
+
+    A \hldef{character of $G$ valued in $R$} is a \CrefAndHyperrefIfExist{definition:group_homomorphism}{group homomorphism}
+    $$\hlin{\chi : G \to R^\times.}$$
+    \CrefIfExists{definition:unit_of_a_ring_invertible_element_of_a_ring_unit_group_of_a_group}
+
+    Equivalently, a character is a \CrefAndHyperrefIfExist{definition:representation_of_a_group_on_a_vector_space_over_a_field}{representation of $G$} on a rank $1$ free module space over $R$. The equivalence send/ $\chi$ to the action $g \cdot v = \chi(g)v$ on $R$, and conversely sends a 1-dimensional representation $(\rho, R)$ to $g \mapsto \rho(g)$.
+
+    The set of characters $\mathrm{X}^*_R(G) := \Hom_{\mathrm{gr.}}(G, R^\times)$ forms an abelian group under pointwise multiplication:
+    $$ (\chi_1 \chi_2)(g) = \chi_1(g)\chi_2(g), \quad \chi^{-1}(g) = \chi(g)^{-1}, \quad \mathbf{1}(g) = 1. $$
+    This group is called the \hldef{character group of $G$ valued in $R$}.
+
+    Since $R^\times$ is abelian, every character factors uniquely through the abelianization \hl{$G^{\mathrm{ab}} := G/[G,G]$}. Thus $\mathrm{X}^*_R(G) \cong \Hom_{\mathrm{gr.}}(G^{\mathrm{ab}}, R^\times)$.
+
+    If $G$ is regarded to have multiplicative structure, then $\chi$ is often called a \hldef{multiplicative character} and if $G$ is regarded to have additive structure, then $\chi$ is often called an \hldef{additive character}. Oftentimes, if we are given a ring $S$, then a \hldef{multiplicative character of $S$ valued in $R$} refers to a multiplicative character $S^\times \to R^\times$ and an \hldef{additive character of $S$ valued in $R$} refers to an additive character $S \to R^\times$.
+\end{definition}

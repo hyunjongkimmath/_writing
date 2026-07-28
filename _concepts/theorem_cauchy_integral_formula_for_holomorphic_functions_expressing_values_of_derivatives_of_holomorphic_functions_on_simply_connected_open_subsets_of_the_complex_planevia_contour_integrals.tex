@@ -1,0 +1,51 @@
+\begin{theorem} \label{theorem:cauchy_integral_formula_for_holomorphic_functions_expressing_values_of_derivatives_of_holomorphic_functions_on_simply_connected_open_subsets_of_the_complex_planevia_contour_integrals}
+    \TODO{AI generated, verify}
+    Let $U \subset \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:simply_connected_space}{simply connected} open subset and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}{holomorphic function} on $U$. Let $\gamma$ be a \CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}{closed} \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} in $U$ whose image is a simple closed curve, and let $z_0$ be a point in the interior of $\gamma$ (i.e. $z_0$ lies in the bounded component of $\mathbb{C} \setminus \gamma([a,b])$). Then for every non-negative integer $n$,
+    $$\hlin{f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^{n+1}}\,dz,}$$
+    where $f^{(n)}$ denotes the $n$-th derivative of $f$. In particular, for $n = 0$:
+    $$\hlin{f(z_0) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{z - z_0}\,dz.}$$
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We first prove the case $n = 0$, then obtain the general formula by differentiating under the integral sign.
+
+    \begin{enumerate}
+        \item We prove $f(z_0) = \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{z - z_0}\,dz$.
+
+        Let $\varepsilon > 0$ be sufficiently small that the closed disk $\overline{D}(z_0, \varepsilon)$ is contained in the interior of $\gamma$. Let $\gamma_\varepsilon$ be the positively oriented circle of radius $\varepsilon$ centered at $z_0$. By \Cref{theorem:cauchy_integral_theorem_stating_that_the_contour_integral_of_a_holomorphic_function_along_any_closed_piecewise_continuously_differentiable_path_in_a_simply_connected_domain_vanishes} applied to the function $g(z) = \frac{f(z)}{z - z_0}$ on the region between $\gamma$ and $\gamma_\varepsilon$, we have
+        $$\oint_{\gamma} \frac{f(z)}{z - z_0}\,dz = \oint_{\gamma_\varepsilon} \frac{f(z)}{z - z_0}\,dz.$$
+
+        On $\gamma_\varepsilon$, parametrize by $z = z_0 + \varepsilon e^{i\theta}$ with $\theta \in [0, 2\pi]$. Then $dz = i\varepsilon e^{i\theta}\,d\theta$ and $z - z_0 = \varepsilon e^{i\theta}$, so
+        \begin{align*}
+            \oint_{\gamma_\varepsilon} \frac{f(z)}{z - z_0}\,dz &= i \int_0^{2\pi} f(z_0 + \varepsilon e^{i\theta})\,d\theta \\
+            &= i \int_0^{2\pi} (f(z_0) + (f(z_0 + \varepsilon e^{i\theta}) - f(z_0)))\,d\theta \\
+            &= 2\pi i\, f(z_0) + i \int_0^{2\pi} (f(z_0 + \varepsilon e^{i\theta}) - f(z_0))\,d\theta.
+        \end{align*}
+
+        We bound the remainder. Since $f$ is continuous at $z_0$ by \Cref{proposition:holomorphic_functions_on_open_subsets_of_C_are_continuous}, for any $\eta > 0$ there exists $\delta > 0$ such that $|z - z_0| < \delta$ implies $|f(z) - f(z_0)| < \eta$. Choose $\varepsilon < \delta$. Then
+        $$\bigl| i \int_0^{2\pi} (f(z_0 + \varepsilon e^{i\theta}) - f(z_0))\,d\theta \bigr| \leq \int_0^{2\pi} |f(z_0 + \varepsilon e^{i\theta}) - f(z_0)|\,d\theta < 2\pi \eta.$$
+        Taking $\eta \to 0$ (equivalently $\varepsilon \to 0$), the remainder vanishes, so
+        $$\oint_{\gamma} \frac{f(z)}{z - z_0}\,dz = \lim_{\varepsilon \to 0} \oint_{\gamma_\varepsilon} \frac{f(z)}{z - z_0}\,dz = 2\pi i\, f(z_0).$$
+        Dividing by $2\pi i$ yields the desired formula.
+
+        \item Now we prove the formula for $n \geq 1$ by induction on $n$.
+
+        For $n = 1$, we differentiate the formula for $f(z_0)$ with respect to $z_0$. Since $f$ is holomorphic, the integrand $\frac{f(z)}{(z - z_0)^2}$ is a continuously differentiable function of $z_0$, and differentiation under the integral sign is justified by the \CrefAndHyperrefIfExist{theorem:dominated_convergence_theorem}{dominated convergence theorem} (or by uniform convergence on compact subsets away from $z_0$). We compute
+        \begin{align*}
+            f'(z_0) &= \frac{d}{dz_0} \left( \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{z - z_0}\,dz \right) \\
+            &= \frac{1}{2\pi i} \oint_{\gamma} \frac{\partial}{\partial z_0} \left( \frac{f(z)}{z - z_0} \right) dz \\
+            &= \frac{1}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^2}\,dz.
+        \end{align*}
+        Multiplying both sides by $1!$ gives the claimed formula.
+
+        Assume that for some $n \geq 1$, we have $f^{(n)}(z_0) = \frac{n!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^{n+1}}\,dz$. Differentiating again with respect to $z_0$ under the integral sign,
+        \begin{align*}
+            f^{(n+1)}(z_0) &= \frac{d}{dz_0} \left( \frac{n!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^{n+1}}\,dz \right) \\
+            &= \frac{n!}{2\pi i} \oint_{\gamma} \frac{\partial}{\partial z_0} \left( \frac{1}{(z - z_0)^{n+1}} \right) f(z)\,dz \\
+            &= \frac{n!}{2\pi i} \oint_{\gamma} \frac{(n+1)\,f(z)}{(z - z_0)^{n+2}}\,dz \\
+            &= \frac{(n+1)!}{2\pi i} \oint_{\gamma} \frac{f(z)}{(z - z_0)^{n+2}}\,dz,
+        \end{align*}
+        which completes the inductive step.
+    \end{enumerate}
+\end{proof}

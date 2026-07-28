@@ -1,0 +1,11 @@
+\begin{lemma}[Power of a power in a field for integer exponents] \label{lemma:power_of_a_power_in_a_field_for_integer_exponents_is_power_by_product_of_the_exponents}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:field}{field}, let $a \in F$, and let $m, n \in \bbZ$ such that all powers below are defined in the sense of \CrefAndHyperrefIfExist{definition:exponentiation_in_a_field}{$n$th power}. Then
+    $$ (a^m)^n = a^{mn}. $$
+    In particular, if $a \neq 0_F$ or both $m, n \geq 0$, the identity holds.
+\end{lemma}
+
+\begin{proof}
+    We reduce to the group-theoretic lemmas by considering the cases where powers are defined\CrefIfExists{definition:exponentiation_in_a_field}. By that definition, if $a = 0_F$, then negative powers of zero are undefined, while $0_F^k = 0_F$ for $k > 0$ and $0_F^0 = 1_F$. If both $m, n \geq 0$, the identity holds by \Cref{lemma:power_of_power_in_monoid_for_nonnegative_integers} applied to the multiplicative monoid $(F, \cdot)$.
+
+    Assume now that $a \neq 0_F$. Then $a$ belongs to the unit group $F^\times$ of $F$, which is a \CrefAndHyperrefIfExist{definition:group}{group} under multiplication by \Cref{lemma:unit_group_of_a_ring_is_a_group}. The powers $a^k$ for $k \in \bbZ$ coincide with the integer powers of $a$ in the group $F^\times$\CrefIfExists{definition:exponentiation_in_a_field}. Hence $(a^m)^n = a^{mn}$ follows directly from \Cref{lemma:power_of_power_in_group_for_integer_exponents} applied to the element $a \in F^\times$.
+\end{proof}

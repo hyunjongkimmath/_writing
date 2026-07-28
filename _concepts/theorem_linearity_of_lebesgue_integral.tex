@@ -1,12 +1,12 @@
 \begin{theorem}[Linearity of the Lebesgue integral] \label{theorem:linearity_of_lebesgue_integral}
     \TODO{AI generated, verify}
-    Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measure space}. If $f,g : X \to \mathbb{R}$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{(Lebesgue) integrable} with respect to $\mu$ and $\alpha,\beta \in \mathbb{R}$, then the function $\alpha f + \beta g : X \to \mathbb{R}$ is also Lebesgue integrable with respect to $\mu$, and
+    Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measure space}. If $f,g : X \to \mathbb{R}$ are \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{(Lebesgue) integrable} with respect to $\mu$ and $\alpha,\beta \in \mathbb{R}$, then the function $\alpha f + \beta g : X \to \mathbb{R}$ is also Lebesgue integrable with respect to $\mu$, and
     $$\int_X (\alpha f(x) + \beta g(x))\,d\mu(x) = \alpha \int_X f(x)\,d\mu(x) + \beta \int_X g(x)\,d\mu(x).$$
 \end{theorem}
 
 \begin{proof}
     \TODO{AI generated, verify}
-We use the construction of the Lebesgue integral in \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}: for a nonnegative measurable function $h$, the integral is defined as $$\int_X h\,d\mu = \sup\left\{\int_X s\,d\mu : 0 \leq s \leq h,\; s \text{ simple}\right\},$$ and for an integrable function $f: X \to \mathbb{R}$, the integral is $\int_X f\,d\mu = \int_X f^+\,d\mu - \int_X f^-\,d\mu$, where $f^+ = \max(f,0)$ and $f^- = \max(-f,0)$.
+We use the construction of the Lebesgue integral in \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}: for a nonnegative measurable function $h$, the integral is defined as $$\int_X h\,d\mu = \sup\left\{\int_X s\,d\mu : 0 \leq s \leq h,\; s \text{ simple}\right\},$$ and for an integrable function $f: X \to \mathbb{R}$, the integral is $\int_X f\,d\mu = \int_X f^+\,d\mu - \int_X f^-\,d\mu$, where $f^+ = \max(f,0)$ and $f^- = \max(-f,0)$.
 
 We proceed in three steps: first for nonnegative simple functions (direct computation), then for nonnegative measurable functions (supremum argument), and finally for general integrable functions (decomposition into positive and negative parts).
 
@@ -16,7 +16,7 @@ We proceed in three steps: first for nonnegative simple functions (direct comput
     Consider the common refinement partition $\{C_{ij}\}_{i,j}$ of $X$, where $C_{ij} = A_i \cap B_j$. Each set $C_{ij}$ is measurable since it is an intersection of two measurable sets, and these sets are pairwise disjoint with union equal to $X$. On each $C_{ij}$, both $s$ and $t$ are constant: $$s(x) = a_i \quad\text{and}\quad t(x) = b_j \qquad\text{for all } x \in C_{ij}.$$ Therefore the function $\alpha s + \beta t$ is also simple, with representation
     $$\alpha s + \beta t = \sum_{i=1}^m \sum_{j=1}^n (\alpha a_i + \beta b_j) \mathbf{1}_{C_{ij}}.$$
 
-    By the definition of the Lebesgue integral of a simple function in \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}, we compute
+    By the definition of the Lebesgue integral of a simple function in \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}, we compute
     $$\int_X (\alpha s + \beta t)\,d\mu = \sum_{i=1}^m \sum_{j=1}^n (\alpha a_i + \beta b_j) \mu(C_{ij}).$$
 
     We split this double sum:

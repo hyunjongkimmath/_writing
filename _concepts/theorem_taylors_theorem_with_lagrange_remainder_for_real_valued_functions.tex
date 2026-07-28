@@ -25,12 +25,12 @@
     $$g(x_0) = f(x) - \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x - x_0)^k + C \cdot \frac{(x - x_0)^{n+1}}{(n+1)!}.$$
     By the definition of $C$, the last term equals $-(f(x) - P_n(x)) = P_n(x) - f(x)$, so $g(x_0) = f(x) - P_n(x) + P_n(x) - f(x) = 0$.
 
-    Since $g(x_0) = g(x) = 0$ and $g(t)$ is continuous on $[x_0, x]$ (as each term involves compositions of continuous functions), we may apply \CrefAndHyperrefIfExist{theorem:rolles_theorem_for_differentiable_functions_vanishing_at_endpoints}{Rolle's theorem} to conclude that there exists a point $c \in (x_0, x)$ such that $g'(c) = 0$.
+    Since $g(x_0) = g(x) = 0$ and $g(t)$ is continuous on $[x_0, x]$ (as each term involves compositions of continuous functions), we may apply \CrefAndHyperrefIfExist{theorem:rolles_theorem_that_real_differentiable_functions_valued_in_the_reals_with_same_values_at_end_points_have_vanishing_derivative_at_some_point}{Rolle's theorem} to conclude that there exists a point $c \in (x_0, x)$ such that $g'(c) = 0$.
 
     We compute $g'$. For each term in the sum with index $k$,
     $$\frac{d}{dt}\left[\frac{f^{(k)}(t)}{k!}(x - t)^k\right] = \frac{f^{(k+1)}(t)}{k!}(x-t)^k + \frac{f^{(k)}(t)}{k!} \cdot k(x-t)^{k-1}(-1)$$
     $$= \frac{f^{(k+1)}(t)}{k!}(x-t)^k - \frac{f^{(k)}(t)}{(k-1)!}(x-t)^{k-1},$$
-    \CrefIfExists{proposition:derivative_rules_for_sum_product_quotient_and_chain}
+    \CrefIfExists{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}
     where the second term is understood to be zero when $k = 0$. For the constant term:
     $$\frac{d}{dt}\left[C \cdot \frac{(x-t)^{n+1}}{(n+1)!}\right] = C \cdot \frac{(n+1)(x-t)^n(-1)}{(n+1)!} = -C \cdot \frac{(x-t)^n}{n!}.$$
 

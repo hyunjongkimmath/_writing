@@ -1,0 +1,12 @@
+\begin{definition}[Piecewise continuous function on a closed interval] \label{definition:piecewise_continuous_function_on_a_closed_interval}
+    \TODO{AI generated, verify}
+Let $[a,b] \subset \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:interval_in_the_real_line}{closed bounded interval} with $a < b$, and let $f : [a,b] \to \mathbb{R}$ be a function.
+
+The function $f$ is called \hldef{piecewise continuous on $[a,b]$} if there exists a \CrefAndHyperrefIfExist{definition:partition_of_a_closed_interval_in_the_real_line}{partition} $P = \{x_0, x_1, \dots, x_n\}$ of $[a,b]$ such that:
+\begin{enumerate}
+  \item For each subinterval $(x_{i-1}, x_i)$ with $i = 1, \dots, n$, the restriction of $f$ to $(x_{i-1}, x_i)$ is continuous.
+  \item The one-sided limits $\lim_{x \to x_{i-1}^+} f(x)$ and $\lim_{x \to x_i^-} f(x)$ exist (and are finite) for each $i = 1, \dots, n$.
+\end{enumerate}
+
+The set of points at which $f$ may be discontinuous is contained in the finite set $\{x_0, x_1, \dots, x_n\}$. In particular, a piecewise continuous function on a closed bounded interval is bounded.
+\end{definition}

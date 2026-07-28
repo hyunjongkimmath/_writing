@@ -1,0 +1,13 @@
+\begin{definition}[Branch of the complex logarithm on an open subset]
+\label{definition:branch_of_the_complex_logarithm_on_an_open_subset}
+Let $U \subseteq \mathbb{C} \setminus \{0\}$ be an open set, and let $\exp : \mathbb{C} \to \mathbb{C}$ denote the \CrefAndHyperrefIfExist{definition:complex_exponential_function}{complex exponential function}.
+
+A continuous map $\operatorname{Log} : U \to \mathbb{C}$ is called a \hldef{branch of the complex logarithm on $U$} if it satisfies
+$$\exp(\operatorname{Log}(z)) = z \quad \text{for all } z \in U.$$
+
+The \hldef{principal branch of the complex logarithm}, denoted by \hl{$\operatorname{Log}_{\mathrm{princ}}$}, is the unique branch defined on the slit plane $\mathbb{C} \setminus (-\infty, 0]$ such that for $z = r e^{i\theta}$ with $r > 0$ and $\theta \in (-\pi, \pi)$,
+$$\operatorname{Log}_{\mathrm{princ}}(z) = \ln(r) + i\theta,$$
+where $\ln(r)$ denotes the \CrefAndHyperrefIfExist{definition:real_natural_logarithm_function_as_inverse_of_real_exponential_function}{natural logarithm} of $r$.
+
+A connected open set $U \subseteq \mathbb{C} \setminus \{0\}$ admits a branch of the complex logarithm if and only if every loop in $U$ has winding number zero around the origin.
+\end{definition}

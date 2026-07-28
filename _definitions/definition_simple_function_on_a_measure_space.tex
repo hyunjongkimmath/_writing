@@ -1,0 +1,11 @@
+\begin{definition}[Simple function on a measure space] \label{definition:simple_function_on_a_measure_space}
+    \TODO{AI generated, verify}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
+
+A \hldef{simple function on $X$} is a \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} $s : X \to [0,\infty)$ that takes only finitely many values, i.e.,
+$$s = \sum_{k=1}^m a_k \mathbf{1}_{A_k},$$
+where $a_k \in [0,\infty)$ and $A_k \in \mathcal{A}$ are pairwise disjoint.
+
+For such $s$, the \hldef{Lebesgue integral of $s$ with respect to $\mu$} is defined by
+$$\hlin{\int_X s\,d\mu := \sum_{k=1}^m a_k \mu(A_k).}$$
+\end{definition}

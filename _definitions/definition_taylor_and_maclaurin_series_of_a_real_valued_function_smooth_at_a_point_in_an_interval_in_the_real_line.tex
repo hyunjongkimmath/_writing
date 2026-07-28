@@ -1,0 +1,11 @@
+\begin{definition} \label{definition:taylor_and_maclaurin_series_of_a_real_valued_function_smooth_at_a_point_in_an_interval_in_the_real_line}
+    \TODO{AI generated, verify}
+    Let $I \subseteq \mathbb{R}$ be an open interval, let $c \in I$, and let $f : I \to \mathbb{R}$ be a function that is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{smooth} at $c$. 
+
+    The \hldef{Taylor series of $f$ centered at $c$}, denoted by \hl{$T_c f(x)$}, is the \CrefAndHyperrefIfExist{definition:real_power_series_centered_at_a_real_number_and_radius_of_convergence_of_a_real_power_series}{real power series}
+    $$\hlin{T_c f(x) := \sum_{n=0}^\infty \frac{f^{(n)}(c)}{n!} (x - c)^n}$$
+    where $n!$ is the \CrefAndHyperrefIfExist{definition:factorial_of_a_nonnegative_integer}{factorial of $n$}. Under some hypotheses, $T_cf(x)$ as a function $I \to \bbR$ \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converges absolutely} to $f$\CrefIfExists{theorem_taylor_series_convergence_criterion_for_real_valued_functions_on_a_real_interval.tex}.
+
+    When $c = 0$, the Taylor series of $f$ centered at $0$ is called the \hldef{Maclaurin series of $f$}, denoted by \hl{$T_0 f(x)$} or simply \hl{$M_f(x)$}:
+    $$M_f(x) := \sum_{n=0}^\infty \frac{f^{(n)}(0)}{n!} x^n.$$
+\end{definition}

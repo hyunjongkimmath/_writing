@@ -1,0 +1,30 @@
+\begin{lemma}[Theta transformation formula for primitive Dirichlet characters] \label{lemma:theta_transformation_formula_for_primitive_dirichlet_characters}
+\TODO{AI generated, verify}
+Let $k \in \mathbb{Z}_{\geq 1}$, and let $\chi$ be a \CrefAndHyperrefIfExist{definition:primitive_dirichlet_character}{primitive Dirichlet character modulo $k$}. Let $\theta_\chi(u)$ denote the \CrefAndHyperrefIfExist{definition:theta_function_associated_to_a_dirichlet_character}{theta function associated to $\chi$}, and let $\varepsilon(\chi)$ be the \CrefAndHyperrefIfExist{definition:root_number_of_a_dirichlet_character}{root number of $\chi$}. Then for all $u > 0$,
+$$\theta_\chi\!\left( \frac{1}{u} \right) = \varepsilon(\chi) \, \left( \frac{u}{k} \right)^{\!1/2} \theta_{\overline{\chi}}(u),$$
+where $\overline{\chi}$ is the \CrefAndHyperrefIfExist{definition:complex_conjugate_of_a_dirichlet_character}{complex conjugate character}.
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove this using the \CrefAndHyperrefIfExist{theorem:poisson_summation_formula_for_schwartz_functions_on_real_numbers}{Poisson summation formula}. Let $\chi$ be a primitive Dirichlet character modulo $k$.
+
+    Define the function $\phi_\chi(x) = \chi(\lceil x \rceil) e^{-\pi x^2 / k}$ for $x > 0$, extended to an odd or even Schwartz-like function on $\bbR$ depending on the parity of $\chi$. More precisely, define
+    $$f(x) = \sum_{n=1}^\infty \chi(n) e^{-\pi n^2 x / k},$$
+    so that $\theta_\chi(u) = 2f(u) + \chi(0)$.
+
+    The Poisson summation formula applied to the Schwartz function $g(t) = e^{-\pi t^2 u / k}$ gives
+    $$\sum_{n \in \bbZ} g(n) = \sqrt{\frac{k}{u}} \sum_{m \in \bbZ} \hat{g}\left(\frac{m}{k}\right),$$
+    where $\hat{g}(\xi) = e^{-\pi k \xi^2 / u}$ is the Fourier transform of $g$.
+
+    For the twisted version with character $\chi$, we use the Gauss sum. The key identity is that for primitive characters, the discrete Fourier transform of $n \mapsto \chi(n)$ is given by
+    $$\sum_{n=1}^k \chi(n) e^{2\pi i n m / k} = \tau(\chi)\overline{\chi}(m).$$
+
+    Applying this to the theta function:
+    $$\theta_\chi(1/u) = \sum_{n \in \bbZ} \chi(n) e^{-\pi n^2 u / k}.$$
+
+    Using the orthogonality of characters and the Gauss sum identity, we rewrite the left-hand side as a sum over residue classes modulo $k$, then apply Poisson summation to each class. The computation yields
+    $$\theta_\chi(1/u) = \tau(\chi)(u/k)^{1/2} \sum_{m \in \bbZ} \overline{\chi}(m) e^{-\pi m^2 u / k}.$$
+
+    Recognizing $\varepsilon(\chi) = \tau(\chi)/(i^{a(\chi)}\sqrt{k})$ and the right-hand side as $(u/k)^{1/2}\theta_{\overline{\chi}}(u)$, we obtain the claimed transformation formula.
+\end{proof}

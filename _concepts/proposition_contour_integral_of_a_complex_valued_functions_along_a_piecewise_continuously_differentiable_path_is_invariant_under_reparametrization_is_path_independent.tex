@@ -1,0 +1,42 @@
+\begin{proposition}[Path independence and primitive existence for contour integrals] \label{proposition:contour_integral_of_a_complex_valued_functions_along_a_piecewise_continuously_differentiable_path_is_invariant_under_reparametrization_is_path_independent}
+    \TODO{AI generated, verify}
+Let $U \subseteq \mathbb{C}$ be an open set and let $f : U \to \mathbb{C}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous} function. The following statements are equivalent:
+
+\begin{enumerate}
+    \item[(i)] For every closed \CrefAndHyperrefIfExist{definition:piecewise_continuously_differentiable_path_from_a_closed_real_interval_to_the_complex_plane}{piecewise continuously differentiable path} $\gamma$ in $U$, we have $\displaystyle\oint_{\gamma} f(z)\,dz = 0$.
+
+    \item[(ii)] For any two points $z_1, z_2 \in U$ and any two piecewise continuously differentiable paths $\gamma_1, \gamma_2 : [a,b] \to U$ from $z_1$ to $z_2$, we have
+    $$\hlin{\oint_{\gamma_1} f(z)\,dz = \oint_{\gamma_2} f(z)\,dz.}$$
+
+    \item[(iii)] There exists a holomorphic function $F : U \to \mathbb{C}$ such that $F'(z) = f(z)$ for all $z \in U$ (i.e., $f$ admits a holomorphic primitive on $U$, meaning an antiderivative $F$ with $F' = f$).
+\end{enumerate}
+
+When these conditions hold, any such primitive is of the form
+$$F(z) = \int_{\gamma_z} f(w)\,dw + C,$$
+where $\gamma_z$ is any piecewise continuously differentiable path from a fixed base point $z_0 \in U$ to $z$, and $C \in \mathbb{C}$ is an arbitrary constant.
+\end{proposition}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We prove (i) $\implies$ (ii), (ii) $\implies$ (iii), and (iii) $\implies$ (i).
+
+    \textbf{(i) $\implies$ (ii).} Let $\gamma_1, \gamma_2 : [a,b] \to U$ be two piecewise continuously differentiable paths from $z_1$ to $z_2$. Form the closed path $\gamma = \gamma_1 - \gamma_2$ by traversing $\gamma_1$ followed by $\gamma_2$ in reverse. Then
+    $$\oint_{\gamma} f(z)\,dz = \oint_{\gamma_1} f(z)\,dz - \oint_{\gamma_2} f(z)\,dz.$$
+    By hypothesis (i), the left-hand side is zero, so $\displaystyle\oint_{\gamma_1} f(z)\,dz = \oint_{\gamma_2} f(z)\,dz$.
+
+    \textbf{(ii) $\implies$ (iii).} Fix $z_0 \in U$. For any $z \in U$, choose a piecewise continuously differentiable path $\eta_z$ from $z_0$ to $z$ in $U$ and define
+    $$F(z) := \int_{\eta_z} f(w)\,dw.$$
+    By (ii), $F$ is well-defined (independent of the choice of $\eta_z$). For any $z \in U$ and sufficiently small $h \in \mathbb{C}$ with $z + h \in U$, let $\ell_h$ be the straight line segment from $z$ to $z+h$. We may take the path $\eta_{z+h} = \eta_z \cdot \ell_h$, so
+    $$F(z+h) - F(z) = \int_{\ell_h} f(w)\,dw.$$
+    Parametrizing $\ell_h$ by $w = z + th$ for $t \in [0,1]$, we have
+    $$\int_{\ell_h} f(w)\,dw = h \int_0^1 f(z+th)\,dt,$$
+    so
+    $$\frac{F(z+h) - F(z)}{h} - f(z) = \int_0^1 (f(z+th) - f(z))\,dt.$$
+    Since $f$ is continuous at $z$\CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}, the right-hand side tends to zero as $h \to 0$. Hence $F'(z) = f(z)$, and $F$ is holomorphic\CrefAndHyperrefIfExist{definition:holomorphic_function_from_a_subset_of_Cn_to_Cm_and_derivative_of_a_holomorphic_function_at_a_point}.
+
+    \textbf{(iii) $\implies$ (i).} Suppose $F' = f$ on $U$. For any closed piecewise continuously differentiable path $\gamma : [a,b] \to U$, we compute by the \CrefAndHyperrefIfExist{definition:contour_integral_of_a_complex_valued_function_along_a_piecewise_continuously_differentiable_path}{definition of the contour integral}:
+    $$\oint_{\gamma} f(z)\,dz = \int_a^b F'(\gamma(t))\,\gamma'(t)\,dt = \int_a^b \frac{d}{dt}(F \circ \gamma)(t)\,dt.$$
+    By the \CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{fundamental theorem of calculus} applied to the real and imaginary parts of $F \circ \gamma$, this equals
+    $$F(\gamma(b)) - F(\gamma(a)).$$
+    Since $\gamma$ is closed, $\gamma(b) = \gamma(a)$\CrefAndHyperrefIfExist{definition:path_and_loop_in_a_topological_space}, so the difference vanishes.
+\end{proof}

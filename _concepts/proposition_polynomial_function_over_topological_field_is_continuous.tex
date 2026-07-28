@@ -1,0 +1,7 @@
+\begin{proposition} \label{proposition:polynomial_function_over_topological_field_is_continuous}
+    \TODO{AI generated, verify}
+    Let $F$ be a \CrefAndHyperrefIfExist{definition:topological_field}{topological field}, and let $p \in F[x]$\CrefIfExists{definition:polynomial_ring_over_a_commutative_ring} be a polynomial. The function $p : F \to F$ given by evaluation is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}.
+\end{proposition}
+\begin{proof}
+    A constant polynomial defines a constant function, which is continuous by \Cref{proposition:constant_function_between_topological_spaces_is_continuous}. The identity function $\operatorname{id}_F : F \to F$ is continuous by \Cref{proposition:identity_function_between_topological_spaces_is_continuous}. By repeatedly applying \Cref{proposition:pointwise_product_of_continuous_functions_on_topological_spaces_valued_in_topological_ring_is_continuous} and \Cref{proposition:pointwise_sum_of_continuous_functions_on_topological_spaces_valued_in_topological_ring_is_continuous}, continuity is preserved under multiplication and addition of continuous functions. Since every polynomial is a finite sum of products of constants and the identity function, it defines a continuous function.
+\end{proof}

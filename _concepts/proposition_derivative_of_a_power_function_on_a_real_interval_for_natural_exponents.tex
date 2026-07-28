@@ -11,7 +11,7 @@
 
     For $n = 1$, the function is $f(x) = x$, the identity function. By \Cref{proposition:derivative_of_the_identity_function_on_a_real_interval_is_one}, $f'(a) = 1 = 1 \cdot a^0$ for all $a \in I$. The formula holds.
 
-    Assume the statement holds for some $n \ge 1$, i.e., the function $g(x) = x^n$ is differentiable on $I$ with $g'(a) = n a^{n-1}$ for all $a \in I$. Consider the function $f(x) = x^{n+1}$. We can write $f(x) = x \cdot x^n = x \cdot g(x)$. By the \CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}{product rule}, $f$ is differentiable at each $a \in I$ and
+    Assume the statement holds for some $n \ge 1$, i.e., the function $g(x) = x^n$ is differentiable on $I$ with $g'(a) = n a^{n-1}$ for all $a \in I$. Consider the function $f(x) = x^{n+1}$. We can write $f(x) = x \cdot x^n = x \cdot g(x)$. By the \CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{product rule}, $f$ is differentiable at each $a \in I$ and
     \begin{align*}
         f'(a) &= (1) \cdot g(a) + a \cdot g'(a) \\
         &= x^n \big|_{x=a} + a \cdot (n a^{n-1}) \\

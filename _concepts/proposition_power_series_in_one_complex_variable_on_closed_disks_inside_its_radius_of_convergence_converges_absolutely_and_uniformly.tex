@@ -1,22 +1,19 @@
 \begin{proposition}[Convergence of a power series on closed disks inside its radius of convergence] \label{proposition:power_series_in_one_complex_variable_on_closed_disks_inside_its_radius_of_convergence_converges_absolutely_and_uniformly}
-    Let $\sum_{n=0}^\infty a_n (z - z_0)^n$ be a \CrefAndHyperrefIfExist{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}{power series in one complex variable} with coefficients $a_n \in \mathbb{C}$ and with radius of convergence $R \in (0, \infty]$, given by the \CrefAndHyperrefIfExist{proposition:cauchy_hadamard_formula_for_power_series_in_one_complex_variable}{Cauchy--Hadamard formula}.
+    Let $\sum_{n=0}^\infty a_n (z - z_0)^n$ be a \CrefAndHyperrefIfExist{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}{power series in one complex variable} with coefficients $a_n \in \mathbb{C}$ and with radius of convergence $R \in (0, \infty]$, given by the \CrefAndHyperrefIfExist{proposition:cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable}{Cauchy--Hadamard formula}.
     
-    For every $r$ with $0 \leq r < R$, the series converges
-    \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{absolutely}
-    and
-    \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{uniformly}
-    on the closed disk $\overline{D}(z_0, r) = \{z \in \mathbb{C} : |z - z_0| \leq r\}$.
+    For every $r$ with $0 \leq r < R$, the series converges absolutely\CrefIfExists{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring} and uniformly\CrefIfExists{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity} on the closed disk $\overline{D}(z_0, r) = \{z \in \mathbb{C} : |z - z_0| \leq r\}$.
 \end{proposition}
 
 \begin{proof}
     Fix $r$ with $0 \leq r < R$, and denote the closed disk by $\overline{D} = \overline{D}(z_0, r)$.
 
     We first verify that the series $\sum_{n=0}^\infty |a_n| r^n$ converges.
-    By \Cref{proposition:cauchy_hadamard_formula_for_power_series_in_one_complex_variable}, we have
-    $\limsup_{n\to\infty} |a_n|^{1/n} = 1/R$ (with the conventions $1/\infty = 0$ and $1/0 = \infty$).
+    By \Cref{proposition:cauchy_hadamard_formula_for_radius_of_convergence_for_power_series_in_one_complex_variable}, we have
+    $$\limsup_{n\to\infty} |a_n|^{1/n} = 1/R$$ 
+    (with the conventions $1/\infty = 0$ and $1/0 = \infty$).
     Therefore,
     $$\limsup_{n\to\infty} (|a_n| r^n)^{1/n} = r \cdot \limsup_{n\to\infty} |a_n|^{1/n} = \frac{r}{R} < 1.$$
-    \Cref{theorem:root_test_for_absolute_convergence_of_series} then implies that $\sum_{n=0}^\infty |a_n| r^n$ converges.
+    \CrefIfExists{theorem:root_test_for_absolute_convergence_of_series} then implies that $\sum_{n=0}^\infty |a_n| r^n$ converges.
 
     Next we show absolute convergence at each point of $\overline{D}$.
     For any fixed $z \in \overline{D}$, we have $|z - z_0| \leq r$, so the multiplicativity of the
@@ -25,20 +22,13 @@
     for each $n$.
     Since $\sum_{n=0}^\infty |a_n| r^n$ converges,
     \Cref{theorem:comparison_test_for_series_of_nonnegative_real_numbers} implies that $\sum_{n=0}^\infty |a_n(z - z_0)^n|$ converges,
-    i.e.\ the power series converges
-    \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{absolutely}
-    at $z$.
+    i.e.\ the power series converges absolutely\CrefIfExists{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring} at $z$.
 
     Finally, we prove uniform convergence on $\overline{D}$.
     Set $M_n = |a_n| r^n$ for each $n$.
     The series $\sum_{n=0}^\infty M_n$ converges in $\mathbb{R}$ as shown above, so the sequence $(M_n)$ satisfies the \CrefAndHyperrefIfExist{definition:cauchy_tails_condition_for_series_in_an_ordered_semiring}{Cauchy tails condition} by the \CrefAndHyperrefIfExist{proposition:cauchy_criterion_for_convergence_of_series_of_real_numbers}{Cauchy criterion}.
     For every $z \in \overline{D}$ and every $n$, we have $|a_n(z - z_0)^n| \leq M_n$ as shown above.
-    The functions $f_n(z) = a_n(z - z_0)^n$ map $\overline{D}$ to $\mathbb{C}$, and $\mathbb{C}$ is a
-    \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space}
-    over itself with respect to the
-    \CrefAndHyperrefIfExist{definition:complex_absolute_value}{complex absolute value} by
-    \Cref{definition:real_and_complex_fields_as_complete_fields}.
-    By \Cref{theorem:weierstrass_m_test_for_uniform_convergence_of_function_series}, the series $\sum_{n=0}^\infty a_n(z - z_0)^n$ 
-    \CrefAndHyperrefIfExist{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{converges uniformly}
-    on $\overline{D}$.
+    The functions $f_n(z) = a_n(z - z_0)^n$ map $\overline{D}$ to $\mathbb{C}$, and $\mathbb{C}$ is a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over itself with respect to the \CrefAndHyperrefIfExist{definition:complex_absolute_value}{complex absolute value} by
+    \Cref{proposition:C_is_a_Banach_space_over_C_with_the_standard_norm_valued_in_R}, which follows from \Cref{definition:real_and_complex_fields_as_complete_fields}.
+    By \Cref{theorem:weierstrass_m_test_for_uniform_convergence_of_series_of_functions_from_sets_to_banach_spaces_over_a_absolute_valued_ring_valued_in_the_reals}, the series $\sum_{n=0}^\infty a_n(z - z_0)^n$ converges uniformly\CrefIfExists{definition:uniform_convergence_of_a_series_of_functions_from_a_set_to_an_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity} on $\overline{D}$.
 \end{proof}

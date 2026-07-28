@@ -1,0 +1,20 @@
+\begin{proposition}[The field of rational numbers is Archimedean] \label{proposition:the_field_of_rational_numbers_is_archimedean}
+    Let $\bbQ$ be the \CrefAndHyperrefIfExist{definition:field_of_rational_numbers}{field of rational numbers} equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_field_of_rational_numbers}{standard order}. Then $\bbQ$ has the \CrefAndHyperrefIfExist{definition:archimedean_ordered_monoid_dense_at_zero_ordered_monoid}{archimedean property} as an \CrefAndHyperrefIfExist{definition:ordered_abelian_group}{ordered abelian group}: for every $a \in \bbQ_{>0}$ and $b \in \bbQ$, there exists $n \in \bbN$\CrefIfExists{definition:natural_numbers} such that $n \cdot a > b$.
+
+    Equivalently, for every $q \in \bbQ$, there exists a natural number $n \in \bbN$ such that $n > q$.
+\end{proposition}
+\begin{proof}
+    We first show the equivalent statement: for every $q \in \bbQ$, there exists $n \in \bbN$ with $n > q$.
+
+    Let $q \in \bbQ$. Write $q = \frac{a}{b}$ with $a \in \bbZ$ and $b \in \bbZ \setminus \{0\}$. By multiplying numerator and denominator by $-1$ if necessary, we may assume $b > 0$ (see \Cref{definition:standard_order_on_field_of_rational_numbers}). We consider two cases.
+
+    \begin{enumerate}
+        \item If $q \le 0$, then $n = 1$ satisfies $n > q$ because $1 > 0 \ge q$ in $\bbQ$ (see \Cref{proposition:the_field_of_rational_numbers_is_a_totally_ordered_field}).
+
+        \item If $q > 0$, then $a > 0$ (since $b > 0$). The \CrefAndHyperrefIfExist{definition:well_ordered_set}{well ordering} of $\bbZ_{>0}$ (see \Cref{proposition:integers_form_totally_ordered_ring}) implies $b \ge 1$ because $1$ is the least positive integer. Since $a \ge 0$, the compatibility of multiplication with the order in the ordered ring $\bbZ$ (see \Cref{proposition:integers_form_totally_ordered_ring}) gives $a \cdot 1 \le a \cdot b$. By the definition of the standard order on $\bbQ$, the inequality in $\bbZ$ translates to $q = \frac{a}{b} \le \frac{a}{1} = a$. Compatibility of addition with the strict order in $\bbQ$ (see \Cref{proposition:the_field_of_rational_numbers_is_a_totally_ordered_field}) gives $a < a + 1$, so $n = a + 1$ satisfies $n > q$.
+    \end{enumerate}
+
+    Thus for every $q \in \bbQ$, there exists $n \in \bbN$ such that $n > q$.
+
+    Now we deduce the Archimedean property in its general form. Let $a \in \bbQ_{>0}$ and $b \in \bbQ$. Since $a \neq 0$, the quotient $b/a$ is well-defined as an element of $\bbQ$. By the statement above, there exists $n \in \bbN$ such that $n > b/a$. Multiplying the inequality by $a > 0$ preserves the strict inequality (see \Cref{proposition:the_field_of_rational_numbers_is_a_totally_ordered_field}), so $n \cdot a > b$.
+\end{proof}

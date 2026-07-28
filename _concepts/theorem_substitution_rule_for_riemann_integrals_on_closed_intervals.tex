@@ -1,4 +1,5 @@
 \begin{theorem}[Substitution rule for Riemann integrals] \label{theorem:substitution_rule_for_riemann_integrals_on_closed_intervals}
+    \TODO{AI generated, verify}
     Let $[\alpha, \beta]$ and $[a, b]$ be closed bounded intervals in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} with $\alpha < \beta$ and $a < b$. Let $\varphi : [\alpha, \beta] \to [a, b]$ and $f : [a, b] \to \mathbb{R}$ be \CrefAndHyperrefIfExist{definition:function_of_sets}{functions}.
 
     Suppose that:
@@ -16,7 +17,7 @@
     $$F(y) = \int_a^y f(x)\,dx$$
     for each $y \in [a, b]$. By Part I of the Fundamental Theorem of Calculus, $F'(y) = f(y)$ at every point where $f$ is continuous.
 
-    Consider the composition $G(t) = F(\varphi(t))$ for $t \in [\alpha, \beta]$. Since $\varphi : [\alpha, \beta] \to [a, b]$ and $F : [a, b] \to \mathbb{R}$, the domain of $G$ is $[\alpha, \beta]$. Both $F$ and $\varphi$ are differentiable on their respective domains. By the chain rule (\CrefAndHyperrefIfExist{proposition:derivative_rules_for_sum_product_quotient_and_chain}), the composition $G$ is differentiable at each point of $(\alpha, \beta)$ with
+    Consider the composition $G(t) = F(\varphi(t))$ for $t \in [\alpha, \beta]$. Since $\varphi : [\alpha, \beta] \to [a, b]$ and $F : [a, b] \to \mathbb{R}$, the domain of $G$ is $[\alpha, \beta]$. Both $F$ and $\varphi$ are differentiable on their respective domains. By the chain rule (\CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}), the composition $G$ is differentiable at each point of $(\alpha, \beta)$ with
     $$G'(t) = F'(\varphi(t)) \cdot \varphi'(t) = f(\varphi(t)) \cdot \varphi'(t).$$
 
     We now apply the Fundamental Theorem of Calculus, Part II (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}) to $G$ on $[\alpha, \beta]$. Since $G' = (f \circ \varphi) \cdot \varphi'$ is Riemann integrable (as the product of an integrable function and a bounded continuous function), we have:

@@ -1,0 +1,14 @@
+\begin{theorem}[Bolzano--Weierstrass theorem for bounded sequences in $\mathbb{R}$] \label{theorem:bolzano_weierstrass_theorem_stating_that_bounded_sequences_in_real_numbers_have_subsequences_that_converge_to_some_value}
+    Let $(x_n)_{n=1}^\infty$ be a sequence in $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} such that there exists $M > 0$ with $|x_n| \leq M$ for all $n$. Then there exists a subsequence $(x_{n_k})_{k=1}^\infty$ and $x \in \mathbb{R}$ such that
+    $$\lim_{k \to \infty} x_{n_k} = x.$$
+    \CrefIfExists{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity} Moreover, $x \in [-M, M]$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+    We use the bisection method. Set $I_0 = [-M, M]$. The sequence $(x_n)$ has infinitely many terms in $I_0$. Construct a nested sequence of closed intervals $(I_k)_{k=0}^\infty$ inductively as follows. Given $I_k = [a_k, b_k]$ containing infinitely many terms of the sequence, let $m_k = \frac{a_k + b_k}{2}$ be the midpoint. Either the left half $[a_k, m_k]$ or the right half $[m_k, b_k]$ contains infinitely many terms of $(x_n)$. Choose $I_{k+1}$ to be whichever half contains infinitely many terms; if both do, choose the left half.
+
+    Each interval satisfies $I_{k+1} \subseteq I_k$, and its length is $|I_k| = \frac{2M}{2^k}$, which tends to $0$ as $k \to \infty$. By the nested intervals property of $\mathbb{R}$ (a consequence of completeness), there exists a unique point $x \in \bigcap_{k=0}^\infty I_k$.
+
+    We now construct a convergent subsequence. Choose indices $n_1 < n_2 < \cdots$ inductively: having chosen $n_1, \ldots, n_{k-1}$, select $n_k > n_{k-1}$ such that $x_{n_k} \in I_k$. This is always possible because each $I_k$ contains infinitely many terms of the sequence. For each $k$, we have $|x_{n_k} - x| \leq |I_k| = \frac{2M}{2^k}$, since both $x_{n_k}$ and $x$ lie in $I_k$. As $\frac{2M}{2^k} \to 0$, we conclude that $\lim_{k \to \infty} x_{n_k} = x$. Moreover, $x \in [-M, M]$ because $x \in I_0 = [-M, M]$.
+\end{proof}

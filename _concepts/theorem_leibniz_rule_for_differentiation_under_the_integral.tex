@@ -3,7 +3,7 @@
     Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, let $U \subseteq \mathbb{R}$ be open, and let $f : U \times X \to \mathbb{R}$ be a function satisfying:
 
     \begin{enumerate}
-        \item For every $t \in U$, the function $x \mapsto f(t, x)$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{integrable} with respect to $\mu$.
+        \item For every $t \in U$, the function $x \mapsto f(t, x)$ is \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable} with respect to $\mu$.
         \item For $\mu$-almost every $x \in X$, the function $t \mapsto f(t, x)$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} on $U$.
         \item There exists an integrable function $g : X \to \mathbb{R}$ such that for all $t \in U$ and $\mu$-almost every $x \in X$,
         $$\left| \frac{\partial f}{\partial t}(t, x) \right| \le g(x).$$
@@ -27,7 +27,7 @@ We apply the \CrefAndHyperrefIfExist{definition:dominated_convergence_theorem_fo
 
     \item We verify that each $Q_n$ is measurable. For each fixed $n$, the functions $(t_0 + h_n, x) \mapsto f(t_0 + h_n, x)$ and $(t_0, x) \mapsto f(t_0, x)$ are measurable on $X$ by hypothesis (1), since for any fixed $t \in U$, the function $x \mapsto f(t,x)$ is integrable and hence measurable. Their difference divided by the nonzero constant $h_n$ is therefore measurable.
 
-    \item Finally we check that $\frac{\partial f}{\partial t}(t_0, x)$ itself is integrable. By hypothesis (3), $$\left|\frac{\partial f}{\partial t}(t_0, x)\right| \leq g(x)$$ for all $x$, and since $g$ is integrable by hypothesis, it follows that $\frac{\partial f}{\partial t}(t_0, -)$ is dominated by an integrable function. A measurable function dominated by an integrable function is itself integrable (by the comparison property of \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the}{the Lebesgue integral}). Thus $x \mapsto \frac{\partial f}{\partial t}(t_0, x)$ is integrable.
+    \item Finally we check that $\frac{\partial f}{\partial t}(t_0, x)$ itself is integrable. By hypothesis (3), $$\left|\frac{\partial f}{\partial t}(t_0, x)\right| \leq g(x)$$ for all $x$, and since $g$ is integrable by hypothesis, it follows that $\frac{\partial f}{\partial t}(t_0, -)$ is dominated by an integrable function. A measurable function dominated by an integrable function is itself integrable (by the comparison property of \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{the Lebesgue integral}). Thus $x \mapsto \frac{\partial f}{\partial t}(t_0, x)$ is integrable.
 \end{enumerate}
 
 Having verified all hypotheses of the Dominated Convergence Theorem, we may pass the limit inside the integral: $$\lim_{n \to \infty} \int_X Q_n(x) \, d\mu(x) = \int_X \lim_{n \to \infty} Q_n(x) \, d\mu(x) = \int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x).$$ By definition of the derivative, this means $$F'(t_0) = \lim_{h \to 0} \frac{F(t_0 + h) - F(t_0)}{h} = \int_X \frac{\partial f}{\partial t}(t_0, x) \, d\mu(x),$$ which is the desired conclusion. Since $t_0$ was arbitrary in $U$, this holds for every $t \in U$.

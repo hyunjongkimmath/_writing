@@ -1,0 +1,40 @@
+\begin{lemma}[Monotonicity of integer powers of positive reals] \label{lemma:integer_powers_of_positive_reals_are_monotic}
+    \TODO{AI generated, verify}
+    Let $a,b \in \mathbb{R}$ and let $n \in \mathbb{Z}_{\geq 0}$.
+    \begin{enumerate}
+        \item If $0 \leq a \leq b$, then $a^n \leq b^n$\CrefIfExists{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}.
+        \item If $a > 1$ and $m,n \in \mathbb{Z}$ with $m < n$, then $a^m < a^n$.
+        \item If $0 < a < 1$ and $m,n \in \mathbb{Z}$ with $m < n$, then $a^m > a^n$.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+\begin{enumerate}
+    \item We prove this by induction on $n$ for nonnegative integers. For the base case $n = 0$, we have $a^0 = b^0 = 1$ by \CrefAndHyperrefIfExist{definition:exponentiation_in_a_field}{definition}, so $a^0 \leq b^0$ holds trivially.
+
+    Now assume that for some $n \geq 0$, the inequality $a^n \leq b^n$ holds. We show that $a^{n+1} \leq b^{n+1}$. Since $0 \leq a \leq b$ and $a^n \leq b^n$, we first multiply both sides of the inductive hypothesis $a^n \leq b^n$ by the nonnegative scalar $a$. 
+    \TODO{reference needed: In an ordered semigroup, monoid, group, ring, basic facts about the operation preservign order; put these facts across multiple concept files}
+    Because multiplication by a nonnegative element preserves order in an \CrefAndHyperrefIfExist{definition:ordered_field_complete_ordered_field}{ordered field}, this gives
+    $$a^{n+1} = a \cdot a^n \leq a \cdot b^n.$$
+    Next, since $a \leq b$ and $b^n \geq 0$ (as nonnegative powers of a nonnegative real are nonnegative by closure under multiplication in the positive cone), we multiply both sides of $a \leq b$ by the nonnegative element $b^n$:
+    $$a \cdot b^n \leq b \cdot b^n = b^{n+1}.$$
+    Combining these two inequalities, $a^{n+1} \leq a \cdot b^n \leq b^{n+1}$, so by transitivity of $\leq$ in the \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set} $(\mathbb{R}, \leq)$, we conclude $a^{n+1} \leq b^{n+1}$. This completes the induction.
+
+    \item Since $m < n$, their difference satisfies $k := n - m > 0$, so $k \in \mathbb{Z}_{\geq 1}$. We decompose the exponent using \CrefAndHyperrefIfExist{lemma:product_of_powers_of_the_same_base_in_a_field_is_additive_in_exponents}{multiplicativity of powers}:
+    $$a^n = a^{m+k} = a^m \cdot a^k.$$
+    Since $a > 1$ and $k \geq 1$, we claim that $a^k > 1$. To see this, note that by part 1 applied to the base inequality $1 \leq a$ (which holds since $a > 1$), we have $1^k \leq a^k$, i.e., $1 \leq a^k$. Moreover, because $1 < a$, the inequality in part 1 is strict whenever $k \geq 1$: we have $1 = 1^{k-1} \cdot 1 < 1^{k-1} \cdot a = a$ for $k=1$, and for larger $k$ the product of strictly positive factors yields $a^k > 1$.
+
+    Since $a > 0$, all integer powers $a^m$ are positive (as nonzero elements in a field raised to integer powers remain nonzero, and positivity follows from closure under multiplication). Multiplying both sides of the strict inequality $a^k > 1$ by the positive element $a^m$ preserves the direction of the inequality in an ordered field:
+    $$a^n = a^m \cdot a^k > a^m \cdot 1 = a^m,$$
+    so $a^m < a^n$ as claimed.
+
+    \item Since $0 < a < 1$, its multiplicative inverse satisfies $a^{-1} > 1$. To see this, note that if $a^{-1} \leq 1$, then multiplying both sides by the positive element $a$ would give $1 \leq a$, contradicting $a < 1$.
+
+    We rewrite the powers using the identity $(a^{-1})^k = (a^k)^{-1}$ for any integer $k$ (\CrefAndHyperrefIfExist{lemma:inverse_of_power_equals_power_of_inverse_in_a_group}):
+    $$a^m = \left(a^{-1}\right)^{-m} \quad\text{and}\quad a^n = \left(a^{-1}\right)^{-n}.$$
+    Since $m < n$, negating both sides gives $-m > -n$, i.e., $-n < -m$. Apply part 2 to the base $a^{-1} > 1$ with exponents $-n < -m$:
+    $$\left(a^{-1}\right)^{-n} < \left(a^{-1}\right)^{-m},$$
+    which means $a^n < a^m$, or equivalently $a^m > a^n$.
+\end{enumerate}
+\end{proof}
