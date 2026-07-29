@@ -1,0 +1,11 @@
+\begin{definition}[Partially ordered set with adjoined infinity] \label{definition:partially_ordered_set_with_adjoined_infinity}
+    Let $P$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}. Define the set
+    $$\hlin{P^\infty = P \cup \{\infty\},}$$
+    where $\infty$ is a formal element not in $P$.
+
+    We extend the partial order on $P$ to $P^\infty$ by setting $p \leq \infty$ for all $p \in P$, so that $\infty$ is the largest element of $P^\infty$. With this extended order, $P^\infty$ is called the \hldef{partially ordered set with adjoined infinity}.
+
+    \TextIfExists{definition:ordered_commutative_monoid_with_adjoined_infinity}{
+        In particular, if $M$ is an \CrefAndHyperrefIfExist{definition:ordered_commutative_monoid}{ordered commutative monoid}, then the underlying order of $M^\infty$ is that of the \CrefAndHyperrefIfExist{definition:ordered_monoid_with_adjoined_infinity}{ordered monoid with adjoined infinity} constructed from $M$.
+    }
+\end{definition}

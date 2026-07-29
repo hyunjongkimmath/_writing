@@ -3,7 +3,7 @@
     $$g h^k = h^k g,$$
     where $h^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_semigroup_element_by_a_positive_integer}{$k$th power}.
 
-    If $S = (M,\cdot)$ is a \CrefAndHyperrefIfExist{definition:monoid}{monoid} (or a \CrefAndHyperrefIfExist{definition:group}{group}), the same statement holds for $k \in \bbZ_{\geq 0}$ (with $h^0 = e$). If $S = G$ is a group, it holds for all $k \in \bbZ$, where $h^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{integer power}.
+    If $S = (M,\cdot)$ is a \CrefAndHyperrefIfExist{definition:monoid}{monoid} (or a \CrefAndHyperrefIfExist{definition:group}{group}), the same statement holds for $k \in \bbZ_{\geq 0}$ (with $h^0 = e$). If $S = G$ is a group, it holds for all $k \in \bbZ$, where $h^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{integer power}.
 \end{lemma}
 
 \begin{proof}
@@ -23,5 +23,5 @@
 
     Assuming that $S$ is a monoid, it now suffices to prove the case of $k = 0$. We have $g h^0 = g e = g = e g = h^0 g$ by \CrefAndHyperrefIfExist{definition:power_of_a_monoid_element_by_a_nonnegative_integer}{definition}.
 
-    Further assuming that $S$ is a group, it now suffices to prove the case that $k < 0$. Let $m = -k > 0$. Since $h^k = h^{-m} = (h^{-1})^m$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}, we have $g h^k = g (h^{-1})^m$. Since $m > 0$, the work shown above implies $g (h^{-1})^m = (h^{-1})^m g$, which in turn equals $h^k g$. 
+    Further assuming that $S$ is a group, it now suffices to prove the case that $k < 0$. Let $m = -k > 0$. Since $h^k = h^{-m} = (h^{-1})^m$\CrefIfExists{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}, we have $g h^k = g (h^{-1})^m$. Since $m > 0$, the work shown above implies $g (h^{-1})^m = (h^{-1})^m g$, which in turn equals $h^k g$. 
 \end{proof}

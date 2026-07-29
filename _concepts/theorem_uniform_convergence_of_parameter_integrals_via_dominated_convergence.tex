@@ -1,0 +1,20 @@
+\begin{theorem}[Uniform convergence of parameter integrals via dominated convergence] \label{theorem:uniform_convergence_of_parameter_integrals_via_dominated_convergence}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, let $S$ be a set, and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{Banach space} over $\mathbb{R}$ or $\mathbb{C}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$. Let $(f_n)_{n=1}^\infty$ be a sequence of functions $f_n : S \times X \to V$ satisfying:
+
+    \begin{enumerate}
+        \item For every $n$ and every $s \in S$, the function $x \mapsto f_n(s, x)$ is \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integrable}.
+        \item There exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable} function $g : X \to \mathbb{R}_{\ge 0}$ such that for every $n$, every $s \in S$, and $\mu$-almost every $x \in X$,
+        $$\|f_n(s, x)\| \le g(x).$$
+        \item For $\mu$-almost every $x \in X$, the sequence $(f_n(s, x))_{n=1}^\infty$ converges in $V$ pointwise in $s \in S$. Let $f : S \times X \to V$ denote the pointwise limit, so that for each $s \in S$ and $\mu$-almost every $x$,
+        $$\lim_{n \to \infty} f_n(s, x) = f(s, x).$$
+    \end{enumerate}
+
+    Then:
+    \begin{enumerate}
+        \item For every $s \in S$, the function $x \mapsto f(s, x)$ is Bochner integrable.
+        \item The sequence of parameter integrals converges uniformly in $s$:
+        $$\sup_{s \in S} \left\| \int_X f_n(s, x) \, d\mu(x) - \int_X f(s, x) \, d\mu(x) \right\| \to 0 \quad \text{as } n \to \infty,$$
+        where the limit is taken in the sense of \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{convergence of a sequence in an extended metric space}.
+    \end{enumerate}
+\end{theorem}

@@ -1,0 +1,16 @@
+\begin{corollary}[Compact domination criterion for holomorphic parameter integrals] \label{corollary:compact_domination_criterion_for_holomorphic_parameter_integrals}
+    \TODO{AI generated, verify}
+    Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, let $U \subseteq \mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers} be an \CrefAndHyperrefIfExist{definition:topological_space}{open set}, and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{Banach space} over $\mathbb{C}$ with norm $\|\cdot\|$. Let $f : U \times X \to V$ satisfy:
+
+    \begin{enumerate}
+        \item For every $s \in U$, the function $x \mapsto f(s, x)$ is \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integrable}.
+        \item For $\mu$-almost every $x \in X$, the function $s \mapsto f(s, x)$ is holomorphic on $U$ with values in $V$\TODO{AI generated, reference needed: definition of holomorphicity for Banach-space-valued functions of a complex variable}.
+        \item For every \CrefAndHyperrefIfExist{definition:compact_subset_of_a_topological_space_alternate_definition}{compact subset} $K \subset U$, there exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable} function $g_K : X \to \mathbb{R}$ such that for all $s \in K$ and $\mu$-almost every $x \in X$,
+        $$\|f(s, x)\| \le g_K(x).$$
+    \end{enumerate}
+
+    Then the function $F : U \to V$ defined by $F(s) = \int_X f(s, x) \, d\mu(x)$ is holomorphic on $U$, and differentiation under the integral sign is valid: for every $s \in U$,
+    $$F'(s) = \int_X \frac{\partial f}{\partial s}(s, x) \, d\mu(x).$$
+
+    In particular, if $\mu$ is a \CrefAndHyperrefIfExist{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{finite measure} and $f$ is bounded on $K \times X$ for every compact $K \subset U$, then condition (3) is satisfied with $g_K(x) = \sup_{s \in K} \|f(s, x)\|$ (which is integrable because it is bounded on a finite-measure space), and the conclusion holds.
+\end{corollary}

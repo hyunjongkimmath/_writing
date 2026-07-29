@@ -7,6 +7,7 @@ where the integrals are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_s
 \end{proposition}
 \begin{proof}
     \TODO{AI generated, verify}
+    \TODO{reference needed: the defintion of antiderivative}
     The sine and cosine functions are differentiable on $\mathbb{R}$ with derivatives (see \CrefAndHyperrefIfExist{proposition:derivatives_of_sine_and_cosine}):
     $$\frac{d}{dx} \sin(x) = \cos(x), \qquad \frac{d}{dx} \cos(x) = -\sin(x).$$
 
@@ -14,11 +15,12 @@ where the integrals are \CrefAndHyperrefIfExist{definition:lower_upper_riemann_s
 
     We observe that $\cos(x)$ is an antiderivative of $\sin(x)$ up to sign. Specifically, the function $x \mapsto -\cos(x)$ has derivative
     $$\frac{d}{dx}(-\cos(x)) = -(-\sin(x)) = \sin(x).$$
+    \CrefIfExists{proposition:derivatives_of_sine_and_cosine}\CrefIfExists{corollary:derivative_of_real_scalar_multiple_of_real_valued_differentiable_function_on_real_interval_at_a_point_is_scalar_multiple_of_derivative}
 
     Similarly, $\sin(x)$ is an antiderivative of $\cos(x)$ since
     $$\frac{d}{dx}\sin(x) = \cos(x).$$
 
-    Applying the Fundamental Theorem of Calculus, Part II (\CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}):
+    Applying the \CrefAndHyperrefIfExist{theorem:fundamental_theorem_of_calculus_part_two_evaluation_by_antiderivative}{Fundamental Theorem of Calculus, Part II}:
     $$\int_a^b \sin(x)\,dx = \Bigl[-\cos(x)\Bigr]_{x=a}^{x=b} = -\cos(b) + \cos(a) = \cos(a) - \cos(b),$$
     and
     $$\int_a^b \cos(x)\,dx = \Bigl[\sin(x)\Bigr]_{x=a}^{x=b} = \sin(b) - \sin(a).$$

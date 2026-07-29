@@ -2,12 +2,12 @@
     \TODO{AI generated, verify}
     Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $m, n \in \bbZ$,
     $$ (g^m)^n = g^{mn}, $$
-    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
+    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{$k$th power of $g$}.
 \end{lemma}
 
 \begin{proof}
     \TODO{AI generated, verify}
-    We proceed by case analysis on the signs of $m$ and $n$. Recall from \CrefIfExists{definition:power_of_a_group_element_by_an_integer} that for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
+    We proceed by case analysis on the signs of $m$ and $n$. Recall from \CrefIfExists{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer} that for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
 
     \begin{enumerate}
         \item Suppose $m \geq 0$ and $n \geq 0$. Then $(g^m)^n = g^{mn}$ follows directly from \Cref{lemma:power_of_power_in_monoid_for_nonnegative_integers} applied to the underlying monoid of $G$.

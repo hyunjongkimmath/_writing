@@ -1,21 +1,20 @@
 \begin{definition} \label{definition:real_sine_and_cosine_functions_on_real_line_via_power_series}
-\TODO{AI generated, verify}
-For $x \in \mathbb{R}$, the \hldef{sine function} and \hldef{cosine function}, denoted by \hl{$\sin : \mathbb{R} \to \mathbb{R}$} and \hl{$\cos : \mathbb{R} \to \mathbb{R}$}, are defined by the power series
+For $x \in \mathbb{R}$, the \hldef{sine function} and \hldef{cosine function}, denoted by \hl{$\sin : \mathbb{R} \to \mathbb{R}$} and \hl{$\cos : \mathbb{R} \to \mathbb{R}$}, are defined by the \CrefAndHyperrefIfExist{definition:power_series_in_one_complex_variable_and_its_radius_of_convergence_given_by_the_cauchy_hadamard_formula}{power series}
 $$\sin(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n+1}}{(2n+1)!}$$
 $$\cos(x) = \sum_{n=0}^\infty (-1)^n \frac{x^{2n}}{(2n)!}$$
-Both series \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely} for every $x \in \mathbb{R}$. As with other trigonometric functions, exponents of $\sin$ and $\cos$ are written in the following manner:
+Both series \CrefAndHyperrefIfExist{definition:absolute_convergence_of_a_series_in_module_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{converge absolutely} for every $x \in \mathbb{R}$\TODO{reference needed: a lemma proving that these converge absolutely}. As with other trigonometric functions, exponents of $\sin$ and $\cos$ are written in the following manner:
 \begin{align*}
     \sin^n(x) &\coloneq (\sin(x))^n
     \cos^n(x) &\coloneq (\cos(x))^n
 \end{align*}
+\CrefIfExists{definition:exponents_of_real_numbers_by_real_numbers_via_supremum}
 \TODO{write this notational convention more generally}
-\TODO{exponents}
 
 Key properties:
 \begin{enumerate}
-    \item $\sin^2(x) + \cos^2(x) = 1$ for all $x \in \mathbb{R}$ (Pythagorean identity).
-    \item $\cos(0) = 1$, $\sin(0) = 0$. The set $\{x > 0 : \cos(x) = 0\}$ has a unique minimum; we denote it by $\pi/2$ (see \Cref{definition:archimedes_constant_pi_via_cosine_root}).
-    \item Addition formulas: $\sin(x+y) = \sin x \cos y + \cos x \sin y$ and $\cos(x+y) = \cos x \cos y - \sin x \sin y$.
-    \item Both functions are $2\pi$-periodic: $\sin(x + 2\pi) = \sin(x)$ and $\cos(x + 2\pi) = \cos(x)$.
+    \item $\sin^2(x) + \cos^2(x) = 1$ for all $x \in \mathbb{R}$ (\CrefAndHyperrefIfExist{proposition:pythagorean_identity_for_real_sine_and_cosine_functions}{Pythagorean identity}).
+    \item $\cos(0) = 1$, $\sin(0) = 0$. The set $\{x > 0 : \cos(x) = 0\}$ has a unique minimum; we denote it by $\pi/2$ (see \Cref{definition:archimedes_constant_pi_via_cosine_root})\TODO{reference needed: this fact}.
+    \item Addition formulas: $\sin(x+y) = \sin x \cos y + \cos x \sin y$ and $\cos(x+y) = \cos x \cos y - \sin x \sin y$\TODO{reference needed: this fact}.
+    \item Both functions are $2\pi$-periodic: $\sin(x + 2\pi) = \sin(x)$ and $\cos(x + 2\pi) = \cos(x)$\TODO{reference needed: this fact}.
 \end{enumerate}
 \end{definition}

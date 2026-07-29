@@ -1,10 +1,10 @@
 \begin{lemma} \label{lemma:additivity_of_powers_in_a_group}
     Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} and let $g \in G$. For all integers $m,n \in \bbZ$,
     $$g^m g^n = g^{m+n},$$
-    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$k$th power of $g$}.
+    where $g^k$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{$k$th power of $g$}.
 \end{lemma}
 \begin{proof}
-    We proceed by case analysis on the signs of $m$ and $n$. Recall from that\CrefIfExists{definition:power_of_a_group_element_by_an_integer} for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
+    We proceed by case analysis on the signs of $m$ and $n$. Recall from that\CrefIfExists{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer} for $k \geq 0$, $g^k$ is the power in the underlying monoid, while for $k < 0$, $g^k = (g^{-1})^{-k}$.
 
     \begin{enumerate}
         \item Suppose $m \geq 0$ and $n \geq 0$. Then $g^m g^n = g^{m+n}$ follows from additivity of powers in the underlying monoid by \Cref{lemma:additivity_of_powers_in_a_monoid}.

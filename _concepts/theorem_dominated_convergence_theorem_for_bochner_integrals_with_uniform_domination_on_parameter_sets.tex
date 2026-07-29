@@ -1,0 +1,43 @@
+\begin{theorem}[Dominated convergence for Bochner integrals with uniform domination on parameter sets] \label{theorem:dominated_convergence_theorem_for_bochner_integrals_with_uniform_domination_on_parameter_sets}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}, let $S$ be a set equipped with a \CrefAndHyperrefIfExist{definition:topological_space}{topology}, and let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$.
+
+Let $f : S \times X \to V$ be a function satisfying:
+\begin{enumerate}
+    \item For each $s \in S$, the function $x \mapsto f(s, x)$ is \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integrable};
+    \item There exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable function} $g : X \to [0, \infty)$ such that $\|f(s, x)\| \leq g(x)$ for all $s \in S$ and $\mu$-almost every $x \in X$.
+\end{enumerate}
+
+Define the parameter integral $F : S \to V$ by
+$$F(s) = \int_X f(s, x)\,d\mu(x).$$
+
+Then:
+\begin{enumerate}
+    \item For any sequence $(s_n)$ in $S$ and any $s_0 \in S$, if $f(s_n, x) \to f(s_0, x)$ for $\mu$-almost every $x \in X$, then the integrals converge in norm:
+    $$\lim_{n \to \infty} \|F(s_n) - F(s_0)\| = 0.$$
+    Equivalently, $\int_X \|f(s_n, x) - f(s_0, x)\|\,d\mu(x) \to 0$ as $n \to \infty$, where the limits are taken in the sense of \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_extended_metric_space_valued_in_ordered_commutative_monoid_with_adjoined_infinity}{convergence of a sequence in an extended metric space}.
+
+    \item Moreover, if the convergence is uniform on a subset $T \subseteq S$, i.e., for some $s_0 \in S$ and every sequence $(t_n)$ in $T$,
+    $$\sup_{x \in X} \|f(t_n, x) - f(s_0, x)\| \to 0$$
+    (or more generally $\int_X \|f(t_n, x) - f(s_0, x)\|\,d\mu(x) \to 0$ uniformly over the choice of sequence), then $F(t_n) \to F(s_0)$ in $V$. In particular, if for every sequence $(s_n)$ converging to $s_0$ in the topology on $S$, the pointwise convergence $f(s_n, x) \to f(s_0, x)$ holds $\mu$-almost everywhere uniformly over all such sequences (i.e., there is a single null set outside which convergence holds for every sequence), then $F$ is \CrefAndHyperrefIfExist{definition:continuity_at_a_point_for_a_function_between_topological_spaces}{continuous} at $s_0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ be a measure space, let $S$ be a set, and let $V$ be a Banach space over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$ with norm $\|\cdot\|$. Fix the function $f : S \times X \to V$ and the dominating integrable function $g : X \to [0, \infty)$.
+
+For part 1, fix a sequence $(s_n)$ in $S$ and an element $s_0 \in S$ such that $f(s_n, x) \to f(s_0, x)$ for $\mu$-almost every $x \in X$. We apply the Bochner dominated convergence theorem (\Cref{theorem:dominated_convergence_theorem_for_bochner_integrable_functions_into_banach_spaces}) to the sequence of functions $(f_n)_{n \geq 1}$ defined by $f_n(x) = f(s_n, x)$ with limit function $f(x) = f(s_0, x)$.
+
+The hypotheses are satisfied: each $f_n$ is Bochner integrable by assumption; the sequence converges pointwise almost everywhere to $f(s_0, \cdot)$ by hypothesis; and for all $n$, we have
+$$\|f_n(x)\| = \|f(s_n, x)\| \leq g(x)$$
+for $\mu$-almost every $x$, so the uniform dominating bound $g$ serves as the domination function. By Bochner dominated convergence, we obtain
+$$\lim_{n \to \infty} \left\| \int_X f(s_n, x)\,d\mu(x) - \int_X f(s_0, x)\,d\mu(x) \right\| = 0,$$
+which is exactly $\lim_{n \to \infty} \|F(s_n) - F(s_0)\| = 0$. The equivalence with the $L^1(X; V)$ convergence follows from the same theorem.
+
+For part 2, suppose that for a sequence $(t_n)$ in some subset $T \subseteq S$, we have $\int_X \|f(t_n, x) - f(s_0, x)\|\,d\mu(x) \to 0$. Then by the triangle inequality for Bochner integrals:
+$$\|F(t_n) - F(s_0)\| = \left\| \int_X (f(t_n, x) - f(s_0, x))\,d\mu(x) \right\| \leq \int_X \|f(t_n, x) - f(s_0, x)\|\,d\mu(x).$$
+The right-hand side tends to zero by assumption, so $F(t_n) \to F(s_0)$ in $V$.
+
+For the continuity statement: suppose that for every sequence $(s_n)$ converging to $s_0$ in a topology on $S$, there exists a single $\mu$-null set $N$ (independent of the particular values of the sequence, depending only on $s_0$) such that for all $x \notin N$ and every such sequence, $f(s_n, x) \to f(s_0, x)$. Then by part 1 applied to any such sequence, we get $F(s_n) \to F(s_0)$ in $V$, which is the sequential characterization of continuity at $s_0$.
+\end{proof}

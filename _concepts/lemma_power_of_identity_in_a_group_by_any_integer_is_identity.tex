@@ -1,8 +1,8 @@
 \begin{lemma} \label{lemma:power_of_identity_in_a_group_by_any_integer_is_identity}
     Let $G$ be a \CrefAndHyperrefIfExist{definition:group}{group} with identity element $e$. For all $n \in \bbZ$,
     $$e^n = e,$$
-    where $e^n$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{$n$th power of $e$}.
+    where $e^n$ denotes the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{$n$th power of $e$}.
 \end{lemma}
 \begin{proof}
-    By \Cref{lemma:power_of_identity_in_a_monoid_is_the_identity}, the statement holds for all $n \in \bbZ_{\ge 0}$ since every group is a monoid. For $n < 0$, let $m = -n > 0$. Then by the definition of \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{negative powers in a group}, $e^n = (e^{-1})^m$. Since $e$ is its own inverse\CrefIfExists{lemma:identity_element_is_its_own_inverse_in_a_monoid}, we have $(e^{-1})^m = e^m = e$ by the nonnegative case. Thus, $e^n = e$ for all $n \in \bbZ$.
+    By \Cref{lemma:power_of_identity_in_a_monoid_is_the_identity}, the statement holds for all $n \in \bbZ_{\ge 0}$ since every group is a monoid. For $n < 0$, let $m = -n > 0$. Then by the definition of \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{negative powers in a group}, $e^n = (e^{-1})^m$. Since $e$ is its own inverse\CrefIfExists{lemma:identity_element_is_its_own_inverse_in_a_monoid}, we have $(e^{-1})^m = e^m = e$ by the nonnegative case. Thus, $e^n = e$ for all $n \in \bbZ$.
 \end{proof}

@@ -1,10 +1,10 @@
-\begin{proposition} \label{proposition:integral_of_exponential_function}
+\begin{proposition} \label{proposition:integral_of_real_exponential_function}
 For any $a, b \in \mathbb{R}$ and $c \neq 0$,
 $$\hlin{\int_a^b e^{cx} \, dx = \frac{1}{c}\left(e^{cb} - e^{ca}\right)}$$
 In particular, $\int_0^x e^t \, dt = e^x - 1$ for all $x \in \mathbb{R}$, where the integral is the \CrefAndHyperrefIfExist{definition:lower_upper_riemann_sum_integral_of_a_bounded_function_on_a_closed_interval_to_R_and_riemann_integrable_function}{Riemann integral}.
 \end{proposition}
 \begin{proof}
-    Recall that $\exp(x) = e^x$ is differentiable on $\bbR$\CrefIfExists{proposition:derivative_of_exponential_function_is_itself} and has derivative $\exp(x)$. By the \CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{chain rule}, we have 
+    Recall that $\exp(x) = e^x$ is \CrefAndHyperrefIfExist{definition:derivative_of_a_real_valued_function_on_a_real_interval}{differentiable} on $\bbR$\CrefIfExists{proposition:derivative_of_exponential_function_is_itself} and has derivative $\exp(x)$. By the \CrefAndHyperrefIfExist{proposition:sum_rule_product_rule_quotient_rule_chain_rule_for_real_derivatives_of_real_valued_functions_on_real_intervals}{chain rule}, we have 
     $$\frac{d}{dx} e^{cx} = \frac{d}{dy} e^{y} \cdot \frac{d}{dx} (cx) = e^y \cdot c = c \cdot e^{cx}.$$
     Therefore, 
     $$\frac{d}{dx} \frac{1}{c} e^{cx} = e^{cx}.$$

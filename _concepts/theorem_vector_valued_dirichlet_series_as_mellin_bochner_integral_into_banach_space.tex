@@ -1,0 +1,19 @@
+\begin{theorem}[Vector-valued Dirichlet series as Mellin Bochner integrals into a Banach space] \label{theorem:vector_valued_dirichlet_series_as_mellin_bochner_integral_into_banach_space}
+    \TODO{AI generated, verify}
+    Let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{Banach space} over $\mathbb{C}$\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$. Let $(a_n)_{n=1}^\infty$ be a sequence in $V$, and let $A(x) = \sum_{n \le x} a_n$ for $x \ge 0$ denote the partial sum function. Fix a real number $\alpha \in \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} such that
+    $$\|A(x)\| = O(x^{\alpha}) \quad \text{as } x \to \infty.$$
+
+    Let $\sigma_0 > \alpha$, and for $s \in \mathbb{C}$ with $\Re(s) > \sigma_0$ define the step function $f_s : [1, \infty) \to V$ by
+    $$f_s(x) = A(x) x^{-s-1},$$
+    where $x^{-s-1} = \exp(-(s+1)\ln x)$ using the real natural logarithm.
+
+    Then:
+    \begin{enumerate}
+        \item For every $s$ with $\Re(s) > \sigma_0$, the function $f_s$ is \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integrable} on $[1, \infty)$ with respect to \CrefAndHyperrefIfExist{definition:lebesgue_measure_on_Rn}{Lebesgue measure}.
+        \item The \hldef{Mellin Bochner integral representation of the Dirichlet series} is given by
+        $$\sum_{n=1}^\infty \frac{a_n}{n^s} = s \int_1^\infty A(x) x^{-s-1} \, dx,$$
+        where the integral is a Bochner integral into $V$, and the series \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{converges} in the norm of $V$.
+        \item The function $F(s) = s \int_1^\infty A(x) x^{-s-1} \, dx$ is holomorphic on the half-plane $\{ s \in \mathbb{C} : \Re(s) > \sigma_0 \}$ with values in $V$\TODO{AI generated, reference needed: definition of holomorphicity for Banach-space-valued functions of a complex variable}, and differentiation under the integral sign is valid: for every $k \ge 0$,
+        $$F^{(k)}(s) = \int_1^\infty A(x) \frac{\partial^k}{\partial s^k} \left( s x^{-s-1} \right) dx.$$
+    \end{enumerate}
+\end{theorem}

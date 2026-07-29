@@ -1,10 +1,10 @@
 \begin{proposition}[Sum formula for a finite arithmetic series] \label{proposition:sum_formula_for_a_finite_arithmetic_series_in_an_abelian_group}
     \TODO{AI generated, verify}
-    Let $A$ be an abelian group written additively. Let $a, d \in A$. For each integer $n \geq 1$, let $a_n = a + (n-1)d$, where $(n-1)d$ denotes the element $d$ added to itself $n-1$ times in $A$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}. The sequence $(a_n)_{n=1}^\infty$ is an \CrefAndHyperrefIfExist{definition:arithmetic_progression_and_arithmetic_series_in_a_commutative_semiring}{arithmetic progression}.
+    Let $A$ be an abelian group written additively. Let $a, d \in A$. For each integer $n \geq 1$, let $a_n = a + (n-1)d$, where $(n-1)d$ denotes the element $d$ added to itself $n-1$ times in $A$\CrefIfExists{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}. The sequence $(a_n)_{n=1}^\infty$ is an \CrefAndHyperrefIfExist{definition:arithmetic_progression_and_arithmetic_series_in_a_commutative_semiring}{arithmetic progression}.
 
     For each integer $N \geq 1$, the sum of the arithmetic series of length $N$ is given by
     $$\sum_{n=1}^N (a + (n-1)d) = Na + \frac{N(N-1)}{2}d,$$
-    Note that $\frac{N(N-1)}{2}$ is always an integer, and the notation $Na$ and $\frac{N(N-1)}{2}d$ refers to the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer}{integer powers of group elements}.
+    Note that $\frac{N(N-1)}{2}$ is always an integer, and the notation $Na$ and $\frac{N(N-1)}{2}d$ refers to the \CrefAndHyperrefIfExist{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}{integer powers of group elements}.
 \end{proposition}
 \begin{proof}
     \TODO{AI generated, verify}
@@ -12,7 +12,7 @@
 
     For the base case $N = 1$, we have
     $$\sum_{n=1}^1 (a + (n-1)d) = a + 0 \cdot d = a,$$
-    where $0 \cdot d = 0_A$\CrefIfExists{definition:power_of_a_group_element_by_an_integer}. On the other hand, $1 \cdot a + \frac{1 \cdot 0}{2} d = a + 0 \cdot d = a$. Thus the formula holds for $N = 1$.
+    where $0 \cdot d = 0_A$\CrefIfExists{definition:power_of_a_group_element_by_an_integer_multiple_of_an_abelian_group_element_by_an_integer}. On the other hand, $1 \cdot a + \frac{1 \cdot 0}{2} d = a + 0 \cdot d = a$. Thus the formula holds for $N = 1$.
 
     Suppose that the formula holds for some integer $N \geq 1$. We show that it also holds for $N+1$. Compute:
     $$\sum_{n=1}^{N+1} (a + (n-1)d) = \sum_{n=1}^N (a + (n-1)d) + (a + Nd).$$

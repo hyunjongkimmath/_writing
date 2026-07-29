@@ -1,0 +1,56 @@
+\begin{theorem}[Dominated convergence theorem for Bochner integrable functions into Banach spaces] \label{theorem:dominated_convergence_theorem_for_bochner_integrable_functions_into_banach_spaces}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$.
+
+Let $(f_n)_{n \geq 1}$ be a sequence of \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integrable} functions $f_n : X \to V$, and let $f : X \to V$ be a function. Suppose that:
+\begin{enumerate}
+    \item $f_n(x) \to f(x)$ as $n \to \infty$ for $\mu$-almost every $x \in X$, i.e., the sequence converges \CrefAndHyperrefIfExist{definition:almost_sure_convergence_of_a_sequence_of_measurable_functions_from_a_measure_space_to_a_metric_space_valued_in_an_ordered_commutative_monoid_with_adjoined_infinity}{almost everywhere} to $f$;
+    \item There exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable function} $g : X \to [0, \infty)$ such that $\|f_n(x)\| \leq g(x)$ for all $n \geq 1$ and $\mu$-almost every $x \in X$.
+\end{enumerate}
+
+Then:
+\begin{enumerate}
+    \item The limit function $f$ is Bochner integrable;
+    \item The integrals converge in the norm of $V$:
+    $$\lim_{n \to \infty} \left\| \int_X f_n\,d\mu - \int_X f\,d\mu \right\| = 0.$$
+    Equivalently, $\int_X \|f_n - f\|\,d\mu \to 0$ as $n \to \infty$, i.e., $f_n \to f$ in $L^1(X; V)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ be a measure space and let $V$ be a Banach space over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$ with norm $\|\cdot\|$. Fix the sequence of Bochner integrable functions $(f_n)_{n \geq 1}$ and the dominating integrable function $g : X \to [0, \infty)$.
+
+First we show that $f$ is Bochner integrable. We verify this in two steps: measurability and domination of the norm. Since $\|f_n(x)\| \leq g(x)$ for all $n$ and almost every $x$, and $f_n(x) \to f(x)$ almost everywhere, we have by the continuity of the norm
+$$\|f(x)\| = \lim_{n \to \infty} \|f_n(x)\| \leq g(x)$$
+for $\mu$-almost every $x \in X$. Thus $\int_X \|f\|\,d\mu \leq \int_X g\,d\mu < \infty$, so the norm of $f$ is real-valued Lebesgue integrable. For measurability: since each $f_n$ is Bochner measurable and $f_n(x) \to f(x)$ almost everywhere, the pointwise limit of a sequence of measurable functions into a metric space is measurable; hence $f$ is Bochner measurable by \Cref{definition:vector_valued_lebesgue_integral_into_normed_vector_space}. Together with $\int_X \|f\|\,d\mu < \infty$, this implies that $f$ is Bochner integrable.
+
+Next we establish the convergence of integrals in norm. Since $f_n(x) \to f(x)$ almost everywhere and $\|f_n(x)\| \leq g(x)$ for all $n$, by the triangle inequality:
+$$\|f(x)\| \leq g(x),$$
+and consequently
+$$\|f_n(x) - f(x)\| \leq \|f_n(x)\| + \|f(x)\| \leq 2g(x)$$
+for $\mu$-almost every $x \in X$.
+
+We apply the scalar \CrefAndHyperrefIfExist{lemma:fatous_lemma}{Fatou's lemma} to the nonnegative measurable sequence $(2g - \|f_n - f\|)_n$. Since $f_n(x) \to f(x)$ almost everywhere, we have $\|f_n(x) - f(x)\| \to 0$ almost everywhere, which implies that
+$$\lim_{n \to \infty} (2g(x) - \|f_n(x) - f(x)\|) = 2g(x)$$
+for $\mu$-almost every $x$.
+
+Applying Fatou's lemma:
+$$\int_X \liminf_{n \to \infty} (2g - \|f_n - f\|)\,d\mu \leq \liminf_{n \to \infty} \int_X (2g - \|f_n - f\|)\,d\mu.$$
+
+The left-hand side equals $\int_X 2g\,d\mu$. By the linearity of the Lebesgue integral (\CrefAndHyperrefIfExist{theorem:linearity_of_lebesgue_integral}), the right-hand side is
+$$\liminf_{n \to \infty} \left( 2\int_X g\,d\mu - \int_X \|f_n - f\|\,d\mu \right) = 2\int_X g\,d\mu + \limsup_{n \to \infty} \left( -\int_X \|f_n - f\|\,d\mu \right).$$
+
+Subtracting $2\int_X g\,d\mu$ (which is finite) from both sides:
+$$0 \leq -\limsup_{n \to \infty} \int_X \|f_n - f\|\,d\mu.$$
+
+Since $\|f_n - f\| \geq 0$, each integral $\int_X \|f_n - f\|\,d\mu$ is nonnegative. Hence
+$$\lim_{n \to \infty} \int_X \|f_n - f\|\,d\mu = 0.$$
+
+Finally we deduce the convergence of integrals in $V$. By the triangle inequality for Bochner integrals:
+$$\left\| \int_X f_n\,d\mu - \int_X f\,d\mu \right\| = \left\| \int_X (f_n - f)\,d\mu \right\| \leq \int_X \|f_n - f\|\,d\mu.$$
+
+Therefore
+$$\lim_{n \to \infty} \left\| \int_X f_n\,d\mu - \int_X f\,d\mu \right\| = 0,$$
+which establishes the desired convergence in $V$. The equivalence with $L^1(X; V)$ convergence follows immediately from the equality $\int_X \|f_n - f\|\,d\mu \to 0$.
+\end{proof}

@@ -1,0 +1,65 @@
+\begin{theorem}[Fubini's theorem for Bochner integrable functions into Banach spaces] \label{theorem:fubini_theorem_for_bochner_integrable_functions_into_banach_spaces}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be two \CrefAndHyperrefIfExist{definition:finite_sigma_finite_measure_space_for_a_measure_on_a_measurable_space}{$\sigma$-finite measure spaces}. Let $\mathcal{A} \otimes \mathcal{B}$ be the \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product $\sigma$-algebra} and $\mu \times \nu$ the corresponding \CrefAndHyperrefIfExist{definition:product_sigma_algebra_and_product_measure_for_two_measure_spaces}{product measure}. Let $V$ be a \CrefAndHyperrefIfExist{definition:banach_space_over_a_commutative_ring_with_an_absolute_value_valued_in_an_ordered_semiring}{Banach space} over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$.
+
+Let $f : X \times Y \to V$ be a function that is \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable} with respect to $\mathcal{A} \otimes \mathcal{B}$ (as a map into $V$) and satisfies the integrability condition
+$$\int_{X \times Y} \|f(x, y)\|\,d(\mu \times \nu)(x, y) < \infty.$$
+
+Then:
+\begin{enumerate}
+    \item For $\mu$-almost every $x \in X$, the function $y \mapsto f(x, y)$ is Bochner integrable on $(Y, \mathcal{B}, \nu)$;
+    \item The function $x \mapsto \int_Y f(x, y)\,d\nu(y)$ is well-defined $\mu$-almost everywhere and is Bochner integrable on $(X, \mathcal{A}, \mu)$;
+    \item Similarly, for $\nu$-almost every $y \in Y$, the function $x \mapsto f(x, y)$ is Bochner integrable on $(X, \mathcal{A}, \mu)$, and $y \mapsto \int_X f(x, y)\,d\mu(x)$ is Bochner integrable on $(Y, \mathcal{B}, \nu)$.
+    \item The iterated integrals coincide with the product integral in $V$:
+    $$\boxed{\int_X \left(\int_Y f(x, y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} f\,d(\mu \times \nu) = \int_Y \left(\int_X f(x, y)\,d\mu(x)\right) d\nu(y).}$$
+\end{enumerate}
+
+The integrability hypothesis $\int_{X \times Y} \|f\|\,d(\mu \times \nu) < \infty$ is equivalent to the finiteness of either iterated integral of the norm by the scalar \CrefAndHyperrefIfExist{theorem:tonelli_theorem}{Tonelli's theorem} applied to the nonnegative function $(x, y) \mapsto \|f(x, y)\|$.
+\end{theorem}
+
+\begin{proof}
+    \TODO{AI generated, verify}
+Let $(X, \mathcal{A}, \mu)$ and $(Y, \mathcal{B}, \nu)$ be $\sigma$-finite measure spaces. Let $V$ be a Banach space over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$ with norm $\|\cdot\|$. Fix the measurable function $f : X \times Y \to V$ satisfying
+$$\int_{X \times Y} \|f(x, y)\|\,d(\mu \times \nu)(x, y) < \infty.$$
+
+First we verify that the iterated integrability follows from Tonelli's theorem. Apply the scalar \CrefAndHyperrefIfExist{theorem:tonelli_theorem}{Tonelli's theorem} to the nonnegative measurable function $(x, y) \mapsto \|f(x, y)\|$. Since $\|f\|$ is a composition of the measurable map $f$ and the continuous norm, it is measurable with respect to $\mathcal{A} \otimes \mathcal{B}$. Tonelli's theorem gives
+$$\int_{X \times Y} \|f(x, y)\|\,d(\mu \times \nu) = \int_X \left(\int_Y \|f(x, y)\|\,d\nu(y)\right) d\mu(x).$$
+
+Since the left-hand side is finite by hypothesis, the right-hand side is also finite. In particular, for $\mu$-almost every $x \in X$,
+$$\int_Y \|f(x, y)\|\,d\nu(y) < \infty.$$
+
+For such $x$, the function $y \mapsto f(x, y)$ has integrable norm with respect to $\nu$. It remains measurable: for almost every $x$, the slice $(y, z) \mapsto \|f(x, y) - f(x, z)\|$ is measurable in both variables by measurability of $f$ on the product space. Hence $y \mapsto f(x, y)$ is Bochner integrable on $(Y, \mathcal{B}, \nu)$ for $\mu$-almost every $x$. This establishes part 1.
+
+For part 2, define $G : X \to V$ by
+$$G(x) = \int_Y f(x, y)\,d\nu(y),$$
+which is defined for $\mu$-almost every $x$. We show that $G$ is Bochner integrable on $(X, \mathcal{A}, \mu)$ by verifying measurability and norm integrability. For the norm bound:
+$$\|G(x)\| = \left\|\int_Y f(x, y)\,d\nu(y)\right\| \leq \int_Y \|f(x, y)\|\,d\nu(y).$$
+Integrating with respect to $\mu$ and using Tonelli's theorem again:
+$$\int_X \|G(x)\|\,d\mu(x) \leq \int_X \left(\int_Y \|f(x, y)\|\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} \|f(x, y)\|\,d(\mu \times \nu)(x, y) < \infty.$$
+Thus the norm of $G$ is integrable. Measurability follows from standard results on parameter-dependent Bochner integrals: since $f$ is jointly measurable and dominated by an integrable function, the map $x \mapsto \int_Y f(x, y)\,d\nu(y)$ is measurable (approximate by simple functions in the product space). Hence $G$ is Bochner integrable.
+
+For part 3, the same argument with the roles of $X$ and $Y$ reversed establishes that for $\nu$-almost every $y$, the function $x \mapsto f(x, y)$ is Bochner integrable on $(X, \mathcal{A}, \mu)$. Define
+$$H(y) = \int_X f(x, y)\,d\mu(x),$$
+which is well-defined for $\nu$-almost every $y$. By the same norm estimate and Tonelli's theorem applied to $\|f\|$ with reversed integration order:
+$$\int_Y \|H(y)\|\,d\nu(y) \leq \int_Y \left(\int_X \|f(x, y)\|\,d\mu(x)\right) d\nu(y) = \int_{X \times Y} \|f(x, y)\|\,d(\mu \times \nu)(x, y) < \infty.$$
+Hence $H$ is Bochner integrable on $(Y, \mathcal{B}, \nu)$.
+
+For part 4, we establish the equality of iterated and product integrals. Approximate $f$ by a sequence of simple functions in $V$. Since $X \times Y$ is $\sigma$-finite and $f$ is Bochner measurable with integrable norm, there exists a sequence of vector-valued simple functions $(s_n)_{n \geq 1}$ on $X \times Y$ such that
+$$\int_{X \times Y} \|f(x, y) - s_n(x, y)\|\,d(\mu \times \nu)(x, y) \to 0.$$
+
+For each simple function $s_n = \sum_{k=1}^{m_n} v_{n,k} \mathbf{1}_{A_{n,k}}$ with $v_{n,k} \in V$ and pairwise disjoint measurable sets $A_{n,k} \in \mathcal{A} \otimes \mathcal{B}$, the scalar Fubini theorem (\Cref{theorem:fubini_theorem}) applied to each indicator function $\mathbf{1}_{A_{n,k}}$ yields
+$$\int_X \left(\int_Y s_n(x, y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} s_n\,d(\mu \times \nu).$$
+
+Now we pass to the limit. For the left-hand side:
+$$\left\|\int_X \left(\int_Y f(x, y)\,d\nu(y)\right) d\mu(x) - \int_X \left(\int_Y s_n(x, y)\,d\nu(y)\right) d\mu(x)\right\| \leq \int_X \left\|\int_Y (f(x, y) - s_n(x, y))\,d\nu(y)\right\| d\mu(x).$$
+
+By the triangle inequality for Bochner integrals:
+$$\int_X \left(\int_Y \|f(x, y) - s_n(x, y)\|\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} \|f(x, y) - s_n(x, y)\|\,d(\mu \times \nu)(x, y),$$
+where the last equality uses Tonelli's theorem for the nonnegative function $\|f - s_n\|$. This tends to zero as $n \to \infty$ by construction of $(s_n)$. Similarly,
+$$\left\|\int_{X \times Y} f\,d(\mu \times \nu) - \int_{X \times Y} s_n\,d(\mu \times \nu)\right\| \leq \int_{X \times Y} \|f(x, y) - s_n(x, y)\|\,d(\mu \times \nu)(x, y) \to 0.$$
+
+Hence both iterated and product integrals are limits of the same sequence, so they coincide:
+$$\int_X \left(\int_Y f(x, y)\,d\nu(y)\right) d\mu(x) = \int_{X \times Y} f\,d(\mu \times \nu).$$
+
+The equality with the reverse-order iterated integral follows by the same argument with $X$ and $Y$ swapped.
+\end{proof}
