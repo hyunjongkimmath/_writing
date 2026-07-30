@@ -1,0 +1,17 @@
+\begin{definition} \label{definition:homotopy_ring_spectrum}
+    \TODO{AI generated, verify}
+    A \hldef{homotopy ring spectrum} is a \CrefAndHyperrefIfExist{definition:spectrum_of_topological_spaces}{spectrum} $R$ equipped with:
+\begin{itemize}
+    \item a \hldef{unit map} $\eta: S \to R$, where $S = \overline{S}\langle S^0 \rangle$\TODO{AI generated, reference needed: definition and notation for the sphere spectrum as the suspension spectrum of $S^0$} is the sphere spectrum\TODO{AI generated, reference needed: definition of the sphere spectrum}, and
+    \item a \hldef{multiplication map} $\mu: R \wedge R \to R$, where $\wedge$\TODO{AI generated, reference needed: notation for smash product of spectra (distinct from smash product of pointed topological spaces)} denotes the \CrefAndHyperrefIfExist{definition:smash_product_of_pointed_topological_spaces}{smash product} extended to spectra\TODO{AI generated, reference needed: smash product on the category of spectra},
+\end{itemize}
+such that the unit diagrams commute up to homotopy in the \CrefAndHyperrefIfExist{definition:stable_homotopy_theory_on_pointed_topological_spaces}{stable homotopy theory}. That is, viewing $S$ and $R$ as objects of $\mathrm{Ho}(\mathrm{Sp})$\TODO{AI generated, reference needed: notation for the stable homotopy category of spectra and its triangulated structure} equipped with the smash product monoidal structure\TODO{AI generated, reference needed: symmetric monoidal structure on the stable homotopy category}, $\eta$ and $\mu$ exhibit $R$ as a \CrefAndHyperrefIfExist{definition:monoid}{monoid}\TODO{AI generated, reference needed: notion of monoid object in a monoidal category} in $\mathrm{Ho}(\mathrm{Sp})$.
+
+If $\mu$\TODO{AI generated, reference needed: definition of commutativity of a multiplication map up to homotopy} is commutative up to homotopy (i.e., the diagram expressing commutativity commutes in $\mathrm{Ho}(\mathrm{Sp})\TODO{AI generated, reference needed: specification of the commutativity diagram for a monoid in a symmetric monoidal category}), then $R$ is called a \hldef{homotopy commutative ring spectrum}.
+
+A \hldef{morphism of homotopy ring spectra} $f: R \to R'$\TODO{AI generated, reference needed: definition of morphism/homomorphism between monoid objects in a category} is a morphism of spectra such that the diagrams expressing unit and multiplication compatibility commute in $\mathrm{Ho}(\mathrm{Sp})$\TODO{AI generated, reference needed: explicit commutativity conditions for a map of monoids}.
+
+\begin{remark}[Terminology]
+    Homotopy ring spectra are sometimes called \hldef{$H$-ring spectra} to distinguish them from highly structured ring spectra (e.g., $E_\infty$-rings). The terminology ``ring spectrum'' without qualification traditionally refers to this homotopy-theoretic notion, originally due to George Whitehead and developed by Frank Adams in \cite[Part III, §10]{adams_shgh}. See also \cite{nlab:ring_spectrum}.
+\end{remark}
+\end{definition}

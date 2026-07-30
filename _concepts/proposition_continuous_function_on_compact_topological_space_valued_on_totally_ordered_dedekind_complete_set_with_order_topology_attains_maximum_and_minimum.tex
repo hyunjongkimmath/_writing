@@ -1,0 +1,50 @@
+\begin{proposition}[Continuous function on a compact space valued in a Dedekind-complete totally ordered set attains maximum and minimum] \label{proposition:continuous_function_on_compact_topological_space_valued_on_totally_ordered_dedekind_complete_set_with_order_topology_attains_maximum_and_minimum}
+    Let $X$ be a nonempty \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact topological space}, let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set} that is \CrefAndHyperrefIfExist{definition:dedekind_completeness_of_an_ordered_set}{Dedekind-complete}, and equip $P$ with the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology} (For example, the hypotheses on $P$ apply to $\bbR$\CrefIfExists{definition:field_of_real_numbers} with its \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{standard order}\CrefIfExists{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property_and_hence_is_dedekind_complete}). Let $f : X \to P$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous function}. Then there exist points $x_{\max}, x_{\min} \in X$ such that for all $x \in X$, we have
+    $$f(x_{\min}) \leq f(x) \leq f(x_{\max}).$$
+    In other words, $f$ attains its \CrefAndHyperrefIfExist{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}{maximum} at $x_{\max}$ and its \CrefAndHyperrefIfExist{definition:least_element_minimum_element_in_a_subset_of_a_partially_ordered_set}{minimum} at $x_{\min}$.
+\end{proposition}
+
+\begin{proof}
+    We prove that $f$ attains its maximum; the statement for the minimum follows by a symmetric argument applied to the reverse totally ordered set $(P, \geq)$, which is also Dedekind-complete\TODO{AI generated, reference needed: lemma that the reverse of a Dedekind-complete totally ordered set is Dedekind-complete} and carries the same order topology.
+
+    We first show that $f$ is \CrefAndHyperrefIfExist{definition:bounded_above_below_and_bounded_function_on_a_set_to_an_ordered_set}{bounded above}. Let
+    $$\mathcal{U} = \{\, (-\infty, b) : b \in P \,\},$$
+    where $(-\infty, b) = \{y \in P : y < b\}$ denotes a \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{lower ray} in the order topology on $P$. The collection $\mathcal{U}$ covers $P$, hence also covers the image $f(X) \subseteq P$. For each $b \in P$, the set $(-\infty, b)$ is open in the order topology, so its preimage $f^{-1}((-\infty, b))$ is open in $X$ because $f$ is a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous function}. The collection $\{\, f^{-1}((-\infty, b)) : b \in P \,\}$ therefore forms an open cover of $X$. By the \CrefAndHyperrefIfExist{definition:compact_topological_space}{compactness} of $X$, there exists a finite subcover; say
+    $$X = f^{-1}((-\infty, b_1)) \cup \cdots \cup f^{-1}((-\infty, b_n))$$
+    for some $b_1, \dots, b_n \in P$. Let $B = \max\{b_1, \dots, b_n\}$\CrefIfExists{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}\CrefIfExists{lemma:any_finite_nonempty_subset_of_a_totally_ordered_set_has_a_maximum_and_minimum}. Since $b_i \leq B$ for each $i = 1, \dots, n$, we have $(-\infty, b_i) \subseteq (-\infty, B)$, and therefore
+    $$X = f^{-1}((-\infty, B)).$$
+    This implies that for all $x \in X$, we have $f(x) < B$, so $B$ is an upper bound of $f(X)$.
+
+    We now show that the maximum is attained. Since $X$ is nonempty and $f(X)$ is bounded above, the \CrefAndHyperrefIfExist{definition:dedekind_completeness_of_an_ordered_set}{Dedekind completeness} of $P$ guarantees the existence of
+    $$M = \sup f(X)$$
+    \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}. We claim that $M \in f(X)$.
+
+    Suppose for contradiction that $M \notin f(X)$. Then for each $y \in f(X)$, we have $y < M$ because $M$ is an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} of $f(X)$ and $y \neq M$. For each $y \in f(X)$, the set $(-\infty, y)$ is open in the order topology on $P$, so its preimage $f^{-1}((-\infty, y))$ is open in $X$ by continuity of $f$. We show that $\{\, f^{-1}((-\infty, y)) : y \in f(X) \,\}$ covers $X$. To see this, let $x \in X$ and set $y_0 = f(x) \in f(X)$. Since $M = \sup f(X)$ is the least upper bound of $f(X)$ and $y_0 < M$, the element $y_0$ is not an upper bound of $f(X)$; hence there exists some $y' \in f(X)$ such that $y_0 < y'$. Then $x \in f^{-1}((-\infty, y'))$. By the compactness of $X$, there exists a finite subcover
+    $$X = f^{-1}((-\infty, y_1)) \cup \cdots \cup f^{-1}((-\infty, y_m))$$
+    for some $y_1, \dots, y_m \in f(X)$. Let $Y = \max\{y_1, \dots, y_m\}$, which exists by \Cref{lemma:any_finite_nonempty_subset_of_a_totally_ordered_set_has_a_maximum_and_minimum}. Then $(-\infty, y_i) \subseteq (-\infty, Y)$ for each $i$, and so
+    $$X = f^{-1}((-\infty, Y)).$$
+    This implies that for all $z \in f(X)$, we have $z < Y$. In particular, since $Y \in f(X)$, we obtain $Y < Y$, which contradicts the \CrefAndHyperrefIfExist{definition:irreflexive_binary_relation_on_a_set}{irreflexivity} of \CrefAndHyperrefIfExist{definition:strict_partially_ordered_set}{strict order}.
+
+    Therefore, $M \in f(X)$, so there exists a point $x_{\max} \in X$ such that $f(x_{\max}) = M$. By definition of the supremum, for all $x \in X$, we have $f(x) \leq f(x_{\max})$, establishing that $f$ attains its maximum.
+\end{proof}
+
+% \begin{proposition}[Continuous real-valued function on a compact topological space attains maximum and minimum] \label{proposition:continuous_function_on_compact_topological_space_valued_on_totally_ordered_dedekind_complete_set_with_order_topology_attains_maximum_and_minimum}
+%     \TODO{AI generated, verify}
+%     Let $X$ be a \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact topological space} and let $f : X \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous function}. Then $f$ is \CrefAndHyperrefIfExist{definition:bounded_above_below_and_bounded_function_on_a_set_to_an_ordered_set}{bounded above and below}, and attains its \CrefAndHyperrefIfExist{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}{maximum} and \CrefAndHyperrefIfExist{definition:least_element_minimum_element_in_a_subset_of_a_partially_ordered_set}{minimum}, i.e.\ there exist $x_{\max}, x_{\min} \in X$ such that
+%     $$f(x_{\max}) = \sup_{x \in X} f(x), \qquad f(x_{\min}) = \inf_{x \in X} f(x).$$
+% \end{proposition}
+
+% \begin{proof}
+%     \TODO{AI generated, verify}
+%     We prove the statement for the maximum; the minimum follows by applying the same argument to $-f$.
+
+%     Let $M = \sup_{x \in X} f(x) \in \mathbb{R} \cup \{+\infty\}$. We first show that $M < \infty$, i.e.\ $f$ is bounded above. For each $n \in \mathbb{N}$, consider the open set
+%     $$U_n = \{x \in X : f(x) < n\}.$$
+%     Since $f$ is continuous, each $U_n$ is open. The collection $\{U_n\}_{n=1}^\infty$ forms an open cover of $X$ because for each $x \in X$, $f(x) < n$ for sufficiently large $n$. By compactness of $X$, there exists a finite subcover $U_{n_1}, \dots, U_{n_k}$. Let $N = \max\{n_1, \dots, n_k\}$. Then $X = U_N$, so $f(x) < N$ for all $x \in X$, implying $M \le N < \infty$.
+
+%     Now we show that $M$ is attained. Suppose for contradiction that $f(x) < M$ for all $x \in X$. For each $x \in X$, let $\varepsilon_x = M - f(x) > 0$, and consider the open set
+%     $$V_x = \{y \in X : f(y) < f(x) + \varepsilon_x\} = \{y \in X : f(y) < M - \varepsilon_x + \varepsilon_x\} = \{y \in X : f(y) < M\} = X,$$
+%     which is not helpful. Instead, consider the open sets
+%     $$W_x = \{y \in X : f(y) < f(x) + \varepsilon_x/2\} = \{y \in X : f(y) < (M + f(x))/2\}.$$
+%     Each $W_x$ is open by continuity of $f$, and $x \in W_x$, so $\{W_x\}_{x \in X}$ is an open cover of $X$. By compactness, there exists a finite subcover $W_{x_1}, \dots, W_{x_m}$. Let $\delta = \max_{i=1,\dots,m} (M - f(x_i))$ and note that $0 < \delta < M$ because each $f(x_i) < M$. For any $y \in X$, we have $y \in W_{x_i}$ for some $i$, so $f(y) < (M + f(x_i))/2 = M - (M - f(x_i))/2 \le M - \delta/2$. Hence $\sup_{x \in X} f(x) \le M - \delta/2 < M$, contradicting the definition of $M$ as the supremum. Therefore $M$ is attained.
+% \end{proof}

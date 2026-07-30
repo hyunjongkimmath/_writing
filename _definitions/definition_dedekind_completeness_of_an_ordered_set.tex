@@ -1,0 +1,14 @@
+\begin{definition}[Dedekind completeness of an ordered set] \label{definition:dedekind_completeness_of_an_ordered_set}
+    Let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{ordered set}.
+
+    The ordered set $P$ is said to be \hldef{Dedekind-complete} if it satisfies the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}: every nonempty subset $S \subseteq P$ that has an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} in $P$ also has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum} in $P$. That is, if $\emptyset \neq S \subseteq P$ and there exists $M \in P$ such that $s \leq M$ for all $s \in S$, then there exists an element $\sup S \in P$ satisfying
+    $$\forall s \in S,\; s \leq \sup S \quad \text{and} \quad \bigl(\forall u \in P,\; (\forall s \in S,\; s \leq u) \;\rightarrow\; \sup S \leq u\bigr).$$
+
+    Equivalently, $P$ is Dedekind-complete if and only if every nonempty subset of $P$ that has a lower bound also has an infimum in $P$\CrefIfExists{lemma:least_upper_bound_and_greatest_lower_bound_property_on_a_partially_ordered_set_are_equivalent}.
+
+    \TextIfExists{definition:dedekind_cut_in_an_ordered_set}{
+        The terminology comes from \CrefAndHyperrefIfExist{definition:dedekind_cut_in_an_ordered_set}{Dedekind cuts}: a cut $(L, U)$ in $P$ is a partition of $P$ into two nonempty sets such that every element of $L$ is strictly less than every element of $U$. Dedekind completeness means that every such cut is either ``filled'' by an element $\alpha \in P$ that serves as the supremum of $L$, or ``jumps'' in the sense that $L$ has a greatest element and $U$ has a least element.
+    }
+
+    When $P$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set} equipped with an abelian group structure compatible with the order, Dedekind completeness characterizes $\mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} up to unique ordered group isomorphism among all such groups that are also divisible\CrefIfExists{theorem:dedekind_complete_divisible_totally_ordered_abelian_groups_are_uniquely_isomorphic}
+\end{definition}

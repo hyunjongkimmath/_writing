@@ -1,5 +1,5 @@
 \begin{definition}[Interval in the real line] \label{definition:interval_in_the_real_line}
-Let $(\mathbb{R},\leq)$ be the field of \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{real numbers} equipped with its usual total order.
+Let $(\mathbb{R},\leq)$ be the field of \CrefAndHyperrefIfExist{definition:field_of_real_numbers}{real numbers} equipped with its \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{usual} \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}.
 A subset $I \subseteq \mathbb{R}$ is called an \hldef{interval in the real line} if for all $x,y,z \in \mathbb{R}$ one has
 $$
 x < z < y \text{ and } x \in I,\, y \in I \implies z \in I.
@@ -26,4 +26,11 @@ We also regard $\mathbb{R}$ itself and the empty set $\varnothing$ as intervals 
 An interval of the form $(a,b)$ for $a \in \bbR \cup \{\-infty\}$ and $b \in \bbR \cup \{\infty\}$ is called an \hldef{open interval}.
 An interval of the form $[a,b]$ for $a \in \bbR$ and $b \in \bbR$ is called a \hldef{closed interval}.
 An interval of the form $(a,b]$ for $a \in \bbR \cup \{\-infty\}$ and $b \in \bbR$ or of the form $[a, b)$ for $a \in \bbR$ and $b \in \bbR \cup \{\infty\}$ is called a \hldef{half open interval}.
+
+\TextIfExists{definition:intervals_in_a_partially_ordered_set}{Note that the above definitions are special cases of those in \Cref{definition:intervals_in_a_partially_ordered_set} for $\bbR$ as an ordered set.
+}
+
+\TextIfExists{proposition:heine_borel_theorem_for_closed_and_bounded_intervals_in_real_numbers}{
+    By the \CrefAndHyperref{proposition:heine_borel_theorem_for_closed_and_bounded_intervals_in_real_numbers}{Heine-Borel theorem}, closed intervals $[a,b]$ are \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact  topological spaces}.
+}
 \end{definition}

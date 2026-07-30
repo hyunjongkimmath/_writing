@@ -10,7 +10,7 @@
 \begin{proof}
     We prove the nondecreasing case; the nonincreasing case follows by considering $(-a_n)$.
 
-    Let $(a_n)_{n=1}^\infty$ be a nondecreasing sequence in $\mathbb{R}$ that is bounded above. By \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_least_upper_bound_property}, applied to $\mathbb{R}$ with its standard order, which has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}\CrefIfExists{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property}, the set $S = \{a_n : n \in \mathbb{N}\}$ has a supremum $L := \sup S \in \mathbb{R}$.
+    Let $(a_n)_{n=1}^\infty$ be a nondecreasing sequence in $\mathbb{R}$ that is bounded above. By \Cref{theorem:bounded_monotone_sequence_has_supremum_in_poset_with_least_upper_bound_property}, applied to $\mathbb{R}$ with its standard order, which has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}\CrefIfExists{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property_and_hence_is_dedekind_complete}, the set $S = \{a_n : n \in \mathbb{N}\}$ has a supremum $L := \sup S \in \mathbb{R}$.
 
     We now prove metric convergence: $a_n \to L$ in the standard metric on $\mathbb{R}$. Let $\varepsilon > 0$. Since $L = \sup S$, $L - \varepsilon$ is not an upper bound of $S$. Hence there exists some $N \in \mathbb{N}$ such that $a_N > L - \varepsilon$. Because the sequence is nondecreasing, for all $n \ge N$ we have $a_n \ge a_N > L - \varepsilon$. Also $a_n \le L$ for all $n$ since $L$ is an upper bound of $S$. Thus for all $n \ge N$,
     $$|a_n - L| = L - a_n < \varepsilon.$$

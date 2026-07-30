@@ -1,0 +1,15 @@
+% CONDITIONALLY SIGMA-COMPLETE LINEAR ORDER
+\begin{definition}[Conditionally $\sigma$-complete linear order] \label{definition:conditionally_sigma_complete_linear_order}
+    \TODO{AI generated, verify}
+Let $(L, \leq)$ be a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set}.
+
+We say that $L$ is a \hldef{conditionally $\sigma$-complete linear order} if every non-empty countable subset of $L$ that has an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}, and dually every non-empty countable subset that has a lower bound has an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}. That is, if $S \subseteq L$ is countable and non-empty, then
+\begin{enumerate}
+    \item If there exists $u \in L$ such that $s \leq u$ for all $s \in S$, then $\sup S$ exists in $L$.
+    \item If there exists $l \in L$ such that $l \leq s$ for all $s \in S$, then $\inf S$ exists in $L$.
+\end{enumerate}
+
+\TextIfExists{definition:dedekind_completeness_of_an_ordered_set}{
+    A conditionally $\sigma$-complete linear order is a restricted form of \CrefAndHyperrefIfExist{definition:dedekind_completeness_of_an_ordered_set}{Dedekind completeness}: only countable subsets need to have suprema and infima, rather than all bounded subsets.
+}
+\end{definition}

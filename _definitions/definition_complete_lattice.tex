@@ -1,0 +1,12 @@
+% COMPLETE LATTICE
+\begin{definition}[Complete lattice] \label{definition:complete_lattice}
+Let $P$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
+
+We say that $P$ is a \hldef{complete lattice} if every subset of $P$ has both a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum} and an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}. That is, for every $S \subseteq P$, there exist elements $\bigvee S$ and $\bigwedge S$ in $P$ such that
+\begin{enumerate}
+    \item $s \leq \bigvee S$ for all $s \in S$, and if $u \in P$ satisfies $s \leq u$ for all $s \in S$, then $\bigvee S \leq u$;
+    \item $\bigwedge S \leq s$ for all $s \in S$, and if $l \in P$ satisfies $l \leq s$ for all $s \in S$, then $l \leq \bigwedge S$.
+\end{enumerate}
+
+A complete lattice has a unique greatest element (the supremum of $P$) and a unique least element (the infimum of $P$)\CrefIfExists{lemma:supremum_infimum_of_a_subset_of_an_ordered_set_is_unique_if_exists}. For any two elements $x, y \in P$, their \hldef{binary join} \hl{$x \vee y = \bigvee \{x, y\}$} and \hldef{binary meet} \hl{$x \wedge y = \bigwedge \{x, y\}$} exist.
+\end{definition}

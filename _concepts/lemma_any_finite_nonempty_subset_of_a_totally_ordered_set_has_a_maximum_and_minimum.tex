@@ -1,0 +1,18 @@
+% ANY FINITE NONEMPTY SUBSET OF A TOTALLY ORDERED SET HAS A MAXIMUM AND MINIMUM
+\begin{lemma}[Any finite nonempty subset of a totally ordered set has a maximum and minimum] \label{lemma:any_finite_nonempty_subset_of_a_totally_ordered_set_has_a_maximum_and_minimum}
+Let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set}, and let $S = \{x_1, \dots, x_n\}$ be a finite nonempty subset of $P$. Then $S$ has a \CrefAndHyperrefIfExist{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}{maximum} and a \CrefAndHyperrefIfExist{definition:least_element_minimum_element_in_a_subset_of_a_partially_ordered_set}{minimum}.
+\end{lemma}
+\begin{proof}
+    We prove the statement for the maximum by induction on $n = |S|$. The argument for the minimum is symmetric.
+
+    For the base case $n = 1$, we have $S = \{x_1\}$, and $x_1$ is the maximum of $S$ because $x_1 \leq x_1$ by reflexivity\CrefIfExists{definition:partially_ordered_set}.
+
+    Suppose that every subset of size $n-1$ has a maximum. Let $S = \{x_1, \dots, x_n\}$. By the induction hypothesis, the set $S' = \{x_1, \dots, x_{n-1}\}$ has a maximum element $m$, so that $x_i \leq m$ for all $i = 1, \dots, n-1$. Since $(P, \leq)$ is totally ordered\CrefIfExists{definition:total_order_linear_order_on_a_set}, either $m \leq x_n$ or $x_n < m$.
+    \begin{enumerate}
+        \item If $m \leq x_n$, then $x_n$ is the maximum of $S$: for each $i = 1, \dots, n-1$, we have $x_i \leq m \leq x_n$ by transitivity\CrefIfExists{definition:partially_ordered_set}, and trivially $x_n \leq x_n$.
+
+        \item If $x_n < m$, then $m$ is the maximum of $S$: for each $i = 1, \dots, n-1$, we have $x_i \leq m$ by the induction hypothesis, and $x_n < m$ by assumption.
+    \end{enumerate}
+
+    Therefore, by induction, every finite nonempty subset of a totally ordered set has a maximum.
+\end{proof}

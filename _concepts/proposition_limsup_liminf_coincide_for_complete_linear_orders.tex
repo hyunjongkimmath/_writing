@@ -1,0 +1,23 @@
+% COINCIDENCE OF LATTICE-THEORETIC AND SEQUENTIAL LIMSUP/LIMINF FOR COMPLETE LINEAR ORDERS
+\begin{proposition}[Coincidence of lattice-theoretic and sequential limsup/liminf for complete linear orders] \label{proposition:limsup_liminf_coincide_for_complete_linear_orders}
+    \TODO{AI generated, verify}
+Let $(L, \leq)$ be a set that is simultaneously a \CrefAndHyperrefIfExist{definition:complete_lattice}{complete lattice} and a \CrefAndHyperrefIfExist{definition:conditionally_sigma_complete_linear_order}{conditionally $\sigma$-complete linear order} with the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}.
+
+Let $(x_n)_{n=1}^\infty$ be a sequence in $L$. The lattice-theoretic limsup and liminf defined via infima and suprema\CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_a_complete_lattice} coincide with the sequential limsup and liminf defined as limits of tail supremum and tail infimum sequences\CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_a_conditionally_sigma_complete_linear_order}:
+$$\bigwedge_{n \geq 1} \bigvee_{k \geq n} x_k = \lim_{n \to \infty} \left( \bigvee_{k \geq n} x_k \right) \quad \text{and} \quad \bigvee_{n \geq 1} \bigwedge_{k \geq n} x_k = \lim_{n \to \infty} \left( \bigwedge_{k \geq n} x_k \right).$$
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    For each $n \geq 1$, define the tail supremum and tail infimum
+    $$s_n = \bigvee_{k \geq n} x_k \quad \text{and} \quad i_n = \bigwedge_{k \geq n} x_k.$$
+
+    We first show that $(s_n)_{n=1}^\infty$ is a non-increasing sequence. Let $n \leq m$. The set $\{x_k : k \geq m\}$ is a subset of $\{x_k : k \geq n\}$, so the supremum of the smaller set satisfies
+    $$s_m = \bigvee_{k \geq m} x_k \leq \bigvee_{k \geq n} x_k = s_n.$$
+
+    The lattice-theoretic limsup is defined as $\limsup_{n \to \infty} x_n = \bigwedge_{n \geq 1} s_n$. Set $s^* = \bigwedge_{n \geq 1} s_n$, which exists because $L$ is a complete lattice. Since $(s_n)$ is non-increasing and has infimum $s^*$, the sequence converges to $s^*$ in the order topology by \Cref{proposition:convergence_of_a_monotone_sequence_to_a_supremum_or_infimum_in_a_totally_ordered_set_coincides_with_topological_convergence_in_the_order_topology}. Therefore
+    $$\lim_{n \to \infty} s_n = s^* = \bigwedge_{n \geq 1} s_n,$$
+    which is the coincidence for limsup.
+
+    The argument for liminf is symmetric: the sequence $(i_n)$ is non-decreasing, its supremum $i^* = \bigvee_{n \geq 1} i_n$ exists, and $(i_n)$ converges to $i^*$ by \Cref{proposition:convergence_of_a_monotone_sequence_to_a_supremum_or_infimum_in_a_totally_ordered_set_coincides_with_topological_convergence_in_the_order_topology}. Hence
+    $$\lim_{n \to \infty} i_n = i^* = \bigvee_{n \geq 1} i_n.$$
+\end{proof}

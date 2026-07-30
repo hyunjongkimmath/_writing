@@ -1,0 +1,11 @@
+\begin{proposition}[Number of square-free monic polynomials over a finite field, see {\cite[]{carlitz_apgf}}] \label{proposition:number_of_square_free_monic_polynomials_over_finite_field}
+    \TODO{AI generated, verify}
+
+    Let $q$ be the \CrefAndHyperrefIfExist{definition:cardinal_number_and_cardinality_of_a_set}{cardinality} of a \CrefAndHyperrefIfExist{definition:finite_field}{finite field} $\bbF_q$. For each integer $v \geq 0$, let $Q(v)$ denote the number of \CrefAndHyperrefIfExist{definition:monic_polynomial_over_a_commutative_ring}{monic} \CrefAndHyperrefIfExist{definition:squarefree_polynomial_over_a_commutative_ring}{square-free polynomials} in $\bbF_q[T]$ of degree $v$. Then
+    $$Q(0) = 1, \quad Q(1) = q, \quad\text{and}\quad Q(v) = q^v - q^{v-1} \;\; (v \geq 2).$$
+
+    % Equivalently, the generating series is
+    % $$\sum_{v=0}^{\infty} Q(v)\,x^v = 1 + qx + \frac{x^2}{(1-qx)(1-q^2x)}.$$
+
+    % Carlitz \cite[Equation in the introduction]{carlitz_apgf} states $Q(v) = q^v - q^{v-1}$ for all $v$, but this formula is valid only for $v \geq 2$; at $v=1$ it gives $q-1$ instead of the correct value $q$. The error arises because every monic linear polynomial over $\bbF_q$ is irreducible (hence square-free), and there are exactly $q$ such polynomials.
+\end{proposition}

@@ -1,7 +1,11 @@
-\begin{proposition} \label{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property}
-    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{field of real numbers} constructed as $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$, equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{standard order}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}. Then $\bbR$ has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}: every nonempty subset $S \subseteq \bbR$ that is bounded above (i.e.\ there exists $M \in \bbR$ such that $s \le M$ for all $s \in S$) has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{least upper bound} $\sup S \in \bbR$.
+\begin{proposition} \label{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property_and_hence_is_dedekind_complete}
+    Let $\bbR$ be the \CrefAndHyperrefIfExist{definition:real_numbers_as_cauchy_completion_of_rational_numbers}{field of real numbers} constructed as $\mathcal{C}_\bbQ / \mathcal{N}_\bbQ$, equipped with the \CrefAndHyperrefIfExist{definition:standard_order_on_real_numbers}{standard order}\CrefIfExists{proposition:the_field_of_real_numbers_is_a_totally_ordered_field}. Then $\bbR$ has the \CrefAndHyperrefIfExist{definition:least_upper_bound_greatest_lower_bound_property_of_ordered_sets}{least upper bound property}: every nonempty subset $S \subseteq \bbR$ that is bounded above (i.e.\ there exists $M \in \bbR$ such that $s \le M$ for all $s \in S$) has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{least upper bound} $\sup S \in \bbR$. 
 
-    Dually, every nonempty subset $T \subseteq \bbR$ that is bounded below has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{greatest lower bound} $\inf T \in \bbR$.
+    \TextIfExists{definition:dedekind_completeness_of_an_ordered_set}{
+        In other words, $\bbR$ is a \CrefAndHyperrefIfExist{definition:dedekind_completeness_of_an_ordered_set}{Dedekind-complete} ordered set.
+    }
+
+    Equivalently\CrefIfExists{lemma:least_upper_bound_and_greatest_lower_bound_property_on_a_partially_ordered_set_are_equivalent}, every nonempty subset $T \subseteq \bbR$ that is bounded below has a \CrefAndHyperrefIfExist{definition:least_upper_bound_and_greatest_lower_bound_of_a_subset_of_an_ordered_set}{greatest lower bound} $\inf T \in \bbR$.
 \end{proposition}
 
 \begin{proof}

@@ -1,0 +1,22 @@
+\begin{definition} \label{definition:commutative_ring_spectrum_in_stable_inf_category}
+    \TODO{AI generated, verify}
+    Let $\mathrm{Sp}$\TODO{AI generated, reference needed: notation for the infinity-category of spectra} denote the \CrefAndHyperrefIfExist{definition:stable_infinity_category}{stable infinity-category} of \CrefAndHyperrefIfExist{definition:spectrum_of_topological_spaces}{spectra}, endowed with the smash product monoidal structure\TODO{AI generated, reference needed: symmetric monoidal structure on the stable infinity-category of spectra}.
+
+    Following Lurie \cite[Definition 7.1.0.1]{lurie_ha}, an \hldef{$E_\infty$-ring} (or \hldef{commutative ring spectrum in the highly structured sense}) is a commutative algebra object\TODO{AI generated, reference needed: definition of commutative algebra object in a symmetric monoidal infinity-category} of $\mathrm{Sp}$ with respect to its symmetric monoidal structure:
+    $$ R \in \mathcal{C}\mathrm{Alg}(\mathrm{Sp}) = \mathrm{Alg}_{\mathbb{E}_\infty}(\mathrm{Sp}). $$
+    Here $\mathcal{C}\mathrm{Alg}(-)$ denotes the infinity-category of commutative algebra objects in a symmetric monoidal infinity category\TODO{AI generated, reference needed: definition/construction of CAlg(C) for a symmetric monoidal infinity-category C}, and $\mathrm{Alg}_{\mathbb{E}_k}(-)$ denotes the infinity-category of $\mathbb{E}_k$-algebra objects. More generally, for $0 \leq k \leq \infty$, an \hldef{$\mathbb{E}_k$-ring spectrum} is an $\mathbb{E}_k$\TODO{AI generated, reference needed: definition of E_k-operad notation}-algebra object of $\mathrm{Sp}$:
+    $$ R \in \mathrm{Alg}_{\mathbb{E}_k}(\mathrm{Sp}), $$
+    where $\mathbb{E}_k$\TODO{AI generated, reference needed: definition of the little k-cubes operad} denotes the little $k$-cubes operad. In particular:
+    \begin{itemize}
+        \item An $\mathbb{E}_1$-ring is an \hldef{associative ring spectrum} (or $A_\infty$\TODO{AI generated, reference needed: definition/notation for A-infinity algebras}-ring), i.e., a spectrum with multiplication associative up to coherent homotopy.
+        \item An $\mathbb{E}_\infty$-ring is a \hldef{highly commutative ring spectrum}, i.e., a spectrum with multiplication commutative and associative up to all higher coherences.
+    \end{itemize}
+
+    By Remark 7.1.0.4 of \emph{loc.\ cit.}, there are forgetful functors\TODO{AI generated, reference needed: existence of forgetful functors from algebra objects to underlying objects in a symmetric monoidal infinity-category}
+    $$ \mathcal{C}\mathrm{Alg}(\mathrm{Sp}) \to \cdots \to \mathrm{Alg}_{\mathbb{E}_2}(\mathrm{Sp}) \to \mathrm{Alg}_{\mathbb{E}_1}(\mathrm{Sp}) \xrightarrow{\;\text{forget to homotopy category}\;} \mathrm{Mon}(\mathrm{Ho}(\mathrm{Sp})) $$
+    where $\mathrm{Mon}(\mathrm{Ho}(\mathrm{Sp}))$\TODO{AI generated, reference needed: notation for the category of monoids in a monoidal category} denotes the category of monoids\TODO{AI generated, reference needed: definition of Mon(C) for a monoidal category C} in the stable homotopy category with respect to the smash product. An object in the image of this final functor is a \CrefAndHyperrefIfExist{definition:homotopy_ring_spectrum}{homotopy ring spectrum}.
+
+    \begin{remark}[Terminology]
+        Lurie's $\mathbb{E}_k$-rings are what classical literature often calls $\mathbb{E}_k$-ring spectra. The term ``commutative ring spectrum'' is sometimes used in the classical sense to mean a monoid\TODO{AI generated, reference needed: definition of monoid object} in $\mathrm{Ho}(\mathrm{Sp})$\TODO{AI generated, reference needed: notation for the stable homotopy category and its symmetric monoidal structure} (associative and commutative only up to unspecified homotopy); see \CrefAndHyperrefIfExist{definition:homotopy_ring_spectrum}{the definition of a homotopy ring spectrum}. Lurie explicitly distinguishes these two notions in Remark 7.1.0.2 of \emph{loc.\ cit.}.
+    \end{remark}
+\end{definition}

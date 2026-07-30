@@ -1,6 +1,5 @@
-\begin{theorem} \label{theorem:integers_universal_property}
-\TODO{AI generated, verify}
-    Let $R$ be a ring with \CrefAndHyperrefIfExist{definition:commutative_ring}{unity} $1_R$, and let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers}. Then there exists a unique \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\phi: \bbZ \to R$ such that $\phi(1_\bbZ) = 1_R$. The homomorphism is defined recursively by
+\begin{theorem} \label{theorem:integers_universal_property_ring_of_integers_is_the_initial_object_in_the_category_of_rings}
+    Let $R$ be a ring with \CrefAndHyperrefIfExist{definition:commutative_ring}{unity} $1_R$, and let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:ring_of_integers_from_natural_numbers}{ring of integers}. Then there exists a unique \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphism} $\phi: \bbZ \to R$ such that $\phi(1_\bbZ) = 1_R$. The homomorphism is defined recursively by
     \begin{align*}
         \phi(1) &= 1_R, \\
         \phi(n+1) &= \phi(n) + 1_R \quad\text{for every } n \in \bbZ_{> 0}, \\
@@ -9,6 +8,10 @@
     \end{align*}
     where $\bbZ_{> 0}$ is identified with \CrefAndHyperrefIfExist{definition:natural_numbers}{$\bbN$} via the \CrefAndHyperrefIfExist{proposition:positive_integers_correspond_to_natural_numbers}{order isomorphism of totally ordered semirings}.
     The kernel of $\phi$ is either $\{0_\bbZ\}$, in which case $\bbZ$ embeds into $R$, or $p\bbZ$ for some \CrefAndHyperrefIfExist{definition:prime_number}{prime number $p$}, in which case the image of $\phi$ is isomorphic to $\bbF_p$\CrefIfExists{definition:finite_field}.
+
+    \TextIfExists{definition:initial_final_zero_objects_of_a_category}{
+        In other words, $\bbZ$ is the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} in the \CrefAndHyperrefIfExist{definition:category_of_rings}{category of rings}.
+    }
 \end{theorem}
 
 \begin{proof}

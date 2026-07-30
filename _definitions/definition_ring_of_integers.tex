@@ -1,8 +1,14 @@
 \begin{definition} \label{definition:ring_of_integers}
-    The \hldef{ring of integers}, universally denoted by \hl{$\bbZ$}, is the unique (up to \CrefAndHyperref{definition:ring_homomorphism}{isomorphism}) \CrefAndHyperref{definition:ordered_ring}{ordered} \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain} such that there exists a subset $P \subset \bbZ$ such that 
-    \begin{enumerate}
-        \item $P$ is nonempty, and
-        \item Every non-empty subset of $P$ contains a least element.
-    \end{enumerate}
-    \CrefIfExists{corollary:integers_existence_uniqueness}
+    The \hldef{ring of integers}, universally denoted by \hl{$\bbZ$}, is the unique (up to \CrefAndHyperref{definition:ring_homomorphism}{isomorphism}) \CrefAndHyperref{definition:ordered_ring}{ordered}\CrefIfExists{proposition:integers_form_ordered_ring} \CrefAndHyperrefIfExist{definition:domain_integral_domain}{integral domain} whose \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone} $\bbZ_{>0}$ is non-empty and \CrefAndHyperrefIfExist{definition:well_ordered_set}{well-ordered}, i.e. every non-empty subset of $\bbZ_{>0}$ has a least element\CrefIfExists{corollary:integers_existence_uniqueness}.
+    % such that there exists a subset $P \subset \bbZ$ such that 
+    % \begin{enumerate}
+    %     \item $P$ is nonempty, and
+    %     \item Every non-empty subset of $P$ contains a least element.
+    % \end{enumerate}
+    \TextIfExists{definition:category_of_rings}{
+        The ring $\bbZ$ is also \CrefAndHyperrefIfExist{theorem:integers_universal_property_ring_of_integers_is_the_initial_object_in_the_category_of_rings}{uniquely characterized} as the \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} in the \CrefAndHyperrefIfExist{definition:category_of_rings}{category of rings}
+    }
+    \TextIfExists{definition:ring_of_integers_from_natural_numbers}{
+        See also \Cref{definition:ring_of_integers_from_natural_numbers} for a construction of the ring of integers.
+    }
 \end{definition}

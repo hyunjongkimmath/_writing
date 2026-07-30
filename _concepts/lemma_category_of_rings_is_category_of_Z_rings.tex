@@ -3,7 +3,7 @@
 \end{lemma}
 
 \begin{proof}
-    By \Cref{theorem:integers_universal_property}, for every ring $R$ there exists a unique ring homomorphism $\phi_R: \bbZ \to R$. This makes $\bbZ$ an \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} of $\mathbf{Ring}$.
+    By \Cref{theorem:integers_universal_property_ring_of_integers_is_the_initial_object_in_the_category_of_rings}, for every ring $R$ there exists a unique ring homomorphism $\phi_R: \bbZ \to R$. This makes $\bbZ$ an \CrefAndHyperrefIfExist{definition:initial_final_zero_objects_of_a_category}{initial object} of $\mathbf{Ring}$.
 
     We construct an equivalence of categories $F: \mathbf{Ring} \to \mathbf{Ring}_\bbZ$. On objects, send each ring $R$ to the pair $(R, \phi_R)$, where $\phi_R: \bbZ \to R$ is the unique ring homomorphism. On morphisms, send each ring homomorphism $f: R \to S$ to itself, regarded as a morphism in $\mathbf{Ring}_\bbZ$. To see that this is well-defined, note that for any ring homomorphism $f: R \to S$, the triangle
     \begin{center}
@@ -12,7 +12,7 @@
             R \arrow[rr, "f"'] & & S
         \end{tikzcd}
     \end{center}
-    commutes because both $f \circ \phi_R$ and $\phi_S$ are ring homomorphisms from $\bbZ$ to $S$, and by uniqueness in \Cref{theorem:integers_universal_property} they must coincide.
+    commutes because both $f \circ \phi_R$ and $\phi_S$ are ring homomorphisms from $\bbZ$ to $S$, and by uniqueness in \Cref{theorem:integers_universal_property_ring_of_integers_is_the_initial_object_in_the_category_of_rings} they must coincide.
 
     The functor $F$ is clearly \CrefAndHyperrefIfExist{definition:full_and_faithful_functor_between_locally_small_categories}{fully faithful}, since it acts as the identity on morphism sets. It is \CrefAndHyperrefIfExist{definition:essentially_surjective_functor_between_categories}{essentially surjective} because every object of $\mathbf{Ring}_\bbZ$ has the form $(R, \psi)$ for some ring homomorphism $\psi: \bbZ \to R$, and by uniqueness $\psi = \phi_R$, so $(R, \psi) = F(R)$.
     \TODO{statements that various homomorphisms in various categories are indeed closed under composition}

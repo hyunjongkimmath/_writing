@@ -1,0 +1,18 @@
+% DEDKIND-MACNEILLE COMPLETION OF AN ORDERED SET
+\begin{definition}[Dedekind-MacNeille completion of an ordered set] \label{definition:dedekind_MacNeille_completion_of_an_ordered_set}
+    \TODO{AI generated, verify}
+Let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
+
+For any subset $S \subseteq P$, define the \hldef{upper cone of $S$} as
+$$\uparrow S = \{x \in P : s \leq x \text{ for all } s \in S\},$$
+and the \hldef{lower cone of $S$} as
+$$\downarrow S = \{x \in P : x \leq s \text{ for all } s \in S\}.$$
+
+A subset $C \subseteq P$ is called a \hldef{closed set in the Dedekind-MacNeille completion sense} if $\uparrow{\downarrow C} = C$. Let
+$$\widehat{P} = \{C \subseteq P : \uparrow{\downarrow C} = C\}.$$
+Order $\widehat{P}$ by inclusion: for $A, B \in \widehat{P}$, define $A \leq B$ if $A \subseteq B$.
+
+The pair $(\widehat{P}, \subseteq)$ is a complete lattice called the \hldef{Dedekind-MacNeille completion of $P$}. The original poset $P$ embeds into $\widehat{P}$ via the map
+$$p \mapsto \uparrow{\downarrow \{p\}}.$$
+This embedding is order-preserving and satisfies the universal property: for any complete lattice $L$ and order-preserving map $f : P \to L$, there exists a unique complete lattice homomorphism $\widehat{f} : \widehat{P} \to L$ extending $f$.
+\end{definition}

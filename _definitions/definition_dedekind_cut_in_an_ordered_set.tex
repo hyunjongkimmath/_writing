@@ -1,0 +1,18 @@
+\begin{definition}[Dedekind cut in an ordered set] \label{definition:dedekind_cut_in_an_ordered_set}
+    \TODO{AI generated, verify}
+    Let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{ordered set}.
+
+    A \hldef{Dedekind cut} (or simply a \hldef{cut}) in $P$ is a pair of subsets $(L, U)$ such that:
+    \begin{enumerate}
+        \item $L \neq \varnothing$ and $U \neq \varnothing$,
+        \item $L \cup U = P$,
+        \item every element of $L$ is strictly less than every element of $U$: for all $\ell \in L$ and $u \in U$, we have $\ell < u$.
+    \end{enumerate}
+
+    In a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{totally ordered set} $P$, every cut $(L, U)$ falls into exactly one of three mutually exclusive cases:
+    \begin{enumerate}
+        \item \hldef{jumps}: $L$ has a greatest element and $U$ has a least element.
+        \item \hldef{splits at the bottom}: $\sup L$ exists in $P$, belongs to $L$, and is not the greatest element of $L$. Equivalently, there exists $\alpha \in P$ such that $L = \{\,x \in P : x \leq \alpha\,\}$ but $U$ has no least element (so $\alpha \notin U$).
+        \item \hldef{splits at the top}: $\inf U$ exists in $P$, belongs to $U$, and is not the least element of $U$. Equivalently, there exists $\alpha \in P$ such that $U = \{\,x \in P : x \geq \alpha\,\}$ but $L$ has no greatest element (so $\alpha \notin L$).
+    \end{enumerate}
+\end{definition}

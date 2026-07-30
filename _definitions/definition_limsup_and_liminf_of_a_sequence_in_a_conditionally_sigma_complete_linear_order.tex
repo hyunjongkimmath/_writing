@@ -1,0 +1,21 @@
+% LIMSUP AND LIMINF OF A SEQUENCE IN A CONDITIONALLY SIGMA-COMPLETE LINEAR ORDER
+\begin{definition}[Limit superior and limit inferior of a sequence in a conditionally $\sigma$-complete linear order] \label{definition:limsup_and_liminf_of_a_sequence_in_a_conditionally_sigma_complete_linear_order}
+    \TODO{AI generated, verify}
+Let $(L, \leq)$ be a \CrefAndHyperrefIfExist{definition:conditionally_sigma_complete_linear_order}{conditionally $\sigma$-complete linear order}, i.e., a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{linearly ordered set} such that every non-empty countable subset bounded above has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}, and dually every non-empty countable subset bounded below has an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}.
+
+Let $(x_n)_{n=1}^\infty$ be a sequence in $L$. For each $n \geq 1$, define the tail supremum and tail infimum
+$$s_n = \bigvee_{k \geq n} x_k \quad \text{and} \quad i_n = \bigwedge_{k \geq n} x_k,$$
+which exist whenever the tails $\{x_k : k \geq n\}$ are bounded. If a tail is unbounded above or below, pass to the \CrefAndHyperrefIfExist{definition:dedekind_MacNeille_completion_of_an_ordered_set}{Dedekind-MacNeille completion} so that $s_n$ and $i_n$ always exist in the completed order.
+
+The sequence $(s_n)_{n=1}^\infty$ is a \CrefAndHyperrefIfExist{definition:monotone_sequence_of_elements_in_a_partially_ordered_set}{non-increasing monotone sequence}, and the sequence $(i_n)_{n=1}^\infty$ is a non-decreasing monotone sequence. By the theory of \CrefAndHyperrefIfExist{definition:convergence_of_a_monotone_sequence_in_a_partially_ordered_set_with_adjoined_infinity}{convergence of monotone sequences}, both limits exist in the completed order.
+
+The \hldef{limit superior of a sequence in a conditionally $\sigma$-complete linear order} of $(x_n)$ is
+$$\hlin{\limsup_{n \to \infty} x_n = \bigwedge_{n \geq 1} s_n = \lim_{n \to \infty} s_n.}$$
+The \hldef{limit inferior of a sequence in a conditionally $\sigma$-complete linear order} of $(x_n)$ is
+$$\hlin{\liminf_{n \to \infty} x_n = \bigvee_{n \geq 1} i_n = \lim_{n \to \infty} i_n.}$$
+When $L$ carries the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}, these order-theoretic limits coincide with topological \CrefAndHyperrefIfExist{definition:convergence_and_limit_of_sequence_in_a_topological_space}{limits of sequences}\CrefIfExists{proposition:convergence_of_a_monotone_sequence_to_a_supremum_or_infimum_in_a_totally_ordered_set_coincides_with_topological_convergence_in_the_order_topology}.
+
+\TextIfExists{proposition:limsup_liminf_coincide_for_complete_linear_orders}{
+    When $L$ is additionally a complete lattice\CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_a_complete_lattice}, the sequential limsup and liminf defined above coincide with the lattice-theoretic limsup and liminf\CrefIfExists{proposition:limsup_liminf_coincide_for_complete_linear_orders}.
+}
+\end{definition}

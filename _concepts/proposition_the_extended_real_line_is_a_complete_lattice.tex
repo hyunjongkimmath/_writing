@@ -1,0 +1,27 @@
+% THE EXTENDED REAL LINE IS A COMPLETE LATTICE
+\begin{proposition}[The extended real line is a complete lattice] \label{proposition:the_extended_real_line_is_a_complete_lattice}
+    \TODO{AI generated, verify}
+The \CrefAndHyperrefIfExist{definition:extended_real_line}{extended real line} $\overline{\mathbb{R}}$ with its standard order is a \CrefAndHyperrefIfExist{definition:complete_lattice}{complete lattice}. That is, every subset $S \subseteq \overline{\mathbb{R}}$ has both a supremum and an infimum in $\overline{\mathbb{R}}$.
+\end{proposition}
+\begin{proof}
+    \TODO{AI generated, verify}
+    Let $S \subseteq \overline{\mathbb{R}}$. We show that $\sup S$ exists in $\overline{\mathbb{R}}$; the argument for infima is symmetric.
+
+    We consider cases based on whether $+\infty$ belongs to $S$.
+    \begin{enumerate}
+        \item If $+\infty \in S$, then every element of $S$ satisfies $s \leq +\infty$ by the order extension\CrefIfExists{definition:extended_real_line}, and $+\infty$ is itself an upper bound. Hence $\sup S = +\infty$.
+
+        \item Suppose that $+\infty \notin S$. Let $S_{\mathbb{R}} = S \cap \mathbb{R}$ be the real part of $S$. If $S_{\mathbb{R}}$ is empty, then $S \subseteq \{-\infty\}$, so $\sup S = -\infty$.
+
+        \item Suppose that $S_{\mathbb{R}}$ is nonempty. If $-\infty \in S$, the element $-\infty$ does not affect the supremum because $s > -\infty$ for all $s \in S_{\mathbb{R}}$, so we may assume without loss of generality that $S \subseteq \mathbb{R}$.
+
+        We consider cases based on whether $S$ is bounded above in $\mathbb{R}$.
+        \begin{enumerate}
+            \item If $S$ is unbounded above in $\mathbb{R}$, then for every $r \in \mathbb{R}$ there exists $s \in S$ with $s > r$, so the only upper bound of $S$ in $\overline{\mathbb{R}}$ is $+\infty$. Hence $\sup S = +\infty$.
+
+            \item If $S$ is bounded above in $\mathbb{R}$, then by the \CrefAndHyperrefIfExist{definition:dedekind_completeness_of_an_ordered_set}{Dedekind completeness} of $\mathbb{R}$\CrefIfExists{proposition:the_field_of_real_numbers_has_the_least_upper_bound_property_and_hence_is_dedekind_complete}, the supremum $s^* = \sup S$ exists in $\mathbb{R}$. We show that this same element is also the supremum of $S$ in $\overline{\mathbb{R}}$. It is an upper bound of $S$ in $\overline{\mathbb{R}}$ because every element of $S$ satisfies $s \leq s^* < +\infty$. If $u \in \overline{\mathbb{R}}$ is another upper bound of $S$, then either $u = +\infty$, in which case $s^* \leq u$, or $u \in \mathbb{R}$, in which case $s^* \leq u$ because $s^*$ is the supremum of $S$ in $\mathbb{R}$. In either case, $s^*$ is the least upper bound.
+        \end{enumerate}
+    \end{enumerate}
+
+    In all cases, $\sup S$ exists in $\overline{\mathbb{R}}$. By symmetry, $\inf S$ also exists.
+\end{proof}

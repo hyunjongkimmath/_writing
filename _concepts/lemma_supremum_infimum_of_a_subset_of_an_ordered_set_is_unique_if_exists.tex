@@ -1,0 +1,13 @@
+% SUPREMUM AND INFIMUM OF A SUBSET OF AN ORDERED SET ARE UNIQUE IF THEY EXIST
+\begin{lemma}[Supremum and infimum of a subset of an ordered set are unique if they exist] \label{lemma:supremum_infimum_of_a_subset_of_an_ordered_set_is_unique_if_exists}
+Let $(P, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} and let $S \subseteq P$ be a subset.
+\begin{enumerate}
+    \item If $S$ has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum}, then it is unique.
+    \item If $S$ has an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}, then it is unique.
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+    We show that suprema are unique. Suppose that $u, v \in P$ are both suprema of $S$. Since $u$ is a supremum and $v$ is an upper bound of $S$, the definition of the supremum\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set} implies that $v \leq u$. By symmetry, since $v$ is a supremum and $u$ is an upper bound of $S$, we have $u \leq v$. The relation $\leq$ is \CrefAndHyperrefIfExist{definition:reflexive_symmetric_antisymmetric_transitive_total_binary_relations_on_a_set}{antisymmetric}, so $u = v$.
+
+    The argument for infima is symmetric.
+\end{proof}

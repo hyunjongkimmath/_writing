@@ -1,6 +1,6 @@
 \begin{proposition} \label{proposition:positive_integers_correspond_to_natural_numbers}
 \TODO{AI generated, verify}
-    Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers} and let $\bbZ_{> 0} \subset \bbZ$ be its \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone}. Let $\bbN$ be the \CrefAndHyperrefIfExist{definition:natural_numbers}{set of natural numbers}, regarded as a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} via the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$}.
+    Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:ring_of_integers_from_natural_numbers}{ring of integers} and let $\bbZ_{> 0} \subset \bbZ$ be its \CrefAndHyperrefIfExist{definition:positive_cone_in_an_ordered_monoid}{positive cone}. Let $\bbN$ be the \CrefAndHyperrefIfExist{definition:natural_numbers}{set of natural numbers}, regarded as a \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semiring} via the \CrefAndHyperrefIfExist{definition:standard_order_on_natural_numbers}{standard order on $\bbN$}.
 
     The map $\psi: \bbN \to \bbZ_{> 0}$ defined by
     $$\psi(n) = [(n+1, 1)]$$
@@ -37,7 +37,7 @@
         $$(nm+n+m+2) + 1 = nm+n+m+3 = (n+m+2) + (nm+1)$$
         by associativity and commutativity of addition in $\bbN$\CrefIfExists{proposition:natural_numbers_addition_associative_commutative}. Hence $\psi(n) \cdot \psi(m) = \psi(nm)$.
 
-        \item $\psi$ preserves unity. The multiplicative identity of $\bbN$ is $1$, and $\psi(1) = [(2,1)] = 1_\bbZ$\CrefIfExists{definition:integers_from_natural_numbers}.
+        \item $\psi$ preserves unity. The multiplicative identity of $\bbN$ is $1$, and $\psi(1) = [(2,1)] = 1_\bbZ$\CrefIfExists{definition:ring_of_integers_from_natural_numbers}.
 
         \item $\psi$ preserves order. For $n,m \in \bbN$, we have $n < m$ iff there exists $k \in \bbN$ with $n + k = m$ (\Cref{definition:standard_order_on_natural_numbers}). Then $\psi(n) = [(n+1,1)]$ and $\psi(m) = [(m+1,1)] = [(n+k+1,1)]$. In $\bbZ$, we have $\psi(m) - \psi(n) = [(n+k+1,1)] - [(n+1,1)] = [(k, 1)]$, which is positive because $k \geq 1$. Hence $\psi(n) < \psi(m)$. Conversely, if $\psi(n) < \psi(m)$ in $\bbZ$, then by the identification $\bbZ_{> 0} = \{[(a,b)] : a > b\}$ we have $n < m$. Thus $\psi$ is an order isomorphism.
     \end{enumerate}

@@ -1,12 +1,14 @@
 \begin{lemma}[Fatou's lemma for norms of Bochner integrable functions] \label{lemma:fatous_lemma_for_norms_of_bochner_integrable_functions}
     \TODO{AI generated, verify}
-Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{normed vector space} over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$.
+Let $(X, \mathcal{A}, \mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector space} over $\mathbb{F} \in \{\mathbb{R}, \mathbb{C}\}$\CrefIfExists{definition:field_of_real_numbers}\CrefIfExists{definition:field_of_complex_numbers} with norm $\|\cdot\|$.
 
+\TODO{What does extended real-valued measurable function exactly mean here? Isn't $\|\cdot\|$ taken to be a norm, not an extended norm? Either $\|\cdot\|$ should be an extended norm or the below should not say extended. Figure out what is correct/general.}
 Let $(f_n)_{n \geq 1}$ be a sequence of \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner measurable} functions $f_n : X \to V$ such that each $\|f_n\|$ is an extended nonnegative real-valued measurable function. Then the inequality
 $$\int_X \liminf_{n \to \infty} \|f_n(x)\|\,d\mu(x) \leq \liminf_{n \to \infty} \int_X \|f_n(x)\|\,d\mu(x)$$
-holds, where $\liminf$ is taken in the sense of \CrefAndHyperrefIfExist{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line}{limit inferior of a sequence in the extended real line}, and both sides take values in $[0, \infty]$.
+\CrefIfExists{definition:limsup_and_liminf_of_a_sequence_in_the_extended_real_line}
+where both sides take values in $[0, \infty]$.
 
-In particular, if there exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable} dominating function $g : X \to [0, \infty)$ with $\|f_n(x)\| \leq g(x)$ for all $n$ and almost every $x$, then each $f_n$ is Bochner integrable, and the real-valued sequence $(\int_X \|f_n\|\,d\mu)_{n \geq 1}$ satisfies
+In particular, if there exists an \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{integrable} dominating function, i.e. a function $g : X \to [0, \infty)$ with $\|f_n(x)\| \leq g(x)$ for all $n$ and almost every $x$, then each $f_n$ is Bochner integrable, and the real-valued sequence $(\int_X \|f_n\|\,d\mu)_{n \geq 1}$ satisfies
 $$\int_X \liminf_{n \to \infty} \|f_n(x)\|\,d\mu(x) \leq \liminf_{n \to \infty} \int_X \|f_n(x)\|\,d\mu(x) < \infty.$$
 \end{lemma}
 

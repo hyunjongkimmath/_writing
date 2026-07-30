@@ -1,0 +1,12 @@
+\begin{definition}[Arithmetic progression and arithmetic series in a commutative semiring] \label{definition:arithmetic_progression_and_arithmetic_series_in_a_commutative_semigroup}
+    Let $(S,+)$ be a \CrefAndHyperrefIfExist{definition:semigroup}{(additive) commutative semigroup}. Let $a \in S$ and $d \in S$. For each integer $n \geq 1$, let
+    $$a_n = \begin{cases} a &\text{if } n = 1 \\ a + (n-1)d &\text{if } n > 1 \end{cases}.$$
+    \CrefIfExists{definition:power_of_a_semigroup_element_by_a_positive_integer}
+    In particular, $a_n = a+(n-1)d$\CrefIfExists{definition:power_of_a_monoid_element_by_a_nonnegative_integer} for all $n \geq 1$ when $n$ is a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid}.
+    The sequence $(a_n)_{n=1}^\infty$ is called an \hldef{arithmetic progression in $S$} with \hldef{first term} $a$ and \hldef{common difference} $d$.
+
+    For each integer $N \geq 1$, the finite series $\sum_{n=1}^N a_n = \sum_{n=1}^N (a + (n-1)d)$ is called an \hldef{arithmetic series of length $N$ in $S$}.
+
+
+    If $S$ is a \CrefAndHyperrefIfExist{definition:topological_semigroup}{topological semigropu}, i.e. carries a topology making addition \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}, then the \CrefAndHyperrefIfExist{definition:infinite_series_and_convergence_of_infinite_series_in_a_topological_abelian_semigroup}{infinite series} $\sum_{n=1}^\infty (a + (n-1)d)$ is called an \hldef{infinite arithmetic series in $S$}.
+\end{definition}

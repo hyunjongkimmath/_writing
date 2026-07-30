@@ -1,0 +1,22 @@
+\begin{definition}[Intervals in a partially ordered set] \label{definition:intervals_in_a_partially_ordered_set}
+    Let $(X, \leq)$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}. For $a, b \in X$ with $a \leq b$, we define the following subsets of $X$:
+
+    The \hldef{closed interval} from $a$ to $b$ is
+    $$\hlin{[a, b] := \{x \in X : a \leq x \leq b\}.}$$
+
+    The \hldef{open interval} from $a$ to $b$ is
+    $$\hlin{(a, b) := \{x \in X : a < x < b\}.}$$
+
+    The \hldef{half-open intervals} from $a$ to $b$ are
+    $$\hlin{[a, b) := \{x \in X : a \leq x < b\}, \qquad (a, b] := \{x \in X : a < x \leq b\}.}$$
+
+    The \hldef{open upper ray} and \hldef{open lower ray} are
+    $$\hlin{(b, \infty) := \{x \in X : x > b\}, \qquad (-\infty, b) := \{x \in X : x < b\}.}$$
+
+    The \hldef{closed upper ray} and \hldef{closed lower ray} are
+    $$\hlin{[b, \infty) := \{x \in X : x \geq b\}, \qquad (-\infty, b] := \{x \in X : x \leq b\}.}$$
+
+    When $X$ has a \CrefAndHyperrefIfExist{definition:least_element_in_a_subset_of_a_partially_ordered_set}{minimum element} or \CrefAndHyperrefIfExist{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}{maximum element} (denoted by $-\infty_X$ or $+\infty_X$, respectively), the rays may alternatively be expressed using these extremal elements. For instance, if $X$ has a minimum $-\infty_X$, then $(-\infty, b) = [-\infty_X, b)$ and $(-\infty, b] = [-\infty_X, b]$; if $X$ has a maximum $+\infty_X$, then $(a, \infty) = (a, +\infty_X]$ and $[a, \infty) = [a, +\infty_X]$.
+
+    In each case, the elements $a$ and $b$ are called the \hldef{endpoints} of the intervals.
+\end{definition}

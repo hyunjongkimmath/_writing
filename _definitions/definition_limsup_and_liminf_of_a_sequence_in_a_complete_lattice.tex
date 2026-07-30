@@ -1,0 +1,19 @@
+% LIMSUP AND LIMINF OF A SEQUENCE IN A COMPLETE LATTICE
+\begin{definition}[Limit superior and limit inferior of a sequence in a complete lattice] \label{definition:limsup_and_liminf_of_a_sequence_in_a_complete_lattice}
+    \TODO{AI generated, verify}
+Let $L$ be a \CrefAndHyperrefIfExist{definition:complete_lattice}{complete lattice}, i.e., a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set} in which every subset has both a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum} and an \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{infimum}.
+
+Let $(x_n)_{n=1}^\infty$ be a sequence in $L$. For each $n \geq 1$, let
+$$s_n = \bigvee_{k \geq n} x_k \quad \text{and} \quad i_n = \bigwedge_{k \geq n} x_k.$$
+The sequence $(s_n)_{n=1}^\infty$ is non-increasing and the sequence $(i_n)_{n=1}^\infty$ is non-decreasing with respect to the partial order on $L$.
+
+The \hldef{limit superior of a sequence in a complete lattice} of $(x_n)$ is
+$$\hlin{\limsup_{n \to \infty} x_n = \bigwedge_{n \geq 1} s_n = \bigwedge_{n \geq 1} \bigvee_{k \geq n} x_k.}$$
+The \hldef{limit inferior of a sequence in a complete lattice} of $(x_n)$ is
+$$\hlin{\liminf_{n \to \infty} x_n = \bigvee_{n \geq 1} i_n = \bigvee_{n \geq 1} \bigwedge_{k \geq n} x_k.}$$
+\CrefIfExists{definition:supremum_infimum_of_a_subset_of_an_ordered_set}
+
+\TextIfExists{proposition:limsup_liminf_coincide_for_complete_linear_orders}{
+    When the complete lattice $L$ is additionally a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{linearly ordered set} carrying the \CrefAndHyperrefIfExist{definition:order_topology_on_a_partially_ordered_set}{order topology}, the lattice-theoretic limsup and liminf defined above coincide with the sequential limsup and liminf\CrefIfExists{proposition:limsup_liminf_coincide_for_complete_linear_orders}.
+}
+\end{definition}

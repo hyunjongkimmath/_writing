@@ -1,11 +1,11 @@
 \begin{theorem} \label{theorem:integers_uniqueness}
 \TODO{AI generated, verify}
-    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with positive cone $P$. Suppose that $P$ is well-ordered under the induced order. Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:integers_from_natural_numbers}{ring of integers}. Then there exists a unique injective ring homomorphism $\phi: \bbZ \to R$ such that $\phi$ maps the positive cone $\bbZ_{> 0}$ into $P$.
+    Let $R$ be an \CrefAndHyperrefIfExist{definition:ordered_ring}{ordered ring} with positive cone $P$. Suppose that $P$ is well-ordered under the induced order. Let $\bbZ$ be the \CrefAndHyperrefIfExist{definition:ring_of_integers_from_natural_numbers}{ring of integers}. Then there exists a unique injective ring homomorphism $\phi: \bbZ \to R$ such that $\phi$ maps the positive cone $\bbZ_{> 0}$ into $P$.
 \end{theorem}
 
 \begin{proof}
 \TODO{AI generated, verify}
-    We construct $\phi$ using the \CrefAndHyperrefIfExist{theorem:integers_universal_property}{universal property of $\bbZ$}. Let $1_R \in R$ be the multiplicative identity of $R$. Since $R$ is an ordered ring, we have $1_R \in P$\CrefIfExists{definition:ordered_ring}. The universal property gives a unique ring homomorphism $\phi: \bbZ \to R$ with $\phi(1_\bbZ) = 1_R$. It remains to show that $\phi$ is injective and maps $\bbZ_{> 0}$ into $P$.
+    We construct $\phi$ using the \CrefAndHyperrefIfExist{theorem:integers_universal_property_ring_of_integers_is_the_initial_object_in_the_category_of_rings}{universal property of $\bbZ$}. Let $1_R \in R$ be the multiplicative identity of $R$. Since $R$ is an ordered ring, we have $1_R \in P$\CrefIfExists{definition:ordered_ring}. The universal property gives a unique ring homomorphism $\phi: \bbZ \to R$ with $\phi(1_\bbZ) = 1_R$. It remains to show that $\phi$ is injective and maps $\bbZ_{> 0}$ into $P$.
 
     \begin{enumerate}
         \item $\phi$ maps $\bbZ_{> 0}$ into $P$. By the \CrefAndHyperrefIfExist{proposition:positive_integers_correspond_to_natural_numbers}{positive integers correspondence}, every $x \in \bbZ_{> 0}$ can be written as $n \cdot 1_\bbZ$ for some $n \in \bbN$ (where the product is the $n$-fold sum). Since $\phi$ is a ring homomorphism, $\phi(n \cdot 1_\bbZ) = n \cdot 1_R$. We prove by induction on $n$ that $n \cdot 1_R \in P$. The base case $n = 1$ holds because $1 \cdot 1_R = 1_R \in P$ in an ordered ring. Suppose $k \cdot 1_R \in P$ for some $k \in \bbN$. Then $(k+1) \cdot 1_R = k \cdot 1_R + 1_R \in P$ because $P$ is closed under addition in an ordered ring\CrefIfExists{definition:ordered_ring}. Hence $\phi(\bbZ_{> 0}) \subseteq P$.

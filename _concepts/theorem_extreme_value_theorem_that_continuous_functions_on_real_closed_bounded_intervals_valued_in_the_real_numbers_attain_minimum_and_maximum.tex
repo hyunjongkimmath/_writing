@@ -1,9 +1,9 @@
 \begin{theorem}[Extreme value theorem for continuous functions on closed bounded intervals] \label{theorem:extreme_value_theorem_that_continuous_functions_on_real_closed_bounded_intervals_valued_in_the_real_numbers_attain_minimum_and_maximum}
-    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers}{standard topology} induced by the Euclidean metric, and equip $[a, b]$ with the subspace topology.
+    Let $[a, b] \subseteq \mathbb{R}$\CrefIfExists{definition:field_of_real_numbers} be a closed bounded interval with $a < b$, and let $f : [a, b] \to \mathbb{R}$ be a \CrefAndHyperrefIfExist{definition:function_of_sets}{function}. Equip $\mathbb{R}$ with the \CrefAndHyperrefIfExist{definition:standard_absolute_value_on_real_numbers_standard_topology_on_real_numbers}{standard topology} induced by the Euclidean metric, and equip $[a, b]$ with the subspace topology.
 
     If $f$ is \CrefAndHyperrefIfExist{definition:continuous_map_of_topological_spaces}{continuous}, then there exist $c, d \in [a, b]$ such that
     $$f(c) = \inf_{x \in [a,b]} f(x) \quad \text{and} \quad f(d) = \sup_{x \in [a,b]} f(x).$$
-    In other words, $f$ attains both its minimum and maximum on $[a, b]$.
+    In other words, $f$ attains both its \CrefAndHyperrefIfExist{definition:least_element_minimum_element_in_a_subset_of_a_partially_ordered_set}{minimum} and \CrefAndHyperrefIfExist{definition:greatest_element_maximum_element_in_a_subset_of_a_partially_ordered_set}{maximum} on $[a, b]$.
 \end{theorem}
 
 % \begin{proof}
@@ -17,6 +17,5 @@
 % \end{proof}
 
 \begin{proof}[Simplified proof via compactness]
-    \TODO{AI generated, verify}
-    The closed bounded interval $[a,b]$, equipped with the subspace topology from $\mathbb{R}$, is \CrefAndHyperrefIfExist{proposition:heine_borel_theorem_for_closed_and_bounded_intervals_in_real_numbers}{compact} by the Heine--Borel theorem. Since $f$ is continuous, \Cref{proposition:continuous_real_valued_function_on_compact_topological_space_attains_maximum_and_minimum} implies that $f$ attains both its maximum and minimum on $[a,b]$.
+    The closed bounded interval $[a,b]$, equipped with the subspace topology from $\mathbb{R}$, is \CrefAndHyperrefIfExist{definition:compact_topological_space}{compact} by the \CrefAndHyperrefIfExist{proposition:heine_borel_theorem_for_closed_and_bounded_intervals_in_real_numbers}{Heine--Borel theorem}. Since $f$ is continuous, \Cref{proposition:continuous_function_on_compact_topological_space_valued_on_totally_ordered_dedekind_complete_set_with_order_topology_attains_maximum_and_minimum} implies that $f$ attains both its maximum and minimum on $[a,b]$.
 \end{proof}
