@@ -1,0 +1,51 @@
+\begin{definition} \label{definition:semimodule_over_a_semiring_bisemimodule_over_semirings}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:semiring}{not-necessarily commutative semiring}.
+
+\begin{enumerate}
+    \item A \hldef{left $K$-semimodule} is a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} $(M,+)$ together with an operation $K \times M \to M$, denoted $(r,m) \mapsto rm$, such that for all $r,s \in K$ and $m,n \in M$:
+    \begin{itemize}
+        \item $r(m+n) = rm + rn$,
+        \item $(r+s)m = rm + sm$,
+        \item $(rs)m = r(sm)$,
+        \item $1_K m = m$ where $1_K$ is the multiplicative identity of $K$.
+    \end{itemize}
+
+    \item A \hldef{right $K$-semimodule} is defined similarly as a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} $(M,+)$ with an operation $M \times K \to M$, denoted $(m,r) \mapsto mr$, such that for all $r,s \in K$ and $m,n \in M$:
+    \begin{itemize}
+        \item $(m+n)r = mr + nr$,
+        \item $m(r+s) = mr + ms$,
+        \item $m(rs) = (mr)s$,
+        \item $m 1_K = m$.
+    \end{itemize}
+
+    \item Let $K$ and $L$ be (not necessarily commutative) \CrefAndHyperrefIfExist{definition:semiring}{semirings}.
+
+    A \hldef{$K$-$L$-bisemimodule} (or a \hldef{$K$-$L$-semimodule} or a $(K,L)$-semimodule, etc.) is a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} $(M,+)$ equipped with
+    \begin{enumerate}
+        \item a left action of $K$:
+        $$\hlin{K \times M \to M, \quad (k,m) \mapsto k \cdot m,}$$
+        making $M$ a \CrefAndHyperrefIfExist{definition:semimodule_over_a_semiring_bisemimodule_over_semirings}{left $K$-semimodule},
+        \item a right action of $L$:
+        $$\hlin{M \times L \to M, \quad (m,\ell) \mapsto m \cdot \ell,}$$
+        making $M$ a right $L$-semimodule,
+    \end{enumerate}
+    such that the left and right actions commute; that is, for all $k \in K$, $\ell \in L$, and $m \in M$,
+    $$ k \cdot (m \cdot \ell) = (k \cdot m) \cdot \ell.  $$
+
+    \item A \hldef{two-sided $K$-semimodule} (or \hldef{$K$-bisemimodule}) is a $K$-$K$-bisemimodule.
+\end{enumerate}
+
+If $K$ is a commutative \CrefAndHyperrefIfExist{definition:semiring}{semiring}, then a left/right $K$-semimodule can automatically be regarded as a two-sided $K$-semimodule. As such, we simply talk about \hldef{$K$-semimodules} in this case.
+
+Every \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} $(M,+)$ carries a canonical action of the natural numbers $\mathbb{N}$ by repeated addition: for $n \in \mathbb{N}$ and $m \in M$,
+$$n \cdot m := \underbrace{m + m + \cdots + m}_{n \text{ times}}, \quad 0 \cdot m = 0_M.$$
+This makes every commutative monoid an $\mathbb{N}$-semimodule. Consequently, any left $K$-semimodule is canonically a \hldef{$K$-$\mathbb{N}$-bisemimodule}, and any right $K$-semimodule is canonically an \hldef{$\mathbb{N}$-$K$-bisemimodule}. Given a left/right/two-sided $K$-semimodule, its \hldef{natural bisemimodule structure} will refer to its structure as a $K$-$\mathbb{N}$/ $\mathbb{N}$-$K$/ $K$-$K$ bisemimodule.
+
+\CrefIfExists{definition:bimodule_over_rings_module_over_a_ring}{
+    Any ring is a \CrefAndHyperrefIfExist{definition:semiring}{semiring}, so any left/right/two-sided module over a ring is canonically a left/right/two-sided semimodule by forgetting the additive inverses. Conversely, if $K$ is a ring and $M$ is a $K$-semimodule whose underlying monoid $(M,+)$ happens to be an abelian group, then $M$ satisfies the axioms of a \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$K$-module}.
+}
+
+\CrefIfExists{definition:ordered_semiring}{
+    When $K$ is an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, a left/right/two-sided $K$-semimodule may carry additional order structure, yielding the notion of a lattice-ordered semimodule\CrefIfExists{definition:lattice_ordered_semimodule_over_an_ordered_semiring}.
+}
+\end{definition}

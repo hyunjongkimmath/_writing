@@ -1,0 +1,22 @@
+\begin{proposition}[Coproducts of semigroups, monoids, and groups as free products] \label{proposition:coproducts_of_semigroups_monoids_groups_as_free_products}
+    \TODO{AI generated, verify}
+Let $\mathcal{A}$ be one of the categories $\mathbf{Semi}$, $\mathbf{Mon}$, or $\mathbf{Grp}$. The coproduct of any family of objects in $\mathcal{A}$ exists and is given by a free-product construction.
+
+For two objects $A$ and $B$, write their underlying sets as disjoint (or tag elements to make them so: $(a, \ast)$ for $a \in A$ and $(b, \bullet)$ for $b \in B$).
+
+\begin{enumerate}
+    \item [\textbf{(Semi)}] In $\mathbf{Semi}$, the coproduct $A *_{\mathbf{Semi}} B$ has as underlying set the collection of all finite alternating sequences
+    $$a_1 b_1 a_2 b_2 \cdots a_k b_k$$
+    where each block comes from the opposite factor, together with sequences that start from either factor. Multiplication is concatenation followed by reduction: whenever two adjacent elements come from the same factor $A$ (resp.\ $B$), they are multiplied within $A$ (resp.\ $B$). The coprojections $\iota_A : A \to A *_{\mathbf{Semi}} B$ and $\iota_B : B \to A *_{\mathbf{Semi}} B$ send each element to the corresponding one-element word.
+
+    \item [\textbf{(Mon)}] In $\mathbf{Mon}$, let $A^\times = A \setminus \{e_A\}$ and $B^\times = B \setminus \{e_B\}$. The coproduct $A *_{\mathbf{Mon}} B$ consists of a distinguished identity element $1$ together with all finite alternating words
+    $$w = w_1 w_2 \cdots w_k$$
+    where each $w_j$ lies in either $A^\times$ or $B^\times$, and consecutive letters alternate between the two sets. Multiplication is concatenation followed by: (i) multiplying adjacent elements from the same factor within that factor; (ii) deleting any identity element that results. The coprojections $\iota_A : A \to A *_{\mathbf{Mon}} B$ and $\iota_B : B \to A *_{\mathbf{Mon}} B$ are the natural inclusions of one-letter words, with $e_A \mapsto 1$ and $e_B \mapsto 1$.
+
+    \item [\textbf{(Grp)}] In $\mathbf{Grp}$, let $A' = A \setminus \{e_A\}$ and $B' = B \setminus \{e_B\}$. The coproduct $A *_{\mathbf{Grp}} B$ consists of a distinguished identity element together with all reduced alternating words
+    $$w = w_1 w_2 \cdots w_k$$
+    where each $w_j$ is either an element of $A'$ or the formal inverse of an element of $B'$ (or vice-versa), and consecutive letters alternate between the two sets. Multiplication is concatenation followed by: (i) multiplying adjacent elements from the same factor within that factor; (ii) deleting any identity element; (iii) repeating until reduced. The coprojections $\iota_A : A \to A *_{\mathbf{Grp}} B$ and $\iota_B : B \to A *_{\mathbf{Grp}} B$ are the natural inclusions of one-letter words, with $e_A \mapsto 1$ and $e_B \mapsto 1$.
+\end{enumerate}
+
+In each case the universal property holds: given morphisms $f : A \to X$ and $g : B \to X$ in $\mathcal{A}$, there exists a unique morphism $[f, g] : A *_{\mathcal{A}} B \to X$ such that $[f, g] \circ \iota_A = f$ and $[f, g] \circ \iota_B = g$.
+\end{proposition}

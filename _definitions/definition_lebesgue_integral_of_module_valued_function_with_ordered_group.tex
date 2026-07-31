@@ -1,0 +1,16 @@
+\begin{definition}[Lebesgue integral of module-valued functions when M is an ordered group] \label{definition:lebesgue_integral_of_module_valued_function_when_M_is_an_ordered_group}
+    \TODO{AI generated, verify}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$, and let $M$ be a \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{$\sigma$-complete lattice-ordered semimodule} over $K$.
+
+Assume further that $(M, +, 0_M)$ is an \CrefAndHyperrefIfExist{definition:lattice_ordered_group}{lattice-ordered group}, i.e.\ every element has an additive inverse and the order forms a lattice. For each $m \in M$, define:
+$$m^+ := m \vee 0_M, \quad m^- := (-m) \vee 0_M,$$
+so that $m = m^+ - m^-$ and $|m| := m^+ + m^-$.
+
+A measurable function $f : X \to M$ is called \hldef{$\mu$-integrable} if both $\int_X f^+\,d\mu$ and $\int_X f^-\,d\mu$ exist in $M$. For such $f$, the \hldef{Lebesgue integral of $f$ with respect to $\mu$} is defined by
+$$\hlin{\int_X f \, d\mu := \int_X f^+ \, d\mu - \int_X f^- \, d\mu},$$
+where the integrals on the right-hand side are taken in the sense of \Cref{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}.
+
+\TextIfExists{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{
+    When $K = [0,\infty]$ and $M = \mathbb{R}$, this recovers the signed \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integral}.
+}
+\end{definition}

@@ -1,5 +1,5 @@
 \begin{definition}[Lebesgue integral of measurable functions] \label{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}
-Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space}.
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_the_extended_real_line_and_measure_space}{measure space}.
 
 \begin{enumerate}
   \item For a nonnegative \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function} $f : X \to [0,\infty]$, the \hldef{Lebesgue integral of $f$ with respect to $\mu$} is defined by
@@ -16,4 +16,8 @@ Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_m
   $$\hlin{\int_E f\,d\mu := \int_X f \mathbf{1}_E\,d\mu.}$$
   The integral is said to \hldef{converge over $E$} (or that \hldef{$f$ is integrable over $E$}) when $\int_E |f|\,d\mu < \infty$. In particular, for a nonnegative measurable function $f : X \to [0,\infty]$, the integral $\int_E f\,d\mu$ is always defined as an element of $[0,\infty]$ (possibly infinite).
 \end{enumerate}
+
+\TextIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{
+    This definition is a special case of the more general \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{Lebesgue integral for module-valued functions}, where the base semiring is $K = [0,\infty]$ and the codomain module is $M = [0,\infty]$.
+}
 \end{definition}

@@ -1,0 +1,13 @@
+\begin{definition}[Lattice-ordered group] \label{definition:lattice_ordered_group}
+A \hldef{lattice-ordered group} (or \hldef{$\ell$-group}) is an \CrefAndHyperrefIfExist{definition:monoid}{abelian group} $(G,+,0_G)$ equipped with a partial order $\leq$ such that
+\begin{enumerate}
+    \item $(G,+, \leq)$ is an \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoid}, i.e.\ if $x_1 \leq x_2$, then $x_1 + z \leq x_2 + z$ for all $z \in G$;
+    \item $(G,\leq)$ is a \CrefAndHyperrefIfExist{definition:lattice_as_a_partially_ordered_set}{lattice}, i.e.\ every pair of elements $\{x,y\} \subseteq G$ has a \hldef{join} $x \vee y$ and a \hldef{meet} $x \wedge y$.
+\end{enumerate}
+
+For any element $x \in G$, define the \hldef{positive part of $x$}, \hldef{negative part of $x$}, and \hldef{absolute value of $x$} respectively by
+$$x^+ := x \vee 0_G, \quad x^- := (-x) \vee 0_G, \quad |x| := x \vee (-x).$$
+These satisfy the identities $x = x^+ - x^-$ and $|x| = x^+ + x^-$.
+
+If the partial order $\leq$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}, then $G$ is called a \hldef{totally lattice-ordered group}.
+\end{definition}

@@ -50,7 +50,7 @@ The contents of these notes may change constantly.
 
         \item The \CrefAndHyperref{definition:category_of_vector_spaces_over_a_field}{category of finite dimensional vector spaces} over a fixed \CrefAndHyperrefIfExist{definition:field}{field} $k$ whose objects are \CrefAndHyperrefIfExist{definition:basis_and_dimension_of_a_vector_space_over_a_field}{finite dimensional} \CrefAndHyperrefIfExist{definition:vector_space_over_a_field}{vector spaces} over $k$ and whose morphisms are \CrefAndHyperrefIfExist{definition:morphism_of_vector_spaces}{$k$-linear maps}.
 
-        \item Given a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of (either left or right) $R$-modules} whose objects are \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-module homomorphisms}.
+        \item Given a \CrefAndHyperrefIfExist{definition:ring}{ring} $R$, the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of (either left or right) $R$-modules} whose objects are \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$R$-modules} and whose morphisms are \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{$R$-module homomorphisms}.
 
         \item The \CrefAndHyperrefIfExist{definition:category_of_rings}{category of rings} whose objects are \CrefAndHyperrefIfExist{definition:ring}{rings} and whose morphisms are \CrefAndHyperrefIfExist{definition:ring_homomorphism}{ring homomorphisms}.
 
@@ -245,7 +245,7 @@ If we allow ourselves to use \CrefAndHyperrefIfExist{definition:grothendieck_uni
 
 \subsection{Rings and modules}
 
-\input{../_definitions/definition_module_of_a_ring.tex}
+\input{../_definitions/definition_bimodule_over_rings_module_over_a_ring.tex}
 \input{../_definitions/definition_homomorphism_of_modules_over_a_ring.tex}
 \input{../_definitions/definition_category_of_modules_and_bimodules_over_rings.tex}
 
@@ -475,7 +475,7 @@ In fact, Grothendieck posed certain additional axioms that some abelian categori
 
 \section{Chain complexes of objects in additive categories}
 
-\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{Chain complexes} are made of a sequence of morphisms in an additive category such that the composition of any two conseuctive morphisms is $0$. The first kind of chain complexes one should keep in mind are chain complexes of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules} over a ring.
+\CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{Chain complexes} are made of a sequence of morphisms in an additive category such that the composition of any two conseuctive morphisms is $0$. The first kind of chain complexes one should keep in mind are chain complexes of \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{modules} over a ring.
 
 \input{../_definitions/definition_chain_complex_of_objects_in_a_preadditive_category.tex}
 
@@ -919,7 +919,7 @@ When a tensor product is being considered, ``flat'' objects are used to construc
 \input{../_concepts/theorem_equivalent_conditions_for_a_ring_to_be_left_right_perfect.tex}
 
 \begin{proposition} 
-If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
+If $R$ is a \CrefAndHyperrefIfExist{definition:perfect_ring}{left perfect} \CrefAndHyperrefIfExist{definition:ring}{ring} and $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complex} of \CrefAndHyperrefIfExist{definition:flat_left_right_module_over_a_ring}{flat} \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{left $R$-modules}, then $C_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{complex} of \CrefAndHyperrefIfExist{definition:projective_bimodule_over_rings}{projective} \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{modules}. Furthermore, if $f: C_{\bullet} \to D_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:quasi_isomorphism_of_chain_complexes_of_objects_in_an_abelian_category}{quasi-isomorphism} between such complexes, the \CrefAndHyperrefIfExist{definition:mapping_cone_of_a_map_of_chain_cochain_complexes_in_an_additive_category}{mapping cone} $C(f)_{\bullet}$ is a \CrefAndHyperrefIfExist{definition:split_complex_in_an_additive_category}{split exact} complex if it is \CrefAndHyperrefIfExist{definition:acyclic_complex_of_objects_in_an_abelian_category}{acyclic}.
 \end{proposition}
 
 \input{../_concepts/corollary_left_right_artinian_rings_are_left_right_perfect.tex}
@@ -1934,7 +1934,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \section{Assignment 2: Due Feb 6}
 
 \begin{problem}
-    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $\{M_i\}_{i \in I}$ be a small family of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-$S$-bimodules}. Prove that $\prod_{i \in I} M_i$ and $\bigoplus_{i \in I} M_i$ as constructed in \Cref{definition:product_of_modules_of_rings} and \Cref{definition:coproduct_of_modules_of_rings} are respectively the categorical \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product and coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$S$-bimodule}. In particular, note that when $I$ is infinite, the product and coproduct do NOT coincide.
+    Let $R$ and $S$ be \CrefAndHyperrefIfExist{definition:ring}{not necessarily commutative rings}. Let $\{M_i\}_{i \in I}$ be a small family of \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$R$-$S$-bimodules}. Prove that $\prod_{i \in I} M_i$ and $\bigoplus_{i \in I} M_i$ as constructed in \Cref{definition:product_of_modules_of_rings} and \Cref{definition:coproduct_of_modules_of_rings} are respectively the categorical \CrefAndHyperrefIfExist{definition:product_and_coproduct_of_objects_in_a_category}{product and coproduct} in the \CrefAndHyperrefIfExist{definition:category_of_modules_and_bimodules_over_rings}{category of $R$-$S$-bimodule}. In particular, note that when $I$ is infinite, the product and coproduct do NOT coincide.
 \end{problem}
 
 \begin{problem}
@@ -1996,7 +1996,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
     is 
     \begin{enumerate}
         \item \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} as a short exact sequence of \CrefAndHyperrefIfExist{definition:group}{abelian groups}.
-        \item not \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} as a short exact sequence of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules}.
+        \item not \CrefAndHyperrefIfExist{definition:split_exact_sequence_in_an_additive_category}{split} as a short exact sequence of \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$R$-modules}.
     \end{enumerate}
     
 \end{problem}
@@ -2050,7 +2050,7 @@ Read the definition of the \CrefAndHyperrefIfExist{definition:category_of_opens_
 \end{problem}
 
 \begin{problem}
-    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Further assume that $A_\bullet$ is bounded below\footnote{I claim that this hypothesis is not necessary for the truth of the statements in this problem, but also there is a fact in these notes stated in a way that uses this hypothesis.} as a (homological) chain complex, i.e. it is of the form
+    Suppose that $A_\bullet$ and $B_\bullet$ are \CrefAndHyperrefIfExist{definition:chain_complex_of_objects_in_a_preadditive_category}{chain complexes} of \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$R$-modules} where $R$ is a \CrefAndHyperrefIfExist{definition:principal_ideal_ring}{PID}. Further assume that $A_\bullet$ is bounded below\footnote{I claim that this hypothesis is not necessary for the truth of the statements in this problem, but also there is a fact in these notes stated in a way that uses this hypothesis.} as a (homological) chain complex, i.e. it is of the form
     $$\cdots \to A_{n_0 + 2} \to A_{n_0 +1} \to A_{n_0} \to 0 \to 0 \to 0 \to \cdots $$
     for some integer $n_0$.
     

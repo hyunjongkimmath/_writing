@@ -1,0 +1,6 @@
+\begin{definition}[Category of lattice-ordered groups] \label{definition:category_of_lattice_ordered_groups}
+    \TODO{AI generated, verify}
+    The \hldef{category of lattice-ordered groups}, denoted by \hl{$\mathbf{lGrp}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:lattice_ordered_group}{lattice-ordered groups} $(G, +, \leq)$ and whose morphisms $f : (G, +_G, \leq_G) \to (H, +_H, \leq_H)$ are the group homomorphisms that preserve both the lattice operations and the order: for all $x, y \in G$,
+    $$f(x \vee_G y) = f(x) \vee_H f(y) \quad \text{and} \quad f(x \wedge_G y) = f(x) \wedge_H f(y).$$
+    Equivalently, a morphism in $\mathbf{lGrp}$ is an additive group homomorphism that is also a lattice homomorphism.
+\end{definition}

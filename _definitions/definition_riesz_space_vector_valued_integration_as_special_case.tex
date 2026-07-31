@@ -1,0 +1,14 @@
+\begin{definition}[Vector-valued integration in a Dedekind complete Riesz space as a special case] \label{definition:riesz_space_vector_valued_integration_as_special_case}
+    \TODO{AI generated, verify}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_the_extended_real_line_and_measure_space}{measure space} with $\mu : \mathcal{A} \to [0,\infty]$.
+
+Take $K = ([0,\infty], +, \cdot, 0, 1)$ and let $E$ be a Dedekind complete \hldef{Riesz space over $\mathbb{R}$}\TODO{AI generated, reference needed: definition of Riesz space (vector lattice)}, i.e., a real vector space equipped with a partial order making it a lattice such that scalar multiplication by non-negative reals is order-preserving and the order is translation-invariant. Set $M = E$ viewed as a $K$-semimodule via restriction of scalar multiplication from $\mathbb{R}$ to $[0,\infty]$. Then:
+\begin{enumerate}
+    \item $(E, +, \leq)$ is an ordered group with a lattice structure;
+    \item Dedekind completeness implies every non-empty bounded-above subset has a supremum, hence $\sigma$-completeness holds;
+    \item the integral of a simple function $s = \sum_{k=1}^m v_k \mathbf{1}_{E_k}$ is $\int_X s\,d\mu = \sum_{k=1}^m \mu(E_k) \cdot v_k$, where the action is ordinary scalar multiplication in $E$;
+    \item the supremum over simple functions\CrefIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring} recovers the classical order-theoretic definition of integration into Riesz spaces (Pettis/Bochner theory when $E$ carries a compatible norm).
+\end{enumerate}
+
+This generalizes the \CrefAndHyperrefIfExist{definition:vector_valued_lebesgue_integral_into_normed_vector_space}{Bochner integral into normed vector spaces}. When $E = \mathbb{R}$, one recovers the standard Lebesgue integral\CrefIfExists{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}.
+\end{definition}

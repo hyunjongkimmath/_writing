@@ -1,0 +1,15 @@
+\begin{proposition}[Products in algebraic categories are Cartesian products with componentwise operations] \label{proposition:products_in_algebraic_categories_are_componentwise}
+    \TODO{AI generated, verify}
+Let $\mathcal{A}$ be one of the following categories: $\mathbf{Semi}$, $\mathbf{Mon}$, $\mathbf{Grp}$, $\mathbf{SRing}$, or any category defined by universal equations (a variety of algebras). Let $\{A_i\}_{i \in I}$ be a family of objects in $\mathcal{A}$.
+
+The categorical product of the family $\{A_i\}_{i \in I}$ exists and is given by the Cartesian product set $\prod_{i \in I} A_i$ equipped with operations defined componentwise: for any $n$-ary operation symbol $\omega$ in the language of $\mathcal{A}$, and elements $(x^{(1)}_i), \dots, (x^{(n)}_i) \in \prod_{i \in I} A_i$,
+$$\omega((x^{(1)}_i)_i, \dots, (x^{(n)}_i)_i) = (\omega(x^{(1)}_i, \dots, x^{(n)}_i))_{i \in I}.$$
+The projection maps $\pi_j : \prod_{i \in I} A_i \to A_j$ are the coordinate projections. The universal property holds because any family of morphisms $f_i : X \to A_i$ factors uniquely through the product via
+$$x \mapsto (f_i(x))_{i \in I}.$$
+
+For ordered categories ($\mathbf{OSemi}$, $\mathbf{OMon}$, $\mathbf{lGrp}$, $\mathbf{OSRing}$), the same construction holds with the componentwise partial order: for $(x_i), (y_i) \in \prod_{i \in I} A_i$,
+$$(x_i)_i \leq (y_i)_i \iff x_j \leq_{A_j} y_j \text{ for all } j \in I.$$
+
+For lattice categories ($\mathbf{Lat}$, $\mathbf{CLat}$), the same construction holds with componentwise join and meet:
+$$(x_i) \vee (y_i) = (x_i \vee_{A_i} y_i)_i, \quad (x_i) \wedge (y_i) = (x_i \wedge_{A_i} y_i)_i.$$
+\end{proposition}

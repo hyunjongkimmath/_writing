@@ -1,0 +1,17 @@
+\begin{definition}[Measurable module-valued function] \label{definition:measurable_function_on_a_measurable_space_on_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $(X,\mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measurable space}, and let $M$ be a $\sigma$-complete \CrefAndHyperrefIfExist{definition:lattice_ordered_semimodule_over_an_ordered_semiring}{lattice-ordered semimodule} over $K$.
+
+A function $f : X \to M_{\geq 0}$ is called \hldef{measurable} if there exists a sequence of non-negative \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring}{$M$-valued simple functions} $(s_n)_{n=1}^\infty$\CrefIfExists{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring} such that $s_1(x) \leq s_2(x) \leq \cdots$ for all $x \in X$, and
+$$f(x) = \sup_{n \geq 1} s_n(x),$$
+where the supremum is taken in $M$.
+
+This order-theoretic notion of measurability replaces the topological definition (pulling back Borel sets), which may not be available when $M$ lacks a natural topology. It coincides with the classical characterization of non-negative measurable functions: when $K = [0,\infty]$ and $M = [0,\infty]$, every \CrefAndHyperrefIfExist{definition:measurable_function_between_measure_spaces}{measurable function into the extended real line} is exactly one approximable by an increasing sequence of simple functions.
+
+\TextIfExists{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{
+    The $\sigma$-completeness of $M$ ensures that the pointwise supremum $\sup_n s_n(x)$ exists in $M$ for every increasing sequence of simple functions bounded above.
+}
+
+\TextIfExists{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring}{
+    The notion of \hldef{$M$-valued simple function}\CrefIfExists{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring} is the building block for this definition.
+}
+\end{definition}

@@ -1,0 +1,15 @@
+\begin{definition}[Integer-valued integration as a special case] \label{definition:integer_valued_integration_as_special_case}
+    \TODO{AI generated, verify}
+Let $K = (\mathbb{N} \cup \{\infty\}, +, \cdot, 0, 1)$ be the counting-measure semiring. Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$.
+
+Take $K = (\mathbb{N} \cup \{\infty\}, +, \cdot, 0, 1)$ and let $M$ be any $\sigma$-complete lattice-ordered monoid with an action of $\mathbb{N}$ by repeated addition: for $n \in \mathbb{N}$ and $m \in M$,
+$$n \cdot m := \underbrace{m + m + \cdots + m}_{n \text{ times}}, \quad 0 \cdot m = 0_M, \quad \infty \cdot m := \sup_{n \in \mathbb{N}} (n \cdot m)$$
+when the supremum exists. Then:
+\begin{enumerate}
+    \item $(M, +, \leq)$ is an ordered monoid with a lattice structure;
+    \item $\sigma$-completeness ensures countable suprema of bounded-above sequences exist in $M$;
+    \item the integral of a simple function $s = \sum_{k=1}^m a_k \mathbf{1}_{E_k}$ is $\int_X s\,d\mu = \sum_{k=1}^m \mu(E_k) \cdot a_k$, where $\mu(E_k)$ acts by repeated addition.
+\end{enumerate}
+
+This recovers integration of integer-valued or counting-measure functions into lattice-ordered monoids.
+\end{definition}

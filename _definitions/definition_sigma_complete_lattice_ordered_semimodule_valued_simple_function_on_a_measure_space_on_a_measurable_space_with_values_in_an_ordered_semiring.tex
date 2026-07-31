@@ -1,0 +1,12 @@
+\begin{definition}[Module-valued simple function] \label{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $(X,\mathcal{A})$ be a \CrefAndHyperrefIfExist{definition:sigma_algebra_on_a_set_and_measurable_space}{measurable space}, and let $\mu : \mathcal{A} \to K$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure}.
+
+Let $M$ be a \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{$\sigma$-complete lattice-ordered semimodule} over $K$.
+
+An \hldef{$M$-valued simple function on $(X,\mathcal{A})$} is a function of the form
+$$s : X \to M, \quad s = \sum_{k=1}^m a_k \mathbf{1}_{E_k},$$
+where $a_1, \ldots, a_m \in M_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} are non-negative elements and $E_1, \ldots, E_m \in \mathcal{A}$ are pairwise disjoint measurable sets. Here $\mathbf{1}_{E_k}(x)$ denotes the indicator of $E_k$, so that
+$$s(x) = \begin{cases} a_k & \text{if } x \in E_k, \\ 0_M & \text{if } x \notin \bigcup_{k=1}^m E_k. \end{cases}$$
+
+The function $s$ is non-negative in the sense that $0_M \leq s(x)$ for all $x \in X$.
+\end{definition}

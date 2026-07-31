@@ -1,0 +1,16 @@
+\begin{definition}[Category of posets and lattices] \label{definition:category_of_posets_and_lattices}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}.
+    \begin{enumerate}
+        \item The \hldef{category of partially ordered sets}, denoted by \hl{$\mathbf{Poset}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered sets} $(P, \leq_P)$ and whose morphisms $f : (P, \leq_P) \to (Q, \leq_Q)$ are the \hldef{order-preserving maps}, i.e.\ functions $f : P \to Q$ such that
+        $$x \leq_P y \implies f(x) \leq_Q f(y) \quad \text{for all } x, y \in P.$$
+
+        \item The \hldef{category of lattices}, denoted by \hl{$\mathbf{Lat}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:lattice_as_a_partially_ordered_set}{lattices} $(L, \leq_L)$ and whose morphisms $f : (L, \leq_L) \to (M, \leq_M)$ are the \hldef{lattice homomorphisms}, i.e.\ order-preserving maps such that for all $x, y \in L$,
+        $$f(x \vee_L y) = f(x) \vee_M f(y) \quad \text{and} \quad f(x \wedge_L y) = f(x) \wedge_M f(y).$$
+
+        \item The \hldef{category of complete lattices}, denoted by \hl{$\mathbf{CLat}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:complete_lattice_as_a_partially_ordered_set}{complete lattices} and whose morphisms $f : (L, \leq_L) \to (M, \leq_M)$ are the \hldef{complete lattice homomorphisms}, i.e.\ functions that preserve all existing suprema and infima: for every subset $S \subseteq L$ for which $\bigvee S$ and $\bigwedge S$ exist in $L$,
+        $$f\left(\bigvee S\right) = \bigvee f(S) \quad \text{and} \quad f\left(\bigwedge S\right) = \bigwedge f(S).$$
+
+        \item The \hldef{category of $\sigma$-complete lattices}, denoted by \hl{$\mathbf{\Sigma CLat}$}, is the full subcategory of $\mathbf{CLat}$ whose objects are those complete lattices in which all countable suprema and infima exist, and whose morphisms preserve all existing countable suprema and infima.
+    \end{enumerate}
+\end{definition}

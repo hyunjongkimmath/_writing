@@ -1,0 +1,23 @@
+\begin{proposition}[Equalizers as subalgebras and coequalizers as congruence quotients in algebraic categories] \label{proposition:equalizers_subalgebra_and_coequalizers_congruence}
+    \TODO{AI generated, verify}
+Let $\mathcal{A}$ be a variety of algebras (e.g.\ $\mathbf{Semi}$, $\mathbf{Mon}$, $\mathbf{Grp}$, $\mathbf{SRing}$). Let $f, g : A \to B$ be two parallel morphisms in $\mathcal{A}$.
+
+\begin{enumerate}
+    \item The equalizer of $f$ and $g$ exists in $\mathcal{A}$ and is given by the subset
+    $$E = \{x \in A : f(x) = g(x)\}$$
+    equipped with the operations inherited from $A$. Since the operations are defined pointwise, $E$ is a subalgebra of $A$. The equalizer morphism $e : E \to A$ is the inclusion map.
+
+    \item The coequalizer of $f$ and $g$ exists in $\mathcal{A}$ and is given by the quotient set $B / \equiv$, where $\equiv$ is the smallest congruence relation on $B$ containing all pairs $(f(a), g(a))$ for $a \in A$. Equivalently, $\equiv$ is the intersection of all congruences on $B$ that contain $\{(f(a), g(a)) : a \in A\}$. The coequalizer morphism $q : B \to B / \equiv$ is the canonical projection to equivalence classes.
+\end{enumerate}
+
+For ordered algebraic categories ($\mathbf{OSemi}$, $\mathbf{OMon}$, $\mathbf{lGrp}$, $\mathbf{OSRing}$):
+
+\begin{enumerate}
+    \setcounter{enumi}{2}
+    \item The equalizer is the same subalgebra $E \subseteq A$ with the inherited partial order from $A$.
+
+    \item The coequalizer requires a congruence $\equiv$ on $B$ that is compatible both with the algebraic operations and with the order: if $x \leq y$ in $B$ and $x \equiv x'$, $y \equiv y'$, then $[x'] \leq [y']$ in the quotient. The coequalizer is the quotient by the smallest such compatible congruence containing $\{(f(a), g(a)) : a \in A\}$.
+\end{enumerate}
+
+For lattice categories ($\mathbf{Lat}$, $\mathbf{CLat}$): the equalizer is the sublattice of elements on which $f$ and $g$ agree; the coequalizer is the quotient by the smallest lattice-compatible congruence containing $\{(f(x), g(x)) : x \in A\}$.
+\end{proposition}

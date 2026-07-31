@@ -1,0 +1,19 @@
+\begin{remark}[Why $\mathbb{R}$ is special for the signed integral] \label{remark:signed_integral_requires_ordered_group}
+    \TODO{AI generated, verify}
+The generalization of Lebesgue integration to semiring-valued measures and module-valued functions\CrefIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring} applies cleanly to the non-negative theory because it only requires a $\sigma$-complete lattice with compatible addition and scalar multiplication.
+
+For the \textbf{signed integral}, however, one needs an ordered group structure on $M$. The decomposition
+$$f = f^+ - f^-$$
+requires that every element of $M$ has an additive inverse — i.e., that $(M,+,0_M)$ is a group, not merely a monoid. This rules out semirings like $[0,\infty]$ or $\mathbb{N} \cup \{\infty\}$ as codomains for signed integration.
+
+Moreover, $\mathbb{R}$ holds a unique position: it is the unique (up to isomorphism) Dedekind complete totally ordered field. This means that no other structure simultaneously provides
+\begin{enumerate}
+    \item a field structure (for division and calculus),
+    \item total order compatible with the field operations,
+    \item Dedekind completeness (for suprema of arbitrary bounded subsets).
+\end{enumerate}
+
+Consequently, while meaningful generalizations exist when one drops either the field structure (semiring-valued integration) or the total ordering (lattice-ordered vector spaces), no single alternative recovers all three properties. The signed integral with full calculus is inherently tied to $\mathbb{R}$.
+
+\CrefIfExists{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}\CrefIfExists{definition:field_of_real_numbers}
+\end{remark}

@@ -1,0 +1,21 @@
+\begin{definition}[Lattice in a partially ordered set] \label{definition:lattice_as_a_partially_ordered_set}
+Let $P$ be a \CrefAndHyperrefIfExist{definition:partially_ordered_set}{partially ordered set}.
+
+We say that $P$ is a \hldef{lattice} if every pair of elements $\{x, y\} \subseteq P$ has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{least upper bound} and a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{greatest lower bound}. The least upper bound is called the \hldef{join of $x$ and $y$}, denoted by \hl{$x \vee y$}, and the greatest lower bound is called the \hldef{meet of $x$ and $y$}, denoted by \hl{$x \wedge y$}.
+
+The join and meet operations satisfy, for all $x,y,z \in P$:
+\begin{enumerate}
+    \item Commutativity: $x \vee y = y \vee x$, \quad $x \wedge y = y \wedge x$;
+    \item Associativity: $(x \vee y) \vee z = x \vee (y \vee z)$, \quad $(x \wedge y) \wedge z = x \wedge (y \wedge z)$;
+    \item Absorption: $x \vee (x \wedge y) = x$, \quad $x \wedge (x \vee y) = x$;
+    \item Idempotence: $x \vee x = x$, \quad $x \wedge x = x$.
+\end{enumerate}
+
+\CrefIfExists{definition:complete_lattice_as_a_partially_ordered_set}{
+    A \CrefAndHyperrefIfExist{definition:complete_lattice_as_a_partially_ordered_set}{complete lattice} is a lattice in which every subset (not just finite ones) has a supremum and an infimum. Thus every complete lattice is a lattice, but not conversely.
+}
+
+\CrefIfExists{definition:lattice_over_a_commutative_ring}{
+    The term "lattice" also appears in the context of modules over rings\CrefIfExists{definition:lattice_over_a_commutative_ring}; that notion is unrelated to this order-theoretic concept.
+}
+\end{definition}

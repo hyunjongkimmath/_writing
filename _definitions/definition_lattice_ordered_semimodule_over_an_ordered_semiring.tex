@@ -1,0 +1,26 @@
+\begin{definition}[Lattice-ordered semimodule over an ordered semiring] \label{definition:lattice_ordered_semimodule_over_an_ordered_semiring}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}.
+
+A \hldef{lattice-ordered semimodule over $K$} is a \CrefAndHyperrefIfExist{definition:monoid}{commutative monoid} $(M, +, 0_M)$ equipped with
+\begin{enumerate}
+    \item a structure of \CrefAndHyperrefIfExist{definition:semimodule_over_a_semiring_bisemimodule_over_semirings}{$K$-semimodule}, i.e.\ an action $K \times M \to M$, written $(r, m) \mapsto r \cdot m$, satisfying the usual axioms for all $r,s \in K$ and $m,n \in M$:
+    $$ (r+s)\cdot m = r\cdot m + s\cdot m, \quad r\cdot(m+n) = r\cdot m + r\cdot n, \quad (rs)\cdot m = r\cdot(s\cdot m), \quad 1_K\cdot m = m;$$
+    \item a partial order $\leq$ on $M$ such that $(M, +, \leq)$ is an \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoid}, i.e.\ if $m_1 \leq m_2$, then $m_1 + n \leq m_2 + n$ for all $n \in M$;
+    \item the order is compatible with scalar multiplication, i.e.\ if $0_M \leq m$ and $0_K \leq r$, then $0_M \leq r \cdot m$;
+    \item $(M, \leq)$ is a \CrefAndHyperrefIfExist{definition:lattice_as_a_partially_ordered_set}{lattice}, i.e. every pair of elements $\{m_1, m_2\} \subseteq M$ has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{least upper bound} $m_1 \vee m_2$ and a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{greatest lower bound} $m_1 \wedge m_2$.
+\end{enumerate}
+
+If the partial order $\leq$ is a \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total order}, then $M$ is called a \hldef{totally lattice-ordered semimodule over $K$}.
+
+\TextIfExists{definition:lattice_ordered_group}{
+    When the underlying commutative monoid is an abelian group, a lattice-ordered semimodule becomes a \CrefAndHyperrefIfExist{definition:lattice_ordered_group}{lattice-ordered group} equipped with a compatible $K$-semimodule action.
+}
+
+\TextIfExists{definition:complete_lattice_as_a_partially_ordered_set}{
+    A lattice-ordered semimodule in which $(M,\leq)$ is a \CrefAndHyperrefIfExist{definition:complete_lattice_as_a_partially_ordered_set}{complete lattice} enjoys stronger completeness properties; see \CrefIfExists{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}.
+}
+
+\TextIfExists{definition:bimodule_over_rings_module_over_a_ring}{
+    When $K$ is a ring and $M$ is an abelian group, the semimodule structure upgrades to a \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$K$-module}, recovering the classical notion of a lattice-ordered module.
+}
+\end{definition}

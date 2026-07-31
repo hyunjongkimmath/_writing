@@ -1,0 +1,16 @@
+\begin{proposition}[Special cases recover classical integration theory] \label{proposition:special_cases_recover_classical_integration_theory}
+    \TODO{AI generated, verify}
+The general framework of Lebesgue integration for module-valued functions\CrefIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring} recovers the following classical theories as special cases:
+
+\begin{enumerate}
+    \item \textbf{Standard non-negative Lebesgue integral.} When $K = ([0,\infty], +, \cdot)$ and $M = [0,\infty]$ acting on itself, the general integral coincides with the classical \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integral of non-negative measurable functions}\CrefIfExists{definition:standard_nonnegative_lebesgue_integral_as_special_case}.
+
+    \item \textbf{Tropical (min-plus) integration.} When $K = ((-\infty,\infty], \min, +)$ and $M = K$ acting on itself via tropical multiplication, the integral becomes a min-over-simple-functions construction appearing in idempotent analysis\CrefIfExists{definition:tropical_min_plus_integration_as_special_case}.
+
+    \item \textbf{Integer-valued / counting-measure integration.} When $K = (\mathbb{N} \cup \{\infty\}, +, \cdot)$ and $M$ is a $\sigma$-complete lattice-ordered monoid with $\mathbb{N}$ acting by repeated addition, the integral counts weighted sums of values\CrefIfExists{definition:integer_valued_integration_as_special_case}.
+
+    \item \textbf{Vector-valued integration in Riesz spaces.} When $K = [0,\infty]$ and $M$ is a Dedekind complete Riesz space over $\mathbb{R}$, the integral recovers the order-theoretic definition of vector-valued integration, generalizing both the Bochner integral into normed spaces\CrefIfExists{definition:vector_valued_lebesgue_integral_into_normed_vector_space} and the Pettis integral\CrefIfExists{definition:riesz_space_vector_valued_integration_as_special_case}.
+\end{enumerate}
+
+In each case, the monotone convergence theorem\CrefIfExists{theorem:monotone_convergence_theorem_for_module_valued_functions} and Fatou's lemma\CrefIfExists{theorem:fatous_lemma_for_module_valued_functions} specialize to their classical counterparts.
+\end{proposition}

@@ -1,0 +1,12 @@
+\begin{definition}[$\sigma$-complete lattice-ordered semimodule] \label{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}
+    \TODO{AI generated, verify}
+Let $K$ be a \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}.
+
+A \hldef{$\sigma$-complete lattice-ordered semimodule over $K$} is a \CrefAndHyperrefIfExist{definition:lattice_ordered_semimodule_over_an_ordered_semiring}{lattice-ordered semimodule} $(M, +, 0_M, \leq)$ over $K$ such that every non-empty \CrefAndHyperrefIfExist{definition:countable_finite_uncountable_sets}{countable} \CrefAndHyperrefIfExist{definition:subset_of_a_set}{subset} of $M$ that has an \CrefAndHyperrefIfExist{definition:upper_and_lower_bounds_of_subsets_of_an_ordered_set}{upper bound} has a \CrefAndHyperrefIfExist{definition:supremum_infimum_of_a_subset_of_an_ordered_set}{supremum} in $M$.
+
+\TextIfExists{definition:conditionally_sigma_complete_linear_order}{
+    When the order on $M$ is \CrefAndHyperrefIfExist{definition:total_order_linear_order_on_a_set}{total}, this coincides with being a \CrefAndHyperrefIfExist{definition:conditionally_sigma_complete_linear_order}{conditionally $\sigma$-complete linear order}\CrefIfExists{proposition:sigma_complete_lattice_ordered_semimodule_with_total_order_coincides_with_conditionally_sigma_complete_linear_order}.
+}
+
+Equivalently, every non-decreasing sequence $(m_n)_{n=1}^\infty$ in $M$ that is bounded above has a supremum $\bigvee_{n=1}^\infty m_n \in M$. This formulation suffices for integration theory because the integrals of simple functions form an upward-directed set, and the Lebesgue integral is defined as a supremum over such functions.
+\end{definition}

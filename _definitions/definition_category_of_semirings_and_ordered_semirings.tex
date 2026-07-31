@@ -1,0 +1,15 @@
+\begin{definition}[Category of semirings and ordered semirings] \label{definition:category_of_semirings_and_ordered_semirings}
+    \TODO{AI generated, verify}
+    \begin{enumerate}
+        \item The \hldef{category of semirings}, denoted by \hl{$\mathbf{SRing}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:semiring}{semirings} $(R, +_R, \cdot_R, 0_R, 1_R)$ and whose morphisms $f : R \to S$ are the \hldef{semiring homomorphisms}, i.e.\ functions such that for all $a, b \in R$,
+        $$f(a +_R b) = f(a) +_S f(b),$$
+        $$f(a \cdot_R b) = f(a) \cdot_S f(b),$$
+        and $f(0_R) = 0_S$ and $f(1_R) = 1_S$.
+
+        \item The \hldef{category of commutative semirings}, denoted by \hl{$\mathbf{cSRing}$}, is the full subcategory of $\mathbf{SRing}$ consisting of the commutative semirings.
+
+        \item The \hldef{category of ordered semirings}, denoted by \hl{$\mathbf{OSRing}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semirings} $(R, +_R, \cdot_R, 0_R, 1_R, \leq_R)$ and whose morphisms $f : R \to S$ are the semiring homomorphisms that are also order-preserving maps.
+
+        \item The \hldef{category of totally ordered semirings}, denoted by \hl{$\mathbf{TOSRing}$}, is the full subcategory of $\mathbf{OSRing}$ consisting of the \CrefAndHyperrefIfExist{definition:totally_ordered_semiring}{totally ordered semirings}.
+    \end{enumerate}
+\end{definition}

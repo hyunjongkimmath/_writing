@@ -1,4 +1,4 @@
-\begin{definition} \label{definition:module_of_a_ring}
+\begin{definition} \label{definition:bimodule_over_rings_module_over_a_ring}
 Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutative ring}. 
 \begin{enumerate}
     \item A \hldef{left $R$-module} is an abelian group $(M,+)$ together with an operation $R \times M \to M$, denoted $(r,m) \mapsto rm$, such that for all $r,s \in R$ and $m,n \in M$:
@@ -23,7 +23,7 @@ Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutativ
     \begin{enumerate}
         \item a left action of $R$:
         $$\hlin{R \times M \to M, \quad (r,m) \mapsto r \cdot m,}$$
-        making $M$ a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{left $R$-module},
+        making $M$ a \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{left $R$-module},
         \item a right action of $S$:
         $$\hlin{M \times S \to M, \quad (m,s) \mapsto m \cdot s,}$$
         making $M$ a right $S$-module,
@@ -33,11 +33,11 @@ Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{not-necessarily commutativ
 
     \item A \hldef{two-sided $R$-module} (or \hldef{$R$-bimodule}) is an $R$-$R$-bimodule.
     
-    % an abelian group $(M,+)$ which is simultaneously a left $R$-module and a right $R$-module, such that $(rm)s = r(ms)$ for all $r,s \in R$, $m \in M$. Equivalently, a two-sided $R$-module is an \hldef{$R$-$R$-bimodule}\CrefIfExists{definition:module_of_a_ring}
+    % an abelian group $(M,+)$ which is simultaneously a left $R$-module and a right $R$-module, such that $(rm)s = r(ms)$ for all $r,s \in R$, $m \in M$. Equivalently, a two-sided $R$-module is an \hldef{$R$-$R$-bimodule}\CrefIfExists{definition:bimodule_over_rings_module_over_a_ring}
 
 
 \end{enumerate}
 If $R$ is a \CrefAndHyperrefIfExist{definition:commutative_ring}{commutative ring}, then a left/right $R$-module can automatically be regarded as a two-sided $R$-module. As such, we simply talk about \hldef{$R$-modules} in this case. 
 
-Any abelian group is equivalent to a two-sided $\bbZ$-module\CrefIfExists{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}. Moreover, any left $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$R-\bbZ$-bimodule}\CrefIfExists{proposition:category_of_left_R_modules_is_equivalent_to_R_Z_bimodules} and any right $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:module_of_a_ring}{$\bbZ-R$-bimodule}\CrefIfExists{proposition:category_of_right_R_modules_is_equivalent_to_Z_R_bimodules}. Given a left/right/two-sided $R$-module, its \hldef{natural bimodule structure} will refer to its structure as a $R$-$\bbZ$/$\bbZ$-$R$/$R$-$R$ bimodule. In this way, many definitions associated with the notions of left/right/two-sided $R$-modules can be defined as special cases for definitions for $R$-$S$-bimodules.
+Any abelian group is equivalent to a two-sided $\bbZ$-module\CrefIfExists{proposition:category_of_abelian_groups_is_equivalent_to_categories_of_Z_modules}. Moreover, any left $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$R-\bbZ$-bimodule}\CrefIfExists{proposition:category_of_left_R_modules_is_equivalent_to_R_Z_bimodules} and any right $R$-module is equivalent to an \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{$\bbZ-R$-bimodule}\CrefIfExists{proposition:category_of_right_R_modules_is_equivalent_to_Z_R_bimodules}. Given a left/right/two-sided $R$-module, its \hldef{natural bimodule structure} will refer to its structure as a $R$-$\bbZ$/$\bbZ$-$R$/$R$-$R$ bimodule. In this way, many definitions associated with the notions of left/right/two-sided $R$-modules can be defined as special cases for definitions for $R$-$S$-bimodules.
 \end{definition}

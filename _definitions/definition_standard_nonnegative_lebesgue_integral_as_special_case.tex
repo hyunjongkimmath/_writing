@@ -1,0 +1,14 @@
+\begin{definition}[Standard non-negative Lebesgue integral as a special case] \label{definition:standard_nonnegative_lebesgue_integral_as_special_case}
+    \TODO{AI generated, verify}
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_the_extended_real_line_and_measure_space}{measure space} with $\mu : \mathcal{A} \to [0,\infty]$.
+
+Take the base semiring $K = ([0,\infty], +, \cdot, 0, 1)$ and the $K$-semimodule $M = ([0,\infty], +, \cdot, 0, 1)$ acting on itself by multiplication. Then:
+\begin{enumerate}
+    \item $(M, \leq)$ is a totally ordered lattice under the standard order;
+    \item every countable bounded-above subset has a supremum (Dedekind $\sigma$-completeness of $[0,\infty]$);
+    \item an $M$-valued simple function\CrefIfExists{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring} is exactly a classical non-negative simple function\CrefIfExists{definition:simple_function_on_a_measure_space};
+    \item the integral $\int_X s\,d\mu = \sum_{k=1}^m \mu(E_k) \cdot a_k$ coincides with the classical definition because scalar multiplication in $M$ is ordinary multiplication in $[0,\infty]$.
+\end{enumerate}
+
+Thus the general integral\CrefIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring} recovers the classical \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_measurable_functions_into_the_real_line_extended_by_infinities}{Lebesgue integral of non-negative measurable functions}.
+\end{definition}

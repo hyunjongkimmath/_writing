@@ -1,0 +1,9 @@
+\begin{definition}[Integral of a module-valued simple function] \label{definition:integral_of_sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$, and let $M$ be a \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{$\sigma$-complete lattice-ordered semimodule} over $K$.
+
+Let $s = \sum_{k=1}^m a_k \mathbf{1}_{E_k}$ be a non-negative \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_valued_simple_function_on_a_measure_space_on_a_measurable_space_with_values_in_an_ordered_semiring}{$M$-valued simple function}. The \hldef{integral of $s$ with respect to $\mu$} is defined by
+$$\hlin{\int_X s \, d\mu := \sum_{k=1}^m \mu(E_k) \cdot a_k \in M,}$$
+where $\mu(E_k) \in K$ acts on $a_k \in M$ via the $K$-semimodule action.
+
+The integral takes values in $M_{\geq 0}$\CrefIfExists{definition:positive_cone_in_an_ordered_monoid} because each $\mu(E_k) \in K_{\geq 0}$, each $a_k \in M_{\geq 0}$, and the semimodule action is order-preserving: if $r \in K_{\geq 0}$ and $m \in M_{\geq 0}$, then $r \cdot m \in M_{\geq 0}$.
+\end{definition}

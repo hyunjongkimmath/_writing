@@ -1,0 +1,17 @@
+\begin{definition}[Category of semigroups, monoids, and ordered variants] \label{definition:category_of_semigroups_monoids_ordered_variants}
+    \TODO{AI generated, verify}
+    Let $\mathcal{C}$ be a \CrefAndHyperrefIfExist{definition:category}{(large) category}.
+    \begin{enumerate}
+        \item The \hldef{category of semigroups}, denoted by \hl{$\mathbf{Semi}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:semigroup}{semigroups} $(M, \cdot)$ and whose morphisms $f : (M, \cdot_M) \to (N, \cdot_N)$ are the \hldef{semigroup homomorphisms}, i.e.\ functions $f : M \to N$ such that for all $a, b \in M$,
+        $$f(a \cdot_M b) = f(a) \cdot_N f(b).$$
+
+        \item The \hldef{category of monoids}, denoted by \hl{$\mathbf{Mon}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:monoid}{monoids} $(M, \cdot, e)$ and whose morphisms $f : (M, \cdot_M, e_M) \to (N, \cdot_N, e_N)$ are the \hldef{monoid homomorphisms}, i.e.\ semigroup homomorphisms such that
+        $$f(e_M) = e_N.$$
+
+        \item The \hldef{category of ordered semigroups}, denoted by \hl{$\mathbf{OSemi}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are pairs $((S, \cdot_S), \leq_S)$ where $(S, \cdot_S)$ is a semigroup and $\leq_S$ is a partial order on $S$ such that the operation is compatible with the order: for all $a, b, c \in S$,
+        $$a \leq_S b \implies a \cdot_S c \leq_S b \cdot_S c \quad \text{and} \quad c \cdot_S a \leq_S c \cdot_S b.$$
+        A morphism $f : ((S, \cdot_S), \leq_S) \to ((T, \cdot_T), \leq_T)$ is a semigroup homomorphism that is also an order-preserving map.
+
+        \item The \hldef{category of ordered monoids}, denoted by \hl{$\mathbf{OMon}$}, is the \CrefAndHyperrefIfExist{definition:locally_small_category}{locally small} \CrefAndHyperrefIfExist{definition:category}{category} whose objects are \CrefAndHyperrefIfExist{definition:ordered_monoid}{ordered monoids} and whose morphisms $f : M \to N$ are the monoid homomorphisms that are also order-preserving maps.
+    \end{enumerate}
+\end{definition}

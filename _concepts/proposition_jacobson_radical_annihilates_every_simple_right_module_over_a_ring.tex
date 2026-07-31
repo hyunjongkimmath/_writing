@@ -1,7 +1,7 @@
 \begin{proposition}[Jacobson radical annihilates every simple right module]  \label{proposition:jacobson_radical_annihilates_every_simple_right_module_over_a_ring}
 	\TODO{AI generated, verify}
 
-	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, not assumed commutative, and let $S$ be a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} \CrefAndHyperrefIfExist{definition:module_of_a_ring}{(right) $R$-module}. Then the \CrefAndHyperrefIfExist{definition:jacobson_radical_of_a_ring}{Jacobson radical} $J(R)$ annihilates $S$, i.e., $s \cdot x = 0$ for all $s \in S$ and all $x \in J(R)$.
+	Let $R$ be a \CrefAndHyperrefIfExist{definition:ring}{ring}, not assumed commutative, and let $S$ be a \CrefAndHyperrefIfExist{definition:simple_module_of_a_ring}{simple} \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{(right) $R$-module}. Then the \CrefAndHyperrefIfExist{definition:jacobson_radical_of_a_ring}{Jacobson radical} $J(R)$ annihilates $S$, i.e., $s \cdot x = 0$ for all $s \in S$ and all $x \in J(R)$.
 \end{proposition}
 
 \begin{proof}
@@ -12,7 +12,7 @@
     If $S = \{0\}$, then the claim is vacuous. So suppose that $S \neq \{0\}$. Choose any nonzero $s \in S$. Consider the map
     $$\varphi: R \longrightarrow S, \quad r \longmapsto sr.$$
 
-    We verify that $\varphi$ is a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $R$-module homomorphism}. For all $r_1, r_2 \in R$, we have $\varphi(r_1 + r_2) = s(r_1 + r_2) = sr_1 + sr_2 = \varphi(r_1) + \varphi(r_2)$ by the distributivity axiom of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}. Moreover, $\varphi(r_1 r_2) = s(r_1 r_2) = (sr_1) r_2 = \varphi(r_1) r_2$ by the associativity axiom of a \CrefAndHyperrefIfExist{definition:module_of_a_ring}{right $R$-module}.
+    We verify that $\varphi$ is a \CrefAndHyperrefIfExist{definition:homomorphism_of_modules_over_a_ring}{right $R$-module homomorphism}. For all $r_1, r_2 \in R$, we have $\varphi(r_1 + r_2) = s(r_1 + r_2) = sr_1 + sr_2 = \varphi(r_1) + \varphi(r_2)$ by the distributivity axiom of a \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{right $R$-module}. Moreover, $\varphi(r_1 r_2) = s(r_1 r_2) = (sr_1) r_2 = \varphi(r_1) r_2$ by the associativity axiom of a \CrefAndHyperrefIfExist{definition:bimodule_over_rings_module_over_a_ring}{right $R$-module}.
 
     The image $\operatorname{im}(\varphi)$ is a \CrefAndHyperrefIfExist{definition:kernel_image_cokernel_of_a_module_homomorphism_over_rings}{submodule} of $S$. Since $s \neq 0$, we have $\varphi(1_R) = s \neq 0$, so $\operatorname{im}(\varphi) \neq \{0\}$. Because $S$ is simple, the only nonzero submodule of $S$ is $S$ itself. Hence, $\operatorname{im}(\varphi) = S$, i.e. $\varphi$ is surjective.
 

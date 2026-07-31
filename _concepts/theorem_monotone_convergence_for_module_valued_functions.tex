@@ -1,0 +1,13 @@
+\begin{theorem}[Monotone convergence theorem for module-valued functions] \label{theorem:monotone_convergence_theorem_for_module_valued_functions}
+    \TODO{AI generated, verify}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, $(X,\mathcal{A},\mu)$ a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$, and $M$ a \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{$\sigma$-complete lattice-ordered semimodule} over $K$.
+
+Let $(f_n)_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_on_a_measurable_space_on_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{measurable functions} $f_n : X \to M_{\geq 0}$ such that for all $x \in X$,
+$$0_M \leq f_1(x) \leq f_2(x) \leq \cdots,$$
+i.e.\ the sequence is pointwise non-decreasing. Let $f : X \to M_{\geq 0}$ be defined by $f(x) = \sup_{n} f_n(x)$, which exists because $M$ has suprema of countable bounded-above subsets (or if unbounded, pass to the completion).
+
+Then
+$$\int_X f \, d\mu = \sup_{n \geq 1} \int_X f_n \, d\mu = \lim_{n \to \infty} \int_X f_n \, d\mu.$$
+
+The equality follows because the sequence of integrals $\left(\int_X f_n \, d\mu\right)_{n}$ is non-decreasing in $M$ (monotonicity of the integral), bounded above by $\int_X f \, d\mu$, and every simple function dominated by $f$ is eventually dominated by some $f_n$.
+\end{theorem}

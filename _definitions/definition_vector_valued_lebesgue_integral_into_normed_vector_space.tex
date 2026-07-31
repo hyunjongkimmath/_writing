@@ -1,6 +1,6 @@
 \begin{definition}[Vector-valued Lebesgue integral into a normed vector space] \label{definition:vector_valued_lebesgue_integral_into_normed_vector_space}
     \TODO{AI generated, verify}
-Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector space} over $\bbF \in \{\bbR, \bbC\}$ with norm $\|\cdot\|$.
+Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_the_extended_real_line_and_measure_space}{measure space} and let $V$ be a \CrefAndHyperrefIfExist{definition:extended_norm_on_a_vector_space_over_a_field_with_absolute_value}{normed vector space} over $\bbF \in \{\bbR, \bbC\}$ with norm $\|\cdot\|$.
 
 \begin{enumerate}
   \item A \hldef{vector-valued simple function on $X$ with values in $V$} is a function of the form
@@ -22,4 +22,8 @@ Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_m
 \end{enumerate}
 
 In particular, when $V = \bbC$, a function $f : X \to \bbC$ is Bochner integrable if and only if its real part $\operatorname{Re}(f)$ and imaginary part $\operatorname{Im}(f)$ are both real-valued Lebesgue integrable functions.
+
+\TextIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{
+    When the normed vector space $V$ carries a compatible lattice order making it a Dedekind complete Riesz space, this Bochner integral is a special case of the more general \CrefAndHyperrefIfExist{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{Lebesgue integral for module-valued functions}, with base semiring $K = [0,\infty]$ and codomain $M = V$. The Bochner definition additionally handles non-ordered normed spaces by using norm-convergence rather than lattice suprema.
+}
 \end{definition}

@@ -1,0 +1,15 @@
+\begin{definition}[Tropical (min-plus) integration as a special case] \label{definition:tropical_min_plus_integration_as_special_case}
+    \TODO{AI generated, verify}
+Let $K = ((-\infty,\infty], \min, +, \infty, 0)$ be the tropical semiring. Let $(X,\mathcal{A},\mu)$ be a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$.
+
+Set $M = K$ acting on itself via tropical multiplication (ordinary addition). Then:
+\begin{enumerate}
+    \item $(M, \leq)$ with the standard order is a totally ordered lattice;
+    \item every countable bounded-below subset has an infimum in $(-\infty,\infty]$, so $\sigma$-completeness holds for the dual order;
+    \item a measure valued in $K$ satisfies $\mu(\bigsqcup E_i) = \min_i \mu(E_i)$ (countable additivity with tropical addition);
+    \item an $M$-valued simple function $s = \sum_{k=1}^m a_k \mathbf{1}_{E_k}$ uses tropical addition, so pointwise $s(x) = \min\{a_k : x \in E_k\}$ on the support;
+    \item the integral of a simple function is $\int_X s\,d\mu = \bigoplus_{k=1}^m (\mu(E_k) \odot a_k) = \min_{k} (a_k + \mu(E_k))$, where $\oplus$ and $\odot$ are tropical addition and multiplication.
+\end{enumerate}
+
+The supremum over simple functions in the general definition\CrefIfExists{definition:lebesgue_integral_of_nonnegative_measurable_function_on_a_measurable_space_valued_in_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring} becomes an infimum with respect to the standard order, yielding a tropical analogue of integration that appears in idempotent analysis and tropical geometry.
+\end{definition}

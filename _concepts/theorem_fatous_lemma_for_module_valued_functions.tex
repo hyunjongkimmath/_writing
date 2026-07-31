@@ -1,0 +1,14 @@
+\begin{theorem}[Fatou's lemma for module-valued functions] \label{theorem:fatous_lemma_for_module_valued_functions}
+    \TODO{AI generated, verify}
+Let $K$ be an \CrefAndHyperrefIfExist{definition:ordered_semiring}{ordered semiring}, $(X,\mathcal{A},\mu)$ a \CrefAndHyperrefIfExist{definition:measure_on_a_measurable_space_valued_in_an_ordered_semiring_and_measure_space_with_such_a_measure}{$K$-valued measure space} with $\mu : \mathcal{A} \to K$, and $M$ a \CrefAndHyperrefIfExist{definition:sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{$\sigma$-complete lattice-ordered semimodule over $K$}.
+
+Let $(f_n)_{n=1}^\infty$ be a sequence of \CrefAndHyperrefIfExist{definition:measurable_function_on_a_measurable_space_on_a_sigma_complete_lattice_ordered_semimodule_over_an_ordered_semiring}{measurable functions} $f_n : X \to M_{\geq 0}$. Define
+$$g_k(x) := \bigvee_{n \geq k} f_n(x),$$
+which exists because $M$ has countable suprema. The sequence $(g_k)$ is pointwise non-increasing, and let
+$$f_*(x) := \liminf_{n \to \infty} f_n(x) = \sup_{k \geq 1} \bigwedge_{n \geq k} f_n(x).$$
+
+Then
+$$\int_X f_* \, d\mu \leq \inf_{k \geq 1} \int_X g_k \, d\mu.$$
+
+In particular, if the sequence $(f_n)$ converges pointwise to a limit $f$, then $\int_X f \, d\mu \leq \liminf_{n \to \infty} \int_X f_n \, d\mu$.
+\end{theorem}
